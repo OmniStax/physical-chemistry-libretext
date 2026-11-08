@@ -20,7 +20,7 @@ const signed = (m) => (m > 0 ? `+${m}` : m < 0 ? `−${-m}` : '0');
 (function () {
   const d = F.sim(root, 'sim-sphere');
   const B = 1.25;
-  const S = F.space3d(d, { box: [[-B, B], [-B, B], [-B, B]], h: 560, turn: -2.3, tilt: 0.38, fit: 3.3, spin: 'off', zoom: false });
+  const S = F.space3d(d, { box: [[-B, B], [-B, B], [-B, B]], h: 560, turn: -0.7, tilt: 0.38, fit: 3.3, spin: 'off', zoom: false });
   const TH = ctl(d.controls, { label: '\\theta', cls: 'angle', key: 'theta', min: 0, max: 180, step: 1, value: 50, unit: '°', dec: 0, aria: 'the polar angle theta in degrees' });
   const PH = ctl(d.controls, { label: '\\kvarphi', cls: 'angle', key: 'phi', min: 0, max: 360, step: 1, value: 40, unit: '°', dec: 0, aria: 'the azimuthal angle phi in degrees' });
   const ring = (f, n = 96) => Array.from({ length: n + 1 }, (_, i) => f(i / n));
@@ -133,7 +133,7 @@ const signed = (m) => (m > 0 ? `+${m}` : m < 0 ? `−${-m}` : '0');
     const three = VIEW.value === '3d';
     if (three && !S) {
       host = document.createElement('div'); d.stage.appendChild(host);
-      S = F.space3d({ stage: host, fig: d.fig }, { box: [[-0.42, 0.42], [-0.42, 0.42], [-0.42, 0.42]], h: 600, turn: -2.3, tilt: 0.3, fit: 2.3, spin: 'off', zoom: false });
+      S = F.space3d({ stage: host, fig: d.fig }, { box: [[-0.42, 0.42], [-0.42, 0.42], [-0.42, 0.42]], h: 600, turn: -0.7, tilt: 0.3, fit: 3.4, spin: 'off', zoom: false });
     }
     d.c.style.display = three ? 'none' : '';
     if (host) host.style.display = three ? '' : 'none';

@@ -127,6 +127,7 @@ class Drafter:
         tex = re.sub(r"\\mbox\s*\{", r"\\text{", tex)  # KaTeX has \\text, not \\mbox
         tex = tex.replace("\u2206", "\\Delta ")  # the increment sign, which KaTeX has no metrics for
         tex = tex.replace("\u2011", "-")  # the non-breaking hyphen (6.2's $n‑1$), which KaTeX has no metrics for
+        tex = tex.replace("\ufeff", "")  # a stray zero-width no-break space (7.4's E_n^o\ufeff +), which KaTeX has no metrics for
         tex = re.sub(r"\\op\s*\{([^{}]*)\}", r"\\hat{\1}", tex)
         # the site's \\braket{a}{b} takes two arguments; KaTeX's takes one, \\braket{a|b} (4.S, 3.S)
         tex = re.sub(r"\\braket\s*\{([^{}]*)\}\s*\{([^{}]*)\}", r"\\braket{\1|\2}", tex)
@@ -270,7 +271,8 @@ class Drafter:
         src = re.search(r"src=media/(\S+)", head)
         src = f"/media/{self.chdir}/{src.group(1)}" if src else ""
         alt = next((x[7:] for x in ls if x.startswith("> alt: ")), "")
-        cap = next((x[11:] for x in ls if x.startswith("> caption: ")), "")
+        # a caption citing an equation keeps its number in the row as in the text (7.1.3, 7.4.2)
+        cap = self.refs(next((x[11:] for x in ls if x.startswith("> caption: ")), ""))
         parts = [re.search(r"src=media/(\S+)", x).group(1) for x in ls[1:] if x.startswith("> part ")]
         panels = [x[9:] for x in ls if x.startswith("> panel: ")]
         num = re.search(r"\{fig:([^}]+)\}", head)

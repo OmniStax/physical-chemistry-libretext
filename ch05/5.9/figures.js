@@ -100,7 +100,7 @@ const Bh = (r) => H_ / (8 * Math.PI ** 2 * MU * AMU * r * r);
     const lv = { t: 130, b: 400 }, EY = (j) => lv.b - (j * (j + 1)) / 110 * (lv.b - lv.t);
     for (let j = 0; j <= 10; j++) {
       line(ctx, sp.l, EY(j), sp.r, EY(j), alpha(ce, j ? 0.5 : 0.8), 2);
-      if (j % 2 === 0) text(ctx, `J = ${j}`, sp.l - 12, EY(j), ce, { size: 17, align: 'right' });
+      if (j % 2 === 0 && j !== 2) text(ctx, `J = ${j}`, sp.l - 12, EY(j), ce, { size: 17, align: 'right' });
     }
     text(ctx, 'energy (B)', sp.l, lv.t - 30, ce, { size: 20, weight: 600 });
     for (let j = 0; j < 10; j++) {
