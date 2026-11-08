@@ -32,7 +32,7 @@ const otherSign = (cw) => { const l = lightOf(cw), far = Math.abs(lightOf(PAL.in
   const v = F.view3d(d.stage, { h: 440, dist: 7, tilt: 0.55, pitch: [0.12, 1.45], yaw: [-Math.PI / 3, Math.PI / 3], spin: 'off', zoom: false });
   const g = v.part(0);
   /* geometry, in A, y up: N on the axis, the hydrogens 0.940 A from it and 0.381 A below N; H1 toward the reader */
-  const S = 1.25, rho = 0.940 * S, hN = 0.381 * S, y0 = 0.15;
+  const S = 1.6, rho = 0.940 * S, hN = 0.381 * S, y0 = 0.15;
   const N = [0, y0 + hN * 0.6, 0];
   const H = [0, 1, 2].map((i) => { const a = Math.PI / 2 + i * 2 * Math.PI / 3; return [rho * Math.cos(a), y0 - hN * 0.4, rho * Math.sin(a)]; });
   const ladder = F.makeCanvas(d.stage, 250);
@@ -55,11 +55,11 @@ const otherSign = (cw) => { const l = lightOf(cw), far = Math.abs(lightOf(PAL.in
     line(ctx, L, yb, R, yb, alpha(PAL.ink, 0.6), 2);
     for (let e = -40; e <= 40; e += 20) { line(ctx, X(e), yb, X(e), yb + 8, alpha(PAL.ink, 0.6), 2); text(ctx, fmt(e, 0), X(e), yb + 34, PAL.muted, { size: 17, align: 'center' }); }
     text(ctx, 'orbital energy E (eV)', (L + R) / 2, yb + 72, ce, { size: 20, weight: 600, align: 'center' });
-    const lv = [[1, -29.8336, 0], [3, -9.2892, -14], [4, -9.2892, 14], [2, 31.0342, 0]];
+    const lv = [[1, -29.8336, 0], [3, -9.2892, -24], [4, -9.2892, 24], [2, 31.0342, 0]];
     lv.forEach(([i, e, dx]) => {
       const on = String(i) === K.value, x = X(e) + dx, col = on ? ce : alpha(PAL.ink, 0.35);
       line(ctx, x, yb - 64, x, yb - 8, col, on ? 6 : 3);
-      text(ctx, `Ψ_${i}`, x, yb - 80, on ? ce : PAL.muted, { size: 22, weight: on ? 600 : 400, align: 'center' });
+      text(ctx, `Ψ_${i}`, x, yb - 82, on ? ce : PAL.muted, { size: 26, weight: on ? 600 : 400, align: 'center' });
     });
     F.legend(ctx, { l: 0, t: 0, r: W, b: 40 }, [
       { s: 'coefficient > 0', color: up, kind: 'dot' },
