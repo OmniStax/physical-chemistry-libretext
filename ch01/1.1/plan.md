@@ -24,11 +24,16 @@ the opening, which has none, divides into three blocks of its own:
 
 - `fig-1-1-1` · Figure 1.1.1 · photo, kept: the text points at it ("when an iron is heated in a fire (Figure 1.1.1)").
 - `fig-1-1-2` · Figure 1.1.2 · kept as the book's drawing: a setup sketch with nothing that varies; the text cites it twice.
-- `sim-blackbody` · Figure 1.1.3 + 1.1.5 · blackbody, stefan-boltzmann-law, wiens-displacement-law, rayleigh-jeans-law, ultraviolet-catastrophe · variation by slider: the reader moves the temperature and sees the peak shift, the area grow and the classical curve run away at short wavelength, which the two still graphs only show at fixed temperatures · arrows: none · still: a spectrum at one temperature has no time in it · T slider 2500–5500 K, detents at the book's 3000, 4000, 5000 K · headline: T and λmax · graph alone, the glowing disc beside it in its real colour · 2D. Facts: the visible band and the disc (`spectrum`).
+- `sim-blackbody` · Figure 1.1.3 + 1.1.5 · blackbody, stefan-boltzmann-law, wiens-displacement-law, rayleigh-jeans-law, ultraviolet-catastrophe · variation by slider: the reader moves the temperature and the peak rides the book's path of peaks up and to the left while the area grows and the oven's hole changes colour, which the still graphs only show at fixed temperatures · arrows: none · still: a spectrum at one temperature has no time in it · T slider 2500–5500 K, detents at the book's 3000, 4000, 5000 K · headline: T and λmax; the point is the peak dot on its path · graph alone, with the glowing hole of the oven (Figure 1.1.2's emitter) large in the corner the curves leave empty; the visible part of the area filled in its own colours (book Figure 1.1.3); Rayleigh–Jeans thin, dashed, muted; book's faint 3000/4000/5000 K curves cut (the path of the peaks carries them) · 2D. Facts: the visible band, the glow colour and the dark of the oven wall (`spectrum`).
 - `fig-fluorescent` · unnumbered image in the note · kept as the book prints it: measured data.
-- `sim-stefan` · Figure 1.1.4 · stefan-boltzmann-law · variation by slider: the point slides along σT⁴ with the readout computing P, the book's four marks kept as hollow points with hover names · arrows: none · still · T slider 0–400 K, detents at 273, 293, 310, 373 K · headline: T and P · graph alone · 2D.
+- `sim-stefan` · Figure 1.1.4 · stefan-boltzmann-law · variation by slider: a column at T and one at T/2 stand on σT⁴, one always sixteen times the other, so the fourth power is seen as a height and not read off a number · arrows: none · still · T slider 0–400 K, default 300 K, detents at 273 (ice), 293, 310 (body), 373 K (boiling) labelled on the track; the curve marks are cut · headline: doubling T from T/2 to T and the two powers · graph alone, y 0–1600 W/m² so 400 K stays in frame · 2D.
 
 Extra simulations: none proposed.
+
+## Rework (rule 14, 2026-11-08)
+
+- `sim-blackbody` critique: the dashed Rayleigh–Jeans curve was the loudest thing in the frame, the faint reference curves barely read, the glow disc sat small off to the side and the caption ran six sentences; the peak, which is the point, was a small dot.
+- `sim-stefan` critique: a single point on a curve says P grows but not how fast; the four hollow marks were clutter, and the two-line headline ran into the axis title.
 
 ## Exercises
 

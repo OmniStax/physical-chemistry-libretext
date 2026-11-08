@@ -4,10 +4,10 @@ window.OMNISTAX_FIGURES['1.1'] = function (root, F) {
 const { tex, C, PAL, alpha, ctl, register, begin, line, dot, text, topline, axes, plot, shade, fmt } = F;
 const sim = (id, H) => F.sim(root, id, H);
 /* a dashed curve clipped to its graph's box, for a prediction drawn beside what was measured */
-function dashed(ctx, ax, f, color) {
+function dashed(ctx, ax, f, color, w = 3) {
   const { box, X, Y, xr } = ax;
   ctx.save(); ctx.beginPath(); ctx.rect(box.l, box.t, box.r - box.l, box.b - box.t); ctx.clip();
-  ctx.strokeStyle = color; ctx.lineWidth = 3; ctx.setLineDash([10, 10]); ctx.beginPath();
+  ctx.strokeStyle = color; ctx.lineWidth = w; ctx.setLineDash([10, 10]); ctx.beginPath();
   let on = false;
   for (let i = 0; i <= 400; i++) {
     const x = xr[0] + (xr[1] - xr[0]) * i / 400, y = f(x);
@@ -46,75 +46,93 @@ function glow(T) {
 
 /* ---------- Figure 1.1.3 + 1.1.5: the blackbody spectrum ----------
    x: wavelength 0 to 3000 nm; y: spectral energy density in 10^5 J/m^4, fixed 0 to 10 from the slider's
-   maximum (5500 K peaks at 8.7 x 10^5 J/m^4). The book's curves at 3000, 4000 and 5000 K stay faint
-   behind the live one; the classical curve is dashed and leaves the box at short wavelengths. */
+   maximum (5500 K peaks at 8.7 x 10^5 J/m^4). The point is the peak: it rides the book's path of peaks
+   (Wien's law traced over 2500 to 5500 K) up and to the left as T rises. The part of the area the eye can
+   see is filled with its own colours, and the hole of the oven glows in the corner the curves leave empty.
+   The classical Rayleigh-Jeans curve is thin, dashed and muted: Figure 1.1.5's point, kept but secondary. */
 (function () {
-  const d = sim('sim-blackbody', 640);
+  const d = sim('sim-blackbody', 620);
   const T = ctl(d.controls, { label: '\\kT', cls: 'temperature', min: 2500, max: 5500, step: 50, value: 5000, unit: 'K', dec: 0,
     detents: [3000, 4000, 5000], snap: true });
-  const Y = 1e5;
+  const Y = 1e5, hits = [];
+  F.hover(d.stage, () => hits);
+  /* the dark of the oven's wall, against which the hole glows (a fact: the hole is the only light) */
+  const OVEN = '#1d1d22';
   function draw() {
     const { ctx, W } = begin(d.c);
-    const t = T.v, lmax = WIEN / t * 1e9;
-    topline(ctx, `At $\\kT = ${fmt(t, 0)}\\ \\text{K}$ the spectrum peaks at $\\klmax = ${fmt(lmax, 0)}\\ \\text{nm}$, and the body glows the colour of the disc.`);
-    const box = { l: 130, r: W - 260, t: 110, b: 540 };
+    const t = T.v, lmax = WIEN / t * 1e9, rho = (l) => planck(l, t) / Y;
+    topline(ctx, `At $\\kT = ${fmt(t, 0)}\\ \\text{K}$ the peak sits at $\\klmax = ${fmt(lmax, 0)}\\ \\text{nm}$.`);
+    const box = { l: 130, r: W - 70, t: 110, b: 530 };
     const ax = axes(ctx, box, [0, 3000], [0, 10], { nx: 6, ny: 5, xl: 'wavelength λ (nm)', yl: 'spectral energy density ρ (10⁵ J/m⁴)', xc: C('wavelength'), yc: C('energy-density') });
-    /* the visible band, in its own colours, as a strip under the axis */
+    /* the area under the curve; the visible part in the colours the eye sees */
+    shade(ctx, ax, rho, 0, 1, 3000, C('energy-density'), { alpha: 0.1 });
     for (let nm = 380; nm < 780; nm += 4) {
-      const x0 = ax.X(nm), x1 = ax.X(nm + 4);
-      ctx.save(); ctx.fillStyle = F.fact(spectral(nm + 2)); ctx.globalAlpha = 0.9; ctx.fillRect(x0, box.b + 2, x1 - x0 + 0.5, 12); ctx.restore();
+      const x0 = ax.X(nm), x1 = ax.X(nm + 4), y = ax.Y(Math.min(10, rho(nm + 2)));
+      ctx.save(); ctx.fillStyle = F.fact(spectral(nm + 2)); ctx.globalAlpha = 0.85; ctx.fillRect(x0, y, x1 - x0 + 0.5, box.b - y); ctx.restore();
     }
-    [3000, 4000, 5000].forEach((tb) => { if (Math.abs(tb - t) > 1) plot(ctx, ax, (l) => planck(l, tb) / Y, alpha(C('energy-density'), 0.3), { w: 3 }); });
-    dashed(ctx, ax, (l) => rj(l, t) / Y, C('energy-density'));
-    shade(ctx, ax, (l) => planck(l, t) / Y, 0, 1, 3000, C('energy-density'), { alpha: 0.12 });
-    plot(ctx, ax, (l) => planck(l, t) / Y, C('energy-density'), { w: 5 });
-    /* the peak, Wien's law */
-    const yp = planck(lmax, t) / Y;
-    if (lmax < 3000) {
-      line(ctx, ax.X(lmax), ax.Y(yp), ax.X(lmax), box.b, alpha(C('wavelength'), 0.8), 3, [4, 8]);
-      dot(ctx, ax.X(lmax), ax.Y(Math.min(yp, 10)), C('energy-density'), true, 9);
-    }
-    /* which curve is which, on the curves themselves at long wavelength */
-    const lx = 2200;
-    text(ctx, 'Rayleigh-Jeans', ax.X(lx) + 6, ax.Y(Math.min(rj(lx, t) / Y, 9.6)) - 16, C('energy-density'), { size: 20 });
-    text(ctx, 'observed', ax.X(lmax) + 30, ax.Y(Math.min(yp, 10)) - 6, C('energy-density'), { size: 20, weight: 600 });
-    /* the glowing body */
-    const gx = W - 130, gy = 300;
-    ctx.save(); ctx.beginPath(); ctx.arc(gx, gy, 70, 0, 2 * Math.PI); ctx.fillStyle = F.fact(glow(t)); ctx.fill();
-    ctx.lineWidth = 2; ctx.strokeStyle = PAL.rule; ctx.stroke(); ctx.restore();
-    text(ctx, `${fmt(t, 0)} K`, gx, gy + 104, C('temperature'), { size: 22, weight: 600, align: 'center' });
-    tex(d.readout, `\\klmax = \\dfrac{b}{\\kT} = \\dfrac{2.898\\times10^{-3}\\ \\text{m·K}}{${fmt(t, 0)}\\ \\text{K}} = ${fmt(lmax, 0)}\\ \\text{nm}`);
+    /* the classical prediction, secondary */
+    dashed(ctx, ax, (l) => rj(l, t) / Y, alpha(PAL.ink, 0.45), 2);
+    /* the path the peak walks as T changes (Wien's law), the book's line through the peaks */
+    ctx.save(); ctx.strokeStyle = alpha(C('wavelength'), 0.55); ctx.lineWidth = 3; ctx.beginPath();
+    for (let tt = 2400; tt <= 5600; tt += 25) { const l = WIEN / tt * 1e9, x = ax.X(l), y = ax.Y(planck(l, tt) / Y); if (tt === 2400) ctx.moveTo(x, y); else ctx.lineTo(x, y); }
+    ctx.stroke(); ctx.restore();
+    { const l = WIEN / 5600 * 1e9; text(ctx, 'path of the peak', ax.X(l) + 16, ax.Y(planck(l, 5600) / Y) + 8, alpha(C('wavelength'), 0.85), { size: 20 }); }
+    plot(ctx, ax, rho, C('energy-density'), { w: 5 });
+    /* the peak */
+    const yp = rho(lmax);
+    line(ctx, ax.X(lmax), ax.Y(yp), ax.X(lmax), box.b, alpha(C('wavelength'), 0.9), 3, [4, 8]);
+    dot(ctx, ax.X(lmax), ax.Y(yp), C('energy-density'), true, 12);
+    /* names, on the curves */
+    const l9 = Math.pow(8 * Math.PI * kB * t / (8 * Y), 0.25) * 1e9;
+    text(ctx, 'Rayleigh-Jeans', ax.X(l9) + 14, ax.Y(8), alpha(PAL.ink, 0.6), { size: 20 });
+    text(ctx, 'measured', ax.X(1600), ax.Y(rho(1600)) - 18, C('energy-density'), { size: 20, weight: 600 });
+    /* the hole in the oven, glowing the colour of the body at this temperature */
+    const gx = ax.X(2450), gy = ax.Y(6.9), s = 112, r = 70;
+    ctx.save(); ctx.fillStyle = F.fact(OVEN); ctx.beginPath(); ctx.roundRect(gx - s, gy - s, 2 * s, 2 * s, 14); ctx.fill();
+    const g = ctx.createRadialGradient(gx, gy, r * 0.6, gx, gy, r * 1.45);
+    g.addColorStop(0, alpha(F.fact(glow(t)), 0.55)); g.addColorStop(1, alpha(F.fact(glow(t)), 0));
+    ctx.fillStyle = g; ctx.beginPath(); ctx.arc(gx, gy, r * 1.45, 0, 2 * Math.PI); ctx.fill();
+    ctx.fillStyle = F.fact(glow(t)); ctx.beginPath(); ctx.arc(gx, gy, r, 0, 2 * Math.PI); ctx.fill(); ctx.restore();
+    text(ctx, `the hole glows at ${fmt(t, 0)} K`, gx, gy + s + 28, C('temperature'), { size: 20, weight: 600, align: 'center' });
+    hits.length = 0;
+    hits.push({ x: ax.X(lmax), y: ax.Y(yp), r: 16, name: `the peak, λmax = ${fmt(lmax, 0)} nm` });
+    hits.push({ x: gx, y: gy, r: s, name: `a hole in an oven at ${fmt(t, 0)} K, in the colour it glows` });
+    hits.push({ x: ax.X(WIEN / 3000 * 1e9), y: ax.Y(planck(WIEN / 3000 * 1e9, 3000) / Y), r: 14, name: 'the path of the peak as the temperature changes' });
+    tex(d.readout, `\\klmax = \\dfrac{b}{\\kT} \\\\ \\klmax = \\dfrac{2.898\\times10^{-3}\\ \\text{m·K}}{${fmt(t, 0)}\\ \\text{K}} = ${fmt(lmax, 0)}\\ \\text{nm}`);
   }
   register(d.fig, { update: () => {}, draw });
 })();
 
 /* ---------- Figure 1.1.4: the fourth power ----------
-   x: temperature 0 to 400 K; y: radiated power 0 to 1400 W/m^2 (sigma 400^4 = 1452). The book's four
-   marks (ice, a room, a body, boiling water) stand on the curve. */
+   x: temperature 0 to 400 K; y: radiated power 0 to 1600 W/m^2 (sigma 400^4 = 1452).
+   The point is the sixteen: a column at T and a column at T/2 stand on the curve, one sixteen times the
+   other. The book's everyday temperatures are the slider's detents. */
 (function () {
   const d = sim('sim-stefan', 560);
-  const T = ctl(d.controls, { label: '\\kT', cls: 'temperature', min: 0, max: 400, step: 1, value: 305, unit: 'K', dec: 0,
-    detents: [273, 293, 310, 373], snap: true });
-  const marks = [[273, 'ice'], [293, 'room'], [310, 'body'], [373, 'boiling water']];
+  const T = ctl(d.controls, { label: '\\kT', cls: 'temperature', min: 0, max: 400, step: 1, value: 300, unit: 'K', dec: 0,
+    detents: [{ v: 273, label: 'ice' }, 293, { v: 310, label: 'body' }, { v: 373, label: 'boiling' }], snap: true });
   const hits = [];
   F.hover(d.stage, () => hits);
+  const P = (x) => SIGMA * Math.pow(x, 4);
+  /* two significant figures below 100 W/m^2, whole watts above */
+  const fp = (v) => v <= 0 ? '0' : v >= 100 ? fmt(v, 0) : fmt(v, Math.max(0, 1 - Math.floor(Math.log10(v))));
   function draw() {
     const { ctx, W } = begin(d.c);
-    const t = T.v, p = SIGMA * Math.pow(t, 4);
-    topline(ctx, `A surface at $\\kT = ${fmt(t, 0)}\\ \\text{K}$ radiates $\\kP = ${fmt(p, 0)}\\ \\text{W/m}^2$. Doubling the temperature multiplies the power by sixteen.`);
-    const box = { l: 150, r: W - 90, t: 110, b: 470 };
-    const ax = axes(ctx, box, [0, 400], [0, 1400], { nx: 8, ny: 7, xl: 'temperature T (K)', yl: 'radiated power P (W/m²)', xc: C('temperature'), yc: C('power') });
-    plot(ctx, ax, (x) => SIGMA * Math.pow(x, 4), C('power'), { w: 5 });
-    hits.length = 0;
-    marks.forEach(([tm, name]) => {
-      const x = ax.X(tm), y = ax.Y(SIGMA * Math.pow(tm, 4));
-      dot(ctx, x, y, C('power'), false, 8);
-      hits.push({ x, y, r: 14, name: `${name}, ${tm} K` });
-    });
-    line(ctx, ax.X(t), ax.Y(p), ax.X(t), box.b, alpha(PAL.ink, 0.4), 2, [4, 8]);
-    line(ctx, box.l, ax.Y(p), ax.X(t), ax.Y(p), alpha(PAL.ink, 0.4), 2, [4, 8]);
+    const t = T.v, p = P(t), th = t / 2, ph = P(th);
+    topline(ctx, t < 1 ? `At $\\kT = 0$ K a surface radiates nothing.` : `Doubling $\\kT$ from ${fmt(th, th % 1 ? 1 : 0)} K to ${fmt(t, 0)} K raises $\\kP$ from ${fp(ph)} to ${fp(p)} W/m², sixteen times as much.`);
+    const box = { l: 150, r: W - 90, t: 120, b: 470 };
+    const ax = axes(ctx, box, [0, 400], [0, 1600], { nx: 8, ny: 8, xl: 'temperature T (K)', yl: 'radiated power P (W/m²)', xc: C('temperature'), yc: C('power') });
+    const col = (x, y, a) => { const w = 34, top = ax.Y(y); ctx.save(); ctx.fillStyle = alpha(C('power'), a); ctx.fillRect(ax.X(x) - w / 2, top, w, box.b - top); ctx.restore(); };
+    col(th, ph, 0.75); col(t, p, 0.75);
+    plot(ctx, ax, P, C('power'), { w: 5 });
+    line(ctx, box.l, ax.Y(p), ax.X(t) - 17, ax.Y(p), alpha(PAL.ink, 0.4), 2, [4, 8]);
+    dot(ctx, ax.X(th), ax.Y(ph), C('power'), false, 9);
     dot(ctx, ax.X(t), ax.Y(p), C('power'), true, 10);
-    tex(d.readout, `\\kP = \\sigma \\kT^4 = (5.67\\times10^{-8}\\ \\text{W m}^{-2}\\text{K}^{-4})(${fmt(t, 0)}\\ \\text{K})^4 = ${fmt(p, 0)}\\ \\text{W/m}^2`);
+    if (t >= 40) text(ctx, '½T', ax.X(th), ax.Y(ph) - 24, C('temperature'), { size: 20, weight: 600, align: 'center' });
+    hits.length = 0;
+    hits.push({ x: ax.X(th), y: ax.Y(ph), r: 16, name: `half the temperature, ${fmt(th, 1)} K: ${fp(ph)} W/m²` });
+    hits.push({ x: ax.X(t), y: ax.Y(p), r: 16, name: `${fmt(t, 0)} K: ${fp(p)} W/m²` });
+    tex(d.readout, `\\kP = \\sigma \\kT^4 \\\\ \\kP = (5.67\\times10^{-8}\\ \\text{W m}^{-2}\\text{K}^{-4})(${fmt(t, 0)}\\ \\text{K})^4 = ${fp(p)}\\ \\text{W/m}^2`);
   }
   register(d.fig, { update: () => {}, draw });
 })();
