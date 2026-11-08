@@ -80,7 +80,7 @@ const otherSign = (cw) => { const l = lightOf(cw), far = Math.abs(lightOf(PAL.in
 (function () {
   const d = F.sim(root, 'sim-orbitals', 740);
   const cy = cycle(() => 5, 1.2);
-  const PAIR = F.choice(d.controls, { label: '\\text{orbitals}', key: 'pair', options: [{ value: '1s', label: '1s + 1s' }, { value: '2p', label: '2p_z + 2p_z' }], value: '1s', aria: 'which atomic orbitals combine', onInput: () => cy.reset() });
+  const PAIR = F.choice(d.controls, { label: '\\text{orbitals}', key: 'pair', options: [{ value: '1s', label: '1s + 1s' }, { value: '2p', label: '$2p_z + 2p_z$' }], value: '1s', aria: 'which atomic orbitals combine', onInput: () => cy.reset() });
   const SIGN = F.choice(d.controls, { label: '\\text{combination}', key: 'sign', options: [{ value: '+', label: 'sum' }, { value: '-', label: 'difference' }], value: '+', aria: 'whether the orbitals are added or subtracted' });
   const N1 = 1 / Math.sqrt(Math.PI), N2 = 1 / (4 * Math.sqrt(2 * Math.PI));
   /* phi centred at c on the axis, its positive lobe pointing the way s (+1 or −1) */
@@ -113,26 +113,25 @@ const otherSign = (cw) => { const l = lightOf(cw), far = Math.abs(lightOf(PAL.in
     const fa = phi(pair, -R / 2, 1), fb = phi(pair, R / 2, -1), psi = (x, y) => Cn * (fa(x, y) + sg * fb(x, y));
     const cw = C('wavefunction'), cn = otherSign(cw), cp = C('probability-density'), cl = C('length');
     /* the map */
-    const mb = { l: 140, r: 1260, t: 100, b: 340 };
+    const mb = { l: 140, r: 1260, t: 135, b: 355 };
     const sx = (mb.r - mb.l) / (2 * g.X), ycell = (mb.b - mb.t) / sx / 2, cell = 7;
     ctx.save();
     for (let px = mb.l; px < mb.r; px += cell) for (let py = mb.t; py < mb.b; py += cell) {
       const x = (px + cell / 2 - mb.l) / sx - g.X, y = ycell - (py + cell / 2 - mb.t) / sx;
       const v = psi(x, y) / g.M, a = Math.min(1, Math.abs(v));
-      if (a < 0.02) continue;
-      ctx.fillStyle = alpha(v > 0 ? cw : cn, 0.85 * Math.pow(a, 0.75)); ctx.fillRect(px, py, cell + 0.5, cell + 0.5);
+      ctx.globalAlpha = 0.85 * Math.pow(a, 0.75); ctx.fillStyle = v > 0 ? cw : cn; ctx.fillRect(px, py, cell + 0.5, cell + 0.5);
     }
     ctx.restore();
     ctx.save(); ctx.strokeStyle = PAL.rule; ctx.lineWidth = 1.5; ctx.strokeRect(mb.l, mb.t, mb.r - mb.l, mb.b - mb.t); ctx.restore();
     const XA = mb.l + (g.X - R / 2) * sx, XB = mb.l + (g.X + R / 2) * sx, YM = (mb.t + mb.b) / 2;
     dot(ctx, XA, YM, PAL.ink, true, 7); dot(ctx, XB, YM, PAL.ink, true, 7);
-    text(ctx, 'A', XA, mb.t - 16, PAL.ink, { size: 20, weight: 600, align: 'center' });
-    text(ctx, 'B', XB, mb.t - 16, PAL.ink, { size: 20, weight: 600, align: 'center' });
+    text(ctx, 'A', XA, YM + 28, PAL.ink, { size: 20, weight: 600, align: 'center', bg: PAL.panel });
+    text(ctx, 'B', XB, YM + 28, PAL.ink, { size: 20, weight: 600, align: 'center', bg: PAL.panel });
     hits.push({ x: XA, y: YM, r: 14, name: 'nucleus A' }, { x: XB, y: YM, r: 14, name: 'nucleus B' });
     hits.push({ x: (XA + XB) / 2, y: YM, r: 18, name: `the midpoint: ψ = ${fmt(psi(0, 0), 3)}` });
     F.legend(ctx, { l: mb.l, r: mb.r, t: mb.t - 60, b: mb.t - 30 }, [{ s: 'ψ in the plane of the nuclei', ramp: [cn, PAL.panel, cw], ends: ['ψ < 0', 'ψ > 0'] }], { corner: 'top', panel: false });
     /* the slice along the axis */
-    const box = { l: 140, r: 1260, t: 420, b: 680 };
+    const box = { l: 140, r: 1260, t: 440, b: 690 };
     const ax = axes(ctx, box, [-g.X, g.X], [-g.Y2, g.Y2], { nx: pair === '1s' ? 7 : 7, ny: 4, xl: 'position along the axis (a₀)', yl: 'ψ and ψ² (atomic units)', xc: cl, yc: cw, fx: (v) => fmt(v, 0) });
     line(ctx, box.l, ax.Y(0), box.r, ax.Y(0), alpha(PAL.ink, 0.3), 2);
     const dens = (x) => psi(x, 0) * psi(x, 0) * (pair === '1s' ? 1 : 10);

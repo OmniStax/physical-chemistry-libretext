@@ -480,3 +480,28 @@ equation and no words); Stern–Gerlach's readout writes μ_z plain, not in the
 magnetic-moment colour; the figref into Example 8.8.12 opens the figure at
 its current state, not the chart the sentence names; Chapter 7's summary has
 the same plain cross-page anchor (`#5.summary-harmonic-oscillator`).
+
+## Chapter 10 prep · 2026-11-08
+
+Prep only, no section built. Fetched Chapter 10's images (44, into
+`media/ch10/`), converted the landing page (one paragraph: an `intro/` page),
+10.1–10.7, the summary page 10.S (to `ch10/summary/`) and the empty 10.E; wrote
+`ch10/exploration.md`, `ch10/config.md` (agreed on Chapter 1's terms),
+`ch10/chapter.json` (7 sections, the intro and summary records, 86 variables) and
+merged `ch10/book-rows.json`: no new type, 41 symbols, 46 concepts, 72 edges.
+Drafts made for the intro, 10.1–10.7 and the summary.
+
+Found: every page holds its own text (no empty or stray page); 10.E is empty.
+Exercises: 1 box (10.6.1, unkeyed, for an AI solution); 7 AI exercises proposed,
+one per section. 9 derivations to build. Figures: 2 moving (electrons through
+the PES analyzer; π electrons filling a ring to 4n + 2), four still 3D point-cloud
+scenes (hybrid sets, water's hybrids, water's orbitals, ethylene's σ and π), the
+Walsh diagram, the Franck–Condon band and the spectrum from orbital energies
+still, the rest still or kept.
+
+Tool fix: `lt2md.py` drops elements styled `display:none` (10.5's hidden MathML
+printed as "Ψ = 1 2 ( ϕ 1 + ϕ 2 ) …"); Chapters 1–9 reconverted to a scratch
+folder, all 101 source.md byte-identical. `check:content`: no errors from the book
+or Chapter 10 (one warning, 9.12's Figure 9.12.11). Open for the orchestrator: the
+two duplicated printed figure numbers (10.2.4, 10.3.5) and the CC BY-NC figures on
+10.6's CC BY-SA page.

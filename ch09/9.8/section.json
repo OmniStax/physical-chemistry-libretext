@@ -1,0 +1,173 @@
+{
+ "id": "9.8",
+ "module": "13460",
+ "chapter": "9",
+ "title": "Molecular-Orbital Theory Does not Predict a Stable Diatomic Helium Molecule",
+ "short": "Bond order and He₂",
+ "lead": "Bond order counts the net bonding electrons in a molecular orbital diagram and predicts which species hold together. The section applies it to the molecules and ions built from 1s orbitals, ending with the helium dimer.",
+ "objectives": [
+  "Using bond order as a metric for the existance of molecules"
+ ],
+ "summary_html": "",
+ "notes": "The book names no author for this page, which is shared under CC BY-NC-SA 4.0; Figure 9.8.1 is printed as CC BY-SA-NC with no author, and Example 9.8.1's two diagrams, which the book gives no credit for, are folded into it.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "high"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "high"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The exercise and its key are the book's; its Bloom level and concept tags were chosen by AI.",
+ "figures": [
+  {
+   "id": "sim-1s-diagram",
+   "kind": "sim",
+   "number": "9.8.1",
+   "originals": [
+    "/media/ch09/346419-Figure_9.8.1_MO_levels_for_diatomics.jpg",
+    "/media/ch09/124528-Figure_1.png",
+    "/media/ch09/124529-Figure_2.png"
+   ],
+   "original_caption": "Molecular Orbital Energy-Level Diagrams for Diatomic Molecules with Only 1s Atomic Orbitals. (a) The H2+ ion, (b) the He2+ ion, and (c) the He2 molecule are shown here. (CC BY-SA-NC; anonymous)",
+   "draws": [
+    "energy"
+   ],
+   "conventions": [
+    "e-"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "high",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "sim-he2-potential",
+   "kind": "sim",
+   "number": "9.8.2",
+   "withheld": "The book's Figure 9.8.2 is a plot from INSPIRE after Przybytek and coworkers (2010) whose licence the book does not state; the figure here solves the same problem on Aziz and Slaman's LM2M2 helium potential (1991).",
+   "original_caption": "The weak helium-helium Van der Waals potential decrease leads to the particle probability density distribution leaking more into the classically forbidden region (i..e, tunneling). This effect allows the wavefunction to extend to sizes of fullerenes, the diameter of DNA and even small viruses ($\\mathrm{He_2}$ potential and wavefunction taken from Przybytek 2010), while the classical turning point is located at 13.6 Å, the overall wavefunction extends to more than 200 Å. (Inspire; http://inspirehep.net/record/1415151/plots)",
+   "draws": [
+    "energy",
+    "length",
+    "probability-density"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "high",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "bond-order",
+   "concept": "bond-order",
+   "verb": "introduces"
+  },
+  {
+   "span": "bond-order",
+   "concept": "bond-order-and-stability",
+   "verb": "introduces"
+  },
+  {
+   "span": "bond-order",
+   "concept": "filling-mo-diagram",
+   "verb": "uses"
+  },
+  {
+   "span": "bond-order",
+   "concept": "mo-energy-level-diagram",
+   "verb": "uses"
+  },
+  {
+   "span": "the-helium-dimer",
+   "concept": "helium-dimer-instability",
+   "verb": "introduces"
+  },
+  {
+   "span": "the-helium-dimer",
+   "concept": "antibonding-destabilization",
+   "verb": "introduces"
+  },
+  {
+   "span": "the-helium-dimer",
+   "concept": "van-der-waals-helium-dimer",
+   "verb": "introduces"
+  },
+  {
+   "span": "the-helium-dimer",
+   "concept": "h2plus-energy-curve",
+   "verb": "uses"
+  },
+  {
+   "span": "conclusion",
+   "concept": "antibonding-destabilization",
+   "verb": "reinforces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "e1",
+   "source_id": "exr:9.8.1",
+   "source_number": "Exercise 9.8.1",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "bond-order",
+   "prompt": "<p><strong>The $\\mathrm{H_2^{2−}}$ Ion</strong></p><p>Use a molecular orbital energy-level diagram to predict the valence-electron configuration and bond order of the $\\mathrm{H_2^{2−}}$ ion. Is this a stable species?</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "source",
+    "solution": "<p>$\\mathrm{H_2^{2−}}$ has a valence electron configuration of $\\left (\\sigma _{1s} \\right )^{2}\\left (\\sigma _{1s}^{\\star } \\right )^{2}$ with a bond order of 0. It is therefore predicted to be unstable.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "e1",
+   "concept": "bond-order"
+  },
+  {
+   "exercise": "e1",
+   "concept": "bond-order-and-stability"
+  },
+  {
+   "exercise": "e1",
+   "concept": "filling-mo-diagram"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-he2plus",
+   "kind": "correction",
+   "html": "Figure 9.8.1b and the paragraph are about He<sub>2</sub><sup>+</sup>, the ion with three valence electrons; He<sub>2</sub><sup>2+</sup> has two and is the subject of Example 9.8.1."
+  },
+  {
+   "id": "c-he2-config",
+   "kind": "correction",
+   "html": "With two electrons in each orbital the configuration is $\\left(\\sigma_{1s}\\right)^{2}\\left(\\sigma^{*}_{1s}\\right)^{2}$, as Table 9.8.1 gives it."
+  },
+  {
+   "id": "c-binding",
+   "kind": "correction",
+   "html": "The measured binding energy of He<sub>2</sub> is about 1.1 mK, or $9 \\times 10^{-6}$ kJ/mol (Grisenti and coworkers, 2000), and the LM2M2 potential of Figure 9.8.2 gives 1.3 mK; the $4.6 \\times 10^{-5}$ kJ/mol printed here and in Table 9.8.1 is about five times too large. Either way the bond is some forty million times weaker than H<sub>2</sub>'s 436 kJ/mol, not 5,000 times."
+  }
+ ]
+}

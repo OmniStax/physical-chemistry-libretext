@@ -86,7 +86,7 @@ const halfTex = (n) => (n % 2 ? `\\tfrac{${n}}{2}` : String(n / 2));
    bonds. np_y behaves as np_x turned a quarter turn about the axis, as
    the text says, and is not a separate choice. Schematic orbitals: Slater
    functions r e^-r for s and sqrt3 x e^-r for p (one exponent, unit 1/zeta),
-   nuclei 3.5 apart. 4000 points drawn from |psi|^2 as in 9.5: an atom at
+   nuclei 4 apart. 4000 points drawn from |psi|^2 as in 9.5: an atom at
    random, r from r^4 e^-2r (a gamma variate), the direction uniform for s
    and by rejection on cos^2 for p, kept with probability
    (a +- b)^2 / 2(a^2 + b^2). Scene axes: the internuclear axis z is the
@@ -99,7 +99,7 @@ const halfTex = (n) => (n % 2 ? `\\tfrac{${n}}{2}` : String(n / 2));
 ===================================================================== */
 (function () {
   const d = F.sim(root, 'sim-p-clouds');
-  const R = 3.5, BX = 5, BY = 7, NPTS = 4000;
+  const R = 4, BX = 5, BY = 7.5, NPTS = 4000;
   const S3 = F.space3d(d, { box: [[-BX, BX], [-BY, BY], [-BX, BX]], h: 520, turn: -1.95, tilt: 0.3, fit: 2.5, pitch: [-85 * Math.PI / 180, 85 * Math.PI / 180], spin: 'off', zoom: false });
   const P = F.choice(d.controls, { label: '\\text{pair}', key: 'pair', options: [{ value: 'pz', label: '$np_z$ and $np_z$' }, { value: 'px', label: '$np_x$ and $np_x$' }, { value: 'sp', label: '$ns$ and $np_z$' }], value: 'pz', aria: 'the two atomic orbitals combined' });
   const Q = F.choice(d.controls, { label: '\\text{combination}', key: 'combination', options: [{ value: 'b', label: 'bonding' }, { value: 'a', label: 'antibonding' }], value: 'b', aria: 'the bonding or the antibonding combination' });
@@ -222,12 +222,12 @@ const halfTex = (n) => (n % 2 ? `\\tfrac{${n}}{2}` : String(n / 2));
   const ORB = [
     { id: 's', b: true, lab: (n) => `σ_{${n}s}`, tx: (n) => `\\sigma_{${n}s}` },
     { id: 'ss', b: false, lab: (n) => `σ*_{${n}s}`, tx: (n) => `\\sigma^{*}_{${n}s}` },
-    { id: 'z', b: true, lab: (n) => `σ_{${n}p_z}`, tx: (n) => `\\sigma_{${n}p_z}` },
+    { id: 'z', b: true, lab: (n) => `σ_{${n}p}`, tx: (n) => `\\sigma_{${n}p_z}` },
     { id: 'px', b: true, lab: (n) => `π_{${n}p}`, tx: (n) => `\\pi_{${n}p}`, pair: 'py' },
     { id: 'py', b: true },
     { id: 'qx', b: false, lab: (n) => `π*_{${n}p}`, tx: (n) => `\\pi^{*}_{${n}p}`, pair: 'qy' },
     { id: 'qy', b: false },
-    { id: 'zs', b: false, lab: (n) => `σ*_{${n}p_z}`, tx: (n) => `\\sigma^{*}_{${n}p_z}` },
+    { id: 'zs', b: false, lab: (n) => `σ*_{${n}p}`, tx: (n) => `\\sigma^{*}_{${n}p_z}` },
   ];
   const GROUPS = { O: [['s'], ['ss'], ['z'], ['px', 'py'], ['qx', 'qy'], ['zs']], N: [['s'], ['ss'], ['px', 'py'], ['z'], ['qx', 'qy'], ['zs']] };
   /* the electrons in order: [orbital id, 'u' or 'd'] */

@@ -63,9 +63,8 @@ const bo = (b) => (b % 1 ? fmt(b, 1) : String(b));
     nb.forEach((r, i) => { const x = bx.X(r[2]), y = bx.Y((r[3] - r[4]) / 2); if (i) ctx.lineTo(x, y); else ctx.moveTo(x, y); }); ctx.stroke(); ctx.restore();
     SP.forEach((r) => {
       const ord = (r[3] - r[4]) / 2, v = r[idx], conf = `${r[3]} bonding and ${r[4]} antibonding valence electrons`;
-      const dx = r[7] && r[2] === 14 ? 0 : 0;
       if (v != null) {
-        dot(ctx, ax.X(r[2]) + dx, ax.Y(v), col, !r[7], r[7] ? 9 : 10);
+        dot(ctx, ax.X(r[2]), ax.Y(v), col, !r[7], r[7] ? 9 : 10);
         hits.push({ x: ax.X(r[2]), y: ax.Y(v), r: 14, name: `${r[1]}: ${isR ? fmt(v, v % 1 ? 1 : 0) + ' pm' : fmt(v, 0) + ' kJ/mol'}, bond order ${bo(ord)}` });
       }
       dot(ctx, bx.X(r[2]), bx.Y(ord), PAL.ink, !r[7], r[7] ? 9 : 8);

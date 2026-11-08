@@ -36,7 +36,7 @@ const overlap = (R) => Math.exp(-R) * (1 + R + R * R / 3);
   const BX = 4, BZ = 6, NPTS = 3500;
   const S3 = F.space3d(d, { box: [[-BX, BX], [-BZ, BZ], [-BX, BX]], h: 520, turn: -1.95, tilt: 0.32, fit: 2.4, pitch: [-85 * Math.PI / 180, 85 * Math.PI / 180], spin: 'off', zoom: false });
   const K = F.choice(d.controls, { label: '\\text{orbital}', key: 'orbital', options: [{ value: 'sum', label: '$\\sigma_{1s}$' }, { value: 'diff', label: '$\\sigma^{*}_{1s}$' }], value: 'sum', aria: 'the molecular orbital drawn: the sum or the difference of the two 1s orbitals' });
-  const Rs = ctl(d.controls, { label: '\\kR', cls: 'length', key: 'R', min: 53, max: 212, step: 0.1, value: 105.8, unit: 'pm', dec: 0, aria: 'the distance between the two nuclei in picometres', detents: [105.8], snap: true });
+  const Rs = ctl(d.controls, { label: '\\kR', cls: 'length', key: 'R', min: 53, max: 212, step: 0.01, value: 105.84, unit: 'pm', dec: 0, aria: 'the distance between the two nuclei in picometres', detents: [105.84], snap: true });
   const leg = F.makeCanvas(d.stage, 56);
   const gc = F.makeCanvas(d.stage, 330);
   const made = new Map();

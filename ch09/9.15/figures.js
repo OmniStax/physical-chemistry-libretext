@@ -44,7 +44,7 @@ const otherSign = (cw) => { const l = lightOf(cw), far = Math.abs(lightOf(PAL.in
     const cp = alpha(C('wavefunction'), 0.75), cm = alpha(otherSign(C('wavefunction')), 0.75), st = 6;
     for (let X = box.l; X < box.r; X += st) for (let Yc = box.t; Yc < box.b; Yc += st) {
       const v = f((X + st / 2 - cx) / sc, -(Yc + st / 2 - cy) / sc), a = Math.min(1, Math.abs(v) / fmax);
-      if (a < 0.15) continue;
+      if (a < 0.3) continue;
       ctx.fillStyle = v > 0 ? cp : cm; ctx.fillRect(X - 0.5, Yc - 0.5, st + 1, st + 1);
     }
   }
@@ -60,7 +60,7 @@ const otherSign = (cw) => { const l = lightOf(cw), far = Math.abs(lightOf(PAL.in
       ctx.save(); field(ctx, (x, y) => psi(o, x, y), box, sc, cx, cy, fmax); ctx.restore();
       line(ctx, box.l, cy, box.r, cy, alpha(PAL.ink, 0.35), 2);
       const lobes = o.p ? [[-R, 0.8], [-R, -0.8], [R, 0.8], [R, -0.8]] : o.sg > 0 ? [[0, 0.75]] : [[-R - 0.6, 0], [R + 0.6, 0]];
-      lobes.forEach(([x, y]) => text(ctx, sgn(psi(o, x, y)), cx + x * sc + (o.p ? 44 : 0), cy - y * sc, PAL.ink, { size: 30, weight: 600, align: 'center', base: 'middle' }));
+      lobes.forEach(([x, y]) => text(ctx, sgn(psi(o, x, y)), cx + x * sc + (o.p ? 60 : 0), cy - y * sc, PAL.ink, { size: 30, weight: 600, align: 'center', base: 'middle' }));
       [-1, 1].forEach((k) => { dot(ctx, cx + k * R * sc, cy, PAL.ink, true, 7); text(ctx, k < 0 ? 'A' : 'B', cx + k * R * sc, cy + 30, PAL.ink, { size: 22, weight: 600, align: 'center' }); });
       hits.push({ x: cx - R * sc, y: cy, r: 14, name: 'nucleus A' }, { x: cx + R * sc, y: cy, r: 14, name: 'nucleus B' });
       const P = o.p ? [-R - 0.2, 0.9] : [-R - 0.5, 0.4];
@@ -100,7 +100,7 @@ const otherSign = (cw) => { const l = lightOf(cw), far = Math.abs(lightOf(PAL.in
       });
       if (o.p) {
         topline(ctx, 'Reflected in a plane through both nuclei, one orbital of the π pair keeps its sign (+) and the other changes it (−).');
-        tex(d.readout, `\\hat{\\sigma}_v\\,${o.t}^{(a)} = +${o.t}^{(a)} \\\\ \\hat{\\sigma}_v\\,${o.t}^{(b)} = -${o.t}^{(b)}`);
+        tex(d.readout, `\\hat{\\sigma}_v\\,{${o.t}}^{(a)} = +{${o.t}}^{(a)} \\\\ \\hat{\\sigma}_v\\,{${o.t}}^{(b)} = -{${o.t}}^{(b)}`);
       } else {
         topline(ctx, `Seen down the axis, ${o.s} is round, so reflection in any plane through both nuclei leaves it unchanged (+).`);
         tex(d.readout, `\\hat{\\sigma}_v\\,${o.t} = +${o.t}`);

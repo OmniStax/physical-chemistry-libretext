@@ -70,7 +70,7 @@ const sim = (id, H) => F.sim(root, id, H);
       for (let i = 0; i < m.deg; i++) line(ctx, x0 + i * (w + gap), y, x0 + i * (w + gap) + w, y, col, 6);
       text(ctx, m.n, x0 - 18, y, PAL.ink, { size: 22, align: 'right', base: 'middle', bg: PAL.panel });
       /* the share on A and on B */
-      const bx = XM + 90, bw = 90, bh = 12;
+      const bx = XM + (m.deg === 2 ? 200 : 90), bw = 90, bh = 12;
       ctx.save(); ctx.fillStyle = cA; ctx.fillRect(bx, y - bh / 2, bw * (1 - m.cB), bh); ctx.fillStyle = cBc; ctx.fillRect(bx + bw * (1 - m.cB), y - bh / 2, bw * m.cB, bh); ctx.restore();
       hits.push({ x: XM, y, r: 44, name: `${m.h}: ${fmt(m.E, 1)} eV, ${fmt(100 * (1 - m.cB), 0)}% on A and ${fmt(100 * m.cB, 0)}% on B` });
     });

@@ -14,13 +14,13 @@ const TAU = 2 * Math.PI;
 (function () {
   const d = sim('sim-coupled', 640);
   const MR = ctl(d.controls, { label: '\\kmone/\\kmtwo', cls: 'mass', min: 0, max: Math.log10(2000), step: 0.001, value: Math.log10(1836),
-    fmt: (lg) => fmt(Math.pow(10, lg), Math.pow(10, lg) < 10 ? 1 : 0), detents: [{ v: 0, label: 'equal' }, { v: Math.log10(1836), label: 'proton/electron' }], snap: true,
+    fmt: (lg) => { const v = Math.pow(10, lg); return Math.abs(v - 1836) < 3 ? '1836' : fmt(v, v < 10 ? 1 : 0); }, detents: [{ v: 0, label: 'equal' }, { v: Math.log10(1836), label: 'proton/electron' }], snap: true,
     aria: 'the ratio of the heavy mass to the light mass', key: 'ratio', onInput: () => cy.reset() });
   const KR = ctl(d.controls, { label: 'k_2/k_1', cls: 'force-constant', min: 0.5, max: 2, step: 0.05, value: 1, dec: 2, detents: [1], snap: true,
     aria: 'the stiffness of the second spring over the first', key: 'springs', onInput: () => cy.reset() });
   const X0 = [1, 1.35], SLOW_TURNS = 1.5, LOOP_S = 7;
   function modes() {
-    const rho = Math.pow(10, MR.v), m2 = 1 / rho, k2 = KR.v;
+    const r10 = Math.pow(10, MR.v), rho = Math.abs(r10 - 1836) < 3 ? 1836 : r10, m2 = 1 / rho, k2 = KR.v;
     const a = 1 + k2, b = -k2, c = -k2 / m2, e = k2 / m2;
     const tr = a + e, det = a * e - b * c, disc = Math.sqrt(Math.max(0, tr * tr / 4 - det));
     const w2 = [tr / 2 - disc, tr / 2 + disc];                       /* slow, fast */
@@ -138,10 +138,10 @@ const TAU = 2 * Math.PI;
   const E = (r, th) => 2 * DE * Math.pow(1 - Math.exp(-AA * (r - RE)), 2) + 0.5 * KT * Math.pow((th - TE) * Math.PI / 180, 2);
   const xr = (r) => (r - 0.075) / 0.085, yt = (th) => (th - 60) / 90, ze = (e) => Math.min(CAP, e) / CAP * ZS;
   const rOf = (x) => 0.075 + 0.085 * x, tOf = (y) => 60 + 90 * y;
-  const S = F.space3d(d, { box: [[0, 1], [0, 1], [0, ZS]], h: 500, turn: -2.3, tilt: 0.5, fit: 2.4, pitch: [0.12, Math.PI / 2], spin: 'off', zoom: false });
+  const S = F.space3d(d, { box: [[0, 1], [0, 1], [0, ZS]], h: 500, turn: -0.7, tilt: 0.55, fit: 1.75, pitch: [0.12, Math.PI / 2], spin: 'off', zoom: false });
   const cut = F.makeCanvas(d.stage, 360);
   const CUT = F.choice(d.controls, { label: '\\text{slice}', options: [{ value: 'r', label: 'along r, θ fixed' }, { value: 't', label: 'along θ, r fixed' }], value: 'r', aria: 'which way the slice runs through the point' });
-  const RR = ctl(d.controls, { label: 'r', cls: 'length', min: 0.08, max: 0.155, step: 0.0005, value: 0.0958, unit: 'nm', dec: 4, detents: [{ v: 0.0958, label: 'rₑ' }], snap: true, aria: 'the O-H bond length' });
+  const RR = ctl(d.controls, { label: 'r', cls: 'length', min: 0.08, max: 0.155, step: 0.0002, value: 0.0958, unit: 'nm', dec: 4, detents: [{ v: 0.0958, label: 'rₑ' }], snap: true, aria: 'the O-H bond length' });
   const TH = ctl(d.controls, { label: '\\theta', cls: 'angle', min: 65, max: 145, step: 0.5, value: 104.5, unit: '°', dec: 1, detents: [{ v: 104.5, label: 'θₑ' }], snap: true, aria: 'the H-O-H angle' });
   const hits = []; F.hover(d.stage, () => hits, cut);
   function draw() {
@@ -155,14 +155,14 @@ const TAU = 2 * Math.PI;
     S.set('frame', [
       { k: 'line', pts: [[0, 0, 0], [1, 0, 0], [1, 1, 0], [0, 1, 0], [0, 0, 0]], color: 'guide', w: 2 },
       { k: 'line', pts: [[0, 0, 0], [0, 0, ZS]], color: 'guide', w: 2 },
-      { k: 'label', s: 'r (nm)', p: [0.5, -0.14, 0], color: cl },
-      { k: 'label', s: '0.08', p: [xr(0.08), -0.06, 0], cls: 'tick' }, { k: 'label', s: '0.16', p: [1, -0.06, 0], cls: 'tick' },
-      { k: 'label', s: 'θ (°)', p: [1.16, 0.5, 0], color: ca },
-      { k: 'label', s: '60', p: [1.06, 0, 0], cls: 'tick' }, { k: 'label', s: '150', p: [1.06, 1, 0], cls: 'tick' },
-      { k: 'label', s: 'E (eV)', p: [-0.04, -0.04, ZS + 0.06], color: ce },
+      { k: 'label', s: 'r (nm)', p: [0.5, -0.2, 0], color: cl, cls: 'bare' },
+      { k: 'label', s: '0.08', p: [xr(0.08), -0.09, 0], cls: 'tick' }, { k: 'label', s: '0.16', p: [1, -0.09, 0], cls: 'tick' },
+      { k: 'label', s: 'θ (°)', p: [-0.22, 0.5, 0], color: ca, cls: 'bare' },
+      { k: 'label', s: '60', p: [-0.09, 0.02, 0], cls: 'tick' }, { k: 'label', s: '150', p: [-0.09, 1, 0], cls: 'tick' },
+      { k: 'label', s: 'E (eV)', p: [0, 0, ZS + 0.08], color: ce, cls: 'bare' },
       { k: 'dot', p: [xr(RE), yt(TE), 0], color: 'muted', r: 6, name: 'below the lowest point: water\'s shape, 0.0958 nm and 104.5°' },
     ]);
-    S.headline(`The lowest point is water's shape, $r = 0.0958$ nm and $\\theta = 104.5°$; the point sits ${fmt(e, 2)} eV above it.`);
+    S.headline(e < 0.005 ? `The point sits at the bottom, water's shape: $r = 0.0958$ nm and $\\theta = 104.5°$.` : `The point sits ${fmt(e, 2)} eV above the bottom, water's shape at $r = 0.0958$ nm and $\\theta = 104.5°$.`);
     /* the slice, flat */
     const { ctx } = begin(cut);
     const box = { l: 150, r: 1320, t: 50, b: 290 };
