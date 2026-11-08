@@ -5,9 +5,11 @@
  "title": "The Harmonic Oscillator Wavefunctions involve Hermite Polynomials",
  "short": "Oscillator wavefunctions",
  "lead": "The harmonic oscillator's Schrödinger equation is solved by changing to a dimensionless coordinate and writing each wavefunction as a polynomial times a Gaussian. The polynomials are the Hermite polynomials, and the wavefunctions say where a vibrating bond is likely to be found.",
- "objectives": [],
+ "objectives": [
+  "The Equation for a Harmonic-Oscillator Model of a Diatomic Molecule Contains the Reduced Mass of the Molecule"
+ ],
  "summary_html": "",
- "notes": "Adapted from Hanson, Harvey, Sweeney and Zielinski's Quantum States of Atoms and Molecules (Zielinski et al.) under CC BY-NC-SA 4.0. The page's one learning objective, a copy of Section 5.2's title, is left out, and Exercise 5.4.1, printed in Section 5.4, is set here because it compares the wavefunctions drawn here with the classical oscillator.",
+ "notes": "Adapted from Hanson, Harvey, Sweeney and Zielinski's Quantum States of Atoms and Molecules (Zielinski et al.) under CC BY-NC-SA 4.0. Exercise 5.4.1, printed in Section 5.4, is set here because it compares the wavefunctions drawn here with the classical oscillator.",
  "ai": {
   "text": [
    {

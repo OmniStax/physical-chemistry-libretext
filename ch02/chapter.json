@@ -421,7 +421,8 @@
       "sym": "theta",
       "meaning": "the polar angle on the circular membrane",
       "unit": "rad",
-      "section": "2.5"
+      "section": "2.5",
+      "type": "angle"
     },
     {
       "sym": "J_m",

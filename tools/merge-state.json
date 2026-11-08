@@ -281,5 +281,43 @@
       "eps_i"
     ],
     "types": []
+  },
+  "ch07": {
+    "symbols": [
+      "I_1",
+      "I_2",
+      "E_true",
+      "E_trial",
+      "h_1",
+      "h_2",
+      "Psi_tot",
+      "psi_ela",
+      "psi_elb",
+      "E_na",
+      "E_nb",
+      "zeta",
+      "Z_eff",
+      "psi_trial",
+      "psi_true",
+      "varphi_orb",
+      "a_i",
+      "a_j",
+      "phi_j",
+      "H_ij",
+      "S_ij",
+      "varphi_1s",
+      "c_j",
+      "zeta_j",
+      "H0_hat",
+      "H1_hat",
+      "E_n0",
+      "E_n1",
+      "E_ni",
+      "lambda_pt",
+      "c_mn",
+      "V_o",
+      "eps_c"
+    ],
+    "types": []
   }
 }

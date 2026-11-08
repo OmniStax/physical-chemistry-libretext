@@ -21,7 +21,7 @@ const signed = (m) => (m > 0 ? `+${m}` : m < 0 ? `−${-m}` : '0');
   const d = F.sim(root, 'sim-sphere');
   const B = 1.25;
   const S = F.space3d(d, { box: [[-B, B], [-B, B], [-B, B]], h: 560, turn: -0.7, tilt: 0.38, fit: 3.3, spin: 'off', zoom: false });
-  const TH = ctl(d.controls, { label: '\\theta', cls: 'angle', key: 'theta', min: 0, max: 180, step: 1, value: 50, unit: '°', dec: 0, aria: 'the polar angle theta in degrees' });
+  const TH = ctl(d.controls, { label: '\\ktheta', cls: 'angle', key: 'theta', min: 0, max: 180, step: 1, value: 50, unit: '°', dec: 0, aria: 'the polar angle theta in degrees' });
   const PH = ctl(d.controls, { label: '\\kvarphi', cls: 'angle', key: 'phi', min: 0, max: 360, step: 1, value: 40, unit: '°', dec: 0, aria: 'the azimuthal angle phi in degrees' });
   const ring = (f, n = 96) => Array.from({ length: n + 1 }, (_, i) => f(i / n));
   const shell = () => {
@@ -51,11 +51,11 @@ const signed = (m) => (m > 0 ? `+${m}` : m < 0 ? `−${-m}` : '0');
       { k: 'arrow', a: [0, 0, 0], b: P, color: cl, w: 5, name: 'the internuclear axis, of fixed length r₀' },
       { k: 'dot', p: P, color: cl, r: 9, name: `the point (r₀, θ = ${fmt(TH.v, 0)}°, φ = ${fmt(PH.v, 0)}°)` },
       { k: 'label', s: '$\\krzero$', p: out(P, 0.55).map((v, i) => v + (i === 2 ? 0.08 : 0)), color: cl },
-      ...(th > 2 * DEG ? [{ k: 'line', pts: thArc, color: ca, w: 4, name: 'θ, measured from the z axis' }, { k: 'label', s: '$\\theta$', p: out(mid(thArc), 1.45), color: ca }] : []),
+      ...(th > 2 * DEG ? [{ k: 'line', pts: thArc, color: ca, w: 4, name: 'θ, measured from the z axis' }, { k: 'label', s: '$\\ktheta$', p: out(mid(thArc), 1.45), color: ca }] : []),
       ...(ph > 2 * DEG && th > 2 * DEG && th < 178 * DEG ? [{ k: 'line', pts: phArc, color: ca, w: 4, name: 'φ, measured from the x axis in the xy-plane' }, { k: 'label', s: '$\\kvarphi$', p: out(mid(phArc), 1.45), color: ca }] : []),
     ]);
     const c = (v) => fmt(Math.abs(v) < 5e-3 ? 0 : v, 2);
-    tex(d.readout, `\\kx = \\krzero \\sin\\theta \\cos\\kvarphi = ${c(P[0])}\\,\\krzero \\\\ \\ky = \\krzero \\sin\\theta \\sin\\kvarphi = ${c(P[1])}\\,\\krzero \\\\ \\kz = \\krzero \\cos\\theta = ${c(P[2])}\\,\\krzero`);
+    tex(d.readout, `\\kx = \\krzero \\sin\\ktheta \\cos\\kvarphi = ${c(P[0])}\\,\\krzero \\\\ \\ky = \\krzero \\sin\\ktheta \\sin\\kvarphi = ${c(P[1])}\\,\\krzero \\\\ \\kz = \\krzero \\cos\\ktheta = ${c(P[2])}\\,\\krzero`);
   }
   register(d.fig, { update: () => {}, draw });
 })();
@@ -118,14 +118,14 @@ const signed = (m) => (m > 0 ? `+${m}` : m < 0 ? `−${-m}` : '0');
   const d = sim('sim-ylm', 600);
   const STATES = {
     '00': { J: 0, m: 0, f: () => 1 / (4 * Math.PI), y: '\\dfrac{1}{4\\pi}' },
-    '10': { J: 1, m: 0, f: (t) => 3 / (4 * Math.PI) * Math.cos(t) ** 2, y: '\\dfrac{3}{4\\pi}\\cos^2\\theta' },
-    '11': { J: 1, m: 1, f: (t) => 3 / (8 * Math.PI) * Math.sin(t) ** 2, y: '\\dfrac{3}{8\\pi}\\sin^2\\theta' },
-    '20': { J: 2, m: 0, f: (t) => 5 / (16 * Math.PI) * (3 * Math.cos(t) ** 2 - 1) ** 2, y: '\\dfrac{5}{16\\pi}(3\\cos^2\\theta - 1)^2' },
-    '21': { J: 2, m: 1, f: (t) => 15 / (8 * Math.PI) * (Math.sin(t) * Math.cos(t)) ** 2, y: '\\dfrac{15}{8\\pi}\\sin^2\\theta\\cos^2\\theta' },
-    '22': { J: 2, m: 2, f: (t) => 15 / (32 * Math.PI) * Math.sin(t) ** 4, y: '\\dfrac{15}{32\\pi}\\sin^4\\theta' },
+    '10': { J: 1, m: 0, f: (t) => 3 / (4 * Math.PI) * Math.cos(t) ** 2, y: '\\dfrac{3}{4\\pi}\\cos^2\\ktheta' },
+    '11': { J: 1, m: 1, f: (t) => 3 / (8 * Math.PI) * Math.sin(t) ** 2, y: '\\dfrac{3}{8\\pi}\\sin^2\\ktheta' },
+    '20': { J: 2, m: 0, f: (t) => 5 / (16 * Math.PI) * (3 * Math.cos(t) ** 2 - 1) ** 2, y: '\\dfrac{5}{16\\pi}(3\\cos^2\\ktheta - 1)^2' },
+    '21': { J: 2, m: 1, f: (t) => 15 / (8 * Math.PI) * (Math.sin(t) * Math.cos(t)) ** 2, y: '\\dfrac{15}{8\\pi}\\sin^2\\ktheta\\cos^2\\ktheta' },
+    '22': { J: 2, m: 2, f: (t) => 15 / (32 * Math.PI) * Math.sin(t) ** 4, y: '\\dfrac{15}{32\\pi}\\sin^4\\ktheta' },
   };
   const ST = F.select(d.controls, { label: '(J, m_J)', options: [['00', '(0, 0)'], ['10', '(1, 0)'], ['11', '(1, ±1)'], ['20', '(2, 0)'], ['21', '(2, ±1)'], ['22', '(2, ±2)']].map(([value, label]) => ({ value, label })), value: '10', aria: 'the state J and m_J', key: 'state' });
-  const TH = ctl(d.controls, { label: '\\theta', cls: 'angle', key: 'theta', min: 0, max: 180, step: 1, value: 45, unit: '°', dec: 0, aria: 'the angle theta from the z axis in degrees' });
+  const TH = ctl(d.controls, { label: '\\ktheta', cls: 'angle', key: 'theta', min: 0, max: 180, step: 1, value: 45, unit: '°', dec: 0, aria: 'the angle theta from the z axis in degrees' });
   const VIEW = F.choice(d.controls, { label: '\\text{view}', options: [{ value: '2d', label: '2D' }, { value: '3d', label: '3D' }], value: '2d', aria: 'a flat polar plot or the surface turned about z', key: 'view', onInput: () => show() });
   let hits = []; F.hover(d.stage, () => hits);
   let S = null, host = null;
@@ -174,7 +174,7 @@ const signed = (m) => (m > 0 ? `+${m}` : m < 0 ? `−${-m}` : '0');
       hits.push({ x: O.x + 200, y: O.y, r: 18, name: 'the xy-plane, θ = 90°' });
       F.legend(ctx, { l: 60, t: 60, r: 1340, b: 600 }, [{ s: '|Y|², distance from the center', color: cp, w: 5 }], { corner: 'tl' });
     }
-    tex(d.readout, `${sym} = ${s.y} \\\\ ${sym} = ${fmt(v, 3)} \\text{ at } \\theta = ${fmt(TH.v, 0)}^\\circ`);
+    tex(d.readout, `${sym} = ${s.y} \\\\ ${sym} = ${fmt(v, 3)} \\text{ at } \\ktheta = ${fmt(TH.v, 0)}^\\circ`);
   }
   register(d.fig, { update: () => {}, draw });
 })();

@@ -234,6 +234,11 @@
    "id": "morse-mass",
    "kind": "correction",
    "html": "For a diatomic molecule the mass $m$ in this Hamiltonian is the reduced mass $\\mu$ of Section 5.2."
+  },
+  {
+   "id": "book-colors",
+   "kind": "correction",
+   "html": "The colors are those of the book's Figure 5.3.2: red is the harmonic term alone, blue the exact potential and green the series to the cubic term. In Figure 5.3.2 above, the exact potential is the solid curve and each truncated series the dashed one."
   }
  ]
 }

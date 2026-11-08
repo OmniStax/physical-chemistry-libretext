@@ -1,0 +1,222 @@
+{
+ "id": "6.7",
+ "module": "13432",
+ "chapter": "6",
+ "title": "The Helium Atom Cannot Be Solved Exactly",
+ "short": "The helium atom",
+ "lead": "A second electron brings a new term into the Hamiltonian: the repulsion between the two electrons. Helium's Hamiltonian, and that of any atom with n electrons, leads to wavefunctions of all the electrons at once and to the orbital approximation, which gives each electron an orbital of its own.",
+ "objectives": [
+  "Adding electrons to the quantum hydrogen atom results in analytically unsolvable Schrödinger Equations (they exist, we just do not have analytical forms for them)",
+  "A basic aspect of the corresponding multi-electron Hamiltonians is that they are NOT separable with respect to the spatial coordinate of each electron",
+  "The solutions to multi-electron Schrödinger Equations are called multi-electron wavefunctions and they are often approximated as a product of single-electron wavefunctions (called the orbital approximation)."
+ ],
+ "summary_html": "",
+ "notes": "Written by Theresa Julia Zielinski and shared under CC BY-NC-SA 4.0; the book gives no credit for the image of Figure 6.7.1, which is shown under the page's licence.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "medium"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "medium"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The key of Exercise 6.7.2 is the book's, with corrections under its card. Exercise 6.7.1 has no key in the book, and its solution was written by AI.",
+ "figures": [
+  {
+   "id": "sim-helium",
+   "kind": "sim",
+   "number": "6.7.1",
+   "originals": [
+    "/media/ch06/51421-HeAtomReduced.gif"
+   ],
+   "original_caption": "(a) The nucleus (++) and electrons (e-) of the helium atom. (b) Equivalent reduced particles with the center of mass (approximately located at the nucleus) at the origin of the coordinate system. Note that $\\mu_1$ and $\\mu_2 ≈ m_e$.",
+   "widths": [
+    520
+   ],
+   "draws": [
+    "length",
+    "energy",
+    "charge"
+   ],
+   "conventions": [
+    "He",
+    "e-"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "medium",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [
+  {
+   "id": "electron-1",
+   "label": "electron 1",
+   "figures": [
+    "sim-helium"
+   ]
+  },
+  {
+   "id": "electron-2",
+   "label": "electron 2",
+   "figures": [
+    "sim-helium"
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "span": "multi-electron-hamiltonians",
+   "concept": "multi-electron-hamiltonian",
+   "verb": "introduces"
+  },
+  {
+   "span": "multi-electron-hamiltonians",
+   "concept": "electron-electron-repulsion",
+   "verb": "introduces"
+  },
+  {
+   "span": "multi-electron-hamiltonians",
+   "concept": "hamiltonian-operator",
+   "verb": "uses"
+  },
+  {
+   "span": "multi-electron-hamiltonians",
+   "concept": "coulomb-potential",
+   "verb": "uses"
+  },
+  {
+   "span": "multi-electron-hamiltonians",
+   "concept": "kinetic-energy-operator",
+   "verb": "uses"
+  },
+  {
+   "span": "multi-electron-hamiltonians",
+   "concept": "potential-energy-operator",
+   "verb": "uses"
+  },
+  {
+   "span": "multi-electron-wavefunctions",
+   "concept": "multi-electron-wavefunction",
+   "verb": "introduces"
+  },
+  {
+   "span": "multi-electron-wavefunctions",
+   "concept": "multi-electron-not-separable",
+   "verb": "introduces"
+  },
+  {
+   "span": "multi-electron-wavefunctions",
+   "concept": "orbital-approximation",
+   "verb": "introduces"
+  },
+  {
+   "span": "multi-electron-wavefunctions",
+   "concept": "atomic-orbital",
+   "verb": "reinforces"
+  },
+  {
+   "span": "multi-electron-wavefunctions",
+   "concept": "hydrogen-wavefunctions",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "e1",
+   "source_id": "exr:6.7.1",
+   "source_number": "Exercise 6.7.1",
+   "kind": "exercise",
+   "bloom": "Understand",
+   "place": {
+    "at": "end"
+   },
+   "cite": "multi-electron-hamiltonians",
+   "prompt": "<p>For the generalized multi-electron atom Hamiltonian (Equation 6.7.7):</p>\n<ol type=\"a\"><li>Explain the origin of each of the three summations.</li><li>What do these summations over (i.e., what is the origin of the summing index)?</li><li>Write expressions for $V_i(r_i)$ and $V_{ij}(r_{ij})$.</li></ol>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "Count what each sum has one term for: an electron, or a pair of electrons.",
+    "solution": "<p>a. The first sum is the kinetic energy: one term $-\\frac{\\hbar^2}{2m_e}\\nabla_i^2$ for each electron, since every electron moves. The second is the Coulomb attraction of each electron to the nucleus, one term for each electron. The third is the Coulomb repulsion between the electrons, one term for each pair of electrons, since repulsion acts between two particles.</p><p>b. The index $i$ runs over the electrons, $i = 1, 2, \\ldots, n$, in the first two sums. In the third, $i$ and $j$ both run over the electrons and the sum takes each pair $(i, j)$ with $i \\neq j$; each pair should be counted once, which is the same as summing over $i < j$.</p><p>c. With nuclear charge $Z$ (Equation 6.7.6) and $r_{ij} = |\\vec r_i - \\vec r_j|$,</p>$$ \\begin{aligned} V_i(r_i) &= -\\dfrac{Ze^2}{4\\pi\\epsilon_0 r_i} \\\\[4pt] V_{ij}(r_{ij}) &= \\dfrac{e^2}{4\\pi\\epsilon_0 r_{ij}} \\end{aligned} $$<p>The attraction is negative, between charges $+Ze$ and $-e$; the repulsion is positive, between two charges $-e$.</p>"
+   }
+  },
+  {
+   "id": "e2",
+   "source_id": "exr:6.7.2",
+   "source_number": "Exercise 6.7.2",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "multi-electron-hamiltonians",
+   "prompt": "<p>Boron is the fifth element of the periodic table (Z=5) and is located in Group 13.</p>\n<ol type=\"a\"><li>Write the multi-electron Hamiltonian for a $\\mathrm{^{11}B}$ atom.</li><li>Would it be any different for a $\\mathrm{^{11}B^{+}}$ ion?</li><li>Would it be any different for a $\\mathrm{^{10}B}$ atom?</li></ol>",
+   "answer": {
+    "type": "open",
+    "generated_by": "source",
+    "solution": "<p>a.</p>\n$$ \\hat {H}_{\\mathrm{B}}(\\vec r_1,\\vec r_2,\\vec r_3,\\vec r_4,\\vec r_5) = -\\dfrac {\\hbar ^2}{2m_e} \\sum_i^{5} \\nabla ^2_i + \\sum_i^{5} \\dfrac {-5e^2}{4 \\pi \\epsilon _0 r_i} + \\sum_{i \\ne j}^{5,5} \\dfrac {e^2}{4 \\pi \\epsilon _0 r_{ij}} $$\n<p><sup class=\"fn\" data-note=\"c-key-pairs\"></sup></p>\n<p>which expands to 20 terms<sup class=\"fn\" data-note=\"c-key-signs\"></sup></p>\n$$ \\begin{aligned} \\hat {H}_B(\\vec r_1,\\vec r_2,\\vec r_3,\\vec r_4,\\vec r_5) = &-\\dfrac {\\hbar ^2}{2m_e} \\nabla ^2_1 -\\dfrac {\\hbar ^2}{2m_e} \\nabla ^2_2 -\\dfrac {\\hbar ^2}{2m_e} \\nabla ^2_3 -\\dfrac {\\hbar ^2}{2m_e} \\nabla ^2_4 -\\dfrac {\\hbar ^2}{2m_e} \\nabla ^2_5 \\\\[4pt] &- \\dfrac {-5e^2}{4 \\pi \\epsilon _0 r_1} - \\dfrac {-5e^2}{4 \\pi \\epsilon _0 r_2} - \\dfrac {-5e^2}{4 \\pi \\epsilon _0 r_3} - \\dfrac {-5e^2}{4 \\pi \\epsilon _0 r_4} - \\dfrac {-5e^2}{4 \\pi \\epsilon _0 r_5} \\\\[4pt] &+ \\dfrac {e^2}{4 \\pi \\epsilon _0 r_{12}} + \\dfrac {e^2}{4 \\pi \\epsilon _0 r_{13}} + \\dfrac {e^2}{4 \\pi \\epsilon _0 r_{14}} +\\dfrac {e^2}{4 \\pi \\epsilon _0 r_{15}} + \\dfrac {e^2}{4 \\pi \\epsilon _0 r_{23}} +\\dfrac {e^2}{4 \\pi \\epsilon _0 r_{24}} + \\dfrac {e^2}{4 \\pi \\epsilon _0 r_{25}} + \\dfrac {e^2}{4 \\pi \\epsilon _0 r_{34}} + \\dfrac {e^2}{4 \\pi \\epsilon _0 r_{35}} + \\dfrac {e^2}{4 \\pi \\epsilon _0 r_{45}} \\end{aligned} $$\n<p>b. Yes, $\\mathrm{^{11}B^{+}}$ has one less electron than $\\mathrm{^{11}B}$. Its Hamiltonian is</p>\n$$ \\hat {H}_{\\mathrm{B^+}}(\\vec r_1,\\vec r_2,\\vec r_3,\\vec r_4 ) = -\\dfrac {\\hbar ^2}{2m_e} \\sum_i^{4} \\nabla ^2_i + \\sum_i^{4} \\dfrac {-5e^2}{4 \\pi \\epsilon _0 r_i} + \\sum_{i \\ne j}^{4,4} \\dfrac {e^2}{4 \\pi \\epsilon _0 r_{ij}} $$\n<p>or expanded to 14 terms<sup class=\"fn\" data-note=\"c-key-title\"></sup></p>\n$$ \\begin{aligned} \\hat {H}_B(\\vec r_1,\\vec r_2,\\vec r_3,\\vec r_4) = &-\\dfrac {\\hbar ^2}{2m_e} \\nabla ^2_1 -\\dfrac {\\hbar ^2}{2m_e} \\nabla ^2_2 -\\dfrac {\\hbar ^2}{2m_e} \\nabla ^2_3 -\\dfrac {\\hbar ^2}{2m_e} \\nabla ^2_4 \\\\[4pt] &- \\dfrac {-5e^2}{4 \\pi \\epsilon _0 r_1} - \\dfrac {-5e^2}{4 \\pi \\epsilon _0 r_2} - \\dfrac {-5e^2}{4 \\pi \\epsilon _0 r_3} - \\dfrac {-5e^2}{4 \\pi \\epsilon _0 r_4} \\\\[4pt] &+ \\dfrac {e^2}{4 \\pi \\epsilon _0 r_{12}} + \\dfrac {e^2}{4 \\pi \\epsilon _0 r_{13}} + \\dfrac {e^2}{4 \\pi \\epsilon _0 r_{14}} + \\dfrac {e^2}{4 \\pi \\epsilon _0 r_{23}} +\\dfrac {e^2}{4 \\pi \\epsilon _0 r_{24}} + \\dfrac {e^2}{4 \\pi \\epsilon _0 r_{34}} \\end{aligned} $$\n<p>c. No effect. Changing the number of neutrons in the nucleus does not affect kinetic nor potential energies of the electrons. The Hamilitonian for $\\mathrm{^{10}B}$ is identical to $\\mathrm{^{11}B}$. This is technically correct for this level of discussion, but as we we will see in later, if we expand the Hamiltonian with hyperfine structure the number of neutrons can play a role.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "e1",
+   "concept": "multi-electron-hamiltonian"
+  },
+  {
+   "exercise": "e1",
+   "concept": "electron-electron-repulsion"
+  },
+  {
+   "exercise": "e2",
+   "concept": "multi-electron-hamiltonian"
+  },
+  {
+   "exercise": "e2",
+   "concept": "electron-electron-repulsion"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-pairs",
+   "kind": "correction",
+   "html": "A sum over $i \\ne j$ takes every pair of electrons twice, as $(i, j)$ and as $(j, i)$. Each repulsion is counted once with $\\sum_{i < j} V_{ij}(r_{ij})$, or with $\\frac{1}{2}\\sum_{i \\ne j} V_{ij}(r_{ij})$."
+  },
+  {
+   "id": "c-eq-ref",
+   "kind": "correction",
+   "html": "The 2-electron Hamiltonian is Equation 6.7.2; Equation 6.7.1 is the general form $\\hat{H} = \\hat{T} + \\hat{V}$."
+  },
+  {
+   "id": "c-norm-n",
+   "kind": "correction",
+   "html": "The wavefunction is normalized to 1: $\\int |\\psi|^2\\, d\\tau = 1$, the integral running over the coordinates of every electron. What integrates to the number of electrons $n$ over all space is the electron density the wavefunction gives."
+  },
+  {
+   "id": "c-key-pairs",
+   "kind": "correction",
+   "html": "As in Equation 6.7.7, the sum over $i \\ne j$ would count each pair twice. The expansion below has the 10 pairs once each, $i < j$."
+  },
+  {
+   "id": "c-key-signs",
+   "kind": "correction",
+   "html": "The expanded attraction terms are printed $-\\dfrac{-5e^2}{4\\pi\\epsilon_0 r_i}$, which is positive, a repulsion. Each term is $-\\dfrac{5e^2}{4\\pi\\epsilon_0 r_i}$, as in the summed form. The same holds in the expansion for B⁺."
+  },
+  {
+   "id": "c-key-title",
+   "kind": "correction",
+   "html": "This is the Hamiltonian of the ion, $\\hat{H}_{\\mathrm{B^+}}$."
+  }
+ ]
+}

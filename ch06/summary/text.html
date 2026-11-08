@@ -1,0 +1,11 @@
+<section id="the-hydrogen-atom">
+<h2>The hydrogen atom's Hamiltonian and energies</h2>
+<p>For the hydrogen atom, we let the nucleus be defined as the center of our coordinate system, and the <span data-concept="hamiltonian-operator">Hamiltonian</span> becomes:</p>
+$$ \kH = -\frac{\hbar^2}{2\kme}\nabla^2 - \frac{\ke^2}{4\pi\epsilon_0\kr}, $$
+<p>where $\kr$ is the electron distance, $\nabla^2$ is in spherical coordinates as before, $\ke$ is the charge of the electron<sup class="fn" data-note="c-charge"></sup>, and the Coulombic term is negative to indicate that the proton-electron potential is attractive (i.e., the proton and electron have charges that are opposite in sign). The factor $4\pi\epsilon_0$ comes from using SI units; the factor disappears if using atomic units. The solution to this equation is tedious, but it turns out that the method of <span data-concept="separation-of-variables">separation of variables</span> can be used to solve this system in terms of radial and angular components:</p>
+$$ \kpsi(\kr,\theta,\phi) = \kRf(\kr)Y(\theta,\phi). $$
+<p>The angular solutions are the same as those for the rigid rotor: the <span data-concept="spherical-harmonics">spherical harmonics</span> $Y_l^m(\theta,\phi)$, so the <span data-concept="hydrogen-wavefunctions">hydrogen atom wavefunctions</span> have quantum numbers $l$ and $m_l$. You are already familiar with these from general chemistry, $l=0$ corresponds to an $s$ orbital, $l=1$ is a $p$ orbital, and so on.</p>
+<p>It is found that <span data-concept="hydrogen-energy-levels">the energy of the hydrogen atom depends only on a single quantum number $n$</span>, even though full specification of the wavefunction also requires the quantum numbers $l$ and $m_l$:</p>
+$$ \kE_n = -\frac{\ke^2}{8\pi\epsilon_0\kao n^2},\quad n=1,2,\ldots, $$
+<p>where $\kao$ is the <span data-concept="bohr-radius">Bohr radius</span>. <span data-concept="hydrogen-quantum-number-rules">The allowed quantum numbers are $n = 1,2,3,\ldots$, $0 \leq l \leq n$<sup class="fn" data-note="c-l-max"></sup>, and $0 \leq |m_l| \leq l$.</span></p>
+</section>

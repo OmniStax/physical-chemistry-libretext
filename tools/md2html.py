@@ -161,7 +161,24 @@ class Drafter:
         return "".join(out)
 
     def refs(self, s):
-        return re.sub(r"\[ref:eq:([^\]]+)\]", lambda m: self.eqnum.get(m.group(1), m.group(1)), s)
+        return re.sub(r"\[ref:eq:([^\]]+)\]", lambda m: self.eqnum.get(m.group(1)) or self.foreign(m.group(1)), s)
+
+    def foreign(self, lab):
+        """A \\ref to a label another page defines (7.S cites 5.S's Taylor expansion,
+        chap:intro:eq:taylorpotential): that page's number, found in the converted
+        source.md files, with a warning; the label itself where none defines it."""
+        for c in MODULES["chapters"]:
+            for folder, num in [(s["number"], s["number"]) for s in c["sections"]] + \
+                    ([("summary", c["summary"]["number"])] if c.get("summary") else []):
+                f = os.path.join(BOOK, c["dir"], folder, "source.md")
+                if not os.path.exists(f):
+                    continue
+                m = re.search(r"\{eq:" + re.escape(lab) + r"\} n=(\d+)", open(f).read())
+                if m:
+                    sys.stderr.write(f"warning: Equation {lab} is defined on {num}, not on this page\n")
+                    return f"{num}.{m.group(1)}"
+        sys.stderr.write(f"warning: Equation {lab} is defined on no page\n")
+        return lab
 
     MARK = re.compile(r"(?:\{eq:([^}]+)\} )?n=(\d+)")
 

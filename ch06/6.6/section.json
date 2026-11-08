@@ -1,0 +1,460 @@
+{
+ "id": "6.6",
+ "module": "13431",
+ "chapter": "6",
+ "title": "Orbital Angular Momentum and the p-Orbitals",
+ "short": "Orbital angular momentum",
+ "lead": "An electron on a classical circular orbit keeps a constant angular momentum. In the quantum atom the quantum number l sets its magnitude and m_l its component along a chosen axis, and the two together decide the shapes of the s, p and d orbitals and how their energies respond to a magnetic field.",
+ "objectives": [
+  "To relate the classical orbital angular momentum for an particle to the quantum equivalent",
+  "Characterize the mangnitude and orientation of orbital angular momentum for an electron in terms of quantum numbers"
+ ],
+ "summary_html": "",
+ "notes": "Adapted from Hanson, Harvey, Sweeney and Zielinski's Quantum States of Atoms and Molecules, Richard Bader (McMaster University) and Stack Exchange answers by Ben Norris and Loong, under CC BY-NC-SA 4.0.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "medium"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "medium"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercise on this section. Both exercises are new, written by AI for the concepts it leaves untested (Bohr's angular momentum against the 1s orbital's, and the nodal planes of the real p and d orbitals), and so are their solutions. Numeric answers accept a 2% tolerance.",
+ "figures": [
+  {
+   "id": "sim-orbit",
+   "kind": "sim",
+   "number": "6.6.1",
+   "originals": [
+    "/media/ch06/345619-6.6.1.svg"
+   ],
+   "original_caption": "The angular momentum vector for a classical model of the atom. (CC BY-NC; Ümit Kaya via LibreTexts)",
+   "draws": [
+    "length",
+    "velocity",
+    "angular-momentum",
+    "mass"
+   ],
+   "conventions": [
+    "p+",
+    "e-"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "medium",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "sim-orbitals",
+   "kind": "sim",
+   "number": "6.6.2",
+   "folds": [
+    "6.6.4"
+   ],
+   "originals": [
+    "/media/ch06/87245-Harmoniki_-_Copy.png",
+    "/media/ch06/87246-Harmoniki.png"
+   ],
+   "original_caption": "6.6.2: The appearance of the three 2p orbitals in three-dimensional space. (CC BY-SA 3.0; I, Sarxos). 6.6.4: The appearance of the 3d electron density distribution in three-dimensional space. (CC BY-SA 3.0; I, Sarxos)",
+   "widths": [
+    555,
+    888
+   ],
+   "draws": [
+    "wavefunction",
+    "length"
+   ],
+   "conventions": [
+    "p+"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "medium",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "sim-zeeman",
+   "kind": "sim",
+   "number": "6.6.3",
+   "originals": [
+    "/media/ch06/87284-300px-NMR_EPR.gif"
+   ],
+   "original_caption": "The orbiting electron with a non-zero $l$ value acts like a magnetic field with is no energetic difference for any particular orientation (only one energy state, on the left). However, in external magnetic field there is a high-energy state and a low-energy state depending on the relative orientations of the magnet to the external field. (CC SA-BY 3.0; Darekk2).",
+   "draws": [
+    "energy",
+    "angular-momentum"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "medium",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "classical-orbital-angular-momentum",
+   "concept": "torque",
+   "verb": "introduces"
+  },
+  {
+   "span": "classical-orbital-angular-momentum",
+   "concept": "central-force-conserves-angular-momentum",
+   "verb": "introduces"
+  },
+  {
+   "span": "classical-orbital-angular-momentum",
+   "concept": "orbital-angular-momentum",
+   "verb": "reinforces"
+  },
+  {
+   "span": "quantum-angular-momentum",
+   "concept": "conserved-means-quantized",
+   "verb": "introduces"
+  },
+  {
+   "span": "quantum-angular-momentum",
+   "concept": "s-orbital-zero-angular-momentum",
+   "verb": "introduces"
+  },
+  {
+   "span": "quantum-angular-momentum",
+   "concept": "hydrogen-node-count",
+   "verb": "introduces"
+  },
+  {
+   "span": "quantum-angular-momentum",
+   "concept": "p-orbital-shape",
+   "verb": "introduces"
+  },
+  {
+   "span": "quantum-angular-momentum",
+   "concept": "angular-momentum-magnitude",
+   "verb": "reinforces"
+  },
+  {
+   "span": "quantum-angular-momentum",
+   "concept": "atomic-orbital",
+   "verb": "reinforces"
+  },
+  {
+   "span": "quantum-angular-momentum",
+   "concept": "electron-density-distribution",
+   "verb": "uses"
+  },
+  {
+   "span": "quantum-angular-momentum",
+   "concept": "s-orbital-spherical",
+   "verb": "uses"
+  },
+  {
+   "span": "ml-and-magnetic-fields",
+   "concept": "zeeman-effect",
+   "verb": "introduces"
+  },
+  {
+   "span": "ml-and-magnetic-fields",
+   "concept": "lz-quantization",
+   "verb": "reinforces"
+  },
+  {
+   "span": "ml-and-magnetic-fields",
+   "concept": "magnetic-quantum-number",
+   "verb": "reinforces"
+  },
+  {
+   "span": "ml-and-magnetic-fields",
+   "concept": "real-orbitals",
+   "verb": "reinforces"
+  },
+  {
+   "span": "ml-and-magnetic-fields",
+   "concept": "spherical-harmonics",
+   "verb": "uses"
+  },
+  {
+   "span": "d-orbitals",
+   "concept": "d-orbital-shape",
+   "verb": "introduces"
+  },
+  {
+   "span": "d-orbitals",
+   "concept": "orbital-letter-codes",
+   "verb": "reinforces"
+  },
+  {
+   "span": "d-orbitals",
+   "concept": "hydrogen-degeneracy",
+   "verb": "reinforces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "ai1",
+   "source_id": "For the state *n* = 1 discussed above",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "quantum-angular-momentum",
+   "prompt": "<p>In the Bohr model of Section 1.8, the electron of the ground state circles the nucleus at $r = a_0 = 52.9$ pm with a speed of $2.19 \\times 10^{6}$ m/s.</p><ol type=\"a\"><li>Find the magnitude of its angular momentum, $|\\vec{L}| = mvr$, in units of $\\hbar$.</li><li>What magnitude does Equation 6.6.1 give for an electron in the 1s orbital, in units of $\\hbar$?</li></ol>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 1.0,
+      "unit": "ħ",
+      "hint": "Multiply the mass of the electron, the speed and the radius, then divide by ħ = 1.055 × 10⁻³⁴ J s."
+     },
+     {
+      "part": "b",
+      "value": 0,
+      "unit": "ħ",
+      "tol": 0.01
+     }
+    ],
+    "solution": "<p>a. $|\\vec{L}| = mvr = (9.109 \\times 10^{-31}\\text{ kg})(2.19 \\times 10^{6}\\text{ m/s})(52.9 \\times 10^{-12}\\text{ m}) = 1.055 \\times 10^{-34}$ J s, which is $1.00\\,\\hbar$: Bohr's orbit carries one unit of angular momentum.</p><p>b. The 1s orbital has $n = 1$, so $l = 0$ and Equation 6.6.1 gives $|L| = \\sqrt{0(0+1)}\\,\\hbar = 0$. The two models disagree: the Schrödinger ground state has no angular momentum at all, and its density is spherical with its maximum at the nucleus rather than on a ring.</p>"
+   }
+  },
+  {
+   "id": "ai2",
+   "source_id": "The orbital has a node in this plane",
+   "kind": "exercise",
+   "bloom": "Analyze",
+   "place": {
+    "at": "end"
+   },
+   "cite": "d-orbitals",
+   "prompt": "<p>Using the real forms of the $2p_y$ and $3d_{xy}$ orbitals in Table 6.2.2, find the nodal planes of each orbital. How many nodes does each have, and does the count agree with $n - 1$?</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "Write the angular factor in Cartesian coordinates with $x = r\\sin\\theta\\cos\\phi$ and $y = r\\sin\\theta\\sin\\phi$.",
+    "solution": "<p>For $2p_y$ the angular factor is $\\sin\\theta\\sin\\phi$, so $\\psi_{2p_y}$ is proportional to $r\\sin\\theta\\sin\\phi\\,e^{-Zr/2a_0} = y\\,e^{-Zr/2a_0}$. The exponential never vanishes, so $\\psi = 0$ only where $y = 0$: one nodal plane, the $xz$-plane. That is $n - 1 = 1$ node.</p><p>For $3d_{xy}$ the angular factor is $\\sin^2\\theta\\sin 2\\phi = 2\\sin^2\\theta\\sin\\phi\\cos\\phi$, so $\\psi_{3d_{xy}}$ is proportional to $r^2\\sin^2\\theta\\sin 2\\phi\\,e^{-Zr/3a_0} = 2xy\\,e^{-Zr/3a_0}$. It vanishes where $x = 0$ or $y = 0$: two nodal planes, the $yz$-plane and the $xz$-plane, with the lobes between the axes. That is $n - 1 = 2$ nodes, and neither orbital has a radial node.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "ai1",
+   "concept": "s-orbital-zero-angular-momentum"
+  },
+  {
+   "exercise": "ai1",
+   "concept": "angular-momentum-magnitude"
+  },
+  {
+   "exercise": "ai1",
+   "concept": "orbital-angular-momentum"
+  },
+  {
+   "exercise": "ai2",
+   "concept": "p-orbital-shape"
+  },
+  {
+   "exercise": "ai2",
+   "concept": "d-orbital-shape"
+  },
+  {
+   "exercise": "ai2",
+   "concept": "hydrogen-node-count"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-mvr",
+   "kind": "correction",
+   "html": "The book prints the Greek letter $\\nu$ where it means the speed $v$: $|\\vec{L}| = mvr$."
+  },
+  {
+   "id": "c-bader-figure",
+   "kind": "correction",
+   "html": "Figure 6.6.2 shows the 2p orbitals, not the 1s. The comparison of the 1s, 2s and 3s orbitals belongs to a figure of the source this passage is adapted from, which the book does not print."
+  },
+  {
+   "id": "c-lobes-figure",
+   "kind": "correction",
+   "html": "The two lobes are drawn in Figure 6.6.2. Figure 6.6.3 shows the energy levels in a magnetic field."
+  },
+  {
+   "id": "c-norm",
+   "kind": "correction",
+   "html": "With $r/2$ these two functions are not normalized; normalized as $\\psi_{2,1,0}$ is, they are $\\psi_{2,1,\\pm 1} = \\mp\\dfrac{r}{\\sqrt{2}}\\sin\\theta\\, e^{\\pm i\\phi}R(r)$."
+  },
+  {
+   "id": "c-xy",
+   "kind": "correction",
+   "html": "The Cartesian coordinates carry the factor $r$: $x = r\\sin\\theta\\cos\\phi$ and $y = r\\sin\\theta\\sin\\phi$."
+  },
+  {
+   "id": "c-combination",
+   "kind": "correction",
+   "html": "With the functions of Equation 6.6.2, $m_l = +1$ is $-\\left(|p_x\\rangle + i|p_y\\rangle\\right)/\\sqrt{2}$ and $m_l = -1$ is $\\left(|p_x\\rangle - i|p_y\\rangle\\right)/\\sqrt{2}$: the $p_y$ part carries a factor $i$."
+  },
+  {
+   "id": "c-d-figure",
+   "kind": "correction",
+   "html": "Figure 6.6.4 shows the five 3d orbitals in three dimensions, not contours in a plane."
+  },
+  {
+   "id": "c-zeeman-caption",
+   "kind": "correction",
+   "figure": "sim-zeeman",
+   "html": "The image shows a magnet that takes two orientations in an external field, two levels, as an electron's spin does. A level of orbital angular momentum $l$ splits into $2l + 1$ levels, one for each $m_l$, so three for $l = 1$. Read without its slip, the caption's first sentence says that with no external field the orientations have the same energy."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "px-py",
+   "what": "the real 2p orbitals from the m_l = ±1 functions",
+   "source": "Physical Chemistry (LibreTexts), 6.6 Orbital Angular Momentum and the p-Orbitals",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kpsi_{2,1,+1} = -\\dfrac{\\kr}{\\sqrt{2}}\\sin\\theta\\, e^{i\\phi}\\kRf(\\kr)",
+       "src": "(6.6.2)"
+      },
+      {
+       "tex": "\\kpsi_{2,1,-1} = \\dfrac{\\kr}{\\sqrt{2}}\\sin\\theta\\, e^{-i\\phi}\\kRf(\\kr)",
+       "src": "(6.6.2)"
+      },
+      {
+       "tex": "\\cos\\phi = \\dfrac{e^{i\\phi}+e^{-i\\phi}}{2}",
+       "src": "(6.6.3)"
+      },
+      {
+       "tex": "\\kx = \\kr\\sin\\theta\\cos\\phi",
+       "src": "5.8"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{p}{\\kpsi_{2p_x}} = \\mk{c}{\\dfrac{1}{\\sqrt{2}}\\left(\\kpsi_{2,1,-1}-\\kpsi_{2,1,+1}\\right)}",
+      "src": "6.6"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{p}{\\kpsi_{2p_x}} = \\mk{c}{\\dfrac{1}{\\sqrt{2}}\\left(\\dfrac{\\kr}{\\sqrt{2}}\\sin\\theta\\, e^{-i\\phi}\\kRf(\\kr)+\\dfrac{\\kr}{\\sqrt{2}}\\sin\\theta\\, e^{i\\phi}\\kRf(\\kr)\\right)}",
+       "uses": [
+        0,
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{p}{\\kpsi_{2p_x}} = \\mk{e}{\\dfrac{1}{2}\\left(e^{i\\phi}+e^{-i\\phi}\\right)}\\mk{s}{\\kr\\sin\\theta}\\,\\mk{R}{\\kRf(\\kr)}",
+       "uses": [],
+       "map": {
+        "c": [
+         "e",
+         "s",
+         "R"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{p}{\\kpsi_{2p_x}} = \\mk{x}{\\kr\\sin\\theta\\cos\\phi}\\,\\mk{R}{\\kRf(\\kr)}",
+       "uses": [
+        2
+       ],
+       "map": {
+        "e": "x",
+        "s": "x"
+       }
+      },
+      {
+       "tex": "\\mk{p}{\\kpsi_{2p_x}} = \\mk{x}{\\kx}\\,\\mk{R}{\\kRf(\\kr)}",
+       "uses": [
+        3
+       ]
+      }
+     ],
+     "src": "6.6",
+     "note": "The book writes $\\psi_{2p_x} = \\frac{1}{\\sqrt{2}}\\left(\\psi_{2,1,+1}-\\psi_{2,1,-1}\\right)$, which with the signs of Equation 6.6.2 gives $-xR(r)$, so the order is reversed here. It also writes $f(r)$ for $R(r)$, and $r/2$ for the normalized $r/\\sqrt{2}$."
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\kpsi_{2,1,+1} = -\\dfrac{\\kr}{\\sqrt{2}}\\sin\\theta\\, e^{i\\phi}\\kRf(\\kr)",
+       "src": "(6.6.2)"
+      },
+      {
+       "tex": "\\kpsi_{2,1,-1} = \\dfrac{\\kr}{\\sqrt{2}}\\sin\\theta\\, e^{-i\\phi}\\kRf(\\kr)",
+       "src": "(6.6.2)"
+      },
+      {
+       "tex": "\\sin\\phi = \\dfrac{e^{i\\phi}-e^{-i\\phi}}{2i}",
+       "src": "(6.6.3)"
+      },
+      {
+       "tex": "\\ky = \\kr\\sin\\theta\\sin\\phi",
+       "src": "5.8"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{p}{\\kpsi_{2p_y}} = \\mk{c}{\\dfrac{i}{\\sqrt{2}}\\left(\\kpsi_{2,1,+1}+\\kpsi_{2,1,-1}\\right)}",
+      "src": "6.6"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{p}{\\kpsi_{2p_y}} = \\mk{c}{\\dfrac{i}{\\sqrt{2}}\\left(-\\dfrac{\\kr}{\\sqrt{2}}\\sin\\theta\\, e^{i\\phi}\\kRf(\\kr)+\\dfrac{\\kr}{\\sqrt{2}}\\sin\\theta\\, e^{-i\\phi}\\kRf(\\kr)\\right)}",
+       "uses": [
+        0,
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{p}{\\kpsi_{2p_y}} = \\mk{e}{\\dfrac{1}{2i}\\left(e^{i\\phi}-e^{-i\\phi}\\right)}\\mk{s}{\\kr\\sin\\theta}\\,\\mk{R}{\\kRf(\\kr)}",
+       "uses": [],
+       "map": {
+        "c": [
+         "e",
+         "s",
+         "R"
+        ]
+       },
+       "cap": "Since $i = -1/i$, the factor $\\frac{i}{2}\\left(e^{-i\\phi}-e^{i\\phi}\\right)$ is $\\frac{1}{2i}\\left(e^{i\\phi}-e^{-i\\phi}\\right)$."
+      },
+      {
+       "tex": "\\mk{p}{\\kpsi_{2p_y}} = \\mk{y}{\\kr\\sin\\theta\\sin\\phi}\\,\\mk{R}{\\kRf(\\kr)}",
+       "uses": [
+        2
+       ],
+       "map": {
+        "e": "y",
+        "s": "y"
+       }
+      },
+      {
+       "tex": "\\mk{p}{\\kpsi_{2p_y}} = \\mk{y}{\\ky}\\,\\mk{R}{\\kRf(\\kr)}",
+       "uses": [
+        3
+       ]
+      }
+     ],
+     "src": "6.6",
+     "note": "The book writes $f(r)$ for $R(r)$."
+    }
+   ]
+  }
+ ]
+}

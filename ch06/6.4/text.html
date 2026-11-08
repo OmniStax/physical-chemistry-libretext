@@ -1,0 +1,49 @@
+<section id="orbitals-and-quantum-numbers">
+<h2>Orbitals and their quantum numbers</h2>
+<p>The solutions to the hydrogen atom Schrödinger equation discussed previously are functions that are products of a <strong><span data-concept="spherical-harmonics">spherical harmonic function</span></strong> and a <strong><span data-concept="radial-function">radial function</span></strong>.</p>
+$$ \kpsinlm (\kr, \theta , \kvarphi) = \underbrace{\kRnl (\kr)}_{radial} \underbrace{ \kYlm (\theta , \kvarphi)}_{angular} \tag{6.4.1} $$
+<p>The <span data-concept="hydrogen-wavefunctions">wavefunctions for the hydrogen atom</span> depend upon the three variables $\kr$, $\theta$, and $\kvarphi$ and the three quantum numbers $n$, $l$, and $m_l$. The variables give the position of the electron relative to the proton in spherical coordinates. The absolute square of the wavefunction, $| \kpsi (\kr, \theta , \kvarphi )|^2$, evaluated at $\kr$, $\theta$, and $\kvarphi$ gives the <span data-concept="probability-density">probability density</span> of finding the electron inside a differential volume $d \tau$, centered at the position specified by $\kr$, $\theta$, and $\kvarphi$.</p>
+<p>The quantum numbers $n$, $l$, and $m_l$ have names:</p>
+<ul><li>$n$ is called the <strong><span data-concept="principal-quantum-number">principal quantum number</span></strong>,</li><li>$l$ is called the <strong><span data-concept="angular-momentum-quantum-number">angular momentum quantum number</span></strong>, and</li><li>$m_l$ is called the <strong><span data-concept="magnetic-quantum-number">magnetic quantum number</span></strong> because the energy in a magnetic field depends upon $m_l$.</li></ul>
+<p>Often $l$ is called the azimuthal quantum number because it is a consequence of the $\theta$-equation, which involves the azimuthal angle $\Theta$<sup class="fn" data-note="c-azimuthal"></sup>, referring to the angle to the zenith.</p>
+<p><span data-concept="hydrogen-quantum-number-rules">The three quantum numbers have specific values</span> that are dictated by the physical constraints or boundary conditions imposed upon the Schrödinger equation: n must be an integer greater than 0, $l$ can have the values 0 to $n-1$, and $m_l$ can have $2l + 1$ values ranging from $-l$ to $+l$ in unit or integer steps. The values of the quantum number $l$ usually are <span data-concept="orbital-letter-codes">coded by a letter</span>: s means 0, p means 1, d means 2, f means 3; the next codes continue alphabetically (e.g., g means $l = 4$). The quantum numbers specify the quantization of physical quantities. The discrete energies of different states of the hydrogen atom are given by n, the magnitude of the angular momentum is given by $l$, and one component of the angular momentum (usually chosen by chemists to be the z-component) is given by $m_l$. <span data-concept="hydrogen-degeneracy">The total number of orbitals with a particular value of $n$ is $n^2$</span>.</p>
+</section>
+
+<section id="radial-part-of-the-wavefunction">
+<h2>Radial Part of the Wavefunction</h2>
+<p>The <span data-concept="radial-asymptotic-behavior">asymptotic behavior (i.e., far away from the nucleus) to the radial part of the wavefunction</span> is</p>
+$$ \kRf_\text{asymptotic} (\kr) \sim \exp \left(-\dfrac {\kr}{n} \kao \right) \tag{6.4.2} $$<sup class="fn" data-note="c-asymptotic"></sup>
+<p>where $n$ will turn out to be a quantum number and $\kao$ is the <span data-concept="bohr-radius">Bohr radius</span> (~<span data-type="length">52.9 pm</span>). Note that this function decreases exponentially with distance, in a manner similar to the decaying exponential portion of the <span data-concept="oscillator-wavefunctions">harmonic oscillator wavefunctions</span>, but with a different distance dependence, $r$ vs. $r^2$.</p>
+<p>The polynomials produced by the truncation of the power series are related to the <span data-concept="associated-laguerre-polynomials">associated Laguerre polynomials</span>, $L_n , _l(r)$, where the set of $c_i$ are constant coefficients.</p>
+$$ L_{n, l} (r) = \sum _{r=0}^{n-l-1} c_i r^i \tag{6.4.3} $$<sup class="fn" data-note="c-laguerre-sum"></sup>
+<p>These polynomials are identified by two indices or quantum numbers, $n$ and $l$. Physically acceptable solutions require that $n$ must be greater than or equal to $l +1$. The smallest value for $l$ is zero, so the smallest value for $n$ is 1. The angular momentum quantum number affects the solution to the radial equation because it appears in the radial differential equation, (Equation 6.4.1)<sup class="fn" data-note="c-radial-eq"></sup>.</p>
+<p><span data-concept="hydrogen-radial-functions">The $\kRf(\kr)$ functions that solve the radial differential Equation 6.4.1</span><sup class="fn" data-note="c-radial-eq2"></sup>, are products of the associated Laguerre polynomials and the exponential factor, multiplied by a normalization factor $(N_{n,l})$ and $\left (\dfrac {r}{a_0} \right ) ^l$.</p>
+$$ \kRf (\kr) = N_{n,l} \left ( \dfrac {\kr}{\kao} \right ) ^l L_{n,l} (\kr) e^{-\frac {\kr}{n {\kao}}} \tag{6.4.4} $$
+<p>The decreasing exponential term overpowers the increasing polynomial term so that the overall wavefunction exhibits the desired approach to zero at large values of $r$. The first six radial functions are provided in Table 6.4.1<sup class="fn" data-note="c-table-label"></sup>. Note that the functions in the table exhibit a dependence on $Z$, the atomic number of the nucleus. As discussed later in this chapter, other one electron systems have electronic states analogous to those for the hydrogen atom, and inclusion of the charge on the nucleus allows the same wavefunctions to be used for all one-electron systems. For hydrogen, $Z = 1$.</p>
+<div class="book-table">
+  <div class="tcap"><span class="eyebrow">Table 6.4.3</span><span>Radial functions for one-electron atoms and ions. $Z$ is the atomic number of the nucleus, and $\rho = \frac {Zr}{a_0}$, where $a_0$ is the Bohr radius and r is the radial variable.</span></div>
+  <table>
+    <thead><tr><th></th><th>$n$</th><th>$l$</th><th>$R_{n,l} (\rho)$</th></tr></thead>
+    <tbody>
+      <tr><td>$R_{10}$</td><td>1</td><td>0</td><td>$2 \left (\dfrac {Z}{a_0} \right ) ^{3/2} e^{-\rho}$</td></tr>
+      <tr><td>$R_{20}$</td><td>2</td><td>0</td><td>$\dfrac {1}{2 \sqrt {2}}\left (\dfrac {Z}{a_0} \right ) ^{3/2} (2 - \rho) e^{-\rho/2}$</td></tr>
+      <tr><td>$R_{21}$</td><td>2</td><td>1</td><td>$\dfrac {1}{2 \sqrt {6}}\left (\dfrac {Z}{a_0} \right ) ^{3/2} \rho e^{-\rho/2}$</td></tr>
+      <tr><td>$R_{30}$</td><td>3</td><td>0</td><td>$\dfrac {2}{81 \sqrt {3}}\left (\dfrac {Z}{a_0} \right ) ^{3/2} (27 - 18 \rho + 2\rho ^2) e^{-\rho/3}$</td></tr>
+      <tr><td>$R_{31}$</td><td>3</td><td>1</td><td>$\dfrac {1}{81 \sqrt {6}}\left (\dfrac {Z}{a_0} \right ) ^{3/2} (6 \rho + \rho ^2) e^{-\rho/3}$<sup class="fn" data-note="c-r31"></sup></td></tr>
+      <tr><td>$R_{32}$</td><td>3</td><td>2</td><td>$\dfrac {1}{81 \sqrt {30}}\left (\dfrac {Z}{a_0} \right ) ^{3/2} \rho ^2 e^{-\rho/3}$<sup class="fn" data-note="c-r32"></sup></td></tr>
+    </tbody>
+  </table>
+</div>
+</section>
+
+<section id="energy-levels">
+<h2>Energy levels and the Bohr model</h2>
+<p>The constraint that $n$ be greater than or equal to $l +1$ also <span data-concept="hydrogen-energy-levels">turns out to quantize the energy</span>, producing the same quantized expression for hydrogen atom energy levels that was obtained from the <span data-concept="bohr-energy-levels">Bohr model of the hydrogen atom</span>.</p>
+$$ \kEn = - \dfrac {\kmu \ke^4}{8 \epsilon ^2_0 h^2 n^2} $$
+<div class="note">
+<div class="eyebrow">Note</div>
+<h3>Bohr Theory vs. Schrödinger Theory</h3>
+<p>It is interesting to compare the results obtained by solving the Schrödinger equation with Bohr’s model of the hydrogen atom. There are <span data-concept="bohr-versus-schrodinger">several ways in which the Schrödinger and Bohr models differ</span>.</p>
+<ol><li>First, and perhaps most strikingly, the Schrödinger model does not produce well-defined orbits for the electron. The wavefunctions only give us the probability for the electron to be at various directions and distances from the proton.</li><li>Second, the quantization of angular momentum is different from that proposed by Bohr. Bohr proposed that the angular momentum is quantized in integer units of $\hbar$, while the Schrödinger model leads to an angular momentum of $\sqrt{(l (l +1)} \hbar$.</li><li>Third, the quantum numbers appear naturally during solution of the Schrödinger equation while Bohr had to postulate the existence of quantized energy states. Although more complex, the Schrödinger model leads to a better correspondence between theory and experiment over a range of applications that was not possible for the Bohr model.</li></ol>
+</div>
+</section>

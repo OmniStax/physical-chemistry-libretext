@@ -3,7 +3,7 @@
 Source: `source.md` (`python3 tools/convert.py 5.6`); draft from `python3 tools/md2html.py 5.6`.
 Status: built 2026-11-08 in the Chapter 5 job, without a review stop (config agreed).
 
-One "objective" (a copy of 5.2's title, dropped and named in `notes`), three
+One objective (a copy of 5.2's title, kept as the book prints it: the chapter pass restored it), three
 numbered figures (5.6.2 and 5.6.3 four panels each), nineteen numbered equations
 (5.6.1–5.6.19), eleven exercise boxes (one keyed), one note. Licence CC BY-NC-SA 4.0;
 authors Zielinski et al. (page tags).

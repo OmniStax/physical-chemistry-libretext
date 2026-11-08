@@ -12,7 +12,7 @@
 <h2>Introduction to Microwave Spectroscopy</h2>
 <p>The permanent electric dipole moments of polar molecules can couple to the electric field of electromagnetic radiation. <span data-concept="microwave-spectroscopy">This coupling induces transitions between the rotational states of the molecules.</span> The energies that are associated with these transitions are detected in the far infrared and microwave regions of the spectrum. For example, the microwave spectrum for carbon monoxide spans a frequency range of 100 to 1200 GHz, which corresponds to 3 - 40 $cm^{-1}$.</p>
 <p>The selection rules for the rotational transitions are derived from the transition moment integral by using the spherical harmonic functions and the appropriate dipole moment operator, $\hat {\mu}$.</p>
-$$ \kmuT = \int Y_{J_f}^{m_f*} \kmuhat Y_{J_i}^{m_i} \sin \theta \,d \theta\, d \varphi \tag{5.9.1} $$
+$$ \kmuT = \int Y_{J_f}^{m_f*} \kmuhat Y_{J_i}^{m_i} \sin \ktheta \,d \ktheta\, d \varphi \tag{5.9.1} $$
 <p>or in braket notation</p>
 $$ \kmuT = \langle Y_{J_f}^{m_f} | \kmuhat | Y_{J_i}^{m_i} \rangle \tag{5.9.2} $$
 <p>Evaluating the transition moment integral involves a bit of mathematical effort. This evaluation reveals that the transition moment depends on the square of the dipole moment of the molecule,<sup class="fn" data-note="c-square"></sup> $\mu ^2$ and the rotational quantum number, $J$, of the initial state in the transition,</p>
@@ -31,15 +31,16 @@ $$ \kEJ = J(J + 1) \dfrac {\hbar ^2}{2\kI} \tag{5.9.6} $$
 <h2>Microwave Transition Energies</h2>
 <p><span data-concept="rotational-transition-energies">The transition energies for absorption of radiation</span> are given by</p>
 <figure class="dv" id="drv-line-positions"></figure>
-<p>where $B$ is the <strong><span data-concept="rotational-constant">rotational constant</span></strong> for the molecule and is defined in terms of the <em>energy</em> of the absorbed photon</p>
-$$ B = \dfrac {\hbar ^2}{2\kI} \tag{5.9.10} $$
+<p>Since microwave spectroscopists use frequency units and infrared spectroscopists use wavenumber units when describing rotational spectra and energy levels, both $\knu$ and $\bar {\nu}$ are important to calculate.</p>
+<p>where $\kB$ is the <strong><span data-concept="rotational-constant">rotational constant</span></strong> for the molecule and is defined in terms of the <em>energy</em> of the absorbed photon</p>
+$$ \kB = \dfrac {\hbar ^2}{2\kI} \tag{5.9.10} $$
 <p>Often spectroscopists want to express the rotational constant in terms of <em>frequency</em> of the absorbed photon and do so by dividing Equation 5.9.10 by $h$</p>
-$$ \begin{aligned} B (\text{in freq}) &= \dfrac{B}{h} \\[4pt] &= \dfrac {h}{8\pi^2 \kmu \krzero^2} \end{aligned} \tag{5.9.11} $$
+$$ \begin{aligned} B (\text{in freq}) &= \dfrac{\kB}{h} \\[4pt] &= \dfrac {h}{8\pi^2 \kmu \krzero^2} \end{aligned} \tag{5.9.11} $$
 <p>More often, spectroscopists want to express the rotational constant in terms of <em>wavenumbers</em> ($\bar{\nu}$) of the absorbed photon by dividing Equation 5.9.10 by $hc$,</p>
-$$ \kBt = \dfrac{B}{hc} = \dfrac {h}{8\pi^2 c \kmu \krzero^2} \tag{5.9.12} $$
+$$ \kBt = \dfrac{\kB}{hc} = \dfrac {h}{8\pi^2 c \kmu \krzero^2} \tag{5.9.12} $$
 <p>The rotational constant depends on the distance ($R$)<sup class="fn" data-note="c-R"></sup> and the masses of the atoms (via the reduced mass) of the nuclei in the diatomic molecule.</p>
 <figure class="sim" id="sim-spectrum" data-figure="5.9.3 + 5.9.4" data-original="/media/ch05/15879-COrotspectrum.gif,/media/ch05/122130-Rotational_spectrum_example.png" data-original-caption="5.9.3: The rotation spectrum of ¹²C¹⁶O at 40 K. The peaks are tabulated in Table 5.9.1. 5.9.4: Energy levels and line positions calculated in the rigid rotor approximation. (CC BY-SA 3.0; Nrrw via Wikipedia)">
-  <div class="sim-head"><span class="eyebrow">Figure 5.9.3 + 5.9.4</span><span>Each $J \to J + 1$ absorption lands on the frequency axis at $2B(J + 1)$, so the predicted lines stand $2B$ apart; the hollow dots are the measured lines of Table 5.9.1. Change $\krzero$ and the whole pattern spreads or closes up.</span></div>
+  <div class="sim-head"><span class="eyebrow">Figure 5.9.3 + 5.9.4</span><span>Each $J \to J + 1$ absorption lands on the frequency axis at $2\kB(J + 1)$, so the predicted lines stand $2\kB$ apart; the hollow dots are the measured lines of Table 5.9.1. Change $\krzero$ and the whole pattern spreads or closes up.</span></div>
 </figure>
 <p>Figure 5.9.3 shows the rotational spectrum as a series of nearly equally spaced lines. The line positions $\nu _J$, line spacings, and the maximum absorption coefficients ( $\gamma _{max}$, the absorption coefficients associated with the specified line position) for each line in this spectrum are given here in Table 5.9.1.</p>
 <div class="book-table">
@@ -94,7 +95,7 @@ $$ \begin{aligned} R_{e} &=\sqrt{\frac{\hbar}{2 \pi \mu \Delta v}} \\[4pt] &= \s
 <figure class="sim" id="sim-stretch" data-figure="5.9.5" data-original="/media/ch05/267973-ezgif-3-69bd3a4fa05d.gif" data-original-caption="Two atoms connected by a vibrating bond. There is a rotation around the common center of mass, and oscillation in bond distance. (CC SA-BY 3.0; www.cleonis.nl).">
   <div class="sim-head"><span class="eyebrow">Figure 5.9.5</span><span>Raise $J$ and carbon monoxide spins faster. The bond, drawn a thousand times longer than it really stretches, grows, and the rotational constant read from each line of Table 5.9.1 falls.</span></div>
 </figure>
-<p>The effect of centrifugal stretching is smallest at low $J$ values, so a good estimate for $B$ can be obtained from the $J = 0$ to $J = 1$ transition. <span data-concept="bond-length-from-spectrum">From $B$, a value for the bond length of the molecule can be obtained</span> since the moment of inertia that appears in the definition of $B$ (Equation 5.9.10) is the reduced mass times the bond length squared. When the centrifugal stretching is taken into account quantitatively, the development of which is beyond the scope of the discussion here, a very accurate and precise value for B can be obtained from the observed transition frequencies because of their high precision. Rotational transition frequencies are routinely reported to 8 and 9 significant figures.</p>
+<p>The effect of centrifugal stretching is smallest at low $J$ values, so a good estimate for $\kB$ can be obtained from the $J = 0$ to $J = 1$ transition. <span data-concept="bond-length-from-spectrum">From $\kB$, a value for the bond length of the molecule can be obtained</span> since the moment of inertia that appears in the definition of $\kB$ (Equation 5.9.10) is the reduced mass times the bond length squared. When the centrifugal stretching is taken into account quantitatively, the development of which is beyond the scope of the discussion here, a very accurate and precise value for B can be obtained from the observed transition frequencies because of their high precision. Rotational transition frequencies are routinely reported to 8 and 9 significant figures.</p>
 </div>
 <p>As we have just seen, quantum theory successfully predicts the line spacing in a rotational spectrum. An additional feature of the spectrum is the line intensities. The lines in a rotational spectrum do not all have the same intensity, as can be seen in Figure 5.9.3 and Table 5.9.1. This is related to the populations of the initial and final states. This aspect of spectroscopy will be discussed in more detail in the following chapters</p>
 </section>

@@ -113,8 +113,8 @@ const Bh = (r) => H_ / (8 * Math.PI ** 2 * MU * AMU * r * r);
     }
     LINES.forEach((nu, j) => { const x = ax.X(nu / 1000); dot(ctx, x, ax.Y(GAMMA[j]), PAL.ink, false, 8); hits.push({ x, y: ax.Y(GAMMA[j]), r: 10, name: `the measured line J = ${j} → ${j + 1}, ${fmt(nu / 1000, 2)} GHz` }); });
     F.legend(ctx, ax, [{ s: 'predicted line, height γ_max', color: cf, w: 6 }, { s: 'measured line (Table 5.9.1)', kind: 'dot', color: PAL.ink }], { corner: 'tr' });
-    topline(ctx, `$2B/h = ${fmt(2 * b, 2)}$ GHz: the first line, and the gap between every pair of lines.`);
-    tex(d.readout, `\\dfrac{B}{h} = \\dfrac{h}{8\\pi^2 \\kmu \\krzero^2} = ${fmt(b, 2)}\\text{ GHz} \\\\ \\knu = 2\\dfrac{B}{h}(J_i + 1) = ${fmt(2 * b, 2)}\\text{ GHz},\\ ${fmt(4 * b, 2)}\\text{ GHz},\\ ${fmt(6 * b, 2)}\\text{ GHz}, \\ldots`);
+    topline(ctx, `$2\\kB/h = ${fmt(2 * b, 2)}$ GHz: the first line, and the gap between every pair of lines.`);
+    tex(d.readout, `\\dfrac{\\kB}{h} = \\dfrac{h}{8\\pi^2 \\kmu \\krzero^2} = ${fmt(b, 2)}\\text{ GHz} \\\\ \\knu = 2\\dfrac{\\kB}{h}(J_i + 1) = ${fmt(2 * b, 2)}\\text{ GHz},\\ ${fmt(4 * b, 2)}\\text{ GHz},\\ ${fmt(6 * b, 2)}\\text{ GHz}, \\ldots`);
   }
   register(d.fig, { update: () => {}, draw });
 })();

@@ -1,0 +1,371 @@
+{
+ "id": "6.5",
+ "module": "13430",
+ "chapter": "6",
+ "title": "s-orbitals are Spherically Symmetric",
+ "short": "s orbitals",
+ "lead": "The 1s electron of hydrogen can be described by its density at each point of space or by how much of its charge lies in each thin shell around the nucleus. The two descriptions answer different questions about where the electron is.",
+ "objectives": [],
+ "summary_html": "<p>This completes the description of the most stable state of the hydrogen atom, the state for which $n = 1$. Before proceeding with a discussion of the excited states of the hydrogen atom we must introduce a new term. When the energy of the electron is increased to another of the allowed values, corresponding to a new value for $n$, $y_n$<sup class=\"fn\" data-note=\"c-yn\"></sup> and $P_n$ change as well. The wavefunctions $y_n$ for the hydrogen atom are given a special name, <strong><em>atomic</em></strong> <strong><em>orbitals</em></strong>, because they play such an important role in all of our future discussions of the electronic structure of atoms. In general the word orbital is the name given to a wavefunction which determines the motion of a single electron. If the one-electron wavefunction is for an atomic system, it is called an atomic orbital.</p><p>Do not confuse the word orbital with the classical word and notion of an orbit. First, an orbit implies the knowledge of a definite trajectory or path for a particle through space which in itself is not possible for an electron. Secondly, an orbital, like the wavefunction, has no physical reality but is a mathematical function which when squared gives the physically measurable electron density distribution.</p>",
+ "notes": "Adapted from Richard F. W. Bader (McMaster University) and David M. Hanson, Erica Harvey, Robert Sweeney and Theresa Julia Zielinski's Quantum States of Atoms and Molecules under CC BY-NC-SA 4.0, with the shell image from OpenStax under CC BY; the book gives no credit for Figures 6.5.3, 6.5.4 and 6.5.6, which print Section 6.2's radial plots again and are drawn once there, and Exercises 6.5.1 to 6.5.4, which print Exercises 6.2.5 to 6.2.8 again, are set in Section 6.2.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "Exercises 6.5.1 to 6.5.4 repeat Exercises 6.2.5 to 6.2.8 and are set with them in Section 6.2, where Exercise 6.2.8's card names the larger key Exercise 6.5.4 prints. Both exercises here, on where the 1s radial distribution peaks and on the charge within one Bohr radius, were written by AI with AI solutions; their Bloom levels and concept tags were chosen by AI. Numeric answers accept a 2% tolerance.",
+ "figures": [
+  {
+   "id": "sim-1s-detections",
+   "kind": "sim",
+   "number": "6.5.1",
+   "folds": [
+    "6.5.2",
+    "6.5.5"
+   ],
+   "withheld": "The book's Figures 6.5.1, 6.5.2 and 6.5.5 are greyscale scans of Richard Bader's printed figures and are not reproduced.",
+   "original_caption": "6.5.1: The wavefunction and probability distribution as functions of $r$ for the $n = 1$ level of the H atom. The functions and the radius r are in atomic units in this and succeeding figures. 6.5.2: (a) A contour map of the electron density distribution in a plane containing the nucleus for the $n = 1$ level of the H atom. The distance between adjacent contours is 1 au. The numbers on the left-hand side on each contour give the electron density in au. The numbers on the right-hand side give the fraction of the total electronic charge which lies within a sphere of that radius. Thus 99% of the single electronic charge of the H atom lies within a sphere of radius 4 au (or diameter = $4.2 \\times 10^{-8}\\; cm$). (b) This is a profile of the contour map along a line through the nucleus. It is, of course, the same as that given previously in Figure 6.5.1 for $P_1$, but now plotted from the nucleus in both directions. 6.5.5: The radial distribution function for an H atom. The value of this function at some value of r when multiplied by $\\delta r$ gives the number of electronic charges within the thin shell of space lying between spheres of radius $r$ and $r + \\delta r$.",
+   "draws": [
+    "probability-density",
+    "length"
+   ],
+   "conventions": [
+    "e-",
+    "p+"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "sim-shell",
+   "kind": "sim",
+   "originals": [
+    "/media/ch06/124004-150998212969520.png"
+   ],
+   "original_caption": "The volume element of a box in spherical coordinates. (CC BY; OpenStax).",
+   "draws": [
+    "length"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "ground-state-density",
+   "concept": "atomic-orbital",
+   "verb": "reinforces"
+  },
+  {
+   "span": "ground-state-density",
+   "concept": "electron-density-distribution",
+   "verb": "introduces"
+  },
+  {
+   "span": "ground-state-density",
+   "concept": "s-orbital-spherical",
+   "verb": "introduces"
+  },
+  {
+   "span": "ground-state-density",
+   "concept": "hydrogen-degeneracy",
+   "verb": "reinforces"
+  },
+  {
+   "span": "ground-state-density",
+   "concept": "probability-density",
+   "verb": "uses"
+  },
+  {
+   "span": "ground-state-density",
+   "concept": "orbital-density-plots",
+   "verb": "reinforces"
+  },
+  {
+   "span": "radial-functions",
+   "concept": "radial-function",
+   "verb": "reinforces"
+  },
+  {
+   "span": "radial-functions",
+   "concept": "radial-node",
+   "verb": "reinforces"
+  },
+  {
+   "span": "radial-functions",
+   "concept": "s-orbital-at-nucleus",
+   "verb": "reinforces"
+  },
+  {
+   "span": "radial-functions",
+   "concept": "radial-probability-density",
+   "verb": "reinforces"
+  },
+  {
+   "span": "radial-distribution-functions",
+   "concept": "spherical-shell-volume",
+   "verb": "introduces"
+  },
+  {
+   "span": "radial-distribution-functions",
+   "concept": "ground-state-radial-maximum",
+   "verb": "introduces"
+  },
+  {
+   "span": "radial-distribution-functions",
+   "concept": "radial-distribution-function",
+   "verb": "reinforces"
+  },
+  {
+   "span": "radial-distribution-functions",
+   "concept": "bohr-radius",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "This maximum occurs at $r_{max} = a_0$.",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "radial-distribution-functions",
+   "prompt": "<p>The 1s radial function is $R_{10}(r) = 2\\left(\\dfrac{1}{a_0}\\right)^{3/2}e^{-r/a_0}$. Find the value of $r$, in units of $a_0$, at which the radial distribution function $r^2R_{10}(r)^2$ is greatest.</p>",
+   "answer": {
+    "type": "number",
+    "value": 1,
+    "unit": "a₀",
+    "generated_by": "ai",
+    "hint": "Set the derivative of $r^2e^{-2r/a_0}$ with respect to $r$ to zero.",
+    "solution": "<p>The constants do not move the maximum, so maximize $f(r) = r^2e^{-2r/a_0}$. Its derivative is $f'(r) = 2re^{-2r/a_0} - \\dfrac{2}{a_0}r^2e^{-2r/a_0} = 2re^{-2r/a_0}\\left(1 - \\dfrac{r}{a_0}\\right)$. This is zero at $r = 0$, where $f = 0$ is the least value, and at $r = a_0$, where $f'$ changes from positive to negative. The radial distribution function is therefore greatest at $r = a_0$, the Bohr radius, which is the $r_{max} = a_0$ of the text.</p>"
+   }
+  },
+  {
+   "id": "a2",
+   "source_id": "The numbers on the right-hand side give the fraction of the total electronic charge",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "radial-distribution-functions",
+   "prompt": "<p>Follow Example 6.5.1 to find the probability that the 1s electron of hydrogen is within one Bohr radius, $r \\le a_0$, of the nucleus. Compare your answer with the fraction Figure 6.5.2 gives for a sphere of radius 1 au.</p>",
+   "answer": {
+    "type": "number",
+    "value": 0.323,
+    "generated_by": "ai",
+    "hint": "The integrals over $\\theta$ and $\\phi$ are as in Example 6.5.1; only the upper limit of the radial integral changes.",
+    "solution": "<p>As in Example 6.5.1, $\\text{prob} = \\dfrac{4}{a_0^3}\\int_0^{a_0} r^2e^{-2r/a_0}\\,dr$. Integrating by parts twice, $\\int r^2e^{-2r/a_0}dr = -\\dfrac{a_0}{2}e^{-2r/a_0}\\left(r^2 + a_0r + \\dfrac{a_0^2}{2}\\right)$, so</p>$$ \\text{prob} = \\dfrac{4}{a_0^3}\\left[\\dfrac{a_0^3}{4} - \\dfrac{a_0}{2}e^{-2}\\left(a_0^2 + a_0^2 + \\dfrac{a_0^2}{2}\\right)\\right] = 1 - 5e^{-2} = 0.323 $$<p>About 32% of the electron's charge lies within $a_0$ of the nucleus, the 32% that Figure 6.5.2 writes beside its first contour, although the radial distribution function is greatest at $a_0$ itself.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "ground-state-radial-maximum"
+  },
+  {
+   "exercise": "a1",
+   "concept": "radial-distribution-function"
+  },
+  {
+   "exercise": "a2",
+   "concept": "electron-density-distribution"
+  },
+  {
+   "exercise": "a2",
+   "concept": "spherical-shell-volume"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-ls",
+   "kind": "correction",
+   "html": "The orbital is the 1s orbital."
+  },
+  {
+   "id": "c-plane",
+   "kind": "correction",
+   "html": "The electron on a plane is from an earlier chapter of Bader's text that this book does not include; Figure 6.5.2 is the hydrogen atom's own contour map."
+  },
+  {
+   "id": "c-cube",
+   "kind": "correction",
+   "html": "A cube of side $a_0 = 0.52917\\times10^{-8}$ cm filled at 1 au holds one electronic charge, since its volume is $a_0^3$. It is a cube of side 1 Å, of volume $6.7\\,a_0^3$, that holds 6.7 electronic charges."
+  },
+  {
+   "id": "c-dr",
+   "kind": "correction",
+   "html": "The shell's volume is $4\\pi r^2\\Delta r$."
+  },
+  {
+   "id": "c-4pi",
+   "kind": "correction",
+   "html": "$R(r)$ is normalized with $\\int_0^\\infty r^2R(r)^2\\,dr = 1$, so the radial distribution function is $r^2R(r)^*R(r)$; it equals $4\\pi r^2|\\psi|^2$ for an s orbital, the $4\\pi r^2P_n$ of the text. With the extra $4\\pi$ the 1s curve would peak at 6.8 instead of 0.54."
+  },
+  {
+   "id": "c-fig652",
+   "kind": "correction",
+   "figure": "sim-1s-detections",
+   "html": "The fraction within a sphere of radius 2 au is $1 - 13e^{-4} = 76\\%$, as Example 6.5.1 finds, not 74%."
+  },
+  {
+   "id": "c-yn",
+   "kind": "correction",
+   "html": "$y_n$ is $\\psi_n$, here and in the next sentence."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "example-6-5-1",
+   "what": "the probability that the 1s electron is within 2a₀ of the nucleus",
+   "source": "Physical Chemistry (LibreTexts), 6.5 s-orbitals are Spherically Symmetric, Example 6.5.1",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\psi_{100}= \\dfrac{1}{\\sqrt{\\pi}} \\left(\\dfrac{1}{\\kao}\\right)^{3/2} e^{-\\kr/\\kao}",
+       "src": "6.2, Table 6.2.1"
+      },
+      {
+       "text": "The probability of finding the electron in a region is $\\int |\\psi|^2\\,d\\tau$ over it, with the volume element $d\\tau = r^2\\sin\\theta\\,dr\\,d\\theta\\,d\\phi$.",
+       "src": "3.4"
+      },
+      {
+       "tex": "\\int_0^{\\pi} \\sin \\theta \\,d\\theta=2"
+      },
+      {
+       "tex": "\\int_0^{2\\pi} d\\phi=2\\pi"
+      },
+      {
+       "text": "Integration by parts: $\\int u\\,dv = uv - \\int v\\,du$."
+      }
+     ],
+     "then": {
+      "tex": "\\mk{p}{\\text{prob}} = \\mk{i}{\\int_0^{\\pi}\\!\\int_0^{2\\pi}\\!\\int_0^{2\\kao} |\\psi_{100}|^2\\, \\kr^2 \\sin\\theta \\, d\\kr\\, d\\phi\\, d\\theta}",
+      "uses": [
+       1
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{p}{\\text{prob}} = \\mk{t}{\\int_{0}^{\\pi} \\sin \\theta \\, d\\theta}\\,\\mk{r}{\\dfrac{1}{\\pi \\kao^3} \\int_{0}^{2\\kao} \\kr^2 e^{-2\\kr/\\kao} d\\kr}\\,\\mk{f}{\\int_{0}^{2\\pi} d\\phi}",
+       "uses": [
+        0
+       ],
+       "map": {
+        "i": [
+         "t",
+         "r",
+         "f"
+        ]
+       },
+       "cap": "$|\\psi_{100}|^2 = e^{-2r/a_0}/\\pi a_0^3$ depends on $r$ alone, so the triple integral splits into one integral over each coordinate."
+      },
+      {
+       "tex": "\\mk{p}{\\text{prob}} = \\mk{c}{2 \\times 2\\pi} \\times \\mk{r}{\\dfrac{1}{\\pi \\kao^3} \\int_{0}^{2\\kao} \\kr^2 e^{-2\\kr/\\kao} d\\kr}",
+       "uses": [
+        2,
+        3
+       ],
+       "map": {
+        "t": "c",
+        "f": "c"
+       }
+      },
+      {
+       "tex": "\\mk{p}{\\text{prob}} = \\mk{c}{\\dfrac{4}{\\kao^3}}\\mk{r}{\\int_{0}^{2\\kao} \\kr^2 e^{-2\\kr/\\kao} d\\kr}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{p}{\\text{prob}} = \\mk{c}{\\dfrac{4}{\\kao^3}}\\mk{r}{\\left(-\\dfrac{\\kao}{2}\\right)\\left[\\kr^2 e^{-2\\kr/\\kao} \\Big|_0^{2\\kao} - \\int_0^{2\\kao} 2\\kr e^{-2\\kr/\\kao} d\\kr\\right]}",
+       "uses": [
+        4
+       ],
+       "cap": "By parts with $u = r^2$ and $dv = e^{-2r/a_0}dr$, so that $v = -\\tfrac{a_0}{2}e^{-2r/a_0}$."
+      },
+      {
+       "tex": "\\mk{p}{\\text{prob}} = \\mk{c}{\\dfrac{4}{\\kao^3}}\\mk{r}{\\left(-\\dfrac{\\kao}{2}\\right)\\left[4\\kao^2 e^{-4} - 2\\int_0^{2\\kao} \\kr e^{-2\\kr/\\kao} d\\kr\\right]}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{p}{\\text{prob}} = \\mk{a}{-8e^{-4}} + \\mk{r}{\\dfrac{4}{\\kao^2}\\int_0^{2\\kao} \\kr e^{-2\\kr/\\kao} d\\kr}",
+       "uses": [],
+       "map": {
+        "c": [
+         "a",
+         "r"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{p}{\\text{prob}} = \\mk{a}{-8e^{-4}} + \\mk{r}{\\dfrac{4}{\\kao^2}\\left(-\\dfrac{\\kao}{2}\\right)\\left[\\kr e^{-2\\kr/\\kao} \\Big|_0^{2\\kao} - \\int_0^{2\\kao} e^{-2\\kr/\\kao} d\\kr\\right]}",
+       "uses": [
+        4
+       ],
+       "cap": "By parts again, now with $u = r$."
+      },
+      {
+       "tex": "\\mk{p}{\\text{prob}} = \\mk{a}{-8e^{-4}}\\mk{r}{- \\dfrac{2}{\\kao}\\left[2\\kao e^{-4} + \\dfrac{\\kao}{2}e^{-2\\kr/\\kao} \\Big|_0^{2\\kao}\\right]}",
+       "uses": [],
+       "cap": "The last integral is $-\\tfrac{a_0}{2}e^{-2r/a_0}$ evaluated between the limits."
+      },
+      {
+       "tex": "\\mk{p}{\\text{prob}} = \\mk{a}{-8e^{-4}}\\mk{b}{-4e^{-4}}\\mk{e}{-e^{-2\\kr/\\kao} \\Big|_0^{2\\kao}}",
+       "uses": [],
+       "map": {
+        "r": [
+         "b",
+         "e"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{p}{\\text{prob}} = \\mk{a}{-8e^{-4}}\\mk{b}{-4e^{-4}}\\mk{e}{-(e^{-4} - 1)}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{p}{\\text{prob}} = \\mk{s}{1 - 13e^{-4}}",
+       "uses": [],
+       "map": {
+        "a": "s",
+        "b": "s",
+        "e": "s"
+       }
+      },
+      {
+       "tex": "\\mk{p}{\\text{prob}} = \\mk{s}{0.762}",
+       "uses": []
+      }
+     ],
+     "src": "Example 6.5.1",
+     "note": "The book prints the upper limit of the first radial integral as $\\int_0^2 a_0$ for $\\int_0^{2a_0}$, and the sixth line's $-e^{2r/a_0}$ for $-e^{-2r/a_0}$."
+    }
+   ]
+  }
+ ]
+}

@@ -479,7 +479,7 @@
        "step": 1
       },
       {
-       "tex": "B = \\dfrac{\\hbar^2}{2\\kI}",
+       "tex": "\\kB = \\dfrac{\\hbar^2}{2\\kI}",
        "src": "(5.9.10)"
       }
      ],
@@ -488,7 +488,7 @@
      },
      "steps": [
       {
-       "tex": "\\mk{E}{\\kEph} = \\mk{n}{h\\knu = hc\\bar{\\nu}} = \\mk{d}{2B(J_i + 1)}",
+       "tex": "\\mk{E}{\\kEph} = \\mk{n}{h\\knu = hc\\bar{\\nu}} = \\mk{d}{2\\kB(J_i + 1)}",
        "uses": [
         1
        ]

@@ -1,0 +1,552 @@
+{
+ "id": "6.1",
+ "module": "13426",
+ "chapter": "6",
+ "title": "The Schrodinger Equation for the Hydrogen Atom Can Be Solved Exactly",
+ "short": "The hydrogen atom's equation",
+ "lead": "The hydrogen atom is one particle of reduced mass moving in the Coulomb potential of the nucleus. Written in spherical coordinates, its Schrödinger equation splits into an equation for the angles, already met with the rigid rotor, and an equation for the distance.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "Adapted from David M. Hanson, Erica Harvey, Robert Sweeney and Theresa Julia Zielinski's Quantum States of Atoms and Molecules, under CC BY-NC-SA 4.0; the book gives no credit for Figure 6.1.1.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book gives no key for its four exercises; their solutions were written by AI, the number in Exercise 6.1.1 checked by computation, and those of 6.1.2 to 6.1.4 follow the derivations on this page. Bloom levels and concept tags were chosen by AI. Numeric answers accept the tolerance each part states.",
+ "figures": [
+  {
+   "id": "sim-reduced",
+   "kind": "sim",
+   "number": "6.1.1",
+   "originals": [
+    "/media/ch06/18826-H_atom_reduced.gif"
+   ],
+   "widths": [
+    409
+   ],
+   "original_caption": "(a) The proton ($p^+$) and electron ($e^-$) of the hydrogen atom. (b) Equivalent reduced particle with reduced mass $μ$ at distance $r$ from center of mass.",
+   "draws": [
+    "length",
+    "mass"
+   ],
+   "conventions": [
+    "p+",
+    "e-"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "sim-veff",
+   "kind": "sim",
+   "draws": [
+    "energy",
+    "length"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "hamiltonian",
+   "concept": "hydrogen-reduced-particle",
+   "verb": "introduces"
+  },
+  {
+   "span": "hamiltonian",
+   "concept": "reduced-mass",
+   "verb": "uses"
+  },
+  {
+   "span": "hamiltonian",
+   "concept": "hydrogen-schrodinger-equation",
+   "verb": "introduces"
+  },
+  {
+   "span": "hamiltonian",
+   "concept": "central-potential",
+   "verb": "introduces"
+  },
+  {
+   "span": "hamiltonian",
+   "concept": "coulomb-potential",
+   "verb": "uses"
+  },
+  {
+   "span": "hamiltonian",
+   "concept": "kinetic-energy-operator",
+   "verb": "uses"
+  },
+  {
+   "span": "hamiltonian",
+   "concept": "spherical-coordinates",
+   "verb": "uses"
+  },
+  {
+   "span": "hamiltonian",
+   "concept": "rigid-rotor",
+   "verb": "uses"
+  },
+  {
+   "span": "radial-angular",
+   "concept": "angular-momentum-squared-operator",
+   "verb": "introduces"
+  },
+  {
+   "span": "radial-angular",
+   "concept": "hydrogen-separation",
+   "verb": "introduces"
+  },
+  {
+   "span": "radial-angular",
+   "concept": "separation-of-variables",
+   "verb": "reinforces"
+  },
+  {
+   "span": "radial-angular",
+   "concept": "spherical-harmonics",
+   "verb": "uses"
+  },
+  {
+   "span": "eigenvalues",
+   "concept": "angular-momentum-eigenvalues",
+   "verb": "introduces"
+  },
+  {
+   "span": "eigenvalues",
+   "concept": "hydrogen-radial-equation",
+   "verb": "introduces"
+  },
+  {
+   "span": "eigenvalues",
+   "concept": "spherical-harmonics",
+   "verb": "reinforces"
+  },
+  {
+   "span": "eigenvalues",
+   "concept": "asymptotic-series-method",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "e1",
+   "source_id": "exr:6.1.1",
+   "source_number": "Exercise 6.1.1",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "hamiltonian",
+   "prompt": "<ol type=\"a\"><li>Assuming the Bohr radius gives the distance between the proton and electron, calculate the distance of the proton from the center of mass, and calculate the distance of the electron from the center of mass.</li><li>Calculate the reduced mass of the electron-proton system.</li><li>In view of your calculations in (a) and (b), comment on the validity of a model in which the proton is located at the center of mass and the reduced mass equals the electron mass.</li></ol>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a, proton",
+      "value": 0.0288,
+      "unit": "pm",
+      "hint": "The center of mass divides the distance in the inverse ratio of the masses."
+     },
+     {
+      "part": "a, electron",
+      "value": 52.89,
+      "unit": "pm",
+      "tol": 0.001
+     },
+     {
+      "part": "b",
+      "value": 9.104e-31,
+      "unit": "kg",
+      "tol": 0.001
+     }
+    ],
+    "solution": "<p>With $m_e = 9.109\\times10^{-31}$ kg, $m_p = 1.6726\\times10^{-27}$ kg and $r = a_0 = 52.92$ pm, the center of mass lies at</p>$$ r_p = \\dfrac{m_e}{m_e + m_p}\\,r = \\dfrac{9.109\\times10^{-31}}{1.6735\\times10^{-27}}(52.92\\ \\text{pm}) = 0.0288\\ \\text{pm} $$<p>from the proton, and the electron is $r_e = r - r_p = 52.89$ pm from it. The reduced mass is</p>$$ \\mu = \\dfrac{m_em_p}{m_e + m_p} = 9.104\\times10^{-31}\\ \\text{kg} = 0.99946\\,m_e $$<p>The center of mass is 0.0288 pm from the proton's center, about 0.05% of the separation, and $\\mu$ differs from $m_e$ by 0.054%. Putting the proton at the center of mass and setting $\\mu = m_e$ changes the energies and distances by about one part in two thousand, which is a good model for most purposes.</p>"
+   }
+  },
+  {
+   "id": "e2",
+   "source_id": "exr:6.1.2",
+   "source_number": "Exercise 6.1.2",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "radial-angular",
+   "prompt": "<p>Show the algebraic steps going from Equation 6.1.4 to 6.1.5 and finally to 6.1.7. Justify the statement that the rotational and radial motion are separated in Equation 6.1.7.</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "Multiply by $-2\\mu r^2$, then use Equations 6.1.6 and 6.1.2.",
+    "solution": "<p>The moves are the first three steps of the derivation on this page. Writing Equation 6.1.3 into Equation 6.1.1 gives Equation 6.1.4. Multiplying both sides by $-2\\mu r^2$ cancels the $-\\hbar^2/2\\mu r^2$ in front of the bracket and turns the potential term into $+2\\mu r^2(e^2/4\\pi\\epsilon_0 r)\\psi$ and the right side into $-2\\mu r^2E\\psi$. Keeping the $r$ derivative on the left, moving $-2\\mu r^2E\\psi$ to the left as $+2\\mu r^2E\\psi$ and the angular part to the right gives Equation 6.1.5:</p>$$ \\hbar^2\\dfrac{\\partial}{\\partial r}\\left(r^2\\dfrac{\\partial\\psi}{\\partial r}\\right) + 2\\mu r^2\\left[E + \\dfrac{e^2}{4\\pi\\epsilon_0 r}\\right]\\psi = -\\hbar^2\\left[\\dfrac{1}{\\sin\\theta}\\dfrac{\\partial}{\\partial\\theta}\\left(\\sin\\theta\\dfrac{\\partial}{\\partial\\theta}\\right) + \\dfrac{1}{\\sin^2\\theta}\\dfrac{\\partial^2}{\\partial\\varphi^2}\\right]\\psi $$<p>The right side is $\\hat{M}^2\\psi$ by Equation 6.1.6, and $e^2/4\\pi\\epsilon_0 r = -\\hat{V}$ by Equation 6.1.2, which gives Equation 6.1.7. In Equation 6.1.7 every operator on the left acts on $r$ only, and $\\hat{M}^2$ on the right acts on $\\theta$ and $\\varphi$ only, so the radial motion and the rotational motion appear in separate terms; this is what lets a product $R(r)Y(\\theta,\\varphi)$ separate the equation.</p>"
+   }
+  },
+  {
+   "id": "e3",
+   "source_id": "exr:6.1.3",
+   "source_number": "Exercise 6.1.3",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "radial-angular",
+   "prompt": "<p>Complete the steps leading from Equations 6.1.7 to 6.1.9 and 6.1.9.<sup class=\"fn\" data-note=\"c-ex3\"></sup></p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "After substituting $R(r)Y(\\theta,\\varphi)$, divide both sides by $RY$.",
+    "solution": "<p>These are the last steps of the derivation on this page. Put $\\psi = R(r)Y(\\theta,\\varphi)$ into Equation 6.1.7. $Y$ does not depend on $r$, so it passes outside the $r$ derivatives, and $R$ does not depend on $\\theta$ or $\\varphi$, so it passes outside $\\hat{M}^2$:</p>$$ Y\\,\\hbar^2\\dfrac{\\partial}{\\partial r}r^2\\dfrac{\\partial R}{\\partial r} + 2\\mu r^2[E - V]RY = R\\,\\hat{M}^2Y $$<p>Dividing both sides by $RY$:</p>$$ \\dfrac{\\hbar^2}{R}\\dfrac{\\partial}{\\partial r}r^2\\dfrac{\\partial R}{\\partial r} + \\dfrac{2\\mu r^2}{R}[E - V]R = \\dfrac{1}{Y}\\hat{M}^2Y $$<p>The left side is a function of $r$ alone and the right side a function of $\\theta$ and $\\varphi$ alone. They are equal for every $r$, $\\theta$ and $\\varphi$ only if both are the same constant, $\\lambda$. Setting the left side equal to $\\lambda$ gives the radial equation and setting the right side equal to $\\lambda$ gives the angular equation, the two lines of Equation 6.1.9.</p>"
+   }
+  },
+  {
+   "id": "e4",
+   "source_id": "exr:6.1.4",
+   "source_number": "Exercise 6.1.4",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "eigenvalues",
+   "prompt": "<p>Write the steps leading from Equation 6.1.9 to Equation 6.1.13.</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "Set $\\lambda = l(l+1)\\hbar^2$, then multiply by $-R/2\\mu r^2$.",
+    "solution": "<p>This is the derivation of Equation 6.1.13 on this page. Put $\\lambda = l(l+1)\\hbar^2$ into the radial line of Equation 6.1.9:</p>$$ \\dfrac{\\hbar^2}{R}\\dfrac{\\partial}{\\partial r}r^2\\dfrac{\\partial R}{\\partial r} + \\dfrac{2\\mu r^2}{R}[E - V]R = l(l+1)\\hbar^2 $$<p>Multiply both sides by $-R(r)/2\\mu r^2$:</p>$$ -\\dfrac{\\hbar^2}{2\\mu r^2}\\dfrac{\\partial}{\\partial r}r^2\\dfrac{\\partial R}{\\partial r} - [E - V]R = -\\dfrac{l(l+1)\\hbar^2}{2\\mu r^2}R $$<p>and move the right side to the left, collecting the terms that multiply $R$:</p>$$ -\\dfrac{\\hbar^2}{2\\mu r^2}\\dfrac{\\partial}{\\partial r}r^2\\dfrac{\\partial R}{\\partial r} + \\left[\\dfrac{l(l+1)\\hbar^2}{2\\mu r^2} + V(r) - E\\right]R(r) = 0 $$"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "e1",
+   "concept": "hydrogen-reduced-particle"
+  },
+  {
+   "exercise": "e1",
+   "concept": "reduced-mass"
+  },
+  {
+   "exercise": "e2",
+   "concept": "hydrogen-schrodinger-equation"
+  },
+  {
+   "exercise": "e2",
+   "concept": "angular-momentum-squared-operator"
+  },
+  {
+   "exercise": "e3",
+   "concept": "hydrogen-separation"
+  },
+  {
+   "exercise": "e3",
+   "concept": "separation-of-variables"
+  },
+  {
+   "exercise": "e4",
+   "concept": "hydrogen-radial-equation"
+  },
+  {
+   "exercise": "e4",
+   "concept": "angular-momentum-eigenvalues"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-direction",
+   "kind": "correction",
+   "html": "The sentence names the direction of $r$ twice. It means that the direction of $r$ is given by the vector pointing from the proton to the electron."
+  },
+  {
+   "id": "c-fragment",
+   "kind": "correction",
+   "html": "The sentence is unfinished: the square of the angular momentum operator is written out in Equation 6.1.6."
+  },
+  {
+   "id": "c-table",
+   "kind": "correction",
+   "html": "There is no Table M4. The spherical harmonics are listed in Table 5.8.1 of Section 5.8 and in Table 6.2.1."
+  },
+  {
+   "id": "c-pair",
+   "kind": "correction",
+   "html": "The radial equation and the angular equation are the two lines of Equation 6.1.9."
+  },
+  {
+   "id": "c-ex3",
+   "kind": "correction",
+   "html": "Equation 6.1.9 holds both the radial and the angular equation."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "separation",
+   "what": "the radial and angular equations of the hydrogen atom",
+   "source": "Physical Chemistry (LibreTexts), 6.1 The Schrodinger Equation for the Hydrogen Atom Can Be Solved Exactly",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kH(\\kr, \\theta, \\kvarphi)\\kpsi(\\kr, \\theta, \\kvarphi) = \\kE \\kpsi(\\kr, \\theta, \\kvarphi)",
+       "src": "(6.1.1)"
+      },
+      {
+       "tex": "\\kH(\\kr, \\theta, \\kvarphi) = -\\dfrac{\\hbar^2}{2\\kmu\\kr^2}\\left[\\dfrac{\\partial}{\\partial \\kr}\\left(\\kr^2\\dfrac{\\partial}{\\partial \\kr}\\right) + \\dfrac{1}{\\sin\\theta}\\dfrac{\\partial}{\\partial\\theta}\\left(\\sin\\theta\\dfrac{\\partial}{\\partial\\theta}\\right) + \\dfrac{1}{\\sin^2\\theta}\\dfrac{\\partial^2}{\\partial\\kvarphi^2}\\right] - \\dfrac{\\ke^2}{4\\pi\\epsilon_0\\kr}",
+       "src": "(6.1.3)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\kH(\\kr, \\theta, \\kvarphi)\\kpsi(\\kr, \\theta, \\kvarphi)} = \\mk{R}{\\kE \\kpsi(\\kr, \\theta, \\kvarphi)}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\left\\{ -\\dfrac{\\hbar^2}{2\\kmu\\kr^2}\\left[\\dfrac{\\partial}{\\partial \\kr}\\left(\\kr^2\\dfrac{\\partial}{\\partial \\kr}\\right) + \\dfrac{1}{\\sin\\theta}\\dfrac{\\partial}{\\partial\\theta}\\left(\\sin\\theta\\dfrac{\\partial}{\\partial\\theta}\\right) + \\dfrac{1}{\\sin^2\\theta}\\dfrac{\\partial^2}{\\partial\\kvarphi^2}\\right] - \\dfrac{\\ke^2}{4\\pi\\epsilon_0\\kr} \\right\\} \\kpsi(\\kr, \\theta, \\kvarphi)} = \\mk{R}{\\kE \\kpsi(\\kr, \\theta, \\kvarphi)}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "num": "(6.1.4)",
+     "src": "6.1"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\left\\{ -\\dfrac{\\hbar^2}{2\\kmu\\kr^2}\\left[\\dfrac{\\partial}{\\partial \\kr}\\left(\\kr^2\\dfrac{\\partial}{\\partial \\kr}\\right) + \\dfrac{1}{\\sin\\theta}\\dfrac{\\partial}{\\partial\\theta}\\left(\\sin\\theta\\dfrac{\\partial}{\\partial\\theta}\\right) + \\dfrac{1}{\\sin^2\\theta}\\dfrac{\\partial^2}{\\partial\\kvarphi^2}\\right] - \\dfrac{\\ke^2}{4\\pi\\epsilon_0\\kr} \\right\\} \\kpsi(\\kr, \\theta, \\kvarphi)} = \\mk{R}{\\kE \\kpsi(\\kr, \\theta, \\kvarphi)}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{T}{-\\dfrac{\\hbar^2}{2\\kmu\\kr^2}\\left[\\dfrac{\\partial}{\\partial \\kr}\\left(\\kr^2\\dfrac{\\partial}{\\partial \\kr}\\right) + \\dfrac{1}{\\sin\\theta}\\dfrac{\\partial}{\\partial\\theta}\\left(\\sin\\theta\\dfrac{\\partial}{\\partial\\theta}\\right) + \\dfrac{1}{\\sin^2\\theta}\\dfrac{\\partial^2}{\\partial\\kvarphi^2}\\right]\\kpsi(\\kr, \\theta, \\kvarphi)} - \\mk{V}{\\dfrac{\\ke^2}{4\\pi\\epsilon_0\\kr}\\kpsi(\\kr, \\theta, \\kvarphi)} = \\mk{R}{\\kE \\kpsi(\\kr, \\theta, \\kvarphi)}",
+       "uses": [],
+       "map": {
+        "L": [
+         "T",
+         "V"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{T}{\\hbar^2\\left[\\dfrac{\\partial}{\\partial \\kr}\\left(\\kr^2\\dfrac{\\partial}{\\partial \\kr}\\right) + \\dfrac{1}{\\sin\\theta}\\dfrac{\\partial}{\\partial\\theta}\\left(\\sin\\theta\\dfrac{\\partial}{\\partial\\theta}\\right) + \\dfrac{1}{\\sin^2\\theta}\\dfrac{\\partial^2}{\\partial\\kvarphi^2}\\right]\\kpsi(\\kr, \\theta, \\kvarphi)} + \\mk{V}{2\\kmu\\kr^2\\dfrac{\\ke^2}{4\\pi\\epsilon_0\\kr}\\kpsi(\\kr, \\theta, \\kvarphi)} = \\mk{R}{-2\\kmu\\kr^2\\kE \\kpsi(\\kr, \\theta, \\kvarphi)}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{rad}{\\hbar^2\\dfrac{\\partial}{\\partial \\kr}\\left(\\kr^2\\dfrac{\\partial}{\\partial \\kr}\\right)\\kpsi(\\kr, \\theta, \\kvarphi)} + \\mk{ang}{\\hbar^2\\left[\\dfrac{1}{\\sin\\theta}\\dfrac{\\partial}{\\partial\\theta}\\left(\\sin\\theta\\dfrac{\\partial}{\\partial\\theta}\\right) + \\dfrac{1}{\\sin^2\\theta}\\dfrac{\\partial^2}{\\partial\\kvarphi^2}\\right]\\kpsi(\\kr, \\theta, \\kvarphi)} + \\mk{V}{2\\kmu\\kr^2\\dfrac{\\ke^2}{4\\pi\\epsilon_0\\kr}\\kpsi(\\kr, \\theta, \\kvarphi)} = \\mk{R}{-2\\kmu\\kr^2\\kE \\kpsi(\\kr, \\theta, \\kvarphi)}",
+       "uses": [],
+       "map": {
+        "T": [
+         "rad",
+         "ang"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{rad}{\\hbar^2\\dfrac{\\partial}{\\partial \\kr}\\left(\\kr^2\\dfrac{\\partial}{\\partial \\kr}\\kpsi(\\kr, \\theta, \\kvarphi)\\right)} + \\mk{V}{2\\kmu\\kr^2\\left[\\kE + \\dfrac{\\ke^2}{4\\pi\\epsilon_0\\kr}\\right]\\kpsi(\\kr, \\theta, \\kvarphi)} = \\mk{ang}{-\\hbar^2\\left[\\dfrac{1}{\\sin\\theta}\\dfrac{\\partial}{\\partial\\theta}\\left(\\sin\\theta\\dfrac{\\partial}{\\partial\\theta}\\right) + \\dfrac{1}{\\sin^2\\theta}\\dfrac{\\partial^2}{\\partial\\kvarphi^2}\\right]\\kpsi(\\kr, \\theta, \\kvarphi)}",
+       "uses": [],
+       "map": {
+        "R": "V"
+       }
+      }
+     ],
+     "num": "(6.1.5)",
+     "src": "6.1"
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "tex": "\\kMsqhat = -\\hbar^2\\left[\\dfrac{1}{\\sin\\theta}\\dfrac{\\partial}{\\partial\\theta}\\left(\\sin\\theta\\dfrac{\\partial}{\\partial\\theta}\\right) + \\dfrac{1}{\\sin^2\\theta}\\dfrac{\\partial^2}{\\partial\\kvarphi^2}\\right]",
+       "src": "(6.1.6)"
+      },
+      {
+       "tex": "\\kVhat(\\kr) = -\\dfrac{\\ke^2}{4\\pi\\epsilon_0\\kr}",
+       "src": "(6.1.2)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{rad}{\\hbar^2\\dfrac{\\partial}{\\partial \\kr}\\left(\\kr^2\\dfrac{\\partial}{\\partial \\kr}\\kpsi(\\kr, \\theta, \\kvarphi)\\right)} + \\mk{m}{2\\kmu\\kr^2}\\left[\\mk{E}{\\kE} + \\mk{C}{\\dfrac{\\ke^2}{4\\pi\\epsilon_0\\kr}}\\right]\\mk{p}{\\kpsi(\\kr, \\theta, \\kvarphi)} = \\mk{ang}{-\\hbar^2\\left[\\dfrac{1}{\\sin\\theta}\\dfrac{\\partial}{\\partial\\theta}\\left(\\sin\\theta\\dfrac{\\partial}{\\partial\\theta}\\right) + \\dfrac{1}{\\sin^2\\theta}\\dfrac{\\partial^2}{\\partial\\kvarphi^2}\\right]\\kpsi(\\kr, \\theta, \\kvarphi)}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{rad}{\\hbar^2\\dfrac{\\partial}{\\partial \\kr}\\left(\\kr^2\\dfrac{\\partial}{\\partial \\kr}\\kpsi(\\kr, \\theta, \\kvarphi)\\right)} + \\mk{m}{2\\kmu\\kr^2}\\left[\\mk{E}{\\kE} + \\mk{C}{\\dfrac{\\ke^2}{4\\pi\\epsilon_0\\kr}}\\right]\\mk{p}{\\kpsi(\\kr, \\theta, \\kvarphi)} = \\mk{ang}{\\kMsqhat \\kpsi(\\kr, \\theta, \\kvarphi)}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{rad}{\\hbar^2\\dfrac{\\partial}{\\partial \\kr}\\left(\\kr^2\\dfrac{\\partial}{\\partial \\kr}\\kpsi(\\kr, \\theta, \\kvarphi)\\right)} + \\mk{m}{2\\kmu\\kr^2}\\left[\\mk{E}{\\kE} \\mk{C}{- \\kVhat}\\right]\\mk{p}{\\kpsi(\\kr, \\theta, \\kvarphi)} = \\mk{ang}{\\kMsqhat \\kpsi(\\kr, \\theta, \\kvarphi)}",
+       "uses": [
+        2
+       ]
+      }
+     ],
+     "num": "(6.1.7)",
+     "src": "6.1"
+    },
+    {
+     "assumes": [
+      {
+       "step": 2
+      },
+      {
+       "tex": "\\kpsi(\\kr, \\theta, \\kvarphi) = \\kRf(\\kr)\\kYsh(\\theta, \\kvarphi)",
+       "src": "(6.1.8)"
+      },
+      {
+       "text": "$\\hat{M}^2$ does not involve $r$, and the derivatives with respect to $r$ do not act on $Y(\\theta, \\varphi)$.",
+       "src": "6.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{rad}{\\hbar^2\\dfrac{\\partial}{\\partial \\kr}\\left(\\kr^2\\dfrac{\\partial}{\\partial \\kr}\\kpsi(\\kr, \\theta, \\kvarphi)\\right)} + \\mk{V}{2\\kmu\\kr^2\\left[\\kE - \\kVhat\\right]\\kpsi(\\kr, \\theta, \\kvarphi)} = \\mk{ang}{\\kMsqhat \\kpsi(\\kr, \\theta, \\kvarphi)}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{rad}{\\hbar^2\\dfrac{\\partial}{\\partial \\kr}\\left(\\kr^2\\dfrac{\\partial}{\\partial \\kr}\\kRf(\\kr)\\kYsh(\\theta, \\kvarphi)\\right)} + \\mk{V}{2\\kmu\\kr^2\\left[\\kE - \\kVhat\\right]\\kRf(\\kr)\\kYsh(\\theta, \\kvarphi)} = \\mk{ang}{\\kMsqhat \\kRf(\\kr)\\kYsh(\\theta, \\kvarphi)}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{rad}{\\kYsh(\\theta, \\kvarphi)\\,\\hbar^2\\dfrac{\\partial}{\\partial\\kr}\\kr^2\\dfrac{\\partial}{\\partial\\kr}\\kRf(\\kr)} + \\mk{V}{2\\kmu\\kr^2[\\kE - \\kV]\\kRf(\\kr)\\kYsh(\\theta, \\kvarphi)} = \\mk{ang}{\\kRf(\\kr)\\,\\kMsqhat \\kYsh(\\theta, \\kvarphi)}",
+       "uses": [
+        2
+       ],
+       "cap": "$Y(\\theta, \\varphi)$ is a constant to the derivatives in $r$ and $R(r)$ is a constant to $\\hat{M}^2$, so each passes outside the operator that does not act on it; $\\hat{V}$ only multiplies by $V(r)$."
+      },
+      {
+       "tex": "\\mk{rad}{\\dfrac{\\hbar^2}{\\kRf(\\kr)}\\dfrac{\\partial}{\\partial\\kr}\\kr^2\\dfrac{\\partial}{\\partial\\kr}\\kRf(\\kr)} + \\mk{V}{\\dfrac{2\\kmu\\kr^2}{\\kRf(\\kr)}[\\kE - \\kV]\\kRf(\\kr)} = \\mk{ang}{\\dfrac{1}{\\kYsh(\\theta, \\kvarphi)}\\kMsqhat \\kYsh(\\theta, \\kvarphi)}",
+       "uses": []
+      }
+     ],
+     "src": "6.1"
+    },
+    {
+     "assumes": [
+      {
+       "step": 3
+      },
+      {
+       "text": "The left side depends on $r$ alone and the right side on $\\theta$ and $\\varphi$ alone, so for the two to be equal at every point each must equal the same constant, $\\lambda$.",
+       "src": "6.1; 2.2"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\dfrac{\\hbar^2}{\\kRf(\\kr)}\\dfrac{\\partial}{\\partial\\kr}\\kr^2\\dfrac{\\partial}{\\partial\\kr}\\kRf(\\kr) + \\dfrac{2\\kmu\\kr^2}{\\kRf(\\kr)}[\\kE - \\kV]\\kRf(\\kr)} = \\mk{A}{\\dfrac{1}{\\kYsh(\\theta, \\kvarphi)}\\kMsqhat \\kYsh(\\theta, \\kvarphi)}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\dfrac{\\hbar^2}{\\kRf(\\kr)}\\dfrac{\\partial}{\\partial\\kr}\\kr^2\\dfrac{\\partial}{\\partial\\kr}\\kRf(\\kr) + \\dfrac{2\\kmu\\kr^2}{\\kRf(\\kr)}[\\kE - \\kV]\\kRf(\\kr)} = \\mk{A}{\\klambda}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "num": "(6.1.9)",
+     "src": "6.1"
+    },
+    {
+     "assumes": [
+      {
+       "step": 3
+      },
+      {
+       "step": 4
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\dfrac{\\hbar^2}{\\kRf(\\kr)}\\dfrac{\\partial}{\\partial\\kr}\\kr^2\\dfrac{\\partial}{\\partial\\kr}\\kRf(\\kr) + \\dfrac{2\\kmu\\kr^2}{\\kRf(\\kr)}[\\kE - \\kV]\\kRf(\\kr)} = \\mk{A}{\\dfrac{1}{\\kYsh(\\theta, \\kvarphi)}\\kMsqhat \\kYsh(\\theta, \\kvarphi)}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\klambda} = \\mk{A}{\\dfrac{1}{\\kYsh(\\theta, \\kvarphi)}\\kMsqhat \\kYsh(\\theta, \\kvarphi)}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{A}{\\dfrac{1}{\\kYsh(\\theta, \\kvarphi)}\\kMsqhat \\kYsh(\\theta, \\kvarphi)} = \\mk{L}{\\klambda}",
+       "uses": []
+      }
+     ],
+     "num": "(6.1.9)",
+     "src": "6.1"
+    }
+   ]
+  },
+  {
+   "id": "radial",
+   "what": "the radial equation of the hydrogen atom",
+   "source": "Physical Chemistry (LibreTexts), 6.1 The Schrodinger Equation for the Hydrogen Atom Can Be Solved Exactly",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\dfrac{\\hbar^2}{\\kRf(\\kr)}\\dfrac{\\partial}{\\partial\\kr}\\kr^2\\dfrac{\\partial}{\\partial\\kr}\\kRf(\\kr) + \\dfrac{2\\kmu\\kr^2}{\\kRf(\\kr)}[\\kE - \\kV]\\kRf(\\kr) = \\klambda",
+       "src": "(6.1.9)",
+       "drv": "separation"
+      },
+      {
+       "tex": "\\klambda = l(l + 1)\\hbar^2",
+       "src": "(6.1.12); 5.8"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{rad}{\\dfrac{\\hbar^2}{\\kRf(\\kr)}\\dfrac{\\partial}{\\partial\\kr}\\kr^2\\dfrac{\\partial}{\\partial\\kr}\\kRf(\\kr)} + \\mk{V}{\\dfrac{2\\kmu\\kr^2}{\\kRf(\\kr)}[\\kE - \\kV]\\kRf(\\kr)} = \\mk{lam}{\\klambda}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{rad}{\\dfrac{\\hbar^2}{\\kRf(\\kr)}\\dfrac{\\partial}{\\partial\\kr}\\kr^2\\dfrac{\\partial}{\\partial\\kr}\\kRf(\\kr)} + \\mk{V}{\\dfrac{2\\kmu\\kr^2}{\\kRf(\\kr)}[\\kE - \\kV]\\kRf(\\kr)} = \\mk{lam}{l(l + 1)\\hbar^2}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{rad}{-\\dfrac{\\hbar^2}{2\\kmu\\kr^2}\\dfrac{\\partial}{\\partial\\kr}\\kr^2\\dfrac{\\partial}{\\partial\\kr}\\kRf(\\kr)} \\mk{V}{- [\\kE - \\kV]\\kRf(\\kr)} = \\mk{lam}{-\\dfrac{l(l + 1)\\hbar^2}{2\\kmu\\kr^2}\\kRf(\\kr)}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{rad}{-\\dfrac{\\hbar^2}{2\\kmu\\kr^2}\\dfrac{\\partial}{\\partial\\kr}\\kr^2\\dfrac{\\partial}{\\partial\\kr}\\kRf(\\kr)} + \\left[\\mk{lam}{\\dfrac{l(l + 1)\\hbar^2}{2\\kmu\\kr^2}} + \\mk{V}{\\kV(\\kr) - \\kE}\\right]\\kRf(\\kr) = \\mk{z}{0}",
+       "uses": []
+      }
+     ],
+     "num": "(6.1.13)",
+     "src": "6.1"
+    }
+   ]
+  }
+ ]
+}

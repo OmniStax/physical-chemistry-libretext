@@ -1,0 +1,16 @@
+{
+ "id": "summary",
+ "module": "550557",
+ "chapter": "6",
+ "title": "The Hydrogen Atom (Summary)",
+ "short": "Summary",
+ "lead": "",
+ "notes": "Shared under the book's CC BY-NC-SA 4.0, which names no author for this page.",
+ "ai": {"text": [{"model": "claude-opus-5-5", "effort": "medium"}]},
+ "built": "2026-11-08",
+ "figures": [],
+ "footnotes": [
+  {"id": "c-charge", "kind": "correction", "html": "Here $e$ is the elementary charge, a positive number; the electron's charge is $-e$, and the product of the two charges, $-e^2$, gives the Coulomb term its minus sign."},
+  {"id": "c-l-max", "kind": "correction", "html": "The largest value of $l$ is $n - 1$: $0 \\leq l \\leq n - 1$ (Section 6.2)."}
+ ]
+}

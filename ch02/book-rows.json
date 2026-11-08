@@ -132,7 +132,8 @@
     },
     {
       "sym": "theta",
-      "latex": "\\theta"
+      "latex": "\\theta",
+      "macro": "\\ktheta"
     },
     {
       "sym": "J_m",

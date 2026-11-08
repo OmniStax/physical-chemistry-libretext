@@ -1,0 +1,86 @@
+<section id="angular-momentum-operators">
+<h2>Angular momentum operators</h2>
+<p>Consider a particle described by the Cartesian coordinates $(\kx, \ky, \kz)\equiv \krvec$ and their conjugate momenta $(\kpx, \kpy, \kpz)\equiv \vec{p}$. The classical definition of the <em><span data-concept="orbital-angular-momentum">orbital angular momentum</span></em> of such a particle about the origin is (i.e., via the <a href="https://math.libretexts.org/Bookshelves/Calculus/Book%3A_Calculus_(OpenStax)/12%3A_Vectors_in_Space/12.4%3A_The_Cross_Product">vector cross product</a>):</p>
+$$ \kLvec = \krvec \times \vec{p} $$
+<p>which can be separated into projections into each of the primary axes :</p>
+$$ \begin{aligned} \kLx &= \ky\, \kpz - \kz\, \kpy,  \\[4pt] \kLy &= \kz\, \kpx - \kx\, \kpz  \\[4pt] \kLz &= \kx\,\kpy - \ky \,\kpx  \end{aligned} $$
+<p>Extending this discussion to the quantum mechanics, we can assume that the operators $(\kLxhat, \kLyhat, \kLzhat)\equiv \vec{L}$ - that represent the <span data-concept="angular-momentum-component-operators">components of orbital angular momentum in quantum mechanics</span> - can be defined in an analogous manner to the corresponding components of classical <span data-concept="angular-momentum">angular momentum</span>. In other words, we are going to assume that the above equations specify the <span data-concept="angular-momentum-component-operators">angular momentum operators</span> in terms of the position and linear momentum operators.</p>
+<p>In Cartesian coordinates, the three operators for the orbital angular momentum components can be written as</p>
+$$ \kLxhat = -{\rm i}\,\hbar\left(\ky\,\dfrac{\partial}{\partial \kz} - \kz\,\dfrac{\partial} {\partial \ky}\right) \tag{6.3.1} $$
+$$ \kLyhat = -{\rm i}\,\hbar\left(\kz\,\dfrac{\partial}{\partial \kx} - \kx\,\dfrac{\partial} {\partial \kz}\right) \tag{6.3.2} $$
+$$ \kLzhat = -{\rm i}\,\hbar\left(\kx\,\dfrac{\partial}{\partial \ky} - \ky\,\dfrac{\partial} {\partial \kx}\right) \tag{6.3.3} $$
+<p>These can be transforming to operators in standard <span data-concept="spherical-coordinates">spherical polar coordinates</span>,</p>
+$$ \begin{aligned} \kx &= \kr \,\sin\theta\, \cos\kvarphi  \\[4pt] \ky &= \kr\, \sin\theta\, \sin\kvarphi  \\[4pt] \kz &=\kr \cos \theta  \end{aligned} $$
+<p>we obtain</p>
+$$ \begin{aligned} \kLxhat &= {\rm i}\,\hbar\,\left(\sin\kvarphi\, \dfrac{\partial}{\partial \theta} + \cot\theta \cos\kvarphi\,\dfrac{\partial}{\partial \kvarphi}\right)  \\[4pt] \kLyhat &= -{\rm i} \,\hbar\,\left(\cos\kvarphi\, \dfrac{\partial}{\partial\theta} -\cot\theta \sin\kvarphi \,\dfrac{\partial}{\partial \kvarphi}\right) \end{aligned} $$
+<figure class="dv" id="drv-lz-spherical"></figure>
+<p>We can introduce a new operator $\kLsqhat$:</p>
+$$ \begin{aligned} \kLsqhat &= \kLxhat^{\,2}+\kLyhat^{\,2}+\kLzhat^{\,2}  \\[4pt] &= - \hbar^2\left( \dfrac{1}{\sin\theta}\dfrac{\partial}{\partial \theta} \sin \theta \dfrac{\partial}{\partial \theta} + \dfrac{1}{\sin^2\theta}\dfrac{\partial^2} {\partial\kvarphi^2}\right)  \end{aligned} \tag{6.3.4} $$
+<p>The eigenvalue problem for $\kLsqhat$ takes the form</p>
+$$ \kLsqhat | \kpsi \rangle = \lambda \,\hbar^2 | \kpsi \rangle \tag{6.3.5} $$
+<p>where $\kpsi(\kr, \theta, \kvarphi)$ is the wavefunction, and $\lambda$ is a number. Let us write</p>
+$$ \kpsi(\kr, \theta, \kvarphi) = \kRf(\kr) \,\kYsh(\theta, \kvarphi) \tag{6.3.6} $$
+</section>
+
+<section id="quantized-angular-momentum">
+<h2>Quantized angular momentum</h2>
+<p>By definition,</p>
+$$ \boxed{L^2 \,\kYlm = l\,(l+1)\,\hbar^2\,\kYlm} \tag{6.3.7} $$
+<p>where $l$ is an integer. This is an important conclusion that argues the <span data-concept="angular-momentum-magnitude">angular momentum is quantized with the square of the magnitude of the angular momentum only capable of assume one of the discrete set of values</span> (Equation 6.3.7). From this, the <strong>amplitude</strong><sup class="fn" data-note="c-amplitude"></sup> of angular momentum can be expressed</p>
+$$ \boxed{ |\kLvec| =\sqrt{L^2} = \sqrt{l(l+1)} \hbar } \tag{6.3.8} $$
+<div class="note">
+<div class="eyebrow">Note</div>
+<h3>Warning</h3>
+<p>We often refer to a particle in a state with <span data-concept="angular-momentum-quantum-number">angular momentum quantum number</span> $l$ as having angular momentum $l$, rather than saying that it has angular momentum of $\sqrt{l(l+1)} \hbar$ magnitude, primarily since it is awkward to say quickly.</p>
+</div>
+<p>The properties of <span data-concept="spherical-harmonics">spherical harmonics</span> that the <span data-concept="lz-quantization">z-component of the angular momentum ($\kLz$) is also quantized and can only assume a one of a discrete set of values</span></p>
+$$ \kLz \,\kYlm = m\,\hbar\,\kYlm \tag{6.3.9} $$<sup class="fn" data-note="c-lz-m"></sup>
+<p>where $m_l$ is an integer lying in the range $-l\leq m_l \leq l$.</p>
+<ul><li>$l$ is sometimes called "azimuthal quantum number" or "orbital quantum number"</li><li>$m_l$ is sometimes called "<span data-concept="magnetic-quantum-number">magnetic quantum number</span>"</li></ul>
+</section>
+
+<section id="simultaneous-measurements">
+<h2>Simultaneous Measurements</h2>
+<p>Note that observables associated with $\kLxhat$, $\kLyhat$, and $\kLzhat$ can, in principle, be measured. However, to determine if they can be measured <em>simultaneously</em> with infinite precision, the corresponding operators must <strong><span data-concept="commuting-operators">commute</span></strong>. Remember that the fundamental commutation relations satisfied by the position and linear momentum operators are:</p>
+$$ \begin{aligned} [\hat{x}_i, \hat{x}_j] &=0  \\[4pt] [\hat{p}_i, \hat{p}_j] &=0  \\[4pt] [\hat{x}_i, \hat{p}_j] &= {\rm i}\,\hbar \,\delta_{ij}  \end{aligned} $$
+<p>where $i$ and $j$ stand for either $\kx$, $\ky$, or $\kz$. Consider the <span data-concept="commutator">commutator</span> of the operators $\kLxhat$ and $\kLzhat$<sup class="fn" data-note="c-lx-lz"></sup> :</p>
+<figure class="dv" id="drv-lx-ly-commutator"></figure>
+<p>The <strong><span data-concept="angular-momentum-commutation-relations">cyclic permutations</span></strong> of the above result yield the fundamental <span data-concept="angular-momentum-commutation-relations">commutation relations satisfied by the components of an orbital angular momentum</span>:</p>
+$$ [\kLxhat, \kLyhat] = {\rm i}\,\hbar\, \kLzhat \tag{6.3.10} $$
+$$ [\kLyhat, \kLzhat] = {\rm i}\,\hbar\, \kLxhat \tag{6.3.11} $$
+$$ [\kLzhat, \kLxhat] = {\rm i}\,\hbar\, \kLyhat \tag{6.3.12} $$
+<p>The three <span data-concept="angular-momentum-commutation-relations">commutation relations</span> (Equations 6.3.10 - 6.3.12) are the foundation for the whole theory of angular momentum in quantum mechanics. Whenever we encounter three operators having these commutation relations, we know that the dynamical variables that they represent have identical properties to those of the components of an angular momentum (which we are about to derive). In fact, we shall assume that any three operators that satisfy the commutation relations (Equations 6.3.10 - 6.3.12) represent the components of some sort of angular momentum.</p>
+<blockquote><p>Any three operators that satisfy the cyclic commutation relations represent the components of some sort of angular momentum.</p></blockquote>
+<div class="example" id="ex-6-3-1">
+<h3>Example 6.3.1 · Commutators</h3>
+<p>Show that the $\kLsqhat$ and $\kLxhat$ operators commute.</p>
+<h4>Solution</h4>
+<figure class="dv" id="drv-example-6-3-1"></figure>
+<p>One can also show similarly that</p>
+$$ [\kLsqhat, \kLyhat] = [\kLsqhat, \kLzhat] = 0 $$
+</div>
+<p>Example 6.3.1 shows that while $\kLz$ can be known with certainty, $\kLx$ and $\kLy$ would <strong>unknown</strong>. This means that every vector with the appropriate length and <em>z</em>-component can drawn to represent $\kLvec$, which forms a cone (Figure 6.3.1). The expected value of the angular momentum for a given ensemble of systems in the quantum state characterized by $l$ and $m_l$ could be somewhere on this cone while it cannot be defined for a single system (since the components of $L$ do not commute with each other).</p>
+<figure class="sim" id="sim-vector-model" data-figure="6.3.1" data-original="/media/ch06/350792-Vector_model_of_orbital_angular_momentuml1.svg,/media/ch06/350791-Vector_model_of_orbital_angular_momentum.svg" data-original-width="365,365" data-original-caption="Illustration of the vector model of orbital angular momentum. (left) A set of states with quantum numbers $l=1$, and $m_l = -1, 0, +1,$. (right) A set of states with quantum numbers $l=2$, and $m_l = -2, -1, 0, +1, +2$. (Public Domain; Maschen via Wikipedia)">
+  <div class="sim-head"><span class="eyebrow">Figure 6.3.1</span><span>Pick $l$ and $m_l$, then turn the <span data-concept="vector-model">vector</span> round its cone. Its length $\sqrt{l(l+1)}\,\hbar$ and its <span data-type="angular-momentum">z component</span> $m_l\hbar$ stay fixed while $\kLx$ and $\kLy$ change, and the vector never lies along the z axis.</span></div>
+</figure>
+<div class="note">
+<div class="eyebrow">Note</div>
+<h3>The Meaning of Commutation of Two Operators</h3>
+<p>The mathematics of commutation relations is relatively straightforward, but what does it physically mean for an observable (<span data-concept="hermitian-operator">Hermitian operator</span>) to commute with another observable (<span data-concept="hermitian-operator">Hermitian operator</span>) in quantum mechanics?</p>
+<p>If two operators $\kAhat$ and $\kBhat$ commute with each other then</p>
+$$ \kAhat \kBhat - \kBhat \kAhat = 0, $$
+<p>which can be rearranged to</p>
+$$ \kAhat \kBhat = \kBhat \kAhat. $$
+<p>This is not a trivial statement and many operations do not commute and hence the end-result depends on how you have ordered the operations.</p>
+<p>If you recall that operators act on quantum mechanical states and give you a new state in return, then this means that with $\kAhat$ and $\kBhat$ commuting, the state you obtain from letting first $\kAhat$ act and then $\kBhat$ act on some initial state is the same as if you let first $\kBhat$ and then $\kAhat$ act on that state, i.e.,</p>
+$$ \kAhat \kBhat | \kpsi \rangle = \kBhat \kAhat | \kpsi \rangle. $$
+<p>Recall that when you perform a quantum mechanical measurement, you will always measure an <span data-concept="eigenvalue">eigenvalue</span> of your operator, and after the measurement your state is left in the corresponding <span data-concept="eigenstate">eigenstate</span>. The <span data-concept="eigenstate">eigenstates</span> to the operator are precisely those states for which there is <strong>no uncertainty</strong> in the measurement: You will <strong>always</strong> measure the eigenvalue.</p>
+<p>Therefore, $\kBhat |a \rangle$ must be an <span data-concept="eigenfunction">eigenfunction</span> of $\kAhat$ with eigenvalue $a$ just like $|a \rangle$ itself is. That is essentially saying that $|a \rangle$ is an <span data-concept="eigenfunction">eigenfunction</span> of $\kBhat$.</p>
+<p>A key example of this is since <span data-concept="angular-momentum-commutation">$\kLsqhat$ and $\kLxhat$ commute</span> (Example 6.3.1) then both operators share the same <span data-concept="eigenstate">eigenstates</span>. Hence, we do no need to solve two eignevalue problems:</p>
+$$ \kLsqhat | \kpsi \rangle = \lambda | \kpsi \rangle $$
+<p>and</p>
+$$ \kLxhat | \kpsi \rangle = \beta| \kpsi \rangle $$
+<p>If we solve one, we then know the eigenvalues ($| \kpsi \rangle$)<sup class="fn" data-note="c-eigenfunctions"></sup> for the other!</p>
+<p>What does it mean when some observable $\kAhat$ commutes with the Hamiltonian $\hat{H}$? First, we get all the result from above: There is a simultaneous eigenbasis of the energy-eigenstates and the eigenstates of $\kAhat$. This can yield a tremendous simplification of the task of solving Schrödinger equations. For example, the Hamiltonian of the hydrogen atom commutes with $\hat{L}$, the angular momentum operator, and with $\kLzhat$, its z-component. This tells you that you can classify the eigenstates by an angular- and magnetic quantum number $l$ and $m$.</p>
+</div>
+</section>

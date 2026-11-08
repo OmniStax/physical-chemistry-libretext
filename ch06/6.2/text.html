@@ -1,0 +1,104 @@
+<section id="quantum-numbers">
+<h2>The three quantum numbers</h2>
+<p><span data-concept="hydrogen-wavefunctions">The solutions to the hydrogen atom Schrödinger equation</span> are functions that are products of a <span data-concept="spherical-harmonics">spherical harmonic function</span> and a <span data-concept="radial-function">radial function</span>:</p>
+$$ \kpsinlm (\kr, \theta , \phi) = \kRnl (\kr) \kYlm (\theta , \phi) \tag{6.2.1} $$
+<p>The wavefunctions for the hydrogen atom depend upon the three variables $\kr$, $\theta$, and $\phi$ and the three <span data-concept="quantum-number">quantum numbers</span> n, $l$, and $m_l$. The variables give the position of the electron relative to the nucleus in <span data-concept="spherical-coordinates">spherical coordinates</span>. The absolute square of the wavefunction, $| \kpsi (\kr, \theta , \phi )|^2$, evaluated at $\kr$, $\theta$, and $\phi$ gives the <span data-concept="probability-density">probability density</span> of finding the electron inside a differential volume $d \tau$, centered at the position specified by $r$, $\theta$, and $\phi$.</p>
+<p>The quantum numbers have names:</p>
+<ul><li>$n$ is called the <span data-concept="principal-quantum-number">principal quantum number</span>,</li><li>$l$ is called the <span data-concept="angular-momentum-quantum-number">angular momentum quantum number</span>, and</li><li>$m_l$ is called the <span data-concept="magnetic-quantum-number">magnetic quantum number</span> because (as we will see, the energy in a magnetic field depends upon $m_l$).</li></ul>
+<p>Often $l$ is called the azimuthal quantum number because it is a consequence of the $\theta$-equation, which involves the azimuthal angle $\Theta$, referring to the angle to the zenith.<sup class="fn" data-note="c-azimuthal"></sup> These quantum numbers have specific values that are dictated by the physical constraints or boundary conditions imposed upon the Schrödinger equation: <span data-concept="hydrogen-quantum-number-rules">$n$ must be an integer greater than 0, $l$ can have the values 0 to $n-1$, and $m_l$ can have $2l + 1$ values ranging from $-l$ to $+l$ in unit or integer steps</span>. <span data-concept="hydrogen-degeneracy">The total number of orbitals with a particular value of $n$ is $n^2$</span> - i.e., this is the <strong><span data-concept="degeneracy">degeneracy</span></strong> of the system.</p>
+<div class="note">
+<div class="eyebrow">Note</div>
+<h3>Wavefunction Nomenclature</h3>
+<p><span data-concept="orbital-letter-codes">The values of the quantum number $l$ usually are coded by a letter: s means 0, p means 1, d means 2, f means 3; the next codes continue alphabetically (e.g., g means $l = 4$).</span> The quantum numbers specify the quantization of physical quantities. The discrete energies of different states of the hydrogen atom are given by $n$, the magnitude of the angular momentum is given by $l$, and one component of the angular momentum (usually chosen by chemists to be the z‑component) is given by $m_l$.</p>
+</div>
+<p><span data-concept="rotor-phi-functions">The $\kPhi$ function</span> is found to have the quantum number $m$, where</p>
+$$ \kPhi_m (\phi) = A_m e^{im\phi} $$
+<p>and $A_m$ is the normalization constant and $m = 0, \pm1, \pm2 ... \pm\infty$. The $\kThetaf$ function was solved and is known as <em><span data-concept="associated-legendre-functions">Legendre polynomials</span></em><sup class="fn" data-note="c-legendre"></sup>, which have quantum numbers $m$ and $\ell$. When $\kThetaf$ and $\kPhi$ are multiplied together, the product is known as <strong><span data-concept="spherical-harmonics">spherical harmonics</span></strong> with labeling $Y_{J}^{m} (\theta, \phi)$.</p>
+<figure class="sim" id="sim-harmonics" data-figure="6.2.1" data-original="/media/ch06/349334-20161030161434!Spherical_Harmonics_deg5.png" data-original-caption="Spherical Harmonics as commonly displayed, sorted by increasing energies and aligned for symmetry." data-original-width="861">
+  <div class="sim-head"><span class="eyebrow">Figure 6.2.1</span><span>The real <span data-concept="spherical-harmonics">spherical harmonics</span> from $l = 0$ to 5, the two signs in two tones. Each row down adds one nodal surface; along a row the cones about z turn into planes through it. Pick $l$ and $m_l$ to enlarge one.</span></div>
+</figure>
+<p>Figure 6.2.1 shows the <span data-concept="spherical-harmonics">spherical harmonics</span> $Y_J^M$, which are solutions of the angular Schrödinger equation. These are explicitly written in Table 6.2.1. Notice that these functions are complex in nature.</p>
+<div class="book-table">
+  <div class="tcap"><span class="eyebrow">Table 6.2.1</span><span>spherical harmonics $Y_J^M$</span></div>
+  <table>
+    <thead><tr><th>$m_J$</th><th>$J$</th><th>$\Theta ^{m_J}_J (\theta)$</th><th>$\Phi (\varphi)$</th><th>$Y^{m_J}_J (\theta , \varphi)$</th></tr></thead>
+    <tbody>
+      <tr><td>0</td><td>0</td><td>$\dfrac {1}{\sqrt {2}}$</td><td>$\dfrac {1}{\sqrt {2 \pi}}$</td><td>$\dfrac {1}{\sqrt {4 \pi}}$</td></tr>
+      <tr><td>0</td><td>1</td><td>$\sqrt {\dfrac {3}{2}}\cos \theta$</td><td>$\dfrac {1}{\sqrt {2 \pi}}$</td><td>$\sqrt {\dfrac {3}{4 \pi}}\cos \theta$</td></tr>
+      <tr><td>1</td><td>1</td><td>$\sqrt {\dfrac {3}{4}}\sin \theta$</td><td>$\dfrac {1}{\sqrt {2 \pi}}e^{i \varphi}$</td><td>$\sqrt {\dfrac {3}{8 \pi}}\sin \theta e^{i \varphi}$</td></tr>
+      <tr><td>-1</td><td>1</td><td>$\sqrt {\dfrac {3}{4}}\sin \theta$</td><td>$\dfrac {1}{\sqrt {2 \pi}}e^{-i\varphi}$</td><td>$\sqrt {\dfrac {3}{8 \pi}}\sin \theta e^{-i \varphi}$</td></tr>
+      <tr><td>0</td><td>2</td><td>$\sqrt {\dfrac {5}{8}}(3\cos ^2 \theta - 1)$</td><td>$\dfrac {1}{\sqrt {2 \pi}}$</td><td>$\sqrt {\dfrac {5}{16\pi}}(3\cos ^2 \theta - 1)$</td></tr>
+      <tr><td>1</td><td>2</td><td>$\sqrt {\dfrac {15}{4}} \sin \theta \cos \theta$</td><td>$\dfrac {1}{\sqrt {2 \pi}}e^{i \varphi}$</td><td>$\sqrt {\dfrac {15}{8\pi}} \sin \theta \cos \theta e^{i\varphi}$</td></tr>
+      <tr><td>-1</td><td>2</td><td>$\sqrt {\dfrac {15}{4}} \sin \theta \cos \theta$</td><td>$\dfrac {1}{\sqrt {2 \pi}}e^{-i\varphi}$</td><td>$\sqrt {\dfrac {15}{8\pi}} \sin \theta \cos \theta e^{-i\varphi}$</td></tr>
+      <tr><td>2</td><td>2</td><td>$\sqrt {\dfrac {15}{16}} \sin ^2 \theta$</td><td>$\dfrac {1}{\sqrt {2 \pi}}e^{2i\varphi}$</td><td>$\sqrt {\dfrac {15}{32\pi}} \sin ^2 \theta e^{2i\varphi}$</td></tr>
+      <tr><td>-2</td><td>2</td><td>$\sqrt {\dfrac {15}{16}} \sin ^2 \theta$</td><td>$\dfrac {1}{\sqrt {2 \pi}}e^{-2i\varphi}$</td><td>$\sqrt {\dfrac {15}{32\pi}} \sin ^2 \theta e^{-2i\varphi}$</td></tr>
+    </tbody>
+  </table>
+</div>
+</section>
+
+<section id="atomic-orbitals">
+<h2>Atomic Orbitals</h2>
+<p>The hydrogen atom wavefunctions, $\kpsi (\kr, \theta , \phi )$, are called <strong><span data-concept="atomic-orbital">atomic orbitals</span></strong>. An atomic orbital is a function that describes one electron in an atom. The wavefunction with $n = 1$, $l = 0$, and $m_{l}=0$ is called the 1s orbital, and an electron that is described by this function is said to be “in” the 1s orbital, i.e. have a 1s orbital state. The constraints on $n$, $\ell$, and $m_\ell$ that are imposed during the solution of the hydrogen atom Schrödinger equation explain why there is a single 1s orbital, why there are three 2p orbitals, five 3d orbitals, etc. We will see when we consider multi-electron atoms, these constraints explain the features of the Periodic Table. In other words, the Periodic Table is a manifestation of the Schrödinger model and the physical constraints imposed to obtain the solutions to the Schrödinger equation for the hydrogen atom.</p>
+<p>The first few solutions of the Schrödinger equation for the H atom are:</p>
+<div class="book-table">
+  <div class="tcap"><span class="eyebrow">Table 6.2.1</span><span>The solutions to the Schrödinger equation for one-electron atoms and ions. $Z$ is the atomic number of the nucleus, and $\rho = \frac {Zr}{a_0}$, where $a_0$ is the Bohr radius and r is the radial variable.<sup class="fn" data-note="c-table-label"></sup></span></div>
+  <table>
+    <thead><tr><th></th><th>$n$</th><th>$l$</th><th>$m_l$</th><th>$\psi_{n,l,m_l}$</th></tr></thead>
+    <tbody>
+      <tr><td>$\psi_{100}$</td><td>$1$</td><td>$0$</td><td>$m_{l} = 0$</td><td>$\frac{1}{\sqrt{\pi}}\left( \frac{Z}{a_{0}} \right)^{\frac{3}{2}}e^{- \frac{Zr}{a_{0}}}$</td></tr>
+      <tr><td>$\psi_{200}$</td><td>$2$</td><td>$0$</td><td>$m_{l} = 0$</td><td>$\frac{1}{\sqrt{32\pi}}\left( \frac{Z}{a_{0}} \right)^{\frac{3}{2}}\left( 2 - \frac{Zr}{a_{0}} \right)e^{- \frac{Zr}{2a_{0}}}$</td></tr>
+      <tr><td>$\psi_{210}$</td><td>$2$</td><td>$1$</td><td>$m_{l} = 0$</td><td>$\frac{1}{\sqrt{32\pi}}\left( \frac{Z}{a_{0}} \right)^{\frac{5}{2}}re^{- \frac{Zr}{2a_{0}}}\cos\theta$</td></tr>
+      <tr><td>$\psi_{21\pm 1}$</td><td>$2$</td><td>$1$</td><td>$m_{l} = \pm 1$</td><td>$\frac{1}{\sqrt{64\pi}}\left( \frac{Z}{a_{0}} \right)^{\frac{5}{2}}re^{- \frac{Zr}{2a_{0}}}\sin\theta e^{\pm i\phi}$</td></tr>
+      <tr><td>$\psi_{300}$</td><td>$3$</td><td>$0$</td><td>$m_{l} = 0$</td><td>$\frac{1}{81\sqrt{3\pi}}\left( \frac{Z}{a_{0}} \right)^{\frac{3}{2}}\left( 27 - 18\frac{Zr}{a_{0}} + 2\frac{Z^2r^2}{a_{0}^2} \right)e^{- \frac{Zr}{3a_{0}}}$</td></tr>
+      <tr><td>$\psi_{310}$</td><td>$3$</td><td>$1$</td><td>$m_{l} = 0$</td><td>$\frac{\sqrt{2}}{81\sqrt{\pi}}\left( \frac{Z}{a_{0}} \right)^{\frac{5}{2}}r\left( 6 - \frac{Zr}{a_{0}} \right)e^{- \frac{Zr}{3a_{0}}}\cos\theta$</td></tr>
+      <tr><td>$\psi_{31\pm 1}$</td><td>$3$</td><td>$1$</td><td>$m_{l} = \pm 1$</td><td>$\frac{1}{81\sqrt{\pi}}\left( \frac{Z}{a_{0}} \right)^{\frac{5}{2}}r\left( 6 - \frac{Zr}{a_{0}} \right)e^{- \frac{Zr}{3a_{0}}}\sin\theta e^{\pm i\phi}$</td></tr>
+      <tr><td>$\psi_{320}$</td><td>$3$</td><td>$2$</td><td>$m_{l} = 0$</td><td>$\frac{1}{81\sqrt{6\pi}}\left( \frac{Z}{a_{0}} \right)^{\frac{7}{2}}r^{2}e^{- \frac{Zr}{3a_{0}}}\left( 3\cos^{2}\theta - 1 \right)$</td></tr>
+      <tr><td>$\psi_{32\pm 1}$</td><td>$3$</td><td>$2$</td><td>$m_{l} = \pm 1$</td><td>$\frac{1}{81\sqrt{\pi}}\left( \frac{Z}{a_{0}} \right)^{\frac{7}{2}}r^{2}e^{- \frac{Zr}{3a_{0}}}\sin\theta\cos\theta e^{\pm i\phi}$</td></tr>
+      <tr><td>$\psi_{32\pm 2}$</td><td>$3$</td><td>$2$</td><td>$m_{l} = \pm 2$</td><td>$\frac{1}{162\sqrt{\pi}}\left( \frac{Z}{a_{0}} \right)^{\frac{7}{2}}r^{2}e^{- \frac{Zr}{3a_{0}}}\sin^{2}\theta e^{\pm 2i\phi}$</td></tr>
+    </tbody>
+  </table>
+</div>
+<p><span data-concept="real-orbitals">We can take superposition states of the solutions to obtain real wavefunctions that do not have any imaginary components</span>:</p>
+<div class="book-table">
+  <div class="tcap"><span class="eyebrow">Table 6.2.2</span><span>The real solutions to the Schrödinger equation for one-electron atoms and ions. $Z$ is the atomic number of the nucleus, and $\rho = \frac {Zr}{a_0}$, where $a_0$ is the Bohr radius and r is the radial variable.</span></div>
+  <table>
+    <thead><tr><th></th><th>$n$</th><th>$l$</th><th>$m_l$</th><th>$\psi_{n,l}$</th></tr></thead>
+    <tbody>
+      <tr><td>$\psi_{1s}$</td><td>$1$</td><td>$0$</td><td>$0$</td><td>$\frac{1}{\sqrt{\pi}}\left( \frac{Z}{a_{0}} \right)^{\frac{3}{2}}e^{- \frac{Zr}{a_{0}}}$</td></tr>
+      <tr><td>$\psi_{2s}$</td><td>$2$</td><td>$0$</td><td>$0$</td><td>$\frac{1}{\sqrt{32\pi}}\left( \frac{Z}{a_{0}} \right)^{\frac{3}{2}}\left( 2 - \frac{Zr}{a_{0}} \right)e^{- \frac{Zr}{2a_{0}}}$</td></tr>
+      <tr><td>$\psi_{2p_z}$</td><td>$2$</td><td>$1$</td><td>$0$</td><td>$\frac{1}{\sqrt{32\pi}}\left( \frac{Z}{a_{0}} \right)^{\frac{5}{2}}re^{- \frac{Zr}{2a_{0}}}\cos\theta$</td></tr>
+      <tr><td>$\psi_{2p_x}$</td><td>$2$</td><td>$1$</td><td>$\pm 1$</td><td>$\frac{1}{\sqrt{32\pi}}\left( \frac{Z}{a_{0}} \right)^{\frac{5}{2}}re^{- \frac{Zr}{2a_{0}}}\sin\theta\cos\phi$</td></tr>
+      <tr><td>$\psi_{2p_y}$</td><td>$2$</td><td>$1$</td><td>$\pm 1$</td><td>$\frac{1}{\sqrt{32\pi}}\left( \frac{Z}{a_{0}} \right)^{\frac{5}{2}}re^{- \frac{Zr}{2a_{0}}}\sin\theta\sin\phi$</td></tr>
+      <tr><td>$\psi_{3s}$</td><td>$3$</td><td>$0$</td><td>$0$</td><td>$\frac{1}{81\sqrt{3\pi}}\left( \frac{Z}{a_{0}} \right)^{\frac{3}{2}}\left( 27 - 18\frac{Zr}{a_{0}} + 2\frac{Z^{2}r^{2}}{a_{0}^{2}} \right)e^{- \frac{Zr}{3a_{0}}}$</td></tr>
+      <tr><td>$\psi_{3p_z}$</td><td>$3$</td><td>$1$</td><td>$0$</td><td>$\frac{\sqrt{2}}{81\sqrt{\pi}}\left( \frac{Z}{a_{0}} \right)^{\frac{5}{2}}r\left( 6 - \frac{Zr}{a_{0}} \right)e^{- \frac{Zr}{3a_{0}}}\cos\theta$</td></tr>
+      <tr><td>$\psi_{3p_x}$</td><td>$3$</td><td>$1$</td><td>$\pm 1$</td><td>$\frac{\sqrt{2}}{81\sqrt{\pi}}\left( \frac{Z}{a_{0}} \right)^{\frac{5}{2}}r\left( 6 - \frac{Zr}{a_{0}} \right)e^{- \frac{Zr}{3a_{0}}}\sin\theta\cos\phi$</td></tr>
+      <tr><td>$\psi_{3p_y}$</td><td>$3$</td><td>$1$</td><td>$\pm 1$</td><td>$\frac{\sqrt{2}}{81\sqrt{\pi}}\left( \frac{Z}{a_{0}} \right)^{\frac{5}{2}}r\left( 6 - \frac{Zr}{a_{0}} \right)e^{- \frac{Zr}{3a_{0}}}\sin\theta\sin\phi$</td></tr>
+      <tr><td>$\psi_{3d_{z^2}}$</td><td>$3$</td><td>$2$</td><td>$0$</td><td>$\frac{1}{81\sqrt{6\pi}}\left( \frac{Z}{a_{0}} \right)^{\frac{7}{2}}r^{2}e^{- \frac{Zr}{3a_{0}}}\left( 3\cos^{2}\theta - 1 \right)$</td></tr>
+      <tr><td>$\psi_{3d_{xz}}$</td><td>$3$</td><td>$2$</td><td>$\pm 1$</td><td>$\frac{\sqrt{2}}{81\sqrt{\pi}}\left( \frac{Z}{a_{0}} \right)^{\frac{7}{2}}r^{2}e^{- \frac{Zr}{3a_{0}}}\sin\theta\cos\theta\cos\phi$</td></tr>
+      <tr><td>$\psi_{3d_{yz}}$</td><td>$3$</td><td>$2$</td><td>$\pm 1$</td><td>$\frac{\sqrt{2}}{81\sqrt{\pi}}\left( \frac{Z}{a_{0}} \right)^{\frac{7}{2}}r^{2}e^{- \frac{Zr}{3a_{0}}}\sin\theta\cos\theta\sin\phi$</td></tr>
+      <tr><td>$\psi_{3d_{x^2-y^2}}$</td><td>$3$</td><td>$2$</td><td>$\pm 2$</td><td>$\frac{1}{81\sqrt{2\pi}}\left( \frac{Z}{a_{0}} \right)^{\frac{7}{2}}r^{2}e^{- \frac{Zr}{3a_{0}}}\sin^{2}\theta\cos{2\phi}$</td></tr>
+      <tr><td>$\psi_{3d_{xy}}$</td><td>$3$</td><td>$2$</td><td>$\pm 2$</td><td>$\frac{1}{81\sqrt{2\pi}}\left( \frac{Z}{a_{0}} \right)^{\frac{7}{2}}r^{2}e^{- \frac{Zr}{3a_{0}}}\sin^{2}\theta\sin{2\phi}$</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>These are the wavefunctions that are most often depicted. Visualizing the variation of an electronic wavefunction with $\kr$, $\theta$, and $\phi$ is important because the absolute square of the wavefunction depicts the charge distribution (electron probability density) in an atom or molecule. The charge distribution is central to chemistry because it is related to chemical reactivity. For example, an electron-deficient part of one molecule is attracted to an electron-rich region of another molecule, and such interactions play a major role in chemical interactions ranging from substitution and addition reactions to protein folding and the interaction of substrates with enzymes.</p>
+<p>Visualizing wavefunctions and charge distributions is challenging because it requires examining the behavior of a function of three variables in three-dimensional space. This visualization is made easier by considering the radial and angular parts separately, but plotting the radial and angular parts separately do not reveal the shape of an orbital very well. The shape can be revealed better in <span data-concept="orbital-density-plots">a probability density plot</span>. To make such a three-dimensional plot, divide space up into small volume elements, calculate $\kpsi^* \kpsi$ at the center of each volume element, and then shade, stipple or color that volume element in proportion to the magnitude of $\kpsi^* \kpsi$. Do not confuse such plots with polar plots, which look similar. Probability densities also can be represented by contour maps, as shown in Figure 6.2.2.</p>
+<figure class="sim" id="sim-contour" data-figure="6.2.2" data-original="/media/ch06/349331-imageedit_2_2845651548.png" data-original-caption="Contour plots in the x-y plane for the $2p_x$ and $3p_x$ orbitals of the hydrogen atom. The plots map lines of constant values of $R(r)^2$; red lines follow paths of high $R(r)^2$, blue for low $R(r)^2$. The angular function used to create the figure was a linear combination of two Spherical Harmonic functions.">
+  <div class="sim-head"><span class="eyebrow">Figure 6.2.2</span><span>The <span data-type="probability-density">probability density</span> $|\kpsi|^2$ in the xy-plane, with its contour lines, for two orbitals side by side. The 3p<sub>x</sub> has the two lobes of 2p<sub>x</sub> and a nodal circle inside them. Choose other orbitals from Table 6.2.2 to compare.</span></div>
+</figure>
+<p>Methods for separately examining the radial portions of atomic orbitals provide useful information about the distribution of charge density within the orbitals. Graphs of the <span data-concept="radial-function">radial functions</span>, $\kRf(\kr)$, for the 1s, 2s, and 2p orbitals plotted in Figure 6.2.3.</p>
+<figure class="sim" id="sim-radial" data-figure="6.2.3 + 6.2.4 + 6.2.5 + 6.2.6" data-original="/media/ch06/349332-imageedit_3_2436950155.png,/media/ch06/349335-imageedit_4_8711751630.png,/media/ch06/349336-imageedit_5_7755063594.png,/media/ch06/15890-2s_radial_plots.gif" data-original-caption="Radial function, $R(r)$, for the 1s, 2s, and 2p orbitals.">
+  <div class="sim-head"><span class="eyebrow">Figure 6.2.3 + 6.2.4 + 6.2.5 + 6.2.6</span><span>The <span data-type="wavefunction">radial function</span> $\kRf$, its square $\kRf^2$, and the radial distribution $\kr^2\kRf^2$ on one <span data-type="length">distance</span> axis. Change the orbital and watch the radial nodes, where all three curves reach zero together; move the probe line to read the curves at one distance.</span></div>
+</figure>
+<p>The 1s function in Figure 6.2.3 starts with a high positive value at the nucleus and exponentially decays to essentially zero after 5 Bohr radii. The high value at the nucleus may be surprising, but as we shall see later, the probability of finding an electron at the nucleus is vanishingly small.</p>
+<p>Next notice how the radial function for the 2s orbital, Figure 6.2.3, goes to zero and becomes negative. This behavior reveals the presence of a <span data-concept="radial-node">radial node</span> in the function. <span data-concept="radial-node">A radial node occurs when the radial function equals zero other than at $\kr = 0$ or $\kr = ∞$</span>. Nodes and limiting behaviors of atomic orbital functions are both useful in identifying which orbital is being described by which wavefunction. For example, <span data-concept="s-orbital-at-nucleus">all of the s functions have non-zero wavefunction values at $\kr = 0$, but p, d, f and all other functions go to zero at the origin</span>. It is useful to remember that <span data-concept="radial-node-count">there are $n-1-l$ radial nodes in a wavefunction</span>, which means that a 1s orbital has no radial nodes, a 2s has one radial node, and so on.</p>
+<p>The quantity $\kRf(\kr)^* \kRf(\kr)$ gives the <span data-concept="radial-probability-density">radial probability density</span>; i.e., the probability density for the electron to be at a point located the distance $\kr$ from the proton.<sup class="fn" data-note="c-point"></sup> Radial probability densities for three atomic orbitals are plotted in Figure 6.2.4.</p>
+</section>
+
+<section id="distributions">
+<h2>Probabilities and Distribution Functions</h2>
+<p>When the <strong><span data-concept="radial-probability-density">radial probability density</span></strong> for every value of $\kr$ is multiplied by the area of the spherical surface represented by that particular value of r, we get the <span data-concept="radial-distribution-function">radial distribution function</span>. The radial distribution function gives the probability density for an electron to be found anywhere on the surface of a sphere located a distance r from the proton. Since the area of a spherical surface is $4 \pi \kr^2$, the <strong><span data-concept="radial-distribution-function">radial distribution function</span></strong> is given by<sup class="fn" data-note="c-4pi"></sup></p>
+$$ \underbrace{4 \pi \kr^2 \kRf(\kr) ^* \kRf(\kr)}_{\text{radial probability density}} $$
+<p>Radial distribution functions are shown in Figure 6.2.5. At small values of $\kr$, the radial distribution function is low because the small surface area for small radii modulates the high value of the radial probability density function near the nucleus. As we increase $\kr$, the surface area associated with a given value of r increases, and the $\kr^2$ term causes the radial distribution function to increase even though the radial probability density is beginning to decrease. At large values of $\kr$, the exponential decay of the radial function outweighs the increase caused by the $\kr^2$ term and the radial distribution function decreases.</p>
+</section>

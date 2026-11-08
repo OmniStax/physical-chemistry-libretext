@@ -1,0 +1,308 @@
+{
+ "id": "6.4",
+ "module": "13429",
+ "chapter": "6",
+ "title": "Hydrogen Atomic Orbitals Depend upon Three Quantum Numbers",
+ "short": "Hydrogen orbitals and quantum numbers",
+ "lead": "A hydrogen orbital is a radial function times a spherical harmonic, labelled by three quantum numbers. The radial functions are built from an exponential and a polynomial, and the condition that cuts the polynomial off also fixes the energy.",
+ "objectives": [
+  "Recognize how the hydrogen atomic orbitals vary as a function of the three primary quantum numbers"
+ ],
+ "summary_html": "",
+ "notes": "Adapted from David M. Hanson, Erica Harvey, Robert Sweeney and Theresa Julia Zielinski's Quantum States of Atoms and Molecules under CC BY-NC-SA 4.0; Exercises 6.4.4 to 6.4.6, which print Exercises 6.2.2 to 6.2.4 again, are set in Section 6.2, and the book's last exercise box, which is empty, is left out.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": []
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The keys of Exercises 6.4.1 and 6.4.2 are the book's, with correction notes where they slip. Exercise 6.4.3 has no key in the book, and its solution was written by AI. Exercises 6.4.4 to 6.4.6 repeat 6.2.2 to 6.2.4 and are set with them in Section 6.2. Exercise a1, on the energies with the reduced mass and with the electron's mass, was written by AI. Bloom levels and concept tags were chosen by AI. Numeric answers accept the tolerance each part states.",
+ "figures": [],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "orbitals-and-quantum-numbers",
+   "concept": "hydrogen-wavefunctions",
+   "verb": "reinforces"
+  },
+  {
+   "span": "orbitals-and-quantum-numbers",
+   "concept": "spherical-harmonics",
+   "verb": "uses"
+  },
+  {
+   "span": "orbitals-and-quantum-numbers",
+   "concept": "radial-function",
+   "verb": "reinforces"
+  },
+  {
+   "span": "orbitals-and-quantum-numbers",
+   "concept": "probability-density",
+   "verb": "uses"
+  },
+  {
+   "span": "orbitals-and-quantum-numbers",
+   "concept": "principal-quantum-number",
+   "verb": "reinforces"
+  },
+  {
+   "span": "orbitals-and-quantum-numbers",
+   "concept": "angular-momentum-quantum-number",
+   "verb": "reinforces"
+  },
+  {
+   "span": "orbitals-and-quantum-numbers",
+   "concept": "magnetic-quantum-number",
+   "verb": "reinforces"
+  },
+  {
+   "span": "orbitals-and-quantum-numbers",
+   "concept": "hydrogen-quantum-number-rules",
+   "verb": "reinforces"
+  },
+  {
+   "span": "orbitals-and-quantum-numbers",
+   "concept": "orbital-letter-codes",
+   "verb": "reinforces"
+  },
+  {
+   "span": "orbitals-and-quantum-numbers",
+   "concept": "hydrogen-degeneracy",
+   "verb": "reinforces"
+  },
+  {
+   "span": "radial-part-of-the-wavefunction",
+   "concept": "radial-asymptotic-behavior",
+   "verb": "introduces"
+  },
+  {
+   "span": "radial-part-of-the-wavefunction",
+   "concept": "associated-laguerre-polynomials",
+   "verb": "introduces"
+  },
+  {
+   "span": "radial-part-of-the-wavefunction",
+   "concept": "hydrogen-radial-functions",
+   "verb": "introduces"
+  },
+  {
+   "span": "radial-part-of-the-wavefunction",
+   "concept": "bohr-radius",
+   "verb": "uses"
+  },
+  {
+   "span": "radial-part-of-the-wavefunction",
+   "concept": "oscillator-wavefunctions",
+   "verb": "uses"
+  },
+  {
+   "span": "radial-part-of-the-wavefunction",
+   "concept": "asymptotic-series-method",
+   "verb": "uses"
+  },
+  {
+   "span": "energy-levels",
+   "concept": "hydrogen-energy-levels",
+   "verb": "introduces"
+  },
+  {
+   "span": "energy-levels",
+   "concept": "bohr-versus-schrodinger",
+   "verb": "introduces"
+  },
+  {
+   "span": "energy-levels",
+   "concept": "bohr-energy-levels",
+   "verb": "reinforces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "e1",
+   "source_id": "exr:6.4.1",
+   "source_number": "Exercise 6.4.1",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "orbitals-and-quantum-numbers",
+   "prompt": "<p>Evaluate the following integrals</p>\n<ol type=\"a\"><li>$\\langle \\psi (r, \\theta, \\varphi )| \\psi (r, \\theta , \\varphi ) \\rangle$</li><li>$\\langle \\psi (r, \\theta, \\varphi )| \\psi (r', \\theta' , \\varphi' ) \\rangle$</li></ol>",
+   "answer": {
+    "type": "open",
+    "generated_by": "source",
+    "hint": "Write $\\psi = R_{n,l}Y_l^{m_l}$ and split the integral over all space into a radial and an angular part.",
+    "solution": "<ol type=\"a\"><li>This integral is equal to one since $\\psi(r, \\theta, \\varphi)$ are normalized eigenstates.</li></ol>\n<ol type=\"a\" start=\"2\"><li>However, we can explicitly evaluate this integral for any arbitrary pair of eigenstates</li></ol>\n$$ \\begin{aligned} \\langle\\psi(r,\\theta,\\varphi)|\\psi(r',\\theta',\\varphi')\\rangle & = \\int\\limits_{all space}\\psi^*(r,\\theta,\\varphi)\\psi(r',\\theta',\\varphi')d\\tau \\\\[4pt] &=\\int\\limits_{0}^{\\infty} dr \\int\\limits_{0}^{\\pi}d\\theta\\int\\limits_{0}^{2\\pi}d\\varphi(r^2\\sin(\\theta))\\overbrace{\\psi*(r,\\theta,\\varphi)}^{R_{n,l}(r)Y_{l}^{m_l}(\\theta,\\varphi)}\\overbrace{\\psi(r,\\theta,\\varphi)}^{R_{n',l'}(r)Y_{l'}^{m'_l}(\\theta,\\varphi)} \\\\[4pt] &=\\int \\limits_{0}^{\\infty} dr \\int\\limits_{0}^{\\pi}d\\theta \\int \\limits_{0}^{2\\pi} d\\varphi(r^2\\sin(\\theta))[R_{n,l}(r)Y_{l}^{m_l}(\\theta,\\varphi)][R_{n',l'}(r)Y_{l'}^{m'_l}(\\theta,\\varphi)] \\\\[4pt] &=\\left[\\int\\limits_{0}^{\\infty}r^2[R_{n,l}(r)R_{n',l'}(r)]dr\\right]\\left[\\int\\limits_{0}^{2\\pi}\\int\\limits_{0}^{\\pi}\\sin(\\theta)[Y_{l}^{m_l}(\\theta,\\varphi)Y_{l'}^{m'_l}(\\theta,\\varphi)]d\\theta d\\varphi \\right] \\\\[4pt] &=\\langle R_{n,l}(r)|R_{n',l'}(r)\\rangle\\langle Y_{l}^{m_l}(\\theta,\\varphi)|Y_{l'}^{m'_l}(\\theta,\\varphi)\\rangle \\\\[4pt] &=(\\delta_{nn'}\\delta_{ll'})(\\delta_{ll'}\\delta_{mm'}) =\\delta_{nn'}\\delta_{ll'}\\delta_{mm'} \\end{aligned} $$\n<p>While part a demonstrates normality of the eigenstates, part b demonstrates the orthogonality of the eigenstate (and normality too).<sup class=\"fn\" data-note=\"c-key-641\"></sup></p>"
+   }
+  },
+  {
+   "id": "e2",
+   "source_id": "exr:6.4.2",
+   "source_number": "Exercise 6.4.2",
+   "kind": "exercise",
+   "bloom": "Understand",
+   "place": {
+    "at": "end"
+   },
+   "cite": "radial-part-of-the-wavefunction",
+   "prompt": "<p>What happens to the magnitude of $R_\\text{asymptotic}(r)$ as the distance $r$ from the proton approaches infinity? Sketch a graph of the function, $R_\\text{asymptotic}(r)$. Why might this behavior be expected for an electron in a hydrogen atom?</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "source",
+    "solution": "$$ R(r)=e^{-\\frac{c}{n} a_{0}} $$<p><sup class=\"fn\" data-note=\"c-key-642\"></sup></p>\n<p>As $r$ approaches infinity, the exponential decay goes to zero, this is to be expected as the likelihood of an electron being found at an infinite distance away is almost zero too.</p>\n<p><img src=\"/media/ch06/392738-clipboard_e040cdebfbf1824877f6ef9a82ad75f65.png\" alt=\"Graph of a function showing an exponential decay, approaching zero as it moves right along the horizontal axis.\"></p>"
+   }
+  },
+  {
+   "id": "e3",
+   "source_id": "exr:6.4.3",
+   "source_number": "Exercise 6.4.3",
+   "kind": "exercise",
+   "bloom": "Understand",
+   "place": {
+    "at": "end"
+   },
+   "cite": "energy-levels",
+   "prompt": "<p>Explain how the Schrödinger equation leads to the conclusion that the angular momentum of the hydrogen atom can be zero, and explain how the existence of such states with zero angular momentum contradicts Bohr's idea that the electron is orbiting around the proton in the hydrogen atom.</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "Which values of $l$ are allowed for every $n$, and what magnitude does $l = 0$ give?",
+    "solution": "<p>The angular part of the Schrödinger equation is the eigenvalue equation of $\\hat{L}^2$, with eigenvalues $l(l+1)\\hbar^2$, so the magnitude of the angular momentum is $\\sqrt{l(l+1)}\\,\\hbar$. The boundary conditions allow $l = 0, 1, \\ldots, n-1$, so every level $n$, the ground state included, has an s state with $l = 0$, and there the angular momentum is $\\sqrt{0}\\,\\hbar = 0$. In Bohr's model the electron circles the proton, and a particle of mass $m$ moving with speed $v$ on a circle of radius $r$ has angular momentum $mvr$, which cannot be zero; Bohr set it to $n\\hbar$, at least $\\hbar$. An electron with zero angular momentum cannot be going round the proton at all. The s states therefore have no place for an orbit: the Schrödinger model gives only a probability for the electron to be at each distance and direction, the first difference in the note above.</p>"
+   }
+  },
+  {
+   "id": "a1",
+   "source_id": "producing the same quantized expression for hydrogen atom energy levels",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "energy-levels",
+   "prompt": "<p>Use $E_n = -\\dfrac{\\mu e^4}{8\\epsilon_0^2h^2n^2}$ with $m_e = 9.109\\times10^{-31}$ kg, $m_p = 1.6726\\times10^{-27}$ kg, $e = 1.602\\times10^{-19}$ C, $\\epsilon_0 = 8.854\\times10^{-12}$ C² J⁻¹ m⁻¹ and $h = 6.626\\times10^{-34}$ J s. Find, in eV, (a) $E_1$ and (b) $E_2$ of the hydrogen atom with the reduced mass $\\mu$ of the electron and proton, and (c) $E_1$ when $\\mu$ is replaced by $m_e$. (d) By what percentage does using $m_e$ change $E_1$?</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": -13.594,
+      "unit": "eV",
+      "tol": 0.0002,
+      "hint": "$\\mu = m_em_p/(m_e + m_p)$; divide the energy in joules by $e$ to get eV."
+     },
+     {
+      "part": "b",
+      "value": -3.3985,
+      "unit": "eV",
+      "tol": 0.0002
+     },
+     {
+      "part": "c",
+      "value": -13.601,
+      "unit": "eV",
+      "tol": 0.0002
+     },
+     {
+      "part": "d",
+      "value": 0.0544,
+      "unit": "%",
+      "tol": 0.05
+     }
+    ],
+    "solution": "<p>The reduced mass is $\\mu = \\dfrac{(9.109\\times10^{-31})(1.6726\\times10^{-27})}{9.109\\times10^{-31} + 1.6726\\times10^{-27}} = 9.1040\\times10^{-31}$ kg, which is $0.99946\\,m_e$. Then</p>$$ E_1 = -\\dfrac{(9.1040\\times10^{-31})(1.602\\times10^{-19})^4}{8(8.854\\times10^{-12})^2(6.626\\times10^{-34})^2} = -2.1778\\times10^{-18}\\ \\text{J} $$<p>and dividing by $1.602\\times10^{-19}$ J/eV gives (a) $E_1 = -13.594$ eV. Since $E_n \\propto 1/n^2$, (b) $E_2 = E_1/4 = -3.3985$ eV. (c) With $m_e$ in place of $\\mu$ the energy scales by $m_e/\\mu = 1.00054$: $E_1 = -13.601$ eV. (d) The change is $(m_e - \\mu)/m_e = 0.054\\%$, about one part in 1840, the ratio of the electron's mass to the proton's.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "e1",
+   "concept": "hydrogen-wavefunctions"
+  },
+  {
+   "exercise": "e1",
+   "concept": "normalization-condition"
+  },
+  {
+   "exercise": "e1",
+   "concept": "orthogonality"
+  },
+  {
+   "exercise": "e2",
+   "concept": "radial-asymptotic-behavior"
+  },
+  {
+   "exercise": "e3",
+   "concept": "bohr-versus-schrodinger"
+  },
+  {
+   "exercise": "e3",
+   "concept": "angular-momentum-magnitude"
+  },
+  {
+   "exercise": "a1",
+   "concept": "hydrogen-energy-levels"
+  },
+  {
+   "exercise": "a1",
+   "concept": "reduced-mass"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-azimuthal",
+   "kind": "correction",
+   "html": "$\\theta$ is the polar angle, measured from the zenith as the sentence goes on to say; the azimuthal angle is $\\varphi$."
+  },
+  {
+   "id": "c-asymptotic",
+   "kind": "correction",
+   "html": "The exponent is $-r/na_0$, with $na_0$ in the denominator: $R_\\text{asymptotic}(r) \\sim \\exp(-r/na_0)$, as in Equation 6.4.4."
+  },
+  {
+   "id": "c-laguerre-sum",
+   "kind": "correction",
+   "html": "The sum runs over the index $i$, from $i = 0$ to $n - l - 1$."
+  },
+  {
+   "id": "c-radial-eq",
+   "kind": "correction",
+   "html": "Equation 6.4.1 is $\\psi = RY$; the radial differential equation meant here is Section 6.1's radial equation, Equation 6.1.13."
+  },
+  {
+   "id": "c-radial-eq2",
+   "kind": "correction",
+   "html": "Here too the radial differential equation is Equation 6.1.13 of Section 6.1."
+  },
+  {
+   "id": "c-table-label",
+   "kind": "correction",
+   "html": "The table meant is the one below, which the book captions Table 6.4.3."
+  },
+  {
+   "id": "c-r31",
+   "kind": "correction",
+   "html": "$R_{31} = \\dfrac{4}{81\\sqrt{6}}\\left(\\dfrac{Z}{a_0}\\right)^{3/2}(6\\rho - \\rho^2)e^{-\\rho/3}$: the printed form, with 1 for 4 and a plus sign, is not normalized and has no radial node."
+  },
+  {
+   "id": "c-r32",
+   "kind": "correction",
+   "html": "$R_{32} = \\dfrac{4}{81\\sqrt{30}}\\left(\\dfrac{Z}{a_0}\\right)^{3/2}\\rho^2e^{-\\rho/3}$: with 1 in place of 4 the printed form integrates to 1/16, not 1."
+  },
+  {
+   "id": "c-key-641",
+   "kind": "correction",
+   "html": "The integral needs the complex conjugate of the first spherical harmonic, $Y_l^{m_l*}$, as $\\psi^*$ has it. The radial integral alone equals $\\delta_{nn'}$ only when $l = l'$; the product with the angular integral, which is zero unless $l = l'$, is what gives $\\delta_{nn'}\\delta_{ll'}\\delta_{m_lm_l'}$."
+  },
+  {
+   "id": "c-key-642",
+   "kind": "correction",
+   "html": "The function is $R_\\text{asymptotic}(r) = e^{-r/na_0}$; the graph should start at $r = 0$, since $r$ is a distance and is never negative."
+  }
+ ]
+}

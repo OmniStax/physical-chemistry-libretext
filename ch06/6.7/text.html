@@ -1,0 +1,49 @@
+<section id="multi-electron-hamiltonians">
+<h2>Multi-electron Hamiltonians</h2>
+<p>The second element in the periodic table provides our first example of a quantum-mechanical problem which <em>cannot</em> be solved exactly. Nevertheless, as we will show, approximation methods applied to helium can give accurate solutions in perfect agreement with experimental results. In this sense, it can be concluded that quantum mechanics is correct for atoms more complicated than hydrogen. By contrast, the Bohr theory failed miserably in attempts to apply it beyond the hydrogen atom.</p>
+<p>Figure 6.7.1 shows a schematic representation of a helium atom with <span data-ref="electron-1 electron-2">two electrons</span> whose coordinates are given by the vectors $\kra$ and $\krb$. The electrons are separated by a distance $\krab = |\kra-\krb|$. The origin of the coordinate system is fixed at the nucleus. As with the hydrogen atom, the nuclei for multi-electron atoms are so much heavier than an electron that the nucleus is assumed to be the center of mass. Fixing the origin of the coordinate system at the nucleus allows us to exclude translational motion of the center of mass from our quantum mechanical treatment.</p>
+<figure class="sim" id="sim-helium" data-figure="6.7.1" data-original="/media/ch06/51421-HeAtomReduced.gif" data-original-width="520" data-original-caption="(a) The nucleus (++) and electrons (e-) of the helium atom. (b) Equivalent reduced particles with the center of mass (approximately located at the nucleus) at the origin of the coordinate system. Note that $\mu_1$ and $\mu_2 ≈ m_e$.">
+  <div class="sim-head"><span class="eyebrow">Figure 6.7.1</span><span>Drag either electron and watch the three <span data-type="energy">potential energies</span>. Each attraction to the nucleus follows one electron, but the repulsion between them changes whichever electron moves.</span></div>
+</figure>
+<p>The <span data-concept="hamiltonian-operator">Hamiltonian operator</span> for the hydrogen atom serves as a reference point for writing the <span data-concept="hamiltonian-operator">Hamiltonian operator</span> for atoms with more than one electron. Start with the same general form we used for the hydrogen atom Hamiltonian</p>
+$$ \kH = \kThat + \kVhat \tag{6.7.1} $$
+<p>Include a kinetic energy term for each electron and a potential energy term for the attraction of each negatively charged electron for the positively charged nucleus and a potential energy term for the mutual repulsion of each pair of negatively charged electrons. <span data-concept="multi-electron-hamiltonian">The He atom Hamiltonian is</span></p>
+$$ \kH = -\dfrac {\hbar ^2}{2\kme} (\nabla ^2_1 + \nabla ^2_2) + \kVa (\kra) + \kVb (\krb) + \kVab (\krab) \tag{6.7.2} $$
+<p>where</p>
+$$ \kVa(\kra) = -\dfrac {2\ke^2}{4 \pi \epsilon _0 \kra} \tag{6.7.3} $$
+$$ \kVb(\krb) = -\dfrac {2\ke^2}{4 \pi \epsilon _0 \krb} \tag{6.7.4} $$
+$$ \kVab(\krab) = \dfrac {\ke^2}{4 \pi \epsilon _0 \krab} \tag{6.7.5} $$
+<p>The two-electron Hamiltonian in Equation 6.7.2 can be extended to any atom or ion by replacing the He nuclear charge of +2 with a general charge $Z$; e.g.</p>
+$$ \kVa(\kra) = -\dfrac {Z\ke^2}{4 \pi \epsilon _0 \kra} \tag{6.7.6} $$
+<p>and including terms for the additional electrons. The subsequent multi-electron atom with $n$ electron is</p>
+$$ \kH = \underbrace{-\dfrac {\hbar ^2}{2\kme} \sum_i^n \nabla ^2_i}_{\text{Kinetic Energy}} + \underbrace{\sum_i^n \kVi (\kri)}_{\text{Coulombic Attraction}} + \underbrace{ \sum_{i \ne j}^{n,n} \kVij (\krij)}_{\text{electron-electron Repulsion}} \tag{6.7.7} $$
+<p><sup class="fn" data-note="c-pairs"></sup></p>
+<p>This <span data-concept="multi-electron-hamiltonian">multi-electron Hamiltonian</span> is qualitatively similar to the 2-electron Hamiltonian (Equation 6.7.1)<sup class="fn" data-note="c-eq-ref"></sup> with each electron having its own kinetic energy and nuclear potential energy terms (Equations 6.7.3 and 6.7.4). The other big difference between single electron systems and multi-electron systems is the presence of the $\kVij(\krij)$ terms which contain $1/\krij$, where $\krij$ is the distance between electrons $i$ and $j$. These terms account for the <span data-concept="electron-electron-repulsion">electron-electron repulsion</span> that we expect between like-charged particles.</p>
+</section>
+
+<section id="multi-electron-wavefunctions">
+<h2>Multi-electron Wavefunctions and the Orbital Approximation</h2>
+<p>Given what we have learned from the previous quantum mechanical systems we’ve studied, we predict that exact solutions to the multi-electron Schrödinger equation in Equation 6.7.7 would consist of a family of <span data-concept="multi-electron-wavefunction">multi-electron wavefunctions</span>, each with an associated energy eigenvalue. These wavefunctions and energies would describe the ground and excited states of the multi-electron atom, just as the <span data-concept="hydrogen-wavefunctions">hydrogen wavefunctions</span> and their associated energies describe the ground and excited states of the hydrogen atom. We would predict quantum numbers to be involved, as well.</p>
+<p>The fact that electrons interact through their Coulomb repulsion means that an exact wavefunction for a multi-electron system would be a single function that depends <em>simultaneously</em> upon the coordinates of all the electrons; i.e., <strong><span data-concept="multi-electron-wavefunction">a multi-electron wavefunction</span></strong>,</p>
+$$ \kpsi (\vec r _1, \vec r_2, \vec r_3, \vec r_4, \cdots \vec r_n) $$
+<p>The modulus squared of such a wavefunction would describe the probability of finding the electrons (though not specific ones) at a designated volume ($V$) in the atom.</p>
+$$ p(V)= \int_{V} | \kpsi (\vec r _1, \vec r_2, \vec r_3, \vec r_4, \cdots \vec r_n) |^2 d\tau $$
+<p>All of the electrons are described simultaneously by a <span data-concept="multi-electron-wavefunction">multi-electron wavefunction</span>, so the total amount of electron density represented by the wavefunction equals the number of electrons in the atom.</p>
+$$ \int_{\text{all space}} | \kpsi (\vec r _1, \vec r_2, \vec r_3, \vec r_4, \cdots \vec r_i) |^2 d\tau = n $$
+<p><sup class="fn" data-note="c-norm-n"></sup></p>
+<p><span data-concept="multi-electron-not-separable">Unfortunately, the Coulomb repulsion terms (Equation 6.7.5) make it impossible to find an exact solution to the Schrödinger equation for many-electron atoms and molecules even for two electrons atoms.</span> We have to rely on approximations and the <em><span data-concept="orbital-approximation">orbital approximation</span></em> is central to basic chemistry concepts.</p>
+<div class="note">
+<div class="eyebrow">Note</div>
+<h3>The Orbital Approximation</h3>
+<p>The most basic approximations to the exact solutions to a multi-electron atom Hamiltonian, $\kH$, (Equation 6.7.7) involve writing a <span data-concept="multi-electron-wavefunction">multi-electron wavefunction</span> ($\kpsi (r_1, r_2, \cdots , r_n)$) as a simple product of single-electron wavefunctions ($\kvarphii (\kri)$ ):</p>
+$$ \kpsi (r_1, r_2, \cdots , r_n) \approx \varphi _1 (r_1) \varphi _2 (r_2) \cdots \varphi _n(r_n) \tag{6.7.8} $$
+<p>or in Dirac notation</p>
+$$ |\kpsi (r_1, r_2, \cdots , r_n) \rangle \approx | \varphi _1 (r_1) \rangle |\varphi _2 (r_2) \rangle \cdots |\varphi _n(r_n) \rangle \tag{6.7.9} $$
+<p>The energy of the atom in the state associated with a specific <span data-concept="multi-electron-wavefunction">multi-electron wavefunction</span> ($\kE$) is obtained from the multi-electron Schrödinger Equation</p>
+$$ \kH \kpsi (r_1, r_2, \cdots , r_n) = \kE \kpsi (r_1, r_2, \cdots , r_n) $$
+<p>Within the approximation in Equation 6.7.8, $\kE$ can be expressed sum of the energies of the one-electron components ($\kepsi$).</p>
+$$ \kE \approx \sum_i \kepsi $$
+<p>This is called the <strong><span data-concept="orbital-approximation">orbital approximation</span></strong>.</p>
+</div>
+<p>By writing the <span data-concept="multi-electron-wavefunction">multi-electron wavefunction</span> as a product of single-electron functions (Equations 6.7.8 or 6.7.9), we conceptually transform a multi-electron atom into a collection of individual electrons located in individual orbitals whose spatial characteristics and energies can be separately identified. For atoms, these single-electron wavefunctions are called <em><span data-concept="atomic-orbital">atomic orbitals</span></em> and resemble the wavefunctions for hydrogen-like atoms. For molecules, as we will see in the following chapters, these are called <em>molecular orbitals</em>. While a great deal can be learned from such an analysis, it is important to keep in mind that such a discrete, compartmentalized picture of the electrons is an approximation, albeit a powerful one.</p>
+</section>

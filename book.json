@@ -25,7 +25,8 @@
     "ch03",
     "ch04",
     "ch05",
-    "ch06"
+    "ch06",
+    "ch07"
   ],
   "types": [
     {
@@ -461,7 +462,8 @@
     },
     {
       "sym": "theta",
-      "latex": "\\theta"
+      "latex": "\\theta",
+      "macro": "\\ktheta"
     },
     {
       "sym": "J_m",
@@ -594,7 +596,8 @@
     },
     {
       "sym": "B",
-      "latex": "B"
+      "latex": "B",
+      "macro": "\\kB"
     },
     {
       "sym": "E_1",
@@ -1217,6 +1220,161 @@
       "sym": "eps_i",
       "latex": "\\epsilon_i",
       "macro": "\\kepsi"
+    },
+    {
+      "sym": "I_1",
+      "latex": "I_1",
+      "macro": "\\kIone"
+    },
+    {
+      "sym": "I_2",
+      "latex": "I_2",
+      "macro": "\\kItwo"
+    },
+    {
+      "sym": "E_true",
+      "latex": "E_{true}",
+      "macro": "\\kEtrue"
+    },
+    {
+      "sym": "E_trial",
+      "latex": "E_{trial}",
+      "macro": "\\kEtrial"
+    },
+    {
+      "sym": "h_1",
+      "latex": "h_1",
+      "macro": "\\khone"
+    },
+    {
+      "sym": "h_2",
+      "latex": "h_2",
+      "macro": "\\khtwo"
+    },
+    {
+      "sym": "Psi_tot",
+      "latex": "\\Psi_{total}",
+      "macro": "\\kPsitot"
+    },
+    {
+      "sym": "psi_ela",
+      "latex": "\\psi_{el_1}",
+      "macro": "\\kpsiela"
+    },
+    {
+      "sym": "psi_elb",
+      "latex": "\\psi_{el_2}",
+      "macro": "\\kpsielb"
+    },
+    {
+      "sym": "E_na",
+      "latex": "E_{n_1}",
+      "macro": "\\kEna"
+    },
+    {
+      "sym": "E_nb",
+      "latex": "E_{n_2}",
+      "macro": "\\kEnb"
+    },
+    {
+      "sym": "zeta",
+      "latex": "\\zeta"
+    },
+    {
+      "sym": "Z_eff",
+      "latex": "Z_{eff}"
+    },
+    {
+      "sym": "psi_trial",
+      "latex": "\\psi_{trial}",
+      "macro": "\\kpsitrial"
+    },
+    {
+      "sym": "psi_true",
+      "latex": "\\psi_{true}",
+      "macro": "\\kpsitrue"
+    },
+    {
+      "sym": "varphi_orb",
+      "latex": "\\varphi",
+      "macro": "\\kvarphiorb"
+    },
+    {
+      "sym": "a_i",
+      "latex": "a_i"
+    },
+    {
+      "sym": "a_j",
+      "latex": "a_j"
+    },
+    {
+      "sym": "phi_j",
+      "latex": "\\phi_j",
+      "macro": "\\kphij"
+    },
+    {
+      "sym": "H_ij",
+      "latex": "H_{ij}",
+      "macro": "\\kHij"
+    },
+    {
+      "sym": "S_ij",
+      "latex": "S_{ij}"
+    },
+    {
+      "sym": "varphi_1s",
+      "latex": "\\varphi_{1s}",
+      "macro": "\\kvarphions"
+    },
+    {
+      "sym": "c_j",
+      "latex": "c_j"
+    },
+    {
+      "sym": "zeta_j",
+      "latex": "\\zeta_j"
+    },
+    {
+      "sym": "H0_hat",
+      "latex": "\\hat{H}^0",
+      "macro": "\\kHzerohat"
+    },
+    {
+      "sym": "H1_hat",
+      "latex": "\\hat{H}^1",
+      "macro": "\\kHonehat"
+    },
+    {
+      "sym": "E_n0",
+      "latex": "E_n^o",
+      "macro": "\\kEnzero"
+    },
+    {
+      "sym": "E_n1",
+      "latex": "E_n^1",
+      "macro": "\\kEnone"
+    },
+    {
+      "sym": "E_ni",
+      "latex": "E_n^i",
+      "macro": "\\kEni"
+    },
+    {
+      "sym": "lambda_pt",
+      "latex": "\\lambda"
+    },
+    {
+      "sym": "c_mn",
+      "latex": "c_{m,n}"
+    },
+    {
+      "sym": "V_o",
+      "latex": "V_o",
+      "macro": "\\kVo"
+    },
+    {
+      "sym": "eps_c",
+      "latex": "\\epsilon"
     }
   ],
   "exercise_kinds": [
@@ -5477,6 +5635,537 @@
           "latex": "E \\approx \\sum_i \\epsilon_i"
         }
       ]
+    },
+    {
+      "id": "ionization-energy",
+      "kind": "definition",
+      "section": "7.1",
+      "name": "Ionization energy",
+      "terms": [
+        "first ionization energy",
+        "second ionization energy",
+        "ionization energy"
+      ],
+      "type": "energy",
+      "symbol": "I_1",
+      "statement": "The minimum energy needed to remove an electron from an atom or ion in the gas phase: the first ionization energy I₁ takes the first electron, and the second, I₂, takes the next one from the ion left behind."
+    },
+    {
+      "id": "helium-ground-state-energy",
+      "kind": "result",
+      "section": "7.1",
+      "name": "Ground-state energy of helium",
+      "terms": [
+        "true value"
+      ],
+      "type": "energy",
+      "symbol": "E_true",
+      "statement": "Since the three separated particles have zero energy, helium's ground-state energy is minus the sum of its two ionization energies, −79.02 eV, or −5.8066 R_H; the second ionization energy follows exactly from the hydrogen-like ion He⁺.",
+      "forms": [
+        {
+          "id": "helium-true-energy",
+          "latex": "E_{true} = -(I_1 + I_2)"
+        },
+        {
+          "id": "helium-true-energy-rydberg",
+          "latex": "E_{true} = -5.8066\\,R_H"
+        }
+      ]
+    },
+    {
+      "id": "independent-electron-approximation",
+      "kind": "idea",
+      "section": "7.1",
+      "name": "Ignoring electron–electron repulsion",
+      "statement": "Dropping the repulsion term e²/4πε₀r₁₂ leaves helium's Hamiltonian a sum of two hydrogen-like one-electron Hamiltonians, so the two electrons separate.",
+      "forms": [
+        {
+          "id": "helium-independent-hamiltonian",
+          "latex": "\\hat{H} \\approx h_1(r_1) + h_2(r_2)"
+        }
+      ]
+    },
+    {
+      "id": "additive-electron-energies",
+      "kind": "result",
+      "section": "7.1",
+      "name": "Additive one-electron energies",
+      "terms": [
+        "additive"
+      ],
+      "statement": "When the Hamiltonian is a sum of one-electron Hamiltonians, the wavefunction is a product of one-electron wavefunctions and the energy is the sum of their energies; for helium with both electrons in 1s it gives −8R_H = −108.8 eV, far below the true −79.0 eV.",
+      "forms": [
+        {
+          "id": "helium-product-wavefunction",
+          "latex": "\\Psi_{total} = \\psi_{el_1}\\psi_{el_2}"
+        },
+        {
+          "id": "additive-energies",
+          "latex": "\\hat{H}\\Psi_{total} = (E_{n_1} + E_{n_2})\\,\\psi_{el_1}\\psi_{el_2}"
+        },
+        {
+          "id": "helium-independent-energy",
+          "latex": "E_{He_{1s}} = -8R_H"
+        }
+      ]
+    },
+    {
+      "id": "shielding",
+      "kind": "definition",
+      "section": "7.1",
+      "name": "Shielding",
+      "terms": [
+        "shielding",
+        "shielding effect",
+        "shields"
+      ],
+      "statement": "One electron's negative charge partly cancels the nucleus's attraction for another electron, so that electron feels a smaller nuclear charge than the nucleus carries."
+    },
+    {
+      "id": "effective-nuclear-charge",
+      "kind": "definition",
+      "section": "7.1",
+      "name": "Effective nuclear charge",
+      "terms": [
+        "effective nuclear charge"
+      ],
+      "symbol": "zeta",
+      "statement": "The reduced nuclear charge an electron feels once shielding is counted, written Z_eff or ζ; in helium it lies between 1, for complete shielding, and 2, for none."
+    },
+    {
+      "id": "trial-wavefunction",
+      "kind": "definition",
+      "section": "7.1",
+      "name": "Trial wavefunction",
+      "terms": [
+        "trial wavefunction",
+        "trial function"
+      ],
+      "type": "wavefunction",
+      "symbol": "psi_trial",
+      "statement": "An approximate wavefunction written with one or more adjustable parameters, which the variational method varies to lower its energy."
+    },
+    {
+      "id": "variational-energy",
+      "kind": "definition",
+      "section": "7.1",
+      "name": "Variational energy",
+      "terms": [
+        "variational energy"
+      ],
+      "type": "energy",
+      "symbol": "E_trial",
+      "statement": "The expectation value of the exact Hamiltonian in a trial wavefunction, divided by the trial function's normalization integral.",
+      "forms": [
+        {
+          "id": "variational-energy",
+          "latex": "E_{trial} = \\dfrac{\\langle \\psi_{trial}|\\hat{H}|\\psi_{trial}\\rangle}{\\langle \\psi_{trial}|\\psi_{trial}\\rangle}"
+        },
+        {
+          "id": "variational-energy-integrals",
+          "latex": "E_{trial} = \\dfrac{\\displaystyle\\int \\psi_{trial}^*\\hat{H}\\psi_{trial}\\,d\\tau}{\\displaystyle\\int \\psi_{trial}^*\\psi_{trial}\\,d\\tau}"
+        }
+      ]
+    },
+    {
+      "id": "variational-principle",
+      "kind": "result",
+      "section": "7.1",
+      "name": "Variational principle",
+      "terms": [
+        "variational principle",
+        "variational theorem",
+        "upper bound"
+      ],
+      "statement": "For a time-independent Hamiltonian, the variational energy of any trial wavefunction is greater than or equal to the true ground-state energy, and equal to it only when the trial function is the true ground-state wavefunction; the variational energy is an upper bound.",
+      "forms": [
+        {
+          "id": "variational-principle",
+          "latex": "E_{trial} \\ge E_{true}"
+        }
+      ]
+    },
+    {
+      "id": "variational-method",
+      "kind": "skill",
+      "section": "7.1",
+      "name": "Applying the variational method",
+      "terms": [
+        "variational method"
+      ],
+      "statement": "Define the Hamiltonian, choose a trial wavefunction with adjustable parameters, evaluate its variational energy as a function of them, and find the minimum by setting each derivative to zero; the minimum is the best estimate of the ground-state energy and fixes the best parameters.",
+      "forms": [
+        {
+          "id": "variational-minimum",
+          "latex": "\\dfrac{dE_{trial}}{d\\zeta} = 0"
+        }
+      ]
+    },
+    {
+      "id": "helium-variational-energy",
+      "kind": "result",
+      "section": "7.1",
+      "name": "Variational energy of helium",
+      "type": "energy",
+      "statement": "With a product of two 1s functions of effective charge ζ as trial function and the complete helium Hamiltonian, the variational energy is E_h(ζ² − 27ζ/8); it is lowest at ζ = 27/16 ≈ 1.69, giving −77.5 eV, about 2% above the experimental −79.0 eV.",
+      "forms": [
+        {
+          "id": "helium-variational-energy",
+          "latex": "E_{trial}(\\zeta) = \\dfrac{m_e e^4}{4\\epsilon_0^2 h^2}\\left(\\zeta^2 - \\dfrac{27}{8}\\zeta\\right)"
+        },
+        {
+          "id": "helium-optimal-zeta",
+          "latex": "\\zeta = \\dfrac{27}{16} \\approx 1.6875"
+        }
+      ]
+    },
+    {
+      "id": "basis-functions",
+      "kind": "definition",
+      "section": "7.2",
+      "name": "Basis functions",
+      "terms": [
+        "basis functions",
+        "basis function",
+        "linear variational basis functions",
+        "basis set"
+      ],
+      "type": "wavefunction",
+      "symbol": "phi_j",
+      "statement": "The fixed functions combined in a linear trial wavefunction, chosen to obey the boundary conditions of the exact state, to depend on the same coordinates, to share its symmetry and to make the Hamiltonian's matrix elements easy to evaluate; they need not be orthogonal or normalized."
+    },
+    {
+      "id": "linear-variation-function",
+      "kind": "definition",
+      "section": "7.2",
+      "name": "Linear variation function",
+      "terms": [
+        "linear variation function",
+        "linear variational"
+      ],
+      "statement": "A trial wavefunction written as a linear combination of N linearly independent basis functions, whose coefficients a_j are the parameters varied.",
+      "forms": [
+        {
+          "id": "linear-trial-ket",
+          "latex": "|\\psi_{trial}\\rangle = \\sum_{j=1}^N a_j|\\phi_j\\rangle"
+        },
+        {
+          "id": "linear-trial-bra",
+          "latex": "\\langle\\psi_{trial}| = \\sum_{j=1}^N a_j^*\\langle\\phi_j|"
+        }
+      ]
+    },
+    {
+      "id": "hamiltonian-matrix-element",
+      "kind": "definition",
+      "section": "7.2",
+      "name": "Hamiltonian matrix element",
+      "terms": [
+        "Hamiltonian terms elements"
+      ],
+      "type": "energy",
+      "symbol": "H_ij",
+      "statement": "The integral of the Hamiltonian between two basis functions, H_ij = ⟨φ_i|Ĥ|φ_j⟩.",
+      "forms": [
+        {
+          "id": "hamiltonian-matrix-element",
+          "latex": "H_{ij} = \\langle\\phi_i|\\hat{H}|\\phi_j\\rangle"
+        }
+      ]
+    },
+    {
+      "id": "linear-variational-energy",
+      "kind": "result",
+      "section": "7.2",
+      "name": "Variational energy of a linear trial function",
+      "statement": "With a linear trial function the variational energy is a ratio of two sums over pairs of basis functions, one of Hamiltonian matrix elements and one of overlap integrals, and depends quadratically on the coefficients.",
+      "forms": [
+        {
+          "id": "linear-variational-energy",
+          "latex": "E_{trial} = \\dfrac{\\displaystyle\\sum_{i,j}^{N,N} a_i^*a_jH_{ij}}{\\displaystyle\\sum_{i,j}^{N,N} a_i^*a_jS_{ij}}"
+        },
+        {
+          "id": "linear-variational-numerator",
+          "latex": "\\langle\\psi_{trial}|\\hat{H}|\\psi_{trial}\\rangle = \\sum_{i,j}^{N,N} a_i^*a_jH_{ij}"
+        },
+        {
+          "id": "linear-variational-denominator",
+          "latex": "\\langle\\psi_{trial}|\\psi_{trial}\\rangle = \\sum_{i,j}^{N,N} a_i^*a_jS_{ij}"
+        }
+      ]
+    },
+    {
+      "id": "secular-equations",
+      "kind": "result",
+      "section": "7.2",
+      "name": "Secular equations",
+      "terms": [
+        "secular equations",
+        "secular equation"
+      ],
+      "statement": "Setting the derivative of the linear variational energy with respect to each coefficient to zero gives one linear equation for each k, Σ_i a_i(H_ik − E S_ik) = 0; with an orthonormal basis they become the matrix eigenvalue equation Σ_j H_ij a_j = E a_i.",
+      "forms": [
+        {
+          "id": "secular-equations",
+          "latex": "\\sum_i^N a_i(H_{ik} - E_{trial}S_{ik}) = 0"
+        },
+        {
+          "id": "secular-eigenvalue-form",
+          "latex": "\\sum_j^N H_{ij}a_j = E_{trial}\\,a_i"
+        }
+      ]
+    },
+    {
+      "id": "determinant",
+      "kind": "definition",
+      "section": "7.2",
+      "name": "Determinant",
+      "terms": [
+        "determinant",
+        "minors",
+        "cofactors"
+      ],
+      "statement": "A number computed from a square matrix: ad − bc for a 2 × 2 matrix, and for a larger one an expansion in minors and cofactors; a matrix has an inverse only when its determinant is not zero.",
+      "forms": [
+        {
+          "id": "determinant-2x2",
+          "latex": "\\begin{vmatrix}a&b\\\\c&d\\end{vmatrix} = ad - bc"
+        },
+        {
+          "id": "determinant-3x3",
+          "latex": "\\begin{vmatrix}a&b&c\\\\d&e&f\\\\g&h&i\\end{vmatrix} = aei + bfg + cdh - ceg - bdi - afh"
+        }
+      ]
+    },
+    {
+      "id": "secular-determinant",
+      "kind": "result",
+      "section": "7.2",
+      "name": "Secular determinant",
+      "terms": [
+        "secular determinant"
+      ],
+      "statement": "The secular equations have a solution other than all coefficients zero only when the determinant of H_ik − E S_ik vanishes; its roots, in order, approximate the energies of the lowest states, each lying above the true energy of its state.",
+      "forms": [
+        {
+          "id": "secular-determinant",
+          "latex": "|H_{ik} - ES_{ik}| = 0"
+        },
+        {
+          "id": "secular-determinant-2x2",
+          "latex": "\\begin{vmatrix} H_{11}-E_{trial}S_{11} & H_{12}-E_{trial}S_{12} \\\\ H_{12}-E_{trial}S_{12} & H_{22}-E_{trial}S_{22}\\end{vmatrix} = 0"
+        }
+      ]
+    },
+    {
+      "id": "characteristic-equation",
+      "kind": "definition",
+      "section": "7.2",
+      "name": "Characteristic equation",
+      "terms": [
+        "characteristic equation"
+      ],
+      "statement": "The polynomial in the energy obtained by expanding the secular determinant and setting it to zero, solved directly by linear algebra or numerically."
+    },
+    {
+      "id": "bracketing-theorem",
+      "kind": "result",
+      "section": "7.2",
+      "name": "Bracketing theorem",
+      "terms": [
+        "bracketing theorem"
+      ],
+      "statement": "Between successive pairs of the eigenvalues found by solving the secular problem at least one exact eigenvalue lies."
+    },
+    {
+      "id": "linear-variational-method",
+      "kind": "skill",
+      "section": "7.2",
+      "name": "Applying the linear variational method",
+      "terms": [
+        "linear variational method"
+      ],
+      "statement": "Write the trial function as a linear combination of basis functions, evaluate the H_ij and S_ij, solve the secular determinant for the energies, put each energy back into the secular equations for its coefficients and normalize; a larger basis gives more states."
+    },
+    {
+      "id": "lcao-approximation",
+      "kind": "idea",
+      "section": "7.2",
+      "name": "Linear combination of atomic orbitals",
+      "terms": [
+        "Linear Combination of Atomic Orbitals",
+        "LCAO"
+      ],
+      "statement": "The linear variational method with atomic orbitals as the basis functions, used to compute the energies and wavefunctions of atoms and molecules."
+    },
+    {
+      "id": "slater-type-orbital",
+      "kind": "definition",
+      "section": "7.2",
+      "name": "Slater-type orbital",
+      "terms": [
+        "Slater orbitals",
+        "Slater type",
+        "STO"
+      ],
+      "statement": "A basis function made of a spherical harmonic times a hydrogen-like exponential decay e^{−αr}; it gives exact results for hydrogen.",
+      "forms": [
+        {
+          "id": "slater-orbital",
+          "latex": "|\\phi_i\\rangle = Y_l^m(\\theta,\\phi)\\,e^{-\\alpha r}"
+        }
+      ]
+    },
+    {
+      "id": "gaussian-type-orbital",
+      "kind": "definition",
+      "section": "7.2",
+      "name": "Gaussian-type orbital",
+      "terms": [
+        "Gaussian orbitals",
+        "Gaussian type"
+      ],
+      "statement": "A basis function made of a spherical harmonic times a Gaussian e^{−αr²}; since a product of Gaussians is a Gaussian, its matrix elements are easy to compute, and most quantum chemistry programs use them.",
+      "forms": [
+        {
+          "id": "gaussian-orbital",
+          "latex": "|\\phi_i\\rangle = Y_l^m(\\theta,\\phi)\\,e^{-\\alpha r^2}"
+        }
+      ]
+    },
+    {
+      "id": "sum-of-exponentials-orbital",
+      "kind": "definition",
+      "section": "7.3",
+      "name": "Orbital as a sum of exponentials",
+      "statement": "A single-electron function written as a linear combination of exponentials with different decay constants ζ_j and adjustable coefficients c_j; the ζ_j act as effective nuclear charges, so the charge the electron feels can change with its distance from the nucleus.",
+      "forms": [
+        {
+          "id": "sum-of-exponentials",
+          "latex": "\\varphi_{1s}(r_1) = \\sum_j c_j e^{-\\zeta_j r_1/a_0}"
+        }
+      ]
+    },
+    {
+      "id": "nonlinear-variational-method",
+      "kind": "definition",
+      "section": "7.3",
+      "name": "Nonlinear variational method",
+      "terms": [
+        "Nonlinear Variational Method"
+      ],
+      "statement": "A variational calculation that varies a parameter inside the basis functions, such as an exponent ζ, so that the energy depends on it nonlinearly and every integral must be recomputed at each change; varying only the coefficients of fixed functions is the linear variational method, which is far cheaper."
+    },
+    {
+      "id": "slater-orbital-exponents",
+      "kind": "result",
+      "section": "7.3",
+      "name": "Optimized Slater orbital exponents",
+      "statement": "Orbital exponents optimized once by variational calculations on small systems are reused for larger ones; ζ₁s rises by about one unit per element from He to Ne, while ζ₂s,₂p rises much more slowly."
+    },
+    {
+      "id": "perturbation-theory",
+      "kind": "definition",
+      "section": "7.4",
+      "name": "Perturbation theory",
+      "terms": [
+        "perturbation theory",
+        "perturbation"
+      ],
+      "symbol": "H1_hat",
+      "statement": "Finding approximate energies and wavefunctions of a problem that cannot be solved exactly by writing its Hamiltonian as one whose eigenstates are known plus a small perturbation, and correcting the known solutions by a series of successive terms.",
+      "forms": [
+        {
+          "id": "perturbed-schrodinger",
+          "latex": "(\\hat{H}^0 + \\hat{H}^1)|n\\rangle = E_n|n\\rangle"
+        },
+        {
+          "id": "unperturbed-schrodinger",
+          "latex": "\\hat{H}^0|n^o\\rangle = E_n^o|n^o\\rangle"
+        }
+      ]
+    },
+    {
+      "id": "perturbation-expansion",
+      "kind": "result",
+      "section": "7.4",
+      "name": "Perturbation series in λ",
+      "terms": [
+        "expand"
+      ],
+      "statement": "The perturbed state and energy are expanded as power series in a bookkeeping parameter λ that goes with Ĥ¹ and is set to 1 at the end; the term in λ^i is of order (Ĥ¹/Ĥ⁰)^i, and truncating the series is the approximation.",
+      "forms": [
+        {
+          "id": "perturbation-state-series",
+          "latex": "|n\\rangle = \\sum_{i=0}^m \\lambda^i|n^i\\rangle"
+        },
+        {
+          "id": "perturbation-energy-series",
+          "latex": "E_n = \\sum_{i=0}^m \\lambda^iE_n^i"
+        }
+      ]
+    },
+    {
+      "id": "order-by-order-equations",
+      "kind": "result",
+      "section": "7.4",
+      "name": "Matching powers of λ",
+      "statement": "Putting the series into (Ĥ⁰ + λĤ¹)|n⟩ = E_n|n⟩ and equating the terms of each power of λ gives back the unperturbed equation at zeroth order and, at first order, an equation that links the first-order corrections to the energy and to the state.",
+      "forms": [
+        {
+          "id": "first-order-equation",
+          "latex": "\\hat{H}^0|n^1\\rangle + \\hat{H}^1|n^o\\rangle = E_n^o|n^1\\rangle + E_n^1|n^o\\rangle"
+        }
+      ]
+    },
+    {
+      "id": "first-order-energy-correction",
+      "kind": "result",
+      "section": "7.4",
+      "name": "First-order energy correction",
+      "terms": [
+        "first-order perturbation"
+      ],
+      "type": "energy",
+      "symbol": "E_n1",
+      "statement": "The first-order change in the energy of a state is the expectation value of the perturbation in the unperturbed state, so E_n ≈ E_n⁰ + ⟨n⁰|Ĥ¹|n⁰⟩.",
+      "forms": [
+        {
+          "id": "first-order-energy",
+          "latex": "E_n^1 = \\langle n^o|\\hat{H}^1|n^o\\rangle"
+        },
+        {
+          "id": "first-order-energy-total",
+          "latex": "E_n \\approx E_n^o + \\langle n^o|\\hat{H}^1|n^o\\rangle"
+        }
+      ]
+    },
+    {
+      "id": "first-order-wavefunction-correction",
+      "kind": "result",
+      "section": "7.4",
+      "name": "First-order wavefunction correction",
+      "terms": [
+        "comparable energy"
+      ],
+      "statement": "The first-order correction to a state is a linear combination of the other unperturbed states, each weighted by ⟨m⁰|Ĥ¹|n⁰⟩/(E_n⁰ − E_m⁰): states of comparable energy that the perturbation couples contribute most, and symmetry makes many of the weights zero.",
+      "forms": [
+        {
+          "id": "first-order-wavefunction",
+          "latex": "|n\\rangle \\approx |n^o\\rangle + \\sum_{m\\neq n}\\dfrac{|m^o\\rangle\\langle m^o|\\hat{H}^1|n^o\\rangle}{E_n^o - E_m^o}"
+        },
+        {
+          "id": "first-order-coefficients",
+          "latex": "c_{m,n} = \\dfrac{\\langle m^o|\\hat{H}^1|n^o\\rangle}{E_n^o - E_m^o}"
+        }
+      ]
+    },
+    {
+      "id": "perturbation-series-breakdown",
+      "kind": "idea",
+      "section": "7.4",
+      "name": "When perturbation theory fails",
+      "statement": "Some problems cannot be treated by perturbation theory however weak the perturbation: an arbitrarily weak attractive potential binds a free particle with a binding energy of order λ², while a repulsive one binds none, so the energy shift is not a power series in λ."
     }
   ],
   "concept_prereqs": [
@@ -7203,6 +7892,234 @@
     {
       "concept": "orbital-approximation",
       "prereq": "atomic-orbital"
+    },
+    {
+      "concept": "ionization-energy",
+      "prereq": "ground-state"
+    },
+    {
+      "concept": "helium-ground-state-energy",
+      "prereq": "ionization-energy"
+    },
+    {
+      "concept": "helium-ground-state-energy",
+      "prereq": "hydrogen-energy-levels"
+    },
+    {
+      "concept": "independent-electron-approximation",
+      "prereq": "multi-electron-not-separable"
+    },
+    {
+      "concept": "additive-electron-energies",
+      "prereq": "independent-electron-approximation"
+    },
+    {
+      "concept": "additive-electron-energies",
+      "prereq": "hydrogen-energy-levels"
+    },
+    {
+      "concept": "shielding",
+      "prereq": "electron-electron-repulsion"
+    },
+    {
+      "concept": "effective-nuclear-charge",
+      "prereq": "shielding"
+    },
+    {
+      "concept": "trial-wavefunction",
+      "prereq": "wavefunction"
+    },
+    {
+      "concept": "variational-energy",
+      "prereq": "trial-wavefunction"
+    },
+    {
+      "concept": "variational-energy",
+      "prereq": "expectation-value-unnormalized"
+    },
+    {
+      "concept": "variational-principle",
+      "prereq": "variational-energy"
+    },
+    {
+      "concept": "variational-principle",
+      "prereq": "ground-state"
+    },
+    {
+      "concept": "variational-method",
+      "prereq": "variational-principle"
+    },
+    {
+      "concept": "helium-variational-energy",
+      "prereq": "variational-method"
+    },
+    {
+      "concept": "helium-variational-energy",
+      "prereq": "effective-nuclear-charge"
+    },
+    {
+      "concept": "helium-variational-energy",
+      "prereq": "orbital-approximation"
+    },
+    {
+      "concept": "basis-functions",
+      "prereq": "wavefunction"
+    },
+    {
+      "concept": "basis-functions",
+      "prereq": "boundary-conditions"
+    },
+    {
+      "concept": "linear-variation-function",
+      "prereq": "trial-wavefunction"
+    },
+    {
+      "concept": "linear-variation-function",
+      "prereq": "basis-functions"
+    },
+    {
+      "concept": "hamiltonian-matrix-element",
+      "prereq": "basis-functions"
+    },
+    {
+      "concept": "hamiltonian-matrix-element",
+      "prereq": "hamiltonian-operator"
+    },
+    {
+      "concept": "linear-variational-energy",
+      "prereq": "linear-variation-function"
+    },
+    {
+      "concept": "linear-variational-energy",
+      "prereq": "hamiltonian-matrix-element"
+    },
+    {
+      "concept": "linear-variational-energy",
+      "prereq": "overlap-integral"
+    },
+    {
+      "concept": "linear-variational-energy",
+      "prereq": "variational-energy"
+    },
+    {
+      "concept": "secular-equations",
+      "prereq": "linear-variational-energy"
+    },
+    {
+      "concept": "secular-equations",
+      "prereq": "variational-method"
+    },
+    {
+      "concept": "secular-equations",
+      "prereq": "hamiltonian-is-hermitian"
+    },
+    {
+      "concept": "secular-determinant",
+      "prereq": "secular-equations"
+    },
+    {
+      "concept": "secular-determinant",
+      "prereq": "determinant"
+    },
+    {
+      "concept": "characteristic-equation",
+      "prereq": "secular-determinant"
+    },
+    {
+      "concept": "bracketing-theorem",
+      "prereq": "secular-determinant"
+    },
+    {
+      "concept": "linear-variational-method",
+      "prereq": "secular-determinant"
+    },
+    {
+      "concept": "lcao-approximation",
+      "prereq": "linear-variational-method"
+    },
+    {
+      "concept": "lcao-approximation",
+      "prereq": "atomic-orbital"
+    },
+    {
+      "concept": "slater-type-orbital",
+      "prereq": "basis-functions"
+    },
+    {
+      "concept": "slater-type-orbital",
+      "prereq": "spherical-harmonics"
+    },
+    {
+      "concept": "gaussian-type-orbital",
+      "prereq": "basis-functions"
+    },
+    {
+      "concept": "gaussian-type-orbital",
+      "prereq": "spherical-harmonics"
+    },
+    {
+      "concept": "sum-of-exponentials-orbital",
+      "prereq": "linear-variation-function"
+    },
+    {
+      "concept": "sum-of-exponentials-orbital",
+      "prereq": "slater-type-orbital"
+    },
+    {
+      "concept": "sum-of-exponentials-orbital",
+      "prereq": "effective-nuclear-charge"
+    },
+    {
+      "concept": "nonlinear-variational-method",
+      "prereq": "linear-variational-method"
+    },
+    {
+      "concept": "nonlinear-variational-method",
+      "prereq": "sum-of-exponentials-orbital"
+    },
+    {
+      "concept": "slater-orbital-exponents",
+      "prereq": "nonlinear-variational-method"
+    },
+    {
+      "concept": "perturbation-theory",
+      "prereq": "schrodinger-eigenvalue-problem"
+    },
+    {
+      "concept": "perturbation-expansion",
+      "prereq": "perturbation-theory"
+    },
+    {
+      "concept": "order-by-order-equations",
+      "prereq": "perturbation-expansion"
+    },
+    {
+      "concept": "first-order-energy-correction",
+      "prereq": "order-by-order-equations"
+    },
+    {
+      "concept": "first-order-energy-correction",
+      "prereq": "quantum-expectation-value"
+    },
+    {
+      "concept": "first-order-energy-correction",
+      "prereq": "orthonormality"
+    },
+    {
+      "concept": "first-order-wavefunction-correction",
+      "prereq": "order-by-order-equations"
+    },
+    {
+      "concept": "first-order-wavefunction-correction",
+      "prereq": "complete-set"
+    },
+    {
+      "concept": "first-order-wavefunction-correction",
+      "prereq": "orthonormality"
+    },
+    {
+      "concept": "perturbation-series-breakdown",
+      "prereq": "perturbation-expansion"
     }
   ],
   "colours": {
@@ -7210,139 +8127,139 @@
     "vision": "normal",
     "assign": {
       "energy": {
-        "light": "#AB5D1D",
-        "dark": "#D16E0D"
+        "light": "#774AFF",
+        "dark": "#856FF7"
       },
       "temperature": {
-        "light": "#AB086E",
-        "dark": "#FE5AB2"
+        "light": "#8D035A",
+        "dark": "#FF89C2"
       },
       "wavelength": {
+        "light": "#9D02BB",
+        "dark": "#DC51FE"
+      },
+      "frequency": {
         "light": "#017336",
         "dark": "#0EC360"
       },
-      "frequency": {
-        "light": "#0A6ED2",
-        "dark": "#3190FE"
-      },
       "wavenumber": {
-        "light": "#743A04",
-        "dark": "#FD9F5B"
-      },
-      "momentum": {
-        "light": "#065154",
-        "dark": "#13D9E1"
-      },
-      "velocity": {
         "light": "#5909D7",
         "dark": "#A9A0FF"
+      },
+      "momentum": {
+        "light": "#443303",
+        "dark": "#FFCD4F"
+      },
+      "velocity": {
+        "light": "#003D7B",
+        "dark": "#A6CCFD"
       },
       "length": {
         "light": "#CB0283",
         "dark": "#F12CA0"
       },
       "mass": {
-        "light": "#8B2227",
-        "dark": "#FE938E"
+        "light": "#AB5D1D",
+        "dark": "#D16E0D"
       },
       "potential": {
-        "light": "#8D035A",
-        "dark": "#FF89C2"
+        "light": "#AB086E",
+        "dark": "#FE5AB2"
       },
       "power": {
-        "light": "#B806DC",
-        "dark": "#A274AE"
-      },
-      "energy-density": {
-        "light": "#740414",
-        "dark": "#FCB8B4"
-      },
-      "charge": {
-        "light": "#5C046F",
-        "dark": "#EEB6FE"
-      },
-      "force": {
-        "light": "#443303",
-        "dark": "#FFCD4F"
-      },
-      "displacement": {
-        "light": "#9D02BB",
-        "dark": "#DC51FE"
-      },
-      "time": {
-        "light": "#677806",
-        "dark": "#899E01"
-      },
-      "wavefunction": {
-        "light": "#774AFF",
-        "dark": "#856FF7"
-      },
-      "probability-density": {
-        "light": "#013E1A",
-        "dark": "#3CFE87"
-      },
-      "operator": {
-        "light": "#84039E",
-        "dark": "#E47CFF"
-      },
-      "force-constant": {
-        "light": "#455102",
-        "dark": "#AFCA04"
-      },
-      "moment-of-inertia": {
-        "light": "#A43A3C",
-        "dark": "#E97875"
-      },
-      "angular-momentum": {
-        "light": "#003D7B",
-        "dark": "#A6CCFD"
-      },
-      "dipole-moment": {
         "light": "#795C01",
         "dark": "#C89A01"
       },
-      "angle": {
+      "energy-density": {
         "light": "#0859AC",
         "dark": "#68AAFE"
+      },
+      "charge": {
+        "light": "#740414",
+        "dark": "#FCB8B4"
+      },
+      "force": {
+        "light": "#455102",
+        "dark": "#AFCA04"
+      },
+      "displacement": {
+        "light": "#B806DC",
+        "dark": "#A274AE"
+      },
+      "time": {
+        "light": "#8B2227",
+        "dark": "#FE938E"
+      },
+      "wavefunction": {
+        "light": "#677806",
+        "dark": "#899E01"
+      },
+      "probability-density": {
+        "light": "#065154",
+        "dark": "#13D9E1"
+      },
+      "operator": {
+        "light": "#0A6ED2",
+        "dark": "#3190FE"
+      },
+      "force-constant": {
+        "light": "#5C046F",
+        "dark": "#EEB6FE"
+      },
+      "moment-of-inertia": {
+        "light": "#013E1A",
+        "dark": "#3CFE87"
+      },
+      "angular-momentum": {
+        "light": "#A43A3C",
+        "dark": "#E97875"
+      },
+      "dipole-moment": {
+        "light": "#743A04",
+        "dark": "#FD9F5B"
+      },
+      "angle": {
+        "light": "#84039E",
+        "dark": "#E47CFF"
       }
     },
     "referentOrder": [
-      0,
+      1,
+      33,
       5,
-      8,
-      14,
-      15,
-      22,
-      24,
-      26,
-      30,
-      32,
-      34,
-      3,
-      7,
-      9,
       10,
-      16,
-      17,
+      15,
       18,
-      20,
-      27,
+      23,
+      24,
       28,
       29,
-      31,
-      35,
+      32,
+      0,
       6,
-      12,
-      19,
-      1,
+      7,
       11,
-      23,
-      33,
+      12,
+      14,
+      16,
+      19,
+      22,
+      26,
+      30,
+      35,
+      8,
+      34,
       2,
-      4,
       13,
-      21,
-      25
+      20,
+      25,
+      3,
+      9,
+      17,
+      27,
+      31,
+      4,
+      21
     ]
   }
 }

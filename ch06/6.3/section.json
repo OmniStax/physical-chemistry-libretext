@@ -1,0 +1,578 @@
+{
+ "id": "6.3",
+ "module": "13428",
+ "chapter": "6",
+ "title": "The Three Components of Angular Momentum Cannot be Measured Simultaneously with Arbitrary Precision",
+ "short": "Components of angular momentum",
+ "lead": "The orbital angular momentum of a particle has three components, and quantum mechanics turns each into an operator. Whether two of them can be measured at once depends on whether their operators commute.",
+ "objectives": [
+  "Understand how to measure the orbital angular momentum of an electron around a nucleus.",
+  "Understand how the Heisenburgh Uncertainty Principle extends to orbital angular momenta.",
+  "Manipulate the angular momenta cyclic permutations that allow two of the three projects to be simultaneous measured"
+ ],
+ "summary_html": "<p>In the quantum world, angular momentum is quantized. The square of the magnitude of the angular momentum (determined by the eigenvalues of the $\\hat{L^2}$ operator) can only assume one of the discrete set of values</p>$$ L^2 = l(l + 1)\\hbar^2 $$<p>or the magnitude of the angular momentum</p>$$ L = \\sqrt{l(l + 1)}\\hbar $$<p>with $l = 0, 1, 2, ...$</p><p>The z-component of the angular momentum (i.e., projection of $L$ onto the $z$-axis) is also quantized with</p>$$ L_z= m_{l} \\hbar $$<p>with $m_l = -l, 0-1, ..., 0, ... +l +1, l$<sup class=\"fn\" data-note=\"c-summary-ml\"></sup> for a given value of $l$. Hence, $l$ and $m_l$ are the <em>angular momentum quantum number</em> and the <em>magnetic quantum number,</em> respectively.</p>",
+ "notes": "Adapted from Richard Fitzpatrick (The University of Texas at Austin) under CC BY-NC-SA 4.0, with Figure 6.3.1 by Maschen in the public domain.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercise in this section. All three exercises, on the l = 2 vector model, the commutator of the y and z components and the z component acting on the l = 1 spherical harmonics, were written by AI with AI solutions; their Bloom levels and concept tags were chosen by AI. Numeric answers accept a 2% tolerance.",
+ "figures": [
+  {
+   "id": "sim-vector-model",
+   "kind": "sim",
+   "number": "6.3.1",
+   "originals": [
+    "/media/ch06/350792-Vector_model_of_orbital_angular_momentuml1.svg",
+    "/media/ch06/350791-Vector_model_of_orbital_angular_momentum.svg"
+   ],
+   "original_caption": "Illustration of the vector model of orbital angular momentum. (left) A set of states with quantum numbers $l=1$, and $m_l = -1, 0, +1,$. (right) A set of states with quantum numbers $l=2$, and $m_l = -2, -1, 0, +1, +2$. (Public Domain; Maschen via Wikipedia)",
+   "widths": [
+    365,
+    365
+   ],
+   "draws": [
+    "angular-momentum",
+    "angle"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "angular-momentum-operators",
+   "concept": "orbital-angular-momentum",
+   "verb": "introduces"
+  },
+  {
+   "span": "angular-momentum-operators",
+   "concept": "angular-momentum-component-operators",
+   "verb": "introduces"
+  },
+  {
+   "span": "angular-momentum-operators",
+   "concept": "angular-momentum",
+   "verb": "uses"
+  },
+  {
+   "span": "angular-momentum-operators",
+   "concept": "spherical-coordinates",
+   "verb": "uses"
+  },
+  {
+   "span": "angular-momentum-operators",
+   "concept": "angular-momentum-squared-operator",
+   "verb": "reinforces"
+  },
+  {
+   "span": "angular-momentum-operators",
+   "concept": "eigenvalue-equation",
+   "verb": "uses"
+  },
+  {
+   "span": "quantized-angular-momentum",
+   "concept": "angular-momentum-magnitude",
+   "verb": "introduces"
+  },
+  {
+   "span": "quantized-angular-momentum",
+   "concept": "lz-quantization",
+   "verb": "introduces"
+  },
+  {
+   "span": "quantized-angular-momentum",
+   "concept": "angular-momentum-eigenvalues",
+   "verb": "reinforces"
+  },
+  {
+   "span": "quantized-angular-momentum",
+   "concept": "spherical-harmonics",
+   "verb": "uses"
+  },
+  {
+   "span": "quantized-angular-momentum",
+   "concept": "angular-momentum-quantum-number",
+   "verb": "uses"
+  },
+  {
+   "span": "quantized-angular-momentum",
+   "concept": "magnetic-quantum-number",
+   "verb": "uses"
+  },
+  {
+   "span": "simultaneous-measurements",
+   "concept": "angular-momentum-commutation-relations",
+   "verb": "introduces"
+  },
+  {
+   "span": "simultaneous-measurements",
+   "concept": "vector-model",
+   "verb": "introduces"
+  },
+  {
+   "span": "simultaneous-measurements",
+   "concept": "commutator",
+   "verb": "uses"
+  },
+  {
+   "span": "simultaneous-measurements",
+   "concept": "commuting-operators",
+   "verb": "reinforces"
+  },
+  {
+   "span": "simultaneous-measurements",
+   "concept": "angular-momentum-commutation",
+   "verb": "reinforces"
+  },
+  {
+   "span": "simultaneous-measurements",
+   "concept": "hermitian-operator",
+   "verb": "uses"
+  },
+  {
+   "span": "simultaneous-measurements",
+   "concept": "eigenstate",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "which forms a cone (Figure 6.3.1)",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "simultaneous-measurements",
+   "prompt": "<p>An electron in a hydrogen atom has $l = 2$. Draw its vector model as in Figure 6.3.1. (a) What is the magnitude $|\\kLvec|$ of its angular momentum, in units of $\\hbar$? What angle does the vector make with the z axis (b) when $m_l = +2$ and (c) when $m_l = +1$? Give the angles in degrees.</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 2.449,
+      "unit": "ħ",
+      "hint": "Use Equation 6.3.8 with $l = 2$."
+     },
+     {
+      "part": "b",
+      "value": 35.26,
+      "unit": "°",
+      "hint": "The vector's z component is $m_l\\hbar$, so $\\cos\\theta = m_l/\\sqrt{l(l+1)}$."
+     },
+     {
+      "part": "c",
+      "value": 65.91,
+      "unit": "°"
+     }
+    ],
+    "solution": "<p>By Equation 6.3.8, $|\\kLvec| = \\sqrt{l(l+1)}\\,\\hbar = \\sqrt{6}\\,\\hbar = 2.449\\,\\hbar$. The z component can be $m_l\\hbar$ with $m_l = -2, -1, 0, +1, +2$ (Equation 6.3.9), so the vector model has five cones. The angle $\\theta$ to the z axis has $\\cos\\theta = \\kLz/|\\kLvec| = m_l/\\sqrt{6}$. For $m_l = +2$, $\\cos\\theta = 2/2.449 = 0.8165$ and $\\theta = 35.26°$. For $m_l = +1$, $\\cos\\theta = 0.4082$ and $\\theta = 65.91°$. Since $|m_l| < \\sqrt{l(l+1)}$ for every allowed $m_l$, the angle is never zero: the vector never points along the z axis.</p>"
+   }
+  },
+  {
+   "id": "a2",
+   "source_id": "eq:6.3.17b",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "simultaneous-measurements",
+   "prompt": "<p>Use the fundamental commutation relations of the position and momentum operators, as was done for $[\\kLxhat, \\kLyhat]$, to show that $[\\kLyhat, \\kLzhat] = {\\rm i}\\hbar\\kLxhat$ (Equation 6.3.11).</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "Expand $[\\kz\\kpx - \\kx\\kpz, \\kx\\kpy - \\ky\\kpx]$ into four commutators and keep the ones where a coordinate meets its own momentum.",
+    "solution": "<p>With $\\kLyhat = \\kz\\kpx - \\kx\\kpz$ and $\\kLzhat = \\kx\\kpy - \\ky\\kpx$,</p>$$ [\\kLyhat, \\kLzhat] = [\\kz\\kpx, \\kx\\kpy] - [\\kz\\kpx, \\ky\\kpx] - [\\kx\\kpz, \\kx\\kpy] + [\\kx\\kpz, \\ky\\kpx] $$<p>In the second and third commutators no coordinate meets its own momentum, so both are zero. In the first only $\\kpx$ and $\\kx$ fail to commute, so $[\\kz\\kpx, \\kx\\kpy] = \\kz\\kpy[\\kpx, \\kx] = -{\\rm i}\\hbar\\,\\kz\\kpy$. In the fourth only $\\kx$ and $\\kpx$ fail to commute, so $[\\kx\\kpz, \\ky\\kpx] = \\ky\\kpz[\\kx, \\kpx] = {\\rm i}\\hbar\\,\\ky\\kpz$. Adding,</p>$$ [\\kLyhat, \\kLzhat] = {\\rm i}\\hbar\\,(\\ky\\kpz - \\kz\\kpy) = {\\rm i}\\hbar\\,\\kLxhat $$"
+   }
+  },
+  {
+   "id": "a3",
+   "source_id": "eq:6.3.11",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "angular-momentum-operators",
+   "prompt": "<p>The spherical harmonics with $l = 1$ are $Y_1^{0} = \\left(\\dfrac{3}{4\\pi}\\right)^{1/2}\\cos\\theta$ and $Y_1^{\\pm 1} = \\mp\\left(\\dfrac{3}{8\\pi}\\right)^{1/2}\\sin\\theta\\, e^{\\pm {\\rm i}\\kvarphi}$. Let $\\kLzhat = -{\\rm i}\\hbar\\,\\partial/\\partial\\kvarphi$ act on each. What eigenvalue, in units of $\\hbar$, does it give for (a) $Y_1^{+1}$, (b) $Y_1^{0}$ and (c) $Y_1^{-1}$?</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 1,
+      "unit": "ħ",
+      "hint": "The derivative of $e^{{\\rm i}\\kvarphi}$ with respect to $\\kvarphi$ is ${\\rm i}e^{{\\rm i}\\kvarphi}$."
+     },
+     {
+      "part": "b",
+      "value": 0,
+      "unit": "ħ"
+     },
+     {
+      "part": "c",
+      "value": -1,
+      "unit": "ħ"
+     }
+    ],
+    "solution": "<p>Only the factor $e^{\\pm{\\rm i}\\kvarphi}$ depends on $\\kvarphi$. For $Y_1^{+1}$, $\\partial Y_1^{+1}/\\partial\\kvarphi = {\\rm i}\\,Y_1^{+1}$, so $\\kLzhat Y_1^{+1} = -{\\rm i}\\hbar({\\rm i})Y_1^{+1} = +\\hbar\\, Y_1^{+1}$. $Y_1^{0}$ holds no $\\kvarphi$, so $\\kLzhat Y_1^{0} = 0$. For $Y_1^{-1}$ the derivative brings down $-{\\rm i}$, so $\\kLzhat Y_1^{-1} = -\\hbar\\, Y_1^{-1}$. The eigenvalues are $m_l\\hbar$ with $m_l = +1, 0, -1$, as Equation 6.3.9 says.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "angular-momentum-magnitude"
+  },
+  {
+   "exercise": "a1",
+   "concept": "lz-quantization"
+  },
+  {
+   "exercise": "a1",
+   "concept": "vector-model"
+  },
+  {
+   "exercise": "a2",
+   "concept": "angular-momentum-commutation-relations"
+  },
+  {
+   "exercise": "a2",
+   "concept": "angular-momentum-component-operators"
+  },
+  {
+   "exercise": "a3",
+   "concept": "lz-quantization"
+  },
+  {
+   "exercise": "a3",
+   "concept": "angular-momentum-component-operators"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-amplitude",
+   "kind": "correction",
+   "html": "The magnitude is meant: Equation 6.3.8 gives the length of $\\vec{L}$, as the Summary says."
+  },
+  {
+   "id": "c-lz-m",
+   "kind": "correction",
+   "html": "The operator is $\\hat{L}_z$ and its eigenvalue is $m_l\\hbar$, with the $m_l$ of the next line: $\\hat{L}_z Y_l^{m_l} = m_l\\hbar\\, Y_l^{m_l}$."
+  },
+  {
+   "id": "c-lx-lz",
+   "kind": "correction",
+   "html": "The commutator worked next is that of $\\hat{L}_x$ and $\\hat{L}_y$."
+  },
+  {
+   "id": "c-eigenfunctions",
+   "kind": "correction",
+   "html": "Solving one problem gives the shared eigenfunctions $|\\psi\\rangle$, not the eigenvalues; each operator still has its own eigenvalues."
+  },
+  {
+   "id": "c-summary-ml",
+   "kind": "correction",
+   "html": "The values run $m_l = -l, -l + 1, \\ldots, 0, \\ldots, l - 1, l$."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "lz-spherical",
+   "what": "the z component operator in spherical coordinates",
+   "source": "Physical Chemistry (LibreTexts), 6.3 The Three Components of Angular Momentum Cannot be Measured Simultaneously with Arbitrary Precision",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "text": "The chain rule: a derivative with respect to $\\kvarphi$ at fixed $\\kr$ and $\\theta$ is $\\dfrac{\\partial}{\\partial\\kvarphi} = \\dfrac{\\partial\\kx}{\\partial\\kvarphi}\\dfrac{\\partial}{\\partial\\kx} + \\dfrac{\\partial\\ky}{\\partial\\kvarphi}\\dfrac{\\partial}{\\partial\\ky} + \\dfrac{\\partial\\kz}{\\partial\\kvarphi}\\dfrac{\\partial}{\\partial\\kz}$."
+      },
+      {
+       "tex": "\\kx = \\kr\\sin\\theta\\cos\\kvarphi",
+       "src": "6.3"
+      },
+      {
+       "tex": "\\ky = \\kr\\sin\\theta\\sin\\kvarphi",
+       "src": "6.3"
+      },
+      {
+       "tex": "\\kz = \\kr\\cos\\theta",
+       "src": "6.3"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{d}{\\dfrac{\\partial}{\\partial\\kvarphi}} = \\mk{a}{\\dfrac{\\partial\\kx}{\\partial\\kvarphi}\\dfrac{\\partial}{\\partial\\kx}} + \\mk{b}{\\dfrac{\\partial\\ky}{\\partial\\kvarphi}\\dfrac{\\partial}{\\partial\\ky}} + \\mk{c}{\\dfrac{\\partial\\kz}{\\partial\\kvarphi}\\dfrac{\\partial}{\\partial\\kz}}",
+      "uses": [
+       0
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{d}{\\dfrac{\\partial}{\\partial\\kvarphi}} = \\mk{a}{-\\kr\\sin\\theta\\sin\\kvarphi\\,\\dfrac{\\partial}{\\partial\\kx}} + \\mk{b}{\\kr\\sin\\theta\\cos\\kvarphi\\,\\dfrac{\\partial}{\\partial\\ky}} + \\mk{c}{0}",
+       "uses": [
+        1,
+        2,
+        3
+       ],
+       "cap": "Only $\\kvarphi$ changes, so $\\kr$ and $\\theta$ are constants: the derivative of $\\cos\\kvarphi$ is $-\\sin\\kvarphi$, that of $\\sin\\kvarphi$ is $\\cos\\kvarphi$, and $\\kz$ holds no $\\kvarphi$ at all."
+      },
+      {
+       "tex": "\\mk{d}{\\dfrac{\\partial}{\\partial\\kvarphi}} = \\mk{a}{-\\ky\\,\\dfrac{\\partial}{\\partial\\kx}} + \\mk{b}{\\kx\\,\\dfrac{\\partial}{\\partial\\ky}}",
+       "uses": [
+        1,
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{d}{\\dfrac{\\partial}{\\partial\\kvarphi}} = \\mk{b}{\\kx\\,\\dfrac{\\partial}{\\partial\\ky}} - \\mk{a}{\\ky\\,\\dfrac{\\partial}{\\partial\\kx}}",
+       "uses": []
+      }
+     ],
+     "src": "6.3"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\kLzhat = -{\\rm i}\\,\\hbar\\left(\\kx\\,\\dfrac{\\partial}{\\partial \\ky} - \\ky\\,\\dfrac{\\partial} {\\partial \\kx}\\right)",
+       "src": "(6.3.3)"
+      },
+      {
+       "step": 0
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\kLzhat} = \\mk{k}{-{\\rm i}\\,\\hbar}\\mk{p}{\\left(\\kx\\,\\dfrac{\\partial}{\\partial \\ky} - \\ky\\,\\dfrac{\\partial} {\\partial \\kx}\\right)}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\kLzhat} = \\mk{k}{-{\\rm i}\\,\\hbar}\\,\\mk{p}{\\dfrac{\\partial}{\\partial\\kvarphi}}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "src": "6.3"
+    }
+   ]
+  },
+  {
+   "id": "lx-ly-commutator",
+   "what": "the commutator of the x and y components",
+   "source": "Physical Chemistry (LibreTexts), 6.3 The Three Components of Angular Momentum Cannot be Measured Simultaneously with Arbitrary Precision",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kLxhat = \\ky\\,\\kpz - \\kz\\,\\kpy",
+       "src": "6.3"
+      },
+      {
+       "tex": "\\kLyhat = \\kz\\,\\kpx - \\kx\\,\\kpz",
+       "src": "6.3"
+      },
+      {
+       "text": "A commutator is linear in each of its two places: $[\\kAhat - \\kBhat, \\hat{C} - \\hat{D}] = [\\kAhat, \\hat{C}] - [\\kAhat, \\hat{D}] - [\\kBhat, \\hat{C}] + [\\kBhat, \\hat{D}]$.",
+       "src": "3.2"
+      },
+      {
+       "tex": "[\\hat{x}_i, \\hat{x}_j] = 0",
+       "src": "6.3"
+      },
+      {
+       "tex": "[\\hat{p}_i, \\hat{p}_j] = 0",
+       "src": "6.3"
+      },
+      {
+       "tex": "[\\hat{x}_i, \\hat{p}_j] = {\\rm i}\\,\\hbar\\,\\delta_{ij}",
+       "src": "6.3"
+      },
+      {
+       "tex": "\\kLzhat = \\kx\\,\\kpy - \\ky\\,\\kpx",
+       "src": "6.3"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{[\\kLxhat, \\kLyhat]} = \\mk{r}{[(\\ky\\,\\kpz-\\kz\\,\\kpy), (\\kz\\,\\kpx-\\kx\\,\\kpz)]}",
+      "uses": [
+       0,
+       1
+      ],
+      "why": "The operators are written from the classical components, as the section assumes."
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{[\\kLxhat, \\kLyhat]} = \\mk{a}{[\\ky\\,\\kpz, \\kz\\,\\kpx]} - \\mk{b}{[\\ky\\,\\kpz, \\kx\\,\\kpz]} - \\mk{c}{[\\kz\\,\\kpy, \\kz\\,\\kpx]} + \\mk{d}{[\\kz\\,\\kpy, \\kx\\,\\kpz]}",
+       "uses": [
+        2
+       ],
+       "map": {
+        "r": [
+         "a",
+         "b",
+         "c",
+         "d"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{l}{[\\kLxhat, \\kLyhat]} = \\mk{a}{[\\ky\\,\\kpz, \\kz\\,\\kpx]} + \\mk{d}{[\\kz\\,\\kpy, \\kx\\,\\kpz]}",
+       "uses": [
+        3,
+        4,
+        5
+       ],
+       "cap": "Only a coordinate and its own momentum fail to commute, and no such pair meets in $[\\ky\\,\\kpz, \\kx\\,\\kpz]$ or in $[\\kz\\,\\kpy, \\kz\\,\\kpx]$, so both vanish."
+      },
+      {
+       "tex": "\\mk{l}{[\\kLxhat, \\kLyhat]} = \\mk{a}{\\ky\\,[\\kpz, \\kz]\\,\\kpx} + \\mk{d}{\\kx\\,\\kpy\\,[\\kz, \\kpz]}",
+       "uses": [
+        3,
+        4,
+        5
+       ],
+       "cap": "In the first commutator only $\\kpz$ and $\\kz$ fail to commute, so $\\ky$ and $\\kpx$ come outside it; in the second, $\\kx$ and $\\kpy$ do."
+      },
+      {
+       "tex": "\\mk{l}{[\\kLxhat, \\kLyhat]} = \\mk{a}{-{\\rm i}\\,\\hbar\\,\\ky\\,\\kpx} + \\mk{d}{{\\rm i}\\,\\hbar\\,\\kx\\,\\kpy}",
+       "uses": [
+        5
+       ],
+       "cap": "$[\\kz, \\kpz] = {\\rm i}\\hbar$, and swapping the two places of a commutator changes its sign, so $[\\kpz, \\kz] = -{\\rm i}\\hbar$."
+      },
+      {
+       "tex": "\\mk{l}{[\\kLxhat, \\kLyhat]} = \\mk{k}{{\\rm i}\\,\\hbar}\\,\\mk{q}{(-\\ky\\,\\kpx + \\kx\\,\\kpy)}",
+       "uses": [],
+       "map": {
+        "a": [
+         "k",
+         "q"
+        ],
+        "d": [
+         "k",
+         "q"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{l}{[\\kLxhat, \\kLyhat]} = \\mk{k}{{\\rm i}\\,\\hbar}\\,\\mk{q}{\\kLzhat}",
+       "uses": [
+        6
+       ]
+      }
+     ],
+     "src": "6.3",
+     "note": "The book introduces this work as the commutator of $\\hat{L}_x$ and $\\hat{L}_z$; it computes that of $\\hat{L}_x$ and $\\hat{L}_y$."
+    }
+   ]
+  },
+  {
+   "id": "example-6-3-1",
+   "what": "the square of the angular momentum commutes with its x component",
+   "source": "Physical Chemistry (LibreTexts), 6.3 The Three Components of Angular Momentum Cannot be Measured Simultaneously with Arbitrary Precision, Example 6.3.1",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kLsqhat = \\kLxhat^{\\,2}+\\kLyhat^{\\,2}+\\kLzhat^{\\,2}",
+       "src": "(6.3.4)"
+      },
+      {
+       "text": "A commutator is linear in each place: $[\\kAhat + \\kBhat, \\hat{C}] = [\\kAhat, \\hat{C}] + [\\kBhat, \\hat{C}]$.",
+       "src": "3.2"
+      },
+      {
+       "text": "For a square, $[\\kAhat^2, \\kBhat] = \\kAhat[\\kAhat, \\kBhat] + [\\kAhat, \\kBhat]\\kAhat$, since both sides expand to $\\kAhat\\kAhat\\kBhat - \\kBhat\\kAhat\\kAhat$."
+      },
+      {
+       "tex": "[\\kLxhat, \\kLyhat] = {\\rm i}\\,\\hbar\\, \\kLzhat",
+       "src": "(6.3.10)",
+       "drv": "lx-ly-commutator"
+      },
+      {
+       "tex": "[\\kLzhat, \\kLxhat] = {\\rm i}\\,\\hbar\\, \\kLyhat",
+       "src": "(6.3.12)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{[\\kLsqhat, \\kLxhat]} = \\mk{r}{[\\kLxhat^{2} + \\kLyhat^{2} + \\kLzhat^{2}, \\kLxhat]}",
+      "uses": [
+       0
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{[\\kLsqhat, \\kLxhat]} = \\mk{a}{[\\kLxhat^{2}, \\kLxhat]} + \\mk{b}{[\\kLyhat^{2}, \\kLxhat]} + \\mk{c}{[\\kLzhat^{2}, \\kLxhat]}",
+       "uses": [
+        1
+       ],
+       "map": {
+        "r": [
+         "a",
+         "b",
+         "c"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{l}{[\\kLsqhat, \\kLxhat]} = \\mk{b}{[\\kLyhat^{2}, \\kLxhat]} + \\mk{c}{[\\kLzhat^{2}, \\kLxhat]}",
+       "uses": [],
+       "cap": "$\\kLxhat^2\\kLxhat$ and $\\kLxhat\\kLxhat^2$ are both $\\kLxhat\\kLxhat\\kLxhat$, so their difference is zero."
+      },
+      {
+       "tex": "\\mk{l}{[\\kLsqhat, \\kLxhat]} = \\mk{b}{\\kLyhat[\\kLyhat, \\kLxhat] + [\\kLyhat, \\kLxhat]\\kLyhat} + \\mk{c}{\\kLzhat[\\kLzhat, \\kLxhat] + [\\kLzhat, \\kLxhat]\\kLzhat}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{l}{[\\kLsqhat, \\kLxhat]} = \\mk{b}{-{\\rm i}\\hbar\\,(\\kLyhat\\kLzhat + \\kLzhat\\kLyhat)} + \\mk{c}{\\kLzhat[\\kLzhat, \\kLxhat] + [\\kLzhat, \\kLxhat]\\kLzhat}",
+       "uses": [
+        3
+       ],
+       "cap": "Swapping the two places of a commutator changes its sign, so $[\\kLyhat, \\kLxhat] = -{\\rm i}\\hbar\\kLzhat$."
+      },
+      {
+       "tex": "\\mk{l}{[\\kLsqhat, \\kLxhat]} = \\mk{b}{-{\\rm i}\\hbar\\,(\\kLyhat\\kLzhat + \\kLzhat\\kLyhat)} + \\mk{c}{{\\rm i}\\hbar\\,(\\kLzhat\\kLyhat + \\kLyhat\\kLzhat)}",
+       "uses": [
+        4
+       ]
+      },
+      {
+       "tex": "\\mk{l}{[\\kLsqhat, \\kLxhat]} = \\mk{z}{0}",
+       "uses": [],
+       "map": {
+        "b": "z",
+        "c": "z"
+       }
+      }
+     ],
+     "src": "Example 6.3.1",
+     "note": "The book writes the first of the related forms as $[\\hat{L}_y, \\hat{L}_x] = \\hat{L}_y + \\hat{L}_y[\\hat{L}_y, \\hat{L}_x]$, which is meant as $[\\hat{L}_y, \\hat{L}_x]\\hat{L}_y + \\hat{L}_y[\\hat{L}_y, \\hat{L}_x]$; it also writes $Lz$ for $\\hat{L}_z$ and $ih$ for ${\\rm i}\\hbar$ in the last lines."
+    }
+   ]
+  }
+ ]
+}

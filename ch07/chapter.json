@@ -1,0 +1,556 @@
+{
+ "id": "7",
+ "dir": "ch07",
+ "title": "Approximation Methods",
+ "intro": {
+  "module": "11784",
+  "slug": "07:_Approximation_Methods"
+ },
+ "summary": {
+  "module": "550558",
+  "slug": "07:_Approximation_Methods/7.S:_Approximation_Methods_(Summary)"
+ },
+ "sections": [
+  {
+   "id": "7.1",
+   "module": "13434",
+   "title": "The Variational Method Approximation",
+   "slug": "07:_Approximation_Methods/7.01:_The_Variational_Method_Approximation"
+  },
+  {
+   "id": "7.2",
+   "module": "13435",
+   "title": "Linear Variational Method and the Secular Determinant",
+   "slug": "07:_Approximation_Methods/7.02:_Linear_Variational_Method_and_the_Secular_Determinant"
+  },
+  {
+   "id": "7.3",
+   "module": "13436",
+   "title": "Trial Functions Can Be Linear Combinations of Functions That Also Contain Variational Parameters",
+   "slug": "07:_Approximation_Methods/7.03:_Trial_Functions_Can_Be_Linear_Combinations_of_Functions_That_Also_Contain_Variational_Parameters"
+  },
+  {
+   "id": "7.4",
+   "module": "13437",
+   "title": "Perturbation Theory Expresses the Solutions in Terms of Solved Problems",
+   "slug": "07:_Approximation_Methods/7.04:_Perturbation_Theory_Expresses_the_Solutions_in_Terms_of_Solved_Problems"
+  }
+ ],
+ "variables": [
+  {
+   "sym": "Z",
+   "meaning": "the atomic number of the nucleus, 2 for helium",
+   "section": "7.1"
+  },
+  {
+   "sym": "I_1",
+   "concept": "ionization-energy",
+   "meaning": "the first ionization energy of helium, 24.59 eV",
+   "unit": "eV",
+   "section": "7.1"
+  },
+  {
+   "sym": "I_2",
+   "concept": "ionization-energy",
+   "meaning": "the second ionization energy of helium, 54.42 eV",
+   "unit": "eV",
+   "section": "7.1"
+  },
+  {
+   "sym": "E_true",
+   "concept": "helium-ground-state-energy",
+   "meaning": "the true, experimental ground-state energy of helium, −79.02 eV",
+   "unit": "eV",
+   "section": "7.1"
+  },
+  {
+   "sym": "R_H",
+   "concept": "rydberg-constant",
+   "meaning": "the Rydberg constant as an energy, 13.6 eV, the magnitude of hydrogen's lowest energy",
+   "unit": "eV",
+   "section": "7.1"
+  },
+  {
+   "sym": "H_op",
+   "concept": "hamiltonian-operator",
+   "meaning": "the Hamiltonian operator of the helium atom",
+   "section": "7.1"
+  },
+  {
+   "sym": "hbar",
+   "concept": "reduced-plancks-constant",
+   "meaning": "the reduced Planck constant",
+   "section": "7.1"
+  },
+  {
+   "sym": "m_e",
+   "type": "mass",
+   "meaning": "the mass of the electron",
+   "unit": "kg",
+   "section": "7.1"
+  },
+  {
+   "sym": "nabla2",
+   "concept": "laplacian",
+   "meaning": "the Laplacian operator in the coordinates of one electron",
+   "section": "7.1"
+  },
+  {
+   "sym": "e",
+   "type": "charge",
+   "meaning": "the elementary charge",
+   "unit": "C",
+   "section": "7.1"
+  },
+  {
+   "sym": "epsilon_0",
+   "meaning": "the permittivity of free space",
+   "unit": "C²/(J·m)",
+   "section": "7.1"
+  },
+  {
+   "sym": "r_1",
+   "type": "length",
+   "meaning": "the distance of electron 1 from the nucleus",
+   "unit": "m",
+   "section": "7.1"
+  },
+  {
+   "sym": "r_2",
+   "type": "length",
+   "meaning": "the distance of electron 2 from the nucleus",
+   "unit": "m",
+   "section": "7.1"
+  },
+  {
+   "sym": "r_12",
+   "type": "length",
+   "meaning": "the distance between the two electrons",
+   "unit": "m",
+   "section": "7.1"
+  },
+  {
+   "sym": "h_1",
+   "type": "operator",
+   "meaning": "the hydrogen-like one-electron Hamiltonian of electron 1",
+   "section": "7.1"
+  },
+  {
+   "sym": "h_2",
+   "type": "operator",
+   "meaning": "the hydrogen-like one-electron Hamiltonian of electron 2",
+   "section": "7.1"
+  },
+  {
+   "sym": "Psi_tot",
+   "concept": "multi-electron-wavefunction",
+   "type": "wavefunction",
+   "meaning": "the two-electron wavefunction of helium",
+   "section": "7.1"
+  },
+  {
+   "sym": "psi_ela",
+   "type": "wavefunction",
+   "meaning": "the one-electron wavefunction of electron 1",
+   "section": "7.1"
+  },
+  {
+   "sym": "psi_elb",
+   "type": "wavefunction",
+   "meaning": "the one-electron wavefunction of electron 2",
+   "section": "7.1"
+  },
+  {
+   "sym": "E_na",
+   "type": "energy",
+   "meaning": "the energy of electron 1 in its one-electron state",
+   "unit": "eV",
+   "section": "7.1"
+  },
+  {
+   "sym": "E_nb",
+   "type": "energy",
+   "meaning": "the energy of electron 2 in its one-electron state",
+   "unit": "eV",
+   "section": "7.1"
+  },
+  {
+   "sym": "Z_eff",
+   "concept": "effective-nuclear-charge",
+   "meaning": "the effective nuclear charge an electron feels once the other electron shields the nucleus",
+   "section": "7.1"
+  },
+  {
+   "sym": "zeta",
+   "concept": "effective-nuclear-charge",
+   "meaning": "the effective nuclear charge, the adjustable parameter of the trial wavefunction",
+   "section": "7.1"
+  },
+  {
+   "sym": "E_trial",
+   "concept": "variational-energy",
+   "meaning": "the variational energy of a trial wavefunction",
+   "unit": "eV",
+   "section": "7.1"
+  },
+  {
+   "sym": "psi_trial",
+   "concept": "trial-wavefunction",
+   "meaning": "the trial wavefunction",
+   "section": "7.1"
+  },
+  {
+   "sym": "psi_true",
+   "type": "wavefunction",
+   "meaning": "the true wavefunction of the system",
+   "section": "7.1"
+  },
+  {
+   "sym": "varphi_orb",
+   "type": "wavefunction",
+   "meaning": "the one-electron function, or orbital, of the product trial wavefunction",
+   "section": "7.1"
+  },
+  {
+   "sym": "psi",
+   "concept": "wavefunction",
+   "meaning": "the two-electron wavefunction ψ(r₁, r₂)",
+   "section": "7.1"
+  },
+  {
+   "sym": "mu",
+   "concept": "reduced-mass",
+   "meaning": "the reduced mass of the electron, close to its mass",
+   "section": "7.1"
+  },
+  {
+   "sym": "h",
+   "concept": "plancks-constant",
+   "meaning": "Planck's constant",
+   "section": "7.1"
+  },
+  {
+   "sym": "psi_trial",
+   "concept": "trial-wavefunction",
+   "meaning": "the linear trial wavefunction",
+   "section": "7.2"
+  },
+  {
+   "sym": "psi",
+   "concept": "wavefunction",
+   "meaning": "the true wavefunction the trial function approximates",
+   "section": "7.2"
+  },
+  {
+   "sym": "N",
+   "meaning": "the number of basis functions in the linear combination",
+   "section": "7.2"
+  },
+  {
+   "sym": "a_j",
+   "concept": "linear-variation-function",
+   "meaning": "the coefficient of the basis function φ_j, a parameter varied",
+   "section": "7.2"
+  },
+  {
+   "sym": "a_i",
+   "concept": "linear-variation-function",
+   "meaning": "the coefficient of the basis function φ_i",
+   "section": "7.2"
+  },
+  {
+   "sym": "phi_j",
+   "concept": "basis-functions",
+   "meaning": "a basis function of the linear trial wavefunction",
+   "section": "7.2"
+  },
+  {
+   "sym": "H_op",
+   "concept": "hamiltonian-operator",
+   "meaning": "the Hamiltonian operator of the system",
+   "section": "7.2"
+  },
+  {
+   "sym": "H_ij",
+   "concept": "hamiltonian-matrix-element",
+   "meaning": "the Hamiltonian matrix element between basis functions i and j",
+   "section": "7.2"
+  },
+  {
+   "sym": "S_ij",
+   "concept": "overlap-integral",
+   "meaning": "the overlap integral of basis functions i and j",
+   "section": "7.2"
+  },
+  {
+   "sym": "E_trial",
+   "concept": "variational-energy",
+   "meaning": "the variational energy of the linear trial wavefunction",
+   "section": "7.2"
+  },
+  {
+   "sym": "delta_ij",
+   "concept": "kronecker-delta",
+   "meaning": "the Kronecker delta, 1 when i = j and 0 otherwise",
+   "section": "7.2"
+  },
+  {
+   "sym": "A_hat",
+   "concept": "operator",
+   "meaning": "a Hermitian operator",
+   "section": "7.2"
+  },
+  {
+   "sym": "E",
+   "type": "energy",
+   "meaning": "an energy, a root of the secular determinant",
+   "section": "7.2"
+  },
+  {
+   "sym": "Y_lm",
+   "concept": "spherical-harmonics",
+   "meaning": "the spherical harmonic, the angular part of an atomic orbital",
+   "section": "7.2"
+  },
+  {
+   "sym": "theta",
+   "type": "angle",
+   "meaning": "the polar angle",
+   "unit": "rad",
+   "section": "7.2"
+  },
+  {
+   "sym": "phi",
+   "type": "angle",
+   "meaning": "the azimuthal angle",
+   "unit": "rad",
+   "section": "7.2"
+  },
+  {
+   "sym": "r",
+   "type": "length",
+   "meaning": "the distance of the electron from the nucleus",
+   "unit": "m",
+   "section": "7.2"
+  },
+  {
+   "sym": "alpha",
+   "meaning": "the exponent of a Slater or Gaussian orbital, which sets how fast it decays",
+   "section": "7.2"
+  },
+  {
+   "sym": "varphi_1s",
+   "type": "wavefunction",
+   "meaning": "the 1s single-electron function built as a sum of exponentials",
+   "section": "7.3"
+  },
+  {
+   "sym": "c_j",
+   "concept": "sum-of-exponentials-orbital",
+   "meaning": "the adjustable coefficient of the jth exponential",
+   "section": "7.3"
+  },
+  {
+   "sym": "zeta_j",
+   "concept": "effective-nuclear-charge",
+   "meaning": "the exponent of the jth exponential, which sets its rate of decay and acts as an effective nuclear charge",
+   "section": "7.3"
+  },
+  {
+   "sym": "r",
+   "type": "length",
+   "meaning": "the distance of the electron from the nucleus",
+   "unit": "m",
+   "section": "7.3"
+  },
+  {
+   "sym": "a_0",
+   "concept": "bohr-radius",
+   "meaning": "the Bohr radius",
+   "unit": "m",
+   "section": "7.3"
+  },
+  {
+   "sym": "Z_eff",
+   "concept": "effective-nuclear-charge",
+   "meaning": "the effective nuclear charge",
+   "section": "7.3"
+  },
+  {
+   "sym": "zeta",
+   "concept": "effective-nuclear-charge",
+   "meaning": "an orbital exponent, the effective nuclear charge of a Slater orbital",
+   "section": "7.3"
+  },
+  {
+   "sym": "H0_hat",
+   "concept": "hamiltonian-operator",
+   "meaning": "the unperturbed Hamiltonian, whose eigenstates and energies are known",
+   "section": "7.4"
+  },
+  {
+   "sym": "H1_hat",
+   "concept": "perturbation-theory",
+   "type": "operator",
+   "meaning": "the perturbation, a small term added to the unperturbed Hamiltonian",
+   "section": "7.4"
+  },
+  {
+   "sym": "E_n0",
+   "type": "energy",
+   "meaning": "the unperturbed energy of state n",
+   "unit": "J",
+   "section": "7.4"
+  },
+  {
+   "sym": "E_n",
+   "type": "energy",
+   "meaning": "the perturbed energy of state n",
+   "unit": "J",
+   "section": "7.4"
+  },
+  {
+   "sym": "E_n1",
+   "concept": "first-order-energy-correction",
+   "meaning": "the first-order correction to the energy of state n",
+   "unit": "J",
+   "section": "7.4"
+  },
+  {
+   "sym": "E_ni",
+   "type": "energy",
+   "meaning": "the ith-order correction to the energy of state n",
+   "unit": "J",
+   "section": "7.4"
+  },
+  {
+   "sym": "lambda_pt",
+   "concept": "perturbation-expansion",
+   "meaning": "the dimensionless bookkeeping parameter that goes with the perturbation and is set to 1 at the end",
+   "section": "7.4"
+  },
+  {
+   "sym": "c_mn",
+   "concept": "first-order-wavefunction-correction",
+   "meaning": "the weight of the unperturbed state m in the first-order correction to state n",
+   "section": "7.4"
+  },
+  {
+   "sym": "V_o",
+   "type": "energy",
+   "meaning": "the constant potential energy added inside the box, or inside its left half",
+   "unit": "J",
+   "section": "7.4"
+  },
+  {
+   "sym": "L",
+   "type": "length",
+   "meaning": "the length of the box",
+   "unit": "m",
+   "section": "7.4"
+  },
+  {
+   "sym": "x",
+   "type": "length",
+   "meaning": "the position in the box or the displacement of the oscillator",
+   "unit": "m",
+   "section": "7.4"
+  },
+  {
+   "sym": "n",
+   "meaning": "the quantum number of the particle in a box",
+   "section": "7.4"
+  },
+  {
+   "sym": "h",
+   "concept": "plancks-constant",
+   "meaning": "Planck's constant",
+   "section": "7.4"
+  },
+  {
+   "sym": "m",
+   "type": "mass",
+   "meaning": "the mass of the particle",
+   "unit": "kg",
+   "section": "7.4"
+  },
+  {
+   "sym": "hbar",
+   "concept": "reduced-plancks-constant",
+   "meaning": "the reduced Planck constant",
+   "section": "7.4"
+  },
+  {
+   "sym": "k",
+   "concept": "force-constant",
+   "meaning": "the force constant of the harmonic oscillator",
+   "unit": "N/m",
+   "section": "7.4"
+  },
+  {
+   "sym": "eps_c",
+   "meaning": "the coefficient of the cubic perturbation εx³",
+   "section": "7.4"
+  },
+  {
+   "sym": "gamma",
+   "meaning": "the coefficient of the quartic perturbation γx⁴",
+   "section": "7.4"
+  },
+  {
+   "sym": "psi_v",
+   "concept": "oscillator-wavefunctions",
+   "meaning": "the harmonic oscillator wavefunction of level v",
+   "section": "7.4"
+  },
+  {
+   "sym": "H_v",
+   "concept": "hermite-polynomials",
+   "meaning": "the Hermite polynomial of degree v",
+   "section": "7.4"
+  },
+  {
+   "sym": "N_v",
+   "meaning": "the normalization constant of the oscillator wavefunction",
+   "section": "7.4"
+  },
+  {
+   "sym": "Q",
+   "type": "length",
+   "meaning": "the unscaled displacement coordinate",
+   "unit": "m",
+   "section": "7.4"
+  },
+  {
+   "sym": "alpha",
+   "meaning": "the constant √(kμ/ħ²) of the oscillator wavefunctions",
+   "section": "7.4",
+   "redefines": true
+  },
+  {
+   "sym": "beta",
+   "type": "length",
+   "meaning": "the length that collects the constants, β² = ħ/√(μk)",
+   "section": "7.4"
+  },
+  {
+   "sym": "mu",
+   "concept": "reduced-mass",
+   "meaning": "the reduced mass of the oscillator",
+   "section": "7.4"
+  },
+  {
+   "sym": "v_q",
+   "concept": "vibrational-quantum-number",
+   "meaning": "the vibrational quantum number",
+   "section": "7.4"
+  },
+  {
+   "sym": "nu",
+   "type": "frequency",
+   "meaning": "the frequency of the oscillator",
+   "unit": "Hz",
+   "section": "7.4"
+  }
+ ]
+}

@@ -31,7 +31,7 @@ The book sets none. AI exercises (config):
 
 ## Corrections
 
-Footnotes: the levels said to come from "the harmonic oscillator model"; the Latin v_e; the Morse note's two zero conventions ("infinite r_e"); m for μ in the Morse Hamiltonian. Left as printed: "due in partially", "the the", "with terms up to n < 10 determined of Equation", the missing Figure 5.3.3, Figure 5.3.4's credit without a licence. The text's "red", "blue" and "green" curves name the colours of the book's Figure 5.3.2, which the reader can call up.
+Footnotes: the levels said to come from "the harmonic oscillator model"; the Latin v_e; the Morse note's two zero conventions ("infinite r_e"); m for μ in the Morse Hamiltonian. Left as printed: "due in partially", "the the", "with terms up to n < 10 determined of Equation", the missing Figure 5.3.3, Figure 5.3.4's credit without a licence. The text's "red", "blue" and "green" curves name the colours of the book's Figure 5.3.2; the chapter pass added the correction `book-colors` saying so, since curves of one category have no fact colour to wear.
 
 ## Wanted at chapter level
 

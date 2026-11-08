@@ -649,11 +649,11 @@
     {
      "assumes": [
       {
-       "tex": "\\kH|\\kThetaf(\\theta)\\kPhi(\\kvarphi)\\rangle = \\kE|\\kThetaf(\\theta)\\kPhi(\\kvarphi)\\rangle",
+       "tex": "\\kH|\\kThetaf(\\ktheta)\\kPhi(\\kvarphi)\\rangle = \\kE|\\kThetaf(\\ktheta)\\kPhi(\\kvarphi)\\rangle",
        "src": "(5.8.10)"
       },
       {
-       "tex": "\\kH = -\\dfrac{\\hbar^2}{2\\kmu \\krzero^2}\\left[\\dfrac{\\partial}{\\partial \\krzero}\\krzero^2\\dfrac{\\partial}{\\partial \\krzero} + \\dfrac{1}{\\sin\\theta}\\dfrac{\\partial}{\\partial\\theta}\\sin\\theta\\dfrac{\\partial}{\\partial\\theta} + \\dfrac{1}{\\sin^2\\theta}\\dfrac{\\partial^2}{\\partial\\kvarphi^2}\\right]",
+       "tex": "\\kH = -\\dfrac{\\hbar^2}{2\\kmu \\krzero^2}\\left[\\dfrac{\\partial}{\\partial \\krzero}\\krzero^2\\dfrac{\\partial}{\\partial \\krzero} + \\dfrac{1}{\\sin\\ktheta}\\dfrac{\\partial}{\\partial\\ktheta}\\sin\\ktheta\\dfrac{\\partial}{\\partial\\ktheta} + \\dfrac{1}{\\sin^2\\ktheta}\\dfrac{\\partial^2}{\\partial\\kvarphi^2}\\right]",
        "src": "5.8"
       },
       {
@@ -666,23 +666,23 @@
       }
      ],
      "then": {
-      "tex": "\\mk{L}{\\kH|\\kThetaf(\\theta)\\kPhi(\\kvarphi)\\rangle} = \\mk{R}{\\kE|\\kThetaf(\\theta)\\kPhi(\\kvarphi)\\rangle}"
+      "tex": "\\mk{L}{\\kH|\\kThetaf(\\ktheta)\\kPhi(\\kvarphi)\\rangle} = \\mk{R}{\\kE|\\kThetaf(\\ktheta)\\kPhi(\\kvarphi)\\rangle}"
      },
      "steps": [
       {
-       "tex": "\\mk{L}{-\\dfrac{\\hbar^2}{2\\kmu \\krzero^2}\\left[\\dfrac{\\partial}{\\partial \\krzero}\\krzero^2\\dfrac{\\partial}{\\partial \\krzero} + \\dfrac{1}{\\sin\\theta}\\dfrac{\\partial}{\\partial\\theta}\\sin\\theta\\dfrac{\\partial}{\\partial\\theta} + \\dfrac{1}{\\sin^2\\theta}\\dfrac{\\partial^2}{\\partial\\kvarphi^2}\\right]|\\kThetaf(\\theta)\\kPhi(\\kvarphi)\\rangle} = \\mk{R}{\\kE|\\kThetaf(\\theta)\\kPhi(\\kvarphi)\\rangle}",
+       "tex": "\\mk{L}{-\\dfrac{\\hbar^2}{2\\kmu \\krzero^2}\\left[\\dfrac{\\partial}{\\partial \\krzero}\\krzero^2\\dfrac{\\partial}{\\partial \\krzero} + \\dfrac{1}{\\sin\\ktheta}\\dfrac{\\partial}{\\partial\\ktheta}\\sin\\ktheta\\dfrac{\\partial}{\\partial\\ktheta} + \\dfrac{1}{\\sin^2\\ktheta}\\dfrac{\\partial^2}{\\partial\\kvarphi^2}\\right]|\\kThetaf(\\ktheta)\\kPhi(\\kvarphi)\\rangle} = \\mk{R}{\\kE|\\kThetaf(\\ktheta)\\kPhi(\\kvarphi)\\rangle}",
        "uses": [
         1
        ]
       },
       {
-       "tex": "\\mk{L}{-\\dfrac{\\hbar^2}{2\\kmu \\krzero^2}\\left[\\dfrac{1}{\\sin\\theta}\\dfrac{\\partial}{\\partial\\theta}\\sin\\theta\\dfrac{\\partial}{\\partial\\theta} + \\dfrac{1}{\\sin^2\\theta}\\dfrac{\\partial^2}{\\partial\\kvarphi^2}\\right]|\\kThetaf(\\theta)\\kPhi(\\kvarphi)\\rangle} = \\mk{R}{\\kE|\\kThetaf(\\theta)\\kPhi(\\kvarphi)\\rangle}",
+       "tex": "\\mk{L}{-\\dfrac{\\hbar^2}{2\\kmu \\krzero^2}\\left[\\dfrac{1}{\\sin\\ktheta}\\dfrac{\\partial}{\\partial\\ktheta}\\sin\\ktheta\\dfrac{\\partial}{\\partial\\ktheta} + \\dfrac{1}{\\sin^2\\ktheta}\\dfrac{\\partial^2}{\\partial\\kvarphi^2}\\right]|\\kThetaf(\\ktheta)\\kPhi(\\kvarphi)\\rangle} = \\mk{R}{\\kE|\\kThetaf(\\ktheta)\\kPhi(\\kvarphi)\\rangle}",
        "uses": [
         2
        ]
       },
       {
-       "tex": "\\mk{L}{-\\dfrac{\\hbar^2}{2\\kI}\\left[\\dfrac{1}{\\sin\\theta}\\dfrac{\\partial}{\\partial\\theta}\\sin\\theta\\dfrac{\\partial}{\\partial\\theta} + \\dfrac{1}{\\sin^2\\theta}\\dfrac{\\partial^2}{\\partial\\kvarphi^2}\\right]|\\kThetaf(\\theta)\\kPhi(\\kvarphi)\\rangle} = \\mk{R}{\\kE|\\kThetaf(\\theta)\\kPhi(\\kvarphi)\\rangle}",
+       "tex": "\\mk{L}{-\\dfrac{\\hbar^2}{2\\kI}\\left[\\dfrac{1}{\\sin\\ktheta}\\dfrac{\\partial}{\\partial\\ktheta}\\sin\\ktheta\\dfrac{\\partial}{\\partial\\ktheta} + \\dfrac{1}{\\sin^2\\ktheta}\\dfrac{\\partial^2}{\\partial\\kvarphi^2}\\right]|\\kThetaf(\\ktheta)\\kPhi(\\kvarphi)\\rangle} = \\mk{R}{\\kE|\\kThetaf(\\ktheta)\\kPhi(\\kvarphi)\\rangle}",
        "uses": [
         3
        ]
@@ -702,25 +702,25 @@
       }
      ],
      "then": {
-      "tex": "\\mk{L}{-\\dfrac{\\hbar^2}{2\\kI}\\left[\\dfrac{1}{\\sin\\theta}\\dfrac{\\partial}{\\partial\\theta}\\sin\\theta\\dfrac{\\partial}{\\partial\\theta} + \\dfrac{1}{\\sin^2\\theta}\\dfrac{\\partial^2}{\\partial\\kvarphi^2}\\right]|\\kThetaf(\\theta)\\kPhi(\\kvarphi)\\rangle} = \\mk{R}{\\kE|\\kThetaf(\\theta)\\kPhi(\\kvarphi)\\rangle}"
+      "tex": "\\mk{L}{-\\dfrac{\\hbar^2}{2\\kI}\\left[\\dfrac{1}{\\sin\\ktheta}\\dfrac{\\partial}{\\partial\\ktheta}\\sin\\ktheta\\dfrac{\\partial}{\\partial\\ktheta} + \\dfrac{1}{\\sin^2\\ktheta}\\dfrac{\\partial^2}{\\partial\\kvarphi^2}\\right]|\\kThetaf(\\ktheta)\\kPhi(\\kvarphi)\\rangle} = \\mk{R}{\\kE|\\kThetaf(\\ktheta)\\kPhi(\\kvarphi)\\rangle}"
      },
      "steps": [
       {
-       "tex": "\\mk{L}{-\\left[\\dfrac{1}{\\sin\\theta}\\dfrac{\\partial}{\\partial\\theta}\\sin\\theta\\dfrac{\\partial}{\\partial\\theta} + \\dfrac{1}{\\sin^2\\theta}\\dfrac{\\partial^2}{\\partial\\kvarphi^2}\\right]\\kThetaf(\\theta)\\kPhi(\\kvarphi)} = \\mk{R}{\\dfrac{2\\kI\\kE}{\\hbar^2}\\kThetaf(\\theta)\\kPhi(\\kvarphi)}",
+       "tex": "\\mk{L}{-\\left[\\dfrac{1}{\\sin\\ktheta}\\dfrac{\\partial}{\\partial\\ktheta}\\sin\\ktheta\\dfrac{\\partial}{\\partial\\ktheta} + \\dfrac{1}{\\sin^2\\ktheta}\\dfrac{\\partial^2}{\\partial\\kvarphi^2}\\right]\\kThetaf(\\ktheta)\\kPhi(\\kvarphi)} = \\mk{R}{\\dfrac{2\\kI\\kE}{\\hbar^2}\\kThetaf(\\ktheta)\\kPhi(\\kvarphi)}",
        "uses": []
       },
       {
-       "tex": "\\mk{L}{\\dfrac{1}{\\kThetaf(\\theta)\\kPhi(\\kvarphi)}\\left[\\sin\\theta\\dfrac{\\partial}{\\partial\\theta}\\sin\\theta\\dfrac{\\partial}{\\partial\\theta} + \\dfrac{\\partial^2}{\\partial\\kvarphi^2}\\right]\\kThetaf(\\theta)\\kPhi(\\kvarphi)} = \\mk{R}{\\dfrac{-2\\kI\\kE\\sin^2\\theta}{\\hbar^2}}",
+       "tex": "\\mk{L}{\\dfrac{1}{\\kThetaf(\\ktheta)\\kPhi(\\kvarphi)}\\left[\\sin\\ktheta\\dfrac{\\partial}{\\partial\\ktheta}\\sin\\ktheta\\dfrac{\\partial}{\\partial\\ktheta} + \\dfrac{\\partial^2}{\\partial\\kvarphi^2}\\right]\\kThetaf(\\ktheta)\\kPhi(\\kvarphi)} = \\mk{R}{\\dfrac{-2\\kI\\kE\\sin^2\\ktheta}{\\hbar^2}}",
        "uses": []
       },
       {
-       "tex": "\\mk{L}{\\dfrac{1}{\\kThetaf(\\theta)\\kPhi(\\kvarphi)}\\left[\\sin\\theta\\dfrac{\\partial}{\\partial\\theta}\\sin\\theta\\dfrac{\\partial}{\\partial\\theta} + \\dfrac{\\partial^2}{\\partial\\kvarphi^2}\\right]\\kThetaf(\\theta)\\kPhi(\\kvarphi)} = \\mk{R}{-\\klambda\\sin^2\\theta}",
+       "tex": "\\mk{L}{\\dfrac{1}{\\kThetaf(\\ktheta)\\kPhi(\\kvarphi)}\\left[\\sin\\ktheta\\dfrac{\\partial}{\\partial\\ktheta}\\sin\\ktheta\\dfrac{\\partial}{\\partial\\ktheta} + \\dfrac{\\partial^2}{\\partial\\kvarphi^2}\\right]\\kThetaf(\\ktheta)\\kPhi(\\kvarphi)} = \\mk{R}{-\\klambda\\sin^2\\ktheta}",
        "uses": [
         1
        ]
       },
       {
-       "tex": "\\mk{L}{\\dfrac{1}{\\kThetaf(\\theta)}\\sin\\theta\\dfrac{\\partial}{\\partial\\theta}\\left(\\sin\\theta\\dfrac{\\partial}{\\partial\\theta}\\right)\\kThetaf(\\theta)} + \\mk{P}{\\dfrac{1}{\\kPhi(\\kvarphi)}\\dfrac{\\partial^2}{\\partial\\kvarphi^2}\\kPhi(\\kvarphi)} = \\mk{R}{-\\klambda\\sin^2\\theta}",
+       "tex": "\\mk{L}{\\dfrac{1}{\\kThetaf(\\ktheta)}\\sin\\ktheta\\dfrac{\\partial}{\\partial\\ktheta}\\left(\\sin\\ktheta\\dfrac{\\partial}{\\partial\\ktheta}\\right)\\kThetaf(\\ktheta)} + \\mk{P}{\\dfrac{1}{\\kPhi(\\kvarphi)}\\dfrac{\\partial^2}{\\partial\\kvarphi^2}\\kPhi(\\kvarphi)} = \\mk{R}{-\\klambda\\sin^2\\ktheta}",
        "uses": [],
        "map": {
         "L": [
@@ -731,7 +731,7 @@
        "cap": "$\\Phi(\\varphi)$ is a constant to the $\\theta$ derivatives and $\\Theta(\\theta)$ to the $\\varphi$ derivative, so each passes through and cancels against its factor in $1/\\Theta\\Phi$."
       },
       {
-       "tex": "\\mk{L}{\\dfrac{1}{\\kThetaf(\\theta)}\\left[\\sin\\theta\\dfrac{\\partial}{\\partial\\theta}\\left(\\sin\\theta\\dfrac{\\partial}{\\partial\\theta}\\right)\\kThetaf(\\theta) + \\left(\\klambda\\sin^2\\theta\\right)\\kThetaf(\\theta)\\right]} = \\mk{P}{-\\dfrac{1}{\\kPhi(\\kvarphi)}\\dfrac{\\partial^2}{\\partial\\kvarphi^2}\\kPhi(\\kvarphi)}",
+       "tex": "\\mk{L}{\\dfrac{1}{\\kThetaf(\\ktheta)}\\left[\\sin\\ktheta\\dfrac{\\partial}{\\partial\\ktheta}\\left(\\sin\\ktheta\\dfrac{\\partial}{\\partial\\ktheta}\\right)\\kThetaf(\\ktheta) + \\left(\\klambda\\sin^2\\ktheta\\right)\\kThetaf(\\ktheta)\\right]} = \\mk{P}{-\\dfrac{1}{\\kPhi(\\kvarphi)}\\dfrac{\\partial^2}{\\partial\\kvarphi^2}\\kPhi(\\kvarphi)}",
        "uses": [],
        "map": {
         "R": "L"

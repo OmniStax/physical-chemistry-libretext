@@ -1,0 +1,559 @@
+{
+ "id": "6.2",
+ "module": "13427",
+ "chapter": "6",
+ "title": "The Wavefunctions of a Rigid Rotator are Called Spherical Harmonics",
+ "short": "Hydrogen atom wavefunctions",
+ "lead": "A hydrogen wavefunction is a radial function times a spherical harmonic, labelled by three quantum numbers. The section names them, gives their allowed values, writes out the first orbitals, and pictures them through their angular shapes, a slice of their density and their radial functions.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "The book names no author for this section, so the credit is the book's under CC BY-NC-SA 4.0, and it gives no credit for the figures; Exercises 6.4.4 to 6.4.6 and 6.5.1 to 6.5.4, which print questions of this section again, are set here as one card each.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The keys of Exercises 6.2.1, 6.2.4, 6.2.6, 6.2.7, 6.2.8 and 6.2.9 are the book's, with correction notes where a key slips; 6.2.2, 6.2.3 and 6.2.5 have no key, and their solutions were written by AI. The book prints seven of these questions a second time: 6.2.2 to 6.2.4 as Exercises 6.4.4 to 6.4.6, and 6.2.5 to 6.2.8 as Exercises 6.5.1 to 6.5.4. Each pair is one card here. The key of Exercise 6.5.4 adds the particle in a box and the harmonic oscillator to the table; the card keeps 6.2.8's key, which answers the question asked. Bloom levels and concept tags were chosen by AI. Numeric answers accept a 2% tolerance unless a part states another.",
+ "figures": [
+  {
+   "id": "sim-harmonics",
+   "kind": "sim",
+   "number": "6.2.1",
+   "originals": [
+    "/media/ch06/349334-20161030161434!Spherical_Harmonics_deg5.png"
+   ],
+   "widths": [
+    861
+   ],
+   "original_caption": "Spherical Harmonics as commonly displayed, sorted by increasing energies and aligned for symmetry.",
+   "draws": [
+    "wavefunction"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "sim-contour",
+   "kind": "sim",
+   "number": "6.2.2",
+   "originals": [
+    "/media/ch06/349331-imageedit_2_2845651548.png"
+   ],
+   "original_caption": "Contour plots in the x-y plane for the $2p_x$ and $3p_x$ orbitals of the hydrogen atom. The plots map lines of constant values of $R(r)^2$; red lines follow paths of high $R(r)^2$, blue for low $R(r)^2$. The angular function used to create the figure was a linear combination of two Spherical Harmonic functions.",
+   "draws": [
+    "wavefunction",
+    "length"
+   ],
+   "facts": [
+    "#440154",
+    "#3b528b",
+    "#21918c",
+    "#5ec962",
+    "#fde725",
+    "#ffffff"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "sim-radial",
+   "kind": "sim",
+   "number": "6.2.3",
+   "folds": [
+    "6.2.4",
+    "6.2.5",
+    "6.2.6"
+   ],
+   "originals": [
+    "/media/ch06/349332-imageedit_3_2436950155.png",
+    "/media/ch06/349335-imageedit_4_8711751630.png",
+    "/media/ch06/349336-imageedit_5_7755063594.png",
+    "/media/ch06/15890-2s_radial_plots.gif"
+   ],
+   "original_caption": "Radial function, $R(r)$, for the 1s, 2s, and 2p orbitals.",
+   "draws": [
+    "wavefunction",
+    "probability-density",
+    "length"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "quantum-numbers",
+   "concept": "hydrogen-wavefunctions",
+   "verb": "introduces"
+  },
+  {
+   "span": "quantum-numbers",
+   "concept": "radial-function",
+   "verb": "introduces"
+  },
+  {
+   "span": "quantum-numbers",
+   "concept": "principal-quantum-number",
+   "verb": "introduces"
+  },
+  {
+   "span": "quantum-numbers",
+   "concept": "angular-momentum-quantum-number",
+   "verb": "introduces"
+  },
+  {
+   "span": "quantum-numbers",
+   "concept": "magnetic-quantum-number",
+   "verb": "introduces"
+  },
+  {
+   "span": "quantum-numbers",
+   "concept": "hydrogen-quantum-number-rules",
+   "verb": "introduces"
+  },
+  {
+   "span": "quantum-numbers",
+   "concept": "hydrogen-degeneracy",
+   "verb": "introduces"
+  },
+  {
+   "span": "quantum-numbers",
+   "concept": "orbital-letter-codes",
+   "verb": "introduces"
+  },
+  {
+   "span": "quantum-numbers",
+   "concept": "spherical-harmonics",
+   "verb": "reinforces"
+  },
+  {
+   "span": "quantum-numbers",
+   "concept": "degeneracy",
+   "verb": "uses"
+  },
+  {
+   "span": "quantum-numbers",
+   "concept": "probability-density",
+   "verb": "uses"
+  },
+  {
+   "span": "quantum-numbers",
+   "concept": "associated-legendre-functions",
+   "verb": "uses"
+  },
+  {
+   "span": "quantum-numbers",
+   "concept": "rotor-phi-functions",
+   "verb": "uses"
+  },
+  {
+   "span": "atomic-orbitals",
+   "concept": "atomic-orbital",
+   "verb": "introduces"
+  },
+  {
+   "span": "atomic-orbitals",
+   "concept": "real-orbitals",
+   "verb": "introduces"
+  },
+  {
+   "span": "atomic-orbitals",
+   "concept": "orbital-density-plots",
+   "verb": "introduces"
+  },
+  {
+   "span": "atomic-orbitals",
+   "concept": "radial-node",
+   "verb": "introduces"
+  },
+  {
+   "span": "atomic-orbitals",
+   "concept": "radial-node-count",
+   "verb": "introduces"
+  },
+  {
+   "span": "atomic-orbitals",
+   "concept": "s-orbital-at-nucleus",
+   "verb": "introduces"
+  },
+  {
+   "span": "atomic-orbitals",
+   "concept": "radial-probability-density",
+   "verb": "introduces"
+  },
+  {
+   "span": "atomic-orbitals",
+   "concept": "radial-function",
+   "verb": "reinforces"
+  },
+  {
+   "span": "distributions",
+   "concept": "radial-distribution-function",
+   "verb": "introduces"
+  },
+  {
+   "span": "distributions",
+   "concept": "radial-probability-density",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "e1",
+   "source_id": "exr:6.2.1",
+   "source_number": "Exercise 6.2.1",
+   "kind": "exercise",
+   "bloom": "Understand",
+   "place": {
+    "at": "end"
+   },
+   "cite": "quantum-numbers",
+   "prompt": "<p>What is the value of the integral (in braket notation)</p>\n$$ \\langle \\psi (r, \\theta , \\phi ) | \\psi (r, \\theta , \\phi ) \\rangle \\;? $$\n<p>or expanded in integral notation (in Cartesian coordinates)</p>\n$$ \\int \\limits_{-\\infty}^{+\\infty} \\int \\limits_{-\\infty}^{+\\infty} \\int \\limits_{-\\infty}^{+\\infty} | \\psi (x, y , z)|^2 \\,dx\\,dy\\,dz $$\n<p>or expanded in integral notation (in spherical coordinates)</p>\n$$ \\int \\limits_{0}^{+\\infty} \\int \\limits_{0}^{\\pi} \\int \\limits_{0}^{+2\\pi} | \\psi (r, \\theta , \\phi)|^2 r^2\\sin \\theta \\,d\\theta\\, d\\phi\\,dr $$",
+   "answer": {
+    "type": "number",
+    "value": 1,
+    "generated_by": "source",
+    "solution": "<p>No need to know the functional form of the hydrogen atom eigenstates in any coordinate system. If the eigenstates (i.e., solutions to the hydrogen atom Schrödinger equation) are normalized - as we normally like them- then this integral will be 1.</p>"
+   }
+  },
+  {
+   "id": "e2",
+   "source_id": "exr:6.2.2",
+   "source_number": "Exercise 6.2.2",
+   "kind": "exercise",
+   "bloom": "Understand",
+   "place": {
+    "at": "end"
+   },
+   "cite": "quantum-numbers",
+   "prompt": "<p>Consider several values for $n$, and show that the number of orbitals for each $n$ is $n^2$.</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "For each $l$ from 0 to $n-1$ there are $2l + 1$ values of $m_l$.",
+    "solution": "<p>For a given $n$, $l$ runs from 0 to $n - 1$, and each $l$ has $2l + 1$ values of $m_l$, each one an orbital. For $n = 1$: $l = 0$ only, 1 orbital. For $n = 2$: $1 + 3 = 4$. For $n = 3$: $1 + 3 + 5 = 9$. For $n = 4$: $1 + 3 + 5 + 7 = 16$. In general the number is a sum of the first $n$ odd numbers,</p>$$ \\sum_{l=0}^{n-1}(2l + 1) = 2\\,\\dfrac{(n-1)n}{2} + n = n^2 $$"
+   }
+  },
+  {
+   "id": "e3",
+   "source_id": "exr:6.2.3",
+   "source_number": "Exercise 6.2.3",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "quantum-numbers",
+   "prompt": "<p>Construct a table summarizing the allowed values for the quantum numbers $n$, $l$, and $m_l$. for energy levels 1 through 7 of hydrogen.</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "$l$ runs from 0 to $n - 1$, and $m_l$ from $-l$ to $+l$.",
+    "solution": "<p>For each $n$, $l$ takes the values 0 to $n - 1$ and $m_l$ the values $-l$ to $+l$ in integer steps; the number of orbitals is $n^2$.</p><table><thead><tr><th>$n$</th><th>$l$</th><th>$m_l$</th><th>orbitals</th></tr></thead><tbody><tr><td>1</td><td>0 to 0</td><td>$l = 0$: 0</td><td>1</td></tr><tr><td>2</td><td>0 to 1</td><td>$l = 0$: 0; $l = 1$: −1 to +1</td><td>4</td></tr><tr><td>3</td><td>0 to 2</td><td>$l = 0$: 0; $l = 1$: −1 to +1; $l = 2$: −2 to +2</td><td>9</td></tr><tr><td>4</td><td>0 to 3</td><td>$l = 0$: 0; $l = 1$: −1 to +1; $l = 2$: −2 to +2; $l = 3$: −3 to +3</td><td>16</td></tr><tr><td>5</td><td>0 to 4</td><td>$l = 0$: 0; $l = 1$: −1 to +1; $l = 2$: −2 to +2; $l = 3$: −3 to +3; $l = 4$: −4 to +4</td><td>25</td></tr><tr><td>6</td><td>0 to 5</td><td>$l = 0$: 0; $l = 1$: −1 to +1; $l = 2$: −2 to +2; $l = 3$: −3 to +3; $l = 4$: −4 to +4; $l = 5$: −5 to +5</td><td>36</td></tr><tr><td>7</td><td>0 to 6</td><td>$l = 0$: 0; $l = 1$: −1 to +1; $l = 2$: −2 to +2; $l = 3$: −3 to +3; $l = 4$: −4 to +4; $l = 5$: −5 to +5; $l = 6$: −6 to +6</td><td>49</td></tr></tbody></table>"
+   }
+  },
+  {
+   "id": "e4",
+   "source_id": "exr:6.2.4",
+   "source_number": "Exercise 6.2.4",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "quantum-numbers",
+   "prompt": "<p>The notation 3d specifies the quantum numbers for an electron in the hydrogen atom.</p>\n<ol type=\"a\"><li>What are the values for $n$ and $l$?</li><li>What are the values for the energy and angular momentum?</li><li>What are the possible values for the magnetic quantum number?</li><li>What are the possible orientations for the angular momentum vector?</li></ol>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "source",
+    "parts": [
+     {
+      "part": "a, n",
+      "value": 3
+     },
+     {
+      "part": "a, l",
+      "value": 2
+     },
+     {
+      "part": "b, energy",
+      "value": -1.51,
+      "unit": "eV"
+     },
+     {
+      "part": "b, angular momentum",
+      "value": 2.584e-34,
+      "unit": "J·s",
+      "tol": 0.002
+     }
+    ],
+    "solution": "<ol type=\"a\"><li>$n=3$ and $l=2$</li><li><p>Energy:</p>\n$$ E_{n}=\\frac{E_{1}}{n^{2}}=\\frac{-13.6 \\mathrm{eV}}{9}=-1.51 \\mathrm{eV} $$\n<p>and angular momentum</p>\n$$ \\sqrt{l(l+1)} \\hbar=\\sqrt{2 \\times 3} \\hbar=2.584 \\times 10^{-34} J \\cdot S $$<p><sup class=\"fn\" data-note=\"c-key4\"></sup></p></li><li><p>Magnetic quantum number:</p>\n$$ m_{l}=-2,-1,0,1,2 $$</li><li><img src=\"/media/ch06/392737-clipboard_e5df581bd3fd4faf7ec6bad7dcfdf8938.png\" alt=\"Graph showing ellipses along a vertical axis with points labeled at intervals, indicating directions with red arrows.\"></li></ol>"
+   }
+  },
+  {
+   "id": "e5",
+   "source_id": "exr:6.2.5",
+   "source_number": "Exercise 6.2.5",
+   "kind": "exercise",
+   "bloom": "Analyze",
+   "place": {
+    "at": "end"
+   },
+   "cite": "atomic-orbitals",
+   "prompt": "<p>Examine the mathematical forms of the radial wavefunctions. What feature in the functions causes some of them to go to zero at the origin while the s functions do not go to zero at the origin?</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "Look at the power of $r$ in front of the polynomial and the exponential.",
+    "solution": "<p>Every radial function is a power $\\rho^l$ (with $\\rho = Zr/a_0$) times a polynomial times an exponential. In Table 6.2.2 the p functions carry a factor $r$ and the d functions a factor $r^2$ in front of the polynomial, so they are zero at $r = 0$. For an s function $l = 0$ and the factor is $\\rho^0 = 1$: what is left at $r = 0$ is the polynomial's constant term (2 for 2s, 27 for 3s) times $e^0 = 1$, which is not zero. So the factor $r^l$ is what sends the functions with $l > 0$ to zero at the origin.</p>"
+   }
+  },
+  {
+   "id": "e6",
+   "source_id": "exr:6.2.6",
+   "source_number": "Exercise 6.2.6",
+   "kind": "exercise",
+   "bloom": "Understand",
+   "place": {
+    "at": "end"
+   },
+   "cite": "atomic-orbitals",
+   "prompt": "<p>What mathematical feature of each of the radial functions controls the number of radial nodes?</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "source",
+    "solution": "<p>The Laguerre polynomial controls the radial nodes with the number of roots for the Laguerre polynomial is the number of radial nodes.</p>"
+   }
+  },
+  {
+   "id": "e7",
+   "source_id": "exr:6.2.7",
+   "source_number": "Exercise 6.2.7",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "atomic-orbitals",
+   "prompt": "<p>At what value of $r$ does the 2s radial node occur?</p>",
+   "answer": {
+    "type": "number",
+    "value": 2,
+    "unit": "a₀",
+    "generated_by": "source",
+    "solution": "<p>A node exists when the radial portion of the wavefunction equals 0. The radial portion of the 2s wavefunction is:</p>\n$$ R(r) = \\left(\\frac{1}{2 \\sqrt{2}}\\right)\\left(\\frac{Z}{\\alpha_{0}}\\right)^{\\frac{3}{2}}(2-\\rho) e^{\\frac{-\\rho}{2}} $$\n<p>where $\\rho=\\frac{Z r}{\\alpha_{0}}$, $Z=1$ for the hydrogen atom and $\\alpha_{0}$ is the Bohr radius.</p>\n<p>Therefore:</p>\n$$ R(r) = \\left(\\frac{1}{2 \\sqrt{2}}\\right)\\left(\\frac{1}{\\alpha_{0}}\\right)^{\\frac{3}{2}}\\left(2-\\frac{r}{\\alpha_{0}}\\right) e^{\\frac{-2 r}{\\alpha_{0}}} $$<p><sup class=\"fn\" data-note=\"c-key7\"></sup></p>\n<p>For this wavefunction:</p>\n<ul><li>$\\left(\\frac{1}{\\alpha_{0}}\\right)^{\\frac{3}{2}}$ is a constant and will never equal 0.</li><li>$e^{\\frac{-2 r}{\\alpha_{0}}}$ is an exponential, and will also never equal 0.</li></ul>\n<p>Therefore, our node is when $\\left(2-\\frac{r}{\\alpha_{0}}\\right)=0$ and</p>\n$$ r=2 \\alpha_{0} $$"
+   }
+  },
+  {
+   "id": "e8",
+   "source_id": "exr:6.2.8",
+   "source_number": "Exercise 6.2.8",
+   "kind": "exercise",
+   "bloom": "Analyze",
+   "place": {
+    "at": "end"
+   },
+   "cite": "atomic-orbitals",
+   "prompt": "<p>Make a table that provides the energy, number of radial nodes, and the number of angular nodes and total number of nodes for each function with $n = 1$, $n=2$, and $n=3$. Identify the relationship between the energy and the number of nodes. Identify the relationship between the number of radial nodes and the number of angular nodes.</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "source",
+    "solution": "<div class=\"book-table\">\n  <div class=\"tcap\"><span class=\"eyebrow\">Table</span><span></span></div>\n  <table>\n    <thead><tr><th>Wavefunction</th><th>Energy</th><th>Total Nodes</th><th>Radial Nodes</th><th>Angular Nodes</th></tr></thead>\n    <tbody>\n      <tr><td>1s</td><td>13.6 eV</td><td>0</td><td>0</td><td>0</td></tr>\n      <tr><td>2s</td><td>3.4 eV</td><td>1</td><td>1</td><td>0</td></tr>\n      <tr><td>2p</td><td>3.4 eV</td><td>1</td><td>0</td><td>1</td></tr>\n      <tr><td>3s</td><td>1.5 eV</td><td>2</td><td>2</td><td>0</td></tr>\n      <tr><td>3p</td><td>1.5 eV</td><td>2</td><td>1</td><td>1</td></tr>\n      <tr><td>3d</td><td>1.5 eV</td><td>2</td><td>0</td><td>2</td></tr>\n    </tbody>\n  </table>\n</div>\n<p><sup class=\"fn\" data-note=\"c-key8a\"></sup></p>\n<p>The energy of the electron in each wavefunction is</p>\n$$ E = \\dfrac{Z^2E_h}{2n^2} $$\n<p>The number of total nodes is (N-1\\)<sup class=\"fn\" data-note=\"c-key8b\"></sup>, the number of radial nodes is $N-L-1$ and the number of angular nodes is $L$.</p>"
+   }
+  },
+  {
+   "id": "e9",
+   "source_id": "exr:6.2.9",
+   "source_number": "Exercise 6.2.9",
+   "kind": "exercise",
+   "bloom": "Analyze",
+   "place": {
+    "at": "end"
+   },
+   "cite": "distributions",
+   "prompt": "<p>Write a quality comparison of the radial function and radial distribution function for the 2s orbital. See Figure 6.2.6.</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "source",
+    "solution": "<p>$R(r)$ is the radial function of the eigenstate and $4\\pi r^2 R(r)^* R(r)$ gives the radial distribution function of the distance of electron at distance $r$ from the nucleus (i.e., the probability integrated over all angles).</p>\n<p>The radial probability function is low at small values of $r$ because of a small surface area near nucleus, for example at 2s at a small value of $r$ the radial probability function is low. At higher values of $r$ the surface area increases while radial probability density decreases, this causes the radial distribution function to increase. In contrast the radial probability density is high at small surface area and when $r$ is near the nucleus, i.e low values of $r$.<sup class=\"fn\" data-note=\"c-key9\"></sup></p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "e1",
+   "concept": "normalization-condition"
+  },
+  {
+   "exercise": "e1",
+   "concept": "hydrogen-wavefunctions"
+  },
+  {
+   "exercise": "e2",
+   "concept": "hydrogen-degeneracy"
+  },
+  {
+   "exercise": "e2",
+   "concept": "hydrogen-quantum-number-rules"
+  },
+  {
+   "exercise": "e3",
+   "concept": "hydrogen-quantum-number-rules"
+  },
+  {
+   "exercise": "e3",
+   "concept": "principal-quantum-number"
+  },
+  {
+   "exercise": "e3",
+   "concept": "magnetic-quantum-number"
+  },
+  {
+   "exercise": "e4",
+   "concept": "orbital-letter-codes"
+  },
+  {
+   "exercise": "e4",
+   "concept": "angular-momentum-quantum-number"
+  },
+  {
+   "exercise": "e4",
+   "concept": "magnetic-quantum-number"
+  },
+  {
+   "exercise": "e4",
+   "concept": "angular-momentum-eigenvalues"
+  },
+  {
+   "exercise": "e5",
+   "concept": "s-orbital-at-nucleus"
+  },
+  {
+   "exercise": "e5",
+   "concept": "radial-function"
+  },
+  {
+   "exercise": "e6",
+   "concept": "radial-node-count"
+  },
+  {
+   "exercise": "e7",
+   "concept": "radial-node"
+  },
+  {
+   "exercise": "e7",
+   "concept": "radial-function"
+  },
+  {
+   "exercise": "e8",
+   "concept": "radial-node-count"
+  },
+  {
+   "exercise": "e8",
+   "concept": "hydrogen-degeneracy"
+  },
+  {
+   "exercise": "e8",
+   "concept": "orbital-letter-codes"
+  },
+  {
+   "exercise": "e9",
+   "concept": "radial-distribution-function"
+  },
+  {
+   "exercise": "e9",
+   "concept": "radial-probability-density"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-azimuthal",
+   "kind": "correction",
+   "html": "The $\\theta$-equation involves the polar angle $\\theta$, measured from the z axis (the zenith); the azimuthal angle is $\\phi$."
+  },
+  {
+   "id": "c-legendre",
+   "kind": "correction",
+   "html": "The $\\Theta$ functions are the associated Legendre functions of Section 5.8, which are Legendre polynomials only when $m = 0$."
+  },
+  {
+   "id": "c-table-label",
+   "kind": "correction",
+   "html": "This is the second table the book captions Table 6.2.1; the first is the table of spherical harmonics above."
+  },
+  {
+   "id": "c-point",
+   "kind": "correction",
+   "html": "$R(r)^*R(r)$ is the radial part of the density only. The probability density at a point a distance $r$ from the proton is $|\\psi|^2 = R(r)^2|Y|^2$, which for an s orbital is $R(r)^2/4\\pi$."
+  },
+  {
+   "id": "c-4pi",
+   "kind": "correction",
+   "html": "The label under the display should read radial distribution function, as the sentence says. Since the radial functions are normalized so that $\\int_0^\\infty r^2R(r)^2\\,dr = 1$, the radial distribution function is $r^2R(r)^*R(r)$; it equals $4\\pi r^2|\\psi|^2$ for an s orbital, and the extra $4\\pi$ counts the area of the sphere twice. Figures 6.2.5 and 6.2.6 plot it $4\\pi$ times too large (a 1s peak of 6.8 for 0.54)."
+  },
+  {
+   "id": "c-fig2",
+   "kind": "correction",
+   "figure": "sim-contour",
+   "html": "The contours are lines of constant $|\\psi|^2$, the square of the whole wavefunction, not of $R(r)^2$, which would be circles."
+  },
+  {
+   "id": "c-fig-4pi",
+   "kind": "correction",
+   "figure": "sim-radial",
+   "html": "The radial distribution functions in the book's Figures 6.2.5 and 6.2.6 are $4\\pi$ times too large; with $\\int_0^\\infty r^2R^2\\,dr = 1$ the 1s curve peaks at 0.54 per $a_0$, at $r = a_0$."
+  },
+  {
+   "id": "c-key4",
+   "kind": "correction",
+   "html": "The unit is the joule second, J·s, and $\\sqrt{6}\\,\\hbar = 2.583\\times10^{-34}$ J·s."
+  },
+  {
+   "id": "c-key7",
+   "kind": "correction",
+   "html": "With $Z = 1$ the exponential is $e^{-r/2a_0}$, from $e^{-\\rho/2}$; the $\\alpha_0$ of the key is $a_0$, the Bohr radius. The node at $r = 2a_0$ is right."
+  },
+  {
+   "id": "c-key8a",
+   "kind": "correction",
+   "html": "The energies are negative: $-13.6$ eV for $n = 1$, $-3.4$ eV for $n = 2$ and $-1.5$ eV for $n = 3$, and the formula is $E = -Z^2E_h/2n^2$, with $E_h$ the hartree, 27.2 eV."
+  },
+  {
+   "id": "c-key8b",
+   "kind": "correction",
+   "html": "The total number of nodes is $n - 1$."
+  },
+  {
+   "id": "c-key9",
+   "kind": "correction",
+   "html": "The function that is low at small $r$ and rises as the shell's area grows is the radial distribution function, not a radial probability function; the radial probability density $R(r)^*R(r)$ is the one that is high near the nucleus, as the last sentence says."
+  }
+ ]
+}
