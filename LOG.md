@@ -413,3 +413,28 @@ term…") went with the block the derivation replaced; the Clementi–Raimondi
 values could not be checked online from this session (no network to the
 sources), so the footnote rests on the column's match and the known 1963
 values.
+
+## Chapter 9 prep · 2026-11-08
+
+Prep only, no section built. Fetched Chapter 9's images (41, into
+`media/ch09/`), converted the landing page (one paragraph: an `intro/` page),
+9.1–9.16, the summary page 9.S (to `ch09/summary/`) and the empty 9.E; wrote
+`ch09/exploration.md`, `ch09/config.md` (agreed on Chapter 1's terms),
+`ch09/chapter.json` (16 sections, the intro and summary records, 136 variables)
+and merged `ch09/book-rows.json`: no new type, 50 symbols, 67 concepts, 116
+edges. Drafts made for the intro, 9.1–9.16 and the summary.
+
+Found: 9.13 and 9.16 are empty pages; 9.11's body is a transclusion of
+Zielinski's uncertainty-principle page (the same as 19.E), its exercise routed to
+1.9. Exercises: 13 boxes, 8 keyed, 5 for AI solutions; 8 AI exercises proposed.
+3 derivations to build (9.3, 9.4, 9.9). Figures: 4 moving (coupled oscillators,
+orbitals approaching, the H₂⁺ energy curves traced as R shrinks, filling the
+period-2 diagrams) plus O₂'s microstate chart, three still 3D point-cloud scenes,
+the rest still or faithful copies.
+
+Tool fix: `md2html.py` writes mhchem's `#` as `\equiv` and runs a figure
+caption's and an exercise title's maths through the same KaTeX fixes as the text.
+`lt2md.py` unchanged; Chapters 1–8's drafts differ only in four draft-only
+`_caption` fields. `check:content`: no errors, no warnings. Open for the
+orchestrator: the empty 9.13 and 9.16, the stray 9.11 and its exercise in 1.9,
+where a PES Sim could live, 9.8.2's unshipped original.

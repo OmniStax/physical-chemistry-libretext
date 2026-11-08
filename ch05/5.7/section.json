@@ -10,7 +10,7 @@
   "Be proficient at using symmetries of integrands to quickly solve integrals."
  ],
  "summary_html": "",
- "notes": "Written by Delmar Larsen and shared under CC BY-SA 4.0, with Figure 5.7.1 from Wikipedia under CC BY-SA 3.0; the book cites a Figure 5.7.2 it does not print, and Exercise 5.5.1 is set here.",
+ "notes": "Written by Delmar Larsen and shared under CC BY-SA 4.0, with Figure 5.7.1 from Wikipedia under CC BY-SA 3.0; Exercise 5.5.1 is set here.",
  "ai": {
   "text": [
    {
@@ -70,7 +70,8 @@
      "effort": "medium",
      "part": "built"
     }
-   ]
+   ],
+   "withheld": "The book cites a Figure 5.7.2 but prints none."
   }
  ],
  "referents": [],
