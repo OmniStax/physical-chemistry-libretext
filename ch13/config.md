@@ -52,3 +52,14 @@ Exercises document (`place: end`).
 
 None yet; the open questions are at the end of the agent's report and in
 `exploration.md` (marked *Orchestrator*).
+
+## Decisions taken by the orchestrator (2026-11-08)
+
+- **13.2's figure numbers**: one folded "Figure 13.2.1 + 13.2.3", with a footnote on the duplicate 13.2.3 and the missing 13.2.2. The three short R/P/Q blocks stay printed (12.8.1 precedent); the derivations the exploration scored at or above the bar are built.
+- **Water's plane**: 13.10 and 13.14 link 12.10's `sim-water-modes`, with a footnote that 12.10 puts water in the xz plane where these sections use yz, so the labels B₁ and B₂ swap.
+- **13.4.1**: link 5.9's stretching-rotor figure and keep the book's public-domain GIF as a photo. The second 13.4 figure (rigid against non-rigid ladder) is built.
+- **13.11**: first-order curve only; no exact Rabi curve, since the book doesn't give it.
+- **Extra simulations**: the dipole oscillating during a vibration (13.14) only.
+- **Literature values from memory** (HCl α, I₂'s X and B constants) are named in the figures' notes and flagged in `LOG.md` as unchecked.
+- **13.S's objective on Jablonski diagrams**: kept verbatim, with a footnote that the chapter doesn't cover them.
+- **Captions** have no fixed length.
