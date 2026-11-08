@@ -22,9 +22,9 @@ dropped. Needs BeautifulSoup 4. Markers, in the order a page prints them:
                                   order on the page; the number follows the
                                   marker as n=K). One with \\nonumber has no
                                   marker and no number. An unstarred align (or
-                                  gather, eqnarray) numbers each row that has no
-                                  \\nonumber, as MathJax does, and keeps its
-                                  \\nonumber rows: `{eq:a} n=14 {eq:b} n=15`.
+                                  gather, eqnarray) is one equation with one
+                                  number, whatever its rows; each row's label
+                                  names it: `{eq:a} n=14 {eq:b} n=14`.
   [ref:eq:label]                  \\ref{label}: a reference to an equation of
                                   this page, as the book writes "Equation \\ref{…}".
   {term:…}                        a bold (strong or b) word or phrase in prose,
@@ -168,19 +168,25 @@ class Converter:
                 warn(f"equation label {lab} used twice")
         marks = []  # (label or None, number), one per numbered row
         if rows_env:
-            # MathJax numbers every row of an unstarred align-type environment
-            # that carries no \nonumber, and a \label names its own row
+            # one display is one equation: an unstarred align-type environment
+            # takes a single number if any row is numbered (MathJax would number
+            # each row; the user chose one number per display), and every row's
+            # \label names that number
             body = tex[rows_env.end():tex.find("\\end{" + rows_env.group(1) + "}")]
+            numbered = False
+            row_labels = []
             for row in re.split(r"\\\\(?:\[[^\]]*\])?", body):
                 if not row.strip():
                     continue
                 lab = re.search(r"\\label\s*\{\s*([^}]+?)\s*\}", row)
-                if "\\nonumber" in row or "\\notag" in row:
-                    if lab:
-                        warn(f"equation label {lab.group(1)} on an unnumbered row")
-                    continue
+                if lab:
+                    row_labels.append(lab.group(1))
+                if "\\nonumber" not in row and "\\notag" not in row:
+                    numbered = True
+            if numbered:
                 self.eq_count += 1
-                marks.append((lab.group(1) if lab else None, self.eq_count))
+                for lab in row_labels or [None]:
+                    marks.append((lab, self.eq_count))
         elif "\\begin{align*" in tex or "\\begin{gather*" in tex or "\\begin{alignat*" in tex:
             pass  # a starred environment is never numbered
         elif not nonumber:

@@ -260,7 +260,7 @@
       "unit": "Hz"
      }
     ],
-    "solution": "<p>Equation 2.4.16 gives $\\nu_n = nv/2L$. Here $2L = 1.30$ m, so $\\nu_1 = (410\\ \\text{m/s})/(1.30\\ \\text{m}) = 315.4$ Hz. The overtones are whole multiples of it: $\\nu_2 = 2\\nu_1 = 630.8$ Hz and $\\nu_3 = 3\\nu_1 = 946.2$ Hz.</p>"
+    "solution": "<p>Equation 2.4.15 gives $\\nu_n = nv/2L$. Here $2L = 1.30$ m, so $\\nu_1 = (410\\ \\text{m/s})/(1.30\\ \\text{m}) = 315.4$ Hz. The overtones are whole multiples of it: $\\nu_2 = 2\\nu_1 = 630.8$ Hz and $\\nu_3 = 3\\nu_1 = 946.2$ Hz.</p>"
    }
   },
   {

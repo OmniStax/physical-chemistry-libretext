@@ -74,7 +74,7 @@ $$ \lambda = \dfrac{h}{p} $$
 
 where we recognize that the wavelength of the neutron must be comparable to atomic spacing (let's assumed equal for convenience, so $\lambda = 1.8 \times 10^{-10}\, m$). Rearranging the de Broglie wavelength relationship above to solve for momentum ($p$):
 
-$$ \begin{align} p &= \dfrac{h}{\lambda}  \\[4pt] &= \dfrac{6.6 \times 10^{-34} J s}{1.8 \times 10^{-10} m}  \\[4pt] &= 3.7 \times 10^{-24}\, kg \,\,m\, \,s^{-1}  \end{align} $$
+$$ \begin{align} p &= \dfrac{h}{\lambda} \nonumber \\[4pt] &= \dfrac{6.6 \times 10^{-34} J s}{1.8 \times 10^{-10} m} \nonumber \\[4pt] &= 3.7 \times 10^{-24}\, kg \,\,m\, \,s^{-1} \nonumber \end{align} $$
 
 The relationship for kinetic energy is
 

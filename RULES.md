@@ -67,8 +67,10 @@ untyped and in ink.
 The book's word for them is **Equations**; it prints no key-equations list,
 so the chapter's equations table is the agent's extraction of the equations
 the section states as results or laws, the book's numbers kept. The
-numbers are MathJax's, N.M.K by order of display on the page (`align` rows
-counting one each), checked against the live page.
+numbers are N.M.K by order of display on the page, one number per display:
+a multi-line `align` is one equation with one number (the user's choice,
+2026-11-08), so a number can differ from the live page, where MathJax counts
+each row of an `align`.
 
 ## Exercise kinds
 

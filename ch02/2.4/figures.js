@@ -144,7 +144,7 @@ function modeStrip(ctx, X, L, n, y0, a, s, color, w) {
 
 /* =====================================================================
    Sim: the string as a sum of its first three normal modes (Equations
-   2.4.14 and 2.4.15 with H_n = 0: the string starts from rest). Moving:
+   2.4.14 with H_n = 0: the string starts from rest). Moving:
    one loop is one period T1 of the fundamental, 5 s drawn; mode n turns
    n times in it. The string (displacement colour) is on top, its starting
    shape dashed behind it; the three modes, each G_n cos(omega_n t)

@@ -46,7 +46,7 @@ Max Planck explain the spectral distribution of blackbody radiation as result fr
 
 With that assumption, Planck calculated the following formula for the radiation energy density inside the oven:
 
-$$ \begin{align} d\rho(\nu,T) &= \rho_\nu (T) d\nu \\[4pt] &= \dfrac {8 \pi  h \nu^3}{c^3} \cdot \dfrac {1 }{\exp \left( \dfrac {h\nu}{k_B T}\right)-1} d\nu  \end{align} $$ {eq:Eq2a} n=2
+$$ \begin{align} d\rho(\nu,T) &= \rho_\nu (T) d\nu \\[4pt] &= \dfrac {8 \pi  h \nu^3}{c^3} \cdot \dfrac {1 }{\exp \left( \dfrac {h\nu}{k_B T}\right)-1} d\nu  \end{align} $$ {eq:Eq2a} n=2
 
 with
 
@@ -67,11 +67,11 @@ $$ \lambda_{max}=\frac{hc}{4.965kT} $$
 
 This can be used to calculate the radiance emitted from surface per unit frequency
 
-$$ \begin{aligned} dB_\nu (\nu, T) & =\rho_\nu(T) d \nu \\ & =\frac{2 h \nu^3}{c^2} \cdot \frac{1}{\exp \left(\frac{h \nu}{k_B T}\right)-1} d \nu \end{aligned} $$
+$$ \begin{aligned} dB_\nu (\nu, T) & =\rho_\nu(T) d \nu \\ & =\frac{2 h \nu^3}{c^2} \cdot \frac{1}{\exp \left(\frac{h \nu}{k_B T}\right)-1} d \nu \end{aligned} $$ n=4
 
 or
 
-$$ B_\lambda(\lambda, T)=\frac{2 h c^2}{\lambda^5} \frac{1}{e^{h c /\left(\lambda k_{\mathrm{B}} T\right)}-1} $$ n=4
+$$ B_\lambda(\lambda, T)=\frac{2 h c^2}{\lambda^5} \frac{1}{e^{h c /\left(\lambda k_{\mathrm{B}} T\right)}-1} $$ n=5
 
 Planck's equation (Equation [ref:eq:Eq2b]) gave an excellent agreement with the experimental observations for all temperatures (Figure 1.2.2).
 

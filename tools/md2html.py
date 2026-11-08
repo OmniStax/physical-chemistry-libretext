@@ -17,10 +17,8 @@ answers and Bloom levels). What it does:
   Questions` or `## Problems` list to exercises of kind question.
 - every other `##` opens a `<section id>` block with the book's header.
 - `$$ … $$ {eq:label} n=K` becomes `$$ … \\tag{N.M.K} $$` with the
-  converter's K (MathJax's count: every display without \\nonumber, and each
-  row of an unstarred align), and `[ref:eq:label]` becomes that number;
-  `align`/`align*` become `aligned` so KaTeX can tag them, except an align
-  with several numbered rows, which keeps `align` with a `\\tag` per row.
+  converter's K (one per display without \\nonumber, an align included), and `[ref:eq:label]` becomes that number;
+  `align`/`align*` become `aligned` so KaTeX can tag the display once.
 - a figure of panels keeps each panel's caption in the row's `_panels`.
 - `{term:…}` becomes `<strong>`, `*…*` `<em>`.
 - a FIGURE becomes a `photo` figure with its number, image and caption; an
@@ -96,7 +94,7 @@ class Drafter:
         tex, marks = m.group(1), self.MARK.findall(m.group(2))
         tex = self.refs(tex)
         tex = re.sub(r"\\ce\{([^{}]*)\}", r"\\mathrm{\1}", tex)  # the app's KaTeX has no mhchem
-        nums = [f"{self.sec}.{n}" for lab, n in marks]
+        nums = list(dict.fromkeys(f"{self.sec}.{n}" for lab, n in marks))  # one display, one number
         if len(nums) > 1 and re.search(r"\\begin\{align\}", tex):
             # several numbered rows: KaTeX's align takes a \tag per row and keeps \nonumber
             body = re.search(r"\\begin\{align\}(.*)\\end\{align\}", tex, re.S)

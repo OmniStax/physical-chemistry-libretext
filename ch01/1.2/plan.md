@@ -4,9 +4,9 @@ Source: `source.md` (`python3 tools/convert.py 1.2`); draft from `python3 tools/
 Status: built 2026-11-08 in the Chapter 1 job, without a review stop (the user
 approved the chapter config and asked for the chapter to be built).
 
-One objective, two numbered figures and three unnumbered images, four
-numbered equations (1.2.1–1.2.4; 1.2.4 is MathJax's number for the B_λ line,
-`n=4` in source.md), one inline exercise (unkeyed), three notes, a closing
+One objective, two numbered figures and three unnumbered images, five
+numbered equations (1.2.1–1.2.5, one number per display: 1.2.4 is the dB_ν
+line and 1.2.5 the B_λ line), one inline exercise (unkeyed), three notes, a closing
 Summary. Licence CC BY-NC-SA 4.0.
 
 ## Sub-concepts (page headers)
@@ -15,7 +15,7 @@ The book's one `<h2>` (Quantizing Electrons in the Radiator) is kept whole; the
 opening, which has none, is a block of its own:
 
 1. `classical-failure` **Phenomena classical physics could not explain**: the orderly classical universe, the blackbody spectrum and the ultraviolet catastrophe (Figure 1.2.1 cited). Uses `blackbody`, `rayleigh-jeans-law`; reinforces `ultraviolet-catastrophe`.
-2. `quantizing-electrons` **Quantizing Electrons in the Radiator** (book's): quantization and its note, E = hν (1.2.1), Planck's constant, Planck's law (1.2.2–1.2.4), the Planck note, E = nhν. Introduces `energy-quantization`, `plancks-quantum-hypothesis`, `plancks-constant`, `plancks-distribution-law`.
+2. `quantizing-electrons` **Quantizing Electrons in the Radiator** (book's): quantization and its note, E = hν (1.2.1), Planck's constant, Planck's law (1.2.2–1.2.5), the Planck note, E = nhν. Introduces `energy-quantization`, `plancks-quantum-hypothesis`, `plancks-constant`, `plancks-distribution-law`.
 
 ## Figures
 

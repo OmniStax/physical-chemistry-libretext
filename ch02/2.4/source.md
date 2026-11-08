@@ -171,10 +171,10 @@ The *Principle of Superposition* is the sum of two or more solutions is also a s
 
 Since the wave equation is a linear homogeneous differential equation, the total solution can be expressed as a sum of all possible solutions described by Equation [ref:eq:2.4.19].
 
-$$ \begin{align} u(x,t) &= \sum_{n=1}^{\infty} u_n(x,t)  \\[4pt] & = \sum_{n=1}^{\infty} \left( G_n \cos (\omega_n t) + H_n \sin (\omega_n t) \right) \sin \left(\dfrac{n\pi x}{L}\right)  \end{align} $$ {eq:2.4.20} n=14 {eq:2.4.21} n=15
+$$ \begin{align} u(x,t) &= \sum_{n=1}^{\infty} u_n(x,t)  \\[4pt] & = \sum_{n=1}^{\infty} \left( G_n \cos (\omega_n t) + H_n \sin (\omega_n t) \right) \sin \left(\dfrac{n\pi x}{L}\right)  \end{align} $$ {eq:2.4.20} n=14 {eq:2.4.21} n=14
 
 Each $u_n(x,t)$ solution is called a {term:normal mode} of the system and can be characterized via their corresponding frequencies $\dfrac{n\pi}{L}$ with $n=1,2,3...$. The spatial dependence of the first seven normal modes are shown in Figure 2.4.1 and are standing waves. The first term with $n=1$ is typically called the *fundamental* and each subsequent modes is called an *overtone* or *harmonic*. The temporal dependence of the normal modes is sinusoidal with angular frequencies $\omega_n$ that can be expanded to natural frequencies $\nu_n$ via
 
-$$ \nu_n = \dfrac{\omega_n}{2 \pi} = \dfrac{nv}{2L} $$ {eq:2.4.22} n=16
+$$ \nu_n = \dfrac{\omega_n}{2 \pi} = \dfrac{nv}{2L} $$ {eq:2.4.22} n=15
 
 Hence, as the spatial curvature of the normal mode increases, the temporal oscillation of that mode also increases. This is a common trait in quantum mechanical systems and is a direct consequence of the wave equation.
