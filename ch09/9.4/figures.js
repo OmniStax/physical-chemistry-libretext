@@ -69,7 +69,7 @@ const A0_PM = 52.918, HARTREE_EV = 27.2114;
     if (vm <= 0.5) dot(ctx, bx.X(R), bx.Y(vm), ce, sg < 0, 8);
     if (R <= RMIN) {
       dot(ctx, bx.X(RMIN), bx.Y(EMIN), PAL.ink, false, 7);
-      F.label(ctx, '132 pm, −1.76 eV', bx.X(RMIN) + 8, bx.Y(EMIN) + 30, { side: 'right', size: 18, color: ce });
+      F.label(ctx, '132 pm, −1.76 eV', bx.X(RMIN) + 14, bx.Y(EMIN) - 26, { side: 'right', size: 18, color: ce });
       hits.push({ x: bx.X(RMIN), y: bx.Y(EMIN), r: 14, name: 'the bottom of the bonding well: R = 2.49 a₀ = 132 pm, ΔE₊ = −0.0648 hartree = −1.76 eV' });
     }
     F.legend(ctx, bx, [{ s: 'ΔE₊, bonding', color: ce, w: 5 }, { s: 'ΔE₋, antibonding', color: ce, w: 3, dash: [10, 10] }], { corner: 'tr' });

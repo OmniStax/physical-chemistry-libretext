@@ -1,0 +1,834 @@
+{
+ "id": "10.6",
+ "module": "13475",
+ "chapter": "10",
+ "title": "Butadiene is Stabilized by a Delocalization Energy",
+ "short": "Butadiene",
+ "lead": "Butadiene's four carbons give a 4 × 4 Hückel determinant. Its π energy can be set against that of two separate ethylene double bonds, and against the valence bond picture of resonance structures.",
+ "objectives": [
+  "Apply Hückel theory to an extended $\\pi$-bonding network",
+  "Identify the origin of delocalization energy from Hückel theory and relate it to resonances structures in valence bond theory"
+ ],
+ "summary_html": "",
+ "notes": "Written by Delmar Larsen and shared under CC BY-SA 4.0, with Ümit Kaya's Figures 10.6.2 and 10.6.3 under their own CC BY-NC and the uncredited trans-butadiene image under the page's licence.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "medium"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "medium"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "Exercise 10.6.1 is the book's, but the book prints no answer, so its solution is AI-written. The exercise on the allyl radical is new and AI-written, computed with the section's β. Bloom levels and concept tags were chosen by AI. Numeric answers accept a 2% tolerance.",
+ "figures": [
+  {
+   "id": "fig-trans-butadiene",
+   "kind": "figure",
+   "originals": [
+    "/media/ch10/100559-Butadiène.PNG"
+   ],
+   "widths": [
+    201
+   ],
+   "draws": [],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "medium",
+     "part": "kept as the book prints it"
+    }
+   ]
+  },
+  {
+   "id": "sim-chain",
+   "kind": "sim",
+   "number": "10.6.1",
+   "folds": [
+    "10.6.3"
+   ],
+   "widths": [
+    242,
+    720
+   ],
+   "originals": [
+    "/media/ch10/78093-=800px-Butadiene-pi-MOs-Spartan-3D-balls.png",
+    "/media/ch10/346392-10.6.3.svg"
+   ],
+   "original_caption": "(10.6.1) The $\\pi$ molecular orbital energies from Hückel theory for butadiene with ground-state configuration. Structures calculated and images produced using HF/6-31G* (Public Domain; Ben Mills). (10.6.3) Energy level diagram and decomposition of the $\\pi$ molecular orbitals of butadiene. This is view three-dimensionally in Figure 10.6.1. (CC BY-NC; Ümit Kaya via LibreTexts)",
+   "draws": [
+    "energy",
+    "wavefunction"
+   ],
+   "conventions": [
+    "C",
+    "e-"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "medium",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "fig-10-6-2",
+   "kind": "photo",
+   "number": "10.6.2",
+   "widths": [
+    624
+   ],
+   "draws": []
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "butadiene-levels",
+   "concept": "huckel-determinant",
+   "verb": "introduces"
+  },
+  {
+   "span": "butadiene-levels",
+   "concept": "butadiene-pi-orbitals",
+   "verb": "introduces"
+  },
+  {
+   "span": "butadiene-levels",
+   "concept": "huckel-approximation",
+   "verb": "uses"
+  },
+  {
+   "span": "butadiene-levels",
+   "concept": "huckel-x",
+   "verb": "uses"
+  },
+  {
+   "span": "butadiene-levels",
+   "concept": "secular-equations",
+   "verb": "uses"
+  },
+  {
+   "span": "butadiene-levels",
+   "concept": "secular-determinant",
+   "verb": "uses"
+  },
+  {
+   "span": "butadiene-levels",
+   "concept": "conjugated-system",
+   "verb": "uses"
+  },
+  {
+   "span": "delocalization",
+   "concept": "total-pi-energy",
+   "verb": "introduces"
+  },
+  {
+   "span": "delocalization",
+   "concept": "delocalization-energy",
+   "verb": "introduces"
+  },
+  {
+   "span": "delocalization",
+   "concept": "butadiene-delocalization-energy",
+   "verb": "introduces"
+  },
+  {
+   "span": "delocalization",
+   "concept": "resonance-stabilization",
+   "verb": "introduces"
+  },
+  {
+   "span": "delocalization",
+   "concept": "ethylene-pi-orbitals",
+   "verb": "uses"
+  },
+  {
+   "span": "pi-orbitals",
+   "concept": "butadiene-pi-orbitals",
+   "verb": "reinforces"
+  },
+  {
+   "span": "pi-orbitals",
+   "concept": "nodes-and-energy",
+   "verb": "uses"
+  },
+  {
+   "span": "pi-orbitals",
+   "concept": "particle-in-a-box",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "e1",
+   "source_id": "exr:10.6.1",
+   "source_number": "Exercise 10.6.1",
+   "kind": "exercise",
+   "bloom": "Evaluate",
+   "place": {
+    "at": "end"
+   },
+   "cite": "butadiene-levels",
+   "prompt": "<p>What would Hückel theory predict for the energy levels and $\\pi$ molecular orbitals of cis-butadiene? Do you believe this approach adequately describes the energy levels of the cis-trans isomerization reaction of butadiene?</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "Hückel's determinant records only which carbons are bonded to which.",
+    "solution": "<p>The same as for trans-butadiene. Hückel theory keeps only which atoms are bonded: cis-butadiene is still the chain C1–C2–C3–C4, so its determinant is Equation 10.6.6 again, with $\\beta$ between neighbours and 0 between C1 and C4, which are not bonded even though they lie closer in the cis form. The levels are again $\\alpha \\pm 1.618\\beta$ and $\\alpha \\pm 0.618\\beta$, the orbitals have the coefficients of Equations 10.6.14–10.6.17, and $E_{\\pi} = 4\\alpha + 4.472\\beta$ for both conformers.</p><p>So the approach does not describe the isomerization adequately. It gives cis and trans the same energy, where trans is 2.3 kcal/mol more stable; that difference comes mostly from the crowding of the inner hydrogens in the σ framework, which Hückel theory leaves out. Along the way from one to the other the molecule twists about the C2–C3 bond, the two halves stop being coplanar and the overlap of the p orbitals on C2 and C3 falls; Hückel theory, limited to planar molecules with one β for every bond, cannot follow that.</p>"
+   }
+  },
+  {
+   "id": "a1",
+   "source_id": "Apply Hückel theory to an extended $\\pi$-bonding network",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "delocalization",
+   "prompt": "<p>The allyl radical, $\\mathrm{CH_2{=}CH{-}CH_2\\cdot}$, is a planar chain of three carbons with three $\\pi$ electrons. Write its Hückel determinant in $x = (\\alpha - E)/\\beta$ and solve it. Then find (a) the coefficient of $\\beta$ in the energy of the lowest $\\pi$ orbital, (b) the coefficient of $\\beta$ in the total $\\pi$-electron energy, and (c) the delocalization energy in kJ/mol, measured from one localized double bond, $2(\\alpha + \\beta)$, plus one electron in an isolated p orbital, $\\alpha$, with $\\beta = -75$ kJ/mol.</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 1.414,
+      "hint": "Expand the 3 × 3 determinant along its first row."
+     },
+     {
+      "part": "b",
+      "value": 2.83
+     },
+     {
+      "part": "c",
+      "value": -62,
+      "unit": "kJ/mol"
+     }
+    ],
+    "solution": "<p>The determinant is $\\left|\\begin{array}{ccc}x&1&0\\\\1&x&1\\\\0&1&x\\end{array}\\right| = x(x^2-1) - x = x^3 - 2x = 0$, so $x = 0, \\pm\\sqrt{2}$. With $E = \\alpha - x\\beta$ and $\\beta$ negative, the levels are $E_1 = \\alpha + 1.414\\beta$, $E_2 = \\alpha$ and $E_3 = \\alpha - 1.414\\beta$.</p><p>(a) The lowest level is $\\alpha + 1.414\\beta$. (b) Two electrons fill $\\psi_1$ and the third goes into $\\psi_2$: $E_{\\pi} = 2(\\alpha + 1.414\\beta) + \\alpha = 3\\alpha + 2.83\\beta$. (c) The localized reference is $2(\\alpha + \\beta) + \\alpha = 3\\alpha + 2\\beta$, so the delocalization energy is $0.83\\beta = 0.83(-75\\ \\text{kJ/mol}) = -62\\ \\text{kJ/mol}$, more than butadiene's $-35$ kJ/mol over fewer carbons.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "e1",
+   "concept": "huckel-determinant"
+  },
+  {
+   "exercise": "e1",
+   "concept": "butadiene-pi-orbitals"
+  },
+  {
+   "exercise": "a1",
+   "concept": "huckel-determinant"
+  },
+  {
+   "exercise": "a1",
+   "concept": "total-pi-energy"
+  },
+  {
+   "exercise": "a1",
+   "concept": "delocalization-energy"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-vinyl",
+   "kind": "correction",
+   "html": "A vinyl group is $\\mathrm{CH_2{=}CH{-}}$; $\\mathrm{CH_2{=}CH_2}$ is ethylene itself."
+  },
+  {
+   "id": "c-sum-index",
+   "kind": "correction",
+   "html": "The sum runs over the atomic orbitals: $|\\psi_i \\rangle = \\sum_j c_{ij} |p_j \\rangle$, as the explicit form below writes it."
+  },
+  {
+   "id": "c-alpha-minus-e",
+   "kind": "correction",
+   "html": "With $S_{ii} = 1$ the diagonal element is $H_{ii} - ES_{ii} = \\alpha - E$, as Equation 10.6.3 writes it, not $\\alpha$. Off the diagonal $S_{ij} = 0$, so $H_{ij} - ES_{ij} = \\beta$ for neighbours."
+  },
+  {
+   "id": "c-same-equation",
+   "kind": "correction",
+   "html": "The comparison is of Equation 10.6.12 with Equation 10.6.13."
+  },
+  {
+   "id": "c-0-48",
+   "kind": "correction",
+   "html": "The difference is $4.472\\beta - 4\\beta = 0.472\\beta$, about $0.47\\beta$; with $\\beta = -75$ kJ/mol that is the $-35$ kJ/mol the sentence gives."
+  },
+  {
+   "id": "c-2a",
+   "kind": "correction",
+   "html": "No structure in Figure 10.6.2 is labelled 2a: the dominant one is the structure in the upper left, as the caption says."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "butadiene-levels",
+   "what": "the π energies of butadiene",
+   "source": "Physical Chemistry (LibreTexts), 10.6 Butadiene is Stabilized by a Delocalization Energy",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\begin{bmatrix} \\kalphaH - \\kE & \\kbetaH & 0 & 0 \\\\ \\kbetaH & \\kalphaH - \\kE & \\kbetaH & 0 \\\\ 0 & \\kbetaH & \\kalphaH - \\kE & \\kbetaH \\\\ 0 & 0 & \\kbetaH & \\kalphaH - \\kE \\end{bmatrix} \\begin{bmatrix} c_1 \\\\ c_2 \\\\ c_3 \\\\ c_4 \\end{bmatrix}= 0",
+       "src": "(10.6.3)"
+      },
+      {
+       "text": "Homogeneous equations have a solution other than $c_i = 0$ only if their determinant is zero.",
+       "src": "10.5, (10.5.6)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{M}{\\begin{bmatrix} \\kalphaH - \\kE & \\kbetaH & 0 & 0 \\\\ \\kbetaH & \\kalphaH - \\kE & \\kbetaH & 0 \\\\ 0 & \\kbetaH & \\kalphaH - \\kE & \\kbetaH \\\\ 0 & 0 & \\kbetaH & \\kalphaH - \\kE \\end{bmatrix}} \\mk{c}{\\begin{bmatrix} c_1 \\\\ c_2 \\\\ c_3 \\\\ c_4 \\end{bmatrix}} = 0"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{D}{\\left|\\begin{array}{cccc}\\kalphaH - \\kE&\\kbetaH&0&0\\\\\\kbetaH&\\kalphaH - \\kE&\\kbetaH&0\\\\0&\\kbetaH&\\kalphaH - \\kE&\\kbetaH\\\\0&0&\\kbetaH&\\kalphaH - \\kE\\end{array}\\right|} = 0",
+       "uses": [
+        1
+       ],
+       "map": {
+        "M": "D"
+       }
+      }
+     ],
+     "num": "(10.6.4)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "x=\\dfrac{\\kalphaH-\\kE}{\\kbetaH}",
+       "src": "(10.6.5)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{D}{\\left|\\begin{array}{cccc}\\kalphaH - \\kE&\\kbetaH&0&0\\\\\\kbetaH&\\kalphaH - \\kE&\\kbetaH&0\\\\0&\\kbetaH&\\kalphaH - \\kE&\\kbetaH\\\\0&0&\\kbetaH&\\kalphaH - \\kE\\end{array}\\right|} = 0"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{D}{\\left|\\begin{array}{cccc}\\dfrac{\\kalphaH-\\kE}{\\kbetaH}&1&0&0\\\\1&\\dfrac{\\kalphaH-\\kE}{\\kbetaH}&1&0\\\\0&1&\\dfrac{\\kalphaH-\\kE}{\\kbetaH}&1\\\\0&0&1&\\dfrac{\\kalphaH-\\kE}{\\kbetaH}\\end{array}\\right|} = 0",
+       "cap": "Dividing each of the four rows by $\\beta$ divides the determinant by $\\beta^{4}$, and zero stays zero."
+      },
+      {
+       "tex": "\\mk{D}{\\left|\\begin{array}{cccc}x&1&0&0\\\\1&x&1&0\\\\0&1&x&1\\\\0&0&1&x\\end{array}\\right|} = 0",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "num": "(10.6.6)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      }
+     ],
+     "then": {
+      "tex": "\\mk{D}{\\left|\\begin{array}{cccc}x&1&0&0\\\\1&x&1&0\\\\0&1&x&1\\\\0&0&1&x\\end{array}\\right|} = 0"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{a}{x\\left|\\begin{array}{ccc}x&1&0\\\\1&x&1\\\\0&1&x\\end{array}\\right|} \\mk{b}{- \\left|\\begin{array}{ccc}1&1&0\\\\0&x&1\\\\0&1&x\\end{array}\\right|} = 0",
+       "map": {
+        "D": [
+         "a",
+         "b"
+        ]
+       },
+       "cap": "Expand along the first row, whose only nonzero entries are its first two; the second enters with a minus sign."
+      },
+      {
+       "tex": "\\mk{a}{x(x^{3}-2x)} \\mk{b}{- (x^{2}-1)} = 0",
+       "cap": "Each $3 \\times 3$ determinant is expanded along its first row in the same way."
+      },
+      {
+       "tex": "\\mk{a}{x^{4}-2x^{2}} \\mk{b}{-x^{2}+1} = 0"
+      },
+      {
+       "tex": "\\mk{p}{x^{4}-3x^{2}+1} = 0",
+       "map": {
+        "a": "p",
+        "b": "p"
+       }
+      }
+     ],
+     "num": "(10.6.7)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 2
+      }
+     ],
+     "then": {
+      "tex": "\\mk{p}{x^{4}-3x^{2}+1} = 0"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{q}{x^{2}} = \\mk{r}{\\dfrac{3\\pm\\sqrt{5}}{2}}",
+       "map": {
+        "p": [
+         "q",
+         "r"
+        ]
+       },
+       "cap": "The equation is a quadratic in $x^{2}$, solved by the quadratic formula."
+      },
+      {
+       "tex": "\\mk{q}{x} = \\mk{r}{\\pm 1.618,\\ \\pm 0.618}"
+      }
+     ]
+    },
+    {
+     "assumes": [
+      {
+       "tex": "x=\\dfrac{\\kalphaH-\\kE}{\\kbetaH}",
+       "src": "(10.6.5)"
+      },
+      {
+       "step": 3
+      },
+      {
+       "text": "$\\alpha$ and $\\beta$ are negative.",
+       "src": "10.5"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{x}{x}=\\mk{f}{\\dfrac{\\kalphaH-\\kE}{\\kbetaH}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{E}{\\kE} = \\mk{a}{\\kalphaH} - \\mk{x}{x}\\,\\mk{b}{\\kbetaH}",
+       "map": {
+        "f": [
+         "E",
+         "a",
+         "b"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{E}{\\kE} = \\mk{a}{\\kalphaH} \\mk{x}{\\mp 1.618}\\,\\mk{b}{\\kbetaH},\\ \\kalphaH \\mp 0.618\\kbetaH",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\kEone = \\kalphaH+1.618\\kbetaH,\\ \\kEtwo = \\kalphaH+0.618\\kbetaH,\\ \\kEthree = \\kalphaH-0.618\\kbetaH,\\ \\kEfour = \\kalphaH-1.618\\kbetaH}",
+       "uses": [
+        2
+       ],
+       "map": {
+        "E": "L",
+        "a": "L",
+        "x": "L",
+        "b": "L"
+       },
+       "cap": "With $\\beta$ negative, the most negative root, $x = -1.618$, gives the lowest energy."
+      }
+     ],
+     "num": "(10.6.8)–(10.6.11)"
+    }
+   ]
+  },
+  {
+   "id": "butadiene-delocalization",
+   "what": "the delocalization energy of butadiene",
+   "source": "Physical Chemistry (LibreTexts), 10.6 Butadiene is Stabilized by a Delocalization Energy",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kEpi = \\sum_i n_i E_i",
+       "src": "10.6"
+      },
+      {
+       "text": "Each carbon gives one electron to the $\\pi$ manifold, so butadiene's four $\\pi$ electrons fill $\\psi_1$ and $\\psi_2$: $\\pi_1^{2}\\pi_2^{2}$.",
+       "src": "10.6"
+      },
+      {
+       "tex": "\\kEone = \\kalphaH+1.618\\kbetaH,\\ \\kEtwo = \\kalphaH+0.618\\kbetaH,\\ \\kEthree = \\kalphaH-0.618\\kbetaH,\\ \\kEfour = \\kalphaH-1.618\\kbetaH",
+       "src": "(10.6.8)–(10.6.11)",
+       "drv": "butadiene-levels"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{P}{\\kEpi} = \\mk{s}{\\sum_i n_i E_i}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{P}{\\kEpi (\\text{butadiene})} = \\mk{s}{2 \\times \\kEone + 2 \\times \\kEtwo + 0 \\times \\kEthree + 0 \\times \\kEfour}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{P}{\\kEpi (\\text{butadiene})} = \\mk{s}{2(\\kalphaH+1.618\\kbetaH)+2(\\kalphaH+0.618\\kbetaH)}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{P}{\\kEpi (\\text{butadiene})} = \\mk{s}{4\\kalphaH + 4.472\\kbetaH}"
+      }
+     ],
+     "num": "(10.6.12)"
+    },
+    {
+     "assumes": [
+      {
+       "text": "If the bonding of butadiene were described only as two localized double bonds, as in its dominant valence-bond structure, its $\\pi$-electron energy would be twice that of ethylene.",
+       "src": "10.6"
+      },
+      {
+       "tex": "\\kEpi (\\text{ethylene}) = 2(\\kalphaH+\\kbetaH)",
+       "src": "10.5",
+       "drv": "10.5/ethylene-pi"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{P}{\\kEpi (\\text{two double bonds})} = \\mk{s}{2 \\times \\kEpi (\\text{ethylene})}",
+      "uses": [
+       0
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{P}{\\kEpi (\\text{two double bonds})} = \\mk{s}{2 \\times 2(\\kalphaH+\\kbetaH)}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{P}{\\kEpi (\\text{two double bonds})} = \\mk{s}{4\\kalphaH + 4\\kbetaH}"
+      }
+     ],
+     "num": "(10.6.13)"
+    },
+    {
+     "assumes": [
+      {
+       "text": "The delocalization energy is the difference between the total $\\pi$ energy and that of the localized double bonds.",
+       "src": "10.6"
+      },
+      {
+       "step": 0
+      },
+      {
+       "step": 1
+      }
+     ],
+     "then": {
+      "tex": "\\mk{D}{\\Delta E} = \\mk{a}{\\kEpi (\\text{butadiene})} \\mk{b}{- \\kEpi (\\text{two double bonds})}",
+      "uses": [
+       0
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{D}{\\Delta E} = \\mk{a}{(4\\kalphaH + 4.472\\kbetaH)} \\mk{b}{- \\kEpi (\\text{two double bonds})}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{D}{\\Delta E} = \\mk{a}{(4\\kalphaH + 4.472\\kbetaH)} \\mk{b}{- (4\\kalphaH + 4\\kbetaH)}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{D}{\\Delta E} = \\mk{r}{0.472\\kbetaH}",
+       "map": {
+        "a": "r",
+        "b": "r"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "butadiene-orbitals",
+   "what": "the π orbitals of butadiene",
+   "source": "Physical Chemistry (LibreTexts), 10.6 Butadiene is Stabilized by a Delocalization Energy",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\begin{bmatrix} x & 1 & 0 & 0 \\\\ 1 & x & 1 & 0 \\\\ 0 & 1 & x & 1 \\\\ 0 & 0 & 1 & x \\end{bmatrix} \\begin{bmatrix} c_1 \\\\ c_2 \\\\ c_3 \\\\ c_4 \\end{bmatrix}= 0",
+       "src": "(10.6.3), (10.6.5)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{M}{\\begin{bmatrix} x & 1 & 0 & 0 \\\\ 1 & x & 1 & 0 \\\\ 0 & 1 & x & 1 \\\\ 0 & 0 & 1 & x \\end{bmatrix}} \\mk{c}{\\begin{bmatrix} c_1 \\\\ c_2 \\\\ c_3 \\\\ c_4 \\end{bmatrix}} = 0"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{a}{x c_1 + c_2 = 0},\\ \\mk{b}{c_1 + x c_2 + c_3 = 0},\\ \\mk{d}{c_2 + x c_3 + c_4 = 0}",
+       "map": {
+        "M": [
+         "a",
+         "b",
+         "d"
+        ],
+        "c": [
+         "a",
+         "b",
+         "d"
+        ]
+       },
+       "cap": "The first three rows of the product; the fourth holds once $x$ is a root of (10.6.7)."
+      },
+      {
+       "tex": "\\mk{a}{c_2 = -x\\,c_1},\\ \\mk{b}{c_1 + x c_2 + c_3 = 0},\\ \\mk{d}{c_2 + x c_3 + c_4 = 0}"
+      },
+      {
+       "tex": "\\mk{a}{c_2 = -x\\,c_1},\\ \\mk{b}{c_3 = (x^{2}-1)\\,c_1},\\ \\mk{d}{c_2 + x c_3 + c_4 = 0}"
+      },
+      {
+       "tex": "\\mk{a}{c_2 = -x\\,c_1},\\ \\mk{b}{c_3 = (x^{2}-1)\\,c_1},\\ \\mk{d}{c_4 = (2x - x^{3})\\,c_1}"
+      }
+     ]
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "x = -1.618",
+       "src": "(10.6.7)",
+       "drv": "butadiene-levels"
+      },
+      {
+       "text": "Normalization, with $S_{ij} = 0$ for $i \\neq j$: $c_1^{2} + c_2^{2} + c_3^{2} + c_4^{2} = 1$.",
+       "src": "10.5"
+      },
+      {
+       "tex": "|\\kpsii \\rangle =c_{i1} |p_1 \\rangle+ c_ {i2} | p_2 \\rangle + c_ {i3} | p_3 \\rangle + c_ {i4} | p_4 \\rangle",
+       "src": "(10.6.1)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{a}{c_2 = -x\\,c_1},\\ \\mk{b}{c_3 = (x^{2}-1)\\,c_1},\\ \\mk{d}{c_4 = (2x - x^{3})\\,c_1}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{a}{c_2 = 1.618\\,c_1},\\ \\mk{b}{c_3 = 1.618\\,c_1},\\ \\mk{d}{c_4 = 1.000\\,c_1}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{n}{c_1^{2}\\,(1 + 2.618 + 2.618 + 1)} = 1",
+       "uses": [
+        2
+       ],
+       "map": {
+        "a": "n",
+        "b": "n",
+        "d": "n"
+       }
+      },
+      {
+       "tex": "\\mk{n}{c_1} = 0.37"
+      },
+      {
+       "tex": "\\mk{p}{|\\psi_1 \\rangle} = 0.37 |p_1 \\rangle + 0.60 | p_2 \\rangle + 0.60 | p_3 \\rangle + 0.37 | p_4 \\rangle",
+       "uses": [
+        3
+       ],
+       "map": {
+        "n": "p"
+       }
+      }
+     ],
+     "num": "(10.6.14)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "x = -0.618",
+       "src": "(10.6.7)",
+       "drv": "butadiene-levels"
+      },
+      {
+       "text": "Normalization, with $S_{ij} = 0$ for $i \\neq j$: $c_1^{2} + c_2^{2} + c_3^{2} + c_4^{2} = 1$.",
+       "src": "10.5"
+      },
+      {
+       "tex": "|\\kpsii \\rangle =c_{i1} |p_1 \\rangle+ c_ {i2} | p_2 \\rangle + c_ {i3} | p_3 \\rangle + c_ {i4} | p_4 \\rangle",
+       "src": "(10.6.1)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{a}{c_2 = -x\\,c_1},\\ \\mk{b}{c_3 = (x^{2}-1)\\,c_1},\\ \\mk{d}{c_4 = (2x - x^{3})\\,c_1}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{a}{c_2 = 0.618\\,c_1},\\ \\mk{b}{c_3 = -0.618\\,c_1},\\ \\mk{d}{c_4 = -1.000\\,c_1}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{n}{c_1^{2}\\,(1 + 0.382 + 0.382 + 1)} = 1",
+       "uses": [
+        2
+       ],
+       "map": {
+        "a": "n",
+        "b": "n",
+        "d": "n"
+       }
+      },
+      {
+       "tex": "\\mk{n}{c_1} = 0.60"
+      },
+      {
+       "tex": "\\mk{p}{|\\psi_2 \\rangle} = 0.60 |p_1 \\rangle + 0.37 | p_2 \\rangle -0.37 | p_3 \\rangle - 0.60 | p_4 \\rangle",
+       "uses": [
+        3
+       ],
+       "map": {
+        "n": "p"
+       }
+      }
+     ],
+     "num": "(10.6.15)",
+     "note": "The book labels this orbital $|\\psi_3 \\rangle$, the same label as the next; it is $|\\psi_2 \\rangle$, at $E_2 = \\alpha + 0.618\\beta$."
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "x = 0.618",
+       "src": "(10.6.7)",
+       "drv": "butadiene-levels"
+      },
+      {
+       "text": "Normalization, with $S_{ij} = 0$ for $i \\neq j$: $c_1^{2} + c_2^{2} + c_3^{2} + c_4^{2} = 1$.",
+       "src": "10.5"
+      },
+      {
+       "tex": "|\\kpsii \\rangle =c_{i1} |p_1 \\rangle+ c_ {i2} | p_2 \\rangle + c_ {i3} | p_3 \\rangle + c_ {i4} | p_4 \\rangle",
+       "src": "(10.6.1)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{a}{c_2 = -x\\,c_1},\\ \\mk{b}{c_3 = (x^{2}-1)\\,c_1},\\ \\mk{d}{c_4 = (2x - x^{3})\\,c_1}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{a}{c_2 = -0.618\\,c_1},\\ \\mk{b}{c_3 = -0.618\\,c_1},\\ \\mk{d}{c_4 = 1.000\\,c_1}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{n}{c_1^{2}\\,(1 + 0.382 + 0.382 + 1)} = 1",
+       "uses": [
+        2
+       ],
+       "map": {
+        "a": "n",
+        "b": "n",
+        "d": "n"
+       }
+      },
+      {
+       "tex": "\\mk{n}{c_1} = 0.60"
+      },
+      {
+       "tex": "\\mk{p}{|\\psi_3 \\rangle} = 0.60 |p_1 \\rangle - 0.37 | p_2 \\rangle -0.37 | p_3 \\rangle + 0.60 | p_4 \\rangle",
+       "uses": [
+        3
+       ],
+       "map": {
+        "n": "p"
+       }
+      }
+     ],
+     "num": "(10.6.16)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "x = 1.618",
+       "src": "(10.6.7)",
+       "drv": "butadiene-levels"
+      },
+      {
+       "text": "Normalization, with $S_{ij} = 0$ for $i \\neq j$: $c_1^{2} + c_2^{2} + c_3^{2} + c_4^{2} = 1$.",
+       "src": "10.5"
+      },
+      {
+       "tex": "|\\kpsii \\rangle =c_{i1} |p_1 \\rangle+ c_ {i2} | p_2 \\rangle + c_ {i3} | p_3 \\rangle + c_ {i4} | p_4 \\rangle",
+       "src": "(10.6.1)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{a}{c_2 = -x\\,c_1},\\ \\mk{b}{c_3 = (x^{2}-1)\\,c_1},\\ \\mk{d}{c_4 = (2x - x^{3})\\,c_1}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{a}{c_2 = -1.618\\,c_1},\\ \\mk{b}{c_3 = 1.618\\,c_1},\\ \\mk{d}{c_4 = -1.000\\,c_1}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{n}{c_1^{2}\\,(1 + 2.618 + 2.618 + 1)} = 1",
+       "uses": [
+        2
+       ],
+       "map": {
+        "a": "n",
+        "b": "n",
+        "d": "n"
+       }
+      },
+      {
+       "tex": "\\mk{n}{c_1} = 0.37"
+      },
+      {
+       "tex": "\\mk{p}{|\\psi_4 \\rangle} = 0.37 |p_1 \\rangle - 0.60 | p_2 \\rangle + 0.60 | p_3 \\rangle - 0.37 | p_4 \\rangle",
+       "uses": [
+        3
+       ],
+       "map": {
+        "n": "p"
+       }
+      }
+     ],
+     "num": "(10.6.17)"
+    }
+   ]
+  }
+ ]
+}
