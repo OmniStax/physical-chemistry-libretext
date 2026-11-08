@@ -47,3 +47,27 @@ Proposed by the agent after the chapter exploration (2026-11-08). Status:
 printed, with corrections where a key is wrong; *AI solutions* for the 6
 unkeyed; *AI exercises* for the 6 proposed. Every exercise is an item of the
 Exercises document (`place: end`).
+
+## Decisions taken by the orchestrator (2026-11-08)
+
+The user asked for Chapter 3 onward to be built without stops; these settle
+the questions the exploration left open.
+
+- **Colours**: the reassignment after the three new types stands for the whole book.
+- **Placement**: Exercises 3.7.2, 3.7.3 and 3.7.7 go to 3.5 (rule 12); Example
+  3.4.1 and the second Exercise 3.6.1 are one card in 3.4, keyed by 3.6's
+  printed Solution. Both pages' notes say so.
+- **Mislabelled boxes**: the printed labels stay as the book prints them
+  (book verbatim); the box printed "Example 3.6.1" stays an example, and the
+  box printed "Exercise 3.7.2" stays an exercise. Where the label misleads,
+  a correction footnote says what the box is.
+- **3.9**: two figures, the 3D point cloud of |ψ|² (as the exploration
+  describes; point cloud, not isosurface) and the separate still Sim of the
+  levels splitting as the box is stretched.
+- **3.5's phase expansion note**: cite 3.1's derivation, never draw it twice.
+- **Extra simulations**: build the detections Sim in 3.4, the operator bench in
+  3.3 and the free-particle wave in 3.1 (it moves); not the uncertainty one in 3.8.
+- **Uncredited originals** (3.7.1 and the summary's three): shipped in
+  `originals` under the page's licence, as the book publishes them; `notes`
+  says the book gives no credit.
+- **Captions** have no fixed length (root rules, the caption paragraph).
