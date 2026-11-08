@@ -262,8 +262,8 @@ Counted from the converted pages.
   of S₄ about z, and check S₄² = C₂); 12.5 one (the representative of C₃⁺ in NH₃'s s
   basis and its trace); 12.6 one (characters of the 3N basis of NH₃ by inspection);
   12.7 one (direct products E ⊗ E in C₃ᵥ, reduced); 12.8 one (is ⟨s_N|Ĥ|φ₃⟩ zero by
-  symmetry? why); 12.10 one (Γ_vib of CO₂ through D₂ₕ); 12.11 one (reduce Γ = (12, 0,
-  2) for… a given C₃ᵥ case, tabular); 12.12 one (number of modes of benzene, CO₂,
+  symmetry? why); 12.10 one (Γ_vib of CO₂ through D₂ₕ); 12.11 one (reduce CH₃Cl's 3N
+  representation in C₃ᵥ by the tabular method); 12.12 one (number of modes of benzene, CO₂,
   HCN); 12.13 one (which of NH₃'s modes are IR and Raman active, with the
   polarization); 12.15 one (allowed one-photon transitions from H₂O's ground state to
   its (1B₂)¹(3A₁)¹ and (1B₂)¹(2B₁)¹ states, with polarization). No new one for
@@ -503,7 +503,7 @@ The book's words kept; a numbered footnote where each applies.
 | 421666, Vallance's screenshots (61156 …, 61177), the flowchart, the icons | none | shipped under the page's licence (Chapter 3's decision) |
 | 12.14 JPGs and PNGs | none (ChemWiki student module) | shipped under the page's licence |
 | 12.14.7, 12.14.8 | Sigma-Aldrich catalogue spectra | not shipped (no licence) |
-| Morse potential (27861) | Wikipedia "Morse-potential.png", CC BY-SA 3.0 (Somoza) | shipped under its own licence with credit (10.6's precedent) |
+| Morse potential (27861) | Wikipedia "Morse-potential.png" (licence to be read from its file page; CC BY-SA 3.0 expected) | shipped under its own licence with credit (10.6's precedent) |
 | 57783 water MOs with energies | none (from an outside course page) | shipped under the page's licence; *orchestrator* if a source is wanted |
 | 9878 transition integral, 17590 flowchart | BMP files (one named .JPG) | the integral not shipped (set as maths); the flowchart converted to PNG if shipped |
 
