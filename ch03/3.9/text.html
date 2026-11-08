@@ -1,0 +1,73 @@
+<section id="separating-the-dimensions">
+<h2>Separating the three dimensions</h2>
+<p>The quantum <span data-concept="particle-in-a-box">particle in the 1D box</span> problem can be expanded to consider a particle within a higher dimensions as demonstrated elsewhere for a quantum particle in a 2D box. Here we continue the expansion into a <span data-concept="particle-in-a-3d-box">particle trapped in a 3D box</span> with <span data-type="length">three lengths</span> $\kLx$, $\kLy$, and $\kLz$. As with the other systems, there is NO FORCE (i.e., no potential) acting on the particles <em>inside</em> the box (Figure 3.9.1).</p>
+<p>The potential for the particle inside the box</p>
+$$ \kV(\krvec) = 0 $$
+<ul><li>$0 \leq \kx \leq \kLx$</li><li>$0 \leq \ky \leq \kLy$</li><li>$0 \leq \kz \leq \kLz$</li><li>$\kLx < \kx < 0$</li><li>$\kLy < \ky < 0$</li><li>$\kLz < \kz < 0$<sup class="fn" data-note="c-outside"></sup></li></ul>
+<p>$\krvec$ is the vector with all three components along the three axes of the 3-D box: $\krvec = \kLx\hat{x} + \kLy\hat{y} + \kLz\hat{z}$.<sup class="fn" data-note="c-position"></sup> When <span data-type="energy">the potential energy</span> is infinite, then the <span data-concept="wavefunction">wavefunction</span> equals zero. When <span data-type="energy">the potential energy</span> is zero, then the <span data-concept="wavefunction">wavefunction</span> obeys the <span data-concept="time-independent-schrodinger-equation">Time-Independent Schrödinger Equation</span></p>
+$$ -\dfrac{\hbar^{2}}{2\km}\nabla^{2}\kpsi(r) + \kV(r)\kpsi(r) = \kE\kpsi(r) \tag{3.9.1} $$
+<p>Since we are dealing with a 3-dimensional figure, we need to add the 3 different axes into the Schrondinger equation:</p>
+$$ -\dfrac{\hbar^{2}}{2\km}\left(\dfrac{d^{2}\kpsi(r)}{d\kx^{2}} + \dfrac{d^{2}\kpsi(r)}{d\ky^{2}} + \dfrac{d^{2}\kpsi(r)}{d\kz^{2}}\right) = \kE\kpsi(r) \tag{3.9.2} $$
+<p>The easiest way in solving this partial differential equation is by having the <span data-concept="wavefunction">wavefunction</span> equal to a <strong>product</strong> of individual function for each independent variable (e.g., the <span data-concept="separation-of-variables">Separation of Variables technique</span>):</p>
+$$ \kpsi{(\kx,\ky,\kz)} = X(\kx)Y(\ky)Z(\kz) \tag{3.9.3} $$
+<p>Now each function has its own variable:</p>
+<ul><li>$X(\kx)$ is a function of variable $\kx$ only</li><li>$Y(\ky)$ is a function of variable $\ky$ only</li><li>$Z(\kz)$ is a function of variable $\kz$ only</li></ul>
+<figure class="dv" id="drv-box3d"></figure>
+<p>Notice the similarity between the energies a <span data-concept="particle-in-a-3d-box">particle in a 3D box</span> (Equation 3.9.12) and a <span data-concept="pib-energy-levels">1D box</span>.</p>
+<figure class="sim" id="sim-box3d" data-figure="3.9.1" data-original="/media/ch03/345734-3.12.1_(1).svg" data-original-caption="A particle in 3D box with three lengths Lx, Ly, and Lz. (CC BY-NC 4.0; Ümit Kaya via LibreTexts)">
+  <div class="sim-head"><span class="eyebrow">Figure 3.9.1</span><span>Each point is a place a measurement could find the particle, drawn from $|\kpsi|^2$. Pick $n_x$, $n_y$ and $n_z$, then turn the box: every quantum number above 1 cuts the cloud with flat planes where $\kpsi = 0$. In the cube, (2,1,1), (1,2,1) and (1,1,2) are the same cloud turned. The box keeps its volume $\kL^3$ as you stretch it.</span></div>
+</figure>
+</section>
+
+<section id="degeneracy-in-a-3d-cube">
+<h2>Degeneracy in a 3D Cube</h2>
+<p>The <span data-type="energy">energy of the particle</span> in a 3-D cube (i.e., $\kLx=\kLy= \kL$)<sup class="fn" data-note="c-cube"></sup> in the <em><span data-concept="ground-state">ground state</span></em> is given by Equation 3.9.12 with $n_x=1$, $n_y=1$, and $n_z=1$. This energy ($E_{1,1,1}$) is hence</p>
+$$ E_{1,1,1} = \dfrac{3 h^{2}}{8\km\kL^2} $$
+<p>The <span data-concept="ground-state">ground state</span> has only one <span data-concept="wavefunction">wavefunction</span> and no other state has this specific energy; the <span data-concept="ground-state">ground state</span> and the energy level are said to be <strong><span data-concept="degeneracy">non-degenerate</span></strong>. However, in the 3-D cubical box potential the energy of a state depends upon the sum of the squares of the <span data-concept="quantum-number">quantum numbers</span> (Equation 3.9.11).<sup class="fn" data-note="c-eq-cite"></sup> The particle having a particular value of energy in the excited state <em>MAY</em> has several different <span data-concept="stationary-state">stationary states</span> or <span data-concept="wavefunction">wavefunctions</span>. If so, these states and energy eigenvalues are said to be <strong><span data-concept="degeneracy">degenerate</span></strong>.</p>
+<p>For the first excited state, three combinations of the <span data-concept="quantum-number">quantum numbers</span> $(n_x,\, n_y, \, n_z )$ are $(2,\,1,\,1),\, (1,2,1),\, (1,1,2)$. The sum of squares of the <span data-concept="quantum-number">quantum numbers</span> in each combination is same (equal to 6). Each <span data-concept="wavefunction">wavefunction</span> has same energy:</p>
+$$ E_{2,1,1} =E_{1,2,1} = E_{1,1,2} = \dfrac{6 h^{2}}{8\km\kL^2} $$
+<p>Corresponding to these combinations three different <span data-concept="wavefunction">wavefunctions</span> and <strong>three</strong> different states are possible. Hence, the first excited state is said to be <span data-concept="degree-of-degeneracy">three-fold or triply degenerate</span>. The number of independent <span data-concept="wavefunction">wavefunctions</span> for the <span data-concept="stationary-state">stationary states</span> of an energy level is called as the <strong><span data-concept="degree-of-degeneracy">degree of degeneracy</span></strong> of the energy level. The value of energy levels with the corresponding combinations and sum of squares of the <span data-concept="quantum-number">quantum numbers</span></p>
+$$ n^2 \,= \, n_x^2+n_y^2+n_z^2 $$
+<p>as well as the <span data-concept="degree-of-degeneracy">degree of degeneracy</span> are depicted in Table 3.9.1.</p>
+<div class="book-table">
+  <div class="tcap"><span class="eyebrow">Table 3.9.1</span><span>Degeneracy properties of the particle in a 3-D cube with $\kLx=\kLy= \kL$.</span></div>
+  <table>
+    <thead><tr><th>$n_x^2+n_y^2+n_z^2$</th><th colspan="6">Combinations of Degeneracy<br> ($n_x$, $n_y$, $n_z$)</th><th>Total Energy<br> ($\kEnnn$)</th><th>Degree of Degeneracy</th></tr></thead>
+    <tbody>
+      <tr><td>3</td><td>(1,1,1)</td><td></td><td></td><td></td><td></td><td></td><td>$\dfrac{3 h^{2}}{8\km\kL^2}$</td><td>1</td></tr>
+      <tr><td>6</td><td>(2,1,1)</td><td>(1,2,1)</td><td>(1,1,2)</td><td></td><td></td><td></td><td>$\dfrac{6 h^{2}}{8\km\kL^2}$</td><td>3</td></tr>
+      <tr><td>9</td><td>(2,2,1)</td><td>(1,2,2)</td><td>(2,1,2)</td><td></td><td></td><td></td><td>$\dfrac{9 h^{2}}{8\km\kL^2}$</td><td>3</td></tr>
+      <tr><td>11</td><td>(3,1,1)</td><td>(1,3,1)</td><td>(1,1,3)</td><td></td><td></td><td></td><td>$\dfrac{11 h^{2}}{8\km\kL^2}$</td><td>3</td></tr>
+      <tr><td>12</td><td>(2,2,2)</td><td></td><td></td><td></td><td></td><td></td><td>$\dfrac{12 h^{2}}{8\km\kL^2}$</td><td>1</td></tr>
+      <tr><td>14</td><td>(3,2,1)</td><td>(3,1,2)</td><td>(2,3,1)</td><td>(2,1,3)</td><td>(1,3,2)</td><td>(1,2,3)</td><td>$\dfrac{14 h^{2}}{8\km\kL^2}$</td><td>6</td></tr>
+      <tr><td>17</td><td>(2,2,3)</td><td>(3,2,2)</td><td>(2,3,2)</td><td></td><td></td><td></td><td>$\dfrac{17 h^{2}}{8\km\kL^2}$</td><td>3</td></tr>
+      <tr><td>18</td><td>(1,1,4)</td><td>(1,4,1)</td><td>(4,1,1)</td><td></td><td></td><td></td><td>$\dfrac{18 h^{2}}{8\km\kL^2}$</td><td>3</td></tr>
+      <tr><td>19</td><td>(1,3,3)</td><td>(3,1,3)</td><td>(3,3,1)</td><td></td><td></td><td></td><td>$\dfrac{19 h^{2}}{8\km\kL^2}$</td><td>3</td></tr>
+      <tr><td>21</td><td>(1,2,4)</td><td>(1,4,2)</td><td>(2,1,4)</td><td>(2,4,1)</td><td>(4,1,2)</td><td>(4,2,1)</td><td>$\dfrac{21 h^{2}}{8\km\kL^2}$</td><td>6</td></tr>
+    </tbody>
+  </table>
+</div>
+<div class="example" id="ex-3-9-1">
+<h3>Example 3.9.1 · Accidental Degeneracies</h3>
+<p>When is there <span data-concept="degeneracy">degeneracy</span> in a 3-D box when none of the sides are of equal length (i.e., $\kLx \neq \kLy \neq \kLz$)?</p>
+<h4>Solution</h4>
+<p>From simple inspection of Equation 3.9.12 or Table 3.9.1, it is clear that <span data-concept="degeneracy">degeneracy</span> originates from different combinations of $n_x^2/\kLx^2$, $n_y^2/\kLy^2$ and $n_z^2/\kLz^2$ that give the same value. These will occur at common multiples of at least two of these quantities (the <a href="https://math.libretexts.org/TextMaps/Map%3A_Prealgebra_(OpenStax)/2%3A_Introduction_to_the_Language_of_Algebra/2.5%3A_Prime_Factorization_and_the_Least_Common_Multiple_(Part_1)">Least Common Multiple</a> is one example). For example</p>
+<p>if</p>
+$$ \dfrac{n_x^2}{\kLx^2} = \dfrac{n_y^2}{\kLy^2} $$
+<p>there will be a <span data-concept="degeneracy">degeneracy</span>. Also <span data-concept="degeneracy">degeneracies</span> will exist if</p>
+$$ \dfrac{n_y^2}{\kLy^2} = \dfrac{n_z^2}{\kLz^2} $$
+<p>or if</p>
+$$ \dfrac{n_x^2}{\kLx^2} = \dfrac{n_z^2}{\kLz^2} $$
+<p>and especially if</p>
+$$ \dfrac{n_x^2}{\kLx^2} = \dfrac{n_y^2}{\kLy^2} = \dfrac{n_z^2}{\kLz^2} . $$
+<p>There are two general kinds of <span data-concept="degeneracy">degeneracies</span> in quantum mechanics: <span data-concept="degeneracy">degeneracies</span> due to a symmetry (i.e., $\kLx=\kLy$) and <span data-concept="accidental-degeneracy">accidental degeneracies</span> like those above.</p>
+</div>
+<figure class="sim" id="sim-split">
+  <div class="sim-head"><span class="eyebrow">Sim</span><span>Each rung is one state, at the height of its energy. Stretch the box away from a cube and the degenerate rungs split apart. They merge again only where the sides line up: back at the cube, or at $\kLy = 2\kLx$, where states such as (1,4,1) and (2,2,1) meet by accident. The box keeps its volume $\kL^3$.</span></div>
+</figure>
+</section>
+
+<section id="references">
+<h2>References</h2>
+<ol><li>Atkins, Peter. Physical Chemistry 5th Ed. USA. 1994.</li><li>Fitts, Donald. Principles of Quantum Mechanics. United Kingdom, Cambridge. University Press. 1999</li><li>McQuarrie. Donald. Physical Chemistry A Molecular Approach. Sausalito, CA. University Science Books. 1997.</li><li>Riggs. N. V. Quantum Chemistry. Toronto, Ontario. The Macmillan Company. 1969</li><li><a href="https://doi.org/10.1021/ed067p999">C. A. Hollingsworth, Accidental Degeneracies of the Particle in a Box, J. Chem. Educ., 1990, 67 (12), p 999</a></li></ol>
+</section>

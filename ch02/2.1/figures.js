@@ -91,7 +91,7 @@ const clock = (cy) => { const t = cy.now(); return isFinite(t) ? t : 0; };
     const ax = axes(ctx, box, [-1, 9], [-2, 2], { nx: 10, ny: 4, xl: 'position x (m)', yl: 'displacement y (cm)', xc: C('length'), yc: C('displacement') });
     line(ctx, box.l, ax.Y(0), box.r, ax.Y(0), alpha(PAL.ink, 0.35), 2);
     /* the rope at t = 0 */
-    ctx.save(); ctx.setLineDash([10, 10]); plot(ctx, ax, f, alpha(PAL.ink, 0.45), { w: 3 }); ctx.restore();
+    plot(ctx, ax, f, alpha(PAL.ink, 0.45), { w: 3, dash: [10, 10] });
     /* the rope now: the same function, shifted */
     plot(ctx, ax, (x) => f(x - s), C('displacement'), { w: 5 });
     /* the shift */
@@ -132,9 +132,7 @@ const clock = (cy) => { const t = cy.now(); return isFinite(t) ? t : 0; };
     const ax = axes(ctx, box, [0, L], [-1.4, 1.4], { nx: 4, ny: 0, fx: (x) => fmt(x, 2), xl: 'position x (m)', yl: 'displacement u', xc: C('length'), yc: C('displacement') });
     line(ctx, box.l, ax.Y(0), box.r, ax.Y(0), alpha(PAL.ink, 0.35), 2);
     /* the envelope: how far each point swings */
-    ctx.save(); ctx.setLineDash([10, 10]);
-    plot(ctx, ax, env, alpha(PAL.ink, 0.4), { w: 2 }); plot(ctx, ax, (x) => -env(x), alpha(PAL.ink, 0.4), { w: 2 });
-    ctx.restore();
+    plot(ctx, ax, env, alpha(PAL.ink, 0.4), { w: 2, dash: [10, 10] }); plot(ctx, ax, (x) => -env(x), alpha(PAL.ink, 0.4), { w: 2, dash: [10, 10] });
     plot(ctx, ax, u, C('displacement'), { w: 5 });
     /* the clamps at the ends */
     [0, L].forEach((x) => line(ctx, ax.X(x), ax.Y(-0.3), ax.X(x), ax.Y(0.3), PAL.ink, 5));

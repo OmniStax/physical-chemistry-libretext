@@ -1,0 +1,42 @@
+<section id="uncertainties-from-expectation-values">
+<h2>Uncertainties from expectation values</h2>
+<p>As will be discussed in Section 4.6, the operators $\hat{x}$ and $\hat{p}$ are not compatible and there is <strong>no</strong> measurement that can precisely determine the coresponding observables ($\kx$ and $p$) simultaneously. Hence, there must be an uncertainty relation between them that specifies how uncertain we are about one quantity given a definite precision in the measurement of the other. Presumably, if one can be determined with infinite precision, then there will be an infinite uncertainty in the other. <span data-concept="quantum-uncertainty">The uncertainty in a general quantity</span> $A$ is</p>
+$$ \Delta A = \sqrt{\langle A^2 \rangle - \langle A \rangle ^2} \tag{3.8.1} $$
+<p>where $\langle A^2 \rangle$ and $\langle A \rangle$ are the <span data-concept="quantum-expectation-value">expectation values</span> of $\hat{A^2}$ and $\hat{A}$ <span data-concept="operator">operators</span> for a specific <span data-concept="wavefunction">wavefunction</span>. Extending Equation 3.8.1 to $\kx$ and $p$ results in the following <span data-concept="quantum-uncertainty">uncertainties</span></p>
+$$ \kdx = \sqrt{\kxsqavg - \kxavg ^2} \tag{3.8.2} $$
+$$ \kdp = \sqrt{\kpsqavg - \kpavg ^2} \tag{3.8.3} $$
+<p>These quantities can be expressed explicitly in terms of the (time-dependent) <span data-concept="wavefunction">wavefunction</span> $\kPsi (\kx, \kt)$ using the fact that</p>
+$$ \begin{aligned} \kxavg &= \langle \kPsi(\kt)\vert \hat{x}\vert\kPsi(\kt)\rangle  \\[4pt] &=\int \kPsi^{*}(\kx,\kt) \kx \kPsi(\kx,\kt)\;d\kx \end{aligned} \tag{3.8.4} $$
+<p>and</p>
+$$ \begin{aligned} \kxsqavg &= \langle \kPsi(\kt)\vert \hat{x}^2 \vert\kPsi(\kt)\rangle  \\[4pt] &= \int \kPsi^{*}(\kx,\kt) \kx^2 \kPsi(\kx,\kt)\;d\kx \end{aligned} \tag{3.8.5} $$
+<p>The middle terms in both Equations 3.8.4 and 3.8.5 are the integrals expressed in Dirac's Bra-ket notation. Similarly using the definition of the <span data-concept="momentum-operator">linear momentum operator</span>:</p>
+$$ \kphat = - i \hbar \dfrac{\partial}{ \partial \kx}. $$
+<p>So</p>
+$$ \begin{aligned} \kpavg &= \langle \kPsi(\kt)\vert \hat{p} \vert\kPsi(\kt)\rangle  \\&= \int \kPsi^{*}(\kx,\kt) - i \hbar {\partial \over \partial \kx}\kPsi(\kx,\kt)\,d\kx \end{aligned} \tag{3.8.6} $$
+<p>and</p>
+$$ \begin{aligned} \kpsqavg &= \langle \kPsi(\kt)\vert \hat{p}^2\vert\kPsi(\kt)\rangle  \\ &= \int \kPsi ^{*} (\kx, \kt)\left(-\hbar^2{\partial^2 \over \partial \kx^2}\right)\kPsi(\kx,\kt) \;d\kx \end{aligned} \tag{3.8.7} $$
+<div class="note">
+<div class="eyebrow">Note</div>
+<h3>Time-dependent vs. time-independent wavefunction</h3>
+<p>The <span data-concept="quantum-expectation-value">expectation values</span> above are formulated with the total time-dependence <span data-concept="wavefunction">wavefunction</span> $\kpsi(\kx,\kt)$ that are functions of $\kx$ and $\kt$. However, it is easy to show that the same <span data-concept="quantum-expectation-value">expectation value</span> would be obtained if the time-independent <span data-concept="wavefunction">wavefunction</span> $\kpsi(\kx)$ that are functions of only $\kx$ are used. If $V(\kx)$ in $\hat{H}$ is time independent, then the <span data-concept="wavefunction">wavefunctions</span> are <span data-concept="stationary-state">stationary</span> and the <span data-concept="quantum-expectation-value">expectation value</span> are time-independent. You can easily confirm that by comparing the <span data-concept="quantum-expectation-value">expectation values</span> using the general formula for a <span data-concept="stationary-state">stationary wavefunction</span></p>
+$$ \kPsi(\kx,\kt)=\kpsi(\kx)e^{-iE\kt / \hbar} $$
+<p>and for $\kpsi(\kx)$.</p>
+</div>
+</section>
+
+<section id="the-uncertainty-principle">
+<h2>The uncertainty principle</h2>
+<p>The <span data-concept="heisenberg-uncertainty-principle">Heisenberg uncertainty principle</span> can be quantitatively connected to the properties of a <span data-concept="wavefunction">wavefunction</span>, i.e., calculated via the <span data-concept="quantum-expectation-value">expectation values</span> outlined above:</p>
+$$ \kdp \kdx \ge \dfrac {\hbar}{2} \tag{3.8.8} $$
+<p>This essentially states that the greater certainty that a measurement of $\kx$ or $p$ can be made, the greater will be the <em>uncertainty</em> in the other. Hence, as $\kdp$ approaches 0, $\kdx$ must approach $\infty$, which is the case of the free particle (e.g, with $V(\kx)=0$) where the momentum of a particles can be determined precisely.</p>
+<div class="example" id="ex-3-8-1">
+<h3>Example 3.8.1 · Uncertainty with a Gaussian wavefunction</h3>
+<p>A particle is in a state described by the <span data-concept="wavefunction">wavefunction</span></p>
+$$ \kpsi{(\kx)} =\left(\dfrac{2a}{\pi}\right)^{\frac{1}{4}} e^{-a\kx^2} \tag{3.8.9} $$
+<p>where $a$ is a constant and $-\infty \le \kx \le \infty$. Verify that the value of the product $\kdp\kdx$ is consistent with the predictions from the <span data-concept="heisenberg-uncertainty-principle">uncertainty principle</span> (Equation 3.8.8).</p>
+<h4>Solution</h4>
+<figure class="dv" id="drv-example-3-8-1"></figure>
+<p>Not only does the Heisenburg uncertainly principle hold (Equation 3.8.8), but the equality is established for this <span data-concept="wavefunction">wavefunction</span>. This is because the Gaussian <span data-concept="wavefunction">wavefunction</span> (Equation 3.8.9) is special as discussed later.</p>
+</div>
+<p>The <span data-concept="heisenberg-uncertainty-principle">uncertainty principle</span> is a consequence of the wave property of matter. A wave has some finite extent in space and generally is not localized at a point. Consequently there usually is significant uncertainty in the position of a quantum particle in space.</p>
+</section>

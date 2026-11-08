@@ -8,14 +8,6 @@ const TAU = 2 * Math.PI;
 function readout(host, main, small, o) { tex(host, main, false, o || {}); if (small) { const s = el('small', null, small); host.appendChild(s); F.renderMath(s); } }
 /* a signed number for a sum written out term by term */
 const signed = (x, d) => (x < 0 ? '-' : '+') + fmt(Math.abs(x), d);
-/* a dashed curve clipped to its graph's box, for a part drawn beside the whole it sums to */
-function dashed(ctx, ax, f, color, w = 3) {
-  const { box, X, Y, xr } = ax;
-  ctx.save(); ctx.beginPath(); ctx.rect(box.l, box.t, box.r - box.l, box.b - box.t); ctx.clip();
-  ctx.strokeStyle = color; ctx.lineWidth = w; ctx.setLineDash([10, 8]); ctx.beginPath();
-  for (let i = 0; i <= 400; i++) { const x = xr[0] + (xr[1] - xr[0]) * i / 400; if (i) ctx.lineTo(X(x), Y(f(x))); else ctx.moveTo(X(x), Y(f(x))); }
-  ctx.stroke(); ctx.restore();
-}
 
 /* the stack of normal modes sin(n pi x / L), one strip per mode, drawn between two fixed ends.
    Kept as a helper so the particle in a box of Chapter 3 can draw the same stack.
@@ -113,8 +105,8 @@ function modeStrip(ctx, X, L, n, y0, a, s, color, w) {
     /* the probe at the meeting point */
     line(ctx, ax.X(XP), box.t, ax.X(XP), box.b, alpha(PAL.ink, 0.4), 2, [4, 8]);
     plot(ctx, ax, u, cu, { w: 5 });
-    dashed(ctx, ax, u1, r1, 3);
-    dashed(ctx, ax, u2, r2, 3);
+    plot(ctx, ax, u1, r1, { w: 3, dash: [10, 8] });
+    plot(ctx, ax, u2, r2, { w: 3, dash: [10, 8] });
     dot(ctx, ax.X(XP), ax.Y(u(XP)), cu, true, 9);
     hits.push({ x: ax.X(XP), y: ax.Y(u(XP)), r: 14, name: `the string at x = ${fmt(XP, 1)} m, ${fmt(u(XP), 2)} cm` });
     /* the travel of each pulse, riding above (or below) its peak */
@@ -123,12 +115,8 @@ function modeStrip(ctx, X, L, n, y0, a, s, color, w) {
     arrow(ctx, ax.X(c2) + 40, ya(a2), ax.X(c2) - 40, ya(a2), r2, 4);
     hits.push({ x: ax.X(c1), y: ax.Y(A1), r: 22, name: `pulse 1, ${fmt(A1, 2)} cm tall, running right` });
     hits.push({ x: ax.X(c2), y: ax.Y(a2), r: 22, name: `pulse 2, ${fmt(a2, 2)} cm, running left` });
-    /* a legend for the three curves */
-    const lx = box.r - 230, ly = box.t + 18;
-    [[r1, 'pulse 1', [10, 8]], [r2, 'pulse 2', [10, 8]], [cu, 'the string', null]].forEach(([c, s, dash], i) => {
-      line(ctx, lx, ly + 30 * i, lx + 44, ly + 30 * i, c, dash ? 3 : 5, dash || undefined);
-      text(ctx, s, lx + 56, ly + 30 * i, PAL.ink, { size: 17, base: 'middle' });
-    });
+    /* the key to the three curves, on the line above the graph, clear of the pulses wherever they run */
+    F.legend(ctx, ax, [{ s: 'pulse 1', color: r1, w: 3, dash: [10, 8] }, { s: 'pulse 2', color: r2, w: 3, dash: [10, 8] }, { s: 'the string', color: cu, w: 5 }], { corner: 'above' });
     const same = S.value === 'same', top = same ? A1 + A2.v : Math.abs(A1 - A2.v);
     topline(ctx, same
       ? `Pulses on the same side add: where they overlap, the string rises ${fmt(top, 2)} cm.`
@@ -171,9 +159,7 @@ function modeStrip(ctx, X, L, n, y0, a, s, color, w) {
     const ax = axes(ctx, box, [0, 1], [-10, 10], { nx: 4, ny: 4, fx: (v) => fmt(v, 2), xl: 'position x / L', yl: 'displacement u (mm)', xc: C('length'), yc: cu });
     line(ctx, box.l, ax.Y(0), box.r, ax.Y(0), alpha(PAL.ink, 0.3), 2);
     /* the starting shape, dashed, and the string now */
-    const p0 = []; for (let i = 0; i <= 200; i++) { const x = i / 200; p0.push([ax.X(x), ax.Y(u(0)(x))]); }
-    ctx.save(); ctx.strokeStyle = alpha(PAL.ink, 0.45); ctx.lineWidth = 3; ctx.setLineDash([10, 10]); ctx.beginPath();
-    p0.forEach(([x, y], i) => (i ? ctx.lineTo(x, y) : ctx.moveTo(x, y))); ctx.stroke(); ctx.restore();
+    plot(ctx, ax, u(0), alpha(PAL.ink, 0.45), { w: 3, dash: [10, 10] });
     plot(ctx, ax, u(k), cu, { w: 5 });
     hits.push({ x: ax.X(0.25), y: ax.Y(u(0)(0.25)), r: 14, name: 'the starting shape of the string' });
     dot(ctx, ax.X(0), ax.Y(0), PAL.ink, true, 8); dot(ctx, ax.X(1), ax.Y(0), PAL.ink, true, 8);

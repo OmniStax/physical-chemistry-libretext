@@ -8,38 +8,27 @@ const { tex, C, PAL, alpha, register, begin, text, fmt } = F;
    page's own ground, so the nodal lines in ink read on it in either theme. */
 const UP = '#c2413a', DOWN = '#2f6ab3';
 const rest = () => F.mixColor(PAL.panel, PAL.ink, 0.1);
-const STEPS = 16;   /* 33 bands from -1 to 1 */
-const band = (q) => (q === 0 ? rest() : q > 0 ? F.mixColor(rest(), F.fact(UP), q / STEPS) : F.mixColor(rest(), F.fact(DOWN), -q / STEPS));
-const level = (w) => Math.max(-STEPS, Math.min(STEPS, Math.round(w * STEPS)));
-/* the sheet as faces grouped by band: rows[j][i] are points, w[j][i] the displacement over its maximum */
+/* the scale, read at every vertex and blended smoothly across each face: blue at the deepest trough, the rest colour at rest, red at the highest crest */
+const scale = () => [[-1, F.fact(DOWN)], [0, rest()], [1, F.fact(UP)]];
+/* the sheet: rows[j][i] are points, w[j][i] the displacement over its maximum */
 function sheet(rows, w) {
-  const groups = new Map();
-  for (let j = 0; j + 1 < rows.length; j++) for (let i = 0; i + 1 < rows[j].length; i++) {
-    const q = level((w[j][i] + w[j][i + 1] + w[j + 1][i] + w[j + 1][i + 1]) / 4);
-    if (!groups.has(q)) groups.set(q, []);
-    groups.get(q).push([rows[j][i], rows[j][i + 1], rows[j + 1][i + 1], rows[j + 1][i]]);
-  }
   /* grid curves every few rows, so the sheet reads as a surface even as it passes through rest */
   const segs = [], nj = rows.length, ni = rows[0].length, sj = Math.max(1, Math.round((nj - 1) / 8)), si = Math.max(1, Math.round((ni - 1) / 10));
   for (let j = 0; j < nj; j += sj) for (let i = 0; i + 1 < ni; i++) segs.push([rows[j][i], rows[j][i + 1]]);
   for (let i = 0; i < ni; i += si) for (let j = 0; j + 1 < nj; j++) segs.push([rows[j][i], rows[j + 1][i]]);
-  return [...[...groups.entries()].map(([q, faces]) => ({ k: 'faces', faces, color: band(q), alpha: 1,
-    name: q > 0 ? 'the membrane, above its rest position' : q < 0 ? 'the membrane, below its rest position' : 'the membrane, near its rest position' })),
+  return [{ k: 'sheet', rows, values: w, scale: scale(), color: rest(), alpha: 1, name: 'the membrane: red above its rest position, blue below' },
     { k: 'segs', segs, color: alpha(PAL.ink, 0.3), w: 1 }];
 }
-/* the legend under the scene: the scale from below rest to above it */
+/* the legend under the scene: the scale from below rest to above it, as smooth as the sheet */
 function legend(c) {
-  const { ctx, W } = begin(c), n = 2 * STEPS + 1, w = 34, x0 = W / 2 - (n * w) / 2, y = 22, h = 22;
-  for (let q = -STEPS; q <= STEPS; q++) { ctx.save(); ctx.fillStyle = band(q); ctx.fillRect(x0 + (q + STEPS) * w, y, w + 0.5, h); ctx.restore(); }
-  ctx.save(); ctx.strokeStyle = alpha(PAL.ink, 0.4); ctx.lineWidth = 1; ctx.strokeRect(x0, y, n * w, h); ctx.restore();
-  text(ctx, 'below rest', x0 - 14, y + h / 2 + 7, PAL.muted, { size: 17, align: 'right' });
-  text(ctx, 'above rest', x0 + n * w + 14, y + h / 2 + 7, PAL.muted, { size: 17 });
-  text(ctx, 'at rest', W / 2, y + h + 26, PAL.muted, { size: 17, align: 'center' });
+  const { ctx, W } = begin(c);
+  F.legend(ctx, { l: 0, t: 0, r: W, b: 90 }, [{ s: 'at rest', ramp: scale().map(([, col]) => col), ends: ['below rest', 'above rest'] }], { corner: 'top', panel: false });
 }
 /* the flat nodal map, drawn where WebGL is missing: the sheet from straight above on the same scale */
 function flatMap(c, cells, nodes, frame, head) {
   const { ctx } = begin(c);
-  cells.forEach(({ poly, w }) => { ctx.save(); ctx.fillStyle = band(level(w)); ctx.beginPath(); poly.forEach(([x, y], i) => (i ? ctx.lineTo(x, y) : ctx.moveTo(x, y))); ctx.closePath(); ctx.fill(); ctx.restore(); });
+  const sc = scale();
+  cells.forEach(({ poly, w }) => { ctx.save(); ctx.fillStyle = F.space.tint(sc, w); ctx.beginPath(); poly.forEach(([x, y], i) => (i ? ctx.lineTo(x, y) : ctx.moveTo(x, y))); ctx.closePath(); ctx.fill(); ctx.restore(); });
   [...frame, ...nodes].forEach((pts) => { ctx.save(); ctx.strokeStyle = PAL.ink; ctx.lineWidth = 3; ctx.beginPath(); pts.forEach(([x, y], i) => (i ? ctx.lineTo(x, y) : ctx.moveTo(x, y))); ctx.stroke(); ctx.restore(); });
   if (head) F.topline(ctx, head);
 }

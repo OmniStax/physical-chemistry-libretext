@@ -1,0 +1,75 @@
+<section id="extracting-probabilities">
+<h2>Extracting Probabilities</h2>
+<p>Since <span data-concept="wavefunction">wavefunctions</span> can in general be complex functions, the physical significance of <span data-concept="wavefunction">wavefunctions</span> cannot be found from the functions themselves because the $\sqrt {-1}$ is not a property of the physical world. Rather, the physical significance is found in the product of the <span data-concept="wavefunction">wavefunction</span> and its complex conjugate, i.e. the absolute square of the <span data-concept="wavefunction">wavefunction</span>, which also is called the <strong><span data-concept="square-of-the-modulus">square of the modulus</span></strong>.</p>
+$$ \kPsi^*(r , \kt ) \kPsi (r , \kt ) = {|\kPsi (r , \kt)|}^2 \tag{3.6.1} $$
+<p>where $r$ is a vector specifying a point in three-dimensional space. The square is used, rather than the modulus itself, just like the intensity of a light wave depends on the square of the electric field. Remember that <span data-concept="born-interpretation">the Born interpretation</span> is that $\kpsi^*(r_i)\kpsi(r_i)\, d\tau$ is the <strong><span data-concept="position-probability">probability</span></strong> that the electron is in the volume $d\tau$ located at $r_i$. <span data-concept="born-interpretation">The Born interpretation</span> therefore calls the <span data-concept="wavefunction">wavefunction</span> the probability amplitude, the absolute square of the <span data-concept="wavefunction">wavefunction</span> is called the <strong><span data-concept="probability-density">probability density</span></strong>, and the <span data-concept="probability-density">probability density</span> times a volume element in three-dimensional space ($d\tau$) is the probability.</p>
+<p>Since the squared magnitude $|\kpsi|^2$ of the <span data-concept="wavefunction">wavefunction</span> of a particle can be interpreted as the <span data-concept="probability-density">probability density</span>, then <span data-concept="position-probability">the probability for a one-dimensional wavefunction between the points $\kx=a$ and $\kx=b$</span> can be calculated by</p>
+$$ P_{1D}=\int\limits_{a}^{b}|\kpsi(\kx)|^{2} \mathrm{d} \kx \tag{3.6.2} $$
+<p>This is just the area under the under the $|\kpsi|^2$ curve (Figure 3.6.1).</p>
+<figure class="sim" id="sim-probability-area" data-figure="3.6.1 + 3.6.2 + 3.6.3" data-original="/media/ch03/348642-drawing.svg,/media/ch03/348966-figure-a.svg,/media/ch03/348965-figure-b.svg" data-original-caption="The probability can be interpreted as an area under the probability density |ψ|². (CC BY-NC 4.0; Ümit Kaya via LibreTexts)">
+  <div class="sim-head"><span class="eyebrow">Figure 3.6.1 + 3.6.2 + 3.6.3</span><span>Pick a <span data-type="probability-density">probability density</span> and slide the interval along <span data-type="length">the box</span>. The shaded area is the probability of finding the particle in the interval. The dashed rectangle, the density at the center times the width, is the quick estimate of Example 3.6.1.</span></div>
+</figure>
+<p>If the probability of a two-dimensional <span data-concept="wavefunction">wavefunction</span> is being evaluated, then Equation 3.6.2 will be amended to included a double integral:</p>
+$$ P_{2D}=\iint\limits_{a_1, a_2}^{b_1, b_2}|\kpsi(\kx,y)|^{2} \mathrm{d} \kx \mathrm{d} y $$
+<p>and similarly a triple integral would be used for calculating probabilities of three-dimensional <span data-concept="wavefunction">wavefunctions</span>:</p>
+$$ P_{3D}=\iiint\limits_{a_1, a_2, a_3}^{b_1, b_2,b_3}|\kpsi(\kx,y,z)|^{2} \mathrm{d} \kx \mathrm{d} y \mathrm{d} z $$
+<div class="example" id="ex-3-6-1">
+<h3>Example 3.6.1 · Probability of a Particle in a Box</h3>
+<p>Calculate the probability of finding an electron at $\kL/2$ in a box of infinite height within an interval ranging from $\dfrac {\kL}{2} - \dfrac {\kL}{200}$ to $\dfrac {\kL}{2} + \dfrac {\kL}{200}$ for the $n = 1$ and $n = 2$ states. Since the length of the interval, $\kL/100$, is small compared to $\kL$, you can get an approximate answer without explicitly integrating.</p>
+<h4>Solution</h4>
+<p>The <span data-concept="pib-wavefunctions">wavefunction for the particle in a box</span> is</p>
+$$ \kpsi(\kx)=\sqrt{\frac{2}{\kL}} \sin \left(\frac{n \pi \kx}{\kL}\right) $$
+<p>and the <span data-concept="wavefunction">wavefunction</span> for the $n=1$ state is</p>
+$$ \kpsi_{n=1}=\sqrt{\frac{2}{\kL}} \sin \left(\frac{\pi \kx}{\kL}\right) $$
+<p>From the interpretation that the <span data-concept="square-of-the-modulus">wavefunction modulus squared</span> is the <span data-concept="probability-density">probability density</span>, we can establish the following integral to solve the problem (note the limits of integration)</p>
+$$ \left|\kpsi_{n=1}\right|^{2}=\frac{2}{\kL} \int_{\frac{99 \kL}{200}}^{\frac{101\kL}{200}} \sin ^{2}\left(\frac{\pi \kx}{\kL}\right) d\kx \tag{3.6.3} $$
+<p>We can solve this, but we can also recognize that Equation 3.6.3 is just calculating an area that can be approximated as the area of a rectangle with a height ($\frac{2}{\kL} \sin ^{2}\left(\frac{\pi \kx}{\kL}\right)$ at $\kx=\kL/2$) and width $\Delta \kx = \kL/100$ (Figure 3.6.2).</p>
+<p>This area can be computed:</p>
+$$ \begin{aligned} \left|\kpsi_{n=1}\right|^{2} &\approx \frac{2}{\kL} \overset{\to\,1}{\cancel{\sin ^{2}\left(\frac{\pi (\kL/2)}{\kL}\right)}} \Delta \kx \\[4pt] & \approx \left(\frac{2}{\kL} \right) (\kL/100) \\[4pt] & \approx 1/50 = 0.02\end{aligned} $$
+<p>Given that the <span data-concept="wavefunction">wavefunction</span> is sinusoidal, the actual probability of finding an electron within the given interval at $\frac{\kL}{2}$ should be slightly less because of the behavior of the sinusoid at $\frac{\kL}{2}$ is at its peak of the <span data-concept="wavefunction">wavefunction</span> (Figure 3.6.2).</p>
+<p>The <span data-concept="wavefunction">wavefunction</span> for the $n = 2$ state</p>
+$$ \kpsi_{n=2}=\sqrt{\frac{2}{\kL}} \sin \left(\frac{2 \pi \kx}{\kL}\right) $$
+<p>so the integral that we need to construct and solve is</p>
+$$ \left|\kpsi_{n=2}\right|^{2}=\frac{2}{\kL} \int_{\frac{99 \kL}{200}}^{\frac{101\kL}{200}} \sin ^{2}\left(\frac{2 \pi \kx}{\kL}\right) d\kx $$
+<p>We can use the same graphical interpretation as above, but using the <span data-concept="probability-density">probability density</span> of the $\kpsi_2$ <span data-concept="wavefunction">wavefunction</span> (Figure 3.6.3).</p>
+$$ \begin{aligned} \left|\kpsi_{n=1}\right|^{2} &\approx \frac{2}{\kL} \overset{\to\,0}{\cancel{\sin ^{2}\left(\frac{ 2\pi (\kL/2)}{\kL}\right)}} \Delta \kx \\[4pt] & \approx 0\end{aligned} $$
+<p>The probability of finding an electron in a box at $\frac{\kL}{2}$ for $n=2$ is approximately zero.<sup class="fn" data-note="n2-label"></sup></p>
+</div>
+</section>
+
+<section id="normalizing-of-the-wavefunction">
+<h2>Normalizing of the Wavefunction</h2>
+<p>A probability is a real number between 0 and 1, inclusive. An outcome of a measurement which has a probability 0 is an impossible outcome, whereas an outcome which has a probability 1 is a certain outcome. According to Equation 3.6.1,<sup class="fn" data-note="eq-361"></sup> the probability of a measurement of $\kx$ yielding a result between $-\infty$ and $+\infty$ is</p>
+$$ P_{\kx \in -\infty:\infty}(\kt) = \int_{-\infty}^{\infty}\vert\kpsi(\kx,\kt)\vert^{ 2} d\kx. \tag{3.6.4} $$
+<p>However, a measurement of $\kx$ <em>must</em> yield a value between $-\infty$ and $+\infty$, since the particle has to be located somewhere. It follows that $P_{\kx \in -\infty:\infty}(\kt) =1$, or</p>
+$$ \int_{-\infty}^{\infty}\vert\kpsi(\kx,\kt)\vert^{ 2} d\kx = 1, \tag{3.6.5} $$
+<p>which is generally known as the <strong><span data-concept="normalization-condition">normalization condition</span></strong> for the <span data-concept="wavefunction">wavefunction</span>.</p>
+<div class="example" id="ex-3-6-2">
+<h3>Example 3.6.2 · Normalizing a Gaussian Wavepacket</h3>
+<p><span data-concept="normalizing-a-wavefunction">Normalize the wavefunction</span> of a Gaussian wave packet, centered on $\kx=\kxo$ with characteristic width $\ksigw$:</p>
+$$ \kpsi(\kx) = \psi_0 {\rm e}^{-(\kx-\kxo)^{ 2}/(4 \ksigw^2)}. \tag{3.6.6} $$
+<h4>Solution</h4>
+<figure class="dv" id="drv-example-3-6-2"></figure>
+<p>where $\phi$ is an arbitrary real phase-angle.</p>
+</div>
+</section>
+
+<section id="time-dependence-to-the-wavefunction">
+<h2>Time Dependence to the Wavefunction</h2>
+<p>Now, it is important to demonstrate that <span data-concept="normalization-preserved">if a wavefunction is initially normalized then it stays normalized as it evolves in time</span> according to the <span data-concept="time-dependent-schrodinger-equation">time-dependent Schrödinger's equation</span>. If this is not the case then the probability interpretation of the <span data-concept="wavefunction">wavefunction</span> is untenable, since it does not make sense for the probability that a measurement of $\kx$ yields <em>any</em> possible outcome (which is, manifestly, unity) to change in time. Hence, we require that</p>
+$$ \dfrac{d}{d\kt} \int_{-\infty}^{\infty}\vert \kpsi(\kx,\kt)\vert^{ 2} d\kx = 0 $$
+<p>for <span data-concept="wavefunction">wavefunctions</span> satisfying the <span data-concept="time-dependent-schrodinger-equation">time-dependent Schrödinger's equation</span> (this results from the <span data-concept="time-dependent-schrodinger-equation">time-dependent Schrödinger's equation</span> and Equation 3.6.5). The above equation gives</p>
+<figure class="dv" id="drv-normalization-in-time"></figure>
+<p>The above equation is satisfied provided the <span data-concept="wavefunction">wavefunction</span> converges</p>
+$$ \lim_{\vert \kx\vert\rightarrow\infty} \vert\kpsi\vert = 0 \tag{3.6.12} $$
+<p>However, this is a necessary condition for the integral on the left-hand side of Equation 3.6.5 to converge. Hence, we conclude that all <span data-concept="wavefunction">wavefunctions</span> which are <em><span data-concept="square-integrable">square-integrable</span></em> [i.e., are such that the integral in Equation 3.6.5 converges] have the property that <span data-concept="normalization-preserved">if the normalization condition Equation 3.6.5 is satisfied at one instant in time then it is satisfied at all subsequent times</span>.</p>
+<div class="note">
+<div class="eyebrow">Note</div>
+<h3>Not all Wavefunctions can be Normalized</h3>
+<p>Not all <span data-concept="wavefunction">wavefunctions</span> can be normalized according to the scheme set out in Equation 3.6.5. For instance, a planewave <span data-concept="wavefunction">wavefunction</span> for a quantum free particle</p>
+$$ \kPsi(\kx,\kt) = \psi_0 {\rm e}^{ {\rm i} (\kk \kx-\komega \kt)} $$
+<p>is not <span data-concept="square-integrable">square-integrable</span>, and, thus, cannot be normalized. For such <span data-concept="wavefunction">wavefunctions</span>, the best we can say is that</p>
+$$ P_{\kx \in a:b}(\kt) \propto \int_{a}^{b}\vert\kPsi(\kx,\kt)\vert^{ 2} d\kx. $$
+<p>In the following, all <span data-concept="wavefunction">wavefunctions</span> are assumed to be <span data-concept="square-integrable">square-integrable</span> and normalized, unless otherwise stated.</p>
+</div>
+</section>

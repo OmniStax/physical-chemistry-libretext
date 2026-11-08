@@ -1,0 +1,113 @@
+{
+ "id": "summary",
+ "module": "550563",
+ "chapter": "3",
+ "title": "The Schrödinger Equation and a Particle in a Box (Summary)",
+ "short": "Summary",
+ "lead": "",
+ "notes": "Written by Kyle Crabtree and shared under the book's CC BY-NC-SA 4.0. The book gives no credit for its three images, and the numbers 1.1 to 1.3 it prints under them are left off.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "figures": [
+  {
+   "id": "fig-well",
+   "kind": "figure",
+   "originals": [
+    "/media/ch03/495297-Infinite_potential_well-en.svg"
+   ],
+   "original_caption": "Particle in a box model system",
+   "widths": [
+    339
+   ],
+   "draws": [
+    "energy",
+    "length"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "fig-pib-wfns",
+   "kind": "figure",
+   "originals": [
+    "/media/ch03/495299-pib-wfns1.png",
+    "/media/ch03/495300-pib-wfns2.png"
+   ],
+   "original_caption": "Wavefunctions (a) and probability densities (b) for a particle in a one-dimensional box. Note that the number of nodes is n - 1.",
+   "widths": [
+    533,
+    533
+   ],
+   "draws": [
+    "wavefunction",
+    "probability-density",
+    "energy",
+    "length"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "fig-cube-levels",
+   "kind": "figure",
+   "originals": [
+    "/media/ch03/495301-pib3d.png"
+   ],
+   "original_caption": "Energy levels and degeneracies of a particle in a cube.",
+   "widths": [
+    469
+   ],
+   "draws": [
+    "energy"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-hamiltonian",
+   "kind": "correction",
+   "html": "The kinetic energy operator carries $\\hbar^2$: $\\hat{H} = -\\dfrac{\\hbar^2}{2m}\\dfrac{\\partial^2}{\\partial x^2}$."
+  },
+  {
+   "id": "c-rearranged",
+   "kind": "correction",
+   "html": "The rearranged equation is $\\dfrac{\\hbar^2}{2m}\\dfrac{\\partial^2}{\\partial x^2}\\ket{\\psi} + E\\ket{\\psi} = 0$: the book drops the square on $\\hbar$ and gives the $E$ term the wrong sign."
+  },
+  {
+   "id": "c-cube-states",
+   "kind": "correction",
+   "figure": "fig-cube-levels",
+   "html": "The book's image lists (3,1,1) three times at $n_x^2+n_y^2+n_z^2 = 11$. The three states are (3,1,1), (1,3,1) and (1,1,3)."
+  }
+ ]
+}

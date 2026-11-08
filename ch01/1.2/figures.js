@@ -3,19 +3,6 @@ window.OMNISTAX_FIGURES = window.OMNISTAX_FIGURES || {};
 window.OMNISTAX_FIGURES['1.2'] = function (root, F) {
 const { tex, C, PAL, alpha, ctl, register, begin, line, dot, text, topline, axes, plot, shade, fmt } = F;
 const sim = (id, H) => F.sim(root, id, H);
-/* a dashed curve clipped to its graph's box, for a prediction drawn beside what was measured */
-function dashed(ctx, ax, f, color, w = 3) {
-  const { box, X, Y, xr } = ax;
-  ctx.save(); ctx.beginPath(); ctx.rect(box.l, box.t, box.r - box.l, box.b - box.t); ctx.clip();
-  ctx.strokeStyle = color; ctx.lineWidth = w; ctx.setLineDash([10, 10]); ctx.beginPath();
-  let on = false;
-  for (let i = 0; i <= 400; i++) {
-    const x = xr[0] + (xr[1] - xr[0]) * i / 400, y = f(x);
-    if (!isFinite(y) || y > 1e3) { on = false; continue; }
-    if (on) ctx.lineTo(X(x), Y(y)); else { ctx.moveTo(X(x), Y(y)); on = true; }
-  }
-  ctx.stroke(); ctx.restore();
-}
 /* a number as m × 10^k in TeX */
 function sci(x, d) {
   if (x === 0) return '0';
@@ -145,7 +132,7 @@ function spectral(nm) {
     /* the Sun, measured */
     shade(ctx, ax, sun, 0, 290, 2490, PAL.ink, { alpha: 0.13 });
     plot(ctx, ax, sun, alpha(PAL.ink, 0.5), { w: 2, x: [290, 2490] });
-    dashed(ctx, ax, (l) => rj(l, t) / Y, alpha(PAL.ink, 0.45), 2);
+    plot(ctx, ax, (l) => rj(l, t) / Y, alpha(PAL.ink, 0.45), { w: 2, dash: [10, 10] });
     plot(ctx, ax, (l) => planck(l, t) / Y, C('energy-density'), { w: 5 });
     /* the peak, its drop to the axis and its rise to the quantum scale */
     const py = rho / Y;

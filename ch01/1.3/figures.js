@@ -47,7 +47,7 @@ const lightColour = (nm) => (nm >= 380 && nm <= 780 ? F.fact(spectral(nm)) : PAL
   const NU = ctl(d.controls, { label: '\\knu', cls: 'frequency', min: 3, max: 15, step: 0.001, value: 7.143, unit: '× 10¹⁴ Hz', dec: 2,
     specials: [{ at: () => PHI[metal.value] * EV / h / 1e14, label: 'threshold frequency' }] });
   const I = ctl(d.controls, { label: '\\text{intensity}', cls: '', min: 0, max: 100, step: 1, value: 50, unit: '%', dec: 0 });
-  const V = ctl(d.controls, { label: 'V', cls: 'potential', min: 0, max: 5, step: 0.01, value: 0, unit: 'V', dec: 2,
+  const V = ctl(d.controls, { label: '\\kV', cls: 'potential', min: 0, max: 5, step: 0.01, value: 0, unit: 'V', dec: 2,
     specials: [{ at: () => { const k = kemax(); return k > 0 ? k : null; }, label: 'stopping voltage' }] });
   const hits = [];
   F.hover(d.stage, () => hits);
@@ -118,9 +118,8 @@ const lightColour = (nm) => (nm >= 380 && nm <= 780 ? F.fact(spectral(nm)) : PAL
       line(ctx, x - tail, e.y, x, e.y, alpha(eC, 0.35), 8);
       dot(ctx, x, e.y, eC, true, 8);
     });
-    /* the two kinds, named once */
-    wavelet(ctx, 60, 610, 0, light); text(ctx, 'photon', 88, 610, PAL.ink, { size: 20 });
-    dot(ctx, 220, 610, eC, true, 8); text(ctx, 'electron', 240, 610, PAL.ink, { size: 20 });
+    /* the two kinds, named once, in a key under the bench */
+    F.legend(ctx, { l: 40, r: 860, t: 560, b: 640 }, [{ s: 'photon', draw: (cx, x, y) => wavelet(cx, x, y, 0, light) }, { s: 'electron', kind: 'dot', color: eC }], { corner: 'bl', row: true, size: 20 });
 
     /* the greatest kinetic energy against frequency */
     const ba = { l: 920, r: 1330, t: 236, b: 506 };

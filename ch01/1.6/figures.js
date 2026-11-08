@@ -40,8 +40,7 @@ const sciS = (x, dg = 2) => { const [m, e] = sciParts(x, dg); return e === 0 ? m
   });
   /* the slider runs over the power of ten; its value is shown as the speed itself */
   const V = ctl(d.controls, { label: '\\kv', cls: 'velocity', key: 'logv', min: 2, max: 7.5, step: 0.001, value: 7.273, unit: '', dec: 2,
-    aria: 'speed of the particle, as a power of ten in meters per second' });
-  const val = V.el.querySelector('.ctl-val');
+    fmt: (lg) => `${sciU(Math.pow(10, lg))} m/s`, aria: 'speed of the particle in meters per second' });
   let hits = []; F.hover(d.stage, () => hits);
   const X0 = 60, X1 = 1340, Y = 210, AMP = 70, GAP = 220, U = GAP / 1e-10;   /* the wave panel: units per meter */
   const RX0 = 110, RX1 = 1290, RY = 430;                                     /* the ruler */
@@ -51,7 +50,6 @@ const sciS = (x, dg = 2) => { const [m, e] = sciParts(x, dg); return e === 0 ? m
     const { ctx } = begin(d.c);
     hits = [];
     const b = BODY[K.value], v = Math.pow(10, V.v), lam = h / (b.m * v), cw = C('wavelength');
-    if (val) val.textContent = `${sciU(v)} m/s`;
     /* the row of atoms */
     for (let x = X0 + 90; x < X1; x += GAP) {
       ctx.save(); ctx.beginPath(); ctx.arc(x, Y, 58, 0, 2 * Math.PI); ctx.fillStyle = alpha(PAL.ink, 0.07); ctx.fill();

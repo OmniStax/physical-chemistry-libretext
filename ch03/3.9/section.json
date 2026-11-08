@@ -1,0 +1,608 @@
+{
+ "id": "3.9",
+ "module": "13401",
+ "chapter": "3",
+ "title": "A Particle in a Three-Dimensional Box",
+ "short": "Particle in a 3D box",
+ "lead": "The particle in a box taken to three dimensions: a rectangular box with sides Lₓ, L_y and L_z, and what happens to its energy levels when the box is a cube.",
+ "objectives": [
+  "To demonstrate how the particle in 1-D box problem can extend to a particle in a 3D box",
+  "Introduction to nodal surfaces (e.g., nodal planes)"
+ ],
+ "summary_html": "",
+ "notes": "Adapted from Hanson, Harvey, Sweeney and Zielinski's Quantum States of Atoms and Molecules under CC BY-NC-SA 4.0, with Figure 3.9.1 by Ümit Kaya under CC BY-NC 4.0.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The one exercise and its key are the book's; its Bloom level and concept tags were chosen by AI.",
+ "figures": [
+  {
+   "id": "sim-box3d",
+   "kind": "sim",
+   "number": "3.9.1",
+   "originals": [
+    "/media/ch03/345734-3.12.1_(1).svg"
+   ],
+   "original_caption": "A particle in 3D box with three lengths $L_x$, $L_y$, and $L_z$. (CC BY-NC 4.0; Ümit Kaya via LibreTexts)",
+   "draws": [
+    "energy",
+    "length",
+    "mass"
+   ],
+   "facts": [
+    "#c2413a",
+    "#2f6ab3"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "sim-split",
+   "kind": "sim",
+   "draws": [
+    "energy",
+    "length",
+    "mass"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "separating-the-dimensions",
+   "concept": "particle-in-a-3d-box",
+   "verb": "introduces"
+  },
+  {
+   "span": "separating-the-dimensions",
+   "concept": "particle-in-a-box",
+   "verb": "uses"
+  },
+  {
+   "span": "separating-the-dimensions",
+   "concept": "separation-of-variables",
+   "verb": "uses"
+  },
+  {
+   "span": "separating-the-dimensions",
+   "concept": "time-independent-schrodinger-equation",
+   "verb": "uses"
+  },
+  {
+   "span": "separating-the-dimensions",
+   "concept": "pib-energy-levels",
+   "verb": "uses"
+  },
+  {
+   "span": "separating-the-dimensions",
+   "concept": "pib-wavefunctions",
+   "verb": "uses"
+  },
+  {
+   "span": "degeneracy-in-a-3d-cube",
+   "concept": "degeneracy",
+   "verb": "introduces"
+  },
+  {
+   "span": "degeneracy-in-a-3d-cube",
+   "concept": "degree-of-degeneracy",
+   "verb": "introduces"
+  },
+  {
+   "span": "degeneracy-in-a-3d-cube",
+   "concept": "cube-degeneracy",
+   "verb": "introduces"
+  },
+  {
+   "span": "degeneracy-in-a-3d-cube",
+   "concept": "accidental-degeneracy",
+   "verb": "introduces"
+  },
+  {
+   "span": "degeneracy-in-a-3d-cube",
+   "concept": "ground-state",
+   "verb": "uses"
+  },
+  {
+   "span": "degeneracy-in-a-3d-cube",
+   "concept": "particle-in-a-3d-box",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "e1",
+   "source_id": "exr:3.9.1",
+   "source_number": "Exercise 3.9.1",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "degeneracy-in-a-3d-cube",
+   "prompt": "<p>The 6<sup>th</sup> energy level of a particle in a 3D Cube box is 6-fold degenerate.</p>\n<ol type=\"a\"><li>What is the energy of the 7th energy level?</li><li>What is the degeneracy of the 7th energy level?</li></ol>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "source",
+    "parts": [
+     {
+      "part": "a",
+      "value": 17,
+      "unit": "h²/8mL²",
+      "tol": 0.001,
+      "hint": "In a cube the energy is n_x² + n_y² + n_z² in units of h²/8mL²; list the sums in order."
+     },
+     {
+      "part": "b",
+      "value": 3,
+      "tol": 0.001
+     }
+    ],
+    "solution": "<h4>Answer a</h4>\n<p>$\\dfrac{17 h^{2}}{8mL^2}$</p>\n<h4>Answer b</h4>\n<p>three-fold (i.e., there are three wavefunctions that share the same energy.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "e1",
+   "concept": "cube-degeneracy"
+  },
+  {
+   "exercise": "e1",
+   "concept": "degree-of-degeneracy"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-outside",
+   "kind": "correction",
+   "html": "The book prints $L_x < x < 0$, and the same for $y$ and $z$, a range no $x$ lies in. Outside the box, where the potential energy is infinite, $x < 0$ or $x > L_x$, and likewise for $y$ and $z$."
+  },
+  {
+   "id": "c-position",
+   "kind": "correction",
+   "html": "$L_x\\hat{x} + L_y\\hat{y} + L_z\\hat{z}$ is the far corner of the box. The position of the particle is $\\vec{r} = x\\hat{x} + y\\hat{y} + z\\hat{z}$."
+  },
+  {
+   "id": "c-cube",
+   "kind": "correction",
+   "html": "In a cube all three sides are equal, $L_x = L_y = L_z = L$. The book leaves out $L_z$ here and in the caption of Table 3.9.1."
+  },
+  {
+   "id": "c-eq-cite",
+   "kind": "correction",
+   "html": "Equation 3.9.11 is the wavefunction. The energy, which depends on the sum of the squares, is Equation 3.9.12."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "box3d",
+   "what": "the particle in a three-dimensional box",
+   "source": "Physical Chemistry (LibreTexts), 3.9 A Particle in a Three-Dimensional Box",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "text": "Separate the variables: $\\kpsi(\\kx,\\ky,\\kz) = X(\\kx)Y(\\ky)Z(\\kz)$.",
+       "src": "(3.9.3)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{c}{-\\dfrac{\\hbar^{2}}{2\\km}}\\left(\\mk{x}{\\dfrac{d^{2}\\kpsi}{d\\kx^{2}}} + \\mk{y}{\\dfrac{d^{2}\\kpsi}{d\\ky^{2}}} + \\mk{z}{\\dfrac{d^{2}\\kpsi}{d\\kz^{2}}}\\right) = \\mk{E}{\\kE\\kpsi}",
+      "src": "(3.9.2)"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{c}{-\\dfrac{\\hbar^{2}}{2\\km}}\\left(\\mk{x}{YZ\\dfrac{d^{2}X}{d\\kx^{2}}} + \\mk{y}{XZ\\dfrac{d^{2}Y}{d\\ky^{2}}} + \\mk{z}{XY\\dfrac{d^{2}Z}{d\\kz^{2}}}\\right) = \\mk{E}{\\kE\\,XYZ}",
+       "uses": [
+        0
+       ],
+       "cap": "Each derivative acts only on the factor that holds its own variable; to it the other two factors are constants."
+      },
+      {
+       "tex": "\\mk{x}{\\left(-\\dfrac{\\hbar^{2}}{2\\km X}\\dfrac{d^{2}X}{d\\kx^{2}}\\right)} + \\mk{y}{\\left(-\\dfrac{\\hbar^{2}}{2\\km Y}\\dfrac{d^{2}Y}{d\\ky^{2}}\\right)} + \\mk{z}{\\left(-\\dfrac{\\hbar^{2}}{2\\km Z}\\dfrac{d^{2}Z}{d\\kz^{2}}\\right)} = \\mk{E}{\\kE}",
+       "uses": [],
+       "map": {
+        "c": [
+         "x",
+         "y",
+         "z"
+        ]
+       }
+      }
+     ],
+     "num": "(3.9.4)",
+     "src": "3.9",
+     "note": "The book says to divide by the $xyz$ product; the division is by $XYZ$, the product of the three functions."
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      }
+     ],
+     "then": {
+      "tex": "\\mk{t}{-\\dfrac{\\hbar^{2}}{2\\km X}\\dfrac{d^{2}X}{d\\kx^{2}}} = \\mk{e}{\\kepsx}",
+      "uses": [
+       0
+      ],
+      "why": "The first term of (3.9.4) changes only with $\\kx$, and the other two do not change with $\\kx$ at all, yet the sum is always $\\kE$. So the first term is a constant, named $\\kepsx$."
+     },
+     "steps": [
+      {
+       "tex": "\\mk{t}{\\dfrac{d^{2}X}{d\\kx^{2}}} = \\mk{e}{-\\dfrac{2\\km}{\\hbar^{2}} \\kepsx X}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{t}{\\dfrac{d^{2}X}{d\\kx^{2}}} + \\mk{e}{\\dfrac{2\\km}{\\hbar^{2}} \\kepsx X} = 0",
+       "uses": []
+      }
+     ],
+     "src": "3.9"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      }
+     ],
+     "then": {
+      "tex": "\\mk{t}{-\\dfrac{\\hbar^{2}}{2\\km Y}\\dfrac{d^{2}Y}{d\\ky^{2}}} = \\mk{e}{\\kepsy}",
+      "uses": [
+       0
+      ],
+      "why": "The second term of (3.9.4) changes only with $\\ky$, and the other two do not change with $\\ky$ at all, yet the sum is always $\\kE$. So the second term is a constant, named $\\kepsy$."
+     },
+     "steps": [
+      {
+       "tex": "\\mk{t}{\\dfrac{d^{2}Y}{d\\ky^{2}}} = \\mk{e}{-\\dfrac{2\\km}{\\hbar^{2}} \\kepsy Y}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{t}{\\dfrac{d^{2}Y}{d\\ky^{2}}} + \\mk{e}{\\dfrac{2\\km}{\\hbar^{2}} \\kepsy Y} = 0",
+       "uses": []
+      }
+     ],
+     "src": "3.9"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      }
+     ],
+     "then": {
+      "tex": "\\mk{t}{-\\dfrac{\\hbar^{2}}{2\\km Z}\\dfrac{d^{2}Z}{d\\kz^{2}}} = \\mk{e}{\\kepsz}",
+      "uses": [
+       0
+      ],
+      "why": "The third term of (3.9.4) changes only with $\\kz$, and the other two do not change with $\\kz$ at all, yet the sum is always $\\kE$. So the third term is a constant, named $\\kepsz$."
+     },
+     "steps": [
+      {
+       "tex": "\\mk{t}{\\dfrac{d^{2}Z}{d\\kz^{2}}} = \\mk{e}{-\\dfrac{2\\km}{\\hbar^{2}} \\kepsz Z}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{t}{\\dfrac{d^{2}Z}{d\\kz^{2}}} + \\mk{e}{\\dfrac{2\\km}{\\hbar^{2}} \\kepsz Z} = 0",
+       "uses": []
+      }
+     ],
+     "src": "3.9"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "step": 1
+      },
+      {
+       "step": 2
+      },
+      {
+       "step": 3
+      }
+     ],
+     "then": {
+      "tex": "\\mk{x}{\\left(-\\dfrac{\\hbar^{2}}{2\\km X}\\dfrac{d^{2}X}{d\\kx^{2}}\\right)} + \\mk{y}{\\left(-\\dfrac{\\hbar^{2}}{2\\km Y}\\dfrac{d^{2}Y}{d\\ky^{2}}\\right)} + \\mk{z}{\\left(-\\dfrac{\\hbar^{2}}{2\\km Z}\\dfrac{d^{2}Z}{d\\kz^{2}}\\right)} = \\mk{E}{\\kE}",
+      "uses": [
+       0
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{x}{\\kepsx} + \\mk{y}{\\kepsy} + \\mk{z}{\\kepsz} = \\mk{E}{\\kE}",
+       "uses": [
+        1,
+        2,
+        3
+       ]
+      }
+     ],
+     "num": "(3.9.5)",
+     "src": "3.9"
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "text": "The wavefunction is zero at the walls of the box, where the potential energy is infinite.",
+       "src": "3.9"
+      },
+      {
+       "text": "In a one-dimensional box of length $\\kL$, $\\dfrac{d^2\\kpsi}{d\\kx^2} = -\\dfrac{2\\km\\kE}{\\hbar^2}\\kpsi$ with $\\kpsi(0) = \\kpsi(\\kL) = 0$ has the normalized solutions $\\psi_n(\\kx) = \\sqrt{\\dfrac{2}{\\kL}}\\sin\\dfrac{n\\pi \\kx}{\\kL}$, $n = 1, 2, 3, \\ldots$",
+       "src": "(3.5.16)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{t}{\\dfrac{d^{2}X}{d\\kx^{2}}} + \\mk{e}{\\dfrac{2\\km}{\\hbar^{2}} \\kepsx X} = 0",
+      "uses": [
+       0
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{t}{\\dfrac{d^{2}X}{d\\kx^{2}}} = \\mk{e}{-\\dfrac{2\\km \\kepsx}{\\hbar^{2}} X}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{t}{X(\\kx)} = \\mk{e}{\\sqrt{\\dfrac{2}{\\kLx}} \\sin\\left(\\dfrac{n_x\\pi \\kx}{\\kLx}\\right)}",
+       "uses": [
+        1,
+        2
+       ],
+       "cap": "This is the particle in a one-dimensional box of length $\\kLx$, with $\\kepsx$ in place of $\\kE$, since $X$ vanishes at both walls."
+      }
+     ],
+     "num": "(3.9.7)",
+     "src": "3.9",
+     "note": "The book sets this equation beside the wave equation, $\\frac{d^{2}X}{dx^{2}} + \\frac{2m}{\\hbar^{2}} E_{x}X = 0 \\approx \\frac{d^{2}\\psi}{dx^{2}} = -\\frac{4\\pi^{2}}{\\lambda^{2}}\\psi$, numbered (3.9.6): the two have the same form, with $4\\pi^2/\\lambda^2 = 2m\\varepsilon_x/\\hbar^2$."
+    },
+    {
+     "assumes": [
+      {
+       "step": 2
+      },
+      {
+       "text": "The wavefunction is zero at the walls of the box, where the potential energy is infinite.",
+       "src": "3.9"
+      },
+      {
+       "text": "In a one-dimensional box of length $\\kL$, $\\dfrac{d^2\\kpsi}{d\\kx^2} = -\\dfrac{2\\km\\kE}{\\hbar^2}\\kpsi$ with $\\kpsi(0) = \\kpsi(\\kL) = 0$ has the normalized solutions $\\psi_n(\\kx) = \\sqrt{\\dfrac{2}{\\kL}}\\sin\\dfrac{n\\pi \\kx}{\\kL}$, $n = 1, 2, 3, \\ldots$",
+       "src": "(3.5.16)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{t}{\\dfrac{d^{2}Y}{d\\ky^{2}}} + \\mk{e}{\\dfrac{2\\km}{\\hbar^{2}} \\kepsy Y} = 0",
+      "uses": [
+       0
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{t}{\\dfrac{d^{2}Y}{d\\ky^{2}}} = \\mk{e}{-\\dfrac{2\\km \\kepsy}{\\hbar^{2}} Y}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{t}{Y(\\ky)} = \\mk{e}{\\sqrt{\\dfrac{2}{\\kLy}} \\sin\\left(\\dfrac{n_y\\pi \\ky}{\\kLy}\\right)}",
+       "uses": [
+        1,
+        2
+       ],
+       "cap": "This is the particle in a one-dimensional box of length $\\kLy$, with $\\kepsy$ in place of $\\kE$, since $Y$ vanishes at both walls."
+      }
+     ],
+     "num": "(3.9.8)",
+     "src": "3.9"
+    },
+    {
+     "assumes": [
+      {
+       "step": 3
+      },
+      {
+       "text": "The wavefunction is zero at the walls of the box, where the potential energy is infinite.",
+       "src": "3.9"
+      },
+      {
+       "text": "In a one-dimensional box of length $\\kL$, $\\dfrac{d^2\\kpsi}{d\\kx^2} = -\\dfrac{2\\km\\kE}{\\hbar^2}\\kpsi$ with $\\kpsi(0) = \\kpsi(\\kL) = 0$ has the normalized solutions $\\psi_n(\\kx) = \\sqrt{\\dfrac{2}{\\kL}}\\sin\\dfrac{n\\pi \\kx}{\\kL}$, $n = 1, 2, 3, \\ldots$",
+       "src": "(3.5.16)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{t}{\\dfrac{d^{2}Z}{d\\kz^{2}}} + \\mk{e}{\\dfrac{2\\km}{\\hbar^{2}} \\kepsz Z} = 0",
+      "uses": [
+       0
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{t}{\\dfrac{d^{2}Z}{d\\kz^{2}}} = \\mk{e}{-\\dfrac{2\\km \\kepsz}{\\hbar^{2}} Z}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{t}{Z(\\kz)} = \\mk{e}{\\sqrt{\\dfrac{2}{\\kLz}} \\sin\\left(\\dfrac{n_z\\pi \\kz}{\\kLz}\\right)}",
+       "uses": [
+        1,
+        2
+       ],
+       "cap": "This is the particle in a one-dimensional box of length $\\kLz$, with $\\kepsz$ in place of $\\kE$, since $Z$ vanishes at both walls."
+      }
+     ],
+     "num": "(3.9.9)",
+     "src": "3.9"
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "text": "The energies of a particle in a one-dimensional box of length $\\kL$ are $E_n = \\dfrac{n^2h^2}{8\\km\\kL^2}$, $n = 1, 2, 3, \\ldots$",
+       "src": "(3.5.10)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{t}{\\dfrac{d^{2}X}{d\\kx^{2}}} + \\mk{e}{\\dfrac{2\\km}{\\hbar^{2}} \\kepsx X} = 0",
+      "uses": [
+       0
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{e}{\\kepsx} = \\mk{n}{\\dfrac{n_{x}^{2}h^{2}}{8\\km\\kLx^{2}}}",
+       "uses": [
+        1
+       ],
+       "cap": "The same one-dimensional box gives its energies, with $\\kLx$ for $\\kL$ and $n_x$ for $n$."
+      }
+     ],
+     "num": "(3.9.10)",
+     "src": "3.9",
+     "note": "The book calls this the de Broglie energy equation; it is the energy of a particle in a one-dimensional box, (3.5.10)."
+    },
+    {
+     "assumes": [
+      {
+       "text": "Separate the variables: $\\kpsi(\\kx,\\ky,\\kz) = X(\\kx)Y(\\ky)Z(\\kz)$.",
+       "src": "(3.9.3)"
+      },
+      {
+       "step": 5
+      },
+      {
+       "step": 6
+      },
+      {
+       "step": 7
+      },
+      {
+       "text": "The volume of the box is $V = \\kLx\\kLy\\kLz$.",
+       "src": "3.9"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{p}{\\kpsi(r)} = \\mk{X}{X(\\kx)}\\mk{Y}{Y(\\ky)}\\mk{Z}{Z(\\kz)}",
+      "uses": [
+       0
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{p}{\\kpsi(r)} = \\mk{X}{\\sqrt{\\dfrac{2}{\\kLx}} \\sin\\left(\\dfrac{n_x\\pi \\kx}{\\kLx}\\right)}\\,\\mk{Y}{\\sqrt{\\dfrac{2}{\\kLy}} \\sin\\left(\\dfrac{n_y\\pi \\ky}{\\kLy}\\right)}\\,\\mk{Z}{\\sqrt{\\dfrac{2}{\\kLz}} \\sin\\left(\\dfrac{n_z\\pi \\kz}{\\kLz}\\right)}",
+       "uses": [
+        1,
+        2,
+        3
+       ]
+      },
+      {
+       "tex": "\\mk{p}{\\kpsi(r)} = \\mk{c}{\\sqrt{\\dfrac{8}{\\kLx\\kLy\\kLz}}}\\mk{X}{\\sin\\left(\\dfrac{n_x\\pi \\kx}{\\kLx}\\right)}\\mk{Y}{\\sin\\left(\\dfrac{n_y\\pi \\ky}{\\kLy}\\right)}\\mk{Z}{\\sin\\left(\\dfrac{n_z\\pi \\kz}{\\kLz}\\right)}",
+       "uses": [],
+       "map": {
+        "X": [
+         "c",
+         "X"
+        ],
+        "Y": [
+         "c",
+         "Y"
+        ],
+        "Z": [
+         "c",
+         "Z"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{p}{\\kpsi(r)} = \\mk{c}{\\sqrt{\\dfrac{8}{V}}}\\mk{X}{\\sin\\left(\\dfrac{n_x\\pi \\kx}{\\kLx}\\right)}\\mk{Y}{\\sin\\left(\\dfrac{n_y\\pi \\ky}{\\kLy}\\right)}\\mk{Z}{\\sin\\left(\\dfrac{n_z\\pi \\kz}{\\kLz}\\right)}",
+       "uses": [
+        4
+       ]
+      }
+     ],
+     "num": "(3.9.11)",
+     "src": "3.9"
+    },
+    {
+     "assumes": [
+      {
+       "step": 4
+      },
+      {
+       "step": 8
+      },
+      {
+       "step": 2
+      },
+      {
+       "step": 3
+      },
+      {
+       "text": "The energies of a particle in a one-dimensional box of length $\\kL$ are $E_n = \\dfrac{n^2h^2}{8\\km\\kL^2}$, $n = 1, 2, 3, \\ldots$",
+       "src": "(3.5.10)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{x}{\\kepsx} + \\mk{y}{\\kepsy} + \\mk{z}{\\kepsz} = \\mk{E}{\\kE}",
+      "uses": [
+       0
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{x}{\\dfrac{n_x^{2}h^{2}}{8\\km\\kLx^{2}}} + \\mk{y}{\\kepsy} + \\mk{z}{\\kepsz} = \\mk{E}{\\kE}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{x}{\\dfrac{n_x^{2}h^{2}}{8\\km\\kLx^{2}}} + \\mk{y}{\\dfrac{n_y^{2}h^{2}}{8\\km\\kLy^{2}}} + \\mk{z}{\\dfrac{n_z^{2}h^{2}}{8\\km\\kLz^{2}}} = \\mk{E}{\\kE}",
+       "uses": [
+        2,
+        3,
+        4
+       ],
+       "cap": "The $\\ky$ and $\\kz$ equations are the same one-dimensional box with lengths $\\kLy$ and $\\kLz$, so $\\kepsy$ and $\\kepsz$ take the form of (3.9.10)."
+      },
+      {
+       "tex": "\\mk{E}{\\kEnnn} = \\dfrac{h^{2}}{8\\km}\\left(\\mk{x}{\\dfrac{n_{x}^{2}}{\\kLx^{2}}} + \\mk{y}{\\dfrac{n_{y}^{2}}{\\kLy^{2}}} + \\mk{z}{\\dfrac{n_{z}^{2}}{\\kLz^{2}}}\\right)",
+       "uses": []
+      }
+     ],
+     "num": "(3.9.12)",
+     "src": "3.9"
+    }
+   ]
+  }
+ ]
+}

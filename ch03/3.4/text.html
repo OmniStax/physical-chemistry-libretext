@@ -1,0 +1,39 @@
+<section id="born-interpretation">
+<h2>The Born interpretation</h2>
+<p>For a single-particle system, the <span data-concept="wavefunction">wavefunction</span> $\kPsi(\krvec,\kt)$, or $\kpsi(\krvec)$ for the time-independent case, represents the amplitude of the still vaguely defined matter waves. Since <span data-concept="wavefunction">wavefunctions</span> can in general be complex functions, the physical significance cannot be found from the function itself because the $\sqrt {-1}$ is not a property of the physical world. Rather, the physical significance is found in the product of the <span data-concept="wavefunction">wavefunction</span> and its complex conjugate, i.e. the absolute square of the <span data-concept="wavefunction">wavefunction</span>, which also is called the <strong><span data-concept="square-of-the-modulus">square of the modulus</span></strong> (also called absolute value).</p>
+$$ \begin{aligned} \kPd(\krvec,\kt) &= \kPsi^*(\krvec,\kt) \kPsi(\krvec,\kt) \\[4pt] &= {|\kPsi(\krvec,\kt)|}^2  \end{aligned} \tag{3.4.1} $$
+<p>where $\krvec$ is a vector $(x, y, z)$ specifying a point in three-dimensional space. The square is used, rather than the modulus itself, just like the intensity of a light wave depends on the square of the electric field.</p>
+<p>Born proposed in 1926, <span data-concept="born-interpretation">the most commonly accepted interpretation of the wavefunction</span> <strong>that the <span data-concept="square-of-the-modulus">square of the modulus</span></strong> (Equation 3.4.1) is <strong>proportional</strong> to the <strong><span data-concept="probability-density">probability density</span></strong> (probability per unit volume) that the electron is in the volume $d\tau$ located at $r_i$. Since the <span data-concept="wavefunction">wavefunction</span> represents the wave properties of matter, the probability amplitude $\kPd(\kx,\kt)$<sup class="fn" data-note="amplitude-density"></sup> will also exhibit wave-like behavior. <span data-concept="probability-density">Probability density</span> is the three-dimensional analog of <span data-concept="matter-wave-diffraction">the diffraction pattern that appears on the two-dimensional screen in the double-slit diffraction experiment for electrons</span>. The idea that we can understand the world of atoms and molecules only in terms of probabilities is disturbing to some, who are seeking more satisfying descriptions through ongoing research.</p>
+<blockquote><p><span data-concept="born-interpretation">The Born interpretation</span> therefore calls the <span data-concept="wavefunction">wavefunction</span> the probability amplitude, the absolute square of the <span data-concept="wavefunction">wavefunction</span> is called the <span data-concept="probability-density">probability density</span>, and the <span data-concept="probability-density">probability density</span> times a volume element in three-dimensional space ($d\tau$) is the probability $P$</p></blockquote>
+</section>
+
+<section id="probability-in-a-region">
+<h2>Probability in a region</h2>
+<p><span data-concept="position-probability">The probability that a single quantum particle moving in one spatial dimension will be found in a region $\kx\in[a,b]$ if a measurement of its location is performed</span> is</p>
+$$ P(\kx\in[a,b])=\int_{a}^{b}|\kpsi (\kx)|^2 d\kx \tag{3.4.2} $$
+<figure class="sim" id="sim-detections">
+  <div class="sim-head"><span class="eyebrow">Sim</span><span>Each dot is one measurement of where a particle held between two walls is found. Watch the counts build up the <span data-type="probability-density">probability density</span> $|\kpsi|^2$, then pick another state or move the region to compare the counted fraction with the integral.</span></div>
+</figure>
+<p>In three dimensions, Equation 3.4.2 is represented differently</p>
+$$ P(\kx \in[a,b])=\int_{V}|\kpsi (\vec{\tau})|^2 d\tau \tag{3.4.3} $$
+<p>This integration extends over a specified volume ($V$)<sup class="fn" data-note="volume-label"></sup> with the symbol $d\tau$ designating <span data-concept="volume-element">the appropriate volume element</span> (including a <a href="https://math.libretexts.org/TextMaps/Calculus/Supplemental_Modules_(Calculus)/Vector_Calculus/3%3A_Multiple_Integrals/3.8%3A_Jacobians">Jacobian</a>) of the coordinate system adopted:</p>
+<ul><li><p>Cartesian:</p>
+$$ d\tau = dx\,dy\,dz $$</li><li><p>Spherical:</p>
+$$ d\tau = r^2 \sin \phi \,dr\, d\theta \,d \phi $$</li><li><p>Cylindrical:</p>
+$$ d\tau = r \,dr\, d \phi \,dz. $$</li></ul>
+<p>For rectilinear Cartesian space, Equation 3.4.3 can be is expanded with dimension explicitly indicated</p>
+$$ P(\kx \in[a,b])=\int_{a_x}^{b_x} \int_{a_y}^{b_y} \int_{a_z}^{b_z}|\kpsi (x,y,z)|^2 dx\,dy\,dz \tag{3.4.4} $$
+<p>where the limits of integration are selected to encompass the volume $V$ of consideration.</p>
+</section>
+
+<section id="well-behaved">
+<h2>Well-behaved wavefunctions</h2>
+<p><span data-concept="born-interpretation">The Born interpretation</span> (Equation 3.4.1) of relating the <span data-concept="wavefunction">wavefunction</span> to probability forces certain demands on its mathematical behavior of <span data-concept="wavefunction">wavefunctions</span> and not any mathematical function can be a valid <span data-concept="wavefunction">wavefunction</span>.</p>
+<div class="note">
+<div class="eyebrow">Note</div>
+<h3>Required Properties of Wavefunction</h3>
+<ul><li>The <span data-concept="wavefunction">wavefunction</span> must be a <em>single-valued function</em> of all its coordinates, since the <span data-concept="probability-density">probability density</span> ought to be <em>uniquely determined</em> at each point in space.</li><li>The <span data-concept="wavefunction">wavefunction</span> should be both <em>finite</em> as an infinite probability has no meaning.</li><li>The <span data-concept="wavefunction">wavefunction</span> should be <em>continuous everywhere</em>, as expected for a physically-meaningful <span data-concept="probability-density">probability density</span>.</li></ul>
+</div>
+<p>The conditions that the <span data-concept="wavefunction">wavefunction</span> be single-valued, finite and continuous--in short, "<span data-concept="well-behaved-wavefunction">well behaved</span>"-- lead to restrictions on solutions of the Schrödinger equation such that only certain values of the energy and other dynamical variables are allowed. This is called <em><span data-concept="energy-quantization">quantization</span></em> and is in the feature that gives <em>quantum</em> mechanics its name.</p>
+<p>It is important to note that this interpretation implies the <span data-concept="wavefunction">wavefunction</span> does <strong>not</strong> mean the particle is distributed over a large region as a sort of "charge cloud". The <span data-concept="wavefunction">wavefunction</span> is used to describe the electron motion that behaves like waves and satisfies a wave equation. This is akin to how a grade distribution in a large class does not represent a smearing of grades for a single student, but only makes sense when taking into account that the distribution is the result of many measurables (e.g., student performances).</p>
+</section>

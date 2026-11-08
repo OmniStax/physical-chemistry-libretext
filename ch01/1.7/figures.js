@@ -61,8 +61,7 @@ function rng(seed) { let s = seed >>> 0; return () => { s = (s + 0x6D2B79F5) >>>
     aria: 'wavelength of the light', onInput: () => cy.reset() });
   /* the speed slider runs over the power of ten; its value is shown as the speed itself */
   const V = ctl(d.controls, { label: '\\kv', cls: 'velocity', key: 'logv', min: 6.4, max: 7.4, step: 0.001, value: 7.273, unit: '', dec: 2,
-    aria: 'speed of the particles, as a power of ten in meters per second', onInput: () => cy.reset() });
-  const vval = V.el.querySelector('.ctl-val');
+    fmt: (lg) => `${sciU(Math.pow(10, lg))} m/s`, aria: 'speed of the particles in meters per second', onInput: () => cy.reset() });
   V.show(false, { ms: 0 });
   const LOOP = 6, NMAX = 1100, cy = cycle(() => LOOP, 1.2);
   const XB = 330, XS = 900, T0 = 110, B0 = 470, YC = (T0 + B0) / 2, L = XS - XB, D = 120, A = D / 4;
@@ -85,7 +84,6 @@ function rng(seed) { let s = seed >>> 0; return () => { s = (s + 0x6D2B79F5) >>>
     hits = [];
     const k = K.value, q = KIND[k], light = k === 'light', wave = M.value === 'wave';
     const v = light ? 0 : Math.pow(10, V.v), lam = light ? LAM.v * 1e-3 : h / (q.m * v) * 1e9;   /* in the spacing's unit: um for light, nm for particles */
-    if (vval && !light) vval.textContent = `${sciU(v)} m/s`;
     const lw = lam * q.per, ratio = lam / q.dd, t = cy.now();
     const wc = light ? F.fact(spectral(LAM.v)) : C('wavelength');
     const hc = light ? wc : F.el(q.el);

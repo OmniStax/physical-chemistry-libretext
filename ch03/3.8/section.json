@@ -1,0 +1,390 @@
+{
+ "id": "3.8",
+ "module": "13399",
+ "chapter": "3",
+ "title": "The Uncertainty Principle - Estimating Uncertainties from Wavefunctions",
+ "short": "Uncertainties from wavefunctions",
+ "lead": "The uncertainty in a measured quantity can be computed from a wavefunction through expectation values. Applied to position and momentum, it puts numbers on Heisenberg's uncertainty principle.",
+ "objectives": [
+  "Expand on the introduction of Heisenberg's Uncertainty Principle by calculating the $\\Delta x$ or $\\Delta p$ directly from the wavefunction"
+ ],
+ "summary_html": "",
+ "notes": "Adapted from Hanson, Harvey, Sweeney and Zielinski's Quantum States of Atoms and Molecules, under CC BY-NC-SA 4.0.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": []
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "Exercise 3.8.1 has no key in the book; its solution was written by AI and checked by computation. The answer is the product in units of ħ, within 1%.",
+ "figures": [],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "uncertainties-from-expectation-values",
+   "concept": "quantum-uncertainty",
+   "verb": "introduces"
+  },
+  {
+   "span": "uncertainties-from-expectation-values",
+   "concept": "quantum-expectation-value",
+   "verb": "uses"
+  },
+  {
+   "span": "uncertainties-from-expectation-values",
+   "concept": "momentum-operator",
+   "verb": "uses"
+  },
+  {
+   "span": "uncertainties-from-expectation-values",
+   "concept": "stationary-state",
+   "verb": "uses"
+  },
+  {
+   "span": "the-uncertainty-principle",
+   "concept": "heisenberg-uncertainty-principle",
+   "verb": "reinforces"
+  },
+  {
+   "span": "the-uncertainty-principle",
+   "concept": "quantum-uncertainty",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "e1",
+   "source_id": "exr:3.8.1",
+   "source_number": "Exercise 3.8.1",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "the-uncertainty-principle",
+   "prompt": "<p>A particle is in a state described by the ground state wavefunction of a particle in a box</p>\n$$ \\psi = \\sqrt{\\dfrac{2}{L}} \\sin \\left(\\dfrac{\\pi x}{L}\\right) $$\n<p>where $L$ is the length of the box and $0\\le x \\le L$. Verify that the value of the product $\\Delta p\\Delta x$ is consistent with the predictions from the uncertainty principle (Equation 3.8.8).</p>",
+   "answer": {
+    "type": "number",
+    "value": 0.568,
+    "unit": "ħ",
+    "tol": 0.01,
+    "hint": "You need $\\langle x^2 \\rangle$ and $\\langle p^2 \\rangle$; $\\langle x \\rangle$ and $\\langle p \\rangle$ come from Section 3.7.",
+    "solution": "<p>For the box the density is symmetric about the center, so $\\langle x \\rangle = L/2$, and $\\langle p \\rangle = 0$ (Example 3.7.3). The other two averages are</p>$$ \\langle x^2 \\rangle = \\dfrac{2}{L}\\int_0^L x^2 \\sin^2\\left(\\dfrac{\\pi x}{L}\\right)dx = L^2\\left(\\dfrac{1}{3} - \\dfrac{1}{2\\pi^2}\\right) $$$$ \\langle p^2 \\rangle = -\\hbar^2\\dfrac{2}{L}\\int_0^L \\sin\\left(\\dfrac{\\pi x}{L}\\right)\\dfrac{d^2}{dx^2}\\sin\\left(\\dfrac{\\pi x}{L}\\right)dx = \\dfrac{\\pi^2\\hbar^2}{L^2} $$<p>so, by Equations 3.8.2 and 3.8.3,</p>$$ \\Delta x = L\\sqrt{\\dfrac{1}{12} - \\dfrac{1}{2\\pi^2}} = 0.181\\,L $$$$ \\Delta p = \\dfrac{\\pi\\hbar}{L} $$$$ \\Delta p\\,\\Delta x = \\hbar\\sqrt{\\dfrac{\\pi^2}{12} - \\dfrac{1}{2}} = 0.568\\,\\hbar $$<p>The box length cancels, and $0.568\\,\\hbar$ is larger than $\\hbar/2$, so the product agrees with Equation 3.8.8. Unlike the Gaussian of Example 3.8.1, the ground state of the box does not reach the equality.</p>",
+    "generated_by": "ai"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "e1",
+   "concept": "quantum-uncertainty"
+  },
+  {
+   "exercise": "e1",
+   "concept": "heisenberg-uncertainty-principle"
+  },
+  {
+   "exercise": "e1",
+   "concept": "quantum-expectation-value"
+  }
+ ],
+ "footnotes": [],
+ "derivations": [
+  {
+   "id": "example-3-8-1",
+   "what": "the uncertainties of a Gaussian wavefunction",
+   "source": "Physical Chemistry (LibreTexts), 3.8 The Uncertainty Principle - Estimating Uncertainties from Wavefunctions, Example 3.8.1",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kpsi(\\kx) = \\left(\\dfrac{2a}{\\pi}\\right)^{1/4} e^{-a\\kx^2}",
+       "src": "(3.8.9)"
+      },
+      {
+       "text": "An even function times an odd function is an odd function, and an odd function integrates to zero over a range symmetric about $x = 0$."
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\kxavg} = \\mk{i}{\\int_{-\\infty}^{\\infty} \\kpsi^{*}\\,\\kx\\,\\kpsi\\,d\\kx}",
+      "src": "(3.8.4)"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\kxavg} = \\mk{i}{\\int_{-\\infty}^{\\infty} \\left(\\dfrac{2a}{\\pi}\\right)^{1/4} e^{-a\\kx^2}\\,\\kx\\,\\left(\\dfrac{2a}{\\pi}\\right)^{1/4} e^{-a\\kx^2}\\,d\\kx}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{l}{\\kxavg} = \\mk{i}{\\int_{-\\infty}^{\\infty} \\kx \\left(\\dfrac{2a}{\\pi}\\right)^{1/2} e^{-2a\\kx^2}\\,d\\kx}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{l}{\\kxavg} = \\mk{i}{0}",
+       "uses": [
+        1
+       ],
+       "cap": "The integrand is $x$, which is odd, times a Gaussian, which is even."
+      }
+     ],
+     "src": "Example 3.8.1"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\kpsi(\\kx) = \\left(\\dfrac{2a}{\\pi}\\right)^{1/4} e^{-a\\kx^2}",
+       "src": "(3.8.9)"
+      },
+      {
+       "text": "The integral of an even function from $-\\infty$ to $\\infty$ is twice its integral from $0$ to $\\infty$."
+      },
+      {
+       "tex": "\\int_0^{\\infty} \\kx^2 e^{-b\\kx^2}\\,d\\kx = \\dfrac{1}{4b}\\sqrt{\\dfrac{\\pi}{b}}"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\kxsqavg} = \\mk{i}{\\int_{-\\infty}^{\\infty} \\kpsi^{*}\\,\\kx^2\\,\\kpsi\\,d\\kx}",
+      "src": "(3.8.5)"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\kxsqavg} = \\mk{i}{\\int_{-\\infty}^{\\infty} \\left(\\dfrac{2a}{\\pi}\\right)^{1/4} e^{-a\\kx^2}\\,(\\kx^2)\\,\\left(\\dfrac{2a}{\\pi}\\right)^{1/4} e^{-a\\kx^2}\\,d\\kx}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{l}{\\kxsqavg} = \\mk{i}{\\int_{-\\infty}^{\\infty} \\kx^2 \\left(\\dfrac{2a}{\\pi}\\right)^{1/2} e^{-2a\\kx^2}\\,d\\kx}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{l}{\\kxsqavg} = \\mk{i}{2\\left(\\dfrac{2a}{\\pi}\\right)^{1/2}\\int_{0}^{\\infty} \\kx^2 e^{-2a\\kx^2}\\,d\\kx}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{l}{\\kxsqavg} = \\mk{i}{2\\left(\\dfrac{2a}{\\pi}\\right)^{1/2}\\,\\dfrac{1}{8a}\\sqrt{\\dfrac{\\pi}{2a}}}",
+       "uses": [
+        2
+       ],
+       "cap": "The table integral with $b = 2a$."
+      },
+      {
+       "tex": "\\mk{l}{\\kxsqavg} = \\mk{i}{\\dfrac{1}{4a}}",
+       "uses": []
+      }
+     ],
+     "src": "Example 3.8.1"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\kpsi(\\kx) = \\left(\\dfrac{2a}{\\pi}\\right)^{1/4} e^{-a\\kx^2}",
+       "src": "(3.8.9)"
+      },
+      {
+       "tex": "\\kphat = -i\\hbar\\dfrac{d}{d\\kx}",
+       "src": "3.3"
+      },
+      {
+       "text": "An even function times an odd function is an odd function, and an odd function integrates to zero over a range symmetric about $x = 0$."
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\kpavg} = \\mk{i}{\\int_{-\\infty}^{\\infty} \\kpsi^{*}\\,\\hat{p}\\,\\kpsi\\,d\\kx}",
+      "src": "(3.8.6)"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\kpavg} = \\mk{i}{\\int_{-\\infty}^{\\infty} \\left(\\dfrac{2a}{\\pi}\\right)^{1/4} e^{-a\\kx^2}\\left(-i\\hbar\\dfrac{d}{d\\kx}\\right)\\left(\\dfrac{2a}{\\pi}\\right)^{1/4} e^{-a\\kx^2}\\,d\\kx}",
+       "uses": [
+        0,
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{l}{\\kpavg} = \\mk{i}{\\int_{-\\infty}^{\\infty} \\left(\\dfrac{2a}{\\pi}\\right)^{1/4} e^{-a\\kx^2}\\,(-i\\hbar)\\,\\left(\\dfrac{2a}{\\pi}\\right)^{1/4} e^{-a\\kx^2}\\,(-2a\\kx)\\,d\\kx}",
+       "uses": [],
+       "cap": "By the chain rule, $\\dfrac{d}{dx}e^{-ax^2} = -2ax\\,e^{-ax^2}$."
+      },
+      {
+       "tex": "\\mk{l}{\\kpavg} = \\mk{i}{0}",
+       "uses": [
+        2
+       ],
+       "cap": "The integrand is a Gaussian times $x$, so it is odd."
+      }
+     ],
+     "src": "Example 3.8.1"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\kpsi(\\kx) = \\left(\\dfrac{2a}{\\pi}\\right)^{1/4} e^{-a\\kx^2}",
+       "src": "(3.8.9)"
+      },
+      {
+       "tex": "\\kphat = -i\\hbar\\dfrac{d}{d\\kx}",
+       "src": "3.3"
+      },
+      {
+       "text": "The integral of an even function from $-\\infty$ to $\\infty$ is twice its integral from $0$ to $\\infty$."
+      },
+      {
+       "tex": "\\int_0^{\\infty} \\kx^2 e^{-b\\kx^2}\\,d\\kx = \\dfrac{1}{4b}\\sqrt{\\dfrac{\\pi}{b}}"
+      },
+      {
+       "tex": "\\int_0^{\\infty} e^{-b\\kx^2}\\,d\\kx = \\dfrac{1}{2}\\sqrt{\\dfrac{\\pi}{b}}"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\kpsqavg} = \\mk{i}{\\int_{-\\infty}^{\\infty} \\kpsi^{*}\\,\\hat{p}^2\\,\\kpsi\\,d\\kx}",
+      "src": "(3.8.7)"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\kpsqavg} = \\mk{i}{-\\hbar^2\\left(\\dfrac{2a}{\\pi}\\right)^{1/2}\\int_{-\\infty}^{\\infty} e^{-a\\kx^2}\\dfrac{d^2}{d\\kx^2}e^{-a\\kx^2}\\,d\\kx}",
+       "uses": [
+        0,
+        1
+       ],
+       "cap": "Squaring the operator gives $\\hat{p}^2 = (-i\\hbar)^2\\dfrac{d^2}{dx^2} = -\\hbar^2\\dfrac{d^2}{dx^2}$."
+      },
+      {
+       "tex": "\\mk{l}{\\kpsqavg} = \\mk{i}{-\\hbar^2\\left(\\dfrac{2a}{\\pi}\\right)^{1/2}\\int_{-\\infty}^{\\infty} 2a(2a\\kx^2 - 1)e^{-2a\\kx^2}\\,d\\kx}",
+       "uses": [],
+       "cap": "Differentiating twice, $\\dfrac{d^2}{dx^2}e^{-ax^2} = 2a(2ax^2 - 1)e^{-ax^2}$."
+      },
+      {
+       "tex": "\\mk{l}{\\kpsqavg} = \\mk{i1}{-8a^2\\hbar^2\\left(\\dfrac{2a}{\\pi}\\right)^{1/2}\\int_{0}^{\\infty} \\kx^2 e^{-2a\\kx^2}\\,d\\kx} + \\mk{i2}{4a\\hbar^2\\left(\\dfrac{2a}{\\pi}\\right)^{1/2}\\int_{0}^{\\infty} e^{-2a\\kx^2}\\,d\\kx}",
+       "uses": [
+        2
+       ],
+       "map": {
+        "i": [
+         "i1",
+         "i2"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{l}{\\kpsqavg} = \\mk{i1}{-8a^2\\hbar^2\\left(\\dfrac{2a}{\\pi}\\right)^{1/2}\\,\\dfrac{1}{8a}\\sqrt{\\dfrac{\\pi}{2a}}} + \\mk{i2}{4a\\hbar^2\\left(\\dfrac{2a}{\\pi}\\right)^{1/2}\\,\\dfrac{1}{2}\\sqrt{\\dfrac{\\pi}{2a}}}",
+       "uses": [
+        3,
+        4
+       ],
+       "cap": "The two table integrals with $b = 2a$."
+      },
+      {
+       "tex": "\\mk{l}{\\kpsqavg} = \\mk{i1}{-a\\hbar^2} + \\mk{i2}{2a\\hbar^2}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{l}{\\kpsqavg} = \\mk{i}{a\\hbar^2}",
+       "uses": [],
+       "map": {
+        "i1": "i",
+        "i2": "i"
+       }
+      }
+     ],
+     "src": "Example 3.8.1",
+     "note": "The book prints the second derivative as $2a(ax^2 - 1)e^{-ax^2}$; it is $2a(2ax^2 - 1)e^{-ax^2}$. With the range halved, the first coefficient is $-8\\hbar^2a^2$, where the book prints $-4\\hbar^2a^2$. The result $a\\hbar^2$ is the book's."
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "step": 1
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\kdx} = \\mk{r}{\\sqrt{\\kxsqavg - \\kxavg^2}}",
+      "src": "(3.8.2)"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\kdx} = \\mk{r}{\\sqrt{\\dfrac{1}{4a} - 0}}",
+       "uses": [
+        0,
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{l}{\\kdx} = \\mk{r}{\\dfrac{1}{2\\sqrt{a}}}",
+       "uses": []
+      }
+     ],
+     "src": "Example 3.8.1"
+    },
+    {
+     "assumes": [
+      {
+       "step": 2
+      },
+      {
+       "step": 3
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\kdp} = \\mk{r}{\\sqrt{\\kpsqavg - \\kpavg^2}}",
+      "src": "(3.8.3)"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\kdp} = \\mk{r}{\\sqrt{a\\hbar^2 - 0}}",
+       "uses": [
+        0,
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{l}{\\kdp} = \\mk{r}{\\hbar\\sqrt{a}}",
+       "uses": []
+      }
+     ],
+     "src": "Example 3.8.1"
+    },
+    {
+     "assumes": [
+      {
+       "step": 5
+      },
+      {
+       "step": 4
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\kdp} = \\mk{r}{\\hbar\\sqrt{a}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\kdp\\,\\kdx} = \\mk{r}{\\hbar\\sqrt{a}\\,\\kdx}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{l}{\\kdp\\,\\kdx} = \\mk{r}{(\\hbar\\sqrt{a})\\left(\\dfrac{1}{2\\sqrt{a}}\\right)}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{l}{\\kdp\\,\\kdx} = \\mk{r}{\\dfrac{\\hbar}{2}}",
+       "uses": []
+      }
+     ],
+     "src": "Example 3.8.1"
+    }
+   ]
+  }
+ ]
+}

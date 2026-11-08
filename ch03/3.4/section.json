@@ -1,0 +1,188 @@
+{
+ "id": "3.4",
+ "module": "13394",
+ "chapter": "3",
+ "title": "Wavefunctions Have a Probabilistic Interpretation",
+ "short": "Probabilistic interpretation",
+ "lead": "A wavefunction can be complex, so it has no direct physical meaning by itself. Born's interpretation gives its square one, as a probability density, and that reading sets conditions on which functions can be wavefunctions.",
+ "objectives": [
+  "To understand that wavefunctions can have probabilistic interpretations.",
+  "To calculate the probabilities directly from a wavefunctions"
+ ],
+ "summary_html": "",
+ "notes": "Adapted from Hanson, Harvey, Sweeney and Zielinski's Quantum States of Atoms and Molecules under CC BY-NC-SA 4.0; Example 3.4.1 is set as an exercise, keyed by the solution Section 3.6 prints under Exercise 3.6.1, which asks the same question.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "Examples 3.4.1 and 3.4.2 print no solution and are set as exercises. Example 3.4.1 asks the question of Exercise 3.6.1 word for word, so the two are one card keyed by the solution printed in Section 3.6. The solution to Example 3.4.2 was written by AI. Bloom levels and concept tags were chosen by AI.",
+ "figures": [
+  {
+   "id": "sim-detections",
+   "kind": "sim",
+   "draws": [
+    "probability-density",
+    "length"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "born-interpretation",
+   "concept": "square-of-the-modulus",
+   "verb": "introduces"
+  },
+  {
+   "span": "born-interpretation",
+   "concept": "probability-density",
+   "verb": "introduces"
+  },
+  {
+   "span": "born-interpretation",
+   "concept": "born-interpretation",
+   "verb": "introduces"
+  },
+  {
+   "span": "born-interpretation",
+   "concept": "wavefunction",
+   "verb": "uses"
+  },
+  {
+   "span": "born-interpretation",
+   "concept": "matter-wave-diffraction",
+   "verb": "uses"
+  },
+  {
+   "span": "probability-in-a-region",
+   "concept": "position-probability",
+   "verb": "introduces"
+  },
+  {
+   "span": "probability-in-a-region",
+   "concept": "volume-element",
+   "verb": "introduces"
+  },
+  {
+   "span": "probability-in-a-region",
+   "concept": "probability-density",
+   "verb": "uses"
+  },
+  {
+   "span": "well-behaved",
+   "concept": "well-behaved-wavefunction",
+   "verb": "introduces"
+  },
+  {
+   "span": "well-behaved",
+   "concept": "born-interpretation",
+   "verb": "uses"
+  },
+  {
+   "span": "well-behaved",
+   "concept": "energy-quantization",
+   "verb": "reinforces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "e1",
+   "source_id": "ex:3.4.1",
+   "source_number": "Example 3.4.1",
+   "kind": "exercise",
+   "bloom": "Understand",
+   "place": {
+    "at": "end"
+   },
+   "cite": "born-interpretation",
+   "prompt": "<p>Show that the square of the modulus of $\\Psi(\\vec{r},t) = \\psi(\\vec{r}) e^{-i\\omega t}$ is time independent. What insight regarding stationary states do you gain from this proof?</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "source",
+    "hint": "Write the complex conjugate of the time factor and multiply.",
+    "solution": "<p>The square of the modulus of a wavefunction is $\\Psi(r,t)^*\\Psi(r,t)$ so for wavefunctions of this form, the square of the modulus is<sup class=\"fn\" data-note=\"card-conjugate\"></sup></p>\n$$ \\begin{aligned} \\Psi(r,t)^*\\Psi(r,t) &= \\psi(r) \\cancel{e^{+i\\omega t}} \\psi(r) \\cancel{e^{-i\\omega t}} \\\\[4pt] &=\\psi(r)^2 \\end{aligned} $$\n<p>Hence, there is no time dependence to the modulus of wavefunctions of this work, which from the probability interpretation of the wavefunction means that the probability density is time-independent.</p>"
+   }
+  },
+  {
+   "id": "e2",
+   "source_id": "ex:3.4.2",
+   "source_number": "Example 3.4.2",
+   "kind": "exercise",
+   "bloom": "Understand",
+   "place": {
+    "at": "end"
+   },
+   "cite": "born-interpretation",
+   "prompt": "<p>According to the Born interpretation, what is the physical significance of $e\\psi^*(r_0)(r_0)d\\tau$?<sup class=\"fn\" data-note=\"ex342-psi\"></sup></p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "Start from what $\\psi^*\\psi\\,d\\tau$ means, then multiply by a charge.",
+    "solution": "<p>By the Born interpretation, $\\psi^*(r_0)\\psi(r_0)\\,d\\tau$ is the probability of finding the electron in the volume element $d\\tau$ at the point $r_0$. Multiplied by the charge of the electron, $e$, it is the charge expected in that volume element: $e\\psi^*\\psi$ is a charge density, and $e\\psi^*(r_0)\\psi(r_0)\\,d\\tau$ is the share of the electron's charge found in $d\\tau$ at $r_0$, averaged over many measurements.</p><p>A single measurement still finds the whole electron at one place. The charge density describes where the electron is found over many measurements, in the same way the grade distribution of a class describes many students.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "e1",
+   "concept": "square-of-the-modulus"
+  },
+  {
+   "exercise": "e1",
+   "concept": "probability-density"
+  },
+  {
+   "exercise": "e1",
+   "concept": "stationary-state"
+  },
+  {
+   "exercise": "e2",
+   "concept": "born-interpretation"
+  },
+  {
+   "exercise": "e2",
+   "concept": "volume-element"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "amplitude-density",
+   "kind": "correction",
+   "html": "The book calls $P(x,t)$ the probability amplitude. $P$ is the probability density of Equation 3.4.1; the probability amplitude is the wavefunction itself, as the quoted passage below says."
+  },
+  {
+   "id": "volume-label",
+   "kind": "correction",
+   "html": "Equations 3.4.3 and 3.4.4 keep the label $P(x\\in[a,b])$ of the one-dimensional case. In three dimensions the integral is the probability that the particle is found in the volume $V$."
+  },
+  {
+   "id": "ex342-psi",
+   "kind": "correction",
+   "html": "The book prints $e\\psi^*(r_0)(r_0)d\\tau$, with the second $\\psi$ missing. The quantity meant is $e\\psi^*(r_0)\\psi(r_0)d\\tau$."
+  },
+  {
+   "id": "card-conjugate",
+   "kind": "correction",
+   "html": "The first line drops the complex conjugate of $\\psi(r)$. With it the product is $\\psi^*(r)\\psi(r) = |\\psi(r)|^2$, which is still independent of time."
+  }
+ ]
+}

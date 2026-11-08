@@ -3,19 +3,6 @@ window.OMNISTAX_FIGURES = window.OMNISTAX_FIGURES || {};
 window.OMNISTAX_FIGURES['1.1'] = function (root, F) {
 const { tex, C, PAL, alpha, ctl, register, begin, line, dot, text, topline, axes, plot, shade, fmt } = F;
 const sim = (id, H) => F.sim(root, id, H);
-/* a dashed curve clipped to its graph's box, for a prediction drawn beside what was measured */
-function dashed(ctx, ax, f, color, w = 3) {
-  const { box, X, Y, xr } = ax;
-  ctx.save(); ctx.beginPath(); ctx.rect(box.l, box.t, box.r - box.l, box.b - box.t); ctx.clip();
-  ctx.strokeStyle = color; ctx.lineWidth = w; ctx.setLineDash([10, 10]); ctx.beginPath();
-  let on = false;
-  for (let i = 0; i <= 400; i++) {
-    const x = xr[0] + (xr[1] - xr[0]) * i / 400, y = f(x);
-    if (!isFinite(y) || y > 1e3) { on = false; continue; }
-    if (on) ctx.lineTo(X(x), Y(y)); else { ctx.moveTo(X(x), Y(y)); on = true; }
-  }
-  ctx.stroke(); ctx.restore();
-}
 
 /* ---------- physics, SI ---------- */
 const h = 6.62607e-34, c = 2.99792e8, kB = 1.380649e-23, SIGMA = 5.67e-8, WIEN = 2.898e-3;
@@ -71,7 +58,7 @@ function glow(T) {
       ctx.save(); ctx.fillStyle = F.fact(spectral(nm + 2)); ctx.globalAlpha = 0.85; ctx.fillRect(x0, y, x1 - x0 + 0.5, box.b - y); ctx.restore();
     }
     /* the classical prediction, secondary */
-    dashed(ctx, ax, (l) => rj(l, t) / Y, alpha(PAL.ink, 0.45), 2);
+    plot(ctx, ax, (l) => rj(l, t) / Y, alpha(PAL.ink, 0.45), { w: 2, dash: [10, 10] });
     /* the path the peak walks as T changes (Wien's law), the book's line through the peaks */
     ctx.save(); ctx.strokeStyle = alpha(C('wavelength'), 0.55); ctx.lineWidth = 3; ctx.beginPath();
     for (let tt = 2400; tt <= 5600; tt += 25) { const l = WIEN / tt * 1e9, x = ax.X(l), y = ax.Y(planck(l, tt) / Y); if (tt === 2400) ctx.moveTo(x, y); else ctx.lineTo(x, y); }

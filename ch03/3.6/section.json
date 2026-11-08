@@ -1,0 +1,383 @@
+{
+ "id": "3.6",
+ "module": "13396",
+ "chapter": "3",
+ "title": "Wavefunctions Must Be Normalized",
+ "short": "Normalization",
+ "lead": "A probability is read from a wavefunction as an area under its square modulus. For all the probabilities to add up to one, the wavefunction has to be normalized, at every moment of its evolution.",
+ "objectives": [
+  "Calculate the probability of an event from the wavefunction",
+  "Understand the utility and importance of normalizing wavefunctions",
+  "Demonstrate how to normalize an arbitrary wavefunction"
+ ],
+ "summary_html": "",
+ "notes": "Adapted from Hanson, Harvey, Sweeney and Zielinski's Quantum States of Atoms and Molecules, under CC BY-NC-SA 4.0; the second Exercise 3.6.1, printed here, is set in Section 3.4 with Example 3.4.1, which asks the same question.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "Exercise 3.6.2 and its answer are the book's. The second Exercise 3.6.1 is set in Section 3.4, as one card with Example 3.4.1.",
+ "figures": [
+  {
+   "id": "sim-probability-area",
+   "kind": "sim",
+   "number": "3.6.1",
+   "folds": [
+    "3.6.2",
+    "3.6.3"
+   ],
+   "originals": [
+    "/media/ch03/348642-drawing.svg",
+    "/media/ch03/348966-figure-a.svg",
+    "/media/ch03/348965-figure-b.svg"
+   ],
+   "original_caption": "The probability can be interpreted as an area under the probability density |ψ|². (CC BY-NC 4.0; Ümit Kaya via LibreTexts)",
+   "draws": [
+    "probability-density",
+    "length",
+    "wavefunction"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "extracting-probabilities",
+   "concept": "square-of-the-modulus",
+   "verb": "reinforces"
+  },
+  {
+   "span": "extracting-probabilities",
+   "concept": "born-interpretation",
+   "verb": "reinforces"
+  },
+  {
+   "span": "extracting-probabilities",
+   "concept": "probability-density",
+   "verb": "reinforces"
+  },
+  {
+   "span": "extracting-probabilities",
+   "concept": "position-probability",
+   "verb": "reinforces"
+  },
+  {
+   "span": "extracting-probabilities",
+   "concept": "pib-wavefunctions",
+   "verb": "uses"
+  },
+  {
+   "span": "normalizing-of-the-wavefunction",
+   "concept": "normalization-condition",
+   "verb": "reinforces"
+  },
+  {
+   "span": "normalizing-of-the-wavefunction",
+   "concept": "normalizing-a-wavefunction",
+   "verb": "introduces"
+  },
+  {
+   "span": "time-dependence-to-the-wavefunction",
+   "concept": "normalization-preserved",
+   "verb": "introduces"
+  },
+  {
+   "span": "time-dependence-to-the-wavefunction",
+   "concept": "square-integrable",
+   "verb": "introduces"
+  },
+  {
+   "span": "time-dependence-to-the-wavefunction",
+   "concept": "time-dependent-schrodinger-equation",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "e2",
+   "source_id": "exr:3.6.2",
+   "source_number": "Exercise 3.6.2",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "normalizing-of-the-wavefunction",
+   "prompt": "<p>Normalize this wavefunction for a particle in a harmonic well:</p>\n$$ \\psi = x e^{-x^2} $$",
+   "answer": {
+    "type": "open",
+    "generated_by": "source",
+    "hint": "Set $\\int_{-\\infty}^{\\infty} N^2 x^2 e^{-2x^2}\\,dx = 1$ and solve for $N$.",
+    "solution": "$$ \\psi = 2 \\left(\\dfrac{2}{\\pi} \\right)^{1/4} x e^{-x^2} $$"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "e2",
+   "concept": "normalizing-a-wavefunction"
+  },
+  {
+   "exercise": "e2",
+   "concept": "normalization-condition"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "n2-label",
+   "kind": "correction",
+   "html": "The left side of each approximation is the probability, not $|\\psi|^2$; and the $n = 2$ approximation above still writes $|\\psi_{n=1}|^2$ where the state is $\\psi_{n=2}$."
+  },
+  {
+   "id": "eq-361",
+   "kind": "correction",
+   "html": "The probability over an interval is Equation 3.6.2; Equation 3.6.1 defines the square of the modulus."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "example-3-6-2",
+   "what": "the normalized Gaussian wave packet",
+   "source": "Physical Chemistry (LibreTexts), 3.6 Wavefunctions Must Be Normalized, Example 3.6.2",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kpsi(\\kx) = \\psi_0 {\\rm e}^{-(\\kx-\\kxo)^{2}/(4\\ksigw^2)}",
+       "src": "(3.6.6)"
+      },
+      {
+       "text": "Change the variable of integration to $y=(x-x_0)/(\\sqrt{2} \\sigma)$, so that $dx = \\sqrt{2}\\sigma\\,dy$."
+      },
+      {
+       "tex": "\\int_{-\\infty}^{\\infty}{\\rm e}^{-y^2} dy = \\sqrt{\\pi}",
+       "src": "an integral table"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{n}{\\int_{-\\infty}^{\\infty}\\vert\\kpsi(\\kx)\\vert^{2} d\\kx} = \\mk{o}{1}",
+      "src": "(3.6.5)"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{c}{\\vert\\psi_0\\vert^{2}}\\mk{i}{\\int_{-\\infty}^{\\infty}{\\rm e}^{-(\\kx-\\kxo)^{2}/(2\\ksigw^2)}\\,d\\kx} = \\mk{o}{1}",
+       "uses": [
+        0
+       ],
+       "map": {
+        "n": [
+         "c",
+         "i"
+        ]
+       },
+       "cap": "The exponent is real, so squaring the modulus doubles it: $4\\sigma^2$ becomes $2\\sigma^2$."
+      },
+      {
+       "tex": "\\mk{c}{\\vert\\psi_0\\vert^{2}}\\mk{i}{\\sqrt{2}\\,\\ksigw\\int_{-\\infty}^{\\infty}{\\rm e}^{-y^2} dy} = \\mk{o}{1}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{c}{\\vert\\psi_0\\vert^{2}}\\mk{i}{\\sqrt{2}\\,\\ksigw\\sqrt{\\pi}} = \\mk{o}{1}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{c}{\\vert\\psi_0\\vert^{2}} = \\mk{o}{\\dfrac{1}{(2\\pi \\ksigw^2)^{1/2}}}",
+       "uses": [],
+       "map": {
+        "i": "o"
+       }
+      }
+     ],
+     "src": "Example 3.6.2"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "text": "Only $|\\psi_0|$ is fixed, so $\\psi_0$ may carry any phase factor $e^{i\\phi}$ with $\\phi$ real."
+      }
+     ],
+     "then": {
+      "tex": "\\mk{p}{\\kpsi(\\kx)} = \\mk{c}{\\psi_0}\\mk{e}{{\\rm e}^{-(\\kx-\\kxo)^{2}/(4\\ksigw^2)}}",
+      "src": "(3.6.6)"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{p}{\\kpsi(\\kx)} = \\mk{c}{\\dfrac{e^{\\rm{i} \\phi}}{(2\\pi \\ksigw^2)^{1/4}}}\\mk{e}{e^{-(\\kx-\\kxo)^2/(4 \\ksigw^2)}}",
+       "uses": [
+        0,
+        1
+       ],
+       "cap": "The square root of $|\\psi_0|^2$ gives $|\\psi_0|$; the phase factor has modulus 1."
+      }
+     ],
+     "src": "Example 3.6.2"
+    }
+   ]
+  },
+  {
+   "id": "normalization-in-time",
+   "what": "normalization is kept in time",
+   "source": "Physical Chemistry (LibreTexts), 3.6 Wavefunctions Must Be Normalized",
+   "nodes": [
+    {
+     "then": {
+      "tex": "\\mk{l}{i\\hbar\\dfrac{\\partial \\kpsi}{\\partial\\kt}} = \\mk{k}{-\\dfrac{\\hbar^2}{2\\km}\\dfrac{\\partial^2 \\kpsi}{\\partial\\kx^2}} + \\mk{v}{\\kV\\kpsi}",
+      "src": "3.1"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\kpsi^*\\dfrac{\\partial \\kpsi}{\\partial\\kt}} = \\mk{k}{-\\dfrac{\\hbar^2}{2\\km}\\,\\dfrac{1}{i\\hbar}\\,\\kpsi^*\\dfrac{\\partial^2 \\kpsi}{\\partial\\kx^2}} + \\mk{v}{\\dfrac{1}{i\\hbar}\\kV\\kpsi^*\\kpsi}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{l}{\\kpsi^*\\dfrac{\\partial \\kpsi}{\\partial\\kt}} = \\mk{k}{\\dfrac{i\\hbar}{2\\km}\\kpsi^*\\dfrac{\\partial^2 \\kpsi}{\\partial\\kx^2}} - \\mk{v}{\\dfrac{i}{\\hbar}\\kV\\vert\\kpsi\\vert^2}",
+       "uses": [],
+       "cap": "$1/i = -i$, and $\\psi^*\\psi = |\\psi|^2$."
+      }
+     ],
+     "num": "(3.6.8)",
+     "note": "The book prints this line without the $\\hbar$ in the factor $\\dfrac{i\\hbar}{2m}$, writing $\\dfrac{i}{2m}$; multiplying $-\\dfrac{\\hbar^2}{2m}$ by $\\dfrac{1}{i\\hbar}$ leaves $\\dfrac{i\\hbar}{2m}$."
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "text": "$(AB)^* = A^*B^*$, $A^{**} = A$ and $i^* = -i$."
+      },
+      {
+       "text": "The potential energy $V$ is real."
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\kpsi^*\\dfrac{\\partial \\kpsi}{\\partial\\kt}} = \\mk{k}{\\dfrac{i\\hbar}{2\\km}\\kpsi^*\\dfrac{\\partial^2 \\kpsi}{\\partial\\kx^2}} - \\mk{v}{\\dfrac{i}{\\hbar}\\kV\\vert\\kpsi\\vert^2}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\kpsi\\dfrac{\\partial \\kpsi^*}{\\partial\\kt}} = \\mk{k}{-\\dfrac{i\\hbar}{2\\km}\\kpsi\\dfrac{\\partial^2 \\kpsi^*}{\\partial\\kx^2}} + \\mk{v}{\\dfrac{i}{\\hbar}\\kV\\vert\\kpsi\\vert^2}",
+       "uses": [
+        1,
+        2
+       ],
+       "cap": "Conjugating every factor turns each $i$ into $-i$ and leaves the real $\\hbar$, $m$, $V$ and $|\\psi|^2$ as they are."
+      }
+     ],
+     "num": "(3.6.9)",
+     "note": "The book prints this line without the $\\hbar$ in the factor $\\dfrac{i\\hbar}{2m}$, writing $\\dfrac{i}{2m}$; multiplying $-\\dfrac{\\hbar^2}{2m}$ by $\\dfrac{1}{i\\hbar}$ leaves $\\dfrac{i\\hbar}{2m}$."
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "step": 0
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\kpsi\\dfrac{\\partial \\kpsi^*}{\\partial\\kt}} = \\mk{k}{-\\dfrac{i\\hbar}{2\\km}\\kpsi\\dfrac{\\partial^2 \\kpsi^*}{\\partial\\kx^2}} + \\mk{v}{\\dfrac{i}{\\hbar}\\kV\\vert\\kpsi\\vert^2}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\dfrac{\\partial \\kpsi^*}{\\partial\\kt}\\kpsi} + \\mk{l2}{\\kpsi^*\\dfrac{\\partial \\kpsi}{\\partial\\kt}} = \\mk{k}{-\\dfrac{i\\hbar}{2\\km}\\kpsi\\dfrac{\\partial^2 \\kpsi^*}{\\partial\\kx^2}} + \\mk{v}{\\dfrac{i}{\\hbar}\\kV\\vert\\kpsi\\vert^2} + \\mk{k2}{\\dfrac{i\\hbar}{2\\km}\\kpsi^*\\dfrac{\\partial^2 \\kpsi}{\\partial\\kx^2}} - \\mk{v2}{\\dfrac{i}{\\hbar}\\kV\\vert\\kpsi\\vert^2}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{l}{\\dfrac{\\partial \\kpsi^*}{\\partial\\kt}\\kpsi} + \\mk{l2}{\\kpsi^*\\dfrac{\\partial \\kpsi}{\\partial\\kt}} = \\mk{k}{\\dfrac{i\\hbar}{2\\km}\\left(\\kpsi^*\\dfrac{\\partial^2 \\kpsi}{\\partial\\kx^2} - \\kpsi\\dfrac{\\partial^2 \\kpsi^*}{\\partial\\kx^2}\\right)}",
+       "uses": [],
+       "map": {
+        "k2": "k"
+       }
+      },
+      {
+       "tex": "\\mk{l}{\\dfrac{\\partial \\kpsi^*}{\\partial\\kt}\\kpsi} + \\mk{l2}{\\kpsi^*\\dfrac{\\partial \\kpsi}{\\partial\\kt}} = \\mk{k}{\\dfrac{i\\hbar}{2\\km}\\dfrac{\\partial}{\\partial\\kx}\\left(\\kpsi^*\\dfrac{\\partial \\kpsi}{\\partial\\kx} - \\kpsi\\dfrac{\\partial \\kpsi^*}{\\partial\\kx}\\right)}",
+       "uses": [],
+       "cap": "By the product rule the bracket's derivative is $\\psi^*\\psi'' + \\psi^{*\\prime}\\psi' - \\psi\\psi^{*\\prime\\prime} - \\psi'\\psi^{*\\prime}$, and the middle terms cancel."
+      }
+     ],
+     "num": "(3.6.10)",
+     "note": "The book prints the factor in front of both lines as $\\dfrac{i}{2m}$; with the $\\hbar$ of Equations 3.6.8 and 3.6.9 kept, it is $\\dfrac{i\\hbar}{2m}$."
+    },
+    {
+     "assumes": [
+      {
+       "step": 2
+      }
+     ],
+     "then": {
+      "tex": "\\mk{d}{\\dfrac{d}{d\\kt}\\int_{-\\infty}^{\\infty}\\kpsi^*\\kpsi\\,d\\kx} = \\mk{i}{\\int_{-\\infty}^{\\infty}\\left(\\dfrac{\\partial \\kpsi^*}{\\partial\\kt}\\kpsi + \\kpsi^*\\dfrac{\\partial \\kpsi}{\\partial\\kt}\\right)d\\kx}",
+      "src": "(3.6.7)",
+      "why": "The time derivative passes inside the integral over $x$ and acts on the product $\\psi^*\\psi$ by the product rule."
+     },
+     "steps": [
+      {
+       "tex": "\\mk{d}{\\dfrac{d}{d\\kt}\\int_{-\\infty}^{\\infty}\\kpsi^*\\kpsi\\,d\\kx} = \\mk{i}{\\int_{-\\infty}^{\\infty}\\dfrac{i\\hbar}{2\\km}\\dfrac{\\partial}{\\partial\\kx}\\left(\\kpsi^*\\dfrac{\\partial \\kpsi}{\\partial\\kx} - \\kpsi\\dfrac{\\partial \\kpsi^*}{\\partial\\kx}\\right)d\\kx}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{d}{\\dfrac{d}{d\\kt}\\int_{-\\infty}^{\\infty}\\kpsi^*\\kpsi\\,d\\kx} = \\mk{i}{\\dfrac{i\\hbar}{2\\km}\\left[\\kpsi^*\\dfrac{\\partial \\kpsi}{\\partial\\kx} - \\kpsi\\dfrac{\\partial \\kpsi^*}{\\partial\\kx}\\right]_{-\\infty}^{\\infty}}",
+       "uses": [],
+       "cap": "The integral of a derivative over $x$ is the function in the bracket taken between the limits."
+      }
+     ]
+    },
+    {
+     "assumes": [
+      {
+       "step": 3
+      },
+      {
+       "tex": "\\lim_{\\vert \\kx\\vert\\rightarrow\\infty} \\vert\\kpsi\\vert = 0",
+       "src": "(3.6.12)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{d}{\\dfrac{d}{d\\kt}\\int_{-\\infty}^{\\infty}\\kpsi^*\\kpsi\\,d\\kx} = \\mk{i}{\\dfrac{i\\hbar}{2\\km}\\left[\\kpsi^*\\dfrac{\\partial \\kpsi}{\\partial\\kx} - \\kpsi\\dfrac{\\partial \\kpsi^*}{\\partial\\kx}\\right]_{-\\infty}^{\\infty}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{d}{\\dfrac{d}{d\\kt}\\int_{-\\infty}^{\\infty}\\vert\\kpsi\\vert^2\\,d\\kx} = \\mk{i}{\\dfrac{i\\hbar}{2\\km}\\left[\\kpsi^*\\dfrac{\\partial \\kpsi}{\\partial\\kx} - \\kpsi\\dfrac{\\partial \\kpsi^*}{\\partial\\kx}\\right]_{-\\infty}^{\\infty}} = \\mk{z}{0}",
+       "uses": [
+        1
+       ],
+       "cap": "Where $\\psi$ and $\\psi^*$ vanish at both limits, so does each product in the bracket."
+      }
+     ],
+     "num": "(3.6.11)",
+     "note": "The book prints the factor as $\\dfrac{i}{2m}$; it is $\\dfrac{i\\hbar}{2m}$, as in Equation 3.6.10. The zero is the same either way."
+    }
+   ]
+  }
+ ]
+}

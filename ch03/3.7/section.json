@@ -1,0 +1,507 @@
+{
+ "id": "3.7",
+ "module": "13397",
+ "chapter": "3",
+ "title": "The Average Momentum of a Particle in a Box is Zero",
+ "short": "Expectation values",
+ "lead": "An average over many measurements on one quantum state is written as an integral of the wavefunction with an operator. Applied to the particle in a box, it gives the average energy, position and momentum of the particle.",
+ "objectives": [
+  "Calculate the expectation value for a measurement",
+  "Apply the expectation value concept to calculate average properties of a participle in a box model",
+  "Understand the origin of a zero-point energy/zero-point motion.",
+  "Extend the concept of orthogonality from vectors to mathematical functions (and wavefunctions)."
+ ],
+ "summary_html": "",
+ "notes": "Adapted from Hanson, Harvey, Sweeney and Zielinski's Quantum States of Atoms and Molecules, under CC BY-NC-SA 4.0, the original of Figure 3.7.1 carrying no credit in the book; Exercises 3.7.2, 3.7.3 and 3.7.7, printed here, are set in Section 3.5 with the energies, nodes and orthogonality they test.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "Exercise 3.7.5 and its answer are the book's, with a correction under the card. Exercises 3.7.4 and 3.7.6 have no key in the book; their solutions were written by AI. Exercises 3.7.2, 3.7.3 and 3.7.7 are set in Section 3.5.",
+ "figures": [
+  {
+   "id": "sim-balance",
+   "kind": "sim",
+   "number": "3.7.1",
+   "originals": [
+    "/media/ch03/92024-mindtouch_-_Copy.png"
+   ],
+   "original_caption": "(left) The ground-state (n=1) wavefunction for a particle in a box. (right) The ground-state (n=1) probability for a particle in a box.",
+   "draws": [
+    "wavefunction",
+    "probability-density",
+    "length"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "sim-standing",
+   "kind": "sim",
+   "number": "3.7.2",
+   "originals": [
+    "/media/ch03/85638-Standing_wave_2.gif"
+   ],
+   "widths": [
+    732
+   ],
+   "original_caption": "Two waves traveling in opposite directions across the same medium combine linearly. In this animation, both waves have the same wavelength and the sum of amplitudes results in a standing wave. (Public Domain; LucasVB).",
+   "draws": [
+    "wavefunction",
+    "length",
+    "momentum"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [
+  {
+   "id": "wave-right",
+   "label": "the wave moving right",
+   "figures": [
+    "sim-standing"
+   ]
+  },
+  {
+   "id": "wave-left",
+   "label": "the wave moving left",
+   "figures": [
+    "sim-standing"
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "span": "average-properties",
+   "concept": "pib-wavefunctions",
+   "verb": "uses"
+  },
+  {
+   "span": "classical-expectation-values",
+   "concept": "expectation-value",
+   "verb": "introduces"
+  },
+  {
+   "span": "quantum-expectation-values",
+   "concept": "quantum-expectation-value",
+   "verb": "introduces"
+  },
+  {
+   "span": "quantum-expectation-values",
+   "concept": "operator",
+   "verb": "uses"
+  },
+  {
+   "span": "average-energy-of-a-particle-in-a-box",
+   "concept": "average-energy",
+   "verb": "introduces"
+  },
+  {
+   "span": "average-energy-of-a-particle-in-a-box",
+   "concept": "hamiltonian-operator",
+   "verb": "uses"
+  },
+  {
+   "span": "average-energy-of-a-particle-in-a-box",
+   "concept": "kinetic-energy-operator",
+   "verb": "uses"
+  },
+  {
+   "span": "average-energy-of-a-particle-in-a-box",
+   "concept": "zero-point-energy",
+   "verb": "reinforces"
+  },
+  {
+   "span": "average-energy-of-a-particle-in-a-box",
+   "concept": "nodes-and-energy",
+   "verb": "reinforces"
+  },
+  {
+   "span": "average-position-of-a-particle-in-a-box",
+   "concept": "pib-average-position",
+   "verb": "introduces"
+  },
+  {
+   "span": "average-position-of-a-particle-in-a-box",
+   "concept": "probability-density",
+   "verb": "uses"
+  },
+  {
+   "span": "average-momentum-of-a-particle-in-a-box",
+   "concept": "pib-average-momentum",
+   "verb": "introduces"
+  },
+  {
+   "span": "average-momentum-of-a-particle-in-a-box",
+   "concept": "momentum-eigenfunctions",
+   "verb": "introduces"
+  },
+  {
+   "span": "average-momentum-of-a-particle-in-a-box",
+   "concept": "momentum-operator",
+   "verb": "uses"
+  },
+  {
+   "span": "average-momentum-of-a-particle-in-a-box",
+   "concept": "heisenberg-uncertainty-principle",
+   "verb": "uses"
+  },
+  {
+   "span": "orthogonality",
+   "concept": "orthogonality",
+   "verb": "reinforces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "e4",
+   "source_id": "exr:3.7.4",
+   "source_number": "Exercise 3.7.4",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "average-position-of-a-particle-in-a-box",
+   "prompt": "<p>Use the general form of the particle-in-a-box wavefunction for any $n$ to find the mathematical expression for the position expectation value $\\left \\langle x \\right \\rangle$ for a box of length L. How does $\\left \\langle x \\right \\rangle$ depend on $n$?</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "Write $\\sin^2\\theta$ as $\\tfrac{1}{2}(1 - \\cos 2\\theta)$ before integrating.",
+    "solution": "<p>Insert $\\psi_n = \\sqrt{2/L}\\,\\sin(n\\pi x/L)$ into the expectation value, integrating over the box only, since $\\psi_n = 0$ outside it:</p>$$ \\langle x \\rangle = \\dfrac{2}{L}\\int_0^L x\\sin^2\\left(\\dfrac{n\\pi x}{L}\\right)dx = \\dfrac{1}{L}\\int_0^L x\\,dx - \\dfrac{1}{L}\\int_0^L x\\cos\\left(\\dfrac{2n\\pi x}{L}\\right)dx $$<p>using $\\sin^2\\theta = \\tfrac{1}{2}(1 - \\cos 2\\theta)$. The first integral is $L^2/2$. Integrating the second by parts gives $\\left[\\dfrac{L}{2n\\pi}x\\sin\\dfrac{2n\\pi x}{L} + \\left(\\dfrac{L}{2n\\pi}\\right)^2\\cos\\dfrac{2n\\pi x}{L}\\right]_0^L = 0$, since $\\sin 2n\\pi = 0$ and $\\cos 2n\\pi = \\cos 0 = 1$. So</p>$$ \\langle x \\rangle = \\dfrac{L}{2} $$<p>for every $n$. The average position does not depend on $n$: each $|\\psi_n|^2$ is symmetric about the center of the box, so it balances there, even for even $n$, where the density at $L/2$ is zero.</p>"
+   }
+  },
+  {
+   "id": "e5",
+   "source_id": "exr:3.7.5",
+   "source_number": "Exercise 3.7.5",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "average-momentum-of-a-particle-in-a-box",
+   "prompt": "<p>Show that the particle-in-a-box wavefunctions are not eigenfunctions of the momentum operator (Equation 3.7.9).</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "source",
+    "solution": "<p>The easiest way to address this question is asking if the PIB wavefunction also satisfies the eigenvalue equation using the momentum operation instead of the Hamiltonian operator (3rd postulate of QM). That is</p>\n$$ \\hat{p}_x \\psi(n) = p \\psi(n) $$\n<p>with the following PIB wavefunctions</p>\n$$ \\psi_{n}=\\sqrt{\\dfrac{2}{L}} \\sin \\left(\\dfrac{n \\pi x}{L}\\right) $$\n<p>and</p>\n$$ \\hat{p}=- i\\hbar \\dfrac{d}{d x } $$\n<p>and $p$ is a real scalar (since it is a measurable).</p>\n$$ \\begin{aligned} \\hat{p}_x \\psi_{n} &= - i\\hbar \\dfrac{d}{d x} \\left[\\sqrt{\\dfrac{2}{L}} \\sin \\left(\\dfrac{n \\pi x}{L}\\right)\\right] \\\\[4pt] &= -i \\hbar \\sqrt{ \\dfrac{2}{L}} \\cos \\left(\\dfrac{n \\pi x}{L}\\right) \\left(\\dfrac{n \\pi}{L}\\right) \\\\[4pt] &\\neq p \\psi_{n} \\end{aligned} $$\n<p>Hence, the PIB wavefunctions are NOT eigenfunctions of the momentum operator.</p>\n<p><strong>Alternative Solution</strong><sup class=\"fn\" data-note=\"key-375\"></sup></p>\n<p>An alternative, albeit more complicated, approach is to recognize that the uncertainty of $p$ must be zero if the wavefunction is an eigenstate of the momentum operator. Hence</p>\n$$ \\sqrt{\\langle p^{2}\\rangle - \\langle p \\rangle ^{2}}=0 $$\n<p>This requires calculating the $\\langle p^{2}\\rangle$ and $\\langle p \\rangle$ expectation values:</p>\n$$ \\begin{aligned} \\langle p \\rangle &=\\int_{0}^{L} \\psi^{*}\\left[-i \\hbar \\dfrac{d}{d x}\\right] \\psi d x \\\\[4pt] &=-i \\hbar \\int_{0}^{L} \\dfrac{2}{L} \\sin \\left(\\dfrac{n \\pi x}{L}\\right) \\dfrac{d}{dx} x \\sin \\left(\\dfrac{n \\pi x}{L}\\right) dx \\\\[4pt] &=-i \\dfrac{\\mathrm{h}^2}{L} \\int_{0}^{L} \\sin \\left(\\dfrac{n \\pi x}{L}\\right) \\cos \\left(\\dfrac{n \\pi x}{L}\\right) dx \\\\[4pt] &= 0 \\end{aligned} $$\n<p>This integral is zero via orthonormality of the sine and cosine functions (although you can expand the integrand and confirm this).</p>\n$$ \\begin{aligned} \\langle p^{2} \\rangle &=\\int_{0}^{L} \\psi^{*} \\left[-i \\hbar \\dfrac{d}{d x}\\right]^{2} \\psi d x \\\\[4pt] &=\\dfrac{\\mathrm{h}^2}{L} \\int_{0}^{L} \\sin \\left(\\dfrac{n \\pi x}{L}\\right) \\dfrac{d^{2} }{d x^{2}} \\sin \\left(\\dfrac{n \\pi x}{L}\\right) d x \\\\[4pt] &=\\dfrac{-\\mathrm{h}^2}{L} \\int_{0}^{L} \\sin \\left(\\dfrac{n \\pi x}{L}\\right) \\sin \\left(\\dfrac{n \\pi x}{L}\\right) d x \\\\[4pt] &= -\\dfrac{\\mathrm{h}^2}{L} \\end{aligned} $$\n<p>Now the integral above is 1 using orthonormality (although you can expand the integrand and confirm this). Now we calculate the uncertainty in momentum in the PIB wavefunctions:</p>\n$$ \\begin{aligned} \\sqrt{\\langle p^{2} \\rangle - \\langle p \\rangle^2} &=\\sqrt{\\dfrac{-\\mathrm{h}^2}{L} -0^{2}} \\\\[4pt] &= \\sqrt{\\dfrac{-\\mathrm{h}^2}{L}} \\\\[4pt] &\\neq 0 \\rightarrow \\end{aligned} $$\n<p>Since the uncertainty is not 0, different measurements (experiments) will results in different values of momentum being quantified. Hence, the PIB wavefunctions are <strong>not</strong> eigenfunctions of the momentum operator.</p>\n<p>It must be equally likely for the particle-in-a-box to have a momentum $-p$ as $+p$. The average of $+p$ and $–p$ is zero, yet $p^2$ and the average of $p^2$ are not zero. The information that the particle is equally likely to have a momentum of $+p$ or $–p$ is contained in the wavefunction. In fact, the sine function is a representation of the two momentum eigenfunctions $e^{+ikx}$ and $e^{-ikx}$ (Figure 3.7.2).</p>"
+   }
+  },
+  {
+   "id": "e6",
+   "source_id": "exr:3.7.6",
+   "source_number": "Exercise 3.7.6",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "average-momentum-of-a-particle-in-a-box",
+   "prompt": "<p>Write the particle-in-a-box wavefunction as a normalized linear combination of the momentum eigenfunctions $e^{ikx}$ and $e^{-ikx}$ by using Euler’s formula. Show that the momentum eigenvalues for these two functions are $p = +ħk$ and $-ħk$.</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "Solve Euler's formula for $\\sin kx$.",
+    "solution": "<p>Euler's formula gives $e^{\\pm ikx} = \\cos kx \\pm i\\sin kx$, so $\\sin kx = \\dfrac{e^{ikx} - e^{-ikx}}{2i}$ and</p>$$ \\psi_n = \\sqrt{\\dfrac{2}{L}}\\sin kx = -\\dfrac{i}{\\sqrt{2L}}\\,e^{ikx} + \\dfrac{i}{\\sqrt{2L}}\\,e^{-ikx} $$<p>with $k = n\\pi/L$. The combination is normalized because it is $\\psi_n$ itself, and the two coefficients have the same modulus, $1/\\sqrt{2L}$, so the two terms carry equal weight. Applying the momentum operator to each term:</p>$$ \\hat{p}_x e^{ikx} = -i\\hbar\\dfrac{d}{dx}e^{ikx} = -i\\hbar(ik)e^{ikx} = +\\hbar k\\,e^{ikx} $$$$ \\hat{p}_x e^{-ikx} = -i\\hbar(-ik)e^{-ikx} = -\\hbar k\\,e^{-ikx} $$<p>Each exponential is an eigenfunction of $\\hat{p}_x$, with eigenvalues $p = +\\hbar k$ and $p = -\\hbar k$. A measurement of momentum gives $+\\hbar k$ or $-\\hbar k$ with equal probability, which is why $\\langle p \\rangle = 0$ while $p^2 = \\hbar^2k^2$ is not zero.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "e4",
+   "concept": "pib-average-position"
+  },
+  {
+   "exercise": "e4",
+   "concept": "quantum-expectation-value"
+  },
+  {
+   "exercise": "e5",
+   "concept": "momentum-operator"
+  },
+  {
+   "exercise": "e5",
+   "concept": "eigenfunction"
+  },
+  {
+   "exercise": "e5",
+   "concept": "pib-wavefunctions"
+  },
+  {
+   "exercise": "e6",
+   "concept": "momentum-eigenfunctions"
+  },
+  {
+   "exercise": "e6",
+   "concept": "eulers-formula"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "sum-67",
+   "kind": "correction",
+   "html": "The sum below adds 76 as the eighth score, which is 67. The result is right: the eight scores add to 573, and $573/8 = 71.625$."
+  },
+  {
+   "id": "box-label",
+   "kind": "correction",
+   "html": "This box is a worked example, the Example 3.7.2 that the text cites further on. Exercise 3.7.2 is the question on the classical limit, set in Section 3.5."
+  },
+  {
+   "id": "most-probable",
+   "kind": "correction",
+   "html": "What the paragraph goes on to calculate is the average position $\\langle x \\rangle$, not the most probable one."
+  },
+  {
+   "id": "gs-limits",
+   "kind": "correction",
+   "html": "$\\psi$ is zero outside the box and the sine holds only inside it, so the integral runs from 0 to $L$, not from $-\\infty$ to $+\\infty$; the second line is also missing its $dx$."
+  },
+  {
+   "id": "center",
+   "kind": "correction",
+   "html": "Symmetry about $L/2$ gives the average, $\\langle x \\rangle = L/2$. The center is also the most likely place for $n = 1$ (and every odd $n$), but not for even $n$, where the density at $L/2$ is zero."
+  },
+  {
+   "id": "ex-375",
+   "kind": "correction",
+   "html": "The exercise that shows this is Exercise 3.7.5."
+  },
+  {
+   "id": "key-375",
+   "kind": "correction",
+   "html": "The alternative solution has slips. In $\\langle p \\rangle$ a stray $x$ follows $d/dx$, and the factor before the integral is $-i\\hbar\\dfrac{2}{L}\\dfrac{n\\pi}{L}$, not $-i\\dfrac{h^2}{L}$; the sine and cosine integral vanishes because the two are orthogonal over 0 to $L$. In $\\langle p^2 \\rangle$ the square of $-i\\hbar\\,d/dx$ is $-\\hbar^2d^2/dx^2$, and the second derivative brings out $-(n\\pi/L)^2$, so $\\langle p^2 \\rangle = \\dfrac{n^2\\pi^2\\hbar^2}{L^2}$, which is positive. The uncertainty is then $\\dfrac{n\\pi\\hbar}{L}$, a real number that is not zero, and the conclusion stands."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "example-3-7-2",
+   "what": "the average energy of a particle in a box",
+   "source": "Physical Chemistry (LibreTexts), 3.7 The Average Momentum of a Particle in a Box is Zero, Example 3.7.2",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kpsi(\\kx) = \\sqrt{\\dfrac{2}{\\kL}}\\sin(\\kk\\kx)"
+      },
+      {
+       "tex": "\\kKEhat = -\\dfrac{\\hbar^2}{2\\km}\\dfrac{\\partial^2}{\\partial\\kx^2}",
+       "src": "3.3"
+      },
+      {
+       "tex": "\\int\\limits_{0}^{\\kL}\\kpsi^*(\\kx)\\kpsi(\\kx)\\,d\\kx = 1",
+       "src": "3.5"
+      },
+      {
+       "tex": "\\kk = \\dfrac{\\pi}{\\kL}"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\kKEavg} = \\mk{i}{\\int\\limits_{0}^{\\kL}\\kpsi^*(\\kx)\\,\\kKEhat\\,\\kpsi(\\kx)\\,d\\kx}",
+      "src": "(3.7.4)"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\kKEavg} = \\mk{i}{\\int\\limits_{0}^{\\kL}\\left(\\sqrt{\\dfrac{2}{\\kL}}\\right)\\sin(\\kk\\kx)\\left(\\dfrac{-\\hbar^2}{2\\km}\\right)\\dfrac{\\partial^2}{\\partial\\kx^2}\\left(\\sqrt{\\dfrac{2}{\\kL}}\\right)\\sin(\\kk\\kx)\\,d\\kx}",
+       "uses": [
+        0,
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{l}{\\kKEavg} = \\mk{i}{\\left(\\dfrac{2}{\\kL}\\right)\\int\\limits_{0}^{\\kL}\\sin(\\kk\\kx)\\left(\\dfrac{-\\hbar^2}{2\\km}\\right)\\dfrac{\\partial}{\\partial\\kx}\\cos(\\kk\\kx)(\\kk)\\,d\\kx}",
+       "uses": [],
+       "cap": "One derivative of $\\sin kx$ is $k\\cos kx$."
+      },
+      {
+       "tex": "\\mk{l}{\\kKEavg} = \\mk{i}{\\left(\\dfrac{2}{\\kL}\\right)\\int\\limits_{0}^{\\kL}\\sin(\\kk\\kx)\\left(\\dfrac{-\\hbar^2}{2\\km}\\right)\\sin(\\kk\\kx)(\\kk)(-\\kk)\\,d\\kx}",
+       "uses": [],
+       "cap": "The derivative of $\\cos kx$ is $-k\\sin kx$."
+      },
+      {
+       "tex": "\\mk{l}{\\kKEavg} = \\mk{i}{\\left(\\dfrac{2}{\\kL}\\right)\\left(\\dfrac{\\kk^2\\hbar^2}{2\\km}\\right)\\int\\limits_{0}^{\\kL}\\sin^2(\\kk\\kx)\\,d\\kx}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{l}{\\kKEavg} = \\mk{i}{\\left(\\dfrac{\\kk^2\\hbar^2}{2\\km}\\right)\\int\\limits_{0}^{\\kL}\\left(\\dfrac{2}{\\kL}\\right)\\sin^2(\\kk\\kx)\\,d\\kx}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{l}{\\kKEavg} = \\mk{i}{\\left(\\dfrac{\\kk^2\\hbar^2}{2\\km}\\right)(1)}",
+       "uses": [
+        2
+       ],
+       "cap": "The integral is the normalization of $\\psi$, already done when the box's wavefunction was normalized."
+      },
+      {
+       "tex": "\\mk{l}{\\kKEavg} = \\mk{i}{\\dfrac{\\kk^2\\hbar^2}{2\\km}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{l}{\\kKEavg} = \\mk{i}{\\dfrac{\\pi^2\\hbar^2}{2\\km\\kL^2}}",
+       "uses": [
+        3
+       ]
+      }
+     ],
+     "src": "Example 3.7.2"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\kpsi(\\kx) = \\sqrt{\\dfrac{2}{\\kL}}\\sin(\\kk\\kx)"
+      },
+      {
+       "text": "$V(x) = 0$ from 0 to $L$."
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\kVavg} = \\mk{i}{\\int\\limits_{0}^{\\kL}\\kV(\\kx)\\,\\kpsi^*(\\kx)\\kpsi(\\kx)\\,d\\kx}",
+      "src": "(3.7.6)"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\kVavg} = \\mk{i}{\\int\\limits_{0}^{\\kL}\\sqrt{\\dfrac{2}{\\kL}}\\sin(\\kk\\kx)\\,(0)\\,\\sqrt{\\dfrac{2}{\\kL}}\\sin(\\kk\\kx)\\,d\\kx}",
+       "uses": [
+        0,
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{l}{\\kVavg} = \\mk{i}{0}",
+       "uses": []
+      }
+     ],
+     "src": "Example 3.7.2"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "step": 1
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\kHavg} = \\mk{k}{\\kKEavg} + \\mk{v}{\\kVavg}",
+      "src": "(3.7.5)"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\kHavg} = \\mk{k}{\\dfrac{\\pi^2\\hbar^2}{2\\km\\kL^2}} + \\mk{v}{0}",
+       "uses": [
+        0,
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{l}{\\kHavg} = \\mk{k}{\\dfrac{\\pi^2\\hbar^2}{2\\km\\kL^2}}",
+       "uses": []
+      }
+     ],
+     "src": "Example 3.7.2"
+    }
+   ]
+  },
+  {
+   "id": "example-3-7-3",
+   "what": "the average momentum of a particle in a box",
+   "source": "Physical Chemistry (LibreTexts), 3.7 The Average Momentum of a Particle in a Box is Zero, Example 3.7.3",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kphat = -i\\hbar\\dfrac{d}{d\\kx}",
+       "src": "(3.7.9)"
+      },
+      {
+       "tex": "\\kpsin(\\kx) = \\left(\\dfrac{2}{\\kL}\\right)^{1/2}\\sin\\left(\\dfrac{n\\pi\\kx}{\\kL}\\right)",
+       "src": "3.5"
+      },
+      {
+       "tex": "\\sin\\theta\\cos\\theta = \\tfrac{1}{2}\\sin 2\\theta"
+      },
+      {
+       "text": "$\\cos 2n\\pi = 1$ for every whole number $n$."
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\kpavg} = \\mk{i}{\\int\\limits_{0}^{\\kL}\\kpsin^*(\\kx)\\,\\kphat\\,\\kpsin(\\kx)\\,d\\kx}",
+      "src": "(3.7.3)",
+      "why": "The wavefunction is zero outside the box, so the integral runs from 0 to $L$."
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\kpavg} = \\mk{i}{\\int\\limits_{0}^{\\kL}\\kpsin^*(\\kx)\\left(-i\\hbar\\dfrac{d}{d\\kx}\\right)\\kpsin(\\kx)\\,d\\kx}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{l}{\\kpavg} = \\mk{i}{\\int\\limits_{0}^{\\kL}\\left(\\dfrac{2}{\\kL}\\right)^{1/2}\\sin\\left(\\dfrac{n\\pi\\kx}{\\kL}\\right)\\left(-i\\hbar\\dfrac{d}{d\\kx}\\right)\\left(\\dfrac{2}{\\kL}\\right)^{1/2}\\sin\\left(\\dfrac{n\\pi\\kx}{\\kL}\\right)d\\kx}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{l}{\\kpavg} = \\mk{i}{-i\\hbar\\left(\\dfrac{2}{\\kL}\\right)\\int\\limits_{0}^{\\kL}\\sin\\left(\\dfrac{n\\pi\\kx}{\\kL}\\right)\\left(\\dfrac{d}{d\\kx}\\right)\\sin\\left(\\dfrac{n\\pi\\kx}{\\kL}\\right)d\\kx}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{l}{\\kpavg} = \\mk{i}{-i\\hbar\\left(\\dfrac{2}{\\kL}\\right)\\left(\\dfrac{n\\pi}{\\kL}\\right)\\int\\limits_{0}^{\\kL}\\sin\\left(\\dfrac{n\\pi\\kx}{\\kL}\\right)\\cos\\left(\\dfrac{n\\pi\\kx}{\\kL}\\right)d\\kx}",
+       "uses": [],
+       "cap": "The derivative of $\\sin(n\\pi x/L)$ is $(n\\pi/L)\\cos(n\\pi x/L)$."
+      },
+      {
+       "tex": "\\mk{l}{\\kpavg} = \\mk{i}{-i\\hbar\\left(\\dfrac{2}{\\kL}\\right)\\left(\\dfrac{n\\pi}{\\kL}\\right)\\dfrac{1}{2}\\int\\limits_{0}^{\\kL}\\sin\\left(\\dfrac{2n\\pi\\kx}{\\kL}\\right)d\\kx}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{l}{\\kpavg} = \\mk{i}{-i\\hbar\\left(\\dfrac{2}{\\kL}\\right)\\left(\\dfrac{n\\pi}{\\kL}\\right)\\dfrac{1}{2}\\left[-\\dfrac{\\kL}{2n\\pi}\\cos\\left(\\dfrac{2n\\pi\\kx}{\\kL}\\right)\\right]_0^{\\kL}}",
+       "uses": [],
+       "cap": "An antiderivative of $\\sin(2n\\pi x/L)$ is $-\\dfrac{L}{2n\\pi}\\cos(2n\\pi x/L)$."
+      },
+      {
+       "tex": "\\mk{l}{\\kpavg} = \\mk{i}{-i\\hbar\\left(\\dfrac{2}{\\kL}\\right)\\left(\\dfrac{n\\pi}{\\kL}\\right)\\dfrac{1}{2}\\,\\dfrac{\\kL}{2n\\pi}\\left(1 - \\cos 2n\\pi\\right)}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{l}{\\kpavg} = \\mk{i}{0}",
+       "uses": [
+        3
+       ]
+      }
+     ],
+     "src": "Example 3.7.3"
+    }
+   ]
+  }
+ ]
+}
