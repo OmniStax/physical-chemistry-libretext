@@ -240,13 +240,11 @@
      {
       "part": "Total states for n = 2",
       "value": 8,
-      "tol": 0,
       "hint": "A level with total angular momentum quantum number $J$ has $2J + 1$ values of $m_J$."
      },
      {
       "part": "Total states for n = 3",
-      "value": 18,
-      "tol": 0
+      "value": 18
      }
     ],
     "solution": "<p>Each term has one state for each $m_J$ from $+J$ to $-J$, so its degeneracy is $2J + 1$: 2 for $J = \\tfrac{1}{2}$, 4 for $J = \\tfrac{3}{2}$ and 6 for $J = \\tfrac{5}{2}$, as the table gives. For n = 2: $^2S_{1/2}$ (2) + $^2P_{1/2}$ (2) + $^2P_{3/2}$ (4) = 8. For n = 3: $^2S_{1/2}$ (2) + $^2P_{1/2}$ (2) + $^2P_{3/2}$ (4) + $^2D_{3/2}$ (4) + $^2D_{5/2}$ (6) = 18. Both equal $2n^2$, twice the $n^2$ orbitals, so coupling the spin to the orbital motion regroups the states without changing their number.</p>"

@@ -1,0 +1,92 @@
+<section id="opening">
+<h2>The Hartree–Fock equations</h2>
+<p>The Hartree method discussed previously is useful as an introduction to the solution of many-particle system and to the concepts of self-consistency and of the self-consistent-field calculations, but its importance is confined to the history of physics. In fact the Hartree method is not just approximate, it is fundamentally wrong since its wavefunction is not antisymmetric to electron permutation! The <span data-concept="hartree-fock-method">Hartree-Fock approach</span> discussed below is a better approach, which correctly takes into account the antisymmetric character of the trial wavefunctions.</p>
+<p>Although the <em><span data-concept="hartree-equations">Hartree equations</span></em> are numerically tractable via the self-consistent field method, it is not surprising that such a crude approximation fails to capture elements of the essential physics. The Pauli exclusion principle demands that the many-body wavefunction be antisymmetric with respect to interchange of any two electron coordinates, e.g.</p>
+$$ \kPsi(\mathbf{r}_{1},\mathbf{r}_{2}, \ldots, \mathbf{r}_{N}) = - \kPsi(\mathbf{r}_{2},\mathbf{r}_{1}, \ldots, \mathbf{r}_{N}) \tag{8.7.1} $$
+<p>which clearly cannot be satisfied by the multi-electron wavefunctions of the form used in the Hartree Approximation, i.e., the orbital approximation (Equation 8.7.2).</p>
+$$ \kPsi(\mathbf{r}_1,\mathbf{r}_2, \ldots, \mathbf{r}_N) \approx \psi_{1}(\mathbf{r}_1)\psi_{2}(\mathbf{r}_2) \ldots \psi_{N}(\mathbf{r}_N) \tag{8.7.2} $$
+<p>This indistinguishability condition can be satisfied by forming a <span data-concept="slater-determinant">Slater determinant</span> of single-particle orbitals</p>
+$$ \kPsi(\mathbf{r}_{1}, \mathbf{r}_{2}, \ldots, \mathbf{r}_{N})= \dfrac{1}{\sqrt{N}} \left \vert\psi(\mathbf{r}_{1})\psi(\mathbf{r}_{2}) \ldots \psi(\mathbf{r}_{N}) \right\vert \tag{8.7.3} $$<sup class="fn" data-note="c-normalization"></sup>
+<p>This decouples the electrons resulting in $N$ single-particle <span data-concept="hartree-fock-equations"><strong>Hartree-Fock</strong> equations</span>:</p>
+$$ \underbrace{-\dfrac{\hbar^{2}}{2\km}\nabla^{2}\kpsii(\mathbf{r})}_{\text{kinetic energy}} + \underbrace{\kVnuc(\mathbf{r})\kpsii(\mathbf{r})}_{\text{electron-nucleus potential}} + \underbrace{\kVel(\mathbf{r})\kpsii(\mathbf{r})}_{\text{Hartree Term}} - \sum_{j} \int d\mathbf{r}^{\prime} \dfrac{\psi^{\star}_{j}(\mathbf{r}') \psi^{\star}_{i}(\mathbf{r}') \psi_{j}(\mathbf{r}) } {\left \vert \mathbf{r} - \mathbf{r}^{\prime} \right\vert} = \kepsi\kpsii(\mathbf{r}). \tag{8.7.4} $$<sup class="fn" data-note="c-exchange-integrand"></sup>
+<p>As with the <em>Hartree equations</em>, the first term is the kinetic energy of the $i^{th}$ electron</p>
+$$ -\dfrac{\hbar^{2}}{2\km}\nabla^{2}\kpsii(\mathbf{r}) $$
+<p>and the second term is the electron-nucleus potential between the $i^{th}$ electron and nucleus</p>
+$$ \kVnuc(\mathbf{r})\kpsii(\mathbf{r}) $$
+<p>The third term (sometimes called the “Hartree” term) is the electrostatic potential between the $i^{th}$ electron and the <strong>average</strong> charge distribution of the other $N-1$ electrons.</p>
+$$ \kVel(\mathbf{r})\kpsii(\mathbf{r}) = \kJjk = \int |\phi_j(r)|^2 |\phi_k(r')|^2 \dfrac{e^2}{r-r'} dr dr' \tag{8.7.5} $$<sup class="fn" data-note="c-hartree-term"></sup>
+<p>These three terms are identical to Hartree Equations with the product wavefunction ansatz (i.e., orbital approximation). The fourth term of Equation 8.7.4 is not in the Hartree Equations:</p>
+$$ \sum_{j} \int d\mathbf{r}^{\prime} \dfrac{\psi^{\star}_{j}(\mathbf{r}') \psi^{\star}_{i}(\mathbf{r}') \psi_{j}(\mathbf{r}) } {\left \vert \mathbf{r} - \mathbf{r}^{\prime} \right\vert} $$
+<p>and is the <span data-concept="exchange-integral"><em>exchange</em> term</span>. This term resembles the direct Coulomb term, but for the exchanged indices. It is a manifestation of the Pauli exclusion principle, and acts so as to separate electrons of the same spin. This “exchange” term acts only on electrons with the same spin and comes from the Slater determinant form of the wavefunction (Equation 8.7.3). Physically, the effect of exchange is for like-spin electrons to avoid each other. The exchange term adds considerably to the complexity of these equations.</p>
+</section>
+
+<section id="fock-operator">
+<h2>The Fock operator</h2>
+<p>The Hartree-Fock Equations in Equation 8.7.4 can be recast as series of Schrödinger-like equations:</p>
+$$ \kFhat | \kvarphii \rangle = \kepsi| \kvarphii \rangle \tag{8.7.6} $$
+<p>where $\kFhat$ is called the <strong><span data-concept="fock-operator">Fock operator</span></strong> and $\{| \kvarphii \rangle \}$ are the Hatree-Fock orbitals with corresponding energies $\kepsi$.</p>
+<p>The Fock operator is a one-electron operator and solving a Hartree-Fock equation gives the energy and Hartree-Fock orbital for one electron. For a system with 2N electrons, the variable i will range from 1 to N; i.e there will be one equation for each orbital. The reason for this is that only the spatial wavefunctions are used in Equation 8.7.6. Since the spatial portion of an orbital can be used to describe two electrons, each of the energies and wavefunctions found by solving Equation 8.7.6 will be used to describe two electrons.</p>
+<p>The nature of the Fock operator reveals how the Hartree-Fock (HF) or Self-Consistent Field (SCF) Method accounts for the electron-electron interaction in atoms and molecules while preserving the idea of <strong>independent atomic orbitals</strong>. The wavefunction written as a Slater determinant of spin-orbitals is necessary to derive the form of the Fock operator, which is</p>
+$$ \begin{aligned} \kFhat &= \kHzerohat + \sum _{j=1}^N ( 2 \kJhat - \kKhat )  \\[4pt] &= -\dfrac {\hbar ^2}{2\km} \nabla ^2 - \dfrac {Ze^2}{4 \pi \epsilon _0 r} + \sum _{j=1}^N (2\kJhat - \kKhat )  \end{aligned} \tag{8.7.7} $$
+<p>As shown by the expanded version on the far right, the first term in this equation, $\kHzerohat$, is the familiar hydrogen-like operator that accounts for the kinetic energy of an electron and the potential energy of this electron interacting with the nucleus. The next term accounts for the potential energy of one electron in an average field created by all the other electrons in the system. The $\hat {J}$ and $\hat {K}$ operators result from the electron-electron repulsion terms in the full Hamiltonian for a multi-electron system. These operators involve the one-electron orbitals as well as the electron-electron interaction energy.</p>
+<p>The Fock operator (Equation 8.7.7) depends on <strong>all occupied</strong> orbitals (because of the exchange and Coulomb operators). Therefore, a specific orbital can only be determined if all the others are known. One must use iterative methods to solve the HF equations like the Self-consistent field method discussed previously for the Hartree Approximation.</p>
+<div class="note">
+<div class="eyebrow">Note</div>
+<h3>Exchange Energy</h3>
+<p>The <span data-concept="exchange-interaction">exchange interaction</span> is a quantum mechanical effect that only occurs between identical particles. Despite sometimes being called an exchange force in analogy to classical force, <strong>it is not a true force</strong>, as it lacks a force carrier. The effect is due to the wavefunction of indistinguishable particles being subject to exchange symmetry, that is, either remaining unchanged (symmetric) or changing its sign (antisymmetric) when two particles are exchanged. Both bosons and fermions can experience the exchange interaction. For fermions, it is sometimes called Pauli repulsion and related to the Pauli exclusion principle. For bosons, the exchange interaction takes the form of an effective attraction that causes identical particles to be found closer together, as in Bose–Einstein condensation.</p>
+</div>
+<div class="example" id="ex-8-7-1">
+<h3>Example 8.7.1 · Hartree-Fock Energy of Helium</h3>
+<p>For example, the electron 1 in helium (with $Z=2$), then</p>
+$$ \kHzerohat (1) = - \dfrac {\hbar ^2}{2\km} \nabla ^2_1 - \dfrac {2e^2}{4 \pi \epsilon _0 r_1} $$
+</div>
+<p>The Fock operator is couched in terms of the coordinates of the one electron whose perspective we are taking (which we will call electron 1 throughout the following discussion), and the <strong>average field created by all the other electrons</strong> in the system is built in terms of the coordinates of a generic “other electron” (which we’ll call electron 2) that is considered to occupy each orbital in turn during the summation over the $N$ spatial orbitals. The best possible one-electron wavefunctions, by definition, will give the <strong>lowest possible total energy</strong> for a multi-electron system used with the complete multielectron Hamiltonian to calculate the expectation value for the total energy of the system. These wavefunctions are called the <strong>Hartree-Fock wavefunctions</strong> and the calculated total energy is the <span data-concept="hartree-fock-energy">Hartree-Fock energy</span> of the system.</p>
+<p>As with the Hartree Equations, solving the Hartree-Fock Equations is mathematically equivalent to assuming each electron interacts only with the average charge cloud of the other electrons. This is how the electron-electron repulsion is handled. This also why this approach is also called the <strong><span data-concept="self-consistent-field-method">Self-Consistant Field (SCF)</span></strong> approach.</p>
+</section>
+
+<section id="hartree-fock-energy">
+<h2>Hartree-Fock Energy</h2>
+<p>The Hartree-Fock equations $h_e \kphii = \kepsi \kphii$ imply that the <span data-concept="hartree-fock-orbital-energy">orbital energies</span> $\kepsi$ can be written as:</p>
+<figure class="dv" id="drv-hf-orbital-energy"></figure>
+<p>where $T + V$ represents the kinetic ($T$) and nuclear attraction ($V$) energies, respectively. Thus, $\kepsi$ is the average value of the kinetic energy plus Coulombic attraction to the nuclei for an electron in $\kphii$ plus the sum over all of the spin-orbitals occupied in $\psi$ of Coulomb minus Exchange interactions of these electrons with the electron in $\kphii$.</p>
+<p>If $\kphii$ is an occupied spin-orbital, the $j = i$ term $[ J_{i,i} - K_{i,i}]$ disappears in the above sum and the remaining terms in the sum represent the Coulomb minus exchange interaction of $\kphii$ with all of the $N-1$ other occupied spin-orbitals. If $\kphii$ is a <span data-concept="virtual-orbital">virtual spin-orbital</span>, this cancelation does not occur because the sum over $j$ does not include $j = i$. So, one obtains the Coulomb minus exchange interaction of $\kphii$ with all $N$ of the occupied spin-orbitals in $\psi$. Hence the energies of occupied orbitals pertain to interactions appropriate to a total of $N$ electrons, while the energies of virtual orbitals pertain to a system with $N+1$ electrons. This difference is very important to understand and to keep in mind.</p>
+<p>To give an idea of how well HF theory can predict the ground state energies of several atoms, consider Table 8.7.1 below:</p>
+<div class="book-table">
+  <div class="tcap"><span class="eyebrow">Table 8.7.1</span><span>Hartree-Fock Calculations of Ground Energies of Select Atoms (all energies are in $R_H$)</span></div>
+  <table>
+    <thead><tr><th><strong>Atom</strong></th><th><strong>Hartree-Fock Energy</strong></th><th><strong>Experiment</strong></th></tr></thead>
+    <tbody>
+      <tr><td>$He$</td><td>$-5.72$</td><td>$-5.80$</td></tr>
+      <tr><td>$Li$</td><td>$-14.86$</td><td>$-14.96$</td></tr>
+      <tr><td>$Ne$</td><td>$-257.10$</td><td>$-257.88$</td></tr>
+      <tr><td>$Ar$</td><td>$-1053.64$</td><td>$-1055.20$</td></tr>
+    </tbody>
+  </table>
+</div>
+</section>
+
+<section id="koopmans-theorem">
+<h2>Koopmans' Theorem</h2>
+<p><strong><span data-concept="koopmans-theorem">Koopmans' theorem</span></strong> states that the first ionization energy is equal to the negative of the orbital energy of the highest occupied molecular orbital. Hence, the ionization energy required to generated a cation and detached electron is represented by the removal of an electron from an orbital without changing the wavefunctions of the other electrons. This is called the "<span data-concept="frozen-orbital-approximation">frozen orbital approximation</span>." Let us consider the following model of the detachment or attachment of an electron in an $N$-electron system.</p>
+<ol><li>In this model, both the parent molecule and the species generated by adding or removing an electron are treated at the single-determinant level.</li><li>The Hartree-Fock orbitals of the parent molecule are used to describe both species. It is said that such a model neglects orbital relaxation (i.e., the re-optimization of the spin-orbitals to allow them to become appropriate to the daughter species).</li></ol>
+<p>Within this model, the energy difference between the daughter and the parent can be written as follows ($\phi_k$ represents the particular spin-orbital that is added or removed:</p>
+<ul><li><p>for electron detachment (vertical ionization energies)</p>
+$$ \kENm - \kEN = - \kepsk \tag{8.7.8} $$</li><li><p>and for electron attachment (electron affinities)</p>
+$$ \kEN - \kENp = - \kepsk . \tag{8.7.9} $$</li></ul>
+<p>The Hartree-Fock equations deal with exchange exactly; however, the equations neglect more detailed correlations due to many-body interactions. The effects of <span data-concept="electron-correlation">electronic correlations</span> are not negligible; indeed the failure of Hartree-Fock theory to successfully incorporate correlation leads to one of its most celebrated failures.</p>
+<div class="example" id="ex-8-7-2">
+<h3>Example 8.7.2 · Electron Affinity</h3>
+<p>Let’s derive this result for the case in which an electron is added to the $N+1^{st}$ spin-orbital. The energy of the $N$-electron determinant with spin-orbitals $\phi_1$ through $f_N$ occupied is</p>
+<figure class="dv" id="drv-example-8-7-2"></figure>
+<p>That is, the energy difference is equal to minus the expression for the energy of the $N+1^{st}$ spin-orbital, which was given earlier.</p>
+</div>
+<div class="note">
+<div class="eyebrow">Note</div>
+<h3>Advanced: Electron Correlation and the "Exchange Hole"</h3>
+<p>In the Copenhagen Interpretation, the squared modulus of the wavefunction gives the probability of finding a particle in a given place. The many-body wavefunction gives the N-particle distribution function, i.e. $|Φ(r_1, ..., r_N )|^2$ is the probability density that particle 1 is at $r_1$, ..., and particle $N$ is at $r_N$. However, when trying to work out the interaction between electrons, what we want to know is the probability of finding an electron at $r$, given the positions of all the other electrons $\{r_i\}$. This implies that the electron behaves quantum mechanically when we evaluate its wavefunction, but as a classical point particle when it contributes to the potential seen by the other electrons.</p>
+<figure class="sim" id="sim-exchange-hole" data-figure="8.7.2" data-original="/media/ch08/141704-imageedit_2_5486984252.gif" data-original-caption="Normalized Conditional Probability for from electron-electron interactions (excluding coulomb effects) in (A) the Hartree approximation and (B) the Hartree-Fock approximation.">
+  <div class="sim-head"><span class="eyebrow">Figure 8.7.2</span><span>Switch between the Hartree and the <span data-concept="hartree-fock-method">Hartree–Fock</span> pictures and between electrons of the same and the opposite spin. Only Hartree–Fock with the same spin opens a hole around the electron at $r = 0$, and the <span data-type="probability-density">density</span> missing from the shaded hole adds up to one electron.</span></div>
+</figure>
+<p>The contributions of electron-electron interactions in N-electron systems within the Hartree and Hartree-Fock methods are shown in Figure 8.7.2. The conditional electron probability distributions $\knr$ of $N-1$ electrons around an electron with given spin situated at $r=0$. Within the Hartree approximation, all electrons are treated as independent, therefore $\knr$ is structureless. However, within the Hartree-Fock approximation, the $N$-electron wavefunction reflects the Pauli exclusion principle and near the electron at $r=0$ the <span data-concept="exchange-hole">exchange hole</span> can be seen where the the density of spins equal to that of the central electron is reduced. Electrons with opposite spins are <strong>unaffected</strong> (not shown).</p>
+</div>
+</section>
