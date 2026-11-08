@@ -1046,3 +1046,40 @@ terms; ¹⁶O₂ allowing only odd rotational levels; CO₂ and NO₂ C_V,m near
 Tool fixes: `lt2md.py` reads a `div.box-objectives` (18.9's); `md2html.py` reads a `## Exercises`
 list and an unbraced `\ce X`. Chapters 1–17 reconverted to scratch: 196 of 197 source.md
 byte-identical, the other (1.3) from an earlier converter change. `check:content`: no errors.
+
+## Chapter 16 pass · 2026-11-08
+
+Built: the intro, 16.1–16.7 and the summary page (16.E empty, not built). 12 figure rows: 10
+interactive (2 moving: particles kicking the wall, attraction at the wall; 8 still, among them
+the folds 16.1.1 + 16.3.1 and 16.3.4 + 16.4.1 and the two Sims of 16.5 and 16.7; no 3D), 1
+faithful copy (16.1.2) and the summary's kept Figure 7.1; 16.1's system-and-surroundings
+sketch stays an inline image. 7 derivations (16.1 the ideal gas law, 16.2 the Redlich–Kwong
+cubic and constants, 16.3 the van der Waals critical constants, 16.4 reduced variables, 16.7
+the virial series and the constants from molecular parameters). 15 exercises in the Exercises
+document: 16.6's 2 keyed book boxes and 13 AI exercises. 23 AI-marked corrections in footnotes.
+
+Chapter pass: 16.3's derivation had swallowed the passage that bolds "critical volume": the
+book's "Hence, we have two equations in two unknowns …" paragraph is back after the derivation
+with the `critical-volume` and `critical-pressure` spans, and "This is the critical volume",
+"To solve the equations, first divide one by the other", "Now use either of the two
+conditions …" and "Finally, plugging …" are the reasons of their steps; the two criticality
+displays, which the derivation starts from, are no longer printed above it as well (the
+sentence's colon now leads into the derivation). 16.1's derivation facts carry the book's
+elastic-collision, constant-speed and ⟨F⟩ sentences in place of paraphrases. 16.6's "equation
+2.1" links the Lennard-Jones block (`xref`). Variables rows added: 16.3 `T_r` (its Standing–Katz
+sentence) and 16.2 `r`, whose slider name in Figure 16.2.1 was plain ink and is now `\kr`. A
+U+200B in 16.4's prose (as converted) removed. `node --check` clean on the seven `figures.js`.
+No two-argument `\braket`, no bare `\k` script, no U+2011/U+FEFF; every in-book link carries
+`xref`/`figref`; every page has `ai`, `built` and `notes` (the book prints no objectives).
+`colours:default` rerun (every type kept its colour). `check:content`: no errors, no warnings
+from the book's Chapter 16 (those left are Chapters 17–18's). Every figure screenshot in light
+and dark (contact sheets in the pass's scratch folder); no console or KaTeX error on any
+Chapter 16 page, derivations included.
+
+Known gaps: the new types sit close to their neighbours. Pressure and amount are 0.106 apart
+in OKLab in light and 0.095 in dark, under the 0.12 target, and volume and molar-volume are
+0.118; pressure shares temperature's family (0.13 and 0.16), so P and T read as two pinks of
+one hue in dark. Temperature and length (0.07, an older pair) look alike on 16.1's wall
+figure, where the T and a sliders sit side by side. A pin (dry run: pressure onto charge's
+blue, charge taking the plum, no page worse) is the owner's call. 16.1's third-law fact
+restates the sentence printed just before the derivation (the prose-first reading).
