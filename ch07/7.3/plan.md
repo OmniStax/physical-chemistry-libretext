@@ -29,7 +29,7 @@ None qualify (exploration: score 0).
 
 ## Corrections
 
-Footnotes: "hydrogenic spin-orbitals" (spin plays no part); (7.3.1)'s r_j and a_o (marker after the display); Table 7.3.1's F ζ₁s 8.56, checked against Hehre, Stewart and Pople (1969), which give 8.65 (the one-unit step 7.66 → 8.65 → 9.64 confirms it); Exercise 7.3.2's key (in the card).
+Footnotes: "hydrogenic spin-orbitals" (spin plays no part); (7.3.1)'s r_j and a_o (marker after the display); Table 7.3.1's F ζ₁s 8.56, checked against Clementi and Raimondi (1963), whose single-zeta exponents the 1s column rounds (F 1s 8.6501), so 8.65 (the one-unit step 7.66 → 8.65 → 9.64 agrees; corrected at the chapter pass, which had cited Hehre, Stewart and Pople); Exercise 7.3.2's key (in the card).
 
 ## Wanted at chapter level
 

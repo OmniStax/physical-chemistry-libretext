@@ -331,3 +331,44 @@ drafts only five built sections' change (ħ, ½ in maths). `check:content`: no
 errors, no warnings. Open for the orchestrator: three figures printed 8.8.1,
 whether the microstate Sim replaces Example 8.8.12's 13 charts, the Hα line
 intensities' source, the exchange-hole curve's source.
+
+## Chapter 6 pass · 2026-11-08
+
+Built: the intro, 6.1–6.7 and the summary page. 12 interactive figures (no
+kept photographs; the two answer images stay in their answers), 2 moving (the
+1s detections of 6.5, the classical orbit of 6.6), 4 with a 3D view (the
+spherical harmonics of 6.2, the vector model's cones of 6.3, the orbit and the
+p and d point clouds of 6.6); 7 derivations (6.1: 2, 6.3: 3, 6.5: 1, 6.6: 1);
+26 exercises, all `exercise` kind in the Exercises document: 9 keyed, 9 with AI
+solutions, 8 AI exercises; 55 footnotes (corrections and notes).
+
+Chapter pass: the builders' wanted rows (6.6's `L` and `psi` variables, the
+`psi` row placed before 6.7's so the redefinition check reads it in order;
+6.7's `r_1`, `V_1` → `electron-1`, `r_2`, `V_2` → `electron-2`; the form anchors
+of `circular-orbit-angular-momentum` and 6.7's five forms). θ converted to
+`\ktheta` in 6.1–6.6's text and the summary, the derivation lines (and the 6.3
+reasons that already use macros), and the readouts of 6.2 and 6.6; every ch06
+θ row already meant the polar angle, so no `redefines`. Kept plain: exercises,
+footnotes, hover names, 6.1 and 6.5's plain-math facts, and 6.3's readout
+cos θ, the cone's angle, which is not the electron's polar angle. 6.6's
+`sim-orbitals` now opens 40° above the xy-plane and 22° off y (turn −2.75, tilt
+0.7), so the x lobes are side on and 3p_x's radial sphere shows between them;
+plan line updated. The sign tones of `sim-harmonics` and `sim-orbitals` now step
+toward whichever of ink and ground is farther from the wavefunction hue in
+lightness, so they part on both themes whatever hue the palette deals. The six
+hand links in 6.5 to `#6.2-sim-radial` were plain anchors and went nowhere;
+now `class="figref"`, and a click opens 6.2. Example 6.3.1: the book's "the
+first two terms and final two terms can be rewritten as different commutators"
+restored as the reason of its step. No `\braket`, no bare `\k` script, no
+U+2011/U+FEFF in maths (one U+2011 in 6.2's prose, as printed).
+`colours:default` rerun. `check:content`: no errors, no warnings. Every figure
+screenshot in light, 6.2, 6.5, 6.6 and 6.7 in dark; no console or KaTeX error
+on any Chapter 6 page, derivations included.
+
+Known gaps: the link into 6.2 lands about a screen above `sim-radial` (the app
+scrolls before the figures above it have drawn); the palette moved several times
+during the pass as other chapters landed, and at one point dealt the
+wavefunction and angle types near hues; 6.7's two electrons are close blues in
+the figure; connective sentences under 6.1's and 6.5's derivations ("Substituting
+Equation 6.1.6 into Equation 6.1.5 produces", "Note the wavefunction of hydrogen
+1s orbital which is") stay folded into them.

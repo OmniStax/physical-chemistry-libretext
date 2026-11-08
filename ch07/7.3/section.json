@@ -208,7 +208,7 @@
   {
    "id": "c-fluorine",
    "kind": "correction",
-   "html": "Hehre, Stewart and Pople (J. Chem. Phys. 51, 2657 (1969)), the source of these exponents, give $\\zeta_{1s} = 8.65$ for fluorine. That value keeps the step of about one unit per element, from 7.66 for oxygen to 9.64 for neon."
+   "html": "The 1s column is Clementi and Raimondi's single-zeta exponents (J. Chem. Phys. 38, 2686 (1963)) rounded to two places, and their value for fluorine is 8.6501, so $\\zeta_{1s} = 8.65$. That value keeps the step of about one unit per element, from 7.66 for oxygen to 9.64 for neon."
   },
   {
    "id": "c-key732",
