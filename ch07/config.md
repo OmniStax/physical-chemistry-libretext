@@ -55,3 +55,15 @@ the Exercises document (`place: end`).
 
 None yet; the open questions are at the end of the agent's report and in
 `exploration.md` (marked "orchestrator").
+
+## Decisions taken by the orchestrator (2026-11-08)
+
+- **Two figures printed "Figure 7.4.1"**: the perturbation Sim keeps the number 7.4.1. The flowchart is a faithful copy shown unnumbered (eyebrow "Figure"), with a correction footnote saying the book prints it as a second Figure 7.4.1; each citation links by hand to the figure its sentence means.
+- **7.4.1 replacement**: the book's perturbations only (constant, half-box); the tilted box is dropped, since the book doesn't use it.
+- **⟨n⁰|n¹⟩ = 0**: a node note, not a fact.
+- **Fluorine's ζ₁s (Table 7.3.1)**: the builder checks 8.56 against the Hehre–Stewart–Pople set and writes a correction only if the book's value is wrong.
+- **Shielding figure**: the readout uses the charge enclosed inside r, reusing 6.5's enclosed fraction.
+- **Example 7.2.1's derivation** stops at the quadratic, as the book does.
+- **Extra simulations**: the 7.3 three-exponential orbital Sim only.
+- **Forms** carry the corrected maths where the book's is wrong, as in Chapter 6.
+- **Captions** have no fixed length.
