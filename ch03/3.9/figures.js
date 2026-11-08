@@ -32,7 +32,7 @@ const UP = '#c2413a', DOWN = '#2f6ab3';
    Orbit: azimuth free, elevation -80 to 80 deg (no ground; the z axis stays upright); no spin, no zoom. */
 (function () {
   const d = F.sim(root, 'sim-box3d');
-  const H = 560, FIT = 2.6, N = 3500, RPX = 2.6;
+  const H = 560, FIT = 2.6, N = 3500, RPX = 3;
   const S = F.space3d(d, { box: [[-1, 1], [-1, 1], [-1, 1]], h: H, tilt: 0.35, fit: FIT, pitch: [-80 * Math.PI / 180, 80 * Math.PI / 180], spin: 'off', zoom: false });
   const opts = [1, 2, 3].map((k) => ({ value: String(k), label: String(k) }));
   const NX = F.choice(d.controls, { label: 'n_x', options: opts, value: '1', aria: 'the quantum number along x', key: 'nx' });
@@ -55,12 +55,6 @@ const UP = '#c2413a', DOWN = '#2f6ab3';
     return out;
   });
   const Q = (n, u) => { const T = INV[n], x = u * 1600, i = Math.min(1599, Math.floor(x)); return T[i] + (T[i + 1] - T[i]) * (x - i); };
-  /* one point's octahedron, radius r, as eight triangles */
-  const gem = (c, r, out) => {
-    for (const sx of [-1, 1]) for (const sy of [-1, 1]) for (const sz of [-1, 1])
-      out.push([[c[0] + sx * r, c[1], c[2]], [c[0], c[1] + sy * r, c[2]], [c[0], c[1], c[2] + sz * r]]);
-  };
-  const s3 = Math.sqrt(3), pxu = (2 * 7 * Math.tan(Math.PI / 12)) / H / (FIT / s3), R = RPX * pxu;
   const rest = () => F.mixColor(PAL.panel, PAL.ink, 0.1);
   const scale = () => [[-1, F.fact(DOWN)], [0, rest()], [1, F.fact(UP)]];
   let last = '';
@@ -105,11 +99,11 @@ const UP = '#c2413a', DOWN = '#2f6ab3';
         for (let i = 0; i < N; i++) {
           const u = U[i].map((ui, a) => (ks[a] >= 1 || fr[a] === n[a] ? Q(n[a], ui) : Q(fr[a], ui) + (Q(n[a], ui) - Q(fr[a], ui)) * ks[a]));
           const s = Math.sin(n[0] * Math.PI * u[0]) * Math.sin(n[1] * Math.PI * u[1]) * Math.sin(n[2] * Math.PI * u[2]);
-          gem(u.map((ua, a) => (ua - 0.5) * D[a]), R, s >= 0 ? plus : minus);
+          (s >= 0 ? plus : minus).push(u.map((ua, a) => (ua - 0.5) * D[a]));
         }
         S.set('cloud', [
-          { k: 'faces', faces: plus, color: F.fact(UP), alpha: 1, name: 'where ψ > 0: each point a place the particle could be found' },
-          ...(minus.length ? [{ k: 'faces', faces: minus, color: F.fact(DOWN), alpha: 1, name: 'where ψ < 0: each point a place the particle could be found' }] : []),
+          ...F.space.points(plus, F.fact(UP), { r: RPX, name: 'where ψ > 0: each point a place the particle could be found' }),
+          ...F.space.points(minus, F.fact(DOWN), { r: RPX, name: 'where ψ < 0: each point a place the particle could be found' }),
         ]);
         /* the nodal planes of the state, the old ones fading out while the cloud morphs */
         const planes = [];
