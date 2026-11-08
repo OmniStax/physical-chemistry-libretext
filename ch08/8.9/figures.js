@@ -25,7 +25,7 @@ const unit = (a) => { const n = Math.hypot(...a) || 1; return mul(a, 1 / n); };
    a fixed direction. Opens on Figure 8.9.2's case, L = 1, S = 1/2, J = 3/2,
    m_J = +1/2. The scene is scaled
    per choice of L and S so the longest J they allow reaches 4.2 of the box's 5
-   (the readout gives the true lengths). J's azimuth is held at 30 degrees: turning J about z is
+   (the readout gives the true lengths). J's azimuth is held at 100 degrees, side-on to the opening view: turning J about z is
    6.3.1's figure. Free orbit, pitch bound to +-80 degrees so z stays
    upright; no spin, no zoom; flat from the opening view without WebGL.
    S is drawn from the tip of L so the triangle J = L + S reads at once.
@@ -51,8 +51,8 @@ const unit = (a) => { const n = Math.hypot(...a) || 1; return mul(a, 1 / n); };
     const u = 4.2 / mag(L + S);                      /* the scene's scale: the longest J this L and S allow reaches 4.2 */
     const aL = mag(L) * u, aS = mag(S) * u, aJ = mag(J) * u, zJ = mJ * u;
     const cl = C('angular-momentum'), ca = C('angle');
-    /* J on its cone about z: polar angle from m_J, azimuth held at 30 degrees */
-    const thJ = Math.acos(zJ / aJ), ph = 30 * DEG;
+    /* J on its cone about z: polar angle from m_J, azimuth held at 100 degrees */
+    const thJ = Math.acos(zJ / aJ), ph = 100 * DEG;
     const jh = [Math.sin(thJ) * Math.cos(ph), Math.sin(thJ) * Math.sin(ph), Math.cos(thJ)];
     const Jt = mul(jh, aJ);
     /* two unit vectors square to J, for the cone of L about J */

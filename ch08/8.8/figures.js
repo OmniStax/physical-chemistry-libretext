@@ -176,7 +176,7 @@ const LETTER = 'SPDFGHIKLM';
         const c = counts.get(G.key2(M, s)), x = x0 + (j + 0.5) * cw;
         text(ctx, String(c), x, y, alpha(c ? PAL.ink : PAL.muted, k * (c ? 1 : 0.6)), { size: 28, weight: c ? 600 : 400, align: 'center', base: 'middle' });
         const list = G.cell.get(G.key2(M, s)) || [];
-        hits.push({ x, y, r: Math.min(ch, cw) / 2, name: `M_l = ${M}, M_s = ${sgn(s)}: ${list.length} microstate${list.length === 1 ? '' : 's'}${list.length ? ' — ' + list.slice(0, 8).map((m) => '(' + m.map(ms).join(' ') + ')').join(' ') + (list.length > 8 ? ' …' : '') : ''}${done ? `; ${c} left` : ''}` });
+        hits.push({ x, y, r: Math.min(ch, cw) / 2, name: `M_l = ${M}, M_s = ${sgn(s)}: ${list.length} microstate${list.length === 1 ? '' : 's'}${list.length ? ': ' + list.slice(0, 8).map((m) => '(' + m.map(ms).join(' ') + ')').join(' ') + (list.length > 8 ? ' …' : '') : ''}${done ? `; ${c} left` : ''}` });
       });
     });
     /* the rectangle the current term claims */
