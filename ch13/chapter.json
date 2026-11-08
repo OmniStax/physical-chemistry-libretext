@@ -427,8 +427,9 @@
   {
    "sym": "E_r",
    "concept": "nonrigid-rotor-energy-levels",
-   "meaning": "the total rotational energy, kinetic plus the potential energy of the stretch",
-   "section": "13.4"
+   "meaning": "the total rotational energy of the non-rigid rotor, kinetic plus the potential energy of the stretched bond",
+   "section": "13.4",
+   "redefines": true
   },
   {
    "sym": "dr",
@@ -716,8 +717,9 @@
   {
    "sym": "R",
    "type": "length",
-   "meaning": "the fixed bond length of the rigid diatomic",
-   "section": "13.8"
+   "meaning": "the fixed bond length of a rigid diatomic molecule",
+   "section": "13.8",
+   "redefines": true
   },
   {
    "sym": "theta",
@@ -942,8 +944,9 @@
   {
    "sym": "dr",
    "type": "length",
-   "meaning": "the displacement of an atom from its equilibrium position, Δr_o(C) or Δr_o(O)",
-   "section": "13.9"
+   "meaning": "the displacement of an atom of CO from its equilibrium position, Δr_o(C) or Δr_o(O)",
+   "section": "13.9",
+   "redefines": true
   },
   {
    "sym": "r_0",
