@@ -284,12 +284,16 @@ class Drafter:
         return out
 
     def item(self, ls):
-        """A list item: one run of prose, or paragraphs around a display it holds."""
-        if not any(x.startswith("$$") for x in ls):
+        """A list item: one run of prose, or paragraphs around a display, a
+        table or a figure it holds (Example 11.2.2's table of α_j and C_j
+        sits inside its first item)."""
+        def block(x):
+            return x.startswith("$$") or x.startswith("> ") or x.startswith("|")
+        if not any(block(x) for x in ls):
             return self.inline(" ".join(x for x in ls if x))
         paras, cur = [], []
         for x in ls + [""]:
-            if x.startswith("$$") or not x:
+            if block(x) or not x:
                 if cur:
                     paras.append(" ".join(cur))
                     cur = []

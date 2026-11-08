@@ -505,3 +505,26 @@ folder, all 101 source.md byte-identical. `check:content`: no errors from the bo
 or Chapter 10 (one warning, 9.12's Figure 9.12.11). Open for the orchestrator: the
 two duplicated printed figure numbers (10.2.4, 10.3.5) and the CC BY-NC figures on
 10.6's CC BY-SA page.
+
+## Chapter 11 prep · 2026-11-08
+
+Prep only, no section built. Fetched Chapter 11's images (7, into `media/ch11/`),
+converted the landing page (one paragraph: an `intro/` page), 11.1–11.4 and the
+empty 11.E (no summary page exists); wrote `ch11/exploration.md`, `ch11/config.md`
+(agreed on Chapter 1's terms), `ch11/chapter.json` (4 sections, the intro record, 58
+variables) and merged `ch11/book-rows.json`: no new type, 25 symbols, 27 concepts,
+54 edges. Drafts made for the intro and 11.1–11.4.
+
+Found: no empty page; 11.1's first half repeats 8.5–8.6 (cited, not rebuilt); 11.E
+is empty. Exercises: Example 11.2.2 has no solution (1 card, AI solution); 6 AI
+exercises proposed. 1 derivation to build (11.3's cost of a double-zeta basis), 2
+cited. Figures: 3, all still and 2D (the STO-NG fit, single/double/triple zeta, a
+polarization function); 3 extra Sims offered. The tables of 11.3 and 11.4 lost their
+header rows at the source; footnotes proposed.
+
+Tool fixes: `lt2md.py` joins touching `<em>`s (the landing page's "ab initio" came
+out as bold); Chapters 1–10 reconverted to a scratch folder, 110 of 111 source.md
+byte-identical, 1.3's "*kinetic* *energies*" now "*kinetic energies*" (same text,
+left unchanged in the repo). `md2html.py` drafts a table inside a list item
+(Example 11.2.2); Chapters 1–10's drafts unchanged. `check:content`: no errors (one
+warning, 9.12's Figure 9.12.11).

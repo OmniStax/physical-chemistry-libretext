@@ -491,6 +491,14 @@ def convert(page_json, title, page_ids, prefix=""):
     # span styled display:none, invisible on the live page
     for s in soup.find_all(style=re.compile(r"display\s*:\s*none")):
         s.decompose()
+    # an italic run split into touching <em>s (11's landing page writes
+    # "a<em>b </em><em>i</em><em>nitio</em><em>, </em>") is one run: written
+    # apart, the markers touch ("*i**nitio*") and read as bold
+    for e in soup.find_all(["em", "i"]):
+        while e.parent is not None and isinstance(e.next_sibling, Tag) and e.next_sibling.name == e.name:
+            nxt = e.next_sibling.extract()
+            for k in list(nxt.contents):
+                e.append(k)
     conv = Converter(page_ids, prefix)
     root = soup.body or soup
     text = conv.children(root)

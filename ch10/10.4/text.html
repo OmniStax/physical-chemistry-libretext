@@ -1,0 +1,103 @@
+<section id="photoelectron-spectroscopy">
+<h2>Photoelectron spectroscopy</h2>
+<p><strong><span data-concept="photoelectron-spectroscopy">Photoelectron spectroscopy</span></strong> (PES) utilizes photo-ionization and analysis of the kinetic energy distribution of the emitted photoelectrons to study the composition and electronic state of the surface region of a sample.</p>
+<ul><li><strong>X-ray Photoelectron Spectroscopy</strong> (XPS) uses soft x-rays (with a photon energy of 200-2000 eV) to examine electrons in <em>core</em>-levels.</li><li><strong>Ultraviolet Photoelectron Spectroscopy</strong> (UPS) using vacuum UV radiation (with a photon energy of 10-45 eV) to examine electrons in <em>valence</em> levels.</li></ul>
+<p>Both photoelectron spectroscopies are based upon a single photon in/electron out process. The energy of a photon of all types of electromagnetic radiation is given by the <span data-concept="photon">Planck–Einstein relation</span>:</p>
+$$ \kE = h \knu \tag{10.4.1} $$
+<p>where $h$ is Planck constant and $\knu$ is the frequency (Hz) of the radiation. UPS is a powerful technique to exam molecular electron structure since we are interested in the molecular orbitals from polyatomic molecules (especially the valence orbitals) and is the topic of this page.</p>
+<p>Photoelectron spectroscopy uses monochromatic sources of radiation (i.e. photons of fixed energy). In UPS the photon interacts with valence levels of the molecule or solid, leading to ionization by removal of one of these valence electrons. The kinetic energy distribution of the emitted photoelectrons (i.e. the number of emitted photoelectrons as a function of their kinetic energy) can be measured using any appropriate electron energy analyzer and a photoelectron spectrum can thus be recorded.</p>
+<figure class="sim" id="sim-analyzer" data-figure="10.4.1" data-original="/media/ch10/347589-10.4.1.svg" data-original-width="575" data-original-caption="Diagram of a basic, typical PES instrument used in UPS, where the radiation source is an UV light source. When the sample is irradiated, the released photoelectrons pass through the lens system which slows them down before they enter the energy analyzer. The analyzer shown is a spherical deflection analyzer which the photoelectrons pass through before they are collected at the collector slit. (CC BY 4.0; Ümit Kaya via LibreTexts)">
+  <div class="sim-head"><span class="eyebrow">Figure 10.4.1</span><span>Photons from a helium lamp (<span data-type="energy">21.22 eV</span>) ionize water, and electrons leave with three different <span data-type="energy">kinetic energies</span>, one for each orbital they come from. Slide the analyzer's <span data-type="energy">pass energy</span>: the field bends only electrons with that energy onto the exit slit, the rest strike the walls, and the counts recorded at each setting trace the spectrum below.</span></div>
+</figure>
+</section>
+
+<section id="photoionization">
+<h2>The energy of a photoelectron</h2>
+<p>The process of photoionization can be considered in several ways. One way is to look at the overall process for a species $A$:</p>
+<figure class="dv" id="drv-photoelectron-ke"></figure>
+<p>The <span data-concept="vertical-ionization-energy">vertical ionization energy</span> is a direct measure of the energy required to just remove the electron concerned from its initial level to the vacuum level (i.e., a free electron). Photoelectron spectroscopy measures the relative energies of the ground and excited positive ion states that are obtained by removal of single electrons from the neutral molecule.</p>
+<div class="note">
+<div class="eyebrow">Note</div>
+<h3>Note</h3>
+<p><span data-concept="photoelectron-energy-balance">Equation 10.4.5</span> may look familiar to you as it the same equation <span data-concept="einstein-photoelectric-equation">Einstein used to describe the photoelectric effect</span> except the vertical ionization energy ($\kIE$) is substituted for <span data-concept="work-function">workfunction</span> $\kPhi$. Both vertical ionization energy and workfunctions are metrics for the binding energy of an electron in the sample.</p>
+</div>
+</section>
+
+<section id="koopmans">
+<h2>Ionization energies and orbital energies</h2>
+<p>At a fundamental level, ionization energies are well-defined thermodynamic quantities related to the heats of protonation, oxidation/reduction chemistry, and ionic and covalent bond energies. Ionization energies are closely related to the concepts of electronegativity, electron-richness, and the general reactivity of molecules. The energies and other characteristic features of the ionization bands observed in photoelectron spectroscopy provide some of the molecular orbitals detailed and specific quantitative information regarding the electronic structure and bonding in molecules.</p>
+<p>Ionization is explicitly defined in terms of transitions between the ground state of a molecule and ion states as shown in Equation 10.4.6 and as illustrated in the Figure 10.4.2. Nonetheless, the information obtained from photoelectron spectroscopy is typically discussed in terms of the electronic structure and bonding in the ground states of neutral molecules, with ionization of electrons occurring from bonding molecular orbitals, lone pairs, antibonding molecular orbitals, or atomic cores. These descriptions reflect the relationship of ionization energies to the molecular orbital model of electronic structure.</p>
+<p><span data-concept="pes-bands-orbitals">Ionization energies are directly related to the energies of molecular orbitals</span> by <span data-concept="koopmans-theorem">Koopmans' theorem</span>, which states that the negative of the eigenvalue of an occupied orbital from a Hartree-Fock calculation is equal to the <em>vertical ionization energy</em> to the ion state formed by removal of an electron from that orbital (Figure 10.4.3), provided the distributions of the remaining electrons do not change (i.e., frozen).</p>
+$$ \kIj = - \kepsj \tag{10.4.7} $$
+<p>There are many limitations to Koopmans' theorem, but in a first order approximation each ionization of a molecule can be considered as removal of an electron from an individual orbital. The ionization energies can then be considered as measures of orbital stabilities, and shifts can be interpreted in terms of orbital stabilizations or destabilizations due to electron distributions and bonding. Koopmans' theorem is implicated whenever an orbital picture is involved, but is not necessary when the focus is on the total electronic states of the positive ions.</p>
+<figure class="sim" id="sim-pes" data-figure="10.4.3 + 10.4.5 + 10.4.6 + 10.4.7 + 10.4.8" data-original="/media/ch10/347590-10.4.3.svg,/media/ch10/347604-Example_10.4.1.svg,/media/ch10/347605-Example_10.4.2.svg,/media/ch10/347602-10.4.5.svg,/media/ch10/347603-10.4.6.svg,/media/ch10/347601-10.4.7.svg" data-original-width="349,596,739,810,505,688" data-original-caption="Within Koopmans' Theorem, the energies of the orbitals $\epsilon$ have an attractively simple physical interpretation: they give the amount of energy necessary to remove (ionize) the electron out of the molecular orbital, which corresponds to the negative of the experimentally observable ionization potential ($I$). (CC BY 4.0; Ümit Kaya via LibreTexts)">
+  <div class="sim-head"><span class="eyebrow">Figure 10.4.3 + 10.4.5 + 10.4.6 + 10.4.7 + 10.4.8</span><span>Pick a molecule and raise the <span data-type="energy">photon energy</span>. Each occupied orbital whose <span data-type="energy">ionization energy</span> lies below the photon's gives a band at the same height on the spectrum's side; the gap between the photon line and a band is the electrons' <span data-type="energy">kinetic energy</span>. Bonding orbitals give broad bands with long vibrational progressions, nonbonding ones narrow bands.</span></div>
+</figure>
+<div class="note">
+<div class="eyebrow">Note</div>
+<h3>Koopmans' Theorem</h3>
+<p>Koopmans' theorem argues that the negative of the eigenvalue of an occupied orbital from a Hartree-Fock calculation is equal to the vertical ionization energy to the ion state formed by removal of an electron from that orbital.</p>
+</div>
+</section>
+
+<section id="vertical-adiabatic">
+<h2>Vertical and adiabatic ionization</h2>
+<p>Several different ionization energies can be defined, depending on the degree of vibrational excitation of the cations. In general, the following two types of ionization energies are considered (Figure 10.4.4):</p>
+<ul><li><p><span data-concept="adiabatic-ionization-energy">Adiabatic ionization energy</span> corresponds to the ionization energy associated with this transition</p>
+$$ M(X, v” = 0) + h\nu \rightarrow M^+(x, v' = 0) + e^- $$
+<p>Adiabatic ionization energy that is, the minimum energy required to eject an electron from a molecule in its ground vibrational state and transform it into a cation in the lowest vibrational level of an electronic state x of the cation.</p></li><li><p><span data-concept="vertical-ionization-energy">Vertical ionization energy</span> corresponds to the ionization energy associated with this transition</p>
+$$ M(X, v” = 0) + h\nu \rightarrow M^+(x, v' = n) + e^- $$
+<p>where, the value n of the vibrational quantum number v’ corresponds to the vibrational level whose wavefunction gives the largest overlap with the v” = 0 wavefunction. This is the most probable transition and usually corresponds to the vertical transition where the internuclear separations of the ionic state are similar to those of the ground state.</p></li></ul>
+<figure class="sim" id="sim-franck" data-figure="10.4.2 + 10.4.4" data-original="/media/ch10/347588-10.4.2.svg,/media/ch10/347591-10.4.4.svg" data-original-width="492,394" data-original-caption="Vertical ionization process for molecular hydrogen. (CC BY 4.0; Ümit Kaya via LibreTexts)">
+  <div class="sim-head"><span class="eyebrow">Figure 10.4.2 + 10.4.4</span><span>Stretch the ion's <span data-type="length">bond length</span>. Ionization happens straight up from the neutral's lowest level, so it lands on the ion's levels that lie above that stretch of bond lengths; the sticks on the right are the band this gives. The longer the ion's bond, the longer the progression and the farther the vertical <span data-type="energy">ionization energy</span> (tallest stick) sits above the adiabatic one (lowest stick). It opens on H₂, with the constants of Huber and Herzberg.</span></div>
+</figure>
+<p>The geometry of an ion may be different from the neutral molecule. The measured ionzation energy in a PES experiment can refer to the vertical ionization energy, in which case the ion is in the same geometry as the neutral, or to the adiabatic ionzaiton energy, in which case the ion is in its lowest energy, relaxed geometry (mostly the former though). This is illustrated in the Figure 10.4.4. For a diatomic the only geometry change possible is the bond length. The figure shows an ion with a slightly longer bond length than the neutral. The harmonic potential energy surfaces are shown in green (neutral) and red (ion) with vibrational energy levels. The vertical ionzation energy is <strong>always greater</strong> than the adiabatic ionzation energy.<sup class="fn" data-note="c-always"></sup></p>
+<div class="note">
+<div class="eyebrow">Note</div>
+<h3>Differing Ionization Energies</h3>
+<p>You have been exposed to three metrics of ionization energies already, which are similar, but with distinct differences:</p>
+<ul><li>The <em>ionization energy</em> (also called <em>adiabatic ionization energy</em>) is the lowest energy required to effect the removal of an electron from a molecule or atom, and corresponds to the transition from the lowest electronic, vibrational and rotational level of the isolated molecule to the lowest electronic, vibrational and rotational level of the isolated ion.</li><li>The <em>binding energy</em> (also called <em>vertical ionization energy</em>) is the energy change corresponding to an ionization reaction leading to formation of the ion in a configuration which is the same as that of the equilibrium geometry of the ground state neutral molecule.</li><li>The <em>workfunction</em> is the minimum energy needed to remove an electron from a (bulk) solid to a point in the vacuum.</li></ul>
+</div>
+<div class="example" id="ex-10-4-1">
+<h3>Example 10.4.1 · Molecular Hydrogen</h3>
+<p>As you remember, the molecular orbital description of molecular hydrogen involves two $|1s \rangle$ atomic orbitals generating a <span data-concept="bonding-molecular-orbital">bonding</span> $1\sigma_g$ and <span data-concept="antibonding-molecular-orbital">antibonding</span> $2\sigma_u^*$ molecular orbitals.<sup class="fn" data-note="c-h2-label"></sup> The two electrons that are responsible for the $\mathrm{H_2}$ bond are occupied in the $1\sigma_g$.</p>
+<p>The PES spectrum has a single band that corresponds to the ionization of a 1σ<sub>g</sub> electron. The multiple peaks are due to electrons ejecting from a range of stimulated vibrational energy levels.<sup class="fn" data-note="c-h2-vib"></sup> When <span data-concept="pes-vibrational-structure">extensive vibrational structure is resolved in a PES molecular orbital</span>, then the removal of an electron from that molecular orbital induces a significant change in the bonding (in this case an increase in the bond length since the bond order has been reduced).</p>
+</div>
+<div class="example" id="ex-10-4-2">
+<h3>Example 10.4.2 · Molecular Nitrogen</h3>
+<p>Diatomic nitrogen is more complex than hydrogen since multiple molecular orbitals are occupied. Four molecular orbitals are occupied (the two $1\pi_u$ orbitals are both occupied). The UV photoelectron spectrum of $N_2$, has three bands corresponding to $3σ_g$, $1π_u$ and $2σ_u$ occupied molecular orbitals. Both $3σ_g$ and $2σ_u$ are weakly bonding and antibonding.<sup class="fn" data-note="c-n2-bonding"></sup> The $1\sigma_g$ orbital<sup class="fn" data-note="c-n2-2sg"></sup> is not resolved in this spectrum since the incident light $h\nu$ used did not have sufficient energy to ionize electrons in that deeply stabilized molecular orbital.</p>
+<p>Note that extensive vibrational structure for the $1π_u$ band indicates that the removal of an electron from this molecular orbital causes a significant change in the bonding.</p>
+</div>
+</section>
+
+<section id="hydrogen-chloride">
+<h2>Hydrogen Chloride</h2>
+<p>The molecular energy level diagram for $\mathrm{HCl}$ is reproduced in Figure 10.4.5</p>
+<p>Important aspects of molecular orbital diagram in Figure 10.4.5:</p>
+<ul><li>The H 1<em>s</em> energy lies well above the Cl 2<em>s</em> and 2<em>p</em> atomic orbitals;<sup class="fn" data-note="c-hcl-3p"></sup></li><li>The valence electron configuration can be written 3σ<sup>2</sup>1π<sup>4</sup>;</li><li>The H 1<em>s</em> orbital contributes only to the σ molecular orbitals, as does one of the Cl 2<em>p</em> orbitals (hence the lines in Figure 10.4.5 connecting these atomic orbitals and the 3σ and 4σ molecular orbitals);</li><li>The remaining Cl 2<em>p</em> orbitals (ie those perpendicular to the bond axis) are unaffected by bonding, and these form the 1π molecular orbitals;</li><li>The 1π orbitals are <span data-concept="nonbonding-molecular-orbital">nonbonding</span> - they are not affected energetically by the interaction between the atoms, and are hence neither bonding nor antibonding;</li><li>The 3σ orbital is weakly bonding, and largely Cl 2<em>p</em>;</li><li>The 3σ* orbital<sup class="fn" data-note="c-hcl-4s"></sup> is antibonding, and primarily of H 1<em>s</em> character;</li></ul>
+<p>Figure 10.4.6 shows the analogous MO diagram and photoelectron spectrum for $\mathrm{HCl}$. The spectrum has two bands corresponding to non-bonding 1<em>p</em> (or $1\pi$) molecular orbitals (with negligible vibrational structure) and the 3<em>s</em> bonding molecular orbital (vibrational structure).<sup class="fn" data-note="c-hcl-labels"></sup></p>
+<p>The higher energy (more stabilized) core molecular orbitals are not observed since the incident photon energy $h\nu$ is below their ionization energies.</p>
+</section>
+
+<section id="water">
+<h2>Water</h2>
+<p>In the simplified <span data-concept="valence-bond-theory">valence bond theory</span> perspective of the water molecule, the oxygen atom form four <span data-concept="sp3-hybrids">$sp^3$ hybrid orbitals</span>. Two of these are occupied by the two lone pairs on the oxygen atom, while the other two are used for bonding. Within the <span data-concept="water-molecular-orbitals">molecular orbital picture</span>, the electronic configuration of the $\mathrm{H_2O^{+}}$ molecule<sup class="fn" data-note="c-h2o-plus"></sup> is $(1a_1)^2 (2a_1)^2 (1b_2)^2 (3a_1)^2 (1b_1)^2$ where the symbols $a_1$, $b_2$ and $b_1$ are orbital labels based on molecular symmetry that will be discussed later (Figure 10.4.7). Within Koopmans' theorem:</p>
+<ul><li>The energy of the 1b<sub>1</sub> HOMO corresponds to the ionization energy to form the $\mathrm{H_2O^{+}}$ ion in its ground state $(1a_1)^2 (2a_1)^2 (1b_2)^2 (3a_1)^2 (1b_1)^1$.</li><li>The energy of the second-highest molecular orbitals $3a_1$ refers to the ion in the excited state $(1a_1)^2 (2a_1)^2 (1b_2)^2 (3a_1)^1 (1b_1)^2$.</li></ul>
+<p>The Hartree–Fock orbital energies (with sign changed) of these orbitals are tabulated below and compared to the experimental ionization energies.</p>
+<div class="book-table">
+  <div class="tcap"><span class="eyebrow">Table</span><span></span></div>
+  <table>
+    <thead><tr><th>Molecular orbital</th><th>Hartree–Fock orbital Energies (eV)</th><th>Experimental Ionization Energies (eV)</th></tr></thead>
+    <tbody>
+      <tr><td>2a<sub>1</sub></td><td>36.7</td><td>32.2</td></tr>
+      <tr><td>1b<sub>2</sub></td><td>19.5</td><td>18.5</td></tr>
+      <tr><td>3a<sub>1</sub></td><td>15.9</td><td>14.7</td></tr>
+      <tr><td>1b<sub>1</sub></td><td>13.8</td><td>12.6</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>As explained above,<sup class="fn" data-note="c-relax"></sup> the deviations between orbital energy and ionization energy is small and due to the effects of orbital relaxation as well as differences in electron correlation energy between the molecular and the various ionized states.</p>
+<p>The molecular orbital perspective has the lone pair in different orbitals (one in a non-bonding orbital ($1b_1$ and one in the bonding orbitals). We tern to the photoelectron spectroscopy to help identify which theory is more accurate (i.e., describes reality better). The <span data-concept="water-photoelectron-spectrum">photoelectron spectrum of water</span> in Figure 10.4.6<sup class="fn" data-note="c-fig-1048"></sup> can be interpreted as having three major peaks with some fine structure arises from vibrational energy changes. The light source used in this experiment is not sufficiently energetic to ionize electrons from the lowest lying molecular orbitals.</p>
+<p>If water was formed two identical O-H bonds and two lone pairs on the oxygen atom line valence bond theory predicts, then the PES in Figure 10.4.8 would have two (degenerate) peaks, one for the two bonds and one for the two lone pairs. The photoelectron spectrum clearly shows three peaks in the positions expected for the molecular orbitals in Figure 10.4.8.<sup class="fn" data-note="c-fig-1047"></sup></p>
+<p>If the molecular orbitals in Figure 10.4.7 represent the real electronic structure, how do we view the bonding? These molecular orbitals are delocalized and bare little relationship to the familiar 2-center bonds used in valence bond theory. For example, the $2a_1$ $1b_1$ and $3a_1$ molecular orbitals all have contributions from all three atoms,<sup class="fn" data-note="c-1b1"></sup> they are really 3-centered molecular orbitals. The bonds however can be thought of as representing a build up of the total electron density which loosely put is a total of all the orbital contributions. Despite this, we keep the ideas of hybridization and 2-center bonds because they are useful NOT because they represent reality</p>
+</section>

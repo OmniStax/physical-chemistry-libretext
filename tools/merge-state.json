@@ -507,5 +507,35 @@
       "dH_hyd"
     ],
     "types": []
+  },
+  "ch11": {
+    "symbols": [
+      "varphi_1sa",
+      "varphi_1sb",
+      "psi_k",
+      "varphi_j",
+      "c_jk",
+      "phi_GTO",
+      "y_0",
+      "z_0",
+      "N_norm",
+      "psi_STONG",
+      "d_in",
+      "alpha_in",
+      "S_1",
+      "S_G",
+      "C_j",
+      "alpha_j",
+      "zeta_1",
+      "zeta_2",
+      "zeta_i",
+      "zeta_1s",
+      "zeta_2s",
+      "phi_STO",
+      "phi_STO3G",
+      "c_3",
+      "c_4"
+    ],
+    "types": []
   }
 }

@@ -1,0 +1,1166 @@
+{
+ "id": "10.1",
+ "module": "13470",
+ "chapter": "10",
+ "title": "Hybrid Orbitals Account for Molecular Shape",
+ "short": "Hybrid orbitals",
+ "lead": "Valence bond theory builds a bond from one orbital on each atom. Mixing an atom's s and p orbitals into hybrids gives it equivalent orbitals aimed in new directions, which is how the theory reaches the shapes of BeH₂, BH₃ and CH₄.",
+ "objectives": [
+  "Introduce hybrid orbital to explain non-linear molecular structure"
+ ],
+ "summary_html": "<p>The shape and bonding valecies of polyatomic molecules can be accounted for by <span data-concept=\"hybrid-orbital\">hybrid orbitals</span>. Molecular orbitals are formed from linear combinations of atomic orbitals which are similar in energy. These atomic orbitals could come from different atoms, or from the same atom. For example, the 2 sand 2patomic orbitals<sup class=\"fn\" data-note=\"c-summary\"></sup> are very close energetically. When a linear combo of more than one atomic orbital from the <strong>same atom</strong> is formed, we have a <span data-concept=\"hybrid-orbital\">hybrid orbital</span>.</p>",
+ "notes": "By Mark Tuckerman, shared under CC BY-NC-SA 4.0; the book credits none of its figures.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercise in this section. The one here, on two of methane's sp³ hybrids, was written by AI with its solution, Bloom level and concept tags.",
+ "figures": [
+  {
+   "id": "fig-10-1-1",
+   "kind": "photo",
+   "number": "10.1.1",
+   "widths": [
+    84
+   ],
+   "draws": [],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "kept as the book prints it"
+    }
+   ]
+  },
+  {
+   "id": "sim-hybrids",
+   "kind": "sim",
+   "number": "10.1.3",
+   "folds": [
+    "10.1.7",
+    "10.1.8"
+   ],
+   "originals": [
+    "/media/ch10/125591-22dd6f732f9b979df3f3f6cd7f9a672e.jpg",
+    "/media/ch10/125592-ebe6b2c4a818c5c2169eca649b888390.jpg",
+    "/media/ch10/125593-ed3c092ac061d604967430ba5d47a99a.jpg"
+   ],
+   "original_caption": "10.1.3: The Formation of sp Hybrid Orbitals. Taking the sum and difference of an ns and an np atomic orbital where n = 2 gives two equivalent sp hybrid orbitals oriented at 180° to each other. 10.1.7: Formation of sp² Hybrid Orbitals. Combining one ns and two np atomic orbitals gives three equivalent sp² hybrid orbitals in a trigonal planar arrangement; that is, oriented at 120° to one another. 10.1.8: Formation of sp³ Hybrid Orbitals. Combining one ns and three np atomic orbitals results in four sp³ hybrid orbitals oriented at 109.5° to one another in a tetrahedral arrangement.",
+   "widths": [
+    689,
+    786,
+    861
+   ],
+   "draws": [
+    "wavefunction"
+   ],
+   "conventions": [
+    "p+"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "sim-rotate",
+   "kind": "sim",
+   "number": "10.1.4",
+   "folds": [
+    "10.1.5",
+    "10.1.6"
+   ],
+   "originals": [
+    "/media/ch10/125586-img84.png",
+    "/media/ch10/125587-img90.png",
+    "/media/ch10/125588-img105.png"
+   ],
+   "original_caption": "10.1.4: Geometry of $BH_3$. 10.1.5: Rotation of a $2p_y$ orbital by $-30$ degrees. 10.1.6: Rotation of a $-2p_y$ orbital by $30$ degrees.",
+   "widths": [
+    277,
+    336,
+    336
+   ],
+   "draws": [
+    "wavefunction",
+    "angle"
+   ],
+   "conventions": [
+    "H",
+    "B"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "opening",
+   "concept": "valence-bond-theory",
+   "verb": "introduces"
+  },
+  {
+   "span": "opening",
+   "concept": "molecular-orbital",
+   "verb": "uses"
+  },
+  {
+   "span": "review-of-diatomics",
+   "concept": "vb-wavefunctions-h2",
+   "verb": "introduces"
+  },
+  {
+   "span": "review-of-diatomics",
+   "concept": "pauli-exclusion-principle",
+   "verb": "uses"
+  },
+  {
+   "span": "review-of-diatomics",
+   "concept": "gerade-ungerade",
+   "verb": "reinforces"
+  },
+  {
+   "span": "review-of-diatomics",
+   "concept": "antibonding-molecular-orbital",
+   "verb": "reinforces"
+  },
+  {
+   "span": "hybridization",
+   "concept": "electron-promotion",
+   "verb": "introduces"
+  },
+  {
+   "span": "hybridization",
+   "concept": "hybrid-orbital",
+   "verb": "introduces"
+  },
+  {
+   "span": "hybridization",
+   "concept": "degeneracy",
+   "verb": "uses"
+  },
+  {
+   "span": "sp",
+   "concept": "hybrid-orthonormality",
+   "verb": "introduces"
+  },
+  {
+   "span": "sp",
+   "concept": "sp-hybrids",
+   "verb": "introduces"
+  },
+  {
+   "span": "sp",
+   "concept": "hybrid-orbital",
+   "verb": "uses"
+  },
+  {
+   "span": "sp2",
+   "concept": "sp2-hybrids",
+   "verb": "introduces"
+  },
+  {
+   "span": "sp2",
+   "concept": "hybrid-orthonormality",
+   "verb": "uses"
+  },
+  {
+   "span": "sp3",
+   "concept": "sp3-hybrids",
+   "verb": "introduces"
+  },
+  {
+   "span": "sp3",
+   "concept": "hybridization-as-interpretation",
+   "verb": "introduces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "ai1",
+   "source_id": "Finally, we consider the case of methane",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "sp3",
+   "prompt": "<p>Take the first two of methane's <em>sp</em><sup>3</sup> hybrids in Equation 10.1.25, $\\chi_1 = \\frac{1}{2}[\\psi_{2s}+\\psi_{2p_x}+\\psi_{2p_y}+\\psi_{2p_z}]$ and $\\chi_2 = \\frac{1}{2}[\\psi_{2s}-\\psi_{2p_x}-\\psi_{2p_y}+\\psi_{2p_z}]$, with orthonormal atomic orbitals. (a) What is $\\int |\\chi_1|^2 dV$? (b) What is $\\int \\chi_1^*\\chi_2\\, dV$? (c) Each hybrid points along the direction given by its $p_x$, $p_y$, $p_z$ coefficients. What angle, in degrees, lies between the directions of $\\chi_1$ and $\\chi_2$?</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 1,
+      "tol": 0.001,
+      "hint": "Only the squares of the coefficients survive the integral."
+     },
+     {
+      "part": "b",
+      "value": 0,
+      "tol": 0.001,
+      "hint": "Multiply the coefficients of the same orbital in the two hybrids and add."
+     },
+     {
+      "part": "c",
+      "value": 109.47,
+      "unit": "°",
+      "tol": 0.002,
+      "hint": "The directions are (1, 1, 1) and (−1, −1, 1); use the dot product."
+     }
+    ],
+    "solution": "<p>(a) The atomic orbitals are orthonormal, so the cross terms vanish and $\\int|\\chi_1|^2 dV = \\left(\\tfrac{1}{2}\\right)^2 \\times 4 = 1$.</p><p>(b) Only products of the same orbital survive: $\\int\\chi_1^*\\chi_2\\,dV = \\tfrac{1}{4}\\left[(1)(1) + (1)(-1) + (1)(-1) + (1)(1)\\right] = 0$. The two hybrids are orthogonal, as Equation 10.1.10 asks of any pair.</p><p>(c) $\\chi_1$ points along (1, 1, 1) and $\\chi_2$ along (−1, −1, 1). Then $\\cos\\theta = \\dfrac{(1)(-1) + (1)(-1) + (1)(1)}{\\sqrt{3}\\,\\sqrt{3}} = -\\tfrac{1}{3}$, so $\\theta = 109.47^\\circ$, the tetrahedral angle of Figure 10.1.8.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "ai1",
+   "concept": "sp3-hybrids"
+  },
+  {
+   "exercise": "ai1",
+   "concept": "hybrid-orthonormality"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-psi-b",
+   "kind": "correction",
+   "html": "In Equation 10.1.2 the second line's $\\psi_{1s}{B}(r_2)$ should read $\\psi_{1s}^{B}(r_2)$."
+  },
+  {
+   "id": "c-hf",
+   "kind": "correction",
+   "html": "Equation 10.1.4 has a stray closing parenthesis at its end and leaves out the normalization constant, which the other wavefunctions write as $C_g$."
+  },
+  {
+   "id": "c-water",
+   "kind": "correction",
+   "html": "No example of $\\mathrm{H_2O}$ comes before this point in the section. Water is the subject of Section 10.2."
+  },
+  {
+   "id": "c-quadrants",
+   "kind": "correction",
+   "html": "Figure 10.1.4 draws the other two hydrogen atoms in the 2nd and 3rd quadrants, at 120° and 240° from the positive x axis."
+  },
+  {
+   "id": "c-coefficients",
+   "kind": "correction",
+   "html": "There are four coefficients to find: $a$, $b$, $c$ and $d$."
+  },
+  {
+   "id": "c-directions",
+   "kind": "correction",
+   "html": "The hybrids of Equation 10.1.24 point at 180° and ±60° from the positive x axis, 120° apart as they should be, but not at the hydrogen atoms of Figure 10.1.4, which sit at 0° and ±120°. Reversing the signs of the $p$ terms would aim them at the hydrogens."
+  },
+  {
+   "id": "c-promote",
+   "kind": "correction",
+   "html": "It is one of the $2s$ electrons that is promoted to the $2p_z$ orbital."
+  },
+  {
+   "id": "c-summary",
+   "kind": "correction",
+   "html": "Read: the $2s$ and $2p$ atomic orbitals are very close energetically."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "sp-hybrids",
+   "what": "the sp hybrid orbitals",
+   "source": "Physical Chemistry (LibreTexts), 10.1 Hybrid Orbitals Account for Molecular Shape",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "| \\kchii \\rangle = a_1|2s \\rangle + b_1 |2p_z \\rangle",
+       "src": "(10.1.6)"
+      },
+      {
+       "text": "The atomic orbitals $2s$ and $2p_z$ are each normalized: $\\langle 2s|2s\\rangle = \\langle 2p_z|2p_z\\rangle = 1$."
+      },
+      {
+       "text": "The atomic orbitals $2s$ and $2p_z$ are orthogonal: $\\langle 2s|2p_z\\rangle = \\langle 2p_z|2s\\rangle = 0$."
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\langle \\kchii | \\kchii \\rangle} = 1",
+      "src": "(10.1.8)"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\left(a_1\\langle 2s| + b_1\\langle 2p_z|\\right)\\left(a_1|2s\\rangle + b_1|2p_z\\rangle\\right)} = 1",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{ss}{a_1^2\\langle 2s|2s\\rangle} + \\mk{sp}{a_1 b_1\\langle 2s|2p_z\\rangle} + \\mk{ps}{a_1 b_1\\langle 2p_z|2s\\rangle} + \\mk{pp}{b_1^2\\langle 2p_z|2p_z\\rangle} = 1",
+       "uses": [],
+       "map": {
+        "l": [
+         "ss",
+         "sp",
+         "ps",
+         "pp"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{ss}{a_1^2} + \\mk{pp}{b_1^2} = 1",
+       "uses": [
+        1,
+        2
+       ]
+      }
+     ],
+     "num": "(10.1.11)",
+     "src": "10.1"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "| \\kchij \\rangle = a_2|2s \\rangle + b_2 |2p_z \\rangle",
+       "src": "(10.1.7)"
+      },
+      {
+       "text": "The atomic orbitals $2s$ and $2p_z$ are each normalized: $\\langle 2s|2s\\rangle = \\langle 2p_z|2p_z\\rangle = 1$."
+      },
+      {
+       "text": "The atomic orbitals $2s$ and $2p_z$ are orthogonal: $\\langle 2s|2p_z\\rangle = \\langle 2p_z|2s\\rangle = 0$."
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\langle \\kchij | \\kchij \\rangle} = 1",
+      "src": "(10.1.9)"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\left(a_2\\langle 2s| + b_2\\langle 2p_z|\\right)\\left(a_2|2s\\rangle + b_2|2p_z\\rangle\\right)} = 1",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{ss}{a_2^2\\langle 2s|2s\\rangle} + \\mk{sp}{a_2 b_2\\langle 2s|2p_z\\rangle} + \\mk{ps}{a_2 b_2\\langle 2p_z|2s\\rangle} + \\mk{pp}{b_2^2\\langle 2p_z|2p_z\\rangle} = 1",
+       "uses": [],
+       "map": {
+        "l": [
+         "ss",
+         "sp",
+         "ps",
+         "pp"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{ss}{a_2^2} + \\mk{pp}{b_2^2} = 1",
+       "uses": [
+        1,
+        2
+       ]
+      }
+     ],
+     "num": "(10.1.12)",
+     "src": "10.1"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "| \\kchii \\rangle = a_1|2s \\rangle + b_1 |2p_z \\rangle",
+       "src": "(10.1.6)"
+      },
+      {
+       "tex": "| \\kchij \\rangle = a_2|2s \\rangle + b_2 |2p_z \\rangle",
+       "src": "(10.1.7)"
+      },
+      {
+       "text": "The atomic orbitals $2s$ and $2p_z$ are each normalized: $\\langle 2s|2s\\rangle = \\langle 2p_z|2p_z\\rangle = 1$."
+      },
+      {
+       "text": "The atomic orbitals $2s$ and $2p_z$ are orthogonal: $\\langle 2s|2p_z\\rangle = \\langle 2p_z|2s\\rangle = 0$."
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\langle \\kchii | \\kchij \\rangle} = 0",
+      "src": "(10.1.10)"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\left(a_1\\langle 2s| + b_1\\langle 2p_z|\\right)\\left(a_2|2s\\rangle + b_2|2p_z\\rangle\\right)} = 0",
+       "uses": [
+        0,
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{ss}{a_1a_2\\langle 2s|2s\\rangle} + \\mk{sp}{a_1b_2\\langle 2s|2p_z\\rangle} + \\mk{ps}{b_1a_2\\langle 2p_z|2s\\rangle} + \\mk{pp}{b_1b_2\\langle 2p_z|2p_z\\rangle} = 0",
+       "uses": [],
+       "map": {
+        "l": [
+         "ss",
+         "sp",
+         "ps",
+         "pp"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{ss}{a_1a_2} + \\mk{pp}{b_1b_2} = 0",
+       "uses": [
+        2,
+        3
+       ]
+      }
+     ],
+     "num": "(10.1.13)",
+     "src": "10.1"
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "text": "The contribution of $|s\\rangle$ is assumed to be the same for both hybrid orbitals: $a_1 = a_2$.",
+       "src": "10.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{a}{a_2^2} + \\mk{b}{b_2^2} = 1"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{a}{a_1^2} + \\mk{b}{b_2^2} = 1",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "num": "(10.1.15)",
+     "src": "10.1"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "step": 3
+      }
+     ],
+     "then": {
+      "tex": "\\mk{a}{a_1^2} + \\mk{b}{b_1^2} = 1"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{a}{a_1^2} + \\mk{b}{b_1^2} = \\mk{a2}{a_1^2} + \\mk{c}{b_2^2}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{b}{b_1^2} = \\mk{c}{b_2^2}",
+       "uses": []
+      }
+     ],
+     "num": "(10.1.16)",
+     "src": "10.1"
+    },
+    {
+     "assumes": [
+      {
+       "step": 2
+      },
+      {
+       "text": "The contribution of $|s\\rangle$ is assumed to be the same for both hybrid orbitals: $a_1 = a_2$.",
+       "src": "10.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{aa}{a_1a_2} + \\mk{bb}{b_1b_2} = 0"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{aa}{a_1^2} + \\mk{bb}{b_1b_2} = 0",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "src": "10.1"
+    },
+    {
+     "assumes": [
+      {
+       "step": 5
+      },
+      {
+       "step": 4
+      },
+      {
+       "step": 0
+      }
+     ],
+     "then": {
+      "tex": "\\mk{aa}{a_1^2} + \\mk{bb}{b_1b_2} = 0"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{bb}{b_1b_2} = \\mk{aa}{-a_1^2}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{b1}{b_1} = \\mk{b2}{-b_2}",
+       "uses": [
+        1,
+        2
+       ],
+       "map": {
+        "bb": [
+         "b1",
+         "b2"
+        ]
+       },
+       "cap": "By (10.1.16), $b_2$ is $b_1$ or $-b_1$. With $b_2 = b_1$ the line above would read $b_1^2 = -a_1^2$, which real coefficients with $a_1^2 + b_1^2 = 1$ cannot satisfy."
+      }
+     ],
+     "src": "10.1"
+    },
+    {
+     "assumes": [
+      {
+       "step": 5
+      },
+      {
+       "step": 6
+      }
+     ],
+     "then": {
+      "tex": "\\mk{aa}{a_1^2} + \\mk{bb}{b_1b_2} = 0"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{aa}{a_1^2} \\mk{bb}{-b_1^2} = 0",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{aa}{a_1^2} = \\mk{bb}{b_1^2}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{aa}{a_1} = \\mk{bb}{b_1}",
+       "uses": [],
+       "cap": "Either sign solves $a_1^2 = b_1^2$. Taking $b_1$ with the sign of $a_1$ only decides which of the two hybrids is called $\\chi_i$."
+      }
+     ],
+     "num": "(10.1.17)",
+     "src": "10.1"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "step": 7
+      }
+     ],
+     "then": {
+      "tex": "\\mk{a}{a_1^2} + \\mk{b}{b_1^2} = 1"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{a}{a_1^2} + \\mk{b}{a_1^2} = 1",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{a}{2a_1^2} = 1",
+       "uses": [],
+       "map": {
+        "b": "a"
+       }
+      },
+      {
+       "tex": "\\mk{a}{a_1} = \\dfrac{1}{\\sqrt{2}}",
+       "uses": []
+      }
+     ],
+     "src": "10.1",
+     "note": "The book says to insert Equation 10.1.17 into Equation 10.1.16. It is $a_1^2 + b_1^2 = 1$, Equation 10.1.11 (reprinted as 10.1.14), that gives $a_1$."
+    },
+    {
+     "assumes": [
+      {
+       "tex": "| \\kchii \\rangle = a_1|2s \\rangle + b_1 |2p_z \\rangle",
+       "src": "(10.1.6)"
+      },
+      {
+       "step": 7
+      },
+      {
+       "step": 8
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{| \\kchii \\rangle} = \\mk{a}{a_1}\\mk{s}{|2s \\rangle} + \\mk{b}{b_1}\\mk{p}{|2p_z \\rangle}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{| \\kchii \\rangle} = \\mk{a}{a_1}\\mk{s}{|2s \\rangle} + \\mk{b}{a_1}\\mk{p}{|2p_z \\rangle}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{l}{| \\kchii \\rangle} = \\mk{a}{\\tfrac{1}{\\sqrt{2}}}\\mk{s}{|2s \\rangle} + \\mk{b}{\\tfrac{1}{\\sqrt{2}}}\\mk{p}{|2p_z \\rangle}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{l}{\\kchi_1 (r)} = \\dfrac{1}{\\sqrt{2}}[\\mk{s}{\\psi_{2s}(r)}+\\mk{p}{\\psi_{2p_z}(r)}]",
+       "uses": []
+      }
+     ],
+     "num": "(10.1.18)",
+     "src": "10.1"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "| \\kchij \\rangle = a_2|2s \\rangle + b_2 |2p_z \\rangle",
+       "src": "(10.1.7)"
+      },
+      {
+       "text": "The contribution of $|s\\rangle$ is assumed to be the same for both hybrid orbitals: $a_1 = a_2$.",
+       "src": "10.1"
+      },
+      {
+       "step": 6
+      },
+      {
+       "step": 7
+      },
+      {
+       "step": 8
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{| \\kchij \\rangle} = \\mk{a}{a_2}\\mk{s}{|2s \\rangle} + \\mk{b}{b_2}\\mk{p}{|2p_z \\rangle}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{| \\kchij \\rangle} = \\mk{a}{a_1}\\mk{s}{|2s \\rangle} \\mk{b}{- b_1}\\mk{p}{|2p_z \\rangle}",
+       "uses": [
+        1,
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{l}{| \\kchij \\rangle} = \\mk{a}{a_1}\\mk{s}{|2s \\rangle} \\mk{b}{- a_1}\\mk{p}{|2p_z \\rangle}",
+       "uses": [
+        3
+       ]
+      },
+      {
+       "tex": "\\mk{l}{| \\kchij \\rangle} = \\mk{a}{\\tfrac{1}{\\sqrt{2}}}\\mk{s}{|2s \\rangle} \\mk{b}{- \\tfrac{1}{\\sqrt{2}}}\\mk{p}{|2p_z \\rangle}",
+       "uses": [
+        4
+       ]
+      },
+      {
+       "tex": "\\mk{l}{\\kchi_2 (r)} = \\dfrac{1}{\\sqrt{2}}[\\mk{s}{\\psi_{2s}(r)}-\\mk{p}{\\psi_{2p_z}(r)}]",
+       "uses": []
+      }
+     ],
+     "num": "(10.1.18)",
+     "src": "10.1"
+    }
+   ]
+  },
+  {
+   "id": "sp2-hybrids",
+   "what": "the sp² hybrid orbitals",
+   "source": "Physical Chemistry (LibreTexts), 10.1 Hybrid Orbitals Account for Molecular Shape",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kchi_2 (r) = c\\psi_{2s}(r)+d\\psi_{2p_y}^{(rot,1)}(r)",
+       "src": "(10.1.22)"
+      },
+      {
+       "tex": "\\psi_{2p_y}^{(rot,1)} \\sim \\dfrac{\\sqrt{3}}{2}\\psi_{2p_y}+\\dfrac{1}{2}\\psi_{2p_x}",
+       "src": "(10.1.20)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\kchi_2 (r)} = \\mk{s}{c\\psi_{2s}(r)} + \\mk{p}{d\\psi_{2p_y}^{(rot,1)}(r)}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\kchi_2 (r)} = \\mk{s}{c\\psi_{2s}(r)} + \\mk{p}{d\\left[\\dfrac{\\sqrt{3}}{2}\\psi_{2p_y}(r)+\\dfrac{1}{2}\\psi_{2p_x}(r)\\right]}",
+       "uses": [
+        1
+       ],
+       "cap": "The turned orbital has the same radial part as $2p_x$ and $2p_y$, so the relation between their $\\phi$ dependences holds for the orbitals themselves."
+      },
+      {
+       "tex": "\\mk{l}{\\kchi_2 (r)} = \\mk{s}{c\\psi_{2s}(r)} + \\mk{x}{\\dfrac{d}{2}\\psi_{2p_x}(r)} + \\mk{y}{\\dfrac{\\sqrt{3}\\,d}{2}\\psi_{2p_y}(r)}",
+       "uses": [],
+       "map": {
+        "p": [
+         "x",
+         "y"
+        ]
+       }
+      }
+     ],
+     "src": "10.1"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\kchi_3 (r) = c\\psi_{2s}(r)-d\\psi_{2p_y}^{(rot,2)}(r)",
+       "src": "(10.1.22)"
+      },
+      {
+       "tex": "-\\psi_{2p_y}^{(rot,2)} \\sim -\\dfrac{\\sqrt{3}}{2}\\psi_{2p_y}+\\dfrac{1}{2}\\psi_{2p_x}",
+       "src": "(10.1.21)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\kchi_3 (r)} = \\mk{s}{c\\psi_{2s}(r)} \\mk{p}{- d\\psi_{2p_y}^{(rot,2)}(r)}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\kchi_3 (r)} = \\mk{s}{c\\psi_{2s}(r)} + \\mk{p}{d\\left[-\\dfrac{\\sqrt{3}}{2}\\psi_{2p_y}(r)+\\dfrac{1}{2}\\psi_{2p_x}(r)\\right]}",
+       "uses": [
+        1
+       ],
+       "cap": "The turned orbital has the same radial part as $2p_x$ and $2p_y$, so the relation between their $\\phi$ dependences holds for the orbitals themselves."
+      },
+      {
+       "tex": "\\mk{l}{\\kchi_3 (r)} = \\mk{s}{c\\psi_{2s}(r)} + \\mk{x}{\\dfrac{d}{2}\\psi_{2p_x}(r)} \\mk{y}{- \\dfrac{\\sqrt{3}\\,d}{2}\\psi_{2p_y}(r)}",
+       "uses": [],
+       "map": {
+        "p": [
+         "x",
+         "y"
+        ]
+       }
+      }
+     ],
+     "src": "10.1"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\int |\\kchi_2 (r)|^2 dV=1",
+       "src": "(10.1.23)"
+      },
+      {
+       "step": 0
+      },
+      {
+       "text": "The orbitals $2s$, $2p_x$ and $2p_y$ are normalized and mutually orthogonal, and real."
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\int |\\kchi_2 (r)|^2 dV} = 1"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{s}{c^2} + \\mk{x}{\\dfrac{d^2}{4}} + \\mk{y}{\\dfrac{3d^2}{4}} = 1",
+       "uses": [
+        1,
+        2
+       ],
+       "map": {
+        "l": [
+         "s",
+         "x",
+         "y"
+        ]
+       },
+       "cap": "In the square the cross terms integrate to zero, since the orbitals are orthogonal, and each squared orbital integrates to 1."
+      },
+      {
+       "tex": "\\mk{s}{c^2} + \\mk{d}{d^2} = 1",
+       "uses": [],
+       "map": {
+        "x": "d",
+        "y": "d"
+       }
+      }
+     ],
+     "src": "10.1"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\int \\kchi_{2}^{*}(r)\\kchi_3 (r)dV=0",
+       "src": "(10.1.23)"
+      },
+      {
+       "step": 0
+      },
+      {
+       "step": 1
+      },
+      {
+       "text": "The orbitals $2s$, $2p_x$ and $2p_y$ are normalized and mutually orthogonal, and real."
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\int \\kchi_{2}^{*}(r)\\kchi_3 (r)dV} = 0"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{s}{c^2} + \\mk{x}{\\dfrac{d^2}{4}} \\mk{y}{- \\dfrac{3d^2}{4}} = 0",
+       "uses": [
+        1,
+        2,
+        3
+       ],
+       "map": {
+        "l": [
+         "s",
+         "x",
+         "y"
+        ]
+       },
+       "cap": "Only the products of the same orbital survive the integral, each giving the product of its two coefficients."
+      },
+      {
+       "tex": "\\mk{s}{c^2} \\mk{d}{- \\dfrac{d^2}{2}} = 0",
+       "uses": [],
+       "map": {
+        "x": "d",
+        "y": "d"
+       }
+      },
+      {
+       "tex": "\\mk{d}{d^2} = \\mk{s}{2c^2}",
+       "uses": []
+      }
+     ],
+     "src": "10.1"
+    },
+    {
+     "assumes": [
+      {
+       "step": 2
+      },
+      {
+       "step": 3
+      }
+     ],
+     "then": {
+      "tex": "\\mk{s}{c^2} + \\mk{d}{d^2} = 1"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{s}{c^2} + \\mk{d}{2c^2} = 1",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{s}{3c^2} = 1",
+       "uses": [],
+       "map": {
+        "d": "s"
+       }
+      },
+      {
+       "tex": "\\mk{s}{c} = \\dfrac{1}{\\sqrt{3}}",
+       "uses": []
+      }
+     ],
+     "src": "10.1"
+    },
+    {
+     "assumes": [
+      {
+       "step": 3
+      },
+      {
+       "step": 4
+      }
+     ],
+     "then": {
+      "tex": "\\mk{d}{d^2} = \\mk{s}{2c^2}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{d}{d^2} = \\mk{s}{\\dfrac{2}{3}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{d}{d} = \\mk{s}{\\dfrac{2}{\\sqrt{6}}}",
+       "uses": []
+      }
+     ],
+     "src": "10.1"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\int \\kchi_{1}^{*}(r)\\kchi_2 (r)dV=0",
+       "src": "(10.1.23)"
+      },
+      {
+       "tex": "\\kchi_1 (r) = a\\psi_{2s}(r)-b\\psi_{2p_x}",
+       "src": "(10.1.22)"
+      },
+      {
+       "step": 0
+      },
+      {
+       "text": "The orbitals $2s$, $2p_x$ and $2p_y$ are normalized and mutually orthogonal, and real."
+      },
+      {
+       "step": 4
+      },
+      {
+       "step": 5
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\int \\kchi_{1}^{*}(r)\\kchi_2 (r)dV} = 0"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{s}{ac} \\mk{x}{- \\dfrac{bd}{2}} = 0",
+       "uses": [
+        1,
+        2,
+        3
+       ],
+       "map": {
+        "l": [
+         "s",
+         "x"
+        ]
+       },
+       "cap": "$\\chi_1$ has no $2p_y$ part, so only the $2s$ and $2p_x$ products survive."
+      },
+      {
+       "tex": "\\mk{s}{\\dfrac{a}{\\sqrt{3}}} \\mk{x}{- \\dfrac{b}{\\sqrt{6}}} = 0",
+       "uses": [
+        4,
+        5
+       ]
+      },
+      {
+       "tex": "\\mk{x}{b} = \\mk{s}{\\sqrt{2}\\,a}",
+       "uses": []
+      }
+     ],
+     "src": "10.1"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\int |\\kchi_1 (r)|^2 dV=1",
+       "src": "(10.1.23)"
+      },
+      {
+       "tex": "\\kchi_1 (r) = a\\psi_{2s}(r)-b\\psi_{2p_x}",
+       "src": "(10.1.22)"
+      },
+      {
+       "text": "The orbitals $2s$, $2p_x$ and $2p_y$ are normalized and mutually orthogonal, and real."
+      },
+      {
+       "step": 6
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\int |\\kchi_1 (r)|^2 dV} = 1"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{a}{a^2} + \\mk{b}{b^2} = 1",
+       "uses": [
+        1,
+        2
+       ],
+       "map": {
+        "l": [
+         "a",
+         "b"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{a}{a^2} + \\mk{b}{2a^2} = 1",
+       "uses": [
+        3
+       ]
+      },
+      {
+       "tex": "\\mk{a}{3a^2} = 1",
+       "uses": [],
+       "map": {
+        "b": "a"
+       }
+      },
+      {
+       "tex": "\\mk{a}{a} = \\dfrac{1}{\\sqrt{3}}",
+       "uses": []
+      }
+     ],
+     "src": "10.1"
+    },
+    {
+     "assumes": [
+      {
+       "step": 6
+      },
+      {
+       "step": 7
+      }
+     ],
+     "then": {
+      "tex": "\\mk{x}{b} = \\mk{s}{\\sqrt{2}\\,a}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{x}{b} = \\mk{s}{\\dfrac{\\sqrt{2}}{\\sqrt{3}}}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "src": "10.1"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\kchi_1 (r) = a\\psi_{2s}(r)-b\\psi_{2p_x}",
+       "src": "(10.1.22)"
+      },
+      {
+       "step": 7
+      },
+      {
+       "step": 8
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\kchi_1 (r)} = \\mk{s}{a\\psi_{2s}(r)} \\mk{x}{-b\\psi_{2p_x}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\kchi_1 (r)} = \\mk{s}{\\dfrac{1}{\\sqrt{3}}\\psi_{2s}(r)} \\mk{x}{-\\dfrac{\\sqrt{2}}{\\sqrt{3}}\\psi_{2p_x}(r)}",
+       "uses": [
+        1,
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{l}{\\kchi_1 (r)} = \\dfrac{1}{\\sqrt{3}}[\\mk{s}{\\psi_{2s}(r)}\\mk{x}{-\\sqrt{2}\\psi_{2p_x}(r)}]",
+       "uses": []
+      }
+     ],
+     "num": "(10.1.24)",
+     "src": "10.1"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "step": 4
+      },
+      {
+       "step": 5
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\kchi_2 (r)} = \\mk{s}{c\\psi_{2s}(r)} + \\mk{x}{\\dfrac{d}{2}\\psi_{2p_x}(r)} + \\mk{y}{\\dfrac{\\sqrt{3}\\,d}{2}\\psi_{2p_y}(r)}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\kchi_2 (r)} = \\mk{s}{\\dfrac{1}{\\sqrt{3}}\\psi_{2s}(r)} + \\mk{x}{\\dfrac{1}{\\sqrt{6}}\\psi_{2p_x}(r)} + \\mk{y}{\\dfrac{\\sqrt{3}}{\\sqrt{6}}\\psi_{2p_y}(r)}",
+       "uses": [
+        1,
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{l}{\\kchi_2 (r)} = \\dfrac{1}{\\sqrt{6}}[\\mk{s}{\\sqrt{2}\\psi_{2s}(r)}+\\mk{x}{\\psi_{2p_x}(r)}+\\mk{y}{\\sqrt{3}\\psi_{2p_y}(r)}]",
+       "uses": []
+      }
+     ],
+     "num": "(10.1.24)",
+     "src": "10.1"
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "step": 4
+      },
+      {
+       "step": 5
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\kchi_3 (r)} = \\mk{s}{c\\psi_{2s}(r)} + \\mk{x}{\\dfrac{d}{2}\\psi_{2p_x}(r)} \\mk{y}{- \\dfrac{\\sqrt{3}\\,d}{2}\\psi_{2p_y}(r)}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\kchi_3 (r)} = \\mk{s}{\\dfrac{1}{\\sqrt{3}}\\psi_{2s}(r)} + \\mk{x}{\\dfrac{1}{\\sqrt{6}}\\psi_{2p_x}(r)} \\mk{y}{- \\dfrac{\\sqrt{3}}{\\sqrt{6}}\\psi_{2p_y}(r)}",
+       "uses": [
+        1,
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{l}{\\kchi_3 (r)} = \\dfrac{1}{\\sqrt{6}}[\\mk{s}{\\sqrt{2}\\psi_{2s}(r)}+\\mk{x}{\\psi_{2p_x}(r)}\\mk{y}{-\\sqrt{3}\\psi_{2p_y}(r)}]",
+       "uses": []
+      }
+     ],
+     "num": "(10.1.24)",
+     "src": "10.1"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,612 @@
+{
+ "id": "10.5",
+ "module": "13474",
+ "chapter": "10",
+ "title": "The pi-Electron Approximation of Conjugation (Hückel Theory)",
+ "short": "Hückel theory",
+ "lead": "Hückel theory keeps only the π electrons of a planar conjugated molecule, in orbitals built from one 2p<sub>z</sub> orbital on each carbon, and simplifies the secular determinant with four assumptions. Ethylene, with two carbons, is the first molecule it is applied to.",
+ "objectives": [
+  "Demonstrate how Hückel's theory approximates the full molecular orbital picture of molecules by treating the $\\sigma$-bonding and $\\pi$-bonding networks independently."
+ ],
+ "summary_html": "",
+ "notes": "Written by Seymour Blinder and shared under CC BY-NC-SA 4.0; Figure 10.5.6's two images carry no credit in the book and are shared under the page's licence, and a hidden duplicate of one equation on the source page is left out.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "medium"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "medium"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercise here. The one exercise is new and AI-written, with its answer computed from the β of Section 10.6; its Bloom level and concept tags were chosen by AI. Numeric answers accept a 2% tolerance.",
+ "figures": [
+  {
+   "id": "sim-ethylene-frameworks",
+   "kind": "sim",
+   "number": "10.5.1",
+   "widths": [
+    811
+   ],
+   "originals": [
+    "/media/ch10/345964-10.5.1_(1).svg"
+   ],
+   "original_caption": "(a) The σ-bonded framework is formed by the overlap of two sets of singly occupied carbon sp2 hybrid orbitals and four singly occupied hydrogen 1s orbitals to form electron-pair bonds. This uses 10 of the 12 valence electrons to form a total of five σ bonds (four C–H bonds and one C–C bond). (b) One singly occupied unhybridized 2pz orbital remains on each carbon atom to form a carbon–carbon π bond. (Note: by convention, in planar molecules the axis perpendicular to the molecular plane is the z-axis.) (CC BY-NC; Ümit Kaya via LibreTexts)",
+   "draws": [
+    "wavefunction"
+   ],
+   "conventions": [
+    "C",
+    "H"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "medium",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "fig-10-5-2",
+   "kind": "photo",
+   "number": "10.5.2",
+   "widths": [
+    512
+   ],
+   "draws": []
+  },
+  {
+   "id": "fig-10-5-3",
+   "kind": "figure",
+   "number": "10.5.3",
+   "widths": [
+    529
+   ],
+   "originals": [
+    "/media/ch10/346393-10.5.3_(2).svg"
+   ],
+   "original_caption": "Molecular orbitals demonstrating the sigma-pi separability of the $\\pi$-bonding framework (blue) and the $\\sigma$-bonding frameworks (red) of ethylene. (CC BY-NC; Ümit Kaya via LibreTexts)",
+   "draws": [
+    "energy"
+   ],
+   "conventions": [
+    "e-"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "medium",
+     "part": "redrawn as the book draws it"
+    }
+   ]
+  },
+  {
+   "id": "sim-two-p",
+   "kind": "sim",
+   "number": "10.5.4",
+   "folds": [
+    "10.5.5"
+   ],
+   "originals": [
+    "/media/ch10/345963-10.5.4.svg",
+    "/media/ch10/345962-10.5.5.svg"
+   ],
+   "original_caption": "(10.5.4) $\\pi$ energies of ethylene with occupation. (CC BY-NC; Ümit Kaya via LibreTexts) (10.5.5) Schemetic representation of the $\\pi$ molecular orbitals framework for ethylene . Notice that the antibonding molecular orbital has one more node than the bonding molecular orbital as expected since it is higher in energy. (CC BY-NC; Ümit Kaya via LibreTexts)",
+   "draws": [
+    "energy",
+    "wavefunction"
+   ],
+   "conventions": [
+    "C"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "medium",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "fig-10-5-6",
+   "kind": "photo",
+   "number": "10.5.6",
+   "draws": []
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "conjugation",
+   "concept": "conjugated-system",
+   "verb": "introduces"
+  },
+  {
+   "span": "conjugation",
+   "concept": "sigma-pi-separability",
+   "verb": "introduces"
+  },
+  {
+   "span": "conjugation",
+   "concept": "huckel-approximation",
+   "verb": "introduces"
+  },
+  {
+   "span": "conjugation",
+   "concept": "sp2-hybrids",
+   "verb": "uses"
+  },
+  {
+   "span": "conjugation",
+   "concept": "pi-orbital",
+   "verb": "uses"
+  },
+  {
+   "span": "ethylene",
+   "concept": "huckel-coulomb-integral",
+   "verb": "introduces"
+  },
+  {
+   "span": "ethylene",
+   "concept": "resonance-integral",
+   "verb": "introduces"
+  },
+  {
+   "span": "ethylene",
+   "concept": "huckel-x",
+   "verb": "introduces"
+  },
+  {
+   "span": "ethylene",
+   "concept": "ethylene-pi-orbitals",
+   "verb": "introduces"
+  },
+  {
+   "span": "ethylene",
+   "concept": "homo-lumo-gap",
+   "verb": "introduces"
+  },
+  {
+   "span": "ethylene",
+   "concept": "huckel-approximation",
+   "verb": "reinforces"
+  },
+  {
+   "span": "ethylene",
+   "concept": "sigma-pi-separability",
+   "verb": "reinforces"
+  },
+  {
+   "span": "ethylene",
+   "concept": "lcao-mo-method",
+   "verb": "uses"
+  },
+  {
+   "span": "ethylene",
+   "concept": "secular-equations",
+   "verb": "uses"
+  },
+  {
+   "span": "ethylene",
+   "concept": "secular-determinant",
+   "verb": "uses"
+  },
+  {
+   "span": "ethylene",
+   "concept": "hamiltonian-matrix-element",
+   "verb": "uses"
+  },
+  {
+   "span": "ethylene",
+   "concept": "overlap-integral",
+   "verb": "uses"
+  },
+  {
+   "span": "ethylene",
+   "concept": "bonding-molecular-orbital",
+   "verb": "uses"
+  },
+  {
+   "span": "ethylene",
+   "concept": "antibonding-molecular-orbital",
+   "verb": "uses"
+  },
+  {
+   "span": "ethylene",
+   "concept": "frontier-orbitals",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "The energy difference between the HOMO and LUMO is termed the HOMO–LUMO gap.",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "ethylene",
+   "prompt": "<p>In Hückel theory ethylene's two π electrons fill $\\pi_1$ at $\\alpha + \\beta$, and $\\pi_2$ at $\\alpha - \\beta$ is empty. With the typical estimate $\\beta = -75$ kJ/mol (Section 10.6), find (a) the HOMO–LUMO gap in kJ/mol and (b) the wavelength, in nm, of a photon whose energy equals that gap for one molecule.</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 150,
+      "unit": "kJ/mol",
+      "hint": "The HOMO is π₁ and the LUMO is π₂."
+     },
+     {
+      "part": "b",
+      "value": 798,
+      "unit": "nm"
+     }
+    ],
+    "solution": "<p>(a) The gap is $E_2 - E_1 = (\\alpha - \\beta) - (\\alpha + \\beta) = -2\\beta = 2(75\\ \\text{kJ/mol}) = 150\\ \\text{kJ/mol}$.</p><p>(b) For one molecule, $\\Delta E = \\dfrac{1.50\\times10^{5}\\ \\text{J/mol}}{6.022\\times10^{23}\\ \\text{mol}^{-1}} = 2.49\\times10^{-19}\\ \\text{J}$, so $\\lambda = \\dfrac{hc}{\\Delta E} = \\dfrac{(6.626\\times10^{-34}\\ \\text{J s})(2.998\\times10^{8}\\ \\text{m/s})}{2.49\\times10^{-19}\\ \\text{J}} = 7.98\\times10^{-7}\\ \\text{m} = 798\\ \\text{nm}$, in the near infrared. Ethylene in fact absorbs below 200 nm, in the far ultraviolet: with electron repulsion left out, Hückel theory badly underestimates the gap, as the note on its limitations warns.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "homo-lumo-gap"
+  },
+  {
+   "exercise": "a1",
+   "concept": "ethylene-pi-orbitals"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-sigma-pi",
+   "kind": "correction",
+   "html": "The second framework is the $\\pi$-bonding framework: the two are the $\\sigma$-bonding and the $\\pi$-bonding frameworks."
+  },
+  {
+   "id": "c-a-coefficients",
+   "kind": "correction",
+   "html": "Each atomic orbital has its own coefficient: $|\\psi_1\\rangle = a_1|2s\\rangle + a_2|2p_x\\rangle + a_3|2p_y\\rangle + a_4|1s_a\\rangle$."
+  },
+  {
+   "id": "c-b-coefficients",
+   "kind": "correction",
+   "html": "The coefficients of the hybrid are the $\\{b_i\\}$, each orbital with its own: $|sp^2_1\\rangle = b_1|2s\\rangle + b_2|2p_x\\rangle + b_3|2p_y\\rangle$."
+  },
+  {
+   "id": "c-figure-parts",
+   "kind": "correction",
+   "html": "Both frameworks are drawn in Figure 10.5.1: the $\\sigma$ framework in part (a) and the $\\pi$ bond from the $2p_z$ orbitals in part (b)."
+  },
+  {
+   "id": "c-i-neq-j",
+   "kind": "correction",
+   "html": "The resonance integrals are the elements with $i \\neq j$."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "ethylene-pi",
+   "what": "the π orbitals of ethylene",
+   "source": "Physical Chemistry (LibreTexts), 10.5 The pi-Electron Approximation of Conjugation (Hückel Theory)",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\begin{bmatrix} H_{11} - \\kE S_{11} & H_{12} - \\kE S_{12} \\\\ H_{21} - \\kE S_{21} & H_{22} - \\kE S_{22} \\end{bmatrix} \\begin{bmatrix} c_1 \\\\ c_2 \\end{bmatrix} = 0",
+       "src": "(10.5.5)",
+       "drv": "7.2/secular"
+      },
+      {
+       "tex": "H_{11}=H_{22}=\\kalphaH",
+       "src": "10.5, Hückel assumption 4"
+      },
+      {
+       "tex": "H_{12}=H_{21}=\\kbetaH",
+       "src": "10.5, Hückel assumption 3"
+      },
+      {
+       "tex": "S_{11}=S_{22}=1",
+       "src": "10.5"
+      },
+      {
+       "tex": "S_{12}=S_{21}=0",
+       "src": "10.5, Hückel assumption 1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{M}{\\begin{bmatrix} H_{11} - \\kE S_{11} & H_{12} - \\kE S_{12} \\\\ H_{21} - \\kE S_{21} & H_{22} - \\kE S_{22} \\end{bmatrix}} \\mk{c}{\\begin{bmatrix} c_1 \\\\ c_2 \\end{bmatrix}} = 0"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{M}{\\begin{bmatrix} \\kalphaH - \\kE S_{11} & \\kbetaH - \\kE S_{12} \\\\ \\kbetaH - \\kE S_{21} & \\kalphaH - \\kE S_{22} \\end{bmatrix}} \\mk{c}{\\begin{bmatrix} c_1 \\\\ c_2 \\end{bmatrix}} = 0",
+       "uses": [
+        1,
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{M}{\\begin{bmatrix} \\kalphaH - \\kE & \\kbetaH \\\\ \\kbetaH & \\kalphaH - \\kE \\end{bmatrix}} \\mk{c}{\\begin{bmatrix} c_1 \\\\ c_2 \\end{bmatrix}} = 0",
+       "uses": [
+        3,
+        4
+       ]
+      }
+     ],
+     "num": "(10.5.7)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "x = \\dfrac{\\kalphaH - \\kE}{\\kbetaH}",
+       "src": "(10.5.8)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{M}{\\begin{bmatrix} \\kalphaH - \\kE & \\kbetaH \\\\ \\kbetaH & \\kalphaH - \\kE \\end{bmatrix}} \\mk{c}{\\begin{bmatrix} c_1 \\\\ c_2 \\end{bmatrix}} = 0"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{M}{\\begin{bmatrix} \\dfrac{\\kalphaH - \\kE}{\\kbetaH} & 1 \\\\ 1 & \\dfrac{\\kalphaH - \\kE}{\\kbetaH} \\end{bmatrix}} \\mk{c}{\\begin{bmatrix} c_1 \\\\ c_2 \\end{bmatrix}} = 0",
+       "cap": "Dividing both equations by $\\beta$ leaves their solutions unchanged."
+      },
+      {
+       "tex": "\\mk{M}{\\begin{bmatrix} x & 1 \\\\ 1 & x \\end{bmatrix}} \\mk{c}{\\begin{bmatrix} c_1 \\\\ c_2 \\end{bmatrix}} = 0",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "num": "(10.5.9)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "text": "Homogeneous equations have a solution other than $c_1 = c_2 = 0$ only if their determinant is zero.",
+       "src": "(10.5.6)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{M}{\\begin{bmatrix} x & 1 \\\\ 1 & x \\end{bmatrix}} \\mk{c}{\\begin{bmatrix} c_1 \\\\ c_2 \\end{bmatrix}} = 0"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{D}{\\begin{vmatrix} x & 1 \\\\ 1 & x \\end{vmatrix}} = 0",
+       "uses": [
+        1
+       ],
+       "map": {
+        "M": "D"
+       }
+      },
+      {
+       "tex": "\\mk{D}{x^{2}-1} = 0",
+       "cap": "A $2 \\times 2$ determinant is the product of its diagonal less the product of its other two entries."
+      },
+      {
+       "tex": "\\mk{x}{x} = \\mk{r}{\\pm 1}",
+       "map": {
+        "D": [
+         "x",
+         "r"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "assumes": [
+      {
+       "step": 2
+      },
+      {
+       "tex": "x = \\dfrac{\\kalphaH - \\kE}{\\kbetaH}",
+       "src": "(10.5.8)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{x}{x} = \\mk{r}{\\pm 1}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{x}{\\dfrac{\\kalphaH - \\kE}{\\kbetaH}} = \\mk{r}{\\pm 1}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{E}{\\kE} = \\mk{a}{\\kalphaH} \\mk{r}{\\mp \\kbetaH}",
+       "map": {
+        "x": [
+         "E",
+         "a"
+        ]
+       }
+      }
+     ],
+     "note": "The book prints $E=\\alpha -\\pm 1\\times \\beta$ on the way; with $x = \\pm 1$ in $E = \\alpha - x\\beta$ it is $E = \\alpha \\mp \\beta$."
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "step": 3
+      },
+      {
+       "tex": "| \\kpsii \\rangle =c_1 | \\kphione \\rangle +c_2 | \\kphitwo \\rangle",
+       "src": "(10.5.1)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{M}{\\begin{bmatrix} x & 1 \\\\ 1 & x \\end{bmatrix}} \\mk{c}{\\begin{bmatrix} c_1 \\\\ c_2 \\end{bmatrix}} = 0"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{M}{\\begin{bmatrix} -1 & 1 \\\\ 1 & -1 \\end{bmatrix}} \\mk{c}{\\begin{bmatrix} c_1 \\\\ c_2 \\end{bmatrix}} = 0",
+       "uses": [
+        1
+       ],
+       "cap": "Since $\\beta$ is negative, the lower energy is $\\alpha + \\beta$, which is $x = -1$."
+      },
+      {
+       "tex": "\\mk{e}{-c_1 + c_2} = 0",
+       "map": {
+        "M": "e",
+        "c": "e"
+       }
+      },
+      {
+       "tex": "\\mk{a}{c_1} = \\mk{b}{c_2}",
+       "map": {
+        "e": [
+         "a",
+         "b"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{p}{| \\psi_1 \\rangle} = \\mk{a}{c_1} | \\kphione \\rangle + \\mk{b}{c_1} | \\kphitwo \\rangle",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{p}{| \\psi_1 \\rangle} = \\mk{N}{N_1} \\mk{s}{( | \\kphione \\rangle + | \\kphitwo \\rangle )}",
+       "map": {
+        "a": "N",
+        "b": "s"
+       }
+      }
+     ],
+     "num": "(10.5.10)",
+     "note": "The book prints $|\\psi_1 \\rangle = N_1 (\\phi_1 \\rangle + | \\phi_2 \\rangle )$, the first ket missing its bar."
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "step": 3
+      },
+      {
+       "tex": "| \\kpsii \\rangle =c_1 | \\kphione \\rangle +c_2 | \\kphitwo \\rangle",
+       "src": "(10.5.1)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{M}{\\begin{bmatrix} x & 1 \\\\ 1 & x \\end{bmatrix}} \\mk{c}{\\begin{bmatrix} c_1 \\\\ c_2 \\end{bmatrix}} = 0"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{M}{\\begin{bmatrix} 1 & 1 \\\\ 1 & 1 \\end{bmatrix}} \\mk{c}{\\begin{bmatrix} c_1 \\\\ c_2 \\end{bmatrix}} = 0",
+       "uses": [
+        1
+       ],
+       "cap": "The higher energy, $\\alpha - \\beta$, is $x = +1$."
+      },
+      {
+       "tex": "\\mk{e}{c_1 + c_2} = 0",
+       "map": {
+        "M": "e",
+        "c": "e"
+       }
+      },
+      {
+       "tex": "\\mk{a}{c_1} = \\mk{b}{-c_2}",
+       "map": {
+        "e": [
+         "a",
+         "b"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{p}{| \\psi_2 \\rangle} = \\mk{a}{c_1} | \\kphione \\rangle \\mk{b}{- c_1} | \\kphitwo \\rangle",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{p}{| \\psi_2 \\rangle} = \\mk{N}{N_2} \\mk{s}{( | \\kphione \\rangle - | \\kphitwo \\rangle )}",
+       "map": {
+        "a": "N",
+        "b": "s"
+       }
+      }
+     ],
+     "num": "(10.5.11)",
+     "note": "The book prints “for the higher energy molecular orbital ($x=-1$)”: the higher energy, $\\alpha - \\beta$, belongs to $x = +1$. It also prints $\\psi_2 \\rangle$ and $(\\phi_1 \\rangle$, the kets missing their bars."
+    },
+    {
+     "assumes": [
+      {
+       "step": 4
+      },
+      {
+       "step": 5
+      },
+      {
+       "tex": "\\langle \\kpsii | \\kpsii \\rangle = 1",
+       "src": "10.5"
+      },
+      {
+       "tex": "S_{11}=S_{22}=1",
+       "src": "10.5"
+      },
+      {
+       "tex": "S_{12}=S_{21}=0",
+       "src": "10.5, Hückel assumption 1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\langle \\kpsii | \\kpsii \\rangle} = \\mk{o}{1}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{N^2 \\big( \\langle \\kphione | \\kphione \\rangle \\pm 2 \\langle \\kphione | \\kphitwo \\rangle + \\langle \\kphitwo | \\kphitwo \\rangle \\big)} = \\mk{o}{1}",
+       "uses": [
+        0,
+        1
+       ],
+       "cap": "Both orbitals are $N(|\\phi_1\\rangle \\pm |\\phi_2\\rangle)$, with $N = N_1$ or $N_2$; for real orbitals the two cross terms are equal."
+      },
+      {
+       "tex": "\\mk{l}{N^2 (1 \\pm 0 + 1)} = \\mk{o}{1}",
+       "uses": [
+        3,
+        4
+       ]
+      },
+      {
+       "tex": "\\mk{l}{2N^2} = \\mk{o}{1}"
+      },
+      {
+       "tex": "\\mk{N}{N_1 = N_2} = \\mk{o}{\\dfrac{1}{\\sqrt{2}}}",
+       "map": {
+        "l": "N"
+       }
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

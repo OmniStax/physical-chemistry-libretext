@@ -1,0 +1,361 @@
+{
+ "id": "11",
+ "dir": "ch11",
+ "title": "Computational Quantum Chemistry",
+ "intro": {
+  "module": "11788",
+  "slug": "11:_Computational_Quantum_Chemistry"
+ },
+ "sections": [
+  {
+   "id": "11.1",
+   "module": "165359",
+   "title": "Overview of Quantum Calculations",
+   "slug": "11:_Computational_Quantum_Chemistry/11.01:_Overview_of_Quantum_Calculations"
+  },
+  {
+   "id": "11.2",
+   "module": "13476",
+   "title": "Gaussian Basis Sets",
+   "slug": "11:_Computational_Quantum_Chemistry/11.02:_Gaussian_Basis_Sets"
+  },
+  {
+   "id": "11.3",
+   "module": "13478",
+   "title": "Extended Basis Sets (Double Zeta and Split-Valence)",
+   "slug": "11:_Computational_Quantum_Chemistry/11.03:_Extended_Basis_Sets"
+  },
+  {
+   "id": "11.4",
+   "module": "13479",
+   "title": "Orbital Polarization and Diffuse Terms in Basis Sets",
+   "slug": "11:_Computational_Quantum_Chemistry/11.04:_Orbital_Polarization_Terms_in_Basis_Sets"
+  }
+ ],
+ "variables": [
+  {
+   "sym": "psi",
+   "type": "wavefunction",
+   "meaning": "an approximate multi-electron wavefunction, a function of the electrons' coordinates",
+   "section": "11.1"
+  },
+  {
+   "sym": "r_1",
+   "type": "length",
+   "meaning": "the position of electron 1",
+   "section": "11.1"
+  },
+  {
+   "sym": "r_2",
+   "type": "length",
+   "meaning": "the position of electron 2",
+   "section": "11.1"
+  },
+  {
+   "sym": "varphi",
+   "concept": "exchange-phase",
+   "type": "angle",
+   "meaning": "the phase a wavefunction picks up when two particles are interchanged, 0 or π",
+   "section": "11.1"
+  },
+  {
+   "sym": "varphi_1sa",
+   "concept": "spin-orbital",
+   "meaning": "the spin-orbital with the 1s spatial part and spin function α",
+   "section": "11.1"
+  },
+  {
+   "sym": "varphi_1sb",
+   "concept": "spin-orbital",
+   "meaning": "the spin-orbital with the 1s spatial part and spin function β",
+   "section": "11.1"
+  },
+  {
+   "sym": "alpha_s",
+   "type": "wavefunction",
+   "meaning": "the spin state α, with m_s = +½",
+   "section": "11.1"
+  },
+  {
+   "sym": "beta_s",
+   "type": "wavefunction",
+   "meaning": "the spin state β, with m_s = −½",
+   "section": "11.1"
+  },
+  {
+   "sym": "sigma_1s",
+   "concept": "sigma-orbital",
+   "meaning": "the bonding σ₁ₛ molecular orbital of H₂",
+   "section": "11.1"
+  },
+  {
+   "sym": "chi_i",
+   "concept": "spin-orbital",
+   "meaning": "the ith spin-orbital, a spatial orbital times a spin function",
+   "section": "11.1"
+  },
+  {
+   "sym": "m_s",
+   "meaning": "the spin magnetic quantum number, +½ or −½",
+   "section": "11.1"
+  },
+  {
+   "sym": "N",
+   "meaning": "the number of electrons",
+   "section": "11.1"
+  },
+  {
+   "sym": "Psi",
+   "type": "wavefunction",
+   "meaning": "the single-determinant electronic wavefunction of the molecule",
+   "section": "11.1"
+  },
+  {
+   "sym": "psi_k",
+   "concept": "mo-basis-expansion",
+   "meaning": "the kth molecular orbital, a linear combination of basis functions",
+   "section": "11.1"
+  },
+  {
+   "sym": "varphi_j",
+   "concept": "contracted-gaussian-function",
+   "meaning": "a contracted Gaussian basis function",
+   "section": "11.1"
+  },
+  {
+   "sym": "c_jk",
+   "meaning": "the coefficient of basis function k in molecular orbital j",
+   "section": "11.1"
+  },
+  {
+   "sym": "H_op",
+   "concept": "electronic-hamiltonian",
+   "meaning": "the electronic Hamiltonian of the molecule",
+   "section": "11.1"
+  },
+  {
+   "sym": "E",
+   "type": "energy",
+   "meaning": "the electronic energy computed from the trial wavefunction",
+   "section": "11.1"
+  },
+  {
+   "sym": "phi_GTO",
+   "concept": "cartesian-gaussian-orbital",
+   "meaning": "a Cartesian Gaussian-type orbital",
+   "section": "11.2"
+  },
+  {
+   "sym": "alpha",
+   "meaning": "the exponent of a Gaussian, which sets its width",
+   "section": "11.2"
+  },
+  {
+   "sym": "x",
+   "type": "length",
+   "meaning": "the x coordinate of the electron",
+   "section": "11.2"
+  },
+  {
+   "sym": "x_0",
+   "type": "length",
+   "meaning": "the x coordinate of the orbital's centre",
+   "section": "11.2"
+  },
+  {
+   "sym": "y_0",
+   "type": "length",
+   "meaning": "the y coordinate of the orbital's centre",
+   "section": "11.2"
+  },
+  {
+   "sym": "z_0",
+   "type": "length",
+   "meaning": "the z coordinate of the orbital's centre",
+   "section": "11.2"
+  },
+  {
+   "sym": "a",
+   "meaning": "the power of (x − x₀) in a Cartesian Gaussian, a nonnegative integer",
+   "section": "11.2"
+  },
+  {
+   "sym": "b",
+   "meaning": "the power of (y − y₀) in a Cartesian Gaussian, a nonnegative integer",
+   "section": "11.2"
+  },
+  {
+   "sym": "c",
+   "meaning": "the power of (z − z₀) in a Cartesian Gaussian, a nonnegative integer",
+   "section": "11.2"
+  },
+  {
+   "sym": "l",
+   "meaning": "the angular momentum quantum number, a + b + c for a Cartesian Gaussian",
+   "section": "11.2"
+  },
+  {
+   "sym": "m_l",
+   "meaning": "the magnetic quantum number",
+   "section": "11.2"
+  },
+  {
+   "sym": "N_norm",
+   "meaning": "the normalization constant of a Gaussian",
+   "section": "11.2"
+  },
+  {
+   "sym": "N",
+   "redefines": true,
+   "meaning": "the number of primitive Gaussians in an STO-NG function",
+   "section": "11.2"
+  },
+  {
+   "sym": "r",
+   "type": "length",
+   "unit": "a₀",
+   "meaning": "the distance of the electron from the orbital's centre",
+   "section": "11.2"
+  },
+  {
+   "sym": "psi_STONG",
+   "concept": "sto-ng-basis",
+   "meaning": "the STO-NG function that stands for the Slater-type orbital i",
+   "section": "11.2"
+  },
+  {
+   "sym": "d_in",
+   "meaning": "the fixed coefficient of Gaussian n in the STO-NG function for orbital i",
+   "section": "11.2"
+  },
+  {
+   "sym": "alpha_in",
+   "meaning": "the fixed exponent of Gaussian n in the STO-NG function for orbital i",
+   "section": "11.2"
+  },
+  {
+   "sym": "S_1",
+   "concept": "slater-type-orbital",
+   "meaning": "the 1s Slater-type orbital of Example 11.2.2",
+   "section": "11.2"
+  },
+  {
+   "sym": "zeta_1",
+   "meaning": "the orbital exponent of the 1s Slater-type orbital, 1.24 for hydrogen",
+   "section": "11.2"
+  },
+  {
+   "sym": "S_G",
+   "concept": "contracted-gaussian-function",
+   "meaning": "the contracted Gaussian function standing for the 1s Slater-type orbital",
+   "section": "11.2"
+  },
+  {
+   "sym": "C_j",
+   "meaning": "the coefficient of Gaussian j in the contracted function",
+   "section": "11.2"
+  },
+  {
+   "sym": "alpha_j",
+   "meaning": "the exponent of Gaussian j in the contracted function",
+   "section": "11.2"
+  },
+  {
+   "sym": "psi",
+   "type": "wavefunction",
+   "meaning": "the electronic wavefunction of the molecule, a sum of orbital functions",
+   "section": "11.3"
+  },
+  {
+   "sym": "c_i",
+   "meaning": "the weight of orbital function i in the wavefunction",
+   "section": "11.3"
+  },
+  {
+   "sym": "phi_STO",
+   "concept": "slater-type-orbital",
+   "meaning": "the Slater-type orbital of one atomic orbital",
+   "section": "11.3"
+  },
+  {
+   "sym": "zeta_i",
+   "meaning": "the orbital exponent of the Slater-type orbital for orbital i",
+   "section": "11.3"
+  },
+  {
+   "sym": "zeta_1s",
+   "meaning": "the orbital exponent of an atom's 1s Slater-type orbital",
+   "section": "11.3"
+  },
+  {
+   "sym": "zeta_2s",
+   "meaning": "the orbital exponent of an atom's 2s and 2p Slater-type orbitals",
+   "section": "11.3"
+  },
+  {
+   "sym": "phi_STO3G",
+   "concept": "sto-ng-basis",
+   "meaning": "the STO-3G function on one hydrogen atom, three fixed Gaussians",
+   "section": "11.3"
+  },
+  {
+   "sym": "r_A",
+   "type": "length",
+   "meaning": "the position of nucleus A",
+   "section": "11.3"
+  },
+  {
+   "sym": "r_B",
+   "type": "length",
+   "meaning": "the position of nucleus B",
+   "section": "11.3"
+  },
+  {
+   "sym": "c_1",
+   "meaning": "the weight of the first orbital function",
+   "section": "11.3"
+  },
+  {
+   "sym": "c_2",
+   "meaning": "the weight of the second orbital function",
+   "section": "11.3"
+  },
+  {
+   "sym": "c_3",
+   "meaning": "the weight of the third orbital function",
+   "section": "11.3"
+  },
+  {
+   "sym": "c_4",
+   "meaning": "the weight of the fourth orbital function",
+   "section": "11.3"
+  },
+  {
+   "sym": "zeta_1",
+   "redefines": true,
+   "meaning": "the first of the two orbital exponents of a double-zeta 1s function",
+   "section": "11.3"
+  },
+  {
+   "sym": "zeta_2",
+   "meaning": "the second of the two orbital exponents of a double-zeta 1s function",
+   "section": "11.3"
+  },
+  {
+   "sym": "N",
+   "redefines": true,
+   "meaning": "the number of orbital functions in a single-zeta basis",
+   "section": "11.3"
+  },
+  {
+   "sym": "l",
+   "meaning": "the angular momentum quantum number of the valence orbitals",
+   "section": "11.4"
+  },
+  {
+   "sym": "n",
+   "meaning": "the principal quantum number of the valence shell",
+   "section": "11.4"
+  }
+ ]
+}

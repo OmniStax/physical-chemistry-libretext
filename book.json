@@ -29,7 +29,8 @@
     "ch07",
     "ch08",
     "ch09",
-    "ch10"
+    "ch10",
+    "ch11"
   ],
   "types": [
     {
@@ -2186,6 +2187,118 @@
       "sym": "dH_hyd",
       "latex": "\\Delta H_{hyd}",
       "macro": "\\kdHhyd"
+    },
+    {
+      "sym": "varphi_1sa",
+      "latex": "\\varphi_{1s\\alpha}",
+      "macro": "\\kvarphionsa"
+    },
+    {
+      "sym": "varphi_1sb",
+      "latex": "\\varphi_{1s\\beta}",
+      "macro": "\\kvarphionsb"
+    },
+    {
+      "sym": "psi_k",
+      "latex": "\\psi_k",
+      "macro": "\\kpsik"
+    },
+    {
+      "sym": "varphi_j",
+      "latex": "\\varphi_j",
+      "macro": "\\kvarphij"
+    },
+    {
+      "sym": "c_jk",
+      "latex": "c_{jk}"
+    },
+    {
+      "sym": "phi_GTO",
+      "latex": "\\phi^{GTO}_{abc}",
+      "macro": "\\kphiGTO"
+    },
+    {
+      "sym": "y_0",
+      "latex": "y_0",
+      "macro": "\\kyo"
+    },
+    {
+      "sym": "z_0",
+      "latex": "z_0",
+      "macro": "\\kzo"
+    },
+    {
+      "sym": "N_norm",
+      "latex": "N"
+    },
+    {
+      "sym": "psi_STONG",
+      "latex": "\\psi_i^{\\text{STO-NG}}",
+      "macro": "\\kpsiSTONG"
+    },
+    {
+      "sym": "d_in",
+      "latex": "d_{in}"
+    },
+    {
+      "sym": "alpha_in",
+      "latex": "\\alpha_{in}"
+    },
+    {
+      "sym": "S_1",
+      "latex": "S_1",
+      "macro": "\\kSone"
+    },
+    {
+      "sym": "S_G",
+      "latex": "S_G",
+      "macro": "\\kSG"
+    },
+    {
+      "sym": "C_j",
+      "latex": "C_j"
+    },
+    {
+      "sym": "alpha_j",
+      "latex": "\\alpha_j"
+    },
+    {
+      "sym": "zeta_1",
+      "latex": "\\zeta_1"
+    },
+    {
+      "sym": "zeta_2",
+      "latex": "\\zeta_2"
+    },
+    {
+      "sym": "zeta_i",
+      "latex": "\\zeta_i"
+    },
+    {
+      "sym": "zeta_1s",
+      "latex": "\\zeta_{1s}"
+    },
+    {
+      "sym": "zeta_2s",
+      "latex": "\\zeta_{2s}"
+    },
+    {
+      "sym": "phi_STO",
+      "latex": "\\phi_{\\text{STO}}",
+      "macro": "\\kphiSTO"
+    },
+    {
+      "sym": "phi_STO3G",
+      "latex": "\\phi_{\\text{STO-3G}}",
+      "macro": "\\kphiSTOthreeG"
+    },
+    {
+      "sym": "c_3",
+      "latex": "c_3"
+    },
+    {
+      "sym": "c_4",
+      "latex": "c_4"
     }
   ],
   "exercise_kinds": [
@@ -9742,6 +9855,340 @@
         "Hückel's Rule"
       ],
       "statement": "A cyclic conjugated polyene is closed shell and especially stable, aromatic, when it has 4n + 2 π electrons (n = 0, 1, 2 …: 2, 6, 10 …). These molecules have the largest delocalization energies."
+    },
+    {
+      "id": "ab-initio-calculation",
+      "kind": "definition",
+      "section": "11.1",
+      "name": "Ab initio calculation",
+      "terms": [
+        "ab initio",
+        "ab initio electronic structure calculation",
+        "semi-empirical"
+      ],
+      "statement": "A calculation of a molecule's electronic structure from the postulates of quantum mechanics alone, with no empirical parameters or experimental data; semi-empirical methods do use them. For a closed-shell molecule it uses the electronic Hamiltonian with a single Slater determinant built from molecular orbitals, each a linear combination of contracted Gaussian basis functions whose coefficients the self-consistent field and linear variational methods choose to minimize the energy."
+    },
+    {
+      "id": "mo-basis-expansion",
+      "kind": "definition",
+      "section": "11.1",
+      "name": "Molecular orbitals in a basis set",
+      "type": "wavefunction",
+      "symbol": "psi_k",
+      "statement": "Each molecular orbital of an ab initio calculation is a linear combination of the basis functions, ψ_j = Σ_k c_jk φ_k; the coefficients c_jk are the variational parameters, and the number of basis functions fixes the number of molecular orbitals and the size of the matrices to be solved.",
+      "forms": [
+        {
+          "id": "mo-basis-expansion",
+          "latex": "\\psi_j = \\sum_k c_{jk} \\varphi_k"
+        }
+      ]
+    },
+    {
+      "id": "hartree-fock-limit",
+      "kind": "definition",
+      "section": "11.1",
+      "name": "Hartree–Fock limit",
+      "terms": [
+        "Hartree-Fock limit",
+        "Hartree-Fock orbitals",
+        "Hartree-Fock wavefunction"
+      ],
+      "type": "energy",
+      "statement": "As the basis set is enlarged, the variational energy of a single-determinant wavefunction falls toward a limit it cannot pass: the Hartree–Fock limit. The energy there is the Hartree–Fock energy, its orbitals the Hartree–Fock orbitals and its determinant the Hartree–Fock wavefunction."
+    },
+    {
+      "id": "restricted-hartree-fock",
+      "kind": "definition",
+      "section": "11.1",
+      "name": "Restricted and unrestricted Hartree–Fock",
+      "terms": [
+        "restricted",
+        "unrestricted",
+        "restricted HF",
+        "unrestricted spin orbitals"
+      ],
+      "statement": "In a restricted Hartree–Fock calculation, electrons of α and β spin are constrained to the same spatial orbitals; an unrestricted calculation lets each spin have its own spatial orbitals. Unrestricted orbitals can describe the electrons better, especially in a molecule with an odd number of electrons, but need twice as many spatial orbitals."
+    },
+    {
+      "id": "carbon-monoxide-orbitals",
+      "kind": "result",
+      "section": "11.1",
+      "name": "Molecular orbitals of carbon monoxide",
+      "statement": "Huo's 1965 ab initio calculation of CO in a basis of the ten 1s, 2s and 2p orbitals of C and O gives, in order of energy, the oxygen and carbon 1s cores (1σ, 2σ), a bonding 3σ, an antibonding 4σ, two degenerate bonding π orbitals and a nonbonding 5σ, an sp hybrid pointing away from oxygen on carbon. Donation of the 5σ electrons explains why CO binds iron through carbon, and the hybrid mixing of 2s and 2p comes out of the calculation without being put in."
+    },
+    {
+      "id": "cartesian-gaussian-orbital",
+      "kind": "definition",
+      "section": "11.2",
+      "name": "Cartesian Gaussian-type orbital",
+      "terms": [
+        "Gaussian-type orbitals",
+        "GTOs",
+        "GTO",
+        "Cartesian Gaussian functions"
+      ],
+      "type": "wavefunction",
+      "symbol": "phi_GTO",
+      "statement": "A Gaussian-type orbital written in Cartesian coordinates, N e^{−αr²}(x − x₀)^a (y − y₀)^b (z − z₀)^c, centred at (x₀, y₀, z₀); α sets its width, and the nonnegative integers a, b, c, with a + b + c = ℓ, choose its shape as ℓ and m do for an atomic orbital.",
+      "forms": [
+        {
+          "id": "cartesian-gto",
+          "latex": "\\ket{\\phi^{GTO}_{abc}(x,y,z;\\alpha)} = Ne^{-\\alpha r^2}(x-x_0)^a(y-y_0)^b(z-z_0)^c"
+        }
+      ]
+    },
+    {
+      "id": "cartesian-function-count",
+      "kind": "result",
+      "section": "11.2",
+      "name": "Cartesian against spherical Gaussians",
+      "statement": "For angular momentum ℓ there are (ℓ + 1)(ℓ + 2)/2 Cartesian Gaussians but only 2ℓ + 1 spherical-harmonic ones; from ℓ = 2 on the Cartesian set holds extra functions of lower ℓ (x² + y² + z² is an s function among the six d's), which a transformation removes, leaving 5 d functions rather than 6.",
+      "forms": [
+        {
+          "id": "cartesian-count",
+          "latex": "\\frac{(\\ell+1)(\\ell+2)}{2}"
+        },
+        {
+          "id": "spherical-count",
+          "latex": "2\\ell+1"
+        }
+      ]
+    },
+    {
+      "id": "gaussian-nuclear-cusp",
+      "kind": "result",
+      "section": "11.2",
+      "name": "Gaussians miss the nuclear cusp",
+      "terms": [
+        "cusp"
+      ],
+      "statement": "A Gaussian e^{−αr²} is flat at the nucleus and falls off too fast far away, where a Slater-type orbital e^{−ζr} has a cusp at r = 0 and a slower exponential tail; no single Gaussian has the right shape near or far from the nucleus."
+    },
+    {
+      "id": "gaussian-integral-efficiency",
+      "kind": "result",
+      "section": "11.2",
+      "name": "Gaussian integrals are cheap",
+      "statement": "Integrals over Gaussian functions are far cheaper than over Slater-type orbitals: every overlap integral has a closed form, and most Coulomb and exchange integrals split into products of one-dimensional ones (about 600 evaluations against 100⁶ for a six-dimensional integral on a 100-point grid). So even though several Gaussians are needed for each Slater function, Gaussian calculations reach the same accuracy in much less time."
+    },
+    {
+      "id": "primitive-gaussian",
+      "kind": "definition",
+      "section": "11.2",
+      "name": "Primitive Gaussian",
+      "terms": [
+        "primitive Gaussian functions",
+        "Gaussian primitives",
+        "primitives"
+      ],
+      "type": "wavefunction",
+      "statement": "A single Gaussian-type function with its own fixed exponent α and coefficient d, the building block of a contracted Gaussian function."
+    },
+    {
+      "id": "contracted-gaussian-function",
+      "kind": "definition",
+      "section": "11.2",
+      "name": "Contracted Gaussian function",
+      "terms": [
+        "contracted Gaussian function",
+        "contracted basis functions",
+        "contraction",
+        "contracted GTOs",
+        "CGTO"
+      ],
+      "type": "wavefunction",
+      "symbol": "varphi_j",
+      "statement": "A fixed linear combination of primitive Gaussians treated as one basis function: its coefficients and exponents are set beforehand, usually to imitate a Slater-type orbital, and are not varied in the energy calculation. A basis function built this way is called a contraction."
+    },
+    {
+      "id": "sto-ng-basis",
+      "kind": "definition",
+      "section": "11.2",
+      "name": "STO-NG basis set",
+      "terms": [
+        "STO-NG",
+        "STO-3G",
+        "STO-NG basis sets"
+      ],
+      "type": "wavefunction",
+      "symbol": "psi_STONG",
+      "statement": "The minimal basis set in which each Slater-type orbital is replaced by a contraction of N primitive Gaussians whose coefficients d_in and exponents α_in maximize the overlap with that Slater orbital; once fitted, each contraction acts as a single atomic orbital.",
+      "forms": [
+        {
+          "id": "sto-ng",
+          "latex": "\\ket{\\psi_i^{\\text{STO-NG}}} = \\sum_n^N d_{in}\\ket{\\phi^{GTO}(\\alpha_{in})}"
+        }
+      ]
+    },
+    {
+      "id": "fitting-sto-with-gaussians",
+      "kind": "skill",
+      "section": "11.2",
+      "name": "Fitting a Slater orbital with Gaussians",
+      "statement": "Choosing the coefficients and exponents of a few Gaussians so that their sum follows a Slater-type orbital, and judging the fit by plotting the two together: the sum can match the middle of the orbital closely but stays flat at the nucleus and falls too fast in the tail.",
+      "forms": [
+        {
+          "id": "contracted-sto-sum",
+          "latex": "S_G (r) = \\sum _{j=1}^3 C_j e^{-\\alpha _j r^2}"
+        }
+      ]
+    },
+    {
+      "id": "pople-basis-notation",
+      "kind": "definition",
+      "section": "11.2",
+      "name": "Pople basis set notation",
+      "terms": [
+        "N-MPG",
+        "6-31G",
+        "3-21G",
+        "N-MPG*"
+      ],
+      "statement": "The names of Pople's Gaussian basis sets, N-MPG: N primitives for each inner-shell orbital, a hyphen for a split (double-zeta) valence shell whose inner and outer functions are built from M and P primitives, and G for Gaussian; a star adds polarization functions and a plus diffuse functions."
+    },
+    {
+      "id": "minimal-basis-set",
+      "kind": "definition",
+      "section": "11.3",
+      "name": "Minimal basis set",
+      "terms": [
+        "minimal basis",
+        "minimal basis sets"
+      ],
+      "statement": "The smallest basis that holds every occupied orbital of each atom and the whole of any partly filled shell (all three 2p orbitals of carbon), with the p shell added for the alkali and alkaline earth metals: one 1s function for each hydrogen, 1s, 2s and three 2p for carbon."
+    },
+    {
+      "id": "orbital-function",
+      "kind": "definition",
+      "section": "11.3",
+      "name": "Orbital function",
+      "terms": [
+        "orbital function",
+        "orbital functions"
+      ],
+      "type": "wavefunction",
+      "statement": "A basis function in the role an atomic orbital plays in an LCAO calculation: the Hamiltonian matrix has one row per orbital function, and only their weights are varied. Each may be built from several Gaussian primitives, whose exponents and coefficients stay fixed."
+    },
+    {
+      "id": "contraction-notation",
+      "kind": "definition",
+      "section": "11.3",
+      "name": "Contraction notation",
+      "terms": [
+        "segmented contractions",
+        "general contractions"
+      ],
+      "statement": "A basis set's contraction is written (primitives) → [orbital function shells]: carbon in STO-3G is (6s3p) → [2s1p], six s-type primitives contracted into two s functions and three p-type primitives into one p shell, five orbital functions in all. In a segmented contraction each primitive belongs to one orbital function; in a general contraction a primitive may appear in several."
+    },
+    {
+      "id": "single-zeta-basis",
+      "kind": "definition",
+      "section": "11.3",
+      "name": "Single-zeta basis set",
+      "terms": [
+        "Single zeta",
+        "single zeta basis set"
+      ],
+      "statement": "A basis that represents each atomic orbital by one orbital function: one value of ζ for a Slater orbital, or one contraction of Gaussians imitating it. Every minimal basis is single zeta."
+    },
+    {
+      "id": "multiple-zeta-basis",
+      "kind": "definition",
+      "section": "11.3",
+      "name": "Multiple-zeta basis set",
+      "terms": [
+        "multiple zeta",
+        "double zeta",
+        "triple zeta",
+        "DZ",
+        "TZ"
+      ],
+      "statement": "A basis that represents each atomic orbital by several orbital functions with different ζ, two in a double-zeta (DZ) and three in a triple-zeta (TZ) basis; the variational weights then mix compact and diffuse functions, so each atom's orbitals can change their radial shape in the molecule."
+    },
+    {
+      "id": "basis-set-flexibility",
+      "kind": "idea",
+      "section": "11.3",
+      "name": "Flexibility of a basis set",
+      "terms": [
+        "flexibility"
+      ],
+      "statement": "The variety of shapes a basis lets the wavefunction take around each nucleus. More functions per atomic orbital give more flexibility and a better reproduction of the molecular wavefunction, as the hydrogen in HF needs a different 1s shape from the hydrogen in H₂, but the functions lose their meaning as atomic orbitals and must be optimized directly in atomic calculations."
+    },
+    {
+      "id": "basis-set-cost",
+      "kind": "result",
+      "section": "11.3",
+      "name": "Cost of a larger basis",
+      "statement": "A calculation's cost grows steeply with the number of orbital functions: doubling them from N to 2N makes the Hamiltonian a 2N × 2N matrix with, even using its Hermiticity, about 3 to 4 times as many matrix elements to evaluate."
+    },
+    {
+      "id": "split-valence-basis",
+      "kind": "definition",
+      "section": "11.3",
+      "name": "Split-valence basis set",
+      "terms": [
+        "split-valence",
+        "split-valence basis sets",
+        "split-basis"
+      ],
+      "statement": "A basis with a single orbital function for each core orbital and several for each valence orbital, putting flexibility where bonding distorts the electron density and saving it near the nuclei, where the core electrons change little."
+    },
+    {
+      "id": "pople-split-valence-basis",
+      "kind": "definition",
+      "section": "11.3",
+      "name": "Pople split-valence basis sets",
+      "terms": [
+        "Pople basis sets",
+        "Pople-style",
+        "X-YG"
+      ],
+      "statement": "Pople's split-valence sets X-YG: a contraction of X primitives for each core orbital and one orbital function per digit of Y for each valence orbital, each digit giving its primitives. In 3-21G the core orbitals are 3-primitive contractions and each valence orbital has a 2-primitive, compact function and a 1-primitive, diffuse one. Their exponents and coefficients are optimized in Hartree–Fock calculations on the atoms."
+    },
+    {
+      "id": "polarization-function",
+      "kind": "definition",
+      "section": "11.4",
+      "name": "Polarization function",
+      "terms": [
+        "polarization functions",
+        "polarization",
+        "6-31G*",
+        "6-311G**"
+      ],
+      "type": "wavefunction",
+      "statement": "An orbital function with a higher ℓ than the atom's valence orbitals (p on hydrogen, d on carbon), added so that the electron density can shift and bend away from the nucleus as a bond makes its surroundings anisotropic. In Pople's names one star adds them to the heavier atoms and two stars to hydrogen and helium as well, each from a single Gaussian primitive."
+    },
+    {
+      "id": "diffuse-function",
+      "kind": "definition",
+      "section": "11.4",
+      "name": "Diffuse function",
+      "terms": [
+        "diffuse functions",
+        "6-31+G",
+        "6-311++G"
+      ],
+      "type": "wavefunction",
+      "statement": "A broad orbital function with a very small exponent, added to describe electron density far from the nuclei, as in anions, excited states and weakly bound complexes. In Pople's names one plus adds a single-primitive s and p set to each atom heavier than helium, two pluses an s function to hydrogen and helium too."
+    },
+    {
+      "id": "basis-set-tradeoff",
+      "kind": "idea",
+      "section": "11.4",
+      "name": "Choosing a basis set",
+      "statement": "The accuracy of a calculation rests on a basis flexible enough to fit the true wavefunction, but every added function costs time, and heavier atoms need more functions; the choice of basis is a trade between the two."
+    },
+    {
+      "id": "effective-core-potential",
+      "kind": "definition",
+      "section": "11.4",
+      "name": "Effective core potential",
+      "terms": [
+        "effective core potentials"
+      ],
+      "statement": "A potential added to the Hamiltonian in place of many of an atom's core electrons, which cuts the number of integrals for heavy atoms; it fails for properties sensitive to the wavefunction near the nucleus, such as X-ray spectra and NMR shielding."
     }
   ],
   "concept_prereqs": [
@@ -13068,6 +13515,222 @@
     {
       "concept": "huckel-rule",
       "prereq": "closed-shell"
+    },
+    {
+      "concept": "ab-initio-calculation",
+      "prereq": "electronic-hamiltonian"
+    },
+    {
+      "concept": "ab-initio-calculation",
+      "prereq": "slater-determinant"
+    },
+    {
+      "concept": "ab-initio-calculation",
+      "prereq": "self-consistent-field-method"
+    },
+    {
+      "concept": "mo-basis-expansion",
+      "prereq": "lcao-mo-method"
+    },
+    {
+      "concept": "mo-basis-expansion",
+      "prereq": "basis-functions"
+    },
+    {
+      "concept": "hartree-fock-limit",
+      "prereq": "hartree-fock-energy"
+    },
+    {
+      "concept": "hartree-fock-limit",
+      "prereq": "variational-principle"
+    },
+    {
+      "concept": "hartree-fock-limit",
+      "prereq": "mo-basis-expansion"
+    },
+    {
+      "concept": "restricted-hartree-fock",
+      "prereq": "hartree-fock-method"
+    },
+    {
+      "concept": "restricted-hartree-fock",
+      "prereq": "spin-orbital"
+    },
+    {
+      "concept": "carbon-monoxide-orbitals",
+      "prereq": "ab-initio-calculation"
+    },
+    {
+      "concept": "carbon-monoxide-orbitals",
+      "prereq": "mo-basis-expansion"
+    },
+    {
+      "concept": "carbon-monoxide-orbitals",
+      "prereq": "nonbonding-molecular-orbital"
+    },
+    {
+      "concept": "carbon-monoxide-orbitals",
+      "prereq": "antibonding-molecular-orbital"
+    },
+    {
+      "concept": "carbon-monoxide-orbitals",
+      "prereq": "pi-orbital"
+    },
+    {
+      "concept": "carbon-monoxide-orbitals",
+      "prereq": "hybrid-orbital"
+    },
+    {
+      "concept": "cartesian-gaussian-orbital",
+      "prereq": "gaussian-type-orbital"
+    },
+    {
+      "concept": "cartesian-function-count",
+      "prereq": "cartesian-gaussian-orbital"
+    },
+    {
+      "concept": "cartesian-function-count",
+      "prereq": "spherical-harmonics"
+    },
+    {
+      "concept": "gaussian-nuclear-cusp",
+      "prereq": "gaussian-type-orbital"
+    },
+    {
+      "concept": "gaussian-nuclear-cusp",
+      "prereq": "slater-type-orbital"
+    },
+    {
+      "concept": "gaussian-integral-efficiency",
+      "prereq": "gaussian-type-orbital"
+    },
+    {
+      "concept": "primitive-gaussian",
+      "prereq": "gaussian-type-orbital"
+    },
+    {
+      "concept": "contracted-gaussian-function",
+      "prereq": "primitive-gaussian"
+    },
+    {
+      "concept": "contracted-gaussian-function",
+      "prereq": "basis-functions"
+    },
+    {
+      "concept": "sto-ng-basis",
+      "prereq": "contracted-gaussian-function"
+    },
+    {
+      "concept": "sto-ng-basis",
+      "prereq": "slater-type-orbital"
+    },
+    {
+      "concept": "sto-ng-basis",
+      "prereq": "gaussian-nuclear-cusp"
+    },
+    {
+      "concept": "fitting-sto-with-gaussians",
+      "prereq": "sto-ng-basis"
+    },
+    {
+      "concept": "pople-basis-notation",
+      "prereq": "sto-ng-basis"
+    },
+    {
+      "concept": "minimal-basis-set",
+      "prereq": "basis-functions"
+    },
+    {
+      "concept": "minimal-basis-set",
+      "prereq": "electron-configuration"
+    },
+    {
+      "concept": "orbital-function",
+      "prereq": "contracted-gaussian-function"
+    },
+    {
+      "concept": "orbital-function",
+      "prereq": "hamiltonian-matrix-element"
+    },
+    {
+      "concept": "contraction-notation",
+      "prereq": "orbital-function"
+    },
+    {
+      "concept": "single-zeta-basis",
+      "prereq": "minimal-basis-set"
+    },
+    {
+      "concept": "single-zeta-basis",
+      "prereq": "orbital-function"
+    },
+    {
+      "concept": "single-zeta-basis",
+      "prereq": "slater-orbital-exponents"
+    },
+    {
+      "concept": "multiple-zeta-basis",
+      "prereq": "single-zeta-basis"
+    },
+    {
+      "concept": "basis-set-flexibility",
+      "prereq": "multiple-zeta-basis"
+    },
+    {
+      "concept": "basis-set-cost",
+      "prereq": "multiple-zeta-basis"
+    },
+    {
+      "concept": "basis-set-cost",
+      "prereq": "hamiltonian-is-hermitian"
+    },
+    {
+      "concept": "split-valence-basis",
+      "prereq": "basis-set-flexibility"
+    },
+    {
+      "concept": "split-valence-basis",
+      "prereq": "basis-set-cost"
+    },
+    {
+      "concept": "pople-split-valence-basis",
+      "prereq": "split-valence-basis"
+    },
+    {
+      "concept": "pople-split-valence-basis",
+      "prereq": "pople-basis-notation"
+    },
+    {
+      "concept": "pople-split-valence-basis",
+      "prereq": "contraction-notation"
+    },
+    {
+      "concept": "polarization-function",
+      "prereq": "split-valence-basis"
+    },
+    {
+      "concept": "polarization-function",
+      "prereq": "angular-momentum-quantum-number"
+    },
+    {
+      "concept": "diffuse-function",
+      "prereq": "split-valence-basis"
+    },
+    {
+      "concept": "basis-set-tradeoff",
+      "prereq": "polarization-function"
+    },
+    {
+      "concept": "basis-set-tradeoff",
+      "prereq": "diffuse-function"
+    },
+    {
+      "concept": "effective-core-potential",
+      "prereq": "basis-set-tradeoff"
+    },
+    {
+      "concept": "effective-core-potential",
+      "prereq": "electronic-hamiltonian"
     }
   ],
   "colours": {
