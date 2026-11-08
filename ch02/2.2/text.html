@@ -1,0 +1,86 @@
+<section id="opening">
+<h2>Partial differential equations</h2>
+<p>Solving the wave equation involves identifying the functions $\ku(\kx,\kt)$ that solve <span data-concept="partial-differential-equation">the partial differential equation</span> that represent <span data-type="displacement">the amplitude of the wave</span> at any <span data-type="length">position</span> $\kx$ at any <span data-type="time">time</span> $\kt$</p>
+$$ \dfrac{\partial^2 \ku(\kx,\kt)}{\partial \kx^2} = \dfrac{1}{\kv^2} \dfrac{\partial^2 \ku(\kx,\kt)}{\partial \kt^2} \tag{2.2.1} $$
+<p>This <span data-concept="classical-wave-equation">wave equation</span> is a type of second-order <a href="https://math.libretexts.org/TextMaps/Analysis/Book%3A_Partial_Differential_Equations_(Miersemann)">partial differential equation</a> (PDE) involving two variables - $\kx$ and $\kt$. PDEs differ from <a href="https://math.libretexts.org/TextMaps/Analysis/Book%3A_Differential_Equations_for_Engineers_(Lebl)"><span data-concept="ordinary-differential-equation">ordinary differential equations</span></a> (ODEs) that involve functions of only one variable. However, this difference makes PDEs appreciably more difficult to solve. In fact, the vast majority of PDE cannot be solved analytically and those classes of special PDEs that can be solved analytically invariably involve converting the PDE into one or more ODEs and then solving independently. One of these approaches is the the method of <em><span data-concept="separation-of-variables">separation of variables</span></em>.</p>
+<div class="note">
+<div class="eyebrow">Note</div>
+<h3>Method of Separation of Variables</h3>
+<p>The general application of the <a href="https://math.libretexts.org/Bookshelves/Calculus/Book%3A_Calculus_(OpenStax)/08%3A_Introduction_to_Differential_Equations/8.3%3A_Separable_Equations"><em>Method of Separation of Variables</em></a> for a wave equation involves three steps:<sup class="fn" data-note="three-steps"></sup></p>
+<ol><li><p>We find all solutions of the wave equation with the general form</p>
+$$ \ku(\kx,\kt)= X(\kx)T(\kt) $$
+<p>for some function $X(\kx)$ that depends on $\kx$ but not $\kt$ and some function $T(\kt)$ that depends only on $\kt$, but not $\kx$. It is of course too much to expect that all solutions of Equation 2.2.1 are of this form, however, if we find a set of solutions $\{X_i(\kx)T_i(\kt)\}$ since the wave equation is a <em>linear equation</em>,</p>
+$$ \ku(\kx,\kt)=\sum_i c_ iX_i(\kx)T_i(\kt) \tag{2.2.2} $$
+<p>is also a solution for <em>any choice</em> of the constants $c_i$.</p></li><li>Impose constraints on the solutions based on the knowledge of the system. These are called the <strong><span data-concept="boundary-conditions">boundary conditions</span></strong>, which specify the values of $\ku(\kx,\kt)$ at the extremes ("boundaries"). This is a similar constraint to the solution as in initial value problems which the conditions $x(t_i)$ are specified at a specific time $t_i$. The goal is then to select the constants $c_i$ in Equation 2.2.2 so that the boundary conditions are also satisfied.</li></ol>
+</div>
+<p>Method of separation of variables is one of the most widely used techniques to solve partial differential equations and is based on the <em>assumption</em> that the solution of the equation is separable, that is, the final solution can be represented as a product of several functions, each of which is only dependent upon a single independent variable. If this assumption is incorrect, then clear violations of mathematical principles will be obvious from the analysis.</p>
+</section>
+
+<section id="vibrating-string">
+<h2>A Vibrating Spring Held Fixed Between Two Points</h2>
+<p>As discussed in Section 2.1, the solutions to the string example $\ku(\kx,\kt)$ for all $\kx$ and $\kt$ would be assumed to be a product of two functions: $X(\kx)$ and $T(\kt)$, where $X(\kx)$ is a function of only $\kx$, not $\kt$ and $T(\kt)$ is a function of $\kt$, but not $\kx$.<sup class="fn" data-note="spring"></sup></p>
+$$ \ku(\kx,\kt)= X(\kx)T(\kt) \tag{2.2.3} $$
+<figure class="dv" id="drv-separated"></figure>
+<p>Hence, by substituting the new product solution form (Equation 2.2.3) into the original wave equation (Equation 2.2.1), we converted a partial differential equation of two variables ($\kx$ and $\kt$) into <span data-concept="separated-wave-equation">two <em>ordinary differential equations</em></span> (differential equation containing a function or functions of one independent variable and its derivatives). Each differential equation involves only one of the independent variables ($\kx$ or $\kt$).</p>
+<ul><li>If $K=0$, then the solution is <span data-concept="trivial-solution">the trivial $u(x,y,)=0$ solution</span><sup class="fn" data-note="u-of-x-t"></sup> (i.e., no wave exists).</li><li><p>If $K > 0$, then the general solution of Equation 2.2.8 is</p>
+$$ X(\kx) = A e^{\sqrt{K}\kx} + B e^{-\sqrt{K}\kx} \tag{2.2.9} $$</li></ul>
+<p>At this stage, Equation 2.2.9 implies that the solution to the two ordinary differential wave equations will be an infinite number of waves with no quantization to limit those that are allowed (i.e., any values of $A$ and $B$ are possible). Narrowing down the general solution to a specific solution occurs when taking the <span data-concept="boundary-conditions">boundary conditions</span> into account.</p>
+<p>The boundary conditions for this problem is that <span data-type="displacement">the wave amplitude</span> equal to zero at the ends of the string</p>
+$$ \ku(0,\kt) = X(\kx)T(\kt) = 0 \tag{2.2.10} $$
+$$ \ku(\kL,\kt) = X(\kx)T(\kt) = 0 \tag{2.2.11} $$
+<p>for all times $\kt$.</p>
+<p>Applying the two boundary conditions in Equations 2.2.10 and 2.2.11 into the general solution in Equation 2.2.9 results into relationships between $A$ and $B$:</p>
+$$ X(\kx=0)= A + B = 0 \tag{2.2.12} $$
+<p>and</p>
+$$ X(\kx=\kL)= A e^{\sqrt{K}\kL} + B e^{-\sqrt{K}\kL} = 0 \tag{2.2.13} $$
+<div class="note">
+<div class="eyebrow">Note</div>
+<h3>Ignore the Trivial Solution</h3>
+<p>One solution to this is that $A = B = 0$, but this is <span data-concept="trivial-solution">the trivial solution</span> from $K=0$ and one we ignore since it provides no physical solution to the problem other than the knowledge that $0=0$, which is not that inspiring of a result.</p>
+</div>
+<p>Both Equations 2.2.7 and 2.2.8 can be generalized into the following equations</p>
+$$ \dfrac{d^2y(x)}{dx^2} - k^2 y(x) = 0 \tag{2.2.14} $$
+<p>where $k$ is a real constant (i.e., not complex). Equation 2.2.14 is a <em>homogeneous</em> second order linear differential equation. <span data-concept="exponential-solutions">The general solution to these types of differential equations</span> has the form</p>
+$$ y(x) = e^{\alpha x} \tag{2.2.15} $$
+<p>where $\alpha$ is a constant to be determined by the constraints of system.</p>
+<figure class="dv" id="drv-exponential"></figure>
+<div class="example" id="ex-2-2-1">
+<h3>Example 2.2.1 · General Solution</h3>
+<p>Solve</p>
+$$ y'' + 3y' - 4y = 0 $$
+<h4>Solution</h4>
+<p>The strategy is to search for a solution of the form</p>
+$$ y = e^{\alpha t } $$
+<p>The reason for this is that long ago some geniuses figured this stuff out and it works. Now calculate derivatives</p>
+$$ y' = \alpha e^{\alpha t } $$
+$$ y'' = \alpha^2e^{\alpha t} $$
+<p>Substituting into the differential equation gives</p>
+$$ \begin{aligned} \alpha ^2e^{\alpha t} + 3(\alpha e^{\alpha t}) - 4(e^{\alpha t}) &= 0 \\[4pt] ( \alpha ^2 + 3\alpha - 4)e^{\alpha t} &= 0 \end{aligned} $$
+<p>Now divide by $e^{\alpha t}$ to get</p>
+$$ \begin{aligned} \alpha ^2 + 3\alpha - 4 &= 0 \\[4pt] (\alpha - 1)(\alpha + 4) &= 0 \\[4pt] \alpha &= 1 \end{aligned} $$
+<p>and</p>
+$$ \alpha = -4 $$
+<p>We can conclude that two solutions are</p>
+$$ y_1 = e^t $$
+<p>and</p>
+$$ y_2 = e^{-4t} $$
+<p>Now let</p>
+$$ L(y) = y'' + 3y' - 4y $$
+<p>It is easy to verify that if $y_1$ and $y_2$ are solutions to</p>
+$$ L(y) = 0 $$
+<p>then</p>
+$$ y= c_1y_1 + c_2y_2 $$
+<p>is also a solution. More specifically we can conclude that</p>
+$$ y = c_1e^t + c_2e^{-4t } $$
+<p>Represents a two dimensional family (vector space) of solutions. Later we will prove that this is the most general description of the solution space.</p>
+</div>
+<div class="example" id="ex-2-2-2">
+<h3>Example 2.2.2 · Boundary Conditions<sup class="fn" data-note="initial-conditions"></sup></h3>
+<p>Solve</p>
+$$ y'' - y' - 6y = 0 $$
+<p>with $y(0) = 1$ and $y'(0) = 2$.</p>
+<h4>Solution</h4>
+<figure class="dv" id="drv-example-2-2-2"></figure>
+</div>
+<p>When $K > 0$,<sup class="fn" data-note="k-negative"></sup> the general solutions of Equations 2.2.7 and 2.2.8 are oscillatory in time and space, respectively, as discussed in the following section.</p>
+</section>

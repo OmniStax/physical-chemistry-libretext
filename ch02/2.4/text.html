@@ -1,0 +1,56 @@
+<section id="product-solution">
+<h2>The product solution</h2>
+<p>As discussed previously, the solutions to the string example $\ku(\kx,\kt)$ for all $\kx$ and $\kt$ would be assumed to be a product of two functions: $X(\kx)$ and $T(\kt)$, where $X(\kx)$ is a function of only $\kx$, not $\kt$ and $T(\kt)$ is a function of $\kt$, but not $\kx$.</p>
+$$ \ku(\kx,\kt)= X(\kx)T(\kt) $$
+<p>By substituting the new product solution form into the original <span data-concept="classical-wave-equation">wave equation</span>, one can obtain two <em><span data-concept="ordinary-differential-equation">ordinary differential equations</span></em> (differential equation containing a function or functions of one independent variable and its derivatives). Each differential equation would involve only one of the independent variables ($\kx$ or $\kt$).</p>
+</section>
+
+<section id="spatial-dependence">
+<h2>Spatial Dependence of the Solution: $X(x)$</h2>
+<p>The <span data-concept="boundary-conditions">boundary conditions</span> for the string held to zero at both ends argue that $\ku(\kx,\kt)$ collapses to zero at the extremes of the string. Unfortunately, when $K>0$, the general solution to the wave equation results in a sum of exponential decays and growths that cannot achieve the boundary conditions (except for the <span data-concept="trivial-solution">trivial solution</span> that $\ku(\kx,\kt)=0$); hence $K<0$. This means we must introduce complex numbers due to the $\sqrt{K}$ terms in Equation 2.4.5.<sup class="fn" data-note="sqrt-k-ref"></sup> So we can rewrite $K$:</p>
+$$ K = - \kpn^2 \tag{2.4.1} $$
+<figure class="dv" id="drv-string-spatial"></figure>
+<p>Equation 2.4.10 presents <span data-concept="string-spatial-solutions">a set of solutions to the spatial part of the solution to the wave equation</span> subject to the boundary conditions (Figure 2.4.1). This set of solutions is infinitely large with individual solutions that are distinguished from each other by the $n$ parameter introduced to account for the boundary conditions. This number is an example of a "<span data-concept="quantum-number">quantum number</span>" that are ubiquitously in quantum mechanics and are uniquely defined for each system.</p>
+<figure class="sim" id="sim-modes" data-figure="2.4.1" data-original="/media/ch02/344335-2.4.1.svg" data-original-width="488" data-original-caption="The first seven $X(x)$ solutions of a vibrating string of length $L$ at the two times of maximum displacement (red and blue). (CC BY-NC; Ümit Kaya via LibreTexts).">
+  <div class="sim-head"><span class="eyebrow">Figure 2.4.1</span><span>Pick a mode $n$ and change <span data-type="velocity">the wave velocity</span> or <span data-type="length">the length of the string</span>. Mode $n$ has $n-1$ <span data-concept="node">nodes</span> between the fixed ends and swings $n$ times for each swing of the fundamental.</span></div>
+</figure>
+</section>
+
+<section id="time-dependence">
+<h2>Time Dependence of the Solution: $T(t)$</h2>
+<p>A similar argument applies to <span data-concept="string-temporal-solutions">the other half of the <em>ansatz</em> ($T(\kt)$)</span> originally proposed for the classical wave equation was obtain from solving Equation 2.4.4a, which qualitatively resembles the original spatial differential equation solved above (Equation 2.4.4b).<sup class="fn" data-note="separated-refs"></sup></p>
+<figure class="dv" id="drv-string-temporal"></figure>
+<p>In contrast to the spatial dependence solution, we have no boundary conditions to use to identify the constants $E$ and $F$.</p>
+</section>
+
+<section id="superposition">
+<h2>The Principle of Superposition</h2>
+<p>Now let's revisit the original <em>ansatz</em> solution to the classical wave equation (Equation 2.4.1),<sup class="fn" data-note="ansatz-ref"></sup> which can be substituted with Equations 2.4.10 and 2.4.12</p>
+<figure class="dv" id="drv-normal-mode"></figure>
+<p>The functions represented in Equation 2.4.13 are set of solutions including both spatial and temporal features that solve the wave equation of a string held tight on two ends.</p>
+<div class="note">
+<div class="eyebrow">Note</div>
+<h3>Linearity of the Wave Equation</h3>
+<p>The wave equation has a very important property: if we have two solutions to the equation, then the sum of the two is <em>also</em> a solution to the equation. It’s easy to check this:</p>
+<figure class="dv" id="drv-sum-of-solutions"></figure>
+<p>Any differential equation for which this property holds is called <em><span data-concept="linear-differential-equation">a linear differential equation</span></em>. Also note that $af(\kx,\kt) + bg(\kx,\kt)$ is also a solution to the equation if $a$, $b$ are constants. So you can add together—superpose—multiples of any two solutions of the wave equation to find a new function satisfying the equation.</p>
+</div>
+<p>The linearity property is easy to interpret <em>visually</em>: if you can draw two wave solutions, then at each point on the string simply add <span data-type="displacement">the displacement $\kun(\kx,\kt)$</span> of one wave to the other $\ku_m(\kx,\kt)$—the sum of the two waves together is a solution. So, for example, as two <span data-concept="traveling-wave">traveling waves</span> moving along the string in opposite directions meet each other, the displacement of the string at any point at any instant is just the sum of the displacements it would have had from the two waves singly.</p>
+<figure class="sim" id="sim-pulses" data-figure="2.4.2" data-original="/media/ch02/347962-pulses.gif" data-original-caption="Interference of Multiple Pulses. (&quot;for non-profit educational purposes.&quot;; Tom Walsh via [ophysics.com](https://www.ophysics.com/waves3b.html))">
+  <div class="sim-head"><span class="eyebrow">Figure 2.4.2</span><span><span data-ref="pulse-1">One pulse</span> runs right, <span data-ref="pulse-2">the other</span> runs left, and the string is their sum at every point. Put the second on the opposite side, and where they overlap the string is displaced less.</span></div>
+</figure>
+<p>This simple addition of the displacements is interference, doubtless because if the waves meeting have displacements in opposite directions, the string will be displaced less than by a single wave. This is also called the <strong><em><span data-concept="principle-of-superposition">Principle of Superposition</span></em></strong>.</p>
+<div class="note">
+<div class="eyebrow">Note</div>
+<h3>Principle of Superposition</h3>
+<p>The <em><span data-concept="principle-of-superposition">Principle of Superposition</span></em> is the sum of two or more solutions is also a solution.</p>
+</div>
+<p>Since the wave equation is a linear homogeneous differential equation, <span data-concept="normal-mode-expansion">the total solution can be expressed as a sum of all possible solutions</span> described by Equation 2.4.13.</p>
+$$ \begin{align} \ku(\kx,\kt) &= \sum_{n=1}^{\infty} \kun(\kx,\kt) \tag{2.4.14} \\[4pt] & = \sum_{n=1}^{\infty} \left( G_n \cos (\komegan \kt) + H_n \sin (\komegan \kt) \right) \sin \left(\dfrac{n\pi \kx}{\kL}\right) \tag{2.4.15} \end{align} $$
+<p>Each $\kun(\kx,\kt)$ solution is called a <strong><span data-concept="normal-mode">normal mode</span></strong> of the system and can be characterized via their corresponding frequencies $\dfrac{n\pi}{\kL}$<sup class="fn" data-note="mode-frequencies"></sup> with $n=1,2,3...$. The spatial dependence of the first seven normal modes are shown in Figure 2.4.1 and are <span data-concept="standing-wave">standing waves</span>. The first term with $n=1$ is typically called the <em><span data-concept="fundamental-and-overtones">fundamental</span></em> and each subsequent modes is called an <em><span data-concept="fundamental-and-overtones">overtone</span></em> or <em><span data-concept="fundamental-and-overtones">harmonic</span></em>. The temporal dependence of the normal modes is sinusoidal with <span data-type="frequency">angular frequencies $\komegan$</span> that can be expanded to <span data-concept="normal-mode-frequency">natural frequencies $\knun$</span> via</p>
+$$ \knun = \dfrac{\komegan}{2 \pi} = \dfrac{n\kv}{2\kL} \tag{2.4.16} $$
+<p>Hence, as the spatial curvature of the normal mode increases, the temporal oscillation of that mode also increases. This is a common trait in quantum mechanical systems and is a direct consequence of the wave equation.</p>
+<figure class="sim" id="sim-mode-sum">
+  <div class="sim-head"><span class="eyebrow">Sim</span><span>Set how much of each mode, <span data-type="displacement">$G_1$, $G_2$ and $G_3$</span>, the string starts with and press play. Each mode swings at its own frequency, so the string's shape keeps changing until the slowest mode completes a period.</span></div>
+</figure>
+</section>

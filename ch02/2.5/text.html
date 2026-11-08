@@ -1,0 +1,63 @@
+<section id="higher-dimensions">
+<h2>Waves in higher dimensions</h2>
+<p>So far, we’ve looked at waves in one dimension, traveling along a string or sound waves going down a narrow tube. However, waves in higher dimensions than one are very familiar—water waves on the surface of a pond, or sound waves moving out from a source in three dimensions. It is pleasant to find that these waves in higher dimensions satisfy <span data-concept="multidimensional-wave-equation">wave equations</span> which are a very natural extension of the one we found for a string, and—very important—they also satisfy the <em><span data-concept="principle-of-superposition">Principle of Superposition</span></em>, in other words, if waves meet, you just add the contribution from each wave. In the next two paragraphs, we go into more detail, but this <span data-concept="principle-of-superposition">Principle of Superposition</span> is the crucial lesson.</p>
+</section>
+
+<section id="wave-equation-more-dimensions">
+<h2>The Wave Equation and Superposition in More Dimensions</h2>
+<p>What happens in higher dimensions? Let’s consider two dimensions, for example waves in an elastic sheet like a drumhead. If the rest position for the elastic sheet is the ($\kx$, $\ky$) plane, so when it’s vibrating it’s moving up and down in the z-direction, its configuration at any instant of time is a function. $\ku(\kx,\ky,\kt)$</p>
+<p>In fact, we could do the same thing we did for the string, looking at the total forces on a little bit and applying <a href="http://phys.libretexts.org/TextMaps/Map%3A_Spiral_Physics_(D%E2%80%99Alessandris)/1%3A_Mechanics/Model_2%3A_The_constant-force_particle_model/03._Dynamics/03._Applying_Newton's_Second_Law">Newton’s Second Law</a>. In this case that would mean taking one little bit of the drumhead, and instead of a small stretch of string with tension pulling the two ends, we would have a small <em>square</em> of the elastic sheet, with tension pulling all around the edge. Remember that the net force on the bit of string came about because the string was curving around, so the tensions at the opposite ends tugged in slightly different directions, and did not cancel. The $\frac{\partial^2}{\partial \kx^2}$ term measured that curvature, the rate of change of slope. In two dimensions, thinking of a small square of the elastic sheet, things are more complicated. Visualize the bit of sheet to be momentarily like a tiny patch on a balloon, you’ll see it curves in two directions, and tension forces must be tugging all around the edges. The total force on the little square comes about because the tension forces on opposite sides are out of line if the surface is curving around, now we have to add <em>two</em> sets of almost-opposite forces from the two pairs of sides. The math is now shown here,<sup class="fn" data-note="c-not-shown"></sup> but it is at least plausible that the equation is:</p>
+$$ \dfrac{ \partial^2 \ku(\kx,\ky,\kt)}{\partial \kx^2} + \dfrac{ \partial^2 \ku(\kx,\ky,\kt)}{\partial \ky^2} = \dfrac{1}{\kv^2} \dfrac{ \partial^2 \ku(\kx,\ky,\kt)}{\partial \kt^2} \tag{2.5.1} $$
+<p>The physics of this equation is that the acceleration of a tiny bit of the sheet comes from out-of-balance tensions caused by the sheet curving around in <em>both</em> the <em>x</em>- and <em>y</em>-directions, this is why there are the two terms on the left hand side.</p>
+<p>And, going to three dimensions is easy: add one more term to give</p>
+$$ \dfrac{ \partial^2 \ku(\kx,\ky,,\kz,\kt)}{\partial \kx^2} + \dfrac{ \partial^2 \ku(\kx,\ky,\kz,\kt)}{\partial \ky^2} + \dfrac{ \partial^2 \ku(\kx,\ky,\kz,\kt)}{\partial \kz^2} = \dfrac{1}{\kv^2} \dfrac{ \partial^2 \ku(\kx,\ky,\kz,\kt)}{\partial \kt^2} \tag{2.5.2} $$<sup class="fn" data-note="c-double-comma"></sup>
+<p>This sum of partial differentiations in space is so common in physics that there’s a shorthand:</p>
+$$ \nabla^2 = \left( \dfrac{ \partial^2}{\partial \kx^2}, \dfrac{ \partial^2}{\partial \ky^2}, \dfrac{ \partial^2}{\partial \kz^2} \right) $$<sup class="fn" data-note="c-laplacian"></sup>
+<p>so Equation 2.5.2 can be more easily written as</p>
+$$ \nabla^2 \ku(\kx,\ky,\kz,\kt) = \dfrac{1}{\kv^2} \dfrac{\partial^2 \ku(\kx,\ky,\kz,\kt)}{\partial \kt^2} $$
+<p>Just as we found in one dimension traveling harmonic waves (no boundary conditions)</p>
+$$ \ku(\kx,\kt) = A \sin (\kk\kx -\komega \kt) $$
+<p>with $\komega=\nu \kk$<sup class="fn" data-note="c-nu-k"></sup>, you can verify that the <em>three</em>-dimensional equation has <span data-concept="plane-wave">harmonic solutions</span></p>
+$$ \ku(\kx,\ky,\kz,\kt) = A \sin (k_x \kx +k_x +k_z \kz -\komega \kt) $$<sup class="fn" data-note="c-ky"></sup>
+<p>with $\komega = \nu |\vec{k|}$<sup class="fn" data-note="c-nu-kvec"></sup> where $|k| = \sqrt{k_x^2+k_y^2+k_z^2}$.</p>
+<p>$\kkvec$ is a <span data-concept="wave-vector">vector in the direction the wave is moving</span>. The electric and magnetic fields in a radio wave or light wave have just this form (or, closer to the source, a very similar equivalent expression for outgoing spheres of waves, rather than <span data-concept="plane-wave">plane waves</span>).</p>
+<figure class="dv" id="drv-plane-wave"></figure>
+<div class="note">
+<div class="eyebrow">Note</div>
+<p>It’s important to realize that the 2D wave equation (Equation 2.5.1) is still a <strong><em><span data-concept="linear-differential-equation">linear</span></em></strong> equation, so the <span data-concept="principle-of-superposition">Principle of Superposition</span> still holds. If two waves on an elastic sheet, or the surface of a pond, meet each other, the result at any point is given by simply adding <span data-type="displacement">the displacements</span> from the individual waves. We’ll begin by thinking about waves propagating freely in two and three dimensions, than<sup class="fn" data-note="c-than"></sup> later consider waves in restricted areas, such as a drum head.</p>
+</div>
+</section>
+
+<section id="rectangular-membrane">
+<h2>Vibrational Modes of a Rectangular Membrane</h2>
+<p>A one-dimensional wave does not have a choice in how it propagates: it just moves along the line (well, it could get partly reflected by some change in the line and part of it go backwards). However, when we go to higher dimensions, how a wave disturbance starting in some localized region spreads out is far from obvious. But we can begin by recalling some simple cases: dropping a pebble into still water causes an outward moving circle of ripples. If we grant that light is a wave, we notice a beam of light changes direction on going from air into glass. Of course, it is not immediately evident that light <em>is</em> a wave: we’ll talk a lot more about that later. A few solutions (both temporal and spatials) are shown below together with their <span data-concept="quantum-number">quantum numbers</span> ($n_x$ and $n_y$).</p>
+<figure class="sim" id="sim-rect-membrane" data-figure="2.5.1" data-original-caption="Select Vibrational Modes of a Rectangular Membrane. Animations courtesy of Dr. Dan Russell via Grad. Prog. Acoustics, Penn State).">
+  <div class="sim-head"><span class="eyebrow">Figure 2.5.1</span><span>A <span data-concept="rectangular-membrane-modes">mode of a rectangular membrane</span>, its edges held still. Pick $n_x$ and $n_y$ and turn the sheet: each lobe swings up and down while the <span data-concept="nodal-line">nodal lines</span> between them stay at rest.</span></div>
+</figure>
+<p>Solving for the function $\ku(\kx,\ky,\kt)$ in a vibrating, rectangular membrane is done in a similar fashion by <span data-concept="separation-of-variables">separation of variables</span>, and setting <span data-concept="boundary-conditions">boundary conditions</span>. The solved function is very similar, where</p>
+$$ \ku(\kx,\ky,\kt) = \kAnm \cos(\komeganm \kt + \phi_{nm}) \sin \left(\dfrac {n_x \pi \kx}{\ka}\right) \sin\left(\dfrac {n_y\pi \ky}{\kbm}\right) \tag{2.5.3} $$
+<p>where</p>
+<ul><li>$\ka$ is <span data-type="length">the length of the rectangular membrane</span> and $\kbm$ is <span data-type="length">the width</span>, and</li><li>$n_x$ and $n_y$ are two <span data-concept="quantum-number">quantum numbers</span> (one in each dimension).</li></ul>
+<figure class="dv" id="drv-rectangular-modes"></figure>
+<p>As with the solutions to 1-D wave equations, a <strong><span data-concept="nodal-line">node</span></strong> is a point (or line) on a structure that does not move while the rest of the structure is vibrating.</p>
+<div class="example" id="ex-2-5-1">
+<h3>Example 2.5.1 · Nodal Geometries in Rectangular Membranes</h3>
+<p>For the following 2-D solutions in Figure 2.5.1, how many nodes are there, what is the geometry and how would you characterize them?</p>
+<ol type="a"><li>($n_x=1$, $n_y=1$</li><li>($n_x=2$, $n_y=1$</li></ol>
+<h4>Solution a</h4>
+<p>The ($n_x=1$, $n_y=1$ solution in Figure 2.5.1 has zero nodes. That is, no spot in the membrane (other than the boundaries) is not moving during the motion of the membrane.</p>
+<h4>Solution b</h4>
+<p>The ($n_x=2$, $n_y=1$ solution in Figure 2.5.1 has one node. It is a line at half the length of the x direction and extends over the entire length of the y direction.</p>
+</div>
+</section>
+
+<section id="circular-membrane">
+<h2>Vibrational Modes of a Circular Membrane</h2>
+<p>The basic principles of a vibrating rectangular membrane applies to other 2-D members including circular membranes. However, the mathematics and solutions are a bit more complicated. <span data-concept="circular-membrane-modes">The solutions</span> are best represented in polar notation (instead of rectangular like in Equation 2.5.3) and have the following functional form</p>
+$$ \ku(\kr, \theta, \kt)=J_{m}\left(\lambda_{m n} \kr\right) \cos m \theta \cos c \lambda_{m n} \kt $$
+<p>where $J_m$ are <span data-concept="bessel-function">Bessel functions</span> (these are oscillatory functions) and $\lambda$ are constants. This system has two <span data-concept="quantum-number">quantum numbers</span> ($m$ and $n$) that serve the same function as $n_x$ and $n_y$ do in the rectangular membranes. In the animations in Figure 2.5.2, the <span data-concept="nodal-line">nodal diameters and circles</span> show up as white regions that do not oscillate, while the red and blue regions indicate positive and negative <span data-type="displacement">displacements</span>.</p>
+<figure class="sim" id="sim-circ-membrane" data-figure="2.5.2" data-original="/media/ch02/54917-imageedit_1_8987729393.gif,/media/ch02/54922-imageedit_3_7597293042.gif,/media/ch02/54921-imageedit_5_3064389541.gif" data-original-caption="Select Vibrational Modes of a Circular Membrane. (CC BY-SA-ND 4.0; Dan Russell, via Grad. Prog. Acoustics, Penn State.">
+  <div class="sim-head"><span class="eyebrow">Figure 2.5.2</span><span>A <span data-concept="circular-membrane-modes">mode of a drumhead</span>, its rim held still. Pick $m$ and $n$ and turn the drum: the <span data-concept="nodal-line">nodal diameters and circles</span> stay flat while the lobes between them swing.</span></div>
+</figure>
+<p>Figure 2.5.2 (left) shows the fundamental mode shape for a vibrating circular membrane, while the other two modes are excited modes with more complex nodal character.</p>
+</section>

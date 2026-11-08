@@ -1,0 +1,32 @@
+<section id="negative-constant">
+<h2>A negative separation constant</h2>
+<p>The <span data-concept="boundary-conditions">boundary conditions</span> for the string held to zero at both ends argue that $\ku(\kx,\kt)$ collapses to zero at the extremes of the string (Figure 2.3.1).</p>
+<figure class="sim" id="sim-shooting" data-figure="2.3.1" data-original="/media/ch02/54788-Standing_waves_on_a_string.gif" data-original-caption="Standing waves in a string (both spatially and temporally). from Wikipedia.">
+  <div class="sim-head"><span class="eyebrow">Figure 2.3.1</span><span>Turn the separation constant $K$ and watch the far end of the string. The curve comes back to zero there only where $K = -\kpn^2$ with $\kpn = n\pi/\kL$.</span></div>
+</figure>
+<p>Unfortunately, when $K>0$, the general solution (Equation 2.2.7)<sup class="fn" data-note="cite-general"></sup> results in a sum of exponential decays and growths that cannot achieve the boundary conditions (except for the <span data-concept="trivial-solution">trivial solution</span>); hence $K<0$. This means we must introduce complex numbers due to the $\sqrt{K}$ terms in Equation 2.2.5.<sup class="fn" data-note="cite-sqrt"></sup> So we can rewrite $K$:</p>
+$$ K = - \kpn^2 \tag{2.3.1} $$
+<p>and Equation 2.2.4b<sup class="fn" data-note="cite-space"></sup> can be</p>
+$$ \dfrac{d^2X(\kx)}{d\kx^2} +\kpn^2 X(\kx) = 0 \tag{2.3.2} $$
+<p><span data-concept="oscillatory-solutions">The <a href="http://mathwiki.ucdavis.edu/Analysis/Ordinary_Differential_Equations/Second_Order_Linear_Differential_Equations/Homogeneous_Equations_with_Constant_Coefficients">general solution </a>to differential equations of the form of Equation 2.3.2</span> is</p>
+$$ X(\kx) = A e^{i\kpn\kx} + B e^{-i\kpn\kx} \tag{2.3.3} $$
+</section>
+
+<section id="quantization">
+<h2>Quantization by boundary conditions</h2>
+<div class="example" id="ex-2-3-1">
+<h3>Example 2.3.1</h3>
+<p>Verify that Equation 2.3.3 is the general form for differential equations of the form of Equation 2.3.2, which when substituted with Equation 2.3.1 give</p>
+$$ X(\kx) = A e^{i\kpn\kx} + B e^{-i\kpn\kx} $$
+<h4>Solution</h4>
+<p>Expand the complex exponentials into trigonometric functions via <span data-concept="eulers-formula">Euler formula</span> ($e^{i \theta} = \cos \theta + i\sin \theta$)</p>
+<figure class="dv" id="drv-example-2-3-1"></figure>
+<p>Substituting Equations 2.3.10 and 2.3.6 into Equation 2.3.5 results in</p>
+$$ X(\kx) = c_2 \sin \left(\dfrac{n\pi \kx}{\kL} \right) $$
+<p>which can simplify to<sup class="fn" data-note="omega-for-p"></sup></p>
+$$ X(\kx) = c_2 \sin \left( \omega \kx \right) $$
+<p>with</p>
+$$ \omega=\dfrac{n\pi}{\kL} $$
+<p>A similar argument applies to the other half of the <em>ansatz</em> ($T(\kt)$).</p>
+</div>
+</section>
