@@ -71,7 +71,7 @@ const UP = '#c2413a', DOWN = '#2f6ab3';
     map(ctx, { X: (u) => sb.l + u * (sb.r - sb.l), Y: (v) => sb.b - v * (sb.b - sb.t) }, val, lutD, s);
     const ax2 = axes(ctx, sb, [0, 1], [0, 1], { nx: 1, ny: 1, xl: 'x₁', yl: 'x₂', xc: e1, yc: e2 });
     line(ctx, ax2.X(0), ax2.Y(0), ax2.X(1), ax2.Y(1), alpha(PAL.ink, 0.4), 2, [10, 10]);
-    text(ctx, 'probability density |ψ|²', (sb.l + sb.r) / 2, sb.t - 18, C('probability-density'), { size: 20, weight: 600, align: 'center' });
+    text(ctx, 'probability density |ψ|²', (sb.l + sb.r) / 2 + 20, sb.t - 46, C('probability-density'), { size: 20, weight: 600, align: 'center' });
     F.legend(ctx, { l: 740, r: 1390, t: 470, b: 560 }, [
       { s: 'ψ > 0', color: F.fact(UP), kind: 'swatch' },
       { s: 'ψ < 0', color: F.fact(DOWN), kind: 'swatch' },

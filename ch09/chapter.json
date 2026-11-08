@@ -1,0 +1,962 @@
+{
+ "id": "9",
+ "dir": "ch09",
+ "title": "Chemical Bonding in Diatomic Molecules",
+ "intro": {
+  "module": "11786",
+  "slug": "09:_Chemical_Bonding_in_Diatomic_Molecules"
+ },
+ "summary": {
+  "module": "550560",
+  "slug": "09:_Chemical_Bonding_in_Diatomic_Molecules/9.S:_Chemical_Bonding_in_Diatomic_Molecules_(Summary)"
+ },
+ "sections": [
+  {
+   "id": "9.1",
+   "module": "13451",
+   "title": "The Born-Oppenheimer Approximation Simplifies the Schrödinger Equation for Molecules",
+   "slug": "09:_Chemical_Bonding_in_Diatomic_Molecules/9.01:_The_Born-Oppenheimer_Approximation_Simplifies_the_Schrodinger_Equation_for_Molecules"
+  },
+  {
+   "id": "9.2",
+   "module": "13452",
+   "title": "The H₂⁺ Prototypical Species",
+   "slug": "09:_Chemical_Bonding_in_Diatomic_Molecules/9.02:_The_H_Prototypical_Species"
+  },
+  {
+   "id": "9.3",
+   "module": "13454",
+   "title": "The Overlap Integral",
+   "slug": "09:_Chemical_Bonding_in_Diatomic_Molecules/9.03:_The_Overlap_Integral"
+  },
+  {
+   "id": "9.4",
+   "module": "13455",
+   "title": "Chemical Bond Stability",
+   "slug": "09:_Chemical_Bonding_in_Diatomic_Molecules/9.04:_Chemical_Bond_Stability"
+  },
+  {
+   "id": "9.5",
+   "module": "13456",
+   "title": "Bonding and Antibonding Orbitals",
+   "slug": "09:_Chemical_Bonding_in_Diatomic_Molecules/9.05:_Bonding_and_Antibonding_Orbitals"
+  },
+  {
+   "id": "9.6",
+   "module": "13458",
+   "title": "A Simple Molecular-Orbital Treatment of H₂ Places Both Electrons in a Bonding Orbital",
+   "slug": "09:_Chemical_Bonding_in_Diatomic_Molecules/9.06:_A_Simple_Molecular-Orbital_Treatment_of_H_Places_Both_Electrons_in_a_Bonding_Orbital"
+  },
+  {
+   "id": "9.7",
+   "module": "13459",
+   "title": "Molecular Orbitals Can Be Ordered According to Their Energies",
+   "slug": "09:_Chemical_Bonding_in_Diatomic_Molecules/9.07:_Molecular_Orbitals_Can_Be_Ordered_According_to_Their_Energies"
+  },
+  {
+   "id": "9.8",
+   "module": "13460",
+   "title": "Molecular-Orbital Theory Does not Predict a Stable Diatomic Helium Molecule",
+   "slug": "09:_Chemical_Bonding_in_Diatomic_Molecules/9.08:_Molecular-Orbital_Theory_Does_not_Predict_a_Stable_Diatomic_Helium_Molecule"
+  },
+  {
+   "id": "9.9",
+   "module": "13461",
+   "title": "Electrons Populate Molecular Orbitals According to the Pauli Exclusion Principle",
+   "slug": "09:_Chemical_Bonding_in_Diatomic_Molecules/9.09:_Electrons_Populate_Molecular_Orbitals_According_to_the_Pauli_Exclusion_Principle"
+  },
+  {
+   "id": "9.10",
+   "module": "13462",
+   "title": "Molecular Orbital Theory Predicts that Molecular Oxygen is Paramagnetic",
+   "slug": "09:_Chemical_Bonding_in_Diatomic_Molecules/9.10:_Molecular_Orbital_Theory_Predicts_that_Molecular_Oxygen_is_Paramagnetic"
+  },
+  {
+   "id": "9.11",
+   "module": "13463",
+   "title": "Photoelectron Spectra Support the Existence of Molecular Orbitals",
+   "slug": "09:_Chemical_Bonding_in_Diatomic_Molecules/9.11:_Photoelectron_Spectra_Support_the_Existence_of_Molecular_Orbitals"
+  },
+  {
+   "id": "9.12",
+   "module": "13464",
+   "title": "Molecular-Orbital Theory Also Applies to Heteronuclear Diatomic Molecules",
+   "slug": "09:_Chemical_Bonding_in_Diatomic_Molecules/9.12:_Molecular-Orbital_Theory_Also_Applies_to_Heteronuclear_Diatomic_Molecules"
+  },
+  {
+   "id": "9.13",
+   "module": "13465",
+   "title": "SCF-LCAO-MO Wavefunctions are Molecular Orbitals formed from a Linear Combination of Atomic Orbitals and Whose Coefficients Are Determined Self-Consistently",
+   "slug": "09:_Chemical_Bonding_in_Diatomic_Molecules/9.13:_SCF-LCAO-MO_Wavefunctions_are_Molecular_Orbitals_formed_from_a_Linear_Combination_of_Atomic_Orbitals_and_Whose_Coefficients_Are_Determined_Self-Consistently"
+  },
+  {
+   "id": "9.14",
+   "module": "13466",
+   "title": "Molecular Term Symbols Describe Electronic States of Molecules",
+   "slug": "09:_Chemical_Bonding_in_Diatomic_Molecules/9.14:_Molecular_Term_Symbols_Describe_Electronic_States_of_Molecules"
+  },
+  {
+   "id": "9.15",
+   "module": "13467",
+   "title": "Molecular Term Symbols Designate Symmetry",
+   "slug": "09:_Chemical_Bonding_in_Diatomic_Molecules/9.15:_Molecular_Term_Symbols_Designate_Symmetry"
+  },
+  {
+   "id": "9.16",
+   "module": "13468",
+   "title": "Most Molecules Have Excited Electronic States",
+   "slug": "09:_Chemical_Bonding_in_Diatomic_Molecules/9.16:_Most_Molecules_Have_Excited_Electronic_States"
+  }
+ ],
+ "variables": [
+  {
+   "sym": "H_op",
+   "concept": "molecular-hamiltonian",
+   "meaning": "the complete Hamiltonian of a diatomic molecule",
+   "section": "9.1"
+  },
+  {
+   "sym": "Tnuc_hat",
+   "concept": "kinetic-energy-operator",
+   "meaning": "the kinetic energy operator of the nuclei",
+   "section": "9.1"
+  },
+  {
+   "sym": "Hel_hat",
+   "concept": "electronic-hamiltonian",
+   "meaning": "the electronic Hamiltonian, for nuclei held fixed at separation R",
+   "section": "9.1"
+  },
+  {
+   "sym": "R",
+   "concept": "internuclear-distance",
+   "meaning": "the distance between the two nuclei",
+   "unit": "pm",
+   "section": "9.1"
+  },
+  {
+   "sym": "Z_A",
+   "meaning": "the charge number of nucleus A",
+   "section": "9.1"
+  },
+  {
+   "sym": "Z_B",
+   "meaning": "the charge number of nucleus B",
+   "section": "9.1"
+  },
+  {
+   "sym": "e",
+   "type": "charge",
+   "meaning": "the elementary charge",
+   "unit": "C",
+   "section": "9.1"
+  },
+  {
+   "sym": "epsilon_0",
+   "meaning": "the permittivity of free space",
+   "section": "9.1"
+  },
+  {
+   "sym": "hbar",
+   "concept": "reduced-plancks-constant",
+   "meaning": "the reduced Planck constant h/2π",
+   "section": "9.1"
+  },
+  {
+   "sym": "m_A",
+   "type": "mass",
+   "meaning": "the mass of nucleus A",
+   "unit": "kg",
+   "section": "9.1"
+  },
+  {
+   "sym": "m_B",
+   "type": "mass",
+   "meaning": "the mass of nucleus B",
+   "unit": "kg",
+   "section": "9.1"
+  },
+  {
+   "sym": "m",
+   "type": "mass",
+   "meaning": "the mass of the electron",
+   "unit": "kg",
+   "section": "9.1"
+  },
+  {
+   "sym": "r_Ai",
+   "type": "length",
+   "meaning": "the distance of electron i from nucleus A",
+   "unit": "pm",
+   "section": "9.1"
+  },
+  {
+   "sym": "r_Bi",
+   "type": "length",
+   "meaning": "the distance of electron i from nucleus B",
+   "unit": "pm",
+   "section": "9.1"
+  },
+  {
+   "sym": "r_ij",
+   "type": "length",
+   "meaning": "the distance between electrons i and j",
+   "unit": "pm",
+   "section": "9.1"
+  },
+  {
+   "sym": "r_vec",
+   "type": "length",
+   "meaning": "the positions of all the electrons",
+   "section": "9.1"
+  },
+  {
+   "sym": "R_vec",
+   "type": "length",
+   "meaning": "the positions of all the nuclei",
+   "section": "9.1"
+  },
+  {
+   "sym": "varphi_e",
+   "type": "wavefunction",
+   "meaning": "the electronic wavefunction of electronic state e, which depends on the nuclear positions R",
+   "section": "9.1"
+  },
+  {
+   "sym": "E_e",
+   "type": "energy",
+   "meaning": "the electronic energy at nuclear separation R",
+   "unit": "J",
+   "section": "9.1"
+  },
+  {
+   "sym": "psi_ne",
+   "concept": "born-oppenheimer-wavefunction",
+   "meaning": "the Born–Oppenheimer wavefunction of the molecule",
+   "section": "9.1"
+  },
+  {
+   "sym": "X_ne",
+   "type": "wavefunction",
+   "meaning": "the vibrational wavefunction, a function of the nuclear coordinates R",
+   "section": "9.1"
+  },
+  {
+   "sym": "R_0",
+   "concept": "equilibrium-bond-length",
+   "meaning": "the equilibrium separation of the nuclei, where the potential energy is a minimum",
+   "unit": "pm",
+   "section": "9.1"
+  },
+  {
+   "sym": "V_e",
+   "concept": "potential-energy-curve",
+   "meaning": "the potential energy function that controls the motion of the nuclei",
+   "unit": "J",
+   "section": "9.1"
+  },
+  {
+   "sym": "V",
+   "concept": "potential-energy-curve",
+   "meaning": "the potential energy function V_e(R) of the nuclei",
+   "unit": "J",
+   "section": "9.1"
+  },
+  {
+   "sym": "E_ne",
+   "type": "energy",
+   "meaning": "the vibrational energy of the nuclei in electronic state e",
+   "unit": "J",
+   "section": "9.1"
+  },
+  {
+   "sym": "m_1",
+   "type": "mass",
+   "meaning": "the mass of the heavy particle, tied to the wall",
+   "unit": "kg",
+   "section": "9.1"
+  },
+  {
+   "sym": "m_2",
+   "type": "mass",
+   "meaning": "the mass of the light particle, tied to the heavy one",
+   "unit": "kg",
+   "section": "9.1"
+  },
+  {
+   "sym": "Hel_hat",
+   "concept": "electronic-hamiltonian",
+   "meaning": "the electronic Hamiltonian, for nuclei held fixed at separation R",
+   "section": "9.2"
+  },
+  {
+   "sym": "R",
+   "concept": "internuclear-distance",
+   "meaning": "the distance between the two nuclei",
+   "unit": "pm",
+   "section": "9.2"
+  },
+  {
+   "sym": "e",
+   "type": "charge",
+   "meaning": "the elementary charge",
+   "unit": "C",
+   "section": "9.2"
+  },
+  {
+   "sym": "epsilon_0",
+   "meaning": "the permittivity of free space",
+   "section": "9.2"
+  },
+  {
+   "sym": "hbar",
+   "concept": "reduced-plancks-constant",
+   "meaning": "the reduced Planck constant h/2π",
+   "section": "9.2"
+  },
+  {
+   "sym": "m",
+   "type": "mass",
+   "meaning": "the mass of the electron",
+   "unit": "kg",
+   "section": "9.2"
+  },
+  {
+   "sym": "r_A",
+   "type": "length",
+   "meaning": "the distance of the electron from proton A",
+   "unit": "pm",
+   "section": "9.2"
+  },
+  {
+   "sym": "r_B",
+   "type": "length",
+   "meaning": "the distance of the electron from proton B",
+   "unit": "pm",
+   "section": "9.2"
+  },
+  {
+   "sym": "psi",
+   "concept": "molecular-orbital",
+   "meaning": "a molecular orbital, a one-electron wavefunction of the molecule",
+   "section": "9.2"
+  },
+  {
+   "sym": "C_A",
+   "meaning": "the coefficient of 1s_A in the molecular orbital",
+   "section": "9.2"
+  },
+  {
+   "sym": "C_B",
+   "meaning": "the coefficient of 1s_B in the molecular orbital",
+   "section": "9.2"
+  },
+  {
+   "sym": "s1_A",
+   "type": "wavefunction",
+   "meaning": "the hydrogen 1s orbital centred on proton A",
+   "section": "9.2"
+  },
+  {
+   "sym": "s1_B",
+   "type": "wavefunction",
+   "meaning": "the hydrogen 1s orbital centred on proton B",
+   "section": "9.2"
+  },
+  {
+   "sym": "C_p",
+   "concept": "h2plus-normalization",
+   "meaning": "the normalization constant of the bonding orbital ψ₊",
+   "section": "9.2"
+  },
+  {
+   "sym": "C_m",
+   "concept": "h2plus-normalization",
+   "meaning": "the normalization constant of the antibonding orbital ψ₋",
+   "section": "9.2"
+  },
+  {
+   "sym": "psi_p",
+   "concept": "bonding-molecular-orbital",
+   "meaning": "the bonding molecular orbital of H₂⁺, the sum of the two 1s orbitals",
+   "section": "9.2"
+  },
+  {
+   "sym": "psi_m",
+   "concept": "antibonding-molecular-orbital",
+   "meaning": "the antibonding molecular orbital of H₂⁺, the difference of the two 1s orbitals",
+   "section": "9.2"
+  },
+  {
+   "sym": "psi",
+   "concept": "molecular-orbital",
+   "meaning": "a molecular orbital, a one-electron wavefunction of the molecule",
+   "section": "9.3"
+  },
+  {
+   "sym": "C_A",
+   "meaning": "the coefficient of 1s_A in the molecular orbital",
+   "section": "9.3"
+  },
+  {
+   "sym": "C_B",
+   "meaning": "the coefficient of 1s_B in the molecular orbital",
+   "section": "9.3"
+  },
+  {
+   "sym": "s1_A",
+   "type": "wavefunction",
+   "meaning": "the hydrogen 1s orbital centred on proton A",
+   "section": "9.3"
+  },
+  {
+   "sym": "s1_B",
+   "type": "wavefunction",
+   "meaning": "the hydrogen 1s orbital centred on proton B",
+   "section": "9.3"
+  },
+  {
+   "sym": "C_p",
+   "concept": "h2plus-normalization",
+   "meaning": "the normalization constant of the bonding orbital ψ₊",
+   "section": "9.3"
+  },
+  {
+   "sym": "C_m",
+   "concept": "h2plus-normalization",
+   "meaning": "the normalization constant of the antibonding orbital ψ₋",
+   "section": "9.3"
+  },
+  {
+   "sym": "C_pm",
+   "concept": "h2plus-normalization",
+   "meaning": "the normalization constants C₊ and C₋ of ψ₊ and ψ₋",
+   "section": "9.3"
+  },
+  {
+   "sym": "psi_p",
+   "concept": "bonding-molecular-orbital",
+   "meaning": "the bonding molecular orbital of H₂⁺, the sum of the two 1s orbitals",
+   "section": "9.3"
+  },
+  {
+   "sym": "psi_m",
+   "concept": "antibonding-molecular-orbital",
+   "meaning": "the antibonding molecular orbital of H₂⁺, the difference of the two 1s orbitals",
+   "section": "9.3"
+  },
+  {
+   "sym": "psi_pm",
+   "concept": "h2plus-lcao-orbitals",
+   "meaning": "the bonding and antibonding orbitals ψ₊ and ψ₋ of H₂⁺",
+   "section": "9.3"
+  },
+  {
+   "sym": "S_ov",
+   "concept": "overlap-integral",
+   "meaning": "the overlap integral ⟨1s_A|1s_B⟩ of the two atomic orbitals",
+   "section": "9.3"
+  },
+  {
+   "sym": "R",
+   "concept": "internuclear-distance",
+   "meaning": "the distance between the two nuclei",
+   "unit": "pm",
+   "section": "9.3"
+  },
+  {
+   "sym": "a_0",
+   "concept": "bohr-radius",
+   "meaning": "the Bohr radius, 52.9 pm",
+   "section": "9.3"
+  },
+  {
+   "sym": "e",
+   "type": "charge",
+   "meaning": "the elementary charge",
+   "unit": "C",
+   "section": "9.3"
+  },
+  {
+   "sym": "psi_pm",
+   "concept": "h2plus-lcao-orbitals",
+   "meaning": "the bonding and antibonding orbitals ψ₊ and ψ₋ of H₂⁺",
+   "section": "9.4"
+  },
+  {
+   "sym": "S_ov",
+   "concept": "overlap-integral",
+   "meaning": "the overlap integral ⟨1s_A|1s_B⟩ of the two atomic orbitals",
+   "section": "9.4"
+  },
+  {
+   "sym": "s1_A",
+   "type": "wavefunction",
+   "meaning": "the hydrogen 1s orbital centred on proton A",
+   "section": "9.4"
+  },
+  {
+   "sym": "s1_B",
+   "type": "wavefunction",
+   "meaning": "the hydrogen 1s orbital centred on proton B",
+   "section": "9.4"
+  },
+  {
+   "sym": "E_pm",
+   "concept": "h2plus-lcao-energy",
+   "meaning": "the energies E₊ and E₋ of the bonding and antibonding orbitals of H₂⁺",
+   "unit": "J",
+   "section": "9.4"
+  },
+  {
+   "sym": "Hel_hat",
+   "concept": "electronic-hamiltonian",
+   "meaning": "the electronic Hamiltonian, for nuclei held fixed at separation R",
+   "section": "9.4"
+  },
+  {
+   "sym": "H_AA",
+   "concept": "hamiltonian-matrix-element",
+   "meaning": "the Hamiltonian matrix element ⟨1s_A|Ĥ_elec|1s_A⟩",
+   "unit": "J",
+   "section": "9.4"
+  },
+  {
+   "sym": "H_BB",
+   "concept": "hamiltonian-matrix-element",
+   "meaning": "the Hamiltonian matrix element ⟨1s_B|Ĥ_elec|1s_B⟩",
+   "unit": "J",
+   "section": "9.4"
+  },
+  {
+   "sym": "H_AB",
+   "concept": "hamiltonian-matrix-element",
+   "meaning": "the Hamiltonian matrix element ⟨1s_A|Ĥ_elec|1s_B⟩",
+   "unit": "J",
+   "section": "9.4"
+  },
+  {
+   "sym": "H_BA",
+   "concept": "hamiltonian-matrix-element",
+   "meaning": "the Hamiltonian matrix element ⟨1s_B|Ĥ_elec|1s_A⟩",
+   "unit": "J",
+   "section": "9.4"
+  },
+  {
+   "sym": "E_Hatom",
+   "type": "energy",
+   "meaning": "the energy of a hydrogen atom in its 1s orbital",
+   "unit": "J",
+   "section": "9.4"
+  },
+  {
+   "sym": "J_int",
+   "concept": "h2plus-coulomb-integral",
+   "meaning": "the Coulomb integral of H₂⁺, the attraction of the electron density around proton A to proton B",
+   "unit": "E_h",
+   "section": "9.4"
+  },
+  {
+   "sym": "J_AB",
+   "concept": "h2plus-coulomb-integral",
+   "meaning": "the Coulomb integral of H₂⁺, the attraction of the electron density around proton A to proton B",
+   "unit": "E_h",
+   "section": "9.4"
+  },
+  {
+   "sym": "K_int",
+   "concept": "h2plus-exchange-integral",
+   "meaning": "the exchange integral of H₂⁺, the attraction of the overlap charge density to a proton",
+   "unit": "E_h",
+   "section": "9.4"
+  },
+  {
+   "sym": "K_AB",
+   "concept": "h2plus-exchange-integral",
+   "meaning": "the exchange integral of H₂⁺, the attraction of the overlap charge density to a proton",
+   "unit": "E_h",
+   "section": "9.4"
+  },
+  {
+   "sym": "dE_pm",
+   "concept": "h2plus-energy-curve",
+   "meaning": "the energy of H₂⁺ relative to a separated hydrogen atom and proton",
+   "unit": "E_h",
+   "section": "9.4"
+  },
+  {
+   "sym": "R",
+   "concept": "internuclear-distance",
+   "meaning": "the distance between the two nuclei",
+   "unit": "pm",
+   "section": "9.4"
+  },
+  {
+   "sym": "r_A",
+   "type": "length",
+   "meaning": "the distance of the electron from proton A",
+   "unit": "pm",
+   "section": "9.4"
+  },
+  {
+   "sym": "r_B",
+   "type": "length",
+   "meaning": "the distance of the electron from proton B",
+   "unit": "pm",
+   "section": "9.4"
+  },
+  {
+   "sym": "e",
+   "type": "charge",
+   "meaning": "the elementary charge",
+   "unit": "C",
+   "section": "9.4"
+  },
+  {
+   "sym": "epsilon_0",
+   "meaning": "the permittivity of free space",
+   "section": "9.4"
+  },
+  {
+   "sym": "hbar",
+   "concept": "reduced-plancks-constant",
+   "meaning": "the reduced Planck constant h/2π",
+   "section": "9.4"
+  },
+  {
+   "sym": "m",
+   "type": "mass",
+   "meaning": "the mass of the electron",
+   "unit": "kg",
+   "section": "9.4"
+  },
+  {
+   "sym": "psi_p",
+   "concept": "bonding-molecular-orbital",
+   "meaning": "the bonding molecular orbital of H₂⁺, the sum of the two 1s orbitals",
+   "section": "9.4"
+  },
+  {
+   "sym": "psi_m",
+   "concept": "antibonding-molecular-orbital",
+   "meaning": "the antibonding molecular orbital of H₂⁺, the difference of the two 1s orbitals",
+   "section": "9.4"
+  },
+  {
+   "sym": "E_el",
+   "type": "energy",
+   "meaning": "the energy of the molecule as a function of R",
+   "unit": "J",
+   "section": "9.4"
+  },
+  {
+   "sym": "psi_J",
+   "concept": "molecular-orbital",
+   "meaning": "the Jth molecular orbital, a linear combination of the basis set's atomic orbitals",
+   "section": "9.5"
+  },
+  {
+   "sym": "c_Ji",
+   "meaning": "the coefficient of atomic orbital i in molecular orbital J",
+   "section": "9.5"
+  },
+  {
+   "sym": "phi_i",
+   "concept": "basis-functions",
+   "meaning": "the ith atomic orbital of the basis set",
+   "section": "9.5"
+  },
+  {
+   "sym": "N",
+   "meaning": "the number of atomic orbitals in the basis set",
+   "section": "9.5"
+  },
+  {
+   "sym": "sigma_1s",
+   "concept": "bonding-molecular-orbital",
+   "meaning": "the bonding σ molecular orbital formed from two 1s orbitals",
+   "section": "9.5"
+  },
+  {
+   "sym": "sigma_1s_st",
+   "concept": "antibonding-molecular-orbital",
+   "meaning": "the antibonding σ* molecular orbital formed from two 1s orbitals",
+   "section": "9.5"
+  },
+  {
+   "sym": "S_ov",
+   "concept": "overlap-integral",
+   "meaning": "the overlap integral ⟨1s_A|1s_B⟩ of the two atomic orbitals",
+   "section": "9.5"
+  },
+  {
+   "sym": "s1_A",
+   "type": "wavefunction",
+   "meaning": "the hydrogen 1s orbital centred on proton A",
+   "section": "9.5"
+  },
+  {
+   "sym": "s1_B",
+   "type": "wavefunction",
+   "meaning": "the hydrogen 1s orbital centred on proton B",
+   "section": "9.5"
+  },
+  {
+   "sym": "Hel_hat",
+   "concept": "electronic-hamiltonian",
+   "meaning": "the electronic Hamiltonian, for nuclei held fixed at separation R",
+   "section": "9.5"
+  },
+  {
+   "sym": "H_ij",
+   "concept": "hamiltonian-matrix-element",
+   "meaning": "the Hamiltonian matrix element between basis functions i and j",
+   "unit": "J",
+   "section": "9.5"
+  },
+  {
+   "sym": "S_ij",
+   "meaning": "the overlap integral of basis functions i and j",
+   "section": "9.5"
+  },
+  {
+   "sym": "psi_p",
+   "concept": "bonding-molecular-orbital",
+   "meaning": "the bonding molecular orbital of H₂⁺, the sum of the two 1s orbitals",
+   "section": "9.5"
+  },
+  {
+   "sym": "psi_m",
+   "concept": "antibonding-molecular-orbital",
+   "meaning": "the antibonding molecular orbital of H₂⁺, the difference of the two 1s orbitals",
+   "section": "9.5"
+  },
+  {
+   "sym": "E_J",
+   "concept": "linear-variational-energy",
+   "meaning": "the variational energy of molecular orbital J",
+   "unit": "J",
+   "section": "9.5"
+  },
+  {
+   "sym": "c_i",
+   "meaning": "the coefficient of atomic orbital i in the molecular orbital",
+   "section": "9.5"
+  },
+  {
+   "sym": "E",
+   "type": "energy",
+   "meaning": "an energy, a root of the secular determinant",
+   "unit": "J",
+   "section": "9.5"
+  },
+  {
+   "sym": "psi_i",
+   "concept": "molecular-orbital",
+   "meaning": "the ith molecular orbital",
+   "section": "9.6"
+  },
+  {
+   "sym": "phi_j",
+   "concept": "basis-functions",
+   "meaning": "the jth basis function, usually an atomic orbital",
+   "section": "9.6"
+  },
+  {
+   "sym": "c_ij",
+   "meaning": "the expansion coefficient of basis function j in molecular orbital i",
+   "section": "9.6"
+  },
+  {
+   "sym": "Psi",
+   "type": "wavefunction",
+   "meaning": "the electronic state wavefunction, a single Slater determinant or a combination of Slater determinants",
+   "section": "9.6"
+  },
+  {
+   "sym": "alpha_s",
+   "concept": "spin-states",
+   "meaning": "the spin state α, with m_s = +½",
+   "section": "9.6"
+  },
+  {
+   "sym": "beta_s",
+   "concept": "spin-states",
+   "meaning": "the spin state β, with m_s = −½",
+   "section": "9.6"
+  },
+  {
+   "sym": "eps_i",
+   "type": "energy",
+   "meaning": "the energy of molecular orbital i",
+   "unit": "J",
+   "section": "9.6"
+  },
+  {
+   "sym": "dE_pm",
+   "concept": "h2plus-energy-curve",
+   "meaning": "the energy of H₂⁺ relative to a separated hydrogen atom and proton",
+   "unit": "E_h",
+   "section": "9.8"
+  },
+  {
+   "sym": "R",
+   "concept": "internuclear-distance",
+   "meaning": "the distance between the two nuclei",
+   "unit": "pm",
+   "section": "9.8"
+  },
+  {
+   "sym": "J_int",
+   "concept": "h2plus-coulomb-integral",
+   "meaning": "the Coulomb integral of H₂⁺, the attraction of the electron density around proton A to proton B",
+   "unit": "E_h",
+   "section": "9.8"
+  },
+  {
+   "sym": "K_int",
+   "concept": "h2plus-exchange-integral",
+   "meaning": "the exchange integral of H₂⁺, the attraction of the overlap charge density to a proton",
+   "unit": "E_h",
+   "section": "9.8"
+  },
+  {
+   "sym": "S_ov",
+   "concept": "overlap-integral",
+   "meaning": "the overlap integral ⟨1s_A|1s_B⟩ of the two atomic orbitals",
+   "section": "9.8"
+  },
+  {
+   "sym": "e",
+   "type": "charge",
+   "meaning": "the elementary charge",
+   "unit": "C",
+   "section": "9.8"
+  },
+  {
+   "sym": "epsilon_0",
+   "meaning": "the permittivity of free space",
+   "section": "9.8"
+  },
+  {
+   "sym": "E_Hatom",
+   "type": "energy",
+   "meaning": "the energy of a hydrogen atom in its 1s orbital",
+   "unit": "J",
+   "section": "9.8"
+  },
+  {
+   "sym": "psi",
+   "type": "wavefunction",
+   "meaning": "the two-electron wavefunction of H₂'s ground state",
+   "section": "9.9",
+   "redefines": true
+  },
+  {
+   "sym": "p12_hat",
+   "concept": "exchange-operator",
+   "meaning": "the permutation operator, which swaps the labels of electrons 1 and 2",
+   "section": "9.9"
+  },
+  {
+   "sym": "alpha_s",
+   "concept": "spin-states",
+   "meaning": "the spin state α, with m_s = +½",
+   "section": "9.9"
+  },
+  {
+   "sym": "beta_s",
+   "concept": "spin-states",
+   "meaning": "the spin state β, with m_s = −½",
+   "section": "9.9"
+  },
+  {
+   "sym": "N",
+   "meaning": "the number of electrons",
+   "section": "9.9",
+   "redefines": true
+  },
+  {
+   "sym": "phi_i",
+   "type": "wavefunction",
+   "meaning": "the ith molecular orbital of the Slater determinant",
+   "section": "9.9",
+   "redefines": true
+  },
+  {
+   "sym": "dx",
+   "concept": "heisenberg-uncertainty-principle",
+   "type": "length",
+   "meaning": "the uncertainty in the position of a particle",
+   "section": "9.11"
+  },
+  {
+   "sym": "dp",
+   "concept": "heisenberg-uncertainty-principle",
+   "type": "momentum",
+   "meaning": "the uncertainty in the momentum of a particle",
+   "section": "9.11"
+  },
+  {
+   "sym": "hbar",
+   "concept": "reduced-plancks-constant",
+   "meaning": "the reduced Planck constant h/2π",
+   "section": "9.11"
+  },
+  {
+   "sym": "chi_A",
+   "meaning": "the electronegativity of atom A",
+   "section": "9.12"
+  },
+  {
+   "sym": "chi_B",
+   "meaning": "the electronegativity of atom B",
+   "section": "9.12"
+  },
+  {
+   "sym": "Lambda",
+   "concept": "axial-orbital-angular-momentum",
+   "meaning": "the projection of the electrons' orbital angular momentum on the internuclear axis",
+   "section": "9.14"
+  },
+  {
+   "sym": "S",
+   "concept": "total-spin-quantum-number",
+   "meaning": "the total spin quantum number",
+   "section": "9.14"
+  },
+  {
+   "sym": "Omega",
+   "concept": "axial-total-angular-momentum",
+   "meaning": "the projection of the total angular momentum on the internuclear axis",
+   "section": "9.14"
+  },
+  {
+   "sym": "Lambda",
+   "concept": "axial-orbital-angular-momentum",
+   "meaning": "the projection of the electrons' orbital angular momentum on the internuclear axis",
+   "section": "9.15"
+  },
+  {
+   "sym": "M_L",
+   "meaning": "the total magnetic quantum number of the electrons along the internuclear axis",
+   "section": "9.15"
+  },
+  {
+   "sym": "M_S",
+   "concept": "total-spin-magnetic-quantum-number",
+   "meaning": "the total spin magnetic quantum number",
+   "section": "9.15"
+  },
+  {
+   "sym": "m_s1",
+   "meaning": "the spin magnetic quantum number of electron 1",
+   "section": "9.15"
+  },
+  {
+   "sym": "m_s2",
+   "meaning": "the spin magnetic quantum number of electron 2",
+   "section": "9.15"
+  }
+ ]
+}

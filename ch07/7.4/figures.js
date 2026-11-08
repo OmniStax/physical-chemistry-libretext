@@ -184,8 +184,8 @@ function eigenvalues(A) {
       }
     }
     const a = nz[0], b = nz[1];
-    const term = (m) => `${c[m] < 0 ? '-' : '+'} ${fmt(Math.abs(c[m]), 3)}\\,|${m}^o\\rangle`;
-    tex(d.readout, `|0\\rangle \\approx |0^o\\rangle + c_{${a},0}|${a}^o\\rangle + c_{${b},0}|${b}^o\\rangle \\\\ |0\\rangle \\approx |0^o\\rangle ${term(a)} ${term(b)} \\\\ ` + (cubic
+    const term = (m) => `${c[m] < 0 ? '-' : '+'} ${fmt(Math.abs(c[m]), 3)}\\,|${m}^0\\rangle`;
+    tex(d.readout, `|0\\rangle \\approx |0^0\\rangle + c_{${a},0}|${a}^0\\rangle + c_{${b},0}|${b}^0\\rangle \\\\ |0\\rangle \\approx |0^0\\rangle ${term(a)} ${term(b)} \\\\ ` + (cubic
       ? `\\kE_{0} \\approx \\tfrac{1}{2}h\\knu + 0 = 0.500\\,h\\knu`
       : `\\kE_{0} \\approx \\tfrac{1}{2}h\\knu + \\dfrac{3\\gamma}{4\\alpha^2} = (0.500 + ${fmt(E1, 3)})\\,h\\knu = ${fmt(E0, 3)}\\,h\\knu`));
   }

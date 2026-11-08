@@ -27,7 +27,8 @@
     "ch05",
     "ch06",
     "ch07",
-    "ch08"
+    "ch08",
+    "ch09"
   ],
   "types": [
     {
@@ -1757,6 +1758,241 @@
       "sym": "S_hat",
       "latex": "\\hat{S}",
       "macro": "\\kShat"
+    },
+    {
+      "sym": "R",
+      "latex": "R",
+      "macro": "\\kR"
+    },
+    {
+      "sym": "R_0",
+      "latex": "R_0",
+      "macro": "\\kRzero"
+    },
+    {
+      "sym": "Z_A",
+      "latex": "Z_A"
+    },
+    {
+      "sym": "Z_B",
+      "latex": "Z_B"
+    },
+    {
+      "sym": "Tnuc_hat",
+      "latex": "\\hat{T}_{nuc}",
+      "macro": "\\kTnuchat"
+    },
+    {
+      "sym": "Hel_hat",
+      "latex": "\\hat{H}_{elec}",
+      "macro": "\\kHelhat"
+    },
+    {
+      "sym": "r_Ai",
+      "latex": "r_{Ai}",
+      "macro": "\\krAi"
+    },
+    {
+      "sym": "r_Bi",
+      "latex": "r_{Bi}",
+      "macro": "\\krBi"
+    },
+    {
+      "sym": "varphi_e",
+      "latex": "\\varphi_e",
+      "macro": "\\kvarphie"
+    },
+    {
+      "sym": "E_e",
+      "latex": "E_e",
+      "macro": "\\kEe"
+    },
+    {
+      "sym": "psi_ne",
+      "latex": "\\psi_{ne}",
+      "macro": "\\kpsine"
+    },
+    {
+      "sym": "X_ne",
+      "latex": "X_{ne}",
+      "macro": "\\kXne"
+    },
+    {
+      "sym": "V_e",
+      "latex": "V_e",
+      "macro": "\\kVe"
+    },
+    {
+      "sym": "E_ne",
+      "latex": "E_{ne}",
+      "macro": "\\kEne"
+    },
+    {
+      "sym": "r_A",
+      "latex": "r_A",
+      "macro": "\\krA"
+    },
+    {
+      "sym": "r_B",
+      "latex": "r_B",
+      "macro": "\\krB"
+    },
+    {
+      "sym": "C_A",
+      "latex": "C_A"
+    },
+    {
+      "sym": "C_B",
+      "latex": "C_B"
+    },
+    {
+      "sym": "s1_A",
+      "latex": "1s_A",
+      "macro": "\\konesA"
+    },
+    {
+      "sym": "s1_B",
+      "latex": "1s_B",
+      "macro": "\\konesB"
+    },
+    {
+      "sym": "psi_p",
+      "latex": "\\psi_+",
+      "macro": "\\kpsip"
+    },
+    {
+      "sym": "psi_m",
+      "latex": "\\psi_-",
+      "macro": "\\kpsim"
+    },
+    {
+      "sym": "psi_pm",
+      "latex": "\\psi_{\\pm}",
+      "macro": "\\kpsipm"
+    },
+    {
+      "sym": "C_p",
+      "latex": "C_+"
+    },
+    {
+      "sym": "C_m",
+      "latex": "C_-"
+    },
+    {
+      "sym": "C_pm",
+      "latex": "C_{\\pm}"
+    },
+    {
+      "sym": "E_pm",
+      "latex": "E_{\\pm}",
+      "macro": "\\kEpm"
+    },
+    {
+      "sym": "H_AA",
+      "latex": "H_{AA}",
+      "macro": "\\kHAA"
+    },
+    {
+      "sym": "H_BB",
+      "latex": "H_{BB}",
+      "macro": "\\kHBB"
+    },
+    {
+      "sym": "H_AB",
+      "latex": "H_{AB}",
+      "macro": "\\kHAB"
+    },
+    {
+      "sym": "H_BA",
+      "latex": "H_{BA}",
+      "macro": "\\kHBA"
+    },
+    {
+      "sym": "E_Hatom",
+      "latex": "E_H",
+      "macro": "\\kEHatom"
+    },
+    {
+      "sym": "J_int",
+      "latex": "J",
+      "macro": "\\kJint"
+    },
+    {
+      "sym": "K_int",
+      "latex": "K",
+      "macro": "\\kKint"
+    },
+    {
+      "sym": "J_AB",
+      "latex": "J_{AB}",
+      "macro": "\\kJAB"
+    },
+    {
+      "sym": "K_AB",
+      "latex": "K_{AB}",
+      "macro": "\\kKAB"
+    },
+    {
+      "sym": "dE_pm",
+      "latex": "\\Delta E_{\\pm}",
+      "macro": "\\kdEpm"
+    },
+    {
+      "sym": "E_el",
+      "latex": "E_{el}",
+      "macro": "\\kEel"
+    },
+    {
+      "sym": "psi_J",
+      "latex": "\\psi_J",
+      "macro": "\\kpsiJ"
+    },
+    {
+      "sym": "c_Ji",
+      "latex": "c_{J,i}"
+    },
+    {
+      "sym": "sigma_1s",
+      "latex": "\\sigma_{1s}",
+      "macro": "\\ksigmaones"
+    },
+    {
+      "sym": "sigma_1s_st",
+      "latex": "\\sigma^{*}_{1s}",
+      "macro": "\\ksigmaonesst"
+    },
+    {
+      "sym": "c_ij",
+      "latex": "c_{ij}"
+    },
+    {
+      "sym": "p12_hat",
+      "latex": "\\hat{p}_{12}",
+      "macro": "\\kponetwohat"
+    },
+    {
+      "sym": "chi_A",
+      "latex": "\\chi_A"
+    },
+    {
+      "sym": "chi_B",
+      "latex": "\\chi_B"
+    },
+    {
+      "sym": "Lambda",
+      "latex": "\\Lambda"
+    },
+    {
+      "sym": "Omega",
+      "latex": "\\Omega"
+    },
+    {
+      "sym": "M_L",
+      "latex": "M_L"
+    },
+    {
+      "sym": "M_S",
+      "latex": "M_S"
     }
   ],
   "exercise_kinds": [
@@ -7858,6 +8094,858 @@
         "D line"
       ],
       "statement": "Sodium's yellow D line is a doublet, D₁ at 589.6 nm and D₂ at 589.0 nm, because the 3p level of its one valence electron splits by spin–orbit coupling into ²P₁/₂ and ²P₃/₂; every line ending or starting on 3p is doubled the same way."
+    },
+    {
+      "id": "quantum-chemistry",
+      "kind": "idea",
+      "section": "9.1",
+      "name": "Quantum chemistry",
+      "terms": [
+        "molecular quantum mechanics",
+        "quantum chemistry"
+      ],
+      "statement": "The use of quantum mechanics to predict the bonding patterns, geometries and properties of molecules. For all but the simplest molecules exact solutions of the Schrödinger equation are not available, so its methods and software packages rest on a series of approximations."
+    },
+    {
+      "id": "internuclear-distance",
+      "kind": "definition",
+      "section": "9.1",
+      "name": "Internuclear distance",
+      "terms": [
+        "internuclear separation",
+        "internuclear distance"
+      ],
+      "type": "length",
+      "symbol": "R",
+      "statement": "The distance R between the two nuclei of a diatomic molecule, the coordinate on which its electronic energy and wavefunction depend."
+    },
+    {
+      "id": "molecular-hamiltonian",
+      "kind": "definition",
+      "section": "9.1",
+      "name": "Hamiltonian of a diatomic molecule",
+      "type": "operator",
+      "symbol": "H_op",
+      "statement": "The Hamiltonian of a diatomic molecule grouped into three terms: the kinetic energy of the nuclei, the Coulomb repulsion Z_AZ_Be²/4πε₀R of the two nuclei, and the electronic Hamiltonian, which holds the electrons' kinetic energy, their mutual repulsion and their attraction to the nuclei.",
+      "forms": [
+        {
+          "id": "molecular-hamiltonian-terms",
+          "latex": "\\hat{H}(r,R) = \\hat{T}_{nuc}(R) + \\dfrac{e^2}{4\\pi\\epsilon_0}\\dfrac{Z_AZ_B}{R} + \\hat{H}_{elec}(r,R)"
+        },
+        {
+          "id": "nuclear-kinetic-energy-operator",
+          "latex": "\\hat{T}_{nuc}(R) = -\\dfrac{\\hbar^2}{2m_A}\\nabla^2_A - \\dfrac{\\hbar^2}{2m_B}\\nabla^2_B"
+        }
+      ]
+    },
+    {
+      "id": "electronic-hamiltonian",
+      "kind": "definition",
+      "section": "9.1",
+      "name": "Electronic Hamiltonian",
+      "type": "operator",
+      "symbol": "Hel_hat",
+      "statement": "The part Ĥ_elec of a molecule's Hamiltonian that holds the electrons' kinetic energy, their attraction to each nucleus and their repulsion for each other, for nuclei at fixed positions R; the factor ½ keeps each pair of electrons from being counted twice.",
+      "forms": [
+        {
+          "id": "electronic-hamiltonian-diatomic",
+          "latex": "\\hat{H}_{elec}(\\vec{r},\\vec{R}) = -\\dfrac{\\hbar^2}{2m}\\sum_i \\nabla^2_i + \\dfrac{e^2}{4\\pi\\epsilon_0}\\left(-\\sum_i \\dfrac{Z_A}{r_{Ai}} - \\sum_i \\dfrac{Z_B}{r_{Bi}} + \\dfrac{1}{2}\\sum_i \\sum_{j \\ne i} \\dfrac{1}{r_{ij}}\\right)"
+        }
+      ]
+    },
+    {
+      "id": "born-oppenheimer-approximation",
+      "kind": "idea",
+      "section": "9.1",
+      "name": "Born–Oppenheimer approximation",
+      "terms": [
+        "Born-Oppenheimer approximation",
+        "Born-Oppenheimer Approximation"
+      ],
+      "statement": "A nucleus is more than a thousand times heavier than an electron, so the nuclei move slowly while the electrons respond to forces almost at once. The approximation neglects the nuclear kinetic energy in solving for the electrons, which are described with the nuclei held still at each position R, separating the motion of the electrons from that of the nuclei."
+    },
+    {
+      "id": "electronic-schrodinger-equation",
+      "kind": "result",
+      "section": "9.1",
+      "name": "Electronic Schrödinger equation",
+      "terms": [
+        "electronic Schrödinger equation"
+      ],
+      "statement": "Within the Born–Oppenheimer approximation the electronic wavefunction φ_e(r, R) and the electronic energy E_e(R) solve Ĥ_elec φ_e = E_e(R) φ_e, once for each fixed position of the nuclei; both depend on R although the nuclear motion is neglected.",
+      "forms": [
+        {
+          "id": "electronic-schrodinger-equation",
+          "latex": "\\hat{H}_{elec}(r,R)\\,\\varphi_e(r,R) = E_e(R)\\,\\varphi_e(r,R)"
+        }
+      ]
+    },
+    {
+      "id": "born-oppenheimer-wavefunction",
+      "kind": "result",
+      "section": "9.1",
+      "name": "Born–Oppenheimer wavefunction",
+      "terms": [
+        "Born-Oppenheimer wavefunction"
+      ],
+      "type": "wavefunction",
+      "symbol": "psi_ne",
+      "statement": "The molecular wavefunction as a product ψ_ne(r, R) = X_ne(R)φ_e(r, R) of a vibrational wavefunction of the nuclear coordinates, which depends on both the vibrational and the electronic state, and the electronic wavefunction; translational and rotational wavefunctions multiply it where those motions are not coupled to it.",
+      "forms": [
+        {
+          "id": "born-oppenheimer-product",
+          "latex": "\\psi_{ne}(r,R) = X_{ne}(R)\\,\\varphi_e(r,R)"
+        }
+      ]
+    },
+    {
+      "id": "potential-energy-curve",
+      "kind": "definition",
+      "section": "9.1",
+      "name": "Potential energy curve",
+      "terms": [
+        "potential energy function"
+      ],
+      "type": "energy",
+      "symbol": "V_e",
+      "statement": "The electronic energy plus the Coulomb repulsion of the nuclei, V_e(R) = E_e(R) + Z_AZ_Be²/4πε₀R: the energy of a diatomic molecule against the internuclear separation, which is the potential energy of the nuclei. Large and positive at very small R, it falls to a minimum where a bond forms and levels off at large R to two weakly interacting atoms.",
+      "forms": [
+        {
+          "id": "potential-energy-curve",
+          "latex": "V_e(R) = E_e(R) + \\dfrac{e^2}{4\\pi\\epsilon_0}\\dfrac{Z_AZ_B}{R}"
+        }
+      ]
+    },
+    {
+      "id": "equilibrium-bond-length",
+      "kind": "definition",
+      "section": "9.1",
+      "name": "Equilibrium bond length",
+      "terms": [
+        "equilibrium position",
+        "equilibrium separation"
+      ],
+      "type": "length",
+      "symbol": "R_0",
+      "statement": "The internuclear separation R₀ at which the potential energy curve has its minimum: the equilibrium position of the nuclei."
+    },
+    {
+      "id": "crude-born-oppenheimer-approximation",
+      "kind": "idea",
+      "section": "9.1",
+      "name": "Crude Born–Oppenheimer approximation",
+      "terms": [
+        "Crude Born-Oppenheimer Approximation",
+        "Crude Born-Oppenheimer approximation"
+      ],
+      "statement": "A further simplification in which R is set to the equilibrium separation R₀ and the electronic wavefunction found there is used for every position of the nuclei, as if the nuclei never moved."
+    },
+    {
+      "id": "nuclear-schrodinger-equation",
+      "kind": "result",
+      "section": "9.1",
+      "name": "Nuclear Schrödinger equation",
+      "statement": "The potential energy curve controls the motion of the nuclei: (T̂_nuc + V(R))X_ne = E_ne X_ne gives the vibrational wavefunctions and energies, for which the harmonic or the Morse potential is an approximation to V(R).",
+      "forms": [
+        {
+          "id": "nuclear-schrodinger-equation",
+          "latex": "\\left(\\hat{T}_{nuc}(R) + V(R)\\right)X_{ne}(R) = E_{ne}X_{ne}(R)"
+        }
+      ]
+    },
+    {
+      "id": "potential-energy-surface",
+      "kind": "definition",
+      "section": "9.1",
+      "name": "Potential energy surface",
+      "terms": [
+        "potential energy surfaces",
+        "potential energy surface"
+      ],
+      "statement": "The energy of a molecule of more than two atoms as a function of its 3N − 6 internal coordinates (3N − 5 for a linear molecule), the many-dimensional counterpart of a diatomic's potential energy curve; its minimum is the molecule's equilibrium shape."
+    },
+    {
+      "id": "reaction-coordinate-diagram",
+      "kind": "idea",
+      "section": "9.1",
+      "name": "Reaction coordinate diagram",
+      "terms": [
+        "reaction coordinate diagrams"
+      ],
+      "statement": "A one-dimensional slice through a potential energy surface, which chemists use to rationalize and illustrate how the potential energy varies with molecular motion in a reaction or process."
+    },
+    {
+      "id": "hydrogen-molecular-ion",
+      "kind": "idea",
+      "section": "9.2",
+      "name": "Hydrogen molecular ion",
+      "terms": [
+        "hydrogen molecule-ion",
+        "Hydrogen Molecular Ion"
+      ],
+      "statement": "H₂⁺, two protons held together by one electron, the simplest conceivable molecule. Its Schrödinger equation can be solved exactly within the Born–Oppenheimer approximation, which makes it the prototype for diatomic bonding as the hydrogen atom is for atomic structure."
+    },
+    {
+      "id": "h2plus-hamiltonian",
+      "kind": "definition",
+      "section": "9.2",
+      "name": "Electronic Hamiltonian of H₂⁺",
+      "statement": "The electronic Hamiltonian of H₂⁺: the electron's kinetic energy, its attraction to protons A and B at distances r_A and r_B, and the repulsion of the two protons a distance R apart.",
+      "forms": [
+        {
+          "id": "h2plus-electronic-hamiltonian",
+          "latex": "\\hat{H}_{elec}(r,R) = -\\dfrac{\\hbar^2}{2m}\\nabla^2 - \\dfrac{e^2}{4\\pi\\epsilon_0 r_A} - \\dfrac{e^2}{4\\pi\\epsilon_0 r_B} + \\dfrac{e^2}{4\\pi\\epsilon_0 R}"
+        }
+      ]
+    },
+    {
+      "id": "molecular-orbital",
+      "kind": "definition",
+      "section": "9.2",
+      "name": "Molecular orbital",
+      "terms": [
+        "molecular orbital",
+        "molecular orbitals"
+      ],
+      "type": "wavefunction",
+      "symbol": "psi",
+      "statement": "A one-electron wavefunction that extends over the whole molecule, the counterpart of an atomic orbital in the orbital description of a molecule."
+    },
+    {
+      "id": "lcao-mo-method",
+      "kind": "definition",
+      "section": "9.2",
+      "name": "LCAO-MO method",
+      "terms": [
+        "Linear Combination of Atomic Orbitals - Molecular Orbital (LCAO-MO) Method",
+        "LCAO-MO",
+        "linear combinations of atomic orbitals"
+      ],
+      "statement": "Finding molecular orbitals as linear combinations of atomic orbitals, the linear variational method with the atomic orbitals of the molecule's atoms as the basis. For H₂⁺ the basis is the two hydrogen 1s orbitals, ψ = C_A1s_A + C_B1s_B; in general |ψ_J⟩ = Σ_i c_{J,i}|φ_i⟩.",
+      "forms": [
+        {
+          "id": "lcao-h2plus",
+          "latex": "\\psi(r) = C_A 1s_A(r) + C_B 1s_B(r)"
+        },
+        {
+          "id": "lcao-expansion",
+          "latex": "|\\psi_J\\rangle = \\sum_i^N c_{J,i}|\\phi_i\\rangle",
+          "section": "9.5"
+        }
+      ]
+    },
+    {
+      "id": "molecular-orbital-count",
+      "kind": "result",
+      "section": "9.2",
+      "name": "Number of molecular orbitals",
+      "statement": "The secular determinant of a basis of N atomic orbitals has N roots, so a molecule has as many molecular orbitals as there are atomic orbitals in the basis: two 1s orbitals give two molecular orbitals."
+    },
+    {
+      "id": "orbital-interference",
+      "kind": "idea",
+      "section": "9.2",
+      "name": "Interference of atomic orbitals",
+      "terms": [
+        "constructive interference",
+        "destructive interference"
+      ],
+      "statement": "Two atomic orbitals added with the same sign reinforce each other, as two waves interfere constructively, and the electron density between the nuclei increases; subtracted, they interfere destructively and leave a node between the nuclei."
+    },
+    {
+      "id": "h2plus-lcao-orbitals",
+      "kind": "result",
+      "section": "9.2",
+      "name": "Molecular orbitals of H₂⁺",
+      "type": "wavefunction",
+      "symbol": "psi_pm",
+      "statement": "Since the two protons are identical, the electron is as likely near one as near the other, |C_A|² = |C_B|², which gives two molecular orbitals, ψ₊ = C₊(1s_A + 1s_B) and ψ₋ = C₋(1s_A − 1s_B). The charge density of ψ₊ is enhanced between the protons; ψ₋ has a node in the middle.",
+      "forms": [
+        {
+          "id": "h2plus-psi-plus",
+          "latex": "\\psi_+ = C_+(1s_A + 1s_B)"
+        },
+        {
+          "id": "h2plus-psi-minus",
+          "latex": "\\psi_- = C_-(1s_A - 1s_B)"
+        }
+      ]
+    },
+    {
+      "id": "bonding-molecular-orbital",
+      "kind": "definition",
+      "section": "9.2",
+      "name": "Bonding molecular orbital",
+      "terms": [
+        "bonding molecular orbital",
+        "bonding molecular orbitals",
+        "bonding orbital",
+        "bonding orbitals"
+      ],
+      "type": "wavefunction",
+      "symbol": "psi_p",
+      "statement": "A molecular orbital whose electron density is enhanced between the nuclei, which holds them together against their repulsion; for H₂⁺ it is ψ₊, the sum of the two 1s orbitals."
+    },
+    {
+      "id": "antibonding-molecular-orbital",
+      "kind": "definition",
+      "section": "9.2",
+      "name": "Antibonding molecular orbital",
+      "terms": [
+        "antibonding molecular orbital",
+        "antibonding molecular orbitals",
+        "antibonding orbital",
+        "antibonding orbitals"
+      ],
+      "type": "wavefunction",
+      "symbol": "psi_m",
+      "statement": "A molecular orbital with little electron density between the nuclei and a node there, which cannot balance their repulsion; for H₂⁺ it is ψ₋, the difference of the two 1s orbitals."
+    },
+    {
+      "id": "h2plus-normalization",
+      "kind": "result",
+      "section": "9.3",
+      "name": "Normalized molecular orbitals of H₂⁺",
+      "symbol": "C_pm",
+      "statement": "Normalizing ψ± with the overlap integral S = ⟨1s_A|1s_B⟩ of the real 1s orbitals gives |C±|²(2 ± 2S) = 1, so C± = 1/√(2(1 ± S)) and ψ± = (1s_A ± 1s_B)/√(2(1 ± S)).",
+      "forms": [
+        {
+          "id": "h2plus-coefficients",
+          "latex": "C_{\\pm} = \\dfrac{1}{\\sqrt{2(1 \\pm S)}}"
+        },
+        {
+          "id": "h2plus-normalized-orbitals",
+          "latex": "|\\psi_{\\pm}\\rangle = \\dfrac{1}{\\sqrt{2(1 \\pm S)}}(1s_A \\pm 1s_B)"
+        },
+        {
+          "id": "h2plus-normalization-condition",
+          "latex": "|C_{\\pm}|^2(2 \\pm 2S) = 1"
+        }
+      ]
+    },
+    {
+      "id": "overlap-integral-1s",
+      "kind": "result",
+      "section": "9.3",
+      "name": "Overlap integral of two 1s orbitals",
+      "statement": "For two hydrogen 1s orbitals a distance R apart, S(R) = e^{−R/a₀}(1 + R/a₀ + R²/3a₀²): 1 when the nuclei coincide and the two functions are the same, falling toward 0 as the nuclei separate and the functions stop overlapping.",
+      "forms": [
+        {
+          "id": "overlap-1s-1s",
+          "latex": "S(R) = e^{-R/a_0}\\left(1 + \\dfrac{R}{a_0} + \\dfrac{R^2}{3a_0^2}\\right)"
+        }
+      ]
+    },
+    {
+      "id": "h2plus-lcao-energy",
+      "kind": "result",
+      "section": "9.4",
+      "name": "LCAO energies of H₂⁺",
+      "type": "energy",
+      "symbol": "E_pm",
+      "statement": "The expectation value of Ĥ_elec in ψ± is E± = [H_AA + H_BB ± H_AB ± H_BA]/2(1 ± S). Protons A and B enter the Hamiltonian equivalently, so H_AA = H_BB, and the orbitals are real, so H_AB = H_BA, which leaves E± = (H_AA ± H_AB)/(1 ± S).",
+      "forms": [
+        {
+          "id": "h2plus-energy-matrix-elements",
+          "latex": "E_{\\pm} = \\dfrac{1}{1 \\pm S}(H_{AA} \\pm H_{AB})"
+        },
+        {
+          "id": "h2plus-energy-four-integrals",
+          "latex": "E_{\\pm} = \\dfrac{1}{2(1 \\pm S)}\\left[H_{AA} + H_{BB} \\pm H_{AB} \\pm H_{BA}\\right]"
+        },
+        {
+          "id": "h2plus-energy-expectation",
+          "latex": "E_{\\pm} = \\langle \\psi_{\\pm}|\\hat{H}_{elec}|\\psi_{\\pm}\\rangle"
+        }
+      ]
+    },
+    {
+      "id": "h2plus-coulomb-integral",
+      "kind": "definition",
+      "section": "9.4",
+      "name": "Coulomb integral of H₂⁺",
+      "terms": [
+        "Coulomb integral",
+        "Coulomb Integral",
+        "coulomb integral"
+      ],
+      "type": "energy",
+      "symbol": "J_AB",
+      "statement": "J = ⟨1s_A|−e²/4πε₀r_B|1s_A⟩, the average potential energy of the electron density around proton A in the field of proton B: the attraction of proton B to hydrogen atom A's electron density. It is negative and goes to zero as the protons separate.",
+      "forms": [
+        {
+          "id": "h2plus-coulomb-integral",
+          "latex": "J_{AB} = \\left\\langle 1s_A \\left| \\dfrac{-e^2}{4\\pi\\epsilon_0 r_B} \\right| 1s_A \\right\\rangle"
+        }
+      ]
+    },
+    {
+      "id": "overlap-charge-density",
+      "kind": "definition",
+      "section": "9.4",
+      "name": "Overlap charge density",
+      "terms": [
+        "overlap charge density"
+      ],
+      "statement": "The product eφ*_{1s_A}φ_{1s_B}, which is significant only where the two atomic orbitals overlap, in the region between the nuclei, and so contributes to the chemical bond."
+    },
+    {
+      "id": "h2plus-exchange-integral",
+      "kind": "definition",
+      "section": "9.4",
+      "name": "Exchange integral of H₂⁺",
+      "terms": [
+        "exchange integral",
+        "Exchange Integral"
+      ],
+      "type": "energy",
+      "symbol": "K_AB",
+      "statement": "K = ⟨1s_A|−e²/4πε₀r_A|1s_B⟩, with the electron in 1s_A on one side of the operator and in 1s_B on the other: the potential energy of the overlap charge density with one of the protons, the added attraction from the charge built up between them. It is negative and goes to zero as the protons separate.",
+      "forms": [
+        {
+          "id": "h2plus-exchange-integral",
+          "latex": "K_{AB} = \\left\\langle 1s_A \\left| \\dfrac{-e^2}{4\\pi\\epsilon_0 r_A} \\right| 1s_B \\right\\rangle"
+        }
+      ]
+    },
+    {
+      "id": "h2plus-energy-curve",
+      "kind": "result",
+      "section": "9.4",
+      "name": "Energy of H₂⁺ against proton separation",
+      "type": "energy",
+      "symbol": "dE_pm",
+      "statement": "With H_AA = E_H + e²/4πε₀R + J and H_AB = (E_H + e²/4πε₀R)S + K, the energy is E± = E_H + e²/4πε₀R + (J ± K)/(1 ± S): a hydrogen atom, the protons' repulsion and the electron's added interactions with the protons. Measured from a separated hydrogen atom and proton, ΔE± = e²/4πε₀R + (J ± K)/(1 ± S).",
+      "forms": [
+        {
+          "id": "h2plus-delta-energy",
+          "latex": "\\Delta E_{\\pm} = \\dfrac{e^2}{4\\pi\\epsilon_0 R} + \\dfrac{J \\pm K}{1 \\pm S}"
+        },
+        {
+          "id": "h2plus-energy-jks",
+          "latex": "E_{\\pm} = E_H + \\dfrac{e^2}{4\\pi\\epsilon_0 R} + \\dfrac{J \\pm K}{1 \\pm S}"
+        }
+      ]
+    },
+    {
+      "id": "h2plus-bond-stability",
+      "kind": "result",
+      "section": "9.4",
+      "name": "Stability of the H₂⁺ bond",
+      "terms": [
+        "chemical bond"
+      ],
+      "statement": "A bond forms where ΔE is negative and has a minimum, so (J ± K)/(1 ± S) must outweigh the protons' repulsion at some R. For ψ₊, J and K together do, and the energy has a minimum near R = 2.5a₀; for ψ₋, −K nearly cancels J and the energy is always above that of the separated atom and proton. S has only a small effect."
+    },
+    {
+      "id": "sigma-orbital",
+      "kind": "definition",
+      "section": "9.5",
+      "name": "Sigma orbital",
+      "terms": [
+        "sigma (σ) orbital",
+        "σ orbital",
+        "cylindrical symmetry"
+      ],
+      "statement": "A molecular orbital whose electron density has cylindrical symmetry about the internuclear axis: every cross-section perpendicular to the axis is a circle. σ_1s, the sum of two 1s orbitals, is a bonding σ orbital, and σ*_1s, their difference, the antibonding one.",
+      "forms": [
+        {
+          "id": "sigma-1s",
+          "latex": "|\\sigma_{1s}\\rangle = \\dfrac{1}{\\sqrt{2(1 + S)}}\\left(|1s_A\\rangle + |1s_B\\rangle\\right)"
+        },
+        {
+          "id": "sigma-star-1s",
+          "latex": "|\\sigma^{*}_{1s}\\rangle = \\dfrac{1}{\\sqrt{2(1 - S)}}\\left(|1s_A\\rangle - |1s_B\\rangle\\right)"
+        }
+      ]
+    },
+    {
+      "id": "antibonding-node",
+      "kind": "result",
+      "section": "9.5",
+      "name": "Nodal plane of an antibonding orbital",
+      "terms": [
+        "nodal plane",
+        "node"
+      ],
+      "statement": "Antibonding orbitals contain a node, a plane of zero electron density, perpendicular to the internuclear axis; bonding orbitals do not."
+    },
+    {
+      "id": "mo-energy-level-diagram",
+      "kind": "definition",
+      "section": "9.5",
+      "name": "Molecular orbital energy-level diagram",
+      "terms": [
+        "energy-level diagram",
+        "molecular orbital energy-level diagram"
+      ],
+      "statement": "A schematic drawing that compares the energies of the molecular orbitals (bonding, antibonding and nonbonding) with the energies of the parent atomic orbitals."
+    },
+    {
+      "id": "bonding-stabilization",
+      "kind": "result",
+      "section": "9.5",
+      "name": "Stabilization of bonding orbitals",
+      "terms": [
+        "stabilized",
+        "destabilized"
+      ],
+      "statement": "Electrons in a bonding orbital interact with both nuclei at once, so a bonding molecular orbital is always lower in energy, more stable, than its component atomic orbitals; electrons in an antibonding orbital interact with one nucleus at a time and lie farther from it, so an antibonding orbital is always higher."
+    },
+    {
+      "id": "extended-lcao-basis",
+      "kind": "idea",
+      "section": "9.5",
+      "name": "Larger LCAO basis sets",
+      "statement": "The 1s-only LCAO picture of H₂⁺ gives a bond length of 134 pm and a dissociation energy of 1.8 eV against 106 pm and 2.8 eV exact, because spherical 1s orbitals cannot favour the space between the nuclei. Adding orbitals such as 2s and 2p_z on each atom gives the linear variational method more coefficients, a lower energy and a better charge density.",
+      "forms": [
+        {
+          "id": "h2plus-six-orbital-basis",
+          "latex": "|\\psi_J\\rangle = c_{J,1}1s_A + c_{J,2}1s_B + c_{J,3}2s_A + c_{J,4}2s_B + c_{J,5}2p_{z,A} + c_{J,6}2p_{z,B}"
+        }
+      ]
+    },
+    {
+      "id": "molecular-electron-configuration",
+      "kind": "definition",
+      "section": "9.6",
+      "name": "Molecular electron configuration",
+      "terms": [
+        "electron configuration",
+        "configuration"
+      ],
+      "statement": "The molecular orbitals a molecule's electrons occupy and how many are in each. By the Aufbau and Pauli principles two electrons of opposite spin go into each spatial orbital in order of increasing energy, so the ground state of a 2n-electron molecule is ψ₁²ψ₂²…ψ_n²; higher-energy configurations give excited states."
+    },
+    {
+      "id": "mo-symmetry-labels",
+      "kind": "definition",
+      "section": "9.6",
+      "name": "Symmetry labels of molecular orbitals",
+      "terms": [
+        "sigma",
+        "pi"
+      ],
+      "statement": "A diatomic molecule keeps a component of angular momentum along its axis, which labels its orbitals: σ means a component of 0 and no node in any plane containing the axis, π a node in such a plane and a wavefunction antisymmetric to reflection in it. A prefix numbers the orbitals of a type and a superscript gives their electrons, as in 2σ_g²."
+    },
+    {
+      "id": "gerade-ungerade",
+      "kind": "definition",
+      "section": "9.6",
+      "name": "Gerade and ungerade",
+      "terms": [
+        "gerade",
+        "ungerade",
+        "center of inversion"
+      ],
+      "statement": "A homonuclear diatomic molecule has a center of inversion in the middle of the bond, and its orbitals are either g (gerade), ψ(x, y, z) = ψ(−x, −y, −z) about that center, or u (ungerade), changing sign under inversion. A heteronuclear diatomic has no center of inversion and no g or u label.",
+      "forms": [
+        {
+          "id": "inversion-parity",
+          "latex": "\\psi(x,y,z) = \\pm\\psi(-x,-y,-z)"
+        }
+      ]
+    },
+    {
+      "id": "quantum-chemistry-methods",
+      "kind": "idea",
+      "section": "9.6",
+      "name": "Hierarchy of quantum chemistry methods",
+      "terms": [
+        "post Hartree-Fock",
+        "density functional theory"
+      ],
+      "statement": "LCAO only chooses the mixing coefficients of orbitals assumed to be atomic and gives qualitative results. Hartree–Fock also optimizes the orbitals' shapes, density functional theory is often more accurate still, and post-Hartree–Fock methods improve on Hartree–Fock systematically, each at a greater computational cost."
+    },
+    {
+      "id": "homonuclear-diatomic-molecule",
+      "kind": "definition",
+      "section": "9.7",
+      "name": "Homonuclear diatomic molecule",
+      "terms": [
+        "homonuclear diatomic molecule",
+        "homonuclear diatomic molecules"
+      ],
+      "statement": "A molecule of two identical atoms, such as H₂, Li₂ or N₂."
+    },
+    {
+      "id": "valence-molecular-orbitals",
+      "kind": "idea",
+      "section": "9.7",
+      "name": "Valence molecular orbitals",
+      "statement": "When two atoms come close enough for their valence orbitals to overlap, the filled inner shells are largely unperturbed, so the molecular orbitals are built from the valence atomic orbitals alone."
+    },
+    {
+      "id": "p-sigma-orbitals",
+      "kind": "result",
+      "section": "9.7",
+      "name": "Sigma orbitals from p orbitals",
+      "statement": "Two np_z orbitals pointing at each other along the internuclear axis z combine head to head. Since their lobes alternate − + − + from left to right, their difference puts lobes of the same sign together and is the σ_np_z bonding orbital, and their sum, with a nodal plane between the atoms, the σ*_np_z antibonding one. An ns orbital on one atom and an np_z on the other combine the same way.",
+      "forms": [
+        {
+          "id": "sigma-npz",
+          "latex": "\\sigma_{np_z} = np_z(A) - np_z(B)"
+        },
+        {
+          "id": "sigma-star-npz",
+          "latex": "\\sigma^{*}_{np_z} = np_z(A) + np_z(B)"
+        }
+      ]
+    },
+    {
+      "id": "pi-orbital",
+      "kind": "definition",
+      "section": "9.7",
+      "name": "Pi orbital",
+      "terms": [
+        "pi (π) orbital",
+        "π orbital",
+        "pi star (π*) orbital",
+        "π* orbital"
+      ],
+      "statement": "A molecular orbital formed from the side-to-side overlap of two parallel np_x (or np_y) orbitals. Their sum is the bonding π orbital, with more electron density above and below the internuclear axis; their difference is the antibonding π*, with a nodal plane perpendicular to the axis. π_np_x and π_np_y are a degenerate pair, and so are the two π*.",
+      "forms": [
+        {
+          "id": "pi-npx",
+          "latex": "\\pi_{np_x} = np_x(A) + np_x(B)"
+        },
+        {
+          "id": "pi-star-npx",
+          "latex": "\\pi^{*}_{np_x} = np_x(A) - np_x(B)"
+        }
+      ]
+    },
+    {
+      "id": "mo-diagram-rules",
+      "kind": "result",
+      "section": "9.7",
+      "name": "Rules for a molecular orbital diagram",
+      "statement": "The number of molecular orbitals equals the number of atomic orbitals combined; the more two atomic orbitals overlap, the farther apart their bonding and antibonding combinations; a bonding orbital is stabilized about as much as its antibonding partner is destabilized; and orbitals interact most when their energies are the same. Head-on p_z overlap is greater than side-on, so σ and σ* are split more than π and π*."
+    },
+    {
+      "id": "period-2-mo-order",
+      "kind": "result",
+      "section": "9.7",
+      "name": "Orbital order of the period 2 diatomics",
+      "statement": "For O₂ and F₂ the valence orbitals run σ_2s < σ*_2s < σ_2p_z < π_2p < π*_2p < σ*_2p_z. For Li₂ through N₂ the interaction of the 2s orbital on one atom with the 2p_z on the other, strongest when their energies are close, pushes σ_2p_z above the π_2p pair; the 2s–2p gap grows with nuclear charge across the period."
+    },
+    {
+      "id": "filling-mo-diagram",
+      "kind": "skill",
+      "section": "9.7",
+      "name": "Filling a molecular orbital diagram",
+      "statement": "Count the valence electrons, place them in the molecular orbitals from the lowest energy up, two of opposite spin to an orbital (Pauli) and singly with parallel spins across a degenerate pair (Hund), then read off the electron configuration, the bond order and the number of unpaired electrons."
+    },
+    {
+      "id": "bond-order",
+      "kind": "definition",
+      "section": "9.8",
+      "name": "Bond order",
+      "terms": [
+        "bond order"
+      ],
+      "statement": "One-half the net number of bonding electrons, (bonding electrons − antibonding electrons)/2. It matches the number of electron pairs of a Lewis structure: 1, 2 and 3 for single, double and triple bonds.",
+      "forms": [
+        {
+          "id": "bond-order",
+          "latex": "\\text{bond order} = \\dfrac{\\text{number of bonding electrons} - \\text{number of antibonding electrons}}{2}"
+        }
+      ]
+    },
+    {
+      "id": "bond-order-and-stability",
+      "kind": "result",
+      "section": "9.8",
+      "name": "Bond order and bond strength",
+      "statement": "A species whose bond order is greater than zero is predicted to be stable, and a higher bond order means a stronger, shorter bond: H₂⁺ and He₂⁺, with ½, have weaker and longer bonds than H₂, with 1. A bond order of 0 predicts no covalent bond."
+    },
+    {
+      "id": "antibonding-destabilization",
+      "kind": "result",
+      "section": "9.8",
+      "name": "Antibonding electrons outweigh bonding ones",
+      "statement": "The antibonding σ*_1s orbital lies farther above the 1s energy than the bonding σ_1s lies below it, ΔE₋ > |ΔE₊|, so electrons in antibonding orbitals cancel and exceed the stabilization of as many electrons in bonding orbitals: equal numbers of each leave the molecule less stable than the separated atoms."
+    },
+    {
+      "id": "helium-dimer-instability",
+      "kind": "result",
+      "section": "9.8",
+      "name": "No covalent bond in He₂",
+      "statement": "He₂'s four valence electrons fill both σ_1s and σ*_1s, (σ_1s)²(σ*_1s)², for a bond order of 0: molecular orbital theory predicts no stable covalent He₂."
+    },
+    {
+      "id": "van-der-waals-helium-dimer",
+      "kind": "idea",
+      "section": "9.8",
+      "name": "Van der Waals helium dimer",
+      "statement": "The van der Waals force, which also makes liquid helium possible, binds two helium atoms very weakly. Proposed by Slater in 1928 and observed in 1993, He₂ is the largest known ground-state molecule of two atoms, its wavefunction reaching far into the classically forbidden region beyond the shallow well."
+    },
+    {
+      "id": "h2-ground-state-wavefunction",
+      "kind": "result",
+      "section": "9.9",
+      "name": "Antisymmetric ground state of H₂",
+      "type": "wavefunction",
+      "statement": "The product |1σ¹α¹⟩|1σ²β²⟩ does not change sign when the electrons' labels are swapped; the combination (|1σ¹α¹1σ²β²⟩ − |1σ²α²1σ¹β¹⟩)/√2 does, p̂₁₂ψ = −ψ, and has the same energy, since the Hamiltonian holds no spin terms.",
+      "forms": [
+        {
+          "id": "h2-antisymmetric-ground-state",
+          "latex": "|\\psi\\rangle = \\dfrac{1}{\\sqrt{2}}\\left(|1\\sigma^1\\alpha^1 1\\sigma^2\\beta^2\\rangle - |1\\sigma^2\\alpha^2 1\\sigma^1\\beta^1\\rangle\\right)"
+        }
+      ]
+    },
+    {
+      "id": "slater-determinant-properties",
+      "kind": "result",
+      "section": "9.9",
+      "name": "Properties of Slater determinants",
+      "statement": "Exchanging two electrons changes a Slater determinant's sign, and two identical spin-orbitals make it zero, which is why an orbital holds one electron of each spin at most. In the independent-particle approximation its energy is the sum of its orbitals' energies; it is normalized when its orbitals are, and two determinants that differ in any one orbital are orthogonal."
+    },
+    {
+      "id": "mo-slater-determinant",
+      "kind": "skill",
+      "section": "9.9",
+      "name": "Writing a molecule's Slater determinant",
+      "statement": "Fill the molecular orbital diagram by the Aufbau and Pauli principles and write the N × N Slater determinant of the occupied spin-orbitals φ₁α, φ₁β, φ₂α, …, normalized by 1/√N!; the diagram then stands for that antisymmetrized wavefunction.",
+      "forms": [
+        {
+          "id": "closed-shell-slater-determinant",
+          "latex": "|\\psi\\rangle = \\dfrac{1}{\\sqrt{N!}}\\begin{vmatrix} |\\phi_1^1\\alpha^1\\rangle & |\\phi_1^1\\beta^1\\rangle & \\cdots & |\\phi_{N/2}^1\\beta^1\\rangle \\\\ \\vdots & \\vdots & \\ddots & \\vdots \\\\ |\\phi_1^N\\alpha^N\\rangle & |\\phi_1^N\\beta^N\\rangle & \\cdots & |\\phi_{N/2}^N\\beta^N\\rangle \\end{vmatrix}"
+        }
+      ]
+    },
+    {
+      "id": "paramagnetism",
+      "kind": "definition",
+      "section": "9.10",
+      "name": "Paramagnetism",
+      "terms": [
+        "paramagnetic"
+      ],
+      "statement": "A substance with unpaired electrons is paramagnetic: it is attracted into a magnetic field. Most substances have only paired electrons."
+    },
+    {
+      "id": "oxygen-paramagnetism",
+      "kind": "result",
+      "section": "9.10",
+      "name": "Paramagnetism of O₂",
+      "statement": "Filling O₂'s 12 valence electrons leaves the last two in separate π*_2p orbitals with parallel spins: a bond order of 2 and a triplet with two unpaired electrons, so O₂ is paramagnetic, which is why liquid O₂ stays suspended between the poles of a magnet. Lewis and valence bond pictures cannot predict this."
+    },
+    {
+      "id": "spin-barrier",
+      "kind": "idea",
+      "section": "9.10",
+      "name": "Spin barrier",
+      "terms": [
+        "spin barrier"
+      ],
+      "statement": "Organic compounds, water, carbon dioxide and nitrogen have only paired electrons, while O₂ has two unpaired ones, so their reaction would need an electron of O₂ to change its spin. That costs a large input of energy, a spin barrier, which keeps organic matter from burning rapidly in air."
+    },
+    {
+      "id": "heteronuclear-diatomic-molecule",
+      "kind": "definition",
+      "section": "9.12",
+      "name": "Heteronuclear diatomic molecule",
+      "terms": [
+        "heteronuclear diatomic molecules",
+        "heteronuclear diatomic molecule"
+      ],
+      "statement": "A diatomic molecule of two different atoms, such as NO, HCl or CN⁻."
+    },
+    {
+      "id": "skewed-mo-diagram",
+      "kind": "result",
+      "section": "9.12",
+      "name": "Molecular orbitals of a heteronuclear diatomic",
+      "terms": [
+        "polar covalent bond",
+        "skewed"
+      ],
+      "statement": "When atom B is more electronegative than A, χ_B > χ_A, B's atomic orbitals lie lower, the diagram is skewed toward B and the bonding orbitals lie closer in energy to B's orbitals. The bonding electrons are then closer to B: molecular orbital theory's description of a polar covalent bond."
+    },
+    {
+      "id": "nonbonding-molecular-orbital",
+      "kind": "definition",
+      "section": "9.12",
+      "name": "Nonbonding molecular orbital",
+      "terms": [
+        "nonbonding molecular orbitals",
+        "nonbonding molecular orbital",
+        "nonbonding orbitals"
+      ],
+      "statement": "An orbital whose energy does not change when the molecule forms because it has no net overlap with the other atom's orbitals or too different an energy, such as chlorine's 3s, 3p_x and 3p_y in HCl. Filled, it is the molecular orbital equivalent of a lone pair, and its electrons do not count in the bond order."
+    },
+    {
+      "id": "axial-orbital-angular-momentum",
+      "kind": "definition",
+      "section": "9.14",
+      "name": "Axial orbital angular momentum",
+      "symbol": "Lambda",
+      "statement": "Λ, the projection of the electrons' orbital angular momentum on the internuclear axis, which plays the part of L in an atom: a state is Σ, Π, Δ, Φ for Λ = 0, 1, 2, 3."
+    },
+    {
+      "id": "axial-total-angular-momentum",
+      "kind": "definition",
+      "section": "9.14",
+      "name": "Axial total angular momentum",
+      "symbol": "Omega",
+      "statement": "Ω, the projection of the total angular momentum, orbital and spin, on the internuclear axis."
+    },
+    {
+      "id": "molecular-term-symbol",
+      "kind": "definition",
+      "section": "9.14",
+      "name": "Molecular term symbol",
+      "terms": [
+        "molecular term symbols",
+        "molecular term symbol",
+        "term symbols"
+      ],
+      "statement": "The label ^{2S+1}Λ_{Ω,(g/u)}^{(+/−)} of an electronic state of a diatomic molecule: the spin multiplicity, the letter Σ, Π, Δ, Φ for Λ, the projection Ω of the total angular momentum, the parity g or u (homonuclear molecules only) and, for Σ states, the + or − symmetry to reflection in a plane containing the internuclear axis.",
+      "forms": [
+        {
+          "id": "molecular-term-symbol",
+          "latex": "^{2S+1}\\Lambda_{\\Omega,(g/u)}^{(+/-)}"
+        }
+      ]
+    },
+    {
+      "id": "finding-molecular-terms",
+      "kind": "skill",
+      "section": "9.14",
+      "name": "Finding the term symbols of a diatomic configuration",
+      "statement": "Closed shells contribute ¹Σ⁺ and can be ignored. Combine the labels of the singly occupied orbitals with the allowed total spins: CO's excited configuration with one electron in a σ⁺ and one in a π orbital gives Π × Σ⁺ = Π, ¹Π and ³Π. Where two electrons share a degenerate π pair, list the microstates and read Λ, M_S, parity and reflection off them; O₂'s two π_g* electrons give ³Σ_g⁻, ¹Δ_g and ¹Σ_g⁺, with ³Σ_g⁻ the ground state."
+    },
+    {
+      "id": "diatomic-selection-rules",
+      "kind": "result",
+      "section": "9.14",
+      "name": "Selection rules for diatomic molecules",
+      "terms": [
+        "selection rules"
+      ],
+      "statement": "Electric dipole transitions between electronic states of a diatomic molecule obey ΔΛ = 0, ±1, ΔS = 0 and ΔΩ = 0, ±1, as atomic transitions obey their rules; Σ⁺ ↔ Σ⁻ is forbidden, and in a homonuclear molecule only g ↔ u."
+    },
+    {
+      "id": "molecular-state-parity",
+      "kind": "result",
+      "section": "9.15",
+      "name": "Parity of a molecular state",
+      "terms": [
+        "Parity",
+        "parity"
+      ],
+      "statement": "The parity of a state is the product of the parities of its open-shell electrons: g × g = g, g × u = u, u × u = g. Bonding σ and antibonding π orbitals are g; antibonding σ and bonding π are u."
+    },
+    {
+      "id": "sigma-reflection-symmetry",
+      "kind": "result",
+      "section": "9.15",
+      "name": "Reflection symmetry of Σ states",
+      "terms": [
+        "Reflection",
+        "reflection"
+      ],
+      "statement": "Reflection through a plane containing both nuclei leaves an orbital unchanged (+) or changes its sign (−), and a state's label is the product: (+)(+) = (−)(−) = +, (+)(−) = −. Of a degenerate π pair one orbital is + and the other −, and the label is written only for Σ states."
     }
   ],
   "concept_prereqs": [
@@ -10432,6 +11520,470 @@
     {
       "concept": "sodium-d-lines",
       "prereq": "russell-saunders-selection-rules"
+    },
+    {
+      "concept": "quantum-chemistry",
+      "prereq": "time-independent-schrodinger-equation"
+    },
+    {
+      "concept": "molecular-hamiltonian",
+      "prereq": "multi-electron-hamiltonian"
+    },
+    {
+      "concept": "molecular-hamiltonian",
+      "prereq": "internuclear-distance"
+    },
+    {
+      "concept": "electronic-hamiltonian",
+      "prereq": "molecular-hamiltonian"
+    },
+    {
+      "concept": "born-oppenheimer-approximation",
+      "prereq": "electronic-hamiltonian"
+    },
+    {
+      "concept": "electronic-schrodinger-equation",
+      "prereq": "born-oppenheimer-approximation"
+    },
+    {
+      "concept": "born-oppenheimer-wavefunction",
+      "prereq": "electronic-schrodinger-equation"
+    },
+    {
+      "concept": "potential-energy-curve",
+      "prereq": "electronic-schrodinger-equation"
+    },
+    {
+      "concept": "equilibrium-bond-length",
+      "prereq": "potential-energy-curve"
+    },
+    {
+      "concept": "crude-born-oppenheimer-approximation",
+      "prereq": "equilibrium-bond-length"
+    },
+    {
+      "concept": "nuclear-schrodinger-equation",
+      "prereq": "potential-energy-curve"
+    },
+    {
+      "concept": "nuclear-schrodinger-equation",
+      "prereq": "born-oppenheimer-wavefunction"
+    },
+    {
+      "concept": "potential-energy-surface",
+      "prereq": "potential-energy-curve"
+    },
+    {
+      "concept": "reaction-coordinate-diagram",
+      "prereq": "potential-energy-surface"
+    },
+    {
+      "concept": "hydrogen-molecular-ion",
+      "prereq": "born-oppenheimer-approximation"
+    },
+    {
+      "concept": "h2plus-hamiltonian",
+      "prereq": "hydrogen-molecular-ion"
+    },
+    {
+      "concept": "molecular-orbital",
+      "prereq": "orbital-approximation"
+    },
+    {
+      "concept": "lcao-mo-method",
+      "prereq": "molecular-orbital"
+    },
+    {
+      "concept": "lcao-mo-method",
+      "prereq": "lcao-approximation"
+    },
+    {
+      "concept": "molecular-orbital-count",
+      "prereq": "lcao-mo-method"
+    },
+    {
+      "concept": "orbital-interference",
+      "prereq": "lcao-mo-method"
+    },
+    {
+      "concept": "h2plus-lcao-orbitals",
+      "prereq": "hydrogen-molecular-ion"
+    },
+    {
+      "concept": "h2plus-lcao-orbitals",
+      "prereq": "orbital-interference"
+    },
+    {
+      "concept": "bonding-molecular-orbital",
+      "prereq": "h2plus-lcao-orbitals"
+    },
+    {
+      "concept": "antibonding-molecular-orbital",
+      "prereq": "h2plus-lcao-orbitals"
+    },
+    {
+      "concept": "h2plus-normalization",
+      "prereq": "h2plus-lcao-orbitals"
+    },
+    {
+      "concept": "overlap-integral-1s",
+      "prereq": "overlap-integral"
+    },
+    {
+      "concept": "overlap-integral-1s",
+      "prereq": "internuclear-distance"
+    },
+    {
+      "concept": "overlap-integral-1s",
+      "prereq": "hydrogen-wavefunctions"
+    },
+    {
+      "concept": "h2plus-lcao-energy",
+      "prereq": "h2plus-normalization"
+    },
+    {
+      "concept": "h2plus-lcao-energy",
+      "prereq": "h2plus-hamiltonian"
+    },
+    {
+      "concept": "h2plus-coulomb-integral",
+      "prereq": "h2plus-hamiltonian"
+    },
+    {
+      "concept": "h2plus-coulomb-integral",
+      "prereq": "electron-charge-density"
+    },
+    {
+      "concept": "overlap-charge-density",
+      "prereq": "overlap-integral"
+    },
+    {
+      "concept": "overlap-charge-density",
+      "prereq": "electron-charge-density"
+    },
+    {
+      "concept": "h2plus-exchange-integral",
+      "prereq": "h2plus-hamiltonian"
+    },
+    {
+      "concept": "h2plus-exchange-integral",
+      "prereq": "overlap-charge-density"
+    },
+    {
+      "concept": "h2plus-energy-curve",
+      "prereq": "h2plus-lcao-energy"
+    },
+    {
+      "concept": "h2plus-energy-curve",
+      "prereq": "h2plus-coulomb-integral"
+    },
+    {
+      "concept": "h2plus-energy-curve",
+      "prereq": "h2plus-exchange-integral"
+    },
+    {
+      "concept": "h2plus-energy-curve",
+      "prereq": "hydrogen-energy-levels"
+    },
+    {
+      "concept": "h2plus-bond-stability",
+      "prereq": "h2plus-energy-curve"
+    },
+    {
+      "concept": "h2plus-bond-stability",
+      "prereq": "bonding-molecular-orbital"
+    },
+    {
+      "concept": "h2plus-bond-stability",
+      "prereq": "antibonding-molecular-orbital"
+    },
+    {
+      "concept": "sigma-orbital",
+      "prereq": "bonding-molecular-orbital"
+    },
+    {
+      "concept": "sigma-orbital",
+      "prereq": "antibonding-molecular-orbital"
+    },
+    {
+      "concept": "antibonding-node",
+      "prereq": "antibonding-molecular-orbital"
+    },
+    {
+      "concept": "mo-energy-level-diagram",
+      "prereq": "molecular-orbital"
+    },
+    {
+      "concept": "bonding-stabilization",
+      "prereq": "h2plus-bond-stability"
+    },
+    {
+      "concept": "bonding-stabilization",
+      "prereq": "mo-energy-level-diagram"
+    },
+    {
+      "concept": "extended-lcao-basis",
+      "prereq": "h2plus-bond-stability"
+    },
+    {
+      "concept": "molecular-electron-configuration",
+      "prereq": "molecular-orbital"
+    },
+    {
+      "concept": "molecular-electron-configuration",
+      "prereq": "aufbau-principle"
+    },
+    {
+      "concept": "mo-symmetry-labels",
+      "prereq": "sigma-orbital"
+    },
+    {
+      "concept": "mo-symmetry-labels",
+      "prereq": "lz-quantization"
+    },
+    {
+      "concept": "gerade-ungerade",
+      "prereq": "mo-symmetry-labels"
+    },
+    {
+      "concept": "gerade-ungerade",
+      "prereq": "odd-function"
+    },
+    {
+      "concept": "quantum-chemistry-methods",
+      "prereq": "lcao-mo-method"
+    },
+    {
+      "concept": "quantum-chemistry-methods",
+      "prereq": "hartree-fock-method"
+    },
+    {
+      "concept": "quantum-chemistry-methods",
+      "prereq": "quantum-chemistry"
+    },
+    {
+      "concept": "valence-molecular-orbitals",
+      "prereq": "lcao-mo-method"
+    },
+    {
+      "concept": "p-sigma-orbitals",
+      "prereq": "sigma-orbital"
+    },
+    {
+      "concept": "p-sigma-orbitals",
+      "prereq": "p-orbital-shape"
+    },
+    {
+      "concept": "p-sigma-orbitals",
+      "prereq": "antibonding-node"
+    },
+    {
+      "concept": "pi-orbital",
+      "prereq": "mo-symmetry-labels"
+    },
+    {
+      "concept": "pi-orbital",
+      "prereq": "p-orbital-shape"
+    },
+    {
+      "concept": "pi-orbital",
+      "prereq": "antibonding-node"
+    },
+    {
+      "concept": "mo-diagram-rules",
+      "prereq": "molecular-orbital-count"
+    },
+    {
+      "concept": "mo-diagram-rules",
+      "prereq": "bonding-stabilization"
+    },
+    {
+      "concept": "mo-diagram-rules",
+      "prereq": "p-sigma-orbitals"
+    },
+    {
+      "concept": "mo-diagram-rules",
+      "prereq": "pi-orbital"
+    },
+    {
+      "concept": "period-2-mo-order",
+      "prereq": "mo-diagram-rules"
+    },
+    {
+      "concept": "period-2-mo-order",
+      "prereq": "homonuclear-diatomic-molecule"
+    },
+    {
+      "concept": "period-2-mo-order",
+      "prereq": "valence-molecular-orbitals"
+    },
+    {
+      "concept": "filling-mo-diagram",
+      "prereq": "period-2-mo-order"
+    },
+    {
+      "concept": "filling-mo-diagram",
+      "prereq": "molecular-electron-configuration"
+    },
+    {
+      "concept": "filling-mo-diagram",
+      "prereq": "hunds-rules"
+    },
+    {
+      "concept": "bond-order",
+      "prereq": "molecular-electron-configuration"
+    },
+    {
+      "concept": "bond-order",
+      "prereq": "bonding-molecular-orbital"
+    },
+    {
+      "concept": "bond-order",
+      "prereq": "antibonding-molecular-orbital"
+    },
+    {
+      "concept": "bond-order-and-stability",
+      "prereq": "bond-order"
+    },
+    {
+      "concept": "antibonding-destabilization",
+      "prereq": "bonding-stabilization"
+    },
+    {
+      "concept": "helium-dimer-instability",
+      "prereq": "bond-order-and-stability"
+    },
+    {
+      "concept": "helium-dimer-instability",
+      "prereq": "antibonding-destabilization"
+    },
+    {
+      "concept": "van-der-waals-helium-dimer",
+      "prereq": "helium-dimer-instability"
+    },
+    {
+      "concept": "van-der-waals-helium-dimer",
+      "prereq": "classically-forbidden-region"
+    },
+    {
+      "concept": "h2-ground-state-wavefunction",
+      "prereq": "molecular-electron-configuration"
+    },
+    {
+      "concept": "slater-determinant-properties",
+      "prereq": "determinant-antisymmetry"
+    },
+    {
+      "concept": "mo-slater-determinant",
+      "prereq": "slater-determinant-properties"
+    },
+    {
+      "concept": "mo-slater-determinant",
+      "prereq": "filling-mo-diagram"
+    },
+    {
+      "concept": "mo-slater-determinant",
+      "prereq": "h2-ground-state-wavefunction"
+    },
+    {
+      "concept": "paramagnetism",
+      "prereq": "electron-spin"
+    },
+    {
+      "concept": "paramagnetism",
+      "prereq": "magnetic-field"
+    },
+    {
+      "concept": "oxygen-paramagnetism",
+      "prereq": "filling-mo-diagram"
+    },
+    {
+      "concept": "oxygen-paramagnetism",
+      "prereq": "paramagnetism"
+    },
+    {
+      "concept": "oxygen-paramagnetism",
+      "prereq": "bond-order"
+    },
+    {
+      "concept": "spin-barrier",
+      "prereq": "oxygen-paramagnetism"
+    },
+    {
+      "concept": "skewed-mo-diagram",
+      "prereq": "heteronuclear-diatomic-molecule"
+    },
+    {
+      "concept": "skewed-mo-diagram",
+      "prereq": "mo-diagram-rules"
+    },
+    {
+      "concept": "nonbonding-molecular-orbital",
+      "prereq": "skewed-mo-diagram"
+    },
+    {
+      "concept": "nonbonding-molecular-orbital",
+      "prereq": "bond-order"
+    },
+    {
+      "concept": "axial-orbital-angular-momentum",
+      "prereq": "mo-symmetry-labels"
+    },
+    {
+      "concept": "axial-orbital-angular-momentum",
+      "prereq": "total-orbital-angular-momentum-quantum-number"
+    },
+    {
+      "concept": "axial-total-angular-momentum",
+      "prereq": "axial-orbital-angular-momentum"
+    },
+    {
+      "concept": "axial-total-angular-momentum",
+      "prereq": "total-angular-momentum-quantum-number"
+    },
+    {
+      "concept": "molecular-term-symbol",
+      "prereq": "term-symbol"
+    },
+    {
+      "concept": "molecular-term-symbol",
+      "prereq": "axial-total-angular-momentum"
+    },
+    {
+      "concept": "molecular-term-symbol",
+      "prereq": "gerade-ungerade"
+    },
+    {
+      "concept": "finding-molecular-terms",
+      "prereq": "molecular-term-symbol"
+    },
+    {
+      "concept": "finding-molecular-terms",
+      "prereq": "terms-from-microstates"
+    },
+    {
+      "concept": "diatomic-selection-rules",
+      "prereq": "molecular-term-symbol"
+    },
+    {
+      "concept": "diatomic-selection-rules",
+      "prereq": "russell-saunders-selection-rules"
+    },
+    {
+      "concept": "molecular-state-parity",
+      "prereq": "gerade-ungerade"
+    },
+    {
+      "concept": "molecular-state-parity",
+      "prereq": "parity-product-rules"
+    },
+    {
+      "concept": "sigma-reflection-symmetry",
+      "prereq": "mo-symmetry-labels"
+    },
+    {
+      "concept": "sigma-reflection-symmetry",
+      "prereq": "parity-product-rules"
     }
   ],
   "colours": {
@@ -10463,8 +12015,8 @@
         "dark": "#13D9E1"
       },
       "velocity": {
-        "light": "#013E1A",
-        "dark": "#3CFE87"
+        "light": "#007C78",
+        "dark": "#00FCA8"
       },
       "length": {
         "light": "#CB0283",
@@ -10547,6 +12099,10 @@
       "probability-density": {
         "light": "#017336",
         "dark": "#0EC360"
+      },
+      "velocity": {
+        "light": "#007C78",
+        "dark": "#00FCA8"
       }
     },
     "referentOrder": [

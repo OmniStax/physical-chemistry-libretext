@@ -1,0 +1,559 @@
+{
+ "id": "8.4",
+ "module": "13442",
+ "chapter": "8",
+ "title": "An Electron has an Intrinsic Spin Angular Momentum",
+ "short": "Electron spin",
+ "lead": "Hydrogen atoms in a magnetic field absorb microwaves, which no orbital transition can explain. With the Zeeman splitting of orbital levels and the Stern–Gerlach experiment, this points to a new angular momentum of the electron, its spin, with its own operators, quantum numbers and magnetic moment.",
+ "objectives": [
+  "Understand the forth quantum number for electrons - spin.",
+  "Understand how spin is connected to magnetic properties of the electrons and atoms.",
+  "Understand how to break degeneracy via externally applied magnetic fields in electrons and atoms."
+ ],
+ "summary_html": "",
+ "notes": "Credited to Theodore Zielinski. Figure 8.4.4, which draws the absorption of Figure 8.4.1's experiment, is folded into the live spectrometer.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "Exercise 8.4.1 is the book's, unkeyed, with an AI solution that works the book's numbers. The Zeeman exercise and its solution were written by AI. Bloom levels and concept tags were chosen by AI.",
+ "figures": [
+  {
+   "id": "sim-esr",
+   "kind": "sim",
+   "number": "8.4.1",
+   "folds": [
+    "8.4.4"
+   ],
+   "widths": [
+    932,
+    302
+   ],
+   "originals": [
+    "/media/ch08/350733-8.5.1p.svg",
+    "/media/ch08/350734-8.5.2.svg"
+   ],
+   "original_caption": "Schematic diagram of a microwave spectrometer with the sample in a variable magnetic field. The strength of the magnetic field is set, and the sample’s absorption of microwave photons is measured for a range of microwave photon energies (or frequencies). (CC BY-NC 4.0; Ümit Kaya via LibreTexts)",
+   "draws": [
+    "magnetic-field",
+    "frequency",
+    "energy"
+   ],
+   "conventions": [
+    "H"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "sim-zeeman",
+   "kind": "sim",
+   "number": "8.4.2",
+   "widths": [
+    555
+   ],
+   "originals": [
+    "/media/ch08/350736-8.4.2.svg"
+   ],
+   "original_caption": "The Zeeman effect for the $2s \\rightarrow 1s$ transition. Emission when an electron switches from a 2p orbital to a 1s orbital occurs at only one energy in the absence of a magnetic field, but can occur at three different energies in the presence of a magnetic field. (CC BY-NC; Ümit Kaya via LibreTexts)",
+   "draws": [
+    "magnetic-field",
+    "energy",
+    "wavelength"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "sim-sg",
+   "kind": "sim",
+   "widths": [
+    689
+   ],
+   "originals": [
+    "/media/ch08/350737-Stern_-_Gerlach_experiment.svg"
+   ],
+   "original_caption": "Stern–Gerlach experiment: silver atoms travel through an inhomogeneous magnetic field and are deflected up or down depending on their spin. (CC BY-NC 4.0; Ümit Kaya via LibreTexts)",
+   "draws": [
+    "magnetic-field"
+   ],
+   "conventions": [
+    "Ag"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "fig-8-4-3",
+   "kind": "photo",
+   "number": "8.4.3",
+   "draws": []
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "microwave-line",
+   "concept": "electron-spin-resonance",
+   "verb": "introduces"
+  },
+  {
+   "span": "microwave-line",
+   "concept": "magnetic-field",
+   "verb": "uses"
+  },
+  {
+   "span": "zeeman",
+   "concept": "magnetic-field",
+   "verb": "introduces"
+  },
+  {
+   "span": "zeeman",
+   "concept": "magnetic-dipole-moment",
+   "verb": "introduces"
+  },
+  {
+   "span": "zeeman",
+   "concept": "magnetic-dipole-energy",
+   "verb": "introduces"
+  },
+  {
+   "span": "zeeman",
+   "concept": "zeeman-effect",
+   "verb": "reinforces"
+  },
+  {
+   "span": "zeeman",
+   "concept": "zeeman-energy",
+   "verb": "introduces"
+  },
+  {
+   "span": "zeeman",
+   "concept": "bohr-magneton",
+   "verb": "introduces"
+  },
+  {
+   "span": "zeeman",
+   "concept": "magnetic-quantum-number",
+   "verb": "uses"
+  },
+  {
+   "span": "stern-gerlach",
+   "concept": "electron-spin",
+   "verb": "introduces"
+  },
+  {
+   "span": "stern-gerlach",
+   "concept": "stern-gerlach-experiment",
+   "verb": "introduces"
+  },
+  {
+   "span": "stern-gerlach",
+   "concept": "spin-magnetic-quantum-number",
+   "verb": "introduces"
+  },
+  {
+   "span": "stern-gerlach",
+   "concept": "electron-spin-resonance",
+   "verb": "reinforces"
+  },
+  {
+   "span": "spin-eigenstates",
+   "concept": "spin-angular-momentum",
+   "verb": "introduces"
+  },
+  {
+   "span": "spin-eigenstates",
+   "concept": "spin-operators",
+   "verb": "introduces"
+  },
+  {
+   "span": "spin-eigenstates",
+   "concept": "spin-eigenvalues",
+   "verb": "introduces"
+  },
+  {
+   "span": "spin-eigenstates",
+   "concept": "spherical-harmonics",
+   "verb": "uses"
+  },
+  {
+   "span": "spin-eigenstates",
+   "concept": "spin-quantum-number",
+   "verb": "introduces"
+  },
+  {
+   "span": "spin-eigenstates",
+   "concept": "spin-one-half",
+   "verb": "introduces"
+  },
+  {
+   "span": "spin-eigenstates",
+   "concept": "spin-states",
+   "verb": "introduces"
+  },
+  {
+   "span": "spin-eigenstates",
+   "concept": "orthonormality",
+   "verb": "reinforces"
+  },
+  {
+   "span": "spin-eigenstates",
+   "concept": "electron-g-factor",
+   "verb": "introduces"
+  },
+  {
+   "span": "spin-eigenstates",
+   "concept": "spin-gyromagnetic-ratio",
+   "verb": "introduces"
+  },
+  {
+   "span": "spin-eigenstates",
+   "concept": "gyromagnetic-ratio",
+   "verb": "introduces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "e1",
+   "source_id": "exr:8.4.1",
+   "source_number": "Exercise 8.4.1",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "spin-eigenstates",
+   "prompt": "<p>Carry out the calculations that show that the g-factor for electron spin is 2.0023.</p>",
+   "answer": {
+    "type": "number",
+    "generated_by": "ai",
+    "value": 2.0007,
+    "tol": 0.001,
+    "hint": "Find $h\\nu/B$ from the experiment and divide it by the Bohr magneton.",
+    "solution": "<p>The photon energy matches the gap between the spin states, $h\\nu = -\\gamma_s\\hbar\\,B$ (the derivation of the g-factor in this section), so $-\\gamma_s\\hbar = h\\nu/B$. With $\\nu = 28\\times10^{9}$ Hz and $B = 10^{4}$ G, $h\\nu/B = (6.626\\times10^{-27}\\ \\text{erg s})(28\\times10^{9}\\ \\text{s}^{-1})/10^{4}\\ \\text{G} = 1.855\\times10^{-20}$ erg/G. Dividing by the Bohr magneton $-\\gamma_e\\hbar = 9.2732\\times10^{-21}$ erg/G (Equation 8.4.3) gives $g = \\gamma_s/\\gamma_e = 2.0007$. The book's round 28 GHz is not precise enough to give 2.0023: that value needs $\\nu = 28.02$ GHz at $10^4$ G. With the current Bohr magneton, $9.2740\\times10^{-21}$ erg/G, the same numbers give 2.0005.</p>"
+   }
+  },
+  {
+   "id": "ai1",
+   "source_id": "The Zeeman Effect: Breaking Degeneracies with Magnetic Fields",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "zeeman",
+   "prompt": "<p>In a field of $B_z = 1.00$ T, how far apart are the neighbouring $m_l$ levels of hydrogen's 2p state? Give the spacing $\\mu_B B_z$ in wavenumbers, cm⁻¹.</p>",
+   "answer": {
+    "type": "number",
+    "generated_by": "ai",
+    "value": 0.467,
+    "unit": "cm⁻¹",
+    "hint": "Divide $\\mu_B B_z$ by $hc$, with $c$ in cm/s.",
+    "solution": "<p>$\\mu_B B_z = (9.274\\times10^{-24}\\ \\text{J/T})(1.00\\ \\text{T}) = 9.274\\times10^{-24}$ J. Dividing by $hc = (6.626\\times10^{-34}\\ \\text{J s})(2.998\\times10^{10}\\ \\text{cm/s}) = 1.986\\times10^{-23}$ J cm gives $0.467\\ \\text{cm}^{-1}$, against about 82 259 cm⁻¹ for the 2p → 1s line itself.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "e1",
+   "concept": "electron-g-factor"
+  },
+  {
+   "exercise": "e1",
+   "concept": "electron-spin-resonance"
+  },
+  {
+   "exercise": "ai1",
+   "concept": "zeeman-energy"
+  },
+  {
+   "exercise": "ai1",
+   "concept": "bohr-magneton"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-1922",
+   "kind": "correction",
+   "html": "Stern and Gerlach did the experiment in 1922."
+  },
+  {
+   "id": "c-opposite",
+   "kind": "correction",
+   "html": "Electrons of opposite spin cancel each other's magnetic moments. In silver, 23 such pairs cancel and leave the one unpaired electron."
+  },
+  {
+   "id": "c-braket",
+   "kind": "correction",
+   "html": "The second bracket is $\\langle \\beta | \\alpha \\rangle$; the book repeats $\\langle \\alpha | \\beta \\rangle$."
+  },
+  {
+   "id": "c-fig843",
+   "kind": "correction",
+   "html": "The electron's magnetic moment points opposite to its spin. The text gives the α state, $m_s = +\\tfrac{1}{2}$, a moment against the field and the higher energy, while the picture draws the $m_s = +\\tfrac{1}{2}$ electron with its north pole along the field. The licence printed as CC BY-SA-NC is CC BY-NC-SA."
+  },
+  {
+   "id": "c-fig842",
+   "kind": "correction",
+   "figure": "sim-zeeman",
+   "html": "The transition is 2p → 1s, as the rest of the caption says."
+  },
+  {
+   "id": "c-sg",
+   "kind": "correction",
+   "figure": "sim-sg",
+   "html": "The book prints this figure as a second Figure 8.4.2; it is shown here without a number."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "spin-half",
+   "what": "the spin quantum number",
+   "source": "Physical Chemistry (LibreTexts), 8.4 An Electron has an Intrinsic Spin Angular Momentum",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "text": "In the hypothetical experiment one absorption transition is observed, which means there are two spin states."
+      },
+      {
+       "text": "Since $m_l$ ranges in integer steps from $-l$ to $+l$, by analogy $m_s$ ranges in integer steps from $-s$ to $+s$.",
+       "src": "6.2"
+      },
+      {
+       "text": "The two states, labeled f and i, differ in $m_s$ by the smallest integer step, 1."
+      }
+     ],
+     "then": {
+      "tex": "\\mk{d}{m_{s,f} - m_{s,i}} = \\mk{o}{1}",
+      "uses": [
+       2
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{d}{(+s) - (-s)} = \\mk{o}{1}",
+       "uses": [
+        0,
+        1
+       ],
+       "cap": "Two states on a ladder that runs from $-s$ to $+s$ can only be its two ends, $m_s = +s$ and $m_s = -s$."
+      },
+      {
+       "tex": "\\mk{d}{2s} = \\mk{o}{1}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{s}{s} = \\mk{o}{\\dfrac{1}{2}}",
+       "uses": [],
+       "map": {
+        "d": "s"
+       }
+      }
+     ],
+     "num": "(8.4.5)"
+    }
+   ]
+  },
+  {
+   "id": "g-factor",
+   "what": "the electron's g-factor",
+   "source": "Physical Chemistry (LibreTexts), 8.4 An Electron has an Intrinsic Spin Angular Momentum",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "h\\knu = \\kEalpha - \\kEbeta",
+       "src": "(8.4.11)"
+      },
+      {
+       "tex": "\\kEalpha = \\kEones - \\kmusa \\cdot \\kBvec",
+       "src": "(8.4.1)"
+      },
+      {
+       "tex": "\\kEbeta = \\kEones - \\kmusb \\cdot \\kBvec",
+       "src": "(8.4.1)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{h}{h\\knu} = \\mk{a}{\\kEalpha} - \\mk{b}{\\kEbeta}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{h}{h\\knu} = \\mk{a}{(\\kEones - \\kmusa \\cdot \\kBvec)} - \\mk{b}{(\\kEones - \\kmusb \\cdot \\kBvec)}",
+       "uses": [
+        1,
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{h}{h\\knu} = \\mk{m}{(\\kmusb - \\kmusa) \\cdot \\kBvec}",
+       "uses": [],
+       "map": {
+        "a": "m",
+        "b": "m"
+       }
+      }
+     ],
+     "num": "(8.4.12)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "\\kmus = \\gamma_s \\kSvec",
+       "src": "8.4"
+      },
+      {
+       "text": "With the magnetic field along $z$, the scalar product becomes a product of the $z$-components of the spin angular momenta with the field."
+      }
+     ],
+     "then": {
+      "tex": "\\mk{h}{h\\knu} = \\mk{m}{(\\kmusb - \\kmusa) \\cdot \\kBvec}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{h}{h\\knu} = \\mk{m}{\\gamma_s(\\kSvec_{\\beta} - \\kSvec_{\\alpha}) \\cdot \\kBvec}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{h}{h\\knu} = \\mk{m}{\\gamma_s(\\kSzb - \\kSza)\\kBz}",
+       "uses": [
+        2
+       ]
+      }
+     ]
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "tex": "\\kSza = +\\tfrac{1}{2}\\hbar",
+       "src": "(8.4.6)"
+      },
+      {
+       "tex": "\\kSzb = -\\tfrac{1}{2}\\hbar",
+       "src": "(8.4.6)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{h}{h\\knu} = \\mk{m}{\\gamma_s(\\kSzb - \\kSza)\\kBz}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{h}{h\\knu} = \\mk{m}{\\gamma_s(-\\tfrac{1}{2}\\hbar - \\tfrac{1}{2}\\hbar)\\kBz}",
+       "uses": [
+        1,
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{h}{h\\knu} = \\mk{m}{-\\gamma_s\\hbar\\,\\kBz}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{h}{\\dfrac{h\\knu}{\\kBz}} = \\mk{m}{-\\gamma_s\\hbar}",
+       "uses": []
+      }
+     ],
+     "note": "The book prints the second value as $S_{z,\\alpha} = -\\tfrac{1}{2}\\hbar$; it is $S_{z,\\beta}$."
+    },
+    {
+     "assumes": [
+      {
+       "step": 2
+      },
+      {
+       "tex": "\\knu = 28\\times10^{9}\\ \\text{Hz}"
+      },
+      {
+       "tex": "\\kBz = 10^{4}\\ \\text{G}"
+      },
+      {
+       "tex": "h = 6.626\\times10^{-27}\\ \\text{erg s}"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{h}{\\dfrac{h\\knu}{\\kBz}} = \\mk{m}{-\\gamma_s\\hbar}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{m}{-\\gamma_s\\hbar} = \\mk{h}{\\dfrac{(6.626\\times10^{-27}\\ \\text{erg s})(28\\times10^{9}\\ \\text{Hz})}{10^{4}\\ \\text{G}}}",
+       "uses": [
+        1,
+        2,
+        3
+       ]
+      },
+      {
+       "tex": "\\mk{m}{-\\gamma_s\\hbar} = \\mk{h}{18.55\\times10^{-21}\\ \\text{erg/G}}",
+       "uses": []
+      }
+     ],
+     "note": "The book prints $18.5464\\times10^{-21}$ erg/gauss, which is exactly twice its Bohr magneton; its own numbers give $18.55\\times10^{-21}$."
+    },
+    {
+     "assumes": [
+      {
+       "step": 3
+      },
+      {
+       "tex": "\\mu_B = -\\gamma_e\\hbar = 9.2732\\times10^{-21}\\ \\text{erg/G}",
+       "src": "(8.4.3)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{m}{-\\gamma_s\\hbar} = \\mk{h}{18.55\\times10^{-21}\\ \\text{erg/G}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{m}{\\dfrac{\\gamma_s}{\\gamma_e}} = \\mk{h}{\\dfrac{18.55\\times10^{-21}\\ \\text{erg/G}}{9.2732\\times10^{-21}\\ \\text{erg/G}}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{m}{\\gamma_s} = \\mk{h}{2.0007\\,\\gamma_e}",
+       "uses": []
+      }
+     ],
+     "note": "The book writes $\\gamma_s = 2.0023\\,\\gamma_e$, the measured g-factor of the free electron. Its 28 GHz at $10^4$ G gives 2.0007; the measured value needs $\\nu = 28.02$ GHz."
+    }
+   ]
+  }
+ ]
+}

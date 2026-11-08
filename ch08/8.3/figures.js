@@ -62,12 +62,12 @@ const at = (A, r) => { const x = r / h - 1, i = Math.max(0, Math.min(N - 2, Math
    0.001 per bohr anywhere. Frames: r 0 to 4 bohr; radial density 0 to 1.8 per bohr (a zeta = 3 guess peaks
    at 1.62); V_el 0 to 3 E_h (V_el(0) = zeta for a 1s guess); eps -1.25 to -0.6 E_h over passes 1 to 14. */
 (function () {
-  const d = sim('sim-scf', 760);
+  const d = sim('sim-scf', 790);
   const STEP = 0.7;
   let data = [];
   const cy = F.cycle(() => data.length * STEP, 1.2);
   const G = F.choice(d.controls, { label: '\\text{first guess}', key: 'guess', aria: 'the starting guess for the orbital exponent',
-    options: [{ value: '2', label: 'bare nucleus, ζ = 2' }, { value: '1', label: 'hydrogen, ζ = 1' }, { value: '3', label: 'ζ = 3' }], value: '2',
+    options: [{ value: '1', label: 'ζ = 1' }, { value: '2', label: 'ζ = 2' }, { value: '3', label: 'ζ = 3' }], value: '2',
     onInput: () => { solve(); cy.reset(); } });
   const MIX = ctl(d.controls, { label: '\\text{mixing}', cls: '', key: 'mix', min: 0.3, max: 1, step: 0.05, value: 1, dec: 2,
     onInput: () => { solve(); cy.reset(); } });
@@ -85,7 +85,7 @@ const at = (A, r) => { const x = r / h - 1, i = Math.max(0, Math.min(N - 2, Math
       ? (conv ? `After ${K} passes the density changes by less than 0.001 per bohr: $\\kepsi = ${fmt(s.eps, 4)}\\ E_h$.` : `After ${K} passes the density still changes by ${fmt(s.dr, 4)} per bohr.`)
       : `Pass ${i + 1}: ${shownEps ? `$\\kepsi = ${fmt(s.eps, 4)}\\ E_h$, and the density changed by ${fmt(s.dr, s.dr < 0.01 ? 4 : 3)} per bohr` : 'the other electron\'s potential is built from the density'}.`);
     /* the loop, as the book draws it */
-    const bx = 40, bw = 330, bh = 64, y0 = 120, gap = 34;
+    const bx = 40, bw = 330, bh = 64, y0 = 130, gap = 40;
     const Y = (j) => y0 + j * (bh + gap);
     for (let j = 0; j < BOXES.length; j++) {
       const lit = j === stage, y = Y(j);
@@ -104,7 +104,7 @@ const at = (A, r) => { const x = r / h - 1, i = Math.max(0, Math.min(N - 2, Math
     text(ctx, 'yes', bx + bw / 2 + 12, Y(5) - gap / 2, PAL.muted, { size: 17 });
     /* the density: the one the potential was built from, dashed, and the new one */
     const L = 520, Rr = W - 40;
-    const a1 = axes(ctx, { l: L, r: Rr, t: 110, b: 290 }, [0, 4], [0, 1.8], { nx: 4, ny: 3, xl: 'r (bohr)', yl: 'radial density (1/bohr)', yc: C('probability-density') });
+    const a1 = axes(ctx, { l: L, r: Rr, t: 120, b: 270 }, [0, 4], [0, 1.8], { nx: 4, ny: 3, xl: 'r (bohr)', yl: 'radial density (1/bohr)', yc: C('probability-density') });
     plot(ctx, a1, (r) => at(s.Pin, r), alpha(C('probability-density'), 0.6), { w: 3, dash: [10, 10] });
     if (shownNew) {
       const k = done ? 1 : Math.min(1, (ph - 0.5) / 0.15);
@@ -113,16 +113,17 @@ const at = (A, r) => { const x = r / h - 1, i = Math.max(0, Math.min(N - 2, Math
     F.legend(ctx, a1, [{ s: 'density in', color: alpha(C('probability-density'), 0.6), w: 3, dash: [10, 10] }, { s: 'density out', color: C('probability-density'), w: 5 }], { corner: 'tr' });
     /* the potential of the other electron */
     const prevV = i > 0 ? data[i - 1].V : s.V, kv = done ? 1 : i === 0 ? 1 : Math.min(1, ph / 0.2);
-    const a2 = axes(ctx, { l: L, r: Rr, t: 350, b: 510 }, [0, 4], [0, 3], { nx: 4, ny: 3, xl: 'r (bohr)', yl: 'V_el (E_h)', yc: C('energy') });
+    const a2 = axes(ctx, { l: L, r: Rr, t: 370, b: 500 }, [0, 4], [0, 3], { nx: 4, ny: 3, xl: 'r (bohr)', yl: 'V_el (E_h)', yc: C('energy') });
     plot(ctx, a2, (r) => at(prevV, r) * (1 - kv) + at(s.V, r) * kv, C('energy'), { w: 5 });
     text(ctx, 'potential of the other electron', a2.X(1.3), a2.Y(2.3), C('energy'), { size: 20 });
     /* the orbital energy, pass by pass */
-    const a3 = axes(ctx, { l: L, r: Rr, t: 570, b: 700 }, [0, KMAX], [-1.25, -0.6], { nx: 7, ny: 2, xl: 'pass', yl: 'ε (E_h)', yc: C('energy') });
+    const a3 = axes(ctx, { l: L, r: Rr, t: 600, b: 730 }, [0, KMAX], [-1.2, -0.6], { nx: 7, ny: 3, xl: 'pass', yl: 'ε (E_h)', yc: C('energy') });
     line(ctx, a3.X(0), a3.Y(-0.9178), a3.X(KMAX), a3.Y(-0.9178), alpha(PAL.ink, 0.35), 2, [10, 10]);
     const pts = data.slice(0, shownEps ? i + 1 : i);
     if (pts.length > 1) { ctx.save(); ctx.strokeStyle = alpha(C('energy'), 0.7); ctx.lineWidth = 3; ctx.beginPath(); pts.forEach((p, j) => (j ? ctx.lineTo(a3.X(p.k), a3.Y(p.eps)) : ctx.moveTo(a3.X(p.k), a3.Y(p.eps)))); ctx.stroke(); ctx.restore(); }
-    pts.forEach((p, j) => F.dot(ctx, a3.X(p.k), a3.Y(Math.max(-1.25, Math.min(-0.6, p.eps))), C('energy'), j === pts.length - 1, 8));
-    tex(d.readout, `\\kepsi = \\kKE + \\langle \\kVnuc \\rangle + \\kJjk \\\\ \\kepsi = ${fmt(s.KE, 4)} ${fmt(s.Vn, 4)} + ${fmt(s.J, 4)} = ${fmt(s.eps, 4)}\\ E_h \\\\ \\kE = 2\\kepsi - \\kJjk = ${fmt(s.E, 4)}\\ E_h`);
+    pts.forEach((p, j) => F.dot(ctx, a3.X(p.k), a3.Y(Math.max(-1.2, Math.min(-0.6, p.eps))), C('energy'), j === pts.length - 1, 8));
+    const r = shownEps || i === 0 ? s : data[i - 1];
+    tex(d.readout, `\\kepsi = \\kKE + \\langle \\kVnuc \\rangle + \\kJjk \\\\ \\kepsi = ${fmt(r.KE, 4)} ${fmt(r.Vn, 4)} + ${fmt(r.J, 4)} = ${fmt(r.eps, 4)}\\ E_h \\\\ \\kE = 2\\kepsi - \\kJjk = ${fmt(r.E, 4)}\\ E_h`);
   }
   register(d.fig, { update: (dt) => cy.step(dt, () => 1), draw });
 })();

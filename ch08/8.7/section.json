@@ -1,0 +1,398 @@
+{
+ "id": "8.7",
+ "module": "13445",
+ "chapter": "8",
+ "title": "Hartree-Fock Calculations Give Good Agreement with Experimental Data",
+ "short": "Hartree–Fock calculations",
+ "lead": "Fock replaced Hartree's product of orbitals with a Slater determinant, which adds an exchange term to each one-electron equation. The section follows that change to the Fock operator, the orbital energies and the total energy, then to Koopmans' estimate of ionization energies and electron affinities.",
+ "objectives": [
+  "Understand how the Hartree method is expanded to include symmetrized mulit-electron determential wavefunctions via the Hartree-Fock equations.",
+  "Understand how to calculate the orbital energies from HF theory.",
+  "Apply HF theory with Koopman's theory to estimate ionization energies and electron affinities."
+ ],
+ "summary_html": "<p>So, within the limitations of the HF, frozen-orbital model, the ionization potentials (IPs) and electron affinities (EAs) are given as the negative of the occupied and virtual spin-orbital energies, respectively. This statement is referred to as Koopmans’ theorem; it is used extensively in quantum chemical calculations as a means of estimating ionization potentials (Equation 8.7.8) and Electron Affinities (Equation 8.7.9) and often yields results that are qualitatively correct (i.e., ± 0.5 eV). In general Hartree-Fock theory gives a great first order solution (99%) to describing multi-electron systems, but that last 1% is still too great for quantitatively describing many aspects of chemistry and more sophisticated approaches are necessary. These are discussed elsewhere.</p>",
+ "notes": "Written by Theodore Zielinski and shared under CC BY-NC-SA 4.0; the book gives no credit for Figure 8.7.2, which is shown under the page's licence, and the live figure draws the exchange hole of the uniform electron gas after J. C. Slater, Phys. Rev. 81, 385 (1951).",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercises in this section. The two here, Koopmans' estimate for neon and the energy Hartree–Fock misses in Table 8.7.1, were written by AI with AI solutions; neon's orbital energy is the Hartree–Fock value of Clementi and Roetti and its ionization energy the NIST value. Numeric answers accept a 2% tolerance.",
+ "figures": [
+  {
+   "id": "sim-exchange-hole",
+   "kind": "sim",
+   "number": "8.7.2",
+   "originals": [
+    "/media/ch08/141704-imageedit_2_5486984252.gif"
+   ],
+   "original_caption": "Normalized Conditional Probability for from electron-electron interactions (excluding coulomb effects) in (A) the Hartree approximation and (B) the Hartree-Fock approximation.",
+   "draws": [
+    "probability-density",
+    "length"
+   ],
+   "conventions": [
+    "e-"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built, with the uniform electron gas hole (Slater 1951)"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "opening",
+   "concept": "hartree-fock-method",
+   "verb": "introduces"
+  },
+  {
+   "span": "opening",
+   "concept": "hartree-fock-equations",
+   "verb": "introduces"
+  },
+  {
+   "span": "opening",
+   "concept": "exchange-integral",
+   "verb": "introduces"
+  },
+  {
+   "span": "opening",
+   "concept": "hartree-equations",
+   "verb": "reinforces"
+  },
+  {
+   "span": "opening",
+   "concept": "slater-determinant",
+   "verb": "uses"
+  },
+  {
+   "span": "opening",
+   "concept": "antisymmetry-principle",
+   "verb": "uses"
+  },
+  {
+   "span": "opening",
+   "concept": "coulomb-integral",
+   "verb": "uses"
+  },
+  {
+   "span": "fock-operator",
+   "concept": "fock-operator",
+   "verb": "introduces"
+  },
+  {
+   "span": "fock-operator",
+   "concept": "exchange-interaction",
+   "verb": "introduces"
+  },
+  {
+   "span": "fock-operator",
+   "concept": "hartree-fock-energy",
+   "verb": "introduces"
+  },
+  {
+   "span": "fock-operator",
+   "concept": "self-consistent-field-method",
+   "verb": "reinforces"
+  },
+  {
+   "span": "hartree-fock-energy",
+   "concept": "hartree-fock-orbital-energy",
+   "verb": "introduces"
+  },
+  {
+   "span": "hartree-fock-energy",
+   "concept": "virtual-orbital",
+   "verb": "introduces"
+  },
+  {
+   "span": "hartree-fock-energy",
+   "concept": "coulomb-integral",
+   "verb": "uses"
+  },
+  {
+   "span": "koopmans-theorem",
+   "concept": "koopmans-theorem",
+   "verb": "introduces"
+  },
+  {
+   "span": "koopmans-theorem",
+   "concept": "frozen-orbital-approximation",
+   "verb": "introduces"
+  },
+  {
+   "span": "koopmans-theorem",
+   "concept": "exchange-hole",
+   "verb": "introduces"
+  },
+  {
+   "span": "koopmans-theorem",
+   "concept": "ionization-energy",
+   "verb": "uses"
+  },
+  {
+   "span": "koopmans-theorem",
+   "concept": "electron-correlation",
+   "verb": "reinforces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "Koopmans' theorem",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "koopmans-theorem",
+   "prompt": "<p>A Hartree–Fock calculation on the neon atom gives the energy of its highest occupied spin-orbital, a 2p spin-orbital, as $\\epsilon_{2p} = -0.850\\,E_h$. (a) Use Koopmans' theorem to estimate neon's first ionization energy in eV ($1\\,E_h = 27.211$ eV). (b) The measured value is 21.56 eV. By what percentage does the estimate exceed it?</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 23.13,
+      "unit": "eV",
+      "hint": "Equation 8.7.8 gives the ionization energy as $-\\epsilon_k$."
+     },
+     {
+      "part": "b",
+      "value": 7.3,
+      "unit": "%"
+     }
+    ],
+    "solution": "<p>(a) Within the frozen-orbital model, $E_{N-1} - E_N = -\\epsilon_{2p} = 0.850\\,E_h$, and $0.850 \\times 27.211\\ \\text{eV} = 23.13$ eV.</p><p>(b) $(23.13 - 21.56)/21.56 = 0.073$, so the estimate is 7.3% too high. Koopmans' theorem leaves out orbital relaxation, the readjustment of the remaining electrons in the ion, which lowers the ion's energy and so the true ionization energy.</p>"
+   }
+  },
+  {
+   "id": "a2",
+   "source_id": "tab:1",
+   "kind": "exercise",
+   "bloom": "Analyze",
+   "place": {
+    "at": "end"
+   },
+   "cite": "hartree-fock-energy",
+   "prompt": "<p>Use Table 8.7.1, where energies are in $R_H$ ($1\\,R_H = 13.606$ eV). For helium, find (a) the energy the Hartree–Fock calculation misses, in $R_H$, (b) the same in eV, and (c) that energy as a percentage of the experimental total. (d) Find the same percentage for argon.</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 0.08,
+      "unit": "R_H",
+      "hint": "Subtract the experimental energy from the Hartree–Fock energy."
+     },
+     {
+      "part": "b",
+      "value": 1.09,
+      "unit": "eV"
+     },
+     {
+      "part": "c",
+      "value": 1.38,
+      "unit": "%"
+     },
+     {
+      "part": "d",
+      "value": 0.148,
+      "unit": "%"
+     }
+    ],
+    "solution": "<p>(a) $-5.72 - (-5.80) = 0.08\\,R_H$: the Hartree–Fock energy lies above the experimental one. (b) $0.08 \\times 13.606\\ \\text{eV} = 1.09$ eV. (c) $0.08/5.80 = 0.0138$, or 1.38%. (d) For argon the missing energy is $1055.20 - 1053.64 = 1.56\\,R_H$, larger than helium's, but $1.56/1055.20$ is only 0.148% of the total. The missing part is the correlation energy, which the single determinant leaves out.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "koopmans-theorem"
+  },
+  {
+   "exercise": "a1",
+   "concept": "frozen-orbital-approximation"
+  },
+  {
+   "exercise": "a1",
+   "concept": "ionization-energy"
+  },
+  {
+   "exercise": "a2",
+   "concept": "hartree-fock-energy"
+  },
+  {
+   "exercise": "a2",
+   "concept": "electron-correlation"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-normalization",
+   "kind": "correction",
+   "html": "The normalization constant of a determinant of $N$ spin-orbitals is $1/\\sqrt{N!}$, as in Section 8.6."
+  },
+  {
+   "id": "c-exchange-integrand",
+   "kind": "correction",
+   "html": "In the exchange term $\\psi_i(\\mathbf{r}')$ carries no complex conjugate: the integrand is $\\psi_j^*(\\mathbf{r}')\\psi_i(\\mathbf{r}')\\psi_j(\\mathbf{r})/|\\mathbf{r} - \\mathbf{r}'|$. The display of the fourth term below repeats the slip."
+  },
+  {
+   "id": "c-hartree-term",
+   "kind": "correction",
+   "html": "The left side is a function of $\\mathbf{r}$, the Hartree term acting on $\\psi_i$, while $J_{j,k}$ is a number, an energy; the Coulomb integrals come from the term's expectation value. The integral's denominator is $|r - r'|$."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "hf-orbital-energy",
+   "what": "the Hartree–Fock orbital energy",
+   "source": "Physical Chemistry (LibreTexts), 8.7 Hartree-Fock Calculations Give Good Agreement with Experimental Data",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "h_e\\kphii = \\kepsi\\kphii"
+      },
+      {
+       "text": "The spin-orbital $\\phi_i$ is normalized, $\\langle\\phi_i|\\phi_i\\rangle = 1$."
+      },
+      {
+       "tex": "h_e = T + V + \\sum_{j(\\rm occupied)}(J_j - K_j)",
+       "src": "(8.7.7)"
+      },
+      {
+       "tex": "\\kJij = \\langle\\kphii|J_j|\\kphii\\rangle"
+      },
+      {
+       "tex": "\\kKij = \\langle\\kphii|K_j|\\kphii\\rangle"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{h}{h_e\\kphii} = \\mk{e}{\\kepsi\\kphii}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{h}{\\langle\\kphii|h_e|\\kphii\\rangle} = \\mk{e}{\\kepsi\\langle\\kphii|\\kphii\\rangle}",
+       "cap": "Multiply both sides on the left by $\\phi_i^*$ and integrate; $\\epsilon_i$ is a number and comes out of the integral."
+      },
+      {
+       "tex": "\\mk{e}{\\kepsi} = \\mk{h}{\\langle\\kphii|h_e|\\kphii\\rangle}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{e}{\\kepsi} = \\mk{t}{\\langle\\kphii|T + V|\\kphii\\rangle} + \\mk{s}{\\sum_{j(\\rm occupied)}\\langle\\kphii|J_j - K_j|\\kphii\\rangle}",
+       "uses": [
+        2
+       ],
+       "map": {
+        "h": [
+         "t",
+         "s"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{e}{\\kepsi} = \\mk{t}{\\langle\\kphii|T + V|\\kphii\\rangle} + \\mk{s}{\\sum_{j(\\rm occupied)}[\\kJij - \\kKij]}",
+       "uses": [
+        3,
+        4
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "example-8-7-2",
+   "what": "the electron affinity",
+   "source": "Physical Chemistry (LibreTexts), 8.7 Hartree-Fock Calculations Give Good Agreement with Experimental Data, Example 8.7.2",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kEN = \\sum_{i=1}^{N}\\langle\\phi_{i}|T + V|\\phi_{i}\\rangle + \\tfrac{1}{2}\\sum_{i,j=1}^{N}[\\kJij - \\kKij]"
+      },
+      {
+       "tex": "\\kENp = \\sum_{i=1}^{N+1}\\langle\\phi_{i}|T + V|\\phi_{i}\\rangle + \\tfrac{1}{2}\\sum_{i,j=1}^{N+1}[\\kJij - \\kKij]"
+      },
+      {
+       "text": "$J_{N+1,N+1} = K_{N+1,N+1}$, so the term $[J_{N+1,N+1} - K_{N+1,N+1}]$ is zero."
+      },
+      {
+       "text": "The Coulomb and exchange integrals are symmetric in their indices: $J_{i,j} = J_{j,i}$ and $K_{i,j} = K_{j,i}$."
+      },
+      {
+       "tex": "\\epsilon_{N+1} = \\langle\\phi_{N+1}|T + V|\\phi_{N+1}\\rangle + \\sum_{j=1}^{N}[J_{N+1,j} - K_{N+1,j}]",
+       "drv": "hf-orbital-energy"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{d}{\\kEN} = \\mk{a}{\\sum_{i=1}^{N}\\langle\\phi_{i}|T + V|\\phi_{i}\\rangle + \\tfrac{1}{2}\\sum_{i,j=1}^{N}[\\kJij - \\kKij]}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{d}{\\kEN - \\kENp} = \\mk{a}{\\sum_{i=1}^{N}\\langle\\phi_{i}|T + V|\\phi_{i}\\rangle + \\tfrac{1}{2}\\sum_{i,j=1}^{N}[\\kJij - \\kKij]} - \\mk{b}{\\kENp}"
+      },
+      {
+       "tex": "\\mk{d}{\\kEN - \\kENp} = \\mk{a}{\\sum_{i=1}^{N}\\langle\\phi_{i}|T + V|\\phi_{i}\\rangle + \\tfrac{1}{2}\\sum_{i,j=1}^{N}[\\kJij - \\kKij]} - \\mk{b}{\\Big(\\sum_{i=1}^{N+1}\\langle\\phi_{i}|T + V|\\phi_{i}\\rangle + \\tfrac{1}{2}\\sum_{i,j=1}^{N+1}[\\kJij - \\kKij]\\Big)}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{d}{\\kEN - \\kENp} = \\mk{t}{-\\langle\\phi_{N+1}|T + V|\\phi_{N+1}\\rangle} \\mk{p}{- \\tfrac{1}{2}\\sum_{i=1}^{N+1}[J_{i,N+1} - K_{i,N+1}]} \\mk{q}{- \\tfrac{1}{2}\\sum_{j=1}^{N+1}[J_{N+1,j} - K_{N+1,j}]}",
+       "uses": [
+        2
+       ],
+       "cap": "Every term with both indices at most $N$ cancels. What is left has $i = N + 1$ or $j = N + 1$; the term with both is counted twice, but it is zero."
+      },
+      {
+       "tex": "\\mk{d}{\\kEN - \\kENp} = \\mk{t}{-\\langle\\phi_{N+1}|T + V|\\phi_{N+1}\\rangle} \\mk{p}{- \\sum_{j=1}^{N+1}[J_{N+1,j} - K_{N+1,j}]}",
+       "uses": [
+        3
+       ],
+       "map": {
+        "q": "p"
+       },
+       "cap": "With the indices of the integrals swapped, the two half sums are the same sum."
+      },
+      {
+       "tex": "\\mk{d}{\\kEN - \\kENp} = \\mk{e}{-\\epsilon_{N+1}}",
+       "uses": [
+        2,
+        4
+       ],
+       "map": {
+        "t": "e",
+        "p": "e"
+       },
+       "cap": "The sum here also runs over $j = N + 1$, a term that is zero, so what remains is the orbital energy of the virtual spin-orbital $\\phi_{N+1}$."
+      }
+     ],
+     "note": "The book's first expression for $E_N$ sums $[J_{i,j} - K_{i,j}]$ over $i$ alone; the energy of a determinant sums over both indices with a factor $\\tfrac{1}{2}$, as its second expression does. The printed working also leaves the $j = N + 1$ term's vanishing unstated."
+    }
+   ]
+  }
+ ]
+}

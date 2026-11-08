@@ -47,7 +47,7 @@ const eyeOf = (yaw, pitch, dist) => [dist * Math.sin(yaw) * Math.cos(pitch), dis
    photon's h nu drawn up from beta at the current B. Below the apparatus: the detector's signal against
    nu, 0 to 40 GHz, with its dip. Opens on the book's 10^4 G and 28 GHz. */
 (function () {
-  const d = sim('sim-esr', 660);
+  const d = sim('sim-esr', 700);
   const RUN = 4;
   const cy = F.cycle(() => RUN, 0.01);
   const B = ctl(d.controls, { label: '\\kBz', cls: 'magnetic-field', key: 'B', min: 0, max: 1.5, step: 0.01, value: 1, dec: 2,
@@ -56,7 +56,7 @@ const eyeOf = (yaw, pitch, dist) => [dist * Math.sin(yaw) * Math.cos(pitch), dis
   const W0 = 0.4, DEPTH = 0.9;
   const nu0 = (b) => G * MUB * b / h / 1e9;
   const absorb = (nu, b) => DEPTH / (1 + ((nu - nu0(b)) / W0) ** 2);
-  const yaw = 0.55, pitch = 0.32, dist = 1500;
+  const yaw = 0.28, pitch = 0.3, dist = 2200;
   const eye = eyeOf(yaw, pitch, dist);
   const hits = [];
   F.hover(d.stage, () => hits);
@@ -67,19 +67,19 @@ const eyeOf = (yaw, pitch, dist) => [dist * Math.sin(yaw) * Math.cos(pitch), dis
       ? `At $\\knu = ${fmt(nu, 1)}$ GHz the sample absorbs: $h\\knu$ matches the gap between $\\kalphas$ and $\\kbetas$ at $\\kBz = ${fmt(b, 2)}$ T.`
       : `At $\\kBz = ${fmt(b, 2)}$ T the sample absorbs at ${fmt(nu0(b), 1)} GHz; at ${fmt(nu, 1)} GHz the photons pass through.`);
     /* the apparatus, from the book's viewpoint */
-    const V = F.view({ yaw, pitch, dist, cx: 430, cy: 300 });
+    const V = F.view({ yaw, pitch, dist, cx: 460, cy: 290 });
     const field = b / 1.5;
     /* the field between the poles, drawn behind the beam */
     const nl = Math.round(field * 5);
     for (let k = 0; k < nl; k++) {
       const z = -55 + (110 * (k + 0.5)) / nl;
-      const p0 = V.P([-50, 70, z]), p1 = V.P([-50, -70, z]), q0 = V.P([50, 70, z]), q1 = V.P([50, -70, z]);
+      const p0 = V.P([-45, 55, z]), p1 = V.P([-45, -55, z]), q0 = V.P([45, 55, z]), q1 = V.P([45, -55, z]);
       line(ctx, p0[0], p0[1], p1[0], p1[1], alpha(C('magnetic-field'), 0.5), 2, [6, 6]);
       line(ctx, q0[0], q0[1], q1[0], q1[1], alpha(C('magnetic-field'), 0.5), 2, [6, 6]);
     }
     solids(ctx, V, eye, [
-      { c: [-330, 0, 0], s: [150, 120, 120] }, { c: [330, 0, 0], s: [110, 120, 120] },
-      { c: [0, 125, 0], s: [160, 110, 160] }, { c: [0, -125, 0], s: [160, 110, 160] },
+      { c: [-330, 0, 0], s: [150, 110, 110] }, { c: [330, 0, 0], s: [110, 110, 110] },
+      { c: [0, 95, 0], s: [140, 70, 140] }, { c: [0, -95, 0], s: [140, 70, 140] },
       { c: [0, 0, 0], s: [36, 36, 36], tint: alpha(F.el('H'), 0.55) }]);
     /* the photons */
     const N = 16, x0 = -255, x1 = 275;
@@ -92,22 +92,21 @@ const eyeOf = (yaw, pitch, dist) => [dist * Math.sin(yaw) * Math.cos(pitch), dis
       dot(ctx, p[0], p[1], alpha(C('frequency'), 0.95 * fade), true, 8);
     }
     const lab = (s, p, dy, col) => { const q = V.P(p); text(ctx, s, q[0], q[1] + dy, col || PAL.ink, { size: 20, align: 'center' }); };
-    lab('microwave generator', [-330, -60, 60], 40);
-    lab('detector', [330, -60, 60], 40);
-    lab('N', [0, 180, 80], -18, PAL.ink); lab('S', [0, -180, 80], 30, PAL.ink);
-    lab('hydrogen atoms', [0, -70, 80], 64, PAL.muted);
+    lab('microwave generator', [-330, -55, 55], 30);
+    lab('detector', [330, -55, 55], 30);
+    lab('N', [0, 95, 70], 0, PAL.ink); lab('S', [0, -95, 70], 0, PAL.ink);
     /* the detector's signal against frequency */
-    const ax = axes(ctx, { l: 110, r: 820, t: 500, b: 610 }, [0, 40], [0, 1.1], { nx: 8, ny: 0, xl: 'microwave frequency ν (GHz)', yl: 'signal', xc: C('frequency') });
+    const ax = axes(ctx, { l: 110, r: 820, t: 560, b: 650 }, [0, 40], [0, 1.1], { nx: 8, ny: 0, xl: 'microwave frequency ν (GHz)', yl: 'signal', xc: C('frequency') });
     plot(ctx, ax, (f) => 1 - absorb(f, b), PAL.ink, { w: 3 });
     line(ctx, ax.X(nu), ax.Y(0), ax.X(nu), ax.Y(1.1), alpha(C('frequency'), 0.9), 3, [4, 8]);
     dot(ctx, ax.X(nu), ax.Y(1 - A), C('frequency'), true, 9);
     /* the two spin levels against the field */
-    const ax2 = axes(ctx, { l: 980, r: W - 40, t: 120, b: 610 }, [0, 1.5], [-15, 15], { nx: 3, ny: 6, xl: 'magnetic field B (T)', yl: 'E − E₁ₛ (10⁻²⁴ J)', xc: C('magnetic-field'), yc: C('energy') });
+    const ax2 = axes(ctx, { l: 980, r: W - 40, t: 130, b: 650 }, [0, 1.5], [-15, 15], { nx: 3, ny: 6, xl: 'magnetic field B (T)', yl: 'E − E₁ₛ (10⁻²⁴ J)', xc: C('magnetic-field'), yc: C('energy') });
     const half = (bb) => G * MUB * bb / 2 / 1e-24;
     plot(ctx, ax2, (bb) => half(bb), C('energy'), { w: 4 });
     plot(ctx, ax2, (bb) => -half(bb), C('energy'), { w: 4 });
-    text(ctx, 'α', ax2.X(1.42), ax2.Y(half(1.42)) - 22, C('energy'), { size: 24, weight: 600, align: 'center' });
-    text(ctx, 'β', ax2.X(1.42), ax2.Y(-half(1.42)) + 24, C('energy'), { size: 24, weight: 600, align: 'center' });
+    text(ctx, 'α', ax2.X(1.3), ax2.Y(half(1.3)) - 24, C('energy'), { size: 24, weight: 600, align: 'center' });
+    text(ctx, 'β', ax2.X(1.3), ax2.Y(-half(1.3)) + 26, C('energy'), { size: 24, weight: 600, align: 'center' });
     line(ctx, ax2.X(b), ax2.Y(-15), ax2.X(b), ax2.Y(15), alpha(PAL.ink, 0.35), 2, [4, 8]);
     const hv = h * nu * 1e9 / 1e-24, yb = -half(b), top = Math.min(15, yb + hv);
     arrow(ctx, ax2.X(b) + 14, ax2.Y(yb), ax2.X(b) + 14, ax2.Y(top), res ? C('frequency') : alpha(C('frequency'), 0.45), 4);
@@ -117,7 +116,7 @@ const eyeOf = (yaw, pitch, dist) => [dist * Math.sin(yaw) * Math.cos(pitch), dis
     hits.push({ x: g[0], y: g[1], r: 70, name: 'microwave generator' }, { x: s0[0], y: s0[1], r: 26, name: 'sample of hydrogen atoms between the magnet poles' },
       { x: dd[0], y: dd[1], r: 60, name: 'detector' });
     const dE = G * MUB * b;
-    tex(d.readout, `\\kdE = \\kEalpha - \\kEbeta = g\\mu_B \\kBz = (2.0023)(9.274\\times10^{-24}\\ \\text{J/T})(${fmt(b, 2)}\\ \\text{T}) = ${sci(dE, 3)}\\ \\text{J} \\\\ h\\knu = (6.626\\times10^{-34}\\ \\text{J s})(${fmt(nu, 1)}\\times10^{9}\\ \\text{Hz}) = ${sci(h * nu * 1e9, 3)}\\ \\text{J} ${res ? '\\approx' : '\\neq'} \\kdE`);
+    tex(d.readout, `\\kdE = \\kEalpha - \\kEbeta = g\\mu_B \\kBz \\\\ \\kdE = (2.0023)(9.274\\times10^{-24}\\ \\text{J/T})(${fmt(b, 2)}\\ \\text{T}) = ${sci(dE, 3)}\\ \\text{J} \\\\ h\\knu = (6.626\\times10^{-34}\\ \\text{J s})(${fmt(nu, 1)}\\times10^{9}\\ \\text{Hz}) = ${sci(h * nu * 1e9, 3)}\\ \\text{J} ${res ? '\\approx' : '\\neq'} \\kdE`);
   }
   register(d.fig, { update: (dt) => cy.step(dt, () => 1), draw });
 })();
@@ -189,7 +188,7 @@ const eyeOf = (yaw, pitch, dist) => [dist * Math.sin(yaw) * Math.cos(pitch), dis
     options: [{ value: 'ag', label: 'silver atoms' }, { value: 'classical', label: 'classical magnets' }], value: 'ag', onInput: () => cy.reset() });
   const GR = ctl(d.controls, { label: 'dB_z/dz', cls: 'magnetic-field', key: 'grad', min: 0, max: 1500, step: 10, value: 1000, unit: 'T/m', dec: 0, onInput: () => cy.reset() });
   const rnd = (i, k) => { const x = Math.sin(i * 12.9898 + k * 78.233) * 43758.5453; return x - Math.floor(x); };
-  const yaw = 0.62, pitch = 0.28, dist = 1500;
+  const yaw = -0.55, pitch = 0.25, dist = 2200;
   const eye = eyeOf(yaw, pitch, dist);
   const hits = [];
   F.hover(d.stage, () => hits);
@@ -199,20 +198,20 @@ const eyeOf = (yaw, pitch, dist) => [dist * Math.sin(yaw) * Math.cos(pitch), dis
     const mu = (i) => (ag ? (rnd(i, 1) < 0.5 ? 1 : -1) : 2 * rnd(i, 1) - 1);
     const defl = (i) => 70 * mu(i) * g / 1500;
     topline(ctx, ag ? 'Silver atoms land in two spots: the moment along the field has only two values.' : 'Magnets pointing every which way would spread into a smear along the field.');
-    const V = F.view({ yaw, pitch, dist, cx: 640, cy: 330 });
+    const V = F.view({ yaw, pitch, dist, cx: 700, cy: 320 });
     const XS = 420;
     /* the screen: a plate at x = XS, seen from the front side */
     const sc = [[XS, -150, -110], [XS, 150, -110], [XS, 150, 110], [XS, -150, 110]].map((p) => V.P(p));
-    F.face(ctx, sc, V.shade([-1, 0, 0]), 2);
     solids(ctx, V, eye, [
       { c: [-430, 0, 0], s: [130, 130, 130] },
       { c: [-250, 55, 0], s: [14, 90, 130] }, { c: [-250, -55, 0], s: [14, 90, 130] },
       { c: [60, 95, 0], s: [300, 80, 120] }, { c: [60, -95, 0], s: [300, 80, 120] }]);
+    F.face(ctx, sc, V.shade([-1, 0, 0]), 2);
     /* the hits so far */
     const n = Math.min(NMAX, Math.floor(NMAX * t / (RUN - FLY)));
     for (let i = 0; i < n; i++) {
       const p = V.P([XS - 1, defl(i), (rnd(i, 2) - 0.5) * 90]);
-      dot(ctx, p[0], p[1], alpha(PAL.ink, 0.75), true, 3);
+      dot(ctx, p[0], p[1], alpha(PAL.ink, 0.75), true, 4);
     }
     /* atoms in flight: from the oven to the screen in FLY seconds, bending inside the magnet */
     for (let i = n; i < n + 6 && i < NMAX; i++) {

@@ -1,0 +1,361 @@
+{
+ "id": "8.8",
+ "module": "13446",
+ "chapter": "8",
+ "title": "Term Symbols Gives a Detailed Description of an Electron Configuration",
+ "short": "Term symbols",
+ "lead": "The angular momenta of an atom's electrons add as vectors to quantum numbers for the whole atom: L, S, their z projections and J. A term symbol records them for each energy level, and the terms of a configuration are found by counting its microstates.",
+ "objectives": [
+  "Understand how electron configurations results in different manifestations of angular momenta (both oribital and spin)",
+  "Describe the manifestations in atoms via atomic term symbols"
+ ],
+ "summary_html": "",
+ "notes": "Adapted from Mattanjah de Vries's page, CC BY 4.0 at the source and shared here under the book's CC BY-NC-SA 4.0; the book gives no credit for its spin and microstate pictures, its first Figure 8.8.1 is Section 6.3's vector model and its second is Figure 8.9.1, so their citations link there, its two hand-drawn spin sketches are scans and are not reproduced, and the thirteen microstate charts of Example 8.8.12 are states the microstate figure reaches.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercises in this section. The two exercises, on the microstates and terms of p² and p³, were written by AI with their solutions, Bloom levels and concept tags.",
+ "figures": [
+  {
+   "id": "sim-spin-pair",
+   "kind": "sim",
+   "number": "8.8.1",
+   "originals": [
+    "/media/ch08/57511-M1b.jpg"
+   ],
+   "original_caption": "When we call an electron spin “up,” what we really mean is that it has a positive z‐component (e.g. $m_s = +½$).",
+   "widths": [
+    268
+   ],
+   "draws": [
+    "angular-momentum",
+    "angle"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "sim-microstates",
+   "kind": "sim",
+   "originals": [
+    "/media/ch08/182586-8.8.1.png",
+    "/media/ch08/182587-8.8.2.png",
+    "/media/ch08/182588-8.8.3.png"
+   ],
+   "draws": [],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [
+  {
+   "id": "spin-1",
+   "label": "the first electron's spin",
+   "figures": [
+    "sim-spin-pair"
+   ]
+  },
+  {
+   "id": "spin-2",
+   "label": "the second electron's spin",
+   "figures": [
+    "sim-spin-pair"
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "span": "atomic-quantum-numbers",
+   "concept": "angular-momentum-quantum-number",
+   "verb": "uses"
+  },
+  {
+   "span": "total-l",
+   "concept": "total-orbital-angular-momentum-quantum-number",
+   "verb": "introduces"
+  },
+  {
+   "span": "total-l",
+   "concept": "closed-shell",
+   "verb": "introduces"
+  },
+  {
+   "span": "total-l",
+   "concept": "vector-model",
+   "verb": "reinforces"
+  },
+  {
+   "span": "total-l",
+   "concept": "angular-momentum-quantum-number",
+   "verb": "uses"
+  },
+  {
+   "span": "total-l",
+   "concept": "orbital-angular-momentum",
+   "verb": "uses"
+  },
+  {
+   "span": "total-ml",
+   "concept": "total-magnetic-quantum-number",
+   "verb": "introduces"
+  },
+  {
+   "span": "total-ml",
+   "concept": "total-spin-magnetic-quantum-number",
+   "verb": "introduces"
+  },
+  {
+   "span": "total-ml",
+   "concept": "magnetic-quantum-number",
+   "verb": "uses"
+  },
+  {
+   "span": "total-ml",
+   "concept": "spin-magnetic-quantum-number",
+   "verb": "reinforces"
+  },
+  {
+   "span": "total-s",
+   "concept": "total-spin-quantum-number",
+   "verb": "introduces"
+  },
+  {
+   "span": "total-s",
+   "concept": "spin-quantum-number",
+   "verb": "uses"
+  },
+  {
+   "span": "total-j",
+   "concept": "total-angular-momentum-quantum-number",
+   "verb": "introduces"
+  },
+  {
+   "span": "multiplicity",
+   "concept": "spin-multiplicity",
+   "verb": "introduces"
+  },
+  {
+   "span": "multiplicity",
+   "concept": "spin-angular-momentum",
+   "verb": "uses"
+  },
+  {
+   "span": "multiplicity",
+   "concept": "heisenberg-uncertainty-principle",
+   "verb": "uses"
+  },
+  {
+   "span": "constructing-term-symbols",
+   "concept": "term-symbol",
+   "verb": "introduces"
+  },
+  {
+   "span": "constructing-term-symbols",
+   "concept": "hunds-rules",
+   "verb": "introduces"
+  },
+  {
+   "span": "constructing-term-symbols",
+   "concept": "terms-from-microstates",
+   "verb": "introduces"
+  },
+  {
+   "span": "constructing-term-symbols",
+   "concept": "microstate",
+   "verb": "reinforces"
+  },
+  {
+   "span": "constructing-term-symbols",
+   "concept": "spin-multiplicity",
+   "verb": "uses"
+  },
+  {
+   "span": "shortcuts",
+   "concept": "electron-hole-equivalence",
+   "verb": "introduces"
+  },
+  {
+   "span": "shortcuts",
+   "concept": "term-symbol",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "If you can do this problem, you can do almost any atomic term symbol.",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "constructing-term-symbols",
+   "prompt": "<p>Carbon's ground configuration is $1s^2 2s^2 2p^2$. Using the chart method of Example 8.8.12, find how many microstates the $2p^2$ configuration has and how many levels (term symbols with their $J$) it gives.</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "Number of microstates",
+      "value": 15,
+      "hint": "Count the ways to put 2 electrons into the 6 spin-orbitals of a p subshell."
+     },
+     {
+      "part": "Number of levels",
+      "value": 5
+     }
+    ],
+    "solution": "<p>Two electrons in the six 2p spin-orbitals can be placed in $\\binom{6}{2} = 15$ ways, so there are 15 microstates. Charted by $M_l$ (2 to −2) and $M_s$ (−1, 0, +1), the counts are $M_l = \\pm 2$: 0, 1, 0; $M_l = \\pm 1$: 1, 2, 1; $M_l = 0$: 1, 3, 1. The top row has only $M_s = 0$, so the first term is $^1D$, which takes 5 microstates. The top row left is $M_l = 1$ with $M_s = \\pm 1$, so the next term is $^3P$, taking 9. One microstate is left, at $M_l = 0$, $M_s = 0$: the term $^1S$. That accounts for $5 + 9 + 1 = 15$. With $J$ from $|L - S|$ to $L + S$, the levels are $^1D_2$, $^3P_2$, $^3P_1$, $^3P_0$ and $^1S_0$: 5 levels.</p>"
+   }
+  },
+  {
+   "id": "a2",
+   "source_id": "A similar relationship can be used to figure out high electron number term symbols",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "constructing-term-symbols",
+   "prompt": "<p>Nitrogen's ground configuration is $1s^2 2s^2 2p^3$. How many microstates does $2p^3$ have, and how many terms does it give?</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "Number of microstates",
+      "value": 20,
+      "hint": "Three electrons go into six spin-orbitals. For the terms, start the chart at the largest $M_l$ and take the largest $M_s$ in that row."
+     },
+     {
+      "part": "Number of terms",
+      "value": 3
+     }
+    ],
+    "solution": "<p>Three electrons in six spin-orbitals give $\\binom{6}{3} = 20$ microstates. The largest $M_l$ is 2 (two electrons in $m_l = 1$, the third in $m_l = 0$), and that row has only $M_s = \\pm\\tfrac{1}{2}$, so the first term is $^2D$, with 10 microstates. The top row left is $M_l = 1$, again with only $M_s = \\pm\\tfrac{1}{2}$: the term $^2P$, with 6. The 4 microstates left all have $M_l = 0$, with $M_s = \\pm\\tfrac{3}{2}, \\pm\\tfrac{1}{2}$ (one electron in each p orbital): the term $^4S$. That is $10 + 6 + 4 = 20$, in 3 terms. Three spins of ½ give $S = \\tfrac{3}{2}$ and $\\tfrac{1}{2}$ only, as the terms show.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "terms-from-microstates"
+  },
+  {
+   "exercise": "a1",
+   "concept": "term-symbol"
+  },
+  {
+   "exercise": "a1",
+   "concept": "microstate"
+  },
+  {
+   "exercise": "a2",
+   "concept": "terms-from-microstates"
+  },
+  {
+   "exercise": "a2",
+   "concept": "total-spin-quantum-number"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-sums",
+   "kind": "correction",
+   "html": "Angular momenta add as vectors, and their magnitudes do not: $\\sqrt{2}\\hbar + \\sqrt{2}\\hbar$ is $2\\sqrt{2}\\hbar$, not $2\\hbar$. The three cases are $L = 2$, 1 and 0, of magnitude $\\sqrt{6}\\hbar$, $\\sqrt{2}\\hbar$ and 0. All three displays are labelled “same direction”; the second is the opposite case and the third the off-angle case."
+  },
+  {
+   "id": "c-2p2",
+   "kind": "correction",
+   "html": "The configuration is $1s^2 2s^2 2p^2$."
+  },
+  {
+   "id": "c-2s",
+   "kind": "correction",
+   "html": "The 2s electron does count: it has no orbital angular momentum, but it carries spin. Only the closed $1s^2$ shell can be ignored."
+  },
+  {
+   "id": "c-ms-range",
+   "kind": "correction",
+   "html": "The last value is $-m_{s1} - m_{s2}$, so for two electrons $M_s = 1, 0, -1$."
+  },
+  {
+   "id": "c-nitrogen",
+   "kind": "correction",
+   "html": "Three spins of ½ give only $S = 3/2$ and $S = 1/2$: adding ½ to $S = 1$ gives 3/2 or 1/2, and adding it to $S = 0$ gives 1/2. An integer $S$ such as 1 needs an even number of electrons."
+  },
+  {
+   "id": "c-l-for-L",
+   "kind": "correction",
+   "html": "The total orbital angular momentum is measured by $L$; the table below also writes $l$ for it."
+  },
+  {
+   "id": "c-table",
+   "kind": "correction",
+   "html": "The first row's symbol is $L$. The second row is the total magnetic quantum number. $M_s$ takes signed values from $m_{s1} + m_{s2}$ down to $-m_{s1} - m_{s2}$ (1, 0, −1 for two electrons), with no absolute values."
+  },
+  {
+   "id": "c-three-881",
+   "kind": "correction",
+   "html": "The book prints three different figures under the number 8.8.1 on this page: the vector model of an $l = 1$ electron, which is Section 6.3's figure and which the citations above link to; the L-S coupling cones, drawn in Section 8.9; and this picture of spin pairs, which keeps the number here. Two hand-drawn sketches follow it in the book."
+  },
+  {
+   "id": "c-two-pieces",
+   "kind": "correction",
+   "html": "A term symbol carries three pieces of information: $L$, the multiplicity $2S + 1$, and, as its subscript, $J$."
+  },
+  {
+   "id": "c-1s0",
+   "kind": "correction",
+   "html": "A closed-shell atom has $L = 0$, $S = 0$ and $J = 0$, so its term symbol is $^1S_0$."
+  },
+  {
+   "id": "c-microstate-level",
+   "kind": "correction",
+   "html": "In Examples 8.8.9 to 8.8.12 “microstates” means levels. A term symbol with its $J$ names a level, and a level holds $2J + 1$ microstates: boron's $2p^1$ has 6 microstates in 2 levels, and beryllium's $2s^1 2p^1$ has 12 microstates in 4 levels."
+  },
+  {
+   "id": "c-m1",
+   "kind": "correction",
+   "html": "With $S = \\tfrac{1}{2}$ the multiplicity is $M = 2S + 1 = 2$, as the superscript of $^2S$ says. Example 8.8.10 likewise prints $M = 1$ for boron, whose multiplicity is 2."
+  },
+  {
+   "id": "c-ml1",
+   "kind": "correction",
+   "html": "The 8 microstates with $M_l = 1$ split by $M_s$ as 2, 4, 2: four with $M_s = 0$, two with $M_s = +1$ and two with $M_s = -1$."
+  },
+  {
+   "id": "c-chart-3f",
+   "kind": "correction",
+   "html": "After $^3F$ is taken, five rows are left, across $M_s = -1, 0, +1$: $M_l = \\pm 2$: 0, 1, 0; $M_l = \\pm 1$: 1, 2, 1; $M_l = 0$: 1, 3, 1. The book's chart at this point reprints the $M_l = 1, 0, -1$ rows of the full chart."
+  },
+  {
+   "id": "c-chart-1s",
+   "kind": "correction",
+   "html": "After $^3P$ is taken, one microstate is left, at $M_l = 0$, $M_s = 0$; the book's last chart prints a blank $M_l$ and a 0."
+  }
+ ]
+}

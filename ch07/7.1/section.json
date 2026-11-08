@@ -398,7 +398,8 @@
        "text": "We simply ignore the electron-electron repulsion term."
       },
       {
-       "text": "$h_1$ and $h_2$ are one electron Hamiltonians for electron 1 and 2, respectively, and are just the hydrogen-like Hamiltonians."
+       "text": "$h_1$ and $h_2$ are hydrogen-like Hamiltonians.",
+       "src": "7.1, text"
       }
      ],
      "then": {
@@ -433,7 +434,7 @@
        "step": 0
       },
       {
-       "text": "Electron 1 is separable from electron 2, so the two-electron wavefunction is approximated as a product of two one-electron wavefunctions, $\\Psi_{total} = \\psi_{el_1}\\psi_{el_2}$.",
+       "tex": "\\kPsitot = \\kpsiela\\kpsielb",
        "src": "(7.1.4)"
       },
       {

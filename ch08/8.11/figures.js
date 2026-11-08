@@ -20,7 +20,7 @@ const DARK = '#111114';
 /* =====================================================================
    FIGURE 8.11.1 + 8.11.2: hydrogen's H-alpha line built from five
    transitions. Still: one slider, the line width, and nothing in time.
-   Levels to scale within each n (the book's splittings): n = 3 has j = 1/2
+   Levels to scale within each n, 560 units per cm^-1 (the book's splittings): n = 3 has j = 1/2
    (3S, 3P), 3/2 (3P, 3D) 0.108 cm^-1 higher and 5/2 (3D) 0.036 higher
    again; n = 2 has j = 1/2 (2S, 2P) and 3/2 (2P) 0.364 higher. The gap
    between n = 3 and n = 2 is broken. Each transition is drawn at the x of
@@ -38,10 +38,10 @@ const DARK = '#111114';
    The light is drawn in Halpha's own red (fact, 656.3 nm).
 ===================================================================== */
 (function () {
-  const d = F.sim(root, 'sim-h-alpha', 640);
+  const d = F.sim(root, 'sim-h-alpha', 740);
   const W = ctl(d.controls, { label: '\\text{line width}', cls: 'wavenumber', key: 'width', min: 0.01, max: 0.6, step: 0.005, value: 0.2, unit: 'cm⁻¹', dec: 3, aria: 'the width of each line, in reciprocal centimetres' });
-  const U3 = [{ j: '1/2', e: 0, s: '^2S_{1/2}, ^2P_{1/2}' }, { j: '3/2', e: 0.108, s: '^2P_{3/2}, ^2D_{3/2}' }, { j: '5/2', e: 0.144, s: '^2D_{5/2}' }];
-  const U2 = [{ j: '1/2', e: 0, s: '^2S_{1/2}, ^2P_{1/2}' }, { j: '3/2', e: 0.364, s: '^2P_{3/2}' }];
+  const U3 = [{ j: '1/2', e: 0, s: '²S₁/₂, ²P₁/₂' }, { j: '3/2', e: 0.108, s: '²P₃/₂, ²D₃/₂' }, { j: '5/2', e: 0.144, s: '²D₅/₂' }];
+  const U2 = [{ j: '1/2', e: 0, s: '²S₁/₂, ²P₁/₂' }, { j: '3/2', e: 0.364, s: '²P₃/₂' }];
   const LINES = [
     { u: 2, l: 1, I: 1, name: '3²D₅/₂ → 2²P₃/₂' },
     { u: 1, l: 1, I: 0.111, name: '3²D₃/₂ → 2²P₃/₂' },
@@ -62,16 +62,16 @@ const DARK = '#111114';
     const w = W.v, red = F.fact(spectral(656.3)), cw = C('wavenumber');
     const pk = peaksOf(w), top2 = pk.slice().sort((a, b) => b.y - a.y).slice(0, 2).sort((a, b) => a.x - b.x);
     topline(ctx, pk.length === 1 ? `At a width of ${fmt(w, 3)} cm⁻¹ the five lines blur into one.` : pk.length === 2 ? `At a width of ${fmt(w, 3)} cm⁻¹ the five lines blur into a doublet, its peaks ${fmt(top2[1].x - top2[0].x, 3)} cm⁻¹ apart.` : `At a width of ${fmt(w, 3)} cm⁻¹ the line shows ${pk.length} peaks.`);
-    const box = { l: 330, r: 1320, t: 470, b: 590 };
+    const box = { l: 330, r: 1320, t: 540, b: 650 };
     const sx = (box.r - box.l) / 0.8, X = (v) => box.l + (v + 0.5) * sx;
     /* the levels, to scale within each n: 300 units per cm^-1 */
-    const s = 300, y3 = 180, y2 = 380;
+    const s = 560, y3 = 220, y2 = 480;
     const Y3 = (e) => y3 - e * s, Y2 = (e) => y2 - e * s;
     text(ctx, 'n = 3', 40, Y3(0.07), PAL.ink, { size: 22, weight: 600, base: 'middle' });
     text(ctx, 'n = 2', 40, Y2(0.18), PAL.ink, { size: 22, weight: 600, base: 'middle' });
-    const lab3 = U3.map((u) => Y3(u.e)); for (let i = 1; i < 3; i++) if (lab3[i - 1] - lab3[i] < 22) lab3[i] = lab3[i - 1] - 22;
-    U3.forEach((u, i) => { line(ctx, box.l, Y3(u.e), box.r, Y3(u.e), PAL.ink, 3); text(ctx, u.s, box.l - 12, lab3[i], PAL.ink, { size: 18, align: 'right', base: 'middle' }); hits.push({ x: box.l + 40, y: Y3(u.e), r: 12, name: `n = 3, j = ${u.j}: ${u.e ? fmt(u.e, 3) + ' cm⁻¹ above j = 1/2' : 'the lowest n = 3 level'}` }); });
-    U2.forEach((u) => { line(ctx, box.l, Y2(u.e), box.r, Y2(u.e), PAL.ink, 3); text(ctx, u.s, box.l - 12, Y2(u.e), PAL.ink, { size: 18, align: 'right', base: 'middle' }); hits.push({ x: box.l + 40, y: Y2(u.e), r: 12, name: `n = 2, j = ${u.j}: ${u.e ? fmt(u.e, 3) + ' cm⁻¹ above j = 1/2' : 'the lowest n = 2 level'}` }); });
+    const lab3 = U3.map((u) => Y3(u.e)); for (let i = 1; i < 3; i++) if (lab3[i - 1] - lab3[i] < 24) lab3[i] = lab3[i - 1] - 24;
+    U3.forEach((u, i) => { line(ctx, box.l, Y3(u.e), box.r, Y3(u.e), PAL.ink, 3); text(ctx, u.s, box.l - 12, lab3[i], PAL.ink, { size: 20, align: 'right', base: 'middle' }); hits.push({ x: box.l + 40, y: Y3(u.e), r: 12, name: `n = 3, j = ${u.j}: ${u.e ? fmt(u.e, 3) + ' cm⁻¹ above j = 1/2' : 'the lowest n = 3 level'}` }); });
+    U2.forEach((u) => { line(ctx, box.l, Y2(u.e), box.r, Y2(u.e), PAL.ink, 3); text(ctx, u.s, box.l - 12, Y2(u.e), PAL.ink, { size: 20, align: 'right', base: 'middle' }); hits.push({ x: box.l + 40, y: Y2(u.e), r: 12, name: `n = 2, j = ${u.j}: ${u.e ? fmt(u.e, 3) + ' cm⁻¹ above j = 1/2' : 'the lowest n = 2 level'}` }); });
     /* the break in the energy scale between n = 3 and n = 2 */
     const yb = (Y3(0) + Y2(0.364)) / 2;
     [-6, 6].forEach((o) => line(ctx, box.l - 6, yb + o + 5, box.l + 6, yb + o - 5, PAL.muted, 2));
@@ -82,7 +82,7 @@ const DARK = '#111114';
       hits.push({ x, y: (Y3(U3[L.u].e) + Y2(U2[L.l].e)) / 2, r: 14, name: `${L.name}, relative strength ${fmt(L.I, 3)}` });
     });
     /* the spectrum: sticks at their strengths, and the blend at this width */
-    const ax = axes(ctx, box, [-0.5, 0.3], [0, 1.15], { nx: 8, ny: 0, xl: 'wavenumber from the 3²S₁/₂ → 2²S₁/₂ line (cm⁻¹)', xc: cw, fx: (v) => fmt(v, 1) });
+    const ax = axes(ctx, box, [-0.5, 0.3], [0, 1.15], { nx: 8, ny: 0, xl: 'wavenumber offset (cm⁻¹)', xc: cw, fx: (v) => fmt(v, 1) });
     const peak = Math.max(...pk.map((p) => p.y));
     LINES.forEach((L) => line(ctx, ax.X(L.x), ax.Y(0), ax.X(L.x), ax.Y(L.I), alpha(red, 0.55), 3));
     plot(ctx, ax, (x) => blendRaw(x, w) / peak, red, { w: 4 });

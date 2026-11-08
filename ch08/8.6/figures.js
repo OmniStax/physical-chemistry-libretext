@@ -32,8 +32,8 @@ function spin(ctx, x, y, up, color, len, w) {
   /* a small stick diagram of 1s and 2s, its centre at (x, y) */
   function mini(ctx, x, y, c, color) {
     const [s1, s2] = CONF[c];
-    line(ctx, x - 28, y + 22, x + 28, y + 22, color, 3); line(ctx, x - 28, y - 22, x + 28, y - 22, color, 3);
-    spin(ctx, x, y + 22, s1, color, 34, 3); spin(ctx, x, y - 22, s2, color, 34, 3);
+    line(ctx, x - 26, y + 26, x + 26, y + 26, color, 3); line(ctx, x - 26, y - 20, x + 26, y - 20, color, 3);
+    spin(ctx, x, y + 26, s1, color, 30, 3); spin(ctx, x, y - 20, s2, color, 30, 3);
   }
   function draw() {
     const { ctx } = begin(d.c);
@@ -70,8 +70,8 @@ function spin(ctx, x, y, up, color, len, w) {
         f.parts.forEach(([sg, c]) => {
           if (sg) { text(ctx, sg, x + 6, y, ink, { size: 28, base: 'middle' }); x += 40; }
           mini(ctx, x + 34, y, c, String(c) === v ? cw : ink);
-          text(ctx, String(c), x + 34, y + rowH / 2 - 14, PAL.muted, { size: 17, align: 'center' });
-          x += 90;
+          text(ctx, String(c), x + 70, y + 26, PAL.muted, { size: 17, align: 'center' });
+          x += 100;
         });
         if (f.over) text(ctx, ') / √2', x, y, ink, { size: 26, base: 'middle' });
       });
