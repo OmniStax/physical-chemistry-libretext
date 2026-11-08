@@ -17,22 +17,22 @@ const { tex, C, PAL, alpha, ctl, register, begin, line, text, topline, axes, fmt
     aria: 'the moment of inertia about the unique axis over the moment about the two equal axes', specials: [{ at: 1, label: 'spherical top' }] });
   const KK = F.choice(d.controls, { label: '|K|', key: 'K', options: [0, 1, 2, 3].map((k) => ({ value: String(k), label: String(k) })), value: '3', aria: 'the quantum number K of the level the readout writes' });
   const S = F.space3d(d, { box: [[-1.8, 1.8], [-1.8, 1.8], [-1.9, 1.9]], h: 460, turn: -0.6, tilt: 0.35, fit: 2.2, spin: 'off', zoom: false });
-  const lad = F.makeCanvas(d.stage, 380);
+  const lad = F.makeCanvas(d.stage, 460);
   const hits = [];
   F.hover(d.stage, () => hits, lad);
   function draw() {
     const rho = RHO.v, k = +KK.value, cz = Math.sqrt(Math.max(0.01, 2 / rho - 1)), sph = Math.abs(rho - 1) < 0.005, pro = rho < 1;
     const ci = C('moment-of-inertia'), ce = C('energy');
     const u = pro ? 'a' : 'c', o1 = pro ? 'b' : 'a', o2 = pro ? 'c' : 'b';
-    S.set('body', F.space.surface((th, ph) => [Math.sin(th) * Math.cos(ph), Math.sin(th) * Math.sin(ph), cz * Math.cos(th)], [0, Math.PI], [0, 2 * Math.PI], ci, { n: [28, 48], grid: 8, alpha: 0.55 }));
-    const L = 1.6, Lz = Math.max(cz + 0.45, 0.9);
+    S.set('body', F.space.surface((th, ph) => [Math.sin(th) * Math.cos(ph), Math.sin(th) * Math.sin(ph), cz * Math.cos(th)], [0, Math.PI], [0, 2 * Math.PI], ci, { n: [28, 48], grid: 8, alpha: 0.3 }));
+    const L = 1.65, Lz = cz + 0.5;
     S.set('axes', [
       { k: 'line', pts: [[0, 0, -Lz], [0, 0, Lz]], color: 'ink', w: 3, name: sph ? 'a body axis' : `the unique axis, ${u}` },
-      { k: 'line', pts: [[-L, 0, 0], [L, 0, 0]], color: 'muted', w: 2, name: sph ? 'a body axis' : `a body axis, ${o1}` },
-      { k: 'line', pts: [[0, -L, 0], [0, L, 0]], color: 'muted', w: 2, name: sph ? 'a body axis' : `a body axis, ${o2}` },
-      { k: 'label', s: sph ? 'a' : u, p: [0, 0, Lz + 0.15], color: PAL.ink, cls: 'bare' },
-      { k: 'label', s: sph ? 'b' : o1, p: [L + 0.15, 0, 0], color: PAL.muted, cls: 'bare' },
-      { k: 'label', s: sph ? 'c' : o2, p: [0, L + 0.15, 0], color: PAL.muted, cls: 'bare' },
+      { k: 'line', pts: [[-L, 0, 0], [L, 0, 0]], color: 'ink', w: 3, name: sph ? 'a body axis' : `a body axis, ${o1}` },
+      { k: 'line', pts: [[0, -L, 0], [0, L, 0]], color: 'ink', w: 3, name: sph ? 'a body axis' : `a body axis, ${o2}` },
+      { k: 'label', s: sph ? 'a' : u, p: [0, 0, Lz + 0.15], color: 'ink', cls: 'bare' },
+      { k: 'label', s: sph ? 'b' : o1, p: [L + 0.15, 0, 0], color: 'ink', cls: 'bare' },
+      { k: 'label', s: sph ? 'c' : o2, p: [0, L + 0.15, 0], color: 'ink', cls: 'bare' },
     ]);
     S.headline(sph ? 'A spherical top: all three moments equal.' : pro ? `A prolate top: $I_a = ${fmt(rho, 2)}\\,I_b$, a football.` : `An oblate top: $I_c = ${fmt(rho, 2)}\\,I_a$, a frisbee.`);
 
@@ -41,11 +41,11 @@ const { tex, C, PAL, alpha, ctl, register, begin, line, text, topline, axes, fmt
     const sh = 1 / rho - 1, E = (J, K) => J * (J + 1) + K * K * sh;
     topline(ctx, sph ? 'Every $J$ level is one level, whatever $K$: $(2J + 1)^2$ states.'
       : `Each $J$ splits by $K^2$, ${pro ? 'upward' : 'downward'}: $K = ${k ? '\\pm' + k : 0}$ of $J = 3$ sits at ${fmt(E(3, k), 2)} in units of ħ²/2I.`);
-    const box = { l: 150, r: 1340, t: 90, b: 340 };
+    const box = { l: 150, r: 1340, t: 130, b: 410 };
     const ax = axes(ctx, box, [0, 4], [0, 24], { nx: 0, ny: 4, yl: 'energy (ħ²/2I)', yc: ce });
     hits.length = 0;
     for (let J = 0; J <= 3; J++) {
-      const x0 = ax.X(J + 0.1), x1 = ax.X(J + 0.9);
+      const x0 = ax.X(J + 0.1), x1 = ax.X(J + 0.78);
       text(ctx, `J = ${J}`, (x0 + x1) / 2, box.b + 26, PAL.ink, { size: 20, align: 'center' });
       line(ctx, x0, ax.Y(J * (J + 1)), x1, ax.Y(J * (J + 1)), alpha(PAL.ink, 0.35), 2, [10, 10]);
       for (let K = 0; K <= J; K++) {
@@ -53,9 +53,9 @@ const { tex, C, PAL, alpha, ctl, register, begin, line, text, topline, axes, fmt
         line(ctx, x0 + 20, ax.Y(e), x1 - 20, ax.Y(e), alpha(ce, on ? 1 : 0.55), on ? 5 : 3);
         hits.push({ x: (x0 + x1) / 2, y: ax.Y(e), r: 10, name: sph ? `J = ${J}: every K from −${J} to ${J}, ${(2 * J + 1) ** 2} states` : `J = ${J}, K = ${K ? '±' + K : 0}: E = ${fmt(e, 2)} ħ²/2I, ${K ? 2 * (2 * J + 1) : 2 * J + 1} states` });
       }
-      if (J === 3 && !sph) for (let K = 0; K <= 3; K++) text(ctx, K ? `K = ±${K}` : 'K = 0', x1 - 8, ax.Y(E(3, K)) - 14, K === k ? ce : PAL.muted, { size: 17, align: 'right' });
+      if (J === 3 && !sph) { let last = -1e9; for (let K = 0; K <= 3; K++) { const y = ax.Y(E(3, K)); if (Math.abs(y - last) < 20) continue; last = y; text(ctx, K ? `K = ±${K}` : 'K = 0', x1 + 8, y, K === k ? ce : PAL.muted, { size: 17, base: 'middle' }); } }
     }
-    text(ctx, 'dashed: the spherical top, J(J + 1)', box.l + 10, box.t - 14, PAL.muted, { size: 17 });
+    F.legend(ctx, ax, [{ s: 'spherical top, J(J + 1)', color: alpha(PAL.ink, 0.35), w: 2, dash: [10, 10] }, { s: 'this top', color: ce, w: 4 }], { corner: 'tl' });
     const Iu = pro ? '\\kIa' : '\\kIc', g = sph ? (2 * 3 + 1) ** 2 : k ? 2 * 7 : 7;
     tex(d.readout, sph
       ? `E(J,K,M) = \\dfrac{\\hbar^2 J(J+1)}{2I} \\\\ E(3,K,M) = 12\\,\\dfrac{\\hbar^2}{2I} \\\\ \\small (2J+1)^2 = ${g}\\ \\text{states}`

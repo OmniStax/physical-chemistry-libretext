@@ -12,8 +12,8 @@ const TAU = 2 * Math.PI, DEBYE = 4.803;   /* 1 e·Å in debye */
    CO2 C +0.8 e and O −0.4 e, H2O O −0.66 e and H +0.33 e, N2 none. Geometries in Å from the
    bond lengths (N2 1.10, HCl 1.27, CO2 1.16, H2O 0.958 at 104.5°); mode shapes are the usual
    symmetric patterns with the centre of mass held still. Drawn amplitude 0.15 Å, about twice a
-   ground-state swing. Scene 170 units per Å; the dipole arrow 160 units per debye, drawn
-   centred under the molecule so the atoms never hide it. Below, the change of the dipole along the direction it moves, ±1 D frame.
+   ground-state swing. Scene 170 units per Å; the dipole arrow 110 units per debye, drawn
+   beside the molecule so the atoms never hide it. Below, the change of the dipole along the direction it moves, ±1 D frame.
 ===================================================================== */
 (function () {
   const d = sim('sim-dipole-vibration', 680);
@@ -53,14 +53,14 @@ const TAU = 2 * Math.PI, DEBYE = 4.803;   /* 1 e·Å in debye */
       ctx.save(); ctx.fillStyle = F.el(a[0]); ctx.beginPath(); ctx.arc(P[i][0], P[i][1], RAD[a[0]], 0, TAU); ctx.fill(); ctx.strokeStyle = alpha(PAL.ink, 0.7); ctx.lineWidth = 2; ctx.stroke(); ctx.restore();
       hits.push({ x: P[i][0], y: P[i][1], r: RAD[a[0]], name: `${a[0]}, charge ${a[3] === 0 ? '0' : (a[3] > 0 ? '+' : '−') + fmt(Math.abs(a[3]), 2) + ' e'} in the model` });
     });
-    const s = 160;
-    const ay = 320, ax0 = cx - mu[0] * s / 2, ay0 = ay + mu[1] * s / 2;
+    const s = 110;
+    const ay = cy0, cxa = cx + 380, ax0 = cxa - mu[0] * s / 2, ay0 = ay + mu[1] * s / 2;
     if (mag > 0.01) F.arrow(ctx, ax0, ay0, ax0 + mu[0] * s, ay0 - mu[1] * s, C('dipole-moment'), 5);
-    else dot(ctx, cx, ay, C('dipole-moment'), false, 8);
-    text(ctx, 'μ', cx + Math.max(Math.abs(mu[0]) * s / 2, 10) + 18, ay + 8, C('dipole-moment'), { size: 24, weight: 600 });
-    hits.push({ x: cx, y: ay, r: 40, name: `the dipole moment, ${fmt(mag, 2)} D` });
+    else dot(ctx, cxa, ay, C('dipole-moment'), false, 8);
+    text(ctx, 'μ', cxa + Math.max(Math.abs(mu[0]) * s / 2, 10) + 18, ay + 8, C('dipole-moment'), { size: 24, weight: 600 });
+    hits.push({ x: cxa, y: ay, r: 50, name: `the dipole moment, ${fmt(mag, 2)} D` });
     /* the change of the dipole against time */
-    const box = { l: 150, r: W - 80, t: 420, b: 600 };
+    const box = { l: 150, r: W - 80, t: 380, b: 600 };
     const ax = axes(ctx, box, [0, 3], [-1, 1], { nx: 6, ny: 4, xl: 'time (periods)', yl: 'change in dipole (D)', xc: C('time'), yc: C('dipole-moment') });
     const f = (tt) => { const q = dip(m, Math.sin(TAU * tt)); return (q[0] - mu0[0]) * u[0] + (q[1] - mu0[1]) * u[1]; };
     plot(ctx, ax, f, C('dipole-moment'), { w: 5, x: [0, t] });
