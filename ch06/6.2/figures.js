@@ -62,8 +62,8 @@ const formOf = (l, m) => FORMS[`${l},${m}`] ?? `P_{${l}}^{${Math.abs(m)}}(\\cos\
   const d = sim('sim-harmonics');
   const top = document.createElement('div'), big = document.createElement('div');
   d.stage.appendChild(top); d.stage.appendChild(big);
-  const PB = [[-0.6, 0.6], [-5.8, 5.8], [-5.6, 0.6]];
-  const P = F.space3d({ stage: top, fig: d.fig }, { box: PB, h: 380, turn: -PI / 2, tilt: 0.18, fit: 2.25, locked: true });
+  const PB = [[-0.6, 0.6], [-6.6, 5.6], [-5.6, 0.5]];
+  const P = F.space3d({ stage: top, fig: d.fig }, { box: PB, h: 380, turn: -PI / 2, tilt: 0.18, fit: 2.9, locked: true });
   const BB = [[-1.15, 1.15], [-1.15, 1.15], [-1.15, 1.15]];
   const S = F.space3d({ stage: big, fig: d.fig }, { box: BB, h: 520, turn: -2.2, tilt: 0.35, fit: 2.2, spin: 'off', zoom: false });
   const Lc = F.choice(d.controls, { label: 'l', key: 'l', options: [0, 1, 2, 3, 4, 5].map((k) => ({ value: String(k), label: String(k) })), value: '2', aria: 'the angular momentum quantum number l', onInput: () => fixM() });
@@ -98,7 +98,7 @@ const formOf = (l, m) => FORMS[`${l},${m}`] ?? `P_{${l}}^{${Math.abs(m)}}(\\cos\
       const marks = [];
       for (let L = 0; L <= 5; L++) {
         for (let M = -L; M <= L; M++) marks.push(...surface(L, M, at(L, M), 0.42, 14, 22, pos, neg, `the spherical harmonic l = ${L}, m_l = ${signed(M)}`));
-        marks.push({ k: 'label', s: `l = ${L}`, p: [0, -5.6, -L * 1.08], color: PAL.muted, cls: 'tick' });
+        marks.push({ k: 'label', s: `l = ${L}`, p: [0, -6.3, -L * 1.08], color: PAL.muted, cls: 'tick' });
       }
       const c = at(l, m), ring = Array.from({ length: 49 }, (_, i) => { const a = 2 * PI * i / 48; return [0.5, c[1] + 0.52 * Math.cos(a), c[2] + 0.52 * Math.sin(a)]; });
       marks.push({ k: 'line', pts: ring, color: PAL.ink, w: 3, name: `the one enlarged below, l = ${l}, m_l = ${signed(m)}` });
@@ -110,7 +110,7 @@ const formOf = (l, m) => FORMS[`${l},${m}`] ?? `P_{${l}}^{${Math.abs(m)}}(\\cos\
     const nodal = [];
     cones.forEach((t) => {
       const rows = [0, 1].map((k) => Array.from({ length: 49 }, (_, i) => { const p = 2 * PI * i / 48, r = 1.1 * k; return [r * Math.sin(t) * Math.cos(p), r * Math.sin(t) * Math.sin(p), r * Math.cos(t)]; }));
-      nodal.push({ k: 'sheet', rows, color: guide, alpha: 0.12, name: Math.abs(t - PI / 2) < 1e-3 ? 'a nodal plane, the xy-plane, θ = 90°' : `a nodal cone, θ = ${fmt(t * 180 / PI, 1)}°` });
+      nodal.push({ k: 'sheet', rows, color: guide, alpha: 0.12, name: Math.abs(t - PI / 2) < 0.01 ? 'a nodal plane, the xy-plane, θ = 90°' : `a nodal cone, θ = ${fmt(t * 180 / PI, 1)}°` });
     });
     planes.forEach((p) => {
       const u = [Math.cos(p), Math.sin(p), 0];
@@ -119,7 +119,7 @@ const formOf = (l, m) => FORMS[`${l},${m}`] ?? `P_{${l}}^{${Math.abs(m)}}(\\cos\
     });
     S.set('nodes', nodal);
     S.set('axes', F.space.axes(BB, { ticks: 0 }));
-    const eq = cones.some((t) => Math.abs(t - PI / 2) < 1e-3), nc = cones.length - (eq ? 1 : 0), np = planes.length;
+    const eq = cones.some((t) => Math.abs(t - PI / 2) < 0.01), nc = cones.length - (eq ? 1 : 0), np = planes.length;
     const NUM = ['no', 'one', 'two', 'three', 'four', 'five'];
     const parts = [...(nc ? [`${NUM[nc]} nodal cone${nc > 1 ? 's' : ''} about z`] : []), ...(eq ? ['the xy-plane'] : []), ...(np ? [`${NUM[np]} nodal plane${np > 1 ? 's' : ''} through z`] : [])];
     const said = parts.length ? parts.length === 1 ? parts[0] : `${parts.slice(0, -1).join(', ')} and ${parts[parts.length - 1]}` : 'no angular node: the same value in every direction';
@@ -266,7 +266,7 @@ const plainLab = (k) => labOf(k).replace(/_\{?([^}]*)\}?/, (_, s) => s.replace('
     /* the radial nodes, through all three */
     o.nodes.forEach((rn) => {
       const x = ax1.X(rn);
-      line(ctx, x, boxes[0].t, x, boxes[2].b, alpha(PAL.ink, 0.35), 2, [10, 10]);
+      boxes.forEach((b) => line(ctx, x, b.t, x, b.b, alpha(PAL.ink, 0.35), 2, [10, 10]));
       hits.push({ x, y: (boxes[0].b + boxes[1].t) / 2, r: 18, name: `a radial node at r = ${fmt(rn, 2)} a₀, where all three curves are zero` });
     });
     K.curve(ctx, fR, 0, 25, ax1.X, ax1.Y, cw, 5, 400);
@@ -274,7 +274,7 @@ const plainLab = (k) => labOf(k).replace(/_\{?([^}]*)\}?/, (_, s) => s.replace('
     K.curve(ctx, fP, 0, 25, ax3.X, ax3.Y, cp, 5, 400);
     /* the probe */
     const vR = o.f(r), v2 = vR * vR, vP = r * r * v2, x = ax1.X(r);
-    line(ctx, x, boxes[0].t, x, boxes[2].b, alpha(cl, 0.8), 3, [4, 8]);
+    boxes.forEach((b) => line(ctx, x, b.t, x, b.b, alpha(cl, 0.8), 3, [4, 8]));
     if (K.k >= 1) {
       [[ax1, vR, cw], [ax2, v2, cp], [ax3, vP, cp]].forEach(([ax, v, c]) => {
         const y = Math.max(ax.box.t, Math.min(ax.box.b, ax.Y(v)));
