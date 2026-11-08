@@ -1,0 +1,13 @@
+<section id="the-five-principles">
+<h2>The five principles</h2>
+<ol><li><span data-concept="state-postulate">The state of a quantum system is completely specified by its wavefunction $\ket{\kpsi}$.</span></li><li><p>To every <span data-concept="observable">observable</span> quantity in classical mechanics, there exists a <strong><span data-concept="hermitian-operator">Hermitian quantum mechanical operator</span></strong>. For example: kinetic energy in Classical Mechanics is</p>
+$$ \text{kinetic energy} = \dfrac{p^2}{2\km} \tag{classical mechanics} $$
+<p>and in Quantum Mechanics is</p>
+$$ \text{kinetic energy} = \dfrac{\hat{p}^2}{2\km} = -\frac{\hbar}{2\km}\nabla^2. \tag{quantum mechanics} $$
+<p><sup class="fn" data-note="c-kinetic"></sup></p></li><li><span data-concept="observables-as-eigenvalues">Observable quantities in quantum mechanics are eigenvalues of their corresponding operators</span>: $\kAhat\ket{\phi_n} = A_n\ket{\phi_n}$.</li><li><p>The set of <span data-concept="eigenfunction">eigenfunctions</span> of an operator are <span data-concept="orthogonality">orthogonal</span>: $\braket{\phi_n|\phi_m} = \delta_{nm}$. The <span data-concept="kronecker-delta">Kronecker delta</span> $\delta_{nm}$ is 1 if $n = m$, and zero otherwise. As a secondary point, the set of all eigenfunctions of an operator form a <span data-concept="complete-set">complete set</span>. So if $\ket{\phi_n}$ ($n = 0$, 1, 2 $\ldots$) are the set of eigenfunctions of an operator $\kAhat$, then any other state in the same space can be expressed as a linear combination of these functions:</p>
+$$ \ket{\kpsi} = \sum_n c_n\ket{\phi_n}, $$
+<p>where $c_n$ are complex numbers (the exact values are $c_n = \braket{\phi_n|\kpsi}$, as you can see by applying a projection operator on $\ket{\kpsi}$).</p></li><li><p>If two operators do not <span data-concept="commutator">commute</span>, then their corresponding observables cannot be measured simultaneously to arbitrary precision. The most famous example is position and momentum:</p>
+$$ [\hat{x},\kphat] = \hat{x}\kphat - \kphat\hat{x} = i\hbar, $$
+<p>and as a result</p>
+$$ \Delta p_x \Delta x \geq \hbar/2. $$</li></ol>
+</section>

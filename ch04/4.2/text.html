@@ -1,0 +1,54 @@
+<section id="observables-and-operators">
+<h2>An operator for every observable</h2>
+<p>An <span data-concept="observable">observable</span> is a <span data-concept="observable">dynamic variable</span> of a system that can be experimentally measured (e.g., position, momentum and kinetic energy). In systems governed by classical mechanics, it is a real-valued function (never complex), however, in quantum physics, every <span data-concept="observable">observable</span> in quantum mechanics is represented by an independent <span data-concept="operator">operator</span> that is used to obtain physical information about the <span data-concept="observable">observable</span> from the <span data-concept="wavefunction">wavefunction</span>. It is a general principle of quantum mechanics that there is an <span data-concept="operator">operator</span> for every physical <span data-concept="observable">observable</span>. For an <span data-concept="observable">observable</span> that is represented in classical physics by a function $Q(\kx,\kp)$, the corresponding <span data-concept="operator">operator</span> is $Q(\hat{x},\hat{p})$.</p>
+<div class="note">
+<div class="eyebrow">Note</div>
+<h3><span data-concept="operator-postulate">Postulate II</span>: The Correspondence Principle</h3>
+<p>For every observable property of a system there is a corresponding quantum mechanical <span data-concept="operator">operator</span>. This is often referred to as the <strong><span data-concept="operator-postulate">Correspondence Principle</span></strong>.</p>
+</div>
+</section>
+
+<section id="common-operators">
+<h2>Common operators</h2>
+<p>Classical dynamical variables, such as $\kx$ and $\kp$, are represented in quantum mechanics by <em><span data-concept="linear-operator">linear operators</span></em> which act on the <span data-concept="wavefunction">wavefunction</span>. The <span data-concept="position-operator">operator for position</span> of a particle in three dimensions is just the set of coordinates $x$, $y$, and $z$, which is written as a vector, $\krvec$:</p>
+$$ \begin{aligned} \krvec &= (x , y , z ) \\[4pt] &= x \vec {i} + y \vec {j} + z \vec {k}  \end{aligned} \tag{4.2.1} $$
+<p>The <span data-concept="momentum-operator">operator for a component of linear momentum</span> is</p>
+$$ \kphat = -i \hbar \dfrac {\partial}{\partial \kx} \tag{4.2.2} $$
+<p>and the <span data-concept="kinetic-energy-operator">operator for kinetic energy</span> in one dimension is</p>
+$$ \kTxhat = \left ( -\dfrac {\hbar ^2}{2\km} \right ) \dfrac {\partial ^2}{\partial \kx^2} \tag{4.2.3} $$
+<p>and in three dimensions<sup class="fn" data-note="three-d"></sup></p>
+$$ \kpvhat = -i \hbar \nabla \tag{4.2.4} $$
+<p>and</p>
+$$ \kThat = \left ( -\dfrac {\hbar ^2}{2\km} \right ) \knabla \tag{4.2.5} $$
+<p>The total energy operator is called the <span data-concept="hamiltonian-operator">Hamiltonian operator</span>, $\kH$ and consists of the <span data-concept="kinetic-energy-operator">kinetic energy operator</span> plus the <span data-concept="potential-energy-operator">potential energy operator</span>.</p>
+$$ \kH = - \frac {\hbar ^2}{2\km} \knabla + \kVhat (x, y , z ) \tag{4.2.6} $$
+<div class="note">
+<div class="eyebrow">Note</div>
+<h3>The Hamiltonian Operator</h3>
+<p>The <span data-concept="hamiltonian-operator">Hamiltonian operator</span> is named after the Irish mathematician William Hamilton and comes from the his <a href="https://phys.libretexts.org/TextBooks_and_TextMaps/Classical_Mechanics/Book%3A_Variational_Principles_in_Classical_Mechanics_(Cline)/8%3A_Hamiltonian_Mechanics">formulation of Classical Mechanics</a> that is based on the total energy:</p>
+$$ \kH = \kThat + \kVhat $$
+<p>rather than Newton's second law,</p>
+$$ \vec{\kF} = \km\vec{a} $$
+</div>
+<p>In many cases only the kinetic energy of the particles and the electrostatic or Coulomb potential energy due to their charges are considered, but in general all terms that contribute to the energy appear in the <span data-concept="hamiltonian-operator">Hamiltonian</span>. These additional terms account for such things as external electric and magnetic fields and magnetic interactions due to magnetic moments of the particles and their motion.</p>
+<div class="book-table">
+  <div class="tcap"><span class="eyebrow">Table 4.2.1</span><span>Some common Operators in Quantum Mechanics<sup class="fn" data-note="table-partials"></sup></span></div>
+  <table>
+    <thead><tr><th><strong>Name</strong></th><th><strong>Observable Symbol</strong></th><th><strong>Operator Symbol</strong></th><th><strong>Operation</strong></th></tr></thead>
+    <tbody>
+      <tr><td>Position (in 1D)</td><td>$x$</td><td>$\hat{X}$</td><td>Multiply by $x$</td></tr>
+      <tr><td>Position (in 3D)</td><td>$\vec{r}$</td><td>$\hat{R}$</td><td>Multiply by $\vec{r}$</td></tr>
+      <tr><td>Momentum (in 1D)</td><td>$p_{x}$</td><td>$\hat{P_{x}}$</td><td>-$\imath \hbar \dfrac{d}{dx}$</td></tr>
+      <tr><td>Momentum (in 3D)</td><td>$\vec{p}$</td><td>$\hat{P}$</td><td>-$\imath \hbar \left[ \hat{i}\ \dfrac{d}{dx} + \hat{j} \dfrac{d}{dy} + \hat{k} \dfrac{d}{dz}\right]$</td></tr>
+      <tr><td>Kinetic Energy (in 1D)</td><td>$T_{x}$</td><td>$\hat{T_{x}}$</td><td>$\dfrac{-\hbar^2}{2m} \dfrac{d^2}{dx^2}$</td></tr>
+      <tr><td>Kinetic Energy (in 3D)</td><td>$T$</td><td>$\hat{T}$</td><td>$\dfrac{-\hbar^2}{2m} \left[\dfrac{d^{2}}{dx^{2}} + \dfrac{d^2}{dy^2} + \dfrac{d^2}{dz^2} \right]$<br>Which can be simplified to<br>$\dfrac{- \hbar^2}{2m}$$\bigtriangledown^{2}$</td></tr>
+      <tr><td>Potential Energy (in 1D)</td><td>$V(x)$</td><td>$\hat{V}(x)$</td><td>Multiply by $V(x)$</td></tr>
+      <tr><td>Potential Energy (in 3D)</td><td>$V(x,y,z)$</td><td>$\hat{V}(x,y,z)$</td><td>Multiply by $V(x,y,z)$</td></tr>
+      <tr><td>Total Energy</td><td>$E$</td><td>$\hat{E}$</td><td>$\dfrac{- \hbar^{2}}{2m} \nabla^2 + V(x,y,z)$</td></tr>
+      <tr><td>Angular Momentum (x axis component)</td><td>$L_{x}$</td><td>$\hat{L_{x}}$</td><td>-$\imath \hbar \left[ y \dfrac{d}{dz} - z \dfrac{d}{dy}\right]$</td></tr>
+      <tr><td>Angular Momentum (y axis component)</td><td>$L_{y}$</td><td>$\hat{L_{y}}$</td><td>-$\imath \hbar \left[ z \dfrac{d}{dx} - x \dfrac{d}{dz}\right]$</td></tr>
+      <tr><td>Angular Momentum (z axis component)</td><td>$L_{z}$</td><td>$\hat{L_{z}}$</td><td>-$\imath \hbar \left[ x \dfrac{d}{dy} - y \dfrac{d}{dx}\right]$</td></tr>
+    </tbody>
+  </table>
+</div>
+</section>

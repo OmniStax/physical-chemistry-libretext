@@ -1,0 +1,80 @@
+{
+ "id": "4.2",
+ "module": "13407",
+ "chapter": "4",
+ "title": "Quantum Operators Represent Classical Variables",
+ "short": "Quantum operators",
+ "lead": "Every quantity that can be measured has an operator that acts on the wavefunction. The operators for position and momentum build the rest, among them the Hamiltonian, the operator for the total energy.",
+ "objectives": [
+  "Understand how the correspondence principle argues that a unique quantum operator exist for every classical observable.",
+  "Recognize several of the commonly used quantum operators"
+ ],
+ "summary_html": "",
+ "notes": "The book names no author for this page, which it shares under CC BY-NC-SA 4.0.",
+ "ai": {
+  "text": [{"model": "claude-opus-5-5", "effort": "low"}],
+  "figures": []
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercise here. Both exercises, on writing the Hamiltonian of a particle on a spring and the operator for the z component of angular momentum, were written by AI with AI solutions, and their Bloom levels and concept tags were chosen by AI.",
+ "figures": [],
+ "referents": [],
+ "coverage": [
+  {"span": "observables-and-operators", "concept": "observable", "verb": "introduces"},
+  {"span": "observables-and-operators", "concept": "operator-postulate", "verb": "introduces"},
+  {"span": "observables-and-operators", "concept": "operator", "verb": "reinforces"},
+  {"span": "common-operators", "concept": "potential-energy-operator", "verb": "introduces"},
+  {"span": "common-operators", "concept": "linear-operator", "verb": "uses"},
+  {"span": "common-operators", "concept": "position-operator", "verb": "reinforces"},
+  {"span": "common-operators", "concept": "momentum-operator", "verb": "reinforces"},
+  {"span": "common-operators", "concept": "kinetic-energy-operator", "verb": "reinforces"},
+  {"span": "common-operators", "concept": "laplacian", "verb": "uses"},
+  {"span": "common-operators", "concept": "hamiltonian-operator", "verb": "reinforces"},
+  {"span": "common-operators", "concept": "angular-momentum-operator", "verb": "reinforces"}
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "eq:3-22",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {"at": "end"},
+   "cite": "common-operators",
+   "prompt": "<p>A particle of mass $m$ moves along $x$ on a spring, with potential energy $V(x) = \\tfrac{1}{2}kx^2$, where $k$ is the force constant. Use Postulate II and Table 4.2.1 to write its Hamiltonian operator.</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "The classical energy is the kinetic energy plus $\\tfrac{1}{2}kx^2$. Replace each term by its operator.",
+    "solution": "<p>Classically the total energy is $E = \\dfrac{p_x^2}{2m} + \\tfrac{1}{2}kx^2$. By Postulate II each term has an operator. The kinetic energy in one dimension becomes $\\hat{T}_x = -\\dfrac{\\hbar^2}{2m}\\dfrac{\\partial^2}{\\partial x^2}$ (Equation 4.2.3), and the potential energy operator multiplies by $V(x)$ (Table 4.2.1). So</p>$$ \\hat{H} = \\hat{T}_x + \\hat{V} = -\\dfrac{\\hbar^2}{2m}\\dfrac{d^2}{dx^2} + \\tfrac{1}{2}kx^2 $$<p>Acting on a wavefunction, $\\hat{H}\\psi = -\\dfrac{\\hbar^2}{2m}\\psi''(x) + \\tfrac{1}{2}kx^2\\,\\psi(x)$.</p>"
+   }
+  },
+  {
+   "id": "a2",
+   "source_id": "eq:4.2.2",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {"at": "end"},
+   "cite": "observables-and-operators",
+   "prompt": "<p>In classical mechanics the $z$ component of a particle's angular momentum is $L_z = xp_y - yp_x$. Use Postulate II and the momentum operator of Equation 4.2.2 to write the operator $\\hat{L}_z$, and compare your result with Table 4.2.1.</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "Position stays a multiplication; each momentum component becomes $-i\\hbar$ times a partial derivative along its own axis.",
+    "solution": "<p>By Postulate II, $L_z(x, y, p_x, p_y)$ becomes the same function of the operators. Position operators multiply by the coordinate, and each momentum component is $-i\\hbar$ times the partial derivative along its axis, $\\hat{p}_x = -i\\hbar\\,\\partial/\\partial x$ and $\\hat{p}_y = -i\\hbar\\,\\partial/\\partial y$ (Equation 4.2.2). So</p>$$ \\hat{L}_z = x\\left(-i\\hbar\\dfrac{\\partial}{\\partial y}\\right) - y\\left(-i\\hbar\\dfrac{\\partial}{\\partial x}\\right) = -i\\hbar\\left(x\\dfrac{\\partial}{\\partial y} - y\\dfrac{\\partial}{\\partial x}\\right) $$<p>This is the last row of Table 4.2.1, which writes the partial derivatives as $d/dy$ and $d/dx$.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {"exercise": "a1", "concept": "operator-postulate"},
+  {"exercise": "a1", "concept": "hamiltonian-operator"},
+  {"exercise": "a1", "concept": "potential-energy-operator"},
+  {"exercise": "a2", "concept": "operator-postulate"},
+  {"exercise": "a2", "concept": "angular-momentum-operator"},
+  {"exercise": "a2", "concept": "momentum-operator"}
+ ],
+ "footnotes": [
+  {"id": "three-d", "kind": "correction", "html": "Equation 4.2.4 is the momentum operator in three dimensions. The kinetic energy operator in three dimensions is Equation 4.2.5."},
+  {"id": "table-partials", "kind": "correction", "html": "The derivatives in the momentum, kinetic energy and angular momentum rows are partial derivatives, $\\partial/\\partial x$, $\\partial/\\partial y$ and $\\partial/\\partial z$, as in Equations 4.2.2 to 4.2.5; the table prints them as $d/dx$, $d/dy$ and $d/dz$."}
+ ]
+}

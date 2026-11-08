@@ -1,0 +1,280 @@
+{
+ "id": "4.6",
+ "module": "13411",
+ "chapter": "4",
+ "title": "Commuting Operators Allow Infinite Precision",
+ "short": "Commuting operators",
+ "lead": "Whether two quantities can be measured at once to any precision depends on whether their operators commute, that is, on whether the order in which they act matters. The commutator also sets the general form of Heisenberg's uncertainty principle.",
+ "objectives": [
+  "To connect the Heisenberg Uncertainty principle to the commutation relations.",
+  "Develop proficiency in calculating the commutator of two operators."
+ ],
+ "summary_html": "",
+ "notes": "Adapted from Hanson, Harvey, Sweeney and Zielinski's Quantum States of Atoms and Molecules, under CC BY-NC-SA 4.0; Example 4.6.2A, which the book prints without a worked solution, is set as an exercise.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "Exercise 4.6.2C and its answer are the book's, with a correction of its operators under the card. Exercise 4.6.1 and Example 4.6.2A, which the book sets without a worked answer, have solutions written by AI.",
+ "figures": [],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "opening",
+   "concept": "heisenberg-uncertainty-principle",
+   "verb": "reinforces"
+  },
+  {
+   "span": "commuting-operators",
+   "concept": "commutator",
+   "verb": "reinforces"
+  },
+  {
+   "span": "commuting-operators",
+   "concept": "commuting-operators",
+   "verb": "introduces"
+  },
+  {
+   "span": "commuting-operators",
+   "concept": "eigenfunction",
+   "verb": "uses"
+  },
+  {
+   "span": "general-heisenberg-uncertainty-principle",
+   "concept": "general-uncertainty-principle",
+   "verb": "introduces"
+  },
+  {
+   "span": "general-heisenberg-uncertainty-principle",
+   "concept": "quantum-uncertainty",
+   "verb": "uses"
+  },
+  {
+   "span": "general-heisenberg-uncertainty-principle",
+   "concept": "commutator",
+   "verb": "reinforces"
+  },
+  {
+   "span": "applications",
+   "concept": "angular-momentum-commutation",
+   "verb": "introduces"
+  },
+  {
+   "span": "applications",
+   "concept": "angular-momentum-operator",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "e1",
+   "source_id": "exr:4.6.1",
+   "source_number": "Exercise 4.6.1",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "general-heisenberg-uncertainty-principle",
+   "prompt": "<p>Show that the commutator for position and momentum in one dimension equals $–i ħ$<sup class=\"fn\" data-note=\"e1-sign\"></sup> and that the right-hand-side of Equation 4.6.4 therefore equals $ħ/2$ giving $\\sigma _x \\sigma _{px} \\ge \\frac {\\hbar}{2}$.</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "Let $[\\hat{x}, \\hat{p}_x]$ act on a function $f(x)$ and use the product rule.",
+    "solution": "<p>With $\\hat{x} = x$ and $\\hat{p}_x = -i\\hbar\\,d/dx$, acting on any $f(x)$:</p>$$ \\hat{x}\\hat{p}_xf = -i\\hbar\\,x\\dfrac{df}{dx} \\qquad \\hat{p}_x\\hat{x}f = -i\\hbar\\dfrac{d}{dx}(xf) = -i\\hbar\\left(f + x\\dfrac{df}{dx}\\right) $$<p>so $[\\hat{x}, \\hat{p}_x]f = \\hat{x}\\hat{p}_xf - \\hat{p}_x\\hat{x}f = i\\hbar f$, that is $[\\hat{x}, \\hat{p}_x] = i\\hbar$; in the other order, $[\\hat{p}_x, \\hat{x}] = -i\\hbar$. In the general uncertainty principle, $\\sigma_A\\sigma_B \\ge \\tfrac{1}{2}\\left|\\int\\psi^*[\\hat{A}, \\hat{B}]\\psi\\,d\\tau\\right|$, the integral is then $\\int\\psi^*(i\\hbar)\\psi\\,dx = i\\hbar\\int\\psi^*\\psi\\,dx = i\\hbar$ for a normalized $\\psi$. Its modulus is $\\hbar$, so</p>$$ \\sigma_x\\sigma_{p_x} \\ge \\dfrac{\\hbar}{2} $$<p>for every state, which is Heisenberg's uncertainty principle.</p>"
+   }
+  },
+  {
+   "id": "e2a",
+   "source_id": "ex:4.6.2A",
+   "source_number": "Example 4.6.2A",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "applications",
+   "prompt": "<p>Determine whether the following two operators commute:</p>\n$$ \\hat{K} = \\alpha \\displaystyle \\int {[1]}^{[\\infty]} d[x] $$\n<p>and</p>\n$$ \\hat{H} = d/dx $$<p><sup class=\"fn\" data-note=\"e2a-operator\"></sup></p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "$\\hat{K}f$ is a number, not a function of $x$.",
+    "solution": "<p>Let the commutator act on a function $f(x)$ that vanishes as $x \\to \\infty$:</p>$$ \\hat{K}\\hat{H}f = \\alpha\\int_1^\\infty \\dfrac{df}{dx}\\,dx = \\alpha\\left[f(\\infty) - f(1)\\right] = -\\alpha f(1) $$$$ \\hat{H}\\hat{K}f = \\dfrac{d}{dx}\\left(\\alpha\\int_1^\\infty f(x)\\,dx\\right) = 0 $$<p>since the integral is a constant. So $[\\hat{K}, \\hat{H}]f = -\\alpha f(1)$, which is not zero for a general $f$: the two operators do not commute.</p>"
+   }
+  },
+  {
+   "id": "e2c",
+   "source_id": "exr:4.6.2C",
+   "source_number": "Exercise 4.6.2C",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "applications",
+   "prompt": "<p>Show that the components of the angular momentum do not commute.</p>\n$$ \\begin{aligned} \\hat{L}_x &= -i \\hbar \\left[ -\\sin \\left(\\phi \\dfrac {\\delta} {\\delta \\theta} \\right) - \\cot (\\Theta) \\cos \\left( \\phi \\dfrac {\\delta} {\\delta \\phi} \\right) \\right] \\\\[4pt] \\hat{L}_y &= -i \\hbar \\left[ \\cos \\left(\\phi \\dfrac {\\delta} {\\delta \\theta} \\right) - \\cot (\\Theta) \\cos \\left( \\phi \\dfrac {\\delta} {\\delta \\phi} \\right) \\right] \\\\[4pt] \\hat{L}_z &= -i\\hbar \\dfrac {\\delta} {\\delta\\theta} \\end{aligned} $$<p><sup class=\"fn\" data-note=\"e2c-operators\"></sup></p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "source",
+    "solution": "<p>This requires evaluating the following commucators:</p>\n$$ \\left[\\hat{L}_z,\\hat{L}_x\\right] = i\\hbar \\hat{L}_y $$\n$$ \\left[\\hat{L}_x,\\hat{L}_y\\right] = i\\hbar \\hat{L}_z $$\n$$ \\left[\\hat{L}_y,\\hat{L}_z\\right] = i\\hbar \\hat{L}_x $$"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "e1",
+   "concept": "commutator"
+  },
+  {
+   "exercise": "e1",
+   "concept": "general-uncertainty-principle"
+  },
+  {
+   "exercise": "e2a",
+   "concept": "commutator"
+  },
+  {
+   "exercise": "e2c",
+   "concept": "angular-momentum-commutation"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "of-b",
+   "kind": "correction",
+   "html": "$\\psi$ is an eigenfunction of $\\hat{B}$ with eigenvalue $b$; the derivation below uses $\\hat{B}\\psi = b\\psi$."
+  },
+  {
+   "id": "part-a",
+   "kind": "correction",
+   "html": "This is the method of part a of this example."
+  },
+  {
+   "id": "swapped",
+   "kind": "correction",
+   "html": "The two lines apply the operators in the other order: $\\hat{J}\\{\\hat{O}f(x)\\} = 3x\\cdot\\dfrac{f(x)}{x} = 3f(x)$ and $\\hat{O}\\{\\hat{J}f(x)\\} = \\dfrac{3xf(x)}{x} = 3f(x)$. The results, and the conclusion, are right."
+  },
+  {
+   "id": "half",
+   "kind": "correction",
+   "html": "The bound carries a factor $\\tfrac{1}{2}$: $\\sigma_A\\sigma_B \\ge \\dfrac{1}{2}\\left|\\int\\psi^*[\\hat{A}\\hat{B} - \\hat{B}\\hat{A}]\\psi\\,d\\tau\\right|$. For position and momentum it gives $\\hbar/2$, as Exercise 4.6.1 states."
+  },
+  {
+   "id": "bracket",
+   "kind": "correction",
+   "html": "The commutator is the operator inside the square brackets, $[\\hat{A}, \\hat{B}] = \\hat{A}\\hat{B} - \\hat{B}\\hat{A}$; the integral is its expectation value."
+  },
+  {
+   "id": "template",
+   "kind": "correction",
+   "html": "The operator is $\\hat{L}f = \\displaystyle\\int_1^\\infty f(x)\\,dx$; the brackets are left over from the site's template."
+  },
+  {
+   "id": "e1-sign",
+   "kind": "correction",
+   "html": "$[\\hat{x}, \\hat{p}_x] = i\\hbar$; it is $[\\hat{p}_x, \\hat{x}]$ that equals $-i\\hbar$."
+  },
+  {
+   "id": "e2a-operator",
+   "kind": "correction",
+   "html": "The operator is $\\hat{K}f = \\alpha\\displaystyle\\int_1^\\infty f(x)\\,dx$; the brackets are left over from the site's template."
+  },
+  {
+   "id": "e2c-operators",
+   "kind": "correction",
+   "html": "The operators are $\\hat{L}_x = -i\\hbar\\left(-\\sin\\phi\\,\\dfrac{\\partial}{\\partial\\theta} - \\cot\\theta\\cos\\phi\\,\\dfrac{\\partial}{\\partial\\phi}\\right)$, $\\hat{L}_y = -i\\hbar\\left(\\cos\\phi\\,\\dfrac{\\partial}{\\partial\\theta} - \\cot\\theta\\sin\\phi\\,\\dfrac{\\partial}{\\partial\\phi}\\right)$ and $\\hat{L}_z = -i\\hbar\\,\\dfrac{\\partial}{\\partial\\phi}$. The book puts $\\phi$ inside the sine and cosine with the derivative, gives $\\hat{L}_y$ a $\\cos\\phi$ where $\\sin\\phi$ belongs, writes $\\Theta$ for $\\theta$ and $\\delta$ for $\\partial$, and differentiates $\\hat{L}_z$ with respect to $\\theta$ instead of $\\phi$."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "shared-eigenfunctions",
+   "what": "commuting operators share eigenfunctions",
+   "source": "Physical Chemistry (LibreTexts), 4.6 Commuting Operators Allow Infinite Precision",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kAhat\\kBhat = \\kBhat\\kAhat",
+       "src": "4.6"
+      },
+      {
+       "tex": "\\kBhat\\kpsi = b\\kpsi",
+       "src": "4.6"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\kBhat\\kAhat\\kpsi} = \\mk{r}{\\kAhat\\kBhat\\kpsi}",
+      "uses": [
+       0
+      ],
+      "src": "4.6"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\kBhat\\kAhat\\kpsi} = \\mk{r}{\\kAhat b\\kpsi}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{l}{\\kBhat\\kAhat\\kpsi} = \\mk{r}{b\\kAhat\\kpsi}",
+       "uses": [],
+       "cap": "A linear operator passes a constant through."
+      }
+     ],
+     "num": "(4.6.1)",
+     "src": "4.6"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "\\kBhat\\kpsi = b\\kpsi",
+       "src": "4.6"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\kAhat\\kpsi} = \\mk{r}{a\\kpsi}",
+      "uses": [
+       0
+      ],
+      "src": "(4.6.2)",
+      "why": "Equation 4.6.1 says that $\\hat{A}\\psi$ is an eigenfunction of $\\hat{B}$ with eigenvalue $b$, so when $\\hat{A}$ operates on $\\psi$ it cannot change $\\psi$: at most it produces a constant times $\\psi$."
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\kBhat(\\kAhat\\kpsi)} = \\mk{r}{\\kBhat(a\\kpsi)}",
+       "uses": [],
+       "cap": "Apply $\\hat{B}$ to both sides."
+      },
+      {
+       "tex": "\\mk{l}{\\kBhat(\\kAhat\\kpsi)} = \\mk{r}{a\\kBhat\\kpsi}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{l}{\\kBhat(\\kAhat\\kpsi)} = \\mk{r}{ab\\kpsi}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{l}{\\kBhat(\\kAhat\\kpsi)} = \\mk{r}{b(a\\kpsi)}",
+       "uses": [],
+       "cap": "So Equation 4.6.2 is consistent with Equation 4.6.1."
+      }
+     ],
+     "num": "(4.6.3)",
+     "src": "4.6"
+    }
+   ]
+  }
+ ]
+}

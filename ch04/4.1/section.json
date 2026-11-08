@@ -1,0 +1,91 @@
+{
+ "id": "4.1",
+ "module": "13406",
+ "chapter": "4",
+ "title": "The Wavefunction Specifies the State of a System",
+ "short": "The wavefunction and the state",
+ "lead": "Quantum mechanics replaces the classical state, a point of position and momentum, with a wavefunction. Its square is a probability density, and that reading limits which functions can be wavefunctions.",
+ "objectives": [
+  "Introduce the first postulate of quantum mechanics",
+  "Recognize invalid wavefunction categories"
+ ],
+ "summary_html": "",
+ "notes": "Adapted from Allan Adams, Matthew Evans and Barton Zwiebach (MIT OpenCourseWare, used with permission), under CC BY-NC-SA 4.0.",
+ "ai": {
+  "text": [{"model": "claude-opus-5-5", "effort": "low"}],
+  "figures": [{"model": "claude-opus-5-5", "effort": "low"}]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "Exercise 4.1.1 and its key, with the key's four plots, are the book's, with two corrections under the card. Its Bloom level and concept tags were chosen by AI.",
+ "figures": [
+  {
+   "id": "sim-density",
+   "kind": "sim",
+   "number": "4.1.1",
+   "withheld": "The book's Figure 4.1.1 is an MIT OpenCourseWare image that the book uses with permission, and that permission does not extend to this page.",
+   "original_caption": "Examples of good wavefunctions, $\\psi(x)$, (red, top) and corresponding probability densities, $P(x)$, (blue, bottom).",
+   "draws": ["wavefunction", "probability-density", "length", "wavenumber"],
+   "ai": [{"model": "claude-opus-5-5", "effort": "low", "part": "built"}]
+  },
+  {
+   "id": "sim-invalid",
+   "kind": "sim",
+   "number": "4.1.2",
+   "folds": ["4.1.3", "4.1.4"],
+   "originals": [
+    "/media/ch04/344396-4.1.2.svg",
+    "/media/ch04/344393-4.1.3.svg",
+    "/media/ch04/344394-4.1.4-1.svg",
+    "/media/ch04/344395-4.1.4-2.svg"
+   ],
+   "original_caption": "(4.1.2) This function is an invalid wavefunction since the amplitude is going to infinity over a region (the middle in this case). (4.1.3) This function is an invalid wavefunction since it is not a proper function (i. e., not one-to-one). (4.1.4) These functions are invalid wavefunctions. (left) The first derivative of a function gives its gradient at a given point, and it thus exists as long as the function is continuous - only if there is a break in the function is there a point at which its first derivative does not exist. (right) The second derivative of this wavefunction is discontinuous at the point indicated, where the gradient of the line changes by more than 180º. In practice, this requirement may be somewhat flexible, particularly if the potential energy of the system shows rapid changes with distance. (CC BY-NC; Ümit Kaya via LibreTexts)",
+   "draws": ["wavefunction", "length"],
+   "ai": [{"model": "claude-opus-5-5", "effort": "low", "part": "built"}]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {"span": "state-of-a-system", "concept": "classical-state", "verb": "introduces"},
+  {"span": "state-of-a-system", "concept": "state-postulate", "verb": "introduces"},
+  {"span": "state-of-a-system", "concept": "heisenberg-uncertainty-principle", "verb": "uses"},
+  {"span": "state-of-a-system", "concept": "wavefunction", "verb": "reinforces"},
+  {"span": "born-interpretation", "concept": "born-interpretation", "verb": "reinforces"},
+  {"span": "born-interpretation", "concept": "probability-density", "verb": "reinforces"},
+  {"span": "born-interpretation", "concept": "normalization-condition", "verb": "reinforces"},
+  {"span": "born-interpretation", "concept": "square-integrable", "verb": "reinforces"},
+  {"span": "localized-and-spread-states", "concept": "wavefunction", "verb": "uses"},
+  {"span": "localized-and-spread-states", "concept": "probability-density", "verb": "uses"},
+  {"span": "localized-and-spread-states", "concept": "heisenberg-uncertainty-principle", "verb": "reinforces"},
+  {"span": "ill-behaved-invalid-wavefunctions", "concept": "well-behaved-wavefunction", "verb": "reinforces"},
+  {"span": "ill-behaved-invalid-wavefunctions", "concept": "wavefunction-derivative-condition", "verb": "introduces"},
+  {"span": "ill-behaved-invalid-wavefunctions", "concept": "born-interpretation", "verb": "uses"}
+ ],
+ "exercises": [
+  {
+   "id": "e1",
+   "source_id": "exr:4.1.1",
+   "source_number": "Exercise 4.1.1",
+   "kind": "exercise",
+   "bloom": "Analyze",
+   "place": {"at": "end"},
+   "cite": "ill-behaved-invalid-wavefunctions",
+   "prompt": "<p>Determine if each of the following functions is acceptable as a wavefunction over the indicated regions:</p>\n<ol type=\"a\"><li>$\\cos x$ over $(0,\\infty)$</li><li>$e^x$ over $(-\\infty,\\infty)$</li><li>$e^{-x}$ over $[0,\\infty)$</li><li>$\\tan \\theta$ over $[0, 2\\theta]$<sup class=\"fn\" data-note=\"ex-range\"></sup></li></ol>",
+   "answer": {
+    "type": "open",
+    "generated_by": "source",
+    "solution": "<h4>Solution a</h4>\n<p>This is not an acceptable wavefunction. It is <strong>single-valued</strong> across the entire range. There is a single value for each value of $x$. It is <strong>continuous</strong> over the defined limits of integration, as we can see from a plot given below. However, it is not square-integrable.</p>\n$$ \\int_{0}^{\\infty} | \\cos(x) |^2 dx \\; \\xcancel{<} \\; \\infty $$\n<p><img src=\"/media/ch04/142434-clipboard_edee53edc9955affb8853923ca1461a74.png\" alt=\"Graph of a sine wave, showing periodic fluctuations above and below a horizontal axis.\"></p>\n<h4>Solution b</h4>\n<p>This is not an acceptable wavefunction. Over the limits of integration from $-\\infty$ to $\\infty$, this function is not square-integrable. Note in the plot below, how the function is indefinite approaching the limits of $\\infty$.</p>\n<p><img src=\"/media/ch04/142431-clipboard_ef87df29dacb4a9f1034eb987785d6cc8.png\" alt=\"Graph showing an exponential curve, starting near the origin and rising steeply as values increase.\"></p>\n<h4>Solution c</h4>\n<p>This is an acceptable wavefunction over the given limits. It is <strong>finite</strong> over the given limits. It is <strong>continuous</strong> within given limits. It is <strong>single-valued.</strong> It is square-integrable with $\\displaystyle \\int_{0}^{\\infty} | \\Psi(x) |^2 dx = \\frac{1}{2}$.<sup class=\"fn\" data-note=\"key-psi\"></sup></p>\n<p><img src=\"/media/ch04/142430-clipboard_e44ee162583cb6f18584f3b2368bf12ad.png\" alt=\"Graph of an exponential decay curve approaching zero, with the x-axis labeled 0 to 90 and the y-axis showing values decreasing from 1.\"></p>\n<h4>Solution d</h4>\n<p>This is not an acceptable wavefunction. It is discontinuous over the limits of integration.</p>\n<p><img src=\"/media/ch04/142433-clipboard_e82951a21bd77f07747401b8129155694.png\" alt=\"Graph showing a curve approaching the y-axis from the left and the x-axis from the bottom, indicating asymptotic behavior.\"></p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {"exercise": "e1", "concept": "well-behaved-wavefunction"},
+  {"exercise": "e1", "concept": "square-integrable"}
+ ],
+ "footnotes": [
+  {"id": "k-period", "kind": "correction", "html": "$k$ is the wavenumber, not the period. The period of $e^{ikx}$ in $x$ is $2\\pi/k$."},
+  {"id": "missing-n", "kind": "correction", "html": "The second line drops the constant $N$: it should read $|Ne^{ikx}|^2$, which the third line goes on to evaluate."},
+  {"id": "ex-range", "kind": "correction", "html": "The interval is $[0, 2\\pi]$, the range the key's plot of $\\tan\\theta$ covers."},
+  {"id": "key-psi", "kind": "correction", "html": "$\\Psi(x)$ here is the function under test, $e^{-x}$: $\\int_0^\\infty e^{-2x}\\,dx = \\tfrac{1}{2}$."}
+ ]
+}

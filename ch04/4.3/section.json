@@ -1,0 +1,763 @@
+{
+ "id": "4.3",
+ "module": "13408",
+ "chapter": "4",
+ "title": "Observable Quantities Must Be Eigenvalues of Quantum Mechanical Operators",
+ "short": "Observables and eigenvalues",
+ "lead": "A measurement gives an eigenvalue of the observable's operator. When the state is not an eigenstate, the results scatter, and the expectation value, the variance and the expansion of the state in eigenstates describe how.",
+ "objectives": [
+  "To be introduced to the role of eigenvalue equations in obtaining observables from a system",
+  "Understand how expectation values are calculated if the wavefunctions is not an eigenstate of the operator for the observable."
+ ],
+ "summary_html": "",
+ "notes": "Adapted from Richard Fitzpatrick (The University of Texas at Austin) and Wikiversity, under CC BY-NC-SA 4.0; Figure 4.3.1's original is M. W. Toews's diagram from Wikipedia, under CC BY 2.5.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercise here. Both exercises, on the energy probabilities and average energy of a mixed state in a box and on the zero spread of a momentum eigenstate, were written by AI with AI solutions checked by computation; their Bloom levels and concept tags were chosen by AI. Numeric answers accept a 2% tolerance.",
+ "figures": [
+  {
+   "id": "sim-sigma",
+   "kind": "sim",
+   "number": "4.3.1",
+   "originals": [
+    "/media/ch04/122080-2000px-Standard_deviation_diagram.svg.png"
+   ],
+   "original_caption": "A plot of a normal distribution (or bell-shaped curve) where each band has a width of 1 standard deviation. image usd with permission from Wikipedia.",
+   "widths": [
+    402
+   ],
+   "draws": [
+    "probability-density",
+    "length"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "sim-expansion",
+   "kind": "sim",
+   "draws": [
+    "wavefunction",
+    "length"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "sim-collapse",
+   "kind": "figure",
+   "originals": [
+    "/media/ch04/394140-cpn-a.svg",
+    "/media/ch04/394139-cpn-b.svg"
+   ],
+   "original_caption": "The measurement of position (with the position operator) effectively collapses this wavefunction that is a superposition of position eigenstates, which are delta-functions and are continuous - i.e. not quantized. Using a different measurement operation may in quantized values (CC BY-NC 4.0; Ümit Kaya via LibreTexts). The measurement of position (with the position operator) does not collapse this wavefunction since it is in a position eigenstate in contrast to the wavefunction above. Using a different measurement operation (e.g., kinetic energy) may \"collapse\" the wavefunction into a different eigenstate (CC BY-NC 4.0; Ümit Kaya via LibreTexts)",
+   "draws": [
+    "probability-density",
+    "length"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "eigenvalue-equations",
+   "concept": "eigenstate-zero-variance",
+   "verb": "introduces"
+  },
+  {
+   "span": "eigenvalue-equations",
+   "concept": "eigenvalue-equation",
+   "verb": "reinforces"
+  },
+  {
+   "span": "eigenvalue-equations",
+   "concept": "eigenfunction",
+   "verb": "reinforces"
+  },
+  {
+   "span": "eigenvalue-equations",
+   "concept": "eigenvalue",
+   "verb": "reinforces"
+  },
+  {
+   "span": "eigenvalue-equations",
+   "concept": "eigenstate",
+   "verb": "reinforces"
+  },
+  {
+   "span": "eigenvalue-equations",
+   "concept": "observables-as-eigenvalues",
+   "verb": "reinforces"
+  },
+  {
+   "span": "eigenvalue-equations",
+   "concept": "hamiltonian-operator",
+   "verb": "uses"
+  },
+  {
+   "span": "eigenvalue-equations",
+   "concept": "operator-postulate",
+   "verb": "uses"
+  },
+  {
+   "span": "expectation-values",
+   "concept": "expectation-value-unnormalized",
+   "verb": "introduces"
+  },
+  {
+   "span": "expectation-values",
+   "concept": "variance",
+   "verb": "introduces"
+  },
+  {
+   "span": "expectation-values",
+   "concept": "quantum-expectation-value",
+   "verb": "reinforces"
+  },
+  {
+   "span": "expectation-values",
+   "concept": "quantum-uncertainty",
+   "verb": "reinforces"
+  },
+  {
+   "span": "expectation-values",
+   "concept": "probability-density",
+   "verb": "uses"
+  },
+  {
+   "span": "expectation-values",
+   "concept": "pib-average-position",
+   "verb": "reinforces"
+  },
+  {
+   "span": "expectation-values",
+   "concept": "pib-average-momentum",
+   "verb": "reinforces"
+  },
+  {
+   "span": "expanding-the-wavefunction",
+   "concept": "complete-set",
+   "verb": "introduces"
+  },
+  {
+   "span": "expanding-the-wavefunction",
+   "concept": "expansion-coefficients",
+   "verb": "introduces"
+  },
+  {
+   "span": "expanding-the-wavefunction",
+   "concept": "expansion-normalization",
+   "verb": "introduces"
+  },
+  {
+   "span": "expanding-the-wavefunction",
+   "concept": "orthonormality",
+   "verb": "uses"
+  },
+  {
+   "span": "expanding-the-wavefunction",
+   "concept": "kronecker-delta",
+   "verb": "reinforces"
+  },
+  {
+   "span": "expanding-the-wavefunction",
+   "concept": "wavefunction-collapse",
+   "verb": "reinforces"
+  },
+  {
+   "span": "expanding-the-wavefunction",
+   "concept": "principle-of-superposition",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "eq:4.3.12",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "expanding-the-wavefunction",
+   "prompt": "<p>A particle in a box of length $L$ is in the state $\\Psi = \\sqrt{\\tfrac{1}{3}}\\,\\psi_1 + \\sqrt{\\tfrac{2}{3}}\\,\\psi_2$, where $\\psi_1$ and $\\psi_2$ are the box's two lowest normalized eigenstates of $\\hat{H}$, with energies $E_1$ and $E_2 = 4E_1$.</p><ol type='a'><li>What is the probability that a measurement of the energy gives $E_1$?</li><li>What is the probability that it gives $E_2$?</li><li>What is the expectation value $\\langle E\\rangle$, in units of $E_1$?</li></ol>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 0.3333
+     },
+     {
+      "part": "b",
+      "value": 0.6667
+     },
+     {
+      "part": "c",
+      "value": 3,
+      "unit": "E₁"
+     }
+    ],
+    "solution": "<p>The weights of the expansion are $c_1 = \\sqrt{1/3}$ and $c_2 = \\sqrt{2/3}$. A measurement of the energy gives an eigenvalue of $\\hat{H}$, $E_1$ with probability $|c_1|^2 = 1/3$ and $E_2$ with probability $|c_2|^2 = 2/3$. These add to 1, as $\\sum_i |c_i|^2 = 1$ requires for a normalized state.</p><p>The expectation value weights each energy by its probability:</p>$$ \\langle E\\rangle = \\int \\Psi^\\ast \\hat{H}\\Psi\\,dx = |c_1|^2E_1 + |c_2|^2E_2 = \\tfrac{1}{3}E_1 + \\tfrac{2}{3}(4E_1) = 3E_1 $$<p>The cross terms vanish because $\\psi_1$ and $\\psi_2$ are orthogonal. No single measurement gives $3E_1$; it is the mean of many.</p>"
+   }
+  },
+  {
+   "id": "a2",
+   "source_id": "eq:4.3.9",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "eigenvalue-equations",
+   "prompt": "<p>Show that $\\psi(x) = Ne^{ikx}$ is an eigenstate of the momentum operator $\\hat{p}_x = -i\\hbar\\,d/dx$, and that the variance of $p_x$ in this state is zero.</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "Apply $\\hat{p}_x$ once and then twice, and use $\\sigma^2 = \\langle p_x^2\\rangle - \\langle p_x\\rangle^2$.",
+    "solution": "<p>Acting with the momentum operator,</p>$$ \\hat{p}_x\\psi = -i\\hbar\\dfrac{d}{dx}Ne^{ikx} = -i\\hbar(ik)Ne^{ikx} = \\hbar k\\,\\psi $$<p>so $\\psi$ is an eigenstate with eigenvalue $\\hbar k$. Applying the operator twice gives $\\hat{p}_x^2\\psi = (\\hbar k)^2\\psi$. With $\\psi$ normalized over the region considered, $\\langle p_x\\rangle = \\hbar k\\int\\psi^\\ast\\psi\\,dx = \\hbar k$ and $\\langle p_x^2\\rangle = (\\hbar k)^2$, so</p>$$ \\sigma_{p}^2 = \\langle p_x^2\\rangle - \\langle p_x\\rangle^2 = (\\hbar k)^2 - (\\hbar k)^2 = 0 $$<p>Every measurement of the momentum gives $\\hbar k$. The same state has a flat probability density $N^2$, so its position is not defined at all, as Section 4.1 found.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "expansion-coefficients"
+  },
+  {
+   "exercise": "a1",
+   "concept": "expansion-normalization"
+  },
+  {
+   "exercise": "a1",
+   "concept": "quantum-expectation-value"
+  },
+  {
+   "exercise": "a2",
+   "concept": "eigenstate-zero-variance"
+  },
+  {
+   "exercise": "a2",
+   "concept": "momentum-operator"
+  },
+  {
+   "exercise": "a2",
+   "concept": "variance"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "bra-a",
+   "kind": "correction",
+   "html": "In Equations 4.3.7 and 4.3.8 the middle of the bracket is the operator: $\\langle \\psi | \\hat{A} |\\psi \\rangle$, not the number $a$."
+  },
+  {
+   "id": "cite-coefficients",
+   "kind": "correction",
+   "html": "Equation 4.3.8 is the expectation value with an unnormalized wavefunction. The coefficients follow from the expansion $\\psi = \\sum_i c_i\\phi_i$ and the orthonormality of Equation 4.3.10."
+  },
+  {
+   "id": "cite-sum",
+   "kind": "correction",
+   "html": "As above, the sum follows from the expansion $\\psi = \\sum_i c_i\\phi_i$, the orthonormality of Equation 4.3.10 and the normalization of $\\psi$, not from Equation 4.3.8."
+  },
+  {
+   "id": "set-of-eigenfunctions",
+   "kind": "correction",
+   "html": "The complete orthonormal set $\\{\\phi_i\\}$ is a set of eigenfunctions of $\\hat{A}$; its eigenvalues are the numbers $a_i$."
+  },
+  {
+   "id": "fig-credit",
+   "kind": "correction",
+   "figure": "sim-sigma",
+   "html": "The image is M. W. Toews's diagram from Wikipedia, shared under CC BY 2.5."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "eigenstate-spread",
+   "what": "an eigenstate has no spread",
+   "source": "Physical Chemistry (LibreTexts), 4.3 Observable Quantities Must Be Eigenvalues of Quantum Mechanical Operators",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "A\\kpsia = \\ka\\kpsia",
+       "src": "(4.3.4)"
+      },
+      {
+       "tex": "\\int_{-\\infty}^{\\infty}\\kpsia^{\\ast}\\kpsia\\,d\\kx = 1",
+       "src": "(4.1.2)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\langle A\\rangle} = \\mk{i}{\\int_{-\\infty}^{\\infty}\\kpsia^{\\ast} A \\kpsia\\,d\\kx}",
+      "src": "(4.3.7)"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\langle A\\rangle} = \\mk{a}{\\ka}\\mk{i}{\\int_{-\\infty}^{\\infty}\\kpsia^{\\ast}\\kpsia\\,d\\kx}",
+       "uses": [
+        0
+       ],
+       "cap": "The number $a$ comes out of the integral."
+      },
+      {
+       "tex": "\\mk{l}{\\langle A\\rangle} = \\mk{a}{\\ka}",
+       "uses": [
+        1
+       ]
+      }
+     ]
+    },
+    {
+     "assumes": [
+      {
+       "tex": "A\\kpsia = \\ka\\kpsia",
+       "src": "(4.3.4)"
+      },
+      {
+       "tex": "\\int_{-\\infty}^{\\infty}\\kpsia^{\\ast}\\kpsia\\,d\\kx = 1",
+       "src": "(4.1.2)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\langle A^2\\rangle} = \\mk{i}{\\int_{-\\infty}^{\\infty}\\kpsia^{\\ast} A^2 \\kpsia\\,d\\kx}",
+      "src": "(4.3.7)"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\langle A^2\\rangle} = \\mk{i}{\\int_{-\\infty}^{\\infty}\\kpsia^{\\ast} A \\left(A \\kpsia\\right) d\\kx}",
+       "uses": [],
+       "cap": "$A^2$ means $A$ applied twice."
+      },
+      {
+       "tex": "\\mk{l}{\\langle A^2\\rangle} = \\mk{a}{\\ka}\\mk{i}{\\int_{-\\infty}^{\\infty}\\kpsia^{\\ast} A \\kpsia\\,d\\kx}",
+       "uses": [
+        0
+       ],
+       "cap": "$A\\psi_a = a\\psi_a$, and the number $a$ passes through the linear operator $A$."
+      },
+      {
+       "tex": "\\mk{l}{\\langle A^2\\rangle} = \\mk{a}{\\ka^2}\\mk{i}{\\int_{-\\infty}^{\\infty}\\kpsia^{\\ast}\\kpsia\\,d\\kx}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{l}{\\langle A^2\\rangle} = \\mk{a}{\\ka^2}",
+       "uses": [
+        1
+       ]
+      }
+     ]
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "step": 1
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\sigma_A^{2}} = \\mk{s}{\\langle A^2\\rangle} - \\mk{m}{\\langle A\\rangle^2}",
+      "src": "(4.3.9)"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\sigma_A^{2}} = \\mk{s}{\\ka^2} - \\mk{m}{\\ka^2}",
+       "uses": [
+        1,
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{l}{\\sigma_A^{2}} = \\mk{z}{0}",
+       "uses": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "variance",
+   "what": "the variance as ⟨x²⟩ − ⟨x⟩²",
+   "source": "Physical Chemistry (LibreTexts), 4.3 Observable Quantities Must Be Eigenvalues of Quantum Mechanical Operators",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kxavg = \\int_{-\\infty}^{\\infty}\\kx |\\kpsi|^2 d\\kx",
+       "src": "(4.3.5)"
+      },
+      {
+       "tex": "\\langle f(\\kx)\\rangle = \\int_{-\\infty}^{\\infty}f(\\kx)|\\kpsi|^2 d\\kx",
+       "src": "(4.3.6)"
+      },
+      {
+       "tex": "\\int_{-\\infty}^{\\infty}|\\kpsi|^2 d\\kx = 1",
+       "src": "(4.1.2)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\sigma^2_x} = \\mk{i}{\\int_{-\\infty}^{\\infty}\\left(\\kx-\\kxavg \\right)^2 |\\kpsi|^{2} d\\kx}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\sigma^2_x} = \\mk{i}{\\int_{-\\infty}^{\\infty}\\left(\\kx^2 - 2\\kx\\kxavg + \\kxavg^2\\right)|\\kpsi|^{2} d\\kx}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{l}{\\sigma^2_x} = \\mk{a}{\\int_{-\\infty}^{\\infty}\\kx^2|\\kpsi|^2 d\\kx} - \\mk{b}{2\\kxavg\\int_{-\\infty}^{\\infty}\\kx|\\kpsi|^2 d\\kx} + \\mk{c}{\\kxavg^2\\int_{-\\infty}^{\\infty}|\\kpsi|^2 d\\kx}",
+       "uses": [],
+       "map": {
+        "i": [
+         "a",
+         "b",
+         "c"
+        ]
+       },
+       "cap": "The integral of a sum is the sum of the integrals, and the number $\\langle x\\rangle$ comes out of each."
+      },
+      {
+       "tex": "\\mk{l}{\\sigma^2_x} = \\mk{a}{\\langle \\kx^2\\rangle} - \\mk{b}{2\\kxavg\\int_{-\\infty}^{\\infty}\\kx|\\kpsi|^2 d\\kx} + \\mk{c}{\\kxavg^2\\int_{-\\infty}^{\\infty}|\\kpsi|^2 d\\kx}",
+       "uses": [
+        1
+       ],
+       "cap": "Equation 4.3.6 with $f(x) = x^2$."
+      },
+      {
+       "tex": "\\mk{l}{\\sigma^2_x} = \\mk{a}{\\langle \\kx^2\\rangle} - \\mk{b}{2\\kxavg\\kxavg} + \\mk{c}{\\kxavg^2\\int_{-\\infty}^{\\infty}|\\kpsi|^2 d\\kx}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{l}{\\sigma^2_x} = \\mk{a}{\\langle \\kx^2\\rangle} - \\mk{b}{2\\kxavg^2} + \\mk{c}{\\kxavg^2}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{l}{\\sigma^2_x} = \\mk{a}{\\langle \\kx^2\\rangle} - \\mk{b}{\\kxavg^{2}}",
+       "uses": [],
+       "map": {
+        "c": "b"
+       }
+      }
+     ],
+     "num": "(4.3.9)"
+    }
+   ]
+  },
+  {
+   "id": "example-4-3-1-a",
+   "what": "the average position in the ground state",
+   "source": "Physical Chemistry (LibreTexts), 4.3 Observable Quantities Must Be Eigenvalues of Quantum Mechanical Operators, Example 4.3.1",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kpsi = \\sqrt{\\dfrac{2}{\\kL}} \\sin \\left(\\dfrac{\\pi \\kx}{\\kL}\\right)"
+      },
+      {
+       "tex": "\\sin^2\\theta = \\tfrac{1}{2}\\left(1 - \\cos 2\\theta\\right)"
+      },
+      {
+       "text": "Integrating by parts, $\\int_0^L x\\cos(2\\pi x/L)\\,dx = \\left[\\dfrac{L}{2\\pi}x\\sin\\dfrac{2\\pi x}{L}\\right]_0^L + \\left(\\dfrac{L}{2\\pi}\\right)^2\\left[\\cos\\dfrac{2\\pi x}{L}\\right]_0^L = 0$."
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\kxavg} = \\mk{i}{\\int_{0}^{\\kL} \\kpsi^* \\kx \\kpsi \\, d\\kx}",
+      "src": "(4.3.7)",
+      "why": "The wavefunction is zero outside the box, so the integral runs from 0 to $L$."
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\kxavg} = \\mk{i}{\\int_{0}^{\\kL} \\sqrt{\\dfrac{2}{\\kL}}\\, \\kx \\sin\\left(\\dfrac{\\pi\\kx}{\\kL}\\right) \\sqrt{\\dfrac{2}{\\kL}}\\, \\sin\\left(\\dfrac{\\pi\\kx}{\\kL}\\right) \\, d\\kx}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{l}{\\kxavg} = \\mk{i}{\\dfrac{2}{\\kL} \\int_{0}^{\\kL} \\kx \\sin^2 \\left(\\dfrac{\\pi \\kx}{\\kL}\\right) d\\kx}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{l}{\\kxavg} = \\mk{i}{\\dfrac{1}{\\kL}\\int_{0}^{\\kL} \\kx\\, d\\kx - \\dfrac{1}{\\kL}\\int_{0}^{\\kL} \\kx\\cos\\left(\\dfrac{2\\pi \\kx}{\\kL}\\right) d\\kx}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{l}{\\kxavg} = \\mk{i}{\\dfrac{1}{\\kL}\\cdot\\dfrac{\\kL^2}{2} - 0}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{l}{\\kxavg} = \\mk{i}{\\dfrac{\\kL}{2}}",
+       "uses": []
+      }
+     ],
+     "src": "Example 4.3.1"
+    }
+   ]
+  },
+  {
+   "id": "example-4-3-1-b",
+   "what": "the average momentum in the ground state",
+   "source": "Physical Chemistry (LibreTexts), 4.3 Observable Quantities Must Be Eigenvalues of Quantum Mechanical Operators, Example 4.3.1; first worked in 3.7, Example 3.7.3",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kpsi = \\sqrt{\\dfrac{2}{\\kL}} \\sin \\left(\\dfrac{\\pi \\kx}{\\kL}\\right)"
+      },
+      {
+       "tex": "\\kphat = -i\\hbar\\dfrac{\\partial}{\\partial\\kx}",
+       "src": "(4.2.2)"
+      },
+      {
+       "tex": "\\sin\\theta\\cos\\theta = \\tfrac{1}{2}\\sin 2\\theta"
+      },
+      {
+       "text": "$\\cos 2\\pi = \\cos 0 = 1$."
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\kpavg} = \\mk{i}{\\int_{0}^{\\kL} \\kpsi^* \\hat{p} \\kpsi \\, d\\kx}",
+      "src": "(4.3.7)"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\kpavg} = \\mk{i}{\\int_{0}^{\\kL} \\sqrt{\\dfrac{2}{\\kL}}\\, \\sin\\left(\\dfrac{\\pi\\kx}{\\kL}\\right) \\left(-i\\hbar \\dfrac{d}{d\\kx}\\right) \\sqrt{\\dfrac{2}{\\kL}}\\, \\sin\\left(\\dfrac{\\pi\\kx}{\\kL}\\right) \\, d\\kx}",
+       "uses": [
+        0,
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{l}{\\kpavg} = \\mk{i}{-\\dfrac{2i\\hbar}{\\kL} \\int_{0}^{\\kL} \\sin\\left(\\dfrac{\\pi\\kx}{\\kL}\\right) \\dfrac{d}{d\\kx} \\sin\\left(\\dfrac{\\pi\\kx}{\\kL}\\right) \\, d\\kx}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{l}{\\kpavg} = \\mk{i}{-\\dfrac{2i\\hbar\\pi}{\\kL^2} \\int_{0}^{\\kL} \\sin\\left(\\dfrac{\\pi\\kx}{\\kL}\\right) \\cos\\left(\\dfrac{\\pi\\kx}{\\kL}\\right) d\\kx}",
+       "uses": [],
+       "cap": "The derivative of $\\sin(\\pi x/L)$ is $(\\pi/L)\\cos(\\pi x/L)$."
+      },
+      {
+       "tex": "\\mk{l}{\\kpavg} = \\mk{i}{-\\dfrac{i\\hbar\\pi}{\\kL^2} \\int_{0}^{\\kL} \\sin\\left(\\dfrac{2\\pi\\kx}{\\kL}\\right) d\\kx}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{l}{\\kpavg} = \\mk{i}{-\\dfrac{i\\hbar\\pi}{\\kL^2} \\left[-\\dfrac{\\kL}{2\\pi}\\cos\\left(\\dfrac{2\\pi\\kx}{\\kL}\\right)\\right]_0^{\\kL}}",
+       "uses": [],
+       "cap": "An antiderivative of $\\sin(2\\pi x/L)$ is $-\\dfrac{L}{2\\pi}\\cos(2\\pi x/L)$."
+      },
+      {
+       "tex": "\\mk{l}{\\kpavg} = \\mk{i}{-\\dfrac{i\\hbar\\pi}{\\kL^2}\\cdot\\dfrac{\\kL}{2\\pi}\\left(1 - \\cos 2\\pi\\right)}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{l}{\\kpavg} = \\mk{i}{0}",
+       "uses": [
+        3
+       ]
+      }
+     ],
+     "src": "Example 4.3.1",
+     "note": "The book's second line has $\\dfrac{2i\\hbar\\pi}{L^2}$ in front of the integral. The factor $-i\\hbar$ of the momentum operator makes it $-\\dfrac{2i\\hbar\\pi}{L^2}$; the integral is zero either way."
+    }
+   ]
+  },
+  {
+   "id": "example-4-3-1-c",
+   "what": "the average kinetic energy in the ground state",
+   "source": "Physical Chemistry (LibreTexts), 4.3 Observable Quantities Must Be Eigenvalues of Quantum Mechanical Operators, Example 4.3.1; first worked in 3.7, Example 3.7.2",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kpsi = \\sqrt{\\dfrac{2}{\\kL}} \\sin \\left(\\dfrac{\\pi \\kx}{\\kL}\\right)"
+      },
+      {
+       "tex": "\\kTxhat = -\\dfrac{\\hbar^2}{2\\km}\\dfrac{\\partial^2}{\\partial\\kx^2}",
+       "src": "(4.2.3)"
+      },
+      {
+       "tex": "\\dfrac{2}{\\kL}\\int_{0}^{\\kL}\\sin^2\\left(\\dfrac{\\pi\\kx}{\\kL}\\right)d\\kx = 1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\langle T\\rangle} = \\mk{i}{\\int_{0}^{\\kL} \\kpsi^* \\kTxhat \\kpsi \\, d\\kx}",
+      "src": "(4.3.7)"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\langle T\\rangle} = \\mk{i}{\\dfrac{2}{\\kL} \\int_{0}^{\\kL} \\sin\\left(\\dfrac{\\pi\\kx}{\\kL}\\right) \\left(-\\dfrac{\\hbar^2}{2\\km} \\dfrac{\\partial^2}{\\partial \\kx^2}\\right) \\sin\\left(\\dfrac{\\pi\\kx}{\\kL}\\right) \\, d\\kx}",
+       "uses": [
+        0,
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{l}{\\langle T\\rangle} = \\mk{i}{\\dfrac{\\hbar^2 \\pi^2}{2\\km\\kL^2}\\, \\dfrac{2}{\\kL} \\int_{0}^{\\kL} \\sin^2 \\left(\\dfrac{\\pi \\kx}{\\kL}\\right) d\\kx}",
+       "uses": [],
+       "cap": "Two derivatives of $\\sin(\\pi x/L)$ give $-(\\pi/L)^2\\sin(\\pi x/L)$, and the two minus signs cancel."
+      },
+      {
+       "tex": "\\mk{l}{\\langle T\\rangle} = \\mk{i}{\\dfrac{\\hbar^2 \\pi^2}{2\\km\\kL^2}}",
+       "uses": [
+        2
+       ]
+      }
+     ],
+     "src": "Example 4.3.1",
+     "note": "The book's first line names the operator $\\hat{K}$; it is the kinetic energy operator $\\hat{T}$ of Equation 4.2.3."
+    }
+   ]
+  },
+  {
+   "id": "expansion",
+   "what": "the expansion coefficients",
+   "source": "Physical Chemistry (LibreTexts), 4.3 Observable Quantities Must Be Eigenvalues of Quantum Mechanical Operators",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kpsi = \\sum_{j}c_j \\phi_j",
+       "src": "4.3"
+      },
+      {
+       "tex": "\\int_{-\\infty}^{\\infty}\\kphii^\\ast \\phi_j\\, d\\kx = \\delta_{ij}",
+       "src": "(4.3.10)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{p}{\\kpsi} = \\mk{s}{\\sum_{j}c_j \\phi_j}",
+      "uses": [
+       0
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{p}{\\int_{-\\infty}^{\\infty}\\kphii^\\ast\\kpsi\\,d\\kx} = \\mk{s}{\\int_{-\\infty}^{\\infty}\\kphii^\\ast\\sum_{j}c_j\\phi_j\\,d\\kx}",
+       "uses": [],
+       "cap": "Multiply both sides by $\\phi_i^\\ast$ and integrate over all $x$."
+      },
+      {
+       "tex": "\\mk{p}{\\int_{-\\infty}^{\\infty}\\kphii^\\ast\\kpsi\\,d\\kx} = \\mk{s}{\\sum_{j}c_j\\int_{-\\infty}^{\\infty}\\kphii^\\ast\\phi_j\\,d\\kx}",
+       "uses": [],
+       "cap": "The weights $c_j$ are numbers, so they come out of the integral."
+      },
+      {
+       "tex": "\\mk{p}{\\int_{-\\infty}^{\\infty}\\kphii^\\ast\\kpsi\\,d\\kx} = \\mk{s}{\\sum_{j}c_j\\delta_{ij}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{p}{\\int_{-\\infty}^{\\infty}\\kphii^\\ast\\kpsi\\,d\\kx} = \\mk{s}{c_i}",
+       "uses": [],
+       "cap": "$\\delta_{ij}$ is zero for every $j$ but $j = i$, so one term of the sum is left."
+      },
+      {
+       "tex": "\\mk{s}{c_i} = \\mk{p}{\\int_{-\\infty}^{\\infty}\\kphii^\\ast\\kpsi\\,d\\kx}",
+       "uses": []
+      }
+     ],
+     "num": "(4.3.11)"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\int_{-\\infty}^{\\infty}\\kpsi^\\ast\\kpsi\\,d\\kx = 1",
+       "src": "(4.1.2)"
+      },
+      {
+       "tex": "\\kpsi = \\sum_{j}c_j \\phi_j",
+       "src": "4.3"
+      },
+      {
+       "tex": "\\int_{-\\infty}^{\\infty}\\kphii^\\ast \\phi_j\\, d\\kx = \\delta_{ij}",
+       "src": "(4.3.10)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{n}{\\int_{-\\infty}^{\\infty}\\kpsi^\\ast\\kpsi\\,d\\kx} = \\mk{o}{1}",
+      "uses": [
+       0
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{n}{\\int_{-\\infty}^{\\infty}\\Big(\\sum_{i}c_i^\\ast\\kphii^\\ast\\Big)\\Big(\\sum_{j}c_j\\phi_j\\Big)d\\kx} = \\mk{o}{1}",
+       "uses": [
+        1
+       ],
+       "cap": "The complex conjugate of $\\sum_i c_i\\phi_i$ is $\\sum_i c_i^\\ast\\phi_i^\\ast$."
+      },
+      {
+       "tex": "\\mk{n}{\\sum_{i}\\sum_{j}c_i^\\ast c_j\\int_{-\\infty}^{\\infty}\\kphii^\\ast\\phi_j\\,d\\kx} = \\mk{o}{1}",
+       "uses": [],
+       "cap": "The weights are numbers, so they come out of the integral."
+      },
+      {
+       "tex": "\\mk{n}{\\sum_{i}\\sum_{j}c_i^\\ast c_j\\delta_{ij}} = \\mk{o}{1}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{n}{\\sum_{i}c_i^\\ast c_i} = \\mk{o}{1}",
+       "uses": [],
+       "cap": "Only the terms with $j = i$ survive."
+      },
+      {
+       "tex": "\\mk{n}{\\sum_{i}\\vert c_i\\vert^2} = \\mk{o}{1}",
+       "uses": [],
+       "cap": "For a complex number, $c^\\ast c = |c|^2$."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

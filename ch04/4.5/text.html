@@ -1,0 +1,75 @@
+<section id="opening">
+<h2>General theorems from the particle in a box</h2>
+<p>Consideration of the quantum mechanical description of the <span data-concept="particle-in-a-box">particle-in-a-box</span> exposed two important properties of quantum mechanical systems. We saw that the <span data-concept="eigenfunction">eigenfunctions</span> of the <span data-concept="hamiltonian-operator">Hamiltonian operator</span> are <span data-concept="orthogonality">orthogonal</span>, and we also saw that the position and momentum of the particle could not be determined exactly. We now examine the generality of these insights by stating and proving some fundamental theorems. These theorems use the <span data-concept="hermitian-operator">Hermitian property</span> of quantum mechanical operators that correspond to observables, which is discuss first.</p>
+</section>
+
+<section id="hermitian-operators">
+<h2>Hermitian Operators</h2>
+<p>Since the <span data-concept="eigenvalue">eigenvalues</span> of a quantum mechanical operator correspond to measurable quantities, <span data-concept="real-eigenvalues">the eigenvalues must be real</span>, and consequently a quantum mechanical operator must be Hermitian. To prove this, we start with the premises that $\kpsi$ and $\kphif$ are functions, $\int d\tau$ represents integration over all coordinates, and the operator $\kAhat$ is <strong><span data-concept="hermitian-operator">Hermitian</span></strong> by definition if</p>
+$$ \int \kpsi ^* \kAhat \kpsi \,d\tau = \int (\kAhat ^* \kpsi ^* ) \kpsi \,d\tau \tag{4.5.1} $$
+<p>This equation means that the complex conjugate of $\kAhat$ can operate on $\kpsi^*$ to produce the same result after integration as $\kAhat$ operating on $\kphif$,<sup class="fn" data-note="phi-for-psi"></sup> followed by integration. To prove that a quantum mechanical operator $\kAhat$ is Hermitian, consider the <span data-concept="eigenvalue-equation">eigenvalue equation</span> and its complex conjugate.</p>
+<figure class="dv" id="drv-real-hermitian"></figure>
+<p>This equality means that $\kAhat$ is Hermitian.</p>
+<div class="note">
+<div class="eyebrow">Note</div>
+<h3>Orthogonality Theorem</h3>
+<p><span data-concept="orthogonality-theorem">Eigenfunctions of a Hermitian operator are orthogonal if they have different eigenvalues.</span></p>
+</div>
+<p>Because of this theorem, we can identify orthogonal functions easily without having to integrate or conduct an analysis based on symmetry or other considerations.</p>
+<div class="note">
+<div class="eyebrow">Note</div>
+<h3>Proof</h3>
+<p>$\kpsi$ and $\kphif$ are two <span data-concept="eigenfunction">eigenfunctions</span> of the operator $\kAhat$ with real <span data-concept="eigenvalue">eigenvalues</span> $a_1$ and $a_2$, respectively. Since the eigenvalues are real, $a_1^* = a_1$ and $a_2^* = a_2$.</p>
+<figure class="dv" id="drv-orthogonality-theorem"></figure>
+<p>If $a_1$ and $a_2$ in Equation 4.5.10 are not equal, then the integral <strong>must</strong> be zero. This result proves that <strong>nondegenerate eigenfunctions</strong> of the same operator are <span data-concept="orthogonality">orthogonal</span>.</p>
+<p>$\square$</p>
+</div>
+<p>Two <span data-concept="wavefunction">wavefunctions</span>, $\kpsi_1(\kx)$ and $\kpsi_2(\kx)$, are said to be <em><span data-concept="orthogonality">orthogonal</span></em> if</p>
+$$ \int_{-\infty}^{\infty}\kpsi_1^\ast \kpsi_2 \,d\kx = 0. \tag{4.5.11} $$
+<p>Consider two <span data-concept="eigenstate">eigenstates</span> of $\kAhat$, $\kpsia(\kx)$ and $\kpsiap(\kx)$, which correspond to the two <em>different</em> eigenvalues $\ka$ and $\ka'$, respectively. Thus,</p>
+<figure class="dv" id="drv-different-eigenvalues"></figure>
+<p>In other words, eigenstates of an Hermitian operator corresponding to <em>different</em> eigenvalues are automatically <em>orthogonal</em>.</p>
+<div class="note">
+<div class="eyebrow">Note</div>
+<p><span data-concept="real-eigenvalues">The eigenvalues of operators associated with experimental measurements are all <em>real</em>.</span></p>
+</div>
+<div class="example" id="ex-4-5-1">
+<h3>Example 4.5.1</h3>
+<p>Draw graphs and use them to show that the <span data-concept="pib-wavefunctions">particle-in-a-box wavefunctions</span> for $\kpsi(n = 2)$ and $\kpsi(n = 3)$ are orthogonal to each other.</p>
+<h4>Solution</h4>
+<p>The two PIB wavefunctions are qualitatively similar when plotted</p>
+<figure class="sim" id="sim-parity" data-original="/media/ch04/392736-EXTRA_SAUCE1.jpg" data-original-caption="">
+  <div class="sim-head"><span class="eyebrow">Sim</span><span>Pick two of <span data-ref="psi-1 psi-2 psi-3 psi-4">the box's first four wavefunctions</span> and compare the two halves of their product about $\kL/2$. Where one function is odd and the other even, the halves cancel each other; try $m = 1$, $n = 3$ for a pair that cancels within each half.</span></div>
+</figure>
+<p>These wavefunctions are orthogonal when</p>
+$$ \int_{-\infty}^{\infty} \kpsi(n=2) \kpsi(n=3) d\kx =0 $$
+<p>and when the PIB wavefunctions are substituted this integral becomes</p>
+$$ \begin{aligned} \int_0^{\kL} \sqrt{\dfrac{2}{\kL}} \sin \left( \dfrac{2n}{\kL}\kx \right) \sqrt{\dfrac{2}{\kL}} \sin \left( \dfrac{2n}{\kL}\kx \right) d\kx &= ? \\[4pt] \dfrac{2}{\kL} \int_0^{\kL} \sin \left( \dfrac{2}{\kL}\kx \right) \sin \left( \dfrac{3}{\kL}\kx \right) &= ? \end{aligned} $$
+<p><sup class="fn" data-note="pib-arguments"></sup>We can expand the integrand using trigonometric identities to help solve the integral, but it is easier to take advantage of the symmetry of the integrand, specifically, <span data-ref="psi-2">the $\kpsi(n=2)$ wavefunction</span> is even (blue curves in above figure) and <span data-ref="psi-3">the $\kpsi(n=3)$</span> is odd (purple curve).<sup class="fn" data-note="parity-swapped"></sup> Their product (even times odd) is an odd function and the integral over an odd function is zero. Therefore $\kpsi(n=2)$ and $\kpsi(n=3)$ wavefunctions are orthogonal.</p>
+<p>This can be repeated an infinite number of times to confirm the entire set of PIB wavefunctions are mutually orthogonal as the <span data-concept="orthogonality-theorem">Orthogonality Theorem</span> guarantees.</p>
+</div>
+</section>
+
+<section id="orthogonality-of-degenerate-eigenstates">
+<h2>Orthogonality of Degenerate Eigenstates</h2>
+<p>Consider two <span data-concept="eigenstate">eigenstates</span> of $\kAhat$, $\kpsia$ and $\kpsiap$, which correspond to the <em>same</em> eigenvalue, $\ka$. Such eigenstates are termed <strong><span data-concept="degeneracy">degenerate</span></strong>. The above proof of the orthogonality of different eigenstates fails for degenerate eigenstates. Note, however, that <em>any</em> linear combination of $\kpsia$ and $\kpsiap$ is also an eigenstate of $\kAhat$ corresponding to the eigenvalue $\ka$. Thus, even if $\kpsia$ and $\kpsiap$ are not orthogonal, we can always choose two linear combinations of these eigenstates which are orthogonal. For instance, if $\kpsia$ and $\kpsiap$ are properly normalized, we can define the <strong><span data-concept="overlap-integral">overlap integral</span></strong></p>
+$$ S= \int_{-\infty}^\infty \kpsia^\ast \kpsiap d\kx , \tag{4.5.16} $$
+<p>It is easily demonstrated (but not here) that</p>
+$$ \kpsiapp = \frac{\vert S\vert}{\sqrt{1-\vert S\vert^2}}\left(\kpsia - S^{-1} \kpsiap\right) \tag{4.5.17} $$
+<p>is a properly normalized eigenstate of $\kAhat$, corresponding to the eigenvalue $\ka$, which is orthogonal to $\kpsia$. It is straightforward to generalize the above argument to three or more degenerate eigenstates. Hence, we conclude that <span data-concept="orthogonal-eigenstates">the eigenstates of a Hermitian operator are, or can be chosen to be, <strong>mutually orthogonal.</strong></span></p>
+<figure class="dv" id="drv-degenerate-partner"></figure>
+<div class="note">
+<div class="eyebrow">Note</div>
+<h3>Theorem: Gram-Schmidt Orthogonalization</h3>
+<p>Degenerate eigenfunctions are <strong>not</strong> automatically orthogonal, but can be made so mathematically via the <a href="https://math.libretexts.org/TextMaps/Linear_Algebra/Map%3A_Linear_Algebra_(Schilling%2C_Nachtergaele_and_Lankham)/09._Inner_product_spaces/9.5_The_Gram-Schmidt_orthogonalization_procedure"><span data-concept="gram-schmidt-orthogonalization">Gram-Schmidt Orthogonalization</span></a>.</p>
+</div>
+<p>The above theorem argues that if the eigenvalues of two eigenfunctions are the same then the functions are said to be <span data-concept="degeneracy">degenerate</span> and linear combinations of the degenerate functions can be formed that will be orthogonal to each other. Since the two eigenfunctions have the same eigenvalues, the linear combination also will be an eigenfunction with the same eigenvalue. The proof of this theorem shows us one way to produce orthogonal degenerate functions.</p>
+<div class="note">
+<div class="eyebrow">Note</div>
+<h3>Proof</h3>
+<p>If $\kpsia$ and $\kpsiap$ are degenerate, but not orthogonal, we can define a new composite wavefunction $\kpsiapp = \kpsiap - S\kpsia$ where $S$ is the <span data-concept="overlap-integral">overlap integral</span>:</p>
+<figure class="dv" id="drv-gram-schmidt"></figure>
+<p>$\square$</p>
+</div>
+<p>We conclude that the eigenstates of operators are, or can be chosen to be, <strong>mutually orthogonal</strong>.</p>
+</section>

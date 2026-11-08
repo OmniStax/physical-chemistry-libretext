@@ -1,0 +1,889 @@
+{
+ "id": "4.5",
+ "module": "13410",
+ "chapter": "4",
+ "title": "Eigenfunctions of Operators are Orthogonal",
+ "short": "Orthogonal eigenfunctions",
+ "lead": "The orthogonality met for the particle in a box holds for the eigenfunctions of every Hermitian operator. Hermitian operators, whose eigenvalues are real, are the operators of observables, and eigenfunctions that share an eigenvalue can be combined into orthogonal ones.",
+ "objectives": [
+  "Understand the properties of a Hermitian operator and their associated eigenstates",
+  "Recognize that all experimental obervables are obtained by Hermitian operators"
+ ],
+ "summary_html": "",
+ "notes": "Adapted from Richard Fitzpatrick (The University of Texas at Austin), shared under CC BY-NC-SA 4.0; the plot in Example 4.5.1 carries no credit in the book.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "Exercise 4.5.2 and its answer are the book's; the book numbers no Exercise 4.5.1. The exercise on the box's first and third wavefunctions was written by AI for the orthogonality theorem, which the book's exercise does not test.",
+ "figures": [
+  {
+   "id": "sim-parity",
+   "kind": "sim",
+   "originals": [
+    "/media/ch04/392736-EXTRA_SAUCE1.jpg"
+   ],
+   "draws": [
+    "wavefunction",
+    "length"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [
+  {
+   "id": "psi-1",
+   "label": "ψ₁",
+   "figures": [
+    "sim-parity"
+   ]
+  },
+  {
+   "id": "psi-2",
+   "label": "ψ₂",
+   "figures": [
+    "sim-parity"
+   ]
+  },
+  {
+   "id": "psi-3",
+   "label": "ψ₃",
+   "figures": [
+    "sim-parity"
+   ]
+  },
+  {
+   "id": "psi-4",
+   "label": "ψ₄",
+   "figures": [
+    "sim-parity"
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "span": "opening",
+   "concept": "orthogonality",
+   "verb": "reinforces"
+  },
+  {
+   "span": "opening",
+   "concept": "hermitian-operator",
+   "verb": "uses"
+  },
+  {
+   "span": "hermitian-operators",
+   "concept": "real-eigenvalues",
+   "verb": "introduces"
+  },
+  {
+   "span": "hermitian-operators",
+   "concept": "hermitian-operator",
+   "verb": "reinforces"
+  },
+  {
+   "span": "hermitian-operators",
+   "concept": "orthogonality-theorem",
+   "verb": "introduces"
+  },
+  {
+   "span": "hermitian-operators",
+   "concept": "orthogonality",
+   "verb": "reinforces"
+  },
+  {
+   "span": "hermitian-operators",
+   "concept": "pib-wavefunctions",
+   "verb": "uses"
+  },
+  {
+   "span": "orthogonality-of-degenerate-eigenstates",
+   "concept": "degeneracy",
+   "verb": "reinforces"
+  },
+  {
+   "span": "orthogonality-of-degenerate-eigenstates",
+   "concept": "overlap-integral",
+   "verb": "introduces"
+  },
+  {
+   "span": "orthogonality-of-degenerate-eigenstates",
+   "concept": "orthogonal-eigenstates",
+   "verb": "introduces"
+  },
+  {
+   "span": "orthogonality-of-degenerate-eigenstates",
+   "concept": "gram-schmidt-orthogonalization",
+   "verb": "introduces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "e2",
+   "source_id": "exr:4.5.2",
+   "source_number": "Exercise 4.5.2",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "orthogonality-of-degenerate-eigenstates",
+   "prompt": "<p>Find $N$ that normalizes $\\psi$ if $\\psi = N(φ_1 − Sφ_2)$ where $φ_1$ and $φ_2$ are normalized wavefunctions and $S$ is their overlap integral.</p>\n$$ S= \\langle φ_1 | φ_2 \\rangle $$",
+   "answer": {
+    "type": "open",
+    "generated_by": "source",
+    "solution": "<p>Remember that to normalize an arbitrary wavefunction, we find a constant $N$ such that $\\langle \\psi | \\psi \\rangle = 1$. This equates to the following procedure:</p>\n$$ \\begin{aligned} \\langle\\psi | \\psi\\rangle =\\left\\langle N\\left(φ_{1} - Sφ_{2}\\right) | N\\left(φ_{1} - Sφ_{2}\\right)\\right\\rangle &= 1 \\\\[4pt] N^2\\left\\langle \\left(φ_{1} - Sφ_{2}\\right) | \\left(φ_{1}-Sφ_{2}\\right)\\right\\rangle &=1 \\\\[4pt] N^2 \\left[ \\overset{\\to\\,1}{\\cancel{\\langle φ_{1}|φ_{1}\\rangle}} - S \\overset{\\to\\,S}{\\cancel{\\langle φ_{2}|φ_{1}\\rangle}} - S \\overset{\\to\\,S}{\\cancel{\\langle φ_{1}|φ_{2}\\rangle}} + S^2 \\overset{\\to\\,1}{\\cancel{\\langle φ_{2}| φ_{2}\\rangle}} \\right] &= 1 \\\\[4pt] N^2(1 - S^2 \\cancel{-S^2} + \\cancel{S^2})&=1 \\\\[4pt] N^2(1-S^2) &= 1 \\end{aligned} $$\n<p>therefore</p>\n$$ N = \\dfrac{1}{\\sqrt{1-S^2}} $$"
+   }
+  },
+  {
+   "id": "a1",
+   "source_id": "This can be repeated an infinite number of times",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "hermitian-operators",
+   "prompt": "<p>The particle-in-a-box wavefunctions $\\psi_1 = \\sqrt{2/L}\\,\\sin(\\pi x/L)$ and $\\psi_3 = \\sqrt{2/L}\\,\\sin(3\\pi x/L)$ are both even about the center of the box, so the symmetry argument of Example 4.5.1 does not show that they are orthogonal. Evaluate $\\int_0^L \\psi_1\\psi_3\\,dx$ to decide whether they are.</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "Use $\\sin A\\sin B = \\tfrac{1}{2}[\\cos(A-B) - \\cos(A+B)]$.",
+    "solution": "<p>With $\\sin A\\sin B = \\tfrac{1}{2}[\\cos(A-B) - \\cos(A+B)]$,</p>$$ \\int_0^L \\psi_1\\psi_3\\,dx = \\dfrac{2}{L}\\int_0^L \\sin\\dfrac{\\pi x}{L}\\sin\\dfrac{3\\pi x}{L}\\,dx = \\dfrac{1}{L}\\int_0^L \\left[\\cos\\dfrac{2\\pi x}{L} - \\cos\\dfrac{4\\pi x}{L}\\right]dx $$$$ = \\dfrac{1}{L}\\left[\\dfrac{L}{2\\pi}\\sin\\dfrac{2\\pi x}{L} - \\dfrac{L}{4\\pi}\\sin\\dfrac{4\\pi x}{L}\\right]_0^L = 0 $$<p>since $\\sin 2\\pi = \\sin 4\\pi = \\sin 0 = 0$. The two functions are orthogonal, as the Orthogonality Theorem requires: they are eigenfunctions of the Hamiltonian with the different energies $E_1$ and $9E_1$. Their product is even about $L/2$, so the two halves of the integral do not cancel each other; each half is zero by itself.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "e2",
+   "concept": "overlap-integral"
+  },
+  {
+   "exercise": "e2",
+   "concept": "gram-schmidt-orthogonalization"
+  },
+  {
+   "exercise": "a1",
+   "concept": "orthogonality-theorem"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "phi-for-psi",
+   "kind": "correction",
+   "html": "Equation 4.5.1 has only the function $\\psi$: the integral on the left is $\\hat{A}$ operating on $\\psi$, not on $\\phi$."
+  },
+  {
+   "id": "pib-arguments",
+   "kind": "correction",
+   "html": "The arguments of the sines are $2\\pi x/L$ and $3\\pi x/L$: the book writes $2nx/L$ for both in the first line and drops the $\\pi$ in the second, which also lacks its $dx$."
+  },
+  {
+   "id": "parity-swapped",
+   "kind": "correction",
+   "html": "About the center of the box the parities are the other way round: $\\psi(n=2)$ is odd and $\\psi(n=3)$ is even, since $\\psi_n(L-x) = (-1)^{n+1}\\psi_n(x)$. Their product is still odd, so the conclusion stands."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "real-hermitian",
+   "what": "an operator with real eigenvalues is Hermitian",
+   "source": "Physical Chemistry (LibreTexts), 4.5 Eigenfunctions of Operators are Orthogonal",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kAhat\\kpsi = \\ka\\kpsi",
+       "src": "(4.5.2)"
+      },
+      {
+       "tex": "\\ka^* = \\ka",
+       "src": "4.5"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\kAhat\\kpsi} = \\mk{r}{\\ka\\kpsi}",
+      "src": "(4.5.2)"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\kAhat^*\\kpsi^*} = \\mk{r}{\\ka^*\\kpsi^*}",
+       "uses": [],
+       "cap": "Take the complex conjugate of both sides."
+      },
+      {
+       "tex": "\\mk{l}{\\kAhat^*\\kpsi^*} = \\mk{r}{\\ka\\kpsi^*}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "num": "(4.5.3)",
+     "src": "4.5"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\kAhat\\kpsi = \\ka\\kpsi",
+       "src": "(4.5.2)"
+      },
+      {
+       "tex": "\\int\\kpsi^*\\kpsi\\,d\\tau = 1",
+       "src": "4.5"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\kAhat\\kpsi} = \\mk{r}{\\ka\\kpsi}",
+      "src": "(4.5.2)"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\kpsi^*\\kAhat\\kpsi} = \\mk{r}{\\ka\\kpsi^*\\kpsi}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{l}{\\int\\kpsi^*\\kAhat\\kpsi\\,d\\tau} = \\mk{r}{\\ka\\int\\kpsi^*\\kpsi\\,d\\tau}",
+       "uses": [],
+       "cap": "Integrate both sides over all the coordinates; the constant comes out of the integral."
+      },
+      {
+       "tex": "\\mk{l}{\\int\\kpsi^*\\kAhat\\kpsi\\,d\\tau} = \\mk{r}{\\ka}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "num": "(4.5.4)",
+     "src": "4.5"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "\\int\\kpsi^*\\kpsi\\,d\\tau = 1",
+       "src": "4.5"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\kAhat^*\\kpsi^*} = \\mk{r}{\\ka\\kpsi^*}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\kpsi\\kAhat^*\\kpsi^*} = \\mk{r}{\\ka\\kpsi\\kpsi^*}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{l}{\\int\\kpsi\\kAhat^*\\kpsi^*\\,d\\tau} = \\mk{r}{\\ka\\int\\kpsi\\kpsi^*\\,d\\tau}",
+       "uses": [],
+       "cap": "Integrate both sides over all the coordinates; the constant comes out of the integral."
+      },
+      {
+       "tex": "\\mk{l}{\\int\\kpsi\\kAhat^*\\kpsi^*\\,d\\tau} = \\mk{r}{\\ka}",
+       "uses": [
+        1
+       ],
+       "cap": "$\\psi\\psi^*$ and $\\psi^*\\psi$ are the same function."
+      }
+     ],
+     "num": "(4.5.5)",
+     "src": "4.5"
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "step": 2
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\int\\kpsi^*\\kAhat\\kpsi\\,d\\tau} = \\mk{r}{\\ka}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\int\\kpsi^*\\kAhat\\kpsi\\,d\\tau} = \\mk{r}{\\int\\kpsi\\kAhat^*\\kpsi^*\\,d\\tau}",
+       "uses": [
+        1
+       ],
+       "cap": "Both integrals equal $a$."
+      }
+     ],
+     "num": "(4.5.6)",
+     "src": "4.5"
+    },
+    {
+     "assumes": [
+      {
+       "step": 3
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\int\\kpsi^*\\kAhat\\kpsi\\,d\\tau} = \\mk{r}{\\int\\kpsi\\kAhat^*\\kpsi^*\\,d\\tau}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\int\\kpsi^*\\kAhat\\kpsi\\,d\\tau} = \\mk{r}{\\int(\\kAhat^*\\kpsi^*)\\kpsi\\,d\\tau}",
+       "uses": [],
+       "cap": "The operator acting on $\\psi^*$ produces a new function, and functions commute."
+      }
+     ],
+     "num": "(4.5.7)",
+     "src": "4.5",
+     "note": "Between Equations 4.5.6 and 4.5.7 the book prints $\\hat{A}^*\\int\\psi^*\\hat{A}\\psi\\,d\\tau = \\int\\psi\\hat{A}^*\\psi^*\\,d\\tau_*$, which puts the operator outside the integral and means nothing. The step it stands for is this one."
+    }
+   ]
+  },
+  {
+   "id": "orthogonality-theorem",
+   "what": "the orthogonality theorem",
+   "source": "Physical Chemistry (LibreTexts), 4.5 Eigenfunctions of Operators are Orthogonal",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "text": "$\\phi$ is an eigenfunction of $\\hat{A}$: $\\hat{A}\\phi = a_2\\phi$.",
+       "src": "4.5"
+      },
+      {
+       "tex": "a_2^* = a_2",
+       "src": "4.5"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\kAhat\\kphif} = \\mk{r}{a_2\\kphif}",
+      "uses": [
+       0
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\kAhat^*\\kphif^*} = \\mk{r}{a_2^*\\kphif^*}",
+       "uses": [],
+       "cap": "Take the complex conjugate of both sides."
+      },
+      {
+       "tex": "\\mk{l}{\\kAhat^*\\kphif^*} = \\mk{r}{a_2\\kphif^*}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "src": "4.5",
+     "note": "The book writes this line as $\\hat{A}^*\\psi^* = a_2\\psi^*$ and keeps $\\psi$ for $\\phi$ in every line after it. The second eigenfunction is $\\phi$, so the integral of Equations 4.5.8 to 4.5.10 is the overlap $\\int\\phi^*\\psi\\,d\\tau$, not $\\int\\psi^*\\psi\\,d\\tau$, which is 1."
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\kAhat\\kpsi = a_1\\kpsi",
+       "src": "4.5"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\kAhat\\kpsi} = \\mk{r}{a_1\\kpsi}",
+      "src": "4.5"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\kphif^*\\kAhat\\kpsi} = \\mk{r}{a_1\\kphif^*\\kpsi}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{l}{\\int\\kphif^*\\kAhat\\kpsi\\,d\\tau} = \\mk{r}{a_1\\int\\kphif^*\\kpsi\\,d\\tau}",
+       "uses": [],
+       "cap": "Integrate both sides over all the coordinates; the constant comes out of the integral."
+      }
+     ],
+     "src": "4.5"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\kAhat^*\\kphif^*} = \\mk{r}{a_2\\kphif^*}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\kpsi\\kAhat^*\\kphif^*} = \\mk{r}{a_2\\kpsi\\kphif^*}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{l}{\\int\\kpsi\\kAhat^*\\kphif^*\\,d\\tau} = \\mk{r}{a_2\\int\\kpsi\\kphif^*\\,d\\tau}",
+       "uses": [],
+       "cap": "Integrate both sides over all the coordinates; the constant comes out of the integral."
+      }
+     ],
+     "num": "(4.5.8)",
+     "src": "4.5"
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "step": 2
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\int\\kphif^*\\kAhat\\kpsi\\,d\\tau} = \\mk{r}{a_1\\int\\kphif^*\\kpsi\\,d\\tau}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\int\\kphif^*\\kAhat\\kpsi\\,d\\tau - \\int\\kpsi\\kAhat^*\\kphif^*\\,d\\tau} = \\mk{r}{(a_1 - a_2)\\int\\kphif^*\\kpsi\\,d\\tau}",
+       "uses": [
+        1
+       ],
+       "cap": "Subtract Equation 4.5.8; $\\psi\\phi^*$ and $\\phi^*\\psi$ are the same function."
+      }
+     ],
+     "num": "(4.5.9)",
+     "src": "4.5"
+    },
+    {
+     "assumes": [
+      {
+       "step": 3
+      },
+      {
+       "tex": "\\int\\kphif^*\\kAhat\\kpsi\\,d\\tau = \\int\\kpsi\\,\\kAhat^*\\kphif^*\\,d\\tau",
+       "src": "3.2"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\int\\kphif^*\\kAhat\\kpsi\\,d\\tau - \\int\\kpsi\\kAhat^*\\kphif^*\\,d\\tau} = \\mk{r}{(a_1 - a_2)\\int\\kphif^*\\kpsi\\,d\\tau}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{0} = \\mk{r}{(a_1 - a_2)\\int\\kphif^*\\kpsi\\,d\\tau}",
+       "uses": [
+        1
+       ],
+       "cap": "$\\hat{A}$ is Hermitian, so the two integrals on the left are equal."
+      }
+     ],
+     "num": "(4.5.10)",
+     "src": "4.5"
+    },
+    {
+     "assumes": [
+      {
+       "step": 4
+      },
+      {
+       "text": "The eigenvalues are different, $a_1 \\neq a_2$."
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{0} = \\mk{r}{(a_1 - a_2)\\int\\kphif^*\\kpsi\\,d\\tau}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{r}{\\int\\kphif^*\\kpsi\\,d\\tau} = \\mk{l}{0}",
+       "uses": [
+        1
+       ],
+       "cap": "A product is zero only when one of its factors is."
+      }
+     ],
+     "src": "4.5"
+    }
+   ]
+  },
+  {
+   "id": "different-eigenvalues",
+   "what": "eigenstates of different eigenvalues are orthogonal",
+   "source": "Physical Chemistry (LibreTexts), 4.5 Eigenfunctions of Operators are Orthogonal",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kAhat\\kpsia = \\ka\\kpsia",
+       "src": "(4.5.12)"
+      },
+      {
+       "tex": "\\ka^* = \\ka",
+       "src": "4.5"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\kAhat\\kpsia} = \\mk{r}{\\ka\\kpsia}",
+      "src": "(4.5.12)"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{(\\kAhat\\kpsia)^*} = \\mk{r}{\\ka^*\\kpsia^*}",
+       "uses": [],
+       "cap": "Take the complex conjugate of both sides."
+      },
+      {
+       "tex": "\\mk{l}{(\\kAhat\\kpsia)^*} = \\mk{r}{\\ka\\kpsia^*}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{l}{\\int_{-\\infty}^{\\infty}(\\kAhat\\kpsia)^*\\kpsiap\\,d\\kx} = \\mk{r}{\\ka\\int_{-\\infty}^{\\infty}\\kpsia^*\\kpsiap\\,d\\kx}",
+       "uses": [],
+       "cap": "Multiply by $\\psi_{a'}$ and integrate over all $x$."
+      }
+     ],
+     "num": "(4.5.14)",
+     "src": "4.5"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\kAhat\\kpsiap = \\ka'\\kpsiap",
+       "src": "(4.5.13)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\kAhat\\kpsiap} = \\mk{r}{\\ka'\\kpsiap}",
+      "src": "(4.5.13)"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\int_{-\\infty}^{\\infty}\\kpsia^*(\\kAhat\\kpsiap)\\,d\\kx} = \\mk{r}{\\ka'\\int_{-\\infty}^{\\infty}\\kpsia^*\\kpsiap\\,d\\kx}",
+       "uses": [],
+       "cap": "Multiply by $\\psi_a^*$ and integrate over all $x$."
+      }
+     ],
+     "num": "(4.5.15)",
+     "src": "4.5"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "step": 1
+      },
+      {
+       "tex": "\\int_{-\\infty}^{\\infty}(\\kAhat\\kpsia)^*\\kpsiap\\,d\\kx = \\int_{-\\infty}^{\\infty}\\kpsia^*(\\kAhat\\kpsiap)\\,d\\kx",
+       "src": "(4.5.1)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\int_{-\\infty}^{\\infty}(\\kAhat\\kpsia)^*\\kpsiap\\,d\\kx} = \\mk{r}{\\ka\\int_{-\\infty}^{\\infty}\\kpsia^*\\kpsiap\\,d\\kx}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\int_{-\\infty}^{\\infty}\\kpsia^*(\\kAhat\\kpsiap)\\,d\\kx} = \\mk{r}{\\ka\\int_{-\\infty}^{\\infty}\\kpsia^*\\kpsiap\\,d\\kx}",
+       "uses": [
+        2
+       ],
+       "cap": "$\\hat{A}$ is Hermitian, so the left-hand sides of Equations 4.5.14 and 4.5.15 are equal."
+      },
+      {
+       "tex": "\\mk{l}{\\ka'\\int_{-\\infty}^{\\infty}\\kpsia^*\\kpsiap\\,d\\kx} = \\mk{r}{\\ka\\int_{-\\infty}^{\\infty}\\kpsia^*\\kpsiap\\,d\\kx}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{r}{(\\ka-\\ka')\\int_{-\\infty}^{\\infty}\\kpsia^*\\kpsiap\\,d\\kx} = \\mk{l}{0}",
+       "uses": []
+      }
+     ],
+     "src": "4.5",
+     "note": "The book cites Equation 4.5.9 for this step. The step uses the Hermitian property, Equation 4.5.1, in its form for two functions."
+    },
+    {
+     "assumes": [
+      {
+       "step": 2
+      },
+      {
+       "text": "By assumption, $a \\neq a'$."
+      }
+     ],
+     "then": {
+      "tex": "\\mk{r}{(\\ka-\\ka')\\int_{-\\infty}^{\\infty}\\kpsia^*\\kpsiap\\,d\\kx} = \\mk{l}{0}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{r}{\\int_{-\\infty}^{\\infty}\\kpsia^*\\kpsiap\\,d\\kx} = \\mk{l}{0}",
+       "uses": [
+        1
+       ],
+       "cap": "A product is zero only when one of its factors is."
+      }
+     ],
+     "src": "4.5"
+    }
+   ]
+  },
+  {
+   "id": "degenerate-partner",
+   "what": "an orthogonal partner for a degenerate eigenstate",
+   "source": "Physical Chemistry (LibreTexts), 4.5 Eigenfunctions of Operators are Orthogonal",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kpsiapp = \\dfrac{|S|}{\\sqrt{1-|S|^2}}\\left(\\kpsia - S^{-1}\\kpsiap\\right)",
+       "src": "(4.5.17)"
+      },
+      {
+       "tex": "S = \\int_{-\\infty}^{\\infty}\\kpsia^*\\kpsiap\\,d\\kx",
+       "src": "(4.5.16)"
+      },
+      {
+       "tex": "\\int_{-\\infty}^{\\infty}\\kpsia^*\\kpsia\\,d\\kx = 1",
+       "src": "4.5"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\kpsiapp} = \\mk{r}{\\dfrac{|S|}{\\sqrt{1-|S|^2}}\\left(\\kpsia - S^{-1}\\kpsiap\\right)}",
+      "src": "(4.5.17)"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\int_{-\\infty}^{\\infty}\\kpsia^*\\kpsiapp\\,d\\kx} = \\mk{r}{\\dfrac{|S|}{\\sqrt{1-|S|^2}}\\left(\\int_{-\\infty}^{\\infty}\\kpsia^*\\kpsia\\,d\\kx - S^{-1}\\int_{-\\infty}^{\\infty}\\kpsia^*\\kpsiap\\,d\\kx\\right)}",
+       "uses": [],
+       "cap": "Multiply by $\\psi_a^*$ and integrate over all $x$; the integral of a sum is the sum of the integrals."
+      },
+      {
+       "tex": "\\mk{l}{\\int_{-\\infty}^{\\infty}\\kpsia^*\\kpsiapp\\,d\\kx} = \\mk{r}{\\dfrac{|S|}{\\sqrt{1-|S|^2}}\\left(1 - S^{-1}S\\right)}",
+       "uses": [
+        1,
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{l}{\\int_{-\\infty}^{\\infty}\\kpsia^*\\kpsiapp\\,d\\kx} = \\mk{r}{0}",
+       "uses": []
+      }
+     ],
+     "src": "4.5"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\kpsiapp = \\dfrac{|S|}{\\sqrt{1-|S|^2}}\\left(\\kpsia - S^{-1}\\kpsiap\\right)",
+       "src": "(4.5.17)"
+      },
+      {
+       "tex": "S = \\int_{-\\infty}^{\\infty}\\kpsia^*\\kpsiap\\,d\\kx",
+       "src": "(4.5.16)"
+      },
+      {
+       "tex": "\\int_{-\\infty}^{\\infty}\\kpsia^*\\kpsia\\,d\\kx = 1",
+       "src": "4.5"
+      },
+      {
+       "tex": "\\int_{-\\infty}^{\\infty}\\kpsiap^*\\kpsiap\\,d\\kx = 1",
+       "src": "4.5"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\kpsiapp} = \\mk{r}{\\dfrac{|S|}{\\sqrt{1-|S|^2}}\\left(\\kpsia - S^{-1}\\kpsiap\\right)}",
+      "src": "(4.5.17)"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\int_{-\\infty}^{\\infty}\\kpsiapp^*\\kpsiapp\\,d\\kx} = \\mk{r}{\\dfrac{|S|^2}{1-|S|^2}\\int_{-\\infty}^{\\infty}\\left(\\kpsia - S^{-1}\\kpsiap\\right)^*\\left(\\kpsia - S^{-1}\\kpsiap\\right)d\\kx}",
+       "uses": [],
+       "cap": "The factor in front is real, so it comes out of the integral squared."
+      },
+      {
+       "tex": "\\mk{l}{\\int_{-\\infty}^{\\infty}\\kpsiapp^*\\kpsiapp\\,d\\kx} = \\mk{r}{\\dfrac{|S|^2}{1-|S|^2}\\left(\\int_{-\\infty}^{\\infty}\\kpsia^*\\kpsia\\,d\\kx - S^{-1}\\int_{-\\infty}^{\\infty}\\kpsia^*\\kpsiap\\,d\\kx - (S^*)^{-1}\\int_{-\\infty}^{\\infty}\\kpsiap^*\\kpsia\\,d\\kx + |S|^{-2}\\int_{-\\infty}^{\\infty}\\kpsiap^*\\kpsiap\\,d\\kx\\right)}",
+       "uses": [],
+       "cap": "Multiply out the brackets, using $(S^{-1})^* = (S^*)^{-1}$ and $S^{-1}(S^*)^{-1} = |S|^{-2}$."
+      },
+      {
+       "tex": "\\mk{l}{\\int_{-\\infty}^{\\infty}\\kpsiapp^*\\kpsiapp\\,d\\kx} = \\mk{r}{\\dfrac{|S|^2}{1-|S|^2}\\left(1 - S^{-1}S - (S^*)^{-1}S^* + |S|^{-2}\\right)}",
+       "uses": [
+        2,
+        1,
+        3
+       ],
+       "cap": "The conjugate of $S$ is $\\int\\psi_{a'}^*\\psi_a\\,dx$."
+      },
+      {
+       "tex": "\\mk{l}{\\int_{-\\infty}^{\\infty}\\kpsiapp^*\\kpsiapp\\,d\\kx} = \\mk{r}{\\dfrac{|S|^2}{1-|S|^2}\\cdot\\dfrac{1-|S|^2}{|S|^2}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{l}{\\int_{-\\infty}^{\\infty}\\kpsiapp^*\\kpsiapp\\,d\\kx} = \\mk{r}{1}",
+       "uses": []
+      }
+     ],
+     "src": "4.5"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\kpsiapp = \\dfrac{|S|}{\\sqrt{1-|S|^2}}\\left(\\kpsia - S^{-1}\\kpsiap\\right)",
+       "src": "(4.5.17)"
+      },
+      {
+       "text": "A linear operator acts on each term of a sum and passes constants through.",
+       "src": "3.2"
+      },
+      {
+       "tex": "\\kAhat\\kpsia = \\ka\\kpsia",
+       "src": "4.5"
+      },
+      {
+       "tex": "\\kAhat\\kpsiap = \\ka\\kpsiap",
+       "src": "4.5"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\kpsiapp} = \\mk{r}{\\dfrac{|S|}{\\sqrt{1-|S|^2}}\\left(\\kpsia - S^{-1}\\kpsiap\\right)}",
+      "src": "(4.5.17)"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\kAhat\\kpsiapp} = \\mk{r}{\\dfrac{|S|}{\\sqrt{1-|S|^2}}\\kAhat\\left(\\kpsia - S^{-1}\\kpsiap\\right)}",
+       "uses": [],
+       "cap": "Apply $\\hat{A}$ to both sides."
+      },
+      {
+       "tex": "\\mk{l}{\\kAhat\\kpsiapp} = \\mk{r}{\\dfrac{|S|}{\\sqrt{1-|S|^2}}\\left(\\kAhat\\kpsia - S^{-1}\\kAhat\\kpsiap\\right)}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{l}{\\kAhat\\kpsiapp} = \\mk{r}{\\dfrac{|S|}{\\sqrt{1-|S|^2}}\\left(\\ka\\kpsia - S^{-1}\\ka\\kpsiap\\right)}",
+       "uses": [
+        2,
+        3
+       ],
+       "cap": "$\\psi_a$ and $\\psi_{a'}$ are degenerate: both have the eigenvalue $a$."
+      },
+      {
+       "tex": "\\mk{l}{\\kAhat\\kpsiapp} = \\mk{r}{\\ka\\kpsiapp}",
+       "uses": [
+        0
+       ]
+      }
+     ],
+     "src": "4.5"
+    }
+   ]
+  },
+  {
+   "id": "gram-schmidt",
+   "what": "Gram-Schmidt orthogonalization",
+   "source": "Physical Chemistry (LibreTexts), 4.5 Eigenfunctions of Operators are Orthogonal",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kpsiapp = \\kpsiap - S\\kpsia",
+       "src": "4.5"
+      },
+      {
+       "tex": "S = \\langle\\kpsia|\\kpsiap\\rangle",
+       "src": "4.5"
+      },
+      {
+       "tex": "\\langle\\kpsia|\\kpsia\\rangle = 1",
+       "src": "4.5"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\kpsiapp} = \\mk{r}{\\kpsiap - S\\kpsia}",
+      "src": "4.5"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\langle\\kpsia|\\kpsiapp\\rangle} = \\mk{r}{\\langle\\kpsia|\\kpsiap - S\\kpsia\\rangle}",
+       "uses": [],
+       "cap": "Take the inner product of both sides with $\\psi_a$."
+      },
+      {
+       "tex": "\\mk{l}{\\langle\\kpsia|\\kpsiapp\\rangle} = \\mk{r}{\\langle\\kpsia|\\kpsiap\\rangle - S\\langle\\kpsia|\\kpsia\\rangle}",
+       "uses": [],
+       "cap": "The inner product is linear in its right-hand function."
+      },
+      {
+       "tex": "\\mk{l}{\\langle\\kpsia|\\kpsiapp\\rangle} = \\mk{r}{S - S}",
+       "uses": [
+        1,
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{l}{\\langle\\kpsia|\\kpsiapp\\rangle} = \\mk{r}{0}",
+       "uses": []
+      }
+     ],
+     "src": "4.5"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\kpsiapp = \\kpsiap - S\\kpsia",
+       "src": "4.5"
+      },
+      {
+       "tex": "S = \\int\\kpsia^*\\kpsiap\\,d\\tau",
+       "src": "(4.5.16)"
+      },
+      {
+       "tex": "\\int\\kpsia^*\\kpsia\\,d\\tau = 1",
+       "src": "4.5"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\kpsiapp} = \\mk{r}{\\kpsiap - S\\kpsia}",
+      "src": "4.5"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\int\\kpsia^*\\kpsiapp\\,d\\tau} = \\mk{r}{\\int\\kpsia^*(\\kpsiap - S\\kpsia)\\,d\\tau}",
+       "uses": [],
+       "cap": "Multiply by $\\psi_a^*$ and integrate."
+      },
+      {
+       "tex": "\\mk{l}{\\int\\kpsia^*\\kpsiapp\\,d\\tau} = \\mk{r}{\\int\\kpsia^*\\kpsiap\\,d\\tau - S\\int\\kpsia^*\\kpsia\\,d\\tau}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{l}{\\int\\kpsia^*\\kpsiapp\\,d\\tau} = \\mk{r}{S - S}",
+       "uses": [
+        1,
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{l}{\\int\\kpsia^*\\kpsiapp\\,d\\tau} = \\mk{r}{0}",
+       "uses": []
+      }
+     ],
+     "src": "4.5",
+     "note": "The book writes this second form with $\\Phi$ for $\\psi_a''$ and $\\psi_A$ for $\\psi_a$, and prints a stray display $\\int\\psi_a^*\\psi_a\\,d\\tau$ above it where the overlap $S = \\int\\psi_a^*\\psi_a'\\,d\\tau$ belongs."
+    }
+   ]
+  }
+ ]
+}

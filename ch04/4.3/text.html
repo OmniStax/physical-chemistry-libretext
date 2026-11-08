@@ -1,0 +1,95 @@
+<section id="eigenvalue-equations">
+<h2>Eigenvalue equations</h2>
+<p>Recall, that we can identify the total energy operator, which is called the <span data-concept="hamiltonian-operator">Hamiltonian operator</span>, $\kH$, as consisting of the <span data-concept="kinetic-energy-operator">kinetic energy operator</span> plus the <span data-concept="potential-energy-operator">potential energy operator</span>.</p>
+$$ \kH = - \dfrac {\hbar ^2}{2\km} \knabla + \kVhat (x, y , z ) \tag{4.3.1} $$
+<p>Using this notation, we write the Schrödinger Equation as</p>
+$$ \kH | \kpsi (x , y , z ) \rangle = \kE | \kpsi ( x , y , z ) \rangle \tag{4.3.2} $$
+<p>Equation 4.3.2 says that the <span data-concept="hamiltonian-operator">Hamiltonian operator</span> operates on the <span data-concept="wavefunction">wavefunction</span> to produce the energy, which is a number, (a quantity of Joules), times the <span data-concept="wavefunction">wavefunction</span>. Such an equation, where the operator, operating on a function, produces a constant times the function, is called an <strong><span data-concept="eigenvalue-equation">eigenvalue equation</span></strong>. The function is called an <strong><span data-concept="eigenfunction">eigenfunction</span></strong>, and the resulting numerical value is called the <strong><span data-concept="eigenvalue">eigenvalue</span></strong>. Eigen here is the German word meaning self or own.</p>
+<p>It is a general principle of Quantum Mechanics that there is an <span data-concept="operator">operator</span> for every physical <span data-concept="observable">observable</span>. A physical <span data-concept="observable">observable</span> is anything that can be measured. If the <span data-concept="wavefunction">wavefunction</span> that describes a system is an <span data-concept="eigenfunction">eigenfunction</span> of an operator, then the value of the associated <span data-concept="observable">observable</span> is extracted from the <span data-concept="eigenfunction">eigenfunction</span> by operating on the <span data-concept="eigenfunction">eigenfunction</span> with the appropriate operator. The value of the <span data-concept="observable">observable</span> for the system is the <span data-concept="eigenvalue">eigenvalue</span>, and the system is said to be in an <span data-concept="eigenstate">eigenstate</span>. Equation 4.3.2 states this principle mathematically for the case of energy as the <span data-concept="observable">observable</span>.</p>
+<div class="note">
+<div class="eyebrow">Note</div>
+<h3>Postulate III: Obtaining Observables Requires Solving Eigenvalue Problems</h3>
+<p>If a system is described by the <span data-concept="eigenfunction">eigenfunction</span> $\kPsi$ of an operator $\kAhat$ then <span data-concept="observables-as-eigenvalues">the value measured for the observable property corresponding to $\kAhat$ will always be the eigenvalue $\ka$</span>, which can be calculated from the <span data-concept="eigenvalue-equation">eigenvalue equation</span>.</p>
+$$ \kAhat | \kPsi \rangle = \ka | \kPsi \rangle \tag{4.3.3} $$
+</div>
+<p>Consider a general real-space operator $A(\kx)$. When this operator acts on a general <span data-concept="wavefunction">wavefunction</span> $\kpsi(\kx)$ the result is usually a <span data-concept="wavefunction">wavefunction</span> with a completely different shape. However, there are certain special wavefunctions which are such that when $A$ acts on them the result is just a multiple of the original <span data-concept="wavefunction">wavefunction</span>. These special wavefunctions are called <em><span data-concept="eigenstate">eigenstates</span></em>, and the multiples are called <em><span data-concept="eigenvalue">eigenvalues</span></em>. Thus, if</p>
+$$ A | \kpsia(\kx) \rangle = \ka | \kpsia(\kx) \rangle \tag{4.3.4} $$
+<p>where $\ka$ is a complex number, then $\kpsia$ is called an <strong><span data-concept="eigenstate">eigenstate</span></strong> of $A$ corresponding to the <span data-concept="eigenvalue">eigenvalue</span> $\ka$.</p>
+<p>Suppose that $A$ is an operator corresponding to some physical dynamical variable. Consider a particle whose <span data-concept="wavefunction">wavefunction</span> is $\kpsia$. The expectation of value $A$ in this state is simply</p>
+<figure class="dv" id="drv-eigenstate-spread"></figure>
+<p>The fact that <span data-concept="eigenstate-zero-variance">the variance is <em>zero</em></span> implies that every measurement of $A$ is bound to yield the same result: namely, $\ka$. Thus, the <span data-concept="eigenstate">eigenstate</span> $\kpsia$ is a state which is associated with a <em>unique</em> value of the dynamical variable corresponding to $A$. This unique value is simply the associated <span data-concept="eigenvalue">eigenvalue</span> determined by Equation 4.3.4.</p>
+</section>
+
+<section id="expectation-values">
+<h2>Expectation Values</h2>
+<p>We have seen that $\vert\kpsi(\kx,\kt)\vert^{ 2}$ is the <span data-concept="probability-density">probability density</span> of a measurement of a particle's displacement yielding the value $\kx$ at time $\kt$. Suppose that we made a large number of independent measurements of the displacement on an equally large number of identical quantum systems. In general, measurements made on different systems will yield different results. However, from the definition of probability, the mean of all these results is simply</p>
+$$ \kxavg = \int_{-\infty}^{\infty} \kx \vert\kpsi\vert^{ 2} d\kx \tag{4.3.5} $$
+<p>Here, $\kxavg$ is called the <em><span data-concept="quantum-expectation-value">expectation value</span></em> of $\kx$. Similarly the <span data-concept="quantum-expectation-value">expectation value</span> of any function of $\kx$ is</p>
+$$ \langle f(\kx)\rangle = \int_{-\infty}^{\infty} f(\kx) \vert\kpsi\vert^{ 2} d\kx. \tag{4.3.6} $$
+<div class="note">
+<div class="eyebrow">Note</div>
+<h3>Postulate IV</h3>
+<p>The average value of an <span data-concept="observable">observable</span> measurement of a state in (<em>normalized</em>) <span data-concept="wavefunction">wavefunction</span> $\kpsi$ with operator $\kAhat$ is given by the <span data-concept="quantum-expectation-value">expectation value</span> $\langle \ka \rangle$:<sup class="fn" data-note="bra-a"></sup></p>
+$$ \begin{aligned} \langle \ka \rangle &= \langle \kpsi | \ka |\kpsi \rangle \\[4pt] &= \int_{-\infty}^{\infty} \kpsi^* \kAhat \kpsi d\kx  \end{aligned} \tag{4.3.7} $$
+</div>
+<p>If an <span data-concept="expectation-value-unnormalized">unnormalized wavefunction</span> where used, then Equation 4.3.7 changes to</p>
+$$ \begin{aligned} \langle \ka \rangle &= \dfrac{\langle \kpsi | \ka |\kpsi \rangle}{\langle \kpsi | \kpsi \rangle} \\[4pt] &=\dfrac{ \displaystyle \int_{-\infty}^{\infty} \kpsi^* \kAhat \kpsi d\kx}{ \displaystyle \int_{-\infty}^{\infty} \kpsi^* \kpsi d\kx}  \end{aligned} \tag{4.3.8} $$
+<p>The denominator is just the <span data-concept="normalization-condition">normalization</span> requirement discussed earlier. In general, the results of the various different measurements of $\kx$ will be scattered around the <span data-concept="quantum-expectation-value">expectation value</span> $\kxavg$. The degree of scatter is parameterized by the quantity</p>
+<figure class="dv" id="drv-variance"></figure>
+<p>which is known as the <em><span data-concept="variance">variance</span></em> of $\kx$. The square-root of this quantity, $\ksigx$, is called the <em><span data-concept="quantum-uncertainty">standard deviation</span></em> of $\kx$. We generally expect the results of measurements of $\kx$ to lie within a few standard deviations of the <span data-concept="quantum-expectation-value">expectation value</span> (Figure 4.3.1).</p>
+<figure class="sim" id="sim-sigma" data-figure="4.3.1" data-original="/media/ch04/122080-2000px-Standard_deviation_diagram.svg.png" data-original-width="402" data-original-caption="A plot of a normal distribution (or bell-shaped curve) where each band has a width of 1 standard deviation. image usd with permission from Wikipedia.">
+  <div class="sim-head"><span class="eyebrow">Figure 4.3.1</span><span>Each band is one <span data-concept="quantum-uncertainty">standard deviation</span> wide, and its number is the share of measurements that land in it. Change $\ksigx$ and the shares stay put; pick a state of the box and they change.</span></div>
+</figure>
+<div class="example" id="ex-4-3-1">
+<h3>Example 4.3.1</h3>
+<p>For a <span data-concept="particle-in-a-box">particle in a box</span> in its <span data-concept="ground-state">ground state</span>, calculate the <span data-concept="quantum-expectation-value">expectation value</span> of the</p>
+<ol type="a"><li><em>position</em>,</li><li>the <em>linear momentum</em>,</li><li>the <em>kinetic energy</em>, and</li><li>the total energy</li></ol>
+<h4>Solution</h4>
+<p>First the <span data-concept="wavefunction">wavefunction</span> needs to be defined. From the <span data-concept="particle-in-a-box">particle in the box</span> solutions, the <span data-concept="ground-state">ground state</span> <span data-concept="wavefunction">wavefunction</span> ($n=1$) is</p>
+$$ \kpsi = \sqrt{\dfrac{2}{\kL}} \sin \left ( \dfrac{\pi \kx}{\kL} \right ) $$
+<p>We can confirm that the <span data-concept="wavefunction">wavefunction</span> is normalized.</p>
+$$ \int \kpsi^* \kpsi \, d\tau = \int_{0}^{\kL} \sqrt{\dfrac{2}{\kL}} \sin \left ( \dfrac{\pi \kx}{\kL} \right ) \sqrt{\dfrac{2}{\kL}} \sin \left ( \dfrac{\pi \kx}{\kL} \right ) \, d\kx = 1 $$
+<p>Hence, the Equation 4.3.7 is the relevant equation to use.</p>
+<h4>Solution a</h4>
+<p>The <span data-concept="quantum-expectation-value">expectation value</span> of the <strong>position</strong> is:</p>
+<figure class="dv" id="drv-example-4-3-1-a"></figure>
+<h4>Solution b</h4>
+<p>The <span data-concept="quantum-expectation-value">expectation value</span> of the <strong>momentum</strong> is:</p>
+<figure class="dv" id="drv-example-4-3-1-b"></figure>
+<h4>Solution c</h4>
+<p>The <span data-concept="quantum-expectation-value">expectation value</span> of the <strong>kinetic energy</strong> is:</p>
+<figure class="dv" id="drv-example-4-3-1-c"></figure>
+<p>A position "on average" is in the middle of the box ($\kL/2$). It has equal probability of traveling towards the left or right, so the average momentum and velocity must be zero.</p>
+<h4>Solution d</h4>
+<p>The average kinetic energy must be equal to the total energy of the <span data-concept="ground-state">ground state</span> of the <span data-concept="particle-in-a-box">particle in the box</span>, as there is no other energy component (i.e, $\kV=0$).</p>
+</div>
+</section>
+
+<section id="expanding-the-wavefunction">
+<h2>Expanding the Wavefunction</h2>
+<p>It is also possible to demonstrate that the <span data-concept="eigenstate">eigenstates</span> of an operator attributed to a <span data-concept="observable">observable</span> form a <strong><span data-concept="complete-set">complete set</span></strong> (<em>i.e.</em>, that any general <span data-concept="wavefunction">wavefunction</span> can be written as a linear combination of these <span data-concept="eigenstate">eigenstates</span>). However, the proof is quite difficult, and we shall not attempt it here.</p>
+<p>In summary, given an operator $\kAhat$, any general <span data-concept="wavefunction">wavefunction</span>, $\kpsi(\kx)$, can be written</p>
+$$ \kpsi = \sum_{i}c_i \kphii $$
+<p>where the $c_i$ are complex weights, and the $\phi(\kx)$ are the properly <span data-concept="orthonormality">normalized (and mutually orthogonal)</span> <span data-concept="eigenstate">eigenstates</span> of $\kAhat$: i.e.,</p>
+$$ A \kphii = a_i \kphii $$
+<p>where $a_i$ is the <span data-concept="eigenvalue">eigenvalue</span> corresponding to the <span data-concept="eigenstate">eigenstate</span> $\kphii$, and</p>
+$$ \int_{-\infty}^\infty \kphii^\ast \phi_j d\kx = \delta_{ij}. \tag{4.3.10} $$
+<p>Here, $\delta_{ij}$ is called the <strong><span data-concept="kronecker-delta">Kronecker delta-function</span></strong>, and takes the value unity when its two indices are equal, and zero otherwise. It follows from Equations 4.3.8 and 4.3.10<sup class="fn" data-note="cite-coefficients"></sup> that</p>
+$$ c_i = \int_{-\infty}^\infty \kphii^\ast \kpsi d\kx. \tag{4.3.11} $$
+<p>Thus, the <span data-concept="expansion-coefficients">expansion coefficients</span> in Equation 4.3.11 are easily determined, given the <span data-concept="wavefunction">wavefunction</span> $\kpsi$ and the <span data-concept="eigenstate">eigenstates</span> $\kphii$. Moreover, if $\kpsi$ is a properly normalized <span data-concept="wavefunction">wavefunction</span> then Equations 4.3.8 and 4.3.10<sup class="fn" data-note="cite-sum"></sup> yield</p>
+$$ \sum_i \vert c_i\vert^2 =1. $$
+<figure class="dv" id="drv-expansion"></figure>
+<figure class="sim" id="sim-expansion">
+  <div class="sim-head"><span class="eyebrow">Sim</span><span>Add eigenstates of the box one at a time and watch the sum close in on the <span data-type="wavefunction">state</span>. Each bar is $|c_i|^2$, and the bars add up toward 1.</span></div>
+</figure>
+<div class="note">
+<div class="eyebrow">Note</div>
+<h3>Collapsing the Wavefunction</h3>
+<p><span data-concept="wavefunction-collapse">Wavefunction collapse</span> is said to occur when a <span data-concept="wavefunction">wavefunction</span>—initially in a <span data-concept="principle-of-superposition">superposition</span> of several <span data-concept="eigenstate">eigenstates</span>—appears to reduce to a single <span data-concept="eigenstate">eigenstate</span> (by "observation"). A particle (or a system in general) can be found in a given state $\kpsi(\kx,\kt)$. Suppose now a measurement is performed on the wavefuction to characterize a specific property of the system.</p>
+<figure class="sim" id="sim-collapse" data-original="/media/ch04/394140-cpn-a.svg,/media/ch04/394139-cpn-b.svg" data-original-caption="The measurement of position (with the position operator) effectively collapses this wavefunction that is a superposition of position eigenstates, which are delta-functions and are continuous - i.e. not quantized. Using a different measurement operation may in quantized values (CC BY-NC 4.0; Ümit Kaya via LibreTexts). The measurement of position (with the position operator) does not collapse this wavefunction since it is in a position eigenstate in contrast to the wavefunction above. Using a different measurement operation (e.g., kinetic energy) may &quot;collapse&quot; the wavefunction into a different eigenstate (CC BY-NC 4.0; Ümit Kaya via LibreTexts)">
+  <div class="sim-head"><span class="eyebrow">Figure</span><span>Three systems are prepared alike and each is measured once. A spread state <span data-concept="wavefunction-collapse">collapses</span> to a different place each time; switch to a position <span data-concept="eigenstate">eigenstate</span> and every measurement gives the same $\kx$.</span></div>
+</figure>
+<p>Mathematically, an operator $\kAhat$ is associated with this measurement process, which you suppose has a <em>complete orthonormal set</em> of eigenvalues<sup class="fn" data-note="set-of-eigenfunctions"></sup>: $\{ \phi_i \}$ that is typically an infinite set of functionals that depend on quantum number $n$. The <span data-concept="wavefunction">wavefunction</span> $\kPsi$ can be expand and a set of basis functions can be selected to specifies the <span data-concept="wavefunction">wavefunction</span> is the coefficients $\{c_n\}$ of the expansion. Therefore, if the system is perturbed, then your <span data-concept="wavefunction">wavefunction</span> will have another set of coefficients $\{c'_n\}$.</p>
+<p>If you <span data-concept="wavefunction">wavefunction</span> is in the <span data-concept="eigenstate">eigenstate</span> of the operator, then each measurement via that operator will give the same result.</p>
+</div>
+</section>

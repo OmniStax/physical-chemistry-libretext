@@ -1,0 +1,376 @@
+{
+ "id": "4.4",
+ "module": "13409",
+ "chapter": "4",
+ "title": "The Time-Dependent Schrödinger Equation",
+ "short": "The time-dependent Schrödinger equation",
+ "lead": "The time-independent Schrödinger equation gives a system's allowed energies but says nothing about how its state changes. The time-dependent equation does, and the way a state evolves depends on whether it is an eigenstate of the Hamiltonian or a mixture of eigenstates.",
+ "objectives": [
+  "Recognize the differences between the time-dependent and the time-independent Schrödinger equations",
+  "To distinguish between stationary and non-stationary wavefunctions"
+ ],
+ "summary_html": "",
+ "notes": "Adapted from Mark Tuckerman's page, shared under CC BY-NC-SA 4.0.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercise here. Both exercises were written by AI, on the stationary and nonstationary states the section introduces; numeric answers accept a 2% tolerance.",
+ "figures": [
+  {
+   "id": "sim-measure",
+   "kind": "sim",
+   "draws": [
+    "probability-density",
+    "energy",
+    "length"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "opening",
+   "concept": "time-dependent-schrodinger-equation",
+   "verb": "reinforces"
+  },
+  {
+   "span": "opening",
+   "concept": "stationary-state",
+   "verb": "reinforces"
+  },
+  {
+   "span": "time-dependent-wavefunctions",
+   "concept": "time-independent-schrodinger-equation",
+   "verb": "reinforces"
+  },
+  {
+   "span": "time-dependent-wavefunctions",
+   "concept": "time-dependent-schrodinger-equation",
+   "verb": "reinforces"
+  },
+  {
+   "span": "time-dependent-wavefunctions",
+   "concept": "probability-density",
+   "verb": "uses"
+  },
+  {
+   "span": "stationary-states",
+   "concept": "stationary-density-constant",
+   "verb": "introduces"
+  },
+  {
+   "span": "stationary-states",
+   "concept": "stationary-state",
+   "verb": "reinforces"
+  },
+  {
+   "span": "nonstationary-states",
+   "concept": "nonstationary-state",
+   "verb": "introduces"
+  },
+  {
+   "span": "nonstationary-states",
+   "concept": "wavefunction-collapse",
+   "verb": "reinforces"
+  },
+  {
+   "span": "nonstationary-states",
+   "concept": "observer-effect",
+   "verb": "introduces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "eq:4.4.10",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "nonstationary-states",
+   "prompt": "<p>An electron in a one-dimensional box 1.0 nm long is prepared in the state $\\Psi(x,0) = \\dfrac{1}{\\sqrt{2}}[\\psi_1(x) + \\psi_2(x)]$ of Equation 4.4.8. Its probability density changes in time and returns to its starting shape at regular intervals. How long is one interval, in femtoseconds? ($h = 6.626\\times10^{-34}$ J s, $m_e = 9.109\\times10^{-31}$ kg.)</p>",
+   "answer": {
+    "type": "number",
+    "value": 3.67,
+    "unit": "fs",
+    "generated_by": "ai",
+    "hint": "In the density, the cross term carries the phase $(E_2 - E_1)t/\\hbar$.",
+    "solution": "<p>Each eigenstate evolves with its own phase factor, $\\Psi(x,t) = \\dfrac{1}{\\sqrt{2}}\\left[\\psi_1 e^{-iE_1t/\\hbar} + \\psi_2 e^{-iE_2t/\\hbar}\\right]$. The box's wavefunctions are real, so</p>$$ p(x,t) = \\dfrac{1}{2}\\left[\\psi_1^2 + \\psi_2^2 + 2\\psi_1\\psi_2\\cos\\dfrac{(E_2-E_1)t}{\\hbar}\\right] $$<p>The density repeats when the cosine's argument grows by $2\\pi$, after $T = 2\\pi\\hbar/(E_2 - E_1) = h/(E_2 - E_1)$. For the box $E_n = n^2h^2/8mL^2$, so $E_1 = \\dfrac{(6.626\\times10^{-34})^2}{8(9.109\\times10^{-31})(1.0\\times10^{-9})^2} = 6.02\\times10^{-20}$ J and $E_2 - E_1 = 3E_1 = 1.81\\times10^{-19}$ J. Then</p>$$ T = \\dfrac{6.626\\times10^{-34}\\ \\text{J s}}{1.81\\times10^{-19}\\ \\text{J}} = 3.67\\times10^{-15}\\ \\text{s} = 3.67\\ \\text{fs} $$"
+   }
+  },
+  {
+   "id": "a2",
+   "source_id": "is called a *stationary state*",
+   "kind": "exercise",
+   "bloom": "Analyze",
+   "place": {
+    "at": "end"
+   },
+   "cite": "stationary-states",
+   "prompt": "<p>Three wavefunctions of a particle in a box are written with the energies $E_n$ of its eigenstates $\\psi_n$:</p><ol type=\\\"i\\\"><li>$\\Psi(x,t) = \\psi_2(x)e^{-iE_2t/\\hbar}$</li><li>$\\Psi(x,t) = \\dfrac{1}{\\sqrt{2}}\\left[\\psi_1(x)e^{-iE_1t/\\hbar} + \\psi_3(x)e^{-iE_3t/\\hbar}\\right]$</li><li>$\\Psi(x,t) = \\dfrac{1+i}{\\sqrt{2}}\\,\\psi_1(x)e^{-iE_1t/\\hbar}$</li></ol><p>Which of them are stationary states?</p>",
+   "answer": {
+    "type": "choice",
+    "generated_by": "ai",
+    "options": [
+     "(i) only",
+     "(i) and (iii)",
+     "(ii) only",
+     "all three"
+    ],
+    "correct": 1,
+    "hint": "Work out $|\\Psi(x,t)|^2$ for each and see whether $t$ is left in it.",
+    "solution": "<p>(i) is an eigenstate with its phase factor, Equation 4.4.6, so $|\\Psi|^2 = |\\psi_2(x)|^2$ does not change. (iii) is $\\psi_1$ times the constant $(1+i)/\\sqrt{2}$, whose modulus is 1, so $|\\Psi|^2 = |\\psi_1(x)|^2$ and it is stationary too. (ii) mixes two energies: its density has the cross term $\\psi_1\\psi_3\\cos[(E_3-E_1)t/\\hbar]$, which changes in time, so it is a nonstationary state.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "nonstationary-state"
+  },
+  {
+   "exercise": "a2",
+   "concept": "stationary-density-constant"
+  },
+  {
+   "exercise": "a2",
+   "concept": "nonstationary-state"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "no-example",
+   "kind": "correction",
+   "html": "The section has no earlier example. The state meant is the one of Equation 4.4.8, just above."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "stationary-state",
+   "what": "a stationary state",
+   "source": "Physical Chemistry (LibreTexts), 4.4 The Time-Dependent Schrödinger Equation",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kPsi(\\kx,\\kt) = \\kpsin(\\kx)\\,e^{-i\\kEn\\kt/\\hbar}",
+       "src": "(4.4.6)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\kPsi(\\kx,\\kt)} = \\mk{r}{\\kpsin(\\kx)\\,e^{-i\\kEn\\kt/\\hbar}}",
+      "src": "(4.4.6)"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\dfrac{\\partial\\kPsi}{\\partial\\kt}} = \\mk{r}{\\kpsin(\\kx)\\left(\\dfrac{-i\\kEn}{\\hbar}\\right)e^{-i\\kEn\\kt/\\hbar}}",
+       "uses": [],
+       "cap": "$\\psi_n(x)$ does not depend on $t$, so only the exponential is differentiated."
+      },
+      {
+       "tex": "\\mk{l}{i\\hbar\\dfrac{\\partial\\kPsi}{\\partial\\kt}} = \\mk{r}{\\kEn\\kpsin(\\kx)\\,e^{-i\\kEn\\kt/\\hbar}}",
+       "uses": []
+      }
+     ],
+     "src": "4.4",
+     "note": "The book writes the derivative as $d\\Psi/dt$. $\\Psi$ depends on $x$ as well, so it is the partial derivative of Equation 4.4.4."
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\kPsi(\\kx,\\kt) = \\kpsin(\\kx)\\,e^{-i\\kEn\\kt/\\hbar}",
+       "src": "(4.4.6)"
+      },
+      {
+       "tex": "\\kH\\kpsin(\\kx) = \\kEn\\kpsin(\\kx)",
+       "src": "(4.4.1)"
+      },
+      {
+       "step": 0
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\kH\\kPsi(\\kx,\\kt)} = \\mk{r}{e^{-i\\kEn\\kt/\\hbar}\\,\\kH\\kpsin(\\kx)}",
+      "uses": [
+       0
+      ],
+      "why": "$\\hat{H}$ acts on $x$ alone, so the factor $e^{-iE_nt/\\hbar}$ passes through it."
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\kH\\kPsi(\\kx,\\kt)} = \\mk{r}{e^{-i\\kEn\\kt/\\hbar}\\,\\kEn\\kpsin(\\kx)}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{l}{\\kH\\kPsi(\\kx,\\kt)} = \\mk{r}{i\\hbar\\dfrac{\\partial\\kPsi}{\\partial\\kt}}",
+       "uses": [
+        2
+       ],
+       "cap": "So $\\psi_n(x)e^{-iE_nt/\\hbar}$ satisfies the time-dependent Schrödinger equation, Equation 4.4.4."
+      }
+     ],
+     "src": "4.4"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\kpdens(\\kx,\\kt) = |\\kPsi(\\kx,\\kt)|^2",
+       "src": "4.4"
+      },
+      {
+       "tex": "|\\kPsi|^2 = \\kPsi^*\\kPsi",
+       "src": "3.4"
+      },
+      {
+       "tex": "\\kPsi(\\kx,\\kt) = \\kpsin(\\kx)\\,e^{-i\\kEn\\kt/\\hbar}",
+       "src": "(4.4.6)"
+      },
+      {
+       "tex": "\\kpdens(\\kx,0) = |\\kpsin(\\kx)|^2",
+       "src": "(4.4.5)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{p}{\\kpdens(\\kx,\\kt)} = \\mk{r}{|\\kPsi(\\kx,\\kt)|^2}",
+      "src": "4.4"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{p}{\\kpdens(\\kx,\\kt)} = \\mk{r}{\\kPsi^*(\\kx,\\kt)\\,\\kPsi(\\kx,\\kt)}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{p}{\\kpdens(\\kx,\\kt)} = \\mk{r}{\\left[\\kpsin^*(\\kx)\\,e^{i\\kEn\\kt/\\hbar}\\right]\\left[\\kpsin(\\kx)\\,e^{-i\\kEn\\kt/\\hbar}\\right]}",
+       "uses": [
+        2
+       ],
+       "cap": "Conjugating turns $-i$ into $i$; $E_n$ and $t$ are real."
+      },
+      {
+       "tex": "\\mk{p}{\\kpdens(\\kx,\\kt)} = \\mk{r}{\\kpsin^*(\\kx)\\kpsin(\\kx)\\,e^{i\\kEn\\kt/\\hbar}e^{-i\\kEn\\kt/\\hbar}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{p}{\\kpdens(\\kx,\\kt)} = \\mk{r}{\\kpsin^*(\\kx)\\kpsin(\\kx)}",
+       "uses": [],
+       "cap": "$e^{i\\theta}e^{-i\\theta} = e^{0} = 1$."
+      },
+      {
+       "tex": "\\mk{p}{\\kpdens(\\kx,\\kt)} = \\mk{r}{|\\kpsin(\\kx)|^2}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{p}{\\kpdens(\\kx,\\kt)} = \\mk{r}{\\kpdens(\\kx,0)}",
+       "uses": [
+        3
+       ]
+      }
+     ],
+     "src": "4.4",
+     "note": "The book writes the first factor as $\\psi_n(x)e^{iE_nt/\\hbar}$ and the product as $\\psi_n^2(x)$; the conjugate $\\psi_n^*$ is meant, which equals $\\psi_n$ only for a real $\\psi_n$."
+    }
+   ]
+  },
+  {
+   "id": "mixture-density",
+   "what": "a mixture's density changes in time",
+   "source": "Physical Chemistry (LibreTexts), 4.4 The Time-Dependent Schrödinger Equation",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kPsi(\\kx,0) = \\dfrac{1}{\\sqrt{2}}\\left[\\kpsi_1(\\kx) + \\kpsi_2(\\kx)\\right]",
+       "src": "(4.4.8)"
+      },
+      {
+       "tex": "\\kPsi(\\kx,\\kt) = \\kpsin(\\kx)\\,e^{-i\\kEn\\kt/\\hbar}",
+       "src": "(4.4.6)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{s}{\\kPsi(\\kx,0)} = \\mk{r}{\\dfrac{1}{\\sqrt{2}}\\left[\\kpsi_1(\\kx) + \\kpsi_2(\\kx)\\right]}",
+      "src": "(4.4.8)"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{s}{\\kPsi(\\kx,\\kt)} = \\mk{r}{\\dfrac{1}{\\sqrt{2}}\\left[\\kpsi_1(\\kx)\\,e^{-i\\kE_1\\kt/\\hbar} + \\kpsi_2(\\kx)\\,e^{-i\\kE_2\\kt/\\hbar}\\right]}",
+       "uses": [
+        1
+       ],
+       "cap": "The time-dependent Schrödinger equation is linear, so each eigenstate in the sum takes its own phase factor, as a stationary state does."
+      }
+     ],
+     "src": "4.4"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "|\\kPsi|^2 = \\kPsi^*\\kPsi",
+       "src": "3.4"
+      },
+      {
+       "step": 0
+      }
+     ],
+     "then": {
+      "tex": "\\mk{p}{\\kpdens(\\kx,\\kt)} = \\mk{r}{|\\kPsi(\\kx,\\kt)|^2}",
+      "src": "(4.4.9)"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{p}{\\kpdens(\\kx,\\kt)} = \\mk{r}{\\kPsi^*(\\kx,\\kt)\\,\\kPsi(\\kx,\\kt)}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{p}{\\kpdens(\\kx,\\kt)} = \\mk{r}{\\dfrac{1}{2}\\left[\\kpsi_1^*e^{i\\kE_1\\kt/\\hbar} + \\kpsi_2^*e^{i\\kE_2\\kt/\\hbar}\\right]\\left[\\kpsi_1e^{-i\\kE_1\\kt/\\hbar} + \\kpsi_2e^{-i\\kE_2\\kt/\\hbar}\\right]}",
+       "uses": [
+        1
+       ],
+       "cap": "Conjugating turns each $-i$ into $i$."
+      },
+      {
+       "tex": "\\mk{p}{\\kpdens(\\kx,\\kt)} = \\mk{r}{\\dfrac{1}{2}\\left[|\\kpsi_1|^2 + |\\kpsi_2|^2 + \\kpsi_1^*\\kpsi_2\\,e^{-i(\\kE_2-\\kE_1)\\kt/\\hbar} + \\kpsi_2^*\\kpsi_1\\,e^{i(\\kE_2-\\kE_1)\\kt/\\hbar}\\right]}",
+       "uses": [],
+       "cap": "In the squared terms the phase factors cancel; in the cross terms they leave the difference of the two energies."
+      },
+      {
+       "tex": "\\mk{p}{\\kpdens(\\kx,\\kt)} = \\mk{r}{\\dfrac{1}{2}\\left[|\\kpsi_1|^2 + |\\kpsi_2|^2\\right] + \\mathrm{Re}\\left[\\kpsi_1^*\\kpsi_2\\,e^{-i(\\kE_2-\\kE_1)\\kt/\\hbar}\\right]}",
+       "uses": [],
+       "cap": "The two cross terms are complex conjugates of each other, and $z + z^* = 2\\,\\mathrm{Re}\\,z$. The last term changes with $t$, repeating every $h/(E_2 - E_1)$, so the density at time $t$ is not the density at $t = 0$."
+      }
+     ],
+     "src": "4.4"
+    }
+   ]
+  }
+ ]
+}

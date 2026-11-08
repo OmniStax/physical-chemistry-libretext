@@ -1,0 +1,81 @@
+<section id="opening">
+<h2>Commuting operators and precision</h2>
+<p>If two operators commute then both quantities can be measured at the same time with infinite precision, if not then there is a tradeoff in the accuracy in the measurement for one quantity vs. the other. This is the mathematical representation of the <span data-concept="heisenberg-uncertainty-principle">Heisenberg Uncertainty principle</span>.</p>
+</section>
+
+<section id="commuting-operators">
+<h2>Commuting Operators</h2>
+<p>One important property of <span data-concept="operator">operators</span> is that the order of operation matters. Thus in general</p>
+$$ \kAhat{\kEhat f(x)} \not= \kEhat{\kAhat f(x)} $$
+<p>unless the two operators <strong><span data-concept="commutator">commute</span></strong>. Two operators commute if the following equation is true:</p>
+$$ \left[\kAhat,\kEhat\right] = \kAhat\kEhat - \kEhat\kAhat = 0 $$
+<p>To determine whether two operators commute first operate $\kAhat\kEhat$ on a function $f(x)$. Then operate$\kEhat\kAhat$ the same function $f(x)$. If the same answer is obtained subtracting the two functions will equal zero and the two operators will commute.on</p>
+<p><span data-concept="commuting-operators">If two operators commute, then they can have the same set of eigenfunctions.</span> By definition, two operators $\kAhat$ and $\kBhat$ commute if the effect of applying $\kAhat$ then $\kBhat$ is the same as applying $\kBhat$ then $\kAhat$, i.e.</p>
+$$ \kAhat\kBhat = \kBhat \kAhat. $$
+<p>For example, the operations brushing-your-teeth and combing-your-hair commute, while the operations getting-dressed and taking-a-shower do not. This theorem is very important. If two operators commute and consequently have the same set of <span data-concept="eigenfunction">eigenfunctions</span>, then the corresponding physical quantities can be evaluated or measured exactly simultaneously with no limit on the uncertainty. As mentioned previously, the <span data-concept="eigenvalue">eigenvalues</span> of the operators correspond to the measured values.</p>
+<p>If $\kAhat$ and $\kBhat$ commute and $\kpsi$ is an eigenfunction of $\kAhat$<sup class="fn" data-note="of-b"></sup> with eigenvalue $b$, then</p>
+<figure class="dv" id="drv-shared-eigenfunctions"></figure>
+<p>Consequently $\kpsi$ also is an eigenfunction of $\kAhat$ with eigenvalue $a$.</p>
+<div class="example" id="ex-4-6-1">
+<h3>Example 4.6.1</h3>
+<p>Do the following pairs of operators commute?</p>
+<ol type="a"><li>$\hat{A} = \dfrac{d}{dx}$ and $\hat{E} = x^2$</li><li>$\hat{B}= \dfrac {h} {x}$ and $\hat{C}\{f(x)\} = f(x) +3$</li><li>$\hat{J} = 3x$ and $\hat{O} = x^{-1}$</li></ol>
+<h4>Solution a</h4>
+<p>This requires evaluating $\left[\hat{A},\hat{E}\right]$, which requires solving for $\hat{A} \{\hat{E} f(x)\}$ and $\hat{E} \{\hat{A} f(x)\}$ for arbitrary wavefunction $f(x)$ and asking if they are equal.</p>
+$$ \hat{A} \{\hat{E} f(x)\} = \hat{A}\{ x^2 f(x) \}= \dfrac{d}{dx} \{ x^2 f(x)\} = 2xf(x) + x^2 f'(x) $$
+<p>From the product rule of differentiation.</p>
+$$ \hat{E} \{\hat{A}f(x)\} = \hat{E}\{f'(x)\} = x^2 f'(x) $$
+<p>Now ask if they are equal</p>
+$$ \left[\hat{A},\hat{E}\right] = 2x f(x) + x^2 f'(x) - x^2f'(x) = 2x f(x) \not= 0 $$
+<p>Therefore the two operators do not commute.</p>
+<h4>Solution b</h4>
+<p>This requires evaluating $\left[\hat{B},\hat{C}\right]$ like in Example 4.6.1<sup class="fn" data-note="part-a"></sup></p>
+<p>.</p>
+$$ \hat{B} \{\hat{C}f(x)\} = \hat{B}\{f(x) +3\} = \dfrac {h}{x} (f(x) +3) = \dfrac {h f(x)}{x} + \dfrac{3h}{x} $$
+$$ \hat{C} \{\hat{B}f(x)\} = \hat{C} \{ \dfrac {h} {x} f(x)\} = \dfrac {h f(x)} {x} +3 $$
+<p>Now ask if they are equal</p>
+$$ \left[\hat{B},\hat{C}\right] = \dfrac {h f(x)} {x} + \dfrac {3h} {x} - \dfrac {h f(x)} {x} -3 \not= 0 $$
+<p>The two operators do <strong>not</strong> commute.</p>
+<h4>Solution c</h4>
+<p>This requires evaluating $\left[\hat{J},\hat{O}\right]$</p>
+$$ \hat{J} \{\hat{O}f(x) \} = \hat{J} \{f(x)3x\} = f(x)3x/x = 3f(x) $$
+$$ \hat{O} \{\hat{J}f(x) \}= \hat{O} \{\dfrac{f(x)}{x}\} = \dfrac{f(x)3x}{x} = 3f(x) $$
+<p><sup class="fn" data-note="swapped"></sup></p>
+$$ \left[\hat{J},\hat{O}\right] = 3f(x) - 3f(x) = 0 $$
+<p>Because the difference is zero, the two operators commute.</p>
+</div>
+</section>
+
+<section id="general-heisenberg-uncertainty-principle">
+<h2>General Heisenberg Uncertainty Principle</h2>
+<p>Although it will not be proven here, <span data-concept="general-uncertainty-principle">there is a general statement of the uncertainty principle in terms of the commutation property of operators</span>. If two operators $\kAhat$ and $\kBhat$ do not commute, then the <span data-concept="quantum-uncertainty">uncertainties</span> (standard deviations $σ$) in the physical quantities associated with these operators must satisfy</p>
+$$ \sigma _A \sigma _B \ge \left| \int \kpsi ^* [ \kAhat \kBhat - \kBhat \kAhat ] \kpsi \,d\tau \right| \tag{4.6.4} $$
+<p><sup class="fn" data-note="half"></sup>where the integral inside the square brackets is called the <strong><span data-concept="commutator">commutator</span></strong>,<sup class="fn" data-note="bracket"></sup> and ││signifies the modulus or absolute value. If $\kAhat$ and $\kBhat$ commute, then the right-hand-side of Equation 4.6.4 is zero, so either or both $σ_A$ and $σ_B$ could be zero, and there is no restriction on the uncertainties in the measurements of the eigenvalues $a$ and $b$. If $\kAhat$ and $\kBhat$ do not commute, then the right-hand-side of Equation 4.6.4 will not be zero, and neither $σ_A$ nor $σ_B$ can be zero unless the other is infinite. Consequently, both a and b cannot be eigenvalues of the same wavefunctions and cannot be measured simultaneously to arbitrary precision.</p>
+</section>
+
+<section id="applications">
+<h2>Applications</h2>
+<p>Operators are very common with a variety of purposes. They are used to figure out the energy of a <span data-concept="wavefunction">wavefunction</span> using the Schrödinger Equation.</p>
+$$ \kH\kpsi = \kE\kpsi $$
+<p>They also help to explain observations made in the experimentally. <span data-concept="angular-momentum-commutation">An example of this is the relationship between the magnitude of the angular momentum and the components.</span></p>
+$$ \left[\kLsqhat, \kLxhat^2\right] = \left[\kLsqhat, \kLyhat^2\right] = \left[\kLsqhat, \kLzhat^2\right] = 0 $$
+<p>However the components do not commute themselves. An additional property of commuters that commute is that both quantities can be measured simultaneously. Thus, the magnitude of the <span data-concept="angular-momentum-operator">angular momentum</span> and ONE of the components (usually z) can be known at the same time however, NOTHING is known about the other components.</p>
+<blockquote><p>The physical quantities corresponding to operators that commute can be measured simultaneously to any precision.</p></blockquote>
+<div class="example" id="ex-4-6-2b">
+<h3>Example 4.6.2B</h3>
+<p>Determine whether the following two operators commute:</p>
+$$ \hat{I} = 5 $$
+<p>and</p>
+$$ \hat{L} = \displaystyle \int_{[1]}^{[\infty]} d[x] $$
+<p><sup class="fn" data-note="template"></sup></p>
+<h4>Solution</h4>
+<p>The identity operator, $\hat{I}$ is a real number and commutes with everything. Thus, these two operators commute. We can also directly evaluate the commutator:</p>
+$$ \left[\hat{I},\hat{L}\right] $$
+$$ \left[\hat{I},\hat{L}\right] f(x) = 5 \displaystyle \int_{1}^{\infty} f(x) d(x)  - \displaystyle \int_{1}^{\infty} 5 f(x) d(x) = 0 $$
+</div>
+</section>
+
+<section id="references">
+<h2>References</h2>
+<ol><li>Gohberg, I. Basic Operator Theory; Birkhäuser: Boston, 2001</li><li>McQuarrie, D.A. Quantum Chemistry, 2nd Edition; University Science Books:Sausalito, 2008</li><li>Schechter, M. Operator Methods in Quantum Mechanics; Dover Publications, 2003</li></ol>
+</section>

@@ -1,0 +1,1062 @@
+{
+ "id": "5",
+ "dir": "ch05",
+ "title": "The Harmonic Oscillator and the Rigid Rotor",
+ "intro": {
+  "module": "11782",
+  "slug": "05:_The_Harmonic_Oscillator_and_the_Rigid_Rotor"
+ },
+ "summary": {
+  "module": "550562",
+  "slug": "05:_The_Harmonic_Oscillator_and_the_Rigid_Rotor/5.S:_The_Harmonic_Oscillator_and_the_Rigid_Rotor_(Summary)"
+ },
+ "sections": [
+  {
+   "id": "5.1",
+   "module": "13413",
+   "title": "A Harmonic Oscillator Obeys Hooke's Law",
+   "slug": "05:_The_Harmonic_Oscillator_and_the_Rigid_Rotor/5.01:_A_Harmonic_Oscillator_Obeys_Hooke's_Law"
+  },
+  {
+   "id": "5.2",
+   "module": "13414",
+   "title": "The Equation for a Harmonic-Oscillator Model of a Diatomic Molecule Contains the Reduced Mass of the Molecule",
+   "slug": "05:_The_Harmonic_Oscillator_and_the_Rigid_Rotor/5.02:_The_Equation_for_a_Harmonic-Oscillator_Model_of_a_Diatomic_Molecule_Contains_the_Reduced_Mass_of_the_Molecule"
+  },
+  {
+   "id": "5.3",
+   "module": "13415",
+   "title": "The Harmonic Oscillator Approximates Molecular Vibrations",
+   "slug": "05:_The_Harmonic_Oscillator_and_the_Rigid_Rotor/5.03:_The_Harmonic_Oscillator_Approximates_Molecular_Vibrations"
+  },
+  {
+   "id": "5.4",
+   "module": "13419",
+   "title": "The Harmonic Oscillator Energy Levels",
+   "slug": "05:_The_Harmonic_Oscillator_and_the_Rigid_Rotor/5.04:_The_Harmonic_Oscillator_Energy_Levels"
+  },
+  {
+   "id": "5.5",
+   "module": "13418",
+   "title": "The Harmonic Oscillator and Infrared Spectra",
+   "slug": "05:_The_Harmonic_Oscillator_and_the_Rigid_Rotor/5.05:_The_Harmonic_Oscillator_and_Infrared_Spectra"
+  },
+  {
+   "id": "5.6",
+   "module": "13420",
+   "title": "The Harmonic Oscillator Wavefunctions involve Hermite Polynomials",
+   "slug": "05:_The_Harmonic_Oscillator_and_the_Rigid_Rotor/5.06:_The_Harmonic_Oscillator_Wavefunctions_involve_Hermite_Polynomials"
+  },
+  {
+   "id": "5.7",
+   "module": "13421",
+   "title": "Hermite Polynomials are either Even or Odd Functions",
+   "slug": "05:_The_Harmonic_Oscillator_and_the_Rigid_Rotor/5.07:_Hermite_Polynomials_are_either_Even_or_Odd_Functions"
+  },
+  {
+   "id": "5.8",
+   "module": "13422",
+   "title": "The Energy Levels of a Rigid Rotor",
+   "slug": "05:_The_Harmonic_Oscillator_and_the_Rigid_Rotor/5.08:_The_Energy_Levels_of_a_Rigid_Rotor"
+  },
+  {
+   "id": "5.9",
+   "module": "13423",
+   "title": "The Rigid Rotator is a Model for a Rotating Diatomic Molecule",
+   "slug": "05:_The_Harmonic_Oscillator_and_the_Rigid_Rotor/5.09:_The_Rigid_Rotator_is_a_Model_for_a_Rotating_Diatomic_Molecule"
+  }
+ ],
+ "variables": [
+  {
+   "sym": "F",
+   "concept": "hookes-law",
+   "meaning": "the restoring force of the spring, proportional and opposite to the displacement",
+   "unit": "N",
+   "section": "5.1"
+  },
+  {
+   "sym": "x",
+   "concept": "vibrational-coordinate",
+   "meaning": "the displacement from equilibrium",
+   "unit": "m",
+   "section": "5.1"
+  },
+  {
+   "sym": "k",
+   "concept": "force-constant",
+   "meaning": "the force constant, the stiffness of the spring or the bond",
+   "unit": "N/m",
+   "section": "5.1"
+  },
+  {
+   "sym": "V",
+   "concept": "harmonic-potential",
+   "meaning": "the harmonic potential energy, ½kx²",
+   "unit": "J",
+   "section": "5.1"
+  },
+  {
+   "sym": "m",
+   "type": "mass",
+   "meaning": "the mass attached to the spring",
+   "unit": "kg",
+   "section": "5.1"
+  },
+  {
+   "sym": "t",
+   "type": "time",
+   "meaning": "the time",
+   "unit": "s",
+   "section": "5.1"
+  },
+  {
+   "sym": "x_o",
+   "type": "length",
+   "meaning": "the amplitude of the oscillation",
+   "unit": "m",
+   "section": "5.1"
+  },
+  {
+   "sym": "omega",
+   "concept": "oscillator-frequency",
+   "meaning": "the angular frequency of the oscillator, √(k/m)",
+   "unit": "rad/s",
+   "section": "5.1"
+  },
+  {
+   "sym": "phi",
+   "meaning": "the phase of the oscillation",
+   "section": "5.1"
+  },
+  {
+   "sym": "p",
+   "type": "momentum",
+   "meaning": "the momentum of the oscillating mass",
+   "unit": "kg·m/s",
+   "section": "5.1"
+  },
+  {
+   "sym": "v",
+   "type": "velocity",
+   "meaning": "the velocity of the oscillating mass",
+   "unit": "m/s",
+   "section": "5.1"
+  },
+  {
+   "sym": "E",
+   "concept": "oscillator-energy",
+   "meaning": "the total energy of the oscillator",
+   "unit": "J",
+   "section": "5.1"
+  },
+  {
+   "sym": "T",
+   "type": "energy",
+   "meaning": "the kinetic energy of the oscillator",
+   "unit": "J",
+   "section": "5.1"
+  },
+  {
+   "sym": "A",
+   "concept": "turning-points",
+   "meaning": "the turning point, the largest displacement, reached when all the energy is potential",
+   "unit": "m",
+   "section": "5.1"
+  },
+  {
+   "sym": "mu",
+   "concept": "reduced-mass",
+   "meaning": "the reduced mass of the equivalent one-particle system",
+   "unit": "kg",
+   "section": "5.1"
+  },
+  {
+   "sym": "m_1",
+   "type": "mass",
+   "meaning": "the mass of the first atom",
+   "unit": "kg",
+   "section": "5.1"
+  },
+  {
+   "sym": "m_2",
+   "type": "mass",
+   "meaning": "the mass of the second atom",
+   "unit": "kg",
+   "section": "5.1"
+  },
+  {
+   "sym": "r_vec",
+   "type": "length",
+   "meaning": "the vector along the internuclear axis, whose length is the bond length",
+   "unit": "m",
+   "section": "5.1"
+  },
+  {
+   "sym": "mu_AB",
+   "concept": "reduced-mass",
+   "meaning": "the reduced mass of the diatomic molecule AB",
+   "unit": "kg",
+   "section": "5.2"
+  },
+  {
+   "sym": "m_A",
+   "type": "mass",
+   "meaning": "the mass of atom A",
+   "unit": "kg",
+   "section": "5.2"
+  },
+  {
+   "sym": "m_B",
+   "type": "mass",
+   "meaning": "the mass of atom B",
+   "unit": "kg",
+   "section": "5.2"
+  },
+  {
+   "sym": "mu",
+   "concept": "reduced-mass",
+   "meaning": "the reduced mass of the system",
+   "unit": "kg",
+   "section": "5.2"
+  },
+  {
+   "sym": "m_1",
+   "type": "mass",
+   "meaning": "the mass of the first atom",
+   "unit": "kg",
+   "section": "5.2"
+  },
+  {
+   "sym": "m_2",
+   "type": "mass",
+   "meaning": "the mass of the second atom",
+   "unit": "kg",
+   "section": "5.2"
+  },
+  {
+   "sym": "V",
+   "concept": "harmonic-potential",
+   "meaning": "the quadratic potential energy of the oscillator",
+   "unit": "J",
+   "section": "5.2"
+  },
+  {
+   "sym": "k",
+   "concept": "force-constant",
+   "meaning": "the force constant of the bond",
+   "unit": "N/m",
+   "section": "5.2"
+  },
+  {
+   "sym": "x",
+   "concept": "vibrational-coordinate",
+   "meaning": "the displacement from equilibrium",
+   "unit": "m",
+   "section": "5.2"
+  },
+  {
+   "sym": "H_op",
+   "concept": "hamiltonian-operator",
+   "meaning": "the Hamiltonian operator of the quantum harmonic oscillator",
+   "section": "5.2"
+  },
+  {
+   "sym": "psi",
+   "concept": "wavefunction",
+   "meaning": "the wavefunction of the oscillator",
+   "section": "5.2"
+  },
+  {
+   "sym": "E",
+   "type": "energy",
+   "meaning": "the energy of the oscillator",
+   "unit": "J",
+   "section": "5.2"
+  },
+  {
+   "sym": "E_v",
+   "concept": "oscillator-energy-levels",
+   "meaning": "the energy of the oscillator's level v",
+   "unit": "J",
+   "section": "5.2"
+  },
+  {
+   "sym": "v_q",
+   "concept": "vibrational-quantum-number",
+   "meaning": "the vibrational quantum number, v = 0, 1, 2, …",
+   "section": "5.2"
+  },
+  {
+   "sym": "nu",
+   "concept": "oscillator-frequency",
+   "meaning": "the natural vibrational frequency, (1/2π)√(k/μ)",
+   "unit": "Hz",
+   "section": "5.2"
+  },
+  {
+   "sym": "V",
+   "type": "energy",
+   "meaning": "the potential energy of the vibration, a function of the bond length",
+   "unit": "J",
+   "section": "5.3"
+  },
+  {
+   "sym": "x",
+   "type": "length",
+   "meaning": "the bond length, the coordinate of the potential curve",
+   "unit": "m",
+   "section": "5.3",
+   "redefines": true
+  },
+  {
+   "sym": "x_0",
+   "type": "length",
+   "meaning": "the equilibrium bond distance",
+   "unit": "m",
+   "section": "5.3"
+  },
+  {
+   "sym": "k",
+   "concept": "force-constant",
+   "meaning": "the harmonic force constant",
+   "unit": "N/m",
+   "section": "5.3"
+  },
+  {
+   "sym": "gamma",
+   "meaning": "the first anharmonic (cubic) coefficient of the potential",
+   "section": "5.3"
+  },
+  {
+   "sym": "E_v",
+   "concept": "anharmonic-energy-levels",
+   "meaning": "the energy of the anharmonic level v",
+   "unit": "cm⁻¹",
+   "section": "5.3"
+  },
+  {
+   "sym": "v_q",
+   "concept": "vibrational-quantum-number",
+   "meaning": "the vibrational quantum number",
+   "section": "5.3"
+  },
+  {
+   "sym": "nu_e",
+   "type": "wavenumber",
+   "meaning": "the harmonic vibrational wavenumber of the anharmonic expansion",
+   "unit": "cm⁻¹",
+   "section": "5.3"
+  },
+  {
+   "sym": "x_e",
+   "meaning": "the first anharmonicity constant",
+   "section": "5.3"
+  },
+  {
+   "sym": "y_e",
+   "meaning": "the second anharmonicity constant",
+   "section": "5.3"
+  },
+  {
+   "sym": "D_0",
+   "concept": "dissociation-energy",
+   "meaning": "the dissociation energy, measured from the v = 0 level",
+   "unit": "J",
+   "section": "5.3"
+  },
+  {
+   "sym": "D_e",
+   "concept": "well-depth",
+   "meaning": "the well depth, measured from the minimum of the potential",
+   "unit": "J",
+   "section": "5.3"
+  },
+  {
+   "sym": "D_M",
+   "concept": "well-depth",
+   "meaning": "the depth of the Morse potential, V(x = ∞)",
+   "unit": "J",
+   "section": "5.3"
+  },
+  {
+   "sym": "beta",
+   "meaning": "the constant that sets the width of the Morse potential",
+   "unit": "m⁻¹",
+   "section": "5.3"
+  },
+  {
+   "sym": "r_e",
+   "type": "length",
+   "meaning": "the equilibrium internuclear separation",
+   "unit": "m",
+   "section": "5.3"
+  },
+  {
+   "sym": "H_op",
+   "concept": "hamiltonian-operator",
+   "meaning": "the Hamiltonian operator with the Morse potential",
+   "section": "5.3"
+  },
+  {
+   "sym": "m",
+   "type": "mass",
+   "meaning": "the mass in the Morse Hamiltonian",
+   "unit": "kg",
+   "section": "5.3"
+  },
+  {
+   "sym": "mu",
+   "concept": "reduced-mass",
+   "meaning": "the reduced mass of the oscillating system",
+   "unit": "kg",
+   "section": "5.4"
+  },
+  {
+   "sym": "k",
+   "concept": "force-constant",
+   "meaning": "the effective force constant of the normal mode",
+   "unit": "N/m",
+   "section": "5.4"
+  },
+  {
+   "sym": "E_v",
+   "concept": "oscillator-energy-levels",
+   "meaning": "the energy of the oscillator's level v",
+   "unit": "J",
+   "section": "5.4"
+  },
+  {
+   "sym": "v_q",
+   "concept": "vibrational-quantum-number",
+   "meaning": "the vibrational quantum number",
+   "section": "5.4"
+  },
+  {
+   "sym": "omega",
+   "concept": "oscillator-frequency",
+   "meaning": "the angular frequency of the oscillator, √(k/μ)",
+   "unit": "rad/s",
+   "section": "5.4"
+  },
+  {
+   "sym": "nu",
+   "concept": "oscillator-frequency",
+   "meaning": "the frequency of the oscillator",
+   "unit": "Hz",
+   "section": "5.4"
+  },
+  {
+   "sym": "Q",
+   "concept": "vibrational-coordinate",
+   "meaning": "the displacement of the oscillator from its equilibrium position",
+   "unit": "m",
+   "section": "5.4"
+  },
+  {
+   "sym": "psi_v",
+   "concept": "oscillator-wavefunctions",
+   "meaning": "the wavefunction of the oscillator's level v",
+   "section": "5.4"
+  },
+  {
+   "sym": "P_Q",
+   "type": "momentum",
+   "meaning": "the momentum associated with the displacement Q",
+   "unit": "kg·m/s",
+   "section": "5.4"
+  },
+  {
+   "sym": "E_0",
+   "concept": "oscillator-zero-point-energy",
+   "meaning": "the zero-point energy, ħω/2",
+   "unit": "J",
+   "section": "5.4"
+  },
+  {
+   "sym": "Q_0",
+   "concept": "classical-displacement-limit",
+   "meaning": "the classical limit of the displacement in the ground state",
+   "unit": "m",
+   "section": "5.4"
+  },
+  {
+   "sym": "E_v",
+   "concept": "oscillator-energy-levels",
+   "meaning": "the energy of the vth eigenstate of the harmonic oscillator",
+   "unit": "J",
+   "section": "5.5"
+  },
+  {
+   "sym": "v_q",
+   "concept": "vibrational-quantum-number",
+   "meaning": "the vibrational quantum number of the initial state",
+   "section": "5.5"
+  },
+  {
+   "sym": "v_qp",
+   "concept": "vibrational-quantum-number",
+   "meaning": "the vibrational quantum number of the final state",
+   "section": "5.5"
+  },
+  {
+   "sym": "k",
+   "concept": "force-constant",
+   "meaning": "the force constant of the bond",
+   "unit": "N/m",
+   "section": "5.5"
+  },
+  {
+   "sym": "mu",
+   "concept": "reduced-mass",
+   "meaning": "the reduced mass of the molecule",
+   "unit": "kg",
+   "section": "5.5"
+  },
+  {
+   "sym": "nu_m",
+   "concept": "oscillator-frequency",
+   "meaning": "the vibrational frequency of the molecule",
+   "unit": "Hz",
+   "section": "5.5"
+  },
+  {
+   "sym": "omega",
+   "concept": "oscillator-frequency",
+   "meaning": "the angular frequency of the vibration, 2πν",
+   "unit": "rad/s",
+   "section": "5.5"
+  },
+  {
+   "sym": "nu_photon",
+   "concept": "vibrational-transition-frequency",
+   "meaning": "the frequency of the absorbed or emitted photon",
+   "unit": "Hz",
+   "section": "5.5"
+  },
+  {
+   "sym": "dE",
+   "type": "energy",
+   "meaning": "the energy difference between the vibrational states v and v′",
+   "unit": "J",
+   "section": "5.5"
+  },
+  {
+   "sym": "nu_tilde",
+   "concept": "wavenumber",
+   "meaning": "the wavenumber, 1/wavelength in cm",
+   "unit": "cm⁻¹",
+   "section": "5.5"
+  },
+  {
+   "sym": "lambda",
+   "type": "wavelength",
+   "meaning": "the wavelength of the radiation",
+   "unit": "μm",
+   "section": "5.5"
+  },
+  {
+   "sym": "nu",
+   "type": "frequency",
+   "meaning": "the frequency of the radiation",
+   "unit": "Hz",
+   "section": "5.5"
+  },
+  {
+   "sym": "nut_m",
+   "concept": "vibrational-transition-frequency",
+   "meaning": "the wavenumber of the absorption maximum, (1/2πc)√(k/μ)",
+   "unit": "cm⁻¹",
+   "section": "5.5"
+  },
+  {
+   "sym": "mu_T",
+   "concept": "transition-moment-integral",
+   "meaning": "the transition moment integral between the states v and v′",
+   "unit": "C·m",
+   "section": "5.5"
+  },
+  {
+   "sym": "mu_hat",
+   "concept": "dipole-moment-operator",
+   "meaning": "the dipole moment operator",
+   "section": "5.5"
+  },
+  {
+   "sym": "psi_v",
+   "concept": "oscillator-wavefunctions",
+   "meaning": "the harmonic oscillator wavefunction of the state v",
+   "section": "5.5"
+  },
+  {
+   "sym": "x",
+   "concept": "vibrational-coordinate",
+   "meaning": "the displacement of the vibration from its equilibrium bond length",
+   "unit": "m",
+   "section": "5.5",
+   "redefines": true
+  },
+  {
+   "sym": "mu_x0",
+   "concept": "dipole-moment",
+   "meaning": "the dipole moment of the molecule with the nuclei at their equilibrium positions",
+   "unit": "C·m",
+   "section": "5.5"
+  },
+  {
+   "sym": "mu_d",
+   "concept": "dipole-moment",
+   "meaning": "the dipole moment of the molecule as a function of the displacement",
+   "unit": "C·m",
+   "section": "5.5"
+  },
+  {
+   "sym": "e",
+   "meaning": "the elementary charge",
+   "unit": "C",
+   "section": "5.5"
+  },
+  {
+   "sym": "R_vec",
+   "type": "length",
+   "meaning": "the position vector of a nucleus",
+   "unit": "m",
+   "section": "5.5"
+  },
+  {
+   "sym": "H_op",
+   "concept": "hamiltonian-operator",
+   "meaning": "the Hamiltonian operator of the harmonic oscillator",
+   "section": "5.6"
+  },
+  {
+   "sym": "T_hat",
+   "concept": "kinetic-energy-operator",
+   "meaning": "the kinetic energy operator",
+   "section": "5.6"
+  },
+  {
+   "sym": "V_hat",
+   "concept": "potential-energy-operator",
+   "meaning": "the potential energy operator",
+   "section": "5.6"
+  },
+  {
+   "sym": "q",
+   "concept": "vibrational-coordinate",
+   "meaning": "the length of the normal coordinate",
+   "unit": "m",
+   "section": "5.6"
+  },
+  {
+   "sym": "q_hat",
+   "concept": "position-operator",
+   "meaning": "the operator for the length of the normal coordinate",
+   "section": "5.6"
+  },
+  {
+   "sym": "Pq_hat",
+   "concept": "momentum-operator",
+   "meaning": "the momentum operator associated with the normal coordinate",
+   "section": "5.6"
+  },
+  {
+   "sym": "mu",
+   "concept": "reduced-mass",
+   "meaning": "the effective (reduced) mass of the normal mode",
+   "unit": "kg",
+   "section": "5.6"
+  },
+  {
+   "sym": "k",
+   "concept": "force-constant",
+   "meaning": "the effective force constant of the normal mode",
+   "unit": "N/m",
+   "section": "5.6"
+  },
+  {
+   "sym": "psi_v",
+   "concept": "oscillator-wavefunctions",
+   "meaning": "the harmonic oscillator wavefunction of level v",
+   "section": "5.6"
+  },
+  {
+   "sym": "E_v",
+   "concept": "oscillator-energy-levels",
+   "meaning": "the energy of the oscillator's level v",
+   "unit": "J",
+   "section": "5.6"
+  },
+  {
+   "sym": "v_q",
+   "concept": "vibrational-quantum-number",
+   "meaning": "the vibrational quantum number",
+   "section": "5.6"
+  },
+  {
+   "sym": "beta",
+   "type": "length",
+   "meaning": "the length that collects the constants, β² = ħ/√(μk)",
+   "unit": "m",
+   "section": "5.6",
+   "redefines": true
+  },
+  {
+   "sym": "x",
+   "meaning": "the dimensionless displacement q/β",
+   "section": "5.6",
+   "redefines": true
+  },
+  {
+   "sym": "H_v",
+   "concept": "hermite-polynomials",
+   "meaning": "the Hermite polynomial of degree v",
+   "section": "5.6"
+  },
+  {
+   "sym": "N_v",
+   "meaning": "the normalization constant of ψ_v",
+   "section": "5.6"
+  },
+  {
+   "sym": "alpha",
+   "meaning": "the constant √(kμ/ħ²) of the unscaled formulation",
+   "unit": "m⁻²",
+   "section": "5.6"
+  },
+  {
+   "sym": "Q",
+   "concept": "vibrational-coordinate",
+   "meaning": "the unscaled displacement coordinate",
+   "unit": "m",
+   "section": "5.6"
+  },
+  {
+   "sym": "Q_0",
+   "concept": "classical-displacement-limit",
+   "meaning": "the classical limit of the displacement in the ground state",
+   "unit": "m",
+   "section": "5.6"
+  },
+  {
+   "sym": "omega",
+   "concept": "oscillator-frequency",
+   "meaning": "the angular frequency of the oscillator, √(k/μ)",
+   "unit": "rad/s",
+   "section": "5.6"
+  },
+  {
+   "sym": "c_n",
+   "meaning": "the coefficient of xⁿ in the power series",
+   "section": "5.6"
+  },
+  {
+   "sym": "H_v",
+   "concept": "hermite-polynomials",
+   "meaning": "the Hermite polynomial of degree n, Hₙ(x)",
+   "section": "5.7"
+  },
+  {
+   "sym": "x",
+   "meaning": "the variable of a function of one real variable, or of a Hermite polynomial",
+   "section": "5.7",
+   "redefines": true
+  },
+  {
+   "sym": "E_tot",
+   "type": "energy",
+   "meaning": "the total energy of the rigid rotor",
+   "unit": "J",
+   "section": "5.8"
+  },
+  {
+   "sym": "T",
+   "concept": "rotational-kinetic-energy",
+   "meaning": "the kinetic energy of the rotor",
+   "unit": "J",
+   "section": "5.8"
+  },
+  {
+   "sym": "V",
+   "type": "energy",
+   "meaning": "the potential energy, set to zero for a rigid rotor",
+   "unit": "J",
+   "section": "5.8"
+  },
+  {
+   "sym": "m_i",
+   "type": "mass",
+   "meaning": "the mass of the ith particle",
+   "unit": "kg",
+   "section": "5.8"
+  },
+  {
+   "sym": "v_i",
+   "type": "velocity",
+   "meaning": "the velocity of the ith particle",
+   "unit": "m/s",
+   "section": "5.8"
+  },
+  {
+   "sym": "r_i",
+   "type": "length",
+   "meaning": "the position of the ith particle from the axis of rotation",
+   "unit": "m",
+   "section": "5.8"
+  },
+  {
+   "sym": "omega",
+   "concept": "angular-velocity",
+   "meaning": "the angular velocity of the rotation",
+   "unit": "rad/s",
+   "section": "5.8",
+   "redefines": true
+  },
+  {
+   "sym": "l_i",
+   "concept": "angular-momentum",
+   "meaning": "the angular momentum of the ith particle",
+   "unit": "J·s",
+   "section": "5.8"
+  },
+  {
+   "sym": "L",
+   "concept": "angular-momentum",
+   "meaning": "the angular momentum of the entire system",
+   "unit": "J·s",
+   "section": "5.8"
+  },
+  {
+   "sym": "I_mom",
+   "concept": "moment-of-inertia",
+   "meaning": "the moment of inertia of the rigid body about the axis of rotation, μr₀² for a diatomic",
+   "unit": "kg·m²",
+   "section": "5.8"
+  },
+  {
+   "sym": "theta",
+   "type": "angle",
+   "meaning": "the polar angle, measured from the z axis",
+   "unit": "rad",
+   "section": "5.8"
+  },
+  {
+   "sym": "varphi",
+   "type": "angle",
+   "meaning": "the azimuthal angle, measured from the x axis in the xy-plane",
+   "unit": "rad",
+   "section": "5.8"
+  },
+  {
+   "sym": "r",
+   "type": "length",
+   "meaning": "the radial coordinate",
+   "unit": "m",
+   "section": "5.8"
+  },
+  {
+   "sym": "r_0",
+   "type": "length",
+   "meaning": "the fixed bond length of the rigid rotor",
+   "unit": "m",
+   "section": "5.8"
+  },
+  {
+   "sym": "mu",
+   "concept": "reduced-mass",
+   "meaning": "the reduced mass of the rotor",
+   "unit": "kg",
+   "section": "5.8"
+  },
+  {
+   "sym": "psi",
+   "concept": "wavefunction",
+   "meaning": "the rigid rotor wavefunction, a function of θ and φ",
+   "section": "5.8"
+  },
+  {
+   "sym": "Theta_f",
+   "type": "wavefunction",
+   "meaning": "the function of θ alone in the product wavefunction",
+   "section": "5.8"
+  },
+  {
+   "sym": "Phi",
+   "concept": "rotor-phi-functions",
+   "meaning": "the function of φ alone in the product wavefunction",
+   "section": "5.8"
+  },
+  {
+   "sym": "H_op",
+   "concept": "hamiltonian-operator",
+   "meaning": "the Hamiltonian operator of the rigid rotor",
+   "section": "5.8"
+  },
+  {
+   "sym": "E",
+   "concept": "rotor-energy-levels",
+   "meaning": "the energy of the rigid rotor",
+   "unit": "J",
+   "section": "5.8"
+  },
+  {
+   "sym": "lambda",
+   "meaning": "the separation parameter 2IE/ħ², not a wavelength",
+   "section": "5.8",
+   "redefines": true
+  },
+  {
+   "sym": "m_J",
+   "concept": "rotor-quantum-numbers",
+   "meaning": "the quantum number for the z component of the angular momentum",
+   "section": "5.8"
+  },
+  {
+   "sym": "J",
+   "concept": "rotor-quantum-numbers",
+   "meaning": "the rotational quantum number, the length of the angular momentum",
+   "section": "5.8"
+  },
+  {
+   "sym": "N",
+   "meaning": "the normalization constant of Φ(φ)",
+   "section": "5.8"
+  },
+  {
+   "sym": "Y_JM",
+   "concept": "spherical-harmonics",
+   "meaning": "the spherical harmonic with quantum numbers J and m_J",
+   "section": "5.8"
+  },
+  {
+   "sym": "mu_T",
+   "concept": "transition-moment-integral",
+   "meaning": "the transition moment integral between two rotational states",
+   "unit": "C·m",
+   "section": "5.9"
+  },
+  {
+   "sym": "mu_hat",
+   "concept": "dipole-moment-operator",
+   "meaning": "the dipole moment operator",
+   "section": "5.9"
+  },
+  {
+   "sym": "mu_d",
+   "concept": "dipole-moment",
+   "meaning": "the permanent electric dipole moment of the molecule",
+   "unit": "C·m",
+   "section": "5.9"
+  },
+  {
+   "sym": "Y_JM",
+   "concept": "spherical-harmonics",
+   "meaning": "the spherical harmonic of a rotational state",
+   "section": "5.9"
+  },
+  {
+   "sym": "J",
+   "concept": "rotor-quantum-numbers",
+   "meaning": "the rotational quantum number",
+   "section": "5.9"
+  },
+  {
+   "sym": "m_J",
+   "concept": "rotor-quantum-numbers",
+   "meaning": "the quantum number for the z component of the rotational angular momentum",
+   "section": "5.9"
+  },
+  {
+   "sym": "theta",
+   "type": "angle",
+   "meaning": "the polar angle of the internuclear axis",
+   "unit": "rad",
+   "section": "5.9"
+  },
+  {
+   "sym": "varphi",
+   "type": "angle",
+   "meaning": "the azimuthal angle of the internuclear axis",
+   "unit": "rad",
+   "section": "5.9"
+  },
+  {
+   "sym": "E_J",
+   "concept": "rotor-energy-levels",
+   "meaning": "the energy of the Jth rotational level",
+   "unit": "J",
+   "section": "5.9"
+  },
+  {
+   "sym": "I_mom",
+   "concept": "moment-of-inertia",
+   "meaning": "the moment of inertia of the molecule, μr₀²",
+   "unit": "kg·m²",
+   "section": "5.9"
+  },
+  {
+   "sym": "E_photon",
+   "concept": "rotational-transition-energies",
+   "meaning": "the energy of the absorbed photon",
+   "unit": "J",
+   "section": "5.9"
+  },
+  {
+   "sym": "nu",
+   "type": "frequency",
+   "meaning": "the frequency of the absorbed photon",
+   "unit": "Hz",
+   "section": "5.9"
+  },
+  {
+   "sym": "nu_tilde",
+   "concept": "wavenumber",
+   "meaning": "the wavenumber of the absorbed photon",
+   "unit": "cm⁻¹",
+   "section": "5.9"
+  },
+  {
+   "sym": "B",
+   "concept": "rotational-constant",
+   "meaning": "the rotational constant in energy units, ħ²/2I",
+   "unit": "J",
+   "section": "5.9"
+  },
+  {
+   "sym": "B_t",
+   "concept": "rotational-constant",
+   "type": "wavenumber",
+   "meaning": "the rotational constant in wavenumbers, B/hc",
+   "unit": "cm⁻¹",
+   "section": "5.9"
+  },
+  {
+   "sym": "mu",
+   "concept": "reduced-mass",
+   "meaning": "the reduced mass of the diatomic molecule",
+   "unit": "kg",
+   "section": "5.9"
+  },
+  {
+   "sym": "r_0",
+   "type": "length",
+   "meaning": "the bond length of the diatomic molecule",
+   "unit": "m",
+   "section": "5.9"
+  },
+  {
+   "sym": "R_e",
+   "type": "length",
+   "meaning": "the equilibrium bond length found from the spectrum",
+   "unit": "m",
+   "section": "5.9"
+  },
+  {
+   "sym": "nu_J",
+   "concept": "rotational-transition-energies",
+   "type": "frequency",
+   "meaning": "the frequency of the line from level J",
+   "unit": "MHz",
+   "section": "5.9"
+  }
+ ]
+}

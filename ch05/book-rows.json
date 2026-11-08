@@ -1,0 +1,1927 @@
+{
+ "types": [
+  {
+   "id": "force-constant",
+   "label": "force constant",
+   "dimension": "N/m"
+  },
+  {
+   "id": "moment-of-inertia",
+   "label": "moment of inertia",
+   "dimension": "kg·m²"
+  },
+  {
+   "id": "angular-momentum",
+   "label": "angular momentum",
+   "dimension": "J·s"
+  },
+  {
+   "id": "dipole-moment",
+   "label": "dipole moment",
+   "dimension": "C·m"
+  },
+  {
+   "id": "angle",
+   "label": "angle",
+   "dimension": "rad"
+  }
+ ],
+ "symbols": [
+  {
+   "sym": "mu",
+   "latex": "\\mu",
+   "macro": "\\kmu"
+  },
+  {
+   "sym": "mu_AB",
+   "latex": "\\mu_{AB}",
+   "macro": "\\kmuAB"
+  },
+  {
+   "sym": "m_A",
+   "latex": "m_A",
+   "macro": "\\kmA"
+  },
+  {
+   "sym": "m_B",
+   "latex": "m_B",
+   "macro": "\\kmB"
+  },
+  {
+   "sym": "m_1",
+   "latex": "m_1",
+   "macro": "\\kmone"
+  },
+  {
+   "sym": "m_2",
+   "latex": "m_2",
+   "macro": "\\kmtwo"
+  },
+  {
+   "sym": "x_o",
+   "latex": "x_o",
+   "macro": "\\kxlo"
+  },
+  {
+   "sym": "E_v",
+   "latex": "E_v",
+   "macro": "\\kEv"
+  },
+  {
+   "sym": "v_q",
+   "latex": "v"
+  },
+  {
+   "sym": "v_qp",
+   "latex": "v'"
+  },
+  {
+   "sym": "nu_m",
+   "latex": "\\nu_m",
+   "macro": "\\knum"
+  },
+  {
+   "sym": "nu_photon",
+   "latex": "\\nu_{photon}",
+   "macro": "\\knuph"
+  },
+  {
+   "sym": "nut_m",
+   "latex": "\\tilde{\\nu}_m",
+   "macro": "\\knutm"
+  },
+  {
+   "sym": "nu_e",
+   "latex": "\\nu_e",
+   "macro": "\\knue"
+  },
+  {
+   "sym": "x_e",
+   "latex": "x_e"
+  },
+  {
+   "sym": "y_e",
+   "latex": "y_e"
+  },
+  {
+   "sym": "gamma",
+   "latex": "\\gamma"
+  },
+  {
+   "sym": "D_e",
+   "latex": "D_e",
+   "macro": "\\kDe"
+  },
+  {
+   "sym": "D_0",
+   "latex": "D_0",
+   "macro": "\\kDzero"
+  },
+  {
+   "sym": "D_M",
+   "latex": "D",
+   "macro": "\\kDM"
+  },
+  {
+   "sym": "r_e",
+   "latex": "r_e",
+   "macro": "\\kre"
+  },
+  {
+   "sym": "r_0",
+   "latex": "r_0",
+   "macro": "\\krzero"
+  },
+  {
+   "sym": "R_e",
+   "latex": "R_e",
+   "macro": "\\kRe"
+  },
+  {
+   "sym": "R_vec",
+   "latex": "\\vec{R}",
+   "macro": "\\kRvec"
+  },
+  {
+   "sym": "Q",
+   "latex": "Q",
+   "macro": "\\kQ"
+  },
+  {
+   "sym": "Q_0",
+   "latex": "Q_0",
+   "macro": "\\kQzero"
+  },
+  {
+   "sym": "P_Q",
+   "latex": "P_Q",
+   "macro": "\\kPQ"
+  },
+  {
+   "sym": "E_0",
+   "latex": "E_0",
+   "macro": "\\kEzero"
+  },
+  {
+   "sym": "psi_v",
+   "latex": "\\psi_v",
+   "macro": "\\kpsiv"
+  },
+  {
+   "sym": "H_v",
+   "latex": "H_v"
+  },
+  {
+   "sym": "N_v",
+   "latex": "N_v"
+  },
+  {
+   "sym": "c_n",
+   "latex": "c_n"
+  },
+  {
+   "sym": "beta",
+   "latex": "\\beta",
+   "macro": "\\kbeta"
+  },
+  {
+   "sym": "q_hat",
+   "latex": "\\hat{q}",
+   "macro": "\\kqhat"
+  },
+  {
+   "sym": "Pq_hat",
+   "latex": "\\hat{P}_q",
+   "macro": "\\kPqhat"
+  },
+  {
+   "sym": "mu_d",
+   "latex": "\\mu",
+   "macro": "\\kmud"
+  },
+  {
+   "sym": "mu_hat",
+   "latex": "\\hat{\\mu}",
+   "macro": "\\kmuhat"
+  },
+  {
+   "sym": "mu_T",
+   "latex": "\\mu_T",
+   "macro": "\\kmuT"
+  },
+  {
+   "sym": "mu_x0",
+   "latex": "\\mu_{x=0}",
+   "macro": "\\kmuxzero"
+  },
+  {
+   "sym": "dE",
+   "latex": "\\Delta E",
+   "macro": "\\kdE"
+  },
+  {
+   "sym": "I_mom",
+   "latex": "I",
+   "macro": "\\kI"
+  },
+  {
+   "sym": "l_i",
+   "latex": "l_i",
+   "macro": "\\kli"
+  },
+  {
+   "sym": "m_i",
+   "latex": "m_i",
+   "macro": "\\kmi"
+  },
+  {
+   "sym": "v_i",
+   "latex": "v_i",
+   "macro": "\\kvi"
+  },
+  {
+   "sym": "r_i",
+   "latex": "r_i",
+   "macro": "\\kri"
+  },
+  {
+   "sym": "E_tot",
+   "latex": "E_{tot}",
+   "macro": "\\kEtot"
+  },
+  {
+   "sym": "varphi",
+   "latex": "\\varphi",
+   "macro": "\\kvarphi"
+  },
+  {
+   "sym": "Theta_f",
+   "latex": "\\Theta",
+   "macro": "\\kThetaf"
+  },
+  {
+   "sym": "Y_JM",
+   "latex": "Y^{m_J}_J",
+   "macro": "\\kYJm"
+  },
+  {
+   "sym": "J",
+   "latex": "J"
+  },
+  {
+   "sym": "m_J",
+   "latex": "m_J"
+  },
+  {
+   "sym": "E_J",
+   "latex": "E_J",
+   "macro": "\\kEJ"
+  },
+  {
+   "sym": "E_photon",
+   "latex": "E_{photon}",
+   "macro": "\\kEph"
+  },
+  {
+   "sym": "nu_J",
+   "latex": "\\nu_J",
+   "macro": "\\knuJ"
+  },
+  {
+   "sym": "B_t",
+   "latex": "\\tilde{B}",
+   "macro": "\\kBt"
+  }
+ ],
+ "concepts": [
+  {
+   "id": "molecular-motion-separation",
+   "kind": "idea",
+   "section": "5.1",
+   "name": "Translation, rotation and vibration of a diatomic molecule",
+   "statement": "The motion of the two atoms of a diatomic molecule separates into the translation of its center of mass and two internal motions that leave the center of mass where it is: rotation, modeled by the rigid rotor, and vibration, modeled by the harmonic oscillator."
+  },
+  {
+   "id": "harmonic-oscillator",
+   "kind": "idea",
+   "section": "5.1",
+   "name": "Harmonic oscillator",
+   "terms": [
+    "harmonic oscillator",
+    "simple harmonic oscillator"
+   ],
+   "statement": "The model of a mass held by a restoring force proportional to its displacement, F = −kx, which the book uses for the vibration of a diatomic molecule."
+  },
+  {
+   "id": "rigid-rotor",
+   "kind": "idea",
+   "section": "5.1",
+   "name": "Rigid rotor",
+   "terms": [
+    "rigid rotor",
+    "rigid-rotor model",
+    "rigid rotator"
+   ],
+   "statement": "The model of a rotating system of two point masses held at fixed distances from their center of mass, which the book uses for the rotation of a diatomic molecule when its vibration is ignored."
+  },
+  {
+   "id": "hookes-law",
+   "kind": "axiom",
+   "section": "5.1",
+   "name": "Hooke's law",
+   "symbol": "F",
+   "terms": [
+    "Hooke's Law"
+   ],
+   "type": "force",
+   "statement": "The restoring force on a mass displaced from its equilibrium position is proportional to the displacement and opposite to it: F = −kx.",
+   "forms": [
+    {
+     "id": "hookes-law",
+     "latex": "F = -kx"
+    }
+   ]
+  },
+  {
+   "id": "force-constant",
+   "kind": "definition",
+   "section": "5.1",
+   "name": "Force constant",
+   "symbol": "k",
+   "terms": [
+    "force constant",
+    "stiffness",
+    "spring constant"
+   ],
+   "type": "force-constant",
+   "statement": "The constant k of Hooke's law, which reflects the stiffness of a spring or a bond: the larger it is, the stiffer the spring or the bond. It is the second derivative of the potential energy at its minimum.",
+   "forms": [
+    {
+     "id": "force-constant-second-derivative",
+     "latex": "\\dfrac{d^2V}{dx^2} = k",
+     "section": "5.1"
+    }
+   ]
+  },
+  {
+   "id": "vibrational-coordinate",
+   "kind": "definition",
+   "section": "5.1",
+   "name": "Vibrational coordinate",
+   "symbol": "x",
+   "terms": [
+    "vibrational coordinate"
+   ],
+   "type": "length",
+   "statement": "The change in the bond length from the equilibrium bond length, the displacement x along which a diatomic molecule vibrates."
+  },
+  {
+   "id": "harmonic-potential",
+   "kind": "result",
+   "section": "5.1",
+   "name": "Harmonic potential",
+   "symbol": "V",
+   "terms": [
+    "harmonic potential",
+    "quadratic potential"
+   ],
+   "type": "energy",
+   "statement": "The potential energy of a Hooke's-law system increases quadratically with the displacement, V = ½kx², and minus its first derivative is the Hooke's-law force.",
+   "forms": [
+    {
+     "id": "harmonic-potential",
+     "latex": "V(x) = \\dfrac{1}{2} k x^2"
+    }
+   ]
+  },
+  {
+   "id": "oscillator-equation-of-motion",
+   "kind": "result",
+   "section": "5.1",
+   "name": "Equation of motion of the harmonic oscillator",
+   "statement": "Newton's second law with the Hooke's-law force gives the classical equation of motion m d²x/dt² = −kx, a linear second-order differential equation.",
+   "forms": [
+    {
+     "id": "oscillator-equation-of-motion",
+     "latex": "m \\dfrac{d^2x(t)}{dt^2} = -kx(t)"
+    },
+    {
+     "id": "oscillator-equation-standard",
+     "latex": "\\dfrac{d^2x(t)}{dt^2} + \\dfrac{k}{m}x(t) = 0"
+    }
+   ]
+  },
+  {
+   "id": "classical-harmonic-motion",
+   "kind": "result",
+   "section": "5.1",
+   "name": "Harmonic motion",
+   "terms": [
+    "harmonic"
+   ],
+   "type": "length",
+   "statement": "The solution of the classical oscillator's equation of motion is a sinusoidal displacement x(t) = x₀ sin(ωt + φ), with momentum p = mx₀ω cos(ωt + φ); such motion is called harmonic.",
+   "forms": [
+    {
+     "id": "harmonic-motion",
+     "latex": "x(t) = x_o \\sin(\\omega t + \\phi)"
+    },
+    {
+     "id": "harmonic-motion-momentum",
+     "latex": "p = m x_o \\omega \\cos(\\omega t + \\phi)"
+    }
+   ]
+  },
+  {
+   "id": "oscillator-frequency",
+   "kind": "result",
+   "section": "5.1",
+   "name": "Frequency of a harmonic oscillator",
+   "symbol": "omega",
+   "terms": [
+    "natural vibrational frequency",
+    "vibrational frequency"
+   ],
+   "type": "frequency",
+   "statement": "The angular frequency of a harmonic oscillator, ω = √(k/m), depends only on its force constant and its mass (the reduced mass μ for a molecule), not on its energy: a stiffer spring vibrates faster and a heavier mass slower.",
+   "forms": [
+    {
+     "id": "oscillator-angular-frequency",
+     "latex": "\\omega = \\sqrt{\\dfrac{k}{m}}"
+    },
+    {
+     "id": "natural-vibrational-frequency",
+     "latex": "\\nu = \\dfrac{1}{2\\pi}\\sqrt{\\dfrac{k}{\\mu}}",
+     "section": "5.2"
+    }
+   ]
+  },
+  {
+   "id": "oscillator-energy",
+   "kind": "result",
+   "section": "5.1",
+   "name": "Energy of the classical harmonic oscillator",
+   "symbol": "E",
+   "type": "energy",
+   "statement": "The energy of the oscillator is the sum of its kinetic and potential energies, E = p²/2m + kx²/2; it is shifted continuously between the two and equals ½kA², the potential energy at the turning points, so it changes continuously with the amplitude.",
+   "forms": [
+    {
+     "id": "oscillator-energy",
+     "latex": "E = T + V = \\dfrac{p^2}{2m} + \\dfrac{k}{2}x^2"
+    },
+    {
+     "id": "oscillator-energy-amplitude",
+     "latex": "E = \\dfrac{1}{2}kA^2",
+     "section": "5.1"
+    }
+   ]
+  },
+  {
+   "id": "turning-points",
+   "kind": "definition",
+   "section": "5.1",
+   "name": "Turning points",
+   "symbol": "A",
+   "terms": [
+    "turning points"
+   ],
+   "type": "length",
+   "statement": "The displacements x = ±A at which all the oscillator's energy is potential energy, so it stops and reverses; a classical oscillator can never be found beyond them."
+  },
+  {
+   "id": "classical-oscillator-density",
+   "kind": "result",
+   "section": "5.1",
+   "name": "Where a classical oscillator is found",
+   "statement": "A classical oscillator spends the longest time near its turning points, where it slows down and reverses, so the probability of finding it is highest there and lowest at the equilibrium position; its lowest energy is zero, at rest at the bottom of the well."
+  },
+  {
+   "id": "reduced-mass",
+   "kind": "definition",
+   "section": "5.2",
+   "name": "Reduced mass",
+   "symbol": "mu",
+   "terms": [
+    "reduced mass"
+   ],
+   "type": "mass",
+   "statement": "The mass μ = m_A m_B/(m_A + m_B) of the single particle that represents a two-body system whose bodies move only under their mutual interaction, so the vibration and rotation separate from the motion of the center of mass.",
+   "forms": [
+    {
+     "id": "reduced-mass",
+     "latex": "\\mu_{AB}=\\dfrac{m_A\\, m_B}{m_A+m_B}"
+    }
+   ]
+  },
+  {
+   "id": "harmonic-oscillator-schrodinger-equation",
+   "kind": "result",
+   "section": "5.2",
+   "name": "Schrödinger equation of the harmonic oscillator",
+   "terms": [
+    "quantum harmonic oscillator"
+   ],
+   "statement": "With the quadratic potential ½kx² and the reduced mass μ, the Schrödinger equation of the quantum harmonic oscillator is [−(ħ²/2μ) d²/dx² + ½kx²]ψ = Eψ.",
+   "forms": [
+    {
+     "id": "ho-schrodinger",
+     "latex": "\\left[ -\\dfrac{\\hbar^2}{2\\mu} \\dfrac{d^2}{dx^2} + \\dfrac{1}{2}kx^2 \\right] \\psi = E\\psi"
+    },
+    {
+     "id": "ho-hamiltonian-q",
+     "latex": "\\hat{H}(q) = -\\dfrac{\\hbar^2}{2\\mu}\\dfrac{d^2}{dq^2} + \\dfrac{k}{2}q^2",
+     "section": "5.6"
+    }
+   ]
+  },
+  {
+   "id": "vibrational-quantum-number",
+   "kind": "definition",
+   "section": "5.2",
+   "name": "Vibrational quantum number",
+   "symbol": "v_q",
+   "terms": [
+    "vibrational quantum number"
+   ],
+   "statement": "The quantum number v = 0, 1, 2, … that labels the harmonic oscillator's energy levels; it is a Latin v, not the Greek ν of the frequency."
+  },
+  {
+   "id": "oscillator-energy-levels",
+   "kind": "result",
+   "section": "5.2",
+   "name": "Energy levels of the harmonic oscillator",
+   "symbol": "E_v",
+   "type": "energy",
+   "statement": "The energies of the quantum harmonic oscillator are quantized, E_v = (v + ½)hν = (v + ½)ħω with v = 0, 1, 2, …: equally spaced by hν, the lowest above the bottom of the potential.",
+   "forms": [
+    {
+     "id": "ho-energy-levels",
+     "latex": "E_v = \\left(v + \\dfrac{1}{2}\\right)\\hbar\\omega = \\left(v + \\dfrac{1}{2}\\right)h\\nu"
+    },
+    {
+     "id": "ho-energy-levels-k",
+     "latex": "E_v = \\hbar\\sqrt{\\dfrac{k}{\\mu}}\\left(v + \\dfrac{1}{2}\\right)"
+    }
+   ]
+  },
+  {
+   "id": "isotope-effect",
+   "kind": "idea",
+   "section": "5.2",
+   "name": "Isotope effect",
+   "terms": [
+    "isotope effect"
+   ],
+   "statement": "Substituting one isotope for another changes the reduced mass and so the vibrational frequency while the force constant stays nearly the same; vibrational frequencies need the masses of specific isotopes, not the atomic weights of the periodic table."
+  },
+  {
+   "id": "potential-taylor-expansion",
+   "kind": "result",
+   "section": "5.3",
+   "name": "Taylor expansion of a potential",
+   "type": "energy",
+   "statement": "Any potential near a stable equilibrium x₀ can be expanded as a Taylor series in x − x₀; with V(x₀) = 0 and no linear term at the minimum, it starts with the harmonic term ½kx², and the cubic term γx³/6 is the first anharmonic correction.",
+   "forms": [
+    {
+     "id": "potential-taylor-cubic",
+     "latex": "V(x) = \\dfrac{1}{2}kx^2 + \\dfrac{1}{6}\\gamma x^3"
+    }
+   ]
+  },
+  {
+   "id": "anharmonicity",
+   "kind": "definition",
+   "section": "5.3",
+   "name": "Anharmonicity",
+   "terms": [
+    "anharmonic oscillation",
+    "anharmonic",
+    "anharmonicity",
+    "anharmonic oscillator"
+   ],
+   "statement": "The deviation of a system from harmonic oscillation: the restoring force is no longer proportional to the displacement and the potential is not strictly quadratic."
+  },
+  {
+   "id": "anharmonic-energy-levels",
+   "kind": "result",
+   "section": "5.3",
+   "name": "Anharmonic vibrational levels",
+   "terms": [
+    "anharmonicity constants"
+   ],
+   "type": "energy",
+   "statement": "A real vibrational potential has levels E_v = (v + ½)ν_e − (v + ½)²ν_e x_e + (v + ½)³ν_e y_e + …, with anharmonicity constants x_e and y_e; they become less widely spaced at high excitation because the potential is less confining than a parabola.",
+   "forms": [
+    {
+     "id": "anharmonic-levels",
+     "latex": "E_v = \\left(v + \\tfrac{1}{2}\\right)\\nu_e - \\left(v + \\tfrac{1}{2}\\right)^2 \\nu_e x_e + \\left(v + \\tfrac{1}{2}\\right)^3 \\nu_e y_e + \\ldots"
+    }
+   ]
+  },
+  {
+   "id": "well-depth",
+   "kind": "definition",
+   "section": "5.3",
+   "name": "Well depth",
+   "symbol": "D_e",
+   "terms": [
+    "well depth"
+   ],
+   "type": "energy",
+   "statement": "The depth D_e of a molecule's potential, measured from its minimum to the dissociation limit; it is larger than the dissociation energy D₀ by the zero-point energy."
+  },
+  {
+   "id": "dissociation-energy",
+   "kind": "definition",
+   "section": "5.3",
+   "name": "Dissociation energy",
+   "symbol": "D_0",
+   "terms": [
+    "dissociation energy"
+   ],
+   "type": "energy",
+   "statement": "The energy D₀ needed to break the bond, measured from the lowest (v = 0) vibrational level to the dissociation limit."
+  },
+  {
+   "id": "harmonic-oscillator-limitations",
+   "kind": "idea",
+   "section": "5.3",
+   "name": "Limitations of the harmonic oscillator model",
+   "statement": "Because its levels are equally spaced, the harmonic oscillator predicts a single-line vibrational spectrum where many lines (overtones) are seen, and it cannot dissociate however much energy it is given."
+  },
+  {
+   "id": "morse-potential",
+   "kind": "definition",
+   "section": "5.3",
+   "name": "Morse potential",
+   "terms": [
+    "Morse potential"
+   ],
+   "type": "energy",
+   "statement": "The potential V(x) = D(1 − e^{−β(x − x₀)})², which includes bond breaking and the anharmonicity of real bonds: zero at the equilibrium separation and D at infinite separation, its levels crowding together toward the dissociation energy.",
+   "forms": [
+    {
+     "id": "morse-potential",
+     "latex": "V(x) = D\\left(1-e^{-\\beta (x - x_0)}\\right)^2"
+    }
+   ]
+  },
+  {
+   "id": "oscillator-zero-point-energy",
+   "kind": "result",
+   "section": "5.4",
+   "name": "Zero-point energy of the harmonic oscillator",
+   "symbol": "E_0",
+   "terms": [
+    "zero-point motion"
+   ],
+   "type": "energy",
+   "statement": "The lowest energy of the quantum oscillator is E₀ = ħω/2, not zero, so the atoms of a molecule are moving even in the lowest vibrational state, in direct contrast to the classical oscillator at rest.",
+   "forms": [
+    {
+     "id": "ho-zero-point-energy",
+     "latex": "E_0 = \\dfrac{\\hbar\\omega}{2}"
+    }
+   ]
+  },
+  {
+   "id": "classical-displacement-limit",
+   "kind": "result",
+   "section": "5.4",
+   "name": "Classical limit of the displacement",
+   "symbol": "Q_0",
+   "terms": [
+    "classical limit"
+   ],
+   "type": "length",
+   "statement": "Equating the zero-point energy to the potential energy at maximum extension gives the classical limit Q₀ of the oscillator's displacement: ħω/2 = kQ₀²/2.",
+   "forms": [
+    {
+     "id": "classical-displacement-limit",
+     "latex": "\\dfrac{\\hbar\\omega}{2} = \\dfrac{kQ_0^2}{2}"
+    }
+   ]
+  },
+  {
+   "id": "oscillator-zero-averages",
+   "kind": "result",
+   "section": "5.4",
+   "name": "Average displacement and momentum of the oscillator",
+   "statement": "Because the potential is symmetric about Q = 0, a displacement Q > 0 is as likely as Q < 0, so the average displacement ⟨Q⟩ and the average momentum ⟨P_Q⟩ are zero, though the oscillator is not sitting still."
+  },
+  {
+   "id": "root-mean-square-displacement",
+   "kind": "definition",
+   "section": "5.4",
+   "name": "Root-mean-square displacement",
+   "terms": [
+    "root mean square deviation",
+    "root-mean-square displacement",
+    "root-mean-square momentum",
+    "mean square displacement"
+   ],
+   "type": "length",
+   "statement": "The standard deviation of the displacement (and, likewise, the root-mean-square momentum), used as the measure of the uncertainty in the oscillator's position and momentum, since their averages are zero."
+  },
+  {
+   "id": "oscillator-orthonormality",
+   "kind": "result",
+   "section": "5.4",
+   "name": "Orthonormality of the oscillator wavefunctions",
+   "statement": "The harmonic oscillator wavefunctions form an orthonormal set: each is normalized and any two with different v are orthogonal.",
+   "forms": [
+    {
+     "id": "ho-normalized",
+     "latex": "\\int_{-\\infty}^{\\infty} \\psi^*_v(x)\\psi_v(x)\\,dx = 1"
+    },
+    {
+     "id": "ho-orthogonal",
+     "latex": "\\int_{-\\infty}^{\\infty} \\psi^*_{v'}(x)\\psi_v(x)\\,dx = 0",
+     "condition": "v′ ≠ v"
+    }
+   ]
+  },
+  {
+   "id": "classically-forbidden-region",
+   "kind": "definition",
+   "section": "5.4",
+   "name": "Classically forbidden region",
+   "terms": [
+    "classically forbidden region",
+    "forbidden region"
+   ],
+   "statement": "The region beyond the classical limits of the displacement, where the potential energy would exceed the total energy; the quantum oscillator's wavefunctions extend into it."
+  },
+  {
+   "id": "infrared-spectroscopy",
+   "kind": "idea",
+   "section": "5.5",
+   "name": "Infrared spectroscopy",
+   "terms": [
+    "IR spectroscopy",
+    "infrared spectroscopy",
+    "fingerprint"
+   ],
+   "statement": "The study of the absorption of infrared radiation (about 4000 to 40 cm⁻¹) by transitions between vibrational levels, used to identify functional groups and compounds by their characteristic, fingerprint spectra."
+  },
+  {
+   "id": "vibrational-transition-frequency",
+   "kind": "result",
+   "section": "5.5",
+   "name": "Frequency of a vibrational transition",
+   "symbol": "nu_photon",
+   "type": "frequency",
+   "statement": "A photon is absorbed or emitted when its energy matches the difference between two vibrational levels, hν_photon = (v′ − v)hν_m; for adjacent levels its frequency is identical to the classical vibrational frequency of the bond, (1/2π)√(k/μ), or (1/2πc)√(k/μ) in wavenumbers.",
+   "forms": [
+    {
+     "id": "vibrational-transition-frequency",
+     "latex": "h\\nu_{photon} = h\\nu_m = \\dfrac{h}{2\\pi}\\sqrt{\\dfrac{k}{\\mu}}"
+    },
+    {
+     "id": "vibrational-transition-energy",
+     "latex": "h\\nu_{photon} = \\Delta E_{vv'} = (v' - v)h\\nu_m"
+    },
+    {
+     "id": "vibrational-wavenumber",
+     "latex": "\\tilde{\\nu}_m = \\dfrac{1}{2\\pi c}\\sqrt{\\dfrac{k}{\\mu}}"
+    }
+   ]
+  },
+  {
+   "id": "selection-rule",
+   "kind": "definition",
+   "section": "5.5",
+   "name": "Selection rule",
+   "terms": [
+    "selection rules",
+    "selection rule"
+   ],
+   "statement": "A rule that limits which transitions between states are allowed and so observed in a spectrum."
+  },
+  {
+   "id": "dipole-moment",
+   "kind": "definition",
+   "section": "5.5",
+   "name": "Dipole moment",
+   "symbol": "mu_d",
+   "terms": [
+    "dipole moment"
+   ],
+   "type": "dipole-moment",
+   "statement": "The dipole moment of a molecule, the sum of each particle's charge times its position; μ_{x=0} is its value with the nuclei at their equilibrium positions."
+  },
+  {
+   "id": "dipole-moment-operator",
+   "kind": "definition",
+   "section": "5.5",
+   "name": "Dipole moment operator",
+   "symbol": "mu_hat",
+   "terms": [
+    "dipole moment operator"
+   ],
+   "type": "operator",
+   "statement": "The operator μ̂ = Σ e r⃗ + Σ q R⃗ summed over all the electrons and nuclei of the molecule, each charge times its position vector.",
+   "forms": [
+    {
+     "id": "dipole-moment-operator",
+     "latex": "\\hat{\\mu} = \\sum_{electrons} e\\vec{r} + \\sum_{nuclei} q\\vec{R}"
+    }
+   ]
+  },
+  {
+   "id": "transition-moment-integral",
+   "kind": "definition",
+   "section": "5.5",
+   "name": "Transition moment integral",
+   "symbol": "mu_T",
+   "terms": [
+    "transition moment integral",
+    "transition moment"
+   ],
+   "type": "dipole-moment",
+   "statement": "The integral μ_T = ⟨ψ_v′|μ̂|ψ_v⟩ that expresses the probability of a transition between two states: where it is zero the transition is forbidden.",
+   "forms": [
+    {
+     "id": "transition-moment-integral",
+     "latex": "\\mu_T = \\langle \\psi_{v'} | \\hat{\\mu} | \\psi_v \\rangle = \\int_{-\\infty}^{\\infty} \\psi_{v'}^*(x)\\hat{\\mu}(x)\\psi_v(x)\\,dx"
+    }
+   ]
+  },
+  {
+   "id": "forbidden-transition",
+   "kind": "definition",
+   "section": "5.5",
+   "name": "Forbidden transition",
+   "terms": [
+    "forbidden transition",
+    "weakly allowed transitions",
+    "strongly allowed transitions",
+    "allowed"
+   ],
+   "statement": "A transition whose transition moment integral is zero, so it is not observed; transitions with low probabilities are weakly allowed and those with high probabilities strongly allowed."
+  },
+  {
+   "id": "ir-selection-rules",
+   "kind": "result",
+   "section": "5.5",
+   "name": "Selection rules for IR absorption",
+   "statement": "A vibration absorbs infrared radiation only if it changes the molecule's dipole moment, dμ/dx ≠ 0, and only between adjacent levels, Δv = ±1; so the harmonic oscillator's IR spectrum is a single line at ħω, and symmetric molecules such as O₂ and N₂ do not absorb.",
+   "forms": [
+    {
+     "id": "ir-selection-rule",
+     "latex": "\\Delta v = \\pm 1"
+    },
+    {
+     "id": "ir-dipole-derivative",
+     "latex": "\\left.\\dfrac{d\\mu(x)}{dx}\\right|_{x=0} \\neq 0"
+    }
+   ]
+  },
+  {
+   "id": "overtone-transition",
+   "kind": "definition",
+   "section": "5.5",
+   "name": "Overtone transition",
+   "terms": [
+    "overtone",
+    "overtones",
+    "fundamental transitions",
+    "first overtone"
+   ],
+   "statement": "A transition with Δv = ±n, n > 1, forbidden in the harmonic oscillator model and seen because molecular vibrations are anharmonic; the first overtone, Δv = 2, appears at slightly less than twice the frequency of the fundamental, Δv = 1."
+  },
+  {
+   "id": "scaled-oscillator-equation",
+   "kind": "result",
+   "section": "5.6",
+   "name": "Harmonic oscillator equation in a scaled coordinate",
+   "statement": "Collecting constants in β² = ħ/√(μk) and changing the variable to x = q/β turns the oscillator's Schrödinger equation into d²ψ/dx² + (2μβ²E/ħ² − x²)ψ = 0.",
+   "forms": [
+    {
+     "id": "ho-beta",
+     "latex": "\\beta^2 = \\dfrac{\\hbar}{\\sqrt{\\mu k}}"
+    },
+    {
+     "id": "ho-scaled-equation",
+     "latex": "\\dfrac{d^2\\psi_v(x)}{dx^2} + \\left(\\dfrac{2\\mu\\beta^2E_v}{\\hbar^2} - x^2\\right)\\psi_v(x) = 0"
+    }
+   ]
+  },
+  {
+   "id": "asymptotic-series-method",
+   "kind": "skill",
+   "section": "5.6",
+   "name": "Solving by an asymptotic form times a power series",
+   "statement": "Find a solution valid for large values of the variable, then write the complete solution as that asymptotic solution times a power series, truncated to give a family of solutions."
+  },
+  {
+   "id": "hermite-polynomials",
+   "kind": "definition",
+   "section": "5.6",
+   "name": "Hermite polynomials",
+   "symbol": "H_v",
+   "terms": [
+    "Hermite polynomials",
+    "Hermite polynomial"
+   ],
+   "statement": "The polynomials H_v(x) of degree v (H₀ = 1, H₁ = 2x, H₂ = 4x² − 2, …), standard functions from the work of Charles Hermite, that solve the harmonic oscillator equation when multiplied by e^{−x²/2}."
+  },
+  {
+   "id": "oscillator-wavefunctions",
+   "kind": "result",
+   "section": "5.6",
+   "name": "Harmonic oscillator wavefunctions",
+   "symbol": "psi_v",
+   "type": "wavefunction",
+   "statement": "The harmonic oscillator wavefunctions are ψ_v(x) = N_v H_v(x) e^{−x²/2} with N_v = 1/(2^v v! √π)^{1/2}: a Hermite polynomial times a Gaussian that falls off at large displacement.",
+   "forms": [
+    {
+     "id": "ho-wavefunctions",
+     "latex": "\\psi_v(x) = N_v H_v(x) e^{-x^2/2}"
+    },
+    {
+     "id": "ho-normalization-constant",
+     "latex": "N_v = \\dfrac{1}{(2^v v! \\sqrt{\\pi})^{1/2}}"
+    },
+    {
+     "id": "ho-wavefunctions-alpha",
+     "latex": "\\psi_v(Q) = N_v'' H_v(\\sqrt{\\alpha}Q)\\, e^{-\\alpha Q^2/2}"
+    }
+   ]
+  },
+  {
+   "id": "oscillator-wavefunction-parity",
+   "kind": "result",
+   "section": "5.6",
+   "name": "Nodes and symmetry of the oscillator wavefunctions",
+   "terms": [
+    "gerade",
+    "ungerade"
+   ],
+   "statement": "The wavefunction ψ_v has v nodes, and its symmetry alternates: gerade (even) for even v, ungerade (odd) for odd v."
+  },
+  {
+   "id": "quantum-tunneling",
+   "kind": "idea",
+   "section": "5.6",
+   "name": "Quantum mechanical tunneling",
+   "terms": [
+    "quantum mechanical tunneling",
+    "tunneling"
+   ],
+   "statement": "A quantum oscillator has a finite probability of being in a region where its potential energy exceeds its total energy, beyond the classical limits, so the amplitude of a molecular vibration is larger than the classical picture allows."
+  },
+  {
+   "id": "error-function",
+   "kind": "definition",
+   "section": "5.6",
+   "name": "Error function",
+   "terms": [
+    "error function",
+    "ERF"
+   ],
+   "statement": "The integral (2/√π)∫₀^z e^{−x²}dx, which can only be evaluated numerically; ERF(1) = 0.843."
+  },
+  {
+   "id": "oscillator-tunneling-probability",
+   "kind": "result",
+   "section": "5.6",
+   "name": "Probability of the forbidden region in the ground state",
+   "statement": "For v = 0, P[allowed] = (2/√π)∫₀¹ e^{−x²}dx = ERF(1) = 0.843, so the oscillator is found beyond its classical limits 16% of the time.",
+   "forms": [
+    {
+     "id": "ho-forbidden-probability",
+     "latex": "P[\\text{forbidden}] = 1 - P[\\text{allowed}]"
+    },
+    {
+     "id": "ho-allowed-probability",
+     "latex": "P[\\text{allowed}] = \\dfrac{2}{\\sqrt{\\pi}} \\int_0^1 \\exp(-x^2)\\,dx"
+    }
+   ]
+  },
+  {
+   "id": "even-function",
+   "kind": "definition",
+   "section": "5.7",
+   "name": "Even function",
+   "terms": [
+    "even",
+    "even function"
+   ],
+   "statement": "A function with f(−x) = f(x) for all x, symmetric about the y axis, such as x² and cos x.",
+   "forms": [
+    {
+     "id": "even-function",
+     "latex": "f(-x) = f(x)"
+    }
+   ]
+  },
+  {
+   "id": "odd-function",
+   "kind": "definition",
+   "section": "5.7",
+   "name": "Odd function",
+   "terms": [
+    "odd",
+    "odd function"
+   ],
+   "statement": "A function with f(−x) = −f(x) for all x, unchanged by a rotation of 180° about the origin, such as x³ and sin x.",
+   "forms": [
+    {
+     "id": "odd-function",
+     "latex": "f(-x) = -f(x)"
+    }
+   ]
+  },
+  {
+   "id": "parity-product-rules",
+   "kind": "result",
+   "section": "5.7",
+   "name": "Products of even and odd functions",
+   "statement": "The product of two even functions or of two odd functions is even; the product of an even and an odd function is odd."
+  },
+  {
+   "id": "symmetric-interval-integrals",
+   "kind": "result",
+   "section": "5.7",
+   "name": "Integrals of even and odd functions",
+   "statement": "Over an interval symmetric about zero, the integral of an even function is twice the integral over half the interval and the integral of an odd function is zero, whatever the function.",
+   "forms": [
+    {
+     "id": "even-integral",
+     "latex": "\\int_{-a}^a f(x)\\,dx = 2\\int_0^a f(x)\\,dx",
+     "condition": "f even"
+    },
+    {
+     "id": "odd-integral",
+     "latex": "\\int_{-a}^a f(x)\\,dx = 0",
+     "condition": "f odd"
+    }
+   ]
+  },
+  {
+   "id": "hermite-recurrence",
+   "kind": "result",
+   "section": "5.7",
+   "name": "Hermite recurrence relation",
+   "terms": [
+    "recurrence relation",
+    "Generating Formula"
+   ],
+   "statement": "Each Hermite polynomial can be generated from the two before it: H_{n+1}(x) = 2xH_n(x) − 2nH_{n−1}(x).",
+   "forms": [
+    {
+     "id": "hermite-recurrence",
+     "latex": "H_{n+1}(x) = 2xH_n(x) - 2nH_{n-1}(x)"
+    }
+   ]
+  },
+  {
+   "id": "hermite-parity",
+   "kind": "result",
+   "section": "5.7",
+   "name": "Parity of the Hermite polynomials",
+   "statement": "H_n(−x) = (−1)ⁿH_n(x): a Hermite polynomial is even when n is even and odd when n is odd.",
+   "forms": [
+    {
+     "id": "hermite-parity",
+     "latex": "H_n(-x) = (-1)^n H_n(x)"
+    }
+   ]
+  },
+  {
+   "id": "hermite-orthogonality",
+   "kind": "result",
+   "section": "5.7",
+   "name": "Orthogonality of the Hermite polynomials",
+   "statement": "The Hermite polynomials are orthogonal with the weight function e^{−x²}: ∫H_mH_n e^{−x²}dx is zero for m ≠ n and 2ⁿn!√π for m = n, the integral that normalizes the oscillator wavefunctions.",
+   "forms": [
+    {
+     "id": "hermite-orthogonal",
+     "latex": "\\int_{-\\infty}^{\\infty} H_m(x)H_n(x)\\, e^{-x^2}\\, dx = 0",
+     "condition": "m ≠ n"
+    },
+    {
+     "id": "hermite-norm",
+     "latex": "\\int_{-\\infty}^{\\infty} H_n(x)^2\\, e^{-x^2}\\, dx = 2^n n! \\sqrt{\\pi}"
+    }
+   ]
+  },
+  {
+   "id": "angular-velocity",
+   "kind": "definition",
+   "section": "5.8",
+   "name": "Angular velocity",
+   "symbol": "omega",
+   "terms": [
+    "angular velocity"
+   ],
+   "type": "frequency",
+   "statement": "The rate of rotation ω = v/r of a particle moving at speed v at a distance r from the axis.",
+   "forms": [
+    {
+     "id": "angular-velocity",
+     "latex": "\\omega = \\dfrac{v}{r}"
+    }
+   ]
+  },
+  {
+   "id": "angular-momentum",
+   "kind": "definition",
+   "section": "5.8",
+   "name": "Angular momentum",
+   "symbol": "L",
+   "terms": [
+    "angular momentum"
+   ],
+   "type": "angular-momentum",
+   "statement": "The rotational counterpart of linear momentum: for a rigid body rotating with angular velocity ω about an axis, L = Iω, the sum of the angular momenta of its particles.",
+   "forms": [
+    {
+     "id": "angular-momentum",
+     "latex": "L = I\\omega"
+    }
+   ]
+  },
+  {
+   "id": "moment-of-inertia",
+   "kind": "definition",
+   "section": "5.8",
+   "name": "Moment of inertia",
+   "symbol": "I_mom",
+   "terms": [
+    "moment of inertia"
+   ],
+   "type": "moment-of-inertia",
+   "statement": "The inertial resistance of a body to rotation about an axis; for a diatomic rigid rotor about its center of mass it is I = μr₀².",
+   "forms": [
+    {
+     "id": "moment-of-inertia-diatomic",
+     "latex": "I = \\mu r_0^2"
+    }
+   ]
+  },
+  {
+   "id": "rotational-kinetic-energy",
+   "kind": "result",
+   "section": "5.8",
+   "name": "Kinetic energy of a rotating body",
+   "type": "energy",
+   "statement": "The energy of a classical rigid rotor is all kinetic, T = ½Iω² = L²/2I, and grows with the rate of rotation and the moment of inertia; it is not quantized.",
+   "forms": [
+    {
+     "id": "rotational-kinetic-energy",
+     "latex": "T = \\dfrac{1}{2}I\\omega^2"
+    }
+   ]
+  },
+  {
+   "id": "spherical-coordinates",
+   "kind": "definition",
+   "section": "5.8",
+   "name": "Spherical coordinates",
+   "terms": [
+    "spherical coordinate system"
+   ],
+   "statement": "Coordinates that place a point by its distance r from the origin, its polar angle θ from the z axis and its azimuthal angle φ from the x axis; for a rigid rotor r is fixed and only θ and φ vary, on the surface of a sphere of radius r₀."
+  },
+  {
+   "id": "rigid-rotor-schrodinger-equation",
+   "kind": "result",
+   "section": "5.8",
+   "name": "Schrödinger equation of the rigid rotor",
+   "statement": "With r fixed at r₀ and I = μr₀², the rigid rotor's Schrödinger equation contains only the angles: −(ħ²/2I)[(1/sin θ)∂/∂θ(sin θ ∂/∂θ) + (1/sin²θ)∂²/∂φ²]ΘΦ = EΘΦ.",
+   "forms": [
+    {
+     "id": "rigid-rotor-schrodinger",
+     "latex": "-\\dfrac{\\hbar^2}{2I}\\left[\\dfrac{1}{\\sin\\theta}\\dfrac{\\partial}{\\partial\\theta}\\sin\\theta\\dfrac{\\partial}{\\partial\\theta} + \\dfrac{1}{\\sin^2\\theta}\\dfrac{\\partial^2}{\\partial\\varphi^2}\\right]\\Theta(\\theta)\\Phi(\\varphi) = E\\,\\Theta(\\theta)\\Phi(\\varphi)"
+    }
+   ]
+  },
+  {
+   "id": "separated-rotor-equations",
+   "kind": "result",
+   "section": "5.8",
+   "name": "The θ and φ equations of the rigid rotor",
+   "statement": "Writing the wavefunction as Θ(θ)Φ(φ) and setting both sides of the separated equation equal to the constant m_J² gives a θ-equation and a φ-equation, d²Φ/dφ² + m_J²Φ = 0, each in one variable.",
+   "forms": [
+    {
+     "id": "rotor-theta-equation",
+     "latex": "\\sin\\theta\\dfrac{d}{d\\theta}\\left(\\sin\\theta\\dfrac{d}{d\\theta}\\right)\\Theta(\\theta) + \\left(\\lambda\\sin^2\\theta - m_J^2\\right)\\Theta(\\theta) = 0"
+    },
+    {
+     "id": "rotor-phi-equation",
+     "latex": "\\dfrac{d^2}{d\\varphi^2}\\Phi(\\varphi) + m_J^2\\Phi(\\varphi) = 0"
+    }
+   ]
+  },
+  {
+   "id": "cyclic-boundary-condition",
+   "kind": "definition",
+   "section": "5.8",
+   "name": "Cyclic boundary condition",
+   "terms": [
+    "cyclic boundary condition"
+   ],
+   "statement": "Because φ and φ + 2π are the same point in space, the wavefunction must repeat around the circle: Φ(φ) = Φ(φ + 2π).",
+   "forms": [
+    {
+     "id": "cyclic-boundary-condition",
+     "latex": "\\Phi(\\varphi) = \\Phi(\\varphi + 2\\pi)"
+    }
+   ]
+  },
+  {
+   "id": "rotor-phi-functions",
+   "kind": "result",
+   "section": "5.8",
+   "name": "The φ functions of the rigid rotor",
+   "symbol": "Phi",
+   "type": "wavefunction",
+   "statement": "The φ-equation's normalized solutions are Φ(φ) = (1/√2π)e^{±im_Jφ}, and the cyclic boundary condition requires m_J = 0, ±1, ±2, ….",
+   "forms": [
+    {
+     "id": "rotor-phi-functions",
+     "latex": "\\Phi_{m_J}(\\varphi) = \\sqrt{\\dfrac{1}{2\\pi}}\\, e^{\\pm i m_J \\varphi}"
+    }
+   ]
+  },
+  {
+   "id": "associated-legendre-functions",
+   "kind": "definition",
+   "section": "5.8",
+   "name": "Associated Legendre functions",
+   "terms": [
+    "Associated Legendre Functions",
+    "associated Legendre functions"
+   ],
+   "statement": "The power series of sine and cosine functions that solve the rigid rotor's θ-equation, giving the Θ(θ) functions."
+  },
+  {
+   "id": "rotor-quantum-numbers",
+   "kind": "definition",
+   "section": "5.8",
+   "name": "Rigid rotor quantum numbers",
+   "symbol": "J",
+   "statement": "The two quantum numbers of the rigid rotor: J = 0, 1, 2, …, which fixes the length of the angular momentum vector and the energy, and m_J, which fixes its component along z and ranges over −J, …, J.",
+   "forms": [
+    {
+     "id": "rotor-j-bounds",
+     "latex": "J \\ge |m_J|"
+    }
+   ]
+  },
+  {
+   "id": "rotor-energy-levels",
+   "kind": "result",
+   "section": "5.8",
+   "name": "Energy levels of the rigid rotor",
+   "symbol": "E_J",
+   "type": "energy",
+   "statement": "Solving the θ-equation requires λ = J(J + 1), so the rotor's energy is quantized, E = J(J + 1)ħ²/2I, depending only on J; the spacing between levels increases as J increases.",
+   "forms": [
+    {
+     "id": "rotor-energy-levels",
+     "latex": "E = J(J + 1)\\dfrac{\\hbar^2}{2I}"
+    },
+    {
+     "id": "rotor-lambda",
+     "latex": "\\lambda = J(J+1)"
+    }
+   ]
+  },
+  {
+   "id": "rotor-degeneracy",
+   "kind": "result",
+   "section": "5.8",
+   "name": "Degeneracy of the rotor levels",
+   "statement": "Each energy level of the rigid rotor is (2J + 1)-fold degenerate, since m_J runs from +J to −J in integer steps: the energy does not depend on the orientation of the rotor."
+  },
+  {
+   "id": "spherical-harmonics",
+   "kind": "definition",
+   "section": "5.8",
+   "name": "Spherical harmonics",
+   "symbol": "Y_JM",
+   "terms": [
+    "spherical harmonic function",
+    "spherical harmonics",
+    "spherical harmonic"
+   ],
+   "type": "wavefunction",
+   "statement": "The rigid rotor wavefunctions Y^{m_J}_J(θ, φ) = Θ^{|m_J|}_J(θ)Φ_{m_J}(φ), labeled by both quantum numbers; their squares have the shapes of the s, p and d orbitals.",
+   "forms": [
+    {
+     "id": "spherical-harmonic",
+     "latex": "Y^{m_J}_J(\\theta, \\varphi) = \\Theta^{|m_J|}_J(\\theta)\\,\\Phi_{m_J}(\\varphi)"
+    }
+   ]
+  },
+  {
+   "id": "rotor-orientation-probability",
+   "kind": "result",
+   "section": "5.8",
+   "name": "Probability of a rotor's orientation",
+   "statement": "The probability of finding the internuclear axis at θ₀, φ₀ within the area element ds = sin θ dθ dφ is Y*Y ds: the absolute square of the spherical harmonic is the probability density over orientations.",
+   "forms": [
+    {
+     "id": "rotor-orientation-probability",
+     "latex": "Pr[\\theta_0, \\varphi_0] = Y^{m_J*}_J(\\theta_0,\\varphi_0)\\,Y^{m_J}_J(\\theta_0,\\varphi_0)\\,ds"
+    },
+    {
+     "id": "spherical-area-element",
+     "latex": "ds = \\sin\\theta\\, d\\theta\\, d\\varphi"
+    }
+   ]
+  },
+  {
+   "id": "quantum-rotor-not-classical",
+   "kind": "idea",
+   "section": "5.8",
+   "name": "A quantum rotor does not rotate classically",
+   "statement": "In the J = 1, m_J = 0 state the whole xy-plane is a node, so the internuclear axis is never found there, though a classical molecule rotating through it would lie in it twice a revolution: molecules are not rotating in the classical sense, but keep the properties of angular momentum."
+  },
+  {
+   "id": "molecular-rotations",
+   "kind": "idea",
+   "section": "5.9",
+   "name": "Rotations of a molecule",
+   "statement": "An object has three orthogonal rotations, about the x, y and z axes; for a linear molecule the motion about the internuclear axis is not counted as a rotation."
+  },
+  {
+   "id": "microwave-spectroscopy",
+   "kind": "idea",
+   "section": "5.9",
+   "name": "Microwave spectroscopy",
+   "terms": [
+    "microwave spectroscopy",
+    "microwave spectrum",
+    "rotational spectrum"
+   ],
+   "statement": "The permanent dipole moment of a polar molecule couples to radiation and induces transitions between rotational states, whose energies fall in the far infrared and microwave regions."
+  },
+  {
+   "id": "rotational-selection-rules",
+   "kind": "result",
+   "section": "5.9",
+   "name": "Rotational selection rules",
+   "statement": "The transition moment integral of the spherical harmonics allows rotational transitions only with ΔJ = ±1 and Δm_J = 0, ±1, and only in molecules with a permanent dipole moment; a photon is absorbed for ΔJ = +1 and emitted for ΔJ = −1.",
+   "forms": [
+    {
+     "id": "rotational-selection-j",
+     "latex": "\\Delta J = \\pm 1"
+    },
+    {
+     "id": "rotational-selection-m",
+     "latex": "\\Delta m_J = 0, \\pm 1"
+    }
+   ]
+  },
+  {
+   "id": "rotational-constant",
+   "kind": "definition",
+   "section": "5.9",
+   "name": "Rotational constant",
+   "symbol": "B",
+   "terms": [
+    "rotational constant"
+   ],
+   "type": "energy",
+   "statement": "The constant B = ħ²/2I of a molecule's rotational levels, written in frequency as B/h = h/(8π²μr₀²) and in wavenumbers as B̃ = B/hc; it depends on the bond length and the reduced mass.",
+   "forms": [
+    {
+     "id": "rotational-constant",
+     "latex": "B = \\dfrac{\\hbar^2}{2I}"
+    },
+    {
+     "id": "rotational-constant-wavenumber",
+     "latex": "\\tilde{B} = \\dfrac{B}{hc} = \\dfrac{h}{8\\pi^2 c \\mu r_0^2}"
+    }
+   ]
+  },
+  {
+   "id": "rotational-transition-energies",
+   "kind": "result",
+   "section": "5.9",
+   "name": "Rotational transition energies",
+   "symbol": "E_photon",
+   "type": "energy",
+   "statement": "With J_f = J_i + 1, the energy of the photon absorbed in a rotational transition is E_photon = hν = 2B(J_i + 1): the first line lies at 2B, the next at 4B.",
+   "forms": [
+    {
+     "id": "rotational-transition-energy",
+     "latex": "E_{photon} = 2B(J_i + 1)"
+    },
+    {
+     "id": "rotational-transition-difference",
+     "latex": "E_{photon} = J_f(J_f+1)\\dfrac{\\hbar^2}{2I} - J_i(J_i+1)\\dfrac{\\hbar^2}{2I}"
+    }
+   ]
+  },
+  {
+   "id": "rotational-line-spacing",
+   "kind": "result",
+   "section": "5.9",
+   "name": "Spacing of rotational lines",
+   "statement": "The rigid rotor predicts a rotational spectrum of exactly equally spaced lines, 2B apart.",
+   "forms": [
+    {
+     "id": "rotational-line-spacing",
+     "latex": "\\nu_{J_i+1} - \\nu_{J_i} = 2B"
+    }
+   ]
+  },
+  {
+   "id": "centrifugal-stretching",
+   "kind": "idea",
+   "section": "5.9",
+   "name": "Centrifugal stretching",
+   "terms": [
+    "centrifugal stretching",
+    "non-rigid rotors"
+   ],
+   "statement": "As the rotational angular momentum increases with J the bond stretches, increasing the moment of inertia and decreasing the rotational constant, so the observed lines draw slightly closer: a molecule is not really a rigid rotor."
+  },
+  {
+   "id": "bond-length-from-spectrum",
+   "kind": "skill",
+   "section": "5.9",
+   "name": "Finding a bond length from a rotational spectrum",
+   "statement": "Read the J = 0 → 1 line (or the line spacing) as 2B, compute the reduced mass from the isotopes' masses, and solve B = h/(8π²μr₀²) for the bond length."
+  }
+ ],
+ "concept_prereqs": [
+  {
+   "concept": "molecular-motion-separation",
+   "prereq": "harmonic-oscillator"
+  },
+  {
+   "concept": "molecular-motion-separation",
+   "prereq": "rigid-rotor"
+  },
+  {
+   "concept": "hookes-law",
+   "prereq": "harmonic-oscillator"
+  },
+  {
+   "concept": "force-constant",
+   "prereq": "hookes-law"
+  },
+  {
+   "concept": "vibrational-coordinate",
+   "prereq": "molecular-motion-separation"
+  },
+  {
+   "concept": "harmonic-potential",
+   "prereq": "force-constant"
+  },
+  {
+   "concept": "oscillator-equation-of-motion",
+   "prereq": "force-constant"
+  },
+  {
+   "concept": "classical-harmonic-motion",
+   "prereq": "oscillator-equation-of-motion"
+  },
+  {
+   "concept": "classical-harmonic-motion",
+   "prereq": "sine-wave"
+  },
+  {
+   "concept": "oscillator-frequency",
+   "prereq": "classical-harmonic-motion"
+  },
+  {
+   "concept": "oscillator-energy",
+   "prereq": "harmonic-potential"
+  },
+  {
+   "concept": "oscillator-energy",
+   "prereq": "classical-harmonic-motion"
+  },
+  {
+   "concept": "turning-points",
+   "prereq": "oscillator-energy"
+  },
+  {
+   "concept": "classical-oscillator-density",
+   "prereq": "turning-points"
+  },
+  {
+   "concept": "reduced-mass",
+   "prereq": "vibrational-coordinate"
+  },
+  {
+   "concept": "harmonic-oscillator-schrodinger-equation",
+   "prereq": "harmonic-potential"
+  },
+  {
+   "concept": "harmonic-oscillator-schrodinger-equation",
+   "prereq": "reduced-mass"
+  },
+  {
+   "concept": "harmonic-oscillator-schrodinger-equation",
+   "prereq": "hamiltonian-operator"
+  },
+  {
+   "concept": "vibrational-quantum-number",
+   "prereq": "quantum-number"
+  },
+  {
+   "concept": "oscillator-energy-levels",
+   "prereq": "harmonic-oscillator-schrodinger-equation"
+  },
+  {
+   "concept": "oscillator-energy-levels",
+   "prereq": "vibrational-quantum-number"
+  },
+  {
+   "concept": "oscillator-energy-levels",
+   "prereq": "oscillator-frequency"
+  },
+  {
+   "concept": "isotope-effect",
+   "prereq": "reduced-mass"
+  },
+  {
+   "concept": "isotope-effect",
+   "prereq": "oscillator-frequency"
+  },
+  {
+   "concept": "potential-taylor-expansion",
+   "prereq": "harmonic-potential"
+  },
+  {
+   "concept": "anharmonicity",
+   "prereq": "potential-taylor-expansion"
+  },
+  {
+   "concept": "anharmonic-energy-levels",
+   "prereq": "anharmonicity"
+  },
+  {
+   "concept": "anharmonic-energy-levels",
+   "prereq": "oscillator-energy-levels"
+  },
+  {
+   "concept": "well-depth",
+   "prereq": "anharmonicity"
+  },
+  {
+   "concept": "dissociation-energy",
+   "prereq": "well-depth"
+  },
+  {
+   "concept": "dissociation-energy",
+   "prereq": "zero-point-energy"
+  },
+  {
+   "concept": "harmonic-oscillator-limitations",
+   "prereq": "oscillator-energy-levels"
+  },
+  {
+   "concept": "morse-potential",
+   "prereq": "dissociation-energy"
+  },
+  {
+   "concept": "oscillator-zero-point-energy",
+   "prereq": "oscillator-energy-levels"
+  },
+  {
+   "concept": "oscillator-zero-point-energy",
+   "prereq": "zero-point-energy"
+  },
+  {
+   "concept": "classical-displacement-limit",
+   "prereq": "oscillator-zero-point-energy"
+  },
+  {
+   "concept": "classical-displacement-limit",
+   "prereq": "turning-points"
+  },
+  {
+   "concept": "oscillator-zero-averages",
+   "prereq": "expectation-value"
+  },
+  {
+   "concept": "oscillator-zero-averages",
+   "prereq": "harmonic-potential"
+  },
+  {
+   "concept": "root-mean-square-displacement",
+   "prereq": "oscillator-zero-averages"
+  },
+  {
+   "concept": "root-mean-square-displacement",
+   "prereq": "quantum-uncertainty"
+  },
+  {
+   "concept": "oscillator-orthonormality",
+   "prereq": "orthonormality"
+  },
+  {
+   "concept": "oscillator-orthonormality",
+   "prereq": "harmonic-oscillator-schrodinger-equation"
+  },
+  {
+   "concept": "classically-forbidden-region",
+   "prereq": "classical-displacement-limit"
+  },
+  {
+   "concept": "infrared-spectroscopy",
+   "prereq": "oscillator-energy-levels"
+  },
+  {
+   "concept": "vibrational-transition-frequency",
+   "prereq": "infrared-spectroscopy"
+  },
+  {
+   "concept": "selection-rule",
+   "prereq": "line-spectrum"
+  },
+  {
+   "concept": "dipole-moment-operator",
+   "prereq": "dipole-moment"
+  },
+  {
+   "concept": "dipole-moment-operator",
+   "prereq": "operator"
+  },
+  {
+   "concept": "transition-moment-integral",
+   "prereq": "dipole-moment-operator"
+  },
+  {
+   "concept": "transition-moment-integral",
+   "prereq": "selection-rule"
+  },
+  {
+   "concept": "forbidden-transition",
+   "prereq": "transition-moment-integral"
+  },
+  {
+   "concept": "ir-selection-rules",
+   "prereq": "forbidden-transition"
+  },
+  {
+   "concept": "ir-selection-rules",
+   "prereq": "oscillator-orthonormality"
+  },
+  {
+   "concept": "ir-selection-rules",
+   "prereq": "vibrational-transition-frequency"
+  },
+  {
+   "concept": "overtone-transition",
+   "prereq": "ir-selection-rules"
+  },
+  {
+   "concept": "overtone-transition",
+   "prereq": "anharmonic-energy-levels"
+  },
+  {
+   "concept": "scaled-oscillator-equation",
+   "prereq": "harmonic-oscillator-schrodinger-equation"
+  },
+  {
+   "concept": "asymptotic-series-method",
+   "prereq": "scaled-oscillator-equation"
+  },
+  {
+   "concept": "hermite-polynomials",
+   "prereq": "asymptotic-series-method"
+  },
+  {
+   "concept": "oscillator-wavefunctions",
+   "prereq": "hermite-polynomials"
+  },
+  {
+   "concept": "oscillator-wavefunctions",
+   "prereq": "normalization-condition"
+  },
+  {
+   "concept": "oscillator-wavefunction-parity",
+   "prereq": "oscillator-wavefunctions"
+  },
+  {
+   "concept": "oscillator-wavefunction-parity",
+   "prereq": "nodes-and-energy"
+  },
+  {
+   "concept": "quantum-tunneling",
+   "prereq": "oscillator-wavefunctions"
+  },
+  {
+   "concept": "quantum-tunneling",
+   "prereq": "classically-forbidden-region"
+  },
+  {
+   "concept": "error-function",
+   "prereq": "normalization-condition"
+  },
+  {
+   "concept": "oscillator-tunneling-probability",
+   "prereq": "quantum-tunneling"
+  },
+  {
+   "concept": "oscillator-tunneling-probability",
+   "prereq": "error-function"
+  },
+  {
+   "concept": "oscillator-tunneling-probability",
+   "prereq": "position-probability"
+  },
+  {
+   "concept": "odd-function",
+   "prereq": "even-function"
+  },
+  {
+   "concept": "parity-product-rules",
+   "prereq": "odd-function"
+  },
+  {
+   "concept": "symmetric-interval-integrals",
+   "prereq": "odd-function"
+  },
+  {
+   "concept": "hermite-recurrence",
+   "prereq": "hermite-polynomials"
+  },
+  {
+   "concept": "hermite-parity",
+   "prereq": "hermite-polynomials"
+  },
+  {
+   "concept": "hermite-parity",
+   "prereq": "odd-function"
+  },
+  {
+   "concept": "hermite-orthogonality",
+   "prereq": "hermite-parity"
+  },
+  {
+   "concept": "hermite-orthogonality",
+   "prereq": "parity-product-rules"
+  },
+  {
+   "concept": "hermite-orthogonality",
+   "prereq": "symmetric-interval-integrals"
+  },
+  {
+   "concept": "hermite-orthogonality",
+   "prereq": "orthogonality"
+  },
+  {
+   "concept": "angular-velocity",
+   "prereq": "rigid-rotor"
+  },
+  {
+   "concept": "moment-of-inertia",
+   "prereq": "reduced-mass"
+  },
+  {
+   "concept": "angular-momentum",
+   "prereq": "angular-velocity"
+  },
+  {
+   "concept": "angular-momentum",
+   "prereq": "moment-of-inertia"
+  },
+  {
+   "concept": "rotational-kinetic-energy",
+   "prereq": "angular-momentum"
+  },
+  {
+   "concept": "spherical-coordinates",
+   "prereq": "rigid-rotor"
+  },
+  {
+   "concept": "rigid-rotor-schrodinger-equation",
+   "prereq": "spherical-coordinates"
+  },
+  {
+   "concept": "rigid-rotor-schrodinger-equation",
+   "prereq": "moment-of-inertia"
+  },
+  {
+   "concept": "rigid-rotor-schrodinger-equation",
+   "prereq": "time-independent-schrodinger-equation"
+  },
+  {
+   "concept": "separated-rotor-equations",
+   "prereq": "rigid-rotor-schrodinger-equation"
+  },
+  {
+   "concept": "cyclic-boundary-condition",
+   "prereq": "boundary-conditions"
+  },
+  {
+   "concept": "cyclic-boundary-condition",
+   "prereq": "spherical-coordinates"
+  },
+  {
+   "concept": "rotor-phi-functions",
+   "prereq": "separated-rotor-equations"
+  },
+  {
+   "concept": "rotor-phi-functions",
+   "prereq": "cyclic-boundary-condition"
+  },
+  {
+   "concept": "rotor-phi-functions",
+   "prereq": "normalization-condition"
+  },
+  {
+   "concept": "associated-legendre-functions",
+   "prereq": "separated-rotor-equations"
+  },
+  {
+   "concept": "rotor-quantum-numbers",
+   "prereq": "rotor-phi-functions"
+  },
+  {
+   "concept": "rotor-quantum-numbers",
+   "prereq": "associated-legendre-functions"
+  },
+  {
+   "concept": "rotor-energy-levels",
+   "prereq": "rotor-quantum-numbers"
+  },
+  {
+   "concept": "rotor-energy-levels",
+   "prereq": "rotational-kinetic-energy"
+  },
+  {
+   "concept": "rotor-degeneracy",
+   "prereq": "rotor-energy-levels"
+  },
+  {
+   "concept": "rotor-degeneracy",
+   "prereq": "degeneracy"
+  },
+  {
+   "concept": "spherical-harmonics",
+   "prereq": "rotor-quantum-numbers"
+  },
+  {
+   "concept": "rotor-orientation-probability",
+   "prereq": "spherical-harmonics"
+  },
+  {
+   "concept": "quantum-rotor-not-classical",
+   "prereq": "rotor-orientation-probability"
+  },
+  {
+   "concept": "quantum-rotor-not-classical",
+   "prereq": "node"
+  },
+  {
+   "concept": "molecular-rotations",
+   "prereq": "rigid-rotor"
+  },
+  {
+   "concept": "microwave-spectroscopy",
+   "prereq": "dipole-moment"
+  },
+  {
+   "concept": "microwave-spectroscopy",
+   "prereq": "molecular-rotations"
+  },
+  {
+   "concept": "rotational-selection-rules",
+   "prereq": "microwave-spectroscopy"
+  },
+  {
+   "concept": "rotational-selection-rules",
+   "prereq": "transition-moment-integral"
+  },
+  {
+   "concept": "rotational-selection-rules",
+   "prereq": "spherical-harmonics"
+  },
+  {
+   "concept": "rotational-constant",
+   "prereq": "rotor-energy-levels"
+  },
+  {
+   "concept": "rotational-transition-energies",
+   "prereq": "rotational-constant"
+  },
+  {
+   "concept": "rotational-transition-energies",
+   "prereq": "rotational-selection-rules"
+  },
+  {
+   "concept": "rotational-line-spacing",
+   "prereq": "rotational-transition-energies"
+  },
+  {
+   "concept": "centrifugal-stretching",
+   "prereq": "rotational-line-spacing"
+  },
+  {
+   "concept": "bond-length-from-spectrum",
+   "prereq": "rotational-line-spacing"
+  }
+ ]
+}

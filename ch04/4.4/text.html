@@ -1,0 +1,59 @@
+<section id="opening">
+<h2>Two Schrödinger equations</h2>
+<p>There are two "flavors" of Schrödinger equations: the time-dependent and the time-independent versions. While the <span data-concept="time-dependent-schrodinger-equation">time-dependent Schrödinger equation</span> predicts that <span data-concept="wavefunction">wavefunctions</span> can form standing waves (called <span data-concept="stationary-state">stationary states</span>), that if classified and understood, then it becomes easier to solve the <span data-concept="time-dependent-schrodinger-equation">time-dependent Schrödinger equation</span> for any state. <span data-concept="stationary-state">Stationary states</span> can also be described by the <span data-concept="time-independent-schrodinger-equation">time-independent Schrödinger equation</span> (used only when the Hamiltonian is not explicitly time dependent). However, it should be noted that the solutions to the <span data-concept="time-independent-schrodinger-equation">time-independent Schrödinger equation</span> still have time dependencies.</p>
+</section>
+
+<section id="time-dependent-wavefunctions">
+<h2>Time-Dependent Wavefunctions</h2>
+<p>Recall that the <span data-concept="time-independent-schrodinger-equation">time-independent Schrödinger equation</span></p>
+$$ \kH\kpsi (\kx)=\kE\kpsi (\kx) \tag{4.4.1} $$
+<p>yields the allowed energies and corresponding <span data-concept="wavefunction">wavefunctions</span>. However, it does not tell us how the system evolves in time. It would seem that something is missing, since, after all, classical mechanics tells us how the positions and velocities of a classical system evolve in time. The time dependence is given by solving Newton's second law</p>
+$$ \km\dfrac{d^2 \kx}{d\kt^2}=\kF(\kx) \tag{4.4.2} $$
+<p>But where is $\kt$ in quantum mechanics? First of all, what is it that must evolve in time? The answer is that the <span data-concept="wavefunction">wavefunction</span> (and associated <span data-concept="probability-density">probability density</span>) must evolve. Suppose, therefore, that we prepare a system at $\kt=0$ according to a particular <span data-concept="probability-density">probability density</span> $\kpdens(\kx,0)$ related to an amplitude $\kPsi (\kx,0)$ by</p>
+$$ \kpdens(\kx,0) =|\kPsi (\kx,0)|^2 \tag{4.4.3} $$
+<p>How will this initial amplitude $\kPsi (\kx,0)$ look at time $\kt$ later? Note, by the way, that $\kPsi (\kx,0)$ does <em>not</em> necessarily need to be one of the <span data-concept="eigenstate">eigenstates</span> $\kpsin (\kx)$. To address this, we refer to the <span data-concept="time-dependent-schrodinger-equation">time-dependent Schrödinger equation</span> that tells us how $\kPsi (\kx,\kt)$ will evolve starting from the initial condition $\kPsi (\kx,0)$:</p>
+$$ \kH\kPsi (\kx,\kt)=i\hbar\dfrac{\partial}{\partial \kt}\kPsi (\kx,\kt) \tag{4.4.4} $$
+<p>It is important to know how it works physically and when it is sufficient to work with the time-independent version of the Schrödinger equation (Equation 4.4.1).</p>
+<div class="note">
+<div class="eyebrow">Note</div>
+<h3>Postulate V</h3>
+<p>The time dependence of <span data-concept="wavefunction">wavefunctions</span> is governed by the <span data-concept="time-dependent-schrodinger-equation">Time-Dependent Schrödinger Equation</span> (Equation 4.4.4).</p>
+</div>
+</section>
+
+<section id="stationary-states">
+<h2>Stationary States</h2>
+<p>Suppose that we are lucky enough to choose</p>
+$$ \kPsi (\kx,0) =\kpsin (\kx) $$
+<p>with corresponding <span data-concept="probability-density">probability density</span></p>
+$$ \kpdens(\kx,0) =|\kpsin (\kx)|^2 \tag{4.4.5} $$
+<p>We will show that</p>
+$$ \kPsi (\kx,\kt) =\kpsin (\kx)e^{-i\kEn \kt/\hbar} \tag{4.4.6} $$
+<p>From the <span data-concept="time-dependent-schrodinger-equation">time-dependent Schrödinger equation</span></p>
+<figure class="dv" id="drv-stationary-state"></figure>
+<p><span data-concept="stationary-density-constant">the probability does not change in time</span> and for this reason, $\kpsin (\kx)$ is called a <em><span data-concept="stationary-state">stationary state</span></em>. In such a state, the energy remains <strong>fixed</strong> at the well-defined value $\kEn$.</p>
+</section>
+
+<section id="nonstationary-states">
+<h2>Nonstationary States</h2>
+<p>Suppose, however, that we had chosen $\kPsi (\kx,0)$ to be <span data-concept="nonstationary-state">some arbitrary linear combination of the two lowest energy states</span>:</p>
+$$ \kPsi (\kx,0) =a\kpsi_1 (\kx)+b\kpsi_2 (\kx) \tag{4.4.7} $$
+<p>for example</p>
+$$ \kPsi (\kx,0) =\dfrac{1}{\sqrt{2}}[\kpsi_1 (\kx)+\kpsi_2 (\kx)] \tag{4.4.8} $$
+<p>as in the previous example.<sup class="fn" data-note="no-example"></sup> Then, the <span data-concept="probability-density">probability density</span> at time $\kt$</p>
+$$ \kpdens(\kx,\kt) = |\kPsi (\kx,\kt)|^2 \neq \kpdens(\kx,0) \tag{4.4.9} $$
+<figure class="dv" id="drv-mixture-density"></figure>
+<p>For such a mixture to be possible, there must be sufficient energy in the system that there is some probability of measuring the particle to be in its excited state.</p>
+<p>Finally, suppose we start with a state</p>
+$$ \kPsi (\kx,0)=\dfrac{1}{\sqrt{2}} [\kpsi_1 (\kx) + \kpsi_2 (\kx)] $$
+<p>and we let this state evolve in time. At any point in time, the state $\kPsi (\kx,\kt)$ will be some mixture of $\kpsi_1 (\kx)$ and $\kpsi_2 (\kx)$, and this mixture changes with time. Now, at some specific instance in time $\kt$, we measure the energy and obtain a value $\kE_1$. What is the state of the system <em>just after</em> the measurement is made? Once we make the measurement, then we know with 100% certainty that the energy is $\kE_1$. From the above discussion, there is only one possibility for the state of the system, and that has to be the <span data-concept="wavefunction">wavefunction</span> $\kpsi_1 (\kx)$, since in this state we know with 100% certainty that the energy is $\kE_1$. Hence, just after the measurement, the state <em>must be</em> $\kpsi_1 (\kx)$, which means that because of the measurement, any further dependence on $\kpsi_2 (\kx)$ drops out, and for all time thereafter, there is <em>no</em> dependence on $\kpsi_2 (\kx)$. Consequently, any subsequent measurement of the energy would yield the value $\kE_1$ with 100% certainty. This discontinuous change in the quantum state of the system as a result of the measurement is known as the <strong><span data-concept="wavefunction-collapse">collapse of the wavefunction</span></strong>. The idea that the evolution of a system can change as a result of a measurement is one of the topics that is currently debated among quantum theorists.</p>
+<figure class="sim" id="sim-measure">
+  <div class="sim-head"><span class="eyebrow">Sim</span><span>Press play. The <span data-type="probability-density">density</span> of $a\kpsi_1 + b\kpsi_2$ sloshes across the box until the energy is measured, then stands still. Set $|a|^2$ to change how often the measurement gives $\kE_1$.</span></div>
+</figure>
+<div class="note">
+<div class="eyebrow">Note</div>
+<h3>The Quantum Observer Effect</h3>
+<p>The fact that measuring a quantum system changes its time evolution means that the experimenter is now coupled to the quantum system. This <strong><span data-concept="observer-effect">observer effect</span></strong> means that the act of observing will influence the phenomenon being observed. In classical mechanics, this coupling does not exist. A classical system will evolve according to Newton's laws of motion independent of whether or not we observe it. This is not true for quantum systems. The very act of observing the system changes how it evolves in time.</p>
+<p>Put another way, by simply observing a system, we change it!</p>
+</div>
+</section>
