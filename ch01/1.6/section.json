@@ -1,0 +1,272 @@
+{
+ "id": "1.6",
+ "module": "13386",
+ "chapter": "1",
+ "title": "Matter Has Wavelike Properties",
+ "short": "Matter waves",
+ "lead": "Light had turned out to come in particles; de Broglie asked whether particles might in turn behave as waves. The section gives the wavelength he assigned to a particle of given momentum, the reasoning that led him to it, and why the wave nature of electrons had gone unnoticed.",
+ "objectives": [
+  "To introduce the wave-particle duality of light extends to matter",
+  "To describe how matter (e.g., electrons and protons) can exhibit wavelike properties, e.g., interference and diffraction patterns",
+  "To use algebra to find the de Broglie wavelength or momentum of a particle when either one of these quantities is given"
+ ],
+ "summary_html": "",
+ "notes": "The page is adapted from the LibreTexts Physical Chemistry text under CC BY-NC-SA 4.0; nothing of the book was left out.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "Both exercises are the book’s, keyed by the book; their Bloom levels and concept tags are AI-chosen. Numeric answers accept 2% tolerance.",
+ "figures": [
+  {
+   "id": "sim-de-broglie",
+   "kind": "sim",
+   "draws": [
+    "wavelength",
+    "velocity"
+   ],
+   "conventions": [
+    "e-",
+    "p+",
+    "n0"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "de-broglie-hypothesis",
+   "concept": "de-broglie-wavelength",
+   "verb": "introduces"
+  },
+  {
+   "span": "de-broglie-hypothesis",
+   "concept": "wave-particle-duality",
+   "verb": "introduces"
+  },
+  {
+   "span": "de-broglie-hypothesis",
+   "concept": "photon",
+   "verb": "uses"
+  },
+  {
+   "span": "de-broglie-hypothesis",
+   "concept": "photoelectric-effect",
+   "verb": "uses"
+  },
+  {
+   "span": "short-wavelengths",
+   "concept": "de-broglie-wavelength",
+   "verb": "reinforces"
+  },
+  {
+   "span": "electron-waves",
+   "concept": "de-broglie-wavelength",
+   "verb": "uses"
+  },
+  {
+   "span": "electron-waves",
+   "concept": "wave-particle-duality",
+   "verb": "reinforces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "e1",
+   "source_id": "exr:1.6.1",
+   "source_number": "Exercise 1.6.1",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "electron-waves",
+   "prompt": "<h4>Baseball Waves</h4>\n<p>Calculate the de Broglie wavelength for a fast ball thrown at 100 miles per hour and weighing 4 ounces. Comment on whether the wave properties of baseballs could be experimentally observed.</p>",
+   "answer": {
+    "type": "number",
+    "value": 1.3e-34,
+    "unit": "m",
+    "generated_by": "source",
+    "hint": "Convert the mass to kilograms and the speed to meters per second, then use λ = h/mv.",
+    "solution": "<p>Following the unit conversions below, a 4 oz baseball has a mass of 0.11 kg. The velocity of a fast ball thrown at 100 miles per hour in m/s is 44.7 m/s.</p>\n$$ m = \\left(4 \\; \\cancel{oz}\\right)\\left(\\frac{0.0283 \\; kg}{1 \\; \\cancel{oz}}\\right) = 0.11 kg $$\n$$ v = \\left(\\frac{100 \\; \\cancel{mi}}{\\cancel{hr}}\\right) \\left(\\frac{1609.34 \\; m}{\\cancel{mi}}\\right) \\left( \\frac{1 \\; \\cancel{hr}}{3600 \\; s}\\right) = 44.7 \\; m/s $$\n<p>The de Broglie wavelength of this fast ball is:</p>\n$$ \\lambda = \\frac{h}{mv} = \\frac{6.626069 \\times 10^{-34}\\;kg \\cdot m^2/s}{(0.11 \\; kg)(44.7 \\;m/s)} = 1.3 \\times 10^{-34} m $$"
+   }
+  },
+  {
+   "id": "e2",
+   "source_id": "exr:1.6.2",
+   "source_number": "Exercise 1.6.2",
+   "kind": "exercise",
+   "bloom": "Understand",
+   "place": {
+    "at": "end"
+   },
+   "cite": "de-broglie-hypothesis",
+   "prompt": "<h4>Electrons vs. Protons</h4>\n<p>If an electron and a proton have the same velocity, which would have the longer de Broglie wavelength?</p>",
+   "answer": {
+    "type": "choice",
+    "options": [
+     "The electron",
+     "The proton",
+     "They would have the same wavelength"
+    ],
+    "correct": 0,
+    "generated_by": "source",
+    "solution": "<p>Equation 1.6.1 shows that the de Broglie wavelength of a particle's matter wave is inversely proportional to its momentum (mass times velocity). Therefore the smaller mass particle will have a smaller momentum and longer wavelength. The electron is the lightest and will have the longest wavelength.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "e1",
+   "concept": "de-broglie-wavelength"
+  },
+  {
+   "exercise": "e2",
+   "concept": "de-broglie-wavelength"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-momentum-exponent",
+   "kind": "correction",
+   "html": "The book prints $\\sqrt{2.9 \\times 10^{-40}\\, kg^2\\, m^2/s^2}$; the product of $3.1 \\times 10^{-16}\\; kg \\cdot m^2/s^2$ and $9.109383 \\times 10^{-31}\\; kg$ is $2.9 \\times 10^{-46}\\, kg^2\\, m^2/s^2$, whose square root is the $1.7 \\times 10^{-23}\\; kg \\cdot m/s$ the book goes on to use."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "de-broglie-wavelength",
+   "what": "the de Broglie wavelength",
+   "source": "Physical Chemistry (LibreTexts), 1.6 Matter Has Wavelike Properties",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kE=\\sqrt{\\kp^2 c^2+\\km^2 c^4}",
+       "src": "Einstein’s special theory of relativity"
+      },
+      {
+       "text": "Photons are massless particles (technically rest-massless) that always have a finite momentum $p$."
+      }
+     ],
+     "then": {
+      "tex": "\\mk{E}{\\kE} = \\mk{R}{\\sqrt{\\mk{p}{\\kp^2 c^2}+\\mk{m}{\\km^2 c^4}}}",
+      "uses": [
+       0
+      ],
+      "why": "In general, a particle of mass $m$ and momentum $p$ has this energy. Note that if $p=0$, this reduces to the famous rest-energy expression $E=mc^2$."
+     },
+     "steps": [
+      {
+       "tex": "\\mk{E}{\\kE} = \\mk{R}{\\sqrt{\\mk{p}{\\kp^2 c^2}}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{E}{\\kE} = \\mk{R}{\\kp c}",
+       "uses": []
+      }
+     ],
+     "num": "(1.6.2)",
+     "src": "1.6"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "\\kE=h\\knu",
+       "src": "1.2, Planck’s hypothesis"
+      },
+      {
+       "text": "Light of wavelength $\\lambda$ has the frequency $\\nu = c/\\lambda$."
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{h\\knu} = \\mk{E}{\\kE}",
+      "uses": [
+       1
+      ],
+      "why": "From Planck's hypothesis, one quantum of electromagnetic radiation has energy $E=h\\nu$."
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{h\\knu} = \\mk{M}{\\dfrac{hc}{\\klambda}} = \\mk{E}{\\kE}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{L}{h\\knu} = \\mk{M}{\\dfrac{hc}{\\klambda}} = \\mk{R}{\\kp c}",
+       "uses": [
+        0
+       ],
+       "cap": "Equating these two expressions for the kinetic energy of a photon."
+      }
+     ],
+     "num": "(1.6.3)",
+     "src": "1.6"
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "text": "A particle of mass $m$ moving with velocity $v$ has momentum $p = mv$."
+      },
+      {
+       "text": "De Broglie argued that if particles can behave as waves, then a relationship like this, which pertains particularly to waves, should also apply to particles."
+      }
+     ],
+     "then": {
+      "tex": "\\mk{M}{\\dfrac{hc}{\\klambda}} = \\mk{R}{\\kp c}",
+      "uses": [
+       0
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{M}{\\dfrac{h}{\\klambda}} = \\mk{R}{\\kp}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{l}{\\klambda} = \\mk{r}{\\dfrac{h}{\\kp}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{l}{\\klambda} = \\mk{r}{\\dfrac{h}{\\kp}} = \\mk{v}{\\dfrac{h}{\\km\\kv}}",
+       "uses": [
+        1,
+        2
+       ],
+       "cap": "The photon's relation is carried over to a particle of mass $m$, where $v$ is the velocity of the particle."
+      }
+     ],
+     "num": "(1.6.1)",
+     "src": "1.6"
+    }
+   ]
+  }
+ ]
+}

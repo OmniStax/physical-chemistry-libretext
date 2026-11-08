@@ -1,0 +1,236 @@
+{
+ "id": "1.2",
+ "module": "13382",
+ "chapter": "1",
+ "title": "Quantum Hypothesis Used for Blackbody Radiation Law",
+ "short": "Planck's quantum hypothesis",
+ "lead": "Classical physics could not account for the spectrum of a blackbody. The section follows Planck's proposal that the oscillators in a hot body gain and lose energy only in whole quanta, the constant that sets the size of a quantum, and the radiation law he built on it.",
+ "objectives": [
+  "To understand how energy is quantized in blackbody radiation"
+ ],
+ "summary_html": "<p>The agreement between Planck’s theory and the experimental observation provided strong evidence that the energy of electron motion in matter is quantized. In the next two sections, we will see that the energy carried by light also is quantized in units of $h \\bar {\\nu}$. These packets of energy are called “photons.”</p>",
+ "notes": "The page is adapted from Michael Fowler (University of Virginia) and Hanson, Harvey, Sweeney and Zielinski’s Quantum States of Atoms and Molecules; the image of Figure 1.2.1, which repeats Figure 1.1.5, is folded with Figure 1.2.2 into the live Planck spectrum, and the Max Planck Society logo in the note is left out.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "Exercise 1.2.1 is the book’s, which prints no answer, so its solution is AI-written; the two exercises on Planck’s distribution law are new and AI-written, computed with the book’s constants. Bloom levels and concept tags are AI-chosen. Numeric answers accept 2% tolerance.",
+ "figures": [
+  {
+   "id": "sim-ladder",
+   "kind": "sim",
+   "originals": [
+    "/media/ch01/347652-ladder.svg"
+   ],
+   "original_caption": "A continuous vs. a quantized (gravitationaly) potential energy system. In the continuous case (left) a system can have any potential energy, but in the quantized case (right), a system can only have certain values (other values are not allowed). (CC BY-NC; Ümit Kaya via LibreTexts)",
+   "widths": [
+    689
+   ],
+   "draws": [
+    "energy",
+    "frequency"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "sim-planck",
+   "kind": "sim",
+   "number": "1.2.1",
+   "folds": [
+    "1.2.2"
+   ],
+   "originals": [
+    "/media/ch01/347651-9469e9ec92fcdd65227d9055e7ae0639.jpg",
+    "/media/ch01/141672-imageedit_2_2261707525.png"
+   ],
+   "original_caption": "Relationship between the temperature of an object and the spectrum of blackbody radiation it emits. At relatively low temperatures, most radiation is emitted at wavelengths longer than 700 nm, which is in the infrared portion of the spectrum. As the temperature of the object increases, the maximum intensity shifts to shorter wavelengths, successively resulting in orange, yellow, and finally white light. At high temperatures, all wavelengths of visible light are emitted with approximately equal intensities. The white light spectrum shown for an object at 6000 K closely approximates the spectrum of light emitted by the sun. Note the sharp decrease in the intensity of radiation emitted at wavelengths below 400 nm, which constituted the ultraviolet catastrophe. The classical prediction fails to fit the experimental curves entirely and does not have a maximum intensity. (CC BY-SA-NC; anonymous). The Sun is an excellent approximation of a blackbody. Its effective temperature is ~5777 K. (CC-SA-BY 3.0; [Sch](https://commons.wikimedia.org/wiki/User:Sch)).",
+   "draws": [
+    "energy-density",
+    "wavelength",
+    "temperature",
+    "energy"
+   ],
+   "facts": [
+    "spectrum"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "fig-planck-portrait",
+   "kind": "figure",
+   "originals": [
+    "/media/ch01/34210-225px-Max_Planck_1933.jpg"
+   ],
+   "widths": [
+    167
+   ],
+   "draws": [],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "kept as the book prints it"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "classical-failure",
+   "concept": "blackbody",
+   "verb": "uses"
+  },
+  {
+   "span": "classical-failure",
+   "concept": "ultraviolet-catastrophe",
+   "verb": "reinforces"
+  },
+  {
+   "span": "classical-failure",
+   "concept": "rayleigh-jeans-law",
+   "verb": "uses"
+  },
+  {
+   "span": "quantizing-electrons",
+   "concept": "energy-quantization",
+   "verb": "introduces"
+  },
+  {
+   "span": "quantizing-electrons",
+   "concept": "plancks-quantum-hypothesis",
+   "verb": "introduces"
+  },
+  {
+   "span": "quantizing-electrons",
+   "concept": "plancks-constant",
+   "verb": "introduces"
+  },
+  {
+   "span": "quantizing-electrons",
+   "concept": "plancks-distribution-law",
+   "verb": "introduces"
+  },
+  {
+   "span": "quantizing-electrons",
+   "concept": "spectral-energy-density",
+   "verb": "uses"
+  },
+  {
+   "span": "quantizing-electrons",
+   "concept": "ultraviolet-catastrophe",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "e1",
+   "source_id": "exr:1.2.1",
+   "source_number": "Exercise 1.2.1",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "quantizing-electrons",
+   "prompt": "<p>Use Equation 1.2.3 to show that the units of $ρ(λ,T)\\,dλ$ are $J/m^3$ as expected for an energy density.</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "Write the unit of each factor in Equation 1.2.3 and check that the exponent is a pure number.",
+    "solution": "<p>The exponent $hc/\\lambda k_B T$ has units $(J\\cdot s)(m/s)/\\big((m)(J/K)(K)\\big) = 1$, so it is a pure number and the factor $1/(e^{hc/\\lambda k_BT}-1)$ carries no units. What is left is $8\\pi hc/\\lambda^5$, with units $(J\\cdot s)(m/s)/m^5 = J/m^4$: $\\rho(\\lambda,T)$ is an energy per volume per unit wavelength. Multiplying by $d\\lambda$, a length in m, gives $\\rho(\\lambda,T)\\,d\\lambda$ in $J/m^4 \\cdot m = J/m^3$, an energy per unit volume, as an energy density should be.</p>"
+   }
+  },
+  {
+   "id": "a1",
+   "source_id": "With a wavelength of maximum energy density at",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "quantizing-electrons",
+   "prompt": "<p>The Sun’s effective temperature is about 5777 K (Figure 1.2.2). Use $\\lambda_{max}=\\frac{hc}{4.965kT}$ with the constants listed after Equation 1.2.2 to find the wavelength, in nm, at which Planck’s energy density for a 5777 K blackbody is greatest.</p>",
+   "answer": {
+    "type": "number",
+    "value": 502,
+    "unit": "nm",
+    "generated_by": "ai",
+    "hint": "Every quantity is in SI units, so the answer comes out in meters.",
+    "solution": "<p>$\\lambda_{max} = \\dfrac{(6.626\\times10^{-34}\\,J\\cdot s)(3.00\\times10^{8}\\,m/s)}{4.965\\,(1.38\\times10^{-23}\\,J/K)(5777\\,K)} = \\dfrac{1.988\\times10^{-25}\\,J\\cdot m}{3.958\\times10^{-19}\\,J} = 5.02\\times10^{-7}\\,m = 502\\,nm$, in the blue-green of the visible band.</p>"
+   }
+  },
+  {
+   "id": "a2",
+   "source_id": "Planck's radiation energy density",
+   "kind": "exercise",
+   "bloom": "Analyze",
+   "place": {
+    "at": "end"
+   },
+   "cite": "quantizing-electrons",
+   "prompt": "<p>Use Equation 1.2.3 to find by what factor the energy density $\\rho(\\lambda,T)$ at $\\lambda = 400$ nm grows when a blackbody is heated from 3000 K to 6000 K. Compare the factor of 2 by which the Rayleigh-Jeans law would have it grow.</p>",
+   "answer": {
+    "type": "number",
+    "value": 405,
+    "generated_by": "ai",
+    "hint": "The prefactor $8\\pi hc/\\lambda^5$ is the same at both temperatures, so the ratio is the ratio of the two factors $1/(e^{hc/\\lambda k_BT}-1)$.",
+    "solution": "<p>At 400 nm, $hc/\\lambda k_B = (6.626\\times10^{-34})(3.00\\times10^{8})/\\big((400\\times10^{-9})(1.38\\times10^{-23})\\big) = 3.60\\times10^{4}\\,K$. At 3000 K the exponent is 12.0, at 6000 K it is 6.00. The ratio is $\\dfrac{e^{12.0}-1}{e^{6.00}-1} = \\dfrac{1.63\\times10^{5}}{403} = 405$ (from $\\rho = 2.99\\times10^{3}$ and $1.21\\times10^{6}\\,J/m^4$). Doubling the temperature raises the violet energy density about 405-fold, not twofold: at 3000 K a 400 nm quantum is twelve times $k_BT$ and is very rarely emitted, while at 6000 K it is only six times $k_BT$.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "e1",
+   "concept": "plancks-distribution-law"
+  },
+  {
+   "exercise": "a1",
+   "concept": "plancks-distribution-law"
+  },
+  {
+   "exercise": "a2",
+   "concept": "plancks-distribution-law"
+  },
+  {
+   "exercise": "a2",
+   "concept": "plancks-quantum-hypothesis"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-radiance",
+   "kind": "correction",
+   "html": "The first line prints $dB_\\nu(\\nu,T) = \\rho_\\nu(T)\\,d\\nu$, but the radiance is not the energy density: $dB_\\nu(\\nu,T) = \\dfrac{c}{4\\pi}\\rho_\\nu(T)\\,d\\nu$, which with Equation 1.2.2 gives the second line, $\\dfrac{2h\\nu^3}{c^2}\\dfrac{1}{e^{h\\nu/k_BT}-1}\\,d\\nu$."
+  },
+  {
+   "id": "c-figure-number",
+   "kind": "correction",
+   "html": "The page has no Figure 1.2.3; the comparison of Planck’s formula with experiment it points to is Figure 1.2.2."
+  }
+ ]
+}

@@ -1,0 +1,702 @@
+{
+ "id": "1.8",
+ "module": "13388",
+ "chapter": "1",
+ "title": "The Bohr Theory of the Hydrogen Atom",
+ "short": "The Bohr atom",
+ "lead": "By the laws of classical physics Rutherford’s nuclear atom could not last a moment. Bohr kept its orbiting electron but allowed it only certain orbits, and the section follows his argument from the force on the electron to the sizes and energies of those orbits, to the wave picture behind them, and on to the light the atom gives off when the electron jumps between them.",
+ "objectives": [
+  "Introduce the fundamentals behind the Bohr Atom and demonstrate it can predict the Rydberg's equation for the atomic spectrum of hydrogen"
+ ],
+ "summary_html": "",
+ "notes": "The page is adapted from Mark Tuckerman (New York University), Hanson, Harvey, Sweeney and Zielinski’s Quantum States of Atoms and Molecules, and Boundless, and the images of Figures 1.8.6 and 1.8.7 are folded with Figure 1.8.4 into the live hydrogen ladder.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The three exercises are the book’s, keyed by the book; their Bloom levels and concept tags are AI-chosen, and two slips in the keys carry corrections. Numeric answers accept 2% tolerance.",
+ "figures": [
+  {
+   "id": "sim-death-spiral",
+   "kind": "sim",
+   "number": "1.8.1",
+   "originals": [
+    "/media/ch01/344336-1.8.1.svg"
+   ],
+   "original_caption": "The classical death spiral of an electron around a nucleus. (CC BY-NC; Ümit Kaya via LibreTexts)",
+   "widths": [
+    374
+   ],
+   "draws": [
+    "length",
+    "frequency"
+   ],
+   "conventions": [
+    "e-",
+    "p+"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "sim-coulomb",
+   "kind": "sim",
+   "number": "1.8.2",
+   "originals": [
+    "/media/ch01/344387-1.8.2-1.svg",
+    "/media/ch01/344388-1.8.2-2.svg"
+   ],
+   "original_caption": "Potential energy curve for the Coulomb interactions between two charges of same sign (left) and opposite signs (right). (CC BY-NC; Ümit Kaya via LibreTexts)",
+   "draws": [
+    "energy",
+    "length",
+    "force"
+   ],
+   "conventions": [
+    "e-",
+    "p+"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "sim-bohr-atom",
+   "kind": "sim",
+   "number": "1.8.3",
+   "originals": [
+    "/media/ch01/344390-1.8.3.svg"
+   ],
+   "original_caption": "Bohr atom with an electron revolving around a fixed nucleus. (CC BY-NC; Ümit Kaya via LibreTexts)",
+   "widths": [
+    405
+   ],
+   "draws": [
+    "length",
+    "energy",
+    "velocity",
+    "force"
+   ],
+   "conventions": [
+    "e-",
+    "p+"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "sim-hydrogen-ladder",
+   "kind": "sim",
+   "number": "1.8.4",
+   "folds": [
+    "1.8.6",
+    "1.8.7"
+   ],
+   "originals": [
+    "/media/ch01/392741-hydrogen_atom_emission_lines.svg",
+    "/media/ch01/32462-Bohr_atom_animation_2.gif",
+    "/media/ch01/177113-imageedit_13_8734011691.jpg"
+   ],
+   "original_caption": "Figure 1.8.4: Energy levels predicted by the Bohr model of hydrogen ($Z=1$). (CC BY-NC; Ümit Kaya via LibreTexts) Figure 1.8.6: A simple illustration of Bohr's model of the atom, with an electron making quantum leaps. (CC BY-SA 3.0 unported; Kurzon via [Wikipedia](https://commons.wikimedia.org/wiki/File:Bohr_atom_animation.gif)) Figure 1.8.7: Electron Transitions Responsible for the Various Series of Lines Observed in the Emission Spectrum of Hydrogen. The Lyman series of lines is due to transitions from higher-energy orbits to the lowest-energy orbit (n = 1); these transitions release a great deal of energy, corresponding to radiation in the ultraviolet portion of the electromagnetic spectrum. The Paschen, Brackett, and Pfund series of lines are due to transitions from higher-energy orbits to orbits with n = 3, 4, and 5, respectively; these transitions release substantially less energy, corresponding to infrared radiation. Orbits are not drawn to scale. (CC BY-NC-SA 3.0; anonymous)",
+   "draws": [
+    "energy",
+    "wavelength"
+   ],
+   "conventions": [
+    "e-"
+   ],
+   "facts": [
+    "spectrum"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "sim-orbit-wave",
+   "kind": "sim",
+   "number": "1.8.5",
+   "originals": [
+    "/media/ch01/392739-0.svg",
+    "/media/ch01/392740-1.svg"
+   ],
+   "original_caption": "Waves on a string have a wavelength related to the length of the string, allowing them to interfere constructively. (A) If we imagine the string bent into a closed circle, we get a rough idea of how electrons in circular orbits can interfere constructively. (B) If the wavelength does not fit into the circumference, the electron interferes destructively; it cannot exist in such an orbit. (CC BY-NC; Ümit Kaya via LibreTexts)",
+   "draws": [
+    "wavelength",
+    "length"
+   ],
+   "conventions": [
+    "p+"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "planetary-atom",
+   "concept": "planetary-atom-instability",
+   "verb": "introduces"
+  },
+  {
+   "span": "planetary-atom",
+   "concept": "coulomb-potential",
+   "verb": "introduces"
+  },
+  {
+   "span": "bohr-model",
+   "concept": "line-spectrum",
+   "verb": "uses"
+  },
+  {
+   "span": "bohr-model",
+   "concept": "plancks-quantum-hypothesis",
+   "verb": "uses"
+  },
+  {
+   "span": "bohr-model",
+   "concept": "bohr-model",
+   "verb": "introduces"
+  },
+  {
+   "span": "bohr-model",
+   "concept": "coulomb-potential",
+   "verb": "uses"
+  },
+  {
+   "span": "bohr-model",
+   "concept": "planetary-atom-instability",
+   "verb": "reinforces"
+  },
+  {
+   "span": "bohr-model",
+   "concept": "angular-momentum-quantization",
+   "verb": "introduces"
+  },
+  {
+   "span": "bohr-model",
+   "concept": "bohr-radius",
+   "verb": "introduces"
+  },
+  {
+   "span": "bohr-model",
+   "concept": "bohr-energy-levels",
+   "verb": "introduces"
+  },
+  {
+   "span": "wave-argument",
+   "concept": "de-broglie-wavelength",
+   "verb": "uses"
+  },
+  {
+   "span": "wave-argument",
+   "concept": "angular-momentum-quantization",
+   "verb": "reinforces"
+  },
+  {
+   "span": "wave-argument",
+   "concept": "standing-wave-quantization",
+   "verb": "introduces"
+  },
+  {
+   "span": "rydberg-from-bohr",
+   "concept": "bohr-energy-levels",
+   "verb": "uses"
+  },
+  {
+   "span": "rydberg-from-bohr",
+   "concept": "bohr-rydberg-derivation",
+   "verb": "introduces"
+  },
+  {
+   "span": "rydberg-from-bohr",
+   "concept": "rydberg-formula",
+   "verb": "reinforces"
+  },
+  {
+   "span": "rydberg-from-bohr",
+   "concept": "rydberg-constant",
+   "verb": "reinforces"
+  },
+  {
+   "span": "rydberg-from-bohr",
+   "concept": "hydrogen-spectral-series",
+   "verb": "reinforces"
+  },
+  {
+   "span": "rydberg-from-bohr",
+   "concept": "bohr-model",
+   "verb": "reinforces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "e1",
+   "source_id": "exr:1.8.1",
+   "source_number": "Exercise 1.8.1",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "bohr-model",
+   "prompt": "<p>Calculate a value for the Bohr radius using Equation 1.8.8 to check that this equation is consistent with the value 52.9 pm. What would the radius be for $n = 1$ in the $\\ce{Li^{2+}}$ ion?</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "source",
+    "parts": [
+     {
+      "part": "a",
+      "value": 52.9,
+      "unit": "pm",
+      "hint": "Solve Equation 1.8.8 for $r$ with $Z = 1$ and $n = 1$."
+     },
+     {
+      "part": "b",
+      "value": 17.6,
+      "unit": "pm"
+     }
+    ],
+    "solution": "<p>Starting from Equation 1.8.8 and solving for $r$:</p>\n$$ \\begin{aligned} \\dfrac{Ze^2m_er}{4πϵ_0} &=n^2ℏ^2 \\\\ r &=\\dfrac{4 n^2 \\hbar^2 πϵ_0}{Z e^2 m_e} \\end{aligned} $$\n<p>with</p>\n<ul><li>$e$ is the fundamental charge: $e=1.60217662 \\times 10^{-19}C^2$<sup class=\"fn\" data-note=\"e-unit\"></sup></li><li>$m_e$ is the mass of an electron: $m_e= 9.10938356 \\times 10^{-31}kg$</li><li>$\\epsilon_o$ is the permittivity of free space: $\\epsilon_o = 8.854 \\times 10^{-12}C^2N^{-1}m^{-2}$</li><li>$\\hbar$ is the reduced planks constant: $\\hbar=1.0546 \\times 10^{-34}m^2kg/s$</li></ul>\n<p>For the ground-state of the hydrogen atom: $Z=1$ and $n=1$.</p>\n$$ \\begin{aligned} r &=\\dfrac{4 \\hbar^2 πϵ_0}{e^2m_e} \\\\ &= \\dfrac{4 (1.0546 \\times 10^{-34}m^2kg/s)^2 \\times π \\times 8.854 \\times 10^{-12}C^2N^{-1}m^{-2}}{(1.60217662 \\times 10^{-19}C)^2(9.10938356 \\times 10^{-31}kg)} \\\\ &=5.29 \\times 10^{-11}m = 52.9\\, pm\\end{aligned} $$\n<p>For the ground-state of the lithium +2 ion: $Z=3$ and $n=1$</p>\n$$ \\begin{aligned} r &=\\dfrac{4 \\hbar^2 πϵ_0}{3 e^2m_e} \\\\ &= \\dfrac{4 (1.0546 \\times 10^{-34}m^2kg/s)^2 \\times π \\times 8.854\\times10^{-12}C^2N^{-1}m^{-2}}{3(1.60217662 \\times 10^{-19}C)^2(9.10938356 \\times 10^{-31}kg)} \\\\ &=1.76 \\times 10^{-11}m = 17.6 \\,pm\\end{aligned} $$\n<p>As expected, the $\\ce{Li^{2+}}$ has a smaller radius than the $\\ce{H}$ atoms because of the increased nuclear charge.</p>"
+   }
+  },
+  {
+   "id": "e2",
+   "source_id": "exr:1.8.2",
+   "source_number": "Exercise 1.8.2",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "bohr-model",
+   "prompt": "<p>How do the radii of the hydrogen orbits vary with $n$? Prepare a graph showing $r$ as a function of $n$. States of hydrogen atoms with $n = 200$ have been prepared (called Rydberg states). What is the diameter of the atoms in these states?</p>",
+   "answer": {
+    "type": "number",
+    "generated_by": "source",
+    "value": 4.234e-06,
+    "unit": "m",
+    "hint": "The radius grows as $n^2$ times the Bohr radius, and the diameter is twice the radius.",
+    "solution": "<p>This is a straightforward application of Equation of 1.8.9. The hydrogen atom has only certain allowable radii and these radii can be predicted from the equation that relates them with each $n$. Note that the electron must be in motion so $n = 0$ is not allowed.</p>\n<figure class=\"photo\">\n  <img src=\"/media/ch01/392194-imageedit_2_4220143126.png\" alt=\"Graph of the radius in meters against n from 1 to 20, the points rising as n squared from near zero to about 2.1 × 10⁻⁸ m.\">\n  <figcaption><span class=\"eyebrow\">Figure</span><span>This plot shows the relationship of radius as a function of $n$. Note that at $n=1$ the radius is not zero. (CC BY-NC; Ümit Kaya via LibreTexts)</span></figcaption>\n</figure>\n<p>$4 \\pi \\epsilon_{0}=1.113 \\times 10^{-10} \\mathrm{C}^{2} \\mathrm{J}^{-1} \\mathrm{m}^{-1}$ and $\\hbar=1.054 \\times 10^{-34} \\mathrm{J} \\mathrm{s},$ also knowing</p>\n$$ \\begin{aligned} e &=1.602 \\times 10^{-19} \\mathrm{C} \\text { with } \\\\ m_{e} &=9.109 \\times 10^{-31} \\mathrm{kg} \\end{aligned} $$\n<p>and $Z$ is the nuclear charge, we use this equation directly. A simplification can be made by taking advantage of the fact that</p>\n$$ a_{0}=\\frac{4 \\pi \\epsilon_{0} \\hbar^{2}}{e^{2} m_{e}} $$\n<p>resulting in</p>\n$$ r_{n}=\\frac{a_{0}}{Z} n^{2} $$\n<p>where $a_{0}=5.292 \\times 10^{-11} \\mathrm{m}$ which is the Bohr Radius.</p>\n<p>Suppose we want to find the radius where $n=200 . n^{2}=40000$ so plugging in directly we have</p>\n$$ \\begin{aligned} r_{n} &=\\frac{\\left(5.292 \\times 10^{-11}\\right)}{(1)}(40000) \\\\[4pt] &=2.117 \\times 10^{-6} m \\end{aligned} $$\n<p>for the radius of a hydrogen atom with an electron excited to the $\\mathrm{n}=200$ state. The diameter is then $4.234 \\times 10^{-6} \\mathrm{m}$.</p>"
+   }
+  },
+  {
+   "id": "e3",
+   "source_id": "exr:1.8.3",
+   "source_number": "Exercise 1.8.3",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "rydberg-from-bohr",
+   "prompt": "<ol type=\"a\"><li>Calculate the energy of a photon that is produced when an electron in a hydrogen atom goes from an orbit with $n = 4$ to an orbit with $n = 1$.</li><li>What happens to the energy of the photon as the initial value of $n$ approaches infinity?</li></ol>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "source",
+    "parts": [
+     {
+      "part": "a",
+      "value": 2.04e-18,
+      "unit": "J",
+      "hint": "The photon carries the difference between the energies of the two orbits."
+     },
+     {
+      "part": "b",
+      "value": 2.18e-18,
+      "unit": "J"
+     }
+    ],
+    "solution": "<p>a:</p>\n$$ \\begin{aligned} E_{\\text{nf}} &= E_{ni} - h\\nu \\\\ E_{photon} = h\\nu &= E_{nf} - E_{ni}\\\\ &= \\frac{Z^2e^4m_e}{8\\epsilon_o^2h^2}\\left(\\frac{1}{n_f^2} - \\frac{1}{n_i^2} \\right)\\\\ &=\\frac{e^4m_e}{8\\epsilon_o^2h^2}\\left(\\frac{1}{1^2} - \\frac{1}{4^2}\\right)\\\\ &=2.18 \\times 10^{-18}\\left(1 - \\frac{1}{16} \\right)\\\\ &=2.04 \\times 10^{-18} J \\end{aligned} $$<sup class=\"fn\" data-note=\"photon-sign\"></sup>\n<p>b:</p>\n<p>As $n_i \\rightarrow \\infty$</p>\n$$ \\begin{aligned} E_{photon} &= \\frac{e^4m_e}{8\\epsilon_o^2h^2}\\left(\\frac{1}{n_f^2} - \\frac{1}{n_i^2}\\right)\\\\ \\frac{1}{n_i^2} &\\rightarrow 0\\\\ E_{photon} &\\rightarrow \\frac{e^4m_e}{8\\epsilon_o^2h^2}\\left(\\frac{1}{n_f^2}\\right)\\\\ \\end{aligned} $$"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "e1",
+   "concept": "bohr-radius"
+  },
+  {
+   "exercise": "e2",
+   "concept": "bohr-radius"
+  },
+  {
+   "exercise": "e3",
+   "concept": "bohr-rydberg-derivation"
+  },
+  {
+   "exercise": "e3",
+   "concept": "bohr-energy-levels"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "fig-1-8-5-ref",
+   "kind": "correction",
+   "html": "The book prints Figure 1.8.1A here and Figure 1.8.1B in the next sentence; the waves that fit and do not fit the circumference are panels (A) and (B) of Figure 1.8.5."
+  },
+  {
+   "id": "e-unit",
+   "kind": "correction",
+   "html": "The book gives the unit of $e$ as C²; the fundamental charge is $1.60217662 \\times 10^{-19}$ C, as the calculation below uses it."
+  },
+  {
+   "id": "photon-sign",
+   "kind": "correction",
+   "html": "The book writes $E_{photon} = h\\nu = E_{nf} - E_{ni}$; in emission the photon carries $E_{ni} - E_{nf}$, which is positive and is what the following lines evaluate."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "force-balance",
+   "what": "the force balance on a circular orbit",
+   "source": "Physical Chemistry (LibreTexts), 1.8 The Bohr Theory of the Hydrogen Atom",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\vec{\\kF}=-\\dfrac{Z\\ke^2}{4\\pi \\epsilon_0 \\kr^3}\\vec{r}",
+       "src": "1.8, Equations 1.8.3 and 1.8.5"
+      },
+      {
+       "text": "The orbit is circular, so the acceleration is purely centripetal: $|a| = \\kv^2/\\kr$, where $\\kv$ is the velocity of the electron.",
+       "src": "1.8"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{F}{|\\vec{\\kF}|}=\\mk{ma}{\\kme |\\vec{a}|}",
+      "src": "1.8",
+      "why": "Since $\\vec{\\kF} = \\kme\\vec{a}$, the magnitudes are equal too."
+     },
+     "steps": [
+      {
+       "tex": "\\mk{F}{\\dfrac{Z\\ke^2}{4\\pi \\epsilon_0 \\kr^3}|\\vec{r}|}=\\mk{ma}{\\kme |\\vec{a}|}",
+       "uses": [
+        0
+       ],
+       "cap": "The force on the electron is a positive constant times $-\\vec{r}$, so its magnitude is that constant times $|\\vec{r}|$."
+      },
+      {
+       "tex": "\\mk{F}{\\dfrac{Z\\ke^2}{4\\pi \\epsilon_0 \\kr^2}}=\\mk{ma}{\\kme |\\vec{a}|}",
+       "uses": [],
+       "cap": "The length of the position vector is the distance $\\kr$ itself."
+      },
+      {
+       "tex": "\\mk{F}{\\dfrac{Z\\ke^2}{4\\pi \\epsilon_0 \\kr^2}}=\\mk{ma}{\\kme\\dfrac{\\kv^2}{\\kr}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{F}{\\dfrac{Z\\ke^2}{4\\pi \\epsilon_0}}=\\mk{ma}{\\kme \\kv^2 \\kr}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{F}{\\dfrac{Z\\ke^2 \\kme \\kr}{4\\pi \\epsilon_0}}=\\mk{ma}{(\\kme \\kv\\kr)^2}",
+       "uses": [],
+       "cap": "Multiplying both sides by $\\kme\\kr$ gathers $\\kme\\kv\\kr$, the classical orbital angular momentum, into one square."
+      }
+     ],
+     "num": "(1.8.6)",
+     "src": "1.8"
+    }
+   ]
+  },
+  {
+   "id": "bohr-orbits",
+   "what": "the Bohr radii and energies",
+   "source": "Physical Chemistry (LibreTexts), 1.8 The Bohr Theory of the Hydrogen Atom",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "{\\kme \\kv}{\\kr}={n\\hbar}",
+       "src": "(1.8.7)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\dfrac{Z\\ke^2 \\kme \\kr}{4\\pi \\epsilon_0}}=\\mk{L}{(\\kme \\kv\\kr)^2}",
+      "src": "(1.8.6)"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\dfrac{Z\\ke^2 \\kme \\kr}{4\\pi \\epsilon_0}}=\\mk{L}{n^2 (\\hbar)^2}",
+       "uses": [
+        0
+       ],
+       "cap": "Bohr’s postulate puts $n\\hbar$ in place of the angular momentum $\\kme\\kv\\kr$."
+      }
+     ],
+     "num": "(1.8.8)",
+     "src": "1.8"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "\\kao=\\dfrac{4\\pi \\epsilon_0 \\hbar^2}{\\ke^2 \\kme}",
+       "src": "1.8"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\dfrac{Z\\ke^2 \\kme \\kr}{4\\pi \\epsilon_0}}=\\mk{L}{n^2 (\\hbar)^2}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{r}{\\krn}=\\mk{c}{\\dfrac{4\\pi \\epsilon_0 \\hbar^2}{Z\\ke^2 \\kme}}\\mk{n}{n^2}",
+       "uses": [],
+       "map": {
+        "l": [
+         "r",
+         "c"
+        ],
+        "L": [
+         "c",
+         "n"
+        ]
+       },
+       "cap": "Solving for $\\kr$: since $n$ takes only whole values, so does the radius, which is written $\\krn$."
+      },
+      {
+       "tex": "\\mk{r}{\\krn}=\\mk{c}{\\dfrac{4\\pi \\epsilon_0 \\hbar^2}{Z\\ke^2 \\kme}}\\mk{n}{n^2}=\\mk{a}{\\dfrac{\\kao}{Z}n^2}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "num": "(1.8.9)",
+     "src": "1.8"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\kp=\\kme \\kv",
+       "src": "1.8"
+      },
+      {
+       "step": 1
+      }
+     ],
+     "then": {
+      "tex": "\\mk{m}{\\kme \\kv}\\mk{r}{\\kr}=\\mk{n}{n\\hbar}",
+      "src": "(1.8.7)"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{m}{\\kp_n}\\mk{r}{\\krn}=\\mk{n}{n\\hbar}",
+       "uses": [
+        0,
+        1
+       ],
+       "cap": "On the $n$th orbit the momentum $\\kme\\kv$ and the radius take their allowed values $\\kp_n$ and $\\krn$."
+      },
+      {
+       "tex": "\\mk{m}{\\kp_n}=\\mk{n}{\\dfrac{n\\hbar}{\\krn}}",
+       "uses": [],
+       "map": {
+        "r": "n"
+       }
+      },
+      {
+       "tex": "\\mk{m}{\\kp_n}=\\mk{n}{\\dfrac{\\hbar Z}{\\kao n}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{m}{\\kp_n}=\\mk{n}{\\dfrac{Z\\ke^2 \\kme}{4\\pi \\epsilon_0 \\hbar n}}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "src": "1.8"
+    },
+    {
+     "assumes": [
+      {
+       "step": 2
+      },
+      {
+       "step": 1
+      },
+      {
+       "tex": "\\hbar=\\dfrac{h}{2\\pi}",
+       "src": "1.9, Equation 1.9.5"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{E}{\\kE_{total}}=\\mk{K}{\\dfrac{\\kp^2}{2\\kme}}-\\mk{U}{\\dfrac{Z\\ke^2}{4\\pi \\epsilon_0 \\kr}}",
+      "src": "1.8"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{E}{\\kEn}=\\mk{K}{\\dfrac{\\kp^2_n}{2\\kme}}-\\mk{U}{\\dfrac{Z\\ke^2}{4\\pi \\epsilon_0 \\krn}}",
+       "uses": [
+        0,
+        1
+       ],
+       "cap": "On the $n$th orbit the momentum and the radius take their allowed values, and the energy is written $\\kEn$."
+      },
+      {
+       "tex": "\\mk{E}{\\kEn}=\\mk{K}{\\dfrac{1}{2\\kme}\\left(\\dfrac{Z\\ke^2 \\kme}{4\\pi \\epsilon_0 \\hbar n}\\right)^2}-\\mk{U}{\\dfrac{Z\\ke^2}{4\\pi \\epsilon_0}\\cdot\\dfrac{Z\\ke^2 \\kme}{4\\pi \\epsilon_0 \\hbar^2 n^2}}",
+       "uses": [
+        0,
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{E}{\\kEn}=\\mk{K}{\\dfrac{Z^2\\ke^4\\kme}{32\\pi^2\\epsilon_0^2\\hbar^2 n^2}}-\\mk{U}{\\dfrac{Z^2\\ke^4\\kme}{16\\pi^2\\epsilon_0^2\\hbar^2 n^2}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{E}{\\kEn}=\\mk{K}{-\\dfrac{Z^2 \\ke^4 \\kme}{32\\pi^2 \\epsilon_{0}^{2}\\hbar^2}\\dfrac{1}{n^2}}",
+       "uses": [],
+       "map": {
+        "U": "K"
+       }
+      },
+      {
+       "tex": "\\mk{E}{\\kEn}=\\mk{K}{-\\dfrac{Z^2 \\ke^4 \\kme}{32\\pi^2 \\epsilon_{0}^{2}\\hbar^2}\\dfrac{1}{n^2}}=\\mk{h}{-\\dfrac{\\ke^4 \\kme}{8 \\epsilon_{0}^{2}h^2}\\dfrac{Z^2}{n^2}}",
+       "uses": [
+        2
+       ],
+       "cap": "With $\\hbar = h/2\\pi$, $32\\pi^2\\hbar^2 = 8h^2$."
+      }
+     ],
+     "num": "(1.8.10)",
+     "src": "1.8"
+    }
+   ]
+  },
+  {
+   "id": "rydberg-from-bohr",
+   "what": "the Rydberg equation from the Bohr model",
+   "source": "Physical Chemistry (LibreTexts), 1.8 The Bohr Theory of the Hydrogen Atom",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kEn=-\\dfrac{\\ke^4 \\kme}{8 \\epsilon_{0}^{2}h^2}\\dfrac{Z^2}{n^2}",
+       "src": "(1.8.10)"
+      },
+      {
+       "text": "The electron drops from the excited state $n_i$ to a lower state $n_f$, $n_f < n_i$, and emits light of frequency $\\knu$.",
+       "src": "1.8"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{f}{\\kE_{nf}}=\\mk{i}{\\kE_{ni}}-\\mk{h}{h\\knu}",
+      "src": "1.8",
+      "uses": [
+       1
+      ],
+      "why": "The total energy is conserved, so the energy the electron loses is the energy $h\\knu$ the light carries away."
+     },
+     "steps": [
+      {
+       "tex": "\\mk{h}{\\knu}=\\mk{d}{\\dfrac{\\kE_{ni}-\\kE_{nf}}{h}}",
+       "uses": [],
+       "map": {
+        "i": "d",
+        "f": "d"
+       }
+      },
+      {
+       "tex": "\\mk{h}{\\knu}=\\mk{d}{\\dfrac{1}{h}\\left(-\\dfrac{\\ke^4 \\kme}{8 \\epsilon_{0}^{2}h^2}\\dfrac{Z^2}{n_i^2}+\\dfrac{\\ke^4 \\kme}{8 \\epsilon_{0}^{2}h^2}\\dfrac{Z^2}{n_f^2}\\right)}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{h}{\\knu}=\\dfrac{\\kE_{ni}-\\kE_{nf}}{h}=\\mk{d}{\\dfrac{Z^2 \\ke^4 \\kme}{8\\epsilon_{0}^{2} h^3}\\left ( \\dfrac{1}{n_{f}^{2}}-\\dfrac{1}{n_{i}^{2}}\\right )}",
+       "uses": []
+      }
+     ],
+     "num": "(1.8.12)",
+     "src": "1.8"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "\\knut=\\dfrac{\\knu}{c}",
+       "src": "1.4"
+      },
+      {
+       "tex": "\\knut=R_H\\left(\\dfrac{1}{n_1^2}-\\dfrac{1}{n_2^2}\\right)",
+       "src": "(1.5.1)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{h}{\\knu}=\\dfrac{\\kE_{ni}-\\kE_{nf}}{h}=\\mk{d}{\\dfrac{Z^2 \\ke^4 \\kme}{8\\epsilon_{0}^{2} h^3}\\left ( \\dfrac{1}{n_{f}^{2}}-\\dfrac{1}{n_{i}^{2}}\\right )}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{h}{\\dfrac{\\knu}{c}}=\\mk{d}{\\dfrac{Z^2 \\ke^4 \\kme}{8\\epsilon_{0}^{2} h^3 c}\\left ( \\dfrac{1}{n_{f}^{2}}-\\dfrac{1}{n_{i}^{2}}\\right )}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{h}{\\knut}=\\mk{d}{\\dfrac{Z^2 \\ke^4 \\kme}{8\\epsilon_{0}^{2} h^3 c}\\left ( \\dfrac{1}{n_{f}^{2}}-\\dfrac{1}{n_{i}^{2}}\\right )}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{R}{R_H}=\\mk{d}{\\dfrac{\\kme\\ke^4}{8 \\epsilon ^2_0 h^3 c}}",
+       "uses": [
+        2
+       ],
+       "map": {
+        "h": "R"
+       },
+       "cap": "For hydrogen $Z = 1$, and with $n_1 = n_f$ and $n_2 = n_i$ the two equations give $\\knut$ as a constant times the same bracket, so the constants are equal."
+      }
+     ],
+     "src": "1.8",
+     "note": "The book identifies $R_H$ with $\\dfrac{m_e e^4}{8\\epsilon_0^2h^3}$, the constant of Equation 1.8.12 as it stands. That constant is the Rydberg constant in frequency units, $3.29\\times10^{15}$ Hz; the $R_H$ of Equation 1.5.1, $109{,}737\\ \\text{cm}^{-1}$, is it divided by $c$."
+    }
+   ]
+  }
+ ]
+}

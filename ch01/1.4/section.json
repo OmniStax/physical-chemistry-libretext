@@ -1,0 +1,185 @@
+{
+ "id": "1.4",
+ "module": "13384",
+ "chapter": "1",
+ "title": "The Hydrogen Atomic Spectrum",
+ "short": "Hydrogen atomic spectrum",
+ "lead": "A hot gas does not glow in every color: it shines, or absorbs, at a few sharp wavelengths that belong to its atoms. The section meets the three kinds of spectra and follows Balmer’s search for a pattern in the four visible lines of hydrogen.",
+ "objectives": [
+  "To introduce the concept of absorption and emission line spectra and describe the Balmer equation to describe the visible lines of atomic hydrogen."
+ ],
+ "summary_html": "",
+ "notes": "The page is LibreTexts’ own, curated by Delmar Larsen, and nothing of it was left out: the three panels of Figure 1.4.1 and the series schematic of Figure 1.4.4 became live figures, their originals kept beside them.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercise in this section; the two exercises on the Balmer formula are AI-written, with answers computed and checked, and their Bloom levels and concept tags are AI-chosen. Numeric answers accept 2% tolerance unless stated.",
+ "figures": [
+  {
+   "id": "sim-spectra",
+   "kind": "sim",
+   "number": "1.4.1",
+   "originals": [
+    "/media/ch01/345624-1.4.1-1.svg",
+    "/media/ch01/345625-1.4.1-2.svg",
+    "/media/ch01/345626-1.4.1-3.svg"
+   ],
+   "original_caption": "Three Kinds of Spectra. When we see a lightbulb or other source of continuous radiation, all the colors are present. When the continuous spectrum is seen through a thinner gas cloud, the cloud’s atoms produce absorption lines in the continuous spectrum. When the excited cloud is seen without the continuous source behind it, its atoms produce emission lines. We can learn which types of atoms are in the gas cloud from the pattern of absorption or emission lines. (CC BY-NC; Ümit Kaya via LibreTexts).",
+   "widths": [
+    560,
+    560,
+    560
+   ],
+   "draws": [
+    "wavelength"
+   ],
+   "facts": [
+    "spectrum",
+    "#000000"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "fig-1-4-2",
+   "kind": "photo",
+   "number": "1.4.2",
+   "widths": [
+    596
+   ],
+   "draws": []
+  },
+  {
+   "id": "fig-1-4-3",
+   "kind": "photo",
+   "number": "1.4.3",
+   "draws": []
+  },
+  {
+   "id": "sim-balmer",
+   "kind": "sim",
+   "number": "1.4.4",
+   "originals": [
+    "/media/ch01/129920-imageedit_6_5737804170.jpg"
+   ],
+   "original_caption": "A schematic of the hydrogen spectrum shows several series named for those who contributed most to their determination. Part of the Balmer series is in the visible spectrum, while the Lyman series is entirely in the UV, and the Paschen series and others are in the IR. Values of $n_{f}$ and $n_{i}$ are shown for some of the lines (CC BY-SA; OpenStax).",
+   "draws": [
+    "wavelength"
+   ],
+   "facts": [
+    "spectrum",
+    "#000000"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "atomic-line-spectra",
+   "concept": "line-spectrum",
+   "verb": "introduces"
+  },
+  {
+   "span": "atomic-line-spectra",
+   "concept": "blackbody",
+   "verb": "uses"
+  },
+  {
+   "span": "the-balmer-series-of-hydrogen",
+   "concept": "balmer-formula",
+   "verb": "introduces"
+  },
+  {
+   "span": "the-balmer-series-of-hydrogen",
+   "concept": "wavenumber",
+   "verb": "introduces"
+  },
+  {
+   "span": "the-balmer-series-of-hydrogen",
+   "concept": "line-spectrum",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "e1",
+   "source_id": "Balmer predicted that other lines exist in the ultraviolet",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "the-balmer-series-of-hydrogen",
+   "prompt": "<p>Use Balmer’s formula (Equation 1.4.1, with $b$ = 364.56 nm) to calculate the wavelength of the hydrogen line with $n_2 = 12$. Is the line visible?</p>",
+   "answer": {
+    "type": "number",
+    "value": 375.0,
+    "unit": "nm",
+    "hint": "Put $n_2^2 = 144$ into Equation 1.4.1.",
+    "generated_by": "ai",
+    "solution": "<p>With $n_2 = 12$, $n_2^2 = 144$ and</p>$$ \\lambda = (364.56\\;nm)\\left(\\dfrac{144}{144-4}\\right) = (364.56\\;nm)(1.0286) = 375.0\\;nm $$<p>This is shorter than the 380 nm of the $n_2 = 10$ line, which Table 1.4.2 already lists as not visible, so the line lies in the ultraviolet and is not visible. It sits just above the series limit of 364.56 nm found in Example 1.4.1.</p>"
+   }
+  },
+  {
+   "id": "e2",
+   "source_id": "found they were represented by the phenomenological formula",
+   "kind": "exercise",
+   "bloom": "Analyze",
+   "place": {
+    "at": "end"
+   },
+   "cite": "the-balmer-series-of-hydrogen",
+   "prompt": "<p>A line of the Balmer series of hydrogen is measured at 383.5 nm. Solve Balmer’s formula (Equation 1.4.1, with $b$ = 364.56 nm) for $n_2$ to find which line it is.</p>",
+   "answer": {
+    "type": "number",
+    "value": 9,
+    "tol": 0.01,
+    "hint": "Multiply out $\\lambda (n_2^2 - 4) = b\\, n_2^2$ and collect the $n_2^2$ terms.",
+    "generated_by": "ai",
+    "solution": "<p>From $\\lambda (n_2^2 - 4) = b\\, n_2^2$, collecting the $n_2^2$ terms gives</p>$$ n_2^2 = \\dfrac{4\\lambda}{\\lambda - b} = \\dfrac{4(383.5\\;nm)}{383.5\\;nm - 364.56\\;nm} = \\dfrac{1534}{18.94} = 81.0 $$<p>so $n_2 = 9$, the line Table 1.4.2 lists at 383 nm.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "e1",
+   "concept": "balmer-formula"
+  },
+  {
+   "exercise": "e2",
+   "concept": "balmer-formula"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "lyman-start",
+   "kind": "correction",
+   "html": "The caption prints 124 nm; the first line of the Lyman series, Lyman-alpha, is at 122 nm (121.6 nm), as Example 1.5.1 computes."
+  }
+ ]
+}

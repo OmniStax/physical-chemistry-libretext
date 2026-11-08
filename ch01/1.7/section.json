@@ -1,0 +1,201 @@
+{
+ "id": "1.7",
+ "module": "13387",
+ "chapter": "1",
+ "title": "de Broglie Waves can be Experimentally Observed",
+ "short": "Observing de Broglie waves",
+ "lead": "If particles carry de Broglie's wavelength, they should diffract and interfere as light does. The section sets the double-slit experiment for light beside the diffraction of electrons and neutrons, and turns to the electron microscope and neutron diffraction that make use of matter waves.",
+ "objectives": [
+  "To present the experimental evidence behind the wave-particle duality of matter"
+ ],
+ "summary_html": "",
+ "notes": "The page is adapted from the LibreTexts Physical Chemistry text under CC BY-NC-SA 4.0, and the drawings of Figures 1.7.1, 1.7.2 and 1.7.3 are folded into one live double slit.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercise here; both exercises are AI-written on the de Broglie wavelength in diffraction, one on the electrons of Davisson and Germer and one on the speed of neutrons for a diffraction experiment, with AI-computed answers. Numeric answers accept 2% tolerance.",
+ "figures": [
+  {
+   "id": "sim-double-slit",
+   "kind": "sim",
+   "number": "1.7.1",
+   "folds": [
+    "1.7.2",
+    "1.7.3"
+   ],
+   "originals": [
+    "/media/ch01/344485-1.7.1_(1).svg",
+    "/media/ch01/391526-a.svg",
+    "/media/ch01/391527-b.svg",
+    "/media/ch01/391528-c.svg",
+    "/media/ch01/344849-1.7.2-1.svg",
+    "/media/ch01/344850-1.7.2-2.svg"
+   ],
+   "original_caption": "Figure 1.7.1. Young double slit experiment. Two slits are illuminated by a plane light waves. (CC BY-NC; Ümit Kaya via LibreTexts) Figure 1.7.2. Amplitude of particles through (a) left slit, (b) right slit, (c) through both slits. In absence of wavelength interference behavior, the intensity will be the sum of each single slit results (red) and when there is interference, pronounced oscillations in intensity is observed (blue curve). (CC BY; Ümit Kaya via LibreTexts) Figure 1.7.3. (left) classical model of electrons. (right) wave property of electrons. (CC BY-NC; Ümit Kaya via LibreTexts)",
+   "draws": [
+    "wavelength",
+    "velocity",
+    "length"
+   ],
+   "conventions": [
+    "e-",
+    "n0"
+   ],
+   "facts": [
+    "spectrum"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "fig-1-7-4",
+   "kind": "photo",
+   "number": "1.7.4",
+   "widths": [
+    254
+   ],
+   "draws": []
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "matter-diffraction",
+   "concept": "matter-wave-diffraction",
+   "verb": "introduces"
+  },
+  {
+   "span": "matter-diffraction",
+   "concept": "interference-and-diffraction",
+   "verb": "introduces"
+  },
+  {
+   "span": "light-diffraction",
+   "concept": "interference-and-diffraction",
+   "verb": "reinforces"
+  },
+  {
+   "span": "light-diffraction",
+   "concept": "photon",
+   "verb": "uses"
+  },
+  {
+   "span": "electron-diffraction",
+   "concept": "matter-wave-diffraction",
+   "verb": "reinforces"
+  },
+  {
+   "span": "electron-diffraction",
+   "concept": "wave-particle-duality",
+   "verb": "reinforces"
+  },
+  {
+   "span": "electron-diffraction",
+   "concept": "de-broglie-wavelength",
+   "verb": "uses"
+  },
+  {
+   "span": "neutron-diffraction",
+   "concept": "matter-wave-diffraction",
+   "verb": "reinforces"
+  },
+  {
+   "span": "neutron-diffraction",
+   "concept": "de-broglie-wavelength",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "Davisson and L. H. Germer in 1927",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "matter-diffraction",
+   "prompt": "<p>In the experiment of Davisson and Germer, electrons accelerated to a kinetic energy of 54 eV were scattered from the surface of a nickel crystal, whose rows of atoms are 215 pm apart. Calculate the de Broglie wavelength of these electrons in picometers, and say whether it is comparable to the spacing of the scattering centers. (Use $m_e = 9.109 \\times 10^{-31}\\; kg$, $h = 6.626 \\times 10^{-34}\\; J \\cdot s$ and $1\\; eV = 1.602 \\times 10^{-19}\\; J$.)</p>",
+   "answer": {
+    "type": "number",
+    "value": 167,
+    "unit": "pm",
+    "generated_by": "ai",
+    "hint": "Find the momentum from the kinetic energy with $p = \\sqrt{2 m KE}$, then use $\\lambda = h/p$.",
+    "solution": "<p>The kinetic energy in joules is $KE = (54\\; eV)(1.602 \\times 10^{-19}\\; J/eV) = 8.65 \\times 10^{-18}\\; J$. The momentum is</p>$$ p = \\sqrt{2 m KE} = \\sqrt{2 (9.109 \\times 10^{-31}\\; kg)(8.65 \\times 10^{-18}\\; J)} = 3.97 \\times 10^{-24}\\; kg \\cdot m/s $$<p>and the de Broglie wavelength is</p>$$ \\lambda = \\dfrac{h}{p} = \\dfrac{6.626 \\times 10^{-34}\\; kg \\cdot m^2/s}{3.97 \\times 10^{-24}\\; kg \\cdot m/s} = 1.67 \\times 10^{-10}\\; m = 167\\; pm $$<p>This is comparable to the 215 pm spacing of the atoms, so the crystal acts as a diffraction grating for the electrons.</p>"
+   }
+  },
+  {
+   "id": "a2",
+   "source_id": "selected properly by their speed",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "neutron-diffraction",
+   "prompt": "<p>Neutrons from a reactor are selected by their speed so that their de Broglie wavelength equals the 0.25 nm spacing between the atoms of a crystal.</p><ol type=\"a\"><li>What speed must the neutrons have?</li><li>What is their kinetic energy?</li></ol><p>(Use $m_n = 1.6749 \\times 10^{-27}\\; kg$ and $h = 6.626 \\times 10^{-34}\\; J \\cdot s$.)</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 1582,
+      "unit": "m/s",
+      "hint": "Solve $\\lambda = h/mv$ for $v$."
+     },
+     {
+      "part": "b",
+      "value": 2.1e-21,
+      "unit": "J"
+     }
+    ],
+    "solution": "<p>a. Solving $\\lambda = h/mv$ for the velocity,</p>$$ v = \\dfrac{h}{m \\lambda} = \\dfrac{6.626 \\times 10^{-34}\\; kg \\cdot m^2/s}{(1.6749 \\times 10^{-27}\\; kg)(2.5 \\times 10^{-10}\\; m)} = 1.58 \\times 10^{3}\\; m/s $$<p>b. The kinetic energy is</p>$$ KE = \\dfrac{1}{2} m v^2 = \\dfrac{1}{2}(1.6749 \\times 10^{-27}\\; kg)(1.58 \\times 10^{3}\\; m/s)^2 = 2.10 \\times 10^{-21}\\; J $$<p>These are slow neutrons, about the speed a moderator leaves them with, much slower than the fast neutrons of fission.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "de-broglie-wavelength"
+  },
+  {
+   "exercise": "a1",
+   "concept": "matter-wave-diffraction"
+  },
+  {
+   "exercise": "a2",
+   "concept": "de-broglie-wavelength"
+  },
+  {
+   "exercise": "a2",
+   "concept": "matter-wave-diffraction"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-figure-number",
+   "kind": "correction",
+   "html": "The book prints Figure 1.7.0c; the bright and dark bands of light through both slits are Figure 1.7.2c."
+  }
+ ]
+}

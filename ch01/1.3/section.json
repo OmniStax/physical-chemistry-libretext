@@ -1,0 +1,322 @@
+{
+ "id": "1.3",
+ "module": "13383",
+ "chapter": "1",
+ "title": "Photoelectric Effect Explained with Quantum Hypothesis",
+ "short": "Photoelectric effect",
+ "lead": "Light shining on a metal can knock electrons out of it. The section follows the experiments of Lenard and Millikan on how the number and energy of those electrons depend on the light's intensity and colour, Einstein's explanation in terms of quanta of light, and the workfunction that holds an electron in a metal.",
+ "objectives": [
+  "To be familiar with the photoelectron effect for bulk materials",
+  "Understand how the photoelectron kinetic energy and intensity vary as a function of incident light wavelength",
+  "Understand how the photoelectron kinetic energy and intensity vary as a function of incident light intensity",
+  "Describe what a workfunction is and relate it to ionization energy",
+  "Describe the photoelectric effect with Einstein's quantized photon model of light"
+ ],
+ "summary_html": "<p>Although Hertz discovered the photoelectron in 1887, it was not until 1905 that a theory was proposed that explained the effect completely. The theory was proposed by Einstein and it made the claim that electromagnetic radiation had to be thought of as a series of particles, called photons, which collide with the electrons on the surface and emit them. This theory ran contrary to the belief that electromagnetic radiation was a wave and thus it was not recognized as correct until 1916 when Robert Millikan experimentally confirmed the theory</p><p>The photoelectric effect is the process in which electromagnetic radiation ejects electrons from a material. Einstein proposed photons to be quanta of electromagnetic radiation having energy $E=h\\nu$ is the frequency of the radiation. All electromagnetic radiation is composed of photons. As Einstein explained, all characteristics of the photoelectric effect are due to the interaction of individual photons with individual electrons. The maximum kinetic energy $KE_e$ of ejected electrons (photoelectrons) is given by $KE_e=h\\nu – \\Phi$, where $h\\nu$ is the photon energy and $\\Phi$ is the workfunction (or binding energy) of the electron to the particular material.</p>",
+ "notes": "The page is adapted from Michael Fowler (University of Virginia), Mark Tuckerman (New York University), Hanson, Harvey, Sweeney and Zielinski’s Quantum States of Atoms and Molecules and OpenStax Chemistry (CC BY 4.0), and its four figures of the photoelectric experiment are folded into one live bench.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "Exercises 1.3.1 and 1.3.2 are the book’s, keyed by the book; the five Conceptual Questions carry no answers in the book, so their solutions are AI-written. Bloom levels and concept tags are AI-chosen. Numeric answers accept 2% tolerance.",
+ "figures": [
+  {
+   "id": "sim-photoelectric",
+   "kind": "sim",
+   "number": "1.3.1",
+   "folds": [
+    "1.3.2",
+    "1.3.3",
+    "1.3.4"
+   ],
+   "originals": [
+    "/media/ch01/141781-imageedit_2_2853335883.jpg",
+    "/media/ch01/344338-1.3.2.svg",
+    "/media/ch01/344339-1.3.3.svg",
+    "/media/ch01/344350-1.3.4.svg"
+   ],
+   "original_caption": "The photoelectric effect involves irradiating a metal surface with photons of sufficiently high energy to cause the electrons to be ejected from the metal. (CC BY-SA-NC; anonymous) Lenard's photoelectric experiment. (left) High light intensity increase photocurrent (number of collected photoelectrons). (right) Low light intensity has reduced photocurrent. However, the kinetic energy of the ejected electrons is independent of incident light intensity. (CC BY-NC; Ümit Kaya via LibreTexts) Millikan's photoelectric experiment. (left) Incident high-energy blue light. The battery represents the potential Lenard used to charge the collector plate negatively, which would actually be a variable voltage source. Since the electrons ejected by the blue light are getting to the collector plate, the potential supplied by the battery is less than $V_{stop}$, for blue light. (right) Indicent low-energy red light. Since the electrons ejected by the red light are not getting to the collector plate, the potential supplied by the battery exceeds $V_{stop}$ for red light. (CC BY-NC; Ümit Kaya via LibreTexts) Schematic drawings showing the characteristics of the photoelectric effect from Lenard's and Millikan's experiments. (A) The kinetic energy of any single emitted electron increases linearly with frequency above some threshold value (B) The electron kinetic energy is independent of the light intensity above the threshold frequency and zero below. (C) The number of electrons emitted per second (i.e. the electric current) is independent of light frequency above the threshhold frequency and zero below. (D) The number of electrons increases linearly with the light intensity. (CC BY-NC; Ümit Kaya via LibreTexts)",
+   "draws": [
+    "frequency",
+    "energy",
+    "potential",
+    "wavelength"
+   ],
+   "conventions": [
+    "e-"
+   ],
+   "facts": [
+    "spectrum"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "photoelectrons",
+   "concept": "photoelectric-effect",
+   "verb": "introduces"
+  },
+  {
+   "span": "classical-picture",
+   "concept": "photoelectric-effect",
+   "verb": "uses"
+  },
+  {
+   "span": "lenard",
+   "concept": "stopping-voltage",
+   "verb": "introduces"
+  },
+  {
+   "span": "lenard",
+   "concept": "photoelectric-effect",
+   "verb": "reinforces"
+  },
+  {
+   "span": "millikan",
+   "concept": "photoelectric-effect",
+   "verb": "reinforces"
+  },
+  {
+   "span": "einstein",
+   "concept": "plancks-quantum-hypothesis",
+   "verb": "uses"
+  },
+  {
+   "span": "einstein",
+   "concept": "work-function",
+   "verb": "introduces"
+  },
+  {
+   "span": "einstein",
+   "concept": "photon",
+   "verb": "introduces"
+  },
+  {
+   "span": "einstein",
+   "concept": "einstein-photoelectric-equation",
+   "verb": "introduces"
+  },
+  {
+   "span": "einstein",
+   "concept": "threshold-frequency",
+   "verb": "introduces"
+  },
+  {
+   "span": "einstein",
+   "concept": "stopping-voltage",
+   "verb": "uses"
+  },
+  {
+   "span": "workfunction",
+   "concept": "work-function",
+   "verb": "reinforces"
+  },
+  {
+   "span": "workfunction",
+   "concept": "einstein-photoelectric-equation",
+   "verb": "uses"
+  },
+  {
+   "span": "workfunction",
+   "concept": "photon",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "e1",
+   "source_id": "exr:1.3.1",
+   "source_number": "Exercise 1.3.1",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "workfunction",
+   "prompt": "<p>What is the longest-wavelength electromagnetic radiation that can eject a photoelectron from silver? Is this in the visible range?</p>",
+   "answer": {
+    "type": "number",
+    "value": 263,
+    "unit": "nm",
+    "generated_by": "source",
+    "hint": "The longest wavelength belongs to a photon whose energy just equals the workfunction.",
+    "solution": "<p>Given that the workfunction is 4.72 eV from Table 1.3.1, then only photons with wavelengths lower than 263 nm will induce photoelectrons (calculated via $E=h \\nu$). This is ultraviolet and not in the visible range.</p>"
+   }
+  },
+  {
+   "id": "e2",
+   "source_id": "exr:1.3.2",
+   "source_number": "Exercise 1.3.2",
+   "kind": "exercise",
+   "bloom": "Understand",
+   "place": {
+    "at": "end"
+   },
+   "cite": "workfunction",
+   "prompt": "<p>Why is the workfunction of an element generally lower than the ionization energy of that element?</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "source",
+    "solution": "<p>The workfunction of a metal refers to the minimum energy required to extract an electron from the surface of a (<strong>bulk</strong>) metal by the absorption a photon of light. The workfunction will vary from metal to metal. In contrast, ionization energy is the energy needed to detach electrons from <strong>atoms</strong> and also varies with each particular atom, with the valence electrons require less energy to extract than core electrons (i.e., from lower shells) that are more closely bound to the nuclei. The electrons in the metal lattice there less bound (i.e., free to move within the metal) and removing one of these electrons is much easier than removing an electron from an atom because the metallic bonds of the bulk metal reduces their binding energy. As we will show in subsequent chapters, the more delocalized a particle is, the lower its energy.</p>"
+   }
+  },
+  {
+   "id": "cq1",
+   "source_id": "Is visible light the only type of electromagnetic radiation",
+   "source_number": "Conceptual Questions 1",
+   "kind": "question",
+   "bloom": "Understand",
+   "place": {
+    "at": "end"
+   },
+   "prompt": "<p>Is visible light the only type of electromagnetic radiation that can cause the photoelectric effect?</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "<p>No. Any electromagnetic radiation whose photons carry at least the workfunction, $h\\nu \\ge \\Phi$, ejects electrons; the kind of radiation matters only through its frequency. For most metals $\\Phi$ is 4 to 5 eV (Table 1.3.1), so the threshold lies in the ultraviolet: silver needs wavelengths shorter than 263 nm (Exercise 1.3.1). Ultraviolet light, X-rays and gamma rays therefore all cause the photoelectric effect. Visible light does so only for metals with a small workfunction, such as cesium ($\\Phi$ = 1.95 eV, threshold about 638 nm), potassium (about 540 nm) and calcium (459 nm, Example 1.3.1). Infrared, microwave and radio photons carry too little energy to eject an electron from any element of Table 1.3.1, however intense the beam.</p>"
+   }
+  },
+  {
+   "id": "cq2",
+   "source_id": "Which aspects of the photoelectric effect",
+   "source_number": "Conceptual Questions 2",
+   "kind": "question",
+   "bloom": "Analyze",
+   "place": {
+    "at": "end"
+   },
+   "prompt": "<p>Which aspects of the photoelectric effect cannot be explained without photons? Which can be explained without photons? Are the latter inconsistent with the existence of photons?</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "<p>Without photons one cannot explain: that the kinetic energy of the ejected electrons does not depend on the intensity of the light (Lenard’s $V_{stop}$); that it rises linearly with frequency, with slope $h$ (or $h/e$ for $V_{stop}$); that there is a threshold frequency $\\nu_0$ below which no electron is ejected however bright the light; and that electrons leave at once, with no delay even in very dim light. Without photons one can explain that light ejects electrons at all, since a wave carries energy, and that more intense light ejects more electrons. These are not inconsistent with photons: in Einstein’s picture more intense light is more photons per second, and each photon ejects at most one electron, so the number of electrons, the current, is proportional to the intensity, which is what is observed.</p>"
+   }
+  },
+  {
+   "id": "cq3",
+   "source_id": "Is the photoelectric effect a direct consequence",
+   "source_number": "Conceptual Questions 3",
+   "kind": "question",
+   "bloom": "Understand",
+   "place": {
+    "at": "end"
+   },
+   "prompt": "<p>Is the photoelectric effect a direct consequence of the wave character of electromagnetic radiation or of the particle character of electromagnetic radiation? Explain briefly.</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "<p>Of the particle character. A wave delivers energy in proportion to its intensity, so it predicts faster electrons from brighter light, no threshold frequency and a delay in dim light, and none of these is observed. The effect follows directly from light arriving as particles, photons of energy $E = h\\nu$, each absorbed whole by one electron, which keeps $KE = h\\nu - \\Phi$. The wave character still enters only through the frequency $\\nu$, and hence the wavelength, that fixes each photon’s energy.</p>"
+   }
+  },
+  {
+   "id": "cq4",
+   "source_id": "Insulators (nonmetals) have a higher",
+   "source_number": "Conceptual Questions 4",
+   "kind": "question",
+   "bloom": "Analyze",
+   "place": {
+    "at": "end"
+   },
+   "prompt": "<p>Insulators (nonmetals) have a higher $\\Phi$ than metals, and it is more difficult for photons to eject electrons from insulators. Discuss how this relates to the free charges in metals that make them good conductors.</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "<p>The free charges that make a metal a good conductor are its delocalized electrons, which are not bound to any one atom and move through the whole lattice. Little energy is needed to pull one of them out of the surface, so a metal’s workfunction is small, smaller than the ionization energy of its atoms (Table 1.3.1). An insulator has no such free electrons: each one is held in its own atom or bond, and removing it costs an energy closer to an ionization energy. Its higher $\\Phi$ means a higher threshold frequency $\\nu_0 = \\Phi/h$, so only higher-energy photons, far in the ultraviolet, can eject electrons. The same looseness of binding that lets a metal’s electrons carry a current lets low-energy photons eject them.</p>"
+   }
+  },
+  {
+   "id": "cq5",
+   "source_id": "If you pick up and shake a piece of metal",
+   "source_number": "Conceptual Questions 5",
+   "kind": "question",
+   "bloom": "Evaluate",
+   "place": {
+    "at": "end"
+   },
+   "prompt": "<p>If you pick up and shake a piece of metal that has electrons in it free to move as a current, no electrons fall out. Yet if you heat the metal, electrons can be boiled off. Explain both of these facts as they relate to the amount and distribution of energy involved with shaking the object as compared with heating it.</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "<p>When you shake the metal, the energy goes into the motion of the whole piece: every electron moves along with the lattice, and the energy each one gets is tiny. Shaking at 1 m/s gives an electron $\\tfrac12 m_e v^2 = \\tfrac12(9.11\\times10^{-31}\\,kg)(1\\,m/s)^2 = 4.6\\times10^{-31}\\,J$, about $3\\times10^{-12}$ eV, while escaping takes the workfunction, a few eV. So no electron falls out. Heating gives the metal’s particles random thermal energy, distributed unevenly: the average per particle is of order $k_BT$ (0.17 eV at 2000 K), but a small fraction of the electrons have far more than the average, and at high temperature some of them have more than $\\Phi$ and escape from the surface. What matters, as in the photoelectric effect, is the energy one electron receives compared with $\\Phi$, not the total energy put into the metal.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "e1",
+   "concept": "work-function"
+  },
+  {
+   "exercise": "e1",
+   "concept": "threshold-frequency"
+  },
+  {
+   "exercise": "e2",
+   "concept": "work-function"
+  },
+  {
+   "exercise": "cq1",
+   "concept": "threshold-frequency"
+  },
+  {
+   "exercise": "cq1",
+   "concept": "photon"
+  },
+  {
+   "exercise": "cq2",
+   "concept": "photon"
+  },
+  {
+   "exercise": "cq2",
+   "concept": "photoelectric-effect"
+  },
+  {
+   "exercise": "cq3",
+   "concept": "photon"
+  },
+  {
+   "exercise": "cq3",
+   "concept": "einstein-photoelectric-equation"
+  },
+  {
+   "exercise": "cq4",
+   "concept": "work-function"
+  },
+  {
+   "exercise": "cq5",
+   "concept": "work-function"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-ke",
+   "kind": "correction",
+   "html": "The subtraction prints 0.246 eV; $2.96\\ eV - 2.71\\ eV = 0.25\\ eV$."
+  },
+  {
+   "id": "c-retarding",
+   "kind": "correction",
+   "html": "A retarding potential is a voltage: an electron of 0.25 eV is stopped by a retarding potential of 0.25 V, not 0.26 eV."
+  }
+ ]
+}

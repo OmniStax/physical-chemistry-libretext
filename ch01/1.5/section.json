@@ -1,0 +1,123 @@
+{
+ "id": "1.5",
+ "module": "13385",
+ "chapter": "1",
+ "title": "The Rydberg Formula and the Hydrogen Atomic Spectrum",
+ "short": "Rydberg formula",
+ "lead": "Balmer’s formula fits the visible lines of hydrogen; Rydberg’s fits all of them. The section states Rydberg’s equation and uses it to find the other families of hydrogen lines, in the ultraviolet and the infrared.",
+ "objectives": [
+  "Describe Rydberg's theory for the hydrogen spectra.",
+  "Interpret the hydrogen spectrum in terms of the energy states of electrons."
+ ],
+ "summary_html": "",
+ "notes": "The page is LibreTexts’ own, curated by Delmar Larsen, and nothing of it was left out.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The one exercise is the book’s, keyed by the book; its Bloom level and concept tags are AI-chosen. Numeric answers accept 2% tolerance.",
+ "figures": [
+  {
+   "id": "sim-rydberg",
+   "kind": "sim",
+   "draws": [
+    "wavelength",
+    "wavenumber"
+   ],
+   "facts": [
+    "spectrum"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "rydberg-equation",
+   "concept": "rydberg-formula",
+   "verb": "introduces"
+  },
+  {
+   "span": "rydberg-equation",
+   "concept": "rydberg-constant",
+   "verb": "introduces"
+  },
+  {
+   "span": "rydberg-equation",
+   "concept": "balmer-formula",
+   "verb": "uses"
+  },
+  {
+   "span": "other-series",
+   "concept": "hydrogen-spectral-series",
+   "verb": "introduces"
+  },
+  {
+   "span": "other-series",
+   "concept": "rydberg-formula",
+   "verb": "uses"
+  },
+  {
+   "span": "other-series",
+   "concept": "wavenumber",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "e1",
+   "source_id": "exr:1.5.1",
+   "source_number": "Exercise 1.5.1",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "other-series",
+   "prompt": "<p>The Pfund series of lines in the emission spectrum of hydrogen corresponds to transitions from higher excited states to the $n_1 = 5$. Calculate the wavelength of the <em>second</em> line in the Pfund series to three significant figures. In which region of the spectrum does it lie?</p>",
+   "answer": {
+    "type": "number",
+    "value": 4650,
+    "unit": "nm",
+    "hint": "The second line of the series has $n_2 = n_1 + 2$.",
+    "generated_by": "source",
+    "solution": "$4.65 \\times 10^3\\, nm$; infrared"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "e1",
+   "concept": "rydberg-formula"
+  },
+  {
+   "exercise": "e1",
+   "concept": "hydrogen-spectral-series"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "lyman-alpha-wavenumber",
+   "kind": "correction",
+   "html": "The table prints 82,2291 cm<sup>-1</sup>, a slip: $R_H(1 - 1/4)$ = 82,303 cm<sup>-1</sup> with $R_H$ = 109,737 cm<sup>-1</sup>, and Example 1.5.1 finds 82,280 cm<sup>-1</sup> with $R_H$ rounded to $1.097 \\times 10^{7}\\, m^{-1}$."
+  }
+ ]
+}
