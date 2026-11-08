@@ -45,7 +45,7 @@ const otherSign = (cw) => { const l = lightOf(cw), far = Math.abs(lightOf(PAL.in
       v.pickable(F.mesh.sphere(g, p, i ? 0.07 : 0.1, F.el(i ? 'H' : 'N')), i ? `hydrogen ${i}` : 'nitrogen');
       const c = o.c[i];
       if (Math.abs(c) < 1e-6) return;
-      const m = F.mesh.sphere(g, p, 0.5 * Math.sqrt(Math.abs(c)) * S, c > 0 ? up : down, { transparent: true, opacity: 0.62 });
+      const m = F.mesh.sphere(g, p, 0.5 * Math.sqrt(Math.abs(c)) * S, c > 0 ? up : down, { transparent: true, opacity: 0.88 });
       v.pickable(m, `${names[i]} with coefficient ${fmt(c, 4)}`);
     });
     v.headline(o.say);

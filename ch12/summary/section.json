@@ -1,0 +1,32 @@
+{
+ "id": "summary",
+ "module": "550567",
+ "chapter": "12",
+ "title": "Group Theory - The Exploitation of Symmetry (Summary)",
+ "short": "Summary",
+ "lead": "",
+ "notes": "Written by Kyle Crabtree and shared under the book's CC BY-NC-SA 4.0; the chapter's learning objectives, which the book prints at the head of this page, are kept here.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "figures": [],
+ "footnotes": [
+  {
+   "id": "c-truncated",
+   "kind": "correction",
+   "html": "The book's objective breaks off after “a”."
+  }
+ ]
+}

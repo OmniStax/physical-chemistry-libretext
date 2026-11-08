@@ -1,0 +1,268 @@
+{
+ "id": "12.15",
+ "module": "433985",
+ "chapter": "12",
+ "title": "Molecular Orbitals can be Constructed on the Basis of Symmetry",
+ "short": "Molecular orbitals from symmetry",
+ "lead": "Two atomic orbitals can bond only if their overlap integral survives the symmetry operations of the molecule. Molecular orbitals of a polyatomic molecule are built from SALCs, worked through for water's six valence orbitals, and the same direct products decide which electronic states a photon of a given polarization can reach.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "Written by Claire Vallance from her Oxford lecture notes on molecular symmetry, with the closing part on electronic transitions from a ChemWiki module, and shared under CC BY 4.0; the transition moment integral the book prints as an image is set as maths, and its two water diagrams are drawn as one figure.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercises here. The one exercise is written by AI for the selection of electronic transitions, with its answer worked from the C₂ᵥ character table.",
+ "figures": [
+  {
+   "id": "sim-water-basis",
+   "kind": "sim",
+   "originals": [
+    "/media/ch12/61171-Screenshot_23-1.png"
+   ],
+   "draws": [
+    "symmetry-operation",
+    "wavefunction",
+    "representation",
+    "character"
+   ],
+   "conventions": [
+    "O",
+    "H"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "sim-water-mos",
+   "kind": "sim",
+   "originals": [
+    "/media/ch12/57783-image063.jpg",
+    "/media/ch12/61176-Screenshot_27-2.png"
+   ],
+   "draws": [
+    "wavefunction",
+    "energy"
+   ],
+   "conventions": [
+    "O",
+    "H"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "fig-nh3-light",
+   "kind": "figure",
+   "originals": [
+    "/media/ch12/61175-Screenshot_27-1.png"
+   ],
+   "draws": [],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "kept as the book prints it"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "bonding-in-diatomics",
+   "concept": "same-symmetry-bonding",
+   "verb": "introduces"
+  },
+  {
+   "span": "bonding-in-diatomics",
+   "concept": "overlap-integral",
+   "verb": "uses"
+  },
+  {
+   "span": "bonding-in-diatomics",
+   "concept": "direct-product",
+   "verb": "uses"
+  },
+  {
+   "span": "bonding-in-diatomics",
+   "concept": "vanishing-integral-rule",
+   "verb": "uses"
+  },
+  {
+   "span": "bonding-in-polyatomics",
+   "concept": "mo-from-salcs",
+   "verb": "introduces"
+  },
+  {
+   "span": "bonding-in-polyatomics",
+   "concept": "salc",
+   "verb": "uses"
+  },
+  {
+   "span": "steps",
+   "concept": "mo-construction-steps",
+   "verb": "reinforces"
+  },
+  {
+   "span": "steps",
+   "concept": "reduction-formula",
+   "verb": "reinforces"
+  },
+  {
+   "span": "water-example",
+   "concept": "matrix-representation",
+   "verb": "uses"
+  },
+  {
+   "span": "water-example",
+   "concept": "symmetry-operation",
+   "verb": "uses"
+  },
+  {
+   "span": "matrix-aside",
+   "concept": "matrix-representation",
+   "verb": "reinforces"
+  },
+  {
+   "span": "matrix-characters-salcs",
+   "concept": "character",
+   "verb": "uses"
+  },
+  {
+   "span": "matrix-characters-salcs",
+   "concept": "projection-operator",
+   "verb": "reinforces"
+  },
+  {
+   "span": "matrix-characters-salcs",
+   "concept": "mo-from-salcs",
+   "verb": "reinforces"
+  },
+  {
+   "span": "electronic-transitions",
+   "concept": "electronic-state-symmetry",
+   "verb": "introduces"
+  },
+  {
+   "span": "electronic-transitions",
+   "concept": "electronic-selection-symmetry",
+   "verb": "introduces"
+  },
+  {
+   "span": "electronic-transitions",
+   "concept": "transition-moment-integral",
+   "verb": "uses"
+  },
+  {
+   "span": "electronic-transitions",
+   "concept": "direct-product",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "e1",
+   "source_id": "The first excited electronic state has the configuration",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "electronic-transitions",
+   "prompt": "Ground-state water has $A_1$ symmetry. One electron is promoted from the $1B_1$ orbital to the $3A_1$ orbital, giving the configuration $(1B_1)^1(3A_1)^1$. Which polarization of light can drive this transition with one photon?",
+   "answer": {
+    "type": "choice",
+    "options": [
+     "$x$-polarized",
+     "$y$-polarized",
+     "$z$-polarized",
+     "none of them"
+    ],
+    "correct": 0,
+    "generated_by": "ai",
+    "hint": "The excited state's symmetry is the direct product of the species of its two half-filled orbitals.",
+    "solution": "The unpaired electrons sit in $B_1$ and $A_1$ orbitals, so the state has symmetry $B_1 \\otimes A_1 = B_1$. From the $C_{2v}$ character table, $x$ transforms as $B_1$, so $\\Gamma_{\\mu_x} \\otimes \\Gamma_{\\Psi_i} = B_1 \\otimes A_1 = B_1$, which is the final state's species: $x$-polarized light can drive the transition, and $y$ ($B_2$) and $z$ ($A_1$) cannot."
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "e1",
+   "concept": "electronic-selection-symmetry"
+  },
+  {
+   "exercise": "e1",
+   "concept": "electronic-state-symmetry"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-1520-a",
+   "kind": "correction",
+   "html": "Equation (15.20) and Equation 16.1 are numbers from Vallance's lecture notes, from which this text is taken. In this book they are Equations 12.15.4 and 12.15.5, first given in Section 12.8 as Equations 12.8.19 and 12.8.20."
+  },
+  {
+   "id": "c-161",
+   "kind": "correction",
+   "html": "Equation 16.1 is Vallance's number for the projection operator, Equation 12.15.5 here."
+  },
+  {
+   "id": "c-1520-b",
+   "kind": "correction",
+   "html": "Equation (15.20) is Vallance's number for the reduction formula, Equation 12.15.9 here."
+  },
+  {
+   "id": "c-b2-proj",
+   "kind": "correction",
+   "html": "The first line should read $s_H - s_H' - s_H + s_H' = 0$."
+  },
+  {
+   "id": "c-c5pz",
+   "kind": "correction",
+   "html": "The second line ends in $c_5 p_x$, since $\\phi_5 = p_x$ (Equation 12.15.15)."
+  },
+  {
+   "id": "c-part-c",
+   "kind": "correction",
+   "html": "The energy level diagram with transitions A, B and C is in Section 12.13."
+  },
+  {
+   "id": "c-raman-volume",
+   "kind": "correction",
+   "html": "What must change for a Raman transition is the polarizability, how easily the electron cloud is distorted by a field, not the volume the molecule occupies."
+  },
+  {
+   "id": "c-sect18",
+   "kind": "correction",
+   "html": "Section 18 of Vallance's notes is Bonding in Diatomics at the start of this section, where the direct product of two orbitals' species decides their overlap."
+  },
+  {
+   "id": "c-notes78",
+   "kind": "correction",
+   "html": "The book prints neither note 7 nor note 8."
+  }
+ ]
+}

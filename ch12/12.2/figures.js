@@ -137,7 +137,7 @@ function elementMarks(o, lit) {
   const S = F.space3d(d, { box: [[-2.5, 2.5], [-2.5, 2.5], [-2.2, 2.2]], h: 540, turn: -2.25, tilt: 0.3, fit: 3.1, spin: 'off', zoom: false, pitch: [0.03, 75 * RAD], yaw: [-2.25 - 60 * RAD, -2.25 + 60 * RAD] });
   const cy = F.cycle(() => total(), 1.4);
   const MOL = F.select(d.controls, { label: 'molecule', options: MOL_KEYS.map((k) => ({ value: k, label: MOLS[k].name === 'CHFClBr' ? 'CHFClBr' : MOLS[k].name })), value: 'water', aria: 'the molecule', key: 'molecule',
-    onInput: () => { OP.options(opts(), MOL.value === 'chfclbr' ? '1' : '0'); cy.reset(); } });
+    onInput: () => { OP.options(opts()); OP.set(MOL.value === 'chfclbr' ? '1' : '0'); cy.reset(); } });
   const opts = () => MOLS[MOL.value].ops.map((o, i) => ({ value: String(i), label: opLabel(o) }));
   const OP = F.choice(d.controls, { label: 'operation', options: opts(), value: '0', aria: 'the symmetry operation', key: 'operation', onInput: () => cy.reset() });
   const cur = () => MOLS[MOL.value].ops[+OP.value] ?? MOLS[MOL.value].ops[0];
@@ -215,7 +215,7 @@ const FIND = {
     const N1 = [0.62, 0, 0], d = [Math.cos(74 * RAD), Math.sin(74 * RAD), 0];
     return { atoms: [{ el: 'N', p: N1 }, { el: 'N', p: mul(N1, -1) }, { el: 'H', p: add(N1, mul(d, 1.03)) }, { el: 'H', p: mul(add(N1, mul(d, 1.03)), -1) }], bonds: [[0, 1], [0, 2], [1, 3]] };
   })(), yes: ['axis', 'hC'], group: 'C_{2h}', h: '\\kEop,\\ \\kCtwo,\\ \\kiop,\\ \\ksigmah', order: 4, els: [['C', Z, 2], ['s', Z, 'h']], head: 'A C₂ axis square to the molecule and the molecular plane as σ_h, which together give a centre of inversion.' },
-  ethane: { name: 'staggered ethane', m: ethane(), yes: ['axis', 'perp', 'dD'], group: 'D_{3d}', h: '\\kEop,\\ 2\\kCthree,\\ 3\\kCtwo,\\ \\kiop,\\ 2S_6,\\ 3\\ksigmad', order: 12, els: [['C', Z, 3], ...[30, 150, 270].map((a) => ['C', azi(a), 2]), ...[0, 120, 240].map((a) => ['s', azi(a + 90)])], head: 'The C₃ axis along the C–C bond, three C₂ axes square to it and three dihedral mirror planes between them.' },
+  ethane: { name: 'staggered ethane', m: ethane(), yes: ['axis', 'perp', 'dD'], group: 'D_{3d}', h: '\\kEop,\\ 2\\kCthree,\\ 3\\kCtwo,\\ \\kiop,\\ 2S_6,\\ 3\\ksigmad', order: 12, els: [['C', Z, 3], ...[30, 150, 270].map((a) => ['C', azi(a), 2]), ...[0, 120, 240].map((a) => ['s', azi(a + 90)])], head: 'A C₃ axis along the C–C bond, three C₂ axes square to it and three dihedral mirror planes.' },
   co2: { name: 'CO₂', m: { atoms: [{ el: 'C', p: [0, 0, 0] }, { el: 'O', p: [0, 0, 1.16] }, { el: 'O', p: [0, 0, -1.16] }] }, yes: ['lin', 'linI'], group: 'D_{\\infty h}', h: '\\kEop,\\ 2C_{\\infty}^{\\phi},\\ \\infty\\ksigmav,\\ \\kiop,\\ 2S_{\\infty}^{\\phi},\\ \\infty\\kCtwo', order: '\\infty', els: [['C', Z, '∞'], ['i']], head: 'A linear molecule whose two ends match: a C∞ axis and a centre of inversion on the carbon atom.' },
   ch4: { name: 'CH₄', m: methane, yes: ['many'], group: 'T_d', h: '\\kEop,\\ 8\\kCthree,\\ 3\\kCtwo,\\ 6S_4,\\ 6\\ksigmad', order: 24, els: [[1, 1, 1], [1, -1, -1], [-1, 1, -1], [-1, -1, 1]].map((v) => ['C', v, 3]), head: 'Four C₃ axes, one along each C–H bond, and no centre of inversion.' },
   sf6: { name: 'SF₆', m: { atoms: [{ el: 'S', p: [0, 0, 0] }, ...[[1, 0, 0], [-1, 0, 0], [0, 1, 0], [0, -1, 0], [0, 0, 1], [0, 0, -1]].map((v) => ({ el: 'F', p: mul(v, 1.56) }))] }, yes: ['many', 'cubI'], group: 'O_h', h: '\\kEop,\\ 8\\kCthree,\\ 6\\kCtwo,\\ 6C_4,\\ 3\\kCtwo,\\ \\kiop,\\ 6S_4,\\ 8S_6,\\ 3\\ksigmah,\\ 6\\ksigmad', order: 48, els: [[[1, 0, 0], 4], [[0, 1, 0], 4], [[0, 0, 1], 4]].map(([v, n]) => ['C', v, n]).concat([['i']]), head: 'Three C₄ axes along the S–F bonds and a centre of inversion on the sulfur atom, with no C₅ axis.' },
@@ -230,7 +230,7 @@ function pathOf(f) {
 }
 (function () {
   const d = F.sim(root, 'sim-point-group');
-  const S = F.space3d(d, { box: [[-2.2, 2.2], [-2.2, 2.2], [-2, 2]], h: 400, turn: -2.25, tilt: 0.32, fit: 3.0, spin: 'off', zoom: false, pitch: [0.03, 75 * RAD], yaw: [-2.25 - 60 * RAD, -2.25 + 60 * RAD] });
+  const S = F.space3d(d, { box: [[-2.2, 2.2], [-2.2, 2.2], [-2, 2]], h: 460, turn: -2.25, tilt: 0.32, fit: 2.5, spin: 'off', zoom: false, pitch: [0.03, 75 * RAD], yaw: [-2.25 - 60 * RAD, -2.25 + 60 * RAD] });
   const chart = F.makeCanvas(d.stage, 712);
   const MOL = F.select(d.controls, { label: 'molecule', options: FIND_KEYS.map((k) => ({ value: k, label: FIND[k].name })), value: 'nh3', aria: 'the molecule', key: 'molecule' });
   const hits = [];
@@ -245,7 +245,7 @@ function pathOf(f) {
       const col = alpha(C('symmetry-operation'), 0.85);
       if (e[0] === 'C') { const u = unit(e[1]), L = 2.1; els.push({ k: 'line', pts: [mul(u, -L), mul(u, L)], color: col, w: 4, name: `a C${e[2] === '∞' ? '∞' : ['', '', '₂', '₃', '₄'][e[2]]} axis` }); }
       else if (e[0] === 's') {
-        const n = unit(e[1]), a = unit(Math.abs(n[2]) > 0.9 ? cross(n, [1, 0, 0]) : cross(n, Z)), b = cross(n, a), r = 1.75;
+        const n = unit(e[1]), a = unit(Math.abs(n[2]) > 0.9 ? cross(n, [1, 0, 0]) : cross(n, Z)), b = cross(n, a), r = 1.45;
         const c = [add(mul(a, r), mul(b, r)), add(mul(a, -r), mul(b, r)), add(mul(a, -r), mul(b, -r)), add(mul(a, r), mul(b, -r))];
         els.push({ k: 'faces', faces: [c], color: C('symmetry-operation'), alpha: 0.12, name: e[2] === 'h' ? 'the horizontal mirror plane σ_h' : 'a mirror plane' }, { k: 'line', pts: [...c, c[0]], color: alpha(C('symmetry-operation'), 0.5), w: 2 });
       } else if (e[0] === 'i') els.push({ k: 'dot', p: [0, 0, 0], color: C('symmetry-operation'), r: 7, name: 'the centre of inversion' });

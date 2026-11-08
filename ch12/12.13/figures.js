@@ -169,7 +169,7 @@ function water(ctx, cx, cy, S, disp, fade) {
     const m = MODES.find((x) => x.key === V.value), nin = 1e7 / L.v, nout = nin - m.nu, lout = 1e7 / nout;
     const t = Math.min(cy.now(), 3.6), up = clamp(t / 1.5), down = clamp((t - 1.9) / 1.5);
     const box = { l: 200, r: 1300, t: 110, b: 570 };
-    const ax = axes(ctx, box, [0, 1], [0, 26000], { nx: 0, ny: 0, yl: 'energy (cm⁻¹)', yc: C('wavenumber') });
+    const ax = axes(ctx, box, [0, 1], [-1500, 26000], { nx: 0, ny: 0, yl: 'energy (cm⁻¹)', yc: C('wavenumber') });
     [0, 5000, 10000, 15000, 20000, 25000].forEach((v) => text(ctx, fmt(v, 0), box.l - 12, ax.Y(v), PAL.ink, { size: 17, align: 'right' }));
     const ce = C('energy'), x0 = 330, x1 = 900;
     line(ctx, x0 - 60, ax.Y(0), x1, ax.Y(0), ce, 5);
@@ -183,7 +183,8 @@ function water(ctx, cx, cy, S, disp, fade) {
     if (down > 0) arrow(ctx, xe, ax.Y(nin), xe, ax.Y(nin - (nin - m.nu) * down), cout, 6);
     text(ctx, `absorbed photon, ${fmt(L.v, 0)} nm`, xa - 18, ax.Y(nin / 2), cin, { size: 20, weight: 600, align: 'right', bg: PAL.panel });
     if (down > 0) text(ctx, `emitted photon, ${fmt(lout, 0)} nm`, xe + 18, ax.Y((nin + m.nu) / 2), cout, { size: 20, weight: 600, bg: PAL.panel });
-    F.vbracket(ctx, x0 - 90, ax.Y(m.nu), ax.Y(0), C('wavenumber'), `${m.nu} cm⁻¹`, 'left');
+    { const xg = 600, cw = C('wavenumber'); arrow(ctx, xg, ax.Y(m.nu / 2), xg, ax.Y(m.nu) + 2, cw, 3); arrow(ctx, xg, ax.Y(m.nu / 2), xg, ax.Y(0) - 2, cw, 3);
+      text(ctx, `${m.nu} cm⁻¹`, xg + 14, ax.Y(m.nu / 2), cw, { size: 20, weight: 600, bg: PAL.panel }); }
     hits.push({ x: xa, y: ax.Y(nin / 2), r: 30, name: `the absorbed photon: ${fmt(L.v, 0)} nm, ${fmt(nin, 0)} cm⁻¹` });
     hits.push({ x: xe, y: ax.Y((nin + m.nu) / 2), r: 30, name: `the emitted photon: ${fmt(lout, 0)} nm, ${fmt(nout, 0)} cm⁻¹` });
     hits.push({ x: (x0 + x1) / 2, y: ax.Y(m.nu), r: 20, name: `v = 1 of the ${m.name}, ${m.nu} cm⁻¹ above the ground state` });

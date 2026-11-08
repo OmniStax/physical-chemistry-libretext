@@ -2,6 +2,9 @@
 window.OMNISTAX_FIGURES = window.OMNISTAX_FIGURES || {};
 window.OMNISTAX_FIGURES['12.5'] = function (root, F) {
 const { tex, C, PAL, alpha, register, line, text, fmt } = F;
+/* ink or ground, whichever reads on a fill (10.1's rule) */
+const lightOf = (c) => { const m = /^#([0-9a-f]{6})$/i.exec(c) ? [1, 3, 5].map((i) => parseInt(c.slice(i, i + 2), 16)) : (c.match(/[\d.]+/g) || [0, 0, 0]).slice(0, 3).map(Number); return (0.2126 * m[0] + 0.7152 * m[1] + 0.0722 * m[2]) / 255; };
+const inkOn = (fill) => { const f = lightOf(fill); return Math.abs(lightOf(PAL.ink) - f) > Math.abs(lightOf(PAL.panel) - f) ? PAL.ink : PAL.panel; };
 
 /* ---------- Figure (the book's NH3 s basis, unnumbered): the permutation matrices ----------
    A locked view down the C3 axis (root 28.2): NH3 seen from above, as the book draws it, the
@@ -70,11 +73,11 @@ const { tex, C, PAL, alpha, register, line, text, fmt } = F;
     });
     pos.forEach(([x, y]) => line(ctx, X0, Y0, x, y, alpha(PAL.ink, 0.45), 5));
     ball(ctx, X0, Y0, 54, 'N');
-    text(ctx, 's_N', X0, Y0 + 10, PAL.ink, { size: 32, weight: 600, align: 'center' });
+    text(ctx, 's_N', X0, Y0 + 10, inkOn(F.el('N')), { size: 32, weight: 600, align: 'center' });
     hits.push({ x: X0, y: Y0, r: 54, name: 'nitrogen and its s orbital, s_N, on the C₃ axis: every operation leaves it in place' });
     pos.forEach(([x, y], i) => {
       ball(ctx, x, y, 40, 'H');
-      text(ctx, `s_${i + 1}`, x, y + 10, PAL.ink, { size: 32, weight: 600, align: 'center' });
+      text(ctx, `s_${i + 1}`, x, y + 10, inkOn(F.el('H')), { size: 32, weight: 600, align: 'center' });
       hits.push({ x, y, r: 40, name: `hydrogen ${i + 1} and its s orbital, s${'₁₂₃'[i]}` });
     });
     /* the matrix of the row-vector form (12.5.2): column j holds a 1 in the row of g s_j */

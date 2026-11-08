@@ -38,7 +38,7 @@ const ACT = { A_1: 'IR active with $z$-polarized light and Raman active ($x^2 + 
   const mix = ctl(d.controls, { label: '\\text{mix}', cls: 'angle', min: 0, max: 180, step: 1, value: 0, unit: '°', dec: 0, detents: [0, 90], aria: 'how much of the second partner the E mode holds' });
   mix.show(false);
   const cy = cycle(() => Infinity, 0);
-  const v = F.view3d(d.stage, { h: 520, dist: 7.5, tilt: 0.35, pitch: [0.05, 1.45], yaw: [-Math.PI / 3, Math.PI / 3], spin: 'off', zoom: false });
+  const v = F.view3d(d.stage, { h: 500, dist: 12, tilt: 0.45, pitch: [0.05, 1.45], yaw: [-Math.PI / 3, Math.PI / 3], spin: 'off', zoom: false });
   const g = v.part(0);
   /* without WebGL, the same molecule painted flat from the opening view */
   const flat = d.stage.querySelector('.three-none') ? F.makeCanvas(d.stage, 520) : null;
@@ -57,9 +57,9 @@ const ACT = { A_1: 'IR active with $z$-polarized light and Raman active ($x^2 + 
     v.clear(); balls = []; sticks = [];
     [1, 2, 3].forEach(() => sticks.push(F.mesh.stick(g, [0, 0, 0], [0, 1, 0], 0.07, PAL.muted)));
     XYZ.forEach((p, i) => { const b = F.mesh.sphere(g, p.map((x) => x * S), i ? 0.26 : 0.4, F.el(SYM[i])); v.pickable(b, NAMES[i]); balls.push(b); });
-    const ax = F.mesh.stick(g, [0, -1.8, 0], [0, 1.8, 0], 0.025, C('symmetry-operation'), { transparent: true, opacity: 0.6 });
+    const ax = F.mesh.stick(g, [0, -1.4, 0], [0, 1.4, 0], 0.025, C('symmetry-operation'), { transparent: true, opacity: 0.6 });
     v.pickable(ax, 'the C₃ axis');
-    v.label('C₃', [0, 1.95, 0], g);
+    v.label('C₃', [0, 1.5, 0], g);
   }
   function draw() {
     build();
