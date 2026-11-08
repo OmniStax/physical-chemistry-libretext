@@ -1,0 +1,27 @@
+<section id="two-particles">
+<h2>Two particles on two levels</h2>
+<p>In the previous section, the definition of the the <span data-concept="canonical-partition-function">partition function</span> involves a sum of state formulism:</p>
+$$ \kQsys = \sum_i e^{-\beta \kEi} . \tag{17.7.1} $$
+<p>However, under most conditions, full knowledge of each member of an ensemble is missing and hence we have to operate with a more reduced knowledge. This is demonstrated via a simple model of two particles in a two-energy level system in Figure 17.7.1. Each particle (<span data-ref="red">red</span> or <span data-ref="blue">blue</span>) can occupy either the $\kEone=0$ energy level or the $\kEtwo=\kepsilon$ energy level resulting in four possible states that describe the system. <span data-concept="two-particle-two-level-states">The corresponding partition function for this system</span> is then (via Equation 17.7.1):</p>
+$$ \kQdist=e^0+ e^{-\beta\kepsilon} +  e^{-\beta\kepsilon} + e^{-2 \beta\kepsilon}=\kqmol^2 \tag{17.7.2} $$
+<p>and is just the <span data-concept="molecular-partition-function">molecular partition function</span> ($\kqmol$) squared.</p>
+<figure class="sim" id="sim-two-particle-states" data-figure="17.7.1 + 17.7.2" data-original="/media/ch17/419541-Figure_1.svg,/media/ch17/419542-Figure_2.svg" data-original-caption="17.7.1: Four different states can exist for a two-level system with two distinguishable particles (red and blue balls). (CC BY 4.0; Delmar Larsen via LibreTexts) 17.7.2: Three different states can exist for a two-level system with two indistinguishable particles (black balls). The two middle states are indescernable and represent a single state with one particle exited and the other in the ground state. (CC BY 4.0; Delmar Larsen via LibreTexts)">
+  <div class="sim-head"><span class="eyebrow">Figure 17.7.1 + 17.7.2</span><span>Each square is one state: the <span data-ref="red">red particle</span>'s level across, the <span data-ref="blue">blue particle</span>'s down. Make the particles identical and every state off the diagonal folds onto its mirror image. Add levels and the diagonal, where both particles share a level, becomes a smaller part of the whole.</span></div>
+</figure>
+<p>However, if the two particles are <span data-concept="indistinguishable-particles">indistinguishable</span> (e.g., both the same color as in Figure 17.7.2) then while four different combinations can be generated like in Figure 17.7.1, there is no discernible way to separate the two middle states. Hence, there are effectively only three states observable for this system.</p>
+<p>The corresponding partition function for this system (again using Equation 17.7.1) can be constructed:</p>
+$$ \kQsys(N,\kV,\beta) =e^0+ e^{-\beta\kepsilon} + e^{-2 \beta\kepsilon} \neq \kqmol^2 \tag{17.7.3} $$
+</section>
+
+<section id="dividing-by-n-factorial">
+<h2>Dividing by N!</h2>
+<p>and this is not equal to the square of the <span data-concept="molecular-partition-function">molecular partition function</span>. If Equation 17.7.2 were used to describe the indistinguishable particle case, then it would overestimate the number of observable states. From combinatorics, using $\kqmol^N$ for a large $N$-particle system of <span data-concept="indistinguishable-particles">indistinguishable particles</span> will overestimate the number of states by a factor of $N!$. Therefore Equation 17.7.1 requires a slight modification to account for this over counting.</p>
+$$ \kQsys(N,\kV,\beta) = \dfrac{\sum_i{e^{-\beta \kEi}}}{N!} \tag{17.7.4} $$
+<p>If we have $N$ molecules, we can perform $N!$ permutations that should not affect the outcome. To avoid over counting (making sure we do not count each state more than once), <span data-concept="indistinguishable-partition-function">the partition function</span> becomes:</p>
+$$ \kQsys(N,\kV,\beta) = \dfrac{\kqmol(\kV,\beta)^N}{N!} $$
+<div class="note">
+<div class="eyebrow">Note</div>
+<h3>Note</h3>
+<p>As you may have noticed, using Equation 17.7.4 to estimate of $\kQsys$ for the two-indistinguishable particle discussed case above with $N=2$ is incorrect (i.e., Equation 17.7.4 is not equal to Equation 17.7.3). That is because <span data-concept="n-factorial-validity">the $N!$ factor is only applicable for large $N$</span>.<sup class="fn" data-note="c-large-n"></sup></p>
+</div>
+</section>

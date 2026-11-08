@@ -899,6 +899,20 @@
    "sym": "k_B",
    "meaning": "Boltzmann's constant",
    "section": "16.7"
+  },
+  {
+   "sym": "T_r",
+   "concept": "reduced-variables",
+   "type": "temperature",
+   "meaning": "the reduced temperature T/T_c",
+   "section": "16.3"
+  },
+  {
+   "sym": "r",
+   "type": "length",
+   "meaning": "the separation of two molecules",
+   "unit": "m",
+   "section": "16.2"
   }
  ]
 }

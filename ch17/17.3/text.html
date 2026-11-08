@@ -1,0 +1,25 @@
+<section id="average-over-states">
+<h2>The average over states</h2>
+<p>We will be restricting ourselves to the <span data-concept="canonical-ensemble">canonical ensemble</span> (constant temperature and constant pressure)<sup class="fn" data-note="c-constant-pressure"></sup>. Consider a collection of $N$ molecules. The probability of finding a molecule with energy $\kEi$ is equal to the fraction of the molecules with energy $\kEi$. That is, in a collection of $N$ molecules, the probability of the molecules having energy $\kEi$:</p>
+$$ P_i = \dfrac{n_i}{N} $$
+<p>This is the directly obtained from the <span data-concept="boltzmann-probability">Boltzmann distribution</span>, where the fraction of molecules $n_i /N$ having energy $\kEi$ is:<sup class="fn" data-note="c-molecular-q"></sup></p>
+$$ P_i = \dfrac{n_i}{N} = \dfrac{e^{-\kEi/k\kT}}{\kQsys} \tag{17.3.1} $$
+<p>The <span data-concept="average-ensemble-energy">average energy</span> is obtained by multiplying $\kEi$ with its probability and summing over all $i$:</p>
+$$ \kEavg = \sum_i \kEi P_i \tag{17.3.2} $$
+<div class="note">
+<div class="eyebrow">Note</div>
+<p>Equation 17.3.2 is the standard average over a distribution commonly found in quantum mechanics as <a class="xref" href="#3.7-quantum-expectation-values">expectation values</a>. The quantum mechanical version of this Equation is</p>
+$$ \langle \psi | \hat{H} | \psi \rangle $$
+<p>where $\Psi^2$ is the distribution function that the Hamiltonian operator (e.g., energy) is averaged over; this equation is also the starting point in the Variational method approximation.</p>
+</div>
+</section>
+
+<section id="energy-from-ln-q">
+<h2>The energy from ln Q</h2>
+<figure class="dv" id="drv-average-energy"></figure>
+<p>Replacing $1/k\kT$ with $\beta$ often simplifies the math and is easier to use.</p>
+<div class="note">
+<div class="eyebrow">Note</div>
+<p>It is not uncommon to find the notation changes: $Z$ instead of $\kQsys$ and $\kEbar$ instead of $\kEavg$.</p>
+</div>
+</section>

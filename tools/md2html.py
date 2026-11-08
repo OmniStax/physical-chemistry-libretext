@@ -15,7 +15,8 @@ answers and Bloom levels). What it does:
 - `## Learning Objectives` goes to `objectives`; `## Summary` to
   `summary_html`; `## Contributors and Attributions` to `credits` (a
   draft-only field the builder turns into `notes`); a `## Conceptual
-  Questions` or `## Problems` list to exercises of kind question.
+  Questions` or `## Problems` list, or a header that is `## Exercises`
+  itself (18.9's lab exercises), to exercises of kind question.
 - every other `##` opens a `<section id>` block with the book's header.
 - `$$ … $$ {eq:label} n=K` becomes `$$ … \\tag{N.M.K} $$` with the
   converter's K (one per display without \\nonumber, an align included), and `[ref:eq:label]` becomes that number;
@@ -106,6 +107,12 @@ class Drafter:
             j = k + 3
             while 0 <= k and j < len(tex) and tex[j] == " ":
                 j += 1
+            if 0 <= k and j < len(tex) and j > k + 3 and tex[j].isalpha() and tex[j].isupper():
+                # an unbraced argument is one token, as TeX reads it (18.10's \ce H_2: the H
+                # is mhchem's, the _2 the maths')
+                out.append(tex[i:k] + "\\mathrm{" + tex[j] + "}")
+                i = j + 1
+                continue
             if k < 0 or j >= len(tex) or tex[j] != "{":
                 out.append(tex[i:] if k < 0 else tex[i:j])
                 if k < 0:
@@ -534,7 +541,7 @@ class Drafter:
                     e["book_answer"] = "".join(self.boxes(k))
                     e["keyed"] = True
                 continue
-            if re.search(r"conceptual questions|problems", h, re.I):
+            if re.search(r"conceptual questions|problems", h, re.I) or h.strip().lower() == "exercises":
                 items = [re.sub(r"^\d+\. ", "", x) for x in body if re.match(r"^\d+\. ", x)]
                 # an image under the last item belongs to it (12.14's BeH2 orbitals)
                 after = [x for x in body[max((k for k, x in enumerate(body) if re.match(r"^\d+\. ", x)), default=len(body)) + 1:] if x.strip()]

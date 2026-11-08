@@ -36,7 +36,8 @@
     "ch14",
     "ch15",
     "ch16",
-    "ch17"
+    "ch17",
+    "ch18"
   ],
   "types": [
     {
@@ -3589,6 +3590,418 @@
       "sym": "p_i_vec",
       "latex": "\\textbf{p}_i",
       "macro": "\\kpivec"
+    },
+    {
+      "sym": "Lambda_th",
+      "latex": "\\Lambda",
+      "macro": "\\kLambdath"
+    },
+    {
+      "sym": "q_x",
+      "latex": "q_{x}",
+      "macro": "\\kqx"
+    },
+    {
+      "sym": "q_y",
+      "latex": "q_{y}",
+      "macro": "\\kqy"
+    },
+    {
+      "sym": "q_z",
+      "latex": "q_{z}",
+      "macro": "\\kqz"
+    },
+    {
+      "sym": "E_trans",
+      "latex": "E_\\text{trans}",
+      "macro": "\\kEtrans"
+    },
+    {
+      "sym": "E_rot",
+      "latex": "E_\\text{rot}",
+      "macro": "\\kErot"
+    },
+    {
+      "sym": "E_elec",
+      "latex": "E_\\text{elec}",
+      "macro": "\\kEelec"
+    },
+    {
+      "sym": "q_el",
+      "latex": "q_{el}",
+      "macro": "\\kqel"
+    },
+    {
+      "sym": "q_tot",
+      "latex": "q_\\text{tot}",
+      "macro": "\\kqtot"
+    },
+    {
+      "sym": "q_nuc",
+      "latex": "q_\\text{nuc}",
+      "macro": "\\kqnuc"
+    },
+    {
+      "sym": "q_ortho",
+      "latex": "q_{\\text{ortho}}",
+      "macro": "\\kqortho"
+    },
+    {
+      "sym": "q_para",
+      "latex": "q_{\\text{para}}",
+      "macro": "\\kqpara"
+    },
+    {
+      "sym": "q_rot_nu",
+      "latex": "q_{\\text{rot},\\nu}",
+      "macro": "\\kqrotnu"
+    },
+    {
+      "sym": "q_rot0",
+      "latex": "q_{rot}^0",
+      "macro": "\\kqrotzero"
+    },
+    {
+      "sym": "g_3",
+      "latex": "g_3"
+    },
+    {
+      "sym": "g_i",
+      "latex": "g_i"
+    },
+    {
+      "sym": "g_J",
+      "latex": "g_J"
+    },
+    {
+      "sym": "g_e1",
+      "latex": "g_{e1}"
+    },
+    {
+      "sym": "Theta_vib",
+      "latex": "\\Theta_\\text{vib}",
+      "macro": "\\kThetavib"
+    },
+    {
+      "sym": "Theta_vib_i",
+      "latex": "\\Theta_{\\text{vib},i}",
+      "macro": "\\kThetavibi"
+    },
+    {
+      "sym": "Theta_v",
+      "latex": "\\Theta_v",
+      "macro": "\\kThetav"
+    },
+    {
+      "sym": "Theta_rot",
+      "latex": "\\Theta_\\text{rot}",
+      "macro": "\\kThetarot"
+    },
+    {
+      "sym": "Theta_rot_i",
+      "latex": "\\Theta_{\\text{rot},i}",
+      "macro": "\\kThetaroti"
+    },
+    {
+      "sym": "Theta_R",
+      "latex": "\\Theta_R",
+      "macro": "\\kThetaR"
+    },
+    {
+      "sym": "Theta_A",
+      "latex": "\\Theta_A",
+      "macro": "\\kThetaA"
+    },
+    {
+      "sym": "Theta_B",
+      "latex": "\\Theta_B",
+      "macro": "\\kThetaB"
+    },
+    {
+      "sym": "Theta_C",
+      "latex": "\\Theta_C",
+      "macro": "\\kThetaC"
+    },
+    {
+      "sym": "C_V_bar",
+      "latex": "\\bar{C}_V",
+      "macro": "\\kCVbar"
+    },
+    {
+      "sym": "C_v",
+      "latex": "C_v",
+      "macro": "\\kCv"
+    },
+    {
+      "sym": "C_v_trans",
+      "latex": "C_v^{trans}",
+      "macro": "\\kCvtrans"
+    },
+    {
+      "sym": "C_v_rot",
+      "latex": "C_v^{rot}",
+      "macro": "\\kCvrot"
+    },
+    {
+      "sym": "C_heat",
+      "latex": "C",
+      "macro": "\\kCheat"
+    },
+    {
+      "sym": "C_trans",
+      "latex": "C_{trans}",
+      "macro": "\\kCtrans"
+    },
+    {
+      "sym": "C_vib",
+      "latex": "C_{vib}",
+      "macro": "\\kCvib"
+    },
+    {
+      "sym": "C_rot",
+      "latex": "C_{rot}",
+      "macro": "\\kCrot"
+    },
+    {
+      "sym": "C_Vm",
+      "latex": "C_{V,m}",
+      "macro": "\\kCVm"
+    },
+    {
+      "sym": "C_Vm_1D",
+      "latex": "C_{V,m}^{1-D}",
+      "macro": "\\kCVmoneD"
+    },
+    {
+      "sym": "C_Vm_3D",
+      "latex": "C_{V,m}^{3-D}",
+      "macro": "\\kCVmthreeD"
+    },
+    {
+      "sym": "C_V_vib",
+      "latex": "C_{V,\\text{vib}}",
+      "macro": "\\kCVvib"
+    },
+    {
+      "sym": "C_V_rot_nu",
+      "latex": "(C_V)_{\\text{rot},\\nu}",
+      "macro": "\\kCVrotnu"
+    },
+    {
+      "sym": "C_s",
+      "latex": "C_s",
+      "macro": "\\kCs"
+    },
+    {
+      "sym": "M_molar",
+      "latex": "M",
+      "macro": "\\kMmolar"
+    },
+    {
+      "sym": "M_part",
+      "latex": "M",
+      "macro": "\\kMpart"
+    },
+    {
+      "sym": "f_v",
+      "latex": "f_v"
+    },
+    {
+      "sym": "A_tilde",
+      "latex": "\\tilde{A}",
+      "macro": "\\kAtilde"
+    },
+    {
+      "sym": "I_A",
+      "latex": "I_A",
+      "macro": "\\kIA"
+    },
+    {
+      "sym": "I_B",
+      "latex": "I_B",
+      "macro": "\\kIB"
+    },
+    {
+      "sym": "I_C",
+      "latex": "I_C",
+      "macro": "\\kIC"
+    },
+    {
+      "sym": "I_i",
+      "latex": "I_i",
+      "macro": "\\kIi"
+    },
+    {
+      "sym": "sigma_sym",
+      "latex": "\\sigma"
+    },
+    {
+      "sym": "omega_A",
+      "latex": "\\omega_A",
+      "macro": "\\komegaA"
+    },
+    {
+      "sym": "omega_B",
+      "latex": "\\omega_B",
+      "macro": "\\komegaB"
+    },
+    {
+      "sym": "omega_C",
+      "latex": "\\omega_C",
+      "macro": "\\komegaC"
+    },
+    {
+      "sym": "L_A",
+      "latex": "L_A",
+      "macro": "\\kLA"
+    },
+    {
+      "sym": "L_B",
+      "latex": "L_B",
+      "macro": "\\kLB"
+    },
+    {
+      "sym": "L_C",
+      "latex": "L_C",
+      "macro": "\\kLC"
+    },
+    {
+      "sym": "eps_JK",
+      "latex": "\\epsilon_{J,K}",
+      "macro": "\\kepsJK"
+    },
+    {
+      "sym": "eta_ev",
+      "latex": "\\eta"
+    },
+    {
+      "sym": "alpha_dc",
+      "latex": "\\alpha"
+    },
+    {
+      "sym": "beta_dc",
+      "latex": "\\beta"
+    },
+    {
+      "sym": "gamma_dc",
+      "latex": "\\gamma"
+    },
+    {
+      "sym": "psi_eul",
+      "latex": "\\psi",
+      "macro": "\\kpsieul"
+    },
+    {
+      "sym": "p_theta",
+      "latex": "p_{\\theta}",
+      "macro": "\\kptheta"
+    },
+    {
+      "sym": "p_phi",
+      "latex": "p_{\\phi}",
+      "macro": "\\kpphi"
+    },
+    {
+      "sym": "p_psi",
+      "latex": "p_{\\psi}",
+      "macro": "\\kppsi"
+    },
+    {
+      "sym": "H_class",
+      "latex": "H",
+      "macro": "\\kHclass"
+    },
+    {
+      "sym": "k_i",
+      "latex": "k_i",
+      "macro": "\\kki"
+    },
+    {
+      "sym": "mu_i",
+      "latex": "\\mu_i",
+      "macro": "\\kmui"
+    },
+    {
+      "sym": "nu_i",
+      "latex": "\\nu_i",
+      "macro": "\\knui"
+    },
+    {
+      "sym": "q_i_nc",
+      "latex": "q_i"
+    },
+    {
+      "sym": "v_qi",
+      "latex": "v_i"
+    },
+    {
+      "sym": "f_dof",
+      "latex": "f"
+    },
+    {
+      "sym": "N_o",
+      "latex": "N_{o}"
+    },
+    {
+      "sym": "N_p",
+      "latex": "N_{p}"
+    },
+    {
+      "sym": "psi_r",
+      "latex": "| \\psi_r \\rangle",
+      "macro": "\\kpsir"
+    },
+    {
+      "sym": "psi_ns",
+      "latex": "| \\psi_{\\nu,s} \\rangle",
+      "macro": "\\kpsins"
+    },
+    {
+      "sym": "P_l",
+      "latex": "P_l"
+    },
+    {
+      "sym": "P_lm",
+      "latex": "P^{|m|}_l"
+    },
+    {
+      "sym": "E_trans_avg",
+      "latex": "\\langle E_{trans} \\rangle",
+      "macro": "\\kEtransavg"
+    },
+    {
+      "sym": "E_rot_avg",
+      "latex": "\\langle E_{rot} \\rangle",
+      "macro": "\\kErotavg"
+    },
+    {
+      "sym": "E_vib_avg",
+      "latex": "\\langle E_{vib} \\rangle",
+      "macro": "\\kEvibavg"
+    },
+    {
+      "sym": "E_rot_cl",
+      "latex": "E_{rot}^{(classical)}",
+      "macro": "\\kErotcl"
+    },
+    {
+      "sym": "E_vib_cl",
+      "latex": "E_{vib}^{(classical)}",
+      "macro": "\\kEvibcl"
+    },
+    {
+      "sym": "omega_x",
+      "latex": "\\omega_x",
+      "macro": "\\komegax"
+    },
+    {
+      "sym": "omega_y",
+      "latex": "\\omega_y",
+      "macro": "\\komegay"
+    },
+    {
+      "sym": "a_g",
+      "latex": "a"
     }
   ],
   "exercise_kinds": [
@@ -16159,6 +16572,751 @@
           "latex": "\\langle \\epsilon_\\text{vib} \\rangle = kT^2\\dfrac{\\partial \\ln{q_\\text{vib}}}{\\partial T} = -\\dfrac{\\partial \\ln{q_\\text{vib}}}{\\partial \\beta}"
         }
       ]
+    },
+    {
+      "id": "translational-levels-cubic-box",
+      "kind": "result",
+      "section": "18.1",
+      "name": "Translational levels of a gas particle in a cube",
+      "statement": "A monatomic gas particle in a cubic box of length L has the translational energies E = h²(n_x² + n_y² + n_z²)/8mL², with quantum numbers n_x, n_y and n_z in the three directions.",
+      "forms": [
+        {
+          "id": "translational-energy-cube",
+          "latex": "E_\\text{trans}= \\dfrac{h^2 \\left(n_x^2+ n_y^2+ n_z^2 \\right)}{8 mL^2}"
+        }
+      ]
+    },
+    {
+      "id": "translational-q-product",
+      "kind": "result",
+      "section": "18.1",
+      "name": "Translational partition function as a product over directions",
+      "statement": "Because the energy is a sum over the three directions, the translational partition function is the product of the partition functions for each direction, q_trans = q_x q_y q_z.",
+      "forms": [
+        {
+          "id": "q-trans-product",
+          "latex": "q_\\text{trans} = q_{x} q_{y} q_{z}"
+        }
+      ]
+    },
+    {
+      "id": "sum-to-integral",
+      "kind": "idea",
+      "section": "18.1",
+      "name": "Sum over closely spaced levels as an integral",
+      "statement": "When the levels are very closely spaced, nearly continuous on the scale of kT, a partition function's sum over them can be replaced by an integral; the lower limit may then be extended to zero."
+    },
+    {
+      "id": "translational-q-1d",
+      "kind": "result",
+      "section": "18.1",
+      "name": "Translational partition function in one dimension",
+      "symbol": "q_x",
+      "type": "partition-function",
+      "statement": "For one direction of a box of length L, the sum over n_x becomes a Gaussian integral and q_x = ½√(π/a) with a = h²/8mL²kT, or q_x = L/Λ.",
+      "forms": [
+        {
+          "id": "q-x-thermal-wavelength",
+          "latex": "q_x = \\dfrac{L}{\\Lambda}"
+        },
+        {
+          "id": "q-x-gaussian",
+          "latex": "q_x= \\dfrac{1}{2} \\sqrt{\\dfrac{\\pi}{a}}, \\quad a = \\dfrac{h^2}{8mL^2 kT}"
+        }
+      ]
+    },
+    {
+      "id": "thermal-wavelength",
+      "kind": "definition",
+      "section": "18.1",
+      "name": "Thermal de Broglie wavelength",
+      "symbol": "Lambda_th",
+      "type": "wavelength",
+      "statement": "The length Λ = h/√(2πmkT), which the book calls the de Broglie wavelength of the particle; a box of length L holds L/Λ translational states per direction within reach at temperature T.",
+      "forms": [
+        {
+          "id": "thermal-wavelength",
+          "latex": "\\Lambda = \\dfrac{h}{\\sqrt{2 \\pi m kT}}"
+        }
+      ]
+    },
+    {
+      "id": "translational-q-volume",
+      "kind": "result",
+      "section": "18.1",
+      "name": "Translational partition function from the thermal wavelength",
+      "statement": "Multiplying q_x, q_y and q_z gives the translational partition function of a particle in a volume V = L³: q_trans = V/Λ³ = (2πmkT/h²)^{3/2}V.",
+      "forms": [
+        {
+          "id": "q-trans-thermal-wavelength",
+          "latex": "q_\\text{trans} = \\left( \\dfrac{2 \\pi m kT}{h^2} \\right)^{3/2} V = \\dfrac{V}{\\Lambda^3}"
+        }
+      ]
+    },
+    {
+      "id": "many-translational-states",
+      "kind": "result",
+      "section": "18.1",
+      "name": "Many translational states are accessible",
+      "statement": "The translational partition function is a very large number for a gas in an ordinary volume, so a very large number of translational states are thermally accessible, far more than there are molecules."
+    },
+    {
+      "id": "electronic-partition-function",
+      "kind": "definition",
+      "section": "18.2",
+      "name": "Electronic partition function",
+      "symbol": "q_elec",
+      "terms": [
+        "electronic partition function"
+      ],
+      "type": "partition-function",
+      "statement": "The sum over the electronic levels of each level's degeneracy times its Boltzmann factor, q_el = g₁e^(−E₁/kT) + g₂e^(−E₂/kT) + ….",
+      "forms": [
+        {
+          "id": "q-elec-sum",
+          "latex": "q_{el}(T) = g_1 e^{-E_1/kT} + g_2 e^{-E_2/kT} + g_3 e^{-E_3/kT} + \\ldots"
+        },
+        {
+          "id": "q-elec-ground-zero",
+          "latex": "q_{elec}(T) = g_1 + g_2 e^{-E_2/kT} + g_3 e^{-E_3/kT} + \\ldots"
+        },
+        {
+          "id": "q-elec-sum-polyatomic",
+          "latex": "q_\\text{elec} = \\sum_i{g_{i}e^{-E_i/kT}}",
+          "section": "18.7"
+        }
+      ]
+    },
+    {
+      "id": "degenerate-level-weight",
+      "kind": "result",
+      "section": "18.2",
+      "name": "A degenerate level counts once per state",
+      "statement": "A level of degeneracy g holds g states at one energy, so in a partition function its Boltzmann factor is multiplied by g."
+    },
+    {
+      "id": "ground-electronic-state-dominates",
+      "kind": "result",
+      "section": "18.2",
+      "name": "Most atoms are in the ground electronic state",
+      "statement": "Electronic states typically lie tens of thousands of wavenumbers above the ground state, far more than kT, so the excited states are not accessible at ordinary temperatures and q_elec is the ground level's degeneracy, often 1.",
+      "forms": [
+        {
+          "id": "q-elec-ground-only",
+          "latex": "q_\\text{elec} = g_{e1}e^{D_e/kT}",
+          "section": "18.7"
+        }
+      ]
+    },
+    {
+      "id": "molecular-ideal-gas-partition-function",
+      "kind": "result",
+      "section": "18.3",
+      "name": "Partition function of a molecular ideal gas",
+      "statement": "With the molecule's partition function written as q_trans q_vib q_rot q_elec, the partition function of an ideal gas of N molecules is Q = (q_trans q_vib q_rot q_elec)^N/N!.",
+      "forms": [
+        {
+          "id": "q-molecular-ideal-gas",
+          "latex": "Q(N,V,T) = \\frac{(q_\\text{trans}q_\\text{vib}q_\\text{rot}q_\\text{elec})^N}{N!}"
+        }
+      ]
+    },
+    {
+      "id": "heat-capacity-from-levels",
+      "kind": "skill",
+      "section": "18.3",
+      "name": "Finding a heat capacity from energy levels",
+      "statement": "To find a degree of freedom's contribution: define its energy states and degeneracies, compose q for the molecule and Q for the gas, take the β or T derivative of ln Q for ⟨E⟩, and take the T derivative of U ≈ ⟨E⟩ for the heat capacity."
+    },
+    {
+      "id": "geometric-series",
+      "kind": "result",
+      "section": "18.4",
+      "name": "Geometric series",
+      "statement": "For |x| < 1, the series 1 + x + x² + x³ + … sums to 1/(1 − x).",
+      "forms": [
+        {
+          "id": "geometric-series",
+          "latex": "\\dfrac{1}{1 - x} = 1 + x + x^2 + x^3 + x^4 + \\cdots"
+        }
+      ]
+    },
+    {
+      "id": "vibrational-partition-function",
+      "kind": "result",
+      "section": "18.4",
+      "name": "Vibrational partition function",
+      "symbol": "q_vib",
+      "type": "partition-function",
+      "statement": "Summing the Boltzmann factors of a diatomic's harmonic levels (v + ½)hν as a geometric series gives q_vib = e^(−hν/2kT)/(1 − e^(−hν/kT)); measured from the ground level it is 1/(1 − e^(−hν/kT)).",
+      "forms": [
+        {
+          "id": "q-vib",
+          "latex": "q_\\text{vib} = \\dfrac{e^{-h \\nu / 2 k T}} {1 - e^{-h \\nu/ k T}}"
+        },
+        {
+          "id": "q-vib-ground-zero",
+          "latex": "q_\\text{vib} \\approx \\dfrac{1} {1 - e^{-h \\nu / kT}}"
+        }
+      ]
+    },
+    {
+      "id": "vibrational-temperature",
+      "kind": "definition",
+      "section": "18.4",
+      "name": "Vibrational temperature",
+      "symbol": "Theta_vib",
+      "terms": [
+        "vibrational temperature",
+        "characteristic vibrational temperature"
+      ],
+      "type": "temperature",
+      "statement": "The temperature Θ_vib = hcν̃/k = hν/k that expresses the stiffness of a vibrating bond in units of the Boltzmann constant; each normal mode of a polyatomic molecule has its own.",
+      "forms": [
+        {
+          "id": "theta-vib",
+          "latex": "\\Theta_\\text{vib}= \\dfrac{ hc \\tilde{\\nu}}{k}"
+        },
+        {
+          "id": "theta-vib-mode",
+          "latex": "\\Theta_{vib,i} = \\dfrac{h\\nu_i}{k_B}",
+          "section": "18.7"
+        },
+        {
+          "id": "theta-v",
+          "latex": "\\Theta_v = \\dfrac{h\\nu}{k}",
+          "section": "18.9"
+        }
+      ]
+    },
+    {
+      "id": "vibrational-temperature-trends",
+      "kind": "result",
+      "section": "18.4",
+      "name": "What sets the vibrational temperature",
+      "statement": "Θ_vib is higher the stronger the bond and the lighter the (effective) mass of the molecule; molecules with low Θ_vib often dissociate at lower temperatures."
+    },
+    {
+      "id": "molar-heat-capacity",
+      "kind": "definition",
+      "section": "18.4",
+      "name": "Molar heat capacity at constant volume",
+      "symbol": "C_V_bar",
+      "type": "heat-capacity",
+      "statement": "The heat capacity at constant volume of one mole, C̄_V = (∂E/∂T)_V with E the molar energy.",
+      "forms": [
+        {
+          "id": "molar-cv",
+          "latex": "\\bar{C}_V= \\left(\\dfrac{\\partial E}{\\partial T} \\right)_V"
+        }
+      ]
+    },
+    {
+      "id": "temperature-derivative-beta",
+      "kind": "result",
+      "section": "18.4",
+      "name": "Temperature derivative in terms of β",
+      "statement": "Since β = 1/kT, a derivative in T is a derivative in β times ∂β/∂T: ∂/∂T = −(1/kT²)∂/∂β = −kβ²∂/∂β.",
+      "forms": [
+        {
+          "id": "d-dt-beta",
+          "latex": "\\dfrac{\\partial }{\\partial T} = \\left(-k \\beta^2 \\right) \\dfrac{\\partial }{\\partial \\beta}"
+        }
+      ]
+    },
+    {
+      "id": "vibrational-heat-capacity",
+      "kind": "result",
+      "section": "18.4",
+      "name": "Vibrational heat capacity of a diatomic",
+      "type": "heat-capacity",
+      "statement": "A diatomic's vibration contributes k(Θ_vib/T)² e^(−Θ_vib/T)/(1 − e^(−Θ_vib/T))² per molecule to the heat capacity, R per mole at high T and zero at low T; it depends on T only through T/Θ_vib.",
+      "forms": [
+        {
+          "id": "cv-vib",
+          "latex": "\\bar{C}_V = k \\left( \\dfrac{ \\Theta_\\text{vib} }{T} \\right)^2 \\dfrac{ e^{- \\Theta_\\text{vib} /T} }{ \\left( 1- e^{- \\Theta_\\text{vib}/T} \\right)^2 }"
+        },
+        {
+          "id": "cv-vib-1d-molar",
+          "latex": "C_{V,m}^{1-D} = R \\left( \\dfrac{\\Theta_v }{T} \\right)^2 \\left( \\dfrac{e^{-\\Theta_v/2T} }{1- e^{-\\Theta_v/T}} \\right) ^2",
+          "section": "18.9"
+        }
+      ]
+    },
+    {
+      "id": "vibrational-populations",
+      "kind": "result",
+      "section": "18.4",
+      "name": "Vibrational populations",
+      "symbol": "f_v",
+      "statement": "The fraction of molecules in vibrational state v is f_v = (1 − e^(−Θ_vib/T))e^(−vΘ_vib/T).",
+      "forms": [
+        {
+          "id": "f-v",
+          "latex": "f_v = \\left(1-e^{-\\Theta_\\text{vib}/T}\\right)e^{-\\Theta_\\text{vib} v/T}"
+        },
+        {
+          "id": "f-v-def",
+          "latex": "f_v = \\frac{e^{-h\\nu(v+\\frac{1}{2})/kT}}{q_\\text{vib}}"
+        }
+      ]
+    },
+    {
+      "id": "ground-vibrational-state-dominates",
+      "kind": "result",
+      "section": "18.4",
+      "name": "Most molecules are in the ground vibrational state",
+      "statement": "At room temperature most molecules are in the ground vibrational state v = 0; only molecules with very weak bonds and low vibrational temperatures populate excited vibrational states significantly."
+    },
+    {
+      "id": "rotational-partition-function",
+      "kind": "definition",
+      "section": "18.5",
+      "name": "Rotational partition function",
+      "symbol": "q_rot",
+      "type": "partition-function",
+      "statement": "The sum over a diatomic's rotational levels of the Boltzmann factor times the degeneracy 2J + 1, q_rot = Σ(2J + 1)e^(−E_J/kT).",
+      "forms": [
+        {
+          "id": "q-rot-sum",
+          "latex": "q_\\text{rot} = \\sum_{J=0} (2J+1) e^{-E_J/ k T}",
+          "section": "18.6"
+        }
+      ]
+    },
+    {
+      "id": "rotational-temperature",
+      "kind": "definition",
+      "section": "18.5",
+      "name": "Rotational temperature",
+      "symbol": "Theta_rot",
+      "terms": [
+        "rotational temperature",
+        "characteristic rotational temperatures"
+      ],
+      "type": "temperature",
+      "statement": "The characteristic temperature Θ_rot = ħ²/2Ik = hcB̃/k, about the temperature at which kT is comparable to the spacing of the rotational levels and excited rotational levels become important.",
+      "forms": [
+        {
+          "id": "theta-rot",
+          "latex": "\\Theta_{rot} = \\dfrac{\\hbar^2}{2Ik_B}"
+        },
+        {
+          "id": "theta-rot-h",
+          "latex": "\\Theta_\\text{rot} = \\dfrac{h^2}{8 \\pi^2 I k}",
+          "section": "18.6"
+        },
+        {
+          "id": "theta-rot-axis",
+          "latex": "\\Theta_{rot,i} = \\frac{\\hbar^2}{2I_ik}",
+          "section": "18.8"
+        }
+      ]
+    },
+    {
+      "id": "rotational-integral-validity",
+      "kind": "result",
+      "section": "18.5",
+      "name": "When the rotational sum becomes an integral",
+      "statement": "Replacing the rotational sum by an integral needs T ≫ Θ_rot; only the lightest gases at cryogenic temperatures need the discrete sum, while vibrations at room temperature are in the discrete limit."
+    },
+    {
+      "id": "rotational-heat-capacity-diatomic",
+      "kind": "result",
+      "section": "18.5",
+      "name": "Rotational heat capacity of a diatomic",
+      "statement": "The rotational energy of N diatomic molecules is NkT, so rotation contributes R to the molar heat capacity of a diatomic."
+    },
+    {
+      "id": "heat-capacity-contributions",
+      "kind": "result",
+      "section": "18.5",
+      "name": "Heat capacity as a sum of contributions",
+      "statement": "The heat capacity of a molecular gas breaks down into translational, rotational, vibrational (and electronic) contributions, C = C_trans + C_vib + C_rot.",
+      "forms": [
+        {
+          "id": "cv-sum-contributions",
+          "latex": "C = C_{trans} + C_{vib} + C_{rot}",
+          "section": "18.9"
+        }
+      ]
+    },
+    {
+      "id": "gas-heat-capacity-room-temperature",
+      "kind": "result",
+      "section": "18.5",
+      "name": "Heat capacities of monatomic and diatomic gases",
+      "statement": "With the vibrational and electronic contributions negligible at room temperature, C_v = (3/2)nR for a monatomic gas and (3/2)nR + nR = (5/2)nR for a diatomic.",
+      "forms": [
+        {
+          "id": "cv-monatomic",
+          "latex": "C_v= C_v^{trans} = \\dfrac{3}{2} nR"
+        },
+        {
+          "id": "cv-diatomic",
+          "latex": "C_v = C_v^{trans}+C_v^{rot} = \\dfrac{5}{2}nR"
+        }
+      ]
+    },
+    {
+      "id": "rotationally-excited",
+      "kind": "result",
+      "section": "18.5",
+      "name": "Most molecules are rotationally excited",
+      "statement": "Rotational energies are less than vibrational and electronic energies, so at room temperature many rotational states are populated."
+    },
+    {
+      "id": "symmetry-number",
+      "kind": "definition",
+      "section": "18.6",
+      "name": "Symmetry number",
+      "symbol": "sigma_sym",
+      "terms": [
+        "symmetry number"
+      ],
+      "statement": "The number σ of distinct ways a molecule can be brought into identical configurations by rotations; a homonuclear diatomic has σ = 2, a heteronuclear one σ = 1."
+    },
+    {
+      "id": "rotational-q-high-temperature",
+      "kind": "result",
+      "section": "18.6",
+      "name": "Rotational partition function at high temperature",
+      "statement": "When the rotational levels lie close together the sum becomes an integral, q_rot = kT/B̃; dividing by the symmetry number to correct the overcounting of a homonuclear molecule's states gives q_rot = kT/σB̃ = T/σΘ_rot.",
+      "forms": [
+        {
+          "id": "q-rot-high-t",
+          "latex": "q_\\text{rot}= \\dfrac{T}{ \\Theta_\\text{rot} \\sigma}"
+        },
+        {
+          "id": "q-rot-kt-b",
+          "latex": "q_\\text{rot}= \\dfrac{kT}{\\tilde{B} \\sigma}"
+        },
+        {
+          "id": "q-rot-integral",
+          "latex": "q_\\text{rot} = \\dfrac{kT}{\\tilde{B}}"
+        }
+      ]
+    },
+    {
+      "id": "polyatomic-vibrational-partition-function",
+      "kind": "result",
+      "section": "18.7",
+      "name": "Vibrational partition function of a polyatomic molecule",
+      "type": "partition-function",
+      "statement": "The normal modes are independent oscillators, so the vibrational partition function is the product over the modes, q_vib = Π e^(−Θ_vib,i/2T)/(1 − e^(−Θ_vib,i/T)).",
+      "forms": [
+        {
+          "id": "q-vib-polyatomic",
+          "latex": "q_{vib} = \\prod_{i=1}^f \\dfrac{ e^{-\\Theta_{vib,i}/2T} }{1- e^{-\\Theta_{vib,i}/T}}"
+        }
+      ]
+    },
+    {
+      "id": "polyatomic-vibrational-thermal-energy",
+      "kind": "result",
+      "section": "18.7",
+      "name": "Vibrational energy of a polyatomic gas",
+      "statement": "The vibrational energy of N molecules is a sum over the modes, ⟨E_vib⟩ = Nk Σ[Θ_vib,i/2 + Θ_vib,i e^(−Θ_vib,i/T)/(1 − e^(−Θ_vib,i/T))].",
+      "forms": [
+        {
+          "id": "e-vib-polyatomic",
+          "latex": "\\langle E_{vib} \\rangle = Nk \\sum_{i=1}^f \\left[ \\dfrac{ \\Theta_{vib,i} }{2} + \\dfrac{ \\Theta_{vib,i} e^{-\\Theta_{vib,i}/T} }{1- e^{-\\Theta_{vib,i}/T}} \\right]"
+        }
+      ]
+    },
+    {
+      "id": "polyatomic-vibrational-heat-capacity",
+      "kind": "result",
+      "section": "18.7",
+      "name": "Vibrational heat capacity of a polyatomic gas",
+      "type": "heat-capacity",
+      "statement": "Each normal mode adds its own oscillator term to the heat capacity, C̄_V = Nk Σ(Θ_vib,i/T)² e^(−Θ_vib,i/T)/(1 − e^(−Θ_vib,i/T))².",
+      "forms": [
+        {
+          "id": "cv-vib-polyatomic",
+          "latex": "\\bar{C}_V = Nk_B \\sum_{i=1}^f \\left( \\dfrac{ \\Theta_{vib,i} }{T} \\right)^2 \\dfrac{ e^{-\\Theta_{vib,i}/T} }{\\left(1- e^{-\\Theta_{vib,i}/T}\\right)^2}"
+        }
+      ]
+    },
+    {
+      "id": "vibrational-entropy-conformations",
+      "kind": "idea",
+      "section": "18.7",
+      "name": "Vibrational entropy and conformations",
+      "statement": "The vibrational energy and entropy depend on the shape of the potential energy surface, so the vibrational entropy computed from the normal modes shows whether entropy favours one conformation of a molecule over another."
+    },
+    {
+      "id": "center-of-mass",
+      "kind": "definition",
+      "section": "18.8",
+      "name": "Center of mass",
+      "statement": "The point about which the mass-weighted coordinates of the atoms sum to zero, Σm_ix_i = Σm_iy_i = Σm_iz_i = 0."
+    },
+    {
+      "id": "spherical-top-partition-function",
+      "kind": "result",
+      "section": "18.8",
+      "name": "Rotational partition function of a spherical top",
+      "statement": "With levels J(J + 1)ħ²/2I of degeneracy (2J + 1)² and T ≫ Θ_rot, the sum becomes an integral and q_rot = (π^{1/2}/σ)(T/Θ_rot)^{3/2}.",
+      "forms": [
+        {
+          "id": "q-rot-spherical",
+          "latex": "q_\\text{rot} = \\frac{\\pi^{1/2}}{\\sigma}\\left(\\frac{T}{\\Theta_\\text{rot}}\\right)^{3/2}"
+        }
+      ]
+    },
+    {
+      "id": "symmetric-top-partition-function",
+      "kind": "result",
+      "section": "18.8",
+      "name": "Rotational partition function of a symmetric top",
+      "statement": "Converting the sum over J and K to an integral gives q_rot = (√π/σ)(8π²I_BkT/h²)(8π²I_AkT/h²)^{1/2}.",
+      "forms": [
+        {
+          "id": "q-rot-symmetric",
+          "latex": "q_{rot} = \\dfrac{ \\sqrt{\\pi}}{\\sigma} \\left( \\dfrac{8 \\pi^2 I_B kT}{h^2} \\right) \\left( \\dfrac{8 \\pi^2 I_A kT}{h^2} \\right)^{1/2}"
+        }
+      ]
+    },
+    {
+      "id": "asymmetric-top-partition-function",
+      "kind": "result",
+      "section": "18.8",
+      "name": "Rotational partition function of an asymmetric top",
+      "statement": "Integrating classically over the three angular momenta and the orientations and dividing by σh³ gives q_rot = (√π/σ)√(T³/Θ_AΘ_BΘ_C), with a characteristic rotational temperature Θ = h²/8π²Ik for each principal axis.",
+      "forms": [
+        {
+          "id": "q-rot-asymmetric-theta",
+          "latex": "q_{rot} = \\dfrac{\\sqrt{\\pi}}{\\sigma}\\sqrt{\\dfrac{T^3}{ \\Theta_A \\Theta_B \\Theta_C }}"
+        },
+        {
+          "id": "q-rot-asymmetric",
+          "latex": "q_{rot} = \\dfrac{\\pi^2}{\\sigma} \\sqrt{\\dfrac{8 \\pi I_A kT}{h^2}} \\sqrt{\\dfrac{8 \\pi I_B kT}{h^2}} \\sqrt{\\dfrac{8 \\pi I_C kT}{h^2}}"
+        }
+      ]
+    },
+    {
+      "id": "nonlinear-rotational-energy",
+      "kind": "result",
+      "section": "18.8",
+      "name": "Rotational energy of a nonlinear molecule",
+      "statement": "In the classical approximation the molar rotational energy of a nonlinear molecule is (3/2)RT and its rotational heat capacity (3/2)R.",
+      "forms": [
+        {
+          "id": "e-rot-nonlinear",
+          "latex": "E_{rot} = \\dfrac{3}{2} RT"
+        },
+        {
+          "id": "cv-rot-nonlinear",
+          "latex": "\\bar{C}_V= \\dfrac{3}{2} R"
+        }
+      ]
+    },
+    {
+      "id": "specific-heat-capacity",
+      "kind": "definition",
+      "section": "18.9",
+      "name": "Specific heat capacity",
+      "symbol": "C_s",
+      "type": "heat-capacity",
+      "statement": "The heat C_s required to raise the temperature of one gram of a substance by one kelvin."
+    },
+    {
+      "id": "molar-from-specific-heat",
+      "kind": "result",
+      "section": "18.9",
+      "name": "Molar heat capacity from the specific heat",
+      "statement": "The product of the specific heat capacity and the molar mass is the molar heat capacity; for metals Dulong and Petit's law makes it about 25 J K⁻¹ mol⁻¹.",
+      "forms": [
+        {
+          "id": "cs-m-dulong-petit",
+          "latex": "C_s M = C_{V,m} \\approx 25\\ \\text{J K}^{-1}\\,\\text{mol}^{-1}"
+        }
+      ]
+    },
+    {
+      "id": "dulong-petit-atomic-weights",
+      "kind": "idea",
+      "section": "18.9",
+      "name": "Atomic weights from Dulong and Petit's law",
+      "statement": "Measuring a metal's specific heat capacity and dividing 3R by it gave its atomic weight, a simpler method than the disputed gravimetric ones of the time."
+    },
+    {
+      "id": "solid-cp-equals-cv",
+      "kind": "idea",
+      "section": "18.9",
+      "name": "Constant-pressure and constant-volume heat capacities of solids",
+      "statement": "Tabulated heat capacities are measured at constant pressure, but for simple solids C_p and C_v are essentially equal."
+    },
+    {
+      "id": "ortho-hydrogen",
+      "kind": "definition",
+      "section": "18.10",
+      "name": "Ortho hydrogen",
+      "terms": [
+        "ortho"
+      ],
+      "statement": "Hydrogen whose two nuclear spins are parallel, the three triplet nuclear spin states."
+    },
+    {
+      "id": "para-hydrogen",
+      "kind": "definition",
+      "section": "18.10",
+      "name": "Para hydrogen",
+      "terms": [
+        "para"
+      ],
+      "statement": "Hydrogen whose two nuclear spins are antiparallel, the singlet nuclear spin state."
+    },
+    {
+      "id": "nuclear-exchange-symmetry",
+      "kind": "result",
+      "section": "18.10",
+      "name": "Exchange symmetry of the nuclei of H₂",
+      "statement": "The protons are spin-½ fermions, so H₂'s total wavefunction is antisymmetric under their exchange; translation, vibration and the electrons do not change sign, so the product of the nuclear spin and rotational wavefunctions must be antisymmetric.",
+      "forms": [
+        {
+          "id": "psi-antisymmetric-exchange",
+          "latex": "\\psi(1,2) = - \\psi (2,1)"
+        }
+      ]
+    },
+    {
+      "id": "rotational-exchange-parity",
+      "kind": "result",
+      "section": "18.10",
+      "name": "Exchange parity of the rotational wavefunctions",
+      "statement": "Exchanging the nuclei takes θ to π − θ and φ to φ + π, which multiplies the rotational wavefunction by (−1)^J: it is symmetric for even J and antisymmetric for odd J."
+    },
+    {
+      "id": "ortho-para-partition-functions",
+      "kind": "result",
+      "section": "18.10",
+      "name": "Ortho and para partition functions",
+      "statement": "Para hydrogen (the singlet) takes the even rotational levels and ortho hydrogen (the triplet, weight 3) the odd ones: q_ortho = 3Σ_odd(2J + 1)e^(−J(J+1)Θ_R/T), q_para = Σ_even(2J + 1)e^(−J(J+1)Θ_R/T).",
+      "forms": [
+        {
+          "id": "q-ortho",
+          "latex": "q_{\\text{ortho}}= 3 \\sum_{J=1,3,5, \\ldots}(2 J+1) e^{-J(J+1) \\Theta_{R} / T}"
+        },
+        {
+          "id": "q-para",
+          "latex": "q_{\\text{para}}= \\sum_{J=0,2,4, \\ldots}(2 J+1) e^{-J(J+1) \\Theta_{R} / T}"
+        }
+      ]
+    },
+    {
+      "id": "ortho-para-ratio",
+      "kind": "result",
+      "section": "18.10",
+      "name": "Ortho to para ratio",
+      "statement": "At equilibrium N_o/N_p = 3Σ_odd(2J + 1)e^(−J(J+1)Θ_R/T) / Σ_even(2J + 1)e^(−J(J+1)Θ_R/T), which tends to 3 at high temperature and to 0 as T → 0.",
+      "forms": [
+        {
+          "id": "ortho-para-ratio",
+          "latex": "\\frac{N_{o}}{N_{p}}=\\frac{3 \\sum_{J=1,3,5, \\ldots}(2 J+1) e^{-J(J+1) \\Theta_{R} / T}}{\\sum_{J=0,2,4,\\ldots} (2 J+1) e^{-J(J+1) \\Theta_{R} / T}}"
+        }
+      ]
+    },
+    {
+      "id": "frozen-ortho-para-mixture",
+      "kind": "result",
+      "section": "18.10",
+      "name": "Frozen high-temperature ortho–para mixture",
+      "statement": "Ortho–para interconversion is very slow without a catalyst such as activated charcoal, so hydrogen cooled from high temperature keeps its 3:1 ratio and its rotational heat capacity is ¾ that of ortho plus ¼ that of para.",
+      "forms": [
+        {
+          "id": "cv-frozen-mixture",
+          "latex": "(C_V)_{\\text{rot},\\nu} = \\dfrac{3}{4} (C_V)_{\\text{rot},\\nu} (\\text{ortho}) + \\dfrac{1}{4} (C_V)_{\\text{rot},\\nu} (\\text{para})"
+        }
+      ]
+    },
+    {
+      "id": "oxygen-16-rotational-states",
+      "kind": "result",
+      "section": "18.10",
+      "name": "Rotational states of oxygen-16",
+      "statement": "The nuclei of ¹⁶O₂ have zero spin and are bosons, so only one parity of rotational state is allowed and only every other rotational level contributes to its partition function."
+    },
+    {
+      "id": "equipartition-theorem",
+      "kind": "result",
+      "section": "18.11",
+      "name": "Equipartition theorem",
+      "terms": [
+        "equipartition theorem",
+        "law of equipartition",
+        "equipartition of energy",
+        "equipartition"
+      ],
+      "statement": "Every degree of freedom that appears only quadratically in the total energy has an average energy of ½k_BT in thermal equilibrium and contributes ½k_B to the heat capacity."
+    },
+    {
+      "id": "average-translational-energy",
+      "kind": "result",
+      "section": "18.11",
+      "name": "Average translational energy",
+      "statement": "From the translational partition function, ⟨E_trans⟩ = −(1/q_trans)∂q_trans/∂β = (3/2)k_BT: each of the three translational degrees of freedom provides ½k_BT.",
+      "forms": [
+        {
+          "id": "e-trans-avg",
+          "latex": "\\langle E_{trans} \\rangle = \\dfrac{3}{2} k_BT"
+        }
+      ]
+    },
+    {
+      "id": "average-rotational-energy",
+      "kind": "result",
+      "section": "18.11",
+      "name": "Average rotational energy of a diatomic",
+      "statement": "From the rotational partition function, ⟨E_rot⟩ = k_BT: a diatomic's two rotational degrees of freedom each provide ½k_BT.",
+      "forms": [
+        {
+          "id": "e-rot-avg",
+          "latex": "\\langle E_{rot} \\rangle = k_BT"
+        }
+      ]
+    },
+    {
+      "id": "average-vibrational-energy",
+      "kind": "result",
+      "section": "18.11",
+      "name": "Average vibrational energy",
+      "statement": "From the vibrational partition function, ⟨E_vib⟩ = hcν̃/(e^(hcν̃/k_BT) − 1), which tends to k_BT when hcν̃ ≪ k_BT, one ½k_BT for each of the oscillator's two quadratic terms.",
+      "forms": [
+        {
+          "id": "e-vib-avg",
+          "latex": "\\langle E_{vib} \\rangle  = hc \\tilde{\\nu}  \\left( \\dfrac{ 1 }{e^{hc \\tilde{\\nu}/k_BT} -1} \\right)"
+        },
+        {
+          "id": "e-vib-avg-high-t",
+          "latex": "\\langle E_{vib} \\rangle  \\approx k_BT"
+        }
+      ]
+    },
+    {
+      "id": "frozen-out",
+      "kind": "definition",
+      "section": "18.11",
+      "name": "Frozen-out degree of freedom",
+      "terms": [
+        "frozen out"
+      ],
+      "statement": "A degree of freedom whose quantum level spacing is not small beside k_BT; its heat capacity is reduced and drops to zero at low temperature, as for vibrations at room temperature."
+    },
+    {
+      "id": "equipartition-heat-capacity",
+      "kind": "result",
+      "section": "18.11",
+      "name": "Heat capacity by equipartition",
+      "statement": "Each quadratic term contributes ½R to the molar heat capacity: translation (3/2)R, rotation R for a linear and (3/2)R for a nonlinear molecule, and R for each vibrational mode that is not frozen out."
+    },
+    {
+      "id": "diatomic-heat-capacity-steps",
+      "kind": "result",
+      "section": "18.11",
+      "name": "Heat capacity of a diatomic gas against temperature",
+      "statement": "The molar heat capacity of a diatomic gas rises from (3/2)R through (5/2)R to (7/2)R as rotation and then vibration stop being frozen out, near T_rot and T_vib respectively."
     }
   ],
   "concept_prereqs": [
@@ -21949,6 +23107,490 @@
     {
       "concept": "degree-of-freedom-partition-function",
       "prereq": "average-molecular-energy"
+    },
+    {
+      "concept": "translational-levels-cubic-box",
+      "prereq": "particle-in-a-3d-box"
+    },
+    {
+      "concept": "translational-q-product",
+      "prereq": "translational-levels-cubic-box"
+    },
+    {
+      "concept": "translational-q-product",
+      "prereq": "partition-function-factorization"
+    },
+    {
+      "concept": "sum-to-integral",
+      "prereq": "molecular-partition-function"
+    },
+    {
+      "concept": "translational-q-1d",
+      "prereq": "translational-q-product"
+    },
+    {
+      "concept": "translational-q-1d",
+      "prereq": "sum-to-integral"
+    },
+    {
+      "concept": "translational-q-1d",
+      "prereq": "gaussian-integral"
+    },
+    {
+      "concept": "thermal-wavelength",
+      "prereq": "translational-q-1d"
+    },
+    {
+      "concept": "translational-q-volume",
+      "prereq": "thermal-wavelength"
+    },
+    {
+      "concept": "many-translational-states",
+      "prereq": "translational-q-volume"
+    },
+    {
+      "concept": "many-translational-states",
+      "prereq": "partition-function-counts-states"
+    },
+    {
+      "concept": "degenerate-level-weight",
+      "prereq": "degeneracy"
+    },
+    {
+      "concept": "degenerate-level-weight",
+      "prereq": "molecular-partition-function"
+    },
+    {
+      "concept": "electronic-partition-function",
+      "prereq": "degenerate-level-weight"
+    },
+    {
+      "concept": "ground-electronic-state-dominates",
+      "prereq": "electronic-partition-function"
+    },
+    {
+      "concept": "molecular-ideal-gas-partition-function",
+      "prereq": "partition-function-factorization"
+    },
+    {
+      "concept": "molecular-ideal-gas-partition-function",
+      "prereq": "indistinguishable-partition-function"
+    },
+    {
+      "concept": "heat-capacity-from-levels",
+      "prereq": "molecular-ideal-gas-partition-function"
+    },
+    {
+      "concept": "heat-capacity-from-levels",
+      "prereq": "heat-capacity-from-q"
+    },
+    {
+      "concept": "vibrational-partition-function",
+      "prereq": "oscillator-energy-levels"
+    },
+    {
+      "concept": "vibrational-partition-function",
+      "prereq": "geometric-series"
+    },
+    {
+      "concept": "vibrational-partition-function",
+      "prereq": "molecular-partition-function"
+    },
+    {
+      "concept": "vibrational-temperature",
+      "prereq": "oscillator-frequency"
+    },
+    {
+      "concept": "vibrational-temperature",
+      "prereq": "boltzmann-constant"
+    },
+    {
+      "concept": "vibrational-temperature-trends",
+      "prereq": "vibrational-temperature"
+    },
+    {
+      "concept": "vibrational-temperature-trends",
+      "prereq": "reduced-mass"
+    },
+    {
+      "concept": "molar-heat-capacity",
+      "prereq": "constant-volume-heat-capacity"
+    },
+    {
+      "concept": "temperature-derivative-beta",
+      "prereq": "thermodynamic-beta"
+    },
+    {
+      "concept": "vibrational-heat-capacity",
+      "prereq": "vibrational-partition-function"
+    },
+    {
+      "concept": "vibrational-heat-capacity",
+      "prereq": "vibrational-temperature"
+    },
+    {
+      "concept": "vibrational-heat-capacity",
+      "prereq": "molar-heat-capacity"
+    },
+    {
+      "concept": "vibrational-heat-capacity",
+      "prereq": "temperature-derivative-beta"
+    },
+    {
+      "concept": "vibrational-heat-capacity",
+      "prereq": "average-molecular-energy"
+    },
+    {
+      "concept": "vibrational-populations",
+      "prereq": "vibrational-partition-function"
+    },
+    {
+      "concept": "vibrational-populations",
+      "prereq": "vibrational-temperature"
+    },
+    {
+      "concept": "vibrational-populations",
+      "prereq": "boltzmann-probability"
+    },
+    {
+      "concept": "ground-vibrational-state-dominates",
+      "prereq": "vibrational-populations"
+    },
+    {
+      "concept": "rotational-partition-function",
+      "prereq": "rotor-degeneracy"
+    },
+    {
+      "concept": "rotational-partition-function",
+      "prereq": "degenerate-level-weight"
+    },
+    {
+      "concept": "rotational-temperature",
+      "prereq": "rotational-constant"
+    },
+    {
+      "concept": "rotational-temperature",
+      "prereq": "boltzmann-constant"
+    },
+    {
+      "concept": "rotational-integral-validity",
+      "prereq": "rotational-partition-function"
+    },
+    {
+      "concept": "rotational-integral-validity",
+      "prereq": "rotational-temperature"
+    },
+    {
+      "concept": "rotational-integral-validity",
+      "prereq": "sum-to-integral"
+    },
+    {
+      "concept": "rotational-heat-capacity-diatomic",
+      "prereq": "rotational-partition-function"
+    },
+    {
+      "concept": "rotational-heat-capacity-diatomic",
+      "prereq": "heat-capacity-from-q"
+    },
+    {
+      "concept": "heat-capacity-contributions",
+      "prereq": "constant-volume-heat-capacity"
+    },
+    {
+      "concept": "heat-capacity-contributions",
+      "prereq": "molecular-energy-separation"
+    },
+    {
+      "concept": "gas-heat-capacity-room-temperature",
+      "prereq": "heat-capacity-contributions"
+    },
+    {
+      "concept": "gas-heat-capacity-room-temperature",
+      "prereq": "rotational-heat-capacity-diatomic"
+    },
+    {
+      "concept": "gas-heat-capacity-room-temperature",
+      "prereq": "ideal-gas-constant"
+    },
+    {
+      "concept": "rotationally-excited",
+      "prereq": "rotational-populations"
+    },
+    {
+      "concept": "rotationally-excited",
+      "prereq": "rotational-temperature"
+    },
+    {
+      "concept": "symmetry-number",
+      "prereq": "homonuclear-diatomic-molecule"
+    },
+    {
+      "concept": "rotational-q-high-temperature",
+      "prereq": "rotational-integral-validity"
+    },
+    {
+      "concept": "rotational-q-high-temperature",
+      "prereq": "symmetry-number"
+    },
+    {
+      "concept": "polyatomic-vibrational-partition-function",
+      "prereq": "vibrational-partition-function"
+    },
+    {
+      "concept": "polyatomic-vibrational-partition-function",
+      "prereq": "separable-vibrational-hamiltonian"
+    },
+    {
+      "concept": "polyatomic-vibrational-partition-function",
+      "prereq": "vibrational-mode-count"
+    },
+    {
+      "concept": "polyatomic-vibrational-partition-function",
+      "prereq": "partition-function-factorization"
+    },
+    {
+      "concept": "polyatomic-vibrational-thermal-energy",
+      "prereq": "polyatomic-vibrational-partition-function"
+    },
+    {
+      "concept": "polyatomic-vibrational-thermal-energy",
+      "prereq": "average-energy-from-q"
+    },
+    {
+      "concept": "polyatomic-vibrational-heat-capacity",
+      "prereq": "polyatomic-vibrational-thermal-energy"
+    },
+    {
+      "concept": "polyatomic-vibrational-heat-capacity",
+      "prereq": "vibrational-heat-capacity"
+    },
+    {
+      "concept": "vibrational-entropy-conformations",
+      "prereq": "molecular-normal-modes"
+    },
+    {
+      "concept": "spherical-top-partition-function",
+      "prereq": "spherical-top-energy-levels"
+    },
+    {
+      "concept": "spherical-top-partition-function",
+      "prereq": "rotational-temperature"
+    },
+    {
+      "concept": "spherical-top-partition-function",
+      "prereq": "symmetry-number"
+    },
+    {
+      "concept": "spherical-top-partition-function",
+      "prereq": "sum-to-integral"
+    },
+    {
+      "concept": "symmetric-top-partition-function",
+      "prereq": "symmetric-top-energy-levels"
+    },
+    {
+      "concept": "symmetric-top-partition-function",
+      "prereq": "symmetry-number"
+    },
+    {
+      "concept": "symmetric-top-partition-function",
+      "prereq": "sum-to-integral"
+    },
+    {
+      "concept": "symmetric-top-partition-function",
+      "prereq": "gaussian-integral"
+    },
+    {
+      "concept": "asymmetric-top-partition-function",
+      "prereq": "asymmetric-top"
+    },
+    {
+      "concept": "asymmetric-top-partition-function",
+      "prereq": "classical-partition-function"
+    },
+    {
+      "concept": "asymmetric-top-partition-function",
+      "prereq": "symmetry-number"
+    },
+    {
+      "concept": "asymmetric-top-partition-function",
+      "prereq": "gaussian-integral"
+    },
+    {
+      "concept": "nonlinear-rotational-energy",
+      "prereq": "asymmetric-top-partition-function"
+    },
+    {
+      "concept": "nonlinear-rotational-energy",
+      "prereq": "average-energy-from-q"
+    },
+    {
+      "concept": "nonlinear-rotational-energy",
+      "prereq": "ideal-gas-constant"
+    },
+    {
+      "concept": "specific-heat-capacity",
+      "prereq": "constant-volume-heat-capacity"
+    },
+    {
+      "concept": "molar-from-specific-heat",
+      "prereq": "specific-heat-capacity"
+    },
+    {
+      "concept": "molar-from-specific-heat",
+      "prereq": "dulong-petit-law"
+    },
+    {
+      "concept": "dulong-petit-atomic-weights",
+      "prereq": "molar-from-specific-heat"
+    },
+    {
+      "concept": "solid-cp-equals-cv",
+      "prereq": "constant-volume-heat-capacity"
+    },
+    {
+      "concept": "ortho-hydrogen",
+      "prereq": "two-spin-eigenstates"
+    },
+    {
+      "concept": "para-hydrogen",
+      "prereq": "two-spin-eigenstates"
+    },
+    {
+      "concept": "nuclear-exchange-symmetry",
+      "prereq": "nucleon-spin"
+    },
+    {
+      "concept": "rotational-exchange-parity",
+      "prereq": "spherical-harmonics"
+    },
+    {
+      "concept": "ortho-para-partition-functions",
+      "prereq": "ortho-hydrogen"
+    },
+    {
+      "concept": "ortho-para-partition-functions",
+      "prereq": "para-hydrogen"
+    },
+    {
+      "concept": "ortho-para-partition-functions",
+      "prereq": "nuclear-exchange-symmetry"
+    },
+    {
+      "concept": "ortho-para-partition-functions",
+      "prereq": "rotational-exchange-parity"
+    },
+    {
+      "concept": "ortho-para-partition-functions",
+      "prereq": "rotational-partition-function"
+    },
+    {
+      "concept": "ortho-para-ratio",
+      "prereq": "ortho-para-partition-functions"
+    },
+    {
+      "concept": "ortho-para-ratio",
+      "prereq": "boltzmann-probability"
+    },
+    {
+      "concept": "frozen-ortho-para-mixture",
+      "prereq": "ortho-para-ratio"
+    },
+    {
+      "concept": "frozen-ortho-para-mixture",
+      "prereq": "heat-capacity-from-q"
+    },
+    {
+      "concept": "oxygen-16-rotational-states",
+      "prereq": "boson"
+    },
+    {
+      "concept": "oxygen-16-rotational-states",
+      "prereq": "rotational-exchange-parity"
+    },
+    {
+      "concept": "oxygen-16-rotational-states",
+      "prereq": "rotational-partition-function"
+    },
+    {
+      "concept": "equipartition-theorem",
+      "prereq": "degrees-of-freedom"
+    },
+    {
+      "concept": "equipartition-theorem",
+      "prereq": "thermal-energy"
+    },
+    {
+      "concept": "average-translational-energy",
+      "prereq": "translational-q-volume"
+    },
+    {
+      "concept": "average-translational-energy",
+      "prereq": "average-molecular-energy"
+    },
+    {
+      "concept": "average-translational-energy",
+      "prereq": "equipartition-theorem"
+    },
+    {
+      "concept": "average-rotational-energy",
+      "prereq": "rotational-q-high-temperature"
+    },
+    {
+      "concept": "average-rotational-energy",
+      "prereq": "average-molecular-energy"
+    },
+    {
+      "concept": "average-rotational-energy",
+      "prereq": "equipartition-theorem"
+    },
+    {
+      "concept": "average-vibrational-energy",
+      "prereq": "vibrational-partition-function"
+    },
+    {
+      "concept": "average-vibrational-energy",
+      "prereq": "average-molecular-energy"
+    },
+    {
+      "concept": "average-vibrational-energy",
+      "prereq": "equipartition-theorem"
+    },
+    {
+      "concept": "frozen-out",
+      "prereq": "equipartition-theorem"
+    },
+    {
+      "concept": "equipartition-heat-capacity",
+      "prereq": "constant-volume-heat-capacity"
+    },
+    {
+      "concept": "equipartition-heat-capacity",
+      "prereq": "vibrational-mode-count"
+    },
+    {
+      "concept": "equipartition-heat-capacity",
+      "prereq": "ideal-gas-constant"
+    },
+    {
+      "concept": "equipartition-heat-capacity",
+      "prereq": "frozen-out"
+    },
+    {
+      "concept": "diatomic-heat-capacity-steps",
+      "prereq": "equipartition-heat-capacity"
+    },
+    {
+      "concept": "diatomic-heat-capacity-steps",
+      "prereq": "gas-heat-capacity-room-temperature"
+    },
+    {
+      "concept": "diatomic-heat-capacity-steps",
+      "prereq": "vibrational-heat-capacity"
+    },
+    {
+      "concept": "diatomic-heat-capacity-steps",
+      "prereq": "rotational-temperature"
     }
   ],
   "sheets": [

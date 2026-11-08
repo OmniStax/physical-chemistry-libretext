@@ -315,14 +315,14 @@
     {
      "assumes": [
       {
-       "tex": "\\kdvx = -\\kvx - \\kvx = -2\\kvx",
+       "text": "In an elastic collision, all that happens to the velocity is that it changes sign. Thus, if $\\kvx$ is the velocity in the $x$ direction before the collision, then $-\\kvx$ is the velocity after, and $\\kdvx = -\\kvx - \\kvx = -2\\kvx$.",
        "src": "16.1"
       }
      ],
      "then": {
       "tex": "\\mk{L}{-\\kFx} = \\mk{R}{\\km\\dfrac{\\kdvx}{\\kdt}}",
       "src": "(16.1.1)",
-      "why": "Newton's second law, $F = ma$, for the force of the wall on the particle, with the acceleration written as the change in velocity over the time between collisions."
+      "why": "According to Newton’s second law, the force $-\\kFx$ on the particle in this direction gives rise to an acceleration, $a_x = \\kdvx/\\kdt$, where $\\kdt$ is the time interval between collisions with the same wall of the box."
      },
      "steps": [
       {
@@ -341,7 +341,7 @@
        "step": 0
       },
       {
-       "tex": "\\kdt = \\dfrac{2\\ka}{\\kvx}",
+       "text": "The particles move at constant speed, since no forces act on them except when they collide with the wall. The total distance in the $x$ direction traversed is $2\\ka$, and since the speed in the $x$ direction is always $\\kvx$, the interval $\\kdt = \\dfrac{2\\ka}{\\kvx}$.",
        "src": "16.1"
       }
      ],
@@ -386,7 +386,7 @@
     {
      "assumes": [
       {
-       "text": "All $N$ particles strike the wall, so the average force on it is $N\\langle\\kFx\\rangle$.",
+       "text": "$\\langle \\kF \\rangle$ is the average force exerted by all $N$ particles on a wall of the box of area $\\kA$; on the wall at $x = 0$ it is $N\\langle\\kFx\\rangle$, because we have $N$ particles hitting the wall.",
        "src": "16.1"
       },
       {

@@ -1,0 +1,75 @@
+<section id="counting-arrangements">
+<h2>Counting arrangements</h2>
+<p>Consider a N-particle ensemble. The particles are not necessarily indistinguishable and possibly have mutual potential energy. Since this is a large system, there are many different ways to arrange its particles and yet yield the same thermodynamic state. Only one arrangement can occur at a time. The sum of the probabilities of each separate arrangement equals the total number of separate arrangements. Then the probability of a system is:</p>
+$$ p_N=W_N p_i $$
+<p>where $p_N$ is the probability of the system, $W_N$ is the total number of different possible arrangements of the N particles in the system, and $p_i$ is the probability of each separate arrangement. Heisenberg's uncertainty principle states that it is impossible to simultaneously know the momentum and the position of an object with complete precision. In agreement with the uncertainty principle, the total possible number of combinations can be defined as the total number of distinguishable rearrangements of the N particles.</p>
+<p>The most practical ensemble is the <span data-concept="canonical-ensemble">canonical ensemble</span> with $N$, $\kV$, and $\kT$ fixed. We can imagine a collection of boxes with equal volumes and number of particles with the entire collection kept in thermal equilibrium. Based on the <span data-concept="boltzmann-factor">Boltzmann factor</span>, we know that for a system that has states with energies $e_1,e_2,e_3$..., the probability $p_j$ that the system will be in the state $j$ with energy $\kEj$ is exponentially proportional to the energy of state $j$.<sup class="fn" data-note="c-exp-proportional"></sup> The partition functions of the state places a very important role in calculating the properties of a system, for example, it can be used to calculate the probability, as well as the energy, heat capacity, and pressure.</p>
+</section>
+
+<section id="the-boltzmann-distribution">
+<h2>The Boltzmann Distribution</h2>
+<p>We are ultimately interested in the probability that a given distribution will occur. The reason for this is that we must have this information in order to obtain useful thermodynamic averages. Let's consider an ensemble of $A$ systems. We will define $a_j$ as <span data-concept="occupation-number">the number of systems in the ensemble that are in the quantum state $j$</span>. For example, $a_1$ represents the number of systems in the quantum state 1. The <span data-concept="distribution-weight">total number of possible microstates</span> is:</p>
+$$ W(a_1,a_2,...) = \frac{A!}{a_1!a_2!...} $$
+<p>The overall probability that $P_j$ that a system is in the j<sup>th</sup> quantum state is obtained by averaging $a_j/A$ over all the allowed distributions. Thus, $P_j$ is given by:</p>
+$$ \begin{aligned} P_j &= \dfrac{\langle a_j \rangle}{A} \\[4pt] &= \dfrac{1}{A} \dfrac{ \displaystyle \sum_a W(a) a_j(a)}{\displaystyle \sum_a W(a)} \end{aligned} $$
+<p>where the angle brackets indicate an <span data-concept="ensemble-average">ensemble average</span>. Using this definition we can calculate any average property (i.e. any thermodynamic property):</p>
+$$ \langle M \rangle = \sum_j M_j P_j \tag{17.2.1} $$
+<p>The <span data-concept="most-probable-distribution">method of the most probable distribution</span> is based on the idea that the average over $P_j$ is <strong>identical</strong> to the most probable distribution. Physically, this results from the fact that we have so many particles in a typical system that the fluctuations from the mean are extremely (immeasurably) small. The equivalence of the average probability of an occupation number and the most probable distribution is expressed as follows:</p>
+$$ P_j = \dfrac{\langle a_j \rangle}{A} = \dfrac{a_j}{A} $$
+<p>The probability function is subject to the following <span data-concept="distribution-constraints">constraints</span>:</p>
+<ul><li><p>Constraint 1: Conservation of energy requires:</p>
+$$ \kEtotal = \sum_j a_j \kej \tag{17.2.2} $$
+<p>where $\kej$ is the energy of the jth quantum state.</p></li><li><p>Constraint 2: Conservation of mass requires:</p>
+$$ A = \sum_j a_j \tag{17.2.3} $$
+<p>which says only that the total number of all of the systems in the ensemble is $A$.</p></li></ul>
+<figure class="sim" id="sim-quanta-exchange">
+  <div class="sim-head"><span class="eyebrow">Sim</span><span>Oscillators pass quanta to one another at random, one at a time, so the <span data-type="energy">total energy</span> and the number of oscillators stay fixed. The histogram settles onto the <span data-concept="boltzmann-probability">Boltzmann distribution</span>, and $\ln W$ rises to that distribution's value and stays there.</span></div>
+</figure>
+<p>As we will learn in later chapters, the system will tend towards the distribution of $a_j$ that maximizes the total number of microstates. This can be expressed as:<sup class="fn" data-note="c-sum-da"></sup></p>
+$$ \sum_j \left(\dfrac{\partial \ln W }{\partial a_j}\right) = 0 $$
+<p>Our constraints becomes:</p>
+$$ \sum_j \kej da_j =0 $$
+$$ \sum_j da_j =0 $$
+<p>The <span data-concept="lagrange-multipliers">method of Lagrange multipliers</span> (named after Joseph Louis Lagrange is a strategy for finding the local maxima and minima of a function subject to equality constraints. Using the <span data-concept="lagrange-multipliers">method of LaGrange undetermined multipliers</span> we have:</p>
+$$ \sum_j \left[ \left(\dfrac{\partial \ln W }{\partial a_j}\right)da_j + \alpha da_j - \beta \kej da_j \right] = 0 $$
+<p>We can use <span data-concept="stirlings-approximation">Stirling's approximation</span>:</p>
+$$ \ln x! \approx x\ln x - x $$
+<p>to evaluate:</p>
+$$ \left(\dfrac{\partial \ln W }{\partial a_j}\right) $$
+<p>to get:<sup class="fn" data-note="c-stirling-derivative"></sup></p>
+$$ \left(\dfrac{\partial A! }{\partial a_j}\right) - \sum_i \left(\dfrac{\partial \ln a_i }{\partial a_j}\right) = 0 $$
+<p>as outlined below.</p>
+</section>
+
+<section id="stirlings-approximation">
+<h2>Application of Stirling's Approximation</h2>
+<figure class="dv" id="drv-boltzmann-distribution"></figure>
+<p>We will show that $\beta$ from the optimization procedure of <span data-concept="lagrange-multipliers">method of Lagrange multipliers</span> is:</p>
+$$ \beta=\dfrac{1}{k\kT} $$
+<p>This identification will show the importance of temperature in the <span data-concept="boltzmann-probability">Boltzmann distribution</span>. The distribution represents a thermally equilibrated most probable distribution over all energy levels (Figure 17.2.1).</p>
+<figure class="sim" id="sim-level-populations" data-figure="17.2.1 + 17.2.2" data-original="/media/ch17/79139-Population_of_energy_states_separation.png,/media/ch17/79140-Population_of_energy_states.png" data-original-width="600,445" data-original-caption="At lower temperatures, the lower energy states are more greatly populated. At higher temperatures, there are more higher energy states populated, but each is populated less. $k_BT ~ 2.5\; kJ \;mol^{-1}$ at 300 K. (CC SA-BY 3.0; Mysterioso via Wikiversity).">
+  <div class="sim-head"><span class="eyebrow">Figure 17.2.1 + 17.2.2</span><span>Raise <span data-type="temperature">the temperature</span> and each ladder fills up to about $k_B\kT$ above its ground level. At 300 K the rotational levels are filled past the top of the drawing, nearly every molecule sits in the ground vibrational level, and all of them sit in the ground electronic level.</span></div>
+</figure>
+<div class="note">
+<div class="eyebrow">Note</div>
+<h3>Boltzmann Distribution</h3>
+<p>The <span data-concept="boltzmann-probability">Boltzmann distribution</span> represents a thermally equilibrated <strong>most probable</strong> distribution over all energy levels. <span data-concept="populations-fall-with-energy">There is always a <strong>higher</strong> population in a state of lower energy than in one of higher energy</span>.</p>
+</div>
+<p>Once we know the probability distribution for energy, we can calculate thermodynamic properties like the energy, entropy, free energies and heat capacities, which are all average quantities (Equation 17.2.1). To calculate $P_j$, we need the energy levels of a system (i.e., $\{e_i\}$). The energy ("levels") of a system can be built up from the quantum energy levels</p>
+<blockquote><p>It must always be remembered that no matter how large the energy spacing is, there is always a non-zero probability of the upper level being populated. The only exception is a system that is at absolute zero. This situation is however hypothetical as absolute zero can be approached but not reached.</p></blockquote>
+</section>
+
+<section id="partition-function">
+<h2>Partition Function</h2>
+<p>The sum over all factors $e^{-\beta \kej}$ is given a name. It is called the <span data-concept="molecular-partition-function">molecular partition function</span>, $\kqmol$:</p>
+$$ \kqmol = \sum_j e^{-\beta \kej} $$
+<p>The <span data-concept="molecular-partition-function">molecular partition function</span> $\kqmol$ gives an indication of <span data-concept="partition-function-counts-states">the average number of states that are thermally accessible to a molecule</span> at the temperature of the system. The partition function is a sum over states (of course with the <span data-concept="boltzmann-factor">Boltzmann factor</span> $\beta$ multiplying the energy in the exponent) and is a number. Larger the value of $\kqmol$, larger the number of states which are available for the molecular system to occupy (Figure 17.2.2).</p>
+<p>We distinguish here between the <span data-concept="canonical-partition-function">partition function of the ensemble</span>, $\kQsys$ and that of an individual molecule, $\kqmol$. Since $\kQsys$ represents a sum over all states accessible to the system it can written as:</p>
+$$ \kQsys(N,\kV,\kT) = \sum_{i,j,k ...} e^{-\beta ( e_i + e_j +e_k ...)} $$
+<p>where the indices $i,\,j,\,k$ represent energy levels of <strong>different</strong> particles.</p>
+<p>Regardless of the type of particle the <span data-concept="molecular-partition-function">molecular partition function</span>, $\kqmol$ represents the energy levels of one individual molecule. We can <span data-concept="distinguishable-partition-function">rewrite the above sum</span> as:</p>
+$$ \kQsys = \kqi q_j q_k… $$
+<p>or:</p>
+$$ \kQsys = \kqmol^N $$
+<p>for $N$ particles. Note that $\kqi$ means a sum over states or energy levels accessible to molecule $i$ and $q_j$ means the same for molecule $j$. The <span data-concept="molecular-partition-function">molecular partition function</span>, $\kqmol$ counts the energy levels accessible to molecule $i$ only. $\kQsys$ counts not only the states of all of the molecules, but all of the possible combinations of occupations of those states. However, <span data-concept="indistinguishable-partition-function">if the particles are not distinguishable then we will have counted $N!$ states too many</span>. The factor of $N!$ is exactly how many times we can swap the indices in $\kQsys(N,\kV,\kT)$ and get the same value (again provided that the particles are not distinguishable). See this <a href="https://www.coursera.org/learn/statistical-thermodynamics/lecture/tGSh3/video-3-7-the-molecular-partition-function">video </a>for more information.</p>
+</section>

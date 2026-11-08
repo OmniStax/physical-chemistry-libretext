@@ -43,8 +43,13 @@ None printed. AI exercises (config: two): `a1` (multi, Apply) T_c = 304.0 K and 
 
 - `vdw-critical-constants` (printed block, 9 lines; built per config, the id 16.4 links to): replaces "Substituting the
   van der Waals equation into these two conditions" through the P_c display and the words between; five nodes, the
-  two conditions applied, V_c = 3nb, RT_c = 8a/27b, P_c = a/27b². The conditions' paragraph and displays stay
-  printed. The book bolds "critical volume" inside the replaced words; the concept is introduced by the block.
+  two conditions applied, V_c = 3nb, RT_c = 8a/27b, P_c = a/27b². The conditions' sentence stays printed and the
+  derivation follows its colon; its two displays are the derivation's starting lines, so the text no longer prints
+  them (chapter pass, the reader sees nothing twice). The book bolds "critical volume" inside the replaced words: its
+  "Hence, we have two equations in two unknowns …" paragraph stands after the block with the `critical-volume` and
+  `critical-pressure` spans, and "This is the critical volume", "To solve the equations, first divide one by the
+  other", "Now use either of the two conditions …" and "Finally, plugging …" are the reasons of their steps
+  (chapter pass).
 
 ## Corrections
 

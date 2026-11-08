@@ -1,0 +1,12 @@
+<section id="distinguishable-molecules">
+<h2>Molecules told apart by their sites</h2>
+<p>A system, such as a container of gas, can consist of a large number of subsystems. How is the <span data-concept="canonical-partition-function">partition function of the system</span> built up from those of the subsystems? This depends on whether the subsystems are distinguishable or indistinguishable. Let's start with energy. <span data-concept="independent-energy-additivity">Energy is additive</span> so that:</p>
+$$ \kEtot(N,\kV) = \epsilon_1(\kV) + \epsilon_2(\kV) + \epsilon_3(\kV) + \cdots $$
+<p>Each of the molecules can have their energy distributed over their respective energy states (e.g., vibrations, rotations, etc.). This means that each $\kepsi$ is already a summation over the states of the molecule. Let us assume that we can somehow distinguish all the molecules as: $a$, $b$, $c$, $d$… and denote the energy state they are in by $i$, $j$, $k$:</p>
+$$ \kEl(N,\kV) = \epsilon_i^a (\kV) + \epsilon_j^b (\kV) + \epsilon_k^c (\kV) + \cdots $$
+<p>A good example would be the molecules in a molecular crystal. <span data-concept="distinguishable-particles">They only move around a fixed site and so we can distinguish by how far molecule '$a$' is from a given corner of the crystal</span>. The systems <span data-concept="canonical-partition-function">partition function</span> becomes:</p>
+$$ \kQsys(N,\kV,\beta) = \sum_i e^{-\beta \kEl} = \sum_{i,j,k,…} e^{-\beta (\epsilon_i^a + \epsilon_j^b + \epsilon_k^c)} $$<sup class="fn" data-note="c-sum-index"></sup>
+<p>So far, we have done little effort to distinguish between the <span data-concept="molecular-partition-function">partition function of a molecular system</span> $\kqmol$ and the whole ensemble $\kQsys$ (e.g. the gas). If the entities that we called systems are <strong><span data-concept="distinguishable-particles">distinguishable</span></strong> and independent, <span data-concept="distinguishable-partition-function">the whole ensemble partition function is the product of the molecular system partition functions</span>. We get:</p>
+<figure class="dv" id="drv-distinguishable-q"></figure>
+<p>We can do this if, for example, the particles are embedded in a crystal where we can distinguish them by their location. We will see in the next chapter<sup class="fn" data-note="c-next-section"></sup> that for <span data-concept="indistinguishable-particles">indistinguishable particles</span>, such as those in a gas, we get a different result.</p>
+</section>

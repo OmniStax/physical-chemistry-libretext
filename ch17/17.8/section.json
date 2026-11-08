@@ -1,0 +1,203 @@
+{
+ "id": "17.8",
+ "module": "57665",
+ "chapter": "17",
+ "title": "Partition Functions can be Decomposed into Partition Functions of Each Degree of Freedom",
+ "short": "Degrees of freedom",
+ "lead": "The average energy of a system of independent molecules can be found from the partition function of one molecule. A molecule's energy is split among translation, rotation, vibration and electronic motion, and each of these has a partition function of its own.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "Adapted from Jerry LaRue (Chapman University), shared under CC BY 4.0 at the source and here under the book's CC BY-NC-SA 4.0.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": []
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book prints no exercises for this section; both here are new and AI-written, their answers checked by computation with R = 8.314 J K⁻¹ mol⁻¹, with their Bloom levels and concept tags chosen by AI. Numeric answers accept a 2% tolerance.",
+ "figures": [],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "molecule-energy",
+   "concept": "average-molecular-energy",
+   "verb": "introduces"
+  },
+  {
+   "span": "molecule-energy",
+   "concept": "independent-molecule-energy",
+   "verb": "introduces"
+  },
+  {
+   "span": "molecule-energy",
+   "concept": "indistinguishable-partition-function",
+   "verb": "uses"
+  },
+  {
+   "span": "molecule-energy",
+   "concept": "average-energy-from-q",
+   "verb": "uses"
+  },
+  {
+   "span": "molecule-energy",
+   "concept": "boltzmann-probability",
+   "verb": "reinforces"
+  },
+  {
+   "span": "degrees-of-freedom",
+   "concept": "molecular-energy-separation",
+   "verb": "introduces"
+  },
+  {
+   "span": "degrees-of-freedom",
+   "concept": "partition-function-factorization",
+   "verb": "introduces"
+  },
+  {
+   "span": "degrees-of-freedom",
+   "concept": "degree-of-freedom-partition-function",
+   "verb": "introduces"
+  },
+  {
+   "span": "degrees-of-freedom",
+   "concept": "molecular-partition-function",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "The molecular partition function is the product of the degree of freedom partition functions:",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "degrees-of-freedom",
+   "prompt": "<p>For a gas molecule at some temperature, $q_\\text{trans} = 3.0 \\times 10^{29}$, $q_\\text{rot} = 120$, $q_\\text{vib} = 1.05$ and $q_\\text{elec} = 2$ (a ground state with two states of the same energy). What is the molecular partition function $q$?</p>",
+   "answer": {
+    "type": "number",
+    "value": 7.56e+31,
+    "generated_by": "ai",
+    "hint": "The energies of the degrees of freedom add, so their partition functions multiply.",
+    "solution": "<p>$q = q_\\text{trans}q_\\text{rot}q_\\text{vib}q_\\text{elec} = (3.0 \\times 10^{29})(120)(1.05)(2) = 7.56 \\times 10^{31}$. The translational factor sets the size; vibration adds only 5% because nearly every molecule is in its lowest vibrational state.</p>"
+   }
+  },
+  {
+   "id": "a2",
+   "source_id": "For example, the average vibrational energy is:",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "degrees-of-freedom",
+   "prompt": "<p>Take the vibrational levels of a molecule as $\\epsilon_v = vh\\nu$ for $v = 0, 1, 2, \\dots$, measured from the lowest level, with $h\\nu = 12$ kJ/mol. Find $q_\\text{vib}$ as a geometric series, then use $\\langle \\epsilon_\\text{vib} \\rangle = -\\partial \\ln q_\\text{vib}/\\partial \\beta$ to find the average vibrational energy at 300 K, in kJ/mol.</p>",
+   "answer": {
+    "type": "number",
+    "value": 0.0985,
+    "unit": "kJ/mol",
+    "generated_by": "ai",
+    "hint": "$\\sum_v x^v = 1/(1 - x)$ with $x = e^{-\\beta h\\nu}$.",
+    "solution": "<p>$q_\\text{vib} = \\sum_v e^{-v\\beta h\\nu} = \\dfrac{1}{1 - e^{-\\beta h\\nu}}$, so $\\ln q_\\text{vib} = -\\ln(1 - e^{-\\beta h\\nu})$ and $\\langle \\epsilon_\\text{vib} \\rangle = -\\dfrac{\\partial \\ln q_\\text{vib}}{\\partial \\beta} = \\dfrac{h\\nu\\, e^{-\\beta h\\nu}}{1 - e^{-\\beta h\\nu}} = \\dfrac{h\\nu}{e^{\\beta h\\nu} - 1}$. Per mole, $\\beta h\\nu = \\dfrac{12000\\ \\text{J/mol}}{(8.314\\ \\text{J K}^{-1}\\text{mol}^{-1})(300\\ \\text{K})} = 4.811$, so $\\langle \\epsilon_\\text{vib} \\rangle = \\dfrac{12\\ \\text{kJ/mol}}{e^{4.811} - 1} = \\dfrac{12}{121.9}\\ \\text{kJ/mol} = 0.0985$ kJ/mol. That is under 1% of $h\\nu$: at 300 K almost every molecule is in its lowest vibrational level.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "partition-function-factorization"
+  },
+  {
+   "exercise": "a2",
+   "concept": "degree-of-freedom-partition-function"
+  },
+  {
+   "exercise": "a2",
+   "concept": "average-molecular-energy"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-compare",
+   "kind": "correction",
+   "html": "The comparison is of Equation 17.8.3 with Equation 17.8.4."
+  },
+  {
+   "id": "c-pi",
+   "kind": "correction",
+   "html": "The left side is the probability $\\pi_i$, not $\\langle \\epsilon \\rangle$: $\\pi_i = e^{-\\epsilon_i/kT}/q(V,T)$."
+  },
+  {
+   "id": "c-t",
+   "kind": "correction",
+   "html": "The derivative is with respect to the temperature $T$."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "independent-energy",
+   "what": "the average energy of independent molecules",
+   "source": "Physical Chemistry (LibreTexts), 17.8 Partition Functions can be Decomposed into Partition Functions of Each Degree of Freedom",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kEavg = k\\kT^2 \\left(\\dfrac{\\partial \\ln{\\kQsys}}{\\partial \\kT}\\right)_{N,\\kV}",
+       "src": "(17.8.2)",
+       "drv": "17.3/average-energy"
+      },
+      {
+       "tex": "\\kQsys = \\dfrac{\\kqmol^N}{N!}",
+       "src": "17.7"
+      },
+      {
+       "tex": "\\kqmol(\\kV,\\kT) = \\sum_i e^{-\\kepsi/k\\kT}",
+       "src": "17.2"
+      }
+     ],
+     "then": {
+      "tex": "\\kEavg = \\mk{c}{k\\kT^2} \\mk{d}{\\left(\\dfrac{\\partial \\ln{\\kQsys}}{\\partial \\kT}\\right)_{N,\\kV}}"
+     },
+     "steps": [
+      {
+       "tex": "\\kEavg = \\mk{c}{k\\kT^2} \\mk{d}{\\left(\\dfrac{\\partial}{\\partial \\kT}\\left[N\\ln \\kqmol - \\ln N!\\right]\\right)_{N,\\kV}}",
+       "uses": [
+        1
+       ],
+       "cap": "$\\ln(q^N/N!) = N\\ln q - \\ln N!$."
+      },
+      {
+       "tex": "\\kEavg = \\mk{c}{Nk\\kT^2} \\mk{d}{\\left(\\dfrac{\\partial \\ln{\\kqmol}}{\\partial \\kT}\\right)_{\\kV}}",
+       "uses": [],
+       "cap": "$\\ln N!$ does not change with temperature, and the partition function of one molecule depends only on $V$ and $T$."
+      },
+      {
+       "tex": "\\kEavg = \\mk{c}{Nk\\kT^2} \\mk{d}{\\dfrac{1}{\\kqmol}\\left(\\dfrac{\\partial \\kqmol}{\\partial \\kT}\\right)_{\\kV}}",
+       "uses": [],
+       "cap": "The derivative of a logarithm: $\\partial \\ln q = \\partial q/q$."
+      },
+      {
+       "tex": "\\kEavg = \\mk{c}{Nk\\kT^2} \\mk{d}{\\dfrac{1}{\\kqmol}\\sum_i \\dfrac{\\kepsi}{k\\kT^2}e^{-\\kepsi/k\\kT}}",
+       "uses": [
+        2
+       ],
+       "cap": "Each Boltzmann factor changes with temperature as $\\partial e^{-\\epsilon_i/kT}/\\partial T = (\\epsilon_i/kT^2)\\,e^{-\\epsilon_i/kT}$."
+      },
+      {
+       "tex": "\\kEavg = \\mk{c}{N}\\mk{d}{\\sum_i{\\kepsi \\dfrac{e^{-\\kepsi/k\\kT}}{\\kqmol(\\kV,\\kT)}}}",
+       "uses": []
+      }
+     ],
+     "num": "(17.8.3)",
+     "src": "17.8"
+    }
+   ]
+  }
+ ]
+}

@@ -26,7 +26,7 @@ const sigOf = (b) => Math.cbrt(3 * b * 1e-3 / (2 * Math.PI * N0)) * 1e10;
   const d = sim('sim-excluded-volume', 560);
   const G = F.choice(d.controls, { label: '\\text{gas}', options: OPTS, value: 'H2O', onInput: () => { const s = sigOf(GAS[G.value].b); R.range({ min: +s.toFixed(2), max: 9, step: 0.01 }); R.mark([{ at: () => +sigOf(GAS[G.value].b).toFixed(2), label: 'contact' }]); } });
   const s0 = +sigOf(GAS.H2O.b).toFixed(2);
-  const R = ctl(d.controls, { label: 'r', cls: 'length', min: s0, max: 9, step: 0.01, value: 6, unit: 'Å', dec: 2, specials: [{ at: () => +sigOf(GAS[G.value].b).toFixed(2), label: 'contact' }] });
+  const R = ctl(d.controls, { label: '\\kr', cls: 'length', min: s0, max: 9, step: 0.01, value: 6, unit: 'Å', dec: 2, specials: [{ at: () => +sigOf(GAS[G.value].b).toFixed(2), label: 'contact' }] });
   const K = 52, CX = 420, CY = 310;
   const ax = { box: { l: CX, r: CX + 9 * K, t: CY - 40, b: CY + 40 }, xr: [0, 9], yr: [-1, 1], X: (x) => CX + x * K, Y: (y) => CY - y * 40 };
   const P2 = F.drag(d, { x: R, y: 0 });

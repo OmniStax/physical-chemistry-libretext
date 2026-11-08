@@ -1,0 +1,622 @@
+{
+ "id": "17.2",
+ "module": "13680",
+ "chapter": "17",
+ "title": "The Boltzmann Distribution represents a Thermally Equilibrated Distribution",
+ "short": "The Boltzmann distribution",
+ "lead": "An ensemble of systems can be spread over its quantum states in a great many ways. Counting those ways while the energy and the number of systems stay fixed picks out the most probable distribution, and the sum that normalizes it, the partition function, is where the thermodynamics comes from.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "Adapted from Jerry LaRue (Chapman University); the page's two references, which its text never cites, are left out, and Figure 17.2.2 is folded into Figure 17.2.1.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The first exercise is Problem 5 of Section 17.1, set here because it asks about this section's separate arrangements. All six book problems are unkeyed and have AI solutions. The last exercise, on the population of a vibrational level at 300 K, was written by AI with an AI solution. Bloom levels and concept tags were chosen by AI. Numeric answers accept a 2% tolerance.",
+ "figures": [
+  {
+   "id": "sim-quanta-exchange",
+   "kind": "sim",
+   "draws": [
+    "energy"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "sim-level-populations",
+   "kind": "sim",
+   "number": "17.2.1",
+   "folds": [
+    "17.2.2"
+   ],
+   "originals": [
+    "/media/ch17/79139-Population_of_energy_states_separation.png",
+    "/media/ch17/79140-Population_of_energy_states.png"
+   ],
+   "widths": [
+    600,
+    445
+   ],
+   "original_caption": "At lower temperatures, the lower energy states are more greatly populated. At higher temperatures, there are more higher energy states populated, but each is populated less. $k_BT ~ 2.5\\; kJ \\;mol^{-1}$ at 300 K. (CC SA-BY 3.0; Mysterioso via Wikiversity).",
+   "draws": [
+    "energy",
+    "temperature",
+    "partition-function"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "counting-arrangements",
+   "concept": "canonical-ensemble",
+   "verb": "introduces"
+  },
+  {
+   "span": "the-boltzmann-distribution",
+   "concept": "occupation-number",
+   "verb": "introduces"
+  },
+  {
+   "span": "the-boltzmann-distribution",
+   "concept": "distribution-weight",
+   "verb": "introduces"
+  },
+  {
+   "span": "the-boltzmann-distribution",
+   "concept": "ensemble-average",
+   "verb": "introduces"
+  },
+  {
+   "span": "the-boltzmann-distribution",
+   "concept": "most-probable-distribution",
+   "verb": "introduces"
+  },
+  {
+   "span": "the-boltzmann-distribution",
+   "concept": "distribution-constraints",
+   "verb": "introduces"
+  },
+  {
+   "span": "the-boltzmann-distribution",
+   "concept": "lagrange-multipliers",
+   "verb": "introduces"
+  },
+  {
+   "span": "the-boltzmann-distribution",
+   "concept": "stirlings-approximation",
+   "verb": "introduces"
+  },
+  {
+   "span": "stirlings-approximation",
+   "concept": "boltzmann-probability",
+   "verb": "introduces"
+  },
+  {
+   "span": "stirlings-approximation",
+   "concept": "populations-fall-with-energy",
+   "verb": "introduces"
+  },
+  {
+   "span": "partition-function",
+   "concept": "molecular-partition-function",
+   "verb": "introduces"
+  },
+  {
+   "span": "partition-function",
+   "concept": "partition-function-counts-states",
+   "verb": "introduces"
+  },
+  {
+   "span": "partition-function",
+   "concept": "canonical-partition-function",
+   "verb": "introduces"
+  },
+  {
+   "span": "partition-function",
+   "concept": "distinguishable-partition-function",
+   "verb": "introduces"
+  },
+  {
+   "span": "partition-function",
+   "concept": "indistinguishable-partition-function",
+   "verb": "introduces"
+  },
+  {
+   "span": "counting-arrangements",
+   "concept": "boltzmann-factor",
+   "verb": "uses"
+  },
+  {
+   "span": "the-boltzmann-distribution",
+   "concept": "ensemble",
+   "verb": "uses"
+  },
+  {
+   "span": "partition-function",
+   "concept": "boltzmann-factor",
+   "verb": "uses"
+  },
+  {
+   "span": "stirlings-approximation",
+   "concept": "thermodynamic-beta",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "p0",
+   "source_id": "What do \"separate arrangements\" mean?",
+   "source_number": "Problem 5",
+   "kind": "exercise",
+   "bloom": "Understand",
+   "place": {
+    "at": "end"
+   },
+   "cite": "counting-arrangements",
+   "prompt": "<p>What do \"separate arrangements\" mean? What are the differences between these arrangements?</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "<p>An arrangement is one particular way of placing the particles of the system in their states. Many arrangements give the same thermodynamic state: the same $N$, $\\kV$ and $\\kT$, and the same total energy. Two arrangements are separate when they differ in microscopic detail, either in which particle sits in which state (swapping two particles between their states) or in how many particles hold each energy, provided the totals are unchanged. Only one arrangement occurs at a time, and $W_N$ counts how many there are, so the probability of the thermodynamic state is $p_N = W_Np_i$. Arrangements that only swap indistinguishable particles are not separate, since nothing can tell them apart.</p>"
+   },
+   "source_section": "17.1"
+  },
+  {
+   "id": "p1",
+   "source_id": "Complete the justification of Boltzmann",
+   "source_number": "Problem 1",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "stirlings-approximation",
+   "prompt": "<p>Complete the justification of Boltzmann's distribution law by computing the proportionality constant $a$.</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "<p>The constant is the multiplier $\\alpha$, printed $a$. The most probable distribution is $a_j/A = e^{\\alpha}e^{-\\beta \\kej}$ (Equation 17.2.4). Summing over every state, and using $\\sum_j a_j = A$ (Equation 17.2.3), gives $1 = e^{\\alpha}\\sum_j e^{-\\beta\\kej}$. So $e^{\\alpha} = 1/\\sum_j e^{-\\beta\\kej} = 1/\\kqmol$, and $\\alpha = -\\ln \\kqmol$, minus the logarithm of the molecular partition function. With it, $P_j = e^{-\\beta\\kej}/\\kqmol$.</p>"
+   }
+  },
+  {
+   "id": "p2",
+   "source_id": "A system contains two energy levels",
+   "source_number": "Problem 2",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "partition-function",
+   "prompt": "<p>A system contains two energy levels $E_1, E_2$. Using Boltzmann statistics, express the average energy of the system in terms of $E_1, E_2$.</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "<p>Each level is occupied with probability $P_j = e^{-\\beta E_j}/(e^{-\\beta E_1} + e^{-\\beta E_2})$, and the average is $\\langle E\\rangle = \\sum_j E_jP_j$ (Equation 17.2.1). So $\\langle E\\rangle = \\dfrac{E_1e^{-\\beta E_1} + E_2e^{-\\beta E_2}}{e^{-\\beta E_1} + e^{-\\beta E_2}}$, with $\\beta = 1/k\\kT$. Dividing top and bottom by $e^{-\\beta E_1}$ gives the same thing as $\\langle E\\rangle = E_1 + \\dfrac{E_2 - E_1}{e^{\\beta(E_2 - E_1)} + 1}$. It is close to $E_1$ when $k\\kT \\ll E_2 - E_1$ and rises toward the midpoint $(E_1 + E_2)/2$ when $k\\kT \\gg E_2 - E_1$.</p>"
+   }
+  },
+  {
+   "id": "p3",
+   "source_id": "Consider a system contains N energy leve",
+   "source_number": "Problem 3",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "partition-function",
+   "prompt": "<p>Consider a system contains N energy levels. Redo problem #2.</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "<p>With levels $E_1, E_2, \\ldots, E_N$, the probability of level $j$ is $P_j = e^{-\\beta E_j}/\\sum_{k=1}^{N} e^{-\\beta E_k}$, so $\\langle E\\rangle = \\sum_j E_jP_j = \\dfrac{\\sum_{j=1}^{N} E_je^{-\\beta E_j}}{\\sum_{j=1}^{N} e^{-\\beta E_j}}$. The denominator is the molecular partition function $\\kqmol$ of the $N$ levels. At low temperature $\\langle E\\rangle$ is close to the lowest level; at temperatures far above the whole spread of levels every level is about equally likely and $\\langle E\\rangle$ approaches their plain average, $\\tfrac{1}{N}\\sum_j E_j$.</p>"
+   }
+  },
+  {
+   "id": "p4",
+   "source_id": "Use the property of exponential function",
+   "source_number": "Problem 4",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "partition-function",
+   "prompt": "<p>Use the property of exponential function, derive equation (17.9).<sup class=\"fn\" data-note=\"c-problem-4\"></sup></p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "<p>The partition function of the system sums over every combination of states of the molecules: $\\kQsys = \\sum_{i}\\sum_{j}\\sum_{k}\\cdots e^{-\\beta(e_i + e_j + e_k + \\ldots)}$, where $i$ runs over the states of molecule 1, $j$ over those of molecule 2, and so on. The exponential of a sum is the product of the exponentials, $e^{-\\beta(e_i + e_j + \\ldots)} = e^{-\\beta e_i}e^{-\\beta e_j}\\cdots$. Each factor depends on one index only, so the multiple sum factors into a product of single sums: $\\kQsys = \\left(\\sum_i e^{-\\beta e_i}\\right)\\left(\\sum_j e^{-\\beta e_j}\\right)\\left(\\sum_k e^{-\\beta e_k}\\right)\\cdots = \\kqi q_jq_k\\cdots$. When all $N$ molecules have the same set of levels, every factor is the same $\\kqmol$ and $\\kQsys = \\kqmol^N$. This assumes the molecules are independent and can be told apart.</p>"
+   }
+  },
+  {
+   "id": "p5",
+   "source_id": "What are the uses of partition functions",
+   "source_number": "Problem 5",
+   "kind": "exercise",
+   "bloom": "Remember",
+   "place": {
+    "at": "end"
+   },
+   "cite": "partition-function",
+   "prompt": "<p>What are the uses of partition functions?</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "<p>The partition function normalizes the Boltzmann distribution, so it gives the probability of every state, $P_j = e^{-\\beta\\kej}/\\kqmol$. Its size tells how many states are thermally accessible at the temperature of the system. And the thermodynamic properties are averages over that distribution, so they follow from it: the energy, the heat capacity and the pressure, which Sections 17.3 to 17.5 write as derivatives of $\\ln \\kQsys$, and also the entropy and the free energies.</p>"
+   }
+  },
+  {
+   "id": "ai1",
+   "source_id": "eq:Eq3",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "stirlings-approximation",
+   "prompt": "<p>The vibrational levels of a molecule are spaced 12 kJ/mol apart, as in Figure 17.2.1. At 300 K, what is the ratio of the population of the first excited level to that of the ground level? ($R$ = 8.314 J K⁻¹ mol⁻¹.)</p>",
+   "answer": {
+    "type": "number",
+    "value": 0.00815,
+    "generated_by": "ai",
+    "hint": "The ratio of two populations is the ratio of their Boltzmann factors; per mole, $k\\kT$ becomes $R\\kT$.",
+    "solution": "<p>The partition function cancels from the ratio, leaving $P_1/P_0 = e^{-\\Delta e/R\\kT}$. Here $R\\kT = (8.314\\ \\text{J K}^{-1}\\text{mol}^{-1})(300\\ \\text{K}) = 2494$ J/mol, so $\\Delta e/R\\kT = 12\\,000/2494 = 4.81$ and $P_1/P_0 = e^{-4.81} = 0.0081$. About eight molecules in a thousand are in the first excited vibrational level at room temperature.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "p0",
+   "concept": "distribution-weight"
+  },
+  {
+   "exercise": "p0",
+   "concept": "canonical-ensemble"
+  },
+  {
+   "exercise": "p1",
+   "concept": "boltzmann-probability"
+  },
+  {
+   "exercise": "p1",
+   "concept": "distribution-constraints"
+  },
+  {
+   "exercise": "p1",
+   "concept": "molecular-partition-function"
+  },
+  {
+   "exercise": "p2",
+   "concept": "boltzmann-probability"
+  },
+  {
+   "exercise": "p2",
+   "concept": "ensemble-average"
+  },
+  {
+   "exercise": "p3",
+   "concept": "boltzmann-probability"
+  },
+  {
+   "exercise": "p3",
+   "concept": "ensemble-average"
+  },
+  {
+   "exercise": "p3",
+   "concept": "molecular-partition-function"
+  },
+  {
+   "exercise": "p4",
+   "concept": "canonical-partition-function"
+  },
+  {
+   "exercise": "p4",
+   "concept": "distinguishable-partition-function"
+  },
+  {
+   "exercise": "p5",
+   "concept": "molecular-partition-function"
+  },
+  {
+   "exercise": "p5",
+   "concept": "partition-function-counts-states"
+  },
+  {
+   "exercise": "ai1",
+   "concept": "boltzmann-probability"
+  },
+  {
+   "exercise": "ai1",
+   "concept": "populations-fall-with-energy"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-exp-proportional",
+   "kind": "correction",
+   "html": "The probability falls off exponentially as the energy rises, $p_j \\propto e^{-\\beta E_j}$; it is not proportional to the energy."
+  },
+  {
+   "id": "c-sum-da",
+   "kind": "correction",
+   "html": "Each term of the sum carries its change $da_j$: the condition is $\\sum_j (\\partial \\ln W/\\partial a_j)\\,da_j = 0$, the form the constraints and the Lagrange equation below take."
+  },
+  {
+   "id": "c-stirling-derivative",
+   "kind": "correction",
+   "html": "What Stirling's approximation is used for is the derivative of the logarithms of the factorials, $\\partial \\ln W/\\partial a_j = \\partial \\ln A!/\\partial a_j - \\sum_i \\partial \\ln a_i!/\\partial a_j$. It is not zero by itself; by the equation above it equals $\\beta e_j - \\alpha$."
+  },
+  {
+   "id": "c-problem-4",
+   "kind": "correction",
+   "html": "Equation (17.9) is the number the result had in the module this page was taken from. On this page it is $Q = q_iq_jq_k\\ldots$, which follows from $Q(N,V,T) = \\sum e^{-\\beta(e_i + e_j + e_k + \\ldots)}$."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "boltzmann-distribution",
+   "what": "the Boltzmann distribution",
+   "source": "Physical Chemistry (LibreTexts), 17.2 The Boltzmann Distribution represents a Thermally Equilibrated Distribution",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "W = \\dfrac{A!}{a_1!a_2!\\ldots}",
+       "src": "17.2"
+      },
+      {
+       "tex": "\\ln x! \\approx x\\ln x - x",
+       "src": "17.2"
+      },
+      {
+       "tex": "A = \\sum_j a_j",
+       "src": "(17.2.3)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{w}{W} = \\mk{r}{\\dfrac{A!}{a_1!a_2!\\ldots}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{w}{\\ln W} = \\mk{a}{\\ln A!} - \\mk{s}{\\sum_j \\ln a_j!}",
+       "uses": [],
+       "map": {
+        "r": [
+         "a",
+         "s"
+        ]
+       },
+       "cap": "The logarithm of a quotient is the difference of the logarithms, and the logarithm of a product is the sum of the logarithms."
+      },
+      {
+       "tex": "\\mk{w}{\\ln W} \\approx \\mk{a}{A\\ln A} - \\mk{m}{A} - \\mk{s}{\\sum_j a_j\\ln a_j} + \\mk{p}{\\sum_j a_j}",
+       "uses": [
+        1
+       ],
+       "map": {
+        "a": [
+         "a",
+         "m"
+        ],
+        "s": [
+         "s",
+         "p"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{w}{\\ln W} = \\mk{a}{A\\ln A} - \\mk{s}{\\sum_j a_j\\ln a_j}",
+       "uses": [
+        2
+       ]
+      }
+     ],
+     "src": "17.2",
+     "note": "The book prints the last term of the Stirling line as $-\\sum_j a_j$, with a stray $a$ after $\\ln a_j!$. Stirling's approximation gives $+\\sum_j a_j$, and that is the term that cancels against $-A$."
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "text": "$\\partial a_i/\\partial a_j$ is 1 when $i = j$ and 0 otherwise, and $\\partial A/\\partial a_j = 1$, since $A = \\sum_i a_i$.",
+       "src": "17.2"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{w}{\\ln W} = \\mk{a}{A\\ln A} - \\mk{s}{\\sum_j a_j\\ln a_j}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{w}{\\dfrac{\\partial \\ln W}{\\partial a_j}} = \\mk{a}{\\dfrac{\\partial (A\\ln A)}{\\partial a_j}} - \\mk{s}{\\sum_i \\dfrac{\\partial (a_i\\ln a_i)}{\\partial a_j}}",
+       "uses": [],
+       "cap": "Differentiate with respect to one occupation number $a_j$, the others held fixed; the sum is relabeled with $i$ so that $j$ names the one being varied."
+      },
+      {
+       "tex": "\\mk{w}{\\dfrac{\\partial \\ln W}{\\partial a_j}} = \\mk{a}{\\dfrac{\\partial A}{\\partial a_j}(\\ln A + 1)} - \\mk{s}{\\sum_i \\dfrac{\\partial a_i}{\\partial a_j}(\\ln a_i + 1)}",
+       "uses": [],
+       "cap": "By the product rule, $d(x\\ln x) = (\\ln x + 1)\\,dx$."
+      },
+      {
+       "tex": "\\mk{w}{\\dfrac{\\partial \\ln W}{\\partial a_j}} = \\mk{a}{(\\ln A + 1)} - \\mk{s}{(\\ln a_j + 1)}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{w}{\\dfrac{\\partial \\ln W}{\\partial a_j}} = \\mk{r}{-\\ln\\left(\\dfrac{a_j}{A}\\right)}",
+       "uses": [],
+       "map": {
+        "a": "r",
+        "s": "r"
+       }
+      }
+     ],
+     "src": "17.2",
+     "note": "The book prints $\\dfrac{\\partial A}{\\partial a_j}\\ln A - \\dfrac{\\partial A}{\\partial a_j} = \\ln A - 1$ and $\\dfrac{\\partial a_i}{\\partial a_j}\\ln a_i - \\dfrac{\\partial a_i}{\\partial a_j} = \\ln a_j + 1$. The derivative of $x\\ln x$ is $\\ln x + 1$, so both middle signs are $+$ and the first line ends in $\\ln A + 1$; only then do the two lines give $-\\ln(a_j/A)$."
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\sum_j \\left[ \\left(\\dfrac{\\partial \\ln W }{\\partial a_j}\\right)da_j + \\alpha\\, da_j - \\beta \\kej\\, da_j \\right] = 0",
+       "src": "17.2"
+      },
+      {
+       "step": 1
+      }
+     ],
+     "then": {
+      "tex": "\\sum_j \\left[ \\mk{d}{\\left(\\dfrac{\\partial \\ln W }{\\partial a_j}\\right)da_j} + \\mk{al}{\\alpha\\, da_j} - \\mk{be}{\\beta \\kej\\, da_j} \\right] = \\mk{z}{0}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{d}{\\dfrac{\\partial \\ln W}{\\partial a_j}} + \\mk{al}{\\alpha} - \\mk{be}{\\beta \\kej} = \\mk{z}{0}",
+       "uses": [],
+       "cap": "The multipliers $\\alpha$ and $\\beta$ carry the two constraints, so every $da_j$ may now be varied freely, and the sum can vanish for all of them only if each bracket is zero."
+      },
+      {
+       "tex": "\\mk{d}{-\\ln\\left(\\dfrac{a_j}{A}\\right)} + \\mk{al}{\\alpha} - \\mk{be}{\\beta \\kej} = \\mk{z}{0}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "src": "17.2"
+    },
+    {
+     "assumes": [
+      {
+       "step": 2
+      }
+     ],
+     "then": {
+      "tex": "\\mk{d}{-\\ln\\left(\\dfrac{a_j}{A}\\right)} + \\mk{al}{\\alpha} - \\mk{be}{\\beta \\kej} = \\mk{z}{0}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{d}{\\ln\\left(\\dfrac{a_j}{A}\\right)} = \\mk{al}{\\alpha} - \\mk{be}{\\beta \\kej}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{d}{\\dfrac{a_j}{A}} = \\mk{al}{e^{\\alpha}}\\,\\mk{be}{e^{-\\beta \\kej}}",
+       "uses": [],
+       "cap": "Take the exponential of both sides; the exponential of a difference is a quotient, $e^{\\alpha - \\beta e_j} = e^{\\alpha}e^{-\\beta e_j}$."
+      }
+     ],
+     "num": "(17.2.4)",
+     "src": "17.2",
+     "note": "The book prints $a_j/A = e^a\\sum_j e^{-\\beta e_j}$. Solving for one $a_j$ gives one term, $e^{\\alpha}e^{-\\beta e_j}$, with the multiplier $\\alpha$ in the exponent; the sum over $j$ comes in the next step, where it is set equal to 1."
+    },
+    {
+     "assumes": [
+      {
+       "step": 3
+      },
+      {
+       "tex": "A = \\sum_j a_j",
+       "src": "(17.2.3)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{o}{A} = \\mk{s}{\\sum_j a_j}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{o}{1} = \\mk{s}{\\sum_j \\dfrac{a_j}{A}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{o}{1} = \\mk{al}{e^{\\alpha}}\\mk{s}{\\sum_j e^{-\\beta \\kej}}",
+       "uses": [
+        0
+       ],
+       "map": {
+        "s": [
+         "al",
+         "s"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{al}{e^{\\alpha}} = \\mk{s}{\\dfrac{1}{\\sum_j e^{-\\beta \\kej}}}",
+       "uses": [],
+       "map": {
+        "o": "s"
+       }
+      }
+     ],
+     "src": "17.2"
+    },
+    {
+     "assumes": [
+      {
+       "step": 3
+      },
+      {
+       "step": 4
+      },
+      {
+       "tex": "P_j = \\dfrac{a_j}{A}",
+       "src": "17.2"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{p}{P_j} = \\mk{r}{\\dfrac{a_j}{A}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{p}{P_j} = \\mk{al}{e^{\\alpha}}\\,\\mk{be}{e^{-\\beta \\kej}}",
+       "uses": [
+        0
+       ],
+       "map": {
+        "r": [
+         "al",
+         "be"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{p}{P_j} = \\mk{be}{\\dfrac{e^{-\\beta \\kej}}{\\sum_k e^{-\\beta e_k}}}",
+       "uses": [
+        1
+       ],
+       "map": {
+        "al": "be"
+       }
+      }
+     ],
+     "src": "17.2"
+    }
+   ]
+  }
+ ]
+}

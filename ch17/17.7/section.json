@@ -1,0 +1,177 @@
+{
+ "id": "17.7",
+ "module": "13689",
+ "chapter": "17",
+ "title": "Partition Functions of Indistinguishable Molecules Must Avoid Over Counting States",
+ "short": "Indistinguishable molecules",
+ "lead": "Two particles that can be told apart and two that cannot fill the same pair of levels in different numbers of ways. Counting those ways shows how the partition function of indistinguishable molecules has to be corrected.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "Adapted from Delmar Larsen (UC Davis) and Jerry LaRue (Chapman University), shared under CC BY 4.0 at the source and here under the book's CC BY-NC-SA 4.0; Figures 17.7.1 and 17.7.2 are folded into one figure.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book prints no exercises for this section; both here are new and AI-written, their answers checked by counting the states, with their Bloom levels and concept tags chosen by AI. Numeric answers accept a 2% tolerance.",
+ "figures": [
+  {
+   "id": "sim-two-particle-states",
+   "kind": "sim",
+   "number": "17.7.1",
+   "folds": [
+    "17.7.2"
+   ],
+   "originals": [
+    "/media/ch17/419541-Figure_1.svg",
+    "/media/ch17/419542-Figure_2.svg"
+   ],
+   "original_caption": "17.7.1: Four different states can exist for a two-level system with two distinguishable particles (red and blue balls). (CC BY 4.0; Delmar Larsen via LibreTexts) 17.7.2: Three different states can exist for a two-level system with two indistinguishable particles (black balls). The two middle states are indescernable and represent a single state with one particle exited and the other in the ground state. (CC BY 4.0; Delmar Larsen via LibreTexts)",
+   "draws": [
+    "partition-function",
+    "energy"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [
+  {
+   "id": "red",
+   "label": "the red particle",
+   "figures": [
+    "sim-two-particle-states"
+   ]
+  },
+  {
+   "id": "blue",
+   "label": "the blue particle",
+   "figures": [
+    "sim-two-particle-states"
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "span": "two-particles",
+   "concept": "two-particle-two-level-states",
+   "verb": "introduces"
+  },
+  {
+   "span": "two-particles",
+   "concept": "canonical-partition-function",
+   "verb": "uses"
+  },
+  {
+   "span": "two-particles",
+   "concept": "molecular-partition-function",
+   "verb": "uses"
+  },
+  {
+   "span": "two-particles",
+   "concept": "indistinguishable-particles",
+   "verb": "uses"
+  },
+  {
+   "span": "dividing-by-n-factorial",
+   "concept": "n-factorial-validity",
+   "verb": "introduces"
+  },
+  {
+   "span": "dividing-by-n-factorial",
+   "concept": "indistinguishable-partition-function",
+   "verb": "reinforces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "Hence, there are effectively only three states observable for this system.",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "two-particles",
+   "prompt": "<p>Two particles share three levels of energy $0$, $\\epsilon$ and $2\\epsilon$. (a) How many states does the system have if the particles can be told apart? (b) How many if they are indistinguishable? (c) At a temperature high enough that every Boltzmann factor is close to 1, what does $q^2/2!$ give?</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 9
+     },
+     {
+      "part": "b",
+      "value": 6,
+      "hint": "List the states with both particles on one level separately from those with the particles on different levels."
+     },
+     {
+      "part": "c",
+      "value": 4.5
+     }
+    ],
+    "solution": "<p>(a) Each particle can be on any of the three levels: $3 \\times 3 = 9$ states, and $Q = q^2$. (b) Swapping identical particles gives the same state, so the six arrangements with the particles on different levels pair up into 3 states; the 3 arrangements with both on one level stay as they are: $3 + 3 = 6$ states. (c) With every factor near 1, $q \\approx 3$ and $q^2/2! = 4.5$. Dividing by $2!$ also halves the 3 states where the particles share a level, which is why it falls short of 6.</p>"
+   }
+  },
+  {
+   "id": "a2",
+   "source_id": "That is because the $N!$ factor is only applicable for large $N$.",
+   "kind": "exercise",
+   "bloom": "Analyze",
+   "place": {
+    "at": "end"
+   },
+   "cite": "dividing-by-n-factorial",
+   "prompt": "<p>For two indistinguishable particles on the levels $0$ and $\\epsilon$, Equation 17.7.3 gives $Q = 1 + e^{-\\beta\\epsilon} + e^{-2\\beta\\epsilon}$, while $q^2/2! = (1 + e^{-\\beta\\epsilon})^2/2$. Explain where $q^2/2!$ goes wrong, and say when dividing $q^N$ by $N!$ does count the states correctly.</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "Expand $q^2$ and look at which terms come from two arrangements and which from one.",
+    "solution": "<p>$q^2 = 1 + 2e^{-\\beta\\epsilon} + e^{-2\\beta\\epsilon}$. The middle term counts the state with one particle on each level twice, once for each order, so halving it is right. The first and last terms come from states with both particles on the same level, which $q^2$ counts only once, so dividing them by 2 undercounts them: $q^2/2 = \\tfrac{1}{2} + e^{-\\beta\\epsilon} + \\tfrac{1}{2}e^{-2\\beta\\epsilon}$ against the true $1 + e^{-\\beta\\epsilon} + e^{-2\\beta\\epsilon}$. Dividing by $N!$ works when such shared states are rare, that is, when each particle has many more accessible states than there are particles, as for the molecules of a gas. Then nearly every state of the system is a permutation of $N$ different molecular states and is counted $N!$ times in $q^N$.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "two-particle-two-level-states"
+  },
+  {
+   "exercise": "a1",
+   "concept": "indistinguishable-particles"
+  },
+  {
+   "exercise": "a2",
+   "concept": "n-factorial-validity"
+  },
+  {
+   "exercise": "a2",
+   "concept": "indistinguishable-partition-function"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-large-n",
+   "kind": "correction",
+   "html": "What decides it is how often particles share a state, not how many particles there are: $q^N/N!$ is close to the true sum when each particle has many more accessible states than there are particles, so that almost no two are in the same state. For two particles on $M$ levels, $q^2/2$ approaches the true count as $M$ grows."
+  }
+ ]
+}

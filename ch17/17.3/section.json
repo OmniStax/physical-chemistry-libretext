@@ -1,0 +1,291 @@
+{
+ "id": "17.3",
+ "module": "13682",
+ "chapter": "17",
+ "title": "The Average Ensemble Energy is Equal to the Observed Energy of a System",
+ "short": "The average ensemble energy",
+ "lead": "The energy we measure for a system is an average: each state's energy weighted by its Boltzmann probability. Written in terms of the partition function, that average becomes a derivative of ln Q.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "Adapted from Jerry LaRue (Chapman University).",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": []
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercises for this section; the one exercise, on the average energy of a two-level system, was written by AI with an AI solution. Its Bloom level and concept tags were chosen by AI. Numeric answers accept a 2% tolerance.",
+ "figures": [],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "average-over-states",
+   "concept": "average-ensemble-energy",
+   "verb": "introduces"
+  },
+  {
+   "span": "energy-from-ln-q",
+   "concept": "average-energy-from-q",
+   "verb": "introduces"
+  },
+  {
+   "span": "average-over-states",
+   "concept": "boltzmann-probability",
+   "verb": "reinforces"
+  },
+  {
+   "span": "average-over-states",
+   "concept": "canonical-ensemble",
+   "verb": "uses"
+  },
+  {
+   "span": "average-over-states",
+   "concept": "quantum-expectation-value",
+   "verb": "uses"
+  },
+  {
+   "span": "energy-from-ln-q",
+   "concept": "thermodynamic-beta",
+   "verb": "uses"
+  },
+  {
+   "span": "energy-from-ln-q",
+   "concept": "canonical-partition-function",
+   "verb": "reinforces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "ai1",
+   "source_id": "eq:Eq2",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "energy-from-ln-q",
+   "prompt": "<p>A system has two states, of energy 0 and $\\varepsilon$, so $\\kQsys = 1 + e^{-\\beta\\varepsilon}$. Use $\\kEavg = -(\\partial \\ln \\kQsys/\\partial\\beta)$ to find its average energy, and give $\\kEavg/\\varepsilon$ at the temperature where $k\\kT = \\varepsilon$.</p>",
+   "answer": {
+    "type": "number",
+    "value": 0.269,
+    "generated_by": "ai",
+    "hint": "Differentiate $\\ln(1 + e^{-\\beta\\varepsilon})$ with respect to $\\beta$, then set $\\beta\\varepsilon = 1$.",
+    "solution": "<p>$\\ln \\kQsys = \\ln(1 + e^{-\\beta\\varepsilon})$, so $\\partial \\ln \\kQsys/\\partial\\beta = -\\varepsilon e^{-\\beta\\varepsilon}/(1 + e^{-\\beta\\varepsilon})$ and $\\kEavg = \\dfrac{\\varepsilon e^{-\\beta\\varepsilon}}{1 + e^{-\\beta\\varepsilon}} = \\dfrac{\\varepsilon}{e^{\\beta\\varepsilon} + 1}$. At $k\\kT = \\varepsilon$, $\\beta\\varepsilon = 1$ and $\\kEavg = \\varepsilon/(e + 1) = 0.269\\,\\varepsilon$. As $\\kT \\to 0$ the average falls to 0, and as $\\kT$ grows it rises toward $\\varepsilon/2$, where the two states are equally occupied.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "ai1",
+   "concept": "average-energy-from-q"
+  },
+  {
+   "exercise": "ai1",
+   "concept": "canonical-partition-function"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-constant-pressure",
+   "kind": "correction",
+   "html": "The canonical ensemble holds the number of particles, the volume and the temperature constant, as Section 17.2 says; the pressure is not fixed."
+  },
+  {
+   "id": "c-molecular-q",
+   "kind": "correction",
+   "html": "For a fraction of molecules, the sum in the denominator runs over the states of one molecule: it is the molecular partition function $q$ of Section 17.2. The same equation holds with $Q$ when $E_i$ are the energies of the states of the whole system, which is how the rest of this section uses it."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "average-energy",
+   "what": "the average energy from the partition function",
+   "source": "Physical Chemistry (LibreTexts), 17.3 The Average Ensemble Energy is Equal to the Observed Energy of a System",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kEavg = \\sum_i \\kEi P_i",
+       "src": "(17.3.2)"
+      },
+      {
+       "tex": "P_i = \\dfrac{e^{-\\kEi/k\\kT}}{\\kQsys}",
+       "src": "(17.3.1)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{a}{\\kEavg} = \\mk{s}{\\sum_i \\kEi P_i}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{a}{\\kEavg} = \\mk{s}{\\sum_i \\dfrac{\\kEie^{-\\kEi/k\\kT}}{\\kQsys}}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "num": "(17.3.3)",
+     "src": "17.3"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\kQsys = \\sum_i e^{-\\kEi/k\\kT}",
+       "src": "17.3"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{q}{\\kQsys} = \\mk{s}{\\sum_i e^{-\\kEi/k\\kT}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{q}{\\ln \\kQsys} = \\mk{s}{\\ln \\sum_i e^{-\\kEi/k\\kT}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{q}{\\left(\\dfrac{\\partial \\ln \\kQsys}{\\partial \\kT}\\right)} = \\mk{s}{\\dfrac{1}{\\kQsys}\\sum_i \\dfrac{\\partial}{\\partial \\kT}e^{-\\kEi/k\\kT}}",
+       "uses": [],
+       "cap": "Differentiate with respect to $T$; by the chain rule the derivative of $\\ln Q$ is the derivative of $Q$ divided by $Q$."
+      },
+      {
+       "tex": "\\mk{q}{\\left(\\dfrac{\\partial \\ln \\kQsys}{\\partial \\kT}\\right)} = \\mk{s}{\\dfrac{1}{\\kQsys}\\sum_i \\dfrac{\\kEi}{k\\kT^2}e^{-\\kEi/k\\kT}}",
+       "uses": [],
+       "cap": "The exponent $-E_i/kT$ has the derivative $E_i/kT^2$ with respect to $T$, and the exponential brings it down as a factor."
+      },
+      {
+       "tex": "\\mk{q}{\\left(\\dfrac{\\partial \\ln \\kQsys}{\\partial \\kT}\\right)} = \\mk{s}{\\dfrac{1}{k\\kT^2}\\sum_i \\dfrac{\\kEie^{-\\kEi/k\\kT}}{\\kQsys}}",
+       "uses": []
+      }
+     ],
+     "num": "(17.3.4)",
+     "src": "17.3"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "step": 1
+      }
+     ],
+     "then": {
+      "tex": "\\mk{q}{\\left(\\dfrac{\\partial \\ln \\kQsys}{\\partial \\kT}\\right)} = \\mk{s}{\\dfrac{1}{k\\kT^2}\\sum_i \\dfrac{\\kEie^{-\\kEi/k\\kT}}{\\kQsys}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{k}{k\\kT^2}\\mk{q}{\\left(\\dfrac{\\partial \\ln \\kQsys}{\\partial \\kT}\\right)} = \\mk{s}{\\sum_i \\dfrac{\\kEie^{-\\kEi/k\\kT}}{\\kQsys}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{k}{k\\kT^2}\\mk{q}{\\left(\\dfrac{\\partial \\ln \\kQsys}{\\partial \\kT}\\right)} = \\mk{s}{\\kEavg}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{s}{\\kEavg} = \\mk{k}{k\\kT^2}\\mk{q}{\\left(\\dfrac{\\partial \\ln \\kQsys}{\\partial \\kT}\\right)}",
+       "uses": []
+      }
+     ],
+     "src": "17.3"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\kQsys = \\sum_i e^{-\\kEi/k\\kT}",
+       "src": "17.3"
+      },
+      {
+       "tex": "\\beta = \\dfrac{1}{k\\kT}",
+       "src": "17.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{q}{\\kQsys} = \\mk{s}{\\sum_i e^{-\\kEi/k\\kT}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{q}{\\kQsys} = \\mk{s}{\\sum_i e^{-\\beta \\kEi}}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "src": "17.3"
+    },
+    {
+     "assumes": [
+      {
+       "step": 3
+      }
+     ],
+     "then": {
+      "tex": "\\mk{q}{\\kQsys} = \\mk{s}{\\sum_i e^{-\\beta \\kEi}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{q}{\\ln \\kQsys} = \\mk{s}{\\ln \\sum_i e^{-\\beta \\kEi}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{q}{\\left(\\dfrac{\\partial \\ln \\kQsys}{\\partial\\beta}\\right)} = \\mk{s}{\\dfrac{1}{\\kQsys}\\sum_i (-\\kEi)\\,e^{-\\beta \\kEi}}",
+       "uses": [],
+       "cap": "By the chain rule the derivative of $\\ln Q$ is $(\\partial Q/\\partial\\beta)/Q$, and differentiating $e^{-\\beta E_i}$ with respect to $\\beta$ brings down $-E_i$."
+      },
+      {
+       "tex": "\\mk{q}{\\left(\\dfrac{\\partial \\ln \\kQsys}{\\partial\\beta}\\right)} = \\mk{s}{-\\sum_i \\dfrac{\\kEie^{-\\beta \\kEi}}{\\kQsys}}",
+       "uses": []
+      }
+     ],
+     "src": "17.3"
+    },
+    {
+     "assumes": [
+      {
+       "step": 4
+      },
+      {
+       "step": 0
+      },
+      {
+       "tex": "\\beta = \\dfrac{1}{k\\kT}",
+       "src": "17.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{q}{\\left(\\dfrac{\\partial \\ln \\kQsys}{\\partial\\beta}\\right)} = \\mk{s}{-\\sum_i \\dfrac{\\kEie^{-\\beta \\kEi}}{\\kQsys}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{q}{-\\left(\\dfrac{\\partial \\ln \\kQsys}{\\partial\\beta}\\right)} = \\mk{s}{\\sum_i \\dfrac{\\kEie^{-\\beta \\kEi}}{\\kQsys}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{q}{-\\left(\\dfrac{\\partial \\ln \\kQsys}{\\partial\\beta}\\right)} = \\mk{s}{\\sum_i \\dfrac{\\kEie^{-\\kEi/k\\kT}}{\\kQsys}}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{q}{-\\left(\\dfrac{\\partial \\ln \\kQsys}{\\partial\\beta}\\right)} = \\mk{s}{\\kEavg}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{s}{\\kEavg} = \\mk{q}{-\\left(\\dfrac{\\partial \\ln \\kQsys}{\\partial\\beta}\\right)}",
+       "uses": []
+      }
+     ],
+     "src": "17.3"
+    }
+   ]
+  }
+ ]
+}

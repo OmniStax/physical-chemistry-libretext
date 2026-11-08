@@ -300,7 +300,7 @@
          "a"
         ]
        },
-       "cap": "Differentiating the van der Waals equation with respect to $\\kV$ at constant temperature, then setting $\\kT = \\kTc$ and $\\kV = \\kVc$."
+       "cap": "Substituting the van der Waals equation into the first condition: differentiating it with respect to $\\kV$ at constant temperature, then setting $\\kT = \\kTc$ and $\\kV = \\kVc$."
       }
      ],
      "src": "16.3"
@@ -328,7 +328,7 @@
          "a"
         ]
        },
-       "cap": "Differentiating a second time."
+       "cap": "Substituting it into the second condition: differentiating a second time."
       }
      ],
      "src": "16.3"
@@ -355,7 +355,7 @@
        "uses": [
         1
        ],
-       "cap": "Dividing by the second condition written as $\\frac{2nRT_c}{(V_c - nb)^3} = \\frac{6an^2}{V_c^4}$ cancels $\\knmol\\kR\\kTc$ on the left and $\\ka\\knmol^2$ on the right."
+       "cap": "To solve the equations, first divide one by the other: dividing by the second condition written as $\\frac{2nRT_c}{(V_c - nb)^3} = \\frac{6an^2}{V_c^4}$ cancels $\\knmol\\kR\\kTc$ on the left and $\\ka\\knmol^2$ on the right."
       },
       {
        "tex": "\\mk{t}{3\\kVc - 3\\knmol\\kbvdw} = \\mk{a}{2\\kVc}",
@@ -363,7 +363,8 @@
       },
       {
        "tex": "\\mk{t}{\\kVc} = \\mk{a}{3\\knmol\\kbvdw}",
-       "uses": []
+       "uses": [],
+       "cap": "This is the critical volume."
       }
      ],
      "src": "16.3"
@@ -383,7 +384,8 @@
      "steps": [
       {
        "tex": "\\mk{t}{\\dfrac{\\knmol\\kR\\kTc}{\\left( \\kVc - \\knmol\\kbvdw \\right)^2}} = \\mk{a}{\\dfrac{2\\ka\\knmol^2}{\\kVc^3}}",
-       "uses": []
+       "uses": [],
+       "cap": "Now use either of the two conditions to obtain the critical temperature, $\\kTc$. If we use the first one, we find this line."
       },
       {
        "tex": "\\mk{t}{\\dfrac{\\knmol\\kR\\kTc}{\\left( 3\\knmol\\kbvdw - \\knmol\\kbvdw \\right)^2}} = \\mk{a}{\\dfrac{2\\ka\\knmol^2}{\\left( 3\\knmol\\kbvdw \\right)^3}}",
@@ -420,7 +422,7 @@
       "uses": [
        0
       ],
-      "why": "The critical point lies on the van der Waals isotherm at $\\kTc$."
+      "why": "Finally, plugging the critical temperature and volume into the van der Waals equation gives the critical pressure: the critical point lies on the van der Waals isotherm at $\\kTc$."
      },
      "steps": [
       {

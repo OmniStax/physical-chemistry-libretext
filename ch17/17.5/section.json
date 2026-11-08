@@ -1,0 +1,518 @@
+{
+ "id": "17.5",
+ "module": "13684",
+ "chapter": "17",
+ "title": "Pressure can be Expressed in Terms of the Canonical Partition Function",
+ "short": "Pressure from the partition function",
+ "lead": "The pressure of a system is an average over its states, each state pushing back on the walls as its energy changes with the volume. Written through the canonical partition function, that average leads to the ideal gas law and the energy of an ideal gas.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "Adapted from Jerry LaRue (Chapman University), Mark Tuckerman (New York University) and Stefan Franzen (North Carolina State University) under CC BY-NC-SA 4.0.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book prints no exercises for this section; both here are new and AI-written, their answers checked by computation with k = 1.381 × 10⁻²³ J/K and N_A = 6.022 × 10²³ mol⁻¹, with their Bloom levels and concept tags chosen by AI. Numeric answers accept a 2% tolerance.",
+ "figures": [
+  {
+   "id": "sim-piston-levels",
+   "kind": "sim",
+   "number": "17.5.1",
+   "originals": [
+    "/media/ch17/61536-Tuckerman_Screenshot_3-1.png"
+   ],
+   "widths": [
+    276
+   ],
+   "original_caption": "Illustration of a thought experiment in which a system is compressed via a piston pushed into the system along the positive $z$ axis.",
+   "draws": [
+    "length",
+    "temperature",
+    "energy",
+    "force",
+    "pressure",
+    "partition-function"
+   ],
+   "conventions": [
+    "He"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "pressure-average",
+   "concept": "state-pressure",
+   "verb": "introduces"
+  },
+  {
+   "span": "pressure-average",
+   "concept": "pressure-from-q",
+   "verb": "introduces"
+  },
+  {
+   "span": "pressure-average",
+   "concept": "canonical-partition-function",
+   "verb": "uses"
+  },
+  {
+   "span": "pressure-average",
+   "concept": "boltzmann-probability",
+   "verb": "uses"
+  },
+  {
+   "span": "pressure-average",
+   "concept": "pressure",
+   "verb": "uses"
+  },
+  {
+   "span": "ideal-gas-law",
+   "concept": "translational-partition-function",
+   "verb": "introduces"
+  },
+  {
+   "span": "ideal-gas-law",
+   "concept": "ideal-gas-constant",
+   "verb": "introduces"
+  },
+  {
+   "span": "ideal-gas-law",
+   "concept": "indistinguishable-partition-function",
+   "verb": "uses"
+  },
+  {
+   "span": "ideal-gas-law",
+   "concept": "pressure-from-q",
+   "verb": "uses"
+  },
+  {
+   "span": "ideal-gas-law",
+   "concept": "ideal-gas-law",
+   "verb": "reinforces"
+  },
+  {
+   "span": "gas-compressed-by-a-piston",
+   "concept": "pressure-energy-volume",
+   "verb": "introduces"
+  },
+  {
+   "span": "gas-compressed-by-a-piston",
+   "concept": "pressure",
+   "verb": "uses"
+  },
+  {
+   "span": "gas-compressed-by-a-piston",
+   "concept": "pressure-from-q",
+   "verb": "reinforces"
+  },
+  {
+   "span": "ideal-gas-in-the-canonical-ensemble",
+   "concept": "classical-partition-function",
+   "verb": "introduces"
+  },
+  {
+   "span": "ideal-gas-in-the-canonical-ensemble",
+   "concept": "ideal-gas-partition-function",
+   "verb": "introduces"
+  },
+  {
+   "span": "ideal-gas-in-the-canonical-ensemble",
+   "concept": "average-energy-from-q",
+   "verb": "uses"
+  },
+  {
+   "span": "ideal-gas-in-the-canonical-ensemble",
+   "concept": "gaussian-integral",
+   "verb": "uses"
+  },
+  {
+   "span": "ideal-gas-in-the-canonical-ensemble",
+   "concept": "kinetic-temperature",
+   "verb": "reinforces"
+  },
+  {
+   "span": "ideal-gas-in-the-canonical-ensemble",
+   "concept": "ideal-gas-law",
+   "verb": "reinforces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "Which shows that the pressure can be expressed solely terms of the partition function:",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "ideal-gas-law",
+   "prompt": "<p>One mole of an ideal gas fills 22.4 L at 273.15 K. With $\\ln Q = N\\ln q - \\ln N!$ and $q = (2\\pi m/h^2\\beta)^{3/2}V$, use $\\langle P \\rangle = kT(\\partial \\ln Q/\\partial V)_{N,\\beta}$ to find its pressure in pascals.</p>",
+   "answer": {
+    "type": "number",
+    "value": 101400.0,
+    "unit": "Pa",
+    "generated_by": "ai",
+    "hint": "Only $N\\ln V$ in $\\ln Q$ changes with $V$.",
+    "solution": "<p>Only the term $N\\ln V$ of $\\ln Q$ depends on the volume, so $(\\partial \\ln Q/\\partial V)_{N,\\beta} = N/V$ and $\\langle P \\rangle = NkT/V$. With $N = 6.022 \\times 10^{23}$, $k = 1.381 \\times 10^{-23}$ J/K, $T = 273.15$ K and $V = 0.0224$ m³: $\\langle P \\rangle = \\dfrac{(6.022 \\times 10^{23})(1.381 \\times 10^{-23}\\ \\text{J/K})(273.15\\ \\text{K})}{0.0224\\ \\text{m}^3} = 1.014 \\times 10^5$ Pa, about one atmosphere.</p>"
+   }
+  },
+  {
+   "id": "a2",
+   "source_id": "Only one term in the ln $Q$ depends on $V$.",
+   "kind": "exercise",
+   "bloom": "Analyze",
+   "place": {
+    "at": "end"
+   },
+   "cite": "ideal-gas-law",
+   "prompt": "<p>Suppose each of $N$ molecules cannot enter a small volume $b$ held by the others, so that the partition function becomes $Q = \\dfrac{1}{N!}\\left[\\left(\\dfrac{2\\pi m}{h^2\\beta}\\right)^{3/2}(V - Nb)\\right]^N$. Use $\\langle P \\rangle = kT(\\partial \\ln Q/\\partial V)_{N,\\beta}$ to find the equation of state.</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "Take the logarithm first; only $N\\ln(V - Nb)$ depends on $V$.",
+    "solution": "<p>$\\ln Q = \\dfrac{3N}{2}\\ln\\left(\\dfrac{2\\pi m}{h^2\\beta}\\right) + N\\ln(V - Nb) - \\ln N!$. Only the middle term depends on $V$, so $\\left(\\dfrac{\\partial \\ln Q}{\\partial V}\\right)_{N,\\beta} = \\dfrac{N}{V - Nb}$ and $\\langle P \\rangle = \\dfrac{NkT}{V - Nb}$. The molecules move as in an ideal gas, but in the free volume $V - Nb$ only, which is the repulsive part of the van der Waals equation (Section 16.2).</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "pressure-from-q"
+  },
+  {
+   "exercise": "a1",
+   "concept": "ideal-gas-law"
+  },
+  {
+   "exercise": "a2",
+   "concept": "pressure-from-q"
+  },
+  {
+   "exercise": "a2",
+   "concept": "translational-partition-function"
+  }
+ ],
+ "footnotes": [],
+ "derivations": [
+  {
+   "id": "pressure-from-q",
+   "what": "the pressure from the partition function",
+   "source": "Physical Chemistry (LibreTexts), 17.5 Pressure can be Expressed in Terms of the Canonical Partition Function",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kPavg = \\sum_i{P_i(N,\\kV,\\kT)\\kPipress(N,\\kV)}"
+      },
+      {
+       "tex": "\\kPipress(N,\\kV) = -\\left(\\dfrac{\\partial \\kEi}{\\partial \\kV}\\right)_N"
+      },
+      {
+       "tex": "P_i = \\dfrac{e^{-\\kEi/k\\kT}}{\\kQsys(N,\\kV,\\kT)}",
+       "src": "17.2"
+      }
+     ],
+     "then": {
+      "tex": "\\kPavg = \\sum_i{\\mk{p}{P_i(N,\\kV,\\kT)}\\mk{s}{\\kPipress(N,\\kV)}}"
+     },
+     "steps": [
+      {
+       "tex": "\\kPavg = \\sum_i{\\mk{p}{P_i(N,\\kV,\\beta)}\\mk{s}{\\left(-\\dfrac{\\partial \\kEi}{\\partial \\kV}\\right)_N}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\kPavg = \\sum_i{\\mk{s}{\\left(-\\dfrac{\\partial \\kEi}{\\partial \\kV}\\right)_N}\\mk{p}{\\dfrac{e^{-\\kEi(N,\\kV)/k\\kT}}{\\kQsys(N,\\kV,\\kT)}}}",
+       "uses": [
+        2
+       ]
+      }
+     ],
+     "src": "17.5"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\kQsys(N,\\kV,\\kT) = \\sum_i{e^{-\\kEi(N,\\kV)/k\\kT}}",
+       "src": "17.2"
+      },
+      {
+       "tex": "\\beta = \\dfrac{1}{k\\kT}",
+       "src": "17.1"
+      }
+     ],
+     "then": {
+      "tex": "\\kQsys(N,\\kV,\\kT) = \\sum_i{\\mk{e}{e^{-\\kEi(N,\\kV)/k\\kT}}}"
+     },
+     "steps": [
+      {
+       "tex": "\\kQsys(N,\\kV,\\beta) = \\sum_i{\\mk{e}{e^{-\\beta \\kEi(N,\\kV)}}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{d}{\\left(\\dfrac{\\partial \\kQsys}{\\partial \\kV}\\right)_{N,\\beta}} = \\mk{e}{-\\beta \\sum_i{\\left(\\dfrac{\\partial \\kEi}{\\partial \\kV}\\right)_{N}e^{-\\beta \\kEi(N,\\kV)}}}",
+       "uses": [],
+       "cap": "At fixed $\\beta$ only the energies change with the volume, and the chain rule brings $-\\beta\\,\\partial E_i/\\partial V$ down from each exponential."
+      }
+     ],
+     "src": "17.5"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "step": 1
+      },
+      {
+       "tex": "\\beta = \\dfrac{1}{k\\kT}",
+       "src": "17.1"
+      }
+     ],
+     "then": {
+      "tex": "\\kPavg = \\mk{s}{\\sum_i{\\left(-\\dfrac{\\partial \\kEi}{\\partial \\kV}\\right)_N\\dfrac{e^{-\\kEi(N,\\kV)/k\\kT}}{\\kQsys(N,\\kV,\\kT)}}}"
+     },
+     "steps": [
+      {
+       "tex": "\\kPavg = \\mk{q}{\\dfrac{1}{\\kQsys}}\\mk{s}{\\left(-\\sum_i{\\left(\\dfrac{\\partial \\kEi}{\\partial \\kV}\\right)_N e^{-\\beta\\kEi(N,\\kV)}}\\right)}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\kPavg = \\mk{q}{\\dfrac{1}{\\beta\\kQsys}}\\mk{s}{\\left(\\dfrac{\\partial \\kQsys}{\\partial \\kV}\\right)_{N,\\beta}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\kPavg = \\mk{q}{\\dfrac{k\\kT}{\\kQsys(N,\\kV,\\beta)}}\\mk{s}{\\left(\\dfrac{\\partial \\kQsys}{\\partial \\kV}\\right)_{N,\\beta}}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\kPavg = \\mk{q}{k\\kT}\\mk{s}{\\left(\\dfrac{\\partial \\ln{\\kQsys}}{\\partial \\kV}\\right)_{N,\\beta}}",
+       "uses": [],
+       "cap": "The derivative of a logarithm: $\\partial \\ln Q = \\partial Q/Q$."
+      }
+     ],
+     "src": "17.5"
+    }
+   ]
+  },
+  {
+   "id": "ideal-gas-law",
+   "what": "the ideal gas law from the partition function",
+   "source": "Physical Chemistry (LibreTexts), 17.5 Pressure can be Expressed in Terms of the Canonical Partition Function",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kQsys(N,\\kV,\\beta) = \\dfrac{[\\kqtrans(\\kV,\\beta)]^N}{N!}"
+      },
+      {
+       "tex": "\\kqtrans(\\kV,\\beta) = \\left(\\dfrac{2\\pi \\km}{h^2\\beta}\\right)^{3/2}\\kV"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\kQsys(N,\\kV,\\beta)} = \\mk{r}{\\dfrac{[\\kqtrans(\\kV,\\beta)]^N}{N!}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\ln\\kQsys} = \\mk{a}{N\\ln{\\kqtrans}}\\mk{b}{-\\ln{N!}}",
+       "uses": [],
+       "map": {
+        "r": [
+         "a",
+         "b"
+        ]
+       },
+       "cap": "Taking the logarithm, with $\\ln(AB) = \\ln A + \\ln B$ and $\\ln(X^Y) = Y\\ln X$."
+      },
+      {
+       "tex": "\\mk{l}{\\ln\\kQsys} = \\mk{a}{\\dfrac{3N}{2}\\ln{\\left(\\dfrac{2\\pi \\km}{h^2\\beta}\\right)}+N\\ln{\\kV}}\\mk{b}{-\\ln{N!}}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "src": "17.5",
+     "note": "The book prints $-\\dfrac{3N}{2}\\ln\\left(\\dfrac{2\\pi m}{h^2\\beta}\\right)$; $N\\ln q$ contributes $+\\dfrac{3N}{2}\\ln\\left(\\dfrac{2\\pi m}{h^2\\beta}\\right)$. The term holds no $V$, so the pressure is unaffected."
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\kPavg = k\\kT\\left(\\dfrac{\\partial \\ln{\\kQsys}}{\\partial \\kV}\\right)_{N,\\beta}",
+       "drv": "pressure-from-q"
+      },
+      {
+       "step": 0
+      },
+      {
+       "tex": "Nk = \\knmol R",
+       "src": "17.5"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{p}{\\kPavg} = \\mk{k}{k\\kT}\\mk{d}{\\left(\\dfrac{\\partial \\ln{\\kQsys}}{\\partial \\kV}\\right)_{N,\\beta}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{p}{\\kPavg} = \\mk{k}{k\\kT}\\mk{d}{\\left(\\dfrac{\\partial (N\\ln{\\kV})}{\\partial \\kV}\\right)_{N,\\beta}}",
+       "uses": [
+        1
+       ],
+       "cap": "Only one term in $\\ln Q$ depends on $V$."
+      },
+      {
+       "tex": "\\mk{p}{\\kPavg} = \\mk{k}{k\\kT}\\mk{d}{\\dfrac{N}{\\kV}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{p}{\\kP} = \\mk{k}{\\dfrac{Nk\\kT}{\\kV}}",
+       "uses": [],
+       "map": {
+        "d": "k"
+       }
+      },
+      {
+       "tex": "\\mk{p}{\\kP} = \\mk{k}{\\dfrac{\\knmol R\\kT}{\\kV}}",
+       "uses": [
+        2
+       ]
+      }
+     ],
+     "src": "17.5"
+    }
+   ]
+  },
+  {
+   "id": "ideal-gas-energy",
+   "what": "the energy of an ideal gas",
+   "source": "Physical Chemistry (LibreTexts), 17.5 Pressure can be Expressed in Terms of the Canonical Partition Function",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kQsys(N, \\kV, \\kT) = \\dfrac{1}{N!h^{3N}} \\int dx \\: e^{-\\beta \\sum_{i=1}^N \\kpivec^2/2\\km}"
+      },
+      {
+       "text": "The phase-space point $x$ holds the positions and momenta of all $N$ particles: each position ranges over the volume $V$, and each momentum has three components."
+      },
+      {
+       "tex": "\\int_{-\\infty}^{\\infty} dp \\: e^{-\\beta p^2/2\\km} = \\left(\\dfrac{2\\pi\\km}{\\beta}\\right)^{1/2}",
+       "src": "13.7"
+      }
+     ],
+     "then": {
+      "tex": "\\kQsys(N, \\kV, \\kT) = \\mk{c}{\\dfrac{1}{N!h^{3N}}} \\mk{i}{\\int dx \\: e^{-\\beta \\sum_{i=1}^N \\kpivec^2/2\\km}}"
+     },
+     "steps": [
+      {
+       "tex": "\\kQsys(N, \\kV, \\kT) = \\mk{c}{\\dfrac{1}{N!h^{3N}}}\\mk{v}{\\kV^N} \\mk{i}{\\left[ \\int dp \\: e^{-\\beta p^2/2\\km} \\right]^{3N}}",
+       "uses": [
+        1
+       ],
+       "map": {
+        "i": [
+         "v",
+         "i"
+        ]
+       },
+       "cap": "The energy depends on the momenta alone, so each particle's position integral gives $V$, and the exponential of a sum over $3N$ momentum components splits into $3N$ equal integrals."
+      },
+      {
+       "tex": "\\kQsys(N, \\kV, \\kT) = \\mk{c}{\\dfrac{1}{N!h^{3N}}}\\mk{v}{\\kV^N} \\mk{i}{\\left(\\dfrac{2\\pi\\km}{\\beta}\\right)^{3N/2}}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\kQsys(N, \\kV, \\kT) = \\mk{c}{\\dfrac{1}{N!}} \\left[ \\mk{v}{\\dfrac{\\kV}{h^3}} \\mk{i}{\\left( \\dfrac{2 \\pi \\km}{\\beta} \\right)^{3/2}} \\right]^N",
+       "uses": []
+      }
+     ],
+     "src": "17.5"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "\\kE = -\\dfrac{\\partial}{\\partial \\beta} \\ln \\kQsys(N, \\kV, \\kT)",
+       "src": "17.3",
+       "drv": "17.3/average-energy"
+      },
+      {
+       "tex": "\\beta = \\dfrac{1}{k\\kT}",
+       "src": "17.1"
+      },
+      {
+       "tex": "Nk = \\knmol R",
+       "src": "17.5"
+      }
+     ],
+     "then": {
+      "tex": "\\kE = \\mk{d}{-\\dfrac{\\partial}{\\partial \\beta}} \\mk{l}{\\ln \\kQsys(N, \\kV, \\kT)}"
+     },
+     "steps": [
+      {
+       "tex": "\\kE = \\mk{d}{-\\dfrac{\\partial}{\\partial \\beta}} \\mk{l}{\\left[ N\\ln\\dfrac{\\kV}{h^3} + \\dfrac{3N}{2}\\ln(2\\pi\\km) - \\dfrac{3N}{2}\\ln\\beta - \\ln N! \\right]}",
+       "uses": [
+        0
+       ],
+       "cap": "The logarithm of a product is the sum of the logarithms, and $\\ln(X^Y) = Y\\ln X$."
+      },
+      {
+       "tex": "\\kE = \\mk{l}{\\dfrac{3N}{2}\\,\\dfrac{1}{\\beta}}",
+       "uses": [],
+       "map": {
+        "d": "l"
+       },
+       "cap": "Only the term in $\\ln\\beta$ depends on $\\beta$."
+      },
+      {
+       "tex": "\\kE = \\mk{l}{\\dfrac{3}{2}Nk\\kT}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\kE = \\mk{l}{\\dfrac{3}{2}Nk\\kT} = \\mk{n}{\\dfrac{3}{2}\\knmol R\\kT}",
+       "uses": [
+        3
+       ]
+      }
+     ],
+     "num": "(17.5.7)",
+     "src": "17.5"
+    }
+   ]
+  }
+ ]
+}

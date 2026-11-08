@@ -1,0 +1,226 @@
+{
+ "id": "17.1",
+ "module": "2405",
+ "chapter": "17",
+ "title": "The Boltzmann Factor is used to Approximate the Fraction of Particles in a Large System",
+ "short": "The Boltzmann factor",
+ "lead": "A gas of some 10²³ particles moving under Newton's laws holds far more detail than anyone could store. An ensemble of systems that share one macroscopic state averages that detail away, and the Boltzmann factor ties the chance of finding a particle in a state to the state's energy and the temperature.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "Adapted from Mark Tuckerman (New York University); the page's two references, which its text never cites, are left out.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": []
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book's Problems 1 to 4 are unkeyed and have AI solutions; its Problem 5 asks about the separate arrangements of Section 17.2 and is set there. The last exercise, on the Boltzmann factor of a 50 kJ/mol barrier, was written by AI with an AI solution. Bloom levels and concept tags were chosen by AI. Numeric answers accept a 2% tolerance.",
+ "figures": [],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "microscopic-laws",
+   "concept": "newtons-second-law",
+   "verb": "introduces"
+  },
+  {
+   "span": "microscopic-laws",
+   "concept": "force-field",
+   "verb": "introduces"
+  },
+  {
+   "span": "microscopic-laws",
+   "concept": "classical-trajectory",
+   "verb": "introduces"
+  },
+  {
+   "span": "ensemble-concept",
+   "concept": "kinetic-temperature",
+   "verb": "introduces"
+  },
+  {
+   "span": "ensemble-concept",
+   "concept": "many-microstates-one-macrostate",
+   "verb": "introduces"
+  },
+  {
+   "span": "ensemble-concept",
+   "concept": "ensemble",
+   "verb": "introduces"
+  },
+  {
+   "span": "ensemble-concept",
+   "concept": "ensemble-concept",
+   "verb": "introduces"
+  },
+  {
+   "span": "thermal-energy",
+   "concept": "thermal-energy",
+   "verb": "introduces"
+  },
+  {
+   "span": "thermal-energy",
+   "concept": "boltzmann-constant",
+   "verb": "introduces"
+  },
+  {
+   "span": "thermal-energy",
+   "concept": "thermodynamic-beta",
+   "verb": "introduces"
+  },
+  {
+   "span": "thermal-energy",
+   "concept": "boltzmann-factor",
+   "verb": "introduces"
+  },
+  {
+   "span": "thermal-energy",
+   "concept": "activation-energy",
+   "verb": "introduces"
+  },
+  {
+   "span": "thermal-energy",
+   "concept": "activated-processes-boltzmann",
+   "verb": "introduces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "p1",
+   "source_id": "How are temperature and the average ener",
+   "source_number": "Problem 1",
+   "kind": "exercise",
+   "bloom": "Understand",
+   "place": {
+    "at": "end"
+   },
+   "cite": "ensemble-concept",
+   "prompt": "<p>How are temperature and the average energy per particle for a system related?</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "<p>The temperature is proportional to the average kinetic energy per particle. Equation 17.1.3 sets $\\tfrac{3}{2}Nk\\kT$ equal to the total kinetic energy $\\sum_i \\tfrac{1}{2}\\kmi\\kvivec^2$, so each particle carries $\\tfrac{3}{2}k\\kT$ on average, and solving for $\\kT$ gives Equation 17.1.4, $\\kT = \\tfrac{2}{3k}\\langle \\tfrac{1}{2}\\kmi\\kvivec^2\\rangle$. Doubling the average kinetic energy doubles the absolute temperature.</p>"
+   }
+  },
+  {
+   "id": "p2",
+   "source_id": "What does the Boltzmann factor tell you?",
+   "source_number": "Problem 2",
+   "kind": "exercise",
+   "bloom": "Understand",
+   "place": {
+    "at": "end"
+   },
+   "cite": "thermal-energy",
+   "prompt": "<p>What does the Boltzmann factor tell you? Why is it important?</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "<p>The Boltzmann factor $e^{-\\beta\\kEi} = e^{-\\kEi/k\\kT}$ gives the relative chance that a state of energy $\\kEi$ is occupied at temperature $\\kT$. It compares the state's energy with the thermal energy $k\\kT$: a state far above $k\\kT$ is rarely occupied, and one within a few $k\\kT$ of the lowest state is occupied often. It matters because it sets how particles are spread over their states, and every average property of the system is built from that spread. It also sets the rates of activated processes, since the fraction of particles with enough energy to cross a barrier is roughly the Boltzmann factor of the barrier.</p>"
+   }
+  },
+  {
+   "id": "p3",
+   "source_id": "When is it possible for particles to get",
+   "source_number": "Problem 3",
+   "kind": "exercise",
+   "bloom": "Understand",
+   "place": {
+    "at": "end"
+   },
+   "cite": "thermal-energy",
+   "prompt": "<p>When is it possible for particles to get extra energy?</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "<p>A particle gains energy from its surroundings, through collisions with other particles, and it does so more often when the temperature is raised, since heating adds energy to the system and moves particles into states with higher quantum numbers. A typical particle carries only a small multiple of $k\\kT$, so reaching an energy $\\kE$ well above that is a rare fluctuation. The fraction of particles that have it is about $e^{-\\kE/k\\kT}$, which grows quickly as $\\kT$ rises. This is why more particles cross an activation barrier at higher temperature.</p>"
+   }
+  },
+  {
+   "id": "p4",
+   "source_id": "Give three examples of activation proces",
+   "source_number": "Problem 4",
+   "kind": "exercise",
+   "bloom": "Remember",
+   "place": {
+    "at": "end"
+   },
+   "cite": "thermal-energy",
+   "prompt": "<p>Give three examples of activation processes.</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "<p>Three processes whose rates follow the Boltzmann factor of a barrier: a chemical reaction, in which only molecules that collide with at least the activation energy react (the Arrhenius rate law, $k_r \\propto e^{-E_a/R\\kT}$); evaporation, in which a molecule must have enough energy to escape the liquid's surface; and viscous flow of a liquid, in which a molecule must squeeze past its neighbors over an energy barrier, so the viscosity falls steeply as the liquid warms. Diffusion of atoms in a solid and the emission of electrons from a hot metal are two more.</p>"
+   }
+  },
+  {
+   "id": "ai1",
+   "source_id": "eq:17.1",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "thermal-energy",
+   "prompt": "<p>A reaction has an activation energy of 50 kJ/mol. By what factor does the Boltzmann factor of the barrier, $e^{-E_a/R\\kT}$, grow when the temperature rises from 300 K to 310 K? ($R$ = 8.314 J K⁻¹ mol⁻¹.)</p>",
+   "answer": {
+    "type": "number",
+    "value": 1.91,
+    "generated_by": "ai",
+    "hint": "Divide the factor at 310 K by the factor at 300 K; the ratio is $e^{(E_a/R)(1/300 - 1/310)}$.",
+    "solution": "<p>The ratio of the two factors is $e^{-E_a/R(310\\ \\text{K})}/e^{-E_a/R(300\\ \\text{K})} = \\exp\\left[\\dfrac{E_a}{R}\\left(\\dfrac{1}{300\\ \\text{K}} - \\dfrac{1}{310\\ \\text{K}}\\right)\\right]$. With $E_a/R = (50\\,000\\ \\text{J/mol})/(8.314\\ \\text{J K}^{-1}\\text{mol}^{-1}) = 6014$ K and $1/300 - 1/310 = 1.075\\times10^{-4}$ K⁻¹, the exponent is 0.647, so the factor grows by $e^{0.647} = 1.91$. A rise of about 3% in temperature nearly doubles the fraction of molecules that can cross the barrier.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "p1",
+   "concept": "kinetic-temperature"
+  },
+  {
+   "exercise": "p2",
+   "concept": "boltzmann-factor"
+  },
+  {
+   "exercise": "p3",
+   "concept": "thermal-energy"
+  },
+  {
+   "exercise": "p3",
+   "concept": "activated-processes-boltzmann"
+  },
+  {
+   "exercise": "p4",
+   "concept": "activated-processes-boltzmann"
+  },
+  {
+   "exercise": "p4",
+   "concept": "activation-energy"
+  },
+  {
+   "exercise": "ai1",
+   "concept": "boltzmann-factor"
+  },
+  {
+   "exercise": "ai1",
+   "concept": "activated-processes-boltzmann"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-quad-bytes",
+   "kind": "correction",
+   "html": "Quadruple precision stores a number in 128 bits, which is 16 bytes, not 128 bytes. At 16 bytes for each of the $6\\times10^{23}$ numbers, one classical state takes about $10^{16}$ gigabytes (some 10 yottabytes), ten orders of magnitude more than $10^6$ gigabytes."
+  },
+  {
+   "id": "c-last-formula",
+   "kind": "correction",
+   "html": "The formula is the energy of a particle in a three-dimensional box, $E = \\dfrac{h^2}{8mL^2}(n_x^2 + n_y^2 + n_z^2)$, from <a class=\"xref\" href=\"#3.9-separating-the-dimensions\">Section 3.9</a>; this page does not print it."
+  }
+ ]
+}

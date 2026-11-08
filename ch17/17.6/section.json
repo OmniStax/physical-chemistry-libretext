@@ -1,0 +1,88 @@
+{
+ "id": "17.6",
+ "module": "13685",
+ "chapter": "17",
+ "title": "The Partition Function of Distinguishable, Independent Molecules is the Product of the Molecular Partition Functions",
+ "short": "Distinguishable molecules",
+ "lead": "The molecules of a crystal stay near fixed sites, so each one can be told apart from its neighbors. Their energies add, and the partition function of the whole crystal is built from those of its molecules.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "Adapted from Jerry LaRue (Chapman University), shared under CC BY 4.0 at the source and here under the book's CC BY-NC-SA 4.0.",
+ "ai": {"text": [{"model": "claude-opus-5-5", "effort": "low"}], "figures": []},
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book prints no exercises for this section; the one here is new and AI-written, its answer checked by computation, with its Bloom level and concept tags chosen by AI. Numeric answers accept a 2% tolerance.",
+ "figures": [],
+ "referents": [],
+ "coverage": [
+  {"span": "distinguishable-molecules", "concept": "independent-energy-additivity", "verb": "introduces"},
+  {"span": "distinguishable-molecules", "concept": "distinguishable-particles", "verb": "introduces"},
+  {"span": "distinguishable-molecules", "concept": "canonical-partition-function", "verb": "uses"},
+  {"span": "distinguishable-molecules", "concept": "molecular-partition-function", "verb": "uses"},
+  {"span": "distinguishable-molecules", "concept": "distinguishable-partition-function", "verb": "reinforces"}
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "If the energy states of all the particles are the same, then the equation simplifies to:",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {"at": "end"},
+   "cite": "distinguishable-molecules",
+   "prompt": "<p>A small crystal holds three molecules at fixed sites. Each molecule has two states, of energies $0$ and $\\epsilon$, and the temperature is such that $\\beta\\epsilon = 1$. Find the molecular partition function $q$ and the partition function $Q$ of the crystal.</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {"part": "q", "value": 1.368, "hint": "Sum the Boltzmann factor $e^{-\\beta\\epsilon_i}$ over the two states of one molecule."},
+     {"part": "Q", "value": 2.559}
+    ],
+    "solution": "<p>One molecule: $q = e^{0} + e^{-\\beta\\epsilon} = 1 + e^{-1} = 1.368$. The molecules sit at sites, so they are distinguishable, and they are independent with the same states, so $Q = q^N = (1.368)^3 = 2.559$. Summing over all eight states of the crystal gives the same number: $1 + 3e^{-1} + 3e^{-2} + e^{-3} = 2.559$.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {"exercise": "a1", "concept": "distinguishable-partition-function"},
+  {"exercise": "a1", "concept": "molecular-partition-function"}
+ ],
+ "footnotes": [
+  {"id": "c-sum-index", "kind": "correction", "html": "The first sum runs over the states $l$ of the system: $Q = \\sum_l e^{-\\beta E_l}$."},
+  {"id": "c-next-section", "kind": "correction", "html": "The indistinguishable case is the next section, <a class=\"xref\" href=\"/physical-chemistry-libretext/ch17/17.7/\">Section 17.7</a>."}
+ ],
+ "derivations": [
+  {
+   "id": "distinguishable-q",
+   "what": "the partition function of distinguishable molecules",
+   "source": "Physical Chemistry (LibreTexts), 17.6 The Partition Function of Distinguishable, Independent Molecules is the Product of the Molecular Partition Functions",
+   "nodes": [
+    {
+     "assumes": [
+      {"tex": "\\kQsys(N,\\kV,\\beta) = \\sum_{i,j,k,\\dots} e^{-\\beta (\\epsilon_i^a + \\epsilon_j^b + \\epsilon_k^c+\\cdots)}"},
+      {"text": "The molecules are distinguishable and independent, so each index runs over the states of its own molecule whatever the states of the others."},
+      {"tex": "\\kqa = \\sum_i e^{-\\beta\\epsilon_i^a}", "src": "17.2"}
+     ],
+     "then": {"tex": "\\kQsys(N,\\kV,\\beta) = \\mk{s}{\\sum_{i,j,k,\\dots}} \\mk{e}{e^{-\\beta (\\epsilon_i^a + \\epsilon_j^b + \\epsilon_k^c+\\cdots)}}"},
+     "steps": [
+      {"tex": "\\kQsys(N,\\kV,\\beta) = \\mk{s}{\\sum_{i,j,k,\\dots}} \\mk{a}{e^{-\\beta\\epsilon_i^a}}\\,\\mk{b}{e^{-\\beta\\epsilon_j^b}}\\,\\mk{c}{e^{-\\beta\\epsilon_k^c}}\\cdots", "uses": [], "map": {"e": ["a", "b", "c"]}, "cap": "The exponential of a sum is the product of the exponentials, $e^{x+y} = e^x e^y$."},
+      {"tex": "\\kQsys(N,\\kV,\\beta) = \\mk{a}{\\sum_{i} e^{-\\beta \\epsilon_i^a}} \\mk{b}{\\sum_{j} e^{-\\beta \\epsilon_j^b}} \\mk{c}{\\sum_{k} e^{-\\beta \\epsilon_k^c}} \\cdots", "uses": [1], "cap": "Since no index depends on another, the multiple sum splits into one sum per molecule, each summed over independently."},
+      {"tex": "\\kQsys(N,\\kV,\\beta) = \\mk{a}{\\kqa(\\kV,\\beta)}\\, \\mk{b}{\\kqb(\\kV,\\beta)}\\, \\mk{c}{\\kqc(\\kV,\\beta)} \\cdots", "uses": [2]},
+      {"tex": "\\kQsys(N,\\kV,\\beta) = \\mk{a}{\\prod_i^N \\kqi(\\kV,\\beta)}", "uses": [], "map": {"b": "a", "c": "a"}}
+     ],
+     "src": "17.6",
+     "note": "The book's sum writes $\\sum_j e^{-\\beta\\epsilon_i^b}\\sum_k e^{-\\beta\\epsilon_i^c}$; each sum runs over its own index, $\\epsilon_j^b$ and $\\epsilon_k^c$."
+    },
+    {
+     "assumes": [
+      {"step": 0},
+      {"text": "The energy states of all the particles are the same, so every molecule has the same partition function, $\\kqa = \\kqb = \\kqc = \\cdots = \\kqmol$."}
+     ],
+     "then": {"tex": "\\kQsys(N,\\kV,\\beta) = \\mk{p}{\\prod_i^N \\kqi(\\kV,\\beta)}"},
+     "steps": [
+      {"tex": "\\kQsys(N,\\kV,\\beta) = \\mk{p}{[\\kqmol(\\kV,\\beta)]^N}", "uses": [1]}
+     ],
+     "src": "17.6"
+    }
+   ]
+  }
+ ]
+}

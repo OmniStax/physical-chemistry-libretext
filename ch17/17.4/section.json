@@ -1,0 +1,616 @@
+{
+ "id": "17.4",
+ "module": "13683",
+ "chapter": "17",
+ "title": "Heat Capacity at Constant Volume is the Change in Internal Energy with Temperature",
+ "short": "Heat capacity",
+ "lead": "The heat capacity at constant volume measures how the internal energy changes with temperature, and the partition function gives it as a second derivative. Dulong and Petit found one value for many solids near room temperature; Einstein's model of a solid as identical oscillators explains that value and why heat capacities fall at low temperature.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "Adapted from Jerry LaRue (Chapman University); Figure 17.4.1 is from OpenStax, and Figures 17.4.3 and 17.4.4 are folded into Figure 17.4.2, with the measured points of Figure 17.4.4 read off its image and its three unlabeled brown points left out.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercises for this section; both exercises, on the Einstein heat capacity at three temperatures and on diamond, were written by AI with AI solutions. Bloom levels and concept tags were chosen by AI. Numeric answers accept a 2% tolerance.",
+ "figures": [
+  {
+   "id": "fig-17-4-1",
+   "kind": "photo",
+   "number": "17.4.1",
+   "draws": []
+  },
+  {
+   "id": "sim-einstein-solid",
+   "kind": "sim",
+   "number": "17.4.2",
+   "folds": [
+    "17.4.3",
+    "17.4.4"
+   ],
+   "originals": [
+    "/media/ch17/346369-17.4.2.svg",
+    "/media/ch17/346394-17.4.3.svg",
+    "/media/ch17/9841-Heat_Capacity.GIF"
+   ],
+   "widths": [
+    560,
+    615,
+    559
+   ],
+   "original_caption": "This Figure illustrates the effect of the Einstein temperature on the likelihood of an oscillator absorbing energy from a collision and transferring that energy into stored heat or heat capacity. As the Einstein temperature increases, the greater the probability of an oscillator being excited to the next vibrational state. (CC BY-NC 4.0; Ümit Kaya via LibreTexts)",
+   "draws": [
+    "heat-capacity",
+    "temperature",
+    "energy"
+   ],
+   "conventions": [
+    "Pb",
+    "Ag",
+    "Zn",
+    "Cu",
+    "Al"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built, the measured points read off Figure 17.4.4"
+    }
+   ]
+  },
+  {
+   "id": "sim-schottky",
+   "kind": "sim",
+   "draws": [
+    "heat-capacity",
+    "temperature",
+    "energy"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "fig-17-4-5",
+   "kind": "photo",
+   "number": "17.4.5",
+   "widths": [
+    473
+   ],
+   "draws": []
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "heat-capacity-from-ln-q",
+   "concept": "internal-energy",
+   "verb": "introduces"
+  },
+  {
+   "span": "heat-capacity-from-ln-q",
+   "concept": "constant-volume-heat-capacity",
+   "verb": "introduces"
+  },
+  {
+   "span": "heat-capacity-from-ln-q",
+   "concept": "heat-capacity-from-q",
+   "verb": "introduces"
+  },
+  {
+   "span": "dulong-petit",
+   "concept": "dulong-petit-law",
+   "verb": "introduces"
+  },
+  {
+   "span": "dulong-petit",
+   "concept": "heat-capacity-vanishes",
+   "verb": "introduces"
+  },
+  {
+   "span": "einstein",
+   "concept": "einstein-solid",
+   "verb": "introduces"
+  },
+  {
+   "span": "einstein",
+   "concept": "einstein-temperature",
+   "verb": "introduces"
+  },
+  {
+   "span": "einstein",
+   "concept": "einstein-heat-capacity",
+   "verb": "introduces"
+  },
+  {
+   "span": "einstein",
+   "concept": "einstein-high-temperature-limit",
+   "verb": "introduces"
+  },
+  {
+   "span": "einstein",
+   "concept": "einstein-low-temperature-limit",
+   "verb": "introduces"
+  },
+  {
+   "span": "einstein",
+   "concept": "stiff-light-solids",
+   "verb": "introduces"
+  },
+  {
+   "span": "einstein",
+   "concept": "einstein-model-limits",
+   "verb": "introduces"
+  },
+  {
+   "span": "heat-capacity-from-ln-q",
+   "concept": "average-energy-from-q",
+   "verb": "uses"
+  },
+  {
+   "span": "dulong-petit",
+   "concept": "degrees-of-freedom",
+   "verb": "uses"
+  },
+  {
+   "span": "einstein",
+   "concept": "degrees-of-freedom",
+   "verb": "uses"
+  },
+  {
+   "span": "einstein",
+   "concept": "oscillator-frequency",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "ai1",
+   "source_id": "eq:4",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "einstein",
+   "prompt": "<p>In Einstein's model, what fraction of the Dulong–Petit value $3Nk$ is the heat capacity of a solid at (a) $\\kT = \\kthetaE/2$, (b) $\\kT = \\kthetaE$ and (c) $\\kT = 2\\kthetaE$?</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 0.724,
+      "hint": "Set $x = \\kthetaE/\\kT$ in $\\kCV/3Nk = x^2e^x/(e^x - 1)^2$."
+     },
+     {
+      "part": "b",
+      "value": 0.921
+     },
+     {
+      "part": "c",
+      "value": 0.979
+     }
+    ],
+    "solution": "<p>Dividing the Einstein heat capacity by $3Nk$ leaves $\\kCV/3Nk = x^2e^x/(e^x - 1)^2$ with $x = \\kthetaE/\\kT$. (a) $x = 2$: $4(7.389)/(6.389)^2 = 0.724$. (b) $x = 1$: $2.718/(1.718)^2 = 0.921$. (c) $x = 0.5$: $0.25(1.649)/(0.649)^2 = 0.979$. For a mole, $3Nk = 3R = 24.94$ J K⁻¹ mol⁻¹, the book's $2.49\\times10^4$ J kmol⁻¹ K⁻¹, so the three heat capacities are 18.1, 23.0 and 24.4 J K⁻¹ mol⁻¹. Already at $\\kT = 2\\kthetaE$ the solid is within about 2% of Dulong and Petit's value.</p>"
+   }
+  },
+  {
+   "id": "ai2",
+   "source_id": "eq:6",
+   "kind": "exercise",
+   "bloom": "Understand",
+   "place": {
+    "at": "end"
+   },
+   "cite": "einstein",
+   "prompt": "<p>At room temperature the heat capacity of diamond is well below the Dulong–Petit value $3R$. Which statement explains this in Einstein's model?</p>",
+   "answer": {
+    "type": "choice",
+    "generated_by": "ai",
+    "options": [
+     "Stiff C–C bonds and light carbon atoms give a high frequency $\\knu$, so $\\kthetaE = h\\knu/k$ lies well above room temperature and few oscillators are excited.",
+     "Diamond has fewer than six degrees of freedom per atom, so each atom stores less than $3k\\kT$.",
+     "The atoms of diamond do not vibrate independently, which Einstein's model assumes they do.",
+     "A high Einstein temperature makes it easy for collisions to excite the oscillators, so the energy they store saturates early."
+    ],
+    "correct": 0,
+    "hint": "Look at what the force constant and the reduced mass do to $\\knu$ in Equation 17.4.6.",
+    "solution": "<p>By Equation 17.4.6, $\\knu = (1/2\\pi)\\sqrt{\\kkappa/\\kmu}$ is large for a high force constant and a small reduced mass, which describes diamond. A large $\\knu$ means a large $\\kthetaE = h\\knu/k$, so at room temperature $\\kthetaE/\\kT$ is large and $k\\kT$ is small beside the vibrational quantum. Few oscillators can be excited, and $\\kCV$ is on the low-temperature side of the Einstein curve. Heated far enough, diamond's heat capacity still approaches $3Nk$.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "ai1",
+   "concept": "einstein-heat-capacity"
+  },
+  {
+   "exercise": "ai1",
+   "concept": "einstein-temperature"
+  },
+  {
+   "exercise": "ai1",
+   "concept": "dulong-petit-law"
+  },
+  {
+   "exercise": "ai2",
+   "concept": "stiff-light-solids"
+  },
+  {
+   "exercise": "ai2",
+   "concept": "einstein-temperature"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-half-kt",
+   "kind": "correction",
+   "html": "Each degree of freedom carries $\\tfrac{1}{2}kT$, so an atom with six carries $3kT$, and a mole of atoms $3RT$; that is what $6R/2 = 3R$ counts."
+  },
+  {
+   "id": "c-einstein-display",
+   "kind": "correction",
+   "html": "The second and third lines are two factors of one product: $C_V = 3Nk\\left(\\dfrac{\\theta_E}{T}\\right)^2\\dfrac{e^{\\theta_E/T}}{\\left(e^{\\theta_E/T} - 1\\right)^2}$, which gives Equations 17.4.4 and 17.4.5 in its two limits."
+  },
+  {
+   "id": "c-theta-constant",
+   "kind": "correction",
+   "html": "$\\theta_E = h\\nu/k$ is a constant of the solid, set by its vibrational frequency; it does not change with the temperature. What changes is $T/\\theta_E$, and with it the fraction of oscillators that can be excited."
+  },
+  {
+   "id": "c-fig-panels",
+   "kind": "correction",
+   "figure": "sim-einstein-solid",
+   "html": "Across the panels of Figure 17.4.2 it is $T/\\theta_E$ that rises. A higher Einstein temperature, at a fixed $T$, means fewer oscillators are excited, as the paragraph on diamond says."
+  },
+  {
+   "id": "c-fig-axis",
+   "kind": "correction",
+   "figure": "sim-einstein-solid",
+   "html": "The curve of Figure 17.4.3 is the Einstein heat capacity with its axis stretched eightfold: it reaches 0.30 of $3Nk_B$ at 2 and 0.69 at 4, where the function of $T/\\theta_E$ reaches 0.30 at 0.25 and 0.72 at 0.5. Its classical limit holds, within 5%, above about $T = 1.25\\,\\theta_E$."
+  },
+  {
+   "id": "c-fig-units",
+   "kind": "correction",
+   "figure": "sim-einstein-solid",
+   "html": "The vertical axis of Figure 17.4.4 is in units of $10^4$ J K⁻¹ kmol⁻¹, per kilomole as in the text's $2.49\\times10^4$, and its horizontal axis is $T/\\theta_E$."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "heat-capacity",
+   "what": "the heat capacity from the partition function",
+   "source": "Physical Chemistry (LibreTexts), 17.4 Heat Capacity at Constant Volume is the Change in Internal Energy with Temperature",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kCV = \\left(\\dfrac{\\partial \\kU}{\\partial \\kT}\\right)_{N,\\kV}",
+       "src": "(17.4.1)"
+      },
+      {
+       "tex": "\\kE = -\\dfrac{\\partial \\ln \\kQsys(N, \\kV, \\beta)}{\\partial \\beta}",
+       "src": "(17.4.2)",
+       "drv": "17.3/average-energy"
+      },
+      {
+       "text": "The internal energy $U$ is the energy $E$ the partition function gives.",
+       "src": "17.4"
+      },
+      {
+       "tex": "\\beta = \\dfrac{1}{k\\kT}",
+       "src": "17.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{c}{\\kCV} = \\mk{d}{\\left(\\dfrac{\\partial \\kU}{\\partial \\kT}\\right)_{N,\\kV}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{c}{\\kCV} = \\mk{d}{\\dfrac{\\partial \\kU}{\\partial \\beta}}\\mk{b}{\\dfrac{\\partial \\beta}{\\partial \\kT}}",
+       "uses": [],
+       "map": {
+        "d": [
+         "d",
+         "b"
+        ]
+       },
+       "cap": "The chain rule: $U$ depends on $T$ through $\\beta$."
+      },
+      {
+       "tex": "\\mk{c}{\\kCV} = \\mk{d}{\\dfrac{\\partial \\kU}{\\partial \\beta}}\\mk{b}{\\left(-\\dfrac{1}{k\\kT^2}\\right)}",
+       "uses": [
+        3
+       ],
+       "cap": "Since $\\beta = 1/kT$, $\\partial\\beta/\\partial T = -1/kT^2$."
+      },
+      {
+       "tex": "\\mk{c}{\\kCV} = \\mk{b}{\\left(-\\dfrac{1}{k\\kT^2}\\right)}\\mk{d}{\\dfrac{\\partial}{\\partial \\beta}\\left(-\\dfrac{\\partial \\ln \\kQsys(N, \\kV, \\beta)}{\\partial \\beta}\\right)}",
+       "uses": [
+        1,
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{c}{\\kCV} = \\mk{b}{\\dfrac{1}{k\\kT^2}}\\mk{d}{\\dfrac{\\partial^2}{\\partial \\beta^2}\\,\\ln \\kQsys(N, \\kV, \\beta)}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{c}{\\kCV} = \\mk{b}{k\\beta^2}\\mk{d}{\\dfrac{\\partial^2}{\\partial \\beta^2}\\,\\ln \\kQsys(N, \\kV, \\beta)}",
+       "uses": [
+        3
+       ]
+      }
+     ],
+     "num": "(17.4.3)",
+     "src": "17.4"
+    }
+   ]
+  },
+  {
+   "id": "einstein-heat-capacity",
+   "what": "the Einstein heat capacity",
+   "source": "Physical Chemistry (LibreTexts), 17.4 Heat Capacity at Constant Volume is the Change in Internal Energy with Temperature",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "q = \\sum_j e^{-\\beta e_j}",
+       "src": "17.2"
+      },
+      {
+       "tex": "\\varepsilon_v = \\left(v + \\tfrac{1}{2}\\right)h\\knu,\\quad v = 0, 1, 2, \\ldots",
+       "src": "5.2"
+      },
+      {
+       "tex": "\\sum_{v=0}^{\\infty} x^v = \\dfrac{1}{1 - x}\\quad (0 \\le x < 1)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{q}{q} = \\mk{s}{\\sum_j e^{-\\beta e_j}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{q}{q} = \\mk{s}{\\sum_{v=0}^{\\infty} e^{-\\beta(v + \\frac{1}{2})h\\knu}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{q}{q} = \\mk{z}{e^{-\\beta h\\knu/2}}\\mk{s}{\\sum_{v=0}^{\\infty} \\left(e^{-\\beta h\\knu}\\right)^v}",
+       "uses": [],
+       "map": {
+        "s": [
+         "z",
+         "s"
+        ]
+       },
+       "cap": "The exponential of a sum is the product of the exponentials, and $e^{-\\beta v h\\nu} = (e^{-\\beta h\\nu})^v$."
+      },
+      {
+       "tex": "\\mk{q}{q} = \\mk{z}{e^{-\\beta h\\knu/2}}\\mk{s}{\\dfrac{1}{1 - e^{-\\beta h\\knu}}}",
+       "uses": [
+        2
+       ],
+       "cap": "The series is geometric with ratio $e^{-\\beta h\\nu}$, which is less than 1."
+      }
+     ],
+     "src": "17.4"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "\\kQsys = q^N",
+       "src": "17.2"
+      },
+      {
+       "text": "Einstein's solid of $N$ atoms is $3N$ independent oscillators, all of one frequency $\\nu$.",
+       "src": "17.4"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{Q}{\\kQsys} = \\mk{p}{q^N}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{Q}{\\kQsys} = \\mk{p}{q^{3N}}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{Q}{\\ln \\kQsys} = \\mk{p}{3N\\ln q}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{Q}{\\ln \\kQsys} = \\mk{p}{3N\\left[-\\dfrac{\\beta h\\knu}{2} - \\ln\\left(1 - e^{-\\beta h\\knu}\\right)\\right]}",
+       "uses": [
+        0
+       ]
+      }
+     ],
+     "src": "17.4"
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "tex": "\\kE = -\\dfrac{\\partial \\ln \\kQsys}{\\partial \\beta}",
+       "src": "(17.4.2)",
+       "drv": "17.3/average-energy"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{e}{\\kE} = \\mk{d}{-\\dfrac{\\partial \\ln \\kQsys}{\\partial \\beta}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{e}{\\kE} = \\mk{d}{3N\\left[\\dfrac{h\\knu}{2} + \\dfrac{h\\knu e^{-\\beta h\\knu}}{1 - e^{-\\beta h\\knu}}\\right]}",
+       "uses": [
+        0
+       ],
+       "cap": "Differentiate each term with respect to $\\beta$; the derivative of $\\ln(1 - e^{-\\beta h\\nu})$ is $h\\nu e^{-\\beta h\\nu}/(1 - e^{-\\beta h\\nu})$."
+      },
+      {
+       "tex": "\\mk{e}{\\kE} = \\mk{z}{\\dfrac{3Nh\\knu}{2}} + \\mk{d}{\\dfrac{3Nh\\knu}{e^{\\beta h\\knu} - 1}}",
+       "uses": [],
+       "map": {
+        "d": [
+         "z",
+         "d"
+        ]
+       }
+      }
+     ],
+     "src": "17.4"
+    },
+    {
+     "assumes": [
+      {
+       "step": 2
+      },
+      {
+       "tex": "\\kCV = \\left(\\dfrac{\\partial \\kU}{\\partial \\kT}\\right)_{N,\\kV}",
+       "src": "(17.4.1)"
+      },
+      {
+       "text": "The internal energy $U$ is the energy $E$ the partition function gives.",
+       "src": "17.4"
+      },
+      {
+       "tex": "\\beta = \\dfrac{1}{k\\kT}",
+       "src": "17.1"
+      },
+      {
+       "tex": "\\kthetaE = \\dfrac{h\\knu}{k}",
+       "src": "17.4"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{c}{\\kCV} = \\mk{d}{\\left(\\dfrac{\\partial \\kU}{\\partial \\kT}\\right)_{N,\\kV}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{c}{\\kCV} = \\mk{d}{\\dfrac{\\partial}{\\partial \\kT}\\left(\\dfrac{3Nh\\knu}{2} + \\dfrac{3Nh\\knu}{e^{\\beta h\\knu} - 1}\\right)}",
+       "uses": [
+        0,
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{c}{\\kCV} = \\mk{d}{\\dfrac{\\partial}{\\partial \\kT}\\,\\dfrac{3Nh\\knu}{e^{h\\knu/k\\kT} - 1}}",
+       "uses": [
+        3
+       ],
+       "cap": "The zero-point energy $3Nh\\nu/2$ does not depend on the temperature, so it drops out of the heat capacity."
+      },
+      {
+       "tex": "\\mk{c}{\\kCV} = \\mk{d}{3Nh\\knu\\,\\dfrac{h\\knu}{k\\kT^2}\\,\\dfrac{e^{h\\knu/k\\kT}}{\\left(e^{h\\knu/k\\kT} - 1\\right)^2}}",
+       "uses": [],
+       "cap": "The chain rule: $d(e^{a/T} - 1)^{-1}/dT = (a/T^2)\\,e^{a/T}/(e^{a/T} - 1)^2$."
+      },
+      {
+       "tex": "\\mk{c}{\\kCV} = \\mk{d}{3Nk\\left(\\dfrac{h\\knu}{k\\kT}\\right)^2\\dfrac{e^{h\\knu/k\\kT}}{\\left(e^{h\\knu/k\\kT} - 1\\right)^2}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{c}{\\kCV} = \\mk{d}{3Nk\\left(\\dfrac{\\kthetaE}{\\kT}\\right)^2\\dfrac{e^{\\kthetaE/\\kT}}{\\left(e^{\\kthetaE/\\kT} - 1\\right)^2}}",
+       "uses": [
+        4
+       ]
+      }
+     ],
+     "src": "17.4",
+     "note": "The book prints this heat capacity as three lines joined by equals signs, with $3Nk(\\theta_E/T)^2$ and $e^{\\theta_E/T}/(e^{\\theta_E/T} - 1)^2$ on separate lines. They are two factors of one product."
+    },
+    {
+     "assumes": [
+      {
+       "step": 3
+      },
+      {
+       "text": "When $\\theta_E/T \\ll 1$, $e^{\\theta_E/T} \\approx 1 + \\theta_E/T$, and the exponential in the numerator is close to 1."
+      },
+      {
+       "tex": "Nk = \\knmol R",
+       "src": "17.4"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{c}{\\kCV} = \\mk{d}{3Nk\\left(\\dfrac{\\kthetaE}{\\kT}\\right)^2\\dfrac{e^{\\kthetaE/\\kT}}{\\left(e^{\\kthetaE/\\kT} - 1\\right)^2}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{c}{\\kCV} \\approx \\mk{d}{3Nk\\left(\\dfrac{\\kthetaE}{\\kT}\\right)^2\\dfrac{1}{\\left(\\kthetaE/\\kT\\right)^2}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{c}{\\kCV} \\approx \\mk{d}{3Nk}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{c}{\\kCV} \\approx \\mk{d}{3Nk} = \\mk{r}{3\\knmol R}",
+       "uses": [
+        2
+       ]
+      }
+     ],
+     "num": "(17.4.4)",
+     "src": "17.4"
+    },
+    {
+     "assumes": [
+      {
+       "step": 3
+      },
+      {
+       "text": "When $\\theta_E/T \\gg 1$, $e^{\\theta_E/T}$ is so large that $e^{\\theta_E/T} - 1 \\approx e^{\\theta_E/T}$."
+      }
+     ],
+     "then": {
+      "tex": "\\mk{c}{\\kCV} = \\mk{d}{3Nk\\left(\\dfrac{\\kthetaE}{\\kT}\\right)^2\\dfrac{e^{\\kthetaE/\\kT}}{\\left(e^{\\kthetaE/\\kT} - 1\\right)^2}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{c}{\\kCV} \\approx \\mk{d}{3Nk\\left(\\dfrac{\\kthetaE}{\\kT}\\right)^2\\dfrac{e^{\\kthetaE/\\kT}}{e^{2\\kthetaE/\\kT}}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{c}{\\kCV} \\approx \\mk{d}{3Nk\\left(\\dfrac{\\kthetaE}{\\kT}\\right)^2 e^{-\\kthetaE/\\kT}}",
+       "uses": []
+      }
+     ],
+     "num": "(17.4.5)",
+     "src": "17.4"
+    }
+   ]
+  }
+ ]
+}

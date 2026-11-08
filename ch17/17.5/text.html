@@ -1,0 +1,53 @@
+<section id="pressure-average">
+<h2>Pressure as an average</h2>
+<p><span data-concept="pressure">Pressure</span> can also be derived from the <span data-concept="canonical-partition-function">canonical partition function</span>. The average pressure is the sum of the probability times the pressure:</p>
+$$ \kPavg = \sum_i{P_i(N,\kV,\kT)\kPipress(N,\kV)} $$
+<p><span data-concept="state-pressure">The pressure of a macroscopic system</span> is:</p>
+$$ \kPipress(N,\kV) = -\left(\dfrac{\partial \kEi}{\partial \kV}\right)_N $$
+<p>So we can write the average pressure as:</p>
+<figure class="dv" id="drv-pressure-from-q"></figure>
+</section>
+
+<section id="ideal-gas-law">
+<h2>The ideal gas law</h2>
+<p>We can use this result to derive the <span data-concept="ideal-gas-law">ideal gas law</span>. For $N$ particles of an <span data-concept="ideal-gas">ideal gas</span>:</p>
+$$ \kQsys(N,\kV,\beta) = \dfrac{[\kqtrans(\kV,\beta)]^N}{N!} $$
+<p>where:</p>
+$$ \kqtrans(\kV,\beta) = \left(\dfrac{2\pi \km}{h^2\beta}\right)^{3/2}\kV $$
+<p>is the <span data-concept="translational-partition-function">translational partition function</span>. The utility of expressing the pressure as a logarithm is clear from the fact that we can write:</p>
+<figure class="dv" id="drv-ideal-gas-law"></figure>
+<p>which is the <span data-concept="ideal-gas-law">ideal gas law</span>. Recall that $Nk = \knmol R$ where $N$ is the number of molecules and $\knmol$ is the number of moles. <span data-concept="ideal-gas-constant">$R$ is the universal gas constant (8.314 J/mol-K) which is nothing more than $k$ multiplied by Avagadro’s number</span>. $N_Ak = R$ converts the constant from a "per molecule" to a "per mole" basis.</p>
+</section>
+
+<section id="gas-compressed-by-a-piston">
+<h2>Gas Compressed by a Piston</h2>
+<figure class="sim" id="sim-piston-levels" data-figure="17.5.1" data-original="/media/ch17/61536-Tuckerman_Screenshot_3-1.png" data-original-width="276" data-original-caption="Illustration of a thought experiment in which a system is compressed via a piston pushed into the system along the positive $z$ axis.">
+  <div class="sim-head"><span class="eyebrow">Figure 17.5.1</span><span>Drag the piston in. Every <span data-type="energy">energy level</span> of the atoms' motion along $\kz$ climbs, and the gas pushes back harder. Raise <span data-type="temperature">the temperature</span> and the <span data-type="pressure">pressure</span> closes on $Nk\kT/\kV$.</span></div>
+</figure>
+<p>Let us consider a simple thought experiment, which is illustrated in the figure above: A system of $N$ particles is compressed by a piston pushing in the positive $\kz$ direction. Since this is a classical thought experiment, we think in terms of forces. The piston exerts a constant force of magnitude $\kF$ on the system. The direction of the force is purely in the positive $\kz$ direction, so that we can write the force vector $\bf{F}$ as $\bf{F} = \begin{pmatrix} 0, 0, F \end{pmatrix}$. At equilibrium (the piston is not moving), the system exerts an equal and opposite force on the piston of the form $\begin{pmatrix} 0, 0, -F \end{pmatrix}$. If the energy of the system is $\kE$, then <span data-concept="pressure-energy-volume">the force exerted by the system on the piston will be given by the negative change in $\kE$ with respect to $\kz$</span>:</p>
+$$ -\kF = -\dfrac{d\kE}{d\kz} \tag{17.5.1} $$
+<p>or:</p>
+$$ \kF = \dfrac{d\kE}{d\kz} \tag{17.5.2} $$
+<p>The force exerted by the system on the piston is manifest as an observable <span data-concept="pressure">pressure</span> $\kP$ equal to the force $\kF$ divided by the area $A$ of the piston, $\kP=\kF/A$. Given this, the observed pressure is just:</p>
+$$ \kP = \dfrac{d\kE}{Ad\kz} \tag{17.5.3} $$
+<p>Since the volume decreases when the system is compressed, we see that $Ad\kz = -d\kV$. Hence, we can write the pressure as $\kP = -d\kE/d\kV$.</p>
+<p>Of course, the relation $\kP = -d\kE/d\kV$ is a thermodynamic one, but we need a function of $x$ that we can average over the ensemble. The most natural choice is:</p>
+$$ p(x) = -\dfrac{d \kEcal (x)}{d\kV} \tag{17.5.4} $$
+<p>so that $\kP = \langle p(x) \rangle$. Setting up the average, we obtain:</p>
+$$ \begin{aligned} \kP &= -\dfrac{C_N}{\kQsys(N, \kV, \kT)} \int \dfrac{\partial \kEcal}{\partial \kV} e^{-\beta \kEcal (x)} \\ &= \dfrac{C_N}{\kQsys(N, \kV, \kT)} \dfrac{1}{\beta} \int \dfrac{\partial}{\partial \kV} e^{-\beta \kEcal (x)} \\ &= \dfrac{k\kT}{\kQsys(N, \kV, \kT} \dfrac{\partial}{\partial \kV} C_N \int e^{-\beta \kEcal (x)} \\ &= k\kT \left( \dfrac{\partial \: \text{ln} \: \kQsys(N, \kV, \kT)}{\partial \kV} \right) \end{aligned} \tag{17.5.5} $$
+</section>
+
+<section id="ideal-gas-in-the-canonical-ensemble">
+<h2>Ideal Gas in the Canonical Ensemble</h2>
+<p>Recall that the mechanical energy for an <span data-concept="ideal-gas">ideal gas</span> is:</p>
+$$ \kEcal (x) = \sum_{i=1}^N \dfrac{\kpivec^2}{2\km} \tag{17.5.6} $$
+<p>where all particles are identical and have mass $\km$. Thus, the expression for <span data-concept="classical-partition-function">the canonical partition function $\kQsys(N, \kV, \kT)$</span> is:</p>
+$$ \kQsys(N, \kV, \kT) = \dfrac{1}{N!h^{3N}} \int dx \: e^{-\beta \sum_{i=1}^N \kpivec^2/2\km} $$
+<p>Note that this can be expressed as:</p>
+<figure class="dv" id="drv-ideal-gas-energy"></figure>
+<p>and pressure:</p>
+$$ \kP = k\kT \left( \dfrac{\partial \: \text{ln} \: \kQsys(N, \kV, \kT)}{\partial \kV} \right) $$
+<p>giving:</p>
+$$ \kP = \dfrac{Nk\kT}{\kV} = \dfrac{\knmol R\kT}{\kV} \tag{17.5.8} $$
+<p>which is the <span data-concept="ideal-gas-law">ideal gas law</span>.</p>
+</section>

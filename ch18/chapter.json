@@ -1,0 +1,1753 @@
+{
+ "id": "18",
+ "dir": "ch18",
+ "title": "Partition Functions and Ideal Gases",
+ "intro": {
+  "module": "11814",
+  "slug": "18:_Partition_Functions_and_Ideal_Gases"
+ },
+ "sections": [
+  {
+   "id": "18.1",
+   "module": "13691",
+   "title": "Translational Partition Functions of Monotonic Gases",
+   "slug": "18:_Partition_Functions_and_Ideal_Gases/18.01:_Translational_Partition_Functions_of_Monotonic_Gases"
+  },
+  {
+   "id": "18.2",
+   "module": "13692",
+   "title": "Most Atoms are in the Ground Electronic State",
+   "slug": "18:_Partition_Functions_and_Ideal_Gases/18.02:_Most_Atoms_are_in_the_Ground_Electronic_State"
+  },
+  {
+   "id": "18.3",
+   "module": "13693",
+   "title": "The Energy of a Diatomic/Polyatomic Molecule Can Be Approximated as a Sum of Separate Terms",
+   "slug": "18:_Partition_Functions_and_Ideal_Gases/18.03:_The_Energy_of_a_Diatomic_Polyatomic_Molecule_Can_Be_Approximated_as_a_Sum_of_Separate_Terms"
+  },
+  {
+   "id": "18.4",
+   "module": "13694",
+   "title": "Most Molecules are in the Ground Vibrational State",
+   "slug": "18:_Partition_Functions_and_Ideal_Gases/18.04:_Most_Molecules_are_in_the_Ground_Vibrational_State"
+  },
+  {
+   "id": "18.5",
+   "module": "13695",
+   "title": "Most Molecules are Rotationally Excited at Ordinary Temperatures",
+   "slug": "18:_Partition_Functions_and_Ideal_Gases/18.05:_Most_Molecules_are_Rotationally_Excited_at_Ordinary_Temperatures"
+  },
+  {
+   "id": "18.6",
+   "module": "13696",
+   "title": "Rotational Partition Functions of Diatomic Gases Contain a Symmetry Number",
+   "slug": "18:_Partition_Functions_and_Ideal_Gases/18.06:_Rotational_Partition_Functions_of_Diatomic_Gases_Contain_a_Symmetry_Number"
+  },
+  {
+   "id": "18.7",
+   "module": "13697",
+   "title": "Vibrational Partition Functions of Polyatomic Molecules Include the Partition Function for Each Normal Coordinate",
+   "slug": "18:_Partition_Functions_and_Ideal_Gases/18.07:_Vibrational_Partition_Functions_of_Polyatomic_Molecules_Include_the_Partition_Function_for_Each_Normal_Coordinate"
+  },
+  {
+   "id": "18.8",
+   "module": "13698",
+   "title": "Rotational Partition Functions of Polyatomic Molecules Depend on the Sphar of the Molecule",
+   "slug": "18:_Partition_Functions_and_Ideal_Gases/18.08:_Rotational_Partition_Functions_of_Polyatomic_Molecules_Depend_on_the_Sphar_of_the_Molecule"
+  },
+  {
+   "id": "18.9",
+   "module": "13699",
+   "title": "Molar Heat Capacities",
+   "slug": "18:_Partition_Functions_and_Ideal_Gases/18.09:_Molar_Heat_Capacities"
+  },
+  {
+   "id": "18.10",
+   "module": "57614",
+   "title": "Ortho and Para Hydrogen",
+   "slug": "18:_Partition_Functions_and_Ideal_Gases/18.10:_Ortho_and_Para_Hydrogen"
+  },
+  {
+   "id": "18.11",
+   "module": "57608",
+   "title": "The Equipartition Principle",
+   "slug": "18:_Partition_Functions_and_Ideal_Gases/18.11:_The_Equipartition_Principle"
+  }
+ ],
+ "variables": [
+  {
+   "sym": "L",
+   "type": "length",
+   "meaning": "the length of the cubic box",
+   "unit": "m",
+   "section": "18.1"
+  },
+  {
+   "sym": "E_trans",
+   "type": "energy",
+   "meaning": "the translational energy of the particle in the box",
+   "unit": "J",
+   "section": "18.1"
+  },
+  {
+   "sym": "h",
+   "meaning": "Planck's constant",
+   "unit": "J s",
+   "section": "18.1"
+  },
+  {
+   "sym": "n_x",
+   "meaning": "the quantum number of the motion along x",
+   "section": "18.1"
+  },
+  {
+   "sym": "n_y",
+   "meaning": "the quantum number of the motion along y",
+   "section": "18.1"
+  },
+  {
+   "sym": "n_z",
+   "meaning": "the quantum number of the motion along z",
+   "section": "18.1"
+  },
+  {
+   "sym": "m",
+   "type": "mass",
+   "meaning": "the mass of the gas particle",
+   "unit": "kg",
+   "section": "18.1"
+  },
+  {
+   "sym": "q_trans",
+   "concept": "translational-partition-function",
+   "meaning": "the translational partition function of one particle",
+   "section": "18.1"
+  },
+  {
+   "sym": "eps_i",
+   "type": "energy",
+   "meaning": "the energy of translational state i",
+   "unit": "J",
+   "section": "18.1"
+  },
+  {
+   "sym": "k",
+   "concept": "boltzmann-constant",
+   "meaning": "Boltzmann's constant, written k",
+   "unit": "J/K",
+   "section": "18.1"
+  },
+  {
+   "sym": "T",
+   "type": "temperature",
+   "meaning": "the temperature",
+   "unit": "K",
+   "section": "18.1"
+  },
+  {
+   "sym": "q_x",
+   "concept": "translational-q-1d",
+   "meaning": "the translational partition function for motion along x",
+   "section": "18.1"
+  },
+  {
+   "sym": "q_y",
+   "concept": "translational-q-1d",
+   "meaning": "the translational partition function for motion along y",
+   "section": "18.1"
+  },
+  {
+   "sym": "q_z",
+   "concept": "translational-q-1d",
+   "meaning": "the translational partition function for motion along z",
+   "section": "18.1"
+  },
+  {
+   "sym": "eps_x",
+   "type": "energy",
+   "meaning": "the energy of the motion along x, h²n_x²/8mL²",
+   "unit": "J",
+   "section": "18.1"
+  },
+  {
+   "sym": "a_g",
+   "meaning": "the constant h²/8mL²kT of the Gaussian integral",
+   "section": "18.1"
+  },
+  {
+   "sym": "Lambda_th",
+   "concept": "thermal-wavelength",
+   "meaning": "the thermal de Broglie wavelength, h/√(2πmkT)",
+   "unit": "m",
+   "section": "18.1"
+  },
+  {
+   "sym": "V",
+   "type": "volume",
+   "meaning": "the volume of the box, L³",
+   "unit": "m³",
+   "section": "18.1"
+  },
+  {
+   "sym": "U",
+   "concept": "internal-energy",
+   "meaning": "the observed energy of the ideal gas",
+   "unit": "J",
+   "section": "18.1"
+  },
+  {
+   "sym": "n_mol",
+   "type": "amount",
+   "meaning": "the amount of gas in moles",
+   "unit": "mol",
+   "section": "18.1"
+  },
+  {
+   "sym": "R",
+   "concept": "ideal-gas-constant",
+   "meaning": "the gas constant",
+   "unit": "J K⁻¹ mol⁻¹",
+   "section": "18.1"
+  },
+  {
+   "sym": "E_1",
+   "type": "energy",
+   "meaning": "the energy of the lowest electronic level",
+   "unit": "J",
+   "section": "18.2"
+  },
+  {
+   "sym": "E_2",
+   "type": "energy",
+   "meaning": "the energy of the second electronic level",
+   "unit": "J",
+   "section": "18.2"
+  },
+  {
+   "sym": "E_3",
+   "type": "energy",
+   "meaning": "the energy of the third electronic level",
+   "unit": "J",
+   "section": "18.2"
+  },
+  {
+   "sym": "g_1",
+   "meaning": "the degeneracy of the lowest electronic level",
+   "section": "18.2"
+  },
+  {
+   "sym": "g_2",
+   "meaning": "the degeneracy of the second electronic level",
+   "section": "18.2"
+  },
+  {
+   "sym": "g_3",
+   "meaning": "the degeneracy of the third electronic level",
+   "section": "18.2"
+  },
+  {
+   "sym": "q_el",
+   "concept": "electronic-partition-function",
+   "meaning": "the electronic partition function, written q_el",
+   "section": "18.2"
+  },
+  {
+   "sym": "q_elec",
+   "concept": "electronic-partition-function",
+   "meaning": "the electronic partition function with the ground level as the zero of energy",
+   "section": "18.2"
+  },
+  {
+   "sym": "k",
+   "concept": "boltzmann-constant",
+   "meaning": "Boltzmann's constant, written k",
+   "unit": "J/K",
+   "section": "18.2"
+  },
+  {
+   "sym": "T",
+   "type": "temperature",
+   "meaning": "the temperature",
+   "unit": "K",
+   "section": "18.2"
+  },
+  {
+   "sym": "q_tot",
+   "concept": "partition-function-factorization",
+   "type": "partition-function",
+   "meaning": "the partition function of the molecule, q_trans q_vib q_rot q_elec",
+   "section": "18.3"
+  },
+  {
+   "sym": "q_trans",
+   "concept": "translational-partition-function",
+   "meaning": "the translational partition function",
+   "section": "18.3"
+  },
+  {
+   "sym": "q_vib",
+   "concept": "vibrational-partition-function",
+   "meaning": "the vibrational partition function",
+   "section": "18.3"
+  },
+  {
+   "sym": "q_rot",
+   "concept": "rotational-partition-function",
+   "meaning": "the rotational partition function",
+   "section": "18.3"
+  },
+  {
+   "sym": "q_elec",
+   "concept": "electronic-partition-function",
+   "meaning": "the electronic partition function",
+   "section": "18.3"
+  },
+  {
+   "sym": "Q_sys",
+   "concept": "molecular-ideal-gas-partition-function",
+   "type": "partition-function",
+   "meaning": "the partition function of the molecular ideal gas, Q(N, V, T)",
+   "section": "18.3"
+  },
+  {
+   "sym": "N",
+   "meaning": "the number of molecules",
+   "section": "18.3"
+  },
+  {
+   "sym": "V",
+   "type": "volume",
+   "meaning": "the volume",
+   "unit": "m³",
+   "section": "18.3"
+  },
+  {
+   "sym": "T",
+   "type": "temperature",
+   "meaning": "the temperature",
+   "unit": "K",
+   "section": "18.3"
+  },
+  {
+   "sym": "E_tot",
+   "type": "energy",
+   "meaning": "the total energy of the molecule",
+   "unit": "J",
+   "section": "18.3"
+  },
+  {
+   "sym": "E_trans",
+   "type": "energy",
+   "meaning": "the translational energy of the molecule",
+   "unit": "J",
+   "section": "18.3"
+  },
+  {
+   "sym": "E_vib",
+   "type": "energy",
+   "meaning": "the vibrational energy of the molecule",
+   "unit": "J",
+   "section": "18.3"
+  },
+  {
+   "sym": "E_rot",
+   "type": "energy",
+   "meaning": "the rotational energy of the molecule",
+   "unit": "J",
+   "section": "18.3"
+  },
+  {
+   "sym": "E_elec",
+   "type": "energy",
+   "meaning": "the electronic energy of the molecule",
+   "unit": "J",
+   "section": "18.3"
+  },
+  {
+   "sym": "g",
+   "meaning": "the degeneracy, the number of states at one energy",
+   "section": "18.3"
+  },
+  {
+   "sym": "beta",
+   "concept": "thermodynamic-beta",
+   "meaning": "1/kT, the reciprocal of the thermal energy",
+   "unit": "J⁻¹",
+   "section": "18.3"
+  },
+  {
+   "sym": "E_avg",
+   "concept": "average-ensemble-energy",
+   "meaning": "the average energy of the gas",
+   "unit": "J",
+   "section": "18.3"
+  },
+  {
+   "sym": "U",
+   "concept": "internal-energy",
+   "meaning": "the internal energy, approximately ⟨E⟩",
+   "unit": "J",
+   "section": "18.3"
+  },
+  {
+   "sym": "E_v",
+   "type": "energy",
+   "meaning": "the energy of vibrational level v of a diatomic",
+   "unit": "J",
+   "section": "18.4"
+  },
+  {
+   "sym": "v_q",
+   "meaning": "the vibrational quantum number",
+   "section": "18.4"
+  },
+  {
+   "sym": "nu",
+   "type": "frequency",
+   "meaning": "the vibrational frequency",
+   "unit": "s⁻¹",
+   "section": "18.4"
+  },
+  {
+   "sym": "h",
+   "meaning": "Planck's constant",
+   "unit": "J s",
+   "section": "18.4"
+  },
+  {
+   "sym": "k",
+   "concept": "boltzmann-constant",
+   "meaning": "Boltzmann's constant, written k",
+   "unit": "J/K",
+   "section": "18.4"
+  },
+  {
+   "sym": "T",
+   "type": "temperature",
+   "meaning": "the temperature",
+   "unit": "K",
+   "section": "18.4"
+  },
+  {
+   "sym": "q_vib",
+   "concept": "vibrational-partition-function",
+   "meaning": "the vibrational partition function of a diatomic",
+   "section": "18.4"
+  },
+  {
+   "sym": "x",
+   "meaning": "e^(−hν/kT), the ratio of one vibrational Boltzmann factor to the one below it",
+   "section": "18.4"
+  },
+  {
+   "sym": "Theta_vib",
+   "concept": "vibrational-temperature",
+   "meaning": "the vibrational temperature, hcν̃/k",
+   "unit": "K",
+   "section": "18.4"
+  },
+  {
+   "sym": "nu_tilde",
+   "type": "wavenumber",
+   "meaning": "the vibrational frequency in cm⁻¹",
+   "unit": "cm⁻¹",
+   "section": "18.4"
+  },
+  {
+   "sym": "c",
+   "meaning": "the speed of light",
+   "unit": "cm/s",
+   "section": "18.4"
+  },
+  {
+   "sym": "omega",
+   "type": "wavenumber",
+   "meaning": "the vibrational wavenumber ω of Table 18.4.1",
+   "unit": "cm⁻¹",
+   "section": "18.4"
+  },
+  {
+   "sym": "B_t",
+   "concept": "rotational-constant",
+   "meaning": "the rotational constant of Table 18.4.1",
+   "unit": "cm⁻¹",
+   "section": "18.4"
+  },
+  {
+   "sym": "Theta_rot",
+   "concept": "rotational-temperature",
+   "meaning": "the rotational temperature of Table 18.4.1",
+   "unit": "K",
+   "section": "18.4"
+  },
+  {
+   "sym": "D_0",
+   "type": "energy",
+   "meaning": "the dissociation energy of Table 18.4.1",
+   "unit": "kcal/mol",
+   "section": "18.4"
+  },
+  {
+   "sym": "g",
+   "meaning": "the degeneracy of the molecule's ground electronic level",
+   "section": "18.4"
+  },
+  {
+   "sym": "C_V_bar",
+   "concept": "molar-heat-capacity",
+   "meaning": "the molar heat capacity at constant volume",
+   "unit": "J K⁻¹ mol⁻¹",
+   "section": "18.4"
+  },
+  {
+   "sym": "beta",
+   "concept": "thermodynamic-beta",
+   "meaning": "1/kT, the reciprocal of the thermal energy",
+   "unit": "J⁻¹",
+   "section": "18.4"
+  },
+  {
+   "sym": "eps_vib",
+   "type": "energy",
+   "meaning": "the vibrational energy",
+   "unit": "J",
+   "section": "18.4"
+  },
+  {
+   "sym": "N_A",
+   "meaning": "Avogadro's number",
+   "unit": "mol⁻¹",
+   "section": "18.4"
+  },
+  {
+   "sym": "R",
+   "concept": "ideal-gas-constant",
+   "meaning": "the gas constant, N_Ak",
+   "unit": "J K⁻¹ mol⁻¹",
+   "section": "18.4"
+  },
+  {
+   "sym": "f_v",
+   "concept": "vibrational-populations",
+   "meaning": "the fraction of molecules in vibrational state v",
+   "section": "18.4"
+  },
+  {
+   "sym": "J",
+   "meaning": "the rotational quantum number",
+   "section": "18.5"
+  },
+  {
+   "sym": "E_J",
+   "type": "energy",
+   "meaning": "the energy of rotational level J, B̃J(J + 1)",
+   "unit": "cm⁻¹",
+   "section": "18.5"
+  },
+  {
+   "sym": "B_t",
+   "concept": "rotational-constant",
+   "meaning": "the rotational constant in cm⁻¹, h/8π²Ic",
+   "unit": "cm⁻¹",
+   "section": "18.5"
+  },
+  {
+   "sym": "I_mom",
+   "concept": "moment-of-inertia",
+   "meaning": "the moment of inertia of the molecule, μr²",
+   "unit": "kg m²",
+   "section": "18.5"
+  },
+  {
+   "sym": "c",
+   "meaning": "the speed of light",
+   "unit": "cm/s",
+   "section": "18.5"
+  },
+  {
+   "sym": "g",
+   "meaning": "the degeneracy of rotational level J, 2J + 1",
+   "section": "18.5"
+  },
+  {
+   "sym": "q_rot",
+   "concept": "rotational-partition-function",
+   "meaning": "the rotational partition function of a diatomic",
+   "section": "18.5"
+  },
+  {
+   "sym": "X",
+   "meaning": "the variable J(J + 1) the integral is changed to",
+   "section": "18.5"
+  },
+  {
+   "sym": "Theta_rot",
+   "concept": "rotational-temperature",
+   "meaning": "the rotational temperature, ħ²/2Ik",
+   "unit": "K",
+   "section": "18.5"
+  },
+  {
+   "sym": "T",
+   "type": "temperature",
+   "meaning": "the temperature",
+   "unit": "K",
+   "section": "18.5"
+  },
+  {
+   "sym": "mu",
+   "concept": "reduced-mass",
+   "meaning": "the reduced mass of the molecule",
+   "unit": "kg",
+   "section": "18.5"
+  },
+  {
+   "sym": "m_1",
+   "type": "mass",
+   "meaning": "the mass of the first atom",
+   "unit": "kg",
+   "section": "18.5"
+  },
+  {
+   "sym": "m_2",
+   "type": "mass",
+   "meaning": "the mass of the second atom",
+   "unit": "kg",
+   "section": "18.5"
+  },
+  {
+   "sym": "r",
+   "type": "length",
+   "meaning": "the bond length",
+   "unit": "m",
+   "section": "18.5"
+  },
+  {
+   "sym": "hbar",
+   "meaning": "the reduced Planck constant",
+   "section": "18.5"
+  },
+  {
+   "sym": "k_B",
+   "concept": "boltzmann-constant",
+   "meaning": "Boltzmann's constant, written k_b",
+   "unit": "J/K",
+   "section": "18.5"
+  },
+  {
+   "sym": "eps_avg",
+   "concept": "average-molecular-energy",
+   "meaning": "the average energy of a molecule, the moment ⟨ε⟩",
+   "unit": "J",
+   "section": "18.5"
+  },
+  {
+   "sym": "N",
+   "meaning": "the number of molecules",
+   "section": "18.5"
+  },
+  {
+   "sym": "C_v",
+   "concept": "constant-volume-heat-capacity",
+   "meaning": "the heat capacity at constant volume of the gas",
+   "unit": "J/K",
+   "section": "18.5"
+  },
+  {
+   "sym": "C_v_trans",
+   "concept": "constant-volume-heat-capacity",
+   "meaning": "the translational contribution to C_v",
+   "unit": "J/K",
+   "section": "18.5"
+  },
+  {
+   "sym": "C_v_rot",
+   "concept": "constant-volume-heat-capacity",
+   "meaning": "the rotational contribution to C_v",
+   "unit": "J/K",
+   "section": "18.5"
+  },
+  {
+   "sym": "n_mol",
+   "type": "amount",
+   "meaning": "the amount of gas in moles",
+   "unit": "mol",
+   "section": "18.5"
+  },
+  {
+   "sym": "R",
+   "concept": "ideal-gas-constant",
+   "meaning": "the gas constant",
+   "unit": "J K⁻¹ mol⁻¹",
+   "section": "18.5"
+  },
+  {
+   "sym": "E_rot",
+   "type": "energy",
+   "meaning": "the energy of rotational level J of a diatomic, B̃J(J + 1)",
+   "unit": "cm⁻¹",
+   "section": "18.6"
+  },
+  {
+   "sym": "J",
+   "meaning": "the rotational quantum number",
+   "section": "18.6"
+  },
+  {
+   "sym": "B_t",
+   "concept": "rotational-constant",
+   "meaning": "the rotational constant in cm⁻¹, h/8π²Ic",
+   "unit": "cm⁻¹",
+   "section": "18.6"
+  },
+  {
+   "sym": "I_mom",
+   "concept": "moment-of-inertia",
+   "meaning": "the moment of inertia of the molecule, μr²",
+   "unit": "kg m²",
+   "section": "18.6"
+  },
+  {
+   "sym": "E_j",
+   "type": "energy",
+   "meaning": "the energy of rotational level J",
+   "unit": "J",
+   "section": "18.6"
+  },
+  {
+   "sym": "mu",
+   "concept": "reduced-mass",
+   "meaning": "the reduced mass",
+   "unit": "kg",
+   "section": "18.6"
+  },
+  {
+   "sym": "r",
+   "type": "length",
+   "meaning": "the bond length",
+   "unit": "m",
+   "section": "18.6"
+  },
+  {
+   "sym": "Theta_rot",
+   "concept": "rotational-temperature",
+   "meaning": "the rotational temperature, h²/8π²Ik",
+   "unit": "K",
+   "section": "18.6"
+  },
+  {
+   "sym": "q_rot",
+   "concept": "rotational-partition-function",
+   "meaning": "the rotational partition function",
+   "section": "18.6"
+  },
+  {
+   "sym": "E_J",
+   "type": "energy",
+   "meaning": "the energy of rotational level J",
+   "unit": "J",
+   "section": "18.6"
+  },
+  {
+   "sym": "k",
+   "concept": "boltzmann-constant",
+   "meaning": "Boltzmann's constant, written k",
+   "unit": "J/K",
+   "section": "18.6"
+  },
+  {
+   "sym": "T",
+   "type": "temperature",
+   "meaning": "the temperature",
+   "unit": "K",
+   "section": "18.6"
+  },
+  {
+   "sym": "x",
+   "meaning": "the variable J(J + 1) that the rotational integral is changed to",
+   "section": "18.6",
+   "redefines": true
+  },
+  {
+   "sym": "sigma_sym",
+   "concept": "symmetry-number",
+   "meaning": "the symmetry number",
+   "section": "18.6"
+  },
+  {
+   "sym": "Q_sys",
+   "concept": "molecular-ideal-gas-partition-function",
+   "type": "partition-function",
+   "meaning": "the partition function of the gas, Q(N, V, T)",
+   "section": "18.7"
+  },
+  {
+   "sym": "q_mol",
+   "concept": "molecular-partition-function",
+   "meaning": "the partition function of one molecule, q(V, T)",
+   "section": "18.7"
+  },
+  {
+   "sym": "N",
+   "meaning": "the number of molecules",
+   "section": "18.7"
+  },
+  {
+   "sym": "q_trans",
+   "concept": "translational-partition-function",
+   "meaning": "the translational partition function",
+   "section": "18.7"
+  },
+  {
+   "sym": "q_rot",
+   "concept": "rotational-partition-function",
+   "meaning": "the rotational partition function",
+   "section": "18.7"
+  },
+  {
+   "sym": "q_vib",
+   "concept": "polyatomic-vibrational-partition-function",
+   "meaning": "the vibrational partition function of the polyatomic molecule, the product over its normal modes",
+   "section": "18.7"
+  },
+  {
+   "sym": "q_elec",
+   "concept": "electronic-partition-function",
+   "meaning": "the electronic partition function",
+   "section": "18.7"
+  },
+  {
+   "sym": "M_part",
+   "type": "mass",
+   "meaning": "the mass of the particle",
+   "unit": "kg",
+   "section": "18.7"
+  },
+  {
+   "sym": "k",
+   "concept": "boltzmann-constant",
+   "meaning": "Boltzmann's constant, written k",
+   "unit": "J/K",
+   "section": "18.7"
+  },
+  {
+   "sym": "T",
+   "type": "temperature",
+   "meaning": "the temperature",
+   "unit": "K",
+   "section": "18.7"
+  },
+  {
+   "sym": "V",
+   "type": "volume",
+   "meaning": "the volume",
+   "unit": "m³",
+   "section": "18.7"
+  },
+  {
+   "sym": "E_i",
+   "type": "energy",
+   "meaning": "the energy of electronic state i",
+   "unit": "J",
+   "section": "18.7"
+  },
+  {
+   "sym": "g_i",
+   "meaning": "the degeneracy of electronic state i",
+   "section": "18.7"
+  },
+  {
+   "sym": "g_e1",
+   "meaning": "the degeneracy of the ground electronic state",
+   "section": "18.7"
+  },
+  {
+   "sym": "D_e",
+   "type": "energy",
+   "meaning": "the depth of the ground electronic state, whose energy is −D_e",
+   "unit": "J",
+   "section": "18.7"
+  },
+  {
+   "sym": "E_vib",
+   "type": "energy",
+   "meaning": "the vibrational energy of the molecule, the sum over its normal modes",
+   "unit": "J",
+   "section": "18.7"
+  },
+  {
+   "sym": "v_qi",
+   "meaning": "the vibrational quantum number of normal mode i",
+   "section": "18.7"
+  },
+  {
+   "sym": "nu_i",
+   "type": "frequency",
+   "meaning": "the vibrational frequency of normal mode i",
+   "unit": "s⁻¹",
+   "section": "18.7"
+  },
+  {
+   "sym": "alpha",
+   "meaning": "the number of vibrational degrees of freedom",
+   "section": "18.7"
+  },
+  {
+   "sym": "Theta_vib_i",
+   "concept": "vibrational-temperature",
+   "meaning": "the characteristic vibrational temperature of normal mode i, hν_i/k",
+   "unit": "K",
+   "section": "18.7"
+  },
+  {
+   "sym": "C_V_vib",
+   "concept": "polyatomic-vibrational-heat-capacity",
+   "meaning": "the vibrational heat capacity at constant volume",
+   "unit": "J/K",
+   "section": "18.7"
+  },
+  {
+   "sym": "H_op",
+   "concept": "hamiltonian-operator",
+   "meaning": "the vibrational Hamiltonian in normal coordinates",
+   "section": "18.7"
+  },
+  {
+   "sym": "f_dof",
+   "meaning": "the number of vibrational degrees of freedom, 3N − 5 or 3N − 6",
+   "section": "18.7"
+  },
+  {
+   "sym": "mu_i",
+   "type": "mass",
+   "meaning": "the reduced mass of normal mode i",
+   "unit": "kg",
+   "section": "18.7"
+  },
+  {
+   "sym": "k_i",
+   "type": "force-constant",
+   "meaning": "the force constant of normal mode i",
+   "unit": "N/m",
+   "section": "18.7"
+  },
+  {
+   "sym": "q_i_nc",
+   "meaning": "the normal coordinate of mode i",
+   "section": "18.7"
+  },
+  {
+   "sym": "eps_vib",
+   "type": "energy",
+   "meaning": "the vibrational energy of f independent oscillators",
+   "unit": "J",
+   "section": "18.7"
+  },
+  {
+   "sym": "k_B",
+   "concept": "boltzmann-constant",
+   "meaning": "Boltzmann's constant",
+   "unit": "J/K",
+   "section": "18.7"
+  },
+  {
+   "sym": "E_vib_avg",
+   "concept": "polyatomic-vibrational-thermal-energy",
+   "type": "energy",
+   "meaning": "the vibrational energy of N molecules",
+   "unit": "J",
+   "section": "18.7"
+  },
+  {
+   "sym": "C_V_bar",
+   "concept": "polyatomic-vibrational-heat-capacity",
+   "meaning": "the vibrational heat capacity at constant volume",
+   "unit": "J/K",
+   "section": "18.7"
+  },
+  {
+   "sym": "N",
+   "meaning": "the number of atoms in the molecule",
+   "section": "18.8"
+  },
+  {
+   "sym": "I_A",
+   "concept": "principal-moments-of-inertia",
+   "meaning": "the principal moment of inertia about axis A",
+   "unit": "kg m²",
+   "section": "18.8"
+  },
+  {
+   "sym": "I_B",
+   "concept": "principal-moments-of-inertia",
+   "meaning": "the principal moment of inertia about axis B",
+   "unit": "kg m²",
+   "section": "18.8"
+  },
+  {
+   "sym": "I_C",
+   "concept": "principal-moments-of-inertia",
+   "meaning": "the principal moment of inertia about axis C",
+   "unit": "kg m²",
+   "section": "18.8"
+  },
+  {
+   "sym": "m_i",
+   "type": "mass",
+   "meaning": "the mass of atom i",
+   "unit": "kg",
+   "section": "18.8"
+  },
+  {
+   "sym": "I_xx",
+   "concept": "inertia-tensor",
+   "meaning": "a diagonal component of the inertia tensor, Σm_i(y_i² + z_i²)",
+   "unit": "kg m²",
+   "section": "18.8"
+  },
+  {
+   "sym": "I_xy",
+   "concept": "inertia-tensor",
+   "meaning": "an off-diagonal component of the inertia tensor, Σm_ix_iy_i",
+   "unit": "kg m²",
+   "section": "18.8"
+  },
+  {
+   "sym": "alpha_dc",
+   "meaning": "the direction cosine of a principal axis with x",
+   "section": "18.8"
+  },
+  {
+   "sym": "beta_dc",
+   "meaning": "the direction cosine of a principal axis with y",
+   "section": "18.8"
+  },
+  {
+   "sym": "gamma_dc",
+   "meaning": "the direction cosine of a principal axis with z",
+   "section": "18.8"
+  },
+  {
+   "sym": "eta_ev",
+   "type": "moment-of-inertia",
+   "meaning": "a principal moment of inertia, the eigenvalue of the matrix equations",
+   "unit": "kg m²",
+   "section": "18.8"
+  },
+  {
+   "sym": "omega_A",
+   "type": "frequency",
+   "meaning": "the angular speed about axis A",
+   "unit": "rad/s",
+   "section": "18.8"
+  },
+  {
+   "sym": "omega_B",
+   "type": "frequency",
+   "meaning": "the angular speed about axis B",
+   "unit": "rad/s",
+   "section": "18.8"
+  },
+  {
+   "sym": "omega_C",
+   "type": "frequency",
+   "meaning": "the angular speed about axis C",
+   "unit": "rad/s",
+   "section": "18.8"
+  },
+  {
+   "sym": "L_A",
+   "type": "angular-momentum",
+   "meaning": "the angular momentum about axis A",
+   "unit": "J s",
+   "section": "18.8"
+  },
+  {
+   "sym": "L_B",
+   "type": "angular-momentum",
+   "meaning": "the angular momentum about axis B",
+   "unit": "J s",
+   "section": "18.8"
+  },
+  {
+   "sym": "L_C",
+   "type": "angular-momentum",
+   "meaning": "the angular momentum about axis C",
+   "unit": "J s",
+   "section": "18.8"
+  },
+  {
+   "sym": "eps_c",
+   "type": "energy",
+   "meaning": "the rotational energy of the rotor",
+   "unit": "J",
+   "section": "18.8"
+  },
+  {
+   "sym": "Theta_rot_i",
+   "concept": "rotational-temperature",
+   "meaning": "the characteristic rotational temperature of axis i, ħ²/2I_ik",
+   "unit": "K",
+   "section": "18.8"
+  },
+  {
+   "sym": "I_i",
+   "concept": "principal-moments-of-inertia",
+   "meaning": "the principal moment of inertia about axis i",
+   "unit": "kg m²",
+   "section": "18.8"
+  },
+  {
+   "sym": "E_J",
+   "type": "energy",
+   "meaning": "the energy of level J of a spherical top, J(J + 1)ħ²/2I",
+   "unit": "J",
+   "section": "18.8"
+  },
+  {
+   "sym": "g_J",
+   "meaning": "the degeneracy of level J of a spherical top, (2J + 1)²",
+   "section": "18.8"
+  },
+  {
+   "sym": "J",
+   "meaning": "the rotational quantum number",
+   "section": "18.8"
+  },
+  {
+   "sym": "K",
+   "meaning": "the quantum number of the angular momentum's component along the unique axis, from −J to J",
+   "section": "18.8"
+  },
+  {
+   "sym": "q_rot",
+   "concept": "rotational-partition-function",
+   "meaning": "the rotational partition function of the polyatomic molecule",
+   "section": "18.8"
+  },
+  {
+   "sym": "Theta_rot",
+   "concept": "rotational-temperature",
+   "meaning": "the rotational temperature of a spherical top",
+   "unit": "K",
+   "section": "18.8"
+  },
+  {
+   "sym": "sigma_sym",
+   "concept": "symmetry-number",
+   "meaning": "the symmetry number",
+   "section": "18.8"
+  },
+  {
+   "sym": "eps_JK",
+   "type": "energy",
+   "meaning": "the energy of level J, K of a symmetric top",
+   "unit": "cm⁻¹",
+   "section": "18.8"
+  },
+  {
+   "sym": "B_t",
+   "concept": "rotational-constant",
+   "meaning": "the rotational constant about axis B, h/8π²cI_B",
+   "unit": "cm⁻¹",
+   "section": "18.8"
+  },
+  {
+   "sym": "A_tilde",
+   "concept": "rotational-constant",
+   "meaning": "the rotational constant about the unique axis A, h/8π²cI_A",
+   "unit": "cm⁻¹",
+   "section": "18.8"
+  },
+  {
+   "sym": "H_class",
+   "type": "energy",
+   "meaning": "the classical rotational energy H(p, q) in terms of the angles and their momenta",
+   "unit": "J",
+   "section": "18.8"
+  },
+  {
+   "sym": "theta",
+   "type": "angle",
+   "meaning": "the Euler angle θ, from 0 to π",
+   "unit": "rad",
+   "section": "18.8"
+  },
+  {
+   "sym": "phi",
+   "type": "angle",
+   "meaning": "the Euler angle φ, from 0 to 2π",
+   "unit": "rad",
+   "section": "18.8"
+  },
+  {
+   "sym": "psi_eul",
+   "type": "angle",
+   "meaning": "the Euler angle ψ, from 0 to 2π",
+   "unit": "rad",
+   "section": "18.8"
+  },
+  {
+   "sym": "p_theta",
+   "type": "angular-momentum",
+   "meaning": "the momentum conjugate to θ",
+   "unit": "J s",
+   "section": "18.8"
+  },
+  {
+   "sym": "p_phi",
+   "type": "angular-momentum",
+   "meaning": "the momentum conjugate to φ",
+   "unit": "J s",
+   "section": "18.8"
+  },
+  {
+   "sym": "p_psi",
+   "type": "angular-momentum",
+   "meaning": "the momentum conjugate to ψ",
+   "unit": "J s",
+   "section": "18.8"
+  },
+  {
+   "sym": "Theta_A",
+   "concept": "rotational-temperature",
+   "meaning": "the characteristic rotational temperature of axis A, h²/8π²I_Ak",
+   "unit": "K",
+   "section": "18.8"
+  },
+  {
+   "sym": "Theta_B",
+   "concept": "rotational-temperature",
+   "meaning": "the characteristic rotational temperature of axis B, h²/8π²I_Bk",
+   "unit": "K",
+   "section": "18.8"
+  },
+  {
+   "sym": "Theta_C",
+   "concept": "rotational-temperature",
+   "meaning": "the characteristic rotational temperature of axis C, h²/8π²I_Ck",
+   "unit": "K",
+   "section": "18.8"
+  },
+  {
+   "sym": "E_rot",
+   "type": "energy",
+   "meaning": "the molar rotational energy",
+   "unit": "J/mol",
+   "section": "18.8"
+  },
+  {
+   "sym": "C_V_bar",
+   "concept": "molar-heat-capacity",
+   "meaning": "the molar rotational heat capacity at constant volume",
+   "unit": "J K⁻¹ mol⁻¹",
+   "section": "18.8"
+  },
+  {
+   "sym": "q_rot0",
+   "concept": "asymmetric-top-partition-function",
+   "type": "partition-function",
+   "meaning": "the classical approximation to the rotational partition function",
+   "section": "18.8"
+  },
+  {
+   "sym": "k",
+   "concept": "boltzmann-constant",
+   "meaning": "Boltzmann's constant, written k",
+   "unit": "J/K",
+   "section": "18.8"
+  },
+  {
+   "sym": "T",
+   "type": "temperature",
+   "meaning": "the temperature",
+   "unit": "K",
+   "section": "18.8"
+  },
+  {
+   "sym": "R",
+   "concept": "ideal-gas-constant",
+   "meaning": "the gas constant",
+   "unit": "J K⁻¹ mol⁻¹",
+   "section": "18.8"
+  },
+  {
+   "sym": "C_heat",
+   "concept": "constant-volume-heat-capacity",
+   "meaning": "the heat capacity of a substance, the heat needed to raise its temperature by one kelvin",
+   "unit": "J/K",
+   "section": "18.9"
+  },
+  {
+   "sym": "C_trans",
+   "concept": "constant-volume-heat-capacity",
+   "meaning": "the translational contribution to the heat capacity",
+   "unit": "J/K",
+   "section": "18.9"
+  },
+  {
+   "sym": "C_vib",
+   "concept": "constant-volume-heat-capacity",
+   "meaning": "the vibrational contribution to the heat capacity",
+   "unit": "J/K",
+   "section": "18.9"
+  },
+  {
+   "sym": "C_rot",
+   "concept": "constant-volume-heat-capacity",
+   "meaning": "the rotational contribution to the heat capacity",
+   "unit": "J/K",
+   "section": "18.9"
+  },
+  {
+   "sym": "C_Vm",
+   "concept": "molar-heat-capacity",
+   "meaning": "the constant-volume molar heat capacity",
+   "unit": "J K⁻¹ mol⁻¹",
+   "section": "18.9"
+  },
+  {
+   "sym": "C_Vm_1D",
+   "concept": "vibrational-heat-capacity",
+   "meaning": "the constant-volume molar heat capacity of a one-dimensional harmonic oscillator",
+   "unit": "J K⁻¹ mol⁻¹",
+   "section": "18.9"
+  },
+  {
+   "sym": "C_Vm_3D",
+   "concept": "einstein-heat-capacity",
+   "meaning": "the constant-volume molar heat capacity of a three-dimensional Einstein solid",
+   "unit": "J K⁻¹ mol⁻¹",
+   "section": "18.9"
+  },
+  {
+   "sym": "R",
+   "concept": "ideal-gas-constant",
+   "meaning": "the universal gas constant",
+   "unit": "J K⁻¹ mol⁻¹",
+   "section": "18.9"
+  },
+  {
+   "sym": "T",
+   "type": "temperature",
+   "meaning": "the absolute temperature",
+   "unit": "K",
+   "section": "18.9"
+  },
+  {
+   "sym": "Theta_v",
+   "concept": "vibrational-temperature",
+   "meaning": "the characteristic vibrational temperature of the oscillator, hν/k",
+   "unit": "K",
+   "section": "18.9"
+  },
+  {
+   "sym": "nu",
+   "type": "frequency",
+   "meaning": "the vibrational frequency of the oscillator",
+   "unit": "s⁻¹",
+   "section": "18.9"
+  },
+  {
+   "sym": "h",
+   "meaning": "Planck's constant",
+   "unit": "J s",
+   "section": "18.9"
+  },
+  {
+   "sym": "k",
+   "concept": "boltzmann-constant",
+   "meaning": "Boltzmann's constant, written k",
+   "unit": "J/K",
+   "section": "18.9"
+  },
+  {
+   "sym": "C_s",
+   "concept": "specific-heat-capacity",
+   "meaning": "the specific heat capacity, per gram",
+   "unit": "J g⁻¹ K⁻¹",
+   "section": "18.9"
+  },
+  {
+   "sym": "M_molar",
+   "type": "mass",
+   "meaning": "the molar mass of the metal",
+   "unit": "g/mol",
+   "section": "18.9"
+  },
+  {
+   "sym": "q_tot",
+   "concept": "partition-function-factorization",
+   "type": "partition-function",
+   "meaning": "the total partition function of H₂, including q_nuc",
+   "section": "18.10"
+  },
+  {
+   "sym": "q_elec",
+   "concept": "electronic-partition-function",
+   "meaning": "the electronic partition function",
+   "section": "18.10"
+  },
+  {
+   "sym": "q_vib",
+   "concept": "vibrational-partition-function",
+   "meaning": "the vibrational partition function",
+   "section": "18.10"
+  },
+  {
+   "sym": "q_rot",
+   "concept": "rotational-partition-function",
+   "meaning": "the rotational partition function",
+   "section": "18.10"
+  },
+  {
+   "sym": "q_trans",
+   "concept": "translational-partition-function",
+   "meaning": "the translational partition function",
+   "section": "18.10"
+  },
+  {
+   "sym": "q_nuc",
+   "type": "partition-function",
+   "meaning": "the nuclear spin partition function",
+   "section": "18.10"
+  },
+  {
+   "sym": "psi_ns",
+   "type": "wavefunction",
+   "meaning": "a nuclear spin function of the two protons",
+   "section": "18.10"
+  },
+  {
+   "sym": "alpha_s",
+   "concept": "spin-states",
+   "meaning": "the spin-up state of a proton",
+   "section": "18.10"
+  },
+  {
+   "sym": "beta_s",
+   "concept": "spin-states",
+   "meaning": "the spin-down state of a proton",
+   "section": "18.10"
+  },
+  {
+   "sym": "psi_r",
+   "type": "wavefunction",
+   "meaning": "a rotational wavefunction of H₂, e^(imφ)P_l^|m|(cos θ)",
+   "section": "18.10"
+  },
+  {
+   "sym": "P_l",
+   "meaning": "the Legendre polynomial of degree l",
+   "section": "18.10"
+  },
+  {
+   "sym": "P_lm",
+   "concept": "associated-legendre-functions",
+   "meaning": "the associated Legendre polynomial",
+   "section": "18.10"
+  },
+  {
+   "sym": "l",
+   "meaning": "the rotational quantum number, written l here",
+   "section": "18.10"
+  },
+  {
+   "sym": "m_l",
+   "meaning": "the magnetic quantum number, written m",
+   "section": "18.10"
+  },
+  {
+   "sym": "theta",
+   "type": "angle",
+   "meaning": "the polar angle of the molecule's axis",
+   "unit": "rad",
+   "section": "18.10"
+  },
+  {
+   "sym": "phi",
+   "type": "angle",
+   "meaning": "the azimuthal angle of the molecule's axis",
+   "unit": "rad",
+   "section": "18.10"
+  },
+  {
+   "sym": "J",
+   "meaning": "the rotational quantum number",
+   "section": "18.10"
+  },
+  {
+   "sym": "q_ortho",
+   "concept": "ortho-para-partition-functions",
+   "type": "partition-function",
+   "meaning": "the rotational partition function of ortho hydrogen",
+   "section": "18.10"
+  },
+  {
+   "sym": "q_para",
+   "concept": "ortho-para-partition-functions",
+   "type": "partition-function",
+   "meaning": "the rotational partition function of para hydrogen",
+   "section": "18.10"
+  },
+  {
+   "sym": "q_rot_nu",
+   "concept": "ortho-para-partition-functions",
+   "type": "partition-function",
+   "meaning": "the rotational and nuclear partition function of hydrogen, ortho and para together",
+   "section": "18.10"
+  },
+  {
+   "sym": "Theta_R",
+   "concept": "rotational-temperature",
+   "meaning": "the rotational temperature of H₂",
+   "unit": "K",
+   "section": "18.10"
+  },
+  {
+   "sym": "T",
+   "type": "temperature",
+   "meaning": "the temperature",
+   "unit": "K",
+   "section": "18.10"
+  },
+  {
+   "sym": "N_o",
+   "meaning": "the number of ortho hydrogen molecules",
+   "section": "18.10"
+  },
+  {
+   "sym": "N_p",
+   "meaning": "the number of para hydrogen molecules",
+   "section": "18.10"
+  },
+  {
+   "sym": "C_V",
+   "concept": "constant-volume-heat-capacity",
+   "meaning": "the rotational heat capacity at constant volume",
+   "unit": "J/K",
+   "section": "18.10"
+  },
+  {
+   "sym": "E_avg",
+   "concept": "average-ensemble-energy",
+   "meaning": "the average rotational energy",
+   "unit": "J",
+   "section": "18.10"
+  },
+  {
+   "sym": "beta",
+   "concept": "thermodynamic-beta",
+   "meaning": "1/kT, the reciprocal of the thermal energy",
+   "unit": "J⁻¹",
+   "section": "18.10"
+  },
+  {
+   "sym": "C_V_rot_nu",
+   "concept": "constant-volume-heat-capacity",
+   "meaning": "the rotational heat capacity of hydrogen",
+   "unit": "J/K",
+   "section": "18.10"
+  },
+  {
+   "sym": "k_B",
+   "concept": "boltzmann-constant",
+   "meaning": "Boltzmann's constant",
+   "unit": "J/K",
+   "section": "18.11"
+  },
+  {
+   "sym": "T",
+   "type": "temperature",
+   "meaning": "the temperature",
+   "unit": "K",
+   "section": "18.11"
+  },
+  {
+   "sym": "N",
+   "meaning": "the number of atoms in the molecule",
+   "section": "18.11"
+  },
+  {
+   "sym": "E_trans_avg",
+   "concept": "average-translational-energy",
+   "type": "energy",
+   "meaning": "the average translational energy of a molecule",
+   "unit": "J",
+   "section": "18.11"
+  },
+  {
+   "sym": "q_trans",
+   "concept": "translational-partition-function",
+   "meaning": "the translational partition function",
+   "section": "18.11"
+  },
+  {
+   "sym": "beta",
+   "concept": "thermodynamic-beta",
+   "meaning": "1/k_BT, the reciprocal of the thermal energy",
+   "unit": "J⁻¹",
+   "section": "18.11"
+  },
+  {
+   "sym": "Lambda_th",
+   "concept": "thermal-wavelength",
+   "meaning": "the thermal de Broglie wavelength",
+   "unit": "m",
+   "section": "18.11"
+  },
+  {
+   "sym": "V",
+   "type": "volume",
+   "meaning": "the volume",
+   "unit": "m³",
+   "section": "18.11"
+  },
+  {
+   "sym": "E_rot_avg",
+   "concept": "average-rotational-energy",
+   "type": "energy",
+   "meaning": "the average rotational energy of a molecule",
+   "unit": "J",
+   "section": "18.11"
+  },
+  {
+   "sym": "q_rot",
+   "concept": "rotational-partition-function",
+   "meaning": "the rotational partition function",
+   "section": "18.11"
+  },
+  {
+   "sym": "sigma_sym",
+   "concept": "symmetry-number",
+   "meaning": "the symmetry number",
+   "section": "18.11"
+  },
+  {
+   "sym": "B_t",
+   "concept": "rotational-constant",
+   "meaning": "the rotational constant",
+   "unit": "J",
+   "section": "18.11"
+  },
+  {
+   "sym": "E_rot_cl",
+   "type": "energy",
+   "meaning": "the classical rotational energy of a diatomic",
+   "unit": "J",
+   "section": "18.11"
+  },
+  {
+   "sym": "I_mom",
+   "concept": "moment-of-inertia",
+   "meaning": "the moment of inertia of the molecule",
+   "unit": "kg m²",
+   "section": "18.11"
+  },
+  {
+   "sym": "omega_x",
+   "type": "frequency",
+   "meaning": "the angular velocity about x",
+   "unit": "rad/s",
+   "section": "18.11"
+  },
+  {
+   "sym": "omega_y",
+   "type": "frequency",
+   "meaning": "the angular velocity about y",
+   "unit": "rad/s",
+   "section": "18.11"
+  },
+  {
+   "sym": "E_vib_avg",
+   "concept": "average-vibrational-energy",
+   "type": "energy",
+   "meaning": "the average vibrational energy of a molecule",
+   "unit": "J",
+   "section": "18.11"
+  },
+  {
+   "sym": "q_vib",
+   "concept": "vibrational-partition-function",
+   "meaning": "the vibrational partition function",
+   "section": "18.11"
+  },
+  {
+   "sym": "h",
+   "meaning": "Planck's constant",
+   "unit": "J s",
+   "section": "18.11"
+  },
+  {
+   "sym": "c",
+   "meaning": "the speed of light",
+   "unit": "cm/s",
+   "section": "18.11"
+  },
+  {
+   "sym": "nu_tilde",
+   "type": "wavenumber",
+   "meaning": "the vibrational wavenumber",
+   "unit": "cm⁻¹",
+   "section": "18.11"
+  },
+  {
+   "sym": "E_vib_cl",
+   "type": "energy",
+   "meaning": "the classical vibrational energy, ½kx² + ½μv_x²",
+   "unit": "J",
+   "section": "18.11"
+  },
+  {
+   "sym": "k",
+   "type": "force-constant",
+   "meaning": "the force constant of the bond",
+   "unit": "N/m",
+   "section": "18.11",
+   "redefines": true
+  },
+  {
+   "sym": "x",
+   "type": "length",
+   "meaning": "the displacement of the bond from its length at rest",
+   "unit": "m",
+   "section": "18.11",
+   "redefines": true
+  },
+  {
+   "sym": "mu",
+   "concept": "reduced-mass",
+   "meaning": "the reduced mass",
+   "unit": "kg",
+   "section": "18.11"
+  },
+  {
+   "sym": "v_x",
+   "type": "velocity",
+   "meaning": "the velocity of the vibration",
+   "unit": "m/s",
+   "section": "18.11"
+  },
+  {
+   "sym": "C_v",
+   "concept": "constant-volume-heat-capacity",
+   "meaning": "the heat capacity at constant volume",
+   "unit": "J/K",
+   "section": "18.11"
+  },
+  {
+   "sym": "U",
+   "concept": "internal-energy",
+   "meaning": "the internal energy",
+   "unit": "J",
+   "section": "18.11"
+  },
+  {
+   "sym": "R",
+   "concept": "ideal-gas-constant",
+   "meaning": "the gas constant",
+   "unit": "J K⁻¹ mol⁻¹",
+   "section": "18.11"
+  }
+ ]
+}

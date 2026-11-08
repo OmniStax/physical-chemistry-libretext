@@ -1,0 +1,27 @@
+<section id="molecule-energy">
+<h2>The energy of one molecule</h2>
+<p>From the previous sections, <span data-concept="indistinguishable-partition-function">the partition function for a system of $N$ indistinguishable and independent molecules</span> is:</p>
+$$ \kQsys(N,\kV,\beta) = \dfrac{\sum_i{e^{-\beta \kEi}}}{N!} \tag{17.8.1} $$
+<p>And the <span data-concept="average-ensemble-energy">average energy of the system</span> is:</p>
+$$ \kEavg = k\kT^2 \left(\dfrac{\partial \ln{\kQsys}}{\partial \kT}\right) \tag{17.8.2} $$
+<p>We can combine these two equations to obtain:</p>
+<figure class="dv" id="drv-independent-energy"></figure>
+<p>The average energy is equal to:</p>
+$$ \kEavg = N \kepsavg \tag{17.8.4} $$
+<p>where $\kepsavg$ is <span data-concept="average-molecular-energy">the average energy of a single particle</span>. If we compare Equation 17.8.2 with Equation 17.8.2,<sup class="fn" data-note="c-compare"></sup> we can see:</p>
+$$ \kepsavg = \sum_i{\kepsi \dfrac{e^{-\kepsi/k\kT}}{\kqmol(\kV,\kT)}} $$
+<p>The <span data-concept="boltzmann-probability">probability that a particle is in state $i$</span>, $\pi_i$, is given by:</p>
+$$ \kepsavg = \dfrac{e^{-\kepsi/k\kT}}{\kqmol(\kV,\kT)} = \dfrac{e^{-\kepsi/k\kT}}{\sum_i{e^{-\kepsi/k\kT}}} $$<sup class="fn" data-note="c-pi"></sup>
+</section>
+
+<section id="degrees-of-freedom">
+<h2>One factor per degree of freedom</h2>
+<p><span data-concept="molecular-energy-separation">The energy of a particle is a sum of the energy of each degree of freedom for that particle</span>. In the case of a molecule, the energy is:</p>
+$$ \epsilon = \kepstrans + \kepsrot + \kepsvib + \kepselec $$
+<p><span data-concept="partition-function-factorization">The molecular partition function is the product of the degree of freedom partition functions</span>:</p>
+$$ \kqmol(\kV,\kT) = \kqtrans \kqrot \kqvib \kqelec $$
+<p><span data-concept="degree-of-freedom-partition-function">The partition function for each degree of freedom</span> follows the same is related to the <span data-concept="boltzmann-distribution">Boltzmann distribution</span>. For example, the vibrational partition function is:</p>
+$$ \kqvib = \sum_i{e^{-\kepsi/k\kT}} $$
+<p>The average energy of each degree of freedom follows the same pattern as before. For example, the average vibrational energy is:</p>
+$$ \kepsvibavg = k\kT^2\dfrac{\partial \ln{\kqvib}}{\partial t} = -\dfrac{\partial \ln{\kqvib}}{\partial \beta} $$<sup class="fn" data-note="c-t"></sup>
+</section>
