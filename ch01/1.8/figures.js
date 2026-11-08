@@ -128,7 +128,7 @@ function particle(ctx, x, y, r, sym) {
    the slider's least separation, is 7.69 x 10^-18 J).
 ===================================================================== */
 (function () {
-  const d = sim('sim-coulomb', 620);
+  const d = sim('sim-coulomb', 700);
   const P = F.choice(d.controls, { label: '\\text{charges}', options: [{ value: 'like', label: 'same sign (p⁺, p⁺)' }, { value: 'opposite', label: 'opposite signs (p⁺, e⁻)' }], value: 'like', aria: 'the signs of the two charges' });
   const R = ctl(d.controls, { label: '\\kr', cls: 'length', min: 30, max: 400, step: 1, value: 100, unit: 'pm', dec: 0, aria: 'the distance between the two charges' });
   let hits = []; F.hover(d.stage, () => hits);
@@ -138,7 +138,7 @@ function particle(ctx, x, y, r, sym) {
     const like = P.value === 'like', s = P.mix((v) => (v === 'like' ? 1 : -1)), r = R.v;
     const ce = C('energy'), cr = C('length'), cF = C('force');
     const V = (x) => (KC * QE * QE * s / (x * 1e-12)) / 1e-18;             /* 10^-18 J */
-    const box = { l: 170, r: 1320, t: 250, b: 580 };
+    const box = { l: 170, r: 1320, t: 300, b: 610 };
     const ax = axes(ctx, box, [0, 400], [-8, 8], { nx: 8, ny: 4, xl: 'separation r (pm)', yl: 'potential energy V (10⁻¹⁸ J)', xc: cr, yc: ce });
     line(ctx, box.l, ax.Y(0), box.r, ax.Y(0), alpha(PAL.ink, 0.4), 2);
     plot(ctx, ax, V, ce, { w: 5, x: [12, 400] });
@@ -149,7 +149,7 @@ function particle(ctx, x, y, r, sym) {
     dot(ctx, ax.X(r), py, ce, true, 10);
     text(ctx, (like ? 'repulsive' : 'attractive') + ' potential', ax.X(300), ax.Y(V(300)) + (like ? -26 : 30), ce, { size: 20, weight: 600, align: 'center', bg: PAL.panel });
     /* the two charges on the r axis, above the graph */
-    const sy = 160, x1 = ax.X(0), x2 = ax.X(r);
+    const sy = 150, x1 = ax.X(0), x2 = ax.X(r);
     hbracket(ctx, x1, x2, sy + 40, cr, 'r = ' + fmt(r, 0) + ' pm', { side: 'below' });
     particle(ctx, x1, sy, 14, 'p+'); hits.push({ x: x1, y: sy, r: 18, name: 'a proton, charge +e' });
     particle(ctx, x2, sy, like ? 14 : 9, like ? 'p+' : 'e-'); hits.push({ x: x2, y: sy, r: 18, name: like ? 'a second proton, charge +e' : 'an electron, charge −e' });
@@ -168,7 +168,7 @@ function particle(ctx, x, y, r, sym) {
       ? `Two charges of the same sign ${fmt(r, 0)} pm apart: V = +${fmt(vr, 2)} × 10⁻¹⁸ J, and the force of ${sciU(Fv)} N pushes them apart.`
       : `Two charges of opposite sign ${fmt(r, 0)} pm apart: V = −${fmt(-vr, 2)} × 10⁻¹⁸ J, and the force of ${sciU(Fv)} N pulls them together.`);
     readout(d.readout,
-      `\\kV(\\kr)=\\dfrac{k\\kQa\\kQb}{\\kr}=\\dfrac{(8.988\\times10^{9})(+1.602\\times10^{-19})(${like ? '+' : '-'}1.602\\times10^{-19})}{${fmt(r, 0)}\\times10^{-12}}\\ \\text{J}=${sciT(like ? vr * 1e-18 : -Math.abs(vr) * 1e-18)}\\ \\text{J}`,
+      `\\kV(\\kr)=\\dfrac{k\\kQa\\kQb}{\\kr}=\\dfrac{${like ? '' : '-'}(8.988\\times10^{9})(1.602\\times10^{-19})^2}{${fmt(r, 0)}\\times10^{-12}}\\ \\text{J}=${sciT(like ? vr * 1e-18 : -Math.abs(vr) * 1e-18)}\\ \\text{J}`,
       `The force is $\\kF=-d\\kV/d\\kr$, minus the slope of the dashed tangent: ${like ? '+' : '−'}${sciU(Fv)} N, ${like ? 'outward, a repulsion' : 'inward, an attraction'}.`);
   }
   register(d.fig, { update: () => {}, draw });

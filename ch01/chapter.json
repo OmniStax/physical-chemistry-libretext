@@ -204,6 +204,20 @@
    "section": "1.3"
   },
   {
+   "sym": "V",
+   "type": "potential",
+   "meaning": "the retarding voltage on the collector plate",
+   "unit": "V",
+   "section": "1.3"
+  },
+  {
+   "sym": "E",
+   "type": "energy",
+   "meaning": "the energy of a photon",
+   "unit": "J or eV",
+   "section": "1.3"
+  },
+  {
    "sym": "lambda",
    "type": "wavelength",
    "meaning": "the wavelength of a line of the hydrogen spectrum",
@@ -215,6 +229,20 @@
    "concept": "wavenumber",
    "meaning": "the wavenumber of a line of the hydrogen spectrum",
    "unit": "cm⁻¹",
+   "section": "1.4"
+  },
+  {
+   "sym": "nu",
+   "type": "frequency",
+   "meaning": "the frequency of electromagnetic radiation",
+   "unit": "Hz",
+   "section": "1.4"
+  },
+  {
+   "sym": "E",
+   "type": "energy",
+   "meaning": "the energy of a photon",
+   "unit": "J",
    "section": "1.4"
   },
   {
@@ -318,9 +346,10 @@
   {
    "sym": "V",
    "concept": "coulomb-potential",
-   "meaning": "the Coulomb potential energy of two charges",
+   "meaning": "the Coulomb potential energy of two charges a distance r apart",
    "unit": "J",
-   "section": "1.8"
+   "section": "1.8",
+   "redefines": true
   },
   {
    "sym": "F",
@@ -398,6 +427,20 @@
    "concept": "de-broglie-wavelength",
    "meaning": "the de Broglie wavelength of the electron in its orbit",
    "unit": "m",
+   "section": "1.8"
+  },
+  {
+   "sym": "p",
+   "type": "momentum",
+   "meaning": "the momentum of the electron in its orbit",
+   "unit": "kg·m/s",
+   "section": "1.8"
+  },
+  {
+   "sym": "E",
+   "type": "energy",
+   "meaning": "the total energy of the electron, kinetic plus potential",
+   "unit": "J",
    "section": "1.8"
   },
   {

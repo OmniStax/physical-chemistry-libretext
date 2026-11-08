@@ -1037,60 +1037,60 @@
     "vision": "normal",
     "assign": {
       "energy": {
-        "light": "#8D035A",
-        "dark": "#FF89C2"
-      },
-      "temperature": {
         "light": "#CB0283",
         "dark": "#F12CA0"
       },
+      "temperature": {
+        "light": "#0A6ED2",
+        "dark": "#3190FE"
+      },
       "wavelength": {
-        "light": "#774AFF",
-        "dark": "#856FF7"
+        "light": "#677806",
+        "dark": "#899E01"
       },
       "frequency": {
         "light": "#743A04",
         "dark": "#FD9F5B"
       },
       "wavenumber": {
-        "light": "#0A6ED2",
-        "dark": "#3190FE"
-      },
-      "momentum": {
         "light": "#A43A3C",
         "dark": "#E97875"
       },
+      "momentum": {
+        "light": "#84039E",
+        "dark": "#E47CFF"
+      },
       "velocity": {
-        "light": "#017336",
-        "dark": "#0EC360"
+        "light": "#065154",
+        "dark": "#13D9E1"
       },
       "length": {
-        "light": "#5909D7",
-        "dark": "#A9A0FF"
+        "light": "#774AFF",
+        "dark": "#856FF7"
       },
       "mass": {
         "light": "#443303",
         "dark": "#FFCD4F"
       },
       "potential": {
+        "light": "#5909D7",
+        "dark": "#A9A0FF"
+      },
+      "power": {
+        "light": "#8D035A",
+        "dark": "#FF89C2"
+      },
+      "energy-density": {
         "light": "#B806DC",
         "dark": "#A274AE"
       },
-      "power": {
-        "light": "#677806",
-        "dark": "#899E01"
-      },
-      "energy-density": {
-        "light": "#84039E",
-        "dark": "#E47CFF"
-      },
       "charge": {
-        "light": "#003D7B",
-        "dark": "#A6CCFD"
+        "light": "#017336",
+        "dark": "#0EC360"
       },
       "force": {
-        "light": "#065154",
-        "dark": "#13D9E1"
+        "light": "#003D7B",
+        "dark": "#A6CCFD"
       }
     },
     "referentOrder": [

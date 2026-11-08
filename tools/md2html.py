@@ -71,12 +71,12 @@ class Drafter:
         out = []
         for k, p in enumerate(parts):
             if k % 2:
-                out.append(self.refs(p))
+                out.append(re.sub(r"\\ce\{([^{}]*)\}", r"\\mathrm{\1}", self.refs(p)))
                 continue
             p = self.refs(p)
             p = re.sub(r"!\[([^\]]*)\]\(media/([^)]+)\)", lambda m: f'<img src="/media/{self.chdir}/{m.group(2)}" alt="{html.escape(m.group(1))}">', p)
             p = re.sub(r"\[([^\]]+)\]\(page:(\d+)\)", lambda m: f'<a href="{PAGE_URL.get(m.group(2), "#")}">{m.group(1)}</a>', p)
-            p = re.sub(r"\[([^\]]+)\]\((https?://[^)]+)\)", r'<a href="\2">\1</a>', p)
+            p = re.sub(r"\[([^\]]+)\]\((https?://(?:[^()\s]|\([^()\s]*\))+)\)", r'<a href="\2">\1</a>', p)
             p = re.sub(r"\{term:([^{}]+)\}", r"<strong>\1</strong>", p)
             p = re.sub(r"(?<![\w*])\*([^*\n]+?)\*(?![\w*])", r"<em>\1</em>", p)
             p = p.replace("$", "&#36;")
@@ -92,6 +92,7 @@ class Drafter:
         tex = re.sub(r"\\begin\{align\*?\}", r"\\begin{aligned}", tex)
         tex = re.sub(r"\\end\{align\*?\}", r"\\end{aligned}", tex)
         tex = self.refs(tex)
+        tex = re.sub(r"\\ce\{([^{}]*)\}", r"\\mathrm{\1}", tex)  # the app's KaTeX has no mhchem
         if lab:
             tex += f" \\tag{{{self.eqnum[lab]}}}"
         return f"$$ {tex} $$"
