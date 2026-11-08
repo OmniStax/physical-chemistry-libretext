@@ -1,0 +1,107 @@
+{
+ "id": "18.2",
+ "module": "13692",
+ "chapter": "18",
+ "title": "Most Atoms are in the Ground Electronic State",
+ "short": "Electronic partition function",
+ "lead": "The electronic partition function sums a Boltzmann factor for each electronic level, counted once for every state the level holds. Setting the spacing of the levels against kT shows how many terms of the sum matter at ordinary temperatures.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "Adapted from B. L. Tembe's notes (IIT Bombay, www.chem.iitb.ac.in/~bltembe/pdfs/ch_3.pdf), under the book's CC BY-NC-SA 4.0.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercises for this section; the one here is new and AI-written, its answer checked by computation with hc/k = 1.4388 cm K. Its Bloom level and concept tags were chosen by AI. Numeric answers accept a 2% tolerance.",
+ "figures": [],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "electronic-levels",
+   "concept": "electronic-partition-function",
+   "verb": "introduces"
+  },
+  {
+   "span": "electronic-levels",
+   "concept": "degenerate-level-weight",
+   "verb": "introduces"
+  },
+  {
+   "span": "electronic-levels",
+   "concept": "ground-electronic-state-dominates",
+   "verb": "introduces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "the first excited electronic state of nitric oxide (NO)",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "electronic-levels",
+   "prompt": "<p>Take the first excited electronic level of nitric oxide to lie 40 000 cm⁻¹ above the ground level, which is the zero of energy. At 1000 K, find (a) $\\kEtwo/k\\kT$ and (b) the second term of Equation 18.2.2 divided by its degeneracy, $e^{-\\kEtwo/k\\kT}$.</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 57.55,
+      "hint": "An energy of $\\tilde{\\nu}$ in cm⁻¹ is a temperature $hc\\tilde{\\nu}/k$, with $hc/k = 1.4388$ cm K."
+     },
+     {
+      "part": "b",
+      "value": 1.01e-25
+     }
+    ],
+    "solution": "<p>(a) $\\kEtwo/k = hc\\tilde{\\nu}/k = (1.4388\\ \\text{cm K})(40000\\ \\text{cm}^{-1}) = 5.755\\times10^4$ K, so at 1000 K, $\\kEtwo/k\\kT = 57.55$. (b) $e^{-57.55} = 1.01\\times10^{-25}$. Even with a degeneracy of a few, this term adds nothing measurable to $\\kqelec$, which stays at $g_1$.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "electronic-partition-function"
+  },
+  {
+   "exercise": "a1",
+   "concept": "ground-electronic-state-dominates"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-no-doublet",
+   "kind": "correction",
+   "html": "Nitric oxide is the usual exception to this rule. Its ground term is split into two levels, each doubly degenerate, only about 121 cm⁻¹ apart, so at ordinary temperatures $q_\\text{elec} \\approx 2 + 2e^{-174\\ \\text{K}/T}$. The state some 40 000 cm⁻¹ up is the next one above that pair."
+  },
+  {
+   "id": "c-reference",
+   "kind": "correction",
+   "html": "The book prints a raw cross-reference here. It means Equation 18.2.2."
+  },
+  {
+   "id": "c-ten-thousand",
+   "kind": "correction",
+   "html": "40 000 cm⁻¹ is $hc\\tilde{\\nu}/k = 5.76\\times10^4$ K, not $10^4$ K. At 1000 K the second term is $g_2e^{-57.6} = g_2 \\times 1.0\\times10^{-25}$, so the conclusion holds more strongly still."
+  },
+  {
+   "id": "c-e-zero",
+   "kind": "correction",
+   "html": "The first term is $e^0 = 1$, for the nondegenerate ground level of H₂."
+  },
+  {
+   "id": "c-kt-ev",
+   "kind": "correction",
+   "html": "At 300 K, $kT = 0.0259$ eV, so the second term is $e^{-193}$ rather than $e^{-200}$. It is still negligible."
+  }
+ ]
+}

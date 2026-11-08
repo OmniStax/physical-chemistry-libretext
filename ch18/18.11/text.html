@@ -1,0 +1,50 @@
+<section id="half-kt-per-term">
+<h2>Half of kT per quadratic term</h2>
+<p>The <span data-concept="equipartition-theorem">equipartition theorem</span>, also known as the <span data-concept="equipartition-theorem">law of equipartition</span>, <span data-concept="equipartition-theorem">equipartition of energy</span> or simply <span data-concept="equipartition-theorem">equipartition</span>, states that <span data-concept="equipartition-theorem">every degree of freedom that appears only quadratically in the total energy has an average energy of $\tfrac{1}{2}k_B\kT$ in thermal equilibrium and contributes $\tfrac{1}{2}k_B$ to the system's heat capacity</span>. Here, $k_B$ is the <span data-concept="boltzmann-constant">Boltzmann constant</span>, and T is the temperature in Kelvin. The law of equipartition of energy states that each quadratic term in the classical expression for the energy contributes ½kBT to the average energy. For instance, the motion of an atom has three <span data-concept="degrees-of-freedom">degrees of freedom</span> (number of ways of absorbing energy), corresponding to the x, y and z components of its momentum. Since these momenta appear quadratically in the kinetic energy, every atom has an average kinetic energy of $3/2k_B\kT$ in thermal equilibrium. The number of degrees of freedom of a polyatomic gas molecule is $3N$ where $N$ is the number of atoms in the molecule. This is equal to number of coordinates for the system; e.g. for two atoms you would have x, y, z for each atom.</p>
+</section>
+
+<section id="translations">
+<h2>Translations</h2>
+<p>The translational contribution to the average energy is derived in terms of the derivative of the translational partition:</p>
+$$ \kEtransavg  = - \dfrac{1}{\kqtrans} \dfrac{\partial \kqtrans}{\partial \kbeta} \tag{18.11.1} $$
+<figure class="dv" id="drv-trans-energy"></figure>
+<p>Thus, <span data-concept="average-translational-energy">the three translational degrees of freedom in three dimensions satisfy the equipartition theorem with each translational degree providing $\tfrac{1}{2} k_B\kT$ of energy</span>.</p>
+</section>
+
+<section id="rotations">
+<h2>Rotations</h2>
+<p>Consider the molecular partition functions. The average rotational energy to the average energy is derived in terms of the derivative of the translational partition:</p>
+$$ \kErotavg = - \dfrac{1}{\kqrot} \dfrac{\partial \kqrot}{\partial \kbeta} \tag{18.11.2} $$
+<figure class="dv" id="drv-rot-energy"></figure>
+<p>The classical expression for the rotational energy of a diatomic molecule is</p>
+$$ \kErotcl= \dfrac{1}{2} \kI (\komegax^2 + \komegay^2) $$
+<p>where $\kI$ is the <span data-concept="moment-of-inertia">moment of inertia</span> and $\komegax$ and $\komegay$ are the angular velocities in the $x$ and $y$ directions. The rotation along the molecular axis (the $z$ axis here) has no meaning in quantum mechanics because the rotations along the molecular axis lead to configurations which are indistinguishable from the original configuration. <span data-concept="average-rotational-energy">The two rotational degrees of freedom have thus given a value of $k\kT$ with with each rotational degree providing $\tfrac{1}{2} k_B\kT$ of energy</span>.</p>
+</section>
+
+<section id="vibrations">
+<h2>Vibrations</h2>
+<p>Consider vibrational motions. The average vibrational energy to the average energy is derived in terms of the derivative of the translational partition:</p>
+$$ \kEvibavg  = - \dfrac{1}{\kqvib} \dfrac{\partial \kqvib}{\partial \kbeta} \tag{18.11.3} $$
+<figure class="dv" id="drv-vib-energy"></figure>
+<p>with <span data-concept="average-vibrational-energy">each vibrational degree providing $k_B\kT$ of energy</span> (since there ar two quadratic terms in the Hamiltonian for a harmonic oscillator (kinetics energy and potential energy).</p>
+<p>Compare Equation 18.11.7 with the classical expression for the vibrational energy</p>
+$$ \kEvibcl = \tfrac{1}{2}  \kk\kx^2 + \tfrac{1}{2} \kmu\kvx^2 $$
+<p>At high temperature the equipartition theorem is valid, but at low temperature, the expansion in Equation 18.11.6 fails (or more terms are required). In this case, only a few vibrational states are occupied and the equipartition principle is not typically applicable.</p>
+</section>
+
+<section id="heat-capacity">
+<h2>Heat Capacity</h2>
+<p><span data-concept="constant-volume-heat-capacity">Heat capacity at constant volume</span> $\kCv$, is defined as</p>
+$$ \kCv = \left(\dfrac{\partial \kU}{\partial \kT} \right)_v $$
+<p><span data-concept="equipartition-heat-capacity">The equipartition theorem requires that each degree of freedom that appears only quadratically in the total energy has an average energy of ½k<sub>B</sub>T in thermal equilibrium and, thus, contributes ½kB to the system's heat capacity</span>. Thus the three translational degrees of freedom each contribute ½R to (3/2 R). The contribution of rotational kinetic energy will be R for the linear, and 3/2R for the nonlinear molecules. For the vibration, an oscillator has quadratic kinetic and potential terms, making the contribution of each vibrational mode R. However, k<sub>B</sub>T has to be much greater than the spacing between the quantum energy levels. If this is not satisfied, the heat capacity will be reduced and which drop to zero at low temperatures. The corresponding degree of freedom is said to be <strong><span data-concept="frozen-out">frozen out</span></strong>; this is the situation for the vibrational degrees of freedom at room temperature and that is why the usual assumption is that they will not contribute.</p>
+<figure class="sim" id="sim-diatomic-heat-capacity" data-figure="18.11.1" data-original="/media/ch18/79512-450px-DiatomicSpecHeat1.png" data-original-width="515" data-original-caption="Idealized plot of the molar specific heat of a diatomic gas against temperature. It agrees with the value (7/2)R predicted by equipartition at high temperatures (where R is the gas constant), but decreases to (5/2)R and then (3/2)R at lower temperatures, as the vibrational and rotational modes of motion are &quot;frozen out&quot;. The failure of the equipartition theorem led to a paradox that was only resolved by quantum mechanics. For most molecules, the transitional temperature T_rot is much less than room temperature, whereas T_vib can be ten times larger or more. A typical example is carbon monoxide, CO, for which T_rot ≈ 2.8 K and T_vib ≈ 3103 K. For molecules with very large or weakly bound atoms, T_vib can be close to room temperature (about 300 K); for example, T_vib ≈ 308 K for iodine gas, I₂. (Public domain; PD-Self)">
+  <div class="sim-head"><span class="eyebrow">Figure 18.11.1</span><span>Slide <span data-type="temperature">the temperature</span> and pick a molecule. Rotation switches on near $\kThetarot$ and vibration near $\kThetavib$, two to three decades higher. At 300 K most diatomics sit at (5/2)R; only heavy, weakly bound ones such as Cl₂, Na₂, K₂ and I₂ climb toward (7/2)R.</span></div>
+</figure>
+<div class="example" id="ex-co-2-vs-no-2">
+<h3>Example · CO 2 vs. NO 2</h3>
+<p>For comparing the molar heat capacities of nitrogen dioxide and carbon dioxide at constant volume (at room temperature), let us use the law of equipartition and assume the vibrations to be frozen out at room temperature. The predicted molar for the linear $CO_2$ (with three translational and two rotational degrees of freedom) is $5/2R$ $20.8\, JK^{-1}mo'^{-1})$.</p>
+<p>The estimated molar for $NO_2$ (a bent molecule, with three translational and three rotational degrees of freedom) is $3R \,(25.0\, JK^{-1}mol^{-1})$. These estimations are close to the experimental values:</p>
+<ul><li>30.1 JK<sup>-1 </sup>mol<sup>-1</sup> for $CO_2$</li><li>29.5 JK<sup>-1</sup> mol<sup>-1</sup> for $NO_2$</li></ul>
+<p>Especially for $CO_2$, the deviation is significant. This suggests that, although not all vibrational degrees of freedom are available, they cannot be totally ignored. The bigger deviation in the prediction of molar heat capacities is probably due to the existence of the lower frequency-bending vibration in carbon dioxide.</p>
+</div>
+</section>

@@ -1,0 +1,54 @@
+<section id="independent-normal-modes">
+<h2>Independent normal modes</h2>
+<p>As with diatomic molecules, the energies of polyatomic molecules can be approximated by the sum of its individual degrees of freedom. Therefore, we can write <span data-concept="molecular-ideal-gas-partition-function">the partition function</span> as:</p>
+$$ \kQsys(N,\kV,\kT) = \frac{[\kqmol(\kV,\kT)]^2}{N!} $$<sup class="fn" data-note="c-q2"></sup>
+<p>We can write the polyatomic analog to diatomic molecules:</p>
+$$ \kQsys(N,\kV,\kT) = \frac{(\kqtrans\kqrot\kqvib\kqelec)^N}{N!} $$
+<p>When derived for diatomic molecules, we assumed the <span data-concept="rigid-rotor">rigid rotor model</span> for rotations and the <span data-concept="harmonic-oscillator">harmonic oscillator</span> for vibrations. This allowed us to separate the rotational motion from the vibrational motion of the molecule. Polyatomic molecules are a bit more complicated, but we will still make use of these approximations.</p>
+<p><span data-concept="many-translational-states">The number of translational states available to any given molecule is far greater than the number of molecules in the system.</span> $\kqtrans$ is given by:</p>
+$$ \kqtrans = \left[\frac{2\pi \kMpart k\kT}{h^2}\right]^{3/2}\kV $$
+<p>where $\kMpart$ is the mass of the particle. Moving to the <span data-concept="electronic-partition-function">electronic partition function</span>:</p>
+$$ \kqelec = \sum_i{g_{i}e^{-\kEi/k\kT}} $$
+<p>where $\kEi$ is the energy of the electronic state $i$ and {g_i} is its degeneracy. Electronic states are typically spaced far apart from each other. The probability of the system being in any state but the ground state is extremely small. We can therefore <span data-concept="ground-electronic-state-dominates">simplify the electronic partition function to include only the ground electronic state</span>:</p>
+$$ \kqelec = g_{e1}e^{\kDe/k\kT} $$
+<p>where $-\kDe$ is the energy of the ground electronic state. To complete the polyatomic partition function, we still need $\kqvib$ and $\kqrot$. We will finish this section with $\kqvib$ and talk about $\kqrot$ in the next.</p>
+<p>The vibrational motion of diatomic molecules can be expressed as a set of independent harmonic oscillators. For polyatomic molecules, the independent vibrational motions are referred to as <span data-concept="molecular-normal-modes">normal modes of vibration</span>. The vibrational energy is then the sum of the energies for each normal mode:</p>
+$$ \kEvib = \sum_i^\alpha{\left(v_i + \frac{1}{2}\right)h\nu} $$<sup class="fn" data-note="c-hnu"></sup>
+<p>where $\knui$ is the vibrational frequency for the $i$th normal mode and $\alpha$ is the number of vibration degrees of freedom. <span data-concept="vibrational-mode-count">A linear molecule has $3n-5$ vibrational degrees of freedom and a nonlinear molecule has $3n-6$ vibrational degrees of freedom.</span> <span data-concept="polyatomic-vibrational-partition-function">Because the normal modes are independent of each other, we can take out results from previous sections</span>:</p>
+$$ \kqvib = \prod_i^\alpha{\frac{e^{-\kThetavibi/2\kT}}{1-e^{-\kThetavibi/\kT}}} $$
+$$ \kEvib = Nk \sum_i^\alpha{\left( \frac{\kThetavibi}{2} + \kThetavibi \frac{e^{-\kThetavibi/\kT}}{1-e^{-\kThetavibi/\kT}} \right)} $$
+$$ \kCVvib = Nk \sum_i^\alpha{\left( \left(\frac{\kThetavibi}{2}\right)^2 + \frac{e^{-\kThetavibi/\kT}}{(1-e^{-\kThetavibi/\kT})^2} \right)} $$<sup class="fn" data-note="c-cv"></sup>
+<p>where $\kThetavibi$ is the <span data-concept="vibrational-temperature">characteristic vibrational temperature</span> defined by:</p>
+$$ \kThetavibi =\frac{h\knui}{k} $$
+</section>
+
+<section id="vibrational-entropy">
+<h2>Vibrational Entropy</h2>
+<p>There is a great deal of utility for thermodynamic functions calculated from the vibrational normal modes of a molecule. The vibrational energy and entropy depend on the shape a multidimensional potential energy surface. If one performs a conformational search of macromolecule it is one obtains energies and structures but little direct information concerning the shape of the potential energy surface for each conformation. <span data-concept="vibrational-entropy-conformations">The vibrational entropy gives a means determining whether there are significant entropic differences in the structures and therefore whether certain conformations will be favored based on the entropy.</span></p>
+<p>However, it is possible to take appropriate linear combinations of the coordinates so that the cross terms are eliminated and the classical Hamiltonian as well as the operator corresponding to it contains no cross terms and in terms of the new coordinates, <span data-concept="separable-vibrational-hamiltonian">the Hamiltonian can be written as</span>,</p>
+$$ \kH = \sum_{i=1}^{f} \dfrac{h^2}{2 \kmui} \dfrac{\partial}{\partial q_i^2}+ \sum_{i=1}^{f} \dfrac{\kki}{2} q_i^2 \tag{18.7.1} $$<sup class="fn" data-note="c-h"></sup>
+<p>Here, the degrees of freedom $f$ is $3N - 5$ for a linear molecule and $3N - 6$ for a nonlinear molecule. Here, $\kki$ is the force constant and $\kmui$ is the reduced mass for that particular vibrational mode which is referred to as a <strong><span data-concept="normal-coordinates">normal mode</span></strong>.</p>
+<figure class="sim" id="sim-water-mode-factors" data-figure="18.7.1" data-original="/media/ch18/9669-h2ovibrations.gif" data-original-caption="The three vibrational modes of water, the symmetric stretch (3656.7 cm-1, 5160 K ), the asymmetric stretch (3755.8 cm-1 , 5360 K ) and the bending mode (1594.8 cm-1 ,2290 K) are shown. The vibrational frequencies and the characteristic temperature for each mode are shown in parenthesis. Although not shown in the animation, the oxygen atom also moves with each of these normal modes.">
+  <div class="sim-head"><span class="eyebrow">Figure 18.7.1</span><span>Raise <span data-type="temperature">the temperature</span> and watch the three ladders. Each mode of water is an oscillator of its own with its own factor in $\kqvib$, and the bend, whose rungs are closest, fills first.</span></div>
+</figure>
+<p>The Equation 18.7.1 represents $f$ linearly independent harmonic oscillators and the total energy for such a system is</p>
+$$ \kepsvib = \sum_{i=1}^{f} \left( v_i + \dfrac{1}{2} \right) h \knui $$
+<p>The vibrational frequencies are given by</p>
+$$ \knui = \dfrac{1}{2 \pi} \sqrt{\dfrac{\kki}{\kmui}} $$
+<p>The vibrational partition function is given by the product of $f$ vibrational functions for each frequency.</p>
+$$ \kqvib = \prod_{i=1}^f \dfrac{ e^{-\kThetavibi/2\kT} }{1- e^{-\kThetavibi/\kT}} \tag{18.7.2} $$
+<p>with</p>
+$$ \kThetavibi = \dfrac{h\knui}{k_B} $$
+<p>As with the previous discussion regarding simple diatomics, $\kThetavibi$ is called the <strong><span data-concept="vibrational-temperature">characteristic vibrational temperature</span></strong>. <span data-concept="polyatomic-vibrational-thermal-energy">The molar energies</span> and <span data-concept="polyatomic-vibrational-heat-capacity">the heat capacities</span> are given by</p>
+<figure class="dv" id="drv-polyatomic-vibration"></figure>
+<div class="example" id="ex-no2-vibration">
+<h3>Example · Example $NO_2$</h3>
+<p>The three characteristic vibrational temperatures for $\mathrm{NO_{2}}$ are 1900 K, 1980 K and 2330 K. Calculate the vibrational partition function at 300 K.</p>
+<h4>Solution</h4>
+<p>The vibrational partition is (Equation 18.7.2)</p>
+$$ \kqvib = \prod_{i=1}^f \dfrac{ e^{-\kThetavibi/2\kT} }{1- e^{-\kThetavibi/\kT}} $$
+<p>If we calculate $\kqvib$ by taking the zero point energies as the reference points with respect to which the other energies are measured</p>
+$$ \begin{aligned} \kqvib &= \prod_{i=1}^f \dfrac{ 1 }{1- e^{-\kThetavibi/\kT}} = \left( \dfrac{ 1 }{1- e^{-1900/300}} \right) \left( \dfrac{ 1 }{1- e^{-1980/300}} \right) \left( \dfrac{ 1 }{1- e^{-2330/300}} \right) \\[4pt] & =(1.0018) ( 1.0014)(1.0004) = 1.0035 \end{aligned} $$
+<p>The implication is that very few vibrational states of $\mathrm{NO_{2}}$ (other than the ground vibrational state) are accessible at 300 K. This is standard of the vibrations of most molecules.</p>
+</div>
+</section>

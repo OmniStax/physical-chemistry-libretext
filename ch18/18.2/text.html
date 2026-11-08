@@ -1,0 +1,25 @@
+<section id="electronic-levels">
+<h2>Electronic levels far above kT</h2>
+<p>Writing the electronic energies as $\kEone, \kEtwo ,\kEthree, ...$ with <span data-concept="degenerate-level-weight">corresponding degeneracies</span> $g_1, g_2, g_3, \ldots$. The <span data-concept="electronic-partition-function">electronic partition function</span> is then given by the following summation:</p>
+$$ \kqel(\kT) = g_1 e^{-\kEone/k\kT} + g_2 e^{-\kEtwo/k\kT} + g_3 e^{-\kEthree/k\kT} + \ldots \tag{18.2.1} $$
+<p>Usually, the differences in electronic energies are significantly greater than thermal energy $k\kT$:</p>
+$$ k \kT \ll \kEone < \kEtwo < \kEthree $$
+<p>If we treat the lowest energy electronic state $\kEone$ as the reference value of zero of energy, the <span data-concept="electronic-partition-function">electronic partition function</span> (Equation 18.2.1) can be approximated as:</p>
+$$ \kqelec(\kT) = g_1 + g_2 e^{-\kEtwo/k\kT} + g_3 e^{-\kEthree/k\kT} + \ldots \tag{18.2.2} $$
+<p>Typically electronic states are tens of thousands of wave numbers above the ground state. For example, the first excited electronic state of nitric oxide (NO) is ~40,000 cm<sup>-1</sup>.<sup class="fn" data-note="c-no-doublet"></sup> Using this value:</p>
+$$ \frac{\kEtwo}{k\kT} = \frac{40000\text{ cm}^{-1}}{k\kT} = \frac{10^4\text{ K}}{\kT} $$
+<p>That means, that even at 1,000 K, the value of the second term in {\reference{3.24}}<sup class="fn" data-note="c-reference"></sup> is:<sup class="fn" data-note="c-ten-thousand"></sup></p>
+$$ g_2 e^{-10} = g_2 4.5\times 10^{-5} $$
+<p>The result is that the higher electronic states are not accessible under ordinary temperatures. There are some cases, however, where the first excited state lies much closer to the ground state, but these are the exception rather than the rule.</p>
+<div class="example" id="ex-18-2-1">
+<h3>Example 18.2.1</h3>
+<p>Find the electronic partition of $\mathrm{H_2}$ at 300 K.</p>
+<h4>Solution</h4>
+<p>The lowest electronic energy level of $\mathrm{H_2}$ is near $- 32\; eV$ and the next level is about $5\; eV$ higher. Taking -32 eV as the zero (or reference value of energy), then<sup class="fn" data-note="c-e-zero"></sup></p>
+$$ \kqel = e_0 + e^{-5 eV/ k\kT} + ... $$
+<p>At 300 K, T = 0.02\; eV<sup class="fn" data-note="c-kt-ev"></sup> and</p>
+$$ \begin{aligned} \kqel &= 1 + e^{-200} +... \\[4pt] &\approx 1.0 \end{aligned} $$
+<p>Where all terms other than the first are essentially 0. This implies that $\kqel = 1$.</p>
+</div>
+<p>The physical meaning of the result from Example 18.2.1 is that <span data-concept="ground-electronic-state-dominates">only the ground electronic state is generally thermally accessible</span> at room temperature.</p>
+</section>

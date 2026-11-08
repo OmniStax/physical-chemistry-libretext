@@ -4002,6 +4002,16 @@
     {
       "sym": "a_g",
       "latex": "a"
+    },
+    {
+      "sym": "q_j",
+      "latex": "q_j",
+      "macro": "\\kqj"
+    },
+    {
+      "sym": "q_k",
+      "latex": "q_k",
+      "macro": "\\kqk"
     }
   ],
   "exercise_kinds": [
@@ -23700,8 +23710,8 @@
         "dark": "#FE938E"
       },
       "dipole-moment": {
-        "light": "#0859AC",
-        "dark": "#68AAFE"
+        "light": "#5E2F05",
+        "dark": "#FEB98B"
       },
       "angle": {
         "light": "#9D02BB",
@@ -23748,8 +23758,8 @@
         "dark": "#E99AFF"
       },
       "heat-capacity": {
-        "light": "#5E2F05",
-        "dark": "#FEB98B"
+        "light": "#0859AC",
+        "dark": "#68AAFE"
       },
       "partition-function": {
         "light": "#095F2D",
@@ -23764,6 +23774,10 @@
       "velocity": {
         "light": "#007C78",
         "dark": "#00FCA8"
+      },
+      "heat-capacity": {
+        "light": "#0859AC",
+        "dark": "#68AAFE"
       }
     },
     "referentOrder": [

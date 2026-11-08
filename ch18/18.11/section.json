@@ -1,0 +1,415 @@
+{
+ "id": "18.11",
+ "module": "57608",
+ "chapter": "18",
+ "title": "The Equipartition Principle",
+ "short": "Equipartition",
+ "lead": "Classical physics gives every quadratic term in a molecule's energy the same share of thermal energy. The translational, rotational and vibrational partition functions show when the quantum result agrees with that rule, and the heat capacity of a gas shows what happens when it does not.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "Adapted from Zane Sterkewolf (UC Davis), B. L. Tembe's lecture notes (IIT Bombay) and Sudarson S. Sinha (Tel Aviv University); the page's two references, which its text never cites, are left out (Greiner, Neise and Stöcker's Thermodynamics and Statistical Mechanics, Springer 2001, and Atkins's Physical Chemistry, 5th ed., W. H. Freeman 1994); Figure 18.11.1 is in the public domain, and its replacement sums the rotational levels without the nuclear-spin weights of Section 18.10.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercises for this section; the one exercise, on the heat capacity of water vapor by equipartition, was written by AI with an AI solution. Its Bloom level and concept tags were chosen by AI. Numeric answers accept a 2% tolerance.",
+ "figures": [
+  {
+   "id": "sim-diatomic-heat-capacity",
+   "kind": "sim",
+   "number": "18.11.1",
+   "originals": [
+    "/media/ch18/79512-450px-DiatomicSpecHeat1.png"
+   ],
+   "widths": [
+    515
+   ],
+   "original_caption": "Idealized plot of the molar specific heat of a diatomic gas against temperature. It agrees with the value (7/2)R predicted by equipartition at high temperatures (where R is the gas constant), but decreases to (5/2)R and then (3/2)R at lower temperatures, as the vibrational and rotational modes of motion are \"frozen out\". The failure of the equipartition theorem led to a paradox that was only resolved by quantum mechanics. For most molecules, the transitional temperature T_rot is much less than room temperature, whereas T_vib can be ten times larger or more. A typical example is carbon monoxide, CO, for which T_rot ≈ 2.8 K and T_vib ≈ 3103 K. For molecules with very large or weakly bound atoms, T_vib can be close to room temperature (about 300 K); for example, T_vib ≈ 308 K for iodine gas, I₂. (Public domain; PD-Self)",
+   "draws": [
+    "heat-capacity",
+    "temperature"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built, from Table 18.4.1 and the caption's CO and I₂"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "half-kt-per-term",
+   "concept": "equipartition-theorem",
+   "verb": "introduces"
+  },
+  {
+   "span": "half-kt-per-term",
+   "concept": "degrees-of-freedom",
+   "verb": "uses"
+  },
+  {
+   "span": "translations",
+   "concept": "average-translational-energy",
+   "verb": "introduces"
+  },
+  {
+   "span": "translations",
+   "concept": "translational-partition-function",
+   "verb": "uses"
+  },
+  {
+   "span": "translations",
+   "concept": "thermal-wavelength",
+   "verb": "uses"
+  },
+  {
+   "span": "rotations",
+   "concept": "average-rotational-energy",
+   "verb": "introduces"
+  },
+  {
+   "span": "rotations",
+   "concept": "rotational-partition-function",
+   "verb": "uses"
+  },
+  {
+   "span": "vibrations",
+   "concept": "average-vibrational-energy",
+   "verb": "introduces"
+  },
+  {
+   "span": "vibrations",
+   "concept": "vibrational-partition-function",
+   "verb": "uses"
+  },
+  {
+   "span": "heat-capacity",
+   "concept": "frozen-out",
+   "verb": "introduces"
+  },
+  {
+   "span": "heat-capacity",
+   "concept": "equipartition-heat-capacity",
+   "verb": "introduces"
+  },
+  {
+   "span": "heat-capacity",
+   "concept": "diatomic-heat-capacity-steps",
+   "verb": "introduces"
+  },
+  {
+   "span": "heat-capacity",
+   "concept": "constant-volume-heat-capacity",
+   "verb": "reinforces"
+  },
+  {
+   "span": "heat-capacity",
+   "concept": "vibrational-temperature",
+   "verb": "uses"
+  },
+  {
+   "span": "heat-capacity",
+   "concept": "rotational-temperature",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "ai1",
+   "source_id": "eq:18.1.10",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "heat-capacity",
+   "prompt": "<p>Water is a bent triatomic molecule with three vibrational modes. By the equipartition theorem, what is its molar heat capacity at constant volume as a gas (a) with all vibrations frozen out and (b) with all three modes fully active? Give both in J K⁻¹ mol⁻¹.</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 24.9,
+      "unit": "J K⁻¹ mol⁻¹",
+      "hint": "A nonlinear molecule has three rotational degrees of freedom."
+     },
+     {
+      "part": "b",
+      "value": 49.9,
+      "unit": "J K⁻¹ mol⁻¹"
+     }
+    ],
+    "solution": "<p>(a) Translation gives $\\tfrac{3}{2}\\kR$ and, since water is nonlinear, rotation gives another $\\tfrac{3}{2}\\kR$, so $\\kCv = 3\\kR = 3(8.314) = 24.9$ J K⁻¹ mol⁻¹, the same as the book's estimate for NO₂. (b) Each active vibrational mode adds $\\kR$, one $\\tfrac{1}{2}\\kR$ for its kinetic term and one for its potential term, so the three modes add $3\\kR$ and $\\kCv = 6\\kR = 49.9$ J K⁻¹ mol⁻¹. At room temperature water's vibrations are frozen out, so (a) is the value that applies there.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "ai1",
+   "concept": "equipartition-heat-capacity"
+  },
+  {
+   "exercise": "ai1",
+   "concept": "frozen-out"
+  }
+ ],
+ "footnotes": [],
+ "derivations": [
+  {
+   "id": "trans-energy",
+   "what": "the average translational energy",
+   "source": "Physical Chemistry (LibreTexts), 18.11 The Equipartition Principle",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kEtransavg = - \\dfrac{1}{\\kqtrans} \\dfrac{\\partial \\kqtrans}{\\partial \\kbeta}",
+       "src": "(18.11.1)"
+      },
+      {
+       "tex": "\\kqtrans = \\dfrac{\\kV}{\\kLambdath^3}",
+       "src": "18.1"
+      },
+      {
+       "tex": "\\kLambdath = h\\left(\\dfrac{\\kbeta}{2\\pi \\km}\\right)^{1/2}",
+       "src": "18.1"
+      },
+      {
+       "tex": "\\kbeta = \\dfrac{1}{k_B\\kT}",
+       "src": "17.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{e}{\\kEtransavg} = \\mk{d}{- \\dfrac{1}{\\kqtrans} \\dfrac{\\partial \\kqtrans}{\\partial \\kbeta}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{e}{\\kEtransavg} = \\mk{d}{- \\dfrac{\\kLambdath^3}{\\kV} \\dfrac{\\partial }{\\partial \\kbeta} \\dfrac{\\kV}{\\kLambdath^3}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{e}{\\kEtransavg} = \\mk{d}{\\dfrac{3}{\\kLambdath} \\dfrac{\\partial \\kLambdath}{\\partial \\kbeta}}",
+       "uses": [],
+       "cap": "The volume is held fixed, and $\\partial(\\Lambda^{-3})/\\partial\\beta = -3\\Lambda^{-4}\\,\\partial\\Lambda/\\partial\\beta$."
+      },
+      {
+       "tex": "\\mk{e}{\\kEtransavg} = \\mk{d}{\\dfrac{3}{\\kLambdath} \\cdot \\dfrac{\\kLambdath}{2\\kbeta}}",
+       "uses": [
+        2
+       ],
+       "cap": "$\\Lambda$ is proportional to $\\beta^{1/2}$, so $\\partial\\Lambda/\\partial\\beta = \\Lambda/2\\beta$."
+      },
+      {
+       "tex": "\\mk{e}{\\kEtransavg} = \\mk{d}{\\dfrac{3}{2\\kbeta}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{e}{\\kEtransavg} = \\mk{d}{\\dfrac{3}{2} k_B\\kT}",
+       "uses": [
+        3
+       ]
+      }
+     ],
+     "src": "18.11",
+     "note": "As printed, the middle step reads $-\\dfrac{3}{\\Lambda}\\dfrac{\\partial \\Lambda}{\\partial \\beta}$. Differentiating $\\Lambda^{-3}$ brings a factor $-3$ that cancels the leading minus sign, so the term is $+\\dfrac{3}{\\Lambda}\\dfrac{\\partial \\Lambda}{\\partial \\beta}$, which is what gives $+\\tfrac{3}{2}k_BT$."
+    }
+   ]
+  },
+  {
+   "id": "rot-energy",
+   "what": "the average rotational energy of a diatomic",
+   "source": "Physical Chemistry (LibreTexts), 18.11 The Equipartition Principle",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kErotavg = - \\dfrac{1}{\\kqrot} \\dfrac{\\partial \\kqrot}{\\partial \\kbeta}",
+       "src": "(18.11.2)"
+      },
+      {
+       "tex": "\\kqrot = \\dfrac{1}{\\sigma \\kbeta \\kBt}",
+       "src": "18.6"
+      },
+      {
+       "tex": "\\kbeta = \\dfrac{1}{k_B\\kT}",
+       "src": "17.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{e}{\\kErotavg} = \\mk{d}{- \\dfrac{1}{\\kqrot} \\dfrac{\\partial \\kqrot}{\\partial \\kbeta}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{e}{\\kErotavg} = \\mk{d}{-\\sigma \\kbeta \\kBt \\dfrac{\\partial}{\\partial \\kbeta} \\dfrac{1}{\\sigma \\kbeta \\kBt}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{e}{\\kErotavg} = \\mk{d}{-\\sigma \\kbeta \\kBt \\dfrac{1}{\\sigma \\kBt} \\dfrac{\\partial}{\\partial \\kbeta} \\dfrac{1}{\\kbeta}}",
+       "uses": [],
+       "cap": "$\\sigma$ and $\\tilde{B}$ do not depend on $\\beta$, so they come out of the derivative."
+      },
+      {
+       "tex": "\\mk{e}{\\kErotavg} = \\mk{d}{-\\kbeta \\left(-\\dfrac{1}{\\kbeta^2}\\right)}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{e}{\\kErotavg} = \\mk{d}{\\dfrac{1}{\\kbeta}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{e}{\\kErotavg} = \\mk{d}{k_B\\kT}",
+       "uses": [
+        2
+       ]
+      }
+     ],
+     "src": "18.11"
+    }
+   ]
+  },
+  {
+   "id": "vib-energy",
+   "what": "the average vibrational energy",
+   "source": "Physical Chemistry (LibreTexts), 18.11 The Equipartition Principle",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kEvibavg = - \\dfrac{1}{\\kqvib} \\dfrac{\\partial \\kqvib}{\\partial \\kbeta}",
+       "src": "(18.11.3)"
+      },
+      {
+       "tex": "\\kqvib = \\dfrac{1}{1 - e^{-\\kbeta hc\\knut}}",
+       "src": "18.4"
+      },
+      {
+       "tex": "\\kbeta = \\dfrac{1}{k_B\\kT}",
+       "src": "17.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{e}{\\kEvibavg} = \\mk{d}{- \\dfrac{1}{\\kqvib} \\dfrac{\\partial \\kqvib}{\\partial \\kbeta}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{e}{\\kEvibavg} = \\mk{d}{\\dfrac{-1}{\\kqvib} \\left( -hc\\knut\\dfrac{ e^{-\\kbeta hc \\knut}}{(1-e^{-\\kbeta hc \\knut})^2 } \\right)}",
+       "uses": [
+        1
+       ],
+       "cap": "The derivative of $(1 - e^{-\\beta hc\\tilde{\\nu}})^{-1}$ with respect to $\\beta$ is $-hc\\tilde{\\nu}\\,e^{-\\beta hc\\tilde{\\nu}}/(1 - e^{-\\beta hc\\tilde{\\nu}})^2$."
+      },
+      {
+       "tex": "\\mk{e}{\\kEvibavg} = \\mk{d}{\\dfrac{-1}{\\kqvib} \\left( -hc\\knut\\dfrac{ e^{-hc \\knut/k_B\\kT}}{(1-e^{-hc \\knut/k_B\\kT})^2 } \\right)}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{e}{\\kEvibavg} = \\mk{d}{hc\\knut \\dfrac{ e^{-hc \\knut/k_B\\kT}}{1-e^{-hc \\knut/k_B\\kT}}}",
+       "uses": [
+        1,
+        2
+       ],
+       "cap": "$1/q_{vib} = 1 - e^{-hc\\tilde{\\nu}/k_BT}$ cancels one power of the denominator."
+      }
+     ],
+     "num": "(18.11.4)",
+     "src": "18.11"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      }
+     ],
+     "then": {
+      "tex": "\\mk{e}{\\kEvibavg} = \\mk{d}{hc\\knut \\dfrac{ e^{-hc \\knut/k_B\\kT}}{1-e^{-hc \\knut/k_B\\kT}}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{e}{\\kEvibavg} = \\mk{d}{hc \\knut \\left( \\dfrac{ 1 }{e^{hc \\knut/k_B\\kT} -1} \\right)}",
+       "uses": [],
+       "cap": "Divide both numerator and denominator by $e^{-hc\\tilde{\\nu}/k_BT}$."
+      }
+     ],
+     "num": "(18.11.5)",
+     "src": "18.11"
+    },
+    {
+     "assumes": [
+      {
+       "text": "In the high temperature limit, $hc\\tilde{\\nu}/k_BT \\ll 1$.",
+       "src": "18.11"
+      },
+      {
+       "tex": "e^{y} \\approx 1 + y \\quad (y \\ll 1)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{e^{hc \\knut/k_B\\kT} -1} \\approx \\mk{r}{1 + hc \\knut/k_B\\kT -1}",
+      "uses": [
+       0,
+       1
+      ],
+      "why": "The exponential is expanded in a power series, and with $hc\\tilde{\\nu}/k_BT \\ll 1$ the terms past the first power are negligible."
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{e^{hc \\knut/k_B\\kT} -1} \\approx \\mk{r}{hc \\knut/k_B\\kT}",
+       "uses": []
+      }
+     ],
+     "num": "(18.11.6)",
+     "src": "18.11"
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "step": 2
+      }
+     ],
+     "then": {
+      "tex": "\\mk{e}{\\kEvibavg} = \\mk{d}{hc \\knut \\left( \\dfrac{ 1 }{e^{hc \\knut/k_B\\kT} -1} \\right)}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{e}{\\kEvibavg} \\approx \\mk{d}{hc \\knut \\left( \\dfrac{1}{hc \\knut/k_B\\kT}\\right)}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{e}{\\kEvibavg} \\approx \\mk{d}{k_B\\kT}",
+       "uses": []
+      }
+     ],
+     "num": "(18.11.7)",
+     "src": "18.11"
+    }
+   ]
+  }
+ ]
+}

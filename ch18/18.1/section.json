@@ -1,0 +1,316 @@
+{
+ "id": "18.1",
+ "module": "13691",
+ "chapter": "18",
+ "title": "Translational Partition Functions of Monotonic Gases",
+ "short": "Translational partition function",
+ "lead": "A gas particle in a box has translational levels so closely spaced that the sum over them in its partition function can be done as an integral. The result is written with a length that depends on the particle's mass and the temperature.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "Adapted from B. L. Tembe's notes (IIT Bombay, www.chem.iitb.ac.in/~bltembe/pdfs/ch_3.pdf), under the book's CC BY-NC-SA 4.0.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercises for this section; the one here is new and AI-written, its answer checked by computation with h = 6.626 × 10⁻³⁴ J s, k = 1.381 × 10⁻²³ J/K and 1 u = 1.6605 × 10⁻²⁷ kg. Its Bloom level and concept tags were chosen by AI. Numeric answers accept a 2% tolerance.",
+ "figures": [
+  {
+   "id": "sim-thermal-wavelength",
+   "kind": "sim",
+   "draws": [
+    "wavelength",
+    "temperature",
+    "partition-function"
+   ],
+   "conventions": [
+    "He",
+    "H",
+    "N",
+    "Ar",
+    "I"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "box-states",
+   "concept": "translational-levels-cubic-box",
+   "verb": "introduces"
+  },
+  {
+   "span": "box-states",
+   "concept": "translational-q-product",
+   "verb": "introduces"
+  },
+  {
+   "span": "box-states",
+   "concept": "sum-to-integral",
+   "verb": "introduces"
+  },
+  {
+   "span": "box-states",
+   "concept": "translational-q-1d",
+   "verb": "introduces"
+  },
+  {
+   "span": "box-states",
+   "concept": "thermal-wavelength",
+   "verb": "introduces"
+  },
+  {
+   "span": "box-states",
+   "concept": "translational-q-volume",
+   "verb": "introduces"
+  },
+  {
+   "span": "box-states",
+   "concept": "translational-partition-function",
+   "verb": "reinforces"
+  },
+  {
+   "span": "many-states",
+   "concept": "many-translational-states",
+   "verb": "introduces"
+  },
+  {
+   "span": "many-states",
+   "concept": "thermal-wavelength",
+   "verb": "uses"
+  },
+  {
+   "span": "many-states",
+   "concept": "translational-q-volume",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "This is usually a very large number",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "many-states",
+   "prompt": "<p>Argon (39.95 u) fills a 1.00 L flask at 298.15 K. Find (a) its thermal wavelength $\\kLambdath$ in picometers, (b) its translational partition function $\\kqtrans$ in the flask, and (c) the number of translational states per atom, $\\kqtrans/N$, at 1.00 bar, where each atom has $k\\kT/p$ of volume to itself.</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 16.0,
+      "unit": "pm",
+      "hint": "$m = 39.95 \\times 1.6605\\times10^{-27}$ kg; $\\Lambda = h/\\sqrt{2\\pi mkT}$."
+     },
+     {
+      "part": "b",
+      "value": 2.44e+29
+     },
+     {
+      "part": "c",
+      "value": 10100000.0
+     }
+    ],
+    "solution": "<p>(a) $m = 6.634\\times10^{-26}$ kg, so $2\\pi mkT = 2\\pi(6.634\\times10^{-26})(1.381\\times10^{-23})(298.15) = 1.716\\times10^{-45}$ J kg and $\\kLambdath = (6.626\\times10^{-34})/\\sqrt{1.716\\times10^{-45}} = 1.600\\times10^{-11}$ m $= 16.0$ pm. (b) $\\kqtrans = \\kV/\\kLambdath^3 = (1.00\\times10^{-3}\\ \\text{m}^3)/(1.600\\times10^{-11}\\ \\text{m})^3 = 2.44\\times10^{29}$. (c) $k\\kT/p = (1.381\\times10^{-23})(298.15)/(1.00\\times10^5) = 4.12\\times10^{-26}$ m³, and $4.12\\times10^{-26}/(1.600\\times10^{-11})^3 = 1.01\\times10^7$. Each atom has about ten million translational states to itself.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "thermal-wavelength"
+  },
+  {
+   "exercise": "a1",
+   "concept": "translational-q-volume"
+  },
+  {
+   "exercise": "a1",
+   "concept": "many-translational-states"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-ten-twenty",
+   "kind": "correction",
+   "html": "For light and medium molecules at room temperature the number in 1 cm³ is far larger: $V/\\Lambda^3$ is $2.8\\times10^{24}$ for H₂ and $1.4\\times10^{26}$ for N₂ at 300 K."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "translational-q",
+   "what": "the translational partition function",
+   "source": "Physical Chemistry (LibreTexts), 18.1 Translational Partition Functions of Monotonic Gases",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kqx = \\sum_{n_x=1}^{\\infty} e^{-\\kepsx/k\\kT}",
+       "src": "(18.1.1)"
+      },
+      {
+       "text": "The levels are very closely spaced, nearly continuous, so the sum over $n_x$ can be replaced with an integral.",
+       "src": "18.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{q}{\\kqx} = \\mk{s}{\\sum_{n_x=1}^{\\infty} e^{-\\kepsx/k\\kT}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{q}{\\kqx} \\approx \\mk{s}{\\int_{1}^{\\infty} e^{-\\kepsx/k\\kT}\\,dn_x}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "num": "(18.1.2)",
+     "src": "18.1",
+     "note": "The book prints this integral and the two that follow without $dn_x$."
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "\\kepsx = \\dfrac{h^2 n_x^2}{8\\km\\kL^2}",
+       "src": "3.9",
+       "drv": "3.9/box3d"
+      },
+      {
+       "text": "For a box of ordinary size the integrand barely changes between $n_x = 0$ and $n_x = 1$, so starting the integral at 0 changes it negligibly.",
+       "src": "18.1"
+      },
+      {
+       "tex": "\\int_0^{\\infty} e^{-an^2}\\,dn = \\sqrt{\\dfrac{\\pi}{4a}}",
+       "src": "13.7"
+      },
+      {
+       "tex": "\\kLambdath = \\dfrac{h}{\\sqrt{2\\pi\\km k\\kT}}",
+       "src": "18.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{q}{\\kqx} \\approx \\mk{s}{\\int_{1}^{\\infty} e^{-\\kepsx/k\\kT}\\,dn_x}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{q}{\\kqx} \\approx \\mk{s}{\\int_{1}^{\\infty} e^{-h^2n_x^2/8\\km\\kL^2k\\kT}\\,dn_x}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{q}{\\kqx} \\approx \\mk{s}{\\int_{0}^{\\infty} e^{-h^2n_x^2/8\\km\\kL^2k\\kT}\\,dn_x}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{q}{\\kqx} = \\mk{s}{\\sqrt{\\dfrac{8\\pi\\km\\kL^2k\\kT}{4h^2}}}",
+       "uses": [
+        3
+       ],
+       "cap": "The Gaussian integral with $a = h^2/8mL^2kT$."
+      },
+      {
+       "tex": "\\mk{q}{\\kqx} = \\mk{s}{\\dfrac{\\sqrt{2\\pi\\km k\\kT}}{h}}\\,\\mk{L}{\\kL}",
+       "uses": [],
+       "map": {
+        "s": [
+         "s",
+         "L"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{q}{\\kqx} = \\dfrac{\\mk{L}{\\kL}}{\\mk{s}{\\kLambdath}}",
+       "uses": [
+        4
+       ]
+      }
+     ],
+     "src": "18.1",
+     "note": "The book prints $\\Lambda = h/\\sqrt{2\\pi 8mkT}$. The 8 does not belong there: the line before it gives $q_x = \\sqrt{2\\pi mkT}\\,L/h$, and the worked example uses $\\Lambda = h/\\sqrt{2\\pi mkT}$."
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\kqtrans = \\kqx\\kqy\\kqz",
+       "src": "(18.1.1)"
+      },
+      {
+       "step": 1
+      },
+      {
+       "tex": "\\kV = \\kL^3",
+       "src": "18.1"
+      },
+      {
+       "tex": "\\kLambdath = \\dfrac{h}{\\sqrt{2\\pi\\km k\\kT}}",
+       "src": "18.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{Q}{\\kqtrans} = \\mk{x}{\\kqx}\\mk{y}{\\kqy}\\mk{z}{\\kqz}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{Q}{\\kqtrans} = \\mk{x}{\\dfrac{\\kL}{\\kLambdath}}\\mk{y}{\\dfrac{\\kL}{\\kLambdath}}\\mk{z}{\\dfrac{\\kL}{\\kLambdath}}",
+       "uses": [
+        1
+       ],
+       "cap": "In a cube the three directions are alike, so $q_y$ and $q_z$ equal $q_x$."
+      },
+      {
+       "tex": "\\mk{Q}{\\kqtrans} = \\mk{x}{\\dfrac{\\kL^3}{\\kLambdath^3}}",
+       "uses": [],
+       "map": {
+        "y": "x",
+        "z": "x"
+       }
+      },
+      {
+       "tex": "\\mk{Q}{\\kqtrans} = \\mk{x}{\\dfrac{\\kV}{\\kLambdath^3}}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{Q}{\\kqtrans} = \\mk{p}{\\left(\\dfrac{2\\pi\\km k\\kT}{h^2}\\right)^{3/2}\\kV} = \\mk{x}{\\dfrac{\\kV}{\\kLambdath^3}}",
+       "uses": [
+        3
+       ]
+      }
+     ],
+     "num": "(18.1.3)",
+     "src": "18.1",
+     "note": "The book prints the first form as $(\\sqrt{2\\pi 8mkT}/h)^{3/2}V$. With $\\Lambda = h/\\sqrt{2\\pi mkT}$ it is $(2\\pi mkT/h^2)^{3/2}V$."
+    }
+   ]
+  }
+ ]
+}

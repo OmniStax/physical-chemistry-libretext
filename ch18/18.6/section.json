@@ -1,0 +1,85 @@
+{
+ "id": "18.6",
+ "module": "13696",
+ "chapter": "18",
+ "title": "Rotational Partition Functions of Diatomic Gases Contain a Symmetry Number",
+ "short": "Symmetry number",
+ "lead": "The rotational partition function of a diatomic gas is a sum over the rigid rotor's levels, which can be taken as an integral when the levels lie close together. A homonuclear molecule needs one more factor, the symmetry number.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "Adapted from B. L. Tembe's lecture notes (IIT Bombay, www.chem.iitb.ac.in/~bltembe/pdfs/ch_3.pdf), shared under the book's CC BY-NC-SA 4.0.",
+ "ai": {
+  "text": [{"model": "claude-opus-5-5", "effort": "low"}],
+  "figures": []
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book prints no exercises for this section; the one here is new and AI-written, its answers checked by computation, with its Bloom level and concept tags chosen by AI.",
+ "figures": [],
+ "referents": [],
+ "coverage": [
+  {"span": "summing-rotational-levels", "concept": "rotational-q-high-temperature", "verb": "introduces"},
+  {"span": "summing-rotational-levels", "concept": "rotational-partition-function", "verb": "reinforces"},
+  {"span": "summing-rotational-levels", "concept": "rotational-temperature", "verb": "reinforces"},
+  {"span": "summing-rotational-levels", "concept": "rotational-constant", "verb": "reinforces"},
+  {"span": "summing-rotational-levels", "concept": "rotor-degeneracy", "verb": "uses"},
+  {"span": "summing-rotational-levels", "concept": "sum-to-integral", "verb": "uses"},
+  {"span": "symmetry-correction", "concept": "symmetry-number", "verb": "introduces"},
+  {"span": "symmetry-correction", "concept": "homonuclear-diatomic-molecule", "verb": "uses"}
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "What is the rotational partition function of $H_2$ at 300 K?",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {"at": "end"},
+   "cite": "symmetry-correction",
+   "prompt": "<p>Use Table 1 to find the rotational partition function at 300 K of (a) $\\mathrm{N_2}$ and (b) $\\mathrm{HCl}$.</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {"part": "a", "value": 52.1, "hint": "$\\mathrm{N_2}$ is homonuclear, so $σ = 2$."},
+     {"part": "b", "value": 19.7}
+    ],
+    "solution": "<p>Both rotational temperatures are far below 300 K, so $\\kqrot = \\kT/\\kThetarot σ$ (Equation 18.6.6) holds. (a) $\\mathrm{N_2}$ has two identical ends, $σ = 2$: $\\kqrot = 300/(2.88 \\times 2) = 52.1$. (b) $\\mathrm{HCl}$ has $σ = 1$: $\\kqrot = 300/15.2 = 19.7$. The heavier, longer nitrogen molecule has more closely spaced levels, and even after halving for its symmetry it has more of them within reach.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {"exercise": "a1", "concept": "rotational-q-high-temperature"},
+  {"exercise": "a1", "concept": "symmetry-number"}
+ ],
+ "footnotes": [
+  {"id": "c-ej", "kind": "correction", "html": "The denominator is $8\\pi^2 I$: $E_J = J(J+1)h^2/8\\pi^2 I$."},
+  {"id": "c-theta", "kind": "correction", "html": "The numerator is $h^2$: $\\Theta_\\text{rot} = h^2/8\\pi^2 Ik$."},
+  {"id": "c-kt", "kind": "correction", "html": "At 300 K, $kT/hc = 208.5$ cm⁻¹, which gives $q_\\text{rot} = 208.5/(2 \\times 60.864) = 1.713$."}
+ ],
+ "derivations": [
+  {
+   "id": "rotational-q",
+   "what": "the rotational partition function",
+   "source": "Physical Chemistry (LibreTexts), 18.6 Rotational Partition Functions of Diatomic Gases Contain a Symmetry Number",
+   "nodes": [
+    {
+     "assumes": [
+      {"tex": "\\kqrot = \\sum_{J=0}^{\\infty} (2J+1) e^{-\\kEJ/k\\kT}", "src": "(18.6.3)"},
+      {"tex": "\\kEJ = hc\\kBt J(J+1)", "src": "(18.6.1)"},
+      {"text": "When the levels lie close together beside $k\\kT$, the sum over $J$ can be replaced by an integral over $J$.", "src": "18.1"}
+     ],
+     "then": {"tex": "\\kqrot = \\mk{s}{\\sum_{J=0}^{\\infty}} \\mk{g}{(2J+1)} \\mk{e}{e^{-\\kEJ/k\\kT}}"},
+     "steps": [
+      {"tex": "\\kqrot = \\mk{s}{\\sum_{J=0}^{\\infty}} \\mk{g}{(2J+1)} \\mk{e}{e^{-hc\\kBt J(J+1)/k\\kT}}", "uses": [1]},
+      {"tex": "\\kqrot = \\mk{s}{\\int_0^{\\infty}} \\mk{g}{(2J+1)} \\mk{e}{e^{-hc\\kBt J(J+1)/k\\kT}} \\mk{d}{dJ}", "uses": [2]},
+      {"tex": "\\kqrot = \\mk{s}{\\int_0^{\\infty}} \\mk{e}{e^{-hc\\kBt x/k\\kT}} \\mk{d}{dx}", "uses": [], "cap": "Substitute $x = J(J+1)$, so $dx = (2J+1)\\,dJ$, and $x$ runs from $0$ to $\\infty$ as $J$ does.", "map": {"g": "d"}},
+      {"tex": "\\kqrot = \\mk{r}{\\dfrac{k\\kT}{hc\\kBt}}", "uses": [], "cap": "$\\int_0^\\infty e^{-ax}\\,dx = 1/a$.", "map": {"s": "r", "e": "r", "d": "r"}}
+     ],
+     "num": "(18.6.4)",
+     "src": "18.6",
+     "note": "The book prints the integrand's exponential as $R^{-\\tilde{B}J(J+1)/kT}$ and the result as $kT/\\tilde{B}$, with $kT$ in wavenumbers as Example 18.6.1 takes it; in energy units the result is $kT/hc\\tilde{B}$."
+    }
+   ]
+  }
+ ]
+}

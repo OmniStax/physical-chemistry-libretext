@@ -373,7 +373,7 @@
     {
      "assumes": [
       {
-       "tex": "q = \\sum_j e^{-\\beta e_j}",
+       "tex": "\\kqmol = \\sum_j e^{-\\beta e_j}",
        "src": "17.2"
       },
       {
@@ -385,17 +385,17 @@
       }
      ],
      "then": {
-      "tex": "\\mk{q}{q} = \\mk{s}{\\sum_j e^{-\\beta e_j}}"
+      "tex": "\\mk{q}{\\kqmol} = \\mk{s}{\\sum_j e^{-\\beta e_j}}"
      },
      "steps": [
       {
-       "tex": "\\mk{q}{q} = \\mk{s}{\\sum_{v=0}^{\\infty} e^{-\\beta(v + \\frac{1}{2})h\\knu}}",
+       "tex": "\\mk{q}{\\kqmol} = \\mk{s}{\\sum_{v=0}^{\\infty} e^{-\\beta(v + \\frac{1}{2})h\\knu}}",
        "uses": [
         1
        ]
       },
       {
-       "tex": "\\mk{q}{q} = \\mk{z}{e^{-\\beta h\\knu/2}}\\mk{s}{\\sum_{v=0}^{\\infty} \\left(e^{-\\beta h\\knu}\\right)^v}",
+       "tex": "\\mk{q}{\\kqmol} = \\mk{z}{e^{-\\beta h\\knu/2}}\\mk{s}{\\sum_{v=0}^{\\infty} \\left(e^{-\\beta h\\knu}\\right)^v}",
        "uses": [],
        "map": {
         "s": [
@@ -406,7 +406,7 @@
        "cap": "The exponential of a sum is the product of the exponentials, and $e^{-\\beta v h\\nu} = (e^{-\\beta h\\nu})^v$."
       },
       {
-       "tex": "\\mk{q}{q} = \\mk{z}{e^{-\\beta h\\knu/2}}\\mk{s}{\\dfrac{1}{1 - e^{-\\beta h\\knu}}}",
+       "tex": "\\mk{q}{\\kqmol} = \\mk{z}{e^{-\\beta h\\knu/2}}\\mk{s}{\\dfrac{1}{1 - e^{-\\beta h\\knu}}}",
        "uses": [
         2
        ],
@@ -421,7 +421,7 @@
        "step": 0
       },
       {
-       "tex": "\\kQsys = q^N",
+       "tex": "\\kQsys = \\kqmol^N",
        "src": "17.2"
       },
       {
@@ -430,17 +430,17 @@
       }
      ],
      "then": {
-      "tex": "\\mk{Q}{\\kQsys} = \\mk{p}{q^N}"
+      "tex": "\\mk{Q}{\\kQsys} = \\mk{p}{\\kqmol^N}"
      },
      "steps": [
       {
-       "tex": "\\mk{Q}{\\kQsys} = \\mk{p}{q^{3N}}",
+       "tex": "\\mk{Q}{\\kQsys} = \\mk{p}{\\kqmol^{3N}}",
        "uses": [
         2
        ]
       },
       {
-       "tex": "\\mk{Q}{\\ln \\kQsys} = \\mk{p}{3N\\ln q}",
+       "tex": "\\mk{Q}{\\ln \\kQsys} = \\mk{p}{3N\\ln \\kqmol}",
        "uses": []
       },
       {
@@ -580,8 +580,7 @@
        ]
       }
      ],
-     "num": "(17.4.4)",
-     "src": "17.4"
+     "src": "(17.4.4)"
     },
     {
      "assumes": [
@@ -607,8 +606,7 @@
        "uses": []
       }
      ],
-     "num": "(17.4.5)",
-     "src": "17.4"
+     "src": "(17.4.5)"
     }
    ]
   }

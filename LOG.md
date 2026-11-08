@@ -1083,3 +1083,45 @@ one hue in dark. Temperature and length (0.07, an older pair) look alike on 16.1
 figure, where the T and a sliders sit side by side. A pin (dry run: pressure onto charge's
 blue, charge taking the plum, no page worse) is the owner's call. 16.1's third-law fact
 restates the sentence printed just before the derivation (the prose-first reading).
+
+## Chapter 17 pass · 2026-11-08
+
+Built: the intro, 17.1–17.8 and the summary page (17.E empty, not built). 8 figure rows: 6
+interactive (1 moving, 17.2's random exchange of quanta; 5 still: 17.2's three ladders, the
+Einstein solid with 17.4.4's five metals, the two-level Schottky sim, 17.5's piston levels,
+17.7's two particles with its told-apart/identical morph; no 3D) and 2 kept images (17.4.1,
+17.4.5). 9 derivations (17.2 the Boltzmann distribution; 17.3 ⟨E⟩ from ln Q; 17.4 C_V from
+ln Q and the Einstein heat capacity with its limits; 17.5 the pressure, the ideal gas law and
+the ideal-gas energy; 17.6 Q = q^N; 17.8 the energy of independent molecules). 22 exercises, all
+`exercise` kind in the Exercises document: the 10 unkeyed Problems of 17.1 and 17.2 with AI
+solutions and 12 AI exercises. 21 AI-marked corrections in footnotes, besides derivation notes.
+
+Chapter pass: the wanted rows: symbols `q_j`, `q_k` (`\kqj`, `\kqk`) with 17.2 variables rows,
+now in 17.2's Q = q_iq_jq_k… display, its text and Problem 4's solution; a 17.4 `q_mol` row (one
+oscillator of the solid), and the Einstein derivation writes `\kqmol` for its plain q; a 17.1
+`E` row for Problem 3's solution, the one `\k` macro with no row in force. The planned edge
+`boltzmann-distribution` → `boltzmann-probability` is **not added**: it is already reached
+through `distribution-constraints` → `occupation-number` → `ensemble` → … →
+`mean-square-velocity-component` (16.1) → `boltzmann-distribution`, so it would break the
+Hasse reduction. 17.3's derivation wrote `\kEie^` (an undefined macro) eight times: now
+`\kEi e^`. 17.7's particles are drawn in real red and blue (`F.fact`, facts `#d93a32`,
+`#2f6fdc`) since the book names them; the referents `red`, `blue` and their text spans are
+removed (plan and config updated). 17.4's limit results no longer carry (17.4.4) and (17.4.5),
+which the printed displays keep; the nodes' `src` cites them. Copper's brown sat next to
+`heat-capacity`'s brown/peach: `colours:default --pin heat-capacity=#0859AC/#68AAFE`, so
+`dipole-moment` (Chapters 5–13) takes the old brown; the dry run showed no page nearer than
+before. Book sentences restored into derivation reasons: 17.2's "The left hand side of
+Equation … is 1" and "This determines a and defines the Boltzmann distribution", 17.5's
+"Which shows that the pressure can be expressed solely terms of the partition function", 17.6's
+"We can split up the summation into a product of molecular partition functions". `node
+--check` clean on the four `figures.js`; no `\braket`, no bare `\k` script, no U+2011, U+FEFF
+or U+200B; in-book links carry `xref`; every page has `ai` and `built`, sections have `notes`
+(the intro has nothing left out). `check:content`: no errors, no warnings. Every figure
+screenshot in light, the four figure pages in dark (contact sheets in the pass's scratch
+folder); no console or KaTeX error on any Chapter 17 page, derivations included.
+
+Known gaps: 17.5's "In a few steps we can show that the temperature can be expressed …"
+(a method line with the book's slip, temperature for pressure) is not carried; 17.2's footnote
+on "equation (17.9)" writes q_iq_jq_k plain; 17.4's Einstein axis label reads Θ_E against
+θ_E in the text; 17.5's kT label sits on a level line at some temperatures (it has a panel
+background).

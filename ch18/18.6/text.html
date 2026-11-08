@@ -1,0 +1,43 @@
+<section id="summing-rotational-levels">
+<h2>Summing the rotational levels</h2>
+<p>The rotational energy levels of a <strong>diatomic molecule</strong> are given by:</p>
+$$ \kErot(J) = \kBt J (J + 1) \tag{18.6.1} $$
+<p>where:</p>
+$$ \kBt = \dfrac{h}{8 π^2 \kI c} $$
+<p>Here, $\kBt$ is the <span data-concept="rotational-constant">rotational constant</span> expressed in cm<sup>-1</sup>. The rotational energy levels are given by:</p>
+$$ \kEj = \dfrac{J(J+1) h^2}{8 \pi \kI} $$<sup class="fn" data-note="c-ej"></sup>
+<p>where $\kI$ is the <span data-concept="moment-of-inertia">moment of inertia</span> of the molecule given by $\kmu \kr^2$ for a diatomic, and $\kmu$ is the <span data-concept="reduced-mass">reduced mass</span>, and $\kr$ the bond length (assuming <span data-concept="rigid-rotor">rigid rotor approximation</span>). The energies can be also expressed in terms of the <span data-concept="rotational-temperature">rotational temperature</span>, $\kThetarot$, defined as:</p>
+$$ \kThetarot = \dfrac{r^2}{8 \pi^2 \kI k} \tag{18.6.2} $$<sup class="fn" data-note="c-theta"></sup>
+<p>The interpretation of $\kThetarot$ is as an estimate of the temperature at which thermal energy ($\approx k\kT$) is comparable to the spacing between rotational energy levels. At about this temperature the population of excited rotational levels becomes important. See Table 1.</p>
+<div class="book-table">
+  <div class="tcap"><span class="eyebrow">Table 1</span><span>Select Rotational Temperatures. In each case the value refers to the most common isotopic species.</span></div>
+  <table>
+    <thead><tr><th>Molecule</th><th>$H_2$</th><th>$N_2$</th><th>$O_2$</th><th>$F_2$</th><th>$HF$</th><th>$HCl$</th><th>$CO_2$</th><th>$HBr$</th><th>$CO$</th></tr></thead>
+    <tbody>
+      <tr><td>$\kThetarot$</td><td>87.6</td><td>2.88</td><td>2.08</td><td>1.27</td><td>30.2</td><td>15.2</td><td>0.561</td><td>12.2</td><td>2.78</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>In the summation for the expression for <span data-concept="rotational-partition-function">rotational partition function</span> ($\kqrot$), Equation 18.6.3, we can do an explicit summation:</p>
+$$ \kqrot = \sum_{j=0} (2J+1) e^{-\kEJ/ k \kT} \tag{18.6.3} $$
+<p>if only a finite number of terms contribute. The factor $(2J+1)$ for each term in the expansion accounts for the <span data-concept="rotor-degeneracy">degeneracy of a rotational state $J$</span>. For each allowed energy $\kEJ$ from Equation 18.6.1 there are $(2 J + 1)$ eigenstates. The <span data-concept="boltzmann-factor">Boltzmann factor</span> must be multiplied by $(2J+ 1)$ to properly account for the degeneracy these states:</p>
+$$ (2J+ 1)e^{ -\kEJ / k \kT} $$
+<p><span data-concept="rotational-q-high-temperature">If the rotational energy levels are lying very close to one another, we can integrate</span> similar to what we did for $\kqtrans$ previously to get:</p>
+<figure class="dv" id="drv-rotational-q"></figure>
+</section>
+
+<section id="symmetry-correction">
+<h2>Correcting for symmetry</h2>
+<p>For a <span data-concept="homonuclear-diatomic-molecule">homonuclear diatomic molecule</span>, rotating the molecule by 180° brings the molecule into a configuration which is <em>indistinguishable</em> from the original configuration. This leads to an overcounting of the accessible states. To correct for this, we divide the partition function by $σ$, which is called the <strong><span data-concept="symmetry-number">symmetry number</span></strong> and is equal to the distinct number of ways by which a molecule can be brought into identical configurations by rotations. The rotational partition function becomes:</p>
+$$ \kqrot= \dfrac{k\kT}{\kBt σ} \tag{18.6.5} $$
+<p>or commonly expressed in terms of $\kThetarot$:</p>
+$$ \kqrot= \dfrac{\kT}{ \kThetarot σ} \tag{18.6.6} $$
+<div class="example" id="ex-18-6-1">
+<h3>Example 18.6.1</h3>
+<p>What is the rotational partition function of $H_2$ at 300 K?</p>
+<h4>Solution</h4>
+<p>The value of $\kBt$ for $H_2$ is 60.864 cm<sup>-1</sup>. The value of $k \kT$ in cm<sup>-1</sup> can be obtained by dividing it by $hc$, i.e., which is $k\kT/hc = 209.7\; cm^{-1}$<sup class="fn" data-note="c-kt"></sup> at 300 K. $σ = 2$ for a homonuclear molecule. Therefore from Equation 18.6.5,</p>
+$$ \begin{aligned} \kqrot &= \dfrac{k\kT}{\kBt σ} \\[4pt] &= \dfrac{209.7 \;cm^{-1} }{(2) (60.864\; cm^{-1})} \\[4pt] &= 1.723 \end{aligned} $$
+<p>Since the rotational frequency of $H_2$ is quite large, only the first few rotational states are accessible at 300 K</p>
+</div>
+</section>

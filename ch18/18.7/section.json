@@ -1,0 +1,114 @@
+{
+ "id": "18.7",
+ "module": "13697",
+ "chapter": "18",
+ "title": "Vibrational Partition Functions of Polyatomic Molecules Include the Partition Function for Each Normal Coordinate",
+ "short": "Polyatomic vibrations",
+ "lead": "A polyatomic molecule vibrates in several normal modes at once, each a harmonic oscillator independent of the others. Its vibrational partition function, energy and heat capacity are built from one oscillator's results, mode by mode.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "The page names no authors; it is shared under the book's CC BY-NC-SA 4.0, and the lone \"and\" between its two closing equations is left out where the derivation takes their place.",
+ "ai": {
+  "text": [{"model": "claude-opus-5-5", "effort": "low"}],
+  "figures": [{"model": "claude-opus-5-5", "effort": "low"}]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book prints no exercises for this section; the one here is new and AI-written, its answer checked by computation with hc/k = 1.4388 cm K, with its Bloom level and concept tags chosen by AI.",
+ "figures": [
+  {
+   "id": "sim-water-mode-factors",
+   "kind": "sim",
+   "number": "18.7.1",
+   "originals": ["/media/ch18/9669-h2ovibrations.gif"],
+   "original_caption": "The three vibrational modes of water, the symmetric stretch (3656.7 cm-1, 5160 K ), the asymmetric stretch (3755.8 cm-1 , 5360 K ) and the bending mode (1594.8 cm-1 ,2290 K) are shown. The vibrational frequencies and the characteristic temperature for each mode are shown in parenthesis. Although not shown in the animation, the oxygen atom also moves with each of these normal modes.",
+   "draws": ["temperature", "partition-function", "energy", "wavenumber"],
+   "conventions": ["O", "H"],
+   "ai": [{"model": "claude-opus-5-5", "effort": "low", "part": "built, the mode shapes taken from 12.10's sim-water-modes"}]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {"span": "independent-normal-modes", "concept": "polyatomic-vibrational-partition-function", "verb": "introduces"},
+  {"span": "independent-normal-modes", "concept": "molecular-ideal-gas-partition-function", "verb": "reinforces"},
+  {"span": "independent-normal-modes", "concept": "electronic-partition-function", "verb": "reinforces"},
+  {"span": "independent-normal-modes", "concept": "ground-electronic-state-dominates", "verb": "reinforces"},
+  {"span": "independent-normal-modes", "concept": "many-translational-states", "verb": "reinforces"},
+  {"span": "independent-normal-modes", "concept": "molecular-normal-modes", "verb": "uses"},
+  {"span": "independent-normal-modes", "concept": "vibrational-mode-count", "verb": "reinforces"},
+  {"span": "independent-normal-modes", "concept": "vibrational-temperature", "verb": "uses"},
+  {"span": "vibrational-entropy", "concept": "vibrational-entropy-conformations", "verb": "introduces"},
+  {"span": "vibrational-entropy", "concept": "polyatomic-vibrational-thermal-energy", "verb": "introduces"},
+  {"span": "vibrational-entropy", "concept": "polyatomic-vibrational-heat-capacity", "verb": "introduces"},
+  {"span": "vibrational-entropy", "concept": "separable-vibrational-hamiltonian", "verb": "reinforces"},
+  {"span": "vibrational-entropy", "concept": "normal-coordinates", "verb": "reinforces"},
+  {"span": "vibrational-entropy", "concept": "polyatomic-vibrational-partition-function", "verb": "reinforces"}
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "The three vibrational modes of water",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {"at": "end"},
+   "cite": "vibrational-entropy",
+   "prompt": "<p>Water's three normal modes have characteristic vibrational temperatures of 5261 K, 5404 K and 2295 K. Measuring each mode's levels from its zero-point level, find water's vibrational partition function at 1000 K.</p>",
+   "answer": {
+    "type": "number",
+    "value": 1.123,
+    "tol": 0.002,
+    "generated_by": "ai",
+    "hint": "Each mode contributes a factor $1/(1 - e^{-\\kThetavibi/\\kT})$.",
+    "solution": "<p>With the zero-point levels as the reference, $\\kqvib = \\prod_i 1/(1 - e^{-\\kThetavibi/\\kT})$. At 1000 K the three factors are $1/(1 - e^{-5.261}) = 1.0052$, $1/(1 - e^{-5.404}) = 1.0045$ and $1/(1 - e^{-2.295}) = 1.1120$, so $\\kqvib = (1.0052)(1.0045)(1.1120) = 1.123$. Almost all of the excess over 1 comes from the bend, whose rungs are less than half as far apart as those of the two stretches.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {"exercise": "a1", "concept": "polyatomic-vibrational-partition-function"},
+  {"exercise": "a1", "concept": "vibrational-temperature"}
+ ],
+ "footnotes": [
+  {"id": "c-q2", "kind": "correction", "html": "The numerator is the $N$th power: $Q(N,V,T) = [q(V,T)]^N/N!$."},
+  {"id": "c-hnu", "kind": "correction", "html": "Each mode has its own frequency, so the term is $(v_i + \\tfrac{1}{2})h\\nu_i$."},
+  {"id": "c-cv", "kind": "correction", "html": "The sum's terms are $(\\Theta_{\\text{vib},i}/T)^2\\,e^{-\\Theta_{\\text{vib},i}/T}/(1-e^{-\\Theta_{\\text{vib},i}/T})^2$, the form the section works out for $\\bar{C}_V$."},
+  {"id": "c-h", "kind": "correction", "html": "The kinetic term is $-\\dfrac{\\hbar^2}{2\\mu_i}\\dfrac{\\partial^2}{\\partial q_i^2}$."},
+  {"id": "c-fig", "kind": "correction", "figure": "sim-water-mode-factors", "html": "At 3656.7 cm⁻¹ the symmetric stretch's characteristic temperature is $hc\\tilde{\\nu}/k = 5261$ K, and at 3755.8 cm⁻¹ the asymmetric stretch's is 5404 K."}
+ ],
+ "derivations": [
+  {
+   "id": "polyatomic-vibration",
+   "what": "vibrational energy and heat capacity of a polyatomic gas",
+   "source": "Physical Chemistry (LibreTexts), 18.7 Vibrational Partition Functions of Polyatomic Molecules Include the Partition Function for Each Normal Coordinate",
+   "nodes": [
+    {
+     "assumes": [
+      {"tex": "\\kqvib = \\prod_{i=1}^f \\dfrac{ e^{-\\kThetavibi/2\\kT} }{1- e^{-\\kThetavibi/\\kT}}", "src": "(18.7.2)"},
+      {"tex": "\\kEvibavg = Nk\\kT^2\\left(\\dfrac{\\partial \\ln \\kqvib}{\\partial \\kT}\\right)_{\\kV}", "src": "17.8"}
+     ],
+     "then": {"tex": "\\kEvibavg = \\mk{c}{Nk\\kT^2}\\mk{d}{\\left(\\dfrac{\\partial \\ln \\kqvib}{\\partial \\kT}\\right)_{\\kV}}"},
+     "steps": [
+      {"tex": "\\kEvibavg = \\mk{c}{Nk\\kT^2}\\mk{d}{\\dfrac{\\partial}{\\partial \\kT} \\ln \\prod_{i=1}^f \\dfrac{ e^{-\\kThetavibi/2\\kT} }{1- e^{-\\kThetavibi/\\kT}}}", "uses": [0]},
+      {"tex": "\\kEvibavg = \\mk{c}{Nk\\kT^2}\\mk{d}{\\sum_{i=1}^f \\dfrac{\\partial}{\\partial \\kT}\\left[-\\dfrac{\\kThetavibi}{2\\kT} - \\ln\\left(1-e^{-\\kThetavibi/\\kT}\\right)\\right]}", "uses": [], "cap": "The logarithm of a product is the sum of the logarithms, and that of a quotient their difference, so each mode adds its own term."},
+      {"tex": "\\kEvibavg = \\mk{c}{Nk\\kT^2}\\mk{d}{\\sum_{i=1}^f \\left[\\dfrac{\\kThetavibi}{2\\kT^2} + \\dfrac{\\kThetavibi}{\\kT^2}\\dfrac{e^{-\\kThetavibi/\\kT}}{1-e^{-\\kThetavibi/\\kT}}\\right]}", "uses": [], "cap": "Since $\\partial e^{-\\Theta/T}/\\partial T = (\\Theta/T^2)e^{-\\Theta/T}$, the derivative of $-\\ln(1 - e^{-\\Theta/T})$ is $(\\Theta/T^2)e^{-\\Theta/T}/(1 - e^{-\\Theta/T})$."},
+      {"tex": "\\kEvibavg = \\mk{c}{Nk}\\mk{d}{\\sum_{i=1}^f \\left[ \\dfrac{ \\kThetavibi }{2} + \\dfrac{ \\kThetavibi e^{-\\kThetavibi/\\kT} }{1- e^{-\\kThetavibi/\\kT}} \\right]}", "uses": []}
+     ],
+     "src": "18.7"
+    },
+    {
+     "assumes": [
+      {"step": 0},
+      {"tex": "\\kCVbar = \\left(\\dfrac{\\partial \\kEvibavg}{\\partial \\kT}\\right)_{\\kV}", "src": "(17.4.1)"}
+     ],
+     "then": {"tex": "\\kCVbar = \\mk{d}{\\left(\\dfrac{\\partial \\kEvibavg}{\\partial \\kT}\\right)_{\\kV}}"},
+     "steps": [
+      {"tex": "\\kCVbar = \\mk{c}{Nk}\\mk{d}{\\sum_{i=1}^f \\dfrac{\\partial}{\\partial \\kT}\\left[ \\dfrac{ \\kThetavibi }{2} + \\dfrac{ \\kThetavibi e^{-\\kThetavibi/\\kT} }{1- e^{-\\kThetavibi/\\kT}} \\right]}", "uses": [0]},
+      {"tex": "\\kCVbar = \\mk{c}{Nk}\\mk{d}{\\sum_{i=1}^f \\dfrac{\\partial}{\\partial \\kT}\\left[ \\dfrac{ \\kThetavibi }{2} + \\dfrac{ \\kThetavibi }{e^{\\kThetavibi/\\kT} - 1} \\right]}", "uses": []},
+      {"tex": "\\kCVbar = \\mk{c}{Nk}\\mk{d}{\\sum_{i=1}^f \\left( \\dfrac{ \\kThetavibi }{\\kT} \\right)^2 \\dfrac{ e^{\\kThetavibi/\\kT} }{\\left(e^{\\kThetavibi/\\kT} - 1\\right)^2}}", "uses": [], "cap": "The constant $\\Theta_{\\text{vib},i}/2$ drops out, and $\\partial (e^{\\Theta/T}-1)^{-1}/\\partial T = (\\Theta/T^2)\\,e^{\\Theta/T}/(e^{\\Theta/T}-1)^2$."},
+      {"tex": "\\kCVbar = \\mk{c}{Nk}\\mk{d}{\\sum_{i=1}^f \\left( \\dfrac{ \\kThetavibi }{\\kT} \\right)^2 \\dfrac{ e^{-\\kThetavibi/\\kT} }{\\left(1- e^{-\\kThetavibi/\\kT}\\right)^2}}", "uses": []}
+     ],
+     "src": "18.7"
+    }
+   ]
+  }
+ ]
+}

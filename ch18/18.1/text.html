@@ -1,0 +1,32 @@
+<section id="box-states">
+<h2>The sum over the states of a box</h2>
+<p>Let us consider the <span data-concept="translational-partition-function">translational partition function</span> of a monatomic gas particle confined to a cubic box of length $\kL$. The particle inside the box has <span data-concept="translational-levels-cubic-box">translational energy levels</span> given by:</p>
+$$ \kEtrans= \dfrac{h^2 \left(n_x^2+ n_y^2+ n_z^2 \right)}{8 \km\kL^2} $$
+<p>where $n_x$, $n_y$ and $n_z$ are the quantum numbers in the three directions. The <span data-concept="translational-partition-function">translational partition function</span> is given by:</p>
+$$ \kqtrans = \sum_i e^{−\kepsi/k\kT} $$
+<p>which is the <span data-concept="translational-q-product">product of translational partition functions in the three dimensions</span>. We can write the translation partition function as the product of the translation partition function for each direction:</p>
+$$ \begin{aligned} \kqtrans &= \kqx \kqy \kqz  \\[4pt] &= \sum_{n_x=1}^{\infty} e^{−\kepsx/k\kT} \sum_{n_y=1}^{\infty} e^{−\epsilon_y/k\kT} \sum_{n_z=1}^{\infty} e^{−\epsilon_z/k\kT}  \end{aligned} \tag{18.1.1} $$
+<p>Since the levels are very closely spaced (continuous), we can <span data-concept="sum-to-integral">replace each sum in Equation 18.1.1 with an integral</span>.</p>
+<figure class="dv" id="drv-translational-q"></figure>
+</section>
+
+<section id="many-states">
+<h2>Many accessible states</h2>
+<p>This is usually a very large number (10<sup>20</sup>)<sup class="fn" data-note="c-ten-twenty"></sup> for volumes of 1 cm<sup>3</sup><sup> </sup>for small molecular masses. This means that <span data-concept="many-translational-states">such a large number of translational states are accessible</span> and available for occupation by the molecules of a gas. This result is very similar to the result of the classical kinetic gas theory that said that the observed energy of an ideal gas is:</p>
+$$ \kU=\dfrac{3}{2} \knmol R\kT $$
+<p>We postulate therefore that the observed energy of a macroscopic system should equal the statistical average over the partition function as shown above. In other words: if you know the particles your system is composed of and their energy states you can use statistics to calculate what you should observe on the whole ensemble.</p>
+<figure class="sim" id="sim-thermal-wavelength">
+  <div class="sim-head"><span class="eyebrow">Sim</span><span>Pick a gas and change <span data-type="temperature">the temperature</span>. Each molecule's blur is one <span data-type="wavelength">thermal wavelength</span> across. At room temperature it is a speck beside the space between molecules, and only within a few kelvin of zero do the blurs of He and H₂ reach each other.</span></div>
+</figure>
+<div class="example" id="ex-i2">
+<h3>Example</h3>
+<p>Calculate the translational partition function of an $I_2$ molecule at 300K. Assume V to be 1 liter.</p>
+<h4>Solution</h4>
+<p>Mass of $I_2$ is $2 \times 127 \times 1.6606 \times 10^{-27} kg$</p>
+$$ \begin{aligned} 2πmkT &= 2 \times 3.1415 \times (2 \times 127 \times 1.6606 \times 10^{-27}\, kg) \times 1.3807 \times 10^{-23} \, J/K \times 300 K \\[4pt] &= 1.0969 \times 10^{-44}\; J\, kg \end{aligned} $$
+$$ \begin{aligned} Λ &= \dfrac{h}{\sqrt{2 π m kT}} \\[4pt] &= \dfrac{6.6262 \times 10^{-34}\;J\, s}{ \sqrt{1.0969 \times 10^{-44}\, J \, kg}} = 6.326 \times 10^{-12}\;m \end{aligned} $$
+<p>The via Equation 18.1.3</p>
+$$ q_\text{trans}= \dfrac{V}{Λ^3}= \dfrac{1000 \times 10^{-6} m^3}{(6.326 \times 10^{-12} \; m)^3}= 3.95 \times 10^{30} $$
+<p>This means that $3.95 \times 10^{30}$ quantum states are thermally accessible to the molecular system</p>
+</div>
+</section>

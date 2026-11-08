@@ -910,6 +910,31 @@
    "meaning": "the average vibrational energy",
    "unit": "J",
    "section": "17.8"
+  },
+  {
+   "sym": "q_j",
+   "concept": "molecular-partition-function",
+   "meaning": "the molecular partition function of molecule j",
+   "section": "17.2"
+  },
+  {
+   "sym": "q_k",
+   "concept": "molecular-partition-function",
+   "meaning": "the molecular partition function of molecule k",
+   "section": "17.2"
+  },
+  {
+   "sym": "q_mol",
+   "concept": "molecular-partition-function",
+   "meaning": "the partition function of one oscillator of the solid",
+   "section": "17.4"
+  },
+  {
+   "sym": "E",
+   "type": "energy",
+   "meaning": "an energy a particle may have",
+   "unit": "J",
+   "section": "17.1"
   }
  ]
 }

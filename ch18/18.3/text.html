@@ -1,0 +1,19 @@
+<section id="one-factor-per-motion">
+<h2>One factor per kind of motion</h2>
+<p>A monatomic gas has three degrees of freedom per molecule, all of them translational:</p>
+<ol><li>movement in x-direction</li><li>movement in y-direction</li><li>movement in z-direction</li></ol>
+<p>A polyatomic gas, including diatomic molecules, has other levels that you can 'stuff' energy into. Polyatomic molecules can rotate and vibrate, and if enough energy is available you could also excite the electrons involved in the $σ$ and $π$ bonds. A reasonable approximation of the <span data-concept="partition-function-factorization">partition function of the molecule</span> would become:</p>
+$$ \kqtot(\kV,\kT) = \kqtrans\kqvib\kqrot\kqelec $$
+<p>The <span data-concept="molecular-ideal-gas-partition-function">partition function of a molecular idea gas</span> is then:</p>
+$$ \kQsys(N,\kV,\kT) = \frac{(\kqtrans\kqvib\kqrot\kqelec)^N}{N!} $$
+<p>The total energy of the molecule is then the sum of the translation, vibrational, rotational, and electronic energies:<sup class="fn" data-note="c-sum"></sup></p>
+$$ \kEtot = \kEtrans\kEvib\kErot\kEelec $$
+<p>We will only scratch the surface of the additional degrees of freedom and their partition functions.</p>
+</section>
+
+<section id="electronic">
+<h2>Electronic</h2>
+<p>At room temperature the system is usually in its ground electronic state. This means that the <strong><span data-concept="electronic-partition-function">electronic partition function</span></strong> $\kqelec = 1$. Usually we do not have to worry about these degrees of freedom. If we do, there are usually just a few levels to worry about. This includes their <strong>degeneracy g</strong>. If there is a single state at a certain energy ($g=1$), two states ($g=2$), or more states, we must <span data-concept="degenerate-level-weight">multiply the Boltzmann factor by this degeneracy number</span>.</p>
+<p>If there are more than one state to worry about, we could follow the <span data-concept="heat-capacity-from-levels">same procedure as we did for the translational states</span>:</p>
+<ol><li>Define the energy states and their degeneracies</li><li>Compose the partition function $q$ for the molecule and $\kQsys$ for the gas</li><li>Use the ($\beta$ or $\kT$) derivative of $\ln \kQsys$ to determine $\kEavg$</li><li>Use the $\kT$ derivative of $\kU \approx\kEavg$ to find the contribution to the heat capacity</li></ol>
+</section>

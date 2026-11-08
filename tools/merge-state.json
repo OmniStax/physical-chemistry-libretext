@@ -836,7 +836,9 @@
       "F_i",
       "r_i_vec",
       "v_i_vec",
-      "p_i_vec"
+      "p_i_vec",
+      "q_j",
+      "q_k"
     ],
     "types": [
       "heat-capacity",

@@ -1,0 +1,67 @@
+<section id="vibrational-ladder">
+<h2>The sum over the vibrational ladder</h2>
+<p>The vibrational energy levels of a diatomic are given by:</p>
+$$ \kEv = (v +1/2) h \knu $$
+<p>where is $\knu$ the vibrational frequency and $v$ is the vibrational quantum number. In this case, it is easy to sum the <span data-concept="geometric-series">geometric series</span> shown below:</p>
+<figure class="dv" id="drv-vibrational-q"></figure>
+<p>A <span data-concept="vibrational-temperature">vibrational temperature</span> $\kThetavib$ may be defined as:</p>
+$$ \kThetavib= \dfrac{ hc \knut}{k} $$
+<p>where $\knut$ is the vibrational frequency in cm<sup>-1</sup>. $\kThetavib$ is a good way to express the <em>stiffness</em> of the vibrating bond in units of the Boltzmann constant. Because the stiffness obviously depends on what bond your are talking about, this is a good way to do the same thing we did for the critical temperature of the non-ideal gases.</p>
+<div class="book-table">
+  <div class="tcap"><span class="eyebrow">Table 18.4.1</span><span>Representative molecular data for a few diatomics</span></div>
+  <table>
+    <thead><tr><th>Molecule</th><th>g</th><th>Bond Length (pm)<sup class="fn" data-note="c-bond-unit"></sup></th><th>$ω$ (cm<sup>-1</sup>)</th><th>$Θ_\text{vib}$ (K)</th><th>$\tilde{B}$ (cm<sup>-1</sup>)</th><th>$Θ_\text{rot}$ (K)</th><th>Force constant $k$ (dynes/cm)<sup class="fn" data-note="c-force-unit"></sup></th><th>$D_0$ (kcal/ mol)</th></tr></thead>
+    <tbody>
+      <tr><td>$H_2$</td><td>1</td><td>0.7474</td><td>4400</td><td>6332</td><td>60.9</td><td>87.6</td><td>5.749</td><td>103.2</td></tr>
+      <tr><td>$D_2$</td><td>1</td><td>0.7415</td><td>3118</td><td>4487</td><td>30.45</td><td>43.8</td><td>5.77</td><td>104.6</td></tr>
+      <tr><td>$N_2$</td><td>1</td><td>1.097</td><td>2358</td><td>3393</td><td>2.001</td><td>2.99<sup class="fn" data-note="c-n2-rot"></sup></td><td>22.94</td><td>225.1</td></tr>
+      <tr><td>$O_2$</td><td>3</td><td>1.207</td><td>1580</td><td>2274</td><td>1.446</td><td>2.08</td><td>11.76</td><td>118.0</td></tr>
+      <tr><td>$Cl_2$</td><td>1</td><td>1.987</td><td>560</td><td>805</td><td>0.244</td><td>0.351</td><td>3.2</td><td>57.0</td></tr>
+      <tr><td>$CO$</td><td>1</td><td>1.128</td><td>2170</td><td>3122</td><td>1.931</td><td>2.78</td><td>19.03</td><td>255.8</td></tr>
+      <tr><td>$NO$</td><td>2</td><td>1.15</td><td>190<sup class="fn" data-note="c-no-omega"></sup></td><td>2719</td><td>1.695</td><td>2.45</td><td>15.7</td><td>150.0</td></tr>
+      <tr><td>$HCl$</td><td>1</td><td>1.275</td><td>2938</td><td>4227</td><td>10.44</td><td>15.02</td><td>4.9</td><td>102.2</td></tr>
+      <tr><td>$HI$</td><td>1</td><td>1.609</td><td>2270</td><td>3266</td><td>6.46</td><td>9.06<sup class="fn" data-note="c-hi-rot"></sup></td><td>3.0</td><td>70.5</td></tr>
+      <tr><td>$Na_2$</td><td>1</td><td>3.096</td><td>159</td><td>229</td><td>0.154</td><td>0.221</td><td>0.17</td><td>17.3</td></tr>
+      <tr><td>$K_2$</td><td>1</td><td>3.979</td><td>92.3</td><td>133</td><td>0.0561</td><td>0.081</td><td>0.10</td><td>11.8</td></tr>
+    </tbody>
+  </table>
+</div>
+<div class="example" id="ex-18-4-1">
+<h3>Example 18.4.1</h3>
+<p>The vibrational frequency of of $I_2$ is $214.57\; cm^{-1}$. Calculate the vibrational partition function of $I_2$ at 300 K.</p>
+<p>Solution:</p>
+$$ \dfrac{h\nu}{kT} = \dfrac{ 214.57}{209.7} = 1.0232 $$
+<p>so<sup class="fn" data-note="c-kt-hc"></sup></p>
+$$ e^{-h\nu/kT} = 0.3595 $$
+<p>and</p>
+$$ q_\text{vib} = \dfrac{1}{1-0.3595} = 1.561 $$
+<p>This implies, as before, that very few vibrational states are accessible and much less than rotation states and many orders less than translation states.</p>
+</div>
+</section>
+
+<section id="vibrational-heat-capacity">
+<h2>Vibrational Heat Capacity</h2>
+<p>The vibrational energy is given by the above expression and the <span data-concept="molar-heat-capacity">molar heat capacity at constant volume</span>, $\kCVbar$ is given by:</p>
+$$ \kCVbar= \left(\dfrac{\partial E}{\partial \kT} \right)_V $$
+<figure class="dv" id="drv-vibrational-cv"></figure>
+<p>For large $\kT$, the $\kCVbar$ becomes:<sup class="fn" data-note="c-molar"></sup></p>
+$$ N_A k = R $$
+<p>and for small T, $\kCVbar$ goes to zero as demonstrated in Figure 18.4.1.</p>
+<figure class="sim" id="sim-vibrational-freeze" data-figure="18.4.1" data-original="/media/ch18/79365-Untitled.png,/media/ch18/420081-Vibrational_Populations.png" data-original-caption="Figure 18.4.1: Vibrational heat capacity of a diatomic. Figure: The vibrational population of Cl2 at 300 K. Most of the molecules are in the ground vibrational state, $v=0$.">
+  <div class="sim-head"><span class="eyebrow">Figure 18.4.1</span><span>Pick a molecule and raise <span data-type="temperature">the temperature</span>. Well below $\kThetavib$ nearly every molecule sits in $v = 0$ and vibration adds nothing to the <span data-type="heat-capacity">heat capacity</span>. Near $\kT = \kThetavib$ the ladder fills and the contribution climbs to $R$.</span></div>
+</figure>
+<p>The vibrational heat capacity is shown as function of the reduced temperature $T/Θ$ to get a general picture valid for all diatomic gases. Compare the parameters on Table 18.4.1 to see on what different absolute scales we have to think for different gases. Clearly the <span data-concept="vibrational-heat-capacity">vibrational contribution to the heat capacity</span> <em>depends on temperature</em>. For many molecules (especially light ones), the vibrational contribution only kicks in at quite high temperatures.</p>
+<p>The <span data-concept="vibrational-temperature-trends">value of $\kThetavib$ is determined mostly by</span></p>
+<ol><li>the strength of a bond (the stronger the higher $\kThetavib$ )</li><li>the (effective) mass of the molecule (the lighter the higher $\kThetavib$ )</li></ol>
+<p>Molecules with low $\kThetavib$ often dissociate at lower temperatures, although the <em>harmonic</em> oscillator model is not sufficient to describe that phenomenon.</p>
+</section>
+
+<section id="vibrational-populations">
+<h2>Vibrational Populations</h2>
+<p>We can calculate the <span data-concept="vibrational-populations">fraction of molecules in each vibrational state</span>. The fraction of molecules in the $v$th vibrational state is given by:</p>
+$$ f_v = \frac{e^{-h\knu(v+\frac{1}{2})/k\kT}}{\kqvib} $$
+<p>Substituting in Equation 18.4.2, we get:</p>
+$$ \begin{split} f_v &= \left(1-e^{-h\knu/k\kT}\right)e^{-h\knu v/k\kT} \\ &=  \left(1-e^{-\kThetavib/\kT}\right)e^{-\kThetavib v/\kT} \end{split} \tag{18.4.6} $$
+<p>We can plot the fraction molecules in each vibrational state.</p>
+<p>From the figure, we can see that <span data-concept="ground-vibrational-state-dominates">most of the Cl<sub>2</sub> molecules are in the ground vibrational state</span> at room temperature (300 K). This is true for most molecules. Only molecules with very weak bonds and low vibrational temperatures will populate a significant fraction of molecules in excited vibrational states.</p>
+</section>

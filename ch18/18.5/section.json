@@ -1,0 +1,92 @@
+{
+ "id": "18.5",
+ "module": "13695",
+ "chapter": "18",
+ "title": "Most Molecules are Rotationally Excited at Ordinary Temperatures",
+ "short": "Rotational excitation",
+ "lead": "A diatomic molecule's rotational levels are degenerate, and that degeneracy shapes the sum for its rotational partition function and the question of when the sum can be taken as an integral. Rotation also adds its share to the heat capacity of the gas.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "The page names no authors; it is shared under the book's CC BY-NC-SA 4.0, and a stray \"n=1\" printed after the diatomic heat capacity is left out.",
+ "ai": {
+  "text": [{"model": "claude-opus-5-5", "effort": "low"}],
+  "figures": [{"model": "claude-opus-5-5", "effort": "low"}]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "Exercise 18.5.1 and its key are the book's; the second exercise is new and AI-written, its answer checked by computation. Bloom levels and concept tags were chosen by AI.",
+ "figures": [
+  {
+   "id": "fig-hcl-populations",
+   "kind": "figure",
+   "originals": ["/media/ch18/411207-Rotational_Populations.png"],
+   "widths": [550],
+   "draws": [],
+   "ai": [{"model": "claude-opus-5-5", "effort": "low", "part": "kept as the book prints it"}]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {"span": "rotational-levels", "concept": "rotational-partition-function", "verb": "introduces"},
+  {"span": "rotational-levels", "concept": "rotational-integral-validity", "verb": "introduces"},
+  {"span": "rotational-levels", "concept": "degeneracy", "verb": "uses"},
+  {"span": "rotational-levels", "concept": "rotor-degeneracy", "verb": "reinforces"},
+  {"span": "rotational-levels", "concept": "sum-to-integral", "verb": "uses"},
+  {"span": "rotational-heat-capacity", "concept": "rotational-temperature", "verb": "introduces"},
+  {"span": "rotational-heat-capacity", "concept": "rotational-heat-capacity-diatomic", "verb": "introduces"},
+  {"span": "rotational-heat-capacity", "concept": "heat-capacity-contributions", "verb": "introduces"},
+  {"span": "rotational-heat-capacity", "concept": "gas-heat-capacity-room-temperature", "verb": "introduces"},
+  {"span": "rotational-heat-capacity", "concept": "rotationally-excited", "verb": "introduces"},
+  {"span": "rotational-heat-capacity", "concept": "moment-of-inertia", "verb": "reinforces"},
+  {"span": "rotational-heat-capacity", "concept": "reduced-mass", "verb": "reinforces"},
+  {"span": "rotational-heat-capacity", "concept": "rotational-populations", "verb": "reinforces"}
+ ],
+ "exercises": [
+  {
+   "id": "e1",
+   "source_id": "exr:18.5.1",
+   "source_number": "Exercise 18.5.1",
+   "kind": "exercise",
+   "bloom": "Understand",
+   "place": {"at": "end"},
+   "cite": "rotational-levels",
+   "prompt": "<p>Look at table 18.2.<sup class=\"fn\" data-note=\"c-table\"></sup> When do we need to actually work out the (discrete) summation instead of making a (continuous) integration out of it?</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "source",
+    "solution": "<p>Only for the lightest gases like $\\mathrm{He}$<sup class=\"fn\" data-note=\"c-he\"></sup> and $\\mathrm{H_{2}}$ do we need to worry and then only at pretty low cryogenic circumstances. At room temperature, we can take the rotational levels as a continuous set and use an integral. Notice that the vibrational $Θ$ values are much larger! At $T=300\\,\\text{K}$, usually only a single level is occupied and we are in the discrete limit. On the surface of the sun that would be a different matter of course.</p>"
+   }
+  },
+  {
+   "id": "a1",
+   "source_id": "Rotational energies are less than vibrational and electronic energies",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {"at": "end"},
+   "cite": "rotational-heat-capacity",
+   "prompt": "<p>The rotational temperature of $\\mathrm{N_2}$ is $\\kThetarot = 2.88$ K. Which rotational level $J$ holds the most molecules at 300 K?</p>",
+   "answer": {
+    "type": "number",
+    "value": 7,
+    "tol": 0.1,
+    "generated_by": "ai",
+    "hint": "The population of level $J$ goes as $(2J+1)e^{-J(J+1)\\kThetarot/\\kT}$.",
+    "solution": "<p>Each level's population goes as its degeneracy times its Boltzmann factor, $(2J+1)e^{-J(J+1)\\kThetarot/\\kT}$, with $\\kThetarot/\\kT = 2.88/300 = 0.0096$. Setting the derivative with respect to $J$ to zero gives $J_\\text{max} = \\sqrt{\\kT/2\\kThetarot} - \\tfrac{1}{2} = \\sqrt{52.1} - 0.5 = 6.72$. The nearest levels give $13e^{-0.403} = 8.69$ for $J = 6$, $15e^{-0.538} = 8.76$ for $J = 7$ and $17e^{-0.691} = 8.52$ for $J = 8$, so $J = 7$ holds the most. Dozens of levels are populated, so nitrogen at room temperature is well inside the range where the sum can be taken as an integral.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {"exercise": "e1", "concept": "rotational-integral-validity"},
+  {"exercise": "a1", "concept": "rotational-temperature"},
+  {"exercise": "a1", "concept": "rotationally-excited"},
+  {"exercise": "a1", "concept": "rotational-populations"}
+ ],
+ "footnotes": [
+  {"id": "c-c", "kind": "correction", "html": "The speed of light here is in cm s⁻¹, which puts $\\tilde{B}$ in cm⁻¹."},
+  {"id": "c-g", "kind": "correction", "html": "The degeneracy is $g(J) = 2J+1$; the function it is the derivative of is $X = J(J+1)$, the new variable of the next sentence."},
+  {"id": "c-theta", "kind": "correction", "html": "With $\\tilde{B}$ in wavenumbers the rotational temperature is $\\Theta_\\text{rot} = hc\\tilde{B}/k$, which equals $\\hbar^2/2Ik$."},
+  {"id": "c-nkt", "kind": "correction", "html": "$NkT$ is the rotational energy of $N$ molecules; for one molecule $\\langle \\epsilon \\rangle = kT$."},
+  {"id": "c-table", "kind": "correction", "html": "The table of rotational temperatures is Table 18.4.1, in Section 18.4."},
+  {"id": "c-he", "kind": "correction", "html": "Helium is a single atom and has no rotational levels. Of the gases in the table, $\\mathrm{H_2}$, with $\\Theta_\\text{rot} = 87.6$ K, is the one that needs the sum."}
+ ]
+}

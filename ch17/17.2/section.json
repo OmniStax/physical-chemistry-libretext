@@ -252,7 +252,7 @@
    "answer": {
     "type": "open",
     "generated_by": "ai",
-    "solution": "<p>The partition function of the system sums over every combination of states of the molecules: $\\kQsys = \\sum_{i}\\sum_{j}\\sum_{k}\\cdots e^{-\\beta(e_i + e_j + e_k + \\ldots)}$, where $i$ runs over the states of molecule 1, $j$ over those of molecule 2, and so on. The exponential of a sum is the product of the exponentials, $e^{-\\beta(e_i + e_j + \\ldots)} = e^{-\\beta e_i}e^{-\\beta e_j}\\cdots$. Each factor depends on one index only, so the multiple sum factors into a product of single sums: $\\kQsys = \\left(\\sum_i e^{-\\beta e_i}\\right)\\left(\\sum_j e^{-\\beta e_j}\\right)\\left(\\sum_k e^{-\\beta e_k}\\right)\\cdots = \\kqi q_jq_k\\cdots$. When all $N$ molecules have the same set of levels, every factor is the same $\\kqmol$ and $\\kQsys = \\kqmol^N$. This assumes the molecules are independent and can be told apart.</p>"
+    "solution": "<p>The partition function of the system sums over every combination of states of the molecules: $\\kQsys = \\sum_{i}\\sum_{j}\\sum_{k}\\cdots e^{-\\beta(e_i + e_j + e_k + \\ldots)}$, where $i$ runs over the states of molecule 1, $j$ over those of molecule 2, and so on. The exponential of a sum is the product of the exponentials, $e^{-\\beta(e_i + e_j + \\ldots)} = e^{-\\beta e_i}e^{-\\beta e_j}\\cdots$. Each factor depends on one index only, so the multiple sum factors into a product of single sums: $\\kQsys = \\left(\\sum_i e^{-\\beta e_i}\\right)\\left(\\sum_j e^{-\\beta e_j}\\right)\\left(\\sum_k e^{-\\beta e_k}\\right)\\cdots = \\kqi \\kqj\\kqk\\cdots$. When all $N$ molecules have the same set of levels, every factor is the same $\\kqmol$ and $\\kQsys = \\kqmol^N$. This assumes the molecules are independent and can be told apart.</p>"
    }
   },
   {
@@ -551,7 +551,8 @@
      "steps": [
       {
        "tex": "\\mk{o}{1} = \\mk{s}{\\sum_j \\dfrac{a_j}{A}}",
-       "uses": []
+       "uses": [],
+       "cap": "Summed over $j$, the left hand side of Equation 17.2.4 is 1."
       },
       {
        "tex": "\\mk{o}{1} = \\mk{al}{e^{\\alpha}}\\mk{s}{\\sum_j e^{-\\beta \\kej}}",
@@ -611,7 +612,8 @@
        ],
        "map": {
         "al": "be"
-       }
+       },
+       "cap": "This determines $a$ and defines the Boltzmann distribution."
       }
      ],
      "src": "17.2"

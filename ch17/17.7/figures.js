@@ -3,12 +3,14 @@ window.OMNISTAX_FIGURES = window.OMNISTAX_FIGURES || {};
 window.OMNISTAX_FIGURES['17.7'] = function (root, F) {
 const { tex, C, PAL, alpha, ctl, register, begin, line, dot, text, topline, axes, fmt } = F;
 const sim = (id, H) => F.sim(root, id, H);
+/* The book names its two balls red and blue, so they are drawn in those colours (facts). */
+const RED = '#d93a32', BLUE = '#2f6fdc';
 
 /* ---------- Figure 17.7.1 + 17.7.2: two particles, told apart or identical ----------
    Left, every state of two particles on M evenly spaced levels 0, ε, 2ε, … as a grid: the red particle's level
    across, the blue particle's down, so M = 2 is the book's four arrangements. Each square holds a small ladder
    with the two particles on it and is tinted by its Boltzmann weight e^(−βε(i+j)). Choosing "identical" drains
-   the referent colours to ink and slides each square below the diagonal onto its mirror image, where it fades:
+   the book's red and blue to ink and slides each square below the diagonal onto its mirror image, where it fades:
    M² states become M(M+1)/2. Right, three bars on one scale: q² (told apart), Q (identical, the true sum) and
    q²/2!. The bar axis follows q² (a zoom, since q² runs from 1 to 144 over the sliders); the bars are the point,
    not their absolute size. Still: the change between the two choices is a morph, with no clock. */
@@ -32,11 +34,12 @@ const sim = (id, H) => F.sim(root, id, H);
       : `Told apart: ${m * m} states, and $\\kQdist = \\kqmol^2 = ${fmt(Qd, 3)}$.`);
     /* the grid of states */
     const G = 440, gx = 110, gy = 120, s = G / m;
-    const red = F.mixColor(F.ref('red'), PAL.ink, k), blue = F.mixColor(F.ref('blue'), PAL.ink, k);
+    const fr = F.fact(RED), fb = F.fact(BLUE);
+    const red = F.mixColor(fr, PAL.ink, k), blue = F.mixColor(fb, PAL.ink, k);
     const tint = C('partition-function');
-    text(ctx, 'level of the red particle', gx + G / 2, gy - 30, F.ref('red'), { size: 20, weight: 600, align: 'center' });
+    text(ctx, 'level of the red particle', gx + G / 2, gy - 30, fr, { size: 20, weight: 600, align: 'center' });
     ctx.save(); ctx.translate(gx - 42, gy + G / 2); ctx.rotate(-Math.PI / 2);
-    text(ctx, 'level of the blue particle', 0, 0, F.ref('blue'), { size: 20, weight: 600, align: 'center' }); ctx.restore();
+    text(ctx, 'level of the blue particle', 0, 0, fb, { size: 20, weight: 600, align: 'center' }); ctx.restore();
     for (let i = 0; i < m; i++) {
       if (m <= 6 || i % 2 === 0) {
         text(ctx, i === 0 ? '0' : i === 1 ? 'ε' : `${i}ε`, gx + (i + 0.5) * s, gy - 8, PAL.muted, { size: 17, align: 'center' });

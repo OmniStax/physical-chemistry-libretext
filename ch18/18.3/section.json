@@ -1,0 +1,92 @@
+{
+ "id": "18.3",
+ "module": "13693",
+ "chapter": "18",
+ "title": "The Energy of a Diatomic/Polyatomic Molecule Can Be Approximated as a Sum of Separate Terms",
+ "short": "Separate terms of the energy",
+ "lead": "A molecule can store energy in translation, rotation, vibration and its electrons. Treating these as independent turns the partition function of a gas of molecules into a product of one factor per kind of motion, and gives a recipe for each factor's share of the heat capacity.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercises for this section; the one here is new and AI-written, with an AI solution. Its Bloom level and concept tags were chosen by AI.",
+ "figures": [],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "one-factor-per-motion",
+   "concept": "molecular-ideal-gas-partition-function",
+   "verb": "introduces"
+  },
+  {
+   "span": "one-factor-per-motion",
+   "concept": "partition-function-factorization",
+   "verb": "reinforces"
+  },
+  {
+   "span": "one-factor-per-motion",
+   "concept": "translational-partition-function",
+   "verb": "uses"
+  },
+  {
+   "span": "electronic",
+   "concept": "heat-capacity-from-levels",
+   "verb": "introduces"
+  },
+  {
+   "span": "electronic",
+   "concept": "electronic-partition-function",
+   "verb": "reinforces"
+  },
+  {
+   "span": "electronic",
+   "concept": "degenerate-level-weight",
+   "verb": "reinforces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "The partition function of a molecular idea gas is then:",
+   "kind": "exercise",
+   "bloom": "Analyze",
+   "place": {
+    "at": "end"
+   },
+   "cite": "one-factor-per-motion",
+   "prompt": "<p>Of the four factors in $\\kQsys = (\\kqtrans\\kqvib\\kqrot\\kqelec)^N/N!$, which depend on the volume? Use $\\langle P\\rangle = k\\kT(\\partial \\ln \\kQsys/\\partial \\kV)_{N,\\kT}$ to show what this means for the pressure of an ideal gas of molecules.</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "The rotational, vibrational and electronic levels belong to one molecule and do not change when the box does.",
+    "solution": "<p>Only $\\kqtrans = \\kV/\\Lambda^3$ depends on $\\kV$; the rotational, vibrational and electronic levels are those of one molecule and do not change with the box. So $\\ln \\kQsys = N\\ln \\kV + (\\text{terms without } \\kV)$, and $(\\partial \\ln \\kQsys/\\partial \\kV)_{N,\\kT} = N/\\kV$. Then $\\langle P\\rangle = Nk\\kT/\\kV$ for every ideal gas, whatever its molecules: rotation, vibration and electronic structure change the energy and the heat capacity of the gas but not its equation of state.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "molecular-ideal-gas-partition-function"
+  },
+  {
+   "exercise": "a1",
+   "concept": "translational-partition-function"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-sum",
+   "kind": "correction",
+   "html": "The energies add, as the sentence says: $E_\\text{tot} = E_\\text{trans} + E_\\text{vib} + E_\\text{rot} + E_\\text{elec}$. The book prints them as a product."
+  }
+ ]
+}

@@ -1,0 +1,505 @@
+{
+ "id": "18.4",
+ "module": "13694",
+ "chapter": "18",
+ "title": "Most Molecules are in the Ground Vibrational State",
+ "short": "Vibrational partition function",
+ "lead": "The harmonic levels of a diatomic make its vibrational partition function a geometric series. From it follow the vibrational temperature, vibration's share of the heat capacity and the fraction of molecules in each level.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "Adapted from B. L. Tembe's notes (IIT Bombay, www.chem.iitb.ac.in/~bltembe/pdfs/ch_3.pdf), under the book's CC BY-NC-SA 4.0. The unnumbered Cl₂ population chart is folded into Figure 18.4.1.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercises for this section; both here are new and AI-written, their answers checked by computation from Table 18.4.1 with R = 8.314 J K⁻¹ mol⁻¹. Bloom levels and concept tags were chosen by AI. Numeric answers accept a 2% tolerance.",
+ "figures": [
+  {
+   "id": "sim-vibrational-freeze",
+   "kind": "sim",
+   "number": "18.4.1",
+   "originals": [
+    "/media/ch18/79365-Untitled.png",
+    "/media/ch18/420081-Vibrational_Populations.png"
+   ],
+   "original_caption": "Figure 18.4.1: Vibrational heat capacity of a diatomic. Figure: The vibrational population of Cl2 at 300 K. Most of the molecules are in the ground vibrational state, $v=0$.",
+   "draws": [
+    "temperature",
+    "heat-capacity",
+    "energy",
+    "partition-function"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "vibrational-ladder",
+   "concept": "geometric-series",
+   "verb": "introduces"
+  },
+  {
+   "span": "vibrational-ladder",
+   "concept": "vibrational-partition-function",
+   "verb": "introduces"
+  },
+  {
+   "span": "vibrational-ladder",
+   "concept": "vibrational-temperature",
+   "verb": "introduces"
+  },
+  {
+   "span": "vibrational-heat-capacity",
+   "concept": "molar-heat-capacity",
+   "verb": "introduces"
+  },
+  {
+   "span": "vibrational-heat-capacity",
+   "concept": "temperature-derivative-beta",
+   "verb": "introduces"
+  },
+  {
+   "span": "vibrational-heat-capacity",
+   "concept": "vibrational-heat-capacity",
+   "verb": "introduces"
+  },
+  {
+   "span": "vibrational-heat-capacity",
+   "concept": "vibrational-temperature-trends",
+   "verb": "introduces"
+  },
+  {
+   "span": "vibrational-heat-capacity",
+   "concept": "vibrational-partition-function",
+   "verb": "uses"
+  },
+  {
+   "span": "vibrational-heat-capacity",
+   "concept": "vibrational-temperature",
+   "verb": "uses"
+  },
+  {
+   "span": "vibrational-populations",
+   "concept": "vibrational-populations",
+   "verb": "introduces"
+  },
+  {
+   "span": "vibrational-populations",
+   "concept": "ground-vibrational-state-dominates",
+   "verb": "introduces"
+  },
+  {
+   "span": "vibrational-populations",
+   "concept": "vibrational-partition-function",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "We can plot the fraction molecules in each vibrational state",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "vibrational-populations",
+   "prompt": "<p>Use $\\kThetavib = 805$ K for Cl₂ from Table 18.4.1. At 300 K, with the zero of energy at $v = 0$, find (a) $\\kqvib$, (b) the fraction $f_0$ of molecules in $v = 0$, (c) the fraction $f_1$ in $v = 1$, and (d) vibration's contribution to the molar heat capacity $\\kCVbar$, in J K⁻¹ mol⁻¹.</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 1.073,
+      "hint": "Every expression needs only $e^{-\\Theta_\\text{vib}/T} = e^{-805/300}$."
+     },
+     {
+      "part": "b",
+      "value": 0.932
+     },
+     {
+      "part": "c",
+      "value": 0.0637
+     },
+     {
+      "part": "d",
+      "value": 4.71,
+      "unit": "J K⁻¹ mol⁻¹"
+     }
+    ],
+    "solution": "<p>$\\kThetavib/\\kT = 805/300 = 2.683$ and $e^{-2.683} = 0.0683$. (a) $\\kqvib = 1/(1 - 0.0683) = 1.073$. (b) By Equation 18.4.6, $f_0 = 1 - 0.0683 = 0.932$. (c) $f_1 = (0.932)(0.0683) = 0.0637$. (d) Per mole, Equation 18.4.5 times $N_A$ gives $\\kCVbar = R(2.683)^2(0.0683)/(0.932)^2 = 0.567R = 4.71$ J K⁻¹ mol⁻¹. Cl₂'s vibration is partly awake at room temperature, though 93% of the molecules are still in $v = 0$.</p>"
+   }
+  },
+  {
+   "id": "a2",
+   "source_id": "Compare the parameters on Table 18.4.1",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "vibrational-ladder",
+   "prompt": "<p>N₂ has $\\kThetavib = 3393$ K (Table 18.4.1). At 1000 K, with the zero of energy at $v = 0$, find (a) $\\kqvib$ and (b) the fraction of molecules in $v = 0$.</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 1.035,
+      "hint": "Use Equation 18.4.3 with $h\\nu/kT = \\Theta_\\text{vib}/T$."
+     },
+     {
+      "part": "b",
+      "value": 0.966
+     }
+    ],
+    "solution": "<p>$\\kThetavib/\\kT = 3393/1000 = 3.393$ and $e^{-3.393} = 0.0336$. (a) $\\kqvib = 1/(1 - 0.0336) = 1.035$. (b) $f_0 = 1 - 0.0336 = 0.966$. Even at 1000 K, 97% of N₂ molecules are in the ground vibrational state.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "vibrational-partition-function"
+  },
+  {
+   "exercise": "a1",
+   "concept": "vibrational-populations"
+  },
+  {
+   "exercise": "a1",
+   "concept": "vibrational-heat-capacity"
+  },
+  {
+   "exercise": "a2",
+   "concept": "vibrational-partition-function"
+  },
+  {
+   "exercise": "a2",
+   "concept": "vibrational-temperature"
+  },
+  {
+   "exercise": "a2",
+   "concept": "ground-vibrational-state-dominates"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-bond-unit",
+   "kind": "correction",
+   "html": "The bond lengths are in ångströms: 0.7474 Å for H₂ is 74.74 pm."
+  },
+  {
+   "id": "c-force-unit",
+   "kind": "correction",
+   "html": "The force constants are in units of 10⁵ dyn/cm (mdyn/Å): H₂'s 5.749 is $5.749\\times10^5$ dyn/cm, or 575 N/m."
+  },
+  {
+   "id": "c-no-omega",
+   "kind": "correction",
+   "html": "NO's wavenumber is about 1890 cm⁻¹, which is what its $\\Theta_\\text{vib} = 2719$ K requires."
+  },
+  {
+   "id": "c-n2-rot",
+   "kind": "correction",
+   "html": "$\\tilde{B} = 2.001$ cm⁻¹ gives $\\Theta_\\text{rot} = hc\\tilde{B}/k = 2.88$ K, the value Table 1 of Section 18.6 prints."
+  },
+  {
+   "id": "c-hi-rot",
+   "kind": "correction",
+   "html": "$\\tilde{B} = 6.46$ cm⁻¹ gives $\\Theta_\\text{rot} = 9.29$ K."
+  },
+  {
+   "id": "c-kt-hc",
+   "kind": "correction",
+   "html": "At 300 K, $kT/hc = 208.5$ cm⁻¹, not 209.7 cm⁻¹. Then $h\\nu/kT = 1.029$, $e^{-h\\nu/kT} = 0.357$ and $q_\\text{vib} = 1.556$; the conclusion is unchanged."
+  },
+  {
+   "id": "c-molar",
+   "kind": "correction",
+   "html": "Equation 18.4.5 is the heat capacity of one molecule, which tends to $k$ at large $T$. For a mole it is $N_A$ times that, and tends to $N_Ak = R$."
+  },
+  {
+   "id": "c-cl2-chart",
+   "kind": "correction",
+   "figure": "sim-vibrational-freeze",
+   "html": "The bar chart shows about 98% of Cl₂ in $v = 0$ at 300 K. With Table 18.4.1's $\\Theta_\\text{vib} = 805$ K, Equation 18.4.6 gives $f_0 = 1 - e^{-805/300} = 0.932$ and $f_1 = 0.064$."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "vibrational-q",
+   "what": "the vibrational partition function",
+   "source": "Physical Chemistry (LibreTexts), 18.4 Most Molecules are in the Ground Vibrational State",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kEv = \\left(v + \\tfrac{1}{2}\\right)h\\knu",
+       "src": "18.4"
+      },
+      {
+       "tex": "\\kqvib = \\sum_{v=0}^{\\infty} e^{-\\kEv/k\\kT}",
+       "src": "17.2"
+      },
+      {
+       "tex": "x = e^{-h\\knu/k\\kT}",
+       "src": "18.4"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{q}{\\kqvib} = \\mk{s}{\\sum_{v=0}^{\\infty} e^{-\\kEv/k\\kT}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{q}{\\kqvib} = \\mk{s}{\\sum_{v=0}^{\\infty} e^{-(v + 1/2)h\\knu/k\\kT}}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{q}{\\kqvib} = \\mk{z}{e^{-h\\knu/2k\\kT}}\\mk{s}{\\left(1 + e^{-h\\knu/k\\kT} + e^{-2h\\knu/k\\kT} + \\ldots\\right)}",
+       "uses": [],
+       "map": {
+        "s": [
+         "z",
+         "s"
+        ]
+       },
+       "cap": "The exponential of a sum is the product of the exponentials, so every term carries the factor $e^{-h\\nu/2kT}$."
+      },
+      {
+       "tex": "\\mk{q}{\\kqvib} = \\mk{z}{e^{-h\\knu/2k\\kT}}\\mk{s}{\\left(1 + x + x^2 + x^3 + \\ldots\\right)}",
+       "uses": [
+        2
+       ]
+      }
+     ],
+     "num": "(18.4.1)",
+     "src": "18.4"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "\\dfrac{1}{1 - x} = 1 + x + x^2 + x^3 + x^4 + \\ldots",
+       "src": "18.4"
+      },
+      {
+       "tex": "x = e^{-h\\knu/k\\kT}",
+       "src": "18.4"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{q}{\\kqvib} = \\mk{z}{e^{-h\\knu/2k\\kT}}\\mk{s}{\\left(1 + x + x^2 + x^3 + \\ldots\\right)}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{q}{\\kqvib} = \\mk{z}{e^{-h\\knu/2k\\kT}}\\mk{s}{\\left(\\dfrac{1}{1 - x}\\right)}",
+       "uses": [
+        1
+       ],
+       "cap": "The series converges because $0 < x < 1$."
+      },
+      {
+       "tex": "\\mk{q}{\\kqvib} = \\dfrac{\\mk{z}{e^{-h\\knu/2k\\kT}}}{\\mk{s}{1 - e^{-h\\knu/k\\kT}}}",
+       "uses": [
+        2
+       ]
+      }
+     ],
+     "num": "(18.4.2)",
+     "src": "18.4"
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "text": "Measuring the energy from the lowest level, $h\\nu/2$, takes the factor $e^{-h\\nu/2kT}$ out of every term.",
+       "src": "18.4"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{q}{\\kqvib} = \\dfrac{\\mk{z}{e^{-h\\knu/2k\\kT}}}{\\mk{s}{1 - e^{-h\\knu/k\\kT}}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{q}{\\kqvib} \\approx \\dfrac{\\mk{z}{1}}{\\mk{s}{1 - e^{-h\\knu/k\\kT}}}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "num": "(18.4.3)",
+     "src": "18.4",
+     "note": "The book puts the zero of energy at $h\\nu/2kT$; the zero-point energy is $h\\nu/2$."
+    }
+   ]
+  },
+  {
+   "id": "vibrational-cv",
+   "what": "the vibrational heat capacity",
+   "source": "Physical Chemistry (LibreTexts), 18.4 Most Molecules are in the Ground Vibrational State",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\beta = \\dfrac{1}{k\\kT}",
+       "src": "17.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{t}{\\dfrac{\\partial}{\\partial \\kT}} = \\mk{a}{\\dfrac{\\partial \\beta}{\\partial \\kT}}\\mk{d}{\\dfrac{\\partial}{\\partial \\beta}}",
+      "why": "The chain rule: the temperature enters through $\\beta$."
+     },
+     "steps": [
+      {
+       "tex": "\\mk{t}{\\dfrac{\\partial}{\\partial \\kT}} = \\mk{a}{\\dfrac{-1}{k\\kT^2}}\\mk{d}{\\dfrac{\\partial}{\\partial \\beta}}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{t}{\\dfrac{\\partial}{\\partial \\kT}} = \\mk{a}{\\left(-k\\beta^2\\right)}\\mk{d}{\\left(\\dfrac{\\partial}{\\partial \\beta}\\right)}",
+       "uses": [
+        0
+       ]
+      }
+     ],
+     "num": "(18.4.4)",
+     "src": "18.4"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\kepsvib = -\\dfrac{\\partial \\ln \\kqvib}{\\partial \\beta}",
+       "src": "17.8"
+      },
+      {
+       "tex": "\\kqvib = \\dfrac{1}{1 - e^{-\\beta h\\knu}}",
+       "src": "(18.4.3)",
+       "drv": "vibrational-q"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{e}{\\kepsvib} = \\mk{d}{-\\dfrac{\\partial \\ln \\kqvib}{\\partial \\beta}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{e}{\\kepsvib} = \\mk{d}{\\dfrac{\\partial}{\\partial \\beta}\\ln\\left(1 - e^{-\\beta h\\knu}\\right)}",
+       "uses": [
+        1
+       ],
+       "cap": "$\\ln(1/y) = -\\ln y$."
+      },
+      {
+       "tex": "\\mk{e}{\\kepsvib} = \\mk{d}{\\dfrac{h\\knu\\, e^{-\\beta h\\knu}}{1 - e^{-\\beta h\\knu}}}",
+       "uses": [],
+       "cap": "The derivative of $\\ln(1 - e^{-\\beta h\\nu})$ with respect to $\\beta$ is $h\\nu e^{-\\beta h\\nu}/(1 - e^{-\\beta h\\nu})$."
+      },
+      {
+       "tex": "\\mk{e}{\\kepsvib} = \\mk{d}{\\dfrac{h\\knu}{e^{\\beta h\\knu} - 1}}",
+       "uses": []
+      }
+     ]
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "step": 1
+      },
+      {
+       "text": "The heat capacity is the temperature derivative of the vibrational energy, $\\bar{C}_V = (\\partial \\epsilon_\\text{vib}/\\partial T)_V$.",
+       "src": "18.4"
+      },
+      {
+       "tex": "\\kThetavib = \\dfrac{h\\knu}{k}",
+       "src": "18.4"
+      },
+      {
+       "tex": "\\beta = \\dfrac{1}{k\\kT}",
+       "src": "17.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{c}{\\kCVbar} = \\mk{d}{\\dfrac{\\partial \\kepsvib}{\\partial \\kT}}",
+      "uses": [
+       2
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{c}{\\kCVbar} = \\mk{b}{\\left(-k\\beta^2\\right)}\\mk{d}{\\dfrac{\\partial \\kepsvib}{\\partial \\beta}}",
+       "uses": [
+        0
+       ],
+       "map": {
+        "d": [
+         "b",
+         "d"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{c}{\\kCVbar} = \\mk{b}{\\left(-k\\beta^2\\right)}\\mk{d}{\\dfrac{\\partial}{\\partial \\beta}\\dfrac{h\\knu}{e^{\\beta h\\knu} - 1}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{c}{\\kCVbar} = \\mk{b}{\\left(-k\\beta^2\\right)}\\mk{d}{\\left(-\\dfrac{(h\\knu)^2 e^{\\beta h\\knu}}{\\left(e^{\\beta h\\knu} - 1\\right)^2}\\right)}",
+       "uses": [],
+       "cap": "The chain rule: $d(e^{a\\beta} - 1)^{-1}/d\\beta = -a e^{a\\beta}/(e^{a\\beta} - 1)^2$."
+      },
+      {
+       "tex": "\\mk{c}{\\kCVbar} = \\mk{b}{k}\\mk{d}{\\left(\\beta h\\knu\\right)^2\\dfrac{e^{\\beta h\\knu}}{\\left(e^{\\beta h\\knu} - 1\\right)^2}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{c}{\\kCVbar} = \\mk{b}{k}\\mk{d}{\\left(\\dfrac{\\kThetavib}{\\kT}\\right)^2\\dfrac{e^{\\kThetavib/\\kT}}{\\left(e^{\\kThetavib/\\kT} - 1\\right)^2}}",
+       "uses": [
+        3,
+        4
+       ]
+      },
+      {
+       "tex": "\\mk{c}{\\kCVbar} = \\mk{b}{k}\\mk{d}{\\left(\\dfrac{\\kThetavib}{\\kT}\\right)^2\\dfrac{e^{-\\kThetavib/\\kT}}{\\left(1 - e^{-\\kThetavib/\\kT}\\right)^2}}",
+       "uses": []
+      }
+     ],
+     "num": "(18.4.5)",
+     "src": "18.4",
+     "note": "The book labels the first line of this result $q_\\text{vib}$; it is $\\bar{C}_V$. That line also writes $hc\\nu$ and $hv\\tilde{\\nu}$ where $h\\nu = hc\\tilde{\\nu}$ is meant."
+    }
+   ]
+  }
+ ]
+}

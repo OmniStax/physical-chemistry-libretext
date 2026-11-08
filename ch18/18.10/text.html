@@ -1,0 +1,39 @@
+<section id="nuclear-spins">
+<h2>Nuclear spins and exchange</h2>
+<p>The molecules of hydrogen can exist in two forms depending on the spins on the two hydrogen nuclei. If both the nuclear spins are parallel, the molecule is called <span data-concept="ortho-hydrogen">ortho</span> and if the spins are antiparallel, it is referred to as <span data-concept="para-hydrogen">para</span> (in disubstituted benzene, <strong>para</strong> refers to the two groups at two opposite ends, while in <strong>ortho</strong>, they are adjacent or “parallel” to each other). The spin on the hydrogen nucleus has a magnitude of $\tfrac{1}{2} \hbar $. The presence of nuclear spins leads to very interesting consequences for the populations of the rotational states and on a macroscopic scale, has consequences on measured entropies and heat capacities as well. The total partition function of $\mathrm{H_2}$ can be written as:</p>
+$$ \kqtot = \kqelec \kqvib \kqrot \kqtrans \kqnuc $$
+<p>where, the subscripts refer to the respective motions. After “half” a rotation, the nuclei are superimposed on each other. Since a proton is a spin half nucleus, <span data-concept="nuclear-exchange-symmetry">the total wave function must be antisymmetic with respect to the exchange of the particles</span>. i.e.:</p>
+$$ \psi(1,2) = - \psi (2,1) $$
+<p>The translational motion refers to the motion of the molecular center of mass and has no influence on the symmetry of the nuclear wave function. Vibrational motion depends on the magnitude of the internuclear distance and has no effect on the particle exchange. The electronic motion also has no effect on the symmetry properties of the nuclear wave function. Therefore, <span data-concept="nuclear-exchange-symmetry">the product of the nuclear spin and rotational wave functions must be antisymmetric with respect to the particle exchange</span>. For the nuclear spin functions, there are four combinations. One combination is a <span data-concept="two-spin-eigenstates">singlet</span>:</p>
+$$ \kpsins = \kalphas(1) \kbetas(2) - \kalphas (2) \kbetas (1) $$
+<p>And the other three combinations are the three states of a <span data-concept="two-spin-eigenstates">triplet</span>:</p>
+$$ \begin{aligned} \kpsins &= \kalphas(1) \kalphas(2) \\[4pt] \kpsins &= \kalphas(1) \kbetas(2) + \kalphas (2) \kbetas (1) \\[4pt] \kpsins &= \kbetas(1) \kbetas(2) \end{aligned} $$
+</section>
+
+<section id="even-odd-levels">
+<h2>Even and odd rotational levels</h2>
+<p>The rotational wavefunctions ($\psi_r$) are given in terms of the <span data-concept="associated-legendre-functions">associated Legendre polynomials</span> $P^{|m|}_l (x)$ where $x = \cos \ktheta$:</p>
+$$ \kpsir = e^{im\phi} P^{|m|}_l (\cos \ktheta) \tag{18.10.1} $$
+<p>with:<sup class="fn" data-note="c-legendre"></sup></p>
+$$ \begin{aligned} P_{l}^{(m)}(x) &=\left(1-x^{2}\right)^{| m / 2} \frac{d^{|m|} P_{l}(x)}{d x^{m |}} \\[4pt] \quad P_{l}(x) &=\frac{1}{2^{l} l !} \frac{d^{l}\left(x^{2}-1\right)^{l}}{d x^{l}}  \end{aligned} \tag{18.10.2} $$
+<figure class="dv" id="drv-exchange-parity"></figure>
+<ul><li>$\kpsir$ is <span data-concept="rotational-exchange-parity">symmetrical for even $J$</span>, and</li><li>$\kpsir$ is <span data-concept="rotational-exchange-parity">antisymmetrical for odd $J$</span></li></ul>
+<p>Combining the nuclear spin and the rotational parts, we see that, the product $\psi_{r}, \psi_{m}$<sup class="fn" data-note="c-product"></sup> must be antisymmetrical (with respect to the exchange of nuclei) for half integral nuclear spins and symmetrical for integral spins. To accomplish this, <span data-concept="ortho-para-partition-functions">the singlet nuclear states (para) must be combined with the even rotational functions and the triplet nuclear states must be combined with the odd rotational states</span>. The rotational partition functions for ortho and para hydrogens are, thus:</p>
+<figure class="dv" id="drv-ortho-para"></figure>
+</section>
+
+<section id="frozen-mixture">
+<h2>A mixture that cannot equilibrate</h2>
+<p>A good experimental verification of the above analysis is a comparison between the calculated rotational heat capacities at constant volume ($\kCV$) rot, nu (calculated from:</p>
+$$ \kCV= \dfrac{\partial \kEavg }{\partial \kT} $$
+<p>where:<sup class="fn" data-note="c-energy-sign"></sup></p>
+$$ \kEavg = \dfrac{\partial \ln \kqrotnu }{\partial \kbeta} $$
+<p>The heat capacities are shown as a function of temperature in Figure 18.10.1.</p>
+<figure class="sim" id="sim-ortho-para" data-figure="18.10.1" data-original="/media/ch18/79368-800px-Ortho-para_H2_Cvs.jpg" data-original-width="448" data-original-caption="The heat capacities of o- and p- hydrogens as a function of temperature. The curve marked Exp depicts the experimental data, the curve eq represents the data for an equilibrated mixture of o- and p- at a given temperature and the curves o- and p-represent the heat capacities of pure o- and pure p- hydrogens. (CC-SA-BY 3.0; Gadolinist).">
+  <div class="sim-head"><span class="eyebrow">Figure 18.10.1</span><span>Cool the gas and switch the catalyst on and off. With a catalyst, the odd levels empty as <span data-type="temperature">the temperature</span> falls, the ratio of <span data-ref="ortho-h2">ortho</span> to <span data-ref="para-h2">para</span> drops toward zero, and the <span data-type="heat-capacity">heat capacity</span> passes through a high peak near 50 K. Without one, the gas keeps three ortho molecules for every para molecule and follows the 3:1 curve.</span></div>
+</figure>
+<p>The purple curve marked 3:1 gives the experimental data, the curve eq represents the data for an equilibrated mixture of o- and p- at a given temperature. The curves <span data-ref="ortho-h2">o-</span> and <span data-ref="para-h2">p-</span> represent the heat capacities of <span data-ref="ortho-h2">pure o-</span> and <span data-ref="para-h2">pure p- hydrogens</span> calculated from the o- and p- partition functions given by Equations 18.10.6 and 18.10.7 respectively. Initially it was a puzzle as to why the experimental data differs from the calculated values. In fact, the experimental data seemed to agree very well with the following equation:</p>
+$$ \kCVrotnu = \dfrac{3}{4} \kCVrotnu (\text{ortho}) + \dfrac{1}{4} \kCVrotnu (\text{para}) \tag{18.10.11} $$
+<p>The reason for this is that, when $\mathrm{H}_2$ is cooled down from a higher temperature, <span data-concept="frozen-ortho-para-mixture">the ortho:para ratio continues to remain 0.75 / 0.25 (the high temperature value) because the $\text{ortho} \rightarrow \text{para}$ interconversion rate is very very small</span> and we do not reach the equilibrium composition unless a catalyst such as activated charcoal is added to the gas mixture. Equation 18.10.11 corresponds to a “<span data-concept="frozen-ortho-para-mixture">frozen high temperature mixture</span>” of ortho:para hydrogens. In the presence of the catalyst, the experiments also give the curve labeled as eq in the graph. This in indeed a very nice case where the experiments support not only the methods of statistical thermodynamics but also of the antisymmetry principle for <span data-concept="boson">bosons</span> and <span data-concept="fermion">fermions</span>. If we consider the case of $\mathrm{^{16}O_{2}}$, where the nuclear spins are zero, <span data-concept="oxygen-16-rotational-states">the rotational wave function has to be symmetric as only symmetric wave functions are permitted for bosons</span>. Thus, only even rotational states contribute to the partition function:<sup class="fn" data-note="c-oxygen"></sup></p>
+$$ q_{\text{rot}, V} (^{16}\mathrm{O_2}) = \sum_{J=0,2,4,\ldots} (2J+1) e^{-J(J+1) \theta_R/\kT} $$
+</section>

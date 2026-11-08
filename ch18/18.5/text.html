@@ -1,0 +1,31 @@
+<section id="rotational-levels">
+<h2>Rotational levels and their degeneracy</h2>
+<p>The rotational quantum number is $J$ and the energy of the rotations is:</p>
+$$ E(J)= \kBt J(J+1) $$
+<p>Where $\kBt$ is in units of cm<sup>-1</sup> and is equivalent to:</p>
+$$ \frac{h}{8\pi^2\kI c} $$
+<p>Where $c$ is the speed of light in units of cm<sup>-1</sup>.<sup class="fn" data-note="c-c"></sup> However, with the exception of the ground state (i.e., $J=0$), multiple eigenstates exist for a given value of $J$. This is a form of <strong><span data-concept="degeneracy">degeneracy</span></strong>, ($g$), and the number of levels per energy goes as 1, 3, 5, 7, 9 etc or:</p>
+$$ g(J)=2J+1 $$
+<p>Therefore, the summation to find <span data-concept="rotational-partition-function">the partition function $\kqrot(\kT)$</span> contains an extra factor $g=2J+1$. This factor is mathematically very handy, because it is the derivative of:</p>
+$$ g(J)=J(J+1) $$<sup class="fn" data-note="c-g"></sup>
+<p>This makes it possible to change variables to $X=J(J+1)$ and the integration becomes very easy. Notice that just like in the <span data-concept="translational-partition-function">translation partition function</span>, we approximate the summation with an integral. However, because we are dealing with far fewer levels, this is less justified in the rotational case. <span data-concept="rotational-integral-validity">How justified it is depends on the gas and the temperature we consider. Roughly speaking we should be at a temperature $\kT>> \kThetarot$.</span></p>
+</section>
+
+<section id="rotational-heat-capacity">
+<h2>Rotation's share of the heat capacity</h2>
+<p>The <span data-concept="rotational-constant">rotational constant</span> $B$ is directly linked to the <span data-concept="moment-of-inertia">moment of inertia</span>:</p>
+$$ \kI = \kmu \kr^2 $$
+<p>Where $\kmu$ is the <span data-concept="reduced-mass">reduced mass</span> of the molecule:</p>
+$$ \dfrac{1}{\kmu} = \dfrac{1}{\kmone} + \dfrac{1}{\kmtwo} $$
+<p>and $\kr$ is the bond length. Again we can scale the behavior of different systems to one and the same picture by introducing a <span data-concept="rotational-temperature">characteristic temperature</span>:</p>
+$$ \kThetarot = \dfrac{hb}{k} = \dfrac{\hbar^2}{2\kI k_b} $$<sup class="fn" data-note="c-theta"></sup>
+<p>As we did for the translations, we can calculate the moment $\kepsavg$. For vibrations we get a relatively complicated function of temperature. However, for rotations, the moment is simply equal to $Nk\kT$<sup class="fn" data-note="c-nkt"></sup> and this means that <span data-concept="rotational-heat-capacity-diatomic">the rotational contribution to the molar $\kCv$ of a diatomic is simply $\kR$</span>. As <span data-concept="heat-capacity-contributions">the vibrational and electronic contributions to the heat capacity</span> are typically negligible at room temperature, we get:</p>
+<ul><li><p><span data-concept="gas-heat-capacity-room-temperature">monatomic gas</span></p>
+$$ \kCv= \kCvtrans = \dfrac{3}{2} \knmol\kR $$</li><li><p><span data-concept="gas-heat-capacity-room-temperature">diatomic</span></p>
+$$ \begin{aligned} \kCv &= \kCvtrans+\kCvrot \\[4pt] &= \dfrac{3}{2} \knmol\kR + \knmol\kR \\[4pt] &= \dfrac{5}{2}\knmol\kR \end{aligned} \tag{18.5.1} $$</li></ul>
+<p>Rotational energies are less than vibrational and electronic energies and, <span data-concept="rotationally-excited">at room temperature, <a class="figref" href="#13.2-sim-rovib">many rotational states will be populated</a></span>.</p>
+<figure class="photo" id="fig-hcl-populations" data-original-width="550">
+  <img src="/media/ch18/411207-Rotational_Populations.png" alt="Bar graph with varying heights, displaying data distribution with taller bars on the left and shorter bars on the right.">
+  <figcaption><span class="eyebrow">Figure</span><span>The normalized <span data-concept="rotational-populations">rotational population</span> of HCl at room temperature.</span></figcaption>
+</figure>
+</section>

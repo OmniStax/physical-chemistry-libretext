@@ -1,0 +1,91 @@
+<section id="principal-axes">
+<h2>Principal axes and three kinds of top</h2>
+<p>For a polyatomic molecule containing $N$ atoms, the total number of <span data-concept="degrees-of-freedom">degrees of freedom</span> is $3N$. Out of these, three degrees of freedom are taken up for the translational motion of the molecule as a whole. For nonlinear molecules, there are three rotational degrees of freedom and the $3N - 6$ vibrational degrees. For linear molecules, the rotational motion along the molecular axis is quantum mechanically not meaningful as the rotated configuration is indistinguishable from the original configuration. Therefore, linear molecules have two rotational degrees of freedom and $3N - 5$ vibrational degrees of freedom.</p>
+<p>To investigate the rotational motion, we need to fix the center of mass of the molecule and calculate the three <span data-concept="principal-moments-of-inertia">principal moments of inertia</span> $\kIA$, $\kIB$, and $\kIC$ of the ellipsoid of inertia. <span data-concept="center-of-mass">The center of mass is defined as the point for which the following identities hold</span>:</p>
+$$ \sum_i \kmi x_i = \sum_i \kmi y_i = \sum_i \kmi z_i $$<sup class="fn" data-note="c-com"></sup>
+<p>The <span data-concept="inertia-tensor">inertia products</span> are defined by:</p>
+$$ \kIxx = \sum_i \kmi \left(y_i^2+ z^2_i\right) $$
+$$ \kIxy = \sum_i \kmi \left(x_i y_i\right) $$
+<p>The other components $I_{yy}$, $I_{xz}$,.. are defined analogously. To find the direction cosines $\alpha_i, \beta_o, \gamma_i$<sup class="fn" data-note="c-beta"></sup> of the three principle moments of inertia, we need to solve the following matrix equations:</p>
+$$ \alpha (\kIxx - \eta) - \beta \kIxy - \gamma I_{xz} =0 $$
+$$ \alpha \kIxy - \beta (I_{yy} - \eta) - \gamma I_{yz} = 0 $$<sup class="fn" data-note="c-eig"></sup>
+$$ -\alpha I_{xz} - \beta I_{yz} + \gamma (I_{zz} - \eta ) =0 $$
+<p>If the off diagonal terms $\kIxy$ are zero in the above equations, then the $x$, $y$, $z$ axis will be the principal axis. The energy of a rotor with the three moments of inertia $\kIA$, $\kIB$. and $\kIC$ is given by:</p>
+$$ \begin{aligned} \epsilon &= \dfrac{1}{2} \kIA \komegaA^2 + \dfrac{1}{2} \kIB \komegaB^2 + \dfrac{1}{2} \kIC \komegaC^2 \\[4pt] &= \dfrac{\kLA^2}{2\kIA} + \dfrac{\kLB^2}{2\kIB} + \dfrac{\kLC^2}{2\kIC} \end{aligned} $$
+<p>Each of the rotational degrees of freedom will have a <span data-concept="rotational-temperature">characteristic rotational temperature</span> in terms of the moment of inertia:</p>
+$$ \kThetaroti = \frac{hbar^2}{2\kIi k} \qquad i=A,B,C $$<sup class="fn" data-note="c-hbar"></sup>
+<p>There are many different shapes of molecules and these shapes affect the rotational behavior of the molecules. Molecules are therefore classified according to symmetry into different groups called tops. The three different tops are:</p>
+$$ \text{Spherical top} \qquad \Theta_{\text{rot},A} = \Theta_{\text{rot},B} = \Theta_{\text{rot},C} $$
+$$ \text{Symmetric top} \qquad \Theta_{\text{rot},A} = \Theta_{\text{rot},B} \neq \Theta_{\text{rot},C} $$
+$$ \text{Asymmetric top} \qquad \Theta_{\text{rot},A} \neq \Theta_{\text{rot},B} \neq \Theta_{\text{rot},C} $$
+</section>
+
+<section id="spherical-tops">
+<h2>Spherical Tops</h2>
+<p><span data-concept="spherical-top-energy-levels">The <span data-concept="spherical-top">spherical top</span> can be solved exactly to give</span>:</p>
+$$ \kEJ = \frac{J(J+1)\hbar^2}{2\kI} $$
+$$ g_J = (2J+1^2) \qquad J=0,1,2,\ldots $$<sup class="fn" data-note="c-gj"></sup>
+<p><span data-concept="spherical-top-partition-function">The rotational partition function is</span>:</p>
+<figure class="dv" id="drv-spherical-top"></figure>
+</section>
+
+<section id="symmetric-tops">
+<h2>Symmetric Tops</h2>
+<p>Here, $\komegaA$, $\komegaB$, and $\komegaC$ are the three angular speeds and $\kLA$, $\kLB$, and $\kLC$ are the three angular momenta. For a <span data-concept="symmetric-top">symmetric top</span> molecule such as ammonia, or chloromethane, two components of the moments of inertia are equal, i.e., $\kIB = \kIC$. The rotational energy levels of such a molecule are specified by two quantum numbers $J$ and $K$. The total angular momentum is determined by $J$ and the component of this angular momentum along the unique molecular axis is determined by $K$. <span data-concept="symmetric-top-energy-levels">The energy levels are given by</span>:</p>
+$$ \kepsJK = \kBt J(J+1) + (\kAtilde - \kBt) K^2 $$
+<p>with rotational constants in units of wavenumbers:</p>
+$$ \kBt = \dfrac{h}{8\pi^2 c \kIB} $$
+<p>and:</p>
+$$ \kAtilde = \dfrac{h}{8\pi^2 c \kIA} $$
+<p>where</p>
+<ul><li>$J$ takes on values $0,1,2,.... \infty$ and</li><li>$K = -J, -J + 1, - J + 2,...0, 1, 2,...J$.</li></ul>
+<p><span data-concept="symmetric-top-partition-function">The rotational partition function is given by</span>:</p>
+<figure class="dv" id="drv-symmetric-top"></figure>
+</section>
+
+<section id="asymmetric-tops">
+<h2>Asymmetric Tops</h2>
+<p>For <span data-concept="asymmetric-top">asymmetric tops</span>, the expressions for rotational energies are more complex and the conversions to integrations are not easy. One can actually calculate the sum of terms using a computer. An intuitive answer can be obtained by integrating over the angular momenta $\kLA$, $\kLB$ and $\kLC$ as:</p>
+$$ \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} e^{\kHclass(p,q)/k\kT} \,d\kLA \,d\kLB \,d\kLC = \sqrt{ 2\pi \kIA k\kT} \sqrt{ 2\pi \kIB k\kT} \sqrt{ 2\pi \kIC k\kT} $$<sup class="fn" data-note="c-eh"></sup>
+<p>And then multiplying by a factor of $8 π^2 /σ h^3$, we get the rotational partition function. The factor of $8π^2$ accounts for the angular integration. For any axis chosen in a molecule, a complete rotation contributes a factor of $2π$. Integration over all possible orientations of this axis contribute another factor of $4π$. The factor of $h^3$ is for the conversion from the classical phase space to the quantum mechanical phase space.</p>
+<div class="note">
+<div class="eyebrow">Note</div>
+<h3>Symmetry Number</h3>
+<p>As discussed <a class="xref" href="#18.6-symmetry-correction">previously</a>, the <strong><span data-concept="symmetry-number">symmetry number</span></strong> $σ$ corrects for overcounting of rotational configurations. If the molecule has no center of symmetry (e.g. $\mathrm{HCN}$) $\sigma = 1$ whereas if the molecule has a center of symmetry (e.g. $\mathrm{CO_{2}}$) then $\sigma = 2$.</p>
+</div>
+<p><span data-concept="asymmetric-top-partition-function">The final result is</span>:</p>
+$$ \kqrot = \dfrac{\pi^2}{\sigma} \sqrt{\dfrac{8 \pi \kIA k\kT}{h^2}} \sqrt{\dfrac{8 \pi \kIB k\kT}{h^2}} \sqrt{\dfrac{8 \pi \kIC k\kT}{h^2}} \tag{18.8.1} $$
+<div class="note">
+<div class="eyebrow">Note</div>
+<h3>Classical Derivation (Optional)</h3>
+<p>We can explicitly obtain the classical rotational partition function of an asymmetric top by writing the classical expression for the rotational energy in terms of the <span data-concept="euler-angles">Euler angles</span>. The orientation of a rigid rotor can be specified by there Euler angles $\ktheta$, $φ$, and $\kpsieul$ with the ranges of angles $0$ to $π$, $0$ to $2π$ and $0$ to $2π$ respectively. The rotational Hamiltonian for the kinetic energy can be written in terms of the angles and their conjugate momenta ( $\kptheta$, $\kpphi$, $\kppsi$)</p>
+<figure class="dv" id="drv-asymmetric-classical"></figure>
+</div>
+<p>We can simplify calculations by defining <strong><span data-concept="rotational-temperature">characteristic rotational temperatures</span></strong> for each axis of rotational:</p>
+$$ \kThetaA = \dfrac{h^2}{8 \pi^2 \kIA k} $$
+$$ \kThetaB = \dfrac{h^2}{8 \pi^2 \kIB k} $$
+$$ \kThetaC = \dfrac{h^2}{8 \pi^2 \kIC k} $$
+<p>The polyatomic rotational partition function expressed in Equation 18.8.1 can then be re-expressed as:</p>
+$$ \kqrot = \dfrac{\sqrt{\pi}}{\sigma}\sqrt{\dfrac{\kT^3}{ \kThetaA \kThetaB \kThetaC }} \tag{18.8.3} $$
+<p>or alternatively:</p>
+$$ \ln \kqrot = \dfrac{1}{2} \ln \dfrac{\pi \kT}{ \kThetaA \kThetaB \kThetaC \sigma^2} $$<sup class="fn" data-note="c-ln"></sup>
+<div class="example" id="ex-nitrogen-dioxide">
+<h3>Example · Nitrogen Dioxide</h3>
+<p>The three characteristic rotational temperatures for $\mathrm{NO_2}$ are $111.5\, K$<sup class="fn" data-note="c-115"></sup>, $0.624\, K$ and $0.590\, K$. Calculate the rotational partition function at 300 K.</p>
+<h4>Solution</h4>
+<p>The rotational temperature is given by Equation 18.8.3:</p>
+$$ \kqrot = \dfrac{\sqrt{\pi}}{\sigma} \sqrt{\dfrac{\kT^3}{ \kThetaA \kThetaB \kThetaC }} $$
+<p>The rotational partition function becomes,</p>
+$$ \kqrot = \dfrac{1.772}{2} \sqrt{\dfrac{300\; K}{ (11.5\; K)(0.624\,K) ( 22.55\;K)}} = 2242.4 $$<sup class="fn" data-note="c-sub"></sup>
+</div>
+</section>
+
+<section id="thermodynamics-properties">
+<h2>Thermodynamics Properties</h2>
+<p>The molar thermodynamic functions can be readily calculated including <span data-concept="nonlinear-rotational-energy">average rotation energy and molar heat capacity</span>:</p>
+<figure class="dv" id="drv-rotational-energy"></figure>
+<p>Improvements over the classical approximation for the rotational partition function derived above have been obtained. One of the improved versions (with no derivation) is:</p>
+$$ \kqrot = \kqrotzero \left[ 1+ \dfrac{h^2}{96 \pi^2 k\kT} \left( \dfrac{2}{\kIA} + \dfrac{2}{\kIC} + \dfrac{2}{\kIC} + \dfrac{\kIC}{\kIB\kIB} - \dfrac{\kIA}{\kIB\kIC} - \dfrac{\kIB}{\kIA\kIC} \right) \right] $$
+<p>where $\kqrotzero$ is the classical approximation in Equation 18.8.1.</p>
+<p>Comparing this result with the vibrational partition function calculation before ($\kqvib = 1.0035$), give the implication that while multiple rotational states are accessible at room temperature, very few vibrational states (other than the ground vibrational state) are accessible.</p>
+</section>

@@ -1,0 +1,158 @@
+{
+ "id": "18.9",
+ "module": "13699",
+ "chapter": "18",
+ "title": "Molar Heat Capacities",
+ "short": "Molar heat capacities",
+ "lead": "In a crystal of one kind of atom, heat goes only into the vibrations of the atoms. Einstein's model of such a solid gives its molar heat capacity at any temperature, and measured specific heats of the elements test the law that Dulong and Petit found in the early 1800s.",
+ "objectives": [
+  "<strong>Goal</strong>: Specific heat capacity data for a wide range of elements are used to assess the accuracy and limitations of the Dulong-Petit Law.",
+  "<strong>Prerequisites</strong>: An introductory knowledge of statistical thermodynamics including the derivation of the vibrational (harmonic oscillator) contributions to the heat capacity are recommended.",
+  "<strong>Resources you will need</strong>: This exercise should be carried out within a data analysis software environment which is capable of graphing and generating a best-fit line for an x-y data set."
+ ],
+ "summary_html": "",
+ "notes": "Adapted from Tandy Grubbs (Stetson University).",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book's five exercises have no key, so their solutions were written by AI. Exercises 1 to 4 ask for data from the CRC Handbook; their solutions work the method on approximate values recalled from memory, which the reader should replace with the Handbook's. The sixth exercise, on the Einstein heat capacity at the vibrational temperature, was written by AI. Bloom levels and concept tags were chosen by AI. Numeric answers accept a 2% tolerance unless they name another.",
+ "figures": [],
+ "referents": [],
+ "coverage": [
+  {"span": "einstein-solid-dulong-petit", "concept": "specific-heat-capacity", "verb": "introduces"},
+  {"span": "einstein-solid-dulong-petit", "concept": "molar-from-specific-heat", "verb": "introduces"},
+  {"span": "einstein-solid-dulong-petit", "concept": "dulong-petit-atomic-weights", "verb": "introduces"},
+  {"span": "experimental-data", "concept": "solid-cp-equals-cv", "verb": "introduces"},
+  {"span": "einstein-solid-dulong-petit", "concept": "heat-capacity-contributions", "verb": "reinforces"},
+  {"span": "einstein-solid-dulong-petit", "concept": "vibrational-heat-capacity", "verb": "reinforces"},
+  {"span": "einstein-solid-dulong-petit", "concept": "vibrational-temperature", "verb": "reinforces"},
+  {"span": "einstein-solid-dulong-petit", "concept": "einstein-solid", "verb": "reinforces"},
+  {"span": "einstein-solid-dulong-petit", "concept": "einstein-heat-capacity", "verb": "reinforces"},
+  {"span": "einstein-solid-dulong-petit", "concept": "einstein-high-temperature-limit", "verb": "reinforces"},
+  {"span": "einstein-solid-dulong-petit", "concept": "dulong-petit-law", "verb": "reinforces"},
+  {"span": "experimental-data", "concept": "specific-heat-capacity", "verb": "uses"}
+ ],
+ "exercises": [
+  {
+   "id": "cq1",
+   "source_id": "Enter the element name, the specific hea",
+   "source_number": "Exercise 1",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {"at": "end"},
+   "cite": "einstein-solid-dulong-petit",
+   "prompt": "Enter the element name, the specific heat capacity, and the molar mass of each element in a spreadsheet. Calculate the product of specific heat and molar mass for each element and calculate how much this product differs from the Dulong-Petit prediction (express your result as a percent difference relative to $3\\kR$).",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "For each element form $\\kCs\\kMmolar$, then take $(\\kCs\\kMmolar - 3\\kR)/3\\kR$ with $3\\kR = 24.94$ J K⁻¹ mol⁻¹.",
+    "solution": "<p>The product $\\kCs\\kMmolar$ is the molar heat capacity (Equation 18.9.7), and the percent difference is $100(\\kCs\\kMmolar - 3\\kR)/3\\kR$ with $3\\kR = 3(8.314) = 24.94$ J K⁻¹ mol⁻¹. The values below are approximate room-temperature specific heats recalled from memory, not read from the Handbook; use the Handbook's own numbers in your table.</p><ul><li>Li: 3.58 J g⁻¹ K⁻¹ × 6.94 g/mol = 24.8 J K⁻¹ mol⁻¹, 0%</li><li>Na: 1.228 × 22.99 = 28.2, +13%</li><li>Al: 0.897 × 26.98 = 24.2, −3%</li><li>Fe: 0.449 × 55.85 = 25.1, +1%</li><li>Cu: 0.385 × 63.55 = 24.5, −2%</li><li>Ag: 0.235 × 107.87 = 25.3, +2%</li><li>Ba: 0.204 × 137.33 = 28.0, +12%</li><li>Pt: 0.133 × 195.08 = 25.9, +4%</li><li>Au: 0.129 × 196.97 = 25.4, +2%</li><li>Pb: 0.129 × 207.2 = 26.7, +7%</li><li>Be: 1.825 × 9.012 = 16.4, −34%</li><li>B: 1.026 × 10.81 = 11.1, −56%</li><li>C (diamond): 0.509 × 12.01 = 6.1, −75%</li><li>Si: 0.705 × 28.09 = 19.8, −21%</li></ul><p>Most metals land within a few percent of $3\\kR$. Beryllium, boron, diamond and silicon fall far below it.</p>"
+   }
+  },
+  {
+   "id": "cq2",
+   "source_id": "Assess the generality of the Dulong-Peti",
+   "source_number": "Exercise 2",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {"at": "end"},
+   "cite": "einstein-solid-dulong-petit",
+   "prompt": "Assess the generality of the Dulong-Petit law in an alternate way by generating a plot of specific heat as a function of reciprocal Molar Mass ($\\kCs$ versus $1/\\kMmolar$), which should be linear with a slope equal to 3R if the data behave according to Equation 18.9.7.",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "Equation 18.9.7 rearranges to $\\kCs = \\kCVm(1/\\kMmolar)$, a line through the origin.",
+    "solution": "<p>Dividing Equation 18.9.7 by $\\kMmolar$ gives $\\kCs = 3\\kR\\,(1/\\kMmolar)$, so the points should lie on a line through the origin with slope $3\\kR = 24.9$ J K⁻¹ mol⁻¹. With the approximate values of Exercise 1, the ten metals fall close to one line, and a least-squares fit to them gives a slope of 24.9 J K⁻¹ mol⁻¹ and an intercept of 0.015 J g⁻¹ K⁻¹, near zero. Lithium, at $1/\\kMmolar = 0.144$ mol/g, sets most of the slope. Be, B, C and Si lie well below the line: for them the specific heat is smaller than $3\\kR/\\kMmolar$. Fitting all fourteen elements pulls the slope down to about 18 J K⁻¹ mol⁻¹, so the plot only behaves as the law predicts once those four are set aside.</p>"
+   }
+  },
+  {
+   "id": "cq3",
+   "source_id": "Inspect your results from 1 and 2 above",
+   "source_number": "Exercise 3",
+   "kind": "exercise",
+   "bloom": "Analyze",
+   "place": {"at": "end"},
+   "cite": "einstein-solid-dulong-petit",
+   "prompt": "Inspect your results from 1 and 2 above and identify any elements that significantly deviate from the Dulong-Petit law. When they occur, do deviations tend to be smaller or larger than 3R? Does the degree of deviation from the Dulong-Petit law seem to correlate with periodic trends in metallic (or covalent) bonding for these elements? Do deviations tend to occur more readily for elements of smaller or higher atomic weight? Explain how the type of bonding and the magnitude of the atomic weight can lead to deviations from the arguments made in Equations 18.9.5-18.9.7 above.",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "Ask what makes $\\kThetav = h\\knu/\\kk$ large, and compare it with 298 K.",
+    "solution": "<p>The large deviations are beryllium, boron, carbon (diamond) and silicon, and they all fall below $3\\kR$, from about 20% to 75% low. They are light elements whose atoms are held by strong, directional covalent bonds (or, for beryllium, unusually stiff metallic ones). The deviation grows as the bonding becomes more covalent and the atom lighter: diamond is the extreme case, and the soft, heavy metals such as gold and lead sit at or slightly above $3\\kR$.</p><p>Both trends act through the vibrational frequency. A stiff bond and a light atom give a high $\\knu$, so $\\kThetav = h\\knu/\\kk$ is high. The limits of Equations 18.9.5 and 18.9.6 need $\\kThetav \\ll \\kT$; when $\\kThetav$ is comparable to or above 298 K, the factor in Equation 18.9.5 is well below 1 at room temperature, many oscillators stay in their ground level, and Equation 18.9.4 gives less than $3\\kR$. The few values slightly above $3\\kR$ (Na, Ba, Pb) are the small difference between $C_p$ and $C_v$ and the extra motion of soft lattices, which the harmonic model leaves out.</p>"
+   }
+  },
+  {
+   "id": "cq4",
+   "source_id": "Use the plotting method that you employe",
+   "source_number": "Exercise 4",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {"at": "end"},
+   "cite": "einstein-solid-dulong-petit",
+   "prompt": "Use the plotting method that you employed in step 2 above as a means of determining a value for the universal gas constant ($\\kR$) - but make sure you throw-out any specific heat data for elements that you suspect do not fall within the limit $\\kThetav \\ll 298 \\,K$. Calculate the percent error in the value of $\\kR$ that you determine.",
+   "answer": {
+    "type": "number",
+    "value": 8.30,
+    "unit": "J K⁻¹ mol⁻¹",
+    "tol": 0.05,
+    "generated_by": "ai",
+    "hint": "Drop Be, B, C and Si, fit $\\kCs$ against $1/\\kMmolar$, and divide the slope by 3.",
+    "solution": "<p>Drop Be, B, C and Si, whose vibrational temperatures are not far below 298 K. A least-squares line through the other ten points of Exercise 1 (approximate values recalled from memory) has slope 24.90 J K⁻¹ mol⁻¹. Since the slope is $3\\kR$, $\\kR = 24.90/3 = 8.30$ J K⁻¹ mol⁻¹, and the percent error is $100(8.30 - 8.314)/8.314 = -0.2\\%$. Forcing the line through the origin gives a slope of 25.08 and $\\kR = 8.36$ J K⁻¹ mol⁻¹, an error of +0.5%. With the Handbook's values your number should come out within a few percent of 8.314.</p>"
+   }
+  },
+  {
+   "id": "cq5",
+   "source_id": "Verify that the limit expressed in Equat",
+   "source_number": "Exercise 5",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {"at": "end"},
+   "cite": "einstein-solid-dulong-petit",
+   "prompt": "Verify that the limit expressed in Equation 18.9.5 above is true (HINT: expand each of the exponential terms in a power series and note that higher-order terms are negligible in the limit $\\kT \\gg \\kThetav$).",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "Write $x = \\kThetav/\\kT$ and multiply the top and bottom of the fraction by $e^{x/2}$.",
+    "solution": "<p>Let $x = \\kThetav/\\kT$, so $\\kT \\to \\infty$ means $x \\to 0$. Multiplying the numerator and denominator of the fraction by $e^{x/2}$ gives</p>$$ x\\,\\dfrac{e^{-x/2}}{1 - e^{-x}} = \\dfrac{x}{e^{x/2} - e^{-x/2}} $$<p>Expanding each exponential, $e^{\\pm x/2} = 1 \\pm \\dfrac{x}{2} + \\dfrac{x^2}{8} \\pm \\dfrac{x^3}{48} + \\cdots$, so $e^{x/2} - e^{-x/2} = x + \\dfrac{x^3}{24} + \\cdots$. Then</p>$$ \\dfrac{x}{x + x^3/24 + \\cdots} = \\dfrac{1}{1 + x^2/24 + \\cdots} \\to 1 \\quad (x \\to 0) $$<p>because every term after the 1 carries a power of $x$. The square of this quantity is the bracket of Equation 18.9.5, which therefore tends to 1, and Equation 18.9.4 tends to $3\\kR$.</p>"
+   }
+  },
+  {
+   "id": "ai1",
+   "source_id": "eq:3",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {"at": "end"},
+   "cite": "einstein-solid-dulong-petit",
+   "prompt": "<p>What molar heat capacity does Einstein's model, Equation 18.9.4, give for a solid at its own characteristic vibrational temperature, $\\kT = \\kThetav$? Give it in J K⁻¹ mol⁻¹.</p>",
+   "answer": {
+    "type": "number",
+    "value": 22.96,
+    "unit": "J K⁻¹ mol⁻¹",
+    "generated_by": "ai",
+    "hint": "At $\\kT = \\kThetav$ the ratio $\\kThetav/\\kT$ is 1.",
+    "solution": "<p>With $\\kThetav/\\kT = 1$, the bracket of Equation 18.9.4 is $\\left(e^{-1/2}/(1 - e^{-1})\\right)^2 = (0.6065/0.6321)^2 = 0.9207$. So $\\kCVmthreeD = 3\\kR(0.9207) = 3(8.314)(0.9207) = 22.96$ J K⁻¹ mol⁻¹, about 92% of the Dulong–Petit value of 24.9 J K⁻¹ mol⁻¹. A solid is already close to the limit when the temperature only equals $\\kThetav$, which is why metals with $\\kThetav$ near room temperature still roughly obey the law.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {"exercise": "cq1", "concept": "molar-from-specific-heat"},
+  {"exercise": "cq1", "concept": "dulong-petit-law"},
+  {"exercise": "cq2", "concept": "specific-heat-capacity"},
+  {"exercise": "cq2", "concept": "dulong-petit-law"},
+  {"exercise": "cq3", "concept": "dulong-petit-law"},
+  {"exercise": "cq3", "concept": "einstein-high-temperature-limit"},
+  {"exercise": "cq4", "concept": "molar-from-specific-heat"},
+  {"exercise": "cq4", "concept": "dulong-petit-law"},
+  {"exercise": "cq5", "concept": "einstein-high-temperature-limit"},
+  {"exercise": "ai1", "concept": "einstein-heat-capacity"},
+  {"exercise": "ai1", "concept": "vibrational-temperature"}
+ ],
+ "footnotes": []
+}

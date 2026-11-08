@@ -317,7 +317,7 @@
       {
        "tex": "\\kPavg = \\mk{q}{k\\kT}\\mk{s}{\\left(\\dfrac{\\partial \\ln{\\kQsys}}{\\partial \\kV}\\right)_{N,\\beta}}",
        "uses": [],
-       "cap": "The derivative of a logarithm: $\\partial \\ln Q = \\partial Q/Q$."
+       "cap": "The derivative of a logarithm is $\\partial \\ln Q = \\partial Q/Q$. Which shows that the pressure can be expressed solely terms of the partition function."
       }
      ],
      "src": "17.5"

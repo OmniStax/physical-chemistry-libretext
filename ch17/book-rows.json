@@ -224,6 +224,16 @@
    "sym": "p_i_vec",
    "latex": "\\textbf{p}_i",
    "macro": "\\kpivec"
+  },
+  {
+   "sym": "q_j",
+   "latex": "q_j",
+   "macro": "\\kqj"
+  },
+  {
+   "sym": "q_k",
+   "latex": "q_k",
+   "macro": "\\kqk"
   }
  ],
  "concepts": [

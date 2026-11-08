@@ -48,25 +48,14 @@
      "effort": "low",
      "part": "built"
     }
+   ],
+   "facts": [
+    "#d93a32",
+    "#2f6fdc"
    ]
   }
  ],
- "referents": [
-  {
-   "id": "red",
-   "label": "the red particle",
-   "figures": [
-    "sim-two-particle-states"
-   ]
-  },
-  {
-   "id": "blue",
-   "label": "the blue particle",
-   "figures": [
-    "sim-two-particle-states"
-   ]
-  }
- ],
+ "referents": [],
  "coverage": [
   {
    "span": "two-particles",

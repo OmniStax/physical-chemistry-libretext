@@ -1,0 +1,507 @@
+{
+ "id": "18.10",
+ "module": "57614",
+ "chapter": "18",
+ "title": "Ortho and Para Hydrogen",
+ "short": "Ortho and para hydrogen",
+ "lead": "The two protons of a hydrogen molecule each carry a nuclear spin, and the molecule is ortho or para hydrogen as the spins are parallel or antiparallel. Because protons are fermions, the nuclear spin decides which rotational levels the molecule may occupy, and that shows up in the heat capacity of hydrogen gas.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "Adapted from B. L. Tembe's lecture notes (IIT Bombay); Figure 18.10.1 is by Gadolinist under CC BY-SA 3.0.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercises for this section; the one exercise, on the ortho to para ratio at 77 K and 300 K, was written by AI with an AI solution. Its Bloom level and concept tags were chosen by AI. Numeric answers accept a 2% tolerance.",
+ "figures": [
+  {
+   "id": "sim-ortho-para",
+   "kind": "sim",
+   "number": "18.10.1",
+   "originals": [
+    "/media/ch18/79368-800px-Ortho-para_H2_Cvs.jpg"
+   ],
+   "widths": [
+    448
+   ],
+   "original_caption": "The heat capacities of o- and p- hydrogens as a function of temperature. The curve marked Exp depicts the experimental data, the curve eq represents the data for an equilibrated mixture of o- and p- at a given temperature and the curves o- and p-represent the heat capacities of pure o- and pure p- hydrogens. (CC-SA-BY 3.0; Gadolinist).",
+   "draws": [
+    "heat-capacity",
+    "temperature",
+    "energy"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built, its curves computed from Table 18.4.1's rotational temperature of H₂"
+    }
+   ]
+  }
+ ],
+ "referents": [
+  {
+   "id": "ortho-h2",
+   "label": "ortho hydrogen",
+   "figures": [
+    "sim-ortho-para"
+   ]
+  },
+  {
+   "id": "para-h2",
+   "label": "para hydrogen",
+   "figures": [
+    "sim-ortho-para"
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "span": "nuclear-spins",
+   "concept": "ortho-hydrogen",
+   "verb": "introduces"
+  },
+  {
+   "span": "nuclear-spins",
+   "concept": "para-hydrogen",
+   "verb": "introduces"
+  },
+  {
+   "span": "nuclear-spins",
+   "concept": "nuclear-exchange-symmetry",
+   "verb": "introduces"
+  },
+  {
+   "span": "nuclear-spins",
+   "concept": "partition-function-factorization",
+   "verb": "uses"
+  },
+  {
+   "span": "nuclear-spins",
+   "concept": "two-spin-eigenstates",
+   "verb": "reinforces"
+  },
+  {
+   "span": "nuclear-spins",
+   "concept": "fermion",
+   "verb": "uses"
+  },
+  {
+   "span": "even-odd-levels",
+   "concept": "rotational-exchange-parity",
+   "verb": "introduces"
+  },
+  {
+   "span": "even-odd-levels",
+   "concept": "ortho-para-partition-functions",
+   "verb": "introduces"
+  },
+  {
+   "span": "even-odd-levels",
+   "concept": "ortho-para-ratio",
+   "verb": "introduces"
+  },
+  {
+   "span": "even-odd-levels",
+   "concept": "associated-legendre-functions",
+   "verb": "uses"
+  },
+  {
+   "span": "even-odd-levels",
+   "concept": "rotational-temperature",
+   "verb": "uses"
+  },
+  {
+   "span": "frozen-mixture",
+   "concept": "frozen-ortho-para-mixture",
+   "verb": "introduces"
+  },
+  {
+   "span": "frozen-mixture",
+   "concept": "oxygen-16-rotational-states",
+   "verb": "introduces"
+  },
+  {
+   "span": "frozen-mixture",
+   "concept": "constant-volume-heat-capacity",
+   "verb": "uses"
+  },
+  {
+   "span": "frozen-mixture",
+   "concept": "boson",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "ai1",
+   "source_id": "eq:3.100",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "even-odd-levels",
+   "prompt": "<p>Using Equation 18.10.9 with $\\kThetaR = 87.6$ K for H₂ (Table 18.4.1), find the equilibrium ratio $N_{o}/N_{p}$ at (a) 77 K, the boiling point of liquid nitrogen, and (b) 300 K.</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 0.92,
+      "hint": "Keep $J$ up to about 7; the terms beyond fall off quickly."
+     },
+     {
+      "part": "b",
+      "value": 2.987
+     }
+    ],
+    "solution": "<p>(a) At 77 K, $\\kThetaR/\\kT = 1.138$. The odd sum is $3e^{-2(1.138)} + 7e^{-12(1.138)} + \\cdots = 0.3083 + 0.0000083 = 0.3083$, and the even sum is $1 + 5e^{-6(1.138)} + 9e^{-20(1.138)} + \\cdots = 1 + 0.0054 = 1.0054$. So $N_{o}/N_{p} = 3(0.3083)/1.0054 = 0.920$: at equilibrium, liquid-nitrogen temperature already leaves fewer ortho molecules than para. (b) At 300 K, $\\kThetaR/\\kT = 0.292$, and summing to $J = 9$ gives an odd sum of 1.885 and an even sum of 1.893, so $N_{o}/N_{p} = 3(1.885)/1.893 = 2.987$, close to the high-temperature limit of 3.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "ai1",
+   "concept": "ortho-para-ratio"
+  },
+  {
+   "exercise": "ai1",
+   "concept": "ortho-para-partition-functions"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-legendre",
+   "kind": "correction",
+   "html": "The first line of Equation 18.10.2 should read $P_{l}^{|m|}(x) = \\left(1-x^{2}\\right)^{|m|/2} \\dfrac{d^{|m|} P_{l}(x)}{d x^{|m|}}$: the exponent is $|m|/2$ and the derivative is of order $|m|$."
+  },
+  {
+   "id": "c-product",
+   "kind": "correction",
+   "html": "The product meant is that of the rotational and nuclear spin wavefunctions, $\\psi_r\\,\\psi_{\\nu,s}$."
+  },
+  {
+   "id": "c-energy-sign",
+   "kind": "correction",
+   "html": "The average energy is $\\langle E \\rangle = -\\dfrac{\\partial \\ln q_{\\text{rot},\\nu}}{\\partial \\beta}$, with a minus sign; without it the energy would come out negative."
+  },
+  {
+   "id": "c-oxygen",
+   "kind": "correction",
+   "html": "For ¹⁶O₂ it is the odd rotational states that occur. The total wavefunction must be symmetric under exchange of the spinless nuclei, and the electronic ground state of O₂, ³Σg⁻, is itself antisymmetric under that exchange, so the rotational part must be antisymmetric too, which means odd $J$. The sum runs over $J = 1, 3, 5, \\ldots$"
+  },
+  {
+   "id": "c-fig-exp",
+   "kind": "correction",
+   "figure": "sim-ortho-para",
+   "html": "The image has no curve marked Exp. The measured data are the curve marked 3:1, as the text says."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "exchange-parity",
+   "what": "the exchange parity of the rotational wavefunctions",
+   "source": "Physical Chemistry (LibreTexts), 18.10 Ortho and Para Hydrogen",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kpsir = e^{im\\phi} P^{|m|}_l (\\cos \\ktheta)",
+       "src": "(18.10.1)"
+      },
+      {
+       "text": "When the nuclei are interchanged, $\\theta$ becomes $\\pi - \\theta$ and $\\phi$ is changed to $\\phi + \\pi$.",
+       "src": "18.10"
+      },
+      {
+       "tex": "x = \\cos\\ktheta",
+       "src": "18.10"
+      },
+      {
+       "tex": "e^{im(\\phi+\\pi)} = (-1)^{|m|} e^{im\\phi}",
+       "src": "(18.10.4)"
+      },
+      {
+       "tex": "P_{l}^{|m|}(-x) = (-1)^{l-|m|} P_{l}^{|m|}(x)",
+       "src": "(18.10.3)"
+      },
+      {
+       "text": "The quantum number $l$ of the rotational wavefunction is the $J$ of the rotational level.",
+       "src": "18.10"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{p}{\\kpsir} = \\mk{e}{e^{im\\phi}}\\mk{l}{P^{|m|}_l (\\cos \\ktheta)}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{p}{\\hat{P}_{12}\\kpsir} = \\mk{e}{e^{im(\\phi+\\pi)}}\\mk{l}{P^{|m|}_l (\\cos(\\pi - \\ktheta))}",
+       "uses": [
+        1
+       ],
+       "cap": "Exchanging the nuclei turns the molecule end over end, which is the same as giving its axis the angles $\\pi - \\theta$ and $\\phi + \\pi$; $\\hat{P}_{12}$ stands for the exchange."
+      },
+      {
+       "tex": "\\mk{p}{\\hat{P}_{12}\\kpsir} = \\mk{e}{e^{im(\\phi+\\pi)}}\\mk{l}{P^{|m|}_l (-x)}",
+       "uses": [
+        2
+       ],
+       "cap": "$\\cos(\\pi - \\theta) = -\\cos\\theta$."
+      },
+      {
+       "tex": "\\mk{p}{\\hat{P}_{12}\\kpsir} = \\mk{e}{(-1)^{|m|}e^{im\\phi}}\\mk{l}{P^{|m|}_l (-x)}",
+       "uses": [
+        3
+       ]
+      },
+      {
+       "tex": "\\mk{p}{\\hat{P}_{12}\\kpsir} = \\mk{e}{(-1)^{|m|}e^{im\\phi}}\\mk{l}{(-1)^{l-|m|}P^{|m|}_l (x)}",
+       "uses": [
+        4
+       ]
+      },
+      {
+       "tex": "\\mk{p}{\\hat{P}_{12}\\kpsir} = \\mk{s}{(-1)^{l}}\\mk{r}{e^{im\\phi}P^{|m|}_l (x)}",
+       "uses": [],
+       "map": {
+        "e": [
+         "s",
+         "r"
+        ],
+        "l": [
+         "s",
+         "r"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{p}{\\hat{P}_{12}\\kpsir} = \\mk{s}{(-1)^{l}}\\mk{r}{\\kpsir}",
+       "uses": [
+        0,
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{p}{\\hat{P}_{12}\\kpsir} = \\mk{s}{(-1)^{J}}\\mk{r}{\\kpsir}",
+       "uses": [
+        5
+       ]
+      }
+     ],
+     "num": "(18.10.5)",
+     "src": "18.10",
+     "note": "As printed, Equation 18.10.3 reads $(-1)^{\\prime}$ for $(-1)^l$ and $(-1)^{l-|m|||}$ for $(-1)^{l-|m|}$, and Equation 18.10.5 prints the two parities of Equation 18.10.3 again. The conclusion the book draws from them, that the rotational wavefunction is symmetric for even $J$ and antisymmetric for odd $J$, is this line."
+    }
+   ]
+  },
+  {
+   "id": "ortho-para",
+   "what": "the ortho and para partition functions and their ratio",
+   "source": "Physical Chemistry (LibreTexts), 18.10 Ortho and Para Hydrogen",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "text": "The triplet nuclear states must be combined with the odd rotational states.",
+       "src": "18.10"
+      },
+      {
+       "text": "The triplet has three nuclear spin states and the singlet has one.",
+       "src": "18.10"
+      },
+      {
+       "tex": "q_{r,\\text{odd}} = \\sum_{J=1,3,5,\\ldots}(2J+1)e^{-J(J+1)\\kThetaR/\\kT}",
+       "src": "18.10"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{q}{\\kqortho} = \\mk{n}{q_{\\nu, t}}\\mk{r}{q_{r, \\text{odd}}}",
+      "uses": [
+       0
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{q}{\\kqortho} = \\mk{n}{3}\\mk{r}{q_{r, \\text{odd}}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{q}{\\kqortho} = \\mk{n}{3}\\mk{r}{\\sum_{J=1,3,5,\\ldots}(2J+1)e^{-J(J+1)\\kThetaR/\\kT}}",
+       "uses": [
+        2
+       ]
+      }
+     ],
+     "num": "(18.10.6)",
+     "src": "18.10"
+    },
+    {
+     "assumes": [
+      {
+       "text": "The singlet nuclear states (para) must be combined with the even rotational functions.",
+       "src": "18.10"
+      },
+      {
+       "text": "The triplet has three nuclear spin states and the singlet has one.",
+       "src": "18.10"
+      },
+      {
+       "tex": "q_{r,\\text{even}} = \\sum_{J=0,2,4,\\ldots}(2J+1)e^{-J(J+1)\\kThetaR/\\kT}",
+       "src": "18.10"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{q}{\\kqpara} = \\mk{n}{q_{\\nu, s}}\\mk{r}{q_{r, \\text{even}}}",
+      "uses": [
+       0
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{q}{\\kqpara} = \\mk{n}{1}\\mk{r}{q_{r, \\text{even}}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{q}{\\kqpara} = \\mk{n}{1}\\mk{r}{\\sum_{J=0,2,4,\\ldots}(2J+1)e^{-J(J+1)\\kThetaR/\\kT}}",
+       "uses": [
+        2
+       ]
+      }
+     ],
+     "num": "(18.10.7)",
+     "src": "18.10"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "step": 1
+      },
+      {
+       "text": "Hydrogen holds both kinds of molecule, so the partition function of the whole gas counts the states of both.",
+       "src": "18.10"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{q}{\\kqrotnu} = \\mk{p}{\\kqpara} + \\mk{o}{\\kqortho}",
+      "uses": [
+       2
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{q}{\\kqrotnu} = \\mk{p}{1\\sum_{J=0,2,4,\\ldots}(2J+1)e^{-J(J+1)\\kThetaR/\\kT}} + \\mk{o}{3\\sum_{J=1,3,5,\\ldots}(2J+1)e^{-J(J+1)\\kThetaR/\\kT}}",
+       "uses": [
+        0,
+        1
+       ]
+      }
+     ],
+     "num": "(18.10.8)",
+     "src": "18.10",
+     "note": "As printed, Equation 18.10.8 sums over \"$j = 0.2.4$\" and \"$j = 1,3,5, n$\" and writes $\\Theta_k$ in the first exponent; the two sums run over the even and the odd $J$, and both exponents carry $\\Theta_R$."
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "step": 1
+      },
+      {
+       "text": "At thermal equilibrium the numbers of the two kinds of molecule stand in the ratio of their partition functions."
+      }
+     ],
+     "then": {
+      "tex": "\\mk{r}{\\dfrac{N_{o}}{N_{p}}} = \\mk{f}{\\dfrac{\\kqortho}{\\kqpara}}",
+      "uses": [
+       2
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{r}{\\dfrac{N_{o}}{N_{p}}} = \\mk{f}{\\dfrac{3\\sum_{J=1,3,5,\\ldots}(2J+1)e^{-J(J+1)\\kThetaR/\\kT}}{\\sum_{J=0,2,4,\\ldots}(2J+1)e^{-J(J+1)\\kThetaR/\\kT}}}",
+       "uses": [
+        0,
+        1
+       ]
+      }
+     ],
+     "num": "(18.10.9)",
+     "src": "18.10",
+     "note": "As printed, the numerator of Equation 18.10.9 sums over $j = 1, 2, 3 \\ldots$ and its denominator reads $\\sum_{j=0} 2(2J + 1)$; the numerator runs over the odd $J$, and the denominator over the even $J$ with weight 1."
+    },
+    {
+     "assumes": [
+      {
+       "step": 3
+      },
+      {
+       "text": "At high temperature, the two summations become equal.",
+       "src": "18.10"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{r}{\\dfrac{N_{o}}{N_{p}}} = \\mk{f}{\\dfrac{3\\sum_{J=1,3,5,\\ldots}(2J+1)e^{-J(J+1)\\kThetaR/\\kT}}{\\sum_{J=0,2,4,\\ldots}(2J+1)e^{-J(J+1)\\kThetaR/\\kT}}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{r}{\\dfrac{N_{o}}{N_{p}}} \\to \\mk{f}{3}\\quad (\\kT \\gg \\kThetaR)",
+       "uses": [
+        1
+       ],
+       "cap": "Far above $\\Theta_R$ many levels of each parity are populated, and the sum over odd $J$ and the sum over even $J$ each come to about half of $T/\\Theta_R$."
+      }
+     ],
+     "src": "18.10"
+    },
+    {
+     "assumes": [
+      {
+       "step": 3
+      }
+     ],
+     "then": {
+      "tex": "\\mk{r}{\\dfrac{N_{o}}{N_{p}}} = \\mk{f}{\\dfrac{3\\sum_{J=1,3,5,\\ldots}(2J+1)e^{-J(J+1)\\kThetaR/\\kT}}{\\sum_{J=0,2,4,\\ldots}(2J+1)e^{-J(J+1)\\kThetaR/\\kT}}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{r}{\\dfrac{N_{o}}{N_{p}}} = \\mk{f}{\\dfrac{3\\left(3 e^{-2 \\kThetaR / \\kT}+\\ldots\\right)}{1\\left(1+5 e^{-6 \\kThetaR / \\kT} + \\ldots \\right)}}",
+       "uses": [],
+       "cap": "Each sum is led by its lowest terms: $J = 1$ above, with $2J + 1 = 3$ and $J(J+1) = 2$, and $J = 0$ and $J = 2$ below, with $J(J+1) = 6$ for $J = 2$."
+      },
+      {
+       "tex": "\\mk{r}{\\dfrac{N_{o}}{N_{p}}} \\to \\mk{f}{0}\\quad (\\kT \\to 0)",
+       "uses": [],
+       "cap": "As $T \\to 0$, $e^{-2\\Theta_R/T} \\to 0$ while the denominator tends to 1."
+      }
+     ],
+     "num": "(18.10.10)",
+     "src": "18.10",
+     "note": "As printed, Equation 18.10.10 writes the second term of the denominator as $5e^{-5\\Theta_n/T}$ and the exponent above with $\\Theta_k$; for $J = 2$, $J(J+1) = 6$, so the term is $5e^{-6\\Theta_R/T}$, and both exponents carry $\\Theta_R$."
+    }
+   ]
+  }
+ ]
+}

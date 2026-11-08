@@ -64,7 +64,7 @@
      "then": {"tex": "\\kQsys(N,\\kV,\\beta) = \\mk{s}{\\sum_{i,j,k,\\dots}} \\mk{e}{e^{-\\beta (\\epsilon_i^a + \\epsilon_j^b + \\epsilon_k^c+\\cdots)}}"},
      "steps": [
       {"tex": "\\kQsys(N,\\kV,\\beta) = \\mk{s}{\\sum_{i,j,k,\\dots}} \\mk{a}{e^{-\\beta\\epsilon_i^a}}\\,\\mk{b}{e^{-\\beta\\epsilon_j^b}}\\,\\mk{c}{e^{-\\beta\\epsilon_k^c}}\\cdots", "uses": [], "map": {"e": ["a", "b", "c"]}, "cap": "The exponential of a sum is the product of the exponentials, $e^{x+y} = e^x e^y$."},
-      {"tex": "\\kQsys(N,\\kV,\\beta) = \\mk{a}{\\sum_{i} e^{-\\beta \\epsilon_i^a}} \\mk{b}{\\sum_{j} e^{-\\beta \\epsilon_j^b}} \\mk{c}{\\sum_{k} e^{-\\beta \\epsilon_k^c}} \\cdots", "uses": [1], "cap": "Since no index depends on another, the multiple sum splits into one sum per molecule, each summed over independently."},
+      {"tex": "\\kQsys(N,\\kV,\\beta) = \\mk{a}{\\sum_{i} e^{-\\beta \\epsilon_i^a}} \\mk{b}{\\sum_{j} e^{-\\beta \\epsilon_j^b}} \\mk{c}{\\sum_{k} e^{-\\beta \\epsilon_k^c}} \\cdots", "uses": [1], "cap": "We can split up the summation into a product of molecular partition functions: no index depends on another, so each molecular system partition function is summed over independently."},
       {"tex": "\\kQsys(N,\\kV,\\beta) = \\mk{a}{\\kqa(\\kV,\\beta)}\\, \\mk{b}{\\kqb(\\kV,\\beta)}\\, \\mk{c}{\\kqc(\\kV,\\beta)} \\cdots", "uses": [2]},
       {"tex": "\\kQsys(N,\\kV,\\beta) = \\mk{a}{\\prod_i^N \\kqi(\\kV,\\beta)}", "uses": [], "map": {"b": "a", "c": "a"}}
      ],

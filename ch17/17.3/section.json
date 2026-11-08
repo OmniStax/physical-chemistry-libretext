@@ -123,7 +123,7 @@
      },
      "steps": [
       {
-       "tex": "\\mk{a}{\\kEavg} = \\mk{s}{\\sum_i \\dfrac{\\kEie^{-\\kEi/k\\kT}}{\\kQsys}}",
+       "tex": "\\mk{a}{\\kEavg} = \\mk{s}{\\sum_i \\dfrac{\\kEi e^{-\\kEi/k\\kT}}{\\kQsys}}",
        "uses": [
         1
        ]
@@ -158,7 +158,7 @@
        "cap": "The exponent $-E_i/kT$ has the derivative $E_i/kT^2$ with respect to $T$, and the exponential brings it down as a factor."
       },
       {
-       "tex": "\\mk{q}{\\left(\\dfrac{\\partial \\ln \\kQsys}{\\partial \\kT}\\right)} = \\mk{s}{\\dfrac{1}{k\\kT^2}\\sum_i \\dfrac{\\kEie^{-\\kEi/k\\kT}}{\\kQsys}}",
+       "tex": "\\mk{q}{\\left(\\dfrac{\\partial \\ln \\kQsys}{\\partial \\kT}\\right)} = \\mk{s}{\\dfrac{1}{k\\kT^2}\\sum_i \\dfrac{\\kEi e^{-\\kEi/k\\kT}}{\\kQsys}}",
        "uses": []
       }
      ],
@@ -175,11 +175,11 @@
       }
      ],
      "then": {
-      "tex": "\\mk{q}{\\left(\\dfrac{\\partial \\ln \\kQsys}{\\partial \\kT}\\right)} = \\mk{s}{\\dfrac{1}{k\\kT^2}\\sum_i \\dfrac{\\kEie^{-\\kEi/k\\kT}}{\\kQsys}}"
+      "tex": "\\mk{q}{\\left(\\dfrac{\\partial \\ln \\kQsys}{\\partial \\kT}\\right)} = \\mk{s}{\\dfrac{1}{k\\kT^2}\\sum_i \\dfrac{\\kEi e^{-\\kEi/k\\kT}}{\\kQsys}}"
      },
      "steps": [
       {
-       "tex": "\\mk{k}{k\\kT^2}\\mk{q}{\\left(\\dfrac{\\partial \\ln \\kQsys}{\\partial \\kT}\\right)} = \\mk{s}{\\sum_i \\dfrac{\\kEie^{-\\kEi/k\\kT}}{\\kQsys}}",
+       "tex": "\\mk{k}{k\\kT^2}\\mk{q}{\\left(\\dfrac{\\partial \\ln \\kQsys}{\\partial \\kT}\\right)} = \\mk{s}{\\sum_i \\dfrac{\\kEi e^{-\\kEi/k\\kT}}{\\kQsys}}",
        "uses": []
       },
       {
@@ -239,7 +239,7 @@
        "cap": "By the chain rule the derivative of $\\ln Q$ is $(\\partial Q/\\partial\\beta)/Q$, and differentiating $e^{-\\beta E_i}$ with respect to $\\beta$ brings down $-E_i$."
       },
       {
-       "tex": "\\mk{q}{\\left(\\dfrac{\\partial \\ln \\kQsys}{\\partial\\beta}\\right)} = \\mk{s}{-\\sum_i \\dfrac{\\kEie^{-\\beta \\kEi}}{\\kQsys}}",
+       "tex": "\\mk{q}{\\left(\\dfrac{\\partial \\ln \\kQsys}{\\partial\\beta}\\right)} = \\mk{s}{-\\sum_i \\dfrac{\\kEi e^{-\\beta \\kEi}}{\\kQsys}}",
        "uses": []
       }
      ],
@@ -259,15 +259,15 @@
       }
      ],
      "then": {
-      "tex": "\\mk{q}{\\left(\\dfrac{\\partial \\ln \\kQsys}{\\partial\\beta}\\right)} = \\mk{s}{-\\sum_i \\dfrac{\\kEie^{-\\beta \\kEi}}{\\kQsys}}"
+      "tex": "\\mk{q}{\\left(\\dfrac{\\partial \\ln \\kQsys}{\\partial\\beta}\\right)} = \\mk{s}{-\\sum_i \\dfrac{\\kEi e^{-\\beta \\kEi}}{\\kQsys}}"
      },
      "steps": [
       {
-       "tex": "\\mk{q}{-\\left(\\dfrac{\\partial \\ln \\kQsys}{\\partial\\beta}\\right)} = \\mk{s}{\\sum_i \\dfrac{\\kEie^{-\\beta \\kEi}}{\\kQsys}}",
+       "tex": "\\mk{q}{-\\left(\\dfrac{\\partial \\ln \\kQsys}{\\partial\\beta}\\right)} = \\mk{s}{\\sum_i \\dfrac{\\kEi e^{-\\beta \\kEi}}{\\kQsys}}",
        "uses": []
       },
       {
-       "tex": "\\mk{q}{-\\left(\\dfrac{\\partial \\ln \\kQsys}{\\partial\\beta}\\right)} = \\mk{s}{\\sum_i \\dfrac{\\kEie^{-\\kEi/k\\kT}}{\\kQsys}}",
+       "tex": "\\mk{q}{-\\left(\\dfrac{\\partial \\ln \\kQsys}{\\partial\\beta}\\right)} = \\mk{s}{\\sum_i \\dfrac{\\kEi e^{-\\kEi/k\\kT}}{\\kQsys}}",
        "uses": [
         2
        ]
