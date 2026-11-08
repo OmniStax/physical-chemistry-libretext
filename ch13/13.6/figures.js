@@ -50,8 +50,8 @@ function spectral(nm) {
     [top.b + 16, bot.t - 16].forEach((y) => line(ctx, top.l - 12, y + 6, top.l + 12, y - 6, PAL.ink, 2));
     F.plot(ctx, aB, X.V, ce, { w: 5 });
     F.plot(ctx, aT, B.V, ce, { w: 5 });
-    text(ctx, 'B³Π', aT.X(3.45), aT.Y(16500), ce, { size: 22, weight: 600, align: 'center', bg: PAL.panel });
-    text(ctx, 'X¹Σ⁺', aB.X(3.15), aB.Y(500), ce, { size: 22, weight: 600, align: 'center', bg: PAL.panel });
+    text(ctx, 'B³Π', aT.X(4.2), aT.Y(17600), ce, { size: 22, weight: 600, align: 'center', bg: PAL.panel });
+    text(ctx, 'X¹Σ⁺', aB.X(3.7), aB.Y(500), ce, { size: 22, weight: 600, align: 'center', bg: PAL.panel });
     /* the dissociation limit of B */
     line(ctx, top.l, aT.Y(B.T + B.De), top.r, aT.Y(B.T + B.De), alpha(PAL.ink, 0.4), 2, [10, 10]);
     text(ctx, 'dissociation', top.r - 8, aT.Y(B.T + B.De) - 16, PAL.muted, { size: 17, align: 'right' });

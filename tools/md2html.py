@@ -353,7 +353,12 @@ class Drafter:
         cap = self.refs(next((x[11:] for x in ls if x.startswith("> caption: ")), ""))
         # the row's caption is set under the page's macros, which have no mhchem (9.2.1's $\ce{H2^{+}}$)
         cap = self.mathfix(cap)
-        parts = [re.search(r"src=media/(\S+)", x).group(1) for x in ls[1:] if x.startswith("> part ")]
+        # an image served from outside LibreTexts (15.1.3, 15.4.1's two panels) is not mirrored:
+        # it gets no <img>, and the row names its URL in `_external` for the builder
+        external = [m.group(1) for x in ls if x is head or x.startswith("> part ")
+                    for m in [re.search(r"src=(https?://\S+)", x)] if m]
+        parts = [m.group(1) for x in ls[1:] if x.startswith("> part ")
+                 for m in [re.search(r"src=media/(\S+)", x)] if m]
         panels = [x[9:] for x in ls if x.startswith("> panel: ")]
         num = re.search(r"\{fig:([^}]+)\}", head)
         if num:
@@ -361,7 +366,8 @@ class Drafter:
             fid = self.uid("fig-" + n.replace(".", "-"))
             self.figures.append({"id": fid, "kind": "photo", "number": n, "draws": [],
                                  "_src": [src] + [f"/media/{self.chdir}/{p}" for p in parts], "_caption": cap,
-                                 **({"_panels": panels} if panels else {})})
+                                 **({"_panels": panels} if panels else {}),
+                                 **({"_external": external} if external else {})})
             # each panel keeps its own alt text, the one under its `> part` line (4.1.4)
             alts, k = [], -1
             for x in ls:
