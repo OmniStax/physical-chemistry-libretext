@@ -1,0 +1,241 @@
+{
+ "id": "12.6",
+ "module": "13489",
+ "chapter": "12",
+ "title": "Character Tables Summarize the Properties of a Point Group",
+ "short": "Character tables",
+ "lead": "The matrices of a representation depend on the basis chosen, but their traces, the characters, do not. A point group's character table lists the characters of its irreducible representations under each class of operations.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "Written by Jerry LaRue and shared under CC BY-NC-SA 4.0, with nothing left out.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "medium"
+   }
+  ],
+  "figures": []
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The section prints no exercises; the one on the characters of ammonia's 3N basis is new and AI-written, with its answers counted atom by atom. Its Bloom level and concept tags were chosen by AI.",
+ "figures": [],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "similarity-transforms",
+   "concept": "similarity-transform",
+   "verb": "introduces"
+  },
+  {
+   "span": "similarity-transforms",
+   "concept": "character",
+   "verb": "introduces"
+  },
+  {
+   "span": "similarity-transforms",
+   "concept": "matrix-representation",
+   "verb": "uses"
+  },
+  {
+   "span": "similarity-transforms",
+   "concept": "symmetry-class",
+   "verb": "uses"
+  },
+  {
+   "span": "character-tables",
+   "concept": "character-table",
+   "verb": "introduces"
+  },
+  {
+   "span": "character-tables",
+   "concept": "character",
+   "verb": "reinforces"
+  },
+  {
+   "span": "character-tables",
+   "concept": "irreducible-representation",
+   "verb": "uses"
+  },
+  {
+   "span": "character-tables",
+   "concept": "group-order",
+   "verb": "uses"
+  },
+  {
+   "span": "characters-by-inspection",
+   "concept": "character-shortcut",
+   "verb": "introduces"
+  },
+  {
+   "span": "characters-by-inspection",
+   "concept": "character",
+   "verb": "uses"
+  },
+  {
+   "span": "characters-by-inspection",
+   "concept": "symmetry-operation-matrices",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "we could place a $x$, $y$, and $z$ unit vectors on each atom",
+   "source_section": "12.5",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "characters-by-inspection",
+   "prompt": "<p>Place unit vectors along $x$, $y$ and $z$ on each of the four atoms of ammonia, a basis of 12 functions, with $z$ along the $C_3$ axis. Using the shortcut of this section (an axis that stays put adds 1, one that reverses adds $-1$, one rotated by $\\theta$ adds $\\cos\\theta$, and every vector on an atom that moves adds 0), find the characters of this representation under (a) $E$, (b) $C_3$ and (c) $\\sigma_v$.</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 12,
+      "hint": "First find which atoms each operation leaves in place; only their vectors count."
+     },
+     {
+      "part": "b",
+      "value": 0
+     },
+     {
+      "part": "c",
+      "value": 2
+     }
+    ],
+    "solution": "<p>(a) $E$ leaves all 12 vectors unchanged, so $\\chi(E) = 12$.</p><p>(b) $C_3$ moves the three hydrogens, so their nine vectors add 0. Nitrogen stays on the axis: its $z$ vector is unchanged (+1) and its $x$ and $y$ vectors are rotated by 120°, adding $2\\cos 120^\\circ = -1$. So $\\chi(C_3) = 1 - 1 = 0$.</p><p>(c) A $\\sigma_v$ plane contains nitrogen and one hydrogen and swaps the other two, which add 0. On each of the two atoms that stay, the two vectors lying in the plane are unchanged and the one normal to it reverses: $1 + 1 - 1 = 1$ per atom. So $\\chi(\\sigma_v) = 2$.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "character-shortcut"
+  },
+  {
+   "exercise": "a1",
+   "concept": "character"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-appendix",
+   "kind": "correction",
+   "html": "The Appendix is that of Vallance's original lecture notes, from which this part is taken; this book does not print the proofs."
+  },
+  {
+   "id": "c-appendix-b",
+   "kind": "correction",
+   "html": "Appendix B is Vallance's; in this book the character tables of the common point groups are in the sheet of character tables at the end of Chapter 12."
+  },
+  {
+   "id": "c-section-9",
+   "kind": "correction",
+   "html": "Section 9 of Vallance's notes is Section 12.4 of this book, where the rotation matrices are printed as Equations 12.4.3 to 12.4.5."
+  },
+  {
+   "id": "c-e-row",
+   "kind": "correction",
+   "html": "In the $E$ row of Equation 12.6.6 the second pair of quadratic functions is $(x^2 - y^2, xy)$, not $(xy, x^2 + y^2)$: $x^2 + y^2$ is unchanged by every operation and belongs to $A_1$, where the table also lists it."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "similarity-transform",
+   "what": "the similarity transform",
+   "source": "Physical Chemistry (LibreTexts), 12.6 Character Tables Summarize the Properties of a Point Group",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\mathbf{x'} = \\mathbf{x}C",
+       "src": "(12.6.2)"
+      },
+      {
+       "text": "$\\Gamma'(g)$ represents $g$ in the new basis: $g\\mathbf{x'} = \\mathbf{x'}\\Gamma'(g)$.",
+       "src": "12.4"
+      },
+      {
+       "text": "$\\Gamma(g)$ represents $g$ in the original basis: $g\\mathbf{x} = \\mathbf{x}\\Gamma(g)$.",
+       "src": "12.4"
+      },
+      {
+       "tex": "CC^{-1} = I"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\kgop\\mathbf{x'}} = \\mk{r}{\\mathbf{x'}\\kGamma'(\\kgop)}",
+      "uses": [
+       1
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\kgop\\mathbf{x}C} = \\mk{r}{\\mathbf{x}C\\kGamma'(\\kgop)}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{l}{\\kgop\\mathbf{x}} = \\mk{r}{\\mathbf{x}C\\kGamma'(\\kgop)C^{-1}}",
+       "uses": [
+        3
+       ],
+       "cap": "Both sides are multiplied on the right by $C^{-1}$, and $CC^{-1} = I$ takes $C$ off the left side."
+      },
+      {
+       "tex": "\\mk{l}{\\mathbf{x}\\kGamma(\\kgop)} = \\mk{r}{\\mathbf{x}C\\kGamma'(\\kgop)C^{-1}}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{l}{\\kGamma(\\kgop)} = \\mk{r}{C\\kGamma'(\\kgop)C^{-1}}",
+       "uses": [],
+       "cap": "The equality holds for the whole basis, so the matrices that multiply $\\mathbf{x}$ on the two sides are the same."
+      }
+     ],
+     "num": "(12.6.4)",
+     "note": "Equation 12.6.2 writes the change of basis on columns, $\\mathbf{x'} = C\\mathbf{x}$, while this derivation, as the book's, uses the row form $\\mathbf{x'} = \\mathbf{x}C$, which by Equation 12.6.1 holds when $C$ is the transpose of the matrix printed in Equation 12.6.2."
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "C^{-1}C = I"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\kGamma(\\kgop)} = \\mk{r}{C\\kGamma'(\\kgop)C^{-1}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{C^{-1}\\kGamma(\\kgop)C} = \\mk{r}{C^{-1}C\\kGamma'(\\kgop)C^{-1}C}",
+       "uses": [],
+       "cap": "Both sides are multiplied by $C^{-1}$ on the left and by $C$ on the right."
+      },
+      {
+       "tex": "\\mk{l}{C^{-1}\\kGamma(\\kgop)C} = \\mk{r}{\\kGamma'(\\kgop)}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{r}{\\kGamma'(\\kgop)} = \\mk{l}{C^{-1}\\kGamma(\\kgop)C}",
+       "uses": []
+      }
+     ],
+     "num": "(12.6.5)"
+    }
+   ]
+  }
+ ]
+}

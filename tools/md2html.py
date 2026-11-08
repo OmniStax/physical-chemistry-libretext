@@ -125,6 +125,38 @@ class Drafter:
             i = j
 
     @staticmethod
+    def brace_left_exponent(tex):
+        """An exponent written as a bare \\left( … \\right) with no braces
+        (13.2's e^\\left(-\\dfrac{E_r}{kT}\\right)), which MathJax reads and
+        KaTeX refuses: the pair, with its delimiters, is put in braces."""
+        out, i = [], 0
+        while True:
+            k = tex.find("^\\left", i)
+            if k < 0:
+                out.append(tex[i:])
+                return "".join(out)
+            j, depth = k + 1, 0
+            while j < len(tex):
+                if tex.startswith("\\left", j) and not tex[j + 5:j + 6].isalpha():
+                    depth += 1
+                    j += 5
+                elif tex.startswith("\\right", j) and not tex[j + 6:j + 7].isalpha():
+                    depth -= 1
+                    j += 6
+                    if depth == 0:
+                        m = re.match(r"\s*(\\[{}|]|\\[a-zA-Z]+|.)", tex[j:])
+                        j += m.end() if m else 0
+                        break
+                else:
+                    j += 1
+            if depth != 0:
+                out.append(tex[i:k + 1])
+                i = k + 1
+                continue
+            out.append(tex[i:k] + "^{" + tex[k + 1:j] + "}")
+            i = j
+
+    @staticmethod
     def katex(tex):
         """What the site's MathJax has and the app's KaTeX lacks: \\ce (mhchem),
         \\op (the site's operator hat), \\cancelto (the cancel package), \\mbox,
@@ -144,6 +176,7 @@ class Drafter:
         # the site's \\braket{a}{b} takes two arguments; KaTeX's takes one, \\braket{a|b} (4.S, 3.S)
         tex = re.sub(r"\\braket\s*\{([^{}]*)\}\s*\{([^{}]*)\}", r"\\braket{\1|\2}", tex)
         tex = re.sub(r"\\op\s+(\\?\w)", r"\\hat{\1}", tex)
+        tex = Drafter.brace_left_exponent(tex)
         out, i = [], 0
         while True:
             k = tex.find("\\cancelto", i)
