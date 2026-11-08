@@ -1,0 +1,704 @@
+{
+ "id": "2.2",
+ "module": "13376",
+ "chapter": "2",
+ "title": "The Method of Separation of Variables",
+ "short": "Separation of variables",
+ "lead": "The wave equation is a partial differential equation in position and time. Separation of variables writes its solution as a product of a function of position and a function of time, which turns it into two ordinary differential equations, each solved by trying an exponential.",
+ "objectives": [
+  "To be introduced to the <em>Separation of Variables</em> technique as method to solved wave equations"
+ ],
+ "summary_html": "",
+ "notes": "Adapted from Michael Fowler (University of Virginia), under CC BY-NC-SA 4.0.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": []
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercise on separation of variables, so both exercises, their solutions, Bloom levels and concept tags are written by AI. The numeric answer accepts a 2% tolerance.",
+ "figures": [],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "opening",
+   "concept": "partial-differential-equation",
+   "verb": "introduces"
+  },
+  {
+   "span": "opening",
+   "concept": "ordinary-differential-equation",
+   "verb": "introduces"
+  },
+  {
+   "span": "opening",
+   "concept": "separation-of-variables",
+   "verb": "introduces"
+  },
+  {
+   "span": "opening",
+   "concept": "classical-wave-equation",
+   "verb": "uses"
+  },
+  {
+   "span": "opening",
+   "concept": "boundary-conditions",
+   "verb": "uses"
+  },
+  {
+   "span": "vibrating-string",
+   "concept": "separated-wave-equation",
+   "verb": "introduces"
+  },
+  {
+   "span": "vibrating-string",
+   "concept": "trivial-solution",
+   "verb": "introduces"
+  },
+  {
+   "span": "vibrating-string",
+   "concept": "exponential-solutions",
+   "verb": "introduces"
+  },
+  {
+   "span": "vibrating-string",
+   "concept": "separation-of-variables",
+   "verb": "uses"
+  },
+  {
+   "span": "vibrating-string",
+   "concept": "boundary-conditions",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "eq:2.2.4a",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "vibrating-string",
+   "prompt": "<p>Waves travel along a string at $\\kv = 2.0$ m/s. Its wave equation is separated with $\\ku(\\kx,\\kt) = X(\\kx)T(\\kt)$, and the separation constant is $K = -4.0\\ \\text{m}^{-2}$. Write the two ordinary differential equations, and find the $\\komega$ for which the time equation reads $\\dfrac{d^2T}{d\\kt^2} + \\komega^2 T = 0$.</p>",
+   "answer": {
+    "type": "number",
+    "value": 4.0,
+    "unit": "rad/s",
+    "generated_by": "ai",
+    "hint": "In Equation 2.2.7, $-K\\kv^2$ stands where $\\komega^2$ does.",
+    "solution": "<p>The separation gives $\\dfrac{d^2T}{d\\kt^2} - K\\kv^2T = 0$ and $\\dfrac{d^2X}{d\\kx^2} - KX = 0$ (Equations 2.2.7 and 2.2.8). With $K = -4.0\\ \\text{m}^{-2}$ and $\\kv = 2.0$ m/s, $-K\\kv^2 = (4.0\\ \\text{m}^{-2})(2.0\\ \\text{m/s})^2 = 16\\ \\text{s}^{-2}$, so the time equation is $\\dfrac{d^2T}{d\\kt^2} + (16\\ \\text{s}^{-2})\\,T = 0$ and $\\komega = 4.0$ rad/s. The space equation is $\\dfrac{d^2X}{d\\kx^2} + (4.0\\ \\text{m}^{-2})\\,X = 0$.</p>"
+   }
+  },
+  {
+   "id": "a2",
+   "source_id": "eq:2.2.7b",
+   "kind": "exercise",
+   "bloom": "Analyze",
+   "place": {
+    "at": "end"
+   },
+   "cite": "vibrating-string",
+   "prompt": "<p>A string is held at zero at $\\kx = 0$ and $\\kx = \\kL$. Take a separation constant $K > 0$ and show that the general solution $X(\\kx) = Ae^{\\sqrt{K}\\kx} + Be^{-\\sqrt{K}\\kx}$ meets both boundary conditions only when $A = B = 0$.</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "Use the condition at $\\kx = 0$ to write $B$ in terms of $A$.",
+    "solution": "<p>The condition at $\\kx = 0$ gives $A + B = 0$, so $B = -A$ (Equation 2.2.12). The condition at $\\kx = \\kL$ then reads $A\\left(e^{\\sqrt{K}\\kL} - e^{-\\sqrt{K}\\kL}\\right) = 0$ (Equation 2.2.13). With $K > 0$ and $\\kL > 0$, $\\sqrt{K}\\kL > 0$, so $e^{\\sqrt{K}\\kL} > 1 > e^{-\\sqrt{K}\\kL}$ and the bracket is not zero. Hence $A = 0$, and then $B = -A = 0$. Only the trivial solution $X(\\kx) = 0$ is left, so a string held at both ends carries no wave with $K > 0$.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "separated-wave-equation"
+  },
+  {
+   "exercise": "a1",
+   "concept": "separation-of-variables"
+  },
+  {
+   "exercise": "a2",
+   "concept": "trivial-solution"
+  },
+  {
+   "exercise": "a2",
+   "concept": "separation-of-variables"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "three-steps",
+   "kind": "correction",
+   "html": "The note promises three steps and lists two: the product solutions and their sum, then the boundary conditions."
+  },
+  {
+   "id": "spring",
+   "kind": "correction",
+   "html": "The header says spring; the section treats a string held fixed at its two ends, as this sentence says."
+  },
+  {
+   "id": "u-of-x-t",
+   "kind": "correction",
+   "html": "The book prints $u(x,y,)=0$; the trivial solution is $u(x,t) = 0$."
+  },
+  {
+   "id": "initial-conditions",
+   "kind": "correction",
+   "html": "The title says boundary conditions; $y(0)$ and $y'(0)$ are both given at $t = 0$, so they are initial conditions, as the solution calls them."
+  },
+  {
+   "id": "k-negative",
+   "kind": "correction",
+   "html": "The book prints $K > 0$; the solutions are oscillatory for $K < 0$, as Section 2.3 shows. For $K > 0$ they are the exponentials of Equation 2.2.9."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "separated",
+   "what": "the separated wave equation",
+   "source": "Physical Chemistry (LibreTexts), 2.2 The Method of Separation of Variables",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\ku(\\kx,\\kt)= X(\\kx)T(\\kt)",
+       "src": "(2.2.3)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{xx}{\\dfrac{\\partial^2 \\ku(\\kx,\\kt)}{\\partial \\kx^2}} = \\mk{v}{\\dfrac{1}{\\kv^2}} \\mk{tt}{\\dfrac{\\partial^2 \\ku(\\kx,\\kt)}{\\partial \\kt^2}}",
+      "src": "(2.2.1)"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{xx}{\\dfrac{\\partial^2 X(\\kx)T(\\kt)}{\\partial \\kx^2}} = \\mk{v}{\\dfrac{1}{\\kv^2}} \\mk{tt}{\\dfrac{\\partial^2 X(\\kx)T(\\kt)}{\\partial \\kt^2}}",
+       "uses": [
+        0
+       ]
+      }
+     ],
+     "num": "(2.2.4)",
+     "src": "2.2"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "text": "$X$ is not a function of $\\kt$ and $T$ is not a function of $\\kx$."
+      }
+     ],
+     "then": {
+      "tex": "\\mk{xx}{\\dfrac{\\partial^2 X(\\kx)T(\\kt)}{\\partial \\kx^2}} = \\mk{v}{\\dfrac{1}{\\kv^2}} \\mk{tt}{\\dfrac{\\partial^2 X(\\kx)T(\\kt)}{\\partial \\kt^2}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{T}{T(\\kt)} \\mk{xx}{\\dfrac{\\partial^2 X(\\kx)}{\\partial \\kx^2}} = \\mk{v}{\\dfrac{1}{\\kv^2}} \\mk{X}{X(\\kx)} \\mk{tt}{\\dfrac{\\partial^2 T(\\kt)}{\\partial \\kt^2}}",
+       "uses": [
+        1
+       ],
+       "cap": "A factor that does not depend on the variable of a derivative comes outside it as a constant.",
+       "map": {
+        "xx": [
+         "T",
+         "xx"
+        ],
+        "tt": [
+         "X",
+         "tt"
+        ]
+       }
+      }
+     ],
+     "num": "(2.2.5)",
+     "src": "2.2"
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      }
+     ],
+     "then": {
+      "tex": "\\mk{T}{T(\\kt)} \\mk{xx}{\\dfrac{\\partial^2 X(\\kx)}{\\partial \\kx^2}} = \\mk{v}{\\dfrac{1}{\\kv^2}} \\mk{X}{X(\\kx)} \\mk{tt}{\\dfrac{\\partial^2 T(\\kt)}{\\partial \\kt^2}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{X}{\\dfrac{1}{X(\\kx)}} \\mk{xx}{\\dfrac{\\partial^2 X(\\kx)}{\\partial \\kx^2}} = \\mk{v}{\\dfrac{1}{\\kv^2}} \\mk{T}{\\dfrac{1}{T(\\kt)}} \\mk{tt}{\\dfrac{\\partial^2 T(\\kt)}{\\partial \\kt^2}}",
+       "uses": []
+      }
+     ],
+     "num": "(2.2.6)",
+     "src": "2.2"
+    },
+    {
+     "assumes": [
+      {
+       "step": 2
+      },
+      {
+       "text": "Each side can be set to a fixed constant $K$, as that is the only solution that works for all values of $\\kt$ and $\\kx$."
+      }
+     ],
+     "then": {
+      "tex": "\\mk{X}{\\dfrac{1}{X(\\kx)}} \\mk{xx}{\\dfrac{\\partial^2 X(\\kx)}{\\partial \\kx^2}} = \\mk{v}{\\dfrac{1}{\\kv^2}} \\mk{T}{\\dfrac{1}{T(\\kt)}} \\mk{tt}{\\dfrac{\\partial^2 T(\\kt)}{\\partial \\kt^2}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\dfrac{1}{X(\\kx)} \\dfrac{\\partial^2 X(\\kx)}{\\partial \\kx^2}} = \\mk{K}{K} = \\mk{R}{\\dfrac{1}{\\kv^2} \\dfrac{1}{T(\\kt)} \\dfrac{\\partial^2 T(\\kt)}{\\partial \\kt^2}}",
+       "uses": [
+        1
+       ],
+       "cap": "The left side changes only with $\\kx$ and the right side only with $\\kt$, so they can stay equal as $\\kx$ and $\\kt$ vary on their own only if both are one constant.",
+       "map": {
+        "X": "L",
+        "xx": "L",
+        "v": "R",
+        "T": "R",
+        "tt": "R"
+       }
+      }
+     ],
+     "src": "2.2"
+    },
+    {
+     "assumes": [
+      {
+       "step": 3
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\dfrac{1}{X(\\kx)} \\dfrac{\\partial^2 X(\\kx)}{\\partial \\kx^2}} = \\mk{K}{K} = \\mk{R}{\\dfrac{1}{\\kv^2} \\dfrac{1}{T(\\kt)} \\dfrac{\\partial^2 T(\\kt)}{\\partial \\kt^2}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{K}{K} = \\mk{R}{\\dfrac{1}{\\kv^2} \\dfrac{1}{T(\\kt)} \\dfrac{\\partial^2 T(\\kt)}{\\partial \\kt^2}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{K}{K} = \\mk{R}{\\dfrac{1}{\\kv^2} \\dfrac{1}{T(\\kt)} \\dfrac{d^2 T(\\kt)}{d\\kt^2}}",
+       "uses": [],
+       "cap": "$T$ depends on $\\kt$ alone, so its partial derivative is an ordinary derivative."
+      },
+      {
+       "tex": "\\mk{K}{K\\kv^2 T(\\kt)} = \\mk{R}{\\dfrac{d^2 T(\\kt)}{d\\kt^2}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{R}{\\dfrac{d^2T(\\kt)}{d\\kt^2}} - \\mk{K}{K\\kv^2 T(\\kt)} = 0",
+       "uses": []
+      }
+     ],
+     "num": "(2.2.7)",
+     "src": "2.2"
+    },
+    {
+     "assumes": [
+      {
+       "step": 3
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\dfrac{1}{X(\\kx)} \\dfrac{\\partial^2 X(\\kx)}{\\partial \\kx^2}} = \\mk{K}{K} = \\mk{R}{\\dfrac{1}{\\kv^2} \\dfrac{1}{T(\\kt)} \\dfrac{\\partial^2 T(\\kt)}{\\partial \\kt^2}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\dfrac{1}{X(\\kx)} \\dfrac{\\partial^2 X(\\kx)}{\\partial \\kx^2}} = \\mk{K}{K}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{L}{\\dfrac{1}{X(\\kx)} \\dfrac{d^2 X(\\kx)}{d\\kx^2}} = \\mk{K}{K}",
+       "uses": [],
+       "cap": "$X$ depends on $\\kx$ alone, so its partial derivative is an ordinary derivative."
+      },
+      {
+       "tex": "\\mk{L}{\\dfrac{d^2 X(\\kx)}{d\\kx^2}} = \\mk{K}{K X(\\kx)}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{L}{\\dfrac{d^2X(\\kx)}{d\\kx^2}} - \\mk{K}{K X(\\kx)} = 0",
+       "uses": []
+      }
+     ],
+     "num": "(2.2.8)",
+     "src": "2.2"
+    }
+   ]
+  },
+  {
+   "id": "exponential",
+   "what": "the exponential solutions",
+   "source": "Physical Chemistry (LibreTexts), 2.2 The Method of Separation of Variables",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "{y(x)} = {e^{\\alpha x}}",
+       "src": "(2.2.15)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{d}{\\dfrac{d^2y(x)}{dx^2}} - \\mk{k}{k^2 y(x)} = 0",
+      "src": "(2.2.14)"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{d}{\\dfrac{d^2}{dx^2}e^{\\alpha x}} - \\mk{k}{k^2 e^{\\alpha x}} = 0",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{d}{\\alpha^2 e^{\\alpha x}} - \\mk{k}{k^2 e^{\\alpha x}} = 0",
+       "uses": [],
+       "cap": "Each derivative of $e^{\\alpha x}$ brings down one factor of $\\alpha$."
+      },
+      {
+       "tex": "\\mk{f}{\\left( \\alpha^2 - k^2 \\right)} \\mk{e}{e^{\\alpha x}} = 0",
+       "uses": [],
+       "map": {
+        "d": [
+         "f",
+         "e"
+        ],
+        "k": [
+         "f",
+         "e"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{f}{\\left( \\alpha^2 - k^2 \\right)} \\mk{e}{y(x)} = 0",
+       "uses": [
+        0
+       ]
+      }
+     ],
+     "num": "(2.2.16)",
+     "src": "2.2"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "text": "The solution $y(x) = 0$ is the trivial solution and is ignored."
+      }
+     ],
+     "then": {
+      "tex": "\\mk{f}{\\left( \\alpha^2 - k^2 \\right)} \\mk{e}{y(x)} = 0"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{f}{\\alpha^2 - k^2} = 0",
+       "uses": [
+        1
+       ],
+       "cap": "A product is zero only where one of its factors is, and $y(x)$ is not the zero factor."
+      }
+     ],
+     "num": "(2.2.17)",
+     "src": "2.2"
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      }
+     ],
+     "then": {
+      "tex": "\\mk{f}{\\alpha^2 - k^2} = 0"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{a}{\\alpha^2} = \\mk{k}{k^2}",
+       "uses": [],
+       "map": {
+        "f": [
+         "a",
+         "k"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{a}{\\alpha} = \\mk{k}{\\pm k}",
+       "uses": []
+      }
+     ],
+     "num": "(2.2.18)",
+     "src": "2.2"
+    },
+    {
+     "assumes": [
+      {
+       "step": 2
+      },
+      {
+       "text": "Since the equation is linear, any linear combination of its solutions is also a solution.",
+       "src": "(2.2.2)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{y}{y(x)} = \\mk{e}{e^{\\alpha x}}",
+      "src": "(2.2.15)"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{y}{y(x)} = \\mk{e}{e^{\\pm k\\, x}}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{y}{y(x)} = \\mk{e}{c_1 e^{k\\, x} + c_2 e^{-k\\, x}}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "num": "(2.2.19)",
+     "src": "2.2"
+    }
+   ]
+  },
+  {
+   "id": "example-2-2-2",
+   "what": "the solution with its initial conditions",
+   "source": "Physical Chemistry (LibreTexts), 2.2 The Method of Separation of Variables, Example 2.2.2",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "text": "As before, seek solutions of the form $y = e^{rt}$."
+      }
+     ],
+     "then": {
+      "tex": "\\mk{a}{y''} - \\mk{b}{y'} - \\mk{c}{6y} = 0"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{a}{r^2e^{rt}} - \\mk{b}{re^{rt}} - \\mk{c}{6e^{rt}} = 0",
+       "uses": [
+        0
+       ],
+       "cap": "With $y = e^{rt}$, each derivative brings down a factor of $r$: $y' = re^{rt}$ and $y'' = r^2e^{rt}$."
+      },
+      {
+       "tex": "\\mk{p}{( r^2 - r - 6 )} \\mk{e}{e^{rt}} = 0",
+       "uses": [],
+       "map": {
+        "a": [
+         "p",
+         "e"
+        ],
+        "b": [
+         "p",
+         "e"
+        ],
+        "c": [
+         "p",
+         "e"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{p}{r^2 - r - 6} = 0",
+       "uses": [],
+       "cap": "$e^{rt}$ is never zero, so both sides can be divided by it."
+      },
+      {
+       "tex": "\\mk{p}{(r - 3)(r + 2)} = 0",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{r}{r = 3} \\text{ or } \\mk{s}{r = -2}",
+       "uses": [],
+       "map": {
+        "p": [
+         "r",
+         "s"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{r}{y_1 = e^{3t}} \\text{ and } \\mk{s}{y_2 = e^{-2t}}",
+       "uses": [
+        0
+       ]
+      }
+     ],
+     "src": "Example 2.2.2",
+     "note": "The book prints the substituted line as $r^2e^{rt} + (re^{rt}) - 6(e^{rt}) = 0$; the middle term of $y'' - y' - 6y$ is $-re^{rt}$, as the book's next line has it."
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "text": "If $y_1$ and $y_2$ are solutions, then $y = c_1y_1 + c_2y_2$ is also a solution.",
+       "src": "Example 2.2.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{r}{y_1 = e^{3t}} \\text{ and } \\mk{s}{y_2 = e^{-2t}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{y}{y} = \\mk{c}{c_1e^{3t} + c_2e^{-2t}}",
+       "uses": [
+        1
+       ],
+       "map": {
+        "r": [
+         "y",
+         "c"
+        ],
+        "s": [
+         "y",
+         "c"
+        ]
+       }
+      }
+     ],
+     "src": "Example 2.2.2",
+     "note": "The book writes the second constant as $C_2$ here, in $y'$ and in its value, and as $c_2$ elsewhere; it is one constant, $c_2$."
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "tex": "y(0) = 1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{y}{y} = \\mk{c}{c_1e^{3t} + c_2e^{-2t}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{y}{y(0)} = \\mk{c}{c_1 + c_2}",
+       "uses": [],
+       "cap": "At $t = 0$ both exponentials equal one."
+      },
+      {
+       "tex": "\\mk{y}{1} = \\mk{c}{c_1 + c_2}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "src": "Example 2.2.2"
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "tex": "y'(0) = 2"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{y}{y} = \\mk{c}{c_1e^{3t} + c_2e^{-2t}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{y}{y'} = \\mk{c}{3c_1e^{3t} - 2c_2e^{-2t}}",
+       "uses": [],
+       "cap": "Differentiating each exponential brings down its factor of $r$."
+      },
+      {
+       "tex": "\\mk{y}{y'(0)} = \\mk{c}{3c_1 - 2c_2}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{y}{2} = \\mk{c}{3c_1 - 2c_2}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "src": "Example 2.2.2"
+    },
+    {
+     "assumes": [
+      {
+       "step": 2
+      },
+      {
+       "step": 3
+      }
+     ],
+     "then": {
+      "tex": "\\mk{y}{1} = \\mk{c}{c_1 + c_2}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{c2}{c_2} = \\mk{one}{1 - c_1}",
+       "uses": [],
+       "map": {
+        "y": "one",
+        "c": [
+         "one",
+         "c2"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{two}{2} = \\mk{c}{3c_1 - 2(1 - c_1)}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{two}{4} = \\mk{c}{5c_1}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{a}{c_1 = \\dfrac{4}{5}} \\text{ and } \\mk{b}{c_2 = \\dfrac{1}{5}}",
+       "uses": [],
+       "map": {
+        "two": "a",
+        "c": "a"
+       }
+      }
+     ],
+     "src": "Example 2.2.2"
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "step": 4
+      }
+     ],
+     "then": {
+      "tex": "\\mk{y}{y} = \\mk{c}{c_1e^{3t} + c_2e^{-2t}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{y}{y} = \\mk{c}{\\dfrac{4}{5} e^{3t } + \\dfrac{1}{5}e^{-2t}}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "src": "Example 2.2.2"
+    }
+   ]
+  }
+ ]
+}

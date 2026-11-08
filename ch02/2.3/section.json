@@ -1,0 +1,337 @@
+{
+ "id": "2.3",
+ "module": "13377",
+ "chapter": "2",
+ "title": "Oscillatory Solutions to Differential Equations",
+ "short": "Oscillatory solutions",
+ "lead": "With a negative separation constant, the spatial equation of a string has complex exponential solutions, which Euler's formula rewrites as a cosine and a sine. The string's two fixed ends are then applied to them as boundary conditions.",
+ "objectives": [
+  "Explore the basis of the oscillatory solutions to the wave equation",
+  "Understand the consequences of boundary conditions on the possible solutions",
+  "Rationalize how satisfying boundary conditions forces quantization (i.e., only solutions with specific wavelengths exist)"
+ ],
+ "summary_html": "",
+ "notes": "Adapted from Michael Fowler (University of Virginia), under CC BY-NC-SA 4.0. Exercise 2.3.1, printed here, is set in Section 2.4 with the superposition it tests.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "Exercise 2.3.1, printed in this section, is set in Section 2.4, which introduces the superposition it tests.",
+ "figures": [
+  {
+   "id": "sim-shooting",
+   "kind": "sim",
+   "number": "2.3.1",
+   "originals": [
+    "/media/ch02/54788-Standing_waves_on_a_string.gif"
+   ],
+   "original_caption": "Standing waves in a string (both spatially and temporally). from Wikipedia.",
+   "draws": [
+    "length",
+    "wavenumber"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "negative-constant",
+   "concept": "oscillatory-solutions",
+   "verb": "introduces"
+  },
+  {
+   "span": "negative-constant",
+   "concept": "boundary-conditions",
+   "verb": "uses"
+  },
+  {
+   "span": "negative-constant",
+   "concept": "trivial-solution",
+   "verb": "uses"
+  },
+  {
+   "span": "negative-constant",
+   "concept": "separated-wave-equation",
+   "verb": "uses"
+  },
+  {
+   "span": "quantization",
+   "concept": "eulers-formula",
+   "verb": "introduces"
+  },
+  {
+   "span": "quantization",
+   "concept": "quantization-by-boundary-conditions",
+   "verb": "introduces"
+  },
+  {
+   "span": "quantization",
+   "concept": "oscillatory-solutions",
+   "verb": "uses"
+  },
+  {
+   "span": "quantization",
+   "concept": "boundary-conditions",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [],
+ "exercise_concepts": [],
+ "footnotes": [
+  {
+   "id": "cite-general",
+   "kind": "correction",
+   "html": "The general solution for $K > 0$ is Equation 2.2.9, $X(x) = Ae^{\\sqrt{K}x} + Be^{-\\sqrt{K}x}$."
+  },
+  {
+   "id": "cite-sqrt",
+   "kind": "correction",
+   "html": "The $\\sqrt{K}$ terms are those of Equation 2.2.9."
+  },
+  {
+   "id": "cite-space",
+   "kind": "correction",
+   "html": "The spatial equation meant is Equation 2.2.8, $\\dfrac{d^2X(x)}{dx^2} - KX(x) = 0$."
+  },
+  {
+   "id": "omega-for-p",
+   "kind": "correction",
+   "html": "The constant here is $p$ of Equation 2.3.1, a wavenumber; $\\omega$ is the angular frequency elsewhere in the chapter, so $X(x) = c_2\\sin(px)$ with $p = n\\pi/L$."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "example-2-3-1",
+   "what": "the allowed values of p",
+   "source": "Physical Chemistry (LibreTexts), 2.3 Oscillatory Solutions to Differential Equations, Example 2.3.1",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "e^{i \\theta} = \\cos \\theta + i\\sin \\theta"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{X}{X(\\kx)} = \\mk{a}{A e^{i\\kpn\\kx}} + \\mk{b}{B e^{-i\\kpn\\kx}}",
+      "src": "(2.3.3)"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{X}{X(\\kx)} = \\mk{a}{A \\left[\\cos (\\kpn\\kx) + i \\sin (\\kpn\\kx) \\right]} + \\mk{b}{B \\left[ \\cos (\\kpn\\kx) - i \\sin (\\kpn\\kx) \\right]}",
+       "uses": [
+        0
+       ],
+       "cap": "For $e^{-i\\kpn\\kx}$ take $\\theta = -\\kpn\\kx$: the cosine is unchanged and the sine changes sign."
+      },
+      {
+       "tex": "\\mk{X}{X(\\kx)} = \\mk{c}{(A + B ) \\cos (\\kpn\\kx)} + \\mk{s}{i (A - B) \\sin (\\kpn\\kx)}",
+       "uses": [],
+       "map": {
+        "a": [
+         "c",
+         "s"
+        ],
+        "b": [
+         "c",
+         "s"
+        ]
+       }
+      }
+     ],
+     "num": "(2.3.4)",
+     "src": "Example 2.3.1"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "text": "Introduce new complex constants $c_1=A+B$ and $c_2=i(A-B)$."
+      }
+     ],
+     "then": {
+      "tex": "\\mk{X}{X(\\kx)} = \\mk{c}{(A + B ) \\cos (\\kpn\\kx)} + \\mk{s}{i (A - B) \\sin (\\kpn\\kx)}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{X}{X(\\kx)} = \\mk{c}{c_1 \\cos (\\kpn\\kx)} + \\mk{s}{c_2 \\sin (\\kpn\\kx)}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "num": "(2.3.5)",
+     "src": "Example 2.3.1"
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "tex": "X(0) = 0",
+       "src": "2.2, Equation 2.2.10"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{X}{X(\\kx)} = \\mk{c}{c_1 \\cos (\\kpn\\kx)} + \\mk{s}{c_2 \\sin (\\kpn\\kx)}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{X}{X(0)} = \\mk{c}{c_1 \\cos (0)} + \\mk{s}{c_2 \\sin (0)}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{X}{0} = \\mk{c}{c_1 \\cos (0)} + \\mk{s}{c_2 \\sin (0)}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{X}{0} = \\mk{c}{c_1} + \\mk{s}{0}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{c}{c_1} = \\mk{X}{0}",
+       "uses": []
+      }
+     ],
+     "num": "(2.3.6)",
+     "src": "Example 2.3.1",
+     "note": "The book cites these boundary conditions as Equation 2.2.7; they are Equations 2.2.10 and 2.2.11, the string held at zero at both ends."
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "tex": "X(\\kL) = 0",
+       "src": "2.2, Equation 2.2.11"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{X}{X(\\kx)} = \\mk{c}{c_1 \\cos (\\kpn\\kx)} + \\mk{s}{c_2 \\sin (\\kpn\\kx)}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{X}{X(\\kL)} = \\mk{c}{c_1 \\cos (\\kpn\\kL)} + \\mk{s}{c_2 \\sin (\\kpn\\kL)}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{X}{X(\\kL)} = \\mk{c}{c_1 \\cos (\\kpn\\kL)} + \\mk{s}{c_2 \\sin (\\kpn\\kL)} = \\mk{z}{0}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "num": "(2.3.7)",
+     "src": "Example 2.3.1"
+    },
+    {
+     "assumes": [
+      {
+       "step": 3
+      },
+      {
+       "step": 2
+      }
+     ],
+     "then": {
+      "tex": "\\mk{X}{X(\\kL)} = \\mk{c}{c_1 \\cos (\\kpn\\kL)} + \\mk{s}{c_2 \\sin (\\kpn\\kL)} = \\mk{z}{0}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{X}{X(\\kL)} = \\mk{c}{0} + \\mk{s}{c_2 \\sin (\\kpn\\kL)} = \\mk{z}{0}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{s}{c_2 \\sin (\\kpn\\kL)} = \\mk{z}{0}",
+       "uses": []
+      }
+     ],
+     "num": "(2.3.8)",
+     "src": "Example 2.3.1"
+    },
+    {
+     "assumes": [
+      {
+       "step": 4
+      },
+      {
+       "text": "If $c_2$ were zero as well, $X(\\kx)$ would be zero everywhere: the trivial solution, which is ignored."
+      },
+      {
+       "text": "$\\sin\\theta = 0$ exactly where $\\theta$ is a whole multiple of $\\pi$."
+      }
+     ],
+     "then": {
+      "tex": "\\mk{s}{c_2 \\sin (\\kpn\\kL)} = \\mk{z}{0}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{s}{\\sin (\\kpn\\kL)} = \\mk{z}{0}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{s}{\\kpn\\kL} = \\mk{z}{n\\pi}",
+       "uses": [
+        2
+       ]
+      }
+     ],
+     "num": "(2.3.9)",
+     "src": "Example 2.3.1",
+     "note": "The book says Equation 2.3.7 simplifies to this line; it is Equation 2.3.8, the line before, that does."
+    },
+    {
+     "assumes": [
+      {
+       "step": 5
+      },
+      {
+       "text": "$n=0$ is the trivial solution, which is ignored, so $n = 1, 2, 3, \\ldots$"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{s}{\\kpn\\kL} = \\mk{z}{n\\pi}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{s}{\\kpn} = \\mk{z}{\\dfrac{n\\pi}{\\kL}}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "num": "(2.3.10)",
+     "src": "Example 2.3.1"
+    }
+   ]
+  }
+ ]
+}

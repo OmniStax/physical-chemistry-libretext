@@ -1,7 +1,7 @@
 /* Figures for section 2.5 A Vibrating Membrane. Boots against the section's text article. */
 window.OMNISTAX_FIGURES = window.OMNISTAX_FIGURES || {};
 window.OMNISTAX_FIGURES['2.5'] = function (root, F) {
-const { tex, C, PAL, alpha, register, begin, text, line, fmt } = F;
+const { tex, C, PAL, alpha, register, begin, text, fmt } = F;
 
 /* ---------- the displacement scale (a fact: one false-colour scale of u with its legend, root 7.1) ----------
    The book's convention for the drum: red above the rest plane, blue below, white where the sheet is at rest. */
@@ -17,8 +17,13 @@ function sheet(rows, w) {
     if (!groups.has(q)) groups.set(q, []);
     groups.get(q).push([rows[j][i], rows[j][i + 1], rows[j + 1][i + 1], rows[j + 1][i]]);
   }
-  return [...groups.entries()].map(([q, faces]) => ({ k: 'faces', faces, color: band(q), alpha: 1,
-    name: q > 0 ? 'the membrane, above its rest position' : q < 0 ? 'the membrane, below its rest position' : 'the membrane, near its rest position' }));
+  /* grid curves every few rows, so the sheet reads as a surface even as it passes through rest */
+  const segs = [], nj = rows.length, ni = rows[0].length, sj = Math.max(1, Math.round((nj - 1) / 8)), si = Math.max(1, Math.round((ni - 1) / 10));
+  for (let j = 0; j < nj; j += sj) for (let i = 0; i + 1 < ni; i++) segs.push([rows[j][i], rows[j][i + 1]]);
+  for (let i = 0; i < ni; i += si) for (let j = 0; j + 1 < nj; j++) segs.push([rows[j][i], rows[j + 1][i]]);
+  return [...[...groups.entries()].map(([q, faces]) => ({ k: 'faces', faces, color: band(q), alpha: 1,
+    name: q > 0 ? 'the membrane, above its rest position' : q < 0 ? 'the membrane, below its rest position' : 'the membrane, near its rest position' })),
+    { k: 'segs', segs, color: alpha(PAL.ink, 0.3), w: 1 }];
 }
 /* the legend under the scene: the scale from below rest to above it */
 function legend(c) {
@@ -49,7 +54,7 @@ const swings = (ratio) => Math.max(1, Math.round(3 * ratio));
 (function () {
   const d = F.sim(root, 'sim-rect-membrane');
   const A = 1.4, B = 1, Z = 0.36, NI = 42, NJ = 30;
-  const S = F.space3d(d, { box: [[0, A], [0, B], [-0.45, 0.45]], h: 560, turn: -0.55, tilt: 0.62, fit: 2.3, ...ORBIT });
+  const S = F.space3d(d, { box: [[0, A], [0, B], [-0.45, 0.45]], h: 560, turn: -0.55, tilt: 0.62, fit: 2.9, ...ORBIT });
   const cy = F.cycle(() => LOOP, 1.2);
   const opts = [1, 2, 3].map((k) => ({ value: String(k), label: String(k) }));
   const NX = F.choice(d.controls, { label: 'n_x', options: opts, value: '1', aria: 'the quantum number along x', key: 'nx', onInput: () => cy.reset() });
@@ -81,10 +86,10 @@ const swings = (ratio) => Math.max(1, Math.round(3 * ratio));
       S.set('nodes', nodes.map((l) => ({ k: 'line', pts: l.pts, color: alpha(PAL.ink, 0.25 + 0.75 * l.a), w: 4, name: l.name })));
       S.set('frame', [
         { k: 'line', pts: rim, color: 'ink', w: 3, name: 'the fixed edge, where u = 0' },
-        { k: 'arrow', a: [0, -0.14, 0], b: [0.42, -0.14, 0], color: C('length'), w: 3 },
-        { k: 'arrow', a: [-0.14, 0, 0], b: [-0.14, 0.42, 0], color: C('length'), w: 3 },
-        { k: 'label', s: '$\\kx$', p: [0.5, -0.2, 0], color: C('length'), cls: 'bare' },
-        { k: 'label', s: '$\\ky$', p: [-0.2, 0.5, 0], color: C('length'), cls: 'bare' },
+        { k: 'arrow', a: [0, -0.08, 0], b: [0.4, -0.08, 0], color: C('length'), w: 3 },
+        { k: 'arrow', a: [-0.08, 0, 0], b: [-0.08, 0.4, 0], color: C('length'), w: 3 },
+        { k: 'label', s: '$\\kx$', p: [0.48, -0.13, 0], color: C('length'), cls: 'bare' },
+        { k: 'label', s: '$\\ky$', p: [-0.13, 0.48, 0], color: C('length'), cls: 'bare' },
       ]);
     }
     legend(leg);
@@ -106,7 +111,7 @@ const swings = (ratio) => Math.max(1, Math.round(3 * ratio));
   const ZEROS = [[2.4048, 5.5201, 8.6537], [3.8317, 7.0156, 10.1735], [5.1356, 8.4172, 11.6198], [6.3802, 9.761, 13.0152], [7.5883, 11.0647, 14.3725]];
   /* J_m(x) = (1/pi) integral_0^pi cos(m tau - x sin tau) d tau, by the trapezoid rule, exact to 1e-10 here */
   const J = (m, x) => { const N = 96; let s = 0; for (let i = 0; i <= N; i++) { const t = Math.PI * i / N; s += (i === 0 || i === N ? 0.5 : 1) * Math.cos(m * t - x * Math.sin(t)); } return s / N; };
-  const S = F.space3d(d, { box: [[-1, 1], [-1, 1], [-0.45, 0.45]], h: 560, turn: -0.55, tilt: 0.62, fit: 2.3, ...ORBIT });
+  const S = F.space3d(d, { box: [[-1, 1], [-1, 1], [-0.45, 0.45]], h: 560, turn: -0.55, tilt: 0.62, fit: 2.8, ...ORBIT });
   const cy = F.cycle(() => LOOP, 1.2);
   const M = F.choice(d.controls, { label: 'm', options: [0, 1, 2, 3, 4].map((k) => ({ value: String(k), label: String(k) })), value: '0', aria: 'the number of nodal diameters', key: 'm', onInput: () => cy.reset() });
   const N = F.choice(d.controls, { label: 'n', options: [1, 2, 3].map((k) => ({ value: String(k), label: String(k) })), value: '1', aria: 'the radial quantum number', key: 'n', onInput: () => cy.reset() });

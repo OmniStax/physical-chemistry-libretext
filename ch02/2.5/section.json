@@ -1,0 +1,559 @@
+{
+ "id": "2.5",
+ "module": "13379",
+ "chapter": "2",
+ "title": "A Vibrating Membrane",
+ "short": "A vibrating membrane",
+ "lead": "Waves on a drumhead or on the surface of a pond spread in two dimensions. The wave equation of a string carries over to two and three dimensions, and a membrane held at its edges, rectangular or round, has its own set of modes.",
+ "objectives": [
+  "To apply the wave equations to a two-dimensional membrane (rectangles and circles)",
+  "To recognize the possible geometries of a nodes in two-dimensional systems"
+ ],
+ "summary_html": "",
+ "notes": "Adapted from Delmar Larsen and Michael Fowler under CC BY-NC-SA 4.0; the book's animations of the rectangular modes (Figure 2.5.1), courtesy of Dr. Dan Russell, Graduate Program in Acoustics, Penn State, carry no licence and are not shown.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "Both exercises and their keys are the book's; their Bloom levels and concept tags were chosen by AI.",
+ "figures": [
+  {
+   "id": "sim-rect-membrane",
+   "kind": "sim",
+   "number": "2.5.1",
+   "original_caption": "Select Vibrational Modes of a Rectangular Membrane. Animations courtesy of Dr. Dan Russell via Grad. Prog. Acoustics, Penn State).",
+   "draws": [
+    "displacement",
+    "length",
+    "time",
+    "frequency"
+   ],
+   "facts": [
+    "#c2413a",
+    "#2f6ab3",
+    "#ebe8e2"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "sim-circ-membrane",
+   "kind": "sim",
+   "number": "2.5.2",
+   "originals": [
+    "/media/ch02/54917-imageedit_1_8987729393.gif",
+    "/media/ch02/54922-imageedit_3_7597293042.gif",
+    "/media/ch02/54921-imageedit_5_3064389541.gif"
+   ],
+   "original_caption": "Select Vibrational Modes of a Circular Membrane. (CC BY-SA-ND 4.0; Dan Russell, via Grad. Prog. Acoustics, Penn State.",
+   "draws": [
+    "displacement",
+    "length",
+    "time"
+   ],
+   "facts": [
+    "#c2413a",
+    "#2f6ab3",
+    "#ebe8e2"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "higher-dimensions",
+   "concept": "principle-of-superposition",
+   "verb": "uses"
+  },
+  {
+   "span": "wave-equation-more-dimensions",
+   "concept": "multidimensional-wave-equation",
+   "verb": "introduces"
+  },
+  {
+   "span": "wave-equation-more-dimensions",
+   "concept": "laplacian",
+   "verb": "introduces"
+  },
+  {
+   "span": "wave-equation-more-dimensions",
+   "concept": "plane-wave",
+   "verb": "introduces"
+  },
+  {
+   "span": "wave-equation-more-dimensions",
+   "concept": "wave-vector",
+   "verb": "introduces"
+  },
+  {
+   "span": "wave-equation-more-dimensions",
+   "concept": "linear-differential-equation",
+   "verb": "uses"
+  },
+  {
+   "span": "wave-equation-more-dimensions",
+   "concept": "principle-of-superposition",
+   "verb": "reinforces"
+  },
+  {
+   "span": "rectangular-membrane",
+   "concept": "rectangular-membrane-modes",
+   "verb": "introduces"
+  },
+  {
+   "span": "rectangular-membrane",
+   "concept": "nodal-line",
+   "verb": "introduces"
+  },
+  {
+   "span": "rectangular-membrane",
+   "concept": "separation-of-variables",
+   "verb": "uses"
+  },
+  {
+   "span": "rectangular-membrane",
+   "concept": "boundary-conditions",
+   "verb": "uses"
+  },
+  {
+   "span": "rectangular-membrane",
+   "concept": "quantum-number",
+   "verb": "uses"
+  },
+  {
+   "span": "circular-membrane",
+   "concept": "bessel-function",
+   "verb": "introduces"
+  },
+  {
+   "span": "circular-membrane",
+   "concept": "circular-membrane-modes",
+   "verb": "introduces"
+  },
+  {
+   "span": "circular-membrane",
+   "concept": "nodal-line",
+   "verb": "reinforces"
+  },
+  {
+   "span": "circular-membrane",
+   "concept": "quantum-number",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "e1",
+   "source_id": "exr:2.5.1",
+   "source_number": "Exercise 2.5.1",
+   "kind": "exercise",
+   "bloom": "Analyze",
+   "place": {
+    "at": "end"
+   },
+   "cite": "rectangular-membrane",
+   "prompt": "<p>For the ($n_x=2$, $n_y=2$ solution to a rectangular membrane in Figure 2.5.1: how many nodes are there, what is the geometry and how would you characterize them?</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "source",
+    "solution": "<p>There are two nodes. They are lines and one is at half the length of the x direction and extends over the entire length of the y direction and one if and one is<sup class=\"fn\" data-note=\"c-key-garble\"></sup> at half the length of the y direction and extends over the entire length of the x direction</p>"
+   }
+  },
+  {
+   "id": "e2",
+   "source_id": "exr:2.5.2",
+   "source_number": "Exercise 2.5.2",
+   "kind": "exercise",
+   "bloom": "Analyze",
+   "place": {
+    "at": "end"
+   },
+   "cite": "circular-membrane",
+   "prompt": "<p>How many nodes are there in the three solutions for a circular membrane in Figure 2.5.2, what are their geometries, and how would you characterize them?</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "source",
+    "solution": "<p>(left) zero nodes</p>\n<p>(middle) two nodes. They are circular at approximately 1/3 and 2/3 the radius (these are radial nodes = at fixed radii)</p>\n<p>(right) four nodes. They are lines at 45° angle from the center (these are angular nodes = at fixed angles).</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "e1",
+   "concept": "nodal-line"
+  },
+  {
+   "exercise": "e1",
+   "concept": "rectangular-membrane-modes"
+  },
+  {
+   "exercise": "e2",
+   "concept": "nodal-line"
+  },
+  {
+   "exercise": "e2",
+   "concept": "circular-membrane-modes"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-not-shown",
+   "kind": "correction",
+   "html": "The book prints “The math is now shown here”; it means the math is not shown here."
+  },
+  {
+   "id": "c-double-comma",
+   "kind": "correction",
+   "html": "The first term prints $u(x,y,,z,t)$, with a stray comma; it is $u(x,y,z,t)$."
+  },
+  {
+   "id": "c-laplacian",
+   "kind": "correction",
+   "html": "The book writes $\\nabla^2$ as a row of three operators. The Laplacian is their sum, $\\nabla^2 = \\partial^2/\\partial x^2 + \\partial^2/\\partial y^2 + \\partial^2/\\partial z^2$, which is what Equation 2.5.2 needs."
+  },
+  {
+   "id": "c-nu-k",
+   "kind": "correction",
+   "html": "The book prints $\\omega = \\nu k$, with the symbol of frequency; the relation is $\\omega = vk$, with $v$ the velocity of the wave."
+  },
+  {
+   "id": "c-ky",
+   "kind": "correction",
+   "html": "The book prints $k_x x + k_x + k_z z$; the phase is $k_x x + k_y y + k_z z - \\omega t$."
+  },
+  {
+   "id": "c-nu-kvec",
+   "kind": "correction",
+   "html": "The book prints $\\omega = \\nu|\\vec{k|}$; it means $\\omega = v|\\vec{k}|$, with $v$ the velocity of the wave."
+  },
+  {
+   "id": "c-than",
+   "kind": "correction",
+   "html": "“than later” is meant as “then later”."
+  },
+  {
+   "id": "c-key-garble",
+   "kind": "correction",
+   "html": "“one if and one is” is a slip; the second node is the line at half the length of the y direction."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "plane-wave",
+   "what": "harmonic waves in three dimensions",
+   "source": "Physical Chemistry (LibreTexts), 2.5 A Vibrating Membrane",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\nabla^2 \\ku = \\dfrac{1}{\\kv^2}\\dfrac{\\partial^2 \\ku}{\\partial \\kt^2}",
+       "src": "2.5"
+      },
+      {
+       "tex": "\\nabla^2 = \\dfrac{\\partial^2}{\\partial \\kx^2} + \\dfrac{\\partial^2}{\\partial \\ky^2} + \\dfrac{\\partial^2}{\\partial \\kz^2}",
+       "src": "2.5"
+      },
+      {
+       "tex": "\\ku = A \\sin(k_x \\kx + k_y \\ky + k_z \\kz - \\komega \\kt)",
+       "src": "2.5"
+      },
+      {
+       "tex": "|\\kkvec| = \\sqrt{k_x^2 + k_y^2 + k_z^2}",
+       "src": "2.5"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\nabla^2 \\ku} = \\mk{R}{\\dfrac{1}{\\kv^2}\\dfrac{\\partial^2 \\ku}{\\partial \\kt^2}}",
+      "src": "2.5",
+      "uses": [
+       0
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\dfrac{\\partial^2 \\ku}{\\partial \\kx^2} + \\dfrac{\\partial^2 \\ku}{\\partial \\ky^2} + \\dfrac{\\partial^2 \\ku}{\\partial \\kz^2}} = \\mk{R}{\\dfrac{1}{\\kv^2}\\dfrac{\\partial^2 \\ku}{\\partial \\kt^2}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{L}{-(k_x^2 + k_y^2 + k_z^2)\\,\\ku} = \\mk{R}{\\dfrac{1}{\\kv^2}\\dfrac{\\partial^2 \\ku}{\\partial \\kt^2}}",
+       "uses": [
+        2
+       ],
+       "cap": "Each second derivative of the sine brings out the square of the factor on its variable, with a minus sign: $\\partial^2 \\ku/\\partial \\kx^2 = -k_x^2 \\ku$, and the same for $\\ky$ and $\\kz$."
+      },
+      {
+       "tex": "\\mk{L}{-(k_x^2 + k_y^2 + k_z^2)\\,\\ku} = \\mk{R}{-\\dfrac{\\komega^2}{\\kv^2}\\,\\ku}",
+       "uses": [
+        2
+       ],
+       "cap": "In time the factor is $\\komega$, so $\\partial^2 \\ku/\\partial \\kt^2 = -\\komega^2 \\ku$."
+      },
+      {
+       "tex": "\\mk{L}{k_x^2 + k_y^2 + k_z^2} = \\mk{R}{\\dfrac{\\komega^2}{\\kv^2}}",
+       "uses": [],
+       "cap": "The equation has to hold at every point and every time, so the common factor $\\ku$ divides out."
+      },
+      {
+       "tex": "\\mk{L}{|\\kkvec|^2} = \\mk{R}{\\dfrac{\\komega^2}{\\kv^2}}",
+       "uses": [
+        3
+       ]
+      },
+      {
+       "tex": "\\mk{R}{\\komega} = \\mk{L}{\\kv\\,|\\kkvec|}",
+       "uses": [],
+       "cap": "Both $\\komega$ and $|\\kkvec|$ are positive, so the positive root is the one taken."
+      }
+     ],
+     "src": "2.5",
+     "note": "The book prints $\\omega = \\nu|\\vec{k}|$ (and $\\omega = \\nu k$ in one dimension), with $\\nu$ where the velocity of the wave $v$ is meant, and $k_x x + k_x$ for $k_x x + k_y y$ in the solution."
+    }
+   ]
+  },
+  {
+   "id": "rectangular-modes",
+   "what": "the modes of a rectangular membrane",
+   "source": "Physical Chemistry (LibreTexts), 2.5 A Vibrating Membrane",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\dfrac{ \\partial^2 \\ku}{\\partial \\kx^2} + \\dfrac{ \\partial^2 \\ku}{\\partial \\ky^2} = \\dfrac{1}{\\kv^2} \\dfrac{ \\partial^2 \\ku}{\\partial \\kt^2}",
+       "src": "(2.5.1)"
+      },
+      {
+       "text": "Separate the variables: $\\ku(\\kx,\\ky,\\kt) = X(\\kx)\\,Y(\\ky)\\,T(\\kt)$.",
+       "src": "2.5"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{x}{\\dfrac{\\partial^2 \\ku}{\\partial \\kx^2}} + \\mk{y}{\\dfrac{\\partial^2 \\ku}{\\partial \\ky^2}} = \\mk{t}{\\dfrac{1}{\\kv^2}\\dfrac{\\partial^2 \\ku}{\\partial \\kt^2}}",
+      "src": "(2.5.1)",
+      "uses": [
+       0
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{x}{X''YT} + \\mk{y}{XY''T} = \\mk{t}{\\dfrac{1}{\\kv^2}XYT''}",
+       "uses": [
+        1
+       ],
+       "cap": "Each partial derivative acts only on the factor that holds its variable; a prime is a derivative of a factor in its own variable."
+      },
+      {
+       "tex": "\\mk{x}{\\dfrac{X''}{X}} + \\mk{y}{\\dfrac{Y''}{Y}} = \\mk{t}{\\dfrac{1}{\\kv^2}\\dfrac{T''}{T}}",
+       "uses": []
+      }
+     ],
+     "src": "2.5"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "text": "The edges are held fixed: $\\ku = 0$ at $\\kx = 0$, $\\kx = \\ka$, $\\ky = 0$ and $\\ky = \\kbm$.",
+       "src": "2.5"
+      },
+      {
+       "text": "The equation $X'' = -p^2 X$ with $X(0) = X(L) = 0$ has the solutions $X(x) = D\\sin(n\\pi x/L)$, $n = 1, 2, 3, \\ldots$",
+       "src": "(2.4.10)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{x}{\\dfrac{X''}{X}} = \\mk{p}{-p^2}",
+      "uses": [
+       0,
+       1
+      ],
+      "why": "Changing $\\kx$ alone changes only $X''/X$ in the separated equation, yet the equation still holds, so $X''/X$ is a constant. As for the string, only a negative constant lets $X$ vanish at both edges."
+     },
+     "steps": [
+      {
+       "tex": "\\mk{x}{X''} = \\mk{p}{-p^2 X}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{x}{X(\\kx)} = \\mk{p}{C_x\\,\\sin\\left(\\dfrac{n_x \\pi \\kx}{\\ka}\\right)}",
+       "uses": [
+        1,
+        2
+       ],
+       "cap": "Since $\\ku = XYT$ vanishes along the edges $\\kx = 0$ and $\\kx = \\ka$ at every time, $X(0) = X(\\ka) = 0$: the string's problem with $L = \\ka$."
+      }
+     ],
+     "src": "2.5"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "text": "The edges are held fixed: $\\ku = 0$ at $\\kx = 0$, $\\kx = \\ka$, $\\ky = 0$ and $\\ky = \\kbm$.",
+       "src": "2.5"
+      },
+      {
+       "text": "The equation $X'' = -p^2 X$ with $X(0) = X(L) = 0$ has the solutions $X(x) = D\\sin(n\\pi x/L)$, $n = 1, 2, 3, \\ldots$",
+       "src": "(2.4.10)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{x}{\\dfrac{Y''}{Y}} = \\mk{p}{-q^2}",
+      "uses": [
+       0,
+       1
+      ],
+      "why": "Changing $\\ky$ alone changes only $Y''/Y$ in the separated equation, yet the equation still holds, so $Y''/Y$ is a constant. As for the string, only a negative constant lets $Y$ vanish at both edges."
+     },
+     "steps": [
+      {
+       "tex": "\\mk{x}{Y''} = \\mk{p}{-q^2 Y}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{x}{Y(\\ky)} = \\mk{p}{C_y\\,\\sin\\left(\\dfrac{n_y \\pi \\ky}{\\kbm}\\right)}",
+       "uses": [
+        1,
+        2
+       ],
+       "cap": "Since $\\ku = XYT$ vanishes along the edges $\\ky = 0$ and $\\ky = \\kbm$ at every time, $Y(0) = Y(\\kbm) = 0$: the string's problem with $L = \\kbm$."
+      }
+     ],
+     "src": "2.5"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "step": 1
+      },
+      {
+       "step": 2
+      },
+      {
+       "text": "The equation $T'' = -\\omega_n^2 T$ has the solutions $T(t) = E\\cos(\\omega_n t) + F\\sin(\\omega_n t)$.",
+       "src": "(2.4.12)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{t}{\\dfrac{1}{\\kv^2}\\dfrac{T''}{T}} = \\mk{s}{\\dfrac{X''}{X} + \\dfrac{Y''}{Y}}",
+      "uses": [
+       0
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{t}{\\dfrac{T''}{T}} = \\mk{s}{-\\komeganm^2}",
+       "uses": [
+        1,
+        2
+       ],
+       "cap": "With $X$ and $Y$ the sines found above, $X''/X$ and $Y''/Y$ are negative constants, so $T''/T$ is a negative constant too; it is written $-\\komeganm^2$."
+      },
+      {
+       "tex": "\\mk{t}{T''} = \\mk{s}{-\\komeganm^2\\, T}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{t}{T(\\kt)} = \\mk{s}{E\\cos(\\komeganm \\kt) + F\\sin(\\komeganm \\kt)}",
+       "uses": [
+        3
+       ],
+       "cap": "This is the string's equation in time, with $\\komeganm$ in place of $\\omega_n$."
+      },
+      {
+       "tex": "\\mk{t}{T(\\kt)} = \\mk{s}{G\\cos(\\komeganm \\kt + \\phi_{nm})}",
+       "uses": [],
+       "cap": "A cosine and a sine of the same argument add to one shifted cosine: $E\\cos\\alpha + F\\sin\\alpha = G\\cos(\\alpha + \\phi)$ with $G = \\sqrt{E^2 + F^2}$ and $\\tan\\phi = -F/E$."
+      }
+     ],
+     "src": "2.5"
+    },
+    {
+     "assumes": [
+      {
+       "text": "Separate the variables: $\\ku(\\kx,\\ky,\\kt) = X(\\kx)\\,Y(\\ky)\\,T(\\kt)$.",
+       "src": "2.5"
+      },
+      {
+       "step": 1
+      },
+      {
+       "step": 2
+      },
+      {
+       "step": 3
+      }
+     ],
+     "then": {
+      "tex": "\\mk{u}{\\ku(\\kx,\\ky,\\kt)} = \\mk{X}{X(\\kx)}\\,\\mk{Y}{Y(\\ky)}\\,\\mk{T}{T(\\kt)}",
+      "uses": [
+       0
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{u}{\\ku(\\kx,\\ky,\\kt)} = \\mk{X}{C_x \\sin\\left(\\dfrac{n_x \\pi \\kx}{\\ka}\\right)}\\,\\mk{Y}{C_y \\sin\\left(\\dfrac{n_y \\pi \\ky}{\\kbm}\\right)}\\,\\mk{T}{G\\cos(\\komeganm \\kt + \\phi_{nm})}",
+       "uses": [
+        1,
+        2,
+        3
+       ]
+      },
+      {
+       "tex": "\\mk{u}{\\ku(\\kx,\\ky,\\kt)} = \\mk{A}{\\kAnm} \\mk{T}{\\cos(\\komeganm \\kt + \\phi_{nm})} \\mk{X}{\\sin\\left(\\dfrac{n_x \\pi \\kx}{\\ka}\\right)} \\mk{Y}{\\sin\\left(\\dfrac{n_y \\pi \\ky}{\\kbm}\\right)}",
+       "uses": [],
+       "map": {
+        "X": [
+         "A",
+         "X"
+        ],
+        "Y": [
+         "A",
+         "Y"
+        ],
+        "T": [
+         "A",
+         "T"
+        ]
+       }
+      }
+     ],
+     "num": "(2.5.3)",
+     "src": "2.5"
+    }
+   ]
+  }
+ ]
+}
