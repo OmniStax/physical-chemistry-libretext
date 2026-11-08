@@ -313,7 +313,7 @@
        "src": "2.3"
       },
       {
-       "tex": "\\komega \\approx \\komegazero",
+       "text": "The incident frequency of incident light $\\komega$ is comparable to the natural frequency of oscillation $\\komegazero$: $\\komega \\approx \\komegazero$.",
        "src": "13.11"
       }
      ],
@@ -326,7 +326,7 @@
        "uses": [
         1
        ],
-       "cap": "From here $H_{21}$ is the matrix element of the amplitude $V(r)$, the part that does not change in time."
+       "cap": "$V(r)$ is an amplitude of polarization vector, which we can ignore for now: from here $H_{21}$ is its matrix element, the part that does not change in time."
       },
       {
        "tex": "\\mk{L}{c_2(\\kt)} = \\mk{b}{\\dfrac{-iH_{21}}{2\\hbar}\\int_0^{\\kt}\\left(e^{i(\\komegazero+\\komega)t'} + e^{i(\\komegazero-\\komega)t'}\\right)dt'}",

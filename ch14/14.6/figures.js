@@ -67,10 +67,10 @@ const lor = (x, x0, w) => (w * w) / ((x - x0) * (x - x0) + w * w);
     const n = m.sig.length, gap = 60, l0 = 110, r0 = W - 50, w = (r0 - l0 - gap * (n - 1)) / n;
     m.sig.forEach((s, i) => {
       const box = { l: l0 + i * (w + gap), r: l0 + i * (w + gap) + w, t: 130, b: 300 };
-      const ax = axes(ctx, box, [-(s.d + HALF), -(s.d - HALF)], [0, 1.15], { nx: 3, ny: 0, fx: (v) => fmt(-v, 2) });
+      const ax = axes(ctx, box, [-(s.d + HALF), -(s.d - HALF)], [0, 1.15], { nx: 3, ny: 0, nice: true, fx: (v) => fmt(-v, 2) });
       const spec = (x) => { const p = -x; let y = 0; all.forEach((l) => { y += l.h * lor(p * nu0, l.p * nu0, W0); }); return y / (s.H * Math.max(...lines(s.sets).map((q) => q.h))); };
       plot(ctx, ax, spec, PAL.ink, { w: 3 });
-      text(ctx, `${s.lab}  ${fmt(s.d, 2)} ppm`, (box.l + box.r) / 2, box.t - 22, PAL.ink, { size: 22, weight: 600, align: 'center' });
+      text(ctx, `${s.lab}  ${fmt(s.d, 2)} ppm`, (box.l + box.r) / 2, box.t - 50, PAL.ink, { size: 22, weight: 600, align: 'center' });
       /* the largest coupling of this signal, bracketed between two of its lines */
       const ls = lines(s.sets), J = s.sets[0].J, sub = s.sets.slice(1).reduce((a, q) => a + q.n * q.J / 2, 0);
       const pa = s.d + (-s.sets[0].n * J / 2 - sub) / nu0, pb = pa + J / nu0;
@@ -87,7 +87,7 @@ const lor = (x, x0, w) => (w * w) / ((x - x0) * (x - x0) + w * w);
     const bmax = Math.max(...bins.values());
     bins.forEach((h, x) => line(ctx, x, box.b, x, box.b - (box.b - box.t) * 0.95 * h / bmax, PAL.ink, 2));
     /* the 12 ppm window in Hz along the bottom */
-    text(ctx, `12 ppm = ${fmt(12 * nu0, 0)} Hz at ${fmt(nu0, 0)} MHz`, box.r, box.b + 66, cf, { size: 20, weight: 600, align: 'right' });
+    text(ctx, `12 ppm = ${fmt(12 * nu0, 0)} Hz at ${fmt(nu0, 0)} MHz`, box.l, box.b + 66, cf, { size: 20, weight: 600, align: 'left' });
     void top;
     const s0 = m.sig[m.sig.length - 1];
     tex(d.readout, `\\knu - \\knuo = \\delta \\times \\knuo = ${fmt(s0.d, 2)}\\ \\text{ppm} \\times ${fmt(nu0, 0)}\\ \\text{MHz} = ${fmt(s0.d * nu0, 0)}\\ \\text{Hz}`
@@ -109,16 +109,17 @@ const lor = (x, x0, w) => (w * w) / ((x - x0) * (x - x0) + w * w);
    The arrows are notation (rule 24.1), in ink.
 ===================================================================== */
 (function () {
-  const d = F.sim(root, 'sim-splitting', 860);
+  const d = F.sim(root, 'sim-splitting', 940);
   const N = F.choice(d.controls, { label: 'n', key: 'n', options: [0, 1, 2, 3, 4, 5, 6].map((v) => ({ value: String(v), label: String(v) })), value: '1', aria: 'the number of neighbouring hydrogens' });
-  const J = 6.1, PX = 28, CX = 760;
+  const J = 6.1, CX = 760;
+  const pxOf = (n) => (n <= 1 ? 40 : 1000 / (n * J));   /* units per Hz: the widest multiplet fills 1000 units */
   const hits = [];
   F.hover(d.stage, () => hits);
   function scene(ctx, n, a) {
-    const xs = (k, lev) => CX + (k - lev / 2) * J * PX;     /* the k-th branch after lev splittings, from the left */
+    const PX = pxOf(n), xs = (k, lev) => CX + (k - lev / 2) * J * PX;     /* the k-th branch after lev splittings, from the left */
     const ink = alpha(PAL.ink, a);
     /* the tree */
-    const t0 = 110, lh = n ? Math.min(46, 200 / n) : 0;
+    const t0 = 110, lh = n ? Math.min(80, 200 / n) : 0;
     line(ctx, CX, t0 - 20, CX, t0, ink, 3);
     for (let lev = 1; lev <= n; lev++) {
       const y = t0 + (lev - 1) * lh;
@@ -131,24 +132,24 @@ const lor = (x, x0, w) => (w * w) / ((x - x0) * (x - x0) + w * w);
     }
     if (!n) line(ctx, CX, t0, CX, t0 + 40, ink, 3);
     /* the arrangements under each subpeak: column j has n - j spins with B0 (right) and j against (left) */
-    const rowH = 15, aw = 16, y0 = 340;
+    const rowH = 17, aw = Math.min(34, (J * PX - 24) / Math.max(n, 1) - 6), y0 = t0 + n * lh + 34;
     for (let j = 0; j <= n; j++) {
       const x = xs(j, n), rows = [];
       for (let mask = 0; mask < 2 ** n; mask++) { let c = 0; for (let b = 0; b < n; b++) if (mask >> b & 1) c++; if (c === j) rows.push(mask); }
       rows.forEach((mask, r) => {
-        const y = y0 + r * rowH, w = n * (aw + 4) - 4, x1 = x - w / 2;
+        const y = y0 + r * rowH, w = n * (aw + 6) - 6, x1 = x - w / 2;
         for (let b = 0; b < n; b++) {
-          const ax0 = x1 + b * (aw + 4), right = !(mask >> b & 1);
-          if (right) arrow(ctx, ax0, y, ax0 + aw, y, ink, 2); else arrow(ctx, ax0 + aw, y, ax0, y, ink, 2);
+          const ax0 = x1 + b * (aw + 6), right = !(mask >> b & 1);
+          if (right) arrow(ctx, ax0, y, ax0 + aw, y, ink, 3); else arrow(ctx, ax0 + aw, y, ax0, y, ink, 3);
         }
       });
     }
     /* the multiplet */
-    const base = 800, hmax = 140, top = binom(n, Math.floor(n / 2));
+    const base = 870, hmax = 130, top = binom(n, Math.floor(n / 2));
     ctx.save(); ctx.strokeStyle = ink; ctx.lineWidth = 3; ctx.beginPath();
-    for (let X = CX - 560; X <= CX + 560; X += 1) {
+    for (let X = CX - 600; X <= CX + 600; X += 1) {
       let y = 0; for (let k = 0; k <= n; k++) y += binom(n, k) / top * lor(X, xs(k, n), 5);
-      const Y = base - hmax * y; if (X === CX - 560) ctx.moveTo(X, Y); else ctx.lineTo(X, Y);
+      const Y = base - hmax * y; if (X === CX - 600) ctx.moveTo(X, Y); else ctx.lineTo(X, Y);
     }
     ctx.stroke(); ctx.restore();
     for (let k = 0; k <= n; k++) text(ctx, String(binom(n, k)), xs(k, n), base - hmax * binom(n, k) / top - 26, ink, { size: 20, weight: 600, align: 'center' });
@@ -169,11 +170,11 @@ const lor = (x, x0, w) => (w * w) / ((x - x0) * (x - x0) + w * w);
     scene(ctx, n, k < 1 && from !== n ? k : 1);
     /* the spacing */
     if (n > 0) {
-      const xa = 760 + (0 - n / 2) * J * 28, xb = xa + J * 28;
-      F.hbracket(ctx, xa, xb, 830, C('frequency'), `J = ${fmt(J, 1)} Hz`, { side: 'below' });
+      const xa = 760 + (0 - n / 2) * J * pxOf(n), xb = xa + J * pxOf(n);
+      F.hbracket(ctx, xa, xb, 896, C('frequency'), `J = ${fmt(J, 1)} Hz`, { side: 'below' });
     }
     hits.length = 0;
-    for (let j = 0; j <= n; j++) hits.push({ x: 760 + (j - n / 2) * J * 28, y: 700, r: 40, name: `${row[j]} arrangement${row[j] > 1 ? 's' : ''} with ${n - j} spin${n - j === 1 ? '' : 's'} with B₀ and ${j} against` });
+    for (let j = 0; j <= n; j++) hits.push({ x: 760 + (j - n / 2) * J * pxOf(n), y: 800, r: 40, name: `${row[j]} arrangement${row[j] > 1 ? 's' : ''} with ${n - j} spin${n - j === 1 ? '' : 's'} with B₀ and ${j} against` });
     tex(d.readout, `n + 1 = ${n} + 1 = ${n + 1}\\ \\text{subpeaks} \\\\ ${row.join(' : ')} \\\\ \\kJcc = ${fmt(J, 1)}\\ \\text{Hz}`);
   }
   register(d.fig, { update: () => {}, draw });
@@ -216,7 +217,7 @@ const lor = (x, x0, w) => (w * w) / ((x - x0) * (x - x0) + w * w);
     topline(ctx, eq ? `With $\\kJcc_{1} = \\kJcc_{2}$ the ${full} lines of ${p.lab} fall on ${seen} subpeaks: it looks like a ${NAMES[seen - 1] || seen + '-line multiplet'}.`
       : `${p.lab}: split ${p.n1 === 1 ? 'into a doublet' : 'into a triplet'} by ${fmt(j1, 1)} Hz, then each line into a doublet by ${fmt(j2, 1)} Hz, ${seen} subpeaks.`);
     /* the tree */
-    const X = (hz) => CX + hz * PX, t0 = 110, lh = 52;
+    const X = (hz) => CX + hz * PX, t0 = 150, lh = 64;
     line(ctx, CX, t0 - 20, CX, t0, PAL.ink, 3);
     let nodes = [0], y = t0;
     const levels = [...Array(p.n1).fill(j1), ...Array(p.n2).fill(j2)];
@@ -229,11 +230,14 @@ const lor = (x, x0, w) => (w * w) / ((x - x0) * (x - x0) + w * w);
         next.push(x - J / 2, x + J / 2);
       });
       /* the first branch of each stage carries its J */
-      if (i === 0 || i === p.n1) F.hbracket(ctx, X(nodes[0] - J / 2), X(nodes[0] + J / 2), y + lh / 2, cf, `${i === 0 ? p.j1 : p.j2} = ${fmt(J, 1)} Hz`, { side: 'above' });
+      if (i === 0 || i === p.n1) {
+        if (J * PX > 8) F.hbracket(ctx, X(nodes[0] - J / 2), X(nodes[0] + J / 2), y + lh / 2, cf);
+        text(ctx, `${i === 0 ? p.j1 : p.j2} = ${fmt(J, 1)} Hz`, X(Math.max(...next)) + 30, y + lh / 2, cf, { size: 22, weight: 600, base: 'middle' });
+      }
       nodes = [...new Set(next.map((v) => +v.toFixed(3)))].sort((a, b) => a - b); y += lh;
     });
     /* the multiplet */
-    const box = { l: 100, r: 1300, t: 120 + levels.length * lh + 60, b: 600 };
+    const box = { l: 100, r: 1300, t: t0 + levels.length * lh + 40, b: 610 };
     const ax = axes(ctx, box, [-30, 30], [0, 1.15], { nx: 6, ny: 0, xl: 'distance from the centre (Hz)', xc: cf, fx: (v) => fmt(-v, 0) });
     const hmax = Math.max(...ls.map((l) => l.h));
     const spec = (x) => { let s = 0; ls.forEach((l) => { s += l.h / hmax * lor(-x, l.x, 0.35); }); return s; };

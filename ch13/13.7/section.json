@@ -319,7 +319,7 @@
          "g"
         ]
        },
-       "cap": "The first three terms in the braces make a perfect square, $2\\{R-\\tfrac12(R_e+Q_e)\\}^2$; what is left over is $\\tfrac12(R_e-Q_e)^2$."
+       "cap": "Complete the square inside the integral: the first three terms in the braces make a perfect square, $2\\{R-\\tfrac12(R_e+Q_e)\\}^2$, and what is left over is $\\tfrac12(R_e-Q_e)^2$."
       }
      ],
      "src": "13.7",
@@ -351,7 +351,8 @@
        "tex": "\\mk{I}{I} = \\mk{v}{\\sqrt{\\dfrac{\\pi}{\\alpha}}}",
        "uses": [
         1
-       ]
+       ],
+       "cap": "The integral is a Gaussian integral."
       }
      ],
      "src": "13.7",

@@ -1,0 +1,1083 @@
+{
+ "types": [],
+ "symbols": [
+  {
+   "sym": "rho_nu",
+   "latex": "\\rho_{\\nu}",
+   "macro": "\\krhonu"
+  },
+  {
+   "sym": "nu_12",
+   "latex": "\\nu_{12}",
+   "macro": "\\knuonetwo"
+  },
+  {
+   "sym": "nu_21",
+   "latex": "\\nu_{21}",
+   "macro": "\\knutwoone"
+  },
+  {
+   "sym": "nu_13",
+   "latex": "\\nu_{13}",
+   "macro": "\\knuonethree"
+  },
+  {
+   "sym": "nu_31",
+   "latex": "\\nu_{31}",
+   "macro": "\\knuthreeone"
+  },
+  {
+   "sym": "nu_32",
+   "latex": "\\nu_{32}",
+   "macro": "\\knuthreetwo"
+  },
+  {
+   "sym": "nu_23",
+   "latex": "\\nu_{23}",
+   "macro": "\\knutwothree"
+  },
+  {
+   "sym": "N_3",
+   "latex": "N_3"
+  },
+  {
+   "sym": "N_total",
+   "latex": "N_{total}"
+  },
+  {
+   "sym": "A_21",
+   "latex": "A_{21}"
+  },
+  {
+   "sym": "A_31",
+   "latex": "A_{31}"
+  },
+  {
+   "sym": "A_32",
+   "latex": "A_{32}"
+  },
+  {
+   "sym": "B_12",
+   "latex": "B_{12}"
+  },
+  {
+   "sym": "B_21",
+   "latex": "B_{21}"
+  },
+  {
+   "sym": "B_13",
+   "latex": "B_{13}"
+  },
+  {
+   "sym": "B_31",
+   "latex": "B_{31}"
+  },
+  {
+   "sym": "B_32",
+   "latex": "B_{32}"
+  },
+  {
+   "sym": "B_23",
+   "latex": "B_{23}"
+  },
+  {
+   "sym": "g_1",
+   "latex": "g_1"
+  },
+  {
+   "sym": "g_2",
+   "latex": "g_2"
+  },
+  {
+   "sym": "v_qpp",
+   "latex": "v''"
+  }
+ ],
+ "concepts": [
+  {
+   "id": "diamagnetism",
+   "kind": "definition",
+   "section": "15.1",
+   "name": "Diamagnetism",
+   "terms": [
+    "diamagnetic"
+   ],
+   "statement": "A molecule whose electron spins are all paired is diamagnetic: its spins give it no magnetic moment, unlike a free radical, whose unpaired electrons do. Most molecules are diamagnetic in their ground state."
+  },
+  {
+   "id": "excited-singlet-and-triplet",
+   "kind": "definition",
+   "section": "15.1",
+   "name": "Singlet and triplet excited states",
+   "terms": [
+    "excited singlet state",
+    "triplet excited state",
+    "singlet state"
+   ],
+   "statement": "When one electron is promoted to a higher level, it keeps its spin paired with the electron left behind in an excited singlet state (S = 0, multiplicity 2S + 1 = 1) or turns parallel to it in a triplet excited state (S = 1, multiplicity 3). The singlet ground state is diamagnetic and the triplet paramagnetic."
+  },
+  {
+   "id": "spin-forbidden-transitions",
+   "kind": "result",
+   "section": "15.1",
+   "name": "Spin-forbidden transitions",
+   "terms": [
+    "spin selection rule",
+    "forbidden"
+   ],
+   "statement": "A transition between a singlet and a triplet state breaks the spin selection rule ΔS = 0, so it is unlikely: singlet–triplet absorption bands are weak, and the triplet state lives about 10⁴ times longer than the singlet."
+  },
+  {
+   "id": "fluorescence",
+   "kind": "definition",
+   "section": "15.1",
+   "name": "Fluorescence",
+   "terms": [
+    "fluorescence"
+   ],
+   "statement": "Radiative decay of an excited molecule without a change in spin multiplicity, from S₁ to S₀. It is fast, with lifetimes of 10⁻⁹ to 10⁻⁶ s."
+  },
+  {
+   "id": "phosphorescence",
+   "kind": "definition",
+   "section": "15.1",
+   "name": "Phosphorescence",
+   "terms": [
+    "phosphorescence"
+   ],
+   "statement": "Radiative decay with a change in spin multiplicity, from T₁ to S₀, reached after intersystem crossing. Because the transition is spin-forbidden it is slow, taking from milliseconds to minutes or longer."
+  },
+  {
+   "id": "jablonski-diagram",
+   "kind": "definition",
+   "section": "15.1",
+   "name": "Jablonski diagram",
+   "terms": [
+    "Jablonski diagram",
+    "Jablonski diagrams"
+   ],
+   "statement": "An energy diagram of a molecule's states, energy on the vertical axis, with one column per spin multiplicity (S₀, S₁, S₂ … and T₁, T₂ …): bold lines mark the electronic states and thin lines their vibrational levels; straight arrows are radiative transitions and wavy arrows nonradiative ones."
+  },
+  {
+   "id": "deactivation-pathways",
+   "kind": "idea",
+   "section": "15.1",
+   "name": "Competing deactivation processes",
+   "terms": [
+    "deactivation process",
+    "deactivation processes"
+   ],
+   "statement": "An excited molecule returns to the ground state by several possible routes, and the favoured one is the fastest; when a radiationless path has the more favourable rate constant, fluorescence is weak or absent."
+  },
+  {
+   "id": "vibrational-relaxation",
+   "kind": "definition",
+   "section": "15.1",
+   "name": "Vibrational relaxation",
+   "terms": [
+    "vibrational relaxation"
+   ],
+   "statement": "The loss of vibrational energy within one electronic state, by collisions that hand vibrational quanta to other molecules or, in a large molecule, by flow into distant bonds and angles. It brings an excited molecule down to the lowest vibrational level of its electronic state in 10⁻¹² to 10⁻¹⁰ s, faster than fluorescence."
+  },
+  {
+   "id": "fluorescence-red-shift",
+   "kind": "result",
+   "section": "15.1",
+   "name": "Red shift of fluorescence",
+   "terms": [
+    "red-shifted"
+   ],
+   "statement": "Excitation usually lands in an excited vibrational level of the excited state (the Franck–Condon principle), and vibrational relaxation outpaces emission, so fluorescence starts from the lowest level: its photon has less energy and a longer wavelength than the one absorbed."
+  },
+  {
+   "id": "absorption-fluorescence-spectra",
+   "kind": "result",
+   "section": "15.1",
+   "name": "Absorption and fluorescence spectra",
+   "statement": "Absorption starts from the lowest vibrational level of the ground state (v″ = 0) and reaches the excited state's vibrational levels; fluorescence starts from the lowest level of the excited state (v′ = 0) and ends on the ground state's levels. The fluorescence lines therefore lie at longer wavelengths than the absorption lines."
+  },
+  {
+   "id": "radiationless-transition",
+   "kind": "definition",
+   "section": "15.1",
+   "name": "Radiationless transition",
+   "terms": [
+    "radiationless transition",
+    "nonradiative transitions"
+   ],
+   "statement": "A transition between states that releases no photon: the energy goes into vibrations and, finally, heat."
+  },
+  {
+   "id": "internal-conversion",
+   "kind": "definition",
+   "section": "15.1",
+   "name": "Internal conversion",
+   "terms": [
+    "internal conversion"
+   ],
+   "statement": "A radiationless transition from an excited electronic state to a lower one of the same multiplicity: where the excited state's low vibrational levels overlap the high ones of the lower state, the molecule slides across and keeps dropping one vibrational level at a time. Much absorbed light ends as heat this way."
+  },
+  {
+   "id": "intersystem-crossing",
+   "kind": "definition",
+   "section": "15.1",
+   "name": "Intersystem crossing",
+   "terms": [
+    "intersystem crossing"
+   ],
+   "statement": "A radiationless crossing from a singlet excited state into a triplet state of lower energy (or back), reached by vibrational relaxation since it involves no photon. It gives access to triplet states, whose unpaired electrons react by radical processes, that light cannot reach directly."
+  },
+  {
+   "id": "external-conversion",
+   "kind": "definition",
+   "section": "15.1",
+   "name": "External conversion",
+   "terms": [
+    "external conversion"
+   ],
+   "statement": "Deactivation of an excited state by energy transfer to the solvent or solutes in collisions. Low temperature and high viscosity reduce the collisions and so enhance fluorescence."
+  },
+  {
+   "id": "relaxation-timescales",
+   "kind": "idea",
+   "section": "15.1",
+   "name": "Timescales of excitation and relaxation",
+   "statement": "Absorbing a photon takes about 10⁻¹⁵ s; internal conversion 10⁻¹⁴ to 10⁻¹¹ s; vibrational relaxation 10⁻¹² to 10⁻¹⁰ s; intersystem crossing 10⁻¹¹ to 10⁻⁶ s; fluorescence 10⁻⁹ to 10⁻⁶ s; phosphorescence 10⁻³ to 100 s."
+  },
+  {
+   "id": "level-population",
+   "kind": "definition",
+   "section": "15.2",
+   "name": "Population of a level",
+   "terms": [
+    "number density",
+    "population",
+    "populations"
+   ],
+   "symbol": "N_1",
+   "statement": "The number of atoms, or their number per unit volume, in a given energy state: N₁ in the lower and N₂ in the upper level of a two-level atom."
+  },
+  {
+   "id": "photon-absorption",
+   "kind": "definition",
+   "section": "15.2",
+   "name": "Absorption",
+   "terms": [
+    "absorption",
+    "photon absorption"
+   ],
+   "statement": "A photon of energy E₂ − E₁ = hν₁₂ is absorbed and the atom goes from level 1 to level 2. Atoms leave level 1 at the rate B₁₂ρ_ν(ν₁₂)N₁.",
+   "forms": [
+    {
+     "id": "absorption-rate",
+     "latex": "-\\dfrac {dN_1(t)}{dt}= B_{12}\\rho_{\\nu} (\\nu_{12}) N_{1}(t)"
+    }
+   ]
+  },
+  {
+   "id": "spontaneous-emission",
+   "kind": "definition",
+   "section": "15.2",
+   "name": "Spontaneous emission",
+   "terms": [
+    "spontaneous emission"
+   ],
+   "statement": "An atom in level 2 decays to level 1 without outside influence, emitting a photon of energy E₂ − E₁ = hν₂₁; the photons come out over a narrow spread of frequencies, the spectral linewidth. Atoms leave level 2 at the rate A₂₁N₂.",
+   "forms": [
+    {
+     "id": "spontaneous-rate",
+     "latex": "-\\dfrac {dN_2(t)}{dt}= A_{21}N_{2}(t)"
+    }
+   ]
+  },
+  {
+   "id": "stimulated-emission",
+   "kind": "definition",
+   "section": "15.2",
+   "name": "Stimulated emission",
+   "terms": [
+    "stimulated emission",
+    "induced emission"
+   ],
+   "statement": "A photon at the transition's frequency passing an atom in level 2 induces it to emit a second photon, with the same frequency, direction and phase as the first, which continues unaffected; thermodynamically it is negative absorption. Atoms are driven down at the rate B₂₁ρ_ν(ν₂₁)N₂.",
+   "forms": [
+    {
+     "id": "stimulated-rate",
+     "latex": "\\dfrac {dN_1(t)}{dt}= B_{21}\\rho_{\\nu} (\\nu_{21}) N_{2}(t)"
+    }
+   ]
+  },
+  {
+   "id": "laser",
+   "kind": "definition",
+   "section": "15.2",
+   "name": "Laser",
+   "terms": [
+    "laser",
+    "lasers",
+    "lasing"
+   ],
+   "statement": "Light amplification by the stimulated emission of radiation: a source whose light is made, and amplified, by stimulated emission."
+  },
+  {
+   "id": "thermal-population-ratio",
+   "kind": "result",
+   "section": "15.2",
+   "name": "Populations of two levels in thermal equilibrium",
+   "statement": "At temperature T the lower level outnumbers the upper by the Boltzmann factor of their energy difference, weighted by their degeneracies. At room temperature, where k_BT is about 1/40 eV, a 1 eV gap leaves e⁴⁰ ≈ 2.4 × 10¹⁷ times more atoms in the lower level.",
+   "forms": [
+    {
+     "id": "two-level-boltzmann",
+     "latex": "N_1 = N_2 \\, e^{\\dfrac{\\Delta E}{k_BT}}"
+    },
+    {
+     "id": "two-level-boltzmann-g",
+     "latex": "N_2/N_1 =\\dfrac{g_2}{g_1} e^{(-h\\nu_{12})/(k_BT)}"
+    },
+    {
+     "id": "two-level-boltzmann-g-inverse",
+     "latex": "N_1/N_2 =\\dfrac{g_1}{g_2} e^{(h\\nu_{12})/(k_BT)}"
+    }
+   ]
+  },
+  {
+   "id": "no-lasing-at-equilibrium",
+   "kind": "idea",
+   "section": "15.2",
+   "name": "No amplification at thermal equilibrium",
+   "statement": "A photon is as likely to be absorbed by an atom in the lower level as to stimulate emission from one in the upper level, but in thermal equilibrium far more atoms sit in the lower level, so light is absorbed far more often than it is amplified: no laser."
+  },
+  {
+   "id": "einstein-coefficients",
+   "kind": "definition",
+   "section": "15.2",
+   "name": "Einstein coefficients",
+   "terms": [
+    "Einstein coefficient",
+    "Einstein coefficients"
+   ],
+   "statement": "The proportionality constants of Einstein's rate equations: B₁₂ for absorption and B₂₁ for stimulated emission (in m³ J⁻¹ s⁻²), each multiplying the spectral radiant energy density ρ_ν and the population of the starting level, and A₂₁ (in s⁻¹), the probability per unit time of spontaneous emission."
+  },
+  {
+   "id": "two-level-rate-equation",
+   "kind": "result",
+   "section": "15.2",
+   "name": "Rate equation of a two-level system",
+   "statement": "With light of the right frequency present, absorption, spontaneous emission and stimulated emission go on at once, and the populations change at the net rate of the three.",
+   "forms": [
+    {
+     "id": "two-level-rates",
+     "latex": "-\\dfrac {dN_1(t)}{dt} = \\dfrac {dN_2(t)}{dt}= B_{12}\\rho_{\\nu} (\\nu_{12}) N_{1}(t) - A_{21}N_{2}(t) - B_{21}\\rho_{\\nu} (\\nu_{21}) N_{2}(t)"
+    }
+   ]
+  },
+  {
+   "id": "einstein-relations",
+   "kind": "result",
+   "section": "15.2",
+   "name": "Relations between the Einstein coefficients",
+   "statement": "Requiring the rate equation at thermal equilibrium to give Planck's distribution fixes A₂₁/B₂₁ = 8πhν₁₂³/c³ and g₁B₁₂ = g₂B₂₁, so one coefficient gives the other two.",
+   "forms": [
+    {
+     "id": "einstein-a-over-b",
+     "latex": "\\dfrac{A_{21}}{B_{21}} = \\dfrac{8\\pi h \\nu_{12}^3}{c^3}"
+    },
+    {
+     "id": "einstein-b-ratio",
+     "latex": "\\dfrac{g_1B_{12}}{g_2B_{21}} = 1"
+    }
+   ]
+  },
+  {
+   "id": "net-upper-state-rate",
+   "kind": "result",
+   "section": "15.2",
+   "name": "Rate equation in the net upper population",
+   "statement": "With g₁B₁₂ = g₂B₂₁ the upper level's rate equation collects into spontaneous emission plus a stimulated term proportional to the net upper population N₂ − (g₂/g₁)N₁.",
+   "forms": [
+    {
+     "id": "net-upper-rate",
+     "latex": "\\dfrac {dN_2(t)}{dt}= - A_{21}N_{2} - B_{21}\\rho_{\\nu} (\\nu_{12}) \\left(N_2 - \\dfrac{g_2}{g_1}N_1\\right)"
+    }
+   ]
+  },
+  {
+   "id": "population-inversion",
+   "kind": "definition",
+   "section": "15.2",
+   "name": "Population inversion",
+   "terms": [
+    "population inversion"
+   ],
+   "statement": "A state in which the net upper population N₂ − (g₂/g₁)N₁ is positive, so that light is amplified rather than absorbed; optical amplification and lasing occur only then. It needs energy supplied to the system by optical, electrical or thermal means.",
+   "forms": [
+    {
+     "id": "inversion-condition",
+     "latex": "N_2 - \\dfrac{g_2}{g_1}N_1 > 0"
+    },
+    {
+     "id": "inversion-equal-g",
+     "latex": "N_2 > N_1",
+     "condition": "g_1 = g_2",
+     "section": "15.3"
+    }
+   ]
+  },
+  {
+   "id": "laser-light-properties",
+   "kind": "idea",
+   "section": "15.3",
+   "name": "Properties of laser light",
+   "terms": [
+    "coherent",
+    "coherence",
+    "monochromatic",
+    "monochromaticity",
+    "collimated",
+    "directionality"
+   ],
+   "statement": "A laser's light should be coherent, its photons in phase with one another; monochromatic, of one frequency; and collimated, a sharp pencil-like beam; and the laser should be efficient."
+  },
+  {
+   "id": "laser-efficiency",
+   "kind": "definition",
+   "section": "15.3",
+   "name": "Efficiency of a laser",
+   "terms": [
+    "efficiency",
+    "efficient"
+   ],
+   "statement": "The ratio of a laser's output energy to its input energy. A typical He–Ne laser's is near 0.1 %: 1 mW of light for every watt drawn."
+  },
+  {
+   "id": "metastable-state",
+   "kind": "definition",
+   "section": "15.3",
+   "name": "Metastable state",
+   "terms": [
+    "meta-stable state",
+    "metastable",
+    "metastable level"
+   ],
+   "statement": "A long-lived excited state, with lifetimes typically in the milliseconds, in which atoms can wait for a passing photon to stimulate their emission before they decay spontaneously; the upper lasing state must be one."
+  },
+  {
+   "id": "lasing-condition",
+   "kind": "result",
+   "section": "15.3",
+   "name": "Stimulated emission must outpace absorption",
+   "statement": "Lasing needs the rate of stimulated emission to exceed the rate of absorption; with B₂₁ = B₁₂ and the same spectral energy density, that is N₂ > N₁, a population inversion.",
+   "forms": [
+    {
+     "id": "stimulated-over-absorption",
+     "latex": "B_{21}\\rho_{\\nu} (\\nu_{21}) N_{2} > B_{12}\\rho_{\\nu} (\\nu_{12}) N_{1}"
+    }
+   ]
+  },
+  {
+   "id": "pumping",
+   "kind": "definition",
+   "section": "15.3",
+   "name": "Pumping",
+   "terms": [
+    "pump",
+    "pumping",
+    "pump source",
+    "optical pumping",
+    "pumping transition"
+   ],
+   "statement": "Supplying energy to the gain medium to raise its atoms into the excited state from which they lase: by an intense light (a flash lamp or another laser), an electric current or a discharge."
+  },
+  {
+   "id": "two-level-no-inversion",
+   "kind": "result",
+   "section": "15.3",
+   "name": "No inversion in a two-level system",
+   "statement": "In a two-level atom the pump drives the lasing transition itself, raising atoms and stimulating their return at the same rate, so continuous pumping brings the upper population at most up to the lower one and never past it; such a laser could work only in jolts."
+  },
+  {
+   "id": "three-level-laser",
+   "kind": "idea",
+   "section": "15.4",
+   "name": "Three-level laser",
+   "terms": [
+    "three-level system",
+    "three-level laser",
+    "three-level atom"
+   ],
+   "statement": "Pumping between the ground state and a third, upper level, the pair with the greatest energy difference, that decays into a metastable level of intermediate energy. Lasing then runs from the upper level to the metastable one, or from the metastable level to the ground state, at a frequency off-resonant with the pump, so the pump does not trigger stimulated emission."
+  },
+  {
+   "id": "ruby-laser",
+   "kind": "idea",
+   "section": "15.4",
+   "name": "Ruby laser",
+   "terms": [
+    "Maiman's ruby laser",
+    "ruby laser",
+    "flash lamp"
+   ],
+   "statement": "Maiman's ruby laser, the first laser to operate: a three-level laser lasing from the metastable level of the Cr³⁺ ions in ruby to the ground state. A flash lamp must empty the ground state, so it lases in pulses: the lamp's light lasts about 1 ms and the laser pulse about 0.1 ms."
+  },
+  {
+   "id": "three-level-transitions",
+   "kind": "definition",
+   "section": "15.4",
+   "name": "Transitions of a three-level system",
+   "statement": "The nine events of a three-level system: absorption, spontaneous and stimulated emission between each pair of levels, each with its rate term such as ρ_ν(ν₁₃)B₁₃N₁ or A₃₂N₃. In most three-level lasers emission from level 3 to level 1 and absorption from level 1 to level 2 are negligible, which leaves at most five."
+  },
+  {
+   "id": "metastable-level-inversion",
+   "kind": "result",
+   "section": "15.4",
+   "name": "Inversion on the metastable level",
+   "statement": "When spontaneous emission from the upper level into the metastable level is much faster than absorption or stimulated emission between them, the pumped atoms collect in the metastable level, and its population can exceed the ground state's: an inversion between levels 2 and 1."
+  },
+  {
+   "id": "gain-medium",
+   "kind": "definition",
+   "section": "15.4",
+   "name": "Gain medium",
+   "terms": [
+    "gain medium",
+    "active medium"
+   ],
+   "statement": "A collection of atoms or molecules that can attain a population inversion and so undergo stimulated emission and lase. It can be a gas, a liquid or a solid, a pure substance or a solution."
+  },
+  {
+   "id": "three-level-steady-state",
+   "kind": "result",
+   "section": "15.4",
+   "name": "Steady state of a three-level laser",
+   "statement": "At steady state each population is constant. For lasing from level 3 to level 2 the ratio N₃/N₂ follows from level 2's rate equation, and level 3 outnumbers level 2 when atoms in level 2 decay to the ground state faster than atoms in level 3 decay into level 2 (A₂₁ > A₃₂).",
+   "forms": [
+    {
+     "id": "three-level-ratio",
+     "latex": "\\dfrac{N_3}{N_2} = \\dfrac{A_{21} + \\rho_{\\nu}(\\nu_{32})B_{32}}{A_{32} + \\rho_{\\nu}(\\nu_{32})B_{32}}"
+    },
+    {
+     "id": "three-level-total",
+     "latex": "N_1(t) + N_2(t) + N_3(t) = N_{total}"
+    },
+    {
+     "id": "three-level-balance",
+     "latex": "N_2(A_{21} + \\rho_{\\nu}(\\nu_{32})B_{32}) = N_3(A_{32} + \\rho_{\\nu}(\\nu_{32})B_{32})"
+    }
+   ]
+  },
+  {
+   "id": "four-level-laser",
+   "kind": "definition",
+   "section": "15.4",
+   "name": "Four-level laser",
+   "terms": [
+    "four-level laser",
+    "four-level lasers",
+    "four energy levels"
+   ],
+   "statement": "A laser whose lower lasing level is not the ground state, so it can be pumped more efficiently; He–Ne and Nd:YAG lasers are four-level lasers."
+  },
+  {
+   "id": "optical-cavity",
+   "kind": "definition",
+   "section": "15.5",
+   "name": "Optical cavity",
+   "terms": [
+    "optical cavity",
+    "laser optical cavity",
+    "resonator",
+    "output coupler",
+    "modes"
+   ],
+   "statement": "A pair of mirrors around the gain medium that feed its light back through it again and again, which is where the amplification happens. One mirror, the output coupler, reflects most of the light but lets a portion leave as the beam; the light trapped between the mirrors forms standing waves called modes."
+  },
+  {
+   "id": "laser-components",
+   "kind": "idea",
+   "section": "15.5",
+   "name": "Parts of a laser",
+   "statement": "Most lasers have three parts: a gain medium that emits light of a specific frequency, a pump source that supplies its energy, and an optical cavity in which the light is amplified by passing through the medium again and again."
+  },
+  {
+   "id": "cw-and-pulsed-lasers",
+   "kind": "definition",
+   "section": "15.5",
+   "name": "Continuous-wave and pulsed lasers",
+   "terms": [
+    "continuous-wave",
+    "CW",
+    "cw",
+    "pulsed",
+    "continuous beam",
+    "pulsed beam"
+   ],
+   "statement": "A laser's beam is continuous or pulsed. Any laser can be pulsed by pumping it in regularly repeated bursts, but only a gain medium that can hold an inversion continuously gives a continuous-wave (CW) laser; the ruby laser cannot."
+  },
+  {
+   "id": "exciplex-laser",
+   "kind": "definition",
+   "section": "15.5",
+   "name": "Exciplex laser",
+   "terms": [
+    "exciplex",
+    "exciplex lasers",
+    "excimer",
+    "excimer laser"
+   ],
+   "statement": "A laser whose medium is an exciplex AB*, a gaseous species that exists only in an excited state: its lower, dissociated state holds no population, so the medium is inverted from the start, and the exciplex falls apart as it lases (XeCl* at 308 nm, KrF* at 249 nm). An excimer is an excited dimer AA*."
+  },
+  {
+   "id": "dye-laser",
+   "kind": "definition",
+   "section": "15.5",
+   "name": "Dye laser",
+   "terms": [
+    "dye laser",
+    "dye lasers",
+    "tunable laser",
+    "tuning element"
+   ],
+   "statement": "A laser whose gain medium is an organic dye, usually in solution, passed through a cell or a jet. It can be tuned continuously over a wide range (rhodamine 6G from 560 to 635 nm) by a tuning element, often a movable diffraction grating."
+  },
+  {
+   "id": "diode-laser",
+   "kind": "idea",
+   "section": "15.5",
+   "name": "Diode laser",
+   "terms": [
+    "diode lasers",
+    "diode laser"
+   ],
+   "statement": "A semiconductor such as GaAs emits light when an electron and a hole recombine; removing the electrons that fall into the holes quickly keeps the inversion, and the crystal's high refractive index traps the light inside it. Doping changes the colour: GaAs emits infrared, GaAs₀.₆P₀.₄ red."
+  },
+  {
+   "id": "excitation-transfer",
+   "kind": "idea",
+   "section": "15.6",
+   "name": "Excitation transfer from helium to neon",
+   "terms": [
+    "collisional excitation"
+   ],
+   "statement": "Excited helium atoms in the metastable 2³S and 2¹S states, which cannot decay by radiating, give their energy to neon atoms in collisions, filling the neon levels of nearly the same energy, 2p⁵4s and 2p⁵5s.",
+   "forms": [
+    {
+     "id": "he-ne-transfer-4s",
+     "latex": "He^* (2s^3 \\, S_1) + Ne(g) \\rightarrow He(g) + Ne^*(2p^54s)"
+    },
+    {
+     "id": "he-ne-transfer-5s",
+     "latex": "He^* (2s^1 \\, S_0) + Ne(g) \\rightarrow He(g) + Ne^*(2p^55s)"
+    }
+   ]
+  },
+  {
+   "id": "helium-neon-laser",
+   "kind": "idea",
+   "section": "15.6",
+   "name": "Helium–neon laser",
+   "terms": [
+    "He-Ne laser",
+    "He-Ne lasers",
+    "He-Ne",
+    "helium-neon laser"
+   ],
+   "statement": "The first continuous-wave laser: a four-level gas laser in which an electric discharge excites helium, helium hands its energy to neon's 4s and 5s levels, and neon lases down to its quickly emptied 4p and 3p levels, most often at 632.8 nm (5s → 3p); the mirrors choose the line. It gives a few mW, is very stable in wavelength and intensity, and runs near 0.1 % efficiency."
+  },
+  {
+   "id": "laser-spectroscopy",
+   "kind": "idea",
+   "section": "15.7",
+   "name": "Laser spectroscopy",
+   "terms": [
+    "laser spectroscopy"
+   ],
+   "statement": "Laser light's near monochromaticity, directionality and coherence make it a probe of atoms and molecules: one wavelength picks out one energy change, one component of a mixture or one quantum state, and a narrow, directed beam limits damage to the sample."
+  },
+  {
+   "id": "time-resolved-spectroscopy",
+   "kind": "idea",
+   "section": "15.7",
+   "name": "Time-resolved laser spectroscopy",
+   "terms": [
+    "time-resolved",
+    "short pulses"
+   ],
+   "statement": "Short laser pulses follow reactions, biological processes and excited states over time, down to very short timescales."
+  },
+  {
+   "id": "laser-induced-breakdown-spectroscopy",
+   "kind": "definition",
+   "section": "15.7",
+   "name": "Laser-induced breakdown spectroscopy",
+   "terms": [
+    "laser-induced break down spectroscopy",
+    "LIBS"
+   ],
+   "statement": "A technique in which an intense laser turns a solid or liquid sample into a plasma, which is then probed."
+  },
+  {
+   "id": "nonlinear-spectroscopy",
+   "kind": "idea",
+   "section": "15.7",
+   "name": "Nonlinear spectroscopy",
+   "terms": [
+    "nonlinear spectroscopies"
+   ],
+   "statement": "High laser intensities make a sample behave in ways a weaker source cannot stimulate, which the nonlinear spectroscopies use."
+  }
+ ],
+ "concept_prereqs": [
+  {
+   "concept": "diamagnetism",
+   "prereq": "pauli-exclusion-principle"
+  },
+  {
+   "concept": "excited-singlet-and-triplet",
+   "prereq": "spin-multiplicity"
+  },
+  {
+   "concept": "excited-singlet-and-triplet",
+   "prereq": "diamagnetism"
+  },
+  {
+   "concept": "excited-singlet-and-triplet",
+   "prereq": "paramagnetism"
+  },
+  {
+   "concept": "spin-forbidden-transitions",
+   "prereq": "russell-saunders-selection-rules"
+  },
+  {
+   "concept": "spin-forbidden-transitions",
+   "prereq": "excited-singlet-and-triplet"
+  },
+  {
+   "concept": "fluorescence",
+   "prereq": "excited-singlet-and-triplet"
+  },
+  {
+   "concept": "fluorescence",
+   "prereq": "bohr-frequency-condition"
+  },
+  {
+   "concept": "phosphorescence",
+   "prereq": "intersystem-crossing"
+  },
+  {
+   "concept": "jablonski-diagram",
+   "prereq": "excited-singlet-and-triplet"
+  },
+  {
+   "concept": "jablonski-diagram",
+   "prereq": "vibronic-transition"
+  },
+  {
+   "concept": "deactivation-pathways",
+   "prereq": "jablonski-diagram"
+  },
+  {
+   "concept": "deactivation-pathways",
+   "prereq": "fluorescence"
+  },
+  {
+   "concept": "deactivation-pathways",
+   "prereq": "radiationless-transition"
+  },
+  {
+   "concept": "vibrational-relaxation",
+   "prereq": "vibronic-transition"
+  },
+  {
+   "concept": "fluorescence-red-shift",
+   "prereq": "fluorescence"
+  },
+  {
+   "concept": "fluorescence-red-shift",
+   "prereq": "vibrational-relaxation"
+  },
+  {
+   "concept": "fluorescence-red-shift",
+   "prereq": "franck-condon-principle"
+  },
+  {
+   "concept": "absorption-fluorescence-spectra",
+   "prereq": "fluorescence-red-shift"
+  },
+  {
+   "concept": "absorption-fluorescence-spectra",
+   "prereq": "zero-zero-transition"
+  },
+  {
+   "concept": "radiationless-transition",
+   "prereq": "vibrational-relaxation"
+  },
+  {
+   "concept": "internal-conversion",
+   "prereq": "radiationless-transition"
+  },
+  {
+   "concept": "intersystem-crossing",
+   "prereq": "radiationless-transition"
+  },
+  {
+   "concept": "intersystem-crossing",
+   "prereq": "spin-forbidden-transitions"
+  },
+  {
+   "concept": "intersystem-crossing",
+   "prereq": "hunds-rules"
+  },
+  {
+   "concept": "external-conversion",
+   "prereq": "radiationless-transition"
+  },
+  {
+   "concept": "external-conversion",
+   "prereq": "fluorescence"
+  },
+  {
+   "concept": "relaxation-timescales",
+   "prereq": "phosphorescence"
+  },
+  {
+   "concept": "relaxation-timescales",
+   "prereq": "internal-conversion"
+  },
+  {
+   "concept": "relaxation-timescales",
+   "prereq": "fluorescence"
+  },
+  {
+   "concept": "level-population",
+   "prereq": "ground-state"
+  },
+  {
+   "concept": "photon-absorption",
+   "prereq": "bohr-frequency-condition"
+  },
+  {
+   "concept": "photon-absorption",
+   "prereq": "level-population"
+  },
+  {
+   "concept": "spontaneous-emission",
+   "prereq": "bohr-frequency-condition"
+  },
+  {
+   "concept": "spontaneous-emission",
+   "prereq": "level-population"
+  },
+  {
+   "concept": "stimulated-emission",
+   "prereq": "bohr-frequency-condition"
+  },
+  {
+   "concept": "stimulated-emission",
+   "prereq": "level-population"
+  },
+  {
+   "concept": "laser",
+   "prereq": "stimulated-emission"
+  },
+  {
+   "concept": "thermal-population-ratio",
+   "prereq": "boltzmann-distribution"
+  },
+  {
+   "concept": "thermal-population-ratio",
+   "prereq": "level-population"
+  },
+  {
+   "concept": "thermal-population-ratio",
+   "prereq": "degree-of-degeneracy"
+  },
+  {
+   "concept": "no-lasing-at-equilibrium",
+   "prereq": "thermal-population-ratio"
+  },
+  {
+   "concept": "no-lasing-at-equilibrium",
+   "prereq": "stimulated-emission"
+  },
+  {
+   "concept": "no-lasing-at-equilibrium",
+   "prereq": "photon-absorption"
+  },
+  {
+   "concept": "einstein-coefficients",
+   "prereq": "photon-absorption"
+  },
+  {
+   "concept": "einstein-coefficients",
+   "prereq": "spontaneous-emission"
+  },
+  {
+   "concept": "einstein-coefficients",
+   "prereq": "stimulated-emission"
+  },
+  {
+   "concept": "einstein-coefficients",
+   "prereq": "spectral-energy-density"
+  },
+  {
+   "concept": "two-level-rate-equation",
+   "prereq": "einstein-coefficients"
+  },
+  {
+   "concept": "einstein-relations",
+   "prereq": "two-level-rate-equation"
+  },
+  {
+   "concept": "einstein-relations",
+   "prereq": "thermal-population-ratio"
+  },
+  {
+   "concept": "einstein-relations",
+   "prereq": "plancks-distribution-law"
+  },
+  {
+   "concept": "net-upper-state-rate",
+   "prereq": "einstein-relations"
+  },
+  {
+   "concept": "population-inversion",
+   "prereq": "net-upper-state-rate"
+  },
+  {
+   "concept": "laser-light-properties",
+   "prereq": "laser"
+  },
+  {
+   "concept": "laser-efficiency",
+   "prereq": "laser"
+  },
+  {
+   "concept": "metastable-state",
+   "prereq": "stimulated-emission"
+  },
+  {
+   "concept": "metastable-state",
+   "prereq": "spontaneous-emission"
+  },
+  {
+   "concept": "lasing-condition",
+   "prereq": "population-inversion"
+  },
+  {
+   "concept": "pumping",
+   "prereq": "population-inversion"
+  },
+  {
+   "concept": "two-level-no-inversion",
+   "prereq": "lasing-condition"
+  },
+  {
+   "concept": "two-level-no-inversion",
+   "prereq": "pumping"
+  },
+  {
+   "concept": "three-level-laser",
+   "prereq": "two-level-no-inversion"
+  },
+  {
+   "concept": "three-level-laser",
+   "prereq": "metastable-state"
+  },
+  {
+   "concept": "ruby-laser",
+   "prereq": "three-level-laser"
+  },
+  {
+   "concept": "three-level-transitions",
+   "prereq": "three-level-laser"
+  },
+  {
+   "concept": "metastable-level-inversion",
+   "prereq": "three-level-transitions"
+  },
+  {
+   "concept": "gain-medium",
+   "prereq": "population-inversion"
+  },
+  {
+   "concept": "three-level-steady-state",
+   "prereq": "three-level-transitions"
+  },
+  {
+   "concept": "four-level-laser",
+   "prereq": "three-level-laser"
+  },
+  {
+   "concept": "optical-cavity",
+   "prereq": "gain-medium"
+  },
+  {
+   "concept": "optical-cavity",
+   "prereq": "standing-wave"
+  },
+  {
+   "concept": "laser-components",
+   "prereq": "optical-cavity"
+  },
+  {
+   "concept": "laser-components",
+   "prereq": "pumping"
+  },
+  {
+   "concept": "cw-and-pulsed-lasers",
+   "prereq": "pumping"
+  },
+  {
+   "concept": "cw-and-pulsed-lasers",
+   "prereq": "gain-medium"
+  },
+  {
+   "concept": "exciplex-laser",
+   "prereq": "gain-medium"
+  },
+  {
+   "concept": "dye-laser",
+   "prereq": "optical-cavity"
+  },
+  {
+   "concept": "diode-laser",
+   "prereq": "gain-medium"
+  },
+  {
+   "concept": "excitation-transfer",
+   "prereq": "metastable-state"
+  },
+  {
+   "concept": "helium-neon-laser",
+   "prereq": "four-level-laser"
+  },
+  {
+   "concept": "helium-neon-laser",
+   "prereq": "excitation-transfer"
+  },
+  {
+   "concept": "helium-neon-laser",
+   "prereq": "optical-cavity"
+  },
+  {
+   "concept": "laser-spectroscopy",
+   "prereq": "laser-light-properties"
+  },
+  {
+   "concept": "time-resolved-spectroscopy",
+   "prereq": "laser-spectroscopy"
+  },
+  {
+   "concept": "time-resolved-spectroscopy",
+   "prereq": "cw-and-pulsed-lasers"
+  },
+  {
+   "concept": "laser-induced-breakdown-spectroscopy",
+   "prereq": "laser-spectroscopy"
+  },
+  {
+   "concept": "nonlinear-spectroscopy",
+   "prereq": "laser-spectroscopy"
+  }
+ ]
+}

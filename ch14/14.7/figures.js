@@ -13,13 +13,13 @@ const tn = (v, d = 2) => { const s = v.toFixed(d); return /^-[0.]*$/.test(s) ? s
    intensities |<f|I_x|i>|^2, scaled so a free spin's line is 1: 1 + s for the two inner lines and 1 - s for the
    outer two, s = J/(2C). Levels: the two outer levels sit a fixed drawn gap above and below the middle pair,
    since nu (hundreds of MHz) dwarfs the hertz the figure is about; the energy axis is broken there.
-   Spectrum: frequency offset from nu = (nu1 + nu2)/2, fixed -45 to 45 Hz (the widest line at d = 50 Hz,
-   J = 20 Hz is 37 Hz out); intensity fixed 0 to 4.4, two lines of 2 stacking to 4 at equal shifts.
+   Spectrum: frequency offset from nu = (nu1 + nu2)/2, fixed -40 to 40 Hz (the widest line at d = 40 Hz,
+   J = 20 Hz is 32 Hz out); intensity fixed 0 to 5, two lines of 2 stacking to 4 at equal shifts.
    Lines are drawn with a Lorentzian half-width of 0.6 Hz so that coincident lines add. Opens on the book's
    case, equal shifts, with the chapter's J = 6.1 Hz. */
 (function () {
-  const d = sim('sim-ab', 640);
-  const dv = ctl(d.controls, { label: '\\knuone - \\knutwo', cls: 'frequency', key: 'dnu', min: 0, max: 50, step: 0.5, value: 0, unit: 'Hz', dec: 1,
+  const d = sim('sim-ab', 720);
+  const dv = ctl(d.controls, { label: '\\knuone - \\knutwo', cls: 'frequency', key: 'dnu', min: 0, max: 40, step: 0.5, value: 0, unit: 'Hz', dec: 1,
     specials: [{ at: 0, label: 'equal shifts, A₂' }] });
   const Jc = ctl(d.controls, { label: '\\kJcc', cls: 'frequency', key: 'J', min: 0, max: 20, step: 0.1, value: 6.1, unit: 'Hz', dec: 1,
     specials: [{ at: 0, label: 'no coupling' }] });
@@ -41,22 +41,22 @@ const tn = (v, d = 2) => { const s = v.toFixed(d); return /^-[0.]*$/.test(s) ? s
     const eq = D < 0.25, free = J < 0.05;
     let head;
     if (eq && free) head = 'With equal shifts and no coupling all four levels give one line at $\\knu$.';
-    else if (eq) head = `Both allowed lines fall at $\\knu$. The singlet $|3\\rangle$ sits ${fmt(3 * J / 4, 2)} Hz lower, and no line reaches it.`;
+    else if (eq) head = `Both allowed lines fall at $\\knu$. The singlet $|3\\rangle$ sits ${fmt(J, 1)} Hz below $|2\\rangle$, and no line reaches it.`;
     else if (free) head = `Without coupling each nucleus gives one line, ${fmt(D, 1)} Hz apart.`;
     else head = `The two inner lines carry ${fmt(50 * (1 + s), 0)}% of the intensity and the two outer lines ${fmt(50 * (1 - s), 0)}%.`;
     topline(ctx, head);
 
     /* ---- the levels ---- */
-    const y0 = 345, G = 190, k = 3, xa = 70, x0 = 150, x1 = 400;
+    const y0 = 390, G = 230, k = 5, xa = 70, x0 = 150, x1 = 400;
     const Y = { 1: y0 - G - k * E1, 2: y0 - k * Ep, 3: y0 - k * Em, 4: y0 + G - k * E4 };
     const ghost = { 1: y0 - G, 2: y0 - k * D / 2, 3: y0 + k * D / 2, 4: y0 + G };
     /* the energy axis, broken where nu is left out */
     const ink = PAL.ink, en = C('energy');
-    line(ctx, xa, 560, xa, y0 - G - 70, alpha(en, 0.8), 3);
+    line(ctx, xa, 660, xa, y0 - G - 70, alpha(en, 0.8), 3);
     arrow(ctx, xa, y0 - G - 40, xa, y0 - G - 80, alpha(en, 0.8), 3);
     for (const yb of [y0 - G / 2, y0 + G / 2]) {
       line(ctx, xa - 12, yb - 4, xa + 12, yb - 12, en, 3); line(ctx, xa - 12, yb + 8, xa + 12, yb, en, 3); }
-    text(ctx, 'E/h', xa, y0 - G - 96, en, { size: 22, weight: 600, align: 'center' });
+    text(ctx, 'E/h', xa + 18, y0 - G - 62, en, { size: 22, weight: 600 });
     /* the levels without coupling, dashed */
     if (!free) for (const i of [1, 2, 3, 4]) line(ctx, x0, ghost[i], x1, ghost[i], alpha(ink, 0.35), 2, [10, 10]);
     for (const i of [1, 2, 3, 4]) line(ctx, x0, Y[i], x1, Y[i], en, 5);
@@ -76,8 +76,8 @@ const tn = (v, d = 2) => { const s = v.toFixed(d); return /^-[0.]*$/.test(s) ? s
     });
 
     /* ---- the spectrum ---- */
-    const box = { l: 700, r: W - 60, t: 130, b: 530 };
-    const ax = axes(ctx, box, [-45, 45], [0, 4.4], { nx: 6, ny: 4, xl: 'frequency − ν (Hz)', yl: 'intensity', xc: C('frequency'), fy: (v) => fmt(v, 1) });
+    const box = { l: 700, r: W - 60, t: 140, b: 600 };
+    const ax = axes(ctx, box, [-40, 40], [0, 5], { nx: 8, ny: 5, xl: 'frequency − ν (Hz)', yl: 'intensity', xc: C('frequency'), fy: (v) => fmt(v, 0) });
     const S = (x) => lines.reduce((a, L) => a + L.I * lor(x - L.f), 0);
     plot(ctx, ax, S, ink, { w: 3 });
     /* where each line sits, in its arrow's colour, under the axis */

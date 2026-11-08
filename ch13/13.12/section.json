@@ -175,14 +175,14 @@
          "q"
         ]
        },
-       "cap": "The conjugate of $e^{iM'\\varphi}$ is $e^{-iM'\\varphi}$, so the two phases combine into $e^{i(M-M')\\varphi}$."
+       "cap": "$N_{JM}$ is a normalization constant. The conjugate of $e^{iM'\\varphi}$ is $e^{-iM'\\varphi}$, so the two phases combine into $e^{i(M-M')\\varphi}$."
       },
       {
        "tex": "\\mk{m}{(\\kmuz)_{J,M,J',M'}} = \\mk{c}{\\kmud\\,N_{JM}N_{J'M'}}\\mk{p}{\\int_{0}^{2 \\pi }e^{i(M-M')\\kvarphi}\\,d\\kvarphi}\\mk{q}{\\int_{-1}^{1}P_{J'}^{|M'|}(x)\\,x\\,P_{J}^{|M|}(x)\\,dx}",
        "uses": [
         2
        ],
-       "cap": "With $x = \\cos\\theta$, $dx = -\\sin\\theta\\,d\\theta$, and the limits $0$ and $\\pi$ become $1$ and $-1$."
+       "cap": "The standard substitution: with $x = \\cos\\theta$, $dx = -\\sin\\theta\\,d\\theta$, and the limits $0$ and $\\pi$ become $1$ and $-1$."
       }
      ],
      "note": "The book's integrand lacks the conjugate on $Y_{J'}^{M'}$, and after the substitution it drops the $x$ that $\\mu_z = \\mu\\cos\\theta$ brings; it also prints $e^{I(M-M')\\phi}$ for $e^{i(M-M')\\phi}$ and $x = \\cos q$ for $x = \\cos\\theta$."
@@ -209,7 +209,8 @@
       },
       {
        "tex": "\\mk{m}{\\Delta M} = \\mk{p}{0}",
-       "uses": []
+       "uses": [],
+       "cap": "So $\\Delta M = 0$ is part of the rigid rotator selection rule."
       }
      ],
      "note": "The book calls this the integral over $f$; it is the integral over $\\phi$."
@@ -243,7 +244,7 @@
        "map": {
         "p": "c"
        },
-       "cap": "With $M' = M$ the $\\varphi$ integrand is 1, and its integral is $2\\pi$."
+       "cap": "Integration over $\\varphi$ for $M = M'$ gives $2\\pi$."
       },
       {
        "tex": "\\mk{m}{(\\kmuz)_{J,M,J',M}} = \\mk{c}{2\\pi \\kmud\\,N_{JM}N_{J'M}}\\mk{q}{\\int_{-1}^{1}P_{J'}^{|M|}(x)\\left(\\dfrac{J-|M|+1}{2J+1}P_{J+1}^{|M|}(x)+\\dfrac{J+|M|}{2J+1}P_{J-1}^{|M|}(x)\\right)dx}",
@@ -256,7 +257,7 @@
        "uses": [
         3
        ],
-       "cap": "Each term is an overlap of two functions of the same $|M|$, which vanishes unless $J'$ is $J + 1$ or $J - 1$."
+       "cap": "Substituting into the integral one obtains an integral which will vanish unless $J' = J + 1$ or $J' = J - 1$: each term is an overlap of two functions of the same $|M|$."
       },
       {
        "tex": "\\mk{m}{\\Delta J} = \\mk{q}{\\pm 1}",

@@ -1,0 +1,429 @@
+{
+ "id": "15",
+ "dir": "ch15",
+ "title": "Lasers, Laser Spectroscopy, and Photochemistry",
+ "intro": {
+  "module": "11810",
+  "slug": "15:_Lasers_Laser_Spectroscopy_and_Photochemistry"
+ },
+ "summary": {
+  "module": "550572",
+  "slug": "15:_Lasers_Laser_Spectroscopy_and_Photochemistry/15.S:_Lasers_Laser_Spectroscopy_and_Photochemistry_(Summary)"
+ },
+ "sections": [
+  {
+   "id": "15.1",
+   "module": "13647",
+   "title": "Electronically Excited Molecules can Relax by a Number of Processes",
+   "slug": "15:_Lasers_Laser_Spectroscopy_and_Photochemistry/15.01:_Electronically_Excited_Molecules_can_Relax_by_a_Number_of_Processes"
+  },
+  {
+   "id": "15.2",
+   "module": "13648",
+   "title": "The Dynamics of Transitions can be Modeled by Rate Equations",
+   "slug": "15:_Lasers_Laser_Spectroscopy_and_Photochemistry/15.02:_The_Dynamics_of_Transitions_can_be_Modeled_by_Rate_Equations"
+  },
+  {
+   "id": "15.3",
+   "module": "13649",
+   "title": "A Two-Level System Cannot Achieve a Population Inversion",
+   "slug": "15:_Lasers_Laser_Spectroscopy_and_Photochemistry/15.03:_A_Two-Level_System_Cannot_Achieve_a_Population_Inversion"
+  },
+  {
+   "id": "15.4",
+   "module": "13650",
+   "title": "Population Inversion can be Achieved in a Three-Level System",
+   "slug": "15:_Lasers_Laser_Spectroscopy_and_Photochemistry/15.04:_Population_Inversion_can_be_Achieved_in_a_Three-Level_System"
+  },
+  {
+   "id": "15.5",
+   "module": "13651",
+   "title": "What is Inside a Laser?",
+   "slug": "15:_Lasers_Laser_Spectroscopy_and_Photochemistry/15.05:_What_is_Inside_a_Laser"
+  },
+  {
+   "id": "15.6",
+   "module": "13652",
+   "title": "The Helium-Neon Laser",
+   "slug": "15:_Lasers_Laser_Spectroscopy_and_Photochemistry/15.06:_The_Helium-Neon_Laser"
+  },
+  {
+   "id": "15.7",
+   "module": "13653",
+   "title": "Modern Applications of Laser Spectroscopy",
+   "slug": "15:_Lasers_Laser_Spectroscopy_and_Photochemistry/15.07:_Modern_Applications_of_Laser_Spectroscopy"
+  }
+ ],
+ "variables": [
+  {
+   "sym": "n",
+   "concept": "principal-quantum-number",
+   "meaning": "the principal quantum number of an electron",
+   "section": "15.1"
+  },
+  {
+   "sym": "l",
+   "concept": "angular-momentum-quantum-number",
+   "meaning": "the orbital angular momentum quantum number of an electron",
+   "section": "15.1"
+  },
+  {
+   "sym": "m_l",
+   "concept": "magnetic-quantum-number",
+   "meaning": "the magnetic quantum number of an electron",
+   "section": "15.1"
+  },
+  {
+   "sym": "m_s",
+   "concept": "spin-magnetic-quantum-number",
+   "meaning": "the spin magnetic quantum number of an electron, +½ or −½",
+   "section": "15.1"
+  },
+  {
+   "sym": "s",
+   "concept": "spin-magnetic-quantum-number",
+   "meaning": "an individual electron's spin, written s = +1/2 (up) or s = −1/2 (down); its m_s",
+   "section": "15.1"
+  },
+  {
+   "sym": "S",
+   "concept": "total-spin-quantum-number",
+   "meaning": "the total spin quantum number, from the sum of the electron spins",
+   "section": "15.1"
+  },
+  {
+   "sym": "v_qpp",
+   "concept": "vibrational-quantum-number",
+   "meaning": "the vibrational quantum number of the ground electronic state, written v″",
+   "section": "15.1"
+  },
+  {
+   "sym": "v_qp",
+   "concept": "vibrational-quantum-number",
+   "meaning": "the vibrational quantum number of the excited electronic state, written v′",
+   "section": "15.1"
+  },
+  {
+   "sym": "N_1",
+   "concept": "level-population",
+   "meaning": "the number density of atoms in level 1, the lower level",
+   "unit": "m⁻³",
+   "section": "15.2"
+  },
+  {
+   "sym": "N_2",
+   "concept": "level-population",
+   "meaning": "the number density of atoms in level 2",
+   "unit": "m⁻³",
+   "section": "15.2"
+  },
+  {
+   "sym": "dE",
+   "concept": "bohr-frequency-condition",
+   "meaning": "the energy difference between the two levels",
+   "unit": "eV",
+   "section": "15.2"
+  },
+  {
+   "sym": "T",
+   "meaning": "the temperature of the collection of atoms",
+   "unit": "K",
+   "section": "15.2"
+  },
+  {
+   "sym": "k_B",
+   "meaning": "Boltzmann's constant",
+   "section": "15.2"
+  },
+  {
+   "sym": "rho",
+   "type": "energy-density",
+   "meaning": "the radiant energy density of the light",
+   "unit": "J/m³",
+   "section": "15.2"
+  },
+  {
+   "sym": "rho_nu",
+   "concept": "spectral-energy-density",
+   "meaning": "the spectral radiant energy density, dρ/dν, of the light at the transition's frequency",
+   "unit": "J·s/m³",
+   "section": "15.2"
+  },
+  {
+   "sym": "B_12",
+   "concept": "einstein-coefficients",
+   "meaning": "the Einstein coefficient for absorption from level 1 to level 2",
+   "unit": "m³ J⁻¹ s⁻²",
+   "section": "15.2"
+  },
+  {
+   "sym": "A_21",
+   "concept": "einstein-coefficients",
+   "meaning": "the Einstein coefficient for spontaneous emission from level 2 to level 1, a probability per unit time",
+   "unit": "s⁻¹",
+   "section": "15.2"
+  },
+  {
+   "sym": "B_21",
+   "concept": "einstein-coefficients",
+   "meaning": "the Einstein coefficient for stimulated emission from level 2 to level 1",
+   "unit": "m³ J⁻¹ s⁻²",
+   "section": "15.2"
+  },
+  {
+   "sym": "E_1",
+   "type": "energy",
+   "meaning": "the energy of level 1",
+   "unit": "J",
+   "section": "15.2"
+  },
+  {
+   "sym": "E_2",
+   "type": "energy",
+   "meaning": "the energy of level 2",
+   "unit": "J",
+   "section": "15.2"
+  },
+  {
+   "sym": "nu_12",
+   "type": "frequency",
+   "meaning": "the frequency of the transition between levels 1 and 2, E₂ − E₁ = hν₁₂",
+   "unit": "Hz",
+   "section": "15.2"
+  },
+  {
+   "sym": "nu_21",
+   "type": "frequency",
+   "meaning": "the frequency of the transition between levels 2 and 1, the same as ν₁₂",
+   "unit": "Hz",
+   "section": "15.2"
+  },
+  {
+   "sym": "t",
+   "meaning": "the time",
+   "section": "15.2"
+  },
+  {
+   "sym": "h",
+   "concept": "plancks-constant",
+   "meaning": "Planck's constant",
+   "section": "15.2"
+  },
+  {
+   "sym": "c",
+   "meaning": "the speed of light",
+   "section": "15.2"
+  },
+  {
+   "sym": "g_1",
+   "concept": "degree-of-degeneracy",
+   "meaning": "the degeneracy of level 1",
+   "section": "15.2"
+  },
+  {
+   "sym": "g_2",
+   "concept": "degree-of-degeneracy",
+   "meaning": "the degeneracy of level 2",
+   "section": "15.2"
+  },
+  {
+   "sym": "N_1",
+   "concept": "level-population",
+   "meaning": "the number density of atoms in level 1, the lower level",
+   "unit": "m⁻³",
+   "section": "15.3"
+  },
+  {
+   "sym": "N_2",
+   "concept": "level-population",
+   "meaning": "the number density of atoms in level 2",
+   "unit": "m⁻³",
+   "section": "15.3"
+  },
+  {
+   "sym": "B_12",
+   "concept": "einstein-coefficients",
+   "meaning": "the Einstein coefficient for absorption from level 1 to level 2",
+   "unit": "m³ J⁻¹ s⁻²",
+   "section": "15.3"
+  },
+  {
+   "sym": "B_21",
+   "concept": "einstein-coefficients",
+   "meaning": "the Einstein coefficient for stimulated emission from level 2 to level 1",
+   "unit": "m³ J⁻¹ s⁻²",
+   "section": "15.3"
+  },
+  {
+   "sym": "rho_nu",
+   "concept": "spectral-energy-density",
+   "meaning": "the spectral radiant energy density, dρ/dν, of the light at the transition's frequency",
+   "unit": "J·s/m³",
+   "section": "15.3"
+  },
+  {
+   "sym": "nu_12",
+   "type": "frequency",
+   "meaning": "the frequency of the transition between levels 1 and 2, E₂ − E₁ = hν₁₂",
+   "unit": "Hz",
+   "section": "15.3"
+  },
+  {
+   "sym": "nu_21",
+   "type": "frequency",
+   "meaning": "the frequency of the transition between levels 2 and 1, the same as ν₁₂",
+   "unit": "Hz",
+   "section": "15.3"
+  },
+  {
+   "sym": "N_1",
+   "concept": "level-population",
+   "meaning": "the number density of atoms in level 1, the lower level",
+   "unit": "m⁻³",
+   "section": "15.4"
+  },
+  {
+   "sym": "N_2",
+   "concept": "level-population",
+   "meaning": "the number density of atoms in level 2",
+   "unit": "m⁻³",
+   "section": "15.4"
+  },
+  {
+   "sym": "N_3",
+   "concept": "level-population",
+   "meaning": "the number density of atoms in level 3, the highest of three",
+   "unit": "m⁻³",
+   "section": "15.4"
+  },
+  {
+   "sym": "N_total",
+   "meaning": "the total number density of atoms, spread over the three levels",
+   "unit": "m⁻³",
+   "section": "15.4"
+  },
+  {
+   "sym": "rho_nu",
+   "concept": "spectral-energy-density",
+   "meaning": "the spectral radiant energy density, dρ/dν, of the light at the transition's frequency",
+   "unit": "J·s/m³",
+   "section": "15.4"
+  },
+  {
+   "sym": "B_13",
+   "concept": "einstein-coefficients",
+   "meaning": "the Einstein coefficient for absorption from level 1 to level 3",
+   "unit": "m³ J⁻¹ s⁻²",
+   "section": "15.4"
+  },
+  {
+   "sym": "B_23",
+   "concept": "einstein-coefficients",
+   "meaning": "the Einstein coefficient for absorption from level 2 to level 3",
+   "unit": "m³ J⁻¹ s⁻²",
+   "section": "15.4"
+  },
+  {
+   "sym": "B_12",
+   "concept": "einstein-coefficients",
+   "meaning": "the Einstein coefficient for absorption from level 1 to level 2",
+   "unit": "m³ J⁻¹ s⁻²",
+   "section": "15.4"
+  },
+  {
+   "sym": "A_31",
+   "concept": "einstein-coefficients",
+   "meaning": "the Einstein coefficient for spontaneous emission from level 3 to level 1",
+   "unit": "s⁻¹",
+   "section": "15.4"
+  },
+  {
+   "sym": "A_32",
+   "concept": "einstein-coefficients",
+   "meaning": "the Einstein coefficient for spontaneous emission from level 3 to level 2",
+   "unit": "s⁻¹",
+   "section": "15.4"
+  },
+  {
+   "sym": "A_21",
+   "concept": "einstein-coefficients",
+   "meaning": "the Einstein coefficient for spontaneous emission from level 2 to level 1, a probability per unit time",
+   "unit": "s⁻¹",
+   "section": "15.4"
+  },
+  {
+   "sym": "B_31",
+   "concept": "einstein-coefficients",
+   "meaning": "the Einstein coefficient for stimulated emission from level 3 to level 1",
+   "unit": "m³ J⁻¹ s⁻²",
+   "section": "15.4"
+  },
+  {
+   "sym": "B_32",
+   "concept": "einstein-coefficients",
+   "meaning": "the Einstein coefficient for stimulated emission from level 3 to level 2, which the book also writes for absorption from level 2 to level 3",
+   "unit": "m³ J⁻¹ s⁻²",
+   "section": "15.4"
+  },
+  {
+   "sym": "B_21",
+   "concept": "einstein-coefficients",
+   "meaning": "the Einstein coefficient for stimulated emission from level 2 to level 1",
+   "unit": "m³ J⁻¹ s⁻²",
+   "section": "15.4"
+  },
+  {
+   "sym": "nu_13",
+   "type": "frequency",
+   "meaning": "the frequency of the transition between levels 1 and 3",
+   "unit": "Hz",
+   "section": "15.4"
+  },
+  {
+   "sym": "nu_31",
+   "type": "frequency",
+   "meaning": "the frequency of the transition between levels 3 and 1",
+   "unit": "Hz",
+   "section": "15.4"
+  },
+  {
+   "sym": "nu_32",
+   "type": "frequency",
+   "meaning": "the frequency of the transition between levels 3 and 2",
+   "unit": "Hz",
+   "section": "15.4"
+  },
+  {
+   "sym": "nu_23",
+   "type": "frequency",
+   "meaning": "the frequency of the transition between levels 2 and 3",
+   "unit": "Hz",
+   "section": "15.4"
+  },
+  {
+   "sym": "nu_12",
+   "type": "frequency",
+   "meaning": "the frequency of the transition between levels 1 and 2, E₂ − E₁ = hν₁₂",
+   "unit": "Hz",
+   "section": "15.4"
+  },
+  {
+   "sym": "nu_21",
+   "type": "frequency",
+   "meaning": "the frequency of the transition between levels 2 and 1, the same as ν₁₂",
+   "unit": "Hz",
+   "section": "15.4"
+  },
+  {
+   "sym": "t",
+   "meaning": "the time",
+   "section": "15.4"
+  },
+  {
+   "sym": "lambda",
+   "meaning": "the wavelength of a lasing transition of neon",
+   "unit": "nm",
+   "section": "15.6"
+  }
+ ]
+}
