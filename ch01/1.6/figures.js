@@ -49,7 +49,7 @@ const sciS = (x, dg = 2) => { const [m, e] = sciParts(x, dg); return e === 0 ? m
     for (let x = X0 + 60; x < X1; x += 200) {
       ctx.save(); ctx.beginPath(); ctx.arc(x, Y, 46, 0, 2 * Math.PI); ctx.fillStyle = alpha(PAL.ink, 0.07); ctx.fill();
       ctx.lineWidth = 2; ctx.strokeStyle = PAL.rule; ctx.stroke(); ctx.restore();
-      hits.push({ x, y: Y, r: 46, name: 'an atom of a solid, 0.1 nm from its neighbours' });
+      hits.push({ x, y: Y, r: 46, name: 'an atom of a solid, 0.1 nm from its neighbors' });
     }
     hbracket(ctx, X0 + 60, X0 + 260, Y + AMP + 34, PAL.muted, '0.1 nm', { side: 'below' });
     /* the matter wave, or a shaded band where it is too fine to draw */

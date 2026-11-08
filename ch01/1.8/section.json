@@ -4,12 +4,12 @@
  "chapter": "1",
  "title": "The Bohr Theory of the Hydrogen Atom",
  "short": "The Bohr atom",
- "lead": "By the laws of classical physics Rutherford’s nuclear atom could not last a moment. Bohr kept its orbiting electron but allowed it only certain orbits, and the section follows his argument from the force on the electron to the sizes and energies of those orbits, to the wave picture behind them, and on to the light the atom gives off when the electron jumps between them.",
+ "lead": "By the laws of classical physics Rutherford's nuclear atom could not last a moment. Bohr kept its orbiting electron but allowed it only certain orbits. His argument runs from the force on the electron to the sizes and energies of those orbits, then to the wave picture behind them and the light the atom gives off when the electron jumps between them.",
  "objectives": [
   "Introduce the fundamentals behind the Bohr Atom and demonstrate it can predict the Rydberg's equation for the atomic spectrum of hydrogen"
  ],
  "summary_html": "",
- "notes": "The page is adapted from Mark Tuckerman (New York University), Hanson, Harvey, Sweeney and Zielinski’s Quantum States of Atoms and Molecules, and Boundless, and the images of Figures 1.8.6 and 1.8.7 are folded with Figure 1.8.4 into the live hydrogen ladder.",
+ "notes": "Adapted from Mark Tuckerman (New York University), Hanson, Harvey, Sweeney and Zielinski's Quantum States of Atoms and Molecules, and Boundless. The images of Figures 1.8.6 and 1.8.7 are folded with Figure 1.8.4 into the live hydrogen ladder.",
  "ai": {
   "text": [
    {
@@ -26,7 +26,7 @@
  },
  "built": "2026-11-08",
  "exercises_lead": "",
- "exercise_notes": "The three exercises are the book’s, keyed by the book; their Bloom levels and concept tags are AI-chosen, and two slips in the keys carry corrections. Numeric answers accept 2% tolerance.",
+ "exercise_notes": "The three exercises and their keys are the book's. Their Bloom levels and concept tags are AI-chosen, and two slips in the keys carry corrections. Numeric answers accept a 2% tolerance.",
  "figures": [
   {
    "id": "sim-death-spiral",
@@ -493,7 +493,7 @@
          "n"
         ]
        },
-       "cap": "Solving for $\\kr$: since $n$ takes only whole values, so does the radius, which is written $\\krn$."
+       "cap": "Solving for $\\kr$. Because $n$ takes only whole values, the radius takes only certain values, written $\\krn$."
       },
       {
        "tex": "\\mk{r}{\\krn}=\\mk{c}{\\dfrac{4\\pi \\epsilon_0 \\hbar^2}{Z\\ke^2 \\kme}}\\mk{n}{n^2}=\\mk{a}{\\dfrac{\\kao}{Z}n^2}",
@@ -694,7 +694,7 @@
       }
      ],
      "src": "1.8",
-     "note": "The book identifies $R_H$ with $\\dfrac{m_e e^4}{8\\epsilon_0^2h^3}$, the constant of Equation 1.8.12 as it stands. That constant is the Rydberg constant in frequency units, $3.29\\times10^{15}$ Hz; the $R_H$ of Equation 1.5.1, $109{,}737\\ \\text{cm}^{-1}$, is it divided by $c$."
+     "note": "The book identifies $R_H$ with $\\dfrac{m_e e^4}{8\\epsilon_0^2h^3}$, the constant of Equation 1.8.12 as it stands. That constant is the Rydberg constant in frequency units, $3.29\\times10^{15}$ Hz; the $R_H$ of Equation 1.5.1, $109{,}737\\ \\text{cm}^{-1}$, is that constant divided by $c$."
     }
    ]
   }

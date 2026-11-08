@@ -131,7 +131,7 @@ function sciU(x, d = 2) { const e = expOf(x), m = x / Math.pow(10, e); return m.
     const y0 = a2.Y(Math.exp(-0.5));
     if (s > 0.02) hbracket(ctx, a2.X(p0 - s), a2.X(p0 + s), y0, cp, '±Δp', { side: 'below' });
     readout(d.readout,
-      `\\kdp_x\\kdx \\ge \\dfrac{\\hbar}{2}:\\quad \\kdp_x = \\dfrac{1.0546\\times10^{-34}\\ \\text{kg m}^2\\text{/s}}{2\\,(${fmt(dx, 0)}\\times10^{-12}\\ \\text{m})} = ${sciT(dp)}\\ \\text{kg m/s}`,
+      `\\kdp_x\\kdx \\ge \\dfrac{\\hbar}{2} \\\\ \\kdp_x = \\dfrac{1.0546\\times10^{-34}\\ \\text{kg m}^2\\text{/s}}{2\\,(${fmt(dx, 0)}\\times10^{-12}\\ \\text{m})} = ${sciT(dp)}\\ \\text{kg m/s}`,
       `For an electron that is $\\kdv = \\kdp/\\km$ = ${sciU(dv)} m/s.`);
   }
   register(d.fig, { update: () => {}, draw });

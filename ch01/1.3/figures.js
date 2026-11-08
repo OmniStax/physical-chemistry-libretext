@@ -138,8 +138,8 @@ const lightColour = (nm) => (nm >= 380 && nm <= 780 ? F.fact(spectral(nm)) : PAL
     plot(ctx, gd, (x) => (ke > 0 ? 0.4 * x : 0), PAL.ink, { w: 5 });
     dot(ctx, gd.X(I.v), gd.Y(rate), PAL.ink, true, 10);
     tex(d.readout, ke > 0
-      ? `\\kKE = h\\knu - \\kPhi = ${fmt(hv, 2)}\\ \\text{eV} - ${fmt(phi, 2)}\\ \\text{eV} = ${fmt(ke, 2)}\\ \\text{eV}, \\qquad \\ke\\kVstop = \\kKE \\Rightarrow \\kVstop = ${fmt(ke, 2)}\\ \\text{V}`
-      : `h\\knu = ${fmt(hv, 2)}\\ \\text{eV} < \\kPhi = ${fmt(phi, 2)}\\ \\text{eV}, \\qquad \\knu < \\knuo = ${fmt(nu0, 2)}\\times10^{14}\\ \\text{Hz}`);
+      ? `\\kKE = h\\knu - \\kPhi = ${fmt(hv, 2)}\\ \\text{eV} - ${fmt(phi, 2)}\\ \\text{eV} = ${fmt(ke, 2)}\\ \\text{eV} \\\\ \\ke\\kVstop = \\kKE \\Rightarrow \\kVstop = ${fmt(ke, 2)}\\ \\text{V}`
+      : `h\\knu = ${fmt(hv, 2)}\\ \\text{eV} < \\kPhi = ${fmt(phi, 2)}\\ \\text{eV} \\\\ \\knu < \\knuo = ${fmt(nu0, 2)}\\times10^{14}\\ \\text{Hz}`);
   }
   register(d.fig, { update: (dt) => { cy.step(dt, () => 1); step(Math.min(dt, 0.05)); }, draw });
 })();

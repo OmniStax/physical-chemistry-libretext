@@ -4,12 +4,12 @@
  "chapter": "1",
  "title": "de Broglie Waves can be Experimentally Observed",
  "short": "Observing de Broglie waves",
- "lead": "If particles carry de Broglie's wavelength, they should diffract and interfere as light does. The section sets the double-slit experiment for light beside the diffraction of electrons and neutrons, and turns to the electron microscope and neutron diffraction that make use of matter waves.",
+ "lead": "If particles carry de Broglie's wavelength, they should diffract and interfere as light does. The double-slit experiment for light sits beside the diffraction of electrons and neutrons, followed by the electron microscope and neutron diffraction, two uses of matter waves.",
  "objectives": [
   "To present the experimental evidence behind the wave-particle duality of matter"
  ],
  "summary_html": "",
- "notes": "The page is adapted from the LibreTexts Physical Chemistry text under CC BY-NC-SA 4.0, and the drawings of Figures 1.7.1, 1.7.2 and 1.7.3 are folded into one live double slit.",
+ "notes": "Adapted from the LibreTexts Physical Chemistry text under CC BY-NC-SA 4.0. The drawings of Figures 1.7.1, 1.7.2 and 1.7.3 are folded into one live double slit.",
  "ai": {
   "text": [
    {
@@ -26,7 +26,7 @@
  },
  "built": "2026-11-08",
  "exercises_lead": "",
- "exercise_notes": "The book sets no exercise here; both exercises are AI-written on the de Broglie wavelength in diffraction, one on the electrons of Davisson and Germer and one on the speed of neutrons for a diffraction experiment, with AI-computed answers. Numeric answers accept 2% tolerance.",
+ "exercise_notes": "The book sets no exercises here. Both are AI-written, with AI-computed answers, on the de Broglie wavelength in diffraction: one on the electrons of Davisson and Germer, one on the neutron speed a diffraction experiment needs. Numeric answers accept a 2% tolerance.",
  "figures": [
   {
    "id": "sim-double-slit",
@@ -169,7 +169,7 @@
       "unit": "J"
      }
     ],
-    "solution": "<p>a. Solving $\\lambda = h/mv$ for the velocity,</p>$$ v = \\dfrac{h}{m \\lambda} = \\dfrac{6.626 \\times 10^{-34}\\; kg \\cdot m^2/s}{(1.6749 \\times 10^{-27}\\; kg)(2.5 \\times 10^{-10}\\; m)} = 1.58 \\times 10^{3}\\; m/s $$<p>b. The kinetic energy is</p>$$ KE = \\dfrac{1}{2} m v^2 = \\dfrac{1}{2}(1.6749 \\times 10^{-27}\\; kg)(1.58 \\times 10^{3}\\; m/s)^2 = 2.10 \\times 10^{-21}\\; J $$<p>These are slow neutrons, about the speed a moderator leaves them with, much slower than the fast neutrons of fission.</p>"
+    "solution": "<p>a. Solving $\\lambda = h/mv$ for the velocity,</p>$$ v = \\dfrac{h}{m \\lambda} = \\dfrac{6.626 \\times 10^{-34}\\; kg \\cdot m^2/s}{(1.6749 \\times 10^{-27}\\; kg)(2.5 \\times 10^{-10}\\; m)} = 1.58 \\times 10^{3}\\; m/s $$<p>b. The kinetic energy is</p>$$ KE = \\dfrac{1}{2} m v^2 = \\dfrac{1}{2}(1.6749 \\times 10^{-27}\\; kg)(1.58 \\times 10^{3}\\; m/s)^2 = 2.10 \\times 10^{-21}\\; J $$<p>These are slow neutrons, about as fast as a moderator leaves them and much slower than the fast neutrons of fission.</p>"
    }
   }
  ],

@@ -4,14 +4,14 @@
  "chapter": "1",
  "title": "Matter Has Wavelike Properties",
  "short": "Matter waves",
- "lead": "Light had turned out to come in particles; de Broglie asked whether particles might in turn behave as waves. The section gives the wavelength he assigned to a particle of given momentum, the reasoning that led him to it, and why the wave nature of electrons had gone unnoticed.",
+ "lead": "Light had turned out to come in particles, and de Broglie asked whether particles might in turn behave as waves. He gave each particle a wavelength set by its momentum; his reasoning follows, along with why the wave nature of electrons had gone unnoticed.",
  "objectives": [
   "To introduce the wave-particle duality of light extends to matter",
   "To describe how matter (e.g., electrons and protons) can exhibit wavelike properties, e.g., interference and diffraction patterns",
   "To use algebra to find the de Broglie wavelength or momentum of a particle when either one of these quantities is given"
  ],
  "summary_html": "",
- "notes": "The page is adapted from the LibreTexts Physical Chemistry text under CC BY-NC-SA 4.0; nothing of the book was left out.",
+ "notes": "The page is adapted from the LibreTexts Physical Chemistry text under CC BY-NC-SA 4.0 and printed in full.",
  "ai": {
   "text": [
    {
@@ -28,7 +28,7 @@
  },
  "built": "2026-11-08",
  "exercises_lead": "",
- "exercise_notes": "Both exercises are the book’s, keyed by the book; their Bloom levels and concept tags are AI-chosen. Numeric answers accept 2% tolerance.",
+ "exercise_notes": "Both exercises are the book's, keyed by the book. Their Bloom levels and concept tags are AI-chosen. Numeric answers accept 2% tolerance.",
  "figures": [
   {
    "id": "sim-de-broglie",
@@ -148,7 +148,7 @@
   {
    "id": "c-momentum-exponent",
    "kind": "correction",
-   "html": "The book prints $\\sqrt{2.9 \\times 10^{-40}\\, kg^2\\, m^2/s^2}$; the product of $3.1 \\times 10^{-16}\\; kg \\cdot m^2/s^2$ and $9.109383 \\times 10^{-31}\\; kg$ is $2.9 \\times 10^{-46}\\, kg^2\\, m^2/s^2$, whose square root is the $1.7 \\times 10^{-23}\\; kg \\cdot m/s$ the book goes on to use."
+   "html": "The book prints $\\sqrt{2.9 \\times 10^{-40}\\, kg^2\\, m^2/s^2}$. The product of $3.1 \\times 10^{-16}\\; kg \\cdot m^2/s^2$ and $9.109383 \\times 10^{-31}\\; kg$ is $2.9 \\times 10^{-46}\\, kg^2\\, m^2/s^2$, whose square root is the $1.7 \\times 10^{-23}\\; kg \\cdot m/s$ the book goes on to use."
   }
  ],
  "derivations": [

@@ -108,12 +108,12 @@ function particle(ctx, x, y, r, sym) {
     if (!done && fNow <= 40) dot(ctx, ax.X(t / 1e-11), ax.Y(fNow), cf, true, 9);
     /* the headline and the readout */
     topline(ctx, done
-      ? `The electron has spiralled into the nucleus after ${fmt(T / 1e-11, 2)} × 10⁻¹¹ s, sweeping every frequency on the way: a continuous spectrum, not lines.`
+      ? `The electron has spiralled into the nucleus after ${fmt(T / 1e-11, 2)} × 10⁻¹¹ s, sweeping every frequency on the way, so its light spreads over a continuous spectrum.`
       : `After ${fmt(t / 1e-11, 2)} × 10⁻¹¹ s the electron is ${fmt(r, 1)} pm from the nucleus and circles ${fmt(fNow, 2)} × 10¹⁵ times a second; it reaches the nucleus at ${fmt(T / 1e-11, 2)} × 10⁻¹¹ s.`);
     const rr = Math.max(r, 4), v = speed(rr), f = freq(rr);
     readout(d.readout,
       `\\knu = \\dfrac{\\kv}{2\\pi \\kr} = \\dfrac{${fmt(v / 1e6, 2)}\\times10^{6}\\ \\text{m/s}}{2\\pi\\,(${fmt(rr, 1)}\\times10^{-12}\\ \\text{m})} = ${fmt(f / 1e15, 2)}\\times10^{15}\\ \\text{Hz}`,
-      `From $\\kr_0 = ${fmt(r0, 1)}$ pm the fall takes $${sciT(T)}$ s, and on the way the electron really circles about ${fmt(2 * freq(r0) * T / 1000, 0)} thousand times.`);
+      `From $\\kr_0 = ${fmt(r0, 1)}$ pm the fall takes $${sciT(T)}$ s, and the electron circles about ${fmt(2 * freq(r0) * T / 1000, 0)} thousand times on the way.`);
   }
   register(d.fig, { update: (dt) => cy.step(dt, () => 1), draw });
 })();
@@ -390,7 +390,7 @@ function particle(ctx, x, y, r, sym) {
       ? `Exactly ${k} wavelength${k > 1 ? 's' : ''} of ${fmt(lam, 1)} pm fit the orbit, every lap lands on the last, and the wave survives.`
       : `The orbit holds ${fmt(n, 2)} wavelengths of ${fmt(lam, 1)} pm; the laps fall out of step and after six of them only ${fmt(100 * keep, 0)}% of the wave is left.`);
     readout(d.readout,
-      `2\\pi \\kr = n\\klambda:\\quad 2\\pi\\,(476.3\\ \\text{pm}) = 2992.6\\ \\text{pm} = ${fmt(n, 2)}\\times ${fmt(lam, 1)}\\ \\text{pm}`,
+      `2\\pi \\kr = n\\klambda \\\\ 2\\pi\\,(476.3\\ \\text{pm}) = 2992.6\\ \\text{pm} = ${fmt(n, 2)}\\times ${fmt(lam, 1)}\\ \\text{pm}`,
       whole && k === 3 ? 'With $n = 3$ this is the de Broglie wavelength $\\klambda = h/\\kp$ of the electron on the third Bohr orbit, since $\\kme\\kv\\kr = 3\\hbar$.' : '');
   }
   register(d.fig, { update: () => {}, draw });

@@ -51,8 +51,8 @@ const visible = (nm) => nm >= 390 && nm <= 750;
     const mode = M.value, gas = GASES[G.value];
     const wC = M.a('continuous'), wA = M.a('absorption'), wE = M.a('emission'), wLamp = wC + wA, wCloud = wA + wE;
     const lines = gas.lines;
-    const head = mode === 'continuous' ? 'The lamp alone: every color from red to violet reaches the screen.'
-      : mode === 'absorption' ? `Cool ${G.value} in front of the lamp takes out thin dark lines at the wavelengths it absorbs.`
+    const head = mode === 'continuous' ? 'With the lamp alone, every color from red to violet reaches the screen.'
+      : mode === 'absorption' ? `Cool ${G.value} in front of the lamp absorbs at a few wavelengths and leaves thin dark lines there.`
       : `Hot ${G.value} on its own shines only at the same wavelengths, as bright lines on a dark screen.`;
     topline(ctx, head);
     hits.length = 0;
@@ -151,7 +151,7 @@ const visible = (nm) => nm >= 390 && nm <= 750;
       const x = ax.X(a);
       ctx.save(); ctx.beginPath(); ctx.moveTo(x, box.t - 4); ctx.lineTo(x - 8, box.t - 20); ctx.lineTo(x + 8, box.t - 20); ctx.closePath();
       ctx.strokeStyle = PAL.ink; ctx.lineWidth = 2; ctx.stroke(); ctx.restore();
-      hits.push({ x, y: box.t - 12, r: 12, name: `Ångström’s measurement, ${fmt(a, 2)} nm` });
+      hits.push({ x, y: box.t - 12, r: 12, name: `Ångström's measurement, ${fmt(a, 2)} nm` });
     });
     /* the lines up to n2, the newest one wider */
     for (let k = 3; k <= n; k++) {

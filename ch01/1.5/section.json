@@ -4,13 +4,13 @@
  "chapter": "1",
  "title": "The Rydberg Formula and the Hydrogen Atomic Spectrum",
  "short": "Rydberg formula",
- "lead": "Balmer’s formula fits the visible lines of hydrogen; Rydberg’s fits all of them. The section states Rydberg’s equation and uses it to find the other families of hydrogen lines, in the ultraviolet and the infrared.",
+ "lead": "Rydberg extended Balmer's formula from the visible lines of hydrogen to the rest of its spectrum. His equation comes first, then the other families of hydrogen lines in the ultraviolet and the infrared.",
  "objectives": [
   "Describe Rydberg's theory for the hydrogen spectra.",
   "Interpret the hydrogen spectrum in terms of the energy states of electrons."
  ],
  "summary_html": "",
- "notes": "The page is LibreTexts’ own, curated by Delmar Larsen, and nothing of it was left out.",
+ "notes": "The page is LibreTexts' own, curated by Delmar Larsen, and is printed in full.",
  "ai": {
   "text": [
    {
@@ -27,7 +27,7 @@
  },
  "built": "2026-11-08",
  "exercises_lead": "",
- "exercise_notes": "The one exercise is the book’s, keyed by the book; its Bloom level and concept tags are AI-chosen. Numeric answers accept 2% tolerance.",
+ "exercise_notes": "The one exercise is the book's, keyed by the book. Its Bloom level and concept tags are AI-chosen. Numeric answers accept 2% tolerance.",
  "figures": [
   {
    "id": "sim-rydberg",
@@ -117,7 +117,7 @@
   {
    "id": "lyman-alpha-wavenumber",
    "kind": "correction",
-   "html": "The table prints 82,2291 cm<sup>-1</sup>, a slip: $R_H(1 - 1/4)$ = 82,303 cm<sup>-1</sup> with $R_H$ = 109,737 cm<sup>-1</sup>, and Example 1.5.1 finds 82,280 cm<sup>-1</sup> with $R_H$ rounded to $1.097 \\times 10^{7}\\, m^{-1}$."
+   "html": "The table prints 82,2291 cm<sup>-1</sup>, a misprint. $R_H(1 - 1/4)$ = 82,303 cm<sup>-1</sup> with $R_H$ = 109,737 cm<sup>-1</sup>, and Example 1.5.1 finds 82,280 cm<sup>-1</sup> with $R_H$ rounded to $1.097 \\times 10^{7}\\, m^{-1}$."
   }
  ]
 }

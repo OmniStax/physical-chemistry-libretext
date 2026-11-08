@@ -145,7 +145,7 @@ function rng(seed) { let s = seed >>> 0; return () => { s = (s + 0x6D2B79F5) >>>
     const dT = `${fmt(dd, light ? 2 : 3)}\\ ${q.unitT}`;
     topline(ctx, `${who} of $\\klambda = ${lamT}$ through slits $${dT}$ apart: $\\klambda/d = ${fmt(ratio, 2)}$, and ${bright} bright ${bright === 1 ? 'band falls' : 'bands fall'} on the screen.`);
     if (light) tex(d.readout, `\\dfrac{\\klambda}{d} = \\dfrac{${fmt(LAM.v, 0)}\\ \\text{nm}}{${fmt(dd * 1000, 0)}\\ \\text{nm}} = ${fmt(ratio, 2)}`);
-    else tex(d.readout, `\\klambda = \\dfrac{h}{\\km\\kv} = \\dfrac{6.626\\times10^{-34}\\ \\text{J s}}{(${q.mT}\\ \\text{kg})(${sciT(v)}\\ \\text{m/s})} = ${lamT},\\qquad \\dfrac{\\klambda}{d} = ${fmt(ratio, 2)}`);
+    else tex(d.readout, `\\klambda = \\dfrac{h}{\\km\\kv} = \\dfrac{6.626\\times10^{-34}\\ \\text{J s}}{(${q.mT}\\ \\text{kg})(${sciT(v)}\\ \\text{m/s})} = ${lamT} \\\\ \\dfrac{\\klambda}{d} = ${fmt(ratio, 2)}`);
   }
   register(d.fig, { update: (dt) => cy.step(dt, () => 1), draw });
 })();
