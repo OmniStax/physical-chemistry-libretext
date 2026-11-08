@@ -102,9 +102,9 @@ const DARK = '#111114';
    Still: a choice of pair, which the strip zooms to; nothing in time.
    The six wavelengths are the example's. Levels schematic (energies not to
    scale: 3s 0, 3p 16956 and 16973, 5s 33201, 4d 34549 cm^-1, NIST), the 3p
-   pair drawn 14 units apart with its true gap written by it. The strip is
+   pair drawn 22 units apart with its true gap written by it. The strip is
    a dark plate with each line in its own colour (fact); all six span 560
-   to 622 nm, a picked pair a 2.4 nm window about its centre (choice.mix
+   to 620 nm, a picked pair a 2.4 nm window about its centre (choice.mix
    blends the window). The readout writes the pair's separation in cm^-1
    from its two wavelengths: 17.1, 17.0, 17.3, each the 3p gap of 17.2.
 ===================================================================== */
@@ -116,7 +116,7 @@ const DARK = '#111114';
     '4d': { lam: [568.82, 568.26], up: '4d', s: '4d → 3p' },
   };
   const K = F.choice(d.controls, { label: 'lines', key: 'pair', options: [{ value: 'all', label: 'all six' }, ...Object.keys(PAIRS).map((k) => ({ value: k, label: PAIRS[k].s }))], value: 'all', aria: 'which pair of lines to spread out' });
-  const win = (v) => (v === 'all' ? [560, 622] : ((c) => [c - 1.2, c + 1.2])((PAIRS[v].lam[0] + PAIRS[v].lam[1]) / 2));
+  const win = (v) => (v === 'all' ? [560, 620] : ((c) => [c - 1.2, c + 1.2])((PAIRS[v].lam[0] + PAIRS[v].lam[1]) / 2));
   const dnu = (l) => (1 / Math.min(...l) - 1 / Math.max(...l)) * 1e7;
   const hits = [];
   F.hover(d.stage, () => hits);
@@ -126,16 +126,16 @@ const DARK = '#111114';
     const lo = K.mix((x) => win(x)[0]), hi = K.mix((x) => win(x)[1]);
     topline(ctx, v === 'all' ? 'Each of sodium\'s lines is doubled by the 17.2 cm⁻¹ split of its 3p level.' : `The ${PAIRS[v].s} lines at ${fmt(Math.min(...PAIRS[v].lam), 2)} and ${fmt(Math.max(...PAIRS[v].lam), 2)} nm are ${fmt(dnu(PAIRS[v].lam), 1)} cm⁻¹ apart.`);
     /* the levels, schematic */
-    const Ly = { '3s': 450, p1: 300, p3: 286, '5s': 150, '4d': 130 };
-    const seg = (y, x0, x1, s, nm) => { line(ctx, x0, y, x1, y, PAL.ink, 4); text(ctx, s, x0 - 10, y, PAL.ink, { size: 18, align: 'right', base: 'middle' }); hits.push({ x: (x0 + x1) / 2, y, r: 12, name: nm }); };
-    seg(Ly['3s'], 160, 620, '3s ^2S_{1/2}', 'the ground level 3s ²S₁/₂');
-    seg(Ly.p1, 160, 620, '3p ^2P_{1/2}', '3p ²P₁/₂, 16 956 cm⁻¹ above 3s');
-    seg(Ly.p3, 160, 620, '^2P_{3/2}', '3p ²P₃/₂, 17.2 cm⁻¹ above ²P₁/₂');
-    seg(Ly['5s'], 220, 330, '5s ^2S_{1/2}', '5s ²S₁/₂, 33 201 cm⁻¹ above 3s');
-    seg(Ly['4d'], 380, 490, '4d ^2D', '4d ²D, 34 549 cm⁻¹ above 3s');
-    text(ctx, '17.2 cm⁻¹ apart (gap enlarged)', 630, Ly.p3 - 2, PAL.muted, { size: 17, base: 'middle' });
+    const Ly = { '3s': 450, p1: 304, p3: 282, '5s': 150, '4d': 130 };
+    const seg = (y, x0, x1, s, nm, dy = 0) => { line(ctx, x0, y, x1, y, PAL.ink, 4); text(ctx, s, x0 - 10, y + dy, PAL.ink, { size: 22, align: 'right', base: 'middle' }); hits.push({ x: (x0 + x1) / 2, y, r: 10, name: nm }); };
+    seg(Ly['3s'], 200, 620, '3s ²S₁/₂', 'the ground level 3s ²S₁/₂');
+    seg(Ly.p1, 200, 620, '3p ²P₁/₂', '3p ²P₁/₂, 16 956 cm⁻¹ above 3s', 8);
+    seg(Ly.p3, 200, 620, '3p ²P₃/₂', '3p ²P₃/₂, 17.2 cm⁻¹ above ²P₁/₂ (the gap is drawn enlarged)', -8);
+    seg(Ly['5s'], 230, 330, '5s ²S₁/₂', '5s ²S₁/₂, 33 201 cm⁻¹ above 3s');
+    seg(Ly['4d'], 390, 490, '4d ²D', '4d ²D, 34 549 cm⁻¹ above 3s');
+    text(ctx, '17.2 cm⁻¹', 634, (Ly.p1 + Ly.p3) / 2, PAL.muted, { size: 20, base: 'middle' });
     const tr = [
-      { k: '5s', x: 250, from: Ly['5s'], to: Ly.p1, lam: 616.07 }, { k: '5s', x: 290, from: Ly['5s'], to: Ly.p3, lam: 615.42 },
+      { k: '5s', x: 260, from: Ly['5s'], to: Ly.p1, lam: 616.07 }, { k: '5s', x: 300, from: Ly['5s'], to: Ly.p3, lam: 615.42 },
       { k: '4d', x: 410, from: Ly['4d'], to: Ly.p1, lam: 568.82 }, { k: '4d', x: 450, from: Ly['4d'], to: Ly.p3, lam: 568.26 },
       { k: '3p', x: 540, from: Ly.p1, to: Ly['3s'], lam: 589.59 }, { k: '3p', x: 580, from: Ly.p3, to: Ly['3s'], lam: 589.00 },
     ];
@@ -145,11 +145,11 @@ const DARK = '#111114';
       hits.push({ x: t.x, y: (t.from + t.to) / 2, r: 14, name: `${PAIRS[t.k].s}: ${fmt(t.lam, 2)} nm` });
     });
     /* the plate: the lines in the window, in their colours */
-    const sb = { l: 760, r: 1330, t: 190, b: 330 };
+    const sb = { l: 790, r: 1330, t: 190, b: 330 };
     ctx.save(); ctx.fillStyle = F.fact(DARK); ctx.fillRect(sb.l, sb.t, sb.r - sb.l, sb.b - sb.t); ctx.restore();
     const X = (nm) => sb.l + (nm - lo) / (hi - lo) * (sb.r - sb.l);
     tr.forEach((t) => { const x = X(t.lam); if (x < sb.l - 2 || x > sb.r + 2) return; line(ctx, x, sb.t + 8, x, sb.b - 8, F.fact(spectral(t.lam)), 4); });
-    const ax = axes(ctx, { l: sb.l, r: sb.r, t: sb.b, b: sb.b + 1 }, [lo, hi], [0, 1], { nx: 4, ny: 0, xl: 'wavelength λ (nm)', xc: cl, fx: (x) => fmt(x, hi - lo < 10 ? 1 : 0) });
+    const ax = axes(ctx, { l: sb.l, r: sb.r, t: sb.b, b: sb.b + 1 }, [lo, hi], [0, 1], { nx: 6, ny: 0, nice: true, xl: 'wavelength λ (nm)', xc: cl });
     void ax;
     if (v !== 'all' && K.k > 0.95) {
       const l = PAIRS[v].lam, ya = sb.t - 26, x0 = X(Math.min(...l)), x1 = X(Math.max(...l));
