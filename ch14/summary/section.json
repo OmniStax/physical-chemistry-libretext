@@ -1,0 +1,32 @@
+{
+ "id": "summary",
+ "module": "550569",
+ "chapter": "14",
+ "title": "Nuclear Magnetic Resonance Spectroscopy (Summary)",
+ "short": "Summary",
+ "lead": "",
+ "notes": "Written by Kyle Crabtree; the chapter's learning objectives, which the book prints on this page, are kept here.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": []
+ },
+ "built": "2026-11-08",
+ "figures": [],
+ "footnotes": [
+  {
+   "id": "c-proton-nmr",
+   "kind": "correction",
+   "html": "The second “NMR” means proton NMR, <sup>1</sup>H NMR, which the three reasons that follow are about."
+  },
+  {
+   "id": "c-untaught",
+   "kind": "correction",
+   "html": "This chapter's pages do not teach the commutation relations of the spin operators, how a spectrometer's frequency follows from its field, perturbation theory for coupled protons, or the variational treatment of second-order spectra; the objectives and skill goals that name them refer to material the built pages leave out."
+  }
+ ]
+}

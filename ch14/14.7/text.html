@@ -1,5 +1,5 @@
 <section id="why-no-splitting">
-<h2>Why equivalent protons don't split</h2>
+<h2>Equivalent hydrogens and splitting</h2>
 <p>When doing NMR spectroscopy, it is an observed fact that <span data-concept="equivalent-nuclei-do-not-split">equivalent hydrogens do not split one another</span>. Why don't equivalent hydrogens split each other's signals? For example, why is the NMR spectrum for ethane a <span data-concept="multiplet-patterns">singlet</span> instead of a <span data-concept="multiplet-patterns">quartet</span> or even a dodecuplet (due to the hydrogens on the same carbon)? What is so special about hydrogens being equivalent to one another that causes no splitting to be observed?</p>
 </section>
 
@@ -75,8 +75,8 @@ $$ \begin{aligned} E_{4\leftrightarrow2} &= \dfrac{\kJcc}{4} - \left(-\knu + \df
 <p>When there are two distinct nuclei (<span data-concept="ax-spin-system">The AX case</span>) and there is <span data-concept="spin-spin-coupling">spin-spin interaction</span> ($J$ coupling) between them (in addition to <span data-concept="chemical-shift">chemical shift</span>) then fine structure can be observed in the nmr spectrum. The first diagram shows the energy levels and how they interact. Note how the $J$ coupling moves the levels up and down in addition to <span data-concept="chemical-shift">chemical shift</span>.</p>
 <p>Now there are <span data-concept="nmr-selection-rules">selection rules</span> that allow the radio frequency radiation to couple different levels together and so produce a spectrum. The rule is that the $m_z$ quantum number (variously called magnetic, or azimuthal or projection quantum number) has to change by $+1$ or $-1$. This means that in the first diagram only levels in which one alpha changes to beta or vice versa, as shown by the vertical arrows, are allowed transitions. (The selection rule occurs because the photon (even if at radio frequency) has one unit of angular momentum and total angular momentum is conserved.)</p>
 <p>In the equivalent nuclei case (called <span data-concept="a2-spin-system">A2</span>) the interaction between spins is still present but because of the magnetically identical nuclei the spin states are not either symmetrical or anti symmetrical to exchange of nuclei<sup class="fn" data-note="c-a2-symmetry"></sup> and a linear combination has to be made. This is shown on the left of the figure below. The reason that the splitting in energy levels is not observed is that selection rules make the transitions unobservable</p>
-<figure class="sim" id="sim-ab" data-figure="" data-original="/media/ch14/344398-LCkBM.png,/media/ch14/344400-xeaC4.png,/media/ch14/344399-htKbC.png" data-original-caption="">
-  <div class="sim-head"><span class="eyebrow">Figure</span><span>CAPTION</span></div>
+<figure class="sim" id="sim-ab" data-original="/media/ch14/344398-LCkBM.png,/media/ch14/344400-xeaC4.png,/media/ch14/344399-htKbC.png" data-original-caption="">
+  <div class="sim-head"><span class="eyebrow">Figure</span><span>Slide <span data-type="frequency">the shift difference</span> up from zero and the single line opens into two doublets, their inner lines taller than the outer ones. At zero the coupling still moves the levels, and no allowed line reaches the singlet $|3\rangle$.</span></div>
 </figure>
 <div class="note">
 <div class="eyebrow">Note</div>
@@ -88,6 +88,6 @@ $$ \dfrac{\mathrm d}{\mathrm dt}\krhohat=-\mathrm i[\kH,\krhohat] $$
 $$ \kH=\kOmegacs\kIonez+\kOmegacs\kItwoz+\kJcc(\kIonevec\cdot\kItwovec) $$
 <p>After a 90 degree pulse on both nuclei the density matrix $\krhohat$ is of the form $\hat{I}_{1\chi} + \hat{I}_{2\chi}$, where $\chi = x$ or $y$. Now it is a bit lengthy but easy to show that</p>
 <figure class="dv" id="drv-coupling-commutes"></figure>
-<p>meaning that <span data-concept="coupling-commutes-with-pulse">the coupling Hamiltonian does not influence the signal after a 90 degree pulse</span>, as $[\kH_\text{coupling},\krhohat] = 0$.</p>
+<p>meaning that <span data-concept="coupling-commutes-with-pulse">the coupling Hamiltonian does not influence the signal after a 90 degree pulse</span>, as $[\hat{H}_\text{coupling},\krhohat] = 0$.</p>
 </div>
 </section>

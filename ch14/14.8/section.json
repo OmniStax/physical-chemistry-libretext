@@ -1,0 +1,298 @@
+{
+ "id": "14.8",
+ "module": "13643",
+ "chapter": "14",
+ "title": "The n+1 Rule Applies Only to First-Order Spectra",
+ "short": "The n+1 rule",
+ "lead": "The (n+1) rule predicts how many lines a peak splits into from the number of equivalent nuclei it couples to. Three small molecules put it to work, the last with three different alkene hydrogens, each coupled to two others.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "The book's page carries no author credit; the table of couplings in molecule 3, printed as an image, is set as a table.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": []
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "Both exercises are new and AI-written, their answers checked by computation; their Bloom levels and concept tags were chosen by AI. Line counts accept only the exact number; other numeric answers accept a 2% tolerance.",
+ "figures": [
+  {
+   "id": "fig-molecule-1",
+   "kind": "figure",
+   "originals": [
+    "/media/ch14/24857-n+1rule1.png"
+   ],
+   "draws": [],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "kept as the book prints it"
+    }
+   ]
+  },
+  {
+   "id": "fig-molecule-2",
+   "kind": "figure",
+   "originals": [
+    "/media/ch14/24858-n+1rule2.png"
+   ],
+   "draws": [],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "kept as the book prints it"
+    }
+   ]
+  },
+  {
+   "id": "fig-molecule-3",
+   "kind": "figure",
+   "originals": [
+    "/media/ch14/24859-n+1rule3.png"
+   ],
+   "draws": [],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "kept as the book prints it"
+    }
+   ]
+  },
+  {
+   "id": "fig-ha-partners",
+   "kind": "figure",
+   "originals": [
+    "/media/ch14/24861-n+1rule5.png"
+   ],
+   "draws": [],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "kept as the book prints it"
+    }
+   ]
+  },
+  {
+   "id": "fig-ha-tree",
+   "kind": "figure",
+   "originals": [
+    "/media/ch14/24862-n+1rule6.png"
+   ],
+   "draws": [],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "kept as the book prints it"
+    }
+   ]
+  },
+  {
+   "id": "fig-hb-partners",
+   "kind": "figure",
+   "originals": [
+    "/media/ch14/24863-n+1rule7.png"
+   ],
+   "draws": [],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "kept as the book prints it"
+    }
+   ]
+  },
+  {
+   "id": "fig-hb-tree",
+   "kind": "figure",
+   "originals": [
+    "/media/ch14/24864-n+1rule8.png"
+   ],
+   "draws": [],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "kept as the book prints it"
+    }
+   ]
+  },
+  {
+   "id": "fig-hc-partners",
+   "kind": "figure",
+   "originals": [
+    "/media/ch14/24865-n+1rule9.png"
+   ],
+   "draws": [],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "kept as the book prints it"
+    }
+   ]
+  },
+  {
+   "id": "fig-hc-tree",
+   "kind": "figure",
+   "originals": [
+    "/media/ch14/24856-n+1rule10.png"
+   ],
+   "draws": [],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "kept as the book prints it"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "one-set",
+   "concept": "peak-multiplicity",
+   "verb": "introduces"
+  },
+  {
+   "span": "one-set",
+   "concept": "n-plus-one-rule",
+   "verb": "reinforces"
+  },
+  {
+   "span": "one-set",
+   "concept": "multiplet-intensities",
+   "verb": "reinforces"
+  },
+  {
+   "span": "one-set",
+   "concept": "multiplet-patterns",
+   "verb": "uses"
+  },
+  {
+   "span": "one-set",
+   "concept": "spin-spin-coupling",
+   "verb": "uses"
+  },
+  {
+   "span": "several-sets",
+   "concept": "multiple-coupling-sets",
+   "verb": "introduces"
+  },
+  {
+   "span": "several-sets",
+   "concept": "predicting-splitting-patterns",
+   "verb": "introduces"
+  },
+  {
+   "span": "several-sets",
+   "concept": "doublet-of-doublets",
+   "verb": "reinforces"
+  },
+  {
+   "span": "several-sets",
+   "concept": "typical-coupling-constants",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "There are two sets of equivalent hydrogen nuclei in 2",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "one-set",
+   "prompt": "<p>Bromoethane, CH<sub>3</sub>CH<sub>2</sub>Br, has two sets of equivalent hydrogen nuclei. Using the (n+1) Rule, how many lines are in (a) the peak of the CH<sub>2</sub> hydrogens and (b) the peak of the CH<sub>3</sub> hydrogens?</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 4,
+      "tol": 0.1,
+      "hint": "Count the vicinal hydrogens that are not equivalent to the ones you are looking at."
+     },
+     {
+      "part": "b",
+      "value": 3,
+      "tol": 0.1
+     }
+    ],
+    "solution": "<p>The CH<sub>2</sub> hydrogens have three vicinal CH<sub>3</sub> hydrogens, so n = 3 and (n+1) = 4: a quartet, whose lines from Pascal’s triangle stand 1:3:3:1. The CH<sub>3</sub> hydrogens have two vicinal CH<sub>2</sub> hydrogens, so n = 2 and (n+1) = 3: a triplet, 1:2:1.</p>"
+   }
+  },
+  {
+   "id": "a2",
+   "source_id": "To determine the multiplicity of a peak of a nucleus coupled to more than one set of equivalent nuclei",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "several-sets",
+   "prompt": "<p>An alkene hydrogen $H_c$ couples to $H_b$ with $J_{trans} = 17.4$ Hz and to $H_a$ with $J_{cis} = 10.5$ Hz. (a) What is the multiplicity of its peak? (b) How far apart, in Hz, are the outermost two lines?</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 4,
+      "tol": 0.1
+     },
+     {
+      "part": "b",
+      "value": 27.9,
+      "unit": "Hz",
+      "hint": "Split by the larger coupling first, then split each line again by the smaller one."
+     }
+    ],
+    "solution": "<p>Applying the (n+1) Rule to each set gives $2 \\times 2 = 4$ lines, a doublet of a doublet. Splitting first by $J_{trans}$ puts two lines at $\\pm 8.7$ Hz from the centre; splitting each by $J_{cis}$ moves them $\\pm 5.25$ Hz, giving lines at $\\pm 13.95$ and $\\pm 3.45$ Hz. The outermost two are $17.4 + 10.5 = 27.9$ Hz apart.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "peak-multiplicity"
+  },
+  {
+   "exercise": "a1",
+   "concept": "predicting-splitting-patterns"
+  },
+  {
+   "exercise": "a2",
+   "concept": "multiple-coupling-sets"
+  },
+  {
+   "exercise": "a2",
+   "concept": "predicting-splitting-patterns"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-has",
+   "kind": "correction",
+   "html": "“$H_a$s” is “has”, here and in the four places below where the page prints it (“The peak $H_a$s one line”, “2 $H_a$s two peaks”, “The peak $H_a$s three lines”, “The peak $H_a$s two lines”)."
+  },
+  {
+   "id": "c-each-other",
+   "kind": "correction",
+   "html": "The rule is applied independently to each set of equivalent nuclei."
+  }
+ ]
+}

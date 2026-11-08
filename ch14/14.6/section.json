@@ -1,0 +1,644 @@
+{
+ "id": "14.6",
+ "module": "13641",
+ "chapter": "14",
+ "title": "Spin-Spin Coupling Can Lead to Multiplets in NMR Spectra",
+ "short": "Spin-spin coupling",
+ "lead": "A proton's NMR signal is split into subpeaks by its non-equivalent neighbours. Their number and heights come from the neighbours' spins, their spacing is the coupling constant, and two or more sets of neighbours give more complex patterns.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "Adapted from Tim Soderberg's Organic Chemistry With a Biological Emphasis (University of Minnesota, Morris), whose Chapter 5 solution manual, linked from the page, keys the five questions.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The five questions, printed as Examples 5.6 to 5.10, are keyed by the book's linked solution manual; the key of Example 5.10 is corrected under its card. The last exercise was written by AI with an AI solution. Bloom levels and concept tags were chosen by AI.",
+ "figures": [
+  {
+   "id": "sim-spectrum",
+   "kind": "sim",
+   "originals": [
+    "/media/ch14/5173-image058.png",
+    "/media/ch14/5193-image078.png"
+   ],
+   "original_caption": "",
+   "draws": [
+    "frequency"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "sim-splitting",
+   "kind": "sim",
+   "originals": [
+    "/media/ch14/5175-image060.png",
+    "/media/ch14/5177-image062.png"
+   ],
+   "original_caption": "",
+   "draws": [
+    "magnetic-field",
+    "frequency"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "fig-ethyl-acetate",
+   "kind": "figure",
+   "originals": [
+    "/media/ch14/5179-image064.png"
+   ],
+   "draws": [],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "kept as the book prints it"
+    }
+   ]
+  },
+  {
+   "id": "fig-equivalent",
+   "kind": "figure",
+   "originals": [
+    "/media/ch14/5181-image066.png"
+   ],
+   "draws": [],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "kept as the book prints it"
+    }
+   ]
+  },
+  {
+   "id": "fig-five-bonds",
+   "kind": "figure",
+   "originals": [
+    "/media/ch14/5183-image068.png"
+   ],
+   "draws": [],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "kept as the book prints it"
+    }
+   ]
+  },
+  {
+   "id": "fig-examples-1",
+   "kind": "figure",
+   "originals": [
+    "/media/ch14/5185-image070.png"
+   ],
+   "draws": [],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "kept as the book prints it"
+    }
+   ]
+  },
+  {
+   "id": "fig-examples-2",
+   "kind": "figure",
+   "originals": [
+    "/media/ch14/5187-image072.png"
+   ],
+   "draws": [],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "kept as the book prints it"
+    }
+   ]
+  },
+  {
+   "id": "fig-j-alkene",
+   "kind": "figure",
+   "originals": [
+    "/media/ch14/5195-image080.png"
+   ],
+   "draws": [],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "kept as the book prints it"
+    }
+   ]
+  },
+  {
+   "id": "fig-j-aryl",
+   "kind": "figure",
+   "originals": [
+    "/media/ch14/5197-image082.png"
+   ],
+   "draws": [],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "kept as the book prints it"
+    }
+   ]
+  },
+  {
+   "id": "fig-methyl-acrylate",
+   "kind": "figure",
+   "originals": [
+    "/media/ch14/5199-image084.png"
+   ],
+   "draws": [],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "kept as the book prints it"
+    }
+   ]
+  },
+  {
+   "id": "fig-hc-closeup",
+   "kind": "figure",
+   "originals": [
+    "/media/ch14/5201-image086.png"
+   ],
+   "draws": [],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "kept as the book prints it"
+    }
+   ]
+  },
+  {
+   "id": "sim-complex",
+   "kind": "sim",
+   "originals": [
+    "/media/ch14/5203-image088.png",
+    "/media/ch14/5205-image090.png",
+    "/media/ch14/5211-image096.png"
+   ],
+   "original_caption": "",
+   "draws": [
+    "frequency"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "fig-hb-closeup",
+   "kind": "figure",
+   "originals": [
+    "/media/ch14/5207-image092.png"
+   ],
+   "draws": [],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "kept as the book prints it"
+    }
+   ]
+  },
+  {
+   "id": "fig-trichloropropane",
+   "kind": "figure",
+   "originals": [
+    "/media/ch14/5209-image094.png"
+   ],
+   "draws": [],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "kept as the book prints it"
+    }
+   ]
+  },
+  {
+   "id": "fig-pentanone",
+   "kind": "figure",
+   "originals": [
+    "/media/ch14/5213-image098.png"
+   ],
+   "draws": [],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "kept as the book prints it"
+    }
+   ]
+  },
+  {
+   "id": "fig-toluene",
+   "kind": "figure",
+   "originals": [
+    "/media/ch14/5217-image102.png"
+   ],
+   "draws": [],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "kept as the book prints it"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "source-of-coupling",
+   "concept": "spin-spin-coupling",
+   "verb": "introduces"
+  },
+  {
+   "span": "source-of-coupling",
+   "concept": "multiplet-patterns",
+   "verb": "introduces"
+  },
+  {
+   "span": "source-of-coupling",
+   "concept": "splitting-diagram",
+   "verb": "introduces"
+  },
+  {
+   "span": "source-of-coupling",
+   "concept": "multiplet-intensities",
+   "verb": "introduces"
+  },
+  {
+   "span": "source-of-coupling",
+   "concept": "n-plus-one-rule",
+   "verb": "introduces"
+  },
+  {
+   "span": "source-of-coupling",
+   "concept": "equivalent-nuclei-do-not-split",
+   "verb": "introduces"
+  },
+  {
+   "span": "source-of-coupling",
+   "concept": "three-bond-coupling",
+   "verb": "introduces"
+  },
+  {
+   "span": "source-of-coupling",
+   "concept": "nuclear-shielding",
+   "verb": "uses"
+  },
+  {
+   "span": "source-of-coupling",
+   "concept": "nuclear-deshielding",
+   "verb": "uses"
+  },
+  {
+   "span": "source-of-coupling",
+   "concept": "chemical-shift",
+   "verb": "uses"
+  },
+  {
+   "span": "coupling-constants",
+   "concept": "coupling-constant",
+   "verb": "introduces"
+  },
+  {
+   "span": "coupling-constants",
+   "concept": "coupling-constant-field-independence",
+   "verb": "introduces"
+  },
+  {
+   "span": "coupling-constants",
+   "concept": "reciprocal-coupling-constants",
+   "verb": "introduces"
+  },
+  {
+   "span": "coupling-constants",
+   "concept": "typical-coupling-constants",
+   "verb": "introduces"
+  },
+  {
+   "span": "complex-coupling",
+   "concept": "complex-coupling",
+   "verb": "introduces"
+  },
+  {
+   "span": "complex-coupling",
+   "concept": "doublet-of-doublets",
+   "verb": "introduces"
+  },
+  {
+   "span": "complex-coupling",
+   "concept": "overlapping-subpeaks",
+   "verb": "introduces"
+  },
+  {
+   "span": "complex-coupling",
+   "concept": "multiplet",
+   "verb": "introduces"
+  },
+  {
+   "span": "complex-coupling",
+   "concept": "field-strength-resolution",
+   "verb": "introduces"
+  },
+  {
+   "span": "complex-coupling",
+   "concept": "n-plus-one-rule",
+   "verb": "reinforces"
+  },
+  {
+   "span": "complex-coupling",
+   "concept": "splitting-diagram",
+   "verb": "reinforces"
+  },
+  {
+   "span": "complex-coupling",
+   "concept": "coupling-constant",
+   "verb": "reinforces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "e1",
+   "source_id": "Example 5.6",
+   "source_number": "Example 5.6",
+   "kind": "exercise",
+   "bloom": "Understand",
+   "place": {
+    "at": "end"
+   },
+   "cite": "source-of-coupling",
+   "prompt": "<ol type=\"a\"><li>Explain, using left and right arrows to illustrate the possible combinations of nuclear spin states for the H<sub>c</sub> hydrogens, why the H<sub>b</sub> signal in ethyl acetate is split into a quartet.</li><li>The integration ratio of doublets is 1:1, and of triplets is 1:2:1. What is the integration ratio of the H<sub>b</sub> quartet in ethyl acetate? (Hint – use the illustration that you drew in part a to answer this question.)</li></ol>",
+   "answer": {
+    "type": "open",
+    "generated_by": "source",
+    "solution": "<p>a)</p><p><img src=\"/media/ch14/6474-image267.png\" alt=\"The H_b signal split into four lines, under each the arrangements of the three H_c spins: all three right; two right and one left, three ways; one right and two left, three ways; all three left.\"></p><p>b) The figure above demonstrates that the quartet subpeaks integrate to 1:3:3:1 (eg., there are three ways for two spins to be aligned with $\\kBzero$ and one against $\\kBzero$). As an analogy, if you flip three coins at once, you have a 1 in eight chance of getting all heads, 1 in 8 chance of all tails, a 3 in 8 chance of two heads and a tail, and a 3 in 8 chance of two tails and a head.</p>"
+   }
+  },
+  {
+   "id": "e2",
+   "source_id": "Example 5.7",
+   "source_number": "Example 5.7",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "source-of-coupling",
+   "figure": {
+    "src": "/media/ch14/5189-image074.png",
+    "alt": "A diphenyl ether: two rings joined through an oxygen, each ring carrying an OH next to the oxygen and a Cl."
+   },
+   "prompt": "<ol type=\"a\"><li>How many proton signals would you expect to see in the <sup>1</sup>H-NMR spectrum of triclosan<sup class=\"fn\" data-note=\"c-triclosan\"></sup> (a common antimicrobial agent found in detergents)? For each of the proton signals, predict the splitting pattern. Assume that you see only 3-bond coupling.</li></ol>",
+   "answer": {
+    "type": "number",
+    "value": 4,
+    "tol": 0.1,
+    "generated_by": "source",
+    "solution": "<p>Because of the symmetry in the molecule, there are only four proton signals. Predicted splitting is indicated.</p><p><img src=\"/media/ch14/6476-image269.png\" alt=\"The drawn molecule with its protons labelled: OH_a a singlet, H_b a singlet, H_c a doublet and H_d a doublet, the same on both rings.\"></p>"
+   }
+  },
+  {
+   "id": "e3",
+   "source_id": "Example 5.8",
+   "source_number": "Example 5.8",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "source-of-coupling",
+   "figure": {
+    "src": "/media/ch14/5191-image076.png",
+    "alt": "Serotonin, with arrows at two ring hydrogens of the benzene ring and at the two CH2 groups of the side chain."
+   },
+   "prompt": "<p>Predict the splitting pattern for the <sup>1</sup>H-NMR signals corresponding to the protons at the locations indicated by arrows (the structure is that of the neurotransmitter serotonin).</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "source",
+    "solution": "<p><img src=\"/media/ch14/6478-image271.png\" alt=\"Serotonin with the two ring hydrogens marked d (doublets) and the two side-chain CH2 groups marked t (triplets).\"></p><p>(recall that splitting is generally not seen with protons on heteroatoms)</p>"
+   }
+  },
+  {
+   "id": "e4",
+   "source_id": "Example 5.9",
+   "source_number": "Example 5.9",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "complex-coupling",
+   "prompt": "<p>Construct a splitting diagram for the H<sub>b</sub> signal in the <sup>1</sup>H-NMR spectrum of methyl acrylate. Show the chemical shift value for each sub-peak, expressed in Hz (assume that the resonance frequency of TMS is exactly 300 MHz).</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "source",
+    "parts": [
+     {
+      "part": "highest",
+      "value": 1698.0,
+      "unit": "Hz",
+      "tol": 0.0002,
+      "hint": "5.64 ppm at 300 MHz is 1692 Hz; split it by 10.5 Hz, then each branch by 1.5 Hz."
+     },
+     {
+      "part": "second",
+      "value": 1696.5,
+      "unit": "Hz",
+      "tol": 0.0002
+     },
+     {
+      "part": "third",
+      "value": 1687.5,
+      "unit": "Hz",
+      "tol": 0.0002
+     },
+     {
+      "part": "lowest",
+      "value": 1686.0,
+      "unit": "Hz",
+      "tol": 0.0002
+     }
+    ],
+    "solution": "<p><img src=\"/media/ch14/6480-image273.png\" alt=\"The H_b splitting tree: the line at 5.64 ppm, 1692 Hz, split by J_ab = 10.5 Hz and each branch by J_bc = 1.5 Hz, with the chemical shifts of the subpeaks listed as 1698.0, 1696.5, 1687.5 and 1686.0 Hz.\"></p>"
+   }
+  },
+  {
+   "id": "e5",
+   "source_id": "Example 5.10",
+   "source_number": "Example 5.10",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "complex-coupling",
+   "figure": {
+    "src": "/media/ch14/5215-image100.png",
+    "alt": "5-Oxohexanal, OHC–CH2(a)–CH2(b)–CH2(c)–CO–CH3, with the H_a, H_b and H_c hydrogens labelled."
+   },
+   "prompt": "<p>What splitting pattern would you expect for the signal coresponding to H<sub>b</sub> in the molecule below? Assume that J<sub>ab</sub> ~ J<sub>bc</sub>. Draw a splitting diagram for this signal, and determine the relative integration values of each subpeak.</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "source",
+    "solution": "<p>We can think of this signal as being a triplet of triplets, but because the two coupling constants are very close, what we would actually see is a 1,2,3,2,1 pentet.<sup class=\"fn\" data-note=\"c-pentet\"></sup></p><p><img src=\"/media/ch14/6482-image275.png\" alt=\"The H_b tree split into a triplet by J_ab and each line into a triplet by J_bc, with J_ab = J_bc, so the lines land on five positions.\"></p>"
+   }
+  },
+  {
+   "id": "a1",
+   "source_id": "the window is 6000 Hz",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "complex-coupling",
+   "prompt": "<p>A quartet has a coupling constant $\\kJcc = 7.0$ Hz. How wide is it, from its first subpeak to its last, in ppm</p><ol type=\"a\"><li>in a 100 MHz instrument?</li><li>in a 500 MHz instrument?</li></ol>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 0.21,
+      "unit": "ppm",
+      "hint": "A quartet spans three gaps of $\\kJcc$; in ppm, divide hertz by the instrument's frequency in MHz."
+     },
+     {
+      "part": "b",
+      "value": 0.042,
+      "unit": "ppm"
+     }
+    ],
+    "solution": "<p>Four subpeaks have three gaps between them, so the quartet is $3 \\times 7.0 = 21$ Hz wide at any field, since the coupling constant in Hz does not depend on the magnet. At 100 MHz one ppm is 100 Hz, so the width is $21/100 = 0.21$ ppm. At 500 MHz one ppm is 500 Hz, so it is $21/500 = 0.042$ ppm: five times narrower on the ppm scale, which is why stronger magnets pull crowded multiplets apart.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "e1",
+   "concept": "multiplet-intensities"
+  },
+  {
+   "exercise": "e1",
+   "concept": "n-plus-one-rule"
+  },
+  {
+   "exercise": "e2",
+   "concept": "n-plus-one-rule"
+  },
+  {
+   "exercise": "e2",
+   "concept": "three-bond-coupling"
+  },
+  {
+   "exercise": "e2",
+   "concept": "equivalent-nuclei-do-not-split"
+  },
+  {
+   "exercise": "e3",
+   "concept": "n-plus-one-rule"
+  },
+  {
+   "exercise": "e3",
+   "concept": "three-bond-coupling"
+  },
+  {
+   "exercise": "e4",
+   "concept": "splitting-diagram"
+  },
+  {
+   "exercise": "e4",
+   "concept": "doublet-of-doublets"
+  },
+  {
+   "exercise": "e4",
+   "concept": "coupling-constant"
+  },
+  {
+   "exercise": "e5",
+   "concept": "overlapping-subpeaks"
+  },
+  {
+   "exercise": "e5",
+   "concept": "splitting-diagram"
+  },
+  {
+   "exercise": "a1",
+   "concept": "coupling-constant-field-independence"
+  },
+  {
+   "exercise": "a1",
+   "concept": "field-strength-resolution"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-earlier",
+   "kind": "correction",
+   "html": "Those spectra belong to an earlier section of the book this page is taken from; they are not in this book."
+  },
+  {
+   "id": "c-ethane",
+   "kind": "correction",
+   "html": "The molecule is 1,1,2-trichloroethane, as the rest of the page names it."
+  },
+  {
+   "id": "c-benzylic",
+   "kind": "correction",
+   "html": "The structures that follow label these ring hydrogens “ortho-benzylic” and “meta-benzylic”. Benzylic hydrogens sit on a carbon attached to the ring; these are ortho and meta hydrogens on the ring itself."
+  },
+  {
+   "id": "c-jab",
+   "kind": "correction",
+   "html": "The same coupling is printed 10.5 Hz elsewhere on the page and in the spectrum's box; reciprocal coupling constants are equal, so H<sub>b</sub> is split by 10.5 Hz too."
+  },
+  {
+   "id": "c-triclosan",
+   "kind": "correction",
+   "html": "Triclosan is 5-chloro-2-(2,4-dichlorophenoxy)phenol, with one OH and three Cl. The structure drawn has two OH and two Cl on two identical rings, and the key answers for the structure drawn."
+  },
+  {
+   "id": "c-pentet",
+   "kind": "correction",
+   "html": "With J<sub>ab</sub> = J<sub>bc</sub> the triplet of triplets falls on five positions with intensities 1:4:6:4:1, as for four equivalent neighbours by the <em>n</em> + 1 rule. The 1:2:3:2:1 of the key counts how many lines of the tree land on each position, without weighting each triplet's lines 1:2:1."
+  }
+ ]
+}

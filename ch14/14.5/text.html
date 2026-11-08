@@ -1,0 +1,34 @@
+<section id="shifts-and-structure">
+<h2>Shifts and structure</h2>
+<p>The <span data-concept="chemical-shift">chemical shift</span> in NMR is extremely important, as it gives vital information about the local structure surrounding the nucleus of interest. For a majority of scientists, the <span data-concept="chemical-shift">chemical shift</span> is used exlusivley to determine structure, especially in organic systems. Additional information may be gained by examining the anisotropy of the <span data-concept="chemical-shift">chemical shift</span>. This section will be devoted to looking at <span data-concept="chemical-shift">chemical shift</span> from a mathematical standpoint including a full treatment of the chemical shift tensor and the relation to the NMR lineshape.<sup class="fn" data-note="c-promise"></sup></p>
+</section>
+
+<section id="the-chemical-shift">
+<h2>The Chemical Shift</h2>
+<p>The <span data-concept="local-magnetic-field">local magnetic field</span> is the field felt by a particular nucleus, where the <span data-concept="magnetic-field">applied field</span> $\kB$ induces currents in the electrons surrounding the nucleus give rise to a <span data-concept="nuclear-shielding">shielding</span>. The <span data-concept="shielding-constant">shielding constant</span> is $\sigma$. The <span data-concept="local-magnetic-field">local magnetic field</span> is reduced by <span data-concept="nuclear-shielding">shielding</span> by a factor $1 - \sigma$.</p>
+$$ \kBloc = \kB + \kdB = (1 - \sigma)\kB $$
+<p>The <span data-concept="chemical-shift">chemical shift</span> is the difference between the resonance frequency of a nucleus and that of a standard.</p>
+<p>The <span data-concept="larmor-frequency">Larmor frequency</span> of a shielded nucleus is:</p>
+$$ \knuL = \dfrac{\gamma \kBloc}{2\pi} $$
+<p><span data-concept="chemical-shift">Chemical shifts</span> are reported on the $\delta$-scale.</p>
+$$ \delta = \dfrac{\knu - \knuo}{\knuo} \times 10^6 $$
+<p>The resonance frequency of the standard is $\knuo$.</p>
+<figure class="sim" id="sim-larmor">
+  <div class="sim-head"><span class="eyebrow">Sim</span><span>Two nuclear moments precess about the <span data-type="magnetic-field">field</span>, a standard on the left and a shielded proton on the right. Raise <span data-type="magnetic-field">the field</span>: both turn faster and the proton's lead in <span data-type="frequency">hertz</span> grows, while its <span data-concept="chemical-shift">chemical shift</span> in ppm stays put. Change <span data-concept="shielding-constant">σ</span> to move the proton along the δ-scale.</span></div>
+</figure>
+<p>The <span data-concept="shielding-contributions">shielding constant is the sum of three contributions</span>.</p>
+$$ \sigma = \sigma(local) + \sigma(molecule) + \sigma(solvent) $$
+<p>The local contribution is due to electrons on the atom that contains the nucleus. The molecular contribution is from the rest of the molecule. The solvent contribution is from surrounding solvent molecules.</p>
+</section>
+
+<section id="the-local-contribution">
+<h2>The Local Contribution</h2>
+<p>The local contribution is a sum of both <span data-concept="diamagnetic-shielding">diamagnetic $\sigma_d$</span> and <span data-concept="paramagnetic-shielding">paramagnetic $\sigma_p$</span> parts. The <span data-concept="diamagnetic-shielding">diamagnetic part</span> arises from circulation of the electrons in response to $\kB$. The <span data-concept="lamb-formula">Lamb formula</span> gives the magnitude of $\sigma_d$,</p>
+$$ \sigma_d = \dfrac{\ke^2 \mu_0}{3\kme} \int _o^\infty \krhoe(\kr)\kr \,dr $$
+<p>where $\krhoe$ is the electron <span data-concept="probability-density">probability density</span> $|\Psi^2|$<sup class="fn" data-note="c-lamb"></sup>. $\sigma_d$ is inversely proportional to the <strong><span data-concept="bohr-radius">Bohr radius</span></strong>. The magnetic moment of a current loop is proportional to $\kao^2$ and the magnetic field generated at the nucleus is proportional $\frac{1}{\kao^3}$.</p>
+</section>
+
+<section id="the-molecular-contribution">
+<h2>The Molecular Contribution</h2>
+<p>The applied magnetic field generates currents in neighboring groups proportional to the <span data-concept="magnetic-susceptibility">magnetic susceptibility</span> $\chi$ of a group. <span data-concept="molecular-shielding-contribution">The induced magnetic moment gives rise to a magnetic field that is inversely proportional to the cube of the distance from the nucleus</span>.</p>
+</section>

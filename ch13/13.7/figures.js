@@ -52,7 +52,7 @@ function bump(ctx, ax, xc, E, hpx, color, lo, hi) {
     F.plot(ctx, ax, V0, ce, { w: 5 });
     F.plot(ctx, ax, up, ce, { w: 5 });
     text(ctx, 'ground state', ax.X(-2.9), ax.Y(V0(-2.9)) + 30, ce, { size: 20, weight: 600, align: 'left', bg: PAL.panel });
-    text(ctx, 'excited state', ax.X(dd - 3.2) - 10, ax.Y(up(dd - 3.2)), ce, { size: 20, weight: 600, align: 'right', bg: PAL.panel });
+    text(ctx, 'excited state', Math.max(box.l + 140, ax.X(dd - 3.2) - 10), ax.Y(up(dd - 3.2)), ce, { size: 20, weight: 600, align: 'right', bg: PAL.panel });
     /* the levels each well holds, faint */
     for (let v = 0; v < 6; v++) {
       const E = GAP + HW * (v + 0.5), a = Math.sqrt(2 * v + 1); if (E < 14000) line(ctx, ax.X(dd - a), ax.Y(E), ax.X(dd + a), ax.Y(E), alpha(ce, 0.3), 2);
@@ -90,7 +90,7 @@ function bump(ctx, ax, xc, E, hpx, color, lo, hi) {
    Left: the two wells as above with d = sqrt(2S), the ground v = 0 function and the band of positions it covers
    projected straight up, the upper levels v' = 0 to 7 each drawn as strongly as its Franck-Condon factor. Right: the
    stick spectrum at 8000 + 1000 v' cm^-1, heights e^(-S) S^v' / v'!, dressed with Gaussians of sigma 200 cm^-1 whose
-   sum keeps the same area at every S. x 7500 to 15 500 cm^-1, y 0 to 1. Still: S is variation, not time. Opens on the
+   sum keeps the same area at every S. x 7000 to 15 000 cm^-1, y 0 to 1. Still: S is variation, not time. Opens on the
    book's first case, S = 1; detents at the book's 0.1, 1/2, 1 and 2. */
 (function () {
   const d = sim('sim-progression', 600);
@@ -103,10 +103,11 @@ function bump(ctx, ax, xc, E, hpx, color, lo, hi) {
     const { ctx } = begin(d.c);
     const S = SS.v, dd = Math.sqrt(2 * S), P = Array.from({ length: NV }, (_, v) => pois(S, v)), vmax = P.indexOf(Math.max(...P));
     const ce = C('energy'), cf = C('wavefunction'), cw = C('wavenumber'), up = V1(dd);
-    topline(ctx, `With $S = ${fmt(S, 2)}$ the strongest band is $0 \\to ${vmax}$, and the $0 \\to 0$ band carries ${fmt(100 * P[0], 0)}% of the intensity.`);
+    const tie = vmax + 1 < NV && Math.abs(P[vmax + 1] - P[vmax]) < 0.002;
+    topline(ctx, `With $S = ${fmt(S, 2)}$ the strongest band${tie ? `s are $0 \\to ${vmax}$ and $0 \\to ${vmax + 1}$, equally strong` : ` is $0 \\to ${vmax}$`}, and the $0 \\to 0$ band carries ${fmt(100 * P[0], 0)}% of the intensity.`);
     hits.length = 0;
     /* the wells */
-    const wb = { l: 150, r: 620, t: 110, b: 500 };
+    const wb = { l: 150, r: 620, t: 135, b: 500 };
     const ax = axes(ctx, wb, [-3, 6], [0, 16000], { nx: 0, ny: 4, xl: 'nuclear coordinate', xc: C('length'), yl: 'energy (cm⁻¹)', yc: ce });
     const sd = 1 / Math.SQRT2;
     ctx.save(); ctx.fillStyle = alpha(PAL.ink, 0.07); ctx.fillRect(ax.X(-2 * sd), wb.t, ax.X(2 * sd) - ax.X(-2 * sd), ax.Y(HW / 2) - wb.t); ctx.restore();
@@ -120,15 +121,15 @@ function bump(ctx, ax, xc, E, hpx, color, lo, hi) {
     }
     /* the ground function, as an amplitude on its level */
     ctx.save(); ctx.strokeStyle = cf; ctx.lineWidth = 4; ctx.beginPath();
-    for (let x = -3; x <= 3.001; x += 0.05) { const X = ax.X(x), Y = ax.Y(HW / 2) - 70 * psi(0, x) / psi(0, 0); if (x === -3) ctx.moveTo(X, Y); else ctx.lineTo(X, Y); }
+    for (let x = -3; x <= 3.001; x += 0.05) { const X = ax.X(x), Y = ax.Y(HW / 2) - 45 * psi(0, x) / psi(0, 0); if (x === -3) ctx.moveTo(X, Y); else ctx.lineTo(X, Y); }
     ctx.stroke(); ctx.restore();
     hits.push({ x: ax.X(0), y: ax.Y(HW / 2) - 40, r: 26, name: 'the ground state v = 0 vibrational function, and the band of positions it projects straight up' });
-    text(ctx, 'v = 0', ax.X(1.5), ax.Y(HW / 2) + 2, cf, { size: 18, weight: 600, base: 'middle' });
+    text(ctx, 'v = 0', ax.X(-1.3), ax.Y(HW / 2) - 40, cf, { size: 18, weight: 600, align: 'right', bg: PAL.panel });
     /* the spectrum */
-    const sb = { l: 720, r: 1330, t: 110, b: 500 };
-    const sx = axes(ctx, sb, [7500, 15500], [0, 1], { nx: 4, ny: 4, xl: 'absorption wavenumber (cm⁻¹)', xc: cw, yl: 'intensity', yc: PAL.ink });
+    const sb = { l: 720, r: 1330, t: 135, b: 500 };
+    const sx = axes(ctx, sb, [7000, 15000], [0, 1], { nx: 4, ny: 4, xl: 'absorption wavenumber (cm⁻¹)', xc: cw, yl: 'intensity', yc: PAL.ink });
     const dressed = (nu) => P.reduce((s, p, v) => s + p * Math.exp(-((nu - GAP - HW * v) ** 2) / (2 * SIG * SIG)), 0);
-    F.shade(ctx, sx, dressed, 0, 7500, 15500, PAL.ink, { alpha: 0.08 });
+    F.shade(ctx, sx, dressed, 0, 7000, 15000, PAL.ink, { alpha: 0.08 });
     F.plot(ctx, sx, dressed, alpha(PAL.ink, 0.55), { w: 3, dash: [10, 10] });
     for (let v = 0; v < NV; v++) {
       const x = sx.X(GAP + HW * v);

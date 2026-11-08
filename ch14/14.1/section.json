@@ -1,0 +1,104 @@
+{
+ "id": "14.1",
+ "module": "13636",
+ "chapter": "14",
+ "title": "Nuclei Have Intrinsic Spin Angular Momenta",
+ "short": "Nuclear spin",
+ "lead": "Particles such as the electron, the proton and the neutron carry an intrinsic angular momentum called spin, separate from any orbital motion, with quantum numbers of its own.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "Shared under CC BY-SA 4.0, the licence of the page it is adapted from.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": []
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The one exercise was written by AI with an AI solution; its Bloom level and concept tags were chosen by AI.",
+ "figures": [],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "intrinsic-spin",
+   "concept": "nucleon-spin",
+   "verb": "introduces"
+  },
+  {
+   "span": "intrinsic-spin",
+   "concept": "spin-orbital-analogy",
+   "verb": "introduces"
+  },
+  {
+   "span": "intrinsic-spin",
+   "concept": "electron-spin",
+   "verb": "reinforces"
+  },
+  {
+   "span": "intrinsic-spin",
+   "concept": "fermion",
+   "verb": "reinforces"
+  },
+  {
+   "span": "intrinsic-spin",
+   "concept": "boson",
+   "verb": "reinforces"
+  },
+  {
+   "span": "intrinsic-spin",
+   "concept": "pauli-exclusion-principle",
+   "verb": "uses"
+  },
+  {
+   "span": "intrinsic-spin",
+   "concept": "spin-states",
+   "verb": "reinforces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "The proton and neutron also have spin",
+   "kind": "exercise",
+   "bloom": "Remember",
+   "place": {
+    "at": "end"
+   },
+   "cite": "intrinsic-spin",
+   "prompt": "<p>Consider the electron, the proton, the neutron and the photon.</p><ol type=\"a\"><li>How many of the four are fermions?</li><li>What is the spin quantum number $s$ of a proton?</li></ol>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 3,
+      "tol": 0.1,
+      "hint": "Fermions have half-integer spin and obey the Pauli exclusion principle; bosons have integer spin."
+     },
+     {
+      "part": "b",
+      "value": 0.5,
+      "tol": 0.01
+     }
+    ],
+    "solution": "<p>The electron, the proton and the neutron all have spin $\\tfrac12$ and are fermions, governed by the Pauli exclusion principle. The photon has integer spin and is a boson, so three of the four are fermions. A proton has $s = \\tfrac12$, so its $m_s$ is $+\\tfrac12$ or $-\\tfrac12$, the two states $\\kalphas$ and $\\kbetas$.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "nucleon-spin"
+  },
+  {
+   "exercise": "a1",
+   "concept": "fermion"
+  }
+ ],
+ "footnotes": []
+}

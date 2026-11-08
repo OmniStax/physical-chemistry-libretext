@@ -1,0 +1,227 @@
+{
+ "id": "14.5",
+ "module": "13640",
+ "chapter": "14",
+ "title": "Chemical Shifts Depend upon the Chemical Environment of the Nucleus",
+ "short": "Chemical shifts",
+ "lead": "A nucleus resonates at a frequency set by the field it actually feels, so nuclei in different chemical surroundings resonate at slightly different frequencies. The chemical shift measures that difference against a standard, and the shielding behind it has local, molecular and solvent parts.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "Adapted from Stefan Franzen's notes and shared under CC BY-SA 4.0, the licence of the page it comes from.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "Both exercises were written by AI with AI solutions; their Bloom levels and concept tags were chosen by AI. Numeric answers accept a 2% tolerance unless a tighter one is set.",
+ "figures": [
+  {
+   "id": "sim-larmor",
+   "kind": "sim",
+   "draws": [
+    "magnetic-field",
+    "magnetic-moment",
+    "frequency"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "shifts-and-structure",
+   "concept": "chemical-shift",
+   "verb": "uses"
+  },
+  {
+   "span": "the-chemical-shift",
+   "concept": "shielding-constant",
+   "verb": "introduces"
+  },
+  {
+   "span": "the-chemical-shift",
+   "concept": "larmor-frequency",
+   "verb": "introduces"
+  },
+  {
+   "span": "the-chemical-shift",
+   "concept": "chemical-shift",
+   "verb": "introduces"
+  },
+  {
+   "span": "the-chemical-shift",
+   "concept": "shielding-contributions",
+   "verb": "introduces"
+  },
+  {
+   "span": "the-chemical-shift",
+   "concept": "local-magnetic-field",
+   "verb": "reinforces"
+  },
+  {
+   "span": "the-chemical-shift",
+   "concept": "nuclear-shielding",
+   "verb": "uses"
+  },
+  {
+   "span": "the-chemical-shift",
+   "concept": "magnetic-field",
+   "verb": "uses"
+  },
+  {
+   "span": "the-chemical-shift",
+   "concept": "gyromagnetic-ratio",
+   "verb": "uses"
+  },
+  {
+   "span": "the-local-contribution",
+   "concept": "diamagnetic-shielding",
+   "verb": "introduces"
+  },
+  {
+   "span": "the-local-contribution",
+   "concept": "paramagnetic-shielding",
+   "verb": "introduces"
+  },
+  {
+   "span": "the-local-contribution",
+   "concept": "lamb-formula",
+   "verb": "introduces"
+  },
+  {
+   "span": "the-local-contribution",
+   "concept": "probability-density",
+   "verb": "uses"
+  },
+  {
+   "span": "the-local-contribution",
+   "concept": "bohr-radius",
+   "verb": "uses"
+  },
+  {
+   "span": "the-molecular-contribution",
+   "concept": "magnetic-susceptibility",
+   "verb": "introduces"
+  },
+  {
+   "span": "the-molecular-contribution",
+   "concept": "molecular-shielding-contribution",
+   "verb": "introduces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "The Larmor frequency of a shielded nucleus is",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "the-chemical-shift",
+   "prompt": "<p>A proton with $\\gamma/2\\pi = 41.7$ MHz T⁻¹ sits in a molecule in an applied field $\\kB = 7.05$ T. Its shielding constant is $\\sigma = 2.50 \\times 10^{-5}$.</p><ol type=\"a\"><li>What is $\\kdB = \\kBloc - \\kB$, in μT?</li><li>What is its Larmor frequency $\\knuL$, in MHz?</li><li>By how many hertz is $\\knuL$ lower than the frequency of an unshielded proton in the same field?</li></ol>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": -176.25,
+      "unit": "μT",
+      "tol": 0.01,
+      "hint": "$\\kBloc = (1 - \\sigma)\\kB$, so $\\kdB = -\\sigma\\kB$."
+     },
+     {
+      "part": "b",
+      "value": 293.9777,
+      "unit": "MHz",
+      "tol": 2e-06
+     },
+     {
+      "part": "c",
+      "value": 7349.6,
+      "unit": "Hz",
+      "tol": 0.01
+     }
+    ],
+    "solution": "<p>a. $\\kdB = -\\sigma\\kB = -(2.50\\times10^{-5})(7.05\\ \\text{T}) = -1.7625\\times10^{-4}$ T, about $-176$ μT, so $\\kBloc = 7.049824$ T.</p><p>b. $\\knuL = \\dfrac{\\gamma\\kBloc}{2\\pi} = (41.7\\ \\text{MHz T}^{-1})(7.049824\\ \\text{T}) = 293.9777$ MHz.</p><p>c. An unshielded proton resonates at $(41.7)(7.05) = 293.985$ MHz. The difference is $\\sigma$ times that, $(2.50\\times10^{-5})(293.985\\ \\text{MHz}) = 7350$ Hz.</p>"
+   }
+  },
+  {
+   "id": "a2",
+   "source_id": "Chemical shifts are reported on the",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "the-chemical-shift",
+   "prompt": "<p>In a spectrometer whose standard resonates at $\\knuo = 400$ MHz, a proton resonates 1200 Hz above the standard.</p><ol type=\"a\"><li>What is its chemical shift $\\delta$, in ppm?</li><li>How many hertz above the standard does the same proton resonate in a spectrometer whose standard resonates at 600 MHz?</li></ol>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 3.0,
+      "unit": "ppm",
+      "hint": "$\\delta = \\dfrac{\\knu - \\knuo}{\\knuo}\\times10^6$, with $\\knu - \\knuo = 1200$ Hz."
+     },
+     {
+      "part": "b",
+      "value": 1800,
+      "unit": "Hz"
+     }
+    ],
+    "solution": "<p>a. $\\delta = \\dfrac{1200\\ \\text{Hz}}{400\\times10^{6}\\ \\text{Hz}}\\times10^6 = 3.00$ ppm.</p><p>b. The chemical shift is a fraction of the standard's frequency and stays 3.00 ppm, so $\\knu - \\knuo = (3.00\\times10^{-6})(600\\times10^{6}\\ \\text{Hz}) = 1800$ Hz.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "local-magnetic-field"
+  },
+  {
+   "exercise": "a1",
+   "concept": "shielding-constant"
+  },
+  {
+   "exercise": "a1",
+   "concept": "larmor-frequency"
+  },
+  {
+   "exercise": "a2",
+   "concept": "chemical-shift"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-promise",
+   "kind": "correction",
+   "html": "The page stops after the molecular contribution: the chemical shift tensor, the lineshape, the paramagnetic part $\\sigma_p$ and the solvent contribution are named but not treated."
+  },
+  {
+   "id": "c-lamb",
+   "kind": "correction",
+   "html": "The probability density is $|\\Psi|^2$, the square of the modulus of the wavefunction, and the lower limit of the Lamb integral printed $o$ is $0$."
+  }
+ ]
+}

@@ -1,0 +1,753 @@
+{
+ "id": "14.7",
+ "module": "13642",
+ "chapter": "14",
+ "title": "Spin-Spin Coupling Between Chemically Equivalent Protons is Not Observed",
+ "short": "Equivalent protons",
+ "lead": "Two equivalent hydrogens couple to each other, yet their NMR signal shows no splitting. The Hamiltonian of two coupled spin-½ nuclei, its four eigenstates and the NMR selection rules settle why, and the AX and A₂ cases set two distinct nuclei beside two identical ones.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "Adapted from the Chemistry Stack Exchange thread at https://chemistry.stackexchange.com/questions/53478/why-dont-equivalent-hydrogens-cause-splitting-in-nmr and shared under CC BY-SA 4.0; the three level diagrams of its answers are folded into one figure of two coupled spins.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "Both exercises are new and AI-written, their answers checked by computation; their Bloom levels and concept tags were chosen by AI. Numeric answers accept a 2% tolerance.",
+ "figures": [
+  {
+   "id": "sim-ab",
+   "kind": "sim",
+   "originals": [
+    "/media/ch14/344398-LCkBM.png",
+    "/media/ch14/344400-xeaC4.png",
+    "/media/ch14/344399-htKbC.png"
+   ],
+   "draws": [
+    "frequency",
+    "energy"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "why-no-splitting",
+   "concept": "equivalent-nuclei-do-not-split",
+   "verb": "reinforces"
+  },
+  {
+   "span": "why-no-splitting",
+   "concept": "multiplet-patterns",
+   "verb": "uses"
+  },
+  {
+   "span": "finding-the-states",
+   "concept": "nuclear-spin-hamiltonian",
+   "verb": "introduces"
+  },
+  {
+   "span": "finding-the-states",
+   "concept": "nuclear-spin-operators",
+   "verb": "introduces"
+  },
+  {
+   "span": "finding-the-states",
+   "concept": "shift-operators",
+   "verb": "introduces"
+  },
+  {
+   "span": "finding-the-states",
+   "concept": "spin-scalar-product",
+   "verb": "introduces"
+  },
+  {
+   "span": "finding-the-states",
+   "concept": "two-spin-hamiltonian-matrix",
+   "verb": "introduces"
+  },
+  {
+   "span": "finding-the-states",
+   "concept": "two-spin-eigenstates",
+   "verb": "introduces"
+  },
+  {
+   "span": "finding-the-states",
+   "concept": "clebsch-gordan-series",
+   "verb": "introduces"
+  },
+  {
+   "span": "finding-the-states",
+   "concept": "larmor-frequency",
+   "verb": "uses"
+  },
+  {
+   "span": "finding-the-states",
+   "concept": "coupling-constant",
+   "verb": "uses"
+  },
+  {
+   "span": "finding-the-states",
+   "concept": "spin-states",
+   "verb": "uses"
+  },
+  {
+   "span": "finding-the-states",
+   "concept": "secular-equations",
+   "verb": "uses"
+  },
+  {
+   "span": "selection-rules",
+   "concept": "nmr-transition-hamiltonian",
+   "verb": "introduces"
+  },
+  {
+   "span": "selection-rules",
+   "concept": "nmr-selection-rules",
+   "verb": "introduces"
+  },
+  {
+   "span": "selection-rules",
+   "concept": "equivalent-spins-one-line",
+   "verb": "introduces"
+  },
+  {
+   "span": "selection-rules",
+   "concept": "transition-moment-integral",
+   "verb": "uses"
+  },
+  {
+   "span": "selection-rules",
+   "concept": "forbidden-transition",
+   "verb": "uses"
+  },
+  {
+   "span": "notes-and-references",
+   "concept": "larmor-frequency",
+   "verb": "reinforces"
+  },
+  {
+   "span": "notes-and-references",
+   "concept": "gyromagnetic-ratio",
+   "verb": "uses"
+  },
+  {
+   "span": "ax-and-a2",
+   "concept": "magnetic-equivalence",
+   "verb": "introduces"
+  },
+  {
+   "span": "ax-and-a2",
+   "concept": "ax-spin-system",
+   "verb": "introduces"
+  },
+  {
+   "span": "ax-and-a2",
+   "concept": "a2-spin-system",
+   "verb": "introduces"
+  },
+  {
+   "span": "ax-and-a2",
+   "concept": "liouville-von-neumann-equation",
+   "verb": "introduces"
+  },
+  {
+   "span": "ax-and-a2",
+   "concept": "coupling-commutes-with-pulse",
+   "verb": "introduces"
+  },
+  {
+   "span": "ax-and-a2",
+   "concept": "spin-spin-coupling",
+   "verb": "uses"
+  },
+  {
+   "span": "ax-and-a2",
+   "concept": "chemical-shift",
+   "verb": "uses"
+  },
+  {
+   "span": "ax-and-a2",
+   "concept": "nmr-selection-rules",
+   "verb": "reinforces"
+  },
+  {
+   "span": "ax-and-a2",
+   "concept": "angular-momentum-commutation-relations",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "Finding the eigenvectors and eigenvalues of this matrix is again left to the reader",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "finding-the-states",
+   "prompt": "<p>Two equivalent protons have Larmor frequency $\\nu = 300$ MHz and coupling constant $J = 7.0$ Hz. In frequency units, find (a) $E_2$ and (b) $E_3$ in Hz, and (c) $E_1 - E_2$ and (d) $E_2 - E_4$ in MHz.</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 1.75,
+      "unit": "Hz",
+      "hint": "The triplet state |2⟩ has energy J/4."
+     },
+     {
+      "part": "b",
+      "value": -5.25,
+      "unit": "Hz"
+     },
+     {
+      "part": "c",
+      "value": 300,
+      "unit": "MHz"
+     },
+     {
+      "part": "d",
+      "value": 300,
+      "unit": "MHz"
+     }
+    ],
+    "solution": "<p>From the eigenvalues of the Hamiltonian matrix (14.7.5): $E_2 = J/4 = 7.0/4 = 1.75$ Hz and $E_3 = -3J/4 = -5.25$ Hz. With $E_1 = \\nu + J/4$ and $E_4 = -\\nu + J/4$, the two allowed transitions are $E_1 - E_2 = \\nu = 300$ MHz and $E_2 - E_4 = \\nu = 300$ MHz. The coupling shifts the levels but cancels from both differences, so the spectrum shows one line.</p>"
+   }
+  },
+  {
+   "id": "a2",
+   "source_id": "We have four different states, which leads to",
+   "kind": "exercise",
+   "bloom": "Understand",
+   "place": {
+    "at": "end"
+   },
+   "cite": "selection-rules",
+   "prompt": "<p>Of the six possible transitions among the states $|1\\rangle$ to $|4\\rangle$ of two equivalent spin-$1/2$ nuclei, which does the selection rule $\\Delta I = 0$, $\\Delta M_I = \\pm 1$ allow?</p>",
+   "answer": {
+    "type": "choice",
+    "generated_by": "ai",
+    "options": [
+     "$|4\\rangle \\leftrightarrow |2\\rangle$ and $|2\\rangle \\leftrightarrow |1\\rangle$",
+     "$|4\\rangle \\leftrightarrow |3\\rangle$ and $|3\\rangle \\leftrightarrow |1\\rangle$",
+     "$|4\\rangle \\leftrightarrow |1\\rangle$ only",
+     "all six"
+    ],
+    "correct": 0,
+    "hint": "Read I and M_I for each state off the table of states.",
+    "solution": "<p>$|1\\rangle$, $|2\\rangle$ and $|4\\rangle$ form the triplet ($I = 1$, $M_I = 1, 0, -1$) and $|3\\rangle$ is the singlet ($I = 0$). $\\Delta I = 0$ rules out every transition to or from $|3\\rangle$, and $\\Delta M_I = \\pm 1$ rules out $|4\\rangle \\leftrightarrow |1\\rangle$, which changes $M_I$ by 2. That leaves $|4\\rangle \\leftrightarrow |2\\rangle$ and $|2\\rangle \\leftrightarrow |1\\rangle$.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "two-spin-eigenstates"
+  },
+  {
+   "exercise": "a1",
+   "concept": "equivalent-spins-one-line"
+  },
+  {
+   "exercise": "a2",
+   "concept": "nmr-selection-rules"
+  },
+  {
+   "exercise": "a2",
+   "concept": "two-spin-eigenstates"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-eq-4",
+   "kind": "correction",
+   "html": "“Equation (4)” is the answer's own number for the display two above (14.7.4): the eigenvalues of $\\hat{I}_{iz}$ on $|\\alpha_i\\rangle$ and $|\\beta_i\\rangle$."
+  },
+  {
+   "id": "c-eq-11-13",
+   "kind": "correction",
+   "html": "(12) and (13) are the two rows of the display just above, and (11) is the display that writes $\\hat{I}_{ix}$ and $\\hat{I}_{iy}$ in shift operators; the numbers are the answer's own."
+  },
+  {
+   "id": "c-eq-10-11",
+   "kind": "correction",
+   "html": "Equations 10 and 11 are the answer's own numbers for the two displays that define the shift operators and write $\\hat{I}_{ix}$ and $\\hat{I}_{iy}$ in them, in the section on finding the states."
+  },
+  {
+   "id": "c-other-answers",
+   "kind": "correction",
+   "html": "The diagrams of the other answers are the level diagrams of the AX and A₂ cases further down this page."
+  },
+  {
+   "id": "c-omega-prime",
+   "kind": "correction",
+   "html": "$w'$ stands for $\\omega'$, the symbol of (14.7.9)."
+  },
+  {
+   "id": "c-a2-symmetry",
+   "kind": "correction",
+   "html": "The product functions $|\\alpha_1\\beta_2\\rangle$ and $|\\beta_1\\alpha_2\\rangle$ are neither symmetric nor antisymmetric to exchange of the nuclei; the states of two identical nuclei must be one or the other, which is why the linear combinations $|2\\rangle$ and $|3\\rangle$ are made."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "equivalent-levels",
+   "what": "the levels of two equivalent spins",
+   "source": "Physical Chemistry (LibreTexts), 14.7 Spin-Spin Coupling Between Chemically Equivalent Protons is Not Observed",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kIonevec\\cdot\\kItwovec = \\dfrac{\\hat{I}_{1+}\\hat{I}_{2-} + \\hat{I}_{1-}\\hat{I}_{2+}}{2} + \\kIonez\\kItwoz",
+       "src": "14.7"
+      },
+      {
+       "tex": "\\kIiz|\\alpha_i\\rangle = \\tfrac{1}{2}|\\alpha_i\\rangle,\\quad \\kIiz|\\beta_i\\rangle = -\\tfrac{1}{2}|\\beta_i\\rangle",
+       "src": "14.7"
+      },
+      {
+       "tex": "\\kIplus|\\beta_i\\rangle = |\\alpha_i\\rangle,\\quad \\kIminus|\\alpha_i\\rangle = |\\beta_i\\rangle,\\quad \\kIplus|\\alpha_i\\rangle = \\kIminus|\\beta_i\\rangle = 0",
+       "src": "14.7, (14)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{d}{\\kIonevec\\cdot\\kItwovec} = \\mk{f}{\\dfrac{\\hat{I}_{1+}\\hat{I}_{2-} + \\hat{I}_{1-}\\hat{I}_{2+}}{2}} + \\mk{z}{\\kIonez\\kItwoz}"
+     },
+     "steps": [
+      {
+       "tex": "\\begin{array}{rcl} \\mk{p}{\\kIonevec\\cdot\\kItwovec|\\alpha_1\\alpha_2\\rangle} & = & \\mk{a}{\\tfrac{1}{4}|\\alpha_1\\alpha_2\\rangle} \\\\ \\mk{q}{\\kIonevec\\cdot\\kItwovec|\\alpha_1\\beta_2\\rangle} & = & \\mk{b}{-\\tfrac{1}{4}|\\alpha_1\\beta_2\\rangle + \\tfrac{1}{2}|\\beta_1\\alpha_2\\rangle} \\\\ \\mk{r}{\\kIonevec\\cdot\\kItwovec|\\beta_1\\alpha_2\\rangle} & = & \\mk{c}{\\tfrac{1}{2}|\\alpha_1\\beta_2\\rangle - \\tfrac{1}{4}|\\beta_1\\alpha_2\\rangle} \\\\ \\mk{s}{\\kIonevec\\cdot\\kItwovec|\\beta_1\\beta_2\\rangle} & = & \\mk{e}{\\tfrac{1}{4}|\\beta_1\\beta_2\\rangle} \\end{array}",
+       "uses": [
+        1,
+        2
+       ],
+       "map": {
+        "d": [
+         "p",
+         "q",
+         "r",
+         "s"
+        ],
+        "f": [
+         "b",
+         "c"
+        ],
+        "z": [
+         "a",
+         "b",
+         "c",
+         "e"
+        ]
+       },
+       "cap": "Each operator acts only on the spin of its own nucleus. A shift term needs one spin up and the other down, so it gives zero on $|\\alpha_1\\alpha_2\\rangle$ and $|\\beta_1\\beta_2\\rangle$ and swaps $|\\alpha_1\\beta_2\\rangle$ with $|\\beta_1\\alpha_2\\rangle$."
+      }
+     ]
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\kH = \\knu(\\kIonez + \\kItwoz) + \\kJcc(\\kIonevec\\cdot\\kItwovec)",
+       "src": "(14.7.4)"
+      },
+      {
+       "tex": "\\kIiz|\\alpha_i\\rangle = \\tfrac{1}{2}|\\alpha_i\\rangle,\\quad \\kIiz|\\beta_i\\rangle = -\\tfrac{1}{2}|\\beta_i\\rangle",
+       "src": "14.7"
+      },
+      {
+       "step": 0
+      }
+     ],
+     "then": {
+      "tex": "\\mk{h}{\\kH} = \\mk{n}{\\knu(\\kIonez + \\kItwoz)} + \\mk{j}{\\kJcc(\\kIonevec\\cdot\\kItwovec)}"
+     },
+     "steps": [
+      {
+       "tex": "\\begin{array}{rcl} \\mk{p}{\\kH|\\alpha_1\\alpha_2\\rangle} & = & \\mk{a}{\\left(\\knu + \\dfrac{\\kJcc}{4}\\right)|\\alpha_1\\alpha_2\\rangle} \\\\ \\mk{q}{\\kH|\\alpha_1\\beta_2\\rangle} & = & \\mk{b}{-\\dfrac{\\kJcc}{4}|\\alpha_1\\beta_2\\rangle + \\dfrac{\\kJcc}{2}|\\beta_1\\alpha_2\\rangle} \\\\ \\mk{r}{\\kH|\\beta_1\\alpha_2\\rangle} & = & \\mk{c}{\\dfrac{\\kJcc}{2}|\\alpha_1\\beta_2\\rangle - \\dfrac{\\kJcc}{4}|\\beta_1\\alpha_2\\rangle} \\\\ \\mk{s}{\\kH|\\beta_1\\beta_2\\rangle} & = & \\mk{e}{\\left(-\\knu + \\dfrac{\\kJcc}{4}\\right)|\\beta_1\\beta_2\\rangle} \\end{array}",
+       "uses": [
+        1,
+        2
+       ],
+       "map": {
+        "h": [
+         "p",
+         "q",
+         "r",
+         "s"
+        ],
+        "n": [
+         "a",
+         "e"
+        ],
+        "j": [
+         "a",
+         "b",
+         "c",
+         "e"
+        ]
+       },
+       "cap": "On the four product functions $\\hat{I}_{1z} + \\hat{I}_{2z}$ gives $1$, $0$, $0$ and $-1$, the sum of the two spins' eigenvalues."
+      },
+      {
+       "tex": "\\mk{M}{\\mathbf{H}} = \\mk{X}{\\begin{pmatrix} \\knu + \\kJcc/4 & 0 & 0 & 0 \\\\ 0 & -\\kJcc/4 & \\kJcc/2 & 0 \\\\ 0 & \\kJcc/2 & -\\kJcc/4 & 0 \\\\ 0 & 0 & 0 & -\\knu + \\kJcc/4 \\end{pmatrix}}",
+       "map": {
+        "p": "M",
+        "q": "M",
+        "r": "M",
+        "s": "M",
+        "a": "X",
+        "b": "X",
+        "c": "X",
+        "e": "X"
+       },
+       "cap": "Column $j$ of the matrix holds the coefficients of $\\hat{H}$ acting on the $j$th basis function."
+      }
+     ],
+     "num": "(14.7.5)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "tex": "|H_{ik} - E S_{ik}| = 0",
+       "src": "7.2, (7.2.15)"
+      },
+      {
+       "text": "The product functions are orthonormal, so $S_{ik} = \\delta_{ik}$.",
+       "src": "8.4"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{M}{\\mathbf{H}} = \\mk{X}{\\begin{pmatrix} \\knu + \\kJcc/4 & 0 & 0 & 0 \\\\ 0 & -\\kJcc/4 & \\kJcc/2 & 0 \\\\ 0 & \\kJcc/2 & -\\kJcc/4 & 0 \\\\ 0 & 0 & 0 & -\\knu + \\kJcc/4 \\end{pmatrix}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{D}{\\begin{vmatrix} \\knu + \\frac{\\kJcc}{4} - E & 0 & 0 & 0 \\\\ 0 & -\\frac{\\kJcc}{4} - E & \\frac{\\kJcc}{2} & 0 \\\\ 0 & \\frac{\\kJcc}{2} & -\\frac{\\kJcc}{4} - E & 0 \\\\ 0 & 0 & 0 & -\\knu + \\frac{\\kJcc}{4} - E \\end{vmatrix}} = 0",
+       "uses": [
+        1,
+        2
+       ],
+       "map": {
+        "M": "D",
+        "X": "D"
+       },
+       "cap": "With orthonormal basis functions the overlap matrix is the unit matrix, so the secular determinant reads $|\\mathbf{H} - E\\,\\mathbf{1}| = 0$."
+      },
+      {
+       "tex": "\\mk{o}{\\left(\\knu + \\frac{\\kJcc}{4} - E\\right)\\left(-\\knu + \\frac{\\kJcc}{4} - E\\right)}\\mk{m}{\\left[\\left(-\\frac{\\kJcc}{4} - E\\right)^2 - \\frac{\\kJcc^2}{4}\\right]} = 0",
+       "map": {
+        "D": [
+         "o",
+         "m"
+        ]
+       },
+       "cap": "The matrix is block diagonal, so its determinant is the two outer entries times the determinant of the middle $2\\times2$ block."
+      },
+      {
+       "tex": "\\begin{array}{ll} \\mk{a}{\\kEone = \\knu + \\dfrac{\\kJcc}{4}} & \\mk{b}{\\kEtwo = \\dfrac{\\kJcc}{4}} \\\\ \\mk{c}{\\kEthree = -\\dfrac{3\\kJcc}{4}} & \\mk{e}{\\kEfour = -\\knu + \\dfrac{\\kJcc}{4}} \\end{array}",
+       "map": {
+        "o": [
+         "a",
+         "e"
+        ],
+        "m": [
+         "b",
+         "c"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "step": 2
+      },
+      {
+       "tex": "\\sum_j H_{ij} a_j = E\\,a_i",
+       "src": "(7.2.14)",
+       "drv": "7.2/secular"
+      },
+      {
+       "text": "A state is normalized: $a_1^2 + a_2^2 = 1$."
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\sum_j H_{ij} a_j} = \\mk{R}{E\\,a_i}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{-\\dfrac{\\kJcc}{4}a_1 + \\dfrac{\\kJcc}{2}a_2} = \\mk{R}{E\\,a_1}",
+       "uses": [
+        0
+       ],
+       "cap": "Take the row of $|\\alpha_1\\beta_2\\rangle$ in the middle block, with $a_1$ and $a_2$ the coefficients of $|\\alpha_1\\beta_2\\rangle$ and $|\\beta_1\\alpha_2\\rangle$."
+      },
+      {
+       "tex": "\\begin{array}{ll} \\mk{p}{\\kEtwo:\\ a_2 = a_1} & \\mk{q}{\\kEthree:\\ a_2 = -a_1} \\end{array}",
+       "uses": [
+        1
+       ],
+       "map": {
+        "L": [
+         "p",
+         "q"
+        ],
+        "R": [
+         "p",
+         "q"
+        ]
+       },
+       "cap": "Put in $E_2 = J/4$ and then $E_3 = -3J/4$."
+      },
+      {
+       "tex": "\\begin{array}{l} \\mk{p}{|2\\rangle = \\dfrac{1}{\\sqrt{2}}(|\\alpha_1\\beta_2\\rangle + |\\beta_1\\alpha_2\\rangle)} \\\\ \\mk{q}{|3\\rangle = \\dfrac{1}{\\sqrt{2}}(|\\alpha_1\\beta_2\\rangle - |\\beta_1\\alpha_2\\rangle)} \\end{array}",
+       "uses": [
+        3
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "nmr-selection",
+   "what": "the NMR selection rules for two equivalent spins",
+   "source": "Physical Chemistry (LibreTexts), 14.7 Spin-Spin Coupling Between Chemically Equivalent Protons is Not Observed",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kIx = \\hat{I}_{1x} + \\hat{I}_{2x}",
+       "src": "(14.7.9)"
+      },
+      {
+       "tex": "\\kIix = \\dfrac{\\kIplus + \\kIminus}{2}",
+       "src": "14.7"
+      },
+      {
+       "tex": "\\kIplus|\\beta_i\\rangle = |\\alpha_i\\rangle,\\quad \\kIminus|\\alpha_i\\rangle = |\\beta_i\\rangle,\\quad \\kIplus|\\alpha_i\\rangle = \\kIminus|\\beta_i\\rangle = 0",
+       "src": "14.7, (14)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{x}{\\kIx} = \\mk{o}{\\hat{I}_{1x}} + \\mk{t}{\\hat{I}_{2x}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{x}{\\kIx} = \\mk{o}{\\dfrac{\\hat{I}_{1+} + \\hat{I}_{1-}}{2}} + \\mk{t}{\\dfrac{\\hat{I}_{2+} + \\hat{I}_{2-}}{2}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\begin{array}{rcl} \\mk{p}{\\kIx|\\alpha_1\\alpha_2\\rangle} & = & \\mk{a}{\\tfrac{1}{2}(|\\beta_1\\alpha_2\\rangle + |\\alpha_1\\beta_2\\rangle)} \\\\ \\mk{q}{\\kIx|\\alpha_1\\beta_2\\rangle} & = & \\mk{b}{\\tfrac{1}{2}(|\\beta_1\\beta_2\\rangle + |\\alpha_1\\alpha_2\\rangle)} \\\\ \\mk{r}{\\kIx|\\beta_1\\alpha_2\\rangle} & = & \\mk{c}{\\tfrac{1}{2}(|\\alpha_1\\alpha_2\\rangle + |\\beta_1\\beta_2\\rangle)} \\\\ \\mk{s}{\\kIx|\\beta_1\\beta_2\\rangle} & = & \\mk{e}{\\tfrac{1}{2}(|\\alpha_1\\beta_2\\rangle + |\\beta_1\\alpha_2\\rangle)} \\end{array}",
+       "uses": [
+        2
+       ],
+       "map": {
+        "x": [
+         "p",
+         "q",
+         "r",
+         "s"
+        ],
+        "o": [
+         "a",
+         "b",
+         "c",
+         "e"
+        ],
+        "t": [
+         "a",
+         "b",
+         "c",
+         "e"
+        ]
+       },
+       "cap": "Each shift operator turns its own nucleus's spin over or gives zero, so $\\hat{I}_x$ flips one spin at a time."
+      }
+     ]
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "\\begin{array}{ll} |1\\rangle = |\\alpha_1\\alpha_2\\rangle & |2\\rangle = \\tfrac{1}{\\sqrt{2}}(|\\alpha_1\\beta_2\\rangle + |\\beta_1\\alpha_2\\rangle) \\\\ |3\\rangle = \\tfrac{1}{\\sqrt{2}}(|\\alpha_1\\beta_2\\rangle - |\\beta_1\\alpha_2\\rangle) & |4\\rangle = |\\beta_1\\beta_2\\rangle \\end{array}",
+       "src": "14.7",
+       "drv": "equivalent-levels"
+      }
+     ],
+     "then": {
+      "tex": "\\begin{array}{rcl} \\mk{p}{\\kIx|\\alpha_1\\alpha_2\\rangle} & = & \\mk{a}{\\tfrac{1}{2}(|\\beta_1\\alpha_2\\rangle + |\\alpha_1\\beta_2\\rangle)} \\\\ \\mk{q}{\\kIx|\\alpha_1\\beta_2\\rangle} & = & \\mk{b}{\\tfrac{1}{2}(|\\beta_1\\beta_2\\rangle + |\\alpha_1\\alpha_2\\rangle)} \\\\ \\mk{r}{\\kIx|\\beta_1\\alpha_2\\rangle} & = & \\mk{c}{\\tfrac{1}{2}(|\\alpha_1\\alpha_2\\rangle + |\\beta_1\\beta_2\\rangle)} \\\\ \\mk{s}{\\kIx|\\beta_1\\beta_2\\rangle} & = & \\mk{e}{\\tfrac{1}{2}(|\\alpha_1\\beta_2\\rangle + |\\beta_1\\alpha_2\\rangle)} \\end{array}"
+     },
+     "steps": [
+      {
+       "tex": "\\begin{array}{rcl} \\mk{p}{\\kIx|1\\rangle} & = & \\mk{a}{\\tfrac{1}{\\sqrt{2}}|2\\rangle} \\\\ \\mk{q}{\\kIx|2\\rangle} & = & \\mk{b}{\\tfrac{1}{\\sqrt{2}}(|1\\rangle + |4\\rangle)} \\\\ \\mk{r}{\\kIx|3\\rangle} & = & \\mk{c}{0} \\\\ \\mk{s}{\\kIx|4\\rangle} & = & \\mk{e}{\\tfrac{1}{\\sqrt{2}}|2\\rangle} \\end{array}",
+       "uses": [
+        1
+       ],
+       "cap": "Write each eigenstate in product functions and use the four lines above. For the singlet the two halves cancel."
+      }
+     ]
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "text": "The eigenstates $|1\\rangle$ to $|4\\rangle$ are orthonormal."
+      },
+      {
+       "tex": "\\kHprime = \\komegap\\kIx",
+       "src": "(14.7.9)"
+      },
+      {
+       "tex": "\\begin{array}{ccc} \\text{State} & I & M_I \\\\ |1\\rangle & 1 & 1 \\\\ |2\\rangle & 1 & 0 \\\\ |3\\rangle & 0 & 0 \\\\ |4\\rangle & 1 & -1 \\end{array}",
+       "src": "14.7"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{h}{\\kHprime} = \\mk{w}{\\komegap\\kIx}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{h}{\\langle \\psi_\\mathrm{f}|\\kHprime|\\psi_\\mathrm{i}\\rangle} = \\mk{w}{\\komegap\\langle \\psi_\\mathrm{f}|\\kIx|\\psi_\\mathrm{i}\\rangle}"
+      },
+      {
+       "tex": "\\begin{array}{l} \\mk{a}{\\langle 2|\\kHprime|1\\rangle = \\langle 2|\\kHprime|4\\rangle = \\dfrac{\\komegap}{\\sqrt{2}}} \\\\ \\mk{b}{\\text{every other pair: } 0} \\end{array}",
+       "uses": [
+        0,
+        1
+       ],
+       "map": {
+        "h": [
+         "a",
+         "b"
+        ],
+        "w": [
+         "a",
+         "b"
+        ]
+       },
+       "cap": "$\\hat{I}_x$ takes $|1\\rangle$ and $|4\\rangle$ only to $|2\\rangle$ and the singlet to nothing, so orthonormality leaves two elements that are not zero."
+      },
+      {
+       "tex": "\\mk{r}{\\Delta I = 0;\\ \\Delta M_I = \\pm 1}",
+       "uses": [
+        3
+       ],
+       "map": {
+        "a": "r",
+        "b": "r"
+       },
+       "cap": "The two allowed pairs, $|2\\rangle \\leftrightarrow |1\\rangle$ and $|4\\rangle \\leftrightarrow |2\\rangle$, both stay in the triplet and change $M_I$ by one."
+      }
+     ],
+     "num": "(14.7.10)"
+    }
+   ]
+  },
+  {
+   "id": "coupling-commutes",
+   "what": "the coupling commutes with the total spin",
+   "source": "Physical Chemistry (LibreTexts), 14.7 Spin-Spin Coupling Between Chemically Equivalent Protons is Not Observed",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kIonevec\\cdot\\kItwovec = \\hat{I}_{1x}\\hat{I}_{2x} + \\hat{I}_{1y}\\hat{I}_{2y} + \\kIonez\\kItwoz",
+       "src": "14.7"
+      },
+      {
+       "text": "Spin operators of different nuclei commute."
+      },
+      {
+       "tex": "[\\hat{I}_x, \\hat{I}_y] = \\mathrm{i}\\hat{I}_z,\\quad [\\hat{I}_y, \\hat{I}_z] = \\mathrm{i}\\hat{I}_x,\\quad [\\hat{I}_z, \\hat{I}_x] = \\mathrm{i}\\hat{I}_y",
+       "src": "6.3, (6.3.10)–(6.3.12)",
+       "drv": "6.3/lx-ly-commutator"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{d}{\\kIonevec\\cdot\\kItwovec} = \\mk{e}{\\hat{I}_{1x}\\hat{I}_{2x} + \\hat{I}_{1y}\\hat{I}_{2y} + \\kIonez\\kItwoz}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{c}{[\\hat{I}_{1x}+\\hat{I}_{2x},\\ \\kJcc(\\kIonevec\\cdot\\kItwovec)]} = \\mk{j}{\\kJcc}\\mk{e}{[\\hat{I}_{1x}+\\hat{I}_{2x},\\ \\hat{I}_{1x}\\hat{I}_{2x} + \\hat{I}_{1y}\\hat{I}_{2y} + \\kIonez\\kItwoz]}",
+       "map": {
+        "d": "c"
+       },
+       "cap": "Take the commutator of both sides with $\\hat{I}_{1x} + \\hat{I}_{2x}$, the case $\\chi = x$. The constant $J$ comes out."
+      },
+      {
+       "tex": "\\mk{c}{[\\hat{I}_{1x}+\\hat{I}_{2x},\\ \\kJcc(\\kIonevec\\cdot\\kItwovec)]} = \\mk{j}{\\kJcc}\\big(\\mk{a}{[\\hat{I}_{1x},\\hat{I}_{1y}]\\hat{I}_{2y}} + \\mk{b}{[\\hat{I}_{1x},\\hat{I}_{1z}]\\hat{I}_{2z}} + \\mk{p}{\\hat{I}_{1y}[\\hat{I}_{2x},\\hat{I}_{2y}]} + \\mk{q}{\\hat{I}_{1z}[\\hat{I}_{2x},\\hat{I}_{2z}]}\\big)",
+       "uses": [
+        1
+       ],
+       "map": {
+        "e": [
+         "a",
+         "b",
+         "p",
+         "q"
+        ]
+       },
+       "cap": "Operators of different nuclei commute, and each $x$ component commutes with itself, so only commutators within one nucleus are left."
+      },
+      {
+       "tex": "\\mk{c}{[\\hat{I}_{1x}+\\hat{I}_{2x},\\ \\kJcc(\\kIonevec\\cdot\\kItwovec)]} = \\mk{j}{\\kJcc}\\big(\\mk{a}{\\mathrm{i}\\hat{I}_{1z}\\hat{I}_{2y}} \\mk{b}{- \\mathrm{i}\\hat{I}_{1y}\\hat{I}_{2z}} + \\mk{p}{\\mathrm{i}\\hat{I}_{1y}\\hat{I}_{2z}} \\mk{q}{- \\mathrm{i}\\hat{I}_{1z}\\hat{I}_{2y}}\\big)",
+       "uses": [
+        2
+       ],
+       "cap": "For each nucleus $[\\hat{I}_x, \\hat{I}_y] = \\mathrm{i}\\hat{I}_z$ and $[\\hat{I}_x, \\hat{I}_z] = -\\mathrm{i}\\hat{I}_y$, with $\\hbar = 1$."
+      },
+      {
+       "tex": "\\mk{c}{[\\hat{I}_{1x}+\\hat{I}_{2x},\\ \\kJcc(\\kIonevec\\cdot\\kItwovec)]} = \\mk{z}{0}",
+       "map": {
+        "j": "z",
+        "a": "z",
+        "b": "z",
+        "p": "z",
+        "q": "z"
+       }
+      },
+      {
+       "tex": "\\mk{c}{[\\hat{I}_{1\\chi}+\\hat{I}_{2\\chi},\\ \\kJcc(\\kIonevec\\cdot\\kItwovec)]} = \\mk{z}{0}",
+       "uses": [
+        2
+       ],
+       "cap": "Relabelling $x \\to y \\to z \\to x$ leaves the commutation relations and $\\hat{\\vec{I}}_1\\cdot\\hat{\\vec{I}}_2$ unchanged, so the same cancellation holds for $\\chi = y$ and $z$."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -16,7 +16,7 @@ const { tex, C, PAL, alpha, ctl, register, begin, line, text, topline, axes, fmt
   const RHO = ctl(d.controls, { label: 'I_{unique} / I', cls: 'moment-of-inertia', key: 'rho', min: 0.5, max: 1.66, step: 0.01, value: 0.6, dec: 2,
     aria: 'the moment of inertia about the unique axis over the moment about the two equal axes', specials: [{ at: 1, label: 'spherical top' }] });
   const KK = F.choice(d.controls, { label: '|K|', key: 'K', options: [0, 1, 2, 3].map((k) => ({ value: String(k), label: String(k) })), value: '3', aria: 'the quantum number K of the level the readout writes' });
-  const S = F.space3d(d, { box: [[-1.8, 1.8], [-1.8, 1.8], [-1.9, 1.9]], h: 460, turn: -0.6, tilt: 0.35, fit: 2.2, spin: 'off', zoom: false });
+  const S = F.space3d(d, { box: [[-2.1, 2.1], [-2.1, 2.1], [-2.3, 2.3]], h: 460, turn: -0.95, tilt: 0.3, fit: 2.0, spin: 'off', zoom: false });
   const lad = F.makeCanvas(d.stage, 460);
   const hits = [];
   F.hover(d.stage, () => hits, lad);
@@ -30,9 +30,9 @@ const { tex, C, PAL, alpha, ctl, register, begin, line, text, topline, axes, fmt
       { k: 'line', pts: [[0, 0, -Lz], [0, 0, Lz]], color: 'ink', w: 3, name: sph ? 'a body axis' : `the unique axis, ${u}` },
       { k: 'line', pts: [[-L, 0, 0], [L, 0, 0]], color: 'ink', w: 3, name: sph ? 'a body axis' : `a body axis, ${o1}` },
       { k: 'line', pts: [[0, -L, 0], [0, L, 0]], color: 'ink', w: 3, name: sph ? 'a body axis' : `a body axis, ${o2}` },
-      { k: 'label', s: sph ? 'a' : u, p: [0, 0, Lz + 0.15], color: 'ink', cls: 'bare' },
-      { k: 'label', s: sph ? 'b' : o1, p: [L + 0.15, 0, 0], color: 'ink', cls: 'bare' },
-      { k: 'label', s: sph ? 'c' : o2, p: [0, L + 0.15, 0], color: 'ink', cls: 'bare' },
+      { k: 'label', s: '$' + (sph ? 'a' : u) + '$', p: [0, 0, Lz + 0.25], color: 'ink', cls: 'bare' },
+      { k: 'label', s: '$' + (sph ? 'b' : o1) + '$', p: [L + 0.3, 0, 0], color: 'ink', cls: 'bare' },
+      { k: 'label', s: '$' + (sph ? 'c' : o2) + '$', p: [0, L + 0.3, 0], color: 'ink', cls: 'bare' },
     ]);
     S.headline(sph ? 'A spherical top: all three moments equal.' : pro ? `A prolate top: $I_a = ${fmt(rho, 2)}\\,I_b$, a football.` : `An oblate top: $I_c = ${fmt(rho, 2)}\\,I_a$, a frisbee.`);
 
