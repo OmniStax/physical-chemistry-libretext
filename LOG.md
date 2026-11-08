@@ -602,3 +602,46 @@ Known gaps: 9.4's readout and headline write ΔE₊ plain and round differently
 (the headline converts the unrounded value to eV); the exercise card credits
 Quantum States of Atoms and Molecules rather than a section of this book; 9.2's
 "via the secular equations" is not linked to 7.2.
+
+## Chapter 11 pass · 2026-11-08
+
+Built: the intro and 11.1–11.4 (no summary page). 5 figure rows, all interactive
+and still: 3 Figures folding the book's (the STO-NG fit 11.2.1 + 11.2.2 + 11.2.3,
+multiple zeta 11.3.1 + 11.3.2, polarization 11.4.1) and the 2 extra Sims picked
+(fit it yourself for Example 11.2.2, a diffuse function's tail); none moving, no 3D.
+1 derivation (11.3, the cost of a double-zeta basis). 7 exercises, all `exercise`
+kind in the Exercises document: 1 from the book (Example 11.2.2, AI solution) and 6
+AI exercises. 41 AI-marked corrections in footnotes (11.1: 19, 11.2: 6, 11.3: 9,
+11.4: 7).
+
+Chapter pass: the wanted rows (11.2's `y` and `z`, length, for `\ky` and `\kz`;
+11.3's untyped `n_SZ` and `n_DZ`, symbols with latex `n_{\text{SZ}}` and
+`n_{\text{DZ}}` and no macro, which the derivation already writes). 11.2's
+"polarization functions" link now opens 11.4's block (`class="xref"`) instead of
+the LibreTexts URL. `media/ch11/511594-stong.png` (the McQuarrie scan of 11.2.3)
+deleted; nothing referenced it. The intro's "semi-empirical" no longer wears the
+`ab-initio-calculation` span (it names the other kind of method). Figures: the
+STO-NG readout writes `\phi^{\text{GTO}}`, not italic GTO; the multiple-zeta
+readout's general line carries the normalization `\mathcal{N}` its worked line
+substitutes (1.04), true as written; the polarization map's ramp lost its name
+"ψ = c₁ 2p_z + c₂ d_xz", which ran across the z axis and repeats the readout.
+11.4's `notes` and figure comments now name the sources of the literature exponents:
+d 0.8 (6-31G*) and H p 1.1 (6-31G**) from Hariharan and Pople (1973) on the 6-31G of
+Hehre, Ditchfield and Pople (1972); H diffuse 0.036 (6-311++G) from the 6-311G of
+Krishnan et al. (1980) with the diffuse functions of Clark et al. (1983) and Frisch,
+Pople and Binkley (1984). 11.2's STO-NG coefficients name Hehre, Stewart and Pople
+(1969). **None of these values or attributions was checked against the papers in
+this session**; they are recalled. `check:content` reaches every ch11 page: a
+scratch copy with a bogus span in each of the intro and 11.1–11.4 and a bad coverage
+row in 11.4 gave all seven errors (the section count comes from `chapter.json`'s
+records, which is why it did not move when the pages were built). No two-argument
+`\braket`, no bare `\k` script, no U+2011/U+FEFF; every cross-page link carries
+`xref`; every section has `ai`, `notes` (the intro has nothing left out) and no
+objectives, as the book prints none. `colours:default` rerun (every type kept its
+colour). `check:content`: no errors, no warnings. Every figure screenshot in light
+and dark, the derivation rendered; no console or KaTeX error on any Chapter 11 page.
+
+Known gaps: the exponent attributions above are unverified; `ab-initio-calculation`
+still lists "semi-empirical" among its terms, and 12's intro spans it so; 11.2's
+other external links (Inorganic Chemistry's 5.1, bse.pnl.gov) and 11.4's DOI stay
+external, since no page of this book holds them.

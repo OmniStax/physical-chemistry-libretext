@@ -1,0 +1,156 @@
+{
+ "id": "12.10",
+ "module": "433871",
+ "chapter": "12",
+ "title": "Molecular Motions of a Molecule can be Represented by a Reducible Reperesentation",
+ "short": "Symmetries of molecular motions",
+ "lead": "Water's motions can be written in a basis of x, y and z axes on every atom. Its characters under the operations of C₂ᵥ come from the atoms each operation leaves in place, and they split into translations, rotations and vibrations.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "The text is Claire Vallance's (Molecular Symmetry, Group Theory and Applications), shared under the book's CC BY-NC-SA 4.0. The book's two images of water are folded into one moving figure whose mode shapes come from a valence force field, with the measured frequencies from the NIST Chemistry WebBook.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercise in this section. The one here, on CO₂'s vibrations worked in D₂ₕ, was written by AI with its solution, Bloom level and concept tags.",
+ "figures": [
+  {
+   "id": "sim-water-modes",
+   "kind": "sim",
+   "originals": [
+    "/media/ch12/61173-Screenshot_24-2.png",
+    "/media/ch12/61174-Screenshot_24-3.png"
+   ],
+   "draws": [
+    "character",
+    "symmetry-operation",
+    "representation",
+    "wavenumber"
+   ],
+   "conventions": [
+    "O",
+    "H"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "determining-the-symmetries-of-molecular",
+   "concept": "degrees-of-freedom",
+   "verb": "introduces"
+  },
+  {
+   "span": "determining-the-symmetries-of-molecular",
+   "concept": "cartesian-3n-basis",
+   "verb": "introduces"
+  },
+  {
+   "span": "determining-the-symmetries-of-molecular",
+   "concept": "vibrational-representation",
+   "verb": "introduces"
+  },
+  {
+   "span": "determining-the-symmetries-of-molecular",
+   "concept": "character",
+   "verb": "uses"
+  },
+  {
+   "span": "determining-the-symmetries-of-molecular",
+   "concept": "character-table",
+   "verb": "uses"
+  },
+  {
+   "span": "determining-the-symmetries-of-molecular",
+   "concept": "symmetry-operation",
+   "verb": "uses"
+  },
+  {
+   "span": "determining-the-symmetries-of-molecular",
+   "concept": "irreducible-representation",
+   "verb": "uses"
+  },
+  {
+   "span": "determining-the-symmetries-of-molecular",
+   "concept": "reduction-formula",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "ai1",
+   "source_id": "As an exercise, you should make sure",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "determining-the-symmetries-of-molecular",
+   "prompt": "<p>Find the symmetries of the vibrations of CO₂ by working in $D_{2h}$, a subgroup of its point group, with the molecular axis along $z$. A linear molecule has only two rotations, $R_x$ and $R_y$. Which irreducible representations do the vibrations span?</p>",
+   "answer": {
+    "type": "choice",
+    "generated_by": "ai",
+    "options": [
+     "$A_g + B_{1u} + B_{2u} + B_{3u}$",
+     "$2A_g + B_{1u}$",
+     "$A_g + B_{1u} + B_{2g} + B_{3g}$",
+     "$A_g + B_{1g} + B_{2u} + B_{3u}$"
+    ],
+    "correct": 0,
+    "hint": "Count the atoms each operation leaves in place, multiply by the character of $(x, y, z)$, then subtract the translations and the two rotations.",
+    "solution": "<p>Under $E$, $C_2(z)$, $C_2(y)$, $C_2(x)$, $i$, $\\sigma(xy)$, $\\sigma(xz)$, $\\sigma(yz)$ the atoms left in place number 3, 3, 1, 1, 1, 1, 3, 3, and the characters of $(x, y, z)$ are 3, −1, −1, −1, −3, 1, 1, 1. Their products give $\\chi_{3N} = 9, -3, -1, -1, -3, 1, 3, 3$.</p><p>The translations ($B_{1u} + B_{2u} + B_{3u}$) have the characters of $(x, y, z)$, and the rotations $R_x + R_y$ ($B_{3g} + B_{2g}$) have 2, −2, 0, 0, 2, −2, 0, 0. Subtracting both leaves $\\chi_{\\text{Vib}} = 4, 0, 0, 0, -2, 2, 2, 2$.</p><p>The reduction formula with $h = 8$ gives one each of $A_g$, $B_{1u}$, $B_{2u}$ and $B_{3u}$ and none of the rest, so $\\Gamma_{\\text{vib}} = A_g + B_{1u} + B_{2u} + B_{3u}$: the symmetric stretch ($A_g$), the asymmetric stretch ($B_{1u}$) and the two partners of the bend ($B_{2u}$, $B_{3u}$). That is four vibrations, $3N - 5$ for a linear molecule.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "ai1",
+   "concept": "vibrational-representation"
+  },
+  {
+   "exercise": "ai1",
+   "concept": "cartesian-3n-basis"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-above",
+   "kind": "correction",
+   "html": "Nothing above in this book says this. The sentence comes from Claire Vallance's lecture notes, where this passage follows her treatment of molecular orbitals."
+  },
+  {
+   "id": "c-has",
+   "kind": "correction",
+   "html": "Read “each atom has 3 degrees of freedom.”"
+  },
+  {
+   "id": "c-1520",
+   "kind": "correction",
+   "html": "Equation (15.20) is the number in Vallance's notes. In this book the reduction equation is Equation 12.8.19."
+  },
+  {
+   "id": "c-now",
+   "kind": "correction",
+   "html": "The book stops here, and the SALCs of water's 3N Cartesian basis are not worked anywhere in it. Section 12.14 builds the SALCs of water's two O–H stretches."
+  }
+ ]
+}

@@ -66,7 +66,7 @@ const sig = (v, n) => { if (v === 0) return '0'; const p = Math.max(0, n - 1 - M
     hits.push({ x: ax.X(0), y: ax.Y(sto(0)), r: 16, name: `the cusp of the Slater orbital, ${fmt(sto(0), 3)} a₀^−3/2 at r = 0` });
     hits.push({ x: ax.X(0), y: ax.Y(s.f0), r: 16, name: `STO-${K.value}G at r = 0: ${fmt(s.f0, 3)} a₀^−3/2, flat` });
     s.prim.forEach((p, i) => { const rh = Math.min(3.8, 0.6 / Math.sqrt(s.a[i])); hits.push({ x: ax.X(rh), y: ax.Y(p(rh)), r: 12, name: `primitive ${i + 1}: d = ${sig(s.d[i], 4)}, α = ${sig(s.a[i], 4)} a₀⁻²` }); });
-    const terms = s.d.map((di, i) => `${sig(di, 3)}\\ket{\\phi^{GTO}(${sig(s.a[i], 3)})}`);
+    const terms = s.d.map((di, i) => `${sig(di, 3)}\\ket{\\phi^{\\text{GTO}}(${sig(s.a[i], 3)})}`);
     /* two terms a row: six terms in one line overflow the readout */
     const rows = []; for (let i = 0; i < terms.length; i += 2) rows.push(terms.slice(i, i + 2).join(' + '));
     const sum = rows.length > 1 ? `\\begin{aligned} \\ket{\\kpsiSTONG} &= ${rows.join(' \\\\ &\\quad + ')} \\end{aligned}` : `\\ket{\\kpsiSTONG} = ${rows[0]}`;

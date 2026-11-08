@@ -81,7 +81,7 @@ const sim = (id, H) => F.sim(root, id, H);
     const kets = z.map((zi, i) => `${fmt(w[i], 2)}\\ket{\\kphiSTO(${fmt(zi, 2)})}`).join(' + ');
     tex(d.readout, !ok ? `\\ket{\\kpsi} = \\sum_i c_i\\ket{\\kphiSTO(\\zeta_i)} = 0`
       : n === 1 ? `\\ket{\\kpsi} = \\sum_i c_i\\ket{\\kphiSTO(\\zeta_i)} \\\\ \\ket{\\kpsi} = \\ket{\\kphiSTO(1.24)} \\\\ \\langle\\kr\\rangle = ${fmt(mr, 2)}\\,\\kao`
-      : `\\ket{\\kpsi} = \\sum_i c_i\\ket{\\kphiSTO(\\zeta_i)} \\\\ \\ket{\\kpsi} = ${fmt(N, 2)}\\bigl(${kets}\\bigr) \\\\ \\langle\\kr\\rangle = ${fmt(mr, 2)}\\,\\kao`);
+      : `\\ket{\\kpsi} = \\mathcal{N}\\sum_i c_i\\ket{\\kphiSTO(\\zeta_i)} \\\\ \\ket{\\kpsi} = ${fmt(N, 2)}\\bigl(${kets}\\bigr) \\\\ \\langle\\kr\\rangle = ${fmt(mr, 2)}\\,\\kao`);
   }
   register(d.fig, { update: () => {}, draw });
 })();

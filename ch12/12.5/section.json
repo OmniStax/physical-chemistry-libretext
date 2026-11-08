@@ -1,0 +1,125 @@
+{
+ "id": "12.5",
+ "module": "13488",
+ "chapter": "12",
+ "title": "Molecules can be Represented by Reducible Representations",
+ "short": "Reducible representations",
+ "lead": "A basis built from a molecule's own orbitals gives a matrix representation of its point group. For ammonia, the valence s orbitals on nitrogen and the three hydrogens give a 4 × 4 matrix for each operation of C₃ᵥ.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "Written by Jerry LaRue and shared under CC BY 4.0, with nothing left out.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "medium"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "medium"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The section prints no exercises; the one on squaring Γ(C₃⁺) is new and AI-written, with its answer checked by multiplying the matrices. Its Bloom level and concept tags were chosen by AI.",
+ "figures": [
+  {
+   "id": "sim-nh3-permutation",
+   "kind": "sim",
+   "originals": [
+    "/media/ch12/61162-Screenshot_10-1.png"
+   ],
+   "draws": [
+    "symmetry-operation",
+    "character",
+    "wavefunction",
+    "representation"
+   ],
+   "conventions": [
+    "N",
+    "H"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "medium",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "ammonia-s-basis",
+   "concept": "reducible-representation",
+   "verb": "introduces"
+  },
+  {
+   "span": "ammonia-s-basis",
+   "concept": "matrix-representation",
+   "verb": "uses"
+  },
+  {
+   "span": "ammonia-s-basis",
+   "concept": "point-group",
+   "verb": "uses"
+  },
+  {
+   "span": "ammonia-s-basis",
+   "concept": "symmetry-operation",
+   "verb": "uses"
+  },
+  {
+   "span": "ammonia-s-basis",
+   "concept": "group-multiplication-table",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "These reducible representations multiply together according to the group multiplication table",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "ammonia-s-basis",
+   "prompt": "<p>In the $\\begin{pmatrix} s_N, s_1, s_2, s_3 \\end{pmatrix}$ basis of ammonia, multiply the matrix $\\Gamma(C_3^+)$ of Equation 12.5.2 by itself. Which of the six matrices of Equation 12.5.2 is the product?</p>",
+   "answer": {
+    "type": "choice",
+    "generated_by": "ai",
+    "options": [
+     "$\\Gamma(E)$",
+     "$\\Gamma(C_3^+)$",
+     "$\\Gamma(C_3^-)$",
+     "$\\Gamma(\\sigma_v)$"
+    ],
+    "correct": 2,
+    "hint": "Two turns of 120° in the same sense make one turn of 240°, which is one turn of 120° the other way.",
+    "solution": "<p>$$ \\Gamma(C_3^+)\\Gamma(C_3^+) = \\begin{pmatrix} 1 & 0 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\end{pmatrix}\\begin{pmatrix} 1 & 0 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\end{pmatrix} = \\begin{pmatrix} 1 & 0 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 0 & 0 & 1 \\\\ 0 & 1 & 0 & 0 \\end{pmatrix} = \\Gamma(C_3^-) $$</p><p>The matrices multiply as the operations do: $C_3^+$ done twice is a turn of 240°, the same as $C_3^-$. Its trace is 1, since only $s_N$ stays in place.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "reducible-representation"
+  },
+  {
+   "exercise": "a1",
+   "concept": "matrix-representation"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-next-chapter",
+   "kind": "correction",
+   "html": "In this book the reduction follows in the next sections: Section 12.6 gives the result, $2A_1 + E$, and Section 12.11 shows how to reduce a representation."
+  }
+ ]
+}

@@ -1,0 +1,203 @@
+{
+ "id": "12.4",
+ "module": "13487",
+ "chapter": "12",
+ "title": "Symmetry Operations as Matrices",
+ "short": "Operations as matrices",
+ "lead": "Each symmetry operation of a group can be written as a matrix acting on a chosen basis, such as the unit vectors along x, y and z or a set of atomic orbitals. The set of these matrices is a matrix representation of the group.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "Written by Claire Vallance and Jerry LaRue and shared under CC BY 4.0, with nothing left out.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "medium"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "medium"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The section prints no exercises; the one on the matrix of S₄ is new and AI-written, with its answer checked by multiplying the matrices. Its Bloom level and concept tags were chosen by AI.",
+ "figures": [
+  {
+   "id": "sim-vector-ops",
+   "kind": "sim",
+   "number": "12.4.1",
+   "originals": [
+    "/media/ch12/446476-Reflection.png"
+   ],
+   "widths": [
+    295
+   ],
+   "original_caption": "Reflection in the $xy$ plane.",
+   "draws": [
+    "symmetry-operation",
+    "length"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "medium",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "fig-allyl-basis",
+   "kind": "figure",
+   "originals": [
+    "/media/ch12/61163-Screenshot_10-2.png"
+   ],
+   "draws": [],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "medium",
+     "part": "kept as the book prints it"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "transformation-matrices",
+   "concept": "matrix-representation",
+   "verb": "introduces"
+  },
+  {
+   "span": "transformation-matrices",
+   "concept": "symmetry-operation",
+   "verb": "uses"
+  },
+  {
+   "span": "transformation-matrices",
+   "concept": "group",
+   "verb": "uses"
+  },
+  {
+   "span": "transformation-matrices",
+   "concept": "character",
+   "verb": "uses"
+  },
+  {
+   "span": "the-identity-operation",
+   "concept": "symmetry-operation-matrices",
+   "verb": "introduces"
+  },
+  {
+   "span": "the-identity-operation",
+   "concept": "identity-operation",
+   "verb": "uses"
+  },
+  {
+   "span": "the-reflection-operation",
+   "concept": "symmetry-operation-matrices",
+   "verb": "reinforces"
+  },
+  {
+   "span": "the-reflection-operation",
+   "concept": "reflection-operation",
+   "verb": "uses"
+  },
+  {
+   "span": "the-n-fold-rotation-operation",
+   "concept": "symmetry-operation-matrices",
+   "verb": "reinforces"
+  },
+  {
+   "span": "the-n-fold-rotation-operation",
+   "concept": "proper-rotation",
+   "verb": "uses"
+  },
+  {
+   "span": "the-inversion-operation",
+   "concept": "inversion-operation",
+   "verb": "uses"
+  },
+  {
+   "span": "c2v-point-group",
+   "concept": "group-multiplication-table",
+   "verb": "uses"
+  },
+  {
+   "span": "c2v-point-group",
+   "concept": "symmetry-operation-matrices",
+   "verb": "reinforces"
+  },
+  {
+   "span": "matrix-representations-and-groups",
+   "concept": "matrix-representation",
+   "verb": "reinforces"
+  },
+  {
+   "span": "matrix-representations-and-groups",
+   "concept": "group",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "The inverse of a rotation matrix is another rotation matrix",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "the-n-fold-rotation-operation",
+   "prompt": "<p>The improper rotation $S_4$ about $z$ is a $C_4$ rotation about $z$ followed by a reflection in the $xy$ plane. Write the matrix of $S_4$ acting on $\\mathbf{u} = (x, y, z)$ by multiplying the matrices of the two operations, then square it. Which single operation is $S_4^2$?</p>",
+   "answer": {
+    "type": "choice",
+    "generated_by": "ai",
+    "options": [
+     "$E$",
+     "$C_2$ about $z$",
+     "$\\sigma(xy)$",
+     "$i$"
+    ],
+    "correct": 1,
+    "hint": "With $n = 4$ the rotation matrix has $\\cos 90^\\circ = 0$ and $\\sin 90^\\circ = 1$.",
+    "solution": "<p>With $\\cos 90^\\circ = 0$ and $\\sin 90^\\circ = 1$, the rotation is $C_4 = \\begin{pmatrix} 0 & -1 & 0 \\\\ 1 & 0 & 0 \\\\ 0 & 0 & 1 \\end{pmatrix}$, and reflecting afterwards multiplies on the left by $\\sigma(xy)$:</p>$$ S_4 = \\sigma(xy)C_4 = \\begin{pmatrix} 1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & -1 \\end{pmatrix}\\begin{pmatrix} 0 & -1 & 0 \\\\ 1 & 0 & 0 \\\\ 0 & 0 & 1 \\end{pmatrix} = \\begin{pmatrix} 0 & -1 & 0 \\\\ 1 & 0 & 0 \\\\ 0 & 0 & -1 \\end{pmatrix} $$<p>Squaring it,</p>$$ S_4^2 = \\begin{pmatrix} 0 & -1 & 0 \\\\ 1 & 0 & 0 \\\\ 0 & 0 & -1 \\end{pmatrix}\\begin{pmatrix} 0 & -1 & 0 \\\\ 1 & 0 & 0 \\\\ 0 & 0 & -1 \\end{pmatrix} = \\begin{pmatrix} -1 & 0 & 0 \\\\ 0 & -1 & 0 \\\\ 0 & 0 & 1 \\end{pmatrix} $$<p>which is the matrix of $C_2$ about $z$: $(x, y, z) \\rightarrow (-x, -y, z)$. Two quarter turns make a half turn, and the two reflections in the $xy$ plane cancel.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "symmetry-operation-matrices"
+  },
+  {
+   "exercise": "a1",
+   "concept": "improper-rotation"
+  },
+  {
+   "exercise": "a1",
+   "concept": "matrix-representation"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-span",
+   "kind": "correction",
+   "html": "The usual wording, and Vallance's own, runs the other way: the basis spans the representation."
+  },
+  {
+   "id": "c-ry",
+   "kind": "correction",
+   "html": "Equation 12.4.4 puts $-\\sin\\theta$ at the top right and $+\\sin\\theta$ at the bottom left, which is a turn by $-\\theta$. A counterclockwise turn by $\\theta$ about $y$, in the same sense as $R_x$ and $R_z$, is $R_y(\\theta) = \\begin{pmatrix} \\cos\\theta & 0 & \\sin\\theta \\\\ 0 & 1 & 0 \\\\ -\\sin\\theta & 0 & \\cos\\theta \\end{pmatrix}$."
+  },
+  {
+   "id": "c-allyl-sigma",
+   "kind": "correction",
+   "html": "$\\sigma_v'$ is the plane through the middle carbon at right angles to the molecule, so it carries $p_1$ onto $p_3$ and $p_3$ onto $p_1$. In both displays $\\sigma_v'$ takes $(p_1, p_2, p_3)$ to $(p_3, p_2, p_1)$, which is what the printed matrix $\\Gamma(\\sigma_v')$ gives."
+  }
+ ]
+}

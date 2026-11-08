@@ -66,7 +66,7 @@ const signed = (v, dec = 2) => `${v < 0 ? '-' : '+'} ${fmt(Math.abs(v), dec)}`;
     const box = { l: 150, r: 790, t: 120, b: 600 };
     paint(ctx, box, psi, M, cw, cn);
     const ax = axes(ctx, box, [-X, X], [-Y, Y], { nx: 8, ny: 6, xl: 'x (a₀)', yl: g.yl, xc: cl, yc: cl });
-    F.legend(ctx, { l: box.l, r: box.r, t: box.t - 52, b: box.t - 12 }, [{ s: `ψ = c₁ ${g.l1} + c₂ ${g.l2}`, ramp: [cn, PAL.panel, cw], ends: ['ψ < 0', 'ψ > 0'] }], { corner: 'top', panel: false });
+    F.legend(ctx, { l: box.l, r: box.r, t: box.t - 52, b: box.t - 12 }, [{ s: '', ramp: [cn, PAL.panel, cw], ends: ['ψ < 0', 'ψ > 0'] }], { corner: 'top', panel: false });
     const X0 = ax.X(0), Y0 = ax.Y(0), XC = ax.X(sx);
     nucleus(ctx, X0, Y0, g.atom, 9);
     hits.length = 0;
