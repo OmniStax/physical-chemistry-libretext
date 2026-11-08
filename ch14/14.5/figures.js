@@ -29,7 +29,7 @@ const DEG = Math.PI / 180, TAU = 2 * Math.PI;
 ===================================================================== */
 (function () {
   const d = F.sim(root, 'sim-larmor');
-  const S = F.space3d(d, { box: [[-1.4, 1.4], [-2.7, 2.7], [-0.3, 2.6]], h: 520, turn: -0.3, tilt: 0.3, fit: 2.5,
+  const S = F.space3d(d, { box: [[-2.7, 2.7], [-1.4, 1.4], [-0.3, 2.6]], h: 520, turn: -0.3, tilt: 0.3, fit: 2.5,
     pitch: [-75 * DEG, 75 * DEG], spin: 'off', zoom: false });
   const strip = F.makeCanvas(d.stage, 250);
   const cy = F.cycle(() => Infinity, 0);
@@ -41,8 +41,8 @@ const DEG = Math.PI / 180, TAU = 2 * Math.PI;
   const TH = 38 * DEG, L = 1.55, X0 = -1.45, X1 = 1.45;    /* the cone's half-angle, the moment's drawn length, the two axes' x */
   let ph0 = 0, ph1 = 0, last = null;
   const ring = (f, n = 64) => Array.from({ length: n + 1 }, (_, i) => f(i / n));
-  const cone = (x) => { const rows = []; for (let j = 0; j <= 5; j++) { const s = j / 5, r = s * L * Math.sin(TH), z = s * L * Math.cos(TH); rows.push(ring((u) => [r * Math.cos(TAU * u), x + r * Math.sin(TAU * u), z], 48)); } return rows; };
-  const tip = (x, a) => [L * Math.sin(TH) * Math.cos(a), x + L * Math.sin(TH) * Math.sin(a), L * Math.cos(TH)];
+  const cone = (x) => { const rows = []; for (let j = 0; j <= 5; j++) { const s = j / 5, r = s * L * Math.sin(TH), z = s * L * Math.cos(TH); rows.push(ring((u) => [x + r * Math.cos(TAU * u), r * Math.sin(TAU * u), z], 48)); } return rows; };
+  const tip = (x, a) => [x + L * Math.sin(TH) * Math.cos(a), L * Math.sin(TH) * Math.sin(a), L * Math.cos(TH)];
   /* the model, in MHz and Hz */
   const model = () => {
     const b = B.v, s = SG.v * 1e-6, s0 = SIG0 * 1e-6;
@@ -88,16 +88,16 @@ const DEG = Math.PI / 180, TAU = 2 * Math.PI;
       S.set('field', [
         { k: 'arrow', a: [0, 0, -0.2], b: [0, 0, 2.3], color: cB, w: 5, name: `the applied field B, ${fmt(m.b, 2)} T` },
         { k: 'label', s: '$\\kB$', p: [0, 0, 2.55], color: cB },
-        { k: 'line', pts: [[0, X0, 0], [0, X0, 2.1]], color: alpha(cB, 0.55), w: 2, name: 'the axis the standard precesses about, along B' },
-        { k: 'line', pts: [[0, X1, 0], [0, X1, 2.1]], color: alpha(cB, 0.55), w: 2, name: "the axis the proton precesses about, along B" },
+        { k: 'line', pts: [[X0, 0, 0], [X0, 0, 2.1]], color: alpha(cB, 0.55), w: 2, name: 'the axis the standard precesses about, along B' },
+        { k: 'line', pts: [[X1, 0, 0], [X1, 0, 2.1]], color: alpha(cB, 0.55), w: 2, name: "the axis the proton precesses about, along B" },
       ]);
       S.set('cones', [
         { k: 'sheet', rows: cone(X0), color: PAL.soft, alpha: 0.14, name: `the standard's cone: its moment precesses at ν₀ = ${fmt(m.nu0, 4)} MHz` },
         { k: 'sheet', rows: cone(X1), color: PAL.soft, alpha: 0.14, name: `the proton's cone: its moment precesses at ν = ${fmt(m.nu, 4)} MHz` },
         { k: 'line', pts: ring((u) => tip(X0, TAU * u)), color: alpha(PAL.ink, 0.3), w: 2 },
         { k: 'line', pts: ring((u) => tip(X1, TAU * u)), color: alpha(PAL.ink, 0.3), w: 2 },
-        { k: 'label', s: 'standard', p: [0, X0, -0.3] },
-        { k: 'label', s: 'proton', p: [0, X1, -0.3] },
+        { k: 'label', s: 'standard', p: [X0, 0, -0.3] },
+        { k: 'label', s: 'proton', p: [X1, 0, -0.3] },
       ]);
     }
     /* the two moments now, each with the arc it swept in the last moment */
@@ -105,10 +105,10 @@ const DEG = Math.PI / 180, TAU = 2 * Math.PI;
     S.set('moments', [
       { k: 'line', pts: trail(X0, -ph0), color: alpha(cm, 0.4), w: 3 },
       { k: 'line', pts: trail(X1, -ph1), color: alpha(cm, 0.4), w: 3 },
-      { k: 'arrow', a: [0, X0, 0], b: tip(X0, -ph0), color: cm, w: 5, name: "the standard's magnetic moment" },
-      { k: 'arrow', a: [0, X1, 0], b: tip(X1, -ph1), color: cm, w: 5, name: "the proton's magnetic moment" },
-      { k: 'dot', p: [0, X0, 0], color: PAL.ink, r: 6, name: 'the standard nucleus' },
-      { k: 'dot', p: [0, X1, 0], color: PAL.ink, r: 6, name: 'the proton' },
+      { k: 'arrow', a: [X0, 0, 0], b: tip(X0, -ph0), color: cm, w: 5, name: "the standard's magnetic moment" },
+      { k: 'arrow', a: [X1, 0, 0], b: tip(X1, -ph1), color: cm, w: 5, name: "the proton's magnetic moment" },
+      { k: 'dot', p: [X0, 0, 0], color: PAL.ink, r: 6, name: 'the standard nucleus' },
+      { k: 'dot', p: [X1, 0, 0], color: PAL.ink, r: 6, name: 'the proton' },
     ]);
     S.headline(`At ${fmt(m.b, 2)} T the proton precesses ${fmt(m.dHz, 0)} Hz faster than the standard: δ = ${fmt(m.delta, 2)} ppm.`);
     drawStrip(m);

@@ -132,7 +132,7 @@ const lor = (x, x0, w) => (w * w) / ((x - x0) * (x - x0) + w * w);
     }
     if (!n) line(ctx, CX, t0, CX, t0 + 40, ink, 3);
     /* the arrangements under each subpeak: column j has n - j spins with B0 (right) and j against (left) */
-    const rowH = 17, aw = Math.min(34, (J * PX - 24) / Math.max(n, 1) - 6), y0 = t0 + n * lh + 34;
+    const rowH = n <= 4 ? 22 : 17, aw = Math.min(34, (J * PX - 24) / Math.max(n, 1) - 6), y0 = t0 + n * lh + 34;
     for (let j = 0; j <= n; j++) {
       const x = xs(j, n), rows = [];
       for (let mask = 0; mask < 2 ** n; mask++) { let c = 0; for (let b = 0; b < n; b++) if (mask >> b & 1) c++; if (c === j) rows.push(mask); }
@@ -215,7 +215,7 @@ const lor = (x, x0, w) => (w * w) / ((x - x0) * (x - x0) + w * w);
     const full = (p.n1 + 1) * (p.n2 + 1), seen = ls.length;
     const eq = Math.abs(j1 - j2) < 0.05;
     topline(ctx, eq ? `With $\\kJcc_{1} = \\kJcc_{2}$ the ${full} lines of ${p.lab} fall on ${seen} subpeaks: it looks like a ${NAMES[seen - 1] || seen + '-line multiplet'}.`
-      : `${p.lab}: split ${p.n1 === 1 ? 'into a doublet' : 'into a triplet'} by ${fmt(j1, 1)} Hz, then each line into a doublet by ${fmt(j2, 1)} Hz, ${seen} subpeaks.`);
+      : `${p.lab}: split ${p.n1 === 1 ? 'into a doublet' : 'into a triplet'} by ${fmt(j1, 1)} Hz, then each line into a doublet by ${fmt(j2, 1)} Hz: ${seen} lines.`);
     /* the tree */
     const X = (hz) => CX + hz * PX, t0 = 150, lh = 64;
     line(ctx, CX, t0 - 20, CX, t0, PAL.ink, 3);

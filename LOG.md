@@ -806,3 +806,35 @@ Known gaps: the 12.2 figures' symmetry axis runs through the headline text (libr
 12.15's water-basis axis label sits on the z label; 12.13's Raman "initial state" label sits on
 the axis; 12.8 writes s₁–s₃ plain (it has no s₁–s₃ variables rows); the derivation links in
 footnotes are not checked by `check:content` (it reads only `text.html` hrefs).
+
+## Chapter 15 prep · 2026-11-08
+
+Prep only, no section built. Fetched Chapter 15's 23 images into `media/ch15/` (two more,
+15.1.3 from employees.csbsju.edu and 15.4.1's left panel from upload.wikimedia.org, are
+hot-linked at the source and the network here refuses both hosts). Converted the landing
+page (`intro/`), 15.1–15.7, 15.S (`summary/`) and the empty 15.E; wrote
+`ch15/exploration.md`, `ch15/config.md` (agreed on Chapter 1's terms), `ch15/chapter.json`
+(7 sections, the intro and summary records, 56 variables) and merged `ch15/book-rows.json`:
+0 types, 21 symbols (7 with macros), 52 concepts, 88 edges (Hasse-checked). Drafts made for
+all 9 pages.
+
+Found: every page holds its own text (no stray or empty page); 15.E empty; 2 exercise
+boxes, both keyed; 12 AI exercises proposed. 15.2 carries Wikipedia text (shared BY-SA, by
+14.7's decision). 15.5.1 repeats 15.4.1's right panel and 15.6.2 is 15.5.2's file (cited,
+not shown twice). 15.6.3 is a copyrighted photograph (not shipped). Figures: 7 moving
+(Jablonski, potential-curve routes, collision, Einstein's processes, two-level pumping,
+three-level inversion, cavity, He–Ne) and 2 still (mirror spectra, dye tuning). Five
+derivations, two of them hidden (15.3 two levels never invert, 15.4 the ruby's inversion).
+Notable corrections: 15.2's "k_BT is about 140 eV", 15.1.6's equal-bond-length caption,
+15.4's unconditional ruby inversion, 15.5's diode lasers "no stimulated emission".
+
+Literature from memory, **unchecked** (corrections only, no figure uses them): YAG is
+Y₃Al₅O₁₂ and YLF LiYF₄ (Table 15.5.1), the 647 nm ion line is Kr⁺ (Table 15.5.2), copper
+vapour lasers are pumped by a pulsed discharge, ruby has been run continuously, diode lasers
+lase by stimulated emission between the crystal's facets, "Bennett".
+
+Tool fixes: `lt2md.py` keeps `<sub>`/`<sup>` in a header (15.2's "A₂₁, B₁₂, and B₂₁");
+Chapters 1–14 reconverted to scratch, all 166 source.md byte-identical. `md2html.py` no
+longer crashes on a figure panel served from outside LibreTexts and lists such URLs in the
+row's `_external`; Chapters 1–14's 150 drafts regenerated in scratch: identical.
+`check:content`: no errors.

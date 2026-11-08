@@ -5,7 +5,7 @@ const { tex, C, PAL, alpha, ctl, register, begin, line, dot, text, topline, fmt 
 const sim = (id, H) => F.sim(root, id, H);
 
 /* HCl: the band origin (Table 13.5.1) and B̃0 = 10.4 cm^-1 (13.4); kT/hc at 298 K for the line heights.
-   alpha = B̃0 - B̃1 = 0.31 cm^-1 is the literature value (Huber and Herzberg), not printed in the book. */
+   alpha = B̃0 - B̃1 = 0.31 cm^-1 is the literature value (Huber and Herzberg, from memory, unchecked), not printed in the book. */
 const NU0 = 2885.9, B0 = 10.4, KT = 0.69504 * 298;
 
 /* =====================================================================
