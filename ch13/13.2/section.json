@@ -1,0 +1,362 @@
+{
+ "id": "13.2",
+ "module": "2402",
+ "chapter": "13",
+ "title": "Rotations Accompany Vibrational Transitions",
+ "short": "Rotational fine structure",
+ "lead": "A vibrational transition of a gas-phase diatomic molecule carries rotational transitions with it. The selection rules for the combined motion sort its lines into branches, and the populations of the rotational levels set how strong each line is.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "Curated by Delmar Larsen (LibreTexts) under CC BY 4.0, shared here under the book's CC BY-NC-SA 4.0; the book prints two figures numbered 13.2.3 and cites a Figure 13.2.2 it does not print, and all three of its figures are folded into one live band.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercise in this section. Both here, on HCl's first lines and zero gap and on its most populated rotational level, were written by AI with their solutions, Bloom levels and concept tags. Numeric answers accept a 2% tolerance unless they say otherwise.",
+ "figures": [
+  {
+   "id": "sim-rovib",
+   "kind": "sim",
+   "number": "13.2.1",
+   "folds": [
+    "13.2.3"
+   ],
+   "originals": [
+    "/media/ch13/9564-vibrottrans.png",
+    "/media/ch13/125630-151700610935440509.png",
+    "/media/ch13/9568-rovib_ideal_spectrum.png"
+   ],
+   "original_caption": "Rotation-Vibration Transitions. Rotational transitions are on the order of 1-10 cm-1, while vibrational transitions are on the order of 1000 cm-1. The difference of magnitude between the energy transitions allow rotational levels to be superimposed within vibrational levels.",
+   "draws": [
+    "wavenumber",
+    "energy",
+    "temperature"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "opening",
+   "concept": "rotational-constant",
+   "verb": "uses"
+  },
+  {
+   "span": "selection-rules",
+   "concept": "rovibrational-spectrum",
+   "verb": "introduces"
+  },
+  {
+   "span": "selection-rules",
+   "concept": "rotational-term",
+   "verb": "introduces"
+  },
+  {
+   "span": "selection-rules",
+   "concept": "rovibrational-selection-rules",
+   "verb": "introduces"
+  },
+  {
+   "span": "selection-rules",
+   "concept": "r-branch",
+   "verb": "introduces"
+  },
+  {
+   "span": "selection-rules",
+   "concept": "p-branch",
+   "verb": "introduces"
+  },
+  {
+   "span": "selection-rules",
+   "concept": "q-branch",
+   "verb": "introduces"
+  },
+  {
+   "span": "selection-rules",
+   "concept": "rovibrational-term",
+   "verb": "introduces"
+  },
+  {
+   "span": "selection-rules",
+   "concept": "rovibrational-line-intensities",
+   "verb": "introduces"
+  },
+  {
+   "span": "selection-rules",
+   "concept": "zero-gap",
+   "verb": "introduces"
+  },
+  {
+   "span": "selection-rules",
+   "concept": "boltzmann-distribution",
+   "verb": "introduces"
+  },
+  {
+   "span": "selection-rules",
+   "concept": "rotational-populations",
+   "verb": "introduces"
+  },
+  {
+   "span": "selection-rules",
+   "concept": "harmonic-oscillator",
+   "verb": "uses"
+  },
+  {
+   "span": "selection-rules",
+   "concept": "rigid-rotor",
+   "verb": "uses"
+  },
+  {
+   "span": "selection-rules",
+   "concept": "reduced-mass",
+   "verb": "uses"
+  },
+  {
+   "span": "selection-rules",
+   "concept": "moment-of-inertia",
+   "verb": "uses"
+  },
+  {
+   "span": "selection-rules",
+   "concept": "rotational-constant",
+   "verb": "reinforces"
+  },
+  {
+   "span": "selection-rules",
+   "concept": "degeneracy",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "the zero gap",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "selection-rules",
+   "prompt": "<p>For HCl the band origin is at 2885.9 cm⁻¹ and $\\kBt = 10.4$ cm⁻¹. In the rigid rotor–harmonic oscillator picture, find the wavenumbers of (a) the R(0) line and (b) the P(1) line, and (c) the width of the zero gap between them.</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 2906.7,
+      "unit": "cm⁻¹",
+      "tol": 0.0005,
+      "hint": "Divide Equations 13.2.2 and 13.2.3 by hc, so each line sits at the band origin plus or minus a multiple of 2B̃."
+     },
+     {
+      "part": "b",
+      "value": 2865.1,
+      "unit": "cm⁻¹",
+      "tol": 0.0005
+     },
+     {
+      "part": "c",
+      "value": 41.6,
+      "unit": "cm⁻¹"
+     }
+    ],
+    "solution": "<p>Dividing Equation 13.2.2 by $hc$, an R line lies at $\\knut = 2885.9 + 2\\kBt(J+1)$, so R(0) is at $2885.9 + 2(10.4) = 2906.7$ cm⁻¹.</p><p>From Equation 13.2.3, a P line lies at $\\knut = 2885.9 - 2\\kBt J$, so P(1) is at $2885.9 - 2(10.4) = 2865.1$ cm⁻¹.</p><p>The zero gap is $2906.7 - 2865.1 = 41.6$ cm⁻¹, which is $4\\kBt$.</p>"
+   }
+  },
+  {
+   "id": "a2",
+   "source_id": "by differentiation, we obtain",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "selection-rules",
+   "prompt": "<p>Take $\\kBt = 10.4$ cm⁻¹ for HCl and $k\\kT/hc = 207.1$ cm⁻¹ at 298 K. (a) Evaluate $J_{max}$. (b) Which rotational level, a whole number, is the most populated, and so starts the strongest R and P lines?</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 2.66,
+      "tol": 0.02,
+      "hint": "With B in wavenumbers, kT/2hB becomes (kT/hc)/2B̃."
+     },
+     {
+      "part": "b",
+      "value": 3,
+      "tol": 0.1
+     }
+    ],
+    "solution": "<p>(a) With $\\kB = c\\kBt$, $\\dfrac{k\\kT}{2h\\kB} = \\dfrac{k\\kT/hc}{2\\kBt} = \\dfrac{207.1}{20.8} = 9.96$, so $J_{max} = \\sqrt{9.96} - \\tfrac{1}{2} = 3.16 - 0.50 = 2.66$.</p><p>(b) $J$ must be a whole number. Comparing the two neighbours, $N_2/N_0 = 5e^{-62.4/207.1} = 3.70$ and $N_3/N_0 = 7e^{-124.8/207.1} = 3.83$, so $J = 3$ is the most populated level, and R(3) and P(3) are the strongest lines.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "r-branch"
+  },
+  {
+   "exercise": "a1",
+   "concept": "p-branch"
+  },
+  {
+   "exercise": "a1",
+   "concept": "zero-gap"
+  },
+  {
+   "exercise": "a2",
+   "concept": "rotational-populations"
+  },
+  {
+   "exercise": "a2",
+   "concept": "boltzmann-distribution"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-r-wording",
+   "kind": "correction",
+   "html": "The other way round: in the R branch the excited state's $J$ is one more than the ground state's."
+  },
+  {
+   "id": "c-labels",
+   "kind": "correction",
+   "html": "In the first lines of Equations 13.2.2 and 13.2.3, $J$ labels the excited state and $J^\\prime$ the ground state, the reverse of the text's labels; the second lines put the ground state's $J$ back in place."
+  },
+  {
+   "id": "c-p-wording",
+   "kind": "correction",
+   "html": "The other way round: in the P branch the excited state's $J$ is one less than the ground state's."
+  },
+  {
+   "id": "c-q-reason",
+   "kind": "correction",
+   "html": "The moment of inertia is not the reason. A Q branch needs electronic angular momentum about the bond axis, which NO's ground state has and a molecule in a Σ state lacks. O₂, being homonuclear, has no infrared spectrum at all."
+  },
+  {
+   "id": "c-numbers",
+   "kind": "correction",
+   "html": "The book prints no Figure 13.2.2 and two figures numbered 13.2.3; its citations of Figure 13.2.2 mean the drawn transitions and the ideal spectrum, both folded into Figure 13.2.1 + 13.2.3."
+  },
+  {
+   "id": "c-sj",
+   "kind": "correction",
+   "html": "Read $\\kFrot(J)$ for $S(J)$."
+  },
+  {
+   "id": "c-electrons",
+   "kind": "correction",
+   "html": "The distribution is of the molecules over their rotational levels, not of electrons."
+  },
+  {
+   "id": "c-upper",
+   "kind": "correction",
+   "html": "$N_J$ is the population of rotational level $J$ and $N_0$ that of $J = 0$, both in the lower vibrational state; the next sentence's “upper” and “lower” mean these two levels."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "jmax",
+   "what": "the most populated rotational level",
+   "source": "Physical Chemistry (LibreTexts), 13.2 Rotations Accompany Vibrational Transitions",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\dfrac{N_J}{N_0}=(2J+1)e^{-\\kEr/k\\kT}",
+       "src": "13.2"
+      },
+      {
+       "tex": "\\kFrot(J)=\\dfrac{\\kEr}{h}=\\kB J(J+1)",
+       "src": "13.2"
+      },
+      {
+       "tex": "\\dfrac{d}{dJ}\\left(\\dfrac{N_J}{N_0}\\right)=0 \\text{ at } J = J_{max}",
+       "src": "13.2"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{r}{\\dfrac{N_J}{N_0}} = \\mk{g}{(2J+1)}\\mk{e}{e^{-\\kEr/k\\kT}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{r}{\\dfrac{N_J}{N_0}} = \\mk{g}{(2J+1)}\\mk{e}{e^{-h\\kB J(J+1)/k\\kT}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{d}{\\dfrac{d}{dJ}\\left(\\dfrac{N_J}{N_0}\\right)} = \\mk{a}{2e^{-h\\kB J(J+1)/k\\kT}} - \\mk{b}{(2J+1)^2\\dfrac{h\\kB}{k\\kT}e^{-h\\kB J(J+1)/k\\kT}}",
+       "uses": [],
+       "cap": "The product rule, with the chain rule on the exponential, since $\\frac{d}{dJ}J(J+1) = 2J+1$.",
+       "map": {
+        "r": "d",
+        "g": [
+         "a",
+         "b"
+        ],
+        "e": [
+         "a",
+         "b"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{d}{0} = \\mk{a}{2e^{-h\\kB J_{max}(J_{max}+1)/k\\kT}} - \\mk{b}{(2J_{max}+1)^2\\dfrac{h\\kB}{k\\kT}e^{-h\\kB J_{max}(J_{max}+1)/k\\kT}}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{d}{0} = \\mk{a}{2} - \\mk{b}{(2J_{max}+1)^2\\dfrac{h\\kB}{k\\kT}}",
+       "uses": [],
+       "cap": "An exponential is never zero, so it divides out."
+      },
+      {
+       "tex": "\\mk{b}{(2J_{max}+1)^2} = \\mk{a}{\\dfrac{2k\\kT}{h\\kB}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{b}{2J_{max}+1} = \\mk{a}{\\left(\\dfrac{2k\\kT}{h\\kB}\\right)^{\\frac{1}{2}}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{j}{J_{max}} = \\mk{a}{\\left(\\dfrac{k\\kT}{2h\\kB}\\right)^{\\frac{1}{2}}} - \\mk{h}{\\dfrac{1}{2}}",
+       "uses": [],
+       "map": {
+        "b": [
+         "j",
+         "h"
+        ]
+       }
+      }
+     ],
+     "src": "13.2"
+    }
+   ]
+  }
+ ]
+}

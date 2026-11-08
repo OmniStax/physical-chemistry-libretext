@@ -1,0 +1,271 @@
+{
+ "id": "13.12",
+ "module": "13675",
+ "chapter": "13",
+ "title": "The Selection Rule for the Rigid Rotor",
+ "short": "Rotor selection rule",
+ "lead": "Light drives a transition through the transition dipole between two states, and a selection rule says when that dipole is not zero. For a rotating molecule the question comes down to an integral of two spherical harmonics.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "Shared under CC BY-SA 4.0, the licence of the page it is adapted from; the book's pull-quote repeating the sentence before it is kept as a note.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": []
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The one exercise was written by AI with an AI solution; its Bloom level and concept tags were chosen by AI.",
+ "figures": [],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "selection-rules",
+   "concept": "gross-and-specific-selection-rules",
+   "verb": "introduces"
+  },
+  {
+   "span": "selection-rules",
+   "concept": "transition-dipole-coupling",
+   "verb": "introduces"
+  },
+  {
+   "span": "selection-rules",
+   "concept": "selection-rule",
+   "verb": "reinforces"
+  },
+  {
+   "span": "selection-rules",
+   "concept": "dipole-moment-operator",
+   "verb": "uses"
+  },
+  {
+   "span": "selection-rules",
+   "concept": "dipole-moment",
+   "verb": "uses"
+  },
+  {
+   "span": "selection-rules",
+   "concept": "transition-moment-integral",
+   "verb": "reinforces"
+  },
+  {
+   "span": "rotational-transitions",
+   "concept": "legendre-recurrence",
+   "verb": "introduces"
+  },
+  {
+   "span": "rotational-transitions",
+   "concept": "rigid-rotor-transition-moment",
+   "verb": "introduces"
+  },
+  {
+   "span": "rotational-transitions",
+   "concept": "rotational-selection-rules",
+   "verb": "reinforces"
+  },
+  {
+   "span": "rotational-transitions",
+   "concept": "spherical-harmonics",
+   "verb": "uses"
+  },
+  {
+   "span": "rotational-transitions",
+   "concept": "associated-legendre-functions",
+   "verb": "uses"
+  },
+  {
+   "span": "rotational-transitions",
+   "concept": "one-electron-selection-rules",
+   "verb": "reinforces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "ai1",
+   "source_id": "This leads to the selection rule",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "rotational-transitions",
+   "prompt": "<p>A heteronuclear diatomic molecule in the rotational state $J = 1$, $M = 0$ absorbs or emits z-polarized microwave radiation. Which states can it reach?</p>",
+   "answer": {
+    "type": "choice",
+    "generated_by": "ai",
+    "options": [
+     "$J = 0, M = 0$ and $J = 2, M = 0$",
+     "$J = 2, M = 0$ only",
+     "$J = 0$, $2$ or $3$, each with $M = 0$",
+     "$J = 2$ with $M = 0$ or $\\pm 1$"
+    ],
+    "correct": 0,
+    "hint": "Apply $\\Delta M = 0$ and $\\Delta J = \\pm 1$ together, in both directions.",
+    "solution": "<p>For z-polarized light the $\\varphi$ integral keeps only $M' = M$, so $M$ stays 0, and the recurrence keeps only $J' = J \\pm 1$, so $J$ goes to 2 in absorption or to 0 in emission. $J = 3$ would need $\\Delta J = 2$, and $M = \\pm 1$ would need $\\Delta M = \\pm 1$; both integrals vanish. All of this assumes the gross selection rule is met: the transition moment carries the factor $\\mu$, so HCl, with a permanent dipole moment, has a rotational spectrum, while N₂, whose dipole moment is zero, has none however its $J$ and $M$ change.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "ai1",
+   "concept": "rigid-rotor-transition-moment"
+  },
+  {
+   "exercise": "ai1",
+   "concept": "gross-and-specific-selection-rules"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-nonzero",
+   "kind": "correction",
+   "html": "A selection rule says when the probability of a transition can be non-zero."
+  },
+  {
+   "id": "c-mu",
+   "kind": "correction",
+   "html": "“m” is $\\mu$, the permanent dipole moment, which stands in front of the integral."
+  },
+  {
+   "id": "c-section",
+   "kind": "correction",
+   "html": "This page has no section on electronic transitions; the one-electron rules $\\Delta l = \\pm 1$ are in Section 8.11."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "rotor-selection-rules",
+   "what": "the selection rules of the rigid rotor",
+   "source": "Physical Chemistry (LibreTexts), 13.12 The Selection Rule for the Rigid Rotor",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "text": "The rotor's dipole $\\kmud$ lies along its axis, so its component along the field is $\\kmuz = \\kmud\\cos\\ktheta$."
+      },
+      {
+       "tex": "Y_{J}^{M}(\\ktheta,\\kvarphi)=N_{JM}P_{J}^{|M|}(\\cos\\ktheta)e^{iM\\kvarphi}",
+       "src": "13.12"
+      },
+      {
+       "tex": "x = \\cos\\ktheta",
+       "src": "13.12"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{m}{(\\kmuz)_{J,M,J',M'}} = \\mk{i}{\\int_{0}^{2\\pi } \\int_{0}^{\\pi }Y_{J'}^{M'*}(\\ktheta,\\kvarphi)\\,\\kmuz\\,Y_{J}^{M}(\\ktheta,\\kvarphi)\\sin\\ktheta\\,d\\ktheta\\,d\\kvarphi}",
+      "src": "13.12"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{m}{(\\kmuz)_{J,M,J',M'}} = \\mk{c}{\\kmud\\,N_{JM}N_{J'M'}}\\mk{p}{\\int_{0}^{2 \\pi }e^{i(M-M')\\kvarphi}\\,d\\kvarphi}\\mk{q}{\\int_{0}^{\\pi}P_{J'}^{|M'|}(\\cos\\ktheta)\\cos\\ktheta\\,P_{J}^{|M|}(\\cos\\ktheta)\\sin\\ktheta\\,d\\ktheta}",
+       "uses": [
+        0,
+        1
+       ],
+       "map": {
+        "i": [
+         "c",
+         "p",
+         "q"
+        ]
+       },
+       "cap": "The conjugate of $e^{iM'\\varphi}$ is $e^{-iM'\\varphi}$, so the two phases combine into $e^{i(M-M')\\varphi}$."
+      },
+      {
+       "tex": "\\mk{m}{(\\kmuz)_{J,M,J',M'}} = \\mk{c}{\\kmud\\,N_{JM}N_{J'M'}}\\mk{p}{\\int_{0}^{2 \\pi }e^{i(M-M')\\kvarphi}\\,d\\kvarphi}\\mk{q}{\\int_{-1}^{1}P_{J'}^{|M'|}(x)\\,x\\,P_{J}^{|M|}(x)\\,dx}",
+       "uses": [
+        2
+       ],
+       "cap": "With $x = \\cos\\theta$, $dx = -\\sin\\theta\\,d\\theta$, and the limits $0$ and $\\pi$ become $1$ and $-1$."
+      }
+     ],
+     "note": "The book's integrand lacks the conjugate on $Y_{J'}^{M'}$, and after the substitution it drops the $x$ that $\\mu_z = \\mu\\cos\\theta$ brings; it also prints $e^{I(M-M')\\phi}$ for $e^{i(M-M')\\phi}$ and $x = \\cos q$ for $x = \\cos\\theta$."
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "text": "The integral over $\\kvarphi$, $\\int_0^{2\\pi}e^{i(M-M')\\kvarphi}\\,d\\kvarphi$, is zero unless $M = M'$.",
+       "src": "13.12"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{m}{(\\kmuz)_{J,M,J',M'}} = \\mk{c}{\\kmud\\,N_{JM}N_{J'M'}}\\mk{p}{\\int_{0}^{2 \\pi }e^{i(M-M')\\kvarphi}\\,d\\kvarphi}\\mk{q}{\\int_{-1}^{1}P_{J'}^{|M'|}(x)\\,x\\,P_{J}^{|M|}(x)\\,dx}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{m}{(\\kmuz)_{J,M,J',M'}} = \\mk{p}{0}\\ \\text{unless}\\ M' = M",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{m}{\\Delta M} = \\mk{p}{0}",
+       "uses": []
+      }
+     ],
+     "note": "The book calls this the integral over $f$; it is the integral over $\\phi$."
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "step": 1
+      },
+      {
+       "tex": "(2J+1)x\\,P_{J}^{|M|}(x)=(J-|M|+1)P_{J+1}^{|M|}(x)+(J+|M|)P_{J-1}^{|M|}(x)",
+       "src": "13.12"
+      },
+      {
+       "text": "Associated Legendre functions of the same $|M|$ are orthogonal: $\\int_{-1}^{1}P_{J'}^{|M|}(x)P_{J''}^{|M|}(x)\\,dx = 0$ unless $J' = J''$.",
+       "src": "5.8"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{m}{(\\kmuz)_{J,M,J',M'}} = \\mk{c}{\\kmud\\,N_{JM}N_{J'M'}}\\mk{p}{\\int_{0}^{2 \\pi }e^{i(M-M')\\kvarphi}\\,d\\kvarphi}\\mk{q}{\\int_{-1}^{1}P_{J'}^{|M'|}(x)\\,x\\,P_{J}^{|M|}(x)\\,dx}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{m}{(\\kmuz)_{J,M,J',M}} = \\mk{c}{2\\pi \\kmud\\,N_{JM}N_{J'M}}\\mk{q}{\\int_{-1}^{1}P_{J'}^{|M|}(x)\\,x\\,P_{J}^{|M|}(x)\\,dx}",
+       "uses": [
+        1
+       ],
+       "map": {
+        "p": "c"
+       },
+       "cap": "With $M' = M$ the $\\varphi$ integrand is 1, and its integral is $2\\pi$."
+      },
+      {
+       "tex": "\\mk{m}{(\\kmuz)_{J,M,J',M}} = \\mk{c}{2\\pi \\kmud\\,N_{JM}N_{J'M}}\\mk{q}{\\int_{-1}^{1}P_{J'}^{|M|}(x)\\left(\\dfrac{J-|M|+1}{2J+1}P_{J+1}^{|M|}(x)+\\dfrac{J+|M|}{2J+1}P_{J-1}^{|M|}(x)\\right)dx}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{m}{(\\kmuz)_{J,M,J',M}} = \\mk{q}{0}\\ \\text{unless}\\ J' = J \\pm 1",
+       "uses": [
+        3
+       ],
+       "cap": "Each term is an overlap of two functions of the same $|M|$, which vanishes unless $J'$ is $J + 1$ or $J - 1$."
+      },
+      {
+       "tex": "\\mk{m}{\\Delta J} = \\mk{q}{\\pm 1}",
+       "uses": []
+      }
+     ],
+     "note": "The book prints the second coefficient of the recurrence as $(J - |M|)$, twice, and writes $P_{J}^{|M]}$; the coefficient is $(J + |M|)$. Which integrals vanish does not depend on it."
+    }
+   ]
+  }
+ ]
+}

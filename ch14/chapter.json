@@ -1,0 +1,478 @@
+{
+ "id": "14",
+ "dir": "ch14",
+ "title": "Nuclear Magnetic Resonance Spectroscopy",
+ "intro": {
+  "module": "11809",
+  "slug": "14:_Nuclear_Magnetic_Resonance_Spectroscopy"
+ },
+ "summary": {
+  "module": "550569",
+  "slug": "14:_Nuclear_Magnetic_Resonance_Spectroscopy/14.S:_Nuclear_Magnetic_Resonance_Spectroscopy_(Summary)"
+ },
+ "sections": [
+  {
+   "id": "14.1",
+   "module": "13636",
+   "title": "Nuclei Have Intrinsic Spin Angular Momenta",
+   "slug": "14:_Nuclear_Magnetic_Resonance_Spectroscopy/14.01:_Nuclei_Have_Intrinsic_Spin_Angular_Momenta"
+  },
+  {
+   "id": "14.4",
+   "module": "13639",
+   "title": "The Magnetic Field Acting upon Nuclei in Molecules is Shielded",
+   "slug": "14:_Nuclear_Magnetic_Resonance_Spectroscopy/14.04:_The_Magnetic_Field_Acting_upon_Nuclei_in_Molecules_is_Shielded"
+  },
+  {
+   "id": "14.5",
+   "module": "13640",
+   "title": "Chemical Shifts Depend upon the Chemical Environment of the Nucleus",
+   "slug": "14:_Nuclear_Magnetic_Resonance_Spectroscopy/14.05:_Chemical_Shifts_Depend_upon_the_Chemical_Environment_of_the_Nucleus"
+  },
+  {
+   "id": "14.6",
+   "module": "13641",
+   "title": "Spin-Spin Coupling Can Lead to Multiplets in NMR Spectra",
+   "slug": "14:_Nuclear_Magnetic_Resonance_Spectroscopy/14.06:_Spin-Spin_Coupling_Can_Lead_to_Multiplets_in_NMR_Spectra"
+  },
+  {
+   "id": "14.7",
+   "module": "13642",
+   "title": "Spin-Spin Coupling Between Chemically Equivalent Protons is Not Observed",
+   "slug": "14:_Nuclear_Magnetic_Resonance_Spectroscopy/14.07:_Spin-Spin_Coupling_Between_Chemically_Equivalent_Protons_is_Not_Observed"
+  },
+  {
+   "id": "14.8",
+   "module": "13643",
+   "title": "The n+1 Rule Applies Only to First-Order Spectra",
+   "slug": "14:_Nuclear_Magnetic_Resonance_Spectroscopy/14.08:_The_n1_Rule_Applies_Only_to_First-Order_Spectra"
+  }
+ ],
+ "variables": [
+  {
+   "sym": "s",
+   "concept": "spin-quantum-number",
+   "meaning": "the spin quantum number, which for the electron always has the value ½",
+   "section": "14.1"
+  },
+  {
+   "sym": "m_s",
+   "concept": "spin-magnetic-quantum-number",
+   "meaning": "the spin magnetic quantum number, +½ or −½ for the electron",
+   "section": "14.1"
+  },
+  {
+   "sym": "l",
+   "concept": "angular-momentum-quantum-number",
+   "meaning": "the orbital angular momentum quantum number, which s replaces for spin",
+   "section": "14.1"
+  },
+  {
+   "sym": "m_l",
+   "concept": "magnetic-quantum-number",
+   "meaning": "the orbital magnetic quantum number, written m, which m_s replaces for spin",
+   "section": "14.1"
+  },
+  {
+   "sym": "alpha_s",
+   "concept": "spin-states",
+   "meaning": "the spin-up state, a factor in the electron wavefunction",
+   "section": "14.1"
+  },
+  {
+   "sym": "beta_s",
+   "concept": "spin-states",
+   "meaning": "the spin-down state, a factor in the electron wavefunction",
+   "section": "14.1"
+  },
+  {
+   "sym": "B_x",
+   "concept": "magnetic-field",
+   "meaning": "the external magnetic field",
+   "section": "14.4"
+  },
+  {
+   "sym": "B_y",
+   "concept": "local-magnetic-field",
+   "meaning": "the magnetic field experienced by the nucleus",
+   "section": "14.4"
+  },
+  {
+   "sym": "B",
+   "concept": "magnetic-field",
+   "meaning": "the applied magnetic field",
+   "unit": "T",
+   "section": "14.5"
+  },
+  {
+   "sym": "B_loc",
+   "concept": "local-magnetic-field",
+   "meaning": "the local magnetic field, the field felt by a particular nucleus",
+   "unit": "T",
+   "section": "14.5"
+  },
+  {
+   "sym": "dB",
+   "concept": "local-magnetic-field",
+   "meaning": "the change in the field at the nucleus caused by the currents the applied field induces in its electrons",
+   "section": "14.5"
+  },
+  {
+   "sym": "sigma_sh",
+   "concept": "shielding-constant",
+   "meaning": "the shielding constant",
+   "section": "14.5"
+  },
+  {
+   "sym": "nu_L",
+   "concept": "larmor-frequency",
+   "meaning": "the Larmor frequency of a shielded nucleus",
+   "unit": "Hz",
+   "section": "14.5"
+  },
+  {
+   "sym": "gamma",
+   "concept": "gyromagnetic-ratio",
+   "meaning": "the magnetogyric ratio of the nucleus",
+   "section": "14.5"
+  },
+  {
+   "sym": "delta_cs",
+   "concept": "chemical-shift",
+   "meaning": "the chemical shift on the δ-scale, in parts per million",
+   "unit": "ppm",
+   "section": "14.5"
+  },
+  {
+   "sym": "nu",
+   "type": "frequency",
+   "meaning": "the resonance frequency of the nucleus",
+   "unit": "Hz",
+   "section": "14.5"
+  },
+  {
+   "sym": "nu_0",
+   "type": "frequency",
+   "meaning": "the resonance frequency of the standard",
+   "unit": "Hz",
+   "section": "14.5"
+  },
+  {
+   "sym": "sigma_dia",
+   "concept": "diamagnetic-shielding",
+   "meaning": "the diamagnetic part of the local contribution to the shielding",
+   "section": "14.5"
+  },
+  {
+   "sym": "sigma_para",
+   "concept": "paramagnetic-shielding",
+   "meaning": "the paramagnetic part of the local contribution to the shielding",
+   "section": "14.5"
+  },
+  {
+   "sym": "e",
+   "type": "charge",
+   "meaning": "the elementary charge",
+   "section": "14.5"
+  },
+  {
+   "sym": "mu_0",
+   "meaning": "the vacuum permeability",
+   "section": "14.5"
+  },
+  {
+   "sym": "m_e",
+   "type": "mass",
+   "meaning": "the mass of the electron",
+   "section": "14.5"
+  },
+  {
+   "sym": "rho_e",
+   "concept": "probability-density",
+   "meaning": "the electron probability density |Ψ|²",
+   "section": "14.5"
+  },
+  {
+   "sym": "r",
+   "type": "length",
+   "meaning": "the distance from the nucleus",
+   "section": "14.5"
+  },
+  {
+   "sym": "a_0",
+   "concept": "bohr-radius",
+   "meaning": "the Bohr radius",
+   "section": "14.5"
+  },
+  {
+   "sym": "chi_m",
+   "concept": "magnetic-susceptibility",
+   "meaning": "the magnetic susceptibility of a neighbouring group",
+   "section": "14.5"
+  },
+  {
+   "sym": "B_0",
+   "concept": "magnetic-field",
+   "meaning": "the applied magnetic field of the NMR magnet",
+   "unit": "T",
+   "section": "14.6"
+  },
+  {
+   "sym": "B_eff",
+   "concept": "local-magnetic-field",
+   "meaning": "the field ‘felt’ by a proton, changed slightly by the moments of its neighbours",
+   "section": "14.6"
+  },
+  {
+   "sym": "J_cc",
+   "concept": "coupling-constant",
+   "meaning": "the coupling constant, the difference in Hz between two adjacent subpeaks of a split signal",
+   "unit": "Hz",
+   "section": "14.6"
+  },
+  {
+   "sym": "n",
+   "meaning": "the number of neighbouring, non-equivalent hydrogens",
+   "section": "14.6"
+  },
+  {
+   "sym": "H_op",
+   "concept": "nuclear-spin-hamiltonian",
+   "meaning": "the Hamiltonian of two coupled nuclear spins",
+   "section": "14.7"
+  },
+  {
+   "sym": "H_freq",
+   "concept": "nuclear-spin-hamiltonian",
+   "meaning": "the Hamiltonian of two coupled spins in frequency units",
+   "section": "14.7"
+  },
+  {
+   "sym": "omega_1",
+   "concept": "larmor-frequency",
+   "meaning": "the Larmor frequency of nucleus 1",
+   "section": "14.7"
+  },
+  {
+   "sym": "omega_2",
+   "concept": "larmor-frequency",
+   "meaning": "the Larmor frequency of nucleus 2",
+   "section": "14.7"
+  },
+  {
+   "sym": "nu_1",
+   "concept": "larmor-frequency",
+   "meaning": "the Larmor frequency of nucleus 1 in hertz",
+   "section": "14.7"
+  },
+  {
+   "sym": "nu_2",
+   "concept": "larmor-frequency",
+   "meaning": "the Larmor frequency of nucleus 2 in hertz",
+   "section": "14.7"
+  },
+  {
+   "sym": "nu",
+   "concept": "larmor-frequency",
+   "meaning": "the common Larmor frequency of two equivalent nuclei, ν₁ = ν₂",
+   "section": "14.7"
+  },
+  {
+   "sym": "J_12",
+   "concept": "coupling-constant",
+   "meaning": "the coupling constant (in Hz) between the two nuclei",
+   "unit": "Hz",
+   "section": "14.7"
+  },
+  {
+   "sym": "J_cc",
+   "concept": "coupling-constant",
+   "meaning": "the coupling constant of two equivalent nuclei, J₁₂ with the subscript dropped",
+   "unit": "Hz",
+   "section": "14.7"
+  },
+  {
+   "sym": "Ii_vec_hat",
+   "concept": "nuclear-spin-operators",
+   "meaning": "the operator for the spin angular momentum of nucleus i",
+   "section": "14.7"
+  },
+  {
+   "sym": "Iiz_hat",
+   "concept": "nuclear-spin-operators",
+   "meaning": "the operator for the projection of nucleus i's spin along the z-axis",
+   "section": "14.7"
+  },
+  {
+   "sym": "I1z_hat",
+   "concept": "nuclear-spin-operators",
+   "meaning": "the z-component of the spin of nucleus 1",
+   "section": "14.7"
+  },
+  {
+   "sym": "I2z_hat",
+   "concept": "nuclear-spin-operators",
+   "meaning": "the z-component of the spin of nucleus 2",
+   "section": "14.7"
+  },
+  {
+   "sym": "I1_vec_hat",
+   "concept": "nuclear-spin-operators",
+   "meaning": "the spin angular momentum operator of nucleus 1",
+   "section": "14.7"
+  },
+  {
+   "sym": "I2_vec_hat",
+   "concept": "nuclear-spin-operators",
+   "meaning": "the spin angular momentum operator of nucleus 2",
+   "section": "14.7"
+  },
+  {
+   "sym": "Iix_hat",
+   "concept": "nuclear-spin-operators",
+   "meaning": "the x-component of the spin of nucleus i",
+   "section": "14.7"
+  },
+  {
+   "sym": "Iiy_hat",
+   "concept": "nuclear-spin-operators",
+   "meaning": "the y-component of the spin of nucleus i",
+   "section": "14.7"
+  },
+  {
+   "sym": "Iplus_hat",
+   "concept": "shift-operators",
+   "meaning": "the raising shift operator of nucleus i",
+   "section": "14.7"
+  },
+  {
+   "sym": "Iminus_hat",
+   "concept": "shift-operators",
+   "meaning": "the lowering shift operator of nucleus i",
+   "section": "14.7"
+  },
+  {
+   "sym": "alpha_s",
+   "concept": "spin-states",
+   "meaning": "the spin-up state of a nucleus",
+   "section": "14.7"
+  },
+  {
+   "sym": "beta_s",
+   "concept": "spin-states",
+   "meaning": "the spin-down state of a nucleus",
+   "section": "14.7"
+  },
+  {
+   "sym": "E_1",
+   "concept": "two-spin-eigenstates",
+   "meaning": "the energy of the state |1⟩ = |α₁α₂⟩, ν + J/4",
+   "section": "14.7"
+  },
+  {
+   "sym": "E_2",
+   "concept": "two-spin-eigenstates",
+   "meaning": "the energy of the triplet state |2⟩, J/4",
+   "section": "14.7"
+  },
+  {
+   "sym": "E_3",
+   "concept": "two-spin-eigenstates",
+   "meaning": "the energy of the singlet state |3⟩, −3J/4",
+   "section": "14.7"
+  },
+  {
+   "sym": "E_4",
+   "concept": "two-spin-eigenstates",
+   "meaning": "the energy of the state |4⟩ = |β₁β₂⟩, −ν + J/4",
+   "section": "14.7"
+  },
+  {
+   "sym": "I_vec",
+   "type": "angular-momentum",
+   "meaning": "the overall nuclear spin angular momentum, the sum of the two nuclei's",
+   "section": "14.7"
+  },
+  {
+   "sym": "I1_vec",
+   "type": "angular-momentum",
+   "meaning": "the spin angular momentum of nucleus 1",
+   "section": "14.7"
+  },
+  {
+   "sym": "I2_vec",
+   "type": "angular-momentum",
+   "meaning": "the spin angular momentum of nucleus 2",
+   "section": "14.7"
+  },
+  {
+   "sym": "I_ns",
+   "concept": "clebsch-gordan-series",
+   "meaning": "the quantum number of the overall nuclear spin, 1 or 0 for two spin-½ nuclei",
+   "section": "14.7"
+  },
+  {
+   "sym": "I_n1",
+   "meaning": "the spin quantum number of nucleus 1",
+   "section": "14.7"
+  },
+  {
+   "sym": "I_n2",
+   "meaning": "the spin quantum number of nucleus 2",
+   "section": "14.7"
+  },
+  {
+   "sym": "M_I",
+   "meaning": "the projection of the total nuclear spin along the z-axis, I, I − 1, …, −I",
+   "section": "14.7"
+  },
+  {
+   "sym": "Hp_hat",
+   "concept": "nmr-transition-hamiltonian",
+   "meaning": "the Hamiltonian for the process that induces the NMR transition, a field along the x-axis",
+   "section": "14.7"
+  },
+  {
+   "sym": "Ix_hat",
+   "concept": "nuclear-spin-operators",
+   "meaning": "the x-component of the total nuclear spin, Î₁ₓ + Î₂ₓ",
+   "section": "14.7"
+  },
+  {
+   "sym": "omega_p",
+   "type": "frequency",
+   "meaning": "a constant set by the strength B₁ of the field along the x-axis",
+   "section": "14.7"
+  },
+  {
+   "sym": "gamma",
+   "concept": "gyromagnetic-ratio",
+   "meaning": "the magnetogyric ratio of the nucleus in question",
+   "section": "14.7"
+  },
+  {
+   "sym": "B_0",
+   "concept": "magnetic-field",
+   "meaning": "the strength of the external magnetic field",
+   "unit": "T",
+   "section": "14.7"
+  },
+  {
+   "sym": "rho_hat",
+   "type": "operator",
+   "meaning": "the density matrix of the spin system",
+   "section": "14.7"
+  },
+  {
+   "sym": "Omega_cs",
+   "type": "frequency",
+   "meaning": "the chemical shift of each of two spins with identical shifts, in frequency units",
+   "section": "14.7"
+  },
+  {
+   "sym": "n",
+   "meaning": "the number of equivalent nuclei a given nucleus is coupled to",
+   "section": "14.8"
+  }
+ ]
+}

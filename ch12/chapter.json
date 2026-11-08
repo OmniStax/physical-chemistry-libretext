@@ -762,6 +762,102 @@
    "type": "wavefunction",
    "meaning": "the final state",
    "section": "12.15"
+  },
+  {
+   "sym": "sigma_op",
+   "concept": "reflection-operation",
+   "meaning": "the reflection σ in a named plane, σ(xy), σ(xz), σ(yz)",
+   "section": "12.4"
+  },
+  {
+   "sym": "g_op",
+   "concept": "symmetry-operation",
+   "meaning": "a symmetry operation of the group, whose representative is Γ(g)",
+   "section": "12.4"
+  },
+  {
+   "sym": "chi_char",
+   "concept": "character",
+   "meaning": "the character of the representation, the trace of Γ(g)",
+   "section": "12.5"
+  },
+  {
+   "sym": "E_op",
+   "concept": "identity-operation",
+   "meaning": "the identity operation of C₃ᵥ",
+   "section": "12.5"
+  },
+  {
+   "sym": "sigma_v",
+   "concept": "reflection-operation",
+   "meaning": "reflection in the vertical mirror plane of C₃ᵥ through hydrogen 1",
+   "section": "12.5"
+  },
+  {
+   "sym": "sigma_vp",
+   "concept": "reflection-operation",
+   "meaning": "reflection in the vertical mirror plane of C₃ᵥ through hydrogen 3",
+   "section": "12.5"
+  },
+  {
+   "sym": "sigma_vpp",
+   "concept": "reflection-operation",
+   "meaning": "reflection in the vertical mirror plane of C₃ᵥ through hydrogen 2",
+   "section": "12.5"
+  },
+  {
+   "sym": "g_op",
+   "concept": "symmetry-operation",
+   "meaning": "a symmetry operation of the group",
+   "section": "12.6"
+  },
+  {
+   "sym": "E_op",
+   "concept": "identity-operation",
+   "meaning": "the identity operation",
+   "section": "12.11"
+  },
+  {
+   "sym": "C_3",
+   "concept": "proper-rotation",
+   "meaning": "rotation by 120° about a three-fold axis",
+   "section": "12.11"
+  },
+  {
+   "sym": "sigma_v",
+   "concept": "reflection-operation",
+   "meaning": "reflection in a vertical mirror plane, one containing the principal axis",
+   "section": "12.11"
+  },
+  {
+   "sym": "C_4",
+   "concept": "proper-rotation",
+   "meaning": "rotation by 90° about a four-fold axis",
+   "section": "12.2"
+  },
+  {
+   "sym": "C_6",
+   "concept": "proper-rotation",
+   "meaning": "rotation by 60° about a six-fold axis",
+   "section": "12.2"
+  },
+  {
+   "sym": "S_4",
+   "concept": "improper-rotation",
+   "meaning": "the improper rotation S₄: C₄ followed by reflection in the plane perpendicular to the axis",
+   "section": "12.2"
+  },
+  {
+   "sym": "S_6",
+   "concept": "improper-rotation",
+   "meaning": "the improper rotation S₆: C₆ followed by reflection in the plane perpendicular to the axis",
+   "section": "12.2"
+  },
+  {
+   "sym": "C_3",
+   "concept": "proper-rotation",
+   "meaning": "rotation by 120° about the three-fold axis of C₃ᵥ, C₃⁺ anticlockwise and C₃⁻ clockwise",
+   "section": "12.5"
   }
  ]
 }

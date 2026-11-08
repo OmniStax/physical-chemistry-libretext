@@ -1,0 +1,335 @@
+{
+ "id": "13.9",
+ "module": "13672",
+ "chapter": "13",
+ "title": "Normal Modes in Polyatomic Molecules",
+ "short": "Normal modes",
+ "lead": "A molecule of N atoms has 3N degrees of freedom, and the ones left after translation and rotation are its vibrations. The motions of a group of atoms have names of their own, and normal coordinates rewrite the vibrational energy one mode at a time, with CO as the simplest case.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "Shared under the book's CC BY-NC-SA 4.0; the six Wikipedia animations of Figure 13.9.1, used by the book with permission, are not shown.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The one exercise was written by AI with an AI solution; its Bloom level and concept tags were chosen by AI. Numeric answers accept a 2% tolerance.",
+ "figures": [
+  {
+   "id": "sim-ch2-modes",
+   "kind": "sim",
+   "number": "13.9.1",
+   "original_caption": "Six types of Vibrational Modes. Taken from publisher en.Wikipedia.org/wiki/Infrared_spectroscopy with permission from copyright holder.",
+   "withheld": "The book's six animations (Figure 13.9.1), taken from Wikipedia with the copyright holder's permission, carry no licence that lets them be copied here and are not shown.",
+   "draws": [
+    "length",
+    "frequency"
+   ],
+   "conventions": [
+    "C",
+    "H"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "sim-co-normal",
+   "kind": "sim",
+   "number": "13.9.2",
+   "originals": [
+    "/media/ch13/55900-Normal_modes_figurev2.png"
+   ],
+   "widths": [
+    370
+   ],
+   "original_caption": "The Normal coordinate for $CO$ is equation to $\\Delta r(C) + \\Delta r(O)$",
+   "draws": [
+    "length",
+    "time"
+   ],
+   "conventions": [
+    "C",
+    "O"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "normal-modes-and-symmetry",
+   "concept": "molecular-normal-modes",
+   "verb": "reinforces"
+  },
+  {
+   "span": "degrees-of-freedom",
+   "concept": "degrees-of-freedom",
+   "verb": "reinforces"
+  },
+  {
+   "span": "degrees-of-freedom",
+   "concept": "vibrational-mode-count",
+   "verb": "reinforces"
+  },
+  {
+   "span": "degrees-of-freedom",
+   "concept": "vibrational-motion-types",
+   "verb": "introduces"
+  },
+  {
+   "span": "degrees-of-freedom",
+   "concept": "molecular-normal-modes",
+   "verb": "uses"
+  },
+  {
+   "span": "normal-modes",
+   "concept": "polyatomic-harmonic-potential",
+   "verb": "introduces"
+  },
+  {
+   "span": "normal-modes",
+   "concept": "normal-coordinates",
+   "verb": "introduces"
+  },
+  {
+   "span": "normal-modes",
+   "concept": "separable-vibrational-hamiltonian",
+   "verb": "introduces"
+  },
+  {
+   "span": "normal-modes",
+   "concept": "polyatomic-vibrational-energy",
+   "verb": "introduces"
+  },
+  {
+   "span": "normal-modes",
+   "concept": "potential-taylor-expansion",
+   "verb": "uses"
+  },
+  {
+   "span": "normal-modes",
+   "concept": "harmonic-oscillator",
+   "verb": "uses"
+  },
+  {
+   "span": "normal-modes",
+   "concept": "oscillator-energy-levels",
+   "verb": "uses"
+  },
+  {
+   "span": "normal-coordinate-co",
+   "concept": "normal-coordinates",
+   "verb": "reinforces"
+  },
+  {
+   "span": "normal-coordinate-co",
+   "concept": "molecular-normal-modes",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "ai1",
+   "source_id": "3N – 6 degrees of vibrational freedom for a nonlinear molecule",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "degrees-of-freedom",
+   "prompt": "<p>Acetylene, HC≡CH, is linear and formaldehyde, H₂CO, is planar but not linear. For each molecule, how many of its degrees of freedom are rotational and how many are vibrational?</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "C₂H₂ rotational",
+      "value": 2,
+      "hint": "Count the atoms first, then use Table 13.9.1."
+     },
+     {
+      "part": "C₂H₂ vibrational",
+      "value": 7
+     },
+     {
+      "part": "H₂CO rotational",
+      "value": 3
+     },
+     {
+      "part": "H₂CO vibrational",
+      "value": 6
+     }
+    ],
+    "solution": "<p>Each molecule has four atoms, so $3N = 12$ degrees of freedom, three of them translational. Acetylene is linear, so it has only two rotational degrees of freedom and $3N - 5 = 3(4) - 5 = 7$ vibrational ones. Formaldehyde is nonlinear, so it has three rotational degrees of freedom and $3N - 6 = 3(4) - 6 = 6$ vibrational ones. The extra vibration of acetylene is the price of losing a rotation about its axis: its two bends come in perpendicular pairs.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "ai1",
+   "concept": "degrees-of-freedom"
+  },
+  {
+   "exercise": "ai1",
+   "concept": "vibrational-mode-count"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-swapped",
+   "kind": "correction",
+   "html": "The book swaps the two labels: the orientation in space is set by the rotational degrees of freedom, and the position of the center of mass by the translational ones."
+  },
+  {
+   "id": "c-caption",
+   "kind": "correction",
+   "figure": "sim-co-normal",
+   "html": "“Is equation to” means “is equal to”: $q = \\Delta r(\\mathrm{C}) + \\Delta r(\\mathrm{O})$."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "vibrational-energy",
+   "what": "the vibrational energy of a polyatomic molecule",
+   "source": "Physical Chemistry (LibreTexts), 13.9 Normal Modes in Polyatomic Molecules",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kdV = \\dfrac{1}{2} \\sum_{j=1}^{N_{vib}}\\kFj\\kQj^2",
+       "src": "(13.9.2)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{H}{\\kHvib} = \\mk{T}{-\\sum_{j=1}^{N_{vib}} \\dfrac{\\hbar^2}{2\\kmu_j} \\dfrac{d^2}{d\\kQj^2}} + \\mk{V}{\\kdV}",
+      "src": "13.9",
+      "why": "The kinetic energy of each normal coordinate is that of a single particle of reduced mass $\\kmu_j$ moving along $\\kQj$."
+     },
+     "steps": [
+      {
+       "tex": "\\mk{H}{\\kHvib} = \\mk{T}{-\\sum_{j=1}^{N_{vib}} \\dfrac{\\hbar^2}{2\\kmu_j} \\dfrac{d^2}{d\\kQj^2}} + \\mk{V}{\\dfrac{1}{2} \\sum_{j=1}^{N_{vib}}\\kFj\\kQj^2}",
+       "uses": [
+        0
+       ]
+      }
+     ],
+     "num": "(13.9.3)",
+     "note": "The book writes the reduced mass of the kinetic term as $\\mu_i$; it belongs to mode $j$, $\\mu_j$."
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      }
+     ],
+     "then": {
+      "tex": "\\mk{H}{\\kHvib} = \\mk{T}{-\\sum_{j=1}^{N_{vib}} \\dfrac{\\hbar^2}{2\\kmu_j} \\dfrac{d^2}{d\\kQj^2}} + \\mk{V}{\\dfrac{1}{2} \\sum_{j=1}^{N_{vib}}\\kFj\\kQj^2}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{H}{\\kHvib} = \\mk{S}{\\sum_{j=1}^{N_{vib}} \\left( -\\dfrac{\\hbar^2}{2 \\kmu_j}\\dfrac{d^2}{d\\kQj^2} + \\dfrac{1}{2}\\kFj\\kQj^2 \\right)}",
+       "uses": [],
+       "map": {
+        "T": "S",
+        "V": "S"
+       }
+      },
+      {
+       "tex": "\\mk{H}{\\kHvib} = \\mk{S}{\\sum_{j=1}^{N_{vib}} \\hat{H}_{vib,j}}",
+       "uses": []
+      }
+     ],
+     "num": "(13.9.4)",
+     "note": "The book prints the potential's sum over $j$ inside the sum over $j$, and mixes $\\mu_j$ with $Q_i$. Each mode's operator holds only its own kinetic and potential terms, as written here."
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "text": "The total wavefunction is a product of the individual wavefunctions and the energy is the sum of independent energies.",
+       "src": "13.9",
+       "drv": "3.9/box3d"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{H}{\\kHvib}\\,\\mk{p}{\\kpsivib} = \\mk{E}{\\kEvib}\\,\\mk{q}{\\kpsivib}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{H}{\\sum_{j=1}^{N_{vib}} \\hat{H}_{vib,j}}\\,\\mk{p}{\\kpsivib} = \\mk{E}{\\kEvib}\\,\\mk{q}{\\kpsivib}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{p}{\\kpsivib(Q_1, Q_2, \\ldots, Q_{N_{vib}})} = \\mk{q}{\\psi_{vib,1}(Q_1)\\, \\psi_{vib,2}(Q_2) \\cdots \\psi_{vib,N_{vib}}(Q_{N_{vib}})}",
+       "uses": [
+        1
+       ],
+       "cap": "Each $\\hat{H}_{vib,j}$ acts on $Q_j$ alone, so a product of one-mode wavefunctions splits the equation into one equation for each mode."
+      }
+     ],
+     "note": "The book prints the first line as $\\psi_{vib} = Q_1, Q_2, Q_3 ..., Q_{vib}$; it means the wavefunction of all the normal coordinates, $\\psi_{vib}(Q_1, Q_2, \\ldots, Q_{N_{vib}})$."
+    },
+    {
+     "assumes": [
+      {
+       "step": 2
+      },
+      {
+       "tex": "E_v = h\\nu\\left(v + \\dfrac{1}{2}\\right)",
+       "src": "(5.2.3)"
+      },
+      {
+       "text": "$v_j = 0, 1, 2, 3, \\ldots$",
+       "src": "13.9"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{E}{\\kEvib} = \\mk{s}{\\sum_{j=1}^{N_{vib}} E_j}",
+      "uses": [
+       0
+      ],
+      "why": "With the product wavefunction each mode contributes its own energy $E_j$, and the energy is the sum of independent energies."
+     },
+     "steps": [
+      {
+       "tex": "\\mk{E}{\\kEvib} = \\mk{s}{\\sum_{j=1}^{N_{vib}} h\\knuj \\left(v_j + \\dfrac{1}{2}\\right)}",
+       "uses": [
+        1,
+        2
+       ],
+       "cap": "Each $\\hat{H}_{vib,j}$ is a harmonic oscillator in $Q_j$, with the levels of the harmonic oscillator."
+      }
+     ],
+     "num": "(13.9.5)",
+     "note": "The book's upper limit reads $N_{vin}$; it is $N_{vib}$."
+    }
+   ]
+  }
+ ]
+}

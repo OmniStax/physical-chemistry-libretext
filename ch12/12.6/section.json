@@ -192,7 +192,7 @@
       {
        "tex": "\\mk{l}{\\kGamma(\\kgop)} = \\mk{r}{C\\kGamma'(\\kgop)C^{-1}}",
        "uses": [],
-       "cap": "The equality holds for the whole basis, so the matrices that multiply $\\mathbf{x}$ on the two sides are the same."
+       "cap": "We can therefore identify the similarity transform relating $\\kGamma(\\kgop)$, the matrix representative in our original basis, to $\\kGamma'(\\kgop)$, the representative in the transformed basis. The transform depends only on the matrix of coefficients used to transform the basis functions."
       }
      ],
      "num": "(12.6.4)",

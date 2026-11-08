@@ -1,0 +1,1059 @@
+{
+ "types": [],
+ "symbols": [
+  {
+   "sym": "B_x",
+   "latex": "B_x",
+   "macro": "\\kBx"
+  },
+  {
+   "sym": "B_y",
+   "latex": "B_y",
+   "macro": "\\kBy"
+  },
+  {
+   "sym": "B_loc",
+   "latex": "B_{loc}",
+   "macro": "\\kBloc"
+  },
+  {
+   "sym": "dB",
+   "latex": "\\delta B",
+   "macro": "\\kdB"
+  },
+  {
+   "sym": "B_0",
+   "latex": "B_0",
+   "macro": "\\kBzero"
+  },
+  {
+   "sym": "B_eff",
+   "latex": "B_{eff}",
+   "macro": "\\kBeff"
+  },
+  {
+   "sym": "nu_L",
+   "latex": "\\nu_L",
+   "macro": "\\knuL"
+  },
+  {
+   "sym": "sigma_sh",
+   "latex": "\\sigma"
+  },
+  {
+   "sym": "sigma_dia",
+   "latex": "\\sigma_d"
+  },
+  {
+   "sym": "sigma_para",
+   "latex": "\\sigma_p"
+  },
+  {
+   "sym": "delta_cs",
+   "latex": "\\delta"
+  },
+  {
+   "sym": "chi_m",
+   "latex": "\\chi"
+  },
+  {
+   "sym": "mu_0",
+   "latex": "\\mu_0"
+  },
+  {
+   "sym": "J_cc",
+   "latex": "J",
+   "macro": "\\kJcc"
+  },
+  {
+   "sym": "J_12",
+   "latex": "J_{12}",
+   "macro": "\\kJot"
+  },
+  {
+   "sym": "omega_1",
+   "latex": "\\omega_1",
+   "macro": "\\komegaone"
+  },
+  {
+   "sym": "omega_2",
+   "latex": "\\omega_2",
+   "macro": "\\komegatwo"
+  },
+  {
+   "sym": "nu_1",
+   "latex": "\\nu_1",
+   "macro": "\\knuone"
+  },
+  {
+   "sym": "nu_2",
+   "latex": "\\nu_2",
+   "macro": "\\knutwo"
+  },
+  {
+   "sym": "H_freq",
+   "latex": "\\hat{H}_\\text{freq}",
+   "macro": "\\kHfreq"
+  },
+  {
+   "sym": "Ii_vec_hat",
+   "latex": "\\hat{\\vec{I}}_{i}",
+   "macro": "\\kIivec"
+  },
+  {
+   "sym": "Iiz_hat",
+   "latex": "\\hat{I}_{iz}",
+   "macro": "\\kIiz"
+  },
+  {
+   "sym": "I1z_hat",
+   "latex": "\\hat{I}_{1z}",
+   "macro": "\\kIonez"
+  },
+  {
+   "sym": "I2z_hat",
+   "latex": "\\hat{I}_{2z}",
+   "macro": "\\kItwoz"
+  },
+  {
+   "sym": "I1_vec_hat",
+   "latex": "\\hat{\\vec{I}}_{1}",
+   "macro": "\\kIonevec"
+  },
+  {
+   "sym": "I2_vec_hat",
+   "latex": "\\hat{\\vec{I}}_{2}",
+   "macro": "\\kItwovec"
+  },
+  {
+   "sym": "Iix_hat",
+   "latex": "\\hat{I}_{ix}",
+   "macro": "\\kIix"
+  },
+  {
+   "sym": "Iiy_hat",
+   "latex": "\\hat{I}_{iy}",
+   "macro": "\\kIiy"
+  },
+  {
+   "sym": "Iplus_hat",
+   "latex": "\\hat{I}_{i+}",
+   "macro": "\\kIplus"
+  },
+  {
+   "sym": "Iminus_hat",
+   "latex": "\\hat{I}_{i-}",
+   "macro": "\\kIminus"
+  },
+  {
+   "sym": "Ix_hat",
+   "latex": "\\hat{I}_x",
+   "macro": "\\kIx"
+  },
+  {
+   "sym": "Hp_hat",
+   "latex": "\\hat{H'}",
+   "macro": "\\kHprime"
+  },
+  {
+   "sym": "omega_p",
+   "latex": "\\omega'",
+   "macro": "\\komegap"
+  },
+  {
+   "sym": "I_vec",
+   "latex": "\\vec{I}",
+   "macro": "\\kIvec"
+  },
+  {
+   "sym": "I1_vec",
+   "latex": "\\vec{I}_1",
+   "macro": "\\kIonev"
+  },
+  {
+   "sym": "I2_vec",
+   "latex": "\\vec{I}_2",
+   "macro": "\\kItwov"
+  },
+  {
+   "sym": "I_ns",
+   "latex": "I"
+  },
+  {
+   "sym": "I_n1",
+   "latex": "I_1"
+  },
+  {
+   "sym": "I_n2",
+   "latex": "I_2"
+  },
+  {
+   "sym": "M_I",
+   "latex": "M_I"
+  },
+  {
+   "sym": "rho_hat",
+   "latex": "\\hat{\\rho}",
+   "macro": "\\krhohat"
+  },
+  {
+   "sym": "Omega_cs",
+   "latex": "\\Omega",
+   "macro": "\\kOmegacs"
+  }
+ ],
+ "concepts": [
+  {
+   "id": "nucleon-spin",
+   "kind": "axiom",
+   "section": "14.1",
+   "name": "Spin of the proton and neutron",
+   "statement": "The proton and neutron, like the electron, have spin ½ and belong to the fermions, the particles governed by the Pauli exclusion principle."
+  },
+  {
+   "id": "spin-orbital-analogy",
+   "kind": "idea",
+   "section": "14.1",
+   "name": "Spin and orbital angular momentum compared",
+   "statement": "An intrinsic spin angular momentum is possessed in addition to the orbital one, the two analogous to the daily and annual motions of the Earth around the Sun; the spin quantum numbers s and m_s take the place of ℓ and m, and a complete theory of spin requires relativistic quantum mechanics."
+  },
+  {
+   "id": "local-magnetic-field",
+   "kind": "definition",
+   "section": "14.4",
+   "name": "Local magnetic field",
+   "type": "magnetic-field",
+   "symbol": "B_loc",
+   "statement": "The magnetic field felt by a particular nucleus in a molecule: the applied field B induces currents in the surrounding electrons, so the field at the nucleus is slightly lower or slightly higher than the external field, B_loc = B + δB = (1 − σ)B.",
+   "forms": [
+    {
+     "id": "local-field",
+     "latex": "B_{loc} = B + \\delta B = (1 - \\sigma)B"
+    }
+   ]
+  },
+  {
+   "id": "nuclear-shielding",
+   "kind": "definition",
+   "section": "14.4",
+   "name": "Shielded nucleus",
+   "terms": [
+    "shielded"
+   ],
+   "statement": "A nucleus is shielded when the magnetic field it experiences is lower than the external magnetic field, B_y < B_x."
+  },
+  {
+   "id": "nuclear-deshielding",
+   "kind": "definition",
+   "section": "14.4",
+   "name": "Deshielded nucleus",
+   "terms": [
+    "deshielded"
+   ],
+   "statement": "A nucleus is deshielded when the magnetic field it experiences is higher than the external magnetic field, B_y > B_x."
+  },
+  {
+   "id": "shielding-constant",
+   "kind": "definition",
+   "section": "14.5",
+   "name": "Shielding constant",
+   "symbol": "sigma_sh",
+   "statement": "The constant σ by which shielding reduces the local magnetic field, B_loc = (1 − σ)B."
+  },
+  {
+   "id": "larmor-frequency",
+   "kind": "result",
+   "section": "14.5",
+   "name": "Larmor frequency",
+   "terms": [
+    "Larmor frequency"
+   ],
+   "type": "frequency",
+   "symbol": "nu_L",
+   "statement": "A nucleus of magnetogyric ratio γ resonates at its Larmor frequency, ν_L = γB_loc/2π for a shielded nucleus, the frequency with which its magnetic moment precesses about the field; in angular units ω = −γB₀.",
+   "forms": [
+    {
+     "id": "larmor-shielded",
+     "latex": "\\nu_L = \\dfrac{\\gamma B_{loc}}{2\\pi}"
+    },
+    {
+     "id": "larmor-angular",
+     "latex": "\\omega = -\\gamma B_0"
+    }
+   ]
+  },
+  {
+   "id": "chemical-shift",
+   "kind": "definition",
+   "section": "14.5",
+   "name": "Chemical shift",
+   "terms": [
+    "chemical shift"
+   ],
+   "symbol": "delta_cs",
+   "statement": "The difference between the resonance frequency of a nucleus and that of a standard, reported on the δ-scale in parts per million, δ = (ν − ν₀)/ν₀ × 10⁶; it gives vital information about the local structure surrounding the nucleus.",
+   "forms": [
+    {
+     "id": "delta-scale",
+     "latex": "\\delta = \\dfrac{\\nu - \\nu_0}{\\nu_0} \\times 10^6"
+    }
+   ]
+  },
+  {
+   "id": "shielding-contributions",
+   "kind": "idea",
+   "section": "14.5",
+   "name": "Contributions to the shielding constant",
+   "statement": "The shielding constant is the sum of three contributions, σ = σ(local) + σ(molecule) + σ(solvent): from the electrons on the atom that contains the nucleus, from the rest of the molecule, and from surrounding solvent molecules.",
+   "forms": [
+    {
+     "id": "shielding-sum",
+     "latex": "\\sigma = \\sigma(local) + \\sigma(molecule) + \\sigma(solvent)"
+    }
+   ]
+  },
+  {
+   "id": "diamagnetic-shielding",
+   "kind": "definition",
+   "section": "14.5",
+   "name": "Diamagnetic shielding",
+   "symbol": "sigma_dia",
+   "statement": "The part σ_d of the local contribution to the shielding that arises from circulation of the electrons in response to the applied field."
+  },
+  {
+   "id": "paramagnetic-shielding",
+   "kind": "definition",
+   "section": "14.5",
+   "name": "Paramagnetic shielding",
+   "symbol": "sigma_para",
+   "statement": "The part σ_p of the local contribution to the shielding, which with the diamagnetic part σ_d makes up the local contribution."
+  },
+  {
+   "id": "lamb-formula",
+   "kind": "result",
+   "section": "14.5",
+   "name": "Lamb formula",
+   "terms": [
+    "Lamb formula"
+   ],
+   "statement": "The magnitude of the diamagnetic shielding is σ_d = (e²μ₀/3m_e)∫₀^∞ ρ(r) r dr, with ρ the electron probability density; σ_d is inversely proportional to the Bohr radius.",
+   "forms": [
+    {
+     "id": "lamb-formula",
+     "latex": "\\sigma_d = \\dfrac{e^2 \\mu_0}{3m_e} \\int_0^\\infty \\rho(r) r \\,dr"
+    }
+   ]
+  },
+  {
+   "id": "magnetic-susceptibility",
+   "kind": "definition",
+   "section": "14.5",
+   "name": "Magnetic susceptibility",
+   "symbol": "chi_m",
+   "statement": "The property χ of a group to which the currents an applied magnetic field generates in it are proportional."
+  },
+  {
+   "id": "molecular-shielding-contribution",
+   "kind": "result",
+   "section": "14.5",
+   "name": "Molecular contribution to the shielding",
+   "statement": "The applied field generates currents in neighbouring groups in proportion to their magnetic susceptibility; the induced magnetic moment gives rise to a field at the nucleus inversely proportional to the cube of its distance."
+  },
+  {
+   "id": "spin-spin-coupling",
+   "kind": "definition",
+   "section": "14.6",
+   "name": "Spin-spin coupling",
+   "terms": [
+    "spin-spin coupling"
+   ],
+   "statement": "The magnetic interaction between neighbouring, non-equivalent NMR-active nuclei: each proton feels the small field of its neighbour, aligned with B₀ in about half the molecules and against it in the rest, so its signal is split into subpeaks, one upfield and one downfield of the original signal."
+  },
+  {
+   "id": "multiplet-patterns",
+   "kind": "definition",
+   "section": "14.6",
+   "name": "Singlets, doublets, triplets and quartets",
+   "terms": [
+    "doublet",
+    "triplet",
+    "quartet",
+    "singlet"
+   ],
+   "statement": "An unsplit signal is a singlet; one split into two subpeaks of equal height is a doublet; into three, with the middle peak twice the area of each outer one, a triplet; into four, with the two middle peaks taller, a quartet."
+  },
+  {
+   "id": "splitting-diagram",
+   "kind": "skill",
+   "section": "14.6",
+   "name": "Drawing a splitting diagram",
+   "terms": [
+    "splitting diagram"
+   ],
+   "statement": "Draw the unsplit signal as a line and split it once for each coupled neighbour, half the subpeaks shifted upfield and half downfield; with two different couplings it is usually easier to show the larger splitting first, then the finer one."
+  },
+  {
+   "id": "multiplet-intensities",
+   "kind": "result",
+   "section": "14.6",
+   "name": "Intensities of the subpeaks",
+   "statement": "The subpeak areas follow the number of equally probable arrangements of the neighbours' spins: 1:1 for a doublet, 1:2:1 for a triplet, since the two mixed arrangements cancel, and 1:3:3:1 for a quartet, the rows of Pascal's triangle."
+  },
+  {
+   "id": "n-plus-one-rule",
+   "kind": "axiom",
+   "section": "14.6",
+   "name": "The n + 1 rule",
+   "terms": [
+    "n + 1 rule",
+    "(n+1) Rule"
+   ],
+   "statement": "A set of hydrogens with n neighbouring, non-equivalent hydrogens is split into n + 1 subpeaks; the rule is empirical and applies to first-order spectra.",
+   "forms": [
+    {
+     "id": "n-plus-one",
+     "latex": "\\text{multiplicity} = n + 1"
+    }
+   ]
+  },
+  {
+   "id": "equivalent-nuclei-do-not-split",
+   "kind": "axiom",
+   "section": "14.6",
+   "name": "Equivalent hydrogens do not split each other",
+   "statement": "Signal splitting only occurs between non-equivalent hydrogens: equivalent hydrogens do not split one another's signals, an observed fact."
+  },
+  {
+   "id": "three-bond-coupling",
+   "kind": "idea",
+   "section": "14.6",
+   "name": "Coupling through three bonds",
+   "statement": "Splitting occurs primarily between hydrogens separated by three bonds; four- and five-bond coupling is occasionally seen and much weaker, and hydrogens on heteroatoms couple weakly or not at all because they exchange rapidly with solvent or other molecules."
+  },
+  {
+   "id": "coupling-constant",
+   "kind": "definition",
+   "section": "14.6",
+   "name": "Coupling constant",
+   "terms": [
+    "coupling constant"
+   ],
+   "type": "frequency",
+   "symbol": "J_cc",
+   "statement": "The difference J, expressed in Hz, between two adjacent subpeaks in a split signal, written ³J_a-b for a three-bond coupling between H_a and H_b."
+  },
+  {
+   "id": "coupling-constant-field-independence",
+   "kind": "result",
+   "section": "14.6",
+   "name": "Coupling constants do not depend on the field",
+   "statement": "Unlike the chemical shift, the coupling constant expressed in Hz is the same regardless of the applied field strength, because the magnetic moment of the neighbouring proton does not depend on the applied field."
+  },
+  {
+   "id": "reciprocal-coupling-constants",
+   "kind": "result",
+   "section": "14.6",
+   "name": "Reciprocal coupling constants",
+   "terms": [
+    "reciprocal coupling constants"
+   ],
+   "statement": "The coupling between two sets of hydrogens has the same magnitude in either direction: H_a splits H_b by the same J that H_b splits H_a, which helps identify coupling partners."
+  },
+  {
+   "id": "typical-coupling-constants",
+   "kind": "idea",
+   "section": "14.6",
+   "name": "Typical coupling constants",
+   "statement": "Protons on neighbouring sp³ carbons couple at about 6–8 Hz; vinylic trans hydrogens at 11–18 Hz, cis at 6–15 Hz and geminal at 5 Hz or lower; ortho hydrogens on a benzene ring at 6–10 Hz, meta up to 4 Hz; an aldehyde proton and a three-bond neighbour at 2–3 Hz."
+  },
+  {
+   "id": "complex-coupling",
+   "kind": "definition",
+   "section": "14.6",
+   "name": "Complex coupling",
+   "terms": [
+    "complex coupling"
+   ],
+   "statement": "The splitting of a set of hydrogens coupled to two or more sets of non-equivalent neighbours with different coupling constants."
+  },
+  {
+   "id": "doublet-of-doublets",
+   "kind": "definition",
+   "section": "14.6",
+   "name": "Doublet of doublets",
+   "terms": [
+    "doublet of doublets",
+    "dd"
+   ],
+   "statement": "The four-line pattern of a proton split into a doublet by one neighbour and each subpeak split again into a doublet by another with a different coupling constant; abbreviated dd."
+  },
+  {
+   "id": "overlapping-subpeaks",
+   "kind": "result",
+   "section": "14.6",
+   "name": "Overlapping subpeaks",
+   "statement": "When a proton is coupled to two non-equivalent sets with identical or very close coupling constants, its subpeaks overlap and the pattern appears to follow the n + 1 rule: a triplet of doublets looks like a quartet, a triplet of quartets like a sextet."
+  },
+  {
+   "id": "multiplet",
+   "kind": "definition",
+   "section": "14.6",
+   "name": "Multiplet",
+   "terms": [
+    "multiplet"
+   ],
+   "statement": "A signal, or a group of overlapping signals of very similar chemical shift, whose splitting pattern is too complex to analyse in detail."
+  },
+  {
+   "id": "field-strength-resolution",
+   "kind": "result",
+   "section": "14.6",
+   "name": "Stronger magnets resolve more",
+   "statement": "The stronger the magnet, the more resolution in the spectrum: the 12 ppm window of proton signals is 1200 Hz wide at 100 MHz (about 2.4 T) and 6000 Hz at 500 MHz (about 12 T), while coupling constants stay the same in Hz."
+  },
+  {
+   "id": "nuclear-spin-operators",
+   "kind": "definition",
+   "section": "14.7",
+   "name": "Nuclear spin operators",
+   "type": "operator",
+   "symbol": "Iiz_hat",
+   "statement": "Î_i is the operator for the spin angular momentum of nucleus i and Î_iz for its projection along the z-axis; for a spin-½ nucleus Î_iz|α_i⟩ = ½|α_i⟩ and Î_iz|β_i⟩ = −½|β_i⟩, with ħ set to 1.",
+   "forms": [
+    {
+     "id": "nuclear-iz-alpha",
+     "latex": "\\hat{I}_{iz}|\\alpha_i\\rangle = \\dfrac{1}{2}|\\alpha_i\\rangle"
+    },
+    {
+     "id": "nuclear-iz-beta",
+     "latex": "\\hat{I}_{iz}|\\beta_i\\rangle = -\\dfrac{1}{2}|\\beta_i\\rangle"
+    }
+   ]
+  },
+  {
+   "id": "nuclear-spin-hamiltonian",
+   "kind": "axiom",
+   "section": "14.7",
+   "name": "Hamiltonian of two coupled spins",
+   "type": "operator",
+   "symbol": "H_freq",
+   "statement": "The Hamiltonian of two coupled nuclear spins is Ĥ = ω₁Î₁z + ω₂Î₂z + (2πJ₁₂/ħ)(Î₁·Î₂), the Larmor terms of each nucleus plus the coupling; in frequency units with ħ = 1 it is Ĥ = ν₁Î₁z + ν₂Î₂z + J₁₂(Î₁·Î₂).",
+   "forms": [
+    {
+     "id": "two-spin-hamiltonian-freq",
+     "latex": "\\hat{H}_\\text{freq} = \\nu_1\\hat{I}_{1z} + \\nu_2\\hat{I}_{2z} + J_{12}(\\hat{\\vec{I}}_{1}\\cdot\\hat{\\vec{I}}_{2})"
+    },
+    {
+     "id": "two-spin-hamiltonian",
+     "latex": "\\hat{H} = \\omega_1\\hat{I}_{1z} + \\omega_2\\hat{I}_{2z} + \\dfrac{2\\pi J_{12}}{\\hbar}(\\hat{\\vec{I}}_{1}\\cdot\\hat{\\vec{I}}_{2})"
+    }
+   ]
+  },
+  {
+   "id": "shift-operators",
+   "kind": "definition",
+   "section": "14.7",
+   "name": "Shift operators",
+   "terms": [
+    "shift operators",
+    "ladder operators"
+   ],
+   "type": "operator",
+   "symbol": "Iplus_hat",
+   "statement": "The operators Î_i± = Î_ix ± iÎ_iy, which raise or lower a spin: Î_i+|β_i⟩ = |α_i⟩, Î_i+|α_i⟩ = 0, Î_i−|α_i⟩ = |β_i⟩, Î_i−|β_i⟩ = 0.",
+   "forms": [
+    {
+     "id": "shift-operator-def",
+     "latex": "\\hat{I}_{i\\pm} = \\hat{I}_{ix} \\pm \\mathrm{i}\\hat{I}_{iy}"
+    }
+   ]
+  },
+  {
+   "id": "spin-scalar-product",
+   "kind": "result",
+   "section": "14.7",
+   "name": "Scalar product of two spins",
+   "statement": "The scalar product of two spin operators, written with the shift operators: Î₁·Î₂ = (Î₁₊Î₂₋ + Î₁₋Î₂₊)/2 + Î₁zÎ₂z.",
+   "forms": [
+    {
+     "id": "spin-dot-shift",
+     "latex": "\\hat{\\vec{I}}_{1}\\cdot\\hat{\\vec{I}}_{2} = \\dfrac{\\hat{I}_{1+}\\hat{I}_{2-} + \\hat{I}_{1-}\\hat{I}_{2+}}{2} + \\hat{I}_{1z}\\hat{I}_{2z}"
+    }
+   ]
+  },
+  {
+   "id": "two-spin-hamiltonian-matrix",
+   "kind": "result",
+   "section": "14.7",
+   "name": "Hamiltonian matrix of two equivalent spins",
+   "statement": "In the basis of product functions |α₁α₂⟩, |α₁β₂⟩, |β₁α₂⟩, |β₁β₂⟩ the Hamiltonian of two equivalent spins is a matrix with diagonal ν + J/4, −J/4, −J/4, −ν + J/4 and J/2 coupling the two mixed states.",
+   "forms": [
+    {
+     "id": "a2-matrix",
+     "latex": "\\mathbf{H} = \\begin{pmatrix} \\nu + J/4 & 0 & 0 & 0 \\\\ 0 & -J/4 & J/2 & 0 \\\\ 0 & J/2 & -J/4 & 0 \\\\ 0 & 0 & 0 & -\\nu + J/4 \\end{pmatrix}"
+    }
+   ]
+  },
+  {
+   "id": "two-spin-eigenstates",
+   "kind": "result",
+   "section": "14.7",
+   "name": "Triplet and singlet states of two spins",
+   "type": "energy",
+   "statement": "The eigenstates of two equivalent coupled spins are the triplet |α₁α₂⟩, (|α₁β₂⟩ + |β₁α₂⟩)/√2, |β₁β₂⟩ with energies ν + J/4, J/4, −ν + J/4, and the singlet (|α₁β₂⟩ − |β₁α₂⟩)/√2 with energy −3J/4.",
+   "forms": [
+    {
+     "id": "a2-e1",
+     "latex": "E_1 = \\nu + \\dfrac{J}{4}"
+    },
+    {
+     "id": "a2-e2",
+     "latex": "E_2 = \\dfrac{J}{4}"
+    },
+    {
+     "id": "a2-e3",
+     "latex": "E_3 = -\\dfrac{3J}{4}"
+    },
+    {
+     "id": "a2-e4",
+     "latex": "E_4 = -\\nu + \\dfrac{J}{4}"
+    }
+   ]
+  },
+  {
+   "id": "clebsch-gordan-series",
+   "kind": "result",
+   "section": "14.7",
+   "name": "Clebsch–Gordan series",
+   "terms": [
+    "Clebsch-Gordan series"
+   ],
+   "statement": "Two angular momenta I₁ and I₂ couple to an overall angular momentum I = I₁ + I₂ whose allowed values are I = I₁ + I₂, I₁ + I₂ − 1, …, |I₁ − I₂|, each with projections M_I = I, I − 1, …, −I; two spin-½ nuclei give a triplet (I = 1) and a singlet (I = 0).",
+   "forms": [
+    {
+     "id": "cg-series",
+     "latex": "I = I_1 + I_2, I_1 + I_2 - 1, \\cdots, |I_1 - I_2|"
+    },
+    {
+     "id": "mi-range",
+     "latex": "M_I = I, I-1, \\cdots, -I"
+    }
+   ]
+  },
+  {
+   "id": "nmr-transition-hamiltonian",
+   "kind": "definition",
+   "section": "14.7",
+   "name": "Hamiltonian of the NMR transition",
+   "type": "operator",
+   "symbol": "Hp_hat",
+   "statement": "The Hamiltonian for the process that induces an NMR transition, a magnetic field along the x-axis: Ĥ′ = ω′(Î₁ₓ + Î₂ₓ) = ω′Îₓ, with ω′ set by the strength B₁ of that field.",
+   "forms": [
+    {
+     "id": "nmr-perturbation",
+     "latex": "\\hat{H'} = \\omega'(\\hat{I}_{1x} + \\hat{I}_{2x}) = \\omega'\\hat{I}_{x}"
+    }
+   ]
+  },
+  {
+   "id": "nmr-selection-rules",
+   "kind": "result",
+   "section": "14.7",
+   "name": "NMR selection rules",
+   "statement": "The intensity of a transition is proportional to the square of ⟨ψ_f|Ĥ′|ψ_i⟩; for two coupled spins it is non-zero only for ΔI = 0 and ΔM_I = ±1, so transitions to and from the singlet state are forbidden.",
+   "forms": [
+    {
+     "id": "nmr-selection",
+     "latex": "\\Delta I = 0; \\Delta M_I = \\pm 1"
+    }
+   ]
+  },
+  {
+   "id": "equivalent-spins-one-line",
+   "kind": "result",
+   "section": "14.7",
+   "name": "Why equivalent protons show one line",
+   "statement": "For two equivalent coupled spins the allowed transitions |4⟩ ↔ |2⟩ and |2⟩ ↔ |1⟩ both have energy ν, so only one line is observed: the coupling moves the levels but not the transition energies.",
+   "forms": [
+    {
+     "id": "a2-lines",
+     "latex": "E_{4\\leftrightarrow2} = E_{2\\leftrightarrow1} = \\nu"
+    }
+   ]
+  },
+  {
+   "id": "magnetic-equivalence",
+   "kind": "idea",
+   "section": "14.7",
+   "name": "Magnetic and chemical equivalence",
+   "statement": "Magnetically equivalent nuclei do couple to each other, but no splitting is observed; chemically equivalent but magnetically non-equivalent nuclei couple, and their coupling is observable in the spectrum."
+  },
+  {
+   "id": "ax-spin-system",
+   "kind": "definition",
+   "section": "14.7",
+   "name": "AX spin system",
+   "terms": [
+    "AX case"
+   ],
+   "statement": "Two distinct nuclei with a spin-spin interaction between them in addition to their chemical shifts: the J coupling moves the levels up and down so that each nucleus's two transitions differ, δ + J/2 and δ − J/2, and each signal is a doublet."
+  },
+  {
+   "id": "a2-spin-system",
+   "kind": "definition",
+   "section": "14.7",
+   "name": "A₂ spin system",
+   "terms": [
+    "A2"
+   ],
+   "statement": "Two magnetically identical nuclei: the interaction between their spins is still present, but their spin states must be combined into states symmetric or antisymmetric to exchange, and the selection rules make the splitting unobservable."
+  },
+  {
+   "id": "liouville-von-neumann-equation",
+   "kind": "axiom",
+   "section": "14.7",
+   "name": "Liouville–von Neumann equation",
+   "terms": [
+    "Liouville–von Neumann Equation"
+   ],
+   "statement": "The fundamental equation describing NMR quantum mechanically, neglecting relaxation: in frequency units the density matrix evolves as dρ̂/dt = −i[Ĥ, ρ̂].",
+   "forms": [
+    {
+     "id": "liouville",
+     "latex": "\\dfrac{\\mathrm d}{\\mathrm dt}\\hat{\\rho}=-\\mathrm i[\\hat{H},\\hat{\\rho}]"
+    }
+   ]
+  },
+  {
+   "id": "coupling-commutes-with-pulse",
+   "kind": "result",
+   "section": "14.7",
+   "name": "Coupling does not affect the signal of equivalent spins",
+   "statement": "For two spins with identical chemical shifts, the coupling J(Î₁·Î₂) commutes with Î₁χ + Î₂χ (χ = x, y, z), the density matrix after a 90 degree pulse, so the coupling does not influence the signal.",
+   "forms": [
+    {
+     "id": "coupling-commutes",
+     "latex": "[\\hat{I}_{1\\chi}+\\hat{I}_{2\\chi},J(\\vec{\\hat{I}}_{1}\\cdot\\vec{\\hat{I}}_{2})]=0"
+    }
+   ]
+  },
+  {
+   "id": "peak-multiplicity",
+   "kind": "definition",
+   "section": "14.8",
+   "name": "Multiplicity of a peak",
+   "terms": [
+    "multiplicity"
+   ],
+   "statement": "The number of lines a peak is split into: one for a singlet, two for a doublet, three for a triplet; for a nucleus coupled to n equivalent nuclei it is n + 1, and Pascal's triangle gives the splitting pattern."
+  },
+  {
+   "id": "multiple-coupling-sets",
+   "kind": "result",
+   "section": "14.8",
+   "name": "Coupling to several sets of nuclei",
+   "statement": "For a nucleus coupled to more than one set of equivalent nuclei, the n + 1 rule is applied independently to each set and the multiplicities multiply: coupled to two single, non-equivalent neighbours, a peak has 2 × 2 = 4 lines, a doublet of a doublet."
+  },
+  {
+   "id": "predicting-splitting-patterns",
+   "kind": "skill",
+   "section": "14.8",
+   "name": "Predicting a splitting pattern",
+   "statement": "Sort the hydrogens into sets of equivalent nuclei, count each set's vicinal non-equivalent neighbours, apply the n + 1 rule to each coupling set, and order the splittings by the size of their coupling constants (for alkenyl hydrogens, J_trans > J_cis > J_gem)."
+  }
+ ],
+ "concept_prereqs": [
+  {
+   "concept": "nucleon-spin",
+   "prereq": "fermion"
+  },
+  {
+   "concept": "spin-orbital-analogy",
+   "prereq": "electron-spin"
+  },
+  {
+   "concept": "local-magnetic-field",
+   "prereq": "magnetic-field"
+  },
+  {
+   "concept": "nuclear-shielding",
+   "prereq": "local-magnetic-field"
+  },
+  {
+   "concept": "nuclear-deshielding",
+   "prereq": "local-magnetic-field"
+  },
+  {
+   "concept": "shielding-constant",
+   "prereq": "nuclear-shielding"
+  },
+  {
+   "concept": "larmor-frequency",
+   "prereq": "local-magnetic-field"
+  },
+  {
+   "concept": "larmor-frequency",
+   "prereq": "gyromagnetic-ratio"
+  },
+  {
+   "concept": "chemical-shift",
+   "prereq": "larmor-frequency"
+  },
+  {
+   "concept": "chemical-shift",
+   "prereq": "shielding-constant"
+  },
+  {
+   "concept": "shielding-contributions",
+   "prereq": "shielding-constant"
+  },
+  {
+   "concept": "diamagnetic-shielding",
+   "prereq": "shielding-contributions"
+  },
+  {
+   "concept": "paramagnetic-shielding",
+   "prereq": "shielding-contributions"
+  },
+  {
+   "concept": "lamb-formula",
+   "prereq": "diamagnetic-shielding"
+  },
+  {
+   "concept": "lamb-formula",
+   "prereq": "probability-density"
+  },
+  {
+   "concept": "magnetic-susceptibility",
+   "prereq": "magnetic-field"
+  },
+  {
+   "concept": "molecular-shielding-contribution",
+   "prereq": "shielding-contributions"
+  },
+  {
+   "concept": "molecular-shielding-contribution",
+   "prereq": "magnetic-susceptibility"
+  },
+  {
+   "concept": "molecular-shielding-contribution",
+   "prereq": "magnetic-dipole-moment"
+  },
+  {
+   "concept": "spin-spin-coupling",
+   "prereq": "chemical-shift"
+  },
+  {
+   "concept": "multiplet-patterns",
+   "prereq": "spin-spin-coupling"
+  },
+  {
+   "concept": "splitting-diagram",
+   "prereq": "spin-spin-coupling"
+  },
+  {
+   "concept": "multiplet-intensities",
+   "prereq": "multiplet-patterns"
+  },
+  {
+   "concept": "n-plus-one-rule",
+   "prereq": "multiplet-patterns"
+  },
+  {
+   "concept": "equivalent-nuclei-do-not-split",
+   "prereq": "spin-spin-coupling"
+  },
+  {
+   "concept": "three-bond-coupling",
+   "prereq": "spin-spin-coupling"
+  },
+  {
+   "concept": "coupling-constant",
+   "prereq": "spin-spin-coupling"
+  },
+  {
+   "concept": "coupling-constant-field-independence",
+   "prereq": "coupling-constant"
+  },
+  {
+   "concept": "reciprocal-coupling-constants",
+   "prereq": "coupling-constant"
+  },
+  {
+   "concept": "typical-coupling-constants",
+   "prereq": "coupling-constant"
+  },
+  {
+   "concept": "typical-coupling-constants",
+   "prereq": "three-bond-coupling"
+  },
+  {
+   "concept": "complex-coupling",
+   "prereq": "coupling-constant"
+  },
+  {
+   "concept": "doublet-of-doublets",
+   "prereq": "complex-coupling"
+  },
+  {
+   "concept": "doublet-of-doublets",
+   "prereq": "splitting-diagram"
+  },
+  {
+   "concept": "overlapping-subpeaks",
+   "prereq": "complex-coupling"
+  },
+  {
+   "concept": "overlapping-subpeaks",
+   "prereq": "n-plus-one-rule"
+  },
+  {
+   "concept": "multiplet",
+   "prereq": "complex-coupling"
+  },
+  {
+   "concept": "field-strength-resolution",
+   "prereq": "coupling-constant-field-independence"
+  },
+  {
+   "concept": "field-strength-resolution",
+   "prereq": "multiplet"
+  },
+  {
+   "concept": "nuclear-spin-operators",
+   "prereq": "nucleon-spin"
+  },
+  {
+   "concept": "nuclear-spin-hamiltonian",
+   "prereq": "nuclear-spin-operators"
+  },
+  {
+   "concept": "nuclear-spin-hamiltonian",
+   "prereq": "coupling-constant"
+  },
+  {
+   "concept": "nuclear-spin-hamiltonian",
+   "prereq": "hamiltonian-operator"
+  },
+  {
+   "concept": "shift-operators",
+   "prereq": "nuclear-spin-operators"
+  },
+  {
+   "concept": "spin-scalar-product",
+   "prereq": "shift-operators"
+  },
+  {
+   "concept": "two-spin-hamiltonian-matrix",
+   "prereq": "nuclear-spin-hamiltonian"
+  },
+  {
+   "concept": "two-spin-hamiltonian-matrix",
+   "prereq": "spin-scalar-product"
+  },
+  {
+   "concept": "two-spin-hamiltonian-matrix",
+   "prereq": "hamiltonian-matrix-element"
+  },
+  {
+   "concept": "two-spin-eigenstates",
+   "prereq": "two-spin-hamiltonian-matrix"
+  },
+  {
+   "concept": "two-spin-eigenstates",
+   "prereq": "secular-determinant"
+  },
+  {
+   "concept": "clebsch-gordan-series",
+   "prereq": "total-spin-quantum-number"
+  },
+  {
+   "concept": "nmr-transition-hamiltonian",
+   "prereq": "nuclear-spin-operators"
+  },
+  {
+   "concept": "nmr-selection-rules",
+   "prereq": "nmr-transition-hamiltonian"
+  },
+  {
+   "concept": "nmr-selection-rules",
+   "prereq": "clebsch-gordan-series"
+  },
+  {
+   "concept": "nmr-selection-rules",
+   "prereq": "transition-moment-integral"
+  },
+  {
+   "concept": "equivalent-spins-one-line",
+   "prereq": "two-spin-eigenstates"
+  },
+  {
+   "concept": "equivalent-spins-one-line",
+   "prereq": "nmr-selection-rules"
+  },
+  {
+   "concept": "equivalent-spins-one-line",
+   "prereq": "equivalent-nuclei-do-not-split"
+  },
+  {
+   "concept": "magnetic-equivalence",
+   "prereq": "equivalent-spins-one-line"
+  },
+  {
+   "concept": "ax-spin-system",
+   "prereq": "nuclear-spin-hamiltonian"
+  },
+  {
+   "concept": "a2-spin-system",
+   "prereq": "ax-spin-system"
+  },
+  {
+   "concept": "a2-spin-system",
+   "prereq": "equivalent-spins-one-line"
+  },
+  {
+   "concept": "liouville-von-neumann-equation",
+   "prereq": "commutator"
+  },
+  {
+   "concept": "liouville-von-neumann-equation",
+   "prereq": "hamiltonian-operator"
+  },
+  {
+   "concept": "coupling-commutes-with-pulse",
+   "prereq": "liouville-von-neumann-equation"
+  },
+  {
+   "concept": "coupling-commutes-with-pulse",
+   "prereq": "spin-scalar-product"
+  },
+  {
+   "concept": "coupling-commutes-with-pulse",
+   "prereq": "angular-momentum-commutation-relations"
+  },
+  {
+   "concept": "peak-multiplicity",
+   "prereq": "n-plus-one-rule"
+  },
+  {
+   "concept": "peak-multiplicity",
+   "prereq": "multiplet-intensities"
+  },
+  {
+   "concept": "multiple-coupling-sets",
+   "prereq": "peak-multiplicity"
+  },
+  {
+   "concept": "multiple-coupling-sets",
+   "prereq": "doublet-of-doublets"
+  },
+  {
+   "concept": "predicting-splitting-patterns",
+   "prereq": "multiple-coupling-sets"
+  },
+  {
+   "concept": "predicting-splitting-patterns",
+   "prereq": "typical-coupling-constants"
+  }
+ ]
+}

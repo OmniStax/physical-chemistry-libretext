@@ -1,0 +1,64 @@
+<section id="opening">
+<h2>Rotational fine structure</h2>
+<p>Each of the modes of vibration of diatomic molecules in the gas phase also contains closely-spaced (<span data-type="wavenumber">1-10 cm<sup>-1</sup></span> difference) energy states attributable to rotational transitions that accompany the vibrational transitions. A molecule’s rotation can be affected by its vibrational transition because there is a change in bond length, so these rotational transitions are expected to occur. Since vibrational energy states are on the order of <span data-type="wavenumber">1000 cm<sup>-1</sup></span>, the rotational energy states can be superimposed upon the vibrational energy states.</p>
+</section>
+
+<section id="selection-rules">
+<h2>Selection Rules</h2>
+<p>Rotational and Vibration transitions (also known as <span data-concept="rigid-rotor">rigid rotor</span> and <span data-concept="harmonic-oscillator">harmonic oscillator</span>) of molecules help us identify how molecules interact with each other, their bond length as mentioned in previous section. In order to know each transitions, we have to consider other terms like <span data-concept="wavenumber">wavenumber</span>, <span data-concept="force-constant">force constant</span>, quantum number, etc. There are rotational energy levels associated with all vibrational levels. From this, vibrational transitions can couple with rotational transitions to give <strong><span data-concept="rovibrational-spectrum">rovibrational spectra</span></strong>. <span data-concept="rovibrational-spectrum">Rovibrational spectra</span> can be analyzed to determine average bond length.</p>
+<p>We treat the molecule's <strong>vibrations</strong> as those of a <span data-concept="harmonic-oscillator">harmonic oscillator</span> (ignoring <span data-concept="anharmonicity">anharmonicity</span>). The energy of a vibration is quantized in discrete levels and given by</p>
+$$ \kEv=h\knu \left(v+\dfrac{1}{2} \right) $$
+<p>Where v is the vibrational quantum number and can have integer values 0, 1, 2..., and $\knu$ is the frequency of the vibration given by:</p>
+$$ \knu=\dfrac{1}{2\pi}\left(\dfrac{\kk}{\kmu}\right)^{\frac{1}{2}} $$
+<p>where $\kk$ is the <span data-concept="force-constant">force constant</span> and $\kmu$ is the <span data-concept="reduced-mass">reduced mass</span> of a diatomic molecule with atom masses $\kmone$ and $\kmtwo$, given by</p>
+$$ \kmu=\dfrac{\kmone\kmtwo}{\kmone+\kmtwo} \tag{13.2.1} $$
+<p>We treat the molecule's <strong>rotations</strong> as those of a <span data-concept="rigid-rotor">rigid rotor</span> (ignoring centrifugal distortion from non-rigid rotor aspects). The energy of a rotation is also quantized in discrete levels given by</p>
+$$ \kEr=\dfrac{h^2}{8\pi^2\kI} J(J+1) $$
+<p>In which $\kI$ is the <span data-concept="moment-of-inertia">moment of inertia</span>, given by</p>
+$$ \kI=\kmu\kr^2 $$
+<p>where $\kmu$ is the <span data-concept="reduced-mass">reduced mass</span> (Equation 13.2.1) and $\kr$ is the equilibrium bond length.</p>
+<p>Experimentally, frequencies or <span data-concept="wavenumber">wavenumbers</span> are measured rather than energies, and dividing by $h$ or $hc$ gives more commonly seen <span data-concept="rotational-term">term symbols</span>, $\kFrot(J)$ using the rotational quantum number $J$ and the <span data-concept="rotational-constant">rotational constant</span> $\kB$ in either frequency</p>
+$$ \kFrot(J)=\dfrac{\kEr}{h}=\dfrac{h}{8\pi^2\kI} J(J+1)=\kB J(J+1) $$
+<p>or <span data-concept="wavenumber">wavenumbers</span></p>
+$$ \tilde{F}(J)=\dfrac{\kEr}{hc}=\dfrac{h}{8\pi^2c\kI} J(J+1)=\kBt J(J+1) $$
+<div class="note">
+<div class="eyebrow">Note</div>
+<p>It is important to note in which units one is working since the <span data-concept="rotational-constant">rotational constant</span> is always represented as $\kB$, whether in frequency or <span data-concept="wavenumber">wavenumbers</span>.</p>
+</div>
+<ul><li><strong><span data-concept="rovibrational-selection-rules">Vibrational Transition Selection Rules</span></strong>: At room temperature, typically only the lowest energy vibrational state v= 0 is populated, so typically v<sub>0</sub> = 0 and ∆v = +1. The full selection rule is technically that ∆v = ±1, however here we assume energy can only go upwards because of the lack of population in the upper vibrational states.</li><li><strong><span data-concept="rovibrational-selection-rules">Rotational Transition Selection Rules</span></strong>: At room temperature, states with J≠0 can be populated since they represent the fine structure of vibrational states and have smaller energy differences than successive vibrational levels. Additionally, ∆J = ±1 since a <span data-concept="photon">photon</span> contains one quantum <strong>of <span data-concept="angular-momentum">angular momentum</span></strong> and we abide by the principle of <strong>conservation of energy</strong>. This is also the selection rule for rotational transitions.</li></ul>
+<p>These two selection rules mean that the transition ∆J = 0 (i.e. J" = 0 and J' = 0, but $\knuo \neq 0$ is forbidden and the pure vibrational transition is not observed in most cases. The rotational selection rule gives rise to an <span data-concept="r-branch">R-branch</span> (when ∆J = +1) and a <span data-concept="p-branch">P-branch</span> (when ∆J = -1). Each line of the branch is labeled R(J) or P(J), where J represents the value of the lower state <a class="figref" href="#13.2-sim-rovib">Figure 13.2.1</a>).</p>
+<figure class="sim" id="sim-rovib" data-figure="13.2.1 + 13.2.3" data-original="/media/ch13/9564-vibrottrans.png,/media/ch13/125630-151700610935440509.png,/media/ch13/9568-rovib_ideal_spectrum.png" data-original-caption="Rotation-Vibration Transitions. Rotational transitions are on the order of 1-10 cm-1, while vibrational transitions are on the order of 1000 cm-1. The difference of magnitude between the energy transitions allow rotational levels to be superimposed within vibrational levels.">
+  <div class="sim-head"><span class="eyebrow">Figure 13.2.1 + 13.2.3</span><span>Play fires the allowed transitions one at a time, and each lands as a line below its arrow, as tall as the population of the level it starts from. Raise <span data-type="temperature">the temperature</span> and the tallest lines move out to higher J; change <span data-concept="rotational-constant">B̃</span> and the spacing follows.</span></div>
+</figure>
+<h3>R-branch</h3>
+<p>When ∆J = +1, i.e. the rotational quantum number in the ground state is one more than the rotational quantum number in the excited state<sup class="fn" data-note="c-r-wording"></sup> – <span data-concept="r-branch">R branch</span> (in French, <em>riche</em> or rich). To find the energy of a line of the <span data-concept="r-branch">R-branch</span>:<sup class="fn" data-note="c-labels"></sup></p>
+$$ \begin{aligned} \kdE &=h\knuo +h\kB \left [J(J+1)-J^\prime (J^\prime{+1}) \right] \\[4pt] &=h\knuo +h\kB \left[(J+1)(J+2)-J(J+1)\right] \\[4pt] &= h\knuo +2h\kB(J+1) \end{aligned} \tag{13.2.2} $$
+<h3>P-branch</h3>
+<p>When ∆J = -1, i.e. the rotational quantum number in the ground state is one less than the rotational quantum number in the excited state<sup class="fn" data-note="c-p-wording"></sup> – <span data-concept="p-branch">P branch</span> (in French, <em>pauvre</em> or poor). To find the energy of a line of the <span data-concept="p-branch">P-branch</span>:</p>
+$$ \begin{aligned} \kdE &=h\knuo +h\kB \left [J(J+1)-J^\prime(J^\prime+1) \right] \\[4pt] &= h\knuo +h\kB \left [J(J-1)-J(J+1) \right] \\[4pt] &= h\knuo -2h\kB J \end{aligned} \tag{13.2.3} $$
+<h3>Q-branch</h3>
+<p>When ∆J = 0, i.e. the rotational quantum number in the ground state is the same as the rotational quantum number in the excited state – <span data-concept="q-branch">Q branch</span> (simple, the letter between P and R). To find the energy of a line of the <span data-concept="q-branch">Q-branch</span>:</p>
+$$ \begin{aligned} \kdE &=h\knuo +h\kB[J(J+1)-J^\prime(J^\prime+1)] \\[4pt] &=h\knuo \end{aligned} \tag{13.2.4} $$
+<p>The <span data-concept="q-branch">Q-branch</span> can be observed in polyatomic molecules and diatomic molecules with electronic <span data-concept="angular-momentum">angular momentum</span> in the ground electronic state, e.g. nitric oxide, NO. Most diatomics, such as O<sub>2</sub>, have a small <span data-concept="moment-of-inertia">moment of inertia</span> and thus very small <span data-concept="angular-momentum">angular momentum</span> and yield no <span data-concept="q-branch">Q-branch</span>.<sup class="fn" data-note="c-q-reason"></sup></p>
+<p>As seen in <a class="figref" href="#13.2-sim-rovib">Figure 13.2.2</a>,<sup class="fn" data-note="c-numbers"></sup> the lines of the <span data-concept="p-branch">P-branch</span> (represented by purple arrows) and <span data-concept="r-branch">R-branch</span> (represented by red arrows) are separated by specific multiples of $\kB$ (i.e, $2\kB$), thus the bond length can be deduced without the need for pure rotational spectroscopy.</p>
+<p>The total nuclear energy of the combined <span data-concept="rovibrational-term">rotation-vibration terms</span>, $\kSterm(v, J)$, can be written as the sum of the vibrational energy and the rotational energy</p>
+$$ \kSterm(v,J)=\kGvib(v)+\kFrot(J) $$
+<p>where $\kGvib(v)$ represents the energy of the <span data-concept="harmonic-oscillator">harmonic oscillator</span>, ignoring anharmonic components and $S(J)$ represents the energy of a <span data-concept="rigid-rotor">rigid rotor</span>, ignoring centrifugal distortion.<sup class="fn" data-note="c-sj"></sup></p>
+<p>From this, we can derive</p>
+$$ \kSterm(v,J)=\knuo \left(v+\dfrac{1}{2}\right) +\kB J(J+1) $$
+<p>The spectrum we expect, based on the conditions described above, consists of lines equidistant in energy from one another, separated by a value of $2\kB$. <span data-concept="rovibrational-line-intensities">The <em>relative</em> intensity of the lines is a function of the rotational populations of the ground states</span>, i.e. the intensity is proportional to the number of molecules that have made the transition. The <em>overall</em> intensity of the lines depends on the vibrational transition dipole moment.</p>
+<p>In <a class="figref" href="#13.2-sim-rovib">Figure 13.2.2</a>, between $P(1)$ and $R(0)$ lies the <span data-concept="zero-gap">zero gap</span>, where the the first lines of both the P- and R-branch are separated by $4\kB$, assuming that the <span data-concept="rotational-constant">rotational constant</span> $\kB$ is equal for both energy levels. The <span data-concept="zero-gap">zero gap</span> is also where we would expect the <span data-concept="q-branch">Q-branch</span>, depicted as the dotted line, if it is allowed.</p>
+<div class="note">
+<div class="eyebrow">Note</div>
+<h3>Advanced Concept: Occupations (Peak Intensities)</h3>
+<p>The relative intensity of the P- and R-branch lines depends on the thermal distribution of electrons;<sup class="fn" data-note="c-electrons"></sup> more specifically, they depend on the population of the lower J state. If we represent the population of the Jth upper level as N<sub>J</sub> and the population of the lower state as N<sub>0</sub>,<sup class="fn" data-note="c-upper"></sup> we can find the population of the upper state relative to the lower state using the <span data-concept="boltzmann-distribution">Boltzmann distribution</span>:</p>
+$$ \dfrac{N_J}{N_0}={(2J+1)e}^{\left(-\dfrac{\kEr}{k\kT}\right)} $$
+<p>(2J+1) gives the <span data-concept="degeneracy">degeneracy</span> of the Jth upper level arising from the allowed values of M<sub>J</sub> (+J to –J). <span data-concept="rotational-populations">As J increases, the degeneracy factor increases and the exponential factor decreases until at high J, the exponential factor wins out and N<sub>J</sub>/N<sub>0</sub> approaches zero</span> at a certain level, J<sub>max</sub>. Thus, when</p>
+$$ \dfrac{d}{dJ} \left( \dfrac{N_J}{N_0} \right)=0 $$
+<p>by differentiation, we obtain</p>
+$$ J_{max}=\left(\dfrac{k\kT}{2h\kB}\right)^{\frac{1}{2}}-\dfrac{1}{2} $$
+<figure class="dv" id="drv-jmax"></figure>
+<p>This is the reason that rovibrational spectral lines increase in energy to a maximum as J increases, then decrease to zero as J continues to increase, as seen in <a class="figref" href="#13.2-sim-rovib">Figure 13.2.2</a>.</p>
+<p>From this relationship, we can also deduce that in heavier molecules, $\kB$ will decrease because the <span data-concept="moment-of-inertia">moment of inertia</span> will increase, and the decrease in the exponential factor is less pronounced. This results in the population distribution shifting to higher values of J. Similarly, as temperature increases, the population distribution will shift towards higher values of $J$.</p>
+</div>
+</section>

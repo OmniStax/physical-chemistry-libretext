@@ -106,7 +106,8 @@
   },
   {
    "sym": "s_3",
-   "latex": "s_3"
+   "latex": "s_3",
+   "macro": "\\ksthree"
   },
   {
    "sym": "s_H",
@@ -189,6 +190,26 @@
    "sym": "Psi_f",
    "latex": "\\Psi_f",
    "macro": "\\kPsif"
+  },
+  {
+   "sym": "C_4",
+   "latex": "C_4",
+   "macro": "\\kCfour"
+  },
+  {
+   "sym": "C_6",
+   "latex": "C_6",
+   "macro": "\\kCsix"
+  },
+  {
+   "sym": "S_4",
+   "latex": "S_4",
+   "macro": "\\kSfour"
+  },
+  {
+   "sym": "S_6",
+   "latex": "S_6",
+   "macro": "\\kSsix"
   }
  ],
  "concepts": [

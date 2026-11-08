@@ -62,7 +62,8 @@ const bondsOf = (m) => m.bonds ?? star(m.atoms);
 const Z = [0, 0, 1];
 const op = (kind, n, u, tx, name) => ({ kind, n, u: u && unit(u), tex: tx, name });
 const E = op('E', 1, null, '\\kEop', 'the identity E');
-const rotTex = (n) => (n === 2 ? '\\kCtwo' : n === 3 ? '\\kCthree' : `C_{${n}}`);
+const rotTex = (n) => ({ 2: '\\kCtwo', 3: '\\kCthree', 4: '\\kCfour', 6: '\\kCsix' })[n] ?? `C_{${n}}`;
+const impTex = (n) => ({ 4: '\\kSfour', 6: '\\kSsix' })[n] ?? `S_{${n}}`;
 /* how many times the operation is applied before every atom is back where it began */
 const order = (o) => (o.kind === 'E' ? 1 : o.kind === 'C' ? o.n : o.kind === 'S' ? (o.n % 2 ? 2 * o.n : o.n) : 2);
 /* where p goes under o applied once, a fraction q of the way */
@@ -85,7 +86,7 @@ function power(o, j) {
   if (m === 1) return o.tex;
   if (m % 2 === 0) return rot(o.n, m % o.n);
   if ((2 * m) % o.n === 0 && (2 * m / o.n) % 2 === 1) return '\\kiop';
-  return m === o.n && o.n % 2 ? '\\ksigmah' : `S_{${o.n}}^{${m}}`;
+  return m === o.n && o.n % 2 ? '\\ksigmah' : `${impTex(o.n)}^{${m}}`;
 }
 
 /* ---------- Figures 12.2.1 to 12.2.5: one molecule, one operation ----------
@@ -102,14 +103,14 @@ const MOLS = {
   ammonia: { m: ammonia, name: 'ammonia', tx: '\\mathrm{NH_3}', ops: [op('C', 3, Z, '\\kCthree', 'the rotation C₃ about the z axis'), op('s', 0, [1, 0, 0], '\\ksigmav', 'the reflection σᵥ'), E] },
   ethane: { m: ethane(), name: 'staggered ethane', tx: '\\mathrm{C_2H_6}', ops: [
     op('C', 3, Z, '\\kCthree', 'the rotation C₃ about the C–C axis'), op('C', 2, azi(30), '\\kCtwo', 'the rotation C₂ about an axis square to the C–C bond'),
-    op('s', 0, [0, 1, 0], '\\ksigmad', 'the reflection σ_d'), op('i', 0, null, '\\kiop', 'the inversion i through the centre'), op('S', 6, Z, 'S_{6}', 'the improper rotation S₆ about the C–C axis'), E] },
+    op('s', 0, [0, 1, 0], '\\ksigmad', 'the reflection σ_d'), op('i', 0, null, '\\kiop', 'the inversion i through the centre'), op('S', 6, Z, '\\kSsix', 'the improper rotation S₆ about the C–C axis'), E] },
   benzene: { m: benzene, name: 'benzene', tx: '\\mathrm{C_6H_6}', ops: [
-    op('C', 6, Z, 'C_{6}', 'the rotation C₆ about the axis square to the ring'), op('C', 2, [1, 0, 0], '\\kCtwo', 'the rotation C₂ about an axis through two carbon atoms'),
+    op('C', 6, Z, '\\kCsix', 'the rotation C₆ about the axis square to the ring'), op('C', 2, [1, 0, 0], '\\kCtwo', 'the rotation C₂ about an axis through two carbon atoms'),
     op('s', 0, Z, '\\ksigmah', 'the reflection σ_h in the plane of the ring'), op('s', 0, [0, 1, 0], '\\ksigmav', 'the reflection σᵥ through two carbon atoms'),
-    op('s', 0, azi(120), '\\ksigmad', 'the reflection σ_d between the carbon atoms'), op('i', 0, null, '\\kiop', 'the inversion i through the centre'), op('S', 6, Z, 'S_{6}', 'the improper rotation S₆'), E] },
+    op('s', 0, azi(120), '\\ksigmad', 'the reflection σ_d between the carbon atoms'), op('i', 0, null, '\\kiop', 'the inversion i through the centre'), op('S', 6, Z, '\\kSsix', 'the improper rotation S₆'), E] },
   methane: { m: methane, name: 'methane', tx: '\\mathrm{CH_4}', ops: [
     op('C', 3, [1, 1, 1], '\\kCthree', 'the rotation C₃ about a C–H bond'), op('C', 2, Z, '\\kCtwo', 'the rotation C₂ about the z axis'),
-    op('s', 0, [1, -1, 0], '\\ksigmad', 'the reflection σ_d through two C–H bonds'), op('S', 4, Z, 'S_{4}', 'the improper rotation S₄ about the z axis'), E] },
+    op('s', 0, [1, -1, 0], '\\ksigmad', 'the reflection σ_d through two C–H bonds'), op('S', 4, Z, '\\kSfour', 'the improper rotation S₄ about the z axis'), E] },
   chfclbr: { m: chfclbr, name: 'CHFClBr', tx: '\\mathrm{CHFClBr}', ops: [
     E, op('C', 3, Z, '\\kCthree', 'a rotation by 120° about the C–H bond'), op('s', 0, [0, 1, 0], '\\ksigmaop', 'a reflection in the plane of C, H and F'), op('i', 0, null, '\\kiop', 'an inversion through the carbon atom')] },
 };
@@ -151,10 +152,17 @@ function elementMarks(o, lit) {
     /* applied j whole times, then the (j+1)th a fraction of the way */
     const pos = m.atoms.map((a) => { let p = a.p; for (let k = 0; k < j; k++) p = partway(o, p, 1); return j < N ? partway(o, p, ease) : p; });
     const names = named(m.atoms, M.name);
-    /* after a whole application, does every atom point where an atom of its own element pointed? (CHFClBr's bonds differ in length, so directions are compared) */
+    /* after a whole application, does every atom land where an atom of its own element stood? An atom that lands on
+       no atom's place is matched by direction instead (CHFClBr's bonds differ in length); the place is tried first
+       because benzene's C and H lie on the same rays */
     let wrong = null;
     const whole = m.atoms.map((a) => { let p = a.p; for (let k = 0; k < Math.min(j, 1); k++) p = partway(o, p, 1); return p; });
-    if (j >= 1) m.atoms.forEach((a, i) => { const k = m.atoms.findIndex((b) => (Math.hypot(...b.p) < 1e-3 ? Math.hypot(...whole[i]) < 1e-3 : Math.hypot(...whole[i]) > 1e-3 && Math.hypot(...sub(unit(b.p), unit(whole[i]))) < 1e-3)); if (!wrong && k >= 0 && m.atoms[k].el !== a.el) wrong = [a.el, m.atoms[k].el]; });
+    const sameDir = (b, w) => (Math.hypot(...b) < 1e-3 ? Math.hypot(...w) < 1e-3 : Math.hypot(...w) > 1e-3 && Math.hypot(...sub(unit(b), unit(w))) < 1e-3);
+    if (j >= 1) m.atoms.forEach((a, i) => {
+      const at = m.atoms.findIndex((b) => Math.hypot(...sub(b.p, whole[i])) < 1e-3);
+      const k = at >= 0 ? at : m.atoms.findIndex((b) => sameDir(b.p, whole[i]));
+      if (!wrong && k >= 0 && m.atoms[k].el !== a.el) wrong = [a.el, m.atoms[k].el];
+    });
     S.set('element', o.kind === 'E' ? [] : elementMarks(o, q > 0 && q < 1));
     S.set('ghosts', m.atoms.map((a) => ({ k: 'dot', p: a.p, color: alpha(colour(a.el), 0.22), r: RADIUS[a.el] + 2 })));
     S.set('molecule', [
@@ -215,10 +223,10 @@ const FIND = {
     const N1 = [0.62, 0, 0], d = [Math.cos(74 * RAD), Math.sin(74 * RAD), 0];
     return { atoms: [{ el: 'N', p: N1 }, { el: 'N', p: mul(N1, -1) }, { el: 'H', p: add(N1, mul(d, 1.03)) }, { el: 'H', p: mul(add(N1, mul(d, 1.03)), -1) }], bonds: [[0, 1], [0, 2], [1, 3]] };
   })(), yes: ['axis', 'hC'], group: 'C_{2h}', h: '\\kEop,\\ \\kCtwo,\\ \\kiop,\\ \\ksigmah', order: 4, els: [['C', Z, 2], ['s', Z, 'h']], head: 'A C₂ axis square to the molecule and the molecular plane as σ_h, which together give a centre of inversion.' },
-  ethane: { name: 'staggered ethane', m: ethane(), yes: ['axis', 'perp', 'dD'], group: 'D_{3d}', h: '\\kEop,\\ 2\\kCthree,\\ 3\\kCtwo,\\ \\kiop,\\ 2S_6,\\ 3\\ksigmad', order: 12, els: [['C', Z, 3], ...[30, 150, 270].map((a) => ['C', azi(a), 2]), ...[0, 120, 240].map((a) => ['s', azi(a + 90)])], head: 'A C₃ axis along the C–C bond, three C₂ axes square to it and three dihedral mirror planes.' },
+  ethane: { name: 'staggered ethane', m: ethane(), yes: ['axis', 'perp', 'dD'], group: 'D_{3d}', h: '\\kEop,\\ 2\\kCthree,\\ 3\\kCtwo,\\ \\kiop,\\ 2\\kSsix,\\ 3\\ksigmad', order: 12, els: [['C', Z, 3], ...[30, 150, 270].map((a) => ['C', azi(a), 2]), ...[0, 120, 240].map((a) => ['s', azi(a + 90)])], head: 'A C₃ axis along the C–C bond, three C₂ axes square to it and three dihedral mirror planes.' },
   co2: { name: 'CO₂', m: { atoms: [{ el: 'C', p: [0, 0, 0] }, { el: 'O', p: [0, 0, 1.16] }, { el: 'O', p: [0, 0, -1.16] }] }, yes: ['lin', 'linI'], group: 'D_{\\infty h}', h: '\\kEop,\\ 2C_{\\infty}^{\\phi},\\ \\infty\\ksigmav,\\ \\kiop,\\ 2S_{\\infty}^{\\phi},\\ \\infty\\kCtwo', order: '\\infty', els: [['C', Z, '∞'], ['i']], head: 'A linear molecule whose two ends match: a C∞ axis and a centre of inversion on the carbon atom.' },
-  ch4: { name: 'CH₄', m: methane, yes: ['many'], group: 'T_d', h: '\\kEop,\\ 8\\kCthree,\\ 3\\kCtwo,\\ 6S_4,\\ 6\\ksigmad', order: 24, els: [[1, 1, 1], [1, -1, -1], [-1, 1, -1], [-1, -1, 1]].map((v) => ['C', v, 3]), head: 'Four C₃ axes, one along each C–H bond, and no centre of inversion.' },
-  sf6: { name: 'SF₆', m: { atoms: [{ el: 'S', p: [0, 0, 0] }, ...[[1, 0, 0], [-1, 0, 0], [0, 1, 0], [0, -1, 0], [0, 0, 1], [0, 0, -1]].map((v) => ({ el: 'F', p: mul(v, 1.56) }))] }, yes: ['many', 'cubI'], group: 'O_h', h: '\\kEop,\\ 8\\kCthree,\\ 6\\kCtwo,\\ 6C_4,\\ 3\\kCtwo,\\ \\kiop,\\ 6S_4,\\ 8S_6,\\ 3\\ksigmah,\\ 6\\ksigmad', order: 48, els: [[[1, 0, 0], 4], [[0, 1, 0], 4], [[0, 0, 1], 4]].map(([v, n]) => ['C', v, n]).concat([['i']]), head: 'Three C₄ axes along the S–F bonds and a centre of inversion on the sulfur atom, with no C₅ axis.' },
+  ch4: { name: 'CH₄', m: methane, yes: ['many'], group: 'T_d', h: '\\kEop,\\ 8\\kCthree,\\ 3\\kCtwo,\\ 6\\kSfour,\\ 6\\ksigmad', order: 24, els: [[1, 1, 1], [1, -1, -1], [-1, 1, -1], [-1, -1, 1]].map((v) => ['C', v, 3]), head: 'Four C₃ axes, one along each C–H bond, and no centre of inversion.' },
+  sf6: { name: 'SF₆', m: { atoms: [{ el: 'S', p: [0, 0, 0] }, ...[[1, 0, 0], [-1, 0, 0], [0, 1, 0], [0, -1, 0], [0, 0, 1], [0, 0, -1]].map((v) => ({ el: 'F', p: mul(v, 1.56) }))] }, yes: ['many', 'cubI'], group: 'O_h', h: '\\kEop,\\ 8\\kCthree,\\ 6\\kCtwo,\\ 6\\kCfour,\\ 3\\kCtwo,\\ \\kiop,\\ 6\\kSfour,\\ 8\\kSsix,\\ 3\\ksigmah,\\ 6\\ksigmad', order: 48, els: [[[1, 0, 0], 4], [[0, 1, 0], 4], [[0, 0, 1], 4]].map(([v, n]) => ['C', v, n]).concat([['i']]), head: 'Three C₄ axes along the S–F bonds and a centre of inversion on the sulfur atom, with no C₅ axis.' },
 };
 const FIND_KEYS = ['chdfcl', 'ci', 'cs', 'h2o2', 'nh3', 'hcl', 'n2h2', 'ethane', 'co2', 'ch4', 'sf6'];
 /* the path a molecule takes: every question answered, yes where the molecule lists it */

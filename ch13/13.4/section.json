@@ -1,0 +1,427 @@
+{
+ "id": "13.4",
+ "module": "13667",
+ "chapter": "13",
+ "title": "Unequal Spacings in Pure Rotational Spectra",
+ "short": "The non-rigid rotor",
+ "lead": "A real bond is elastic, so a rotating molecule stretches until the bond's restoring force balances the centrifugal force. The stretch changes the rotational energy levels and the spacing of the pure rotational lines.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "Shared under the book's CC BY-NC-SA 4.0; the page's only credit is a link to a course wiki (202.141.40.218/wiki/index.php...r_Spectroscopy), and Figure 13.4.1 is Cleonis's public-domain animation.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercise in this section. The one here, on how far centrifugal stretching lowers HCl's J = 20 level, was written by AI with its solution, Bloom level and concept tags. Numeric answers accept a 2% tolerance.",
+ "figures": [
+  {
+   "id": "fig-13-4-1",
+   "kind": "photo",
+   "number": "13.4.1",
+   "widths": [
+    192
+   ],
+   "draws": []
+  },
+  {
+   "id": "sim-nonrigid",
+   "kind": "sim",
+   "number": "13.4.2",
+   "originals": [
+    "/media/ch13/78872-=500px-Figure_m.png"
+   ],
+   "widths": [
+    404
+   ],
+   "original_caption": "Energy levels and the transitions of rigid rotator (broken red lines) & of non-rigid rotator (solid red lines). (b) resulting spectra from both the models",
+   "draws": [
+    "wavenumber",
+    "energy"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "non-rigid-rotor",
+   "concept": "non-rigid-rotor",
+   "verb": "introduces"
+  },
+  {
+   "span": "non-rigid-rotor",
+   "concept": "centrifugal-force",
+   "verb": "introduces"
+  },
+  {
+   "span": "non-rigid-rotor",
+   "concept": "nonrigid-rotor-energy-levels",
+   "verb": "introduces"
+  },
+  {
+   "span": "non-rigid-rotor",
+   "concept": "centrifugal-distortion-constant",
+   "verb": "introduces"
+  },
+  {
+   "span": "non-rigid-rotor",
+   "concept": "hookes-law",
+   "verb": "uses"
+  },
+  {
+   "span": "non-rigid-rotor",
+   "concept": "reduced-mass",
+   "verb": "uses"
+  },
+  {
+   "span": "non-rigid-rotor",
+   "concept": "angular-momentum",
+   "verb": "uses"
+  },
+  {
+   "span": "non-rigid-rotor",
+   "concept": "rigid-rotor",
+   "verb": "uses"
+  },
+  {
+   "span": "non-rigid-rotor",
+   "concept": "centrifugal-stretching",
+   "verb": "reinforces"
+  },
+  {
+   "span": "nonrigid-spectrum",
+   "concept": "nonrigid-line-spacing",
+   "verb": "introduces"
+  },
+  {
+   "span": "nonrigid-spectrum",
+   "concept": "non-rigid-rotor",
+   "verb": "reinforces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "Usually, $D$ is ignored in the calculations",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "nonrigid-spectrum",
+   "prompt": "<p>For HCl, $\\kBt = 10.4$ cm⁻¹ and $\\kDt = 0.0004$ cm⁻¹. For the level $J = 20$, find (a) the rigid-rotor term $\\kBt J(J+1)$, (b) the centrifugal stretching term $\\kDt J^2(J+1)^2$ and (c) the stretching term as a percentage of the rigid-rotor term.</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 4368,
+      "unit": "cm⁻¹",
+      "hint": "J(J + 1) = 420 at J = 20."
+     },
+     {
+      "part": "b",
+      "value": 70.6,
+      "unit": "cm⁻¹"
+     },
+     {
+      "part": "c",
+      "value": 1.62,
+      "unit": "%"
+     }
+    ],
+    "solution": "<p>(a) $\\kBt J(J+1) = (10.4)(20)(21) = 4368$ cm⁻¹.</p><p>(b) $\\kDt J^2(J+1)^2 = (0.0004)(420)^2 = (0.0004)(176\\,400) = 70.6$ cm⁻¹.</p><p>(c) $70.6/4368 = 0.0162$, or 1.62%. Even at $J = 20$ the stretching lowers the level by less than 2%, and at low $J$ it is far smaller, since it grows as $J^4$ against $J^2$.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "nonrigid-rotor-energy-levels"
+  },
+  {
+   "exercise": "a1",
+   "concept": "centrifugal-distortion-constant"
+  }
+ ],
+ "footnotes": [],
+ "derivations": [
+  {
+   "id": "nonrigid-levels",
+   "what": "the levels of a non-rigid rotor",
+   "source": "Physical Chemistry (LibreTexts), 13.4 Unequal Spacings in Pure Rotational Spectra",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kFc = \\kmu\\krc\\komega^2 = \\kL^2/\\kmu\\krc^3",
+       "src": "(13.4.1)"
+      },
+      {
+       "tex": "F_{\\text{restoring}} = \\kk(\\krc - \\kre)",
+       "src": "13.4, Hooke's law"
+      },
+      {
+       "text": "To keep the mass rotating about the axis, the restoring force balances the centrifugal force.",
+       "src": "13.4"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{f}{F_{\\text{restoring}}} = \\mk{c}{\\kFc}",
+      "uses": [
+       2
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{f}{\\kk(\\krc - \\kre)} = \\mk{c}{\\kFc}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{f}{\\kk(\\krc - \\kre)} = \\mk{c}{\\dfrac{\\kL^2}{\\kmu\\krc^3}}",
+       "uses": [
+        0
+       ]
+      }
+     ],
+     "num": "(13.4.2)",
+     "src": "13.4"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "text": "The stretch is small beside the bond, so $\\krc$ may be replaced by $\\kre$ in the denominator.",
+       "src": "13.4"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{f}{\\kk(\\krc - \\kre)} = \\mk{c}{\\dfrac{\\kL^2}{\\kmu\\krc^3}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{d}{\\krc - \\kre} = \\mk{c}{\\dfrac{\\kL^2}{\\kk\\kmu\\krc^3}}",
+       "uses": [],
+       "map": {
+        "f": "d"
+       }
+      },
+      {
+       "tex": "\\mk{d}{\\krc - \\kre} = \\mk{c}{\\dfrac{\\kL^2}{\\kk\\kmu\\krc^3}} \\cong \\mk{e}{\\dfrac{\\kL^2}{\\kk\\kmu\\kre^3}}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "num": "(13.4.3)",
+     "src": "13.4"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "E_{\\text{kin}} = \\dfrac{\\kL^2}{2\\kmu\\krc^2}",
+       "src": "5.8"
+      },
+      {
+       "tex": "E_{\\text{pot}} = \\dfrac{1}{2}\\kk(\\krc - \\kre)^2",
+       "src": "(13.4.4)"
+      },
+      {
+       "text": "The total energy of rotation is the kinetic energy plus the potential energy stored in the stretched bond.",
+       "src": "13.4"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{E}{\\kEr} = \\mk{k}{E_{\\text{kin}}} + \\mk{p}{E_{\\text{pot}}}",
+      "uses": [
+       2
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{E}{\\kEr} = \\mk{k}{\\dfrac{\\kL^2}{2\\kmu\\krc^2}} + \\mk{p}{E_{\\text{pot}}}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{E}{\\kEr} = \\mk{k}{\\dfrac{\\kL^2}{2\\kmu\\krc^2}} + \\mk{p}{\\dfrac{1}{2}\\kk(\\krc - \\kre)^2}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "num": "(13.4.5)",
+     "src": "13.4"
+    },
+    {
+     "assumes": [
+      {
+       "step": 2
+      },
+      {
+       "tex": "\\kdr = \\krc - \\kre",
+       "src": "13.4"
+      },
+      {
+       "tex": "(1 + \\kdr/\\kre)^{-2} \\approx 1 - 2\\kdr/\\kre",
+       "src": "(13.4.7)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{E}{\\kEr} = \\mk{k}{\\dfrac{\\kL^2}{2\\kmu\\krc^2}} + \\mk{p}{\\dfrac{1}{2}\\kk(\\krc - \\kre)^2}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{E}{\\kEr} = \\mk{k}{\\dfrac{\\kL^2}{2\\kmu(\\kre + \\kdr)^2}} + \\mk{p}{\\dfrac{1}{2}\\kk\\kdr^2}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{E}{\\kEr} = \\mk{k}{\\dfrac{\\kL^2}{2\\kmu\\kre^2(1 + \\kdr/\\kre)^2}} + \\mk{p}{\\dfrac{1}{2}\\kk\\kdr^2}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{E}{\\kEr} = \\mk{k}{\\dfrac{\\kL^2(1 - 2\\kdr/\\kre)}{2\\kmu\\kre^2}} + \\mk{p}{\\dfrac{1}{2}\\kk\\kdr^2}",
+       "uses": [
+        2
+       ],
+       "cap": "The binomial approximation holds because the stretch is a tiny fraction of the bond."
+      }
+     ],
+     "num": "(13.4.6)",
+     "src": "13.4"
+    },
+    {
+     "assumes": [
+      {
+       "step": 3
+      },
+      {
+       "step": 1
+      },
+      {
+       "tex": "\\kL = \\hbar\\sqrt{J(J+1)}",
+       "src": "(13.4.9)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{E}{\\kEr} = \\mk{k}{\\dfrac{\\kL^2(1 - 2\\kdr/\\kre)}{2\\kmu\\kre^2}} + \\mk{p}{\\dfrac{1}{2}\\kk\\kdr^2}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{E}{\\kEr} = \\mk{a}{\\dfrac{\\kL^2}{2\\kmu\\kre^2}} - \\mk{b}{\\dfrac{\\kL^2\\kdr}{\\kmu\\kre^3}} + \\mk{p}{\\dfrac{1}{2}\\kk\\kdr^2}",
+       "uses": [],
+       "map": {
+        "k": [
+         "a",
+         "b"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{E}{\\kEr} = \\mk{a}{\\dfrac{\\kL^2}{2\\kmu\\kre^2}} - \\mk{b}{\\dfrac{\\kL^4}{\\kk\\kmu^2\\kre^6}} + \\mk{p}{\\dfrac{1}{2}\\kk\\dfrac{\\kL^4}{\\kk^2\\kmu^2\\kre^6}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{E}{\\kEr} = \\mk{a}{\\dfrac{\\kL^2}{2\\kmu\\kre^2}} - \\mk{b}{\\dfrac{1}{2}\\dfrac{\\kL^4}{\\kk\\kmu^2\\kre^6}}",
+       "uses": [],
+       "map": {
+        "p": "b"
+       }
+      },
+      {
+       "tex": "\\mk{E}{\\kEr} = \\mk{a}{\\dfrac{\\hbar^2J(J+1)}{2\\kmu\\kre^2}} - \\mk{b}{\\dfrac{\\hbar^4J^2(J+1)^2}{2\\kk\\kmu^2\\kre^6}}",
+       "uses": [
+        2
+       ]
+      }
+     ],
+     "num": "(13.4.8)",
+     "src": "13.4",
+     "note": "The book prints the denominator of the third term of the first line as $k^{2\\mu 2}r_e^6$; it is $k^2\\mu^2 r_e^6$."
+    },
+    {
+     "assumes": [
+      {
+       "step": 4
+      },
+      {
+       "tex": "\\kFrot(J) = \\dfrac{\\kEr}{hc}",
+       "src": "13.2"
+      },
+      {
+       "tex": "h = 2\\pi\\hbar"
+      },
+      {
+       "tex": "\\kBt = \\dfrac{\\hbar}{4\\pi\\kmu\\kre^2c}",
+       "src": "(13.4.11)"
+      },
+      {
+       "tex": "\\kDt = \\dfrac{\\hbar^3}{4\\pi\\kk\\kmu^2\\kre^6c}",
+       "src": "(13.4.12)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{F}{\\kFrot(J)} = \\mk{e}{\\dfrac{\\kEr}{hc}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{F}{\\kFrot(J)} = \\mk{a}{\\dfrac{\\hbar^2J(J+1)}{2hc\\kmu\\kre^2}} - \\mk{b}{\\dfrac{\\hbar^4J^2(J+1)^2}{2hc\\kk\\kmu^2\\kre^6}}",
+       "uses": [
+        0
+       ],
+       "map": {
+        "e": [
+         "a",
+         "b"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{F}{\\kFrot(J)} = \\mk{a}{\\dfrac{\\hbar}{4\\pi\\kmu\\kre^2c}J(J+1)} - \\mk{b}{\\dfrac{\\hbar^3}{4\\pi\\kk\\kmu^2\\kre^6c}J^2(J+1)^2}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{F}{\\kFrot(J)} = \\mk{a}{\\kBt J(J+1)} - \\mk{b}{\\kDt J^2(J+1)^2}",
+       "uses": [
+        3,
+        4
+       ]
+      }
+     ],
+     "num": "(13.4.10)",
+     "src": "13.4"
+    }
+   ]
+  }
+ ]
+}

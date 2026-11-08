@@ -56,10 +56,11 @@ const otherSign = (cw) => { const l = lightOf(cw), far = Math.abs(lightOf(PAL.in
     for (let e = -40; e <= 40; e += 20) { line(ctx, X(e), yb, X(e), yb + 8, alpha(PAL.ink, 0.6), 2); text(ctx, fmt(e, 0), X(e), yb + 34, PAL.muted, { size: 17, align: 'center' }); }
     text(ctx, 'orbital energy E (eV)', (L + R) / 2, yb + 72, ce, { size: 20, weight: 600, align: 'center' });
     const lv = [[1, -29.8336, 0], [3, -9.2892, -24], [4, -9.2892, 24], [2, 31.0342, 0]];
-    lv.forEach(([i, e, dx]) => {
-      const on = String(i) === K.value, x = X(e) + dx, col = on ? ce : alpha(PAL.ink, 0.35);
+    /* the degenerate pair shares one level; only their labels stand apart, and the chosen level is drawn last */
+    lv.slice().sort((p, q) => (String(p[0]) === K.value) - (String(q[0]) === K.value)).forEach(([i, e, dx]) => {
+      const on = String(i) === K.value, x = X(e), col = on ? ce : alpha(PAL.ink, 0.35);
       line(ctx, x, yb - 64, x, yb - 8, col, on ? 6 : 3);
-      text(ctx, `Ψ_${i}`, x, yb - 82, on ? ce : PAL.muted, { size: 26, weight: on ? 600 : 400, align: 'center' });
+      text(ctx, `Ψ_${i}`, x + dx, yb - 82, on ? ce : PAL.muted, { size: 26, weight: on ? 600 : 400, align: 'center' });
     });
     F.legend(ctx, { l: 0, t: 0, r: W, b: 40 }, [
       { s: 'coefficient > 0', color: up, kind: 'dot' },

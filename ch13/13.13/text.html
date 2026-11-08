@@ -1,0 +1,23 @@
+<section id="selection-rules-in-spectroscopy">
+<h2>Selection rules in spectroscopy</h2>
+<p><span data-concept="selection-rule">Selection rules</span> are a very important concept in spectroscopy and physical chemistry, as they directly complement the concept that systems on the atomic level are quantized. Quantization tells us how electrons, neutrons, and protons are set up, and <span data-concept="selection-rule">selection rules</span> tell us how, energetically speaking, they may move about. For example, the principal quantum number, $n$, determines the energy state of particles in the Particle in a Box model.<sup class="fn" data-note="c-principal"></sup> With respect to real systems, the quantum number $n$ describes electronic transitions, such as the excitation of an electron. There are other transitions, such as the rotational transition, which applies to the <span data-concept="rigid-rotor">rigid rotator</span> model and occurs where there are <span data-concept="spherical-harmonics">spherical harmonics</span>. Vibrational transitions occur where there is a system that can be visualized as two masses connected by a spring, such as a diatomic molecule.</p>
+<p><span data-concept="selection-rule">Selection rules</span> can be very useful in spectroscopy for obtaining information about an unknown substance; any given substance has properties and behaviors that operate within the <span data-concept="selection-rule">selection rules</span> and determine the wavelengths of electromagnetic radiation (light) that cause transitions. By tracking these properties, chemists can use techniques like <span data-concept="infrared-spectroscopy">IR spectroscopy</span> to determine the chemical structure of a molecule. For example, a <span data-concept="selection-rule">selection rule</span> might govern how a quantum number changes during a transition. That quantum number appears in equations that determine the energy transition based on the mass and other structural properties of a molecule. Thus, if one knows the <span data-concept="selection-rule">selection rules</span> and the energy transition, he or she can determine other properties about the molecule, such as its mass or its bond strength.</p>
+</section>
+
+<section id="vibrational-transition-moment">
+<h2>The vibrational transition moment</h2>
+<div class="example" id="ex-13-13">
+<h3>Example: Evaluating vibrational transitions using a transition moment integral.</h3>
+<p>Vibrational systems are described by the <span data-concept="oscillator-wavefunctions">harmonic oscillator wavefunctions</span>, which look like</p>
+$$ \Psi_v(\kx)=N_vH_v(\alpha^{1/2}\kx)e^{-\alpha{\kx^2}/2} $$
+<p>A <a class="xref" href="#5.5-drv-ir-selection-rules">transition dipole moment</a> can be written to describe a transition along the z-axis.<sup class="fn" data-note="c-hermite-index"></sup></p>
+$$ \kmuz = \int\limits_{-\infty}^{\infty}N_vN_{v+1}H_{v+1}(\alpha^{1/2}\kx)e^{-\alpha{\kx^2}/2}H_{v+1}\kmuz(\alpha^{1/2}\kx)e^{-\alpha{\kx^2}/2}d\kx $$
+<p>$\kmud$ is the <span data-concept="dipole-moment">dipole moment</span>, so we pull it out of the integral.<sup class="fn" data-note="c-pull-out"></sup></p>
+$$ \kmuz = \kmuz\int\limits_{-\infty}^{\infty}N_vN_{v+1}H_{v+1}(\alpha^{1/2}\kx)e^{-\alpha{\kx^2}/2}H_{v+1}(\alpha^{1/2}\kx)e^{-\alpha{\kx^2}/2}d\kx $$
+<p>Using the idea that the <span data-concept="transition-moment-integral">transition moment</span> $\kmuz$ changes on x, we express it as a derivative.</p>
+$$ \kmuz = \frac{d\kmud}{d\kx}\int\limits_{-\infty}^{\infty}N_vN_{v+1}H_{v+1}(\alpha^{1/2}\kx)e^{-\alpha{\kx^2}/2}H_{v+1}(\alpha^{1/2}\kx)e^{-\alpha{\kx^2}/2}d\kx $$
+<p>To evaluate the integral, we take advantage of a special <span data-concept="hermite-recurrence">Hermite relationship</span>: $\sqrt{\alpha}\kx H_v(\sqrt{\alpha}\kx)=vH_{v-1}(\sqrt{\alpha}\kx)+\frac{1}{2}H_{v+1}(\sqrt{\alpha}\kx)$</p>
+$$ \kmuz = \frac{N_vN_{v+1}}{\sqrt{\alpha}}(\frac{d\kmud}{d\kx})\int\limits_{-\infty}^{\infty}H_{v+1}(\sqrt{\alpha}\kx)e^{-\alpha{\kx^2}/2}[vH_{v-1}(\sqrt{\alpha}\kx)+\frac{1}{2}H_{v+1}(\sqrt{\alpha}\kx)]d\kx $$
+<p>By inspection, it is clear that the integral only allows transitions of $\Delta{v}=\pm1$, because for any other value, the integral will be zero.</p>
+</div>
+</section>

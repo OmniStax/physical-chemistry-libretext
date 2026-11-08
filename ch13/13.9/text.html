@@ -1,0 +1,53 @@
+<section id="normal-modes-and-symmetry">
+<h2>Normal modes and their symmetry</h2>
+<p><span data-concept="molecular-normal-modes">Normal modes</span> are used to describe the different vibrational motions in molecules. Each mode can be characterized by a different type of motion and each mode has a certain symmetry associated with it. Group theory is a useful tool in order to determine what symmetries the <span data-concept="molecular-normal-modes">normal modes</span> contain and predict if these modes are IR and/or Raman active. Consequently, IR and Raman spectroscopy is often used for vibrational spectra.</p>
+</section>
+
+<section id="degrees-of-freedom">
+<h2>Degrees of Freedom</h2>
+<p>In general, a <span data-concept="molecular-normal-modes">normal mode</span> is an independent motion of atoms in a molecule that occurs without causing movement to any of the other modes. <span data-concept="molecular-normal-modes">Normal modes</span>, as implied by their name, are orthogonal to each other. In order to discuss the quantum-mechanical equations that govern molecular vibrations it is convenient to convert Cartesian coordinates into so called <span data-concept="normal-coordinates">normal coordinates</span>. Vibrations in polyatomic molecules are represented by these <span data-concept="normal-coordinates">normal coordinates</span>.</p>
+<p>A molecule can have three types of <span data-concept="degrees-of-freedom">degrees of freedom</span> and a total of 3N <span data-concept="degrees-of-freedom">degrees of freedom</span>, where N equals the number of atoms in the molecule. These <span data-concept="degrees-of-freedom">degrees of freedom</span> can be broken down into three categories.</p>
+<ul><li><strong>Translational</strong>: These are the simplest of the <span data-concept="degrees-of-freedom">degrees of freedom</span>. These entail the movement of the entire molecule’s center of mass. This movement can be completely described by three orthogonal vectors and thus contains 3 <span data-concept="degrees-of-freedom">degrees of freedom</span>.</li><li><strong>Rotational</strong>: These are rotations around the center of mass of the molecule and like the translational movement they can be completely described by three orthogonal vectors. This again means that this category contains only 3 <span data-concept="degrees-of-freedom">degrees of freedom</span>. However, in the case of a linear molecule only two <span data-concept="degrees-of-freedom">degrees of freedom</span> are present due to the rotation along the bonds in the molecule having a negligible inertia.</li><li><strong>Vibrational</strong>: These are any other types of movement not assigned to rotational or translational movement and thus there are <span data-concept="vibrational-mode-count">3N – 6 degrees of vibrational freedom for a nonlinear molecule and 3N – 5 for a linear molecule</span>. These vibrations include bending, stretching, wagging and many other aptly named internal movements of a molecule. These various vibrations arise due to the numerous combinations of different stretches, contractions, and bends that can occur between the bonds of atoms in the molecule.</li></ul>
+<div class="book-table">
+  <div class="tcap"><span class="eyebrow">Table 13.9.1</span><span>Overview of <span data-concept="degrees-of-freedom">degrees of freedom</span></span></div>
+  <table>
+    <thead><tr><th></th><th>Total Degrees of Freedom</th><th>Translational degrees of freedom</th><th>Rotational degrees of freedom</th><th>Vibrational degrees of freedom</th></tr></thead>
+    <tbody>
+      <tr><td><em>Nonlinear Molecules</em></td><td>3N</td><td>3</td><td>3</td><td>3N -6</td></tr>
+      <tr><td><em>Linear Molecules</em></td><td>3N</td><td>3</td><td>2</td><td>3N - 5</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>Each of these <span data-concept="degrees-of-freedom">degrees of freedom</span> is able to store energy. However, In the case of rotational and vibrational <span data-concept="degrees-of-freedom">degrees of freedom</span>, energy can only be stored in discrete amounts. This is due to the quantized break down of energy levels in a molecule described by quantum mechanics. In the case of rotations the energy stored is dependent on the rotational inertia of the gas along with the corresponding quantum number describing the energy level.</p>
+<div class="example" id="ex-13-9-1">
+<h3>Example 13.9.1 · Ethane vs. Carbon Dioxide</h3>
+<p>Ethane, $C_2H_6$ has eight atoms ($N=8$) and is a nonlinear molecule so of the $3N=24$ <span data-concept="degrees-of-freedom">degrees of freedom</span>, three are translational and three are rotational. The remaining 18 <span data-concept="degrees-of-freedom">degrees of freedom</span> are internal (vibrational). This is consistent with:</p>
+$$ 3N -6 =3(8)-6=18 $$
+<p>Carbon Dioxide, $CO_2$ has three atoms ($N=3$ and is a linear molecule so of the $3N=9$ <span data-concept="degrees-of-freedom">degrees of freedom</span>, three are translational and two are rotational. The remaining 4 <span data-concept="degrees-of-freedom">degrees of freedom</span> are vibrational. This is consistent with:</p>
+$$ 3N - 5 = 3(3)-5 = 4 $$
+</div>
+<p>The <span data-concept="vibrational-motion-types">normal modes of vibration are: asymmetric, symmetric, wagging, twisting, scissoring, and rocking</span> for polyatomic molecules.</p>
+<figure class="sim" id="sim-ch2-modes" data-figure="13.9.1" data-original-caption="Six types of Vibrational Modes. Taken from publisher en.Wikipedia.org/wiki/Infrared_spectroscopy with permission from copyright holder.">
+  <div class="sim-head"><span class="eyebrow">Figure 13.9.1</span><span>Choose one of the six motions of a CH₂ group and turn the group to look along its plane. The two stretches lengthen the C–H bonds. Scissoring and rocking bend them within the plane, and wagging and twisting carry the hydrogens out of it.</span></div>
+</figure>
+</section>
+
+<section id="normal-modes">
+<h2>Normal Modes</h2>
+<p>If there is no external field present, the energy of a molecule does not depend on its orientation in space (its translational <span data-concept="degrees-of-freedom">degrees of freedom</span>) nor its center of mass (its rotational <span data-concept="degrees-of-freedom">degrees of freedom</span>).<sup class="fn" data-note="c-swapped"></sup> The potential energy of the molecule is therefore made up of its vibrational <span data-concept="degrees-of-freedom">degrees of freedom</span> only of $3N-6$ (or $3N-5$ for linear molecules). The <span data-concept="polyatomic-harmonic-potential">difference in potential energy</span> is given by:</p>
+$$ \begin{aligned} \kdV &= V(\kq_1,\kq_2,\kq_3,...,\kq_n) - V(0,0,0,...,0)  \\[4pt] &= \dfrac{1}{2} \sum_{i=1}^{N_{vib}} \sum_{j=1}^{N_{vib}} \left(\dfrac{\partial^2 V}{\partial \kq_i\partial \kq_j} \right) \kq_i\kq_j  \\[4pt] &= \dfrac{1}{2}\sum_{i=1}^{N_{vib}} \sum_{j=1}^{N_{vib}} \kfij \kq_i\kq_j  \end{aligned} \tag{13.9.1} $$
+<p>where $\kq$ represents the equilibrium displacement and $N_{vib}$ the number of vibrational <span data-concept="degrees-of-freedom">degrees of freedom</span>.</p>
+<p>For simplicity, the <em>anharmonic</em> terms are neglected in this equation (i.e., higher order terms are ignore). A theorem of classical mechanics states that the cross terms can be eliminated from the above equation (the details of the theorem are very complex and will not be discussed in detail). By using matrix algebra a new set of coordinates {Q<sub>j</sub>} can be found such that</p>
+$$ \kdV = \dfrac{1}{2} \sum_{j=1}^{N_{vib}}{\kFj\kQj^2} \tag{13.9.2} $$
+<p>Note that there are no cross terms in this new expression. These new coordinates are called <strong><span data-concept="normal-coordinates">normal coordinates</span></strong> or <strong><span data-concept="normal-coordinates">normal modes</span></strong>. With these new <span data-concept="normal-coordinates">normal coordinates</span> in hand, the <span data-concept="separable-vibrational-hamiltonian">Hamiltonian operator for vibrations</span> can be written as follows:</p>
+<figure class="dv" id="drv-vibrational-energy"></figure>
+<p>The consequence of the result stated in the above equations is that each vibrational mode can be treated as a <span data-concept="harmonic-oscillator">harmonic oscillator</span> approximation. There are $N_{vib}$ <span data-concept="harmonic-oscillator">harmonic oscillators</span> corresponding to the total number of vibrational modes present in the molecule.</p>
+</section>
+
+<section id="normal-coordinate-co">
+<h2>Pictorial description of normal coordinates using CO</h2>
+<p>The <span data-concept="normal-coordinates">normal coordinate</span> $\kq$ is used to follow the path of a <span data-concept="molecular-normal-modes">normal mode</span> of vibration. As shown in Figure 13.9.2 the <span data-type="length">displacement of the $\mathrm{C}$ atom</span>, denoted by $\kdr_o(\mathrm{C})$, and the <span data-type="length">displacement of the $\mathrm{O}$ atom</span>, denoted by $\kdr_o(\mathrm{O})$, occur at the same frequency. The displacement of atoms is measured from the <span data-type="length">equilibrium distance in ground vibrational state</span>, $\krzero$.</p>
+<figure class="sim" id="sim-co-normal" data-figure="13.9.2" data-original="/media/ch13/55900-Normal_modes_figurev2.png" data-original-width="370" data-original-caption="The Normal coordinate for $CO$ is equation to $\Delta r(C) + \Delta r(O)$">
+  <div class="sim-head"><span class="eyebrow">Figure 13.9.2</span><span>Play the vibration and follow the trace. Carbon swings farther than oxygen, in the ratio of their masses, and the two displacements add to the one <span data-concept="normal-coordinates">normal coordinate</span> $\kq$. Raise the amplitude to see the bond stretch more.</span></div>
+</figure>
+</section>

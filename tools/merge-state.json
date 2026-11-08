@@ -579,7 +579,11 @@
       "alpha_pol",
       "E_field",
       "Psi_i",
-      "Psi_f"
+      "Psi_f",
+      "C_4",
+      "C_6",
+      "S_4",
+      "S_6"
     ],
     "types": [
       "symmetry-operation",
@@ -660,5 +664,52 @@
     "types": [
       "electric-field"
     ]
+  },
+  "ch14": {
+    "symbols": [
+      "B_x",
+      "B_y",
+      "B_loc",
+      "dB",
+      "B_0",
+      "B_eff",
+      "nu_L",
+      "sigma_sh",
+      "sigma_dia",
+      "sigma_para",
+      "delta_cs",
+      "chi_m",
+      "mu_0",
+      "J_cc",
+      "J_12",
+      "omega_1",
+      "omega_2",
+      "nu_1",
+      "nu_2",
+      "H_freq",
+      "Ii_vec_hat",
+      "Iiz_hat",
+      "I1z_hat",
+      "I2z_hat",
+      "I1_vec_hat",
+      "I2_vec_hat",
+      "Iix_hat",
+      "Iiy_hat",
+      "Iplus_hat",
+      "Iminus_hat",
+      "Ix_hat",
+      "Hp_hat",
+      "omega_p",
+      "I_vec",
+      "I1_vec",
+      "I2_vec",
+      "I_ns",
+      "I_n1",
+      "I_n2",
+      "M_I",
+      "rho_hat",
+      "Omega_cs"
+    ],
+    "types": []
   }
 }

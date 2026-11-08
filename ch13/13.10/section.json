@@ -1,0 +1,198 @@
+{
+ "id": "13.10",
+ "module": "13673",
+ "chapter": "13",
+ "title": "Irreducible Representation of Point Groups",
+ "short": "Symmetry of normal modes",
+ "lead": "A normal mode can be sorted by how it behaves under the symmetry operations of its molecule. Water's three modes are assigned from their characters under C₂ᵥ, and the nine modes of the square planar [PtCl₄]²⁻ ion show how quickly the work grows with the number of atoms.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "Shared under the book's CC BY-NC-SA 4.0; the two e_u pairs of Figure 13.10.3 are drawn as a pure stretch and a pure bend, where each real e_u mode mixes the two.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The one exercise was written by AI with an AI solution; its Bloom level and concept tags were chosen by AI.",
+ "figures": [
+  {
+   "id": "fig-13-10-1",
+   "kind": "photo",
+   "number": "13.10.1",
+   "widths": [
+    350
+   ],
+   "draws": []
+  },
+  {
+   "id": "fig-13-10-2",
+   "kind": "photo",
+   "number": "13.10.2",
+   "widths": [
+    350
+   ],
+   "draws": []
+  },
+  {
+   "id": "sim-ptcl4-modes",
+   "kind": "sim",
+   "number": "13.10.3",
+   "originals": [
+    "/media/ch13/9692-PtCl4_modes.png"
+   ],
+   "widths": [
+    471
+   ],
+   "original_caption": "A₁g, b₁g and e_u are stretching vibrations whereas b₂g, a₂u, b₂u and e_u are bending vibrations.",
+   "draws": [],
+   "conventions": [
+    "Pt",
+    "Cl"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "normal-coordinates-and-symmetry",
+   "concept": "normal-mode-symmetry",
+   "verb": "introduces"
+  },
+  {
+   "span": "normal-coordinates-and-symmetry",
+   "concept": "normal-coordinates",
+   "verb": "uses"
+  },
+  {
+   "span": "normal-coordinates-and-symmetry",
+   "concept": "point-group",
+   "verb": "uses"
+  },
+  {
+   "span": "normal-coordinates-and-symmetry",
+   "concept": "character-table",
+   "verb": "uses"
+  },
+  {
+   "span": "normal-coordinates-and-symmetry",
+   "concept": "irreducible-representation",
+   "verb": "uses"
+  },
+  {
+   "span": "symmetry-of-normal-modes",
+   "concept": "assigning-mode-symmetry",
+   "verb": "introduces"
+  },
+  {
+   "span": "symmetry-of-normal-modes",
+   "concept": "normal-mode-symmetry",
+   "verb": "reinforces"
+  },
+  {
+   "span": "symmetry-of-normal-modes",
+   "concept": "molecular-normal-modes",
+   "verb": "uses"
+  },
+  {
+   "span": "symmetry-of-normal-modes",
+   "concept": "symmetry-operation",
+   "verb": "uses"
+  },
+  {
+   "span": "symmetry-of-normal-modes",
+   "concept": "vibrational-representation",
+   "verb": "uses"
+  },
+  {
+   "span": "symmetry-of-normal-modes",
+   "concept": "reducible-representation",
+   "verb": "uses"
+  },
+  {
+   "span": "symmetry-of-normal-modes",
+   "concept": "degrees-of-freedom",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "ai1",
+   "source_id": "Once all the symmetry operations have been performed in a systematic manner",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "symmetry-of-normal-modes",
+   "prompt": "<p>Water lies in the yz plane, with its C₂ axis along z. Under E, C₂, σ(xz) and σ(yz), the arrows of its asymmetric stretch go into themselves, into their negatives, into their negatives and into themselves. Which irreducible representation of C₂ᵥ does the asymmetric stretch belong to?</p>",
+   "answer": {
+    "type": "choice",
+    "generated_by": "ai",
+    "options": [
+     "$a_1$",
+     "$a_2$",
+     "$b_1$",
+     "$b_2$"
+    ],
+    "correct": 3,
+    "hint": "Write the four results as characters, +1 for itself and −1 for its negative, and find the row of the C₂ᵥ character table that matches.",
+    "solution": "<p>The characters are 1, −1, −1, 1. In the C₂ᵥ character table that row is $b_2$: it is symmetric under the reflection in the yz plane, the plane of the molecule, and antisymmetric under C₂ and under σ(xz). The two other modes, the symmetric stretch and the bend, give 1, 1, 1, 1, which is $a_1$, so $\\Gamma_{vib} = 2a_1 + b_2$, as in Table 13.10.2.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "ai1",
+   "concept": "assigning-mode-symmetry"
+  },
+  {
+   "exercise": "ai1",
+   "concept": "normal-mode-symmetry"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-point-group",
+   "kind": "correction",
+   "html": "“The point the molecule” means the point group of the molecule."
+  },
+  {
+   "id": "c-equivalent",
+   "kind": "correction",
+   "html": "Water's two stretches differ in both symmetry and energy: the symmetric stretch is $a_1$ at 3657 cm⁻¹, the asymmetric stretch $b_2$ at 3756 cm⁻¹, as Table 13.10.2 and Section 13.14 show."
+  },
+  {
+   "id": "c-numbering",
+   "kind": "correction",
+   "html": "The usual convention, which Table 13.10.2 follows, numbers water's modes the other way: ν₁ the symmetric stretch, ν₂ the bend and ν₃ the asymmetric stretch. The stretches the next paragraph takes through C₂ are then ν₁ and ν₃."
+  },
+  {
+   "id": "c-plane",
+   "kind": "correction",
+   "html": "This page puts water in the yz plane, so its asymmetric stretch is $b_2$. The figure in Section 12.10 puts it in the xz plane, where the same mode is $B_1$: the labels $b_1$ and $b_2$ trade places with the choice of plane."
+  },
+  {
+   "id": "c-figure",
+   "kind": "correction",
+   "html": "The modes of [PtCl₄]²⁻ are in Figure 13.10.3."
+  }
+ ]
+}

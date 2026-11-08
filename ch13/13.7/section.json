@@ -1,0 +1,527 @@
+{
+ "id": "13.7",
+ "module": "13670",
+ "chapter": "13",
+ "title": "The Franck-Condon Principle",
+ "short": "Franck-Condon principle",
+ "lead": "Electrons move so much faster than nuclei that an electronic transition happens at a fixed bond length. The overlap of the vibrational wavefunctions of the two states then decides how the intensity of an electronic band is shared among its vibrational lines.",
+ "objectives": [
+  "To explain the vibrational fine structure in electronic spectroscopy for bound excited states in terms of the Franck‐Condon approximation",
+  "To calculate the vibrational progressions (Franck-Condon factors) in a single displaced harmonic oscillator vibronic system."
+ ],
+ "summary_html": "",
+ "notes": "Adapted from a LibreTexts page credited to lowers under CC BY-NC-SA 4.0, with Mark Somoza's Franck-Condon diagram under CC BY-SA 3.0; the page's reference list (Luis, Bishop and Kirtman, J. Chem. Phys. 2004; Atkins and de Paula, Physical Chemistry for the Life Sciences; the IUPAC Gold Book; Rabinowitch and Govindjee) is left out.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercise in this section. The one exercise, on S₀₀ and S₀₁ for a given displacement, was written by AI with an AI solution, its answers computed; its Bloom level and concept tags were chosen by AI.",
+ "figures": [
+  {
+   "id": "sim-vertical",
+   "kind": "sim",
+   "number": "13.7.1",
+   "originals": [
+    "/media/ch13/79071-800px-Franck_Condon_Diagram.svg.png"
+   ],
+   "widths": [
+    366
+   ],
+   "original_caption": "Franck–Condon principle energy diagram. Since electronic transitions are very fast compared with nuclear motions, vibrational levels are favored when they correspond to a minimal change in the nuclear coordinates. The potential wells are shown favoring transitions between $v = 0$ and $v' = 2$. (CC-SA-BY-3.0; Samoza).",
+   "draws": [
+    "energy",
+    "wavenumber",
+    "wavefunction",
+    "length"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "sim-progression",
+   "kind": "sim",
+   "number": "13.7.2",
+   "folds": [
+    "13.7.3",
+    "13.7.4",
+    "13.7.5",
+    "13.7.6",
+    "13.7.7",
+    "13.7.8"
+   ],
+   "originals": [
+    "/media/ch13/79078-Image195.gif",
+    "/media/ch13/79079-Image196.gif",
+    "/media/ch13/79080-Image198.gif",
+    "/media/ch13/79081-Picture1.png",
+    "/media/ch13/79082-Image200.gif",
+    "/media/ch13/79083-Picture2.png",
+    "/media/ch13/79084-Image202.gif"
+   ],
+   "widths": [
+    398,
+    441,
+    376,
+    438,
+    337,
+    382,
+    419
+   ],
+   "original_caption": "Wavefunctions transitions for a harmonic oscillator model system with moderate displacement (S=1). Stick spectrum, dressed with Gaussians, for the moderate displacement (S=1) harmonic oscillator system from Figure 13.7.2. Wavefunctions transitions for a harmonic oscillator model system with small displacement (S=1/2). Stick spectrum, dressed with Gaussians, for the small displacement (S=1/2) harmonic oscillator system from Figure 13.7.4. Wavefunctions transitions for a harmonic oscillator model system with strong displacement (S=2). Stick spectrum, dressed with Gaussians, for the large displacement (S=2) harmonic oscillator system from Figure 13.7.6. Stick spectra, dressed with Gaussians, for the small to large displacements in harmonic oscillator system described above.",
+   "draws": [
+    "energy",
+    "wavenumber",
+    "wavefunction",
+    "length"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "franck-condon",
+   "concept": "franck-condon-principle",
+   "verb": "introduces"
+  },
+  {
+   "span": "franck-condon",
+   "concept": "condon-approximation",
+   "verb": "introduces"
+  },
+  {
+   "span": "franck-condon",
+   "concept": "vibronic-transition",
+   "verb": "uses"
+  },
+  {
+   "span": "franck-condon",
+   "concept": "overlap-integral",
+   "verb": "uses"
+  },
+  {
+   "span": "vertical-transitions",
+   "concept": "vertical-transition",
+   "verb": "introduces"
+  },
+  {
+   "span": "vertical-transitions",
+   "concept": "vertical-ionization-energy",
+   "verb": "uses"
+  },
+  {
+   "span": "vertical-transitions",
+   "concept": "franck-condon-factor",
+   "verb": "introduces"
+  },
+  {
+   "span": "vertical-transitions",
+   "concept": "born-oppenheimer-wavefunction",
+   "verb": "uses"
+  },
+  {
+   "span": "vertical-transitions",
+   "concept": "transition-moment-integral",
+   "verb": "uses"
+  },
+  {
+   "span": "vertical-transitions",
+   "concept": "dipole-moment-operator",
+   "verb": "uses"
+  },
+  {
+   "span": "s00",
+   "concept": "oscillator-wavefunctions",
+   "verb": "uses"
+  },
+  {
+   "span": "s00",
+   "concept": "equilibrium-bond-length",
+   "verb": "uses"
+  },
+  {
+   "span": "s00",
+   "concept": "displaced-oscillator-overlaps",
+   "verb": "introduces"
+  },
+  {
+   "span": "s00",
+   "concept": "gaussian-integral",
+   "verb": "introduces"
+  },
+  {
+   "span": "s01",
+   "concept": "hermite-polynomials",
+   "verb": "uses"
+  },
+  {
+   "span": "s01",
+   "concept": "hermite-parity",
+   "verb": "uses"
+  },
+  {
+   "span": "s01",
+   "concept": "franck-condon-progression",
+   "verb": "introduces"
+  },
+  {
+   "span": "franck-condon-progressions",
+   "concept": "franck-condon-progression",
+   "verb": "reinforces"
+  },
+  {
+   "span": "franck-condon-progressions",
+   "concept": "line-broadening",
+   "verb": "introduces"
+  },
+  {
+   "span": "franck-condon-progressions",
+   "concept": "excited-state-bond-length",
+   "verb": "introduces"
+  },
+  {
+   "span": "franck-condon-progressions",
+   "concept": "bond-order",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "ai1",
+   "source_id": "The nuclear overlap for the zero-zero transition",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "s01",
+   "prompt": "<p>In a diatomic molecule both electronic states have harmonic wells with $\\alpha = 100$ Å⁻², and the excited state's bond is 0.20 Å longer, $Q_e - R_e = 0.20$ Å. Find (a) $S_{00}$, (b) $|S_{00}|^2$ and (c) $|S_{01}|^2$. Which is the stronger band, $0 \\rightarrow 0$ or $0 \\rightarrow 1$?</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 0.3679,
+      "tol": 0.01,
+      "hint": "First work out $\\alpha(R_e - Q_e)^2$, which has no units."
+     },
+     {
+      "part": "b",
+      "value": 0.1353,
+      "tol": 0.01
+     },
+     {
+      "part": "c",
+      "value": 0.2707,
+      "tol": 0.01
+     }
+    ],
+    "solution": "<p>Here $\\alpha(R_e-Q_e)^2 = (100\\ \\text{Å}^{-2})(0.20\\ \\text{Å})^2 = 4.0$.</p><p>(a) $S_{00} = e^{-\\alpha(R_e-Q_e)^2/4} = e^{-1} = 0.368$. (b) $|S_{00}|^2 = e^{-2} = 0.135$.</p><p>(c) $S_{01} = \\sqrt{\\alpha/2}\\,(R_e-Q_e)\\,e^{-\\alpha(R_e-Q_e)^2/4}$, so $|S_{01}|^2 = \\tfrac{\\alpha}{2}(R_e-Q_e)^2 e^{-2} = 2.0 \\times 0.135 = 0.271$.</p><p>The $0 \\rightarrow 1$ band is twice as strong as the $0 \\rightarrow 0$ band. The displacement moves the upper well's $v' = 0$ function away from the ground state's, while the $v' = 1$ function has a lobe reaching back over $R_e$.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "ai1",
+   "concept": "displaced-oscillator-overlaps"
+  },
+  {
+   "exercise": "ai1",
+   "concept": "franck-condon-progression"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-vlabels",
+   "kind": "correction",
+   "html": "The rest of the section, and Figure 13.7.1, use the opposite labels: $v$ for the ground state and $v'$ for the excited state."
+  },
+  {
+   "id": "c-turning",
+   "kind": "correction",
+   "html": "A turning point is where the vertical line meets the upper curve. The nuclei are at rest there at the moment of the jump, so it is an end of their new swing."
+  },
+  {
+   "id": "c-pif",
+   "kind": "correction",
+   "html": "The left side of the equation, which the page prints only as its subscript, is the transition probability $P_{i \\rightarrow f}$."
+  },
+  {
+   "id": "c-s",
+   "kind": "correction",
+   "html": "The page never defines $S$. It is the dimensionless displacement of the excited well, $S = \\alpha(R_e - Q_e)^2/2$, so that $|S_{00}|^2 = e^{-S}$."
+  },
+  {
+   "id": "c-ratio",
+   "kind": "correction",
+   "html": "In this model the intensities are $e^{-S}S^{v'}/v'!$, so $S$ is the ratio of the $v' = 1$ intensity to the $v' = 0$ intensity. The $v' = 2$ line is $S/2$ times the $v' = 1$ line: a quarter of it for $S = 0.5$."
+  },
+  {
+   "id": "c-bullets",
+   "kind": "correction",
+   "html": "The three promotions listed move an electron into a more bonding orbital, which raises the bond order and shortens the bond. The ones that lengthen it go the other way: bonding to non-bonding or antibonding, and non-bonding to antibonding."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "s00",
+   "what": "the overlap S₀₀",
+   "source": "Physical Chemistry (LibreTexts), 13.7 The Franck-Condon Principle",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kRe^2 + \\kQe^2 = \\tfrac{1}{2}\\left[(\\kRe + \\kQe)^2 + (\\kRe - \\kQe)^2\\right]",
+       "src": "13.7"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{p}{e^{-\\alpha(\\kR-\\kRe)^2/2}\\,e^{-\\alpha(\\kR-\\kQe)^2/2}} = \\mk{e}{e^{-\\alpha(2\\kR^2-2\\kR\\kRe - 2\\kR\\kQe+ \\kRe^2 + \\kQe^2)/2}}",
+      "src": "(13.7.3)"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{p}{e^{-\\alpha(\\kR-\\kRe)^2/2}\\,e^{-\\alpha(\\kR-\\kQe)^2/2}} = \\mk{e}{e^{-\\alpha\\{2\\kR^2-2\\kR(\\kRe+\\kQe) + \\frac{1}{2}(\\kRe+\\kQe)^2 + \\frac{1}{2}(\\kRe-\\kQe)^2\\}/2}}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{p}{e^{-\\alpha(\\kR-\\kRe)^2/2}\\,e^{-\\alpha(\\kR-\\kQe)^2/2}} = \\mk{c}{e^{-\\alpha(\\kRe-\\kQe)^2/4}}\\,\\mk{g}{e^{-\\alpha\\{\\kR-\\tfrac{1}{2}(\\kRe+\\kQe)\\}^2}}",
+       "uses": [],
+       "map": {
+        "e": [
+         "c",
+         "g"
+        ]
+       },
+       "cap": "The first three terms in the braces make a perfect square, $2\\{R-\\tfrac12(R_e+Q_e)\\}^2$; what is left over is $\\tfrac12(R_e-Q_e)^2$."
+      }
+     ],
+     "src": "13.7",
+     "note": "The book's Equation 13.7.3 prints $-RR_e$ in the exponent; expanding $(R-R_e)^2$ gives $-2RR_e$."
+    },
+    {
+     "assumes": [
+      {
+       "text": "Let $z = \\sqrt{\\alpha}\\{R-\\tfrac12(R_e + Q_e)\\}$, so that $dz = \\sqrt{\\alpha}\\, dR$.",
+       "src": "13.7"
+      },
+      {
+       "tex": "\\int_{-\\infty}^{\\infty} e^{-z^2}\\,dz = \\sqrt{\\pi}",
+       "src": "13.7, a table of integrals"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{I}{I} = \\mk{v}{\\int_{-\\infty}^{\\infty} e^{-\\alpha\\{\\kR-\\tfrac{1}{2}(\\kRe+\\kQe)\\}^2}\\,d\\kR}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{I}{I} = \\mk{v}{\\dfrac{1}{\\sqrt{\\alpha}} \\int_{-\\infty}^{\\infty} e^{-z^2}\\, dz}",
+       "uses": [
+        0
+       ],
+       "cap": "As $R$ runs over the whole line, so does $z$, so the limits stay $-\\infty$ and $\\infty$."
+      },
+      {
+       "tex": "\\mk{I}{I} = \\mk{v}{\\sqrt{\\dfrac{\\pi}{\\alpha}}}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "src": "13.7",
+     "note": "The book's Equation 13.7.4 prints $\\int e^{z^2}dz$, which diverges; the Gaussian integral is $\\int e^{-z^2}dz = \\sqrt{\\pi}$."
+    },
+    {
+     "assumes": [
+      {
+       "tex": "|\\psi(\\kR)\\rangle = \\left(\\dfrac{\\alpha}{\\pi}\\right)^{1/4} e^{-\\alpha(\\kR-\\kRe)^2/2}",
+       "src": "13.7, the ground state"
+      },
+      {
+       "tex": "|\\psi(\\kR)\\rangle = \\left(\\dfrac{\\alpha}{\\pi}\\right)^{1/4} e^{-\\alpha(\\kR-\\kQe)^2/2}",
+       "src": "13.7, the excited state"
+      },
+      {
+       "step": 0
+      },
+      {
+       "step": 1
+      }
+     ],
+     "then": {
+      "tex": "\\mk{S}{S_{00}} = \\mk{o}{\\langle \\psi^*_{nuc, f} | \\psi_{nuc, i} \\rangle}",
+      "src": "(13.7.1)"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{S}{S_{00}} = \\mk{pre}{\\sqrt{\\dfrac{\\alpha}{\\pi}}} \\mk{int}{\\int_{-\\infty}^{\\infty} e^{-\\alpha(\\kR-\\kRe)^2/2}\\,e^{-\\alpha(\\kR-\\kQe)^2/2}\\, d\\kR}",
+       "uses": [
+        0,
+        1
+       ],
+       "map": {
+        "o": [
+         "pre",
+         "int"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{S}{S_{00}} = \\mk{pre}{\\sqrt{\\dfrac{\\alpha}{\\pi}}}\\, \\mk{c}{e^{-\\alpha(\\kRe-\\kQe)^2/4}} \\mk{int}{\\int_{-\\infty}^{\\infty} e^{-\\alpha\\{\\kR-\\tfrac{1}{2}(\\kRe+\\kQe)\\}^2}\\,d\\kR}",
+       "uses": [
+        2
+       ],
+       "map": {
+        "int": [
+         "c",
+         "int"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{S}{S_{00}} = \\mk{pre}{\\sqrt{\\dfrac{\\alpha}{\\pi}}}\\, \\mk{c}{e^{-\\alpha(\\kRe-\\kQe)^2/4}}\\, \\mk{int}{\\sqrt{\\dfrac{\\pi}{\\alpha}}}",
+       "uses": [
+        3
+       ]
+      },
+      {
+       "tex": "\\mk{S}{S_{00}} = \\mk{c}{e^{-\\alpha(\\kRe-\\kQe)^2/4}}",
+       "uses": []
+      }
+     ],
+     "src": "13.7",
+     "note": "The book prints the lower limit of the integrals in Equations 13.7.2 and 13.7.3 as $\\infty$; they run from $-\\infty$ to $\\infty$."
+    }
+   ]
+  },
+  {
+   "id": "s01",
+   "what": "the overlap S₀₁",
+   "source": "Physical Chemistry (LibreTexts), 13.7 The Franck-Condon Principle",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "|\\psi(\\kR)\\rangle = \\left(\\dfrac{\\alpha}{\\pi}\\right)^{1/4} e^{-\\alpha(\\kR-\\kRe)^2/2}",
+       "src": "13.7, the ground state"
+      },
+      {
+       "tex": "|\\psi(\\kR)\\rangle = \\left(\\dfrac{\\alpha}{\\pi}\\right)^{1/4} \\dfrac{1}{\\sqrt{2}}\\sqrt{\\alpha}\\,2(\\kR-\\kQe)\\, e^{-\\alpha(\\kR-\\kQe)^2/2}",
+       "src": "13.7, the excited state, v′ = 1"
+      },
+      {
+       "tex": "e^{-\\alpha(\\kR-\\kRe)^2/2}\\,e^{-\\alpha(\\kR-\\kQe)^2/2} = e^{-\\alpha(\\kRe-\\kQe)^2/4}\\,e^{-\\alpha\\{\\kR-\\tfrac{1}{2}(\\kRe+\\kQe)\\}^2}",
+       "src": "13.7",
+       "drv": "s00"
+      },
+      {
+       "tex": "\\int_{-\\infty}^{\\infty} e^{-\\alpha\\{\\kR-\\tfrac{1}{2}(\\kRe+\\kQe)\\}^2}\\,d\\kR = \\sqrt{\\dfrac{\\pi}{\\alpha}}",
+       "src": "13.7",
+       "drv": "s00"
+      },
+      {
+       "text": "The integral of an odd function over an interval symmetric about zero vanishes.",
+       "src": "5.7",
+       "drv": "5.7/symmetric-integrals"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{S}{S_{01}} = \\mk{o}{\\langle \\psi^{*}_{nuc, f} | \\psi_{nuc, i} \\rangle}",
+      "src": "(13.7.5)"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{S}{S_{01}} = \\mk{pre}{\\dfrac{1}{\\sqrt{2}} \\sqrt{\\dfrac{\\alpha}{\\pi}}\\sqrt{\\alpha}\\,2} \\mk{int}{\\int_{-\\infty}^{\\infty} (\\kR-\\kQe)\\,e^{-\\alpha(\\kR-\\kRe)^2/2}\\,e^{-\\alpha(\\kR-\\kQe)^2/2}\\, d\\kR}",
+       "uses": [
+        0,
+        1
+       ],
+       "map": {
+        "o": [
+         "pre",
+         "int"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{S}{S_{01}} = \\mk{pre}{\\sqrt{\\dfrac{2\\alpha^2}{\\pi}}} \\mk{int}{\\int_{-\\infty}^{\\infty} (\\kR-\\kQe)\\,e^{-\\alpha(\\kR-\\kRe)^2/2}\\,e^{-\\alpha(\\kR-\\kQe)^2/2}\\, d\\kR}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{S}{S_{01}} = \\mk{pre}{\\sqrt{\\dfrac{2\\alpha^2}{\\pi}}}\\, \\mk{c}{e^{-\\alpha(\\kRe-\\kQe)^2/4}} \\mk{int}{\\int_{-\\infty}^{\\infty} (\\kR-\\kQe)\\, e^{-\\alpha\\{\\kR-\\tfrac{1}{2}(\\kRe+\\kQe)\\}^2}\\, d\\kR}",
+       "uses": [
+        2
+       ],
+       "map": {
+        "int": [
+         "c",
+         "int"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{S}{S_{01}} = \\mk{pre}{\\sqrt{\\dfrac{2\\alpha^2}{\\pi}}}\\, \\mk{c}{e^{-\\alpha(\\kRe-\\kQe)^2/4}} \\left[\\mk{odd}{\\int_{-\\infty}^{\\infty} \\{\\kR-\\tfrac{1}{2}(\\kRe+\\kQe)\\}\\, e^{-\\alpha\\{\\kR-\\tfrac{1}{2}(\\kRe+\\kQe)\\}^2}\\, d\\kR} + \\mk{even}{\\tfrac{1}{2}(\\kRe-\\kQe)\\int_{-\\infty}^{\\infty} e^{-\\alpha\\{\\kR-\\tfrac{1}{2}(\\kRe+\\kQe)\\}^2}\\,d\\kR}\\right]",
+       "uses": [],
+       "map": {
+        "int": [
+         "odd",
+         "even"
+        ]
+       },
+       "cap": "Write $R - Q_e = \\{R-\\tfrac12(R_e+Q_e)\\} + \\tfrac12(R_e-Q_e)$ and split the integral in two."
+      },
+      {
+       "tex": "\\mk{S}{S_{01}} = \\mk{pre}{\\sqrt{\\dfrac{2\\alpha^2}{\\pi}}}\\, \\mk{c}{e^{-\\alpha(\\kRe-\\kQe)^2/4}}\\, \\mk{even}{\\tfrac{1}{2}(\\kRe-\\kQe)\\int_{-\\infty}^{\\infty} e^{-\\alpha\\{\\kR-\\tfrac{1}{2}(\\kRe+\\kQe)\\}^2}\\,d\\kR}",
+       "uses": [
+        4
+       ],
+       "cap": "In $u = R-\\tfrac12(R_e+Q_e)$ the first integrand is $u\\,e^{-\\alpha u^2}$, odd in $u$, over the whole line."
+      },
+      {
+       "tex": "\\mk{S}{S_{01}} = \\mk{pre}{\\sqrt{\\dfrac{2\\alpha^2}{\\pi}}}\\, \\mk{c}{e^{-\\alpha(\\kRe-\\kQe)^2/4}}\\, \\mk{even}{\\tfrac{1}{2}(\\kRe-\\kQe)\\sqrt{\\dfrac{\\pi}{\\alpha}}}",
+       "uses": [
+        3
+       ]
+      },
+      {
+       "tex": "\\mk{S}{S_{01}} = \\mk{r}{\\sqrt{\\dfrac{\\alpha}{2}} (\\kRe-\\kQe)}\\, \\mk{c}{e^{-\\alpha(\\kRe-\\kQe)^2/4}}",
+       "uses": [],
+       "map": {
+        "pre": "r",
+        "even": "r"
+       }
+      }
+     ],
+     "src": "13.7",
+     "note": "The book prints the result with $\\sqrt{\\alpha^2/2}$. The prefactor is $\\sqrt{2\\alpha^2/\\pi}\\cdot\\tfrac12\\sqrt{\\pi/\\alpha} = \\sqrt{\\alpha/2}$, which leaves $S_{01}$ without units, as an overlap must be. The book's line before it also puts the square inside the brace, $\\{R - \\tfrac12(R_e+Q_e)^2\\}$, where it belongs outside, and drops $dR$."
+    }
+   ]
+  }
+ ]
+}

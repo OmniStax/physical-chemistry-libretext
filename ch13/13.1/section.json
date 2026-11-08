@@ -1,0 +1,257 @@
+{
+ "id": "13.1",
+ "module": "2398",
+ "chapter": "13",
+ "title": "The Electromagnetic Spectrum",
+ "short": "The electromagnetic spectrum",
+ "lead": "Light is an oscillating electric and magnetic field. Its wavelength, frequency, wavenumber and energy place it in a region of the spectrum, and each region matches a kind of molecular motion that spectroscopy can watch.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "Text adapted by Delmar Larsen from David Harvey's Analytical Chemistry under CC BY 4.0, shared here under the book's CC BY-NC-SA 4.0; Figure 13.1.2 is modified from Zedh on Wikimedia Commons.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "Exercise 13.1.1 is the book's; it prints no answer, so its solution was written by AI. The second exercise, on placing a 2000 cm⁻¹ photon on the spectrum, was written by AI with its solution. Bloom levels and concept tags were chosen by AI; numeric answers accept a 2% tolerance.",
+ "figures": [
+  {
+   "id": "sim-em-wave",
+   "kind": "sim",
+   "number": "13.1.1",
+   "originals": [
+    "/media/ch13/12686-Figure10.02.jpg"
+   ],
+   "widths": [
+    404
+   ],
+   "original_caption": "Plane-polarized electromagnetic radiation showing the oscillating electric field in red and the oscillating magnetic field in blue. The radiation’s amplitude, A, and its wavelength, λ, are shown. Normally, electromagnetic radiation is unpolarized, with oscillating electric and magnetic fields present in all possible planes perpendicular to the direction of propagation.",
+   "draws": [
+    "electric-field",
+    "magnetic-field",
+    "wavelength",
+    "frequency",
+    "time"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "sim-em-spectrum",
+   "kind": "sim",
+   "number": "13.1.2",
+   "originals": [
+    "/media/ch13/411190-Figure10.03.jpg"
+   ],
+   "widths": [
+    891
+   ],
+   "original_caption": "The electromagnetic spectrum showing the boundaries between different regions and the type of atomic or molecular transition responsible for the change in energy. The colored inset shows the visible spectrum. Source: modified from Zedh (www.commons.Wikipedia.org).",
+   "draws": [
+    "wavelength",
+    "frequency",
+    "wavenumber",
+    "energy"
+   ],
+   "facts": [
+    "spectrum"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "opening",
+   "concept": "electromagnetic-spectrum",
+   "verb": "uses"
+  },
+  {
+   "span": "electromagnetic-radiation",
+   "concept": "electromagnetic-radiation",
+   "verb": "introduces"
+  },
+  {
+   "span": "electromagnetic-radiation",
+   "concept": "plane-polarized-radiation",
+   "verb": "introduces"
+  },
+  {
+   "span": "electromagnetic-radiation",
+   "concept": "oscillating-electric-field",
+   "verb": "introduces"
+  },
+  {
+   "span": "electromagnetic-radiation",
+   "concept": "electromagnetic-spectrum",
+   "verb": "introduces"
+  },
+  {
+   "span": "electromagnetic-radiation",
+   "concept": "amplitude",
+   "verb": "uses"
+  },
+  {
+   "span": "electromagnetic-radiation",
+   "concept": "phase-constant",
+   "verb": "uses"
+  },
+  {
+   "span": "electromagnetic-radiation",
+   "concept": "photon",
+   "verb": "uses"
+  },
+  {
+   "span": "other-units",
+   "concept": "wavelength-frequency-relation",
+   "verb": "introduces"
+  },
+  {
+   "span": "other-units",
+   "concept": "wavenumber",
+   "verb": "reinforces"
+  },
+  {
+   "span": "other-units",
+   "concept": "spectroscopic-energy-exchange",
+   "verb": "introduces"
+  },
+  {
+   "span": "regions-and-motions",
+   "concept": "bohr-frequency-condition",
+   "verb": "introduces"
+  },
+  {
+   "span": "regions-and-motions",
+   "concept": "spectral-regions-molecular-motions",
+   "verb": "introduces"
+  },
+  {
+   "span": "regions-and-motions",
+   "concept": "electromagnetic-spectrum",
+   "verb": "reinforces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "e1",
+   "source_id": "exr:13.1.1",
+   "source_number": "Exercise 13.1.1",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "other-units",
+   "prompt": "<p>Another historically important series of spectral lines is the Balmer series of emission lines form hydrogen. One of the lines has a wavelength of 656.3 nm. What are the frequency and the wavenumber for this line?</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "frequency",
+      "value": 457000000000000.0,
+      "unit": "s⁻¹",
+      "hint": "Divide the speed of light by the wavelength in meters."
+     },
+     {
+      "part": "wavenumber",
+      "value": 15240.0,
+      "unit": "cm⁻¹"
+     }
+    ],
+    "solution": "<p>The frequency is $\\knu = \\dfrac{c}{\\klambda} = \\dfrac{3.00\\times10^{8}\\ \\text{m/s}}{656.3\\times10^{-9}\\ \\text{m}} = 4.57\\times10^{14}\\ \\text{s}^{-1}$.</p><p>The wavenumber is $\\knut = \\dfrac{1}{\\klambda} = \\dfrac{1}{656.3\\times10^{-9}\\ \\text{m}}\\times\\dfrac{1\\ \\text{m}}{100\\ \\text{cm}} = 1.524\\times10^{4}\\ \\text{cm}^{-1}$.</p>"
+   }
+  },
+  {
+   "id": "a1",
+   "source_id": "Wavenumbers are frequently used to characterize infrared radiation",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "regions-and-motions",
+   "prompt": "<p>A gas absorbs radiation of wavenumber 2000 cm⁻¹. Find (a) its wavelength in μm, (b) its frequency and (c) the energy of one photon. In which region of the electromagnetic spectrum does it lie, and what kind of molecular transition does it drive?</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 5.0,
+      "unit": "μm",
+      "hint": "The wavelength is the reciprocal of the wavenumber; work in centimeters first."
+     },
+     {
+      "part": "b",
+      "value": 60000000000000.0,
+      "unit": "s⁻¹"
+     },
+     {
+      "part": "c",
+      "value": 3.98e-20,
+      "unit": "J"
+     }
+    ],
+    "solution": "<p>(a) $\\klambda = \\dfrac{1}{\\knut} = \\dfrac{1}{2000\\ \\text{cm}^{-1}} = 5.00\\times10^{-4}\\ \\text{cm} = 5.00\\ \\mu\\text{m}$.</p><p>(b) $\\knu = \\dfrac{c}{\\klambda} = \\dfrac{3.00\\times10^{8}\\ \\text{m/s}}{5.00\\times10^{-6}\\ \\text{m}} = 6.00\\times10^{13}\\ \\text{s}^{-1}$.</p><p>(c) $\\kdE = h\\knu = (6.626\\times10^{-34}\\ \\text{J s})(6.00\\times10^{13}\\ \\text{s}^{-1}) = 3.98\\times10^{-20}\\ \\text{J}$.</p><p>A frequency between 10¹³ and 10¹⁴ Hz is in the infrared, where photons drive transitions between vibrational levels (with rotational transitions alongside).</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "e1",
+   "concept": "wavelength-frequency-relation"
+  },
+  {
+   "exercise": "e1",
+   "concept": "wavenumber"
+  },
+  {
+   "exercise": "a1",
+   "concept": "wavelength-frequency-relation"
+  },
+  {
+   "exercise": "a1",
+   "concept": "bohr-frequency-condition"
+  },
+  {
+   "exercise": "a1",
+   "concept": "spectral-regions-molecular-motions"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-ref-mark",
+   "kind": "correction",
+   "html": "The superscript 2 is a reference mark carried over from the book this passage comes from; the reference it points to is not printed here."
+  },
+  {
+   "id": "c-hz",
+   "kind": "correction",
+   "html": "The frequencies in this list are in hertz (s⁻¹)."
+  }
+ ]
+}

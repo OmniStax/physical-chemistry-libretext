@@ -1,0 +1,37 @@
+<section id="normal-coordinates-and-symmetry">
+<h2>Normal coordinates and irreducible representations</h2>
+<p>There exists an important fact about <span data-concept="normal-coordinates">normal coordinates</span>. <span data-concept="normal-mode-symmetry">Each of these coordinates belongs to an irreducible representation of the point the molecule under investigation</span>.<sup class="fn" data-note="c-point-group"></sup> Vibrational wavefunctions associated with vibrational energy levels share this property as well. The <span data-concept="normal-coordinates">normal coordinates</span> and the vibration wavefunction can be categorized further according to the <span data-concept="point-group">point group</span> they belong to. From the <span data-concept="character-table">character table</span> predictions can be made for which symmetries can exist. The <span data-concept="irreducible-representation">irreducible representation</span> offers insight into the IR and/or Raman activity of the molecule in question.</p>
+</section>
+
+<section id="symmetry-of-normal-modes">
+<h2>Symmetry of normal modes</h2>
+<p>It is important to realize that every <span data-concept="molecular-normal-modes">normal mode</span> has a certain type of symmetry associated with it. Identifying the <span data-concept="point-group">point group</span> of the molecule is therefore an important step. With this in mind it is not surprising that every <span data-concept="molecular-normal-modes">normal mode</span> forms a basis set for an <span data-concept="irreducible-representation">irreducible representation</span> of the <span data-concept="point-group">point group</span> the molecule belongs to. For a molecule such as water, having a structure of $\mathrm{XY_{2}}$, three <span data-concept="normal-coordinates">normal coordinates</span> can be determined. The two stretching modes are equivalent in symmetry and energy.<sup class="fn" data-note="c-equivalent"></sup> The figure below shows the three <span data-concept="molecular-normal-modes">normal modes</span> for the water molecule:</p>
+<figure class="photo" id="fig-13-10-1" data-figure="13.10.1">
+  <img src="/media/ch13/9691-Normal_modes_water.png" alt="Water's three normal modes: the symmetric stretch, the bend and the asymmetric stretch, with arrows on the atoms." data-width="350">
+  <figcaption><span class="eyebrow">Figure 13.10.1</span><span>Three <span data-concept="molecular-normal-modes">normal modes</span> of water</span></figcaption>
+</figure>
+<p>By convention, with nonlinear molecules, the symmetric stretch is denoted v<sub>1</sub> whereas the asymmetric stretch is denoted v<sub>2</sub>. Bending motions are v<sub>3</sub>.<sup class="fn" data-note="c-numbering"></sup> With linear molecules, the bending motion is $\nu_2$ whereas asymmetric stretch is v<sub>3</sub>.</p>
+<p>The water molecule has C<sub>2v</sub> symmetry and its symmetry elements are E, C<sub>2</sub>, σ(xz) and σ(yz). To determine the symmetries of the three vibrations and how they each transform, <span data-concept="symmetry-operation">symmetry operations</span> will be performed. As an example, performing C<sub>2</sub> operations using the two normal mode v<sub>2</sub> and v<sub>3</sub> gives the <a class="figref" href="#12.10-sim-water-modes">following transformation</a>:<sup class="fn" data-note="c-plane"></sup></p>
+<figure class="photo" id="fig-13-10-2" data-figure="13.10.2">
+  <img src="/media/ch13/9695-V2_C2_operation.png" alt="The C₂ operation applied to water's two stretches: the symmetric stretch is carried into itself and the asymmetric stretch into its negative." data-width="350">
+  <figcaption><span class="eyebrow">Figure 13.10.2</span><span><span data-concept="symmetry-operation">Symmetry operations</span> on the symmetric and asymmetric stretches of water</span></figcaption>
+</figure>
+<p><span data-concept="assigning-mode-symmetry">Once all the symmetry operations have been performed in a systematic manner for each modes the symmetry can be assigned to the normal mode</span> using the <span data-concept="character-table">character table</span> for C<sub>2v</sub>:</p>
+<div class="book-table">
+  <div class="tcap"><span class="eyebrow">Table 13.10.2</span><span><span data-concept="character-table">Character table</span> for the C<sub>2v</sub> point group</span></div>
+  <table>
+    <thead><tr><th><strong>C<sub>2v</sub></strong></th><th><strong>E</strong></th><th><strong>C2</strong></th><th><strong>σ (xz)</strong></th><th><strong>σ (yz)</strong></th><th></th></tr></thead>
+    <tbody>
+      <tr><td><strong>ν<sub>1</sub></strong></td><td>1</td><td>1</td><td>1</td><td>1</td><td><strong>= a<sub>1</sub></strong></td></tr>
+      <tr><td><strong>ν<sub>2</sub></strong></td><td>1</td><td>1</td><td>1</td><td>1</td><td><strong>= a<sub>1</sub></strong></td></tr>
+      <tr><td><strong>ν<sub>3</sub></strong></td><td>1</td><td>-1</td><td>-1</td><td>1</td><td><strong>= b<sub>2</sub></strong></td></tr>
+    </tbody>
+  </table>
+</div>
+<p>Water has three <span data-concept="molecular-normal-modes">normal modes</span> that can be grouped together as the <span data-concept="reducible-representation">reducible representation</span></p>
+$$ \kGammavib= 2a_1 + b_2. $$
+<p>Determination of <span data-concept="molecular-normal-modes">normal modes</span> becomes quite complex as the number of atoms in the molecule increases. Nowadays, computer programs that simulate molecular vibrations can be used to perform these calculations. The example of [PtCl<sub>4</sub>]<sup>2-</sup> shows the increasing complexity (Figure 13.10.2).<sup class="fn" data-note="c-figure"></sup> The molecule has five atoms and therefore 15 <span data-concept="degrees-of-freedom">degrees of freedom</span>, 9 of these are vibrational <span data-concept="degrees-of-freedom">degrees of freedom</span>. The nine <span data-concept="molecular-normal-modes">normal modes</span> are exemplified below along with the <span data-concept="irreducible-representation">irreducible representation</span> the <span data-concept="molecular-normal-modes">normal mode</span> belongs to (D<sub>4h</sub> <span data-concept="point-group">point group</span>).</p>
+<figure class="sim" id="sim-ptcl4-modes" data-figure="13.10.3" data-original="/media/ch13/9692-PtCl4_modes.png" data-original-width="471" data-original-caption="A₁g, b₁g and e_u are stretching vibrations whereas b₂g, a₂u, b₂u and e_u are bending vibrations.">
+  <div class="sim-head"><span class="eyebrow">Figure 13.10.3</span><span>Pick one of the nine modes of [PtCl₄]²⁻ and turn the ion. In a₁g, b₁g and the first pair of e_u the Pt–Cl bonds stretch. Every other mode bends them, and a₂u and b₂u carry the chlorines out of the plane, which only a view from the side shows.</span></div>
+</figure>
+</section>

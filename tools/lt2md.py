@@ -172,6 +172,11 @@ class Converter:
 
     def math_inline(self, s):
         s = self.page_index(s)
+        # a delimiter pair half TeX and half dollar (14.7, pasted from Stack Exchange:
+        # "denoted \(E_i$)", "the \(z$-axis", "spin-$1/2\) particles") is one short
+        # inline formula; left alone, \( would run on to the next \) and swallow prose
+        s = re.sub(r"\\\(([^${}\\\n]{1,20}?)\$", r"\\(\1\\)", s)
+        s = re.sub(r"(?<![\\$])\$([^${}\\\n]{1,20}?)\\\)", r"\\(\1\\)", s)
         # \( … \) is inline; \[ … \] in a running paragraph is left to block()
         s = re.sub(r"\\\((.+?)\\\)", lambda m: "$" + self.refs(self.inline_label(m.group(1).strip())) + "$", s, flags=re.S)
         s = self.refs(s) if "\\ref" in s else s

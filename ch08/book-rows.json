@@ -328,11 +328,13 @@
   },
   {
    "sym": "s_1",
-   "latex": "s_1"
+   "latex": "s_1",
+   "macro": "\\ksone"
   },
   {
    "sym": "s_2",
-   "latex": "s_2"
+   "latex": "s_2",
+   "macro": "\\kstwo"
   },
   {
    "sym": "S",

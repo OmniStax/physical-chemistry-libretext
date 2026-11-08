@@ -1,0 +1,289 @@
+{
+ "id": "13.3",
+ "module": "2416",
+ "chapter": "13",
+ "title": "Unequal Spacings in Vibration-Rotation Spectra",
+ "short": "Unequal rovibrational spacings",
+ "lead": "Measured rovibrational bands are not evenly spaced. The bond is longer in the upper vibrational state, so the rotational constant there is smaller, and the line positions of the R and P branches pick up a term in J².",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "Shared under the book's CC BY-NC-SA 4.0 with Figure 13.3.1 from OpenStax; the book's animated anharmonic oscillator (Figure 13.3.2, Wikipedia, used with permission) is not shown, and its references (McQuarrie's Quantum Chemistry, Hollas's Modern Spectroscopy and Basic Atomic and Molecular Spectroscopy, Herzberg's Molecular Spectra and Molecular Structure, and Fetterolf in J. Chem. Ed. 2007, 84, 1064) are listed here.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercise in this section. The one here, on the gaps between neighbouring R and P lines, was written by AI with its solution, Bloom level and concept tags. Numeric answers accept a 2% tolerance.",
+ "figures": [
+  {
+   "id": "sim-branches",
+   "kind": "sim",
+   "number": "13.3.1",
+   "originals": [
+    "/media/ch13/182756-CNX_UPhysics_42_02_HCL.jpg"
+   ],
+   "original_caption": "Absorption spectrum of hydrogen chloride (HCl) from the n = 0 to n = 1 vibrational levels. The discrete peaks indicate a quantization of the angular momentum of the molecule. The bands to the left indicate a decrease in angular momentum, whereas those to the right indicate an increase in angular momentum. (CC-SA; OpenStax).",
+   "draws": [
+    "wavenumber",
+    "energy"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "opening",
+   "concept": "unequal-branch-spacing",
+   "verb": "introduces"
+  },
+  {
+   "span": "opening",
+   "concept": "rovibrational-spectrum",
+   "verb": "uses"
+  },
+  {
+   "span": "opening",
+   "concept": "centrifugal-stretching",
+   "verb": "uses"
+  },
+  {
+   "span": "vibration-rotation-interaction",
+   "concept": "vibration-rotation-interaction",
+   "verb": "introduces"
+  },
+  {
+   "span": "vibration-rotation-interaction",
+   "concept": "branch-lines-with-interaction",
+   "verb": "introduces"
+  },
+  {
+   "span": "vibration-rotation-interaction",
+   "concept": "rotational-constant",
+   "verb": "uses"
+  },
+  {
+   "span": "vibration-rotation-interaction",
+   "concept": "anharmonicity",
+   "verb": "uses"
+  },
+  {
+   "span": "vibration-rotation-interaction",
+   "concept": "r-branch",
+   "verb": "uses"
+  },
+  {
+   "span": "vibration-rotation-interaction",
+   "concept": "p-branch",
+   "verb": "uses"
+  },
+  {
+   "span": "vibration-rotation-interaction",
+   "concept": "unequal-branch-spacing",
+   "verb": "reinforces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "Decrease in Spacing of Lines in the R Branch with Increasing J",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "vibration-rotation-interaction",
+   "prompt": "<p>A diatomic molecule has $\\kBt_0 = 10.4$ cm⁻¹ and $\\kBt_1 = 10.1$ cm⁻¹. Find (a) the gap between the R(4) and R(5) lines and (b) the gap between the P(4) and P(5) lines. Which branch crowds together as J grows?</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 17.2,
+      "unit": "cm⁻¹",
+      "hint": "Subtract the line formula at J = 4 from the one at J = 5; the ν̃ terms cancel."
+     },
+     {
+      "part": "b",
+      "value": 23.2,
+      "unit": "cm⁻¹"
+     }
+    ],
+    "solution": "<p>(a) From $\\knutR = \\knut + 2\\kBt_1 + (3\\kBt_1-\\kBt_0)J + (\\kBt_1-\\kBt_0)J^2$, the gap is $\\knutR(5) - \\knutR(4) = (3\\kBt_1-\\kBt_0) + 9(\\kBt_1-\\kBt_0) = 19.9 + 9(-0.3) = 17.2$ cm⁻¹, less than $2\\kBt_0 = 20.8$ cm⁻¹.</p><p>(b) From $\\knutP = \\knut - (\\kBt_1+\\kBt_0)J + (\\kBt_1-\\kBt_0)J^2$, the gap is $\\knutP(4) - \\knutP(5) = (\\kBt_1+\\kBt_0) - 9(\\kBt_1-\\kBt_0) = 20.5 + 2.7 = 23.2$ cm⁻¹.</p><p>The R lines crowd together as J grows, and the P lines spread apart.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "branch-lines-with-interaction"
+  },
+  {
+   "exercise": "a1",
+   "concept": "unequal-branch-spacing"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-backwards",
+   "kind": "correction",
+   "html": "Both sentences are the wrong way round. As this section works out and Figure 13.3.1 shows, the R lines, at higher wavenumber, draw closer together and the P lines, at lower wavenumber, spread apart; with wavenumber increasing to the right, R is on the right."
+  },
+  {
+   "id": "c-re",
+   "kind": "correction",
+   "html": "The bond length is $\\kRe$; $\\kRe^2$ is its square."
+  },
+  {
+   "id": "c-p-spacing",
+   "kind": "correction",
+   "html": "Read $\\knutP$ for $\\knutR$. The P spacing grows as J increases: $\\knutP(J) - \\knutP(J+1) = (\\kBt_1+\\kBt_0) - (\\kBt_1-\\kBt_0)(2J+1)$, and $\\kBt_1 - \\kBt_0 &lt; 0$."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "branch-lines",
+   "what": "the branch lines with a rotational constant that depends on v",
+   "source": "Physical Chemistry (LibreTexts), 13.3 Unequal Spacings in Vibration-Rotation Spectra",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kEtvJ = \\knut\\left(v+\\dfrac{1}{2}\\right) + \\kBtv J(J+1)",
+       "src": "13.3"
+      },
+      {
+       "text": "An R line ($\\Delta J = +1$, $J = 0, 1, 2, \\ldots$) runs from level $(v, J) = (0, J)$ to $(1, J+1)$.",
+       "src": "13.2"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{n}{\\knutR} = \\mk{u}{\\tilde{E}_{1,J+1}} - \\mk{l}{\\tilde{E}_{0,J}}",
+      "uses": [
+       1
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{n}{\\knutR} = \\mk{a}{\\dfrac{3}{2}\\knut} + \\mk{b}{\\kBt_1(J+1)(J+2)} - \\mk{c}{\\dfrac{1}{2}\\knut} - \\mk{d}{\\kBt_0J(J+1)}",
+       "uses": [
+        0
+       ],
+       "map": {
+        "u": [
+         "a",
+         "b"
+        ],
+        "l": [
+         "c",
+         "d"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{n}{\\knutR} = \\mk{v}{\\knut} + \\mk{b}{\\kBt_1(J^2+3J+2)} - \\mk{d}{\\kBt_0(J^2+J)}",
+       "uses": [],
+       "map": {
+        "a": "v",
+        "c": "v"
+       }
+      },
+      {
+       "tex": "\\mk{n}{\\knutR} = \\mk{v}{\\knut} + \\mk{p}{2\\kBt_1} + \\mk{q}{(3\\kBt_1-\\kBt_0)J} + \\mk{s}{(\\kBt_1-\\kBt_0)J^2}",
+       "uses": [],
+       "map": {
+        "b": [
+         "p",
+         "q",
+         "s"
+        ],
+        "d": [
+         "q",
+         "s"
+        ]
+       }
+      }
+     ],
+     "src": "13.3"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\kEtvJ = \\knut\\left(v+\\dfrac{1}{2}\\right) + \\kBtv J(J+1)",
+       "src": "13.3"
+      },
+      {
+       "text": "A P line ($\\Delta J = -1$, $J = 1, 2, 3, \\ldots$) runs from level $(v, J) = (0, J)$ to $(1, J-1)$.",
+       "src": "13.2"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{n}{\\knutP} = \\mk{u}{\\tilde{E}_{1,J-1}} - \\mk{l}{\\tilde{E}_{0,J}}",
+      "uses": [
+       1
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{n}{\\knutP} = \\mk{a}{\\dfrac{3}{2}\\knut} + \\mk{b}{\\kBt_1(J-1)J} - \\mk{c}{\\dfrac{1}{2}\\knut} - \\mk{d}{\\kBt_0J(J+1)}",
+       "uses": [
+        0
+       ],
+       "map": {
+        "u": [
+         "a",
+         "b"
+        ],
+        "l": [
+         "c",
+         "d"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{n}{\\knutP} = \\mk{v}{\\knut} + \\mk{b}{\\kBt_1(J^2-J)} - \\mk{d}{\\kBt_0(J^2+J)}",
+       "uses": [],
+       "map": {
+        "a": "v",
+        "c": "v"
+       }
+      },
+      {
+       "tex": "\\mk{n}{\\knutP} = \\mk{v}{\\knut} - \\mk{q}{(\\kBt_1+\\kBt_0)J} + \\mk{s}{(\\kBt_1-\\kBt_0)J^2}",
+       "uses": [],
+       "map": {
+        "b": [
+         "q",
+         "s"
+        ],
+        "d": [
+         "q",
+         "s"
+        ]
+       }
+      }
+     ],
+     "src": "13.3"
+    }
+   ]
+  }
+ ]
+}

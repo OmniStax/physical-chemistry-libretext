@@ -1,0 +1,61 @@
+<section id="opening">
+<h2>Beyond the harmonic oscillator</h2>
+<p>Although the harmonic oscillator proves useful for modeling lower energy levels, like $v=0, 1$, it fails at higher numbers of $v$. It not only fails to properly model atomic bonds and dissociations, but also is unable to match spectra showing additional lines that are not accounted for in the harmonic oscillator model.</p>
+</section>
+
+<section id="anharmonicity">
+<h2>Anharmonicity</h2>
+<p>Until this point, we have been using the <span data-concept="harmonic-oscillator">harmonic oscillator</span> to describe the internuclear potential energy of the vibrational motion. Fundamental vibrational frequencies of a molecule corresponds to a transition of $\Delta v= \pm 1$. While this is a decent approximation, bonds do not behave like they do in the Harmonic Oscillator approximation (Figure 13.5.1). For example, the parabolic potential of the Harmonic Oscillator approximation means that the vibrations can hold any amount of energy and bonds can stretch to any length, while in real molecules if the atoms are too far apart the bond will dissociate.</p>
+<figure class="photo" id="fig-13-5-1" data-figure="13.5.1">
+  <img src="/media/ch13/78463-Morse-potential.png" data-width="430" alt="Graph depicting the potential energy curve for two atoms, showing energy levels, dissociation energy, and atomic separation.">
+  <figcaption><span class="eyebrow">Figure 13.5.1</span><span>Pictured above is the Harmonic Oscillator approximation (green parabola) superimposed on the anharmonic oscillator (blue curve) on a potential energy diagram. V(R) is the potential energy of a diatomic molecule and R is the radius between the centers of the two atoms. Towards the left is compression of the bond, towards the right is extension. (CC BY-SA 3.0; Created by Mark Somoza March 26 2006).</span></figcaption>
+</figure>
+<p>As you can see in Figure 13.5.1, the harmonic oscillator potential well (in green) only roughly fits over the more accurate anharmonic oscillator well (in blue). The blue curve accounts for dissociation at large R values, which the green curve does not even remotely cover. However, this is just one important difference between the harmonic and <a class="xref" href="#5.3-sim-morse">anharmonic (real) oscillators</a>.</p>
+<p>The real potential energy can be expanded in the <span data-concept="potential-taylor-expansion">Taylor series</span>.</p>
+$$ \kV(\kR) = \kV(\kRe) + \dfrac{1}{2!}\left(\dfrac{d^2\kV}{d\kR^2}\right)_{\kR=\kRe} (\kR-\kRe)^2 + \dfrac{1}{3!}\left(\dfrac{d^3\kV}{d\kR^3}\right)_{\kR=\kRe} (\kR-\kRe)^3 + \dfrac{1}{4!}\left(\dfrac{d^4\kV}{d\kR^4}\right)_{\kR=\kRe} (\kR-\kRe)^4 + ... \tag{13.5.1} $$
+<p>This expansion was <a class="xref" href="#5.3-sim-taylor">discussed in detail previously</a>. The first term in the expansion is ignored since the derivative of the potential at $\kRe$ is zero (i.e., at the bottom of the well).<sup class="fn" data-note="c-linear"></sup> The Harmonic Oscillator approximation only uses the next term, the quadratic term, in the series</p>
+$$ V_{HO}(\kR) \approx \kV(\kRe) + \dfrac{1}{2!}\left(\dfrac{d^2\kV}{d\kR^2}\right)_{\kR=\kRe} (\kR-\kRe)^2 $$
+<p>or in terms of a spring constant, ignoring the absolute energy term($\kV(\kRe)$) and defining $\kr$ to equal the displacement from equilibrium ($\kr=\kR-\kRe$), then we get the "standard" harmonic oscillator potential:</p>
+$$ V_{HO}(\kR) = \dfrac {1}{2} \kk\kr^2 $$
+<p>Alternatively, the expansion in Equation 13.5.1 can be shortened to the cubic term</p>
+$$ \kV(x) = \dfrac {1}{2} \kk\kr^2 + \dfrac {1}{6} \gamma \kr^3 \tag{13.5.2} $$
+<p>where</p>
+<ul><li>$\kV(x_0) = 0$, and $\kr = \kR - R_0$.</li><li>$\kk$ is the harmonic <span data-concept="force-constant">force constant</span>, and</li><li>$\gamma$ is the first (i.e., cubic) <em><span data-concept="anharmonicity">anharmonic</span></em> term</li></ul>
+<p>It is important to note that this approximation is only good for $\kR$ near $R_0$.</p>
+<p>The harmonic oscillator approximation gives by the following energies:</p>
+$$ \kEv = \knut \left (v + \dfrac{1}{2} \right) $$
+<p>When the cubic term in the expansion (Equation 13.5.2) is included, and the Schrödinger equation is solved using perturbation theory this gives:</p>
+$$ \kEv = \knut \left (v + \dfrac{1}{2} \right) - \tilde{\chi_e} \knut \left (v + \dfrac{1}{2} \right)^2 $$
+<p>where $\tilde{\chi_e}$ is the <strong><span data-concept="anharmonic-energy-levels">anharmonicity constant</span></strong>. It is much smaller than 1, which makes sense because the terms in the Taylor series approach zero. This is why, although $\kEv$ technically includes all of the Taylor series, we only concern ourselves with the first and second terms. The rest are so small and barely add to the total and thus can be ignored. To get a more accurate approximation, more terms can be included, but otherwise, can be ignored. Almost all diatomics have experimentally determined $\frac {d^2 V}{d x^2}$ for their lowest energy states. $\mathrm{H_{2}}$, $\mathrm{Li_{2}}$, $\mathrm{O_{2}}$, $\mathrm{N_{2}}$, and $\mathrm{F_{2}}$ have had terms up to $n < 10$ determined of Equation 13.5.1.</p>
+</section>
+
+<section id="overtones">
+<h2>Overtones</h2>
+<p>The Harmonic Oscillator approximation predicts that there will be only one line in the spectrum of a diatomic molecule, while experimental data shows there is in fact one dominant line--<strong><span data-concept="fundamental-and-overtones">the fundamental</span></strong>--and other weaker lines. How can we account for these extra lines?</p>
+<figure class="sim" id="sim-overtones" data-figure="13.5.3 + 13.5.4" data-original="/media/ch13/78873-=vib_diatomic_molecule.png,/media/ch13/78875-=energy_level_compression.png" data-original-caption="A diagram for a vibrating diatomic molecule. The levels denoted by vibrational quantum numbers v represent the potential energy for the harmonic (quadratic) oscillator. The transition $0 \rightarrow 1$ is the fundamental, transitions $0 \rightarrow n$ (n&gt;1) are called overtones, and transitions $1 \rightarrow n$ (n &gt; 1) are called hot transitions (hot bands). An exaggerated view of the energy levels. (a) would be the harmonic oscillator, with the evenly spaced out energy levels. (b) would be the anharmonic, with the energy levels compressing until they converge.">
+  <div class="sim-head"><span class="eyebrow">Figure 13.5.3 + 13.5.4</span><span>Raise the <span data-concept="anharmonic-energy-levels">anharmonicity constant</span> and the levels close up, so each <span data-concept="overtone-positions">overtone</span> falls further below a whole multiple of the fundamental. Pick a transition to read its line; 1 → 2 is a <span data-concept="hot-band">hot band</span>, starting from v = 1.</span></div>
+</figure>
+<p>Any resonant frequency above the fundamental frequency is referred to as an <em><span data-concept="fundamental-and-overtones">overtone</span></em>. In the IR spectrum, overtone bands are multiples of the fundamental absorption frequency. As you can recall, the energy levels in the Harmonic Oscillator approximation are evenly spaced apart. Energy is proportional to the frequency absorbed, which in turn is proportional to the wavenumber, the first overtone that appears in the spectrum will be twice the wavenumber of the fundamental. That is, first overtone $v = 0 \rightarrow 2$ is (approximately) twice the energy of the fundamental, $v = 0 \rightarrow 1$.</p>
+<p>The levels are not equally spaced, like in the harmonic oscillator, but decrease as $v$ increases, until it ultimately converges, as implied by Figure 13.5.4. Also as a result of <span data-concept="anharmonicity">anharmonicity</span>, the $\Delta v= \pm 1$ <span data-concept="ir-selection-rules">selection rule</span> is no longer valid and $v$ can be any number. This leads to the observation of higher order transitions, or <strong><span data-concept="overtone-transition">overtones</span></strong>, which result from the transition of the ground state to higher energy levels.</p>
+<div class="note">
+<div class="eyebrow">Note</div>
+<h3>Anharmonic Oscillator Selection Rules</h3>
+<p><span data-concept="anharmonic-selection-rule">For the anharmonic oscillator, the selection rule is $\Delta V= \text{any number}$</span>.<sup class="fn" data-note="c-delta-v"></sup> That is, there are no selection rules (for state to state transitions)</p>
+</div>
+<p>Overtones occur when a vibrational mode is excited from $v=0$ to $v=2$ (the first overtone) or $v=0$ to $v=3$ (the second overtone). The fundamental transitions, $v=\pm 1$,<sup class="fn" data-note="c-delta-v2"></sup> are the most commonly occurring, and the probability of overtones rapidly decreases as $\Delta v > \pm 1$ gets bigger. Based on the harmonic oscillator approximation, the energy of the overtone transition will be approximately $v$ times the fundamental associated with that particular transition. <span data-concept="overtone-positions">The anharmonic oscillator calculations show that the overtones are usually less than a multiple of the fundamental frequency</span>. Overtones are generally not detected in larger molecules.</p>
+<p>This is demonstrated with the vibrations of the diatomic $\mathrm{HCl}$ in the gas phase:</p>
+<div class="book-table">
+  <div class="tcap"><span class="eyebrow">Table 13.5.1</span><span>HCl vibrational spectrum.</span></div>
+  <table>
+    <thead><tr><th><strong>Transition</strong></th><th><strong>ṽ<sub>obs</sub> [cm<sup>-1</sup>]</strong></th><th><strong>ṽ<sub>obs</sub> Harmonic [cm<sup>-1</sup>]</strong><sup class="fn" data-note="c-table"></sup></th><th><strong>ṽ<sub>obs</sub> Anharmonic [cm<sup>-1</sup>]</strong></th></tr></thead>
+    <tbody>
+      <tr><td>$0 \rightarrow 1$ (fundamental)</td><td>2885.9</td><td>2885.9</td><td>2,885.3</td></tr>
+      <tr><td>$0 \rightarrow 2$ (first overtone)</td><td>5668.0</td><td>5771.8</td><td>5,665.0</td></tr>
+      <tr><td>$0 \rightarrow 3$ (second overtone)</td><td>8347.0</td><td>8657.7</td><td>8,339.0</td></tr>
+      <tr><td>$0 \rightarrow 4$ (third overtone)</td><td>10 923.1</td><td>11 543.6</td><td>10,907.4</td></tr>
+      <tr><td>$0 \rightarrow 5$ (fourth overtone)</td><td>13 396.5</td><td>14 429.5</td><td>13,370</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>We can see from Table 13.5.1 that the anharmonic frequencies correspond much better with the observed frequencies, especially as the vibrational levels increase. Because the energy levels and overtones are closer together in the anharmonic model, they are also more easily reached. This means that there is a higher chance of that level possibly being occupied, meaning it can show up as additional, albeit weaker intensity lines (the weaker intensity indicates a smaller probability of the transition occuring).</p>
+</section>

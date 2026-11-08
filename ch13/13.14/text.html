@@ -1,0 +1,55 @@
+<section id="ir-raman-activity">
+<h2>Determining if a Normal Modes is IR or Raman Active</h2>
+<p>A transition from $v \rightarrow v'$ is IR active if the <strong><span data-concept="transition-moment-integral">transition moment integral</span></strong> contains the totally symmetric irreducible representation of the point group the molecule belongs to. The transition moment integral is derived from the one-dimensional harmonic oscillator. Using the definition of electric dipole moment $\mu$, the integral is:</p>
+$$ \kMtrans(v \rightarrow v') = \langle \text{final wavefunction} | \vec{\kmud} | \text{initial wavefunction } \rangle $$
+<p>or in terms of vibrational wavefunctions for a specific normal mode $| \kphivib (v) \rangle$</p>
+$$ \kMtrans(v \rightarrow v') = \langle \kphivib(v' \neq 0) | \vec{\kmud} | \kphivib (v=0) \rangle \tag{13.14.1} $$
+<p>assuming the transition from the $v=0$ wavefunction to the $v' \neq 0$ wavefunction.</p>
+<p>Now, consider the case that $\vec{\kmud}$, is a constant and therefore independent of the vibration (i.e., the electric dipole moment does not change during the vibration). This it could be taken outside the integral in Equation 13.14.1 becomes</p>
+$$ \kMtrans(v \rightarrow v') = \vec{\kmud} \langle \kphivib(v' \neq 0) | \kphivib (v=0) \rangle \tag{13.14.2} $$
+<p>Since $|\kphivib(v=0) \rangle$ and $|\kphivib(v =\neq0) \rangle$ are mutually orthogonal to each other, the integral in Equation 13.14.1<sup class="fn" data-note="c-equation"></sup> will equal zero and the transition will <strong>not</strong> be allowed (i.e., it is forbidden). <span data-concept="ir-activity-dipole-change">For the $\kMtrans$ to be nonzero, $\vec{\kmud}$ must change during a vibration</span>. This <span data-concept="selection-rule">selection rule</span> explains why homonuclear diatomic molecules do not produce an IR spectrum. There is no change in <span data-concept="dipole-moment">dipole moment</span> resulting in a transition moment integral of zero and a transition that is forbidden.</p>
+<figure class="sim" id="sim-dipole-vibration">
+  <div class="sim-head"><span class="eyebrow">Sim</span><span>Choose a molecule and one of its vibrations, then watch the <span data-concept="dipole-moment">dipole</span> arrow and its trace. Where the dipole swings, as in HCl or the bend of CO₂, the vibration absorbs infrared light. Where it stays put, as in N₂ or the symmetric stretch of CO₂, the transition moment is zero.</span></div>
+</figure>
+<p>For a transition to be <span data-concept="raman-active-symmetry">Raman active</span>, the same rules apply. The transition moment integral must contain the totally symmetric irreducible representation of the point group. The integral contains the <span data-concept="polarizability">polarizability</span> tensor $\alpha$ (usually represented by a square matrix):</p>
+$$ \kMtrans(v \rightarrow v') = \langle \kphivib(v' \neq 0) | \alpha | \kphivib (v=0) \rangle \tag{13.14.3} $$
+<p>Following a similar argument as above, $\alpha$ must be nonzero<sup class="fn" data-note="c-alpha"></sup> for the transition to be allowed and exhibits Raman scattering.</p>
+<h3>Character Table</h3>
+<p>For a molecule to be IR active the <span data-concept="dipole-moment">dipole moment</span> has to change during the vibration. For a molecule to be Raman active the <span data-concept="polarizability">polarizability</span> of the molecule has to change during the vibration. The <span data-concept="reducible-representation">reducible representation</span> <strong>Γ</strong><strong><sub>vib</sub></strong><strong><sub> </sub></strong>can also be found by determining the reducible representation of the 3N degrees of freedom of H<sub>2</sub>O, <strong>Γ</strong><sub>tot</sub>. By applying Group Theory it is straightforward to find <strong>Γ</strong><strong><sub>x</sub></strong><strong><sub>,y,z</sub></strong> as well as UMA (number of unmoved atoms). Again, using water as an example with C<sub>2v</sub> symmetry where 3N = 9, <strong>Γ</strong><strong><sub>tot</sub></strong> can be determined:</p>
+<div class="book-table">
+  <div class="tcap"><span class="eyebrow">Table</span><span></span></div>
+  <table>
+    <thead><tr><th>C<sub>2v</sub></th><th>E</th><th>C<sub>2</sub></th><th>σ (xz)</th><th>σ (yz)</th><th></th></tr></thead>
+    <tbody>
+      <tr><td><strong>Τ<sub>x</sub><sub>,y,z</sub></strong></td><td>3</td><td>-1</td><td>1</td><td>1</td><td></td></tr>
+      <tr><td>UMA</td><td>3</td><td>1</td><td>1</td><td>3</td><td></td></tr>
+      <tr><td><strong>Γ</strong><sub><strong>tot</strong></sub></td><td><strong>9</strong></td><td><strong>-1</strong></td><td><strong>1</strong></td><td><strong>3</strong></td><td><strong>=3a<sub>1</sub> + a<sub>2</sub> + 2b<sub>1</sub> + 3b<sub>2</sub></strong></td></tr>
+      <tr><td colspan="6">Note that <strong>Γ</strong><sub>tot</sub> contains nine degrees of freedom consistent with 3N = 9.</td></tr>
+    </tbody>
+  </table>
+</div>
+<p><strong>Γ</strong><sub>tot</sub> contains <strong>Γ</strong><sub>translational</sub>, <strong>Γ</strong><sub>rotational</sub> as well as <strong>Γ</strong><sub>vibrational</sub>. <strong>Γ</strong><sub>trans</sub> can be obtained by finding the irreducible representations corresponding to x,y and z in the right side of the character table, <strong>Γ</strong><sub>rot</sub> by finding the ones corresponding to R<sub>x</sub>, R<sub>y</sub> and R<sub>z</sub>. <strong>Γ</strong><sub>vib</sub> can be obtained by <strong>Γ</strong><sub>tot</sub> - <strong>Γ</strong><sub>trans</sub> - <strong>Γ</strong><sub>rot</sub>.</p>
+$$ Γ_{vib} (H_2O) = (3a_1 + a_2 + 2b_1+ 3b_2) - (a_1 + b_1 + b_2) - (a_2 + b_1 + b_2) = 2a_1 + b_2 $$
+<p>In order to determine which modes are IR active, a simple check of the irreducible representation that corresponds to x,y and z and a cross check with the reducible representation <strong>Γ</strong><sub>vib</sub> is necessary. If they contain the same irreducible representation, the mode is IR active.</p>
+<p>For H<sub>2</sub>O, z transforms as a<sub>1</sub>, x as b<sub>1</sub> and y as b<sub>2</sub>. The modes a1 and b2 are IR active since Γvib contains 2a<sub>1</sub> + b<sub>2</sub>.</p>
+<p>In order to determine which modes are Raman active, the irreducible representation that corresponds to z<sup>2</sup>, x<sup>2</sup>-y<sup>2</sup>, xy, xz and yz is used and again cross checked with Γvib. For H<sub>2</sub>O, z<sup>2</sup> and x<sup>2</sup>-y<sup>2</sup> transform as a<sub>1</sub>, xy as a<sub>2</sub>, xz as b<sub>1</sub> and yz as b<sub>2</sub>.The modes a<sub>1</sub> and b<sub>2</sub> are also Raman active since Γ<sub>vib</sub> contains both these modes.</p>
+<p>The IR spectrum of H2O does indeed have <a class="figref" href="#12.10-sim-water-modes">three bands</a><sup class="fn" data-note="c-plane"></sup> as predicted by Group Theory. The two symmetric stretches v1 and v2 occur at 3756 and 3657 cm-1 whereas the bending v3 motion occurs at 1595 cm-1.<sup class="fn" data-note="c-stretches"></sup></p>
+<p><span data-concept="stretch-bend-analysis">In order to determine which normal modes are stretching vibrations and which one are bending vibrations, a stretching analysis can be performed.</span> Then the stretching vibrations can be deducted from the total vibrations in order to obtain the bending vibrations. A double-headed arrow is drawn between the atom as depicted below:</p>
+<figure class="photo" id="fig-water-arrows">
+  <img src="/media/ch13/9696-water.png" alt="Diagram of a water molecule (H2O) showing one oxygen atom connected to two hydrogen atoms with arrows indicating bonds.">
+  <figcaption><span class="eyebrow">Figure</span><span>A double-headed arrow on each O–H bond of water.</span></figcaption>
+</figure>
+<p>Then a determination of how the arrows transform under each symmetry operation in C2v symmetry will yield the following results:</p>
+<div class="book-table">
+  <div class="tcap"><span class="eyebrow">Table</span><span></span></div>
+  <table>
+    <thead><tr><th>C<sub>2v</sub></th><th>E</th><th>C<sub>2</sub></th><th>σ (xz)</th><th>σ (yz)</th><th></th></tr></thead>
+    <tbody>
+      <tr><td><strong>Γ</strong><strong><sub>stretch</sub></strong></td><td>2</td><td>0</td><td>0</td><td>2</td><td><strong>= a<sub>1</sub> + b<sub>2</sub></strong></td></tr>
+    </tbody>
+  </table>
+</div>
+$$ Γ_{bend} = Γ_{vib} - Γ_{stretch} = 2a_1 + b_2 -a_1 - b_2 = a_1 $$
+<p>H<sub>2</sub>O has two stretching vibrations as well as one bending vibration. This concept can be expanded to complex molecules such as PtCl4<sup>-</sup>.<sup class="fn" data-note="c-ptcl4"></sup> Four double headed arrows can be drawn between the atoms of the molecule and determine how these transform in D<sub>4h</sub> symmetry. Once the irreducible representation for <strong>Γ</strong><sub>stretch</sub> has been worked out, <strong>Γ</strong><sub>bend</sub> can be determined by <strong>Γ</strong><sub>bend</sub> = <strong>Γ</strong><sub>vib</sub> - <strong>Γ</strong><sub>stretch</sub>.</p>
+<p>Most molecules are in their zero point energy at room temperature. Therefore, most transitions do originate from the v=0 state. Some molecules do have a significant population of the v=1 state at room temperature and transitions from this thermally excited state are called <strong><span data-concept="hot-band">hot</span></strong> bands.</p>
+</section>

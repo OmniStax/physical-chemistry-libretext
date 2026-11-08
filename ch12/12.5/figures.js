@@ -19,12 +19,12 @@ const inkOn = (fill) => { const f = lightOf(fill); return Math.abs(lightOf(PAL.i
   const d = F.sim(root, 'sim-nh3-permutation', 620);
   /* g s_j = s_{perm[j]} for j = 1, 2, 3 (12.5.1) */
   const OPS = {
-    E: { label: '$E$', tex: '\\kEop', perm: [1, 2, 3], rot: 0 },
-    Cp: { label: '$C_3^+$', tex: 'C_3^+', perm: [2, 3, 1], rot: 1 },
-    Cm: { label: '$C_3^-$', tex: 'C_3^-', perm: [3, 1, 2], rot: -1 },
-    s: { label: '$\\sigma_v$', tex: '\\ksigmav', perm: [1, 3, 2], plane: 90 },
-    sp: { label: "$\\sigma_v'$", tex: '\\ksigmavp', perm: [2, 1, 3], plane: 330 },
-    spp: { label: "$\\sigma_v''$", tex: '\\ksigmavpp', perm: [3, 2, 1], plane: 210 },
+    E: { label: '$\\kEop$', tex: '\\kEop', perm: [1, 2, 3], rot: 0 },
+    Cp: { label: '$\\kCthree^+$', tex: '\\kCthree^+', perm: [2, 3, 1], rot: 1 },
+    Cm: { label: '$\\kCthree^-$', tex: '\\kCthree^-', perm: [3, 1, 2], rot: -1 },
+    s: { label: '$\\ksigmav$', tex: '\\ksigmav', perm: [1, 3, 2], plane: 90 },
+    sp: { label: '$\\ksigmavp$', tex: '\\ksigmavp', perm: [2, 1, 3], plane: 330 },
+    spp: { label: '$\\ksigmavpp$', tex: '\\ksigmavpp', perm: [3, 2, 1], plane: 210 },
   };
   const order = ['E', 'Cp', 'Cm', 's', 'sp', 'spp'];
   const K = F.choice(d.controls, { label: '\\text{operation}', aria: 'the symmetry operation of C3v', key: 'op', value: 'Cp',
@@ -104,10 +104,11 @@ const inkOn = (fill) => { const f = lightOf(fill); return Math.abs(lightOf(PAL.i
     hits.push({ x: MX + 2 * cell, y: MY + 2 * cell, r: 2 * cell, name: 'the representative Γ(g): a 1 in column j sits in the row of the orbital that s_j is carried onto' });
     const tr = full.reduce((s, r, i) => s + r[i], 0);
     text(ctx, `trace = ${show > 0.5 || op.rot === 0 && !op.plane ? tr : '…'}`, MX + 2 * cell, MY + 4 * cell + 64, ch, { size: 32, weight: 600, align: 'center' });
-    const stay = ['s_N'].concat([1, 2, 3].filter((j) => op.perm[j - 1] === j).map((j) => `s_${j}`));
-    F.topline(ctx, `${op.label.replace(/\$/g, '') === 'E' ? '$E$ leaves every orbital in place' : `${op.label} leaves ${stay.length === 1 ? 'only $s_N$' : stay.map((s) => `$${s}$`).join(' and ')} in place`}, so $\\kchar = ${chi}$.`);
-    const after = ['\\ksN'].concat(op.perm.map((p) => `s_${p}`)).join(', ');
-    tex(d.readout, `(\\ksN, s_1, s_2, s_3)\\,\\kGamma(${op.tex}) = (${after}) \\\\ \\kchar(${op.tex}) = ${chi}`);
+    const ks = ['\\ksone', '\\kstwo', '\\ksthree'];
+    const stay = ['\\ksN'].concat([1, 2, 3].filter((j) => op.perm[j - 1] === j).map((j) => ks[j - 1]));
+    F.topline(ctx, `${op.rot === 0 && !op.plane ? '$\\kEop$ leaves every orbital in place' : `${op.label} leaves ${stay.length === 1 ? 'only $\\ksN$' : stay.map((s) => `$${s}$`).join(' and ')} in place`}, so $\\kchar = ${chi}$.`);
+    const after = ['\\ksN'].concat(op.perm.map((p) => ks[p - 1])).join(', ');
+    tex(d.readout, `(\\ksN, \\ksone, \\kstwo, \\ksthree)\\,\\kGamma(${op.tex}) = (${after}) \\\\ \\kchar(${op.tex}) = ${chi}`);
   }
   register(d.fig, { update: (dt) => cy.step(dt, () => 1), draw });
 })();

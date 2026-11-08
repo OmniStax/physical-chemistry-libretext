@@ -1,0 +1,128 @@
+{
+ "id": "13.13",
+ "module": "13676",
+ "chapter": "13",
+ "title": "The Harmonic Oscillator Selection Rule",
+ "short": "Oscillator selection rule",
+ "lead": "Selection rules say which changes of a quantum number light can bring about. For a vibrating diatomic molecule, the transition moment integral of two harmonic oscillator wavefunctions and a Hermite recurrence settle which vibrational transitions appear.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "Shared under the book's CC BY-NC-SA 4.0; the worked example repeats the argument of Section 5.5, whose derivation it links.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": []
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The one exercise was written by AI with an AI solution; its Bloom level and concept tags were chosen by AI.",
+ "figures": [],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "selection-rules-in-spectroscopy",
+   "concept": "selection-rule",
+   "verb": "reinforces"
+  },
+  {
+   "span": "selection-rules-in-spectroscopy",
+   "concept": "rigid-rotor",
+   "verb": "uses"
+  },
+  {
+   "span": "selection-rules-in-spectroscopy",
+   "concept": "spherical-harmonics",
+   "verb": "uses"
+  },
+  {
+   "span": "selection-rules-in-spectroscopy",
+   "concept": "infrared-spectroscopy",
+   "verb": "uses"
+  },
+  {
+   "span": "vibrational-transition-moment",
+   "concept": "transition-moment-integral",
+   "verb": "reinforces"
+  },
+  {
+   "span": "vibrational-transition-moment",
+   "concept": "ir-selection-rules",
+   "verb": "reinforces"
+  },
+  {
+   "span": "vibrational-transition-moment",
+   "concept": "oscillator-wavefunctions",
+   "verb": "uses"
+  },
+  {
+   "span": "vibrational-transition-moment",
+   "concept": "hermite-recurrence",
+   "verb": "uses"
+  },
+  {
+   "span": "vibrational-transition-moment",
+   "concept": "hermite-orthogonality",
+   "verb": "uses"
+  },
+  {
+   "span": "vibrational-transition-moment",
+   "concept": "dipole-moment",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "ai1",
+   "source_id": "the integral only allows transitions of",
+   "kind": "exercise",
+   "bloom": "Analyze",
+   "place": {
+    "at": "end"
+   },
+   "cite": "vibrational-transition-moment",
+   "prompt": "<p>In the harmonic oscillator model, is the overtone transition $v = 0 \\rightarrow v' = 2$ allowed? Use the Hermite relationship $\\sqrt{\\alpha}xH_v(\\sqrt{\\alpha}x)=vH_{v-1}(\\sqrt{\\alpha}x)+\\frac{1}{2}H_{v+1}(\\sqrt{\\alpha}x)$ on the transition moment integral.</p>",
+   "answer": {
+    "type": "choice",
+    "generated_by": "ai",
+    "options": [
+     "Allowed",
+     "Forbidden"
+    ],
+    "correct": 1,
+    "hint": "Apply the relationship to $xH_0$ and look at which Hermite polynomials meet in the integral.",
+    "solution": "<p>The part of the transition moment that survives is $\\dfrac{d\\mu}{dx}\\displaystyle\\int \\psi_2^*\\,x\\,\\psi_0\\,dx$, which holds $H_2(\\sqrt{\\alpha}x)\\,x\\,H_0(\\sqrt{\\alpha}x)\\,e^{-\\alpha x^2}$. With $v = 0$ the relationship gives $\\sqrt{\\alpha}xH_0 = 0\\cdot H_{-1} + \\tfrac{1}{2}H_1$, so the integral becomes $\\tfrac{1}{2\\sqrt{\\alpha}}\\displaystyle\\int H_2 H_1 e^{-\\alpha x^2}dx$. Hermite polynomials of different degree are orthogonal with this weight, so the integral is zero and the transition is forbidden. Only $v' = 1$ survives from $v = 0$. Overtones such as $0 \\rightarrow 2$ are seen in real spectra because the potential is not exactly harmonic (Section 13.5).</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "ai1",
+   "concept": "ir-selection-rules"
+  },
+  {
+   "exercise": "ai1",
+   "concept": "hermite-recurrence"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-principal",
+   "kind": "correction",
+   "html": "In the particle in a box, $n$ is the box's own quantum number; the principal quantum number belongs to the hydrogen atom."
+  },
+  {
+   "id": "c-hermite-index",
+   "kind": "correction",
+   "html": "For a transition from $v$ to $v + 1$ the integrand holds $H_{v+1}$ and $H_v$; the book writes $H_{v+1}$ twice here and in the next two lines."
+  },
+  {
+   "id": "c-pull-out",
+   "kind": "correction",
+   "html": "The dipole moment changes with $x$, so it cannot simply be taken out of the integral. Writing $\\mu = \\mu_0 + (d\\mu/dx)\\,x$, the $\\mu_0$ term vanishes by orthogonality, and $d\\mu/dx$ comes out with an $x$ left in the integrand, which the Hermite relationship below then removes (Section 5.5)."
+  }
+ ]
+}

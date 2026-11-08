@@ -81,7 +81,8 @@ class Drafter:
             return f"\x00{len(maths) - 1}\x00"
         p = re.sub(r"\$[^$]+\$", hold, s)
         p = self.refs(p)
-        p = re.sub(r"!\[([^\]]*)\]\(media/([^)]+)\)", lambda m: f'<img src="/media/{self.chdir}/{m.group(2)}" alt="{html.escape(m.group(1))}">', p)
+        # a file name may hold a pair of parentheses (12.13's Energy_level_Diagram_(1).jpg)
+        p = re.sub(r"!\[([^\]]*)\]\(media/((?:[^()\s]|\([^()\s]*\))+)\)", lambda m: f'<img src="/media/{self.chdir}/{m.group(2)}" alt="{html.escape(m.group(1))}">', p)
         p = re.sub(r"\[([^\]]+)\]\(page:(\d+)\)", lambda m: f'<a href="{PAGE_URL.get(m.group(2), "#")}">{m.group(1)}</a>', p)
         p = re.sub(r"\[([^\]]+)\]\((https?://(?:[^()\s]|\([^()\s]*\))+)\)", r'<a href="\2">\1</a>', p)
         p = re.sub(r"\{term:([^{}]+)\}", r"<strong>\1</strong>", p)
@@ -171,6 +172,8 @@ class Drafter:
         tex = tex.replace("\u2019", "'")  # a right quote written for a prime (8.3's $r’$)
         tex = tex.replace("\u00bd", "\\tfrac{1}{2}")  # the vulgar fraction ½ (8.8's $^2S_{½}$), which KaTeX has no metrics for
         tex = tex.replace("\u0127", "\\hbar ")  # ħ typed in maths (8.4's $+ħ/2$)
+        tex = tex.replace("\u2013", "-")  # an en dash written for a minus (14.5's (1 – σ)), which KaTeX has no metrics for
+        tex = tex.replace("\u00b5", "\\mu ")  # the micro sign written for μ (14.5's µ_0), which KaTeX has no metrics for
         tex = re.sub(r"\\label(?!\s*\{)", "", tex)  # a bare \\label with no argument (8.4's γ_s display), which KaTeX cannot parse
         tex = re.sub(r"\\op\s*\{([^{}]*)\}", r"\\hat{\1}", tex)
         # the site's \\braket{a}{b} takes two arguments; KaTeX's takes one, \\braket{a|b} (4.S, 3.S)
@@ -248,6 +251,11 @@ class Drafter:
             tex = tex[:body.start(1)] + "".join(rows) + tex[body.end(1):]
             return f"$$ {tex} $$"
         tex = tex.replace("\\nonumber", "").replace("\\notag", "")
+        # a starred align whose rows print one and the same \tag (14.7's shift operators, "(14)"
+        # on both rows): KaTeX's aligned takes no \tag inside, so the display takes it once
+        own = re.findall(r"\\tag\s*\{([^}]*)\}", tex)
+        if len(own) > 1 and len(set(own)) == 1 and re.search(r"\\begin\{align\*\}", tex):
+            tex = re.sub(r"\s*\\tag\s*\{[^}]*\}", "", tex).rstrip() + f" \\tag{{{own[0]}}}"
         tex = re.sub(r"\\begin\{align\*?\}", r"\\begin{aligned}", tex)
         tex = re.sub(r"\\end\{align\*?\}", r"\\end{aligned}", tex)
         if nums:
@@ -438,10 +446,17 @@ class Drafter:
         if kind == "exercise" and printed and printed.startswith("Example"):
             kind = "example"
         if kind == "example":
-            eid = self.uid("ex-" + num.replace(".", "-").lower())  # 4.6's "Example 4.6.2A": ex-4-6-2a
             inner = "\n".join(self.boxes(body))
-            # the label the book prints, where it names the other kind (3.7's "Exercise 3.7.2")
-            t = (printed or f"Example {num}") + (f" · {self.inline(title)}" if title else "")
+            if num == "?":
+                # an example the book does not number: 12.14's "2", "4", "3" are its printed labels,
+                # 12.15's "Rotation" its title; the id comes from the label (ex-2, ex-rotation)
+                title = re.sub(r"^Example\s*:\s*", "", title)  # 13.13's "Example: Evaluating …" prints the word once
+                eid = self.uid("ex-" + slug(title))
+                t = f"Example {title}" if re.fullmatch(r"\d+[A-Za-z]?", title) else "Example" + (f" · {self.inline(title)}" if title else "")
+            else:
+                eid = self.uid("ex-" + num.replace(".", "-").lower())  # 4.6's "Example 4.6.2A": ex-4-6-2a
+                # the label the book prints, where it names the other kind (3.7's "Exercise 3.7.2")
+                t = (printed or f"Example {num}") + (f" · {self.inline(title)}" if title else "")
             return f'<div class="example" id="{eid}">\n<h3>{t}</h3>\n{inner}\n</div>'
         # exercise: prompt is everything before the first **Answer…**/**Solution…**
         k = next((i for i, l in enumerate(body) if re.match(r"^\*\*(Answer|Solution)", l)), len(body))
@@ -495,7 +510,8 @@ class Drafter:
             if "{section:attributions}" in head:
                 rec["credits"] = [re.sub(r"<[^>]+>", "", self.inline(x[2:])) for x in body if x.startswith("- ")]
                 continue
-            if h.lower().startswith("summary"):
+            # only a header that is "Summary" itself, not 12.15's "Summary of the Steps Involved…"
+            if h.strip().lower() == "summary":
                 rec["summary_html"] = "".join(self.boxes(body))
                 continue
             if re.search(r"^solutions? to (practice )?problems", h, re.I):

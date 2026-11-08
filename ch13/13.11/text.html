@@ -1,0 +1,42 @@
+<section id="time-dependent-perturbations">
+<h2>Time-dependent perturbations</h2>
+<p>Time-independent <span data-concept="perturbation-theory">perturbation theory</span> was presented by Erwin Schrödinger in a 1926 paper, shortly after he produced his theories in wave mechanics. In time-independent <span data-concept="perturbation-theory">perturbation theory</span>, the perturbation Hamiltonian is <strong>static</strong> (i.e., possesses no time dependence). <span data-concept="time-dependent-perturbation-theory">Time-dependent perturbation theory</span>, developed by Paul Dirac, studies the effect of a time-dependent perturbation $\kV(\kt)$ applied to a <strong>time-independent Hamiltonian</strong> $\kHzero$. Since the perturbed Hamiltonian is time-dependent, so are its energy levels and eigenstates. Thus, the goals of <span data-concept="time-dependent-perturbation-theory">time-dependent perturbation theory</span> are slightly different from time-independent <span data-concept="perturbation-theory">perturbation theory</span>, where one may be interested in the following quantities:</p>
+<ul><li>The time-dependent expectation value of some observable $A$, for a given initial state.</li><li>The time-dependent <span data-concept="probability-amplitudes">amplitudes</span> of those quantum states that are energy eigenkets (eigenvectors) in the unperturbed system.</li></ul>
+<p>The first quantity is important because it gives rise to the classical result of a measurement performed on a macroscopic number of copies of the perturbed system. The second quantity looks at the time-dependent probability of occupation for each eigenstate. This is particularly useful in laser physics, where one is interested in the populations of different atomic states in a gas when a time-dependent electric field is applied. We will briefly examine the method behind Dirac's formulation of <span data-concept="time-dependent-perturbation-theory">time-dependent perturbation theory</span>. Choose an energy basis $| n \rangle$ for the unperturbed system. (We drop the (0) superscripts for the eigenstates, because it is not useful to speak of energy levels and eigenstates for the perturbed system.)</p>
+<p>If the unperturbed system is in eigenstate $|j \rangle$ at time $\kt = 0$, its state at subsequent times varies only by a phase (this is the Schrödinger picture, where state vectors evolve in time and operators are constant)</p>
+$$ |j(\kt)\rangle =e^{-iE_{j}\kt/\hbar }|j\rangle $$
+<p>Now, introduce a time-dependent perturbing Hamiltonian $\kHone(\kt)$. The Hamiltonian of the perturbed system is</p>
+$$ H=\kHzero+\kHone(\kt) $$
+<p>Let $|\kpsi (\kt)\rangle$ denote the quantum state of the perturbed system at time $\kt$ and obeys the <span data-concept="time-dependent-schrodinger-equation">time-dependent Schrödinger equation</span>,</p>
+$$ H|\kpsi (\kt)\rangle =i\hbar {\dfrac {\partial }{\partial \kt}}|\kpsi (\kt)\rangle $$
+<p>The quantum state at each instant can be expressed as a linear combination of the complete eigenbasis of $| n \rangle$:</p>
+$$ |\kpsi (\kt)\rangle =\sum _{n}c_{n}(\kt)e^{-i\kEn\kt/\hbar }|n\rangle $$
+<p>where the $c_n(\kt)$ coefficients are to be determined complex functions of t which we will refer to as <strong><span data-concept="probability-amplitudes">amplitudes</span></strong></p>
+<p>We have explicitly extracted the exponential phase factors $\exp(-i\kEn\kt/\hbar)$ on the right hand side. This is only a matter of convention, and may be done without loss of generality. The reason we go to this trouble is that when the system starts in the state $|j\rangle$ and no perturbation is present, the <span data-concept="probability-amplitudes">amplitudes</span> have the convenient property that, for all t, $c_j(\kt) = 1$ and $c_n(\kt) = 0$ if $n \neq j$.</p>
+<p>The square of the absolute <span data-concept="probability-amplitudes">amplitude</span> $c_n(\kt)$ is the probability that the system is in state $n$ at time $\kt$, since</p>
+$$ |\kpsi (\kt)\rangle =\sum _{n}c_{n}(\kt)e^{-i\kEn\kt/\hbar }|n\rangle $$
+<p>Plugging into the Schrödinger equation and using the fact that $\partial/ \partial \kt$ acts by a chain rule, one obtains</p>
+<figure class="dv" id="drv-amplitude-equations"></figure>
+<p>The matrix elements of $\kHone$ play a similar role as in time-independent <span data-concept="perturbation-theory">perturbation theory</span>, being proportional to the rate at which <span data-concept="probability-amplitudes">amplitudes</span> are shifted between states. Note, however, that the direction of the shift is modified by the exponential phase factor. Over times much longer than the energy difference $E_k − \kEn$, the phase winds around 0 several times. If the time-dependence of $\kHone$ is sufficiently slow, this may cause the state <span data-concept="probability-amplitudes">amplitudes</span> to oscillate (e.g., such oscillations are useful for managing radiative transitions in a laser).</p>
+</section>
+
+<section id="two-level-system">
+<h2>Two-Level System</h2>
+<p>Consider the <span data-concept="two-level-system">two level system</span> (i.e. $n=1,2$)</p>
+$$ | \kpsi \rangle = \sum_ {n=1,2} c_n(\kt) | n \rangle_o $$
+<p>Solution of <span data-concept="time-dependent-perturbation-theory">time-dependent perturbation</span> for <span data-concept="two-level-system">two level system</span>:</p>
+$$ i \hbar \dfrac{\partial c_1(\kt)}{\partial \kt} = c_1(\kt) H_{11}(\kt) + c_2 e^{-i \komegazero \kt} H_{12} (\kt) $$
+$$ i \hbar \dfrac{\partial c_2(\kt)}{\partial \kt} = c_2(\kt) H_{22}(\kt) + c_1 e^{+i \komegazero \kt} H_{21} (\kt) $$
+<p>where the matrix elements of the permutation<sup class="fn" data-note="c-perturbation"></sup> (in terms of the eigenstates of $H(0)$) are</p>
+$$ \langle m | \kHone(\kt) | n \rangle = \kHmn(\kt) $$
+<p>Assume initial state is $n=1$, and $H_{11}=H_{22}=0$</p>
+$$ | \kpsi (\kt=0) \rangle = |1 \rangle $$
+<h3>Transition Probability</h3>
+<p>Assume initial state is $n=1$, and <span data-concept="transition-probability">probability of transition from $n=1$ state to $n=2$ state</span> is:</p>
+<figure class="dv" id="drv-transition-probability"></figure>
+<p>What does this mean? Strangely, it means that the probability of making a transition is actually oscillating sinusoidally (squared)! If you want to cause a transition, should turn off perturbation after time $\pi / |\komega- \komegazero|$or some odd multiple, when the system is in upper state with maximum probability.</p>
+<figure class="sim" id="sim-two-level" data-original="/media/ch13/79089-97011e13-185b-42e8-903b-95b717cf8d76.png,/media/ch13/79090-5a8be543-3739-4acb-bb73-7cb5d7fd6651.png" data-original-caption="Diagram showing two states, |1⟩ and |2⟩, with a pink dashed arrow indicating a transition between them. Graph showing a curve with a peak around the value 1 on the t-axis and labeled axes for ω - ω₀ and t.">
+  <div class="sim-head"><span class="eyebrow">Figure</span><span>Play to switch the light on. Population flows from $|1\rangle$ to $|2\rangle$ and back, and the line below it sharpens and grows as time runs. Move <span data-type="frequency">the detuning</span> toward zero and the swing slows and deepens.</span></div>
+</figure>
+<p>$P_{12}(\kt)$ is <span data-concept="resonance-condition">peaked at $\komega- \komegazero = 0$</span>. The height of $|H_{12}\kt/2 \hbar |^2$ and width of $4\pi/\kt$ gets higher and narrower as time goes on. Recall this is perturbative treatment, however, and $P_{12}(\kt)$ cannot get bigger than 1, so <span data-concept="perturbation-series-breakdown">perturbation theory breaks down eventually</span>.</p>
+</section>

@@ -1,0 +1,319 @@
+{
+ "id": "13.6",
+ "module": "2399",
+ "chapter": "13",
+ "title": "Electronic Spectra Contain Electronic, Vibrational, and Rotational Information",
+ "short": "Electronic spectra",
+ "lead": "An electronic transition lifts a molecule from one potential well to another, and it rarely leaves the vibrational and rotational state alone. The visible absorption of iodine shows what the band structure of such a spectrum looks like.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "Adapted from a LibreTexts ChemWiki module under CC BY 4.0, with OpenStax University Physics' level diagram under CC BY 3.0; the iodine note's numbered references (1) and (2) point to a lab handout the page does not include.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercise in this section. The one exercise, on the 0 → 0 band of a diatomic from the constants of its two states, was written by AI with an AI solution, its answer computed; its Bloom level and concept tag were chosen by AI.",
+ "figures": [
+  {
+   "id": "sim-vibronic",
+   "kind": "sim",
+   "number": "13.6.1",
+   "folds": [
+    "13.6.2"
+   ],
+   "originals": [
+    "/media/ch13/125629-CNX_UPhysics_42_02_Trans.jpg",
+    "/media/ch13/10545-2145c143-87a9-460d-abdd-bb05f4a9e5a8.png"
+   ],
+   "original_caption": "Three types of energy levels in a diatomic molecule: electronic, vibrational, and rotational. If the vibrational quantum number (n) changes by one unit, then the rotational quantum number (l) changes by one unit. (CC BY 3.0; OpenStax). As you can see, electronic transitions involve two energy potential wells! The vibrational levels are included, but rotational levels are excluded. (CC BY 4.0; LibreTexts)",
+   "draws": [
+    "energy",
+    "wavenumber",
+    "length"
+   ],
+   "facts": [
+    "spectrum"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "fig-iodine",
+   "kind": "figure",
+   "originals": [
+    "/media/ch13/125628-imageedit_1_4206612237.gif"
+   ],
+   "draws": [],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "kept as the book prints it"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "opening",
+   "concept": "vibronic-transition",
+   "verb": "uses"
+  },
+  {
+   "span": "not-purely-electronic",
+   "concept": "rovibrational-spectrum",
+   "verb": "uses"
+  },
+  {
+   "span": "not-purely-electronic",
+   "concept": "potential-energy-curve",
+   "verb": "uses"
+  },
+  {
+   "span": "not-purely-electronic",
+   "concept": "born-oppenheimer-approximation",
+   "verb": "uses"
+  },
+  {
+   "span": "not-purely-electronic",
+   "concept": "anharmonic-energy-levels",
+   "verb": "uses"
+  },
+  {
+   "span": "not-purely-electronic",
+   "concept": "nonrigid-rotor-energy-levels",
+   "verb": "uses"
+  },
+  {
+   "span": "not-purely-electronic",
+   "concept": "vibronic-transition",
+   "verb": "introduces"
+  },
+  {
+   "span": "not-purely-electronic",
+   "concept": "electronic-term-energy",
+   "verb": "introduces"
+  },
+  {
+   "span": "not-purely-electronic",
+   "concept": "vibronic-energy",
+   "verb": "introduces"
+  },
+  {
+   "span": "not-purely-electronic",
+   "concept": "vibronic-band-wavenumber",
+   "verb": "introduces"
+  },
+  {
+   "span": "not-purely-electronic",
+   "concept": "zero-zero-transition",
+   "verb": "introduces"
+  },
+  {
+   "span": "not-purely-electronic",
+   "concept": "vibronic-band-structure",
+   "verb": "introduces"
+  },
+  {
+   "span": "not-purely-electronic",
+   "concept": "convergence-limit",
+   "verb": "introduces"
+  },
+  {
+   "span": "not-purely-electronic",
+   "concept": "dissociation-energy",
+   "verb": "uses"
+  },
+  {
+   "span": "not-purely-electronic",
+   "concept": "well-depth",
+   "verb": "uses"
+  },
+  {
+   "span": "not-purely-electronic",
+   "concept": "zero-point-energy",
+   "verb": "uses"
+  },
+  {
+   "span": "not-purely-electronic",
+   "concept": "hot-band",
+   "verb": "reinforces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "ai1",
+   "source_id": "A common transition of importance is the",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "not-purely-electronic",
+   "prompt": "<p>A diatomic molecule has an excited electronic state with $\\tilde{T}_{el} = 20\\,000$ cm⁻¹, $\\tilde{\\nu}'_e = 1500$ cm⁻¹ and $\\tilde{\\chi}'_e\\tilde{\\nu}'_e = 15$ cm⁻¹. Its ground state has $\\tilde{\\nu}''_e = 2000$ cm⁻¹ and $\\tilde{\\chi}''_e\\tilde{\\nu}''_e = 20$ cm⁻¹. Find the wavenumber $\\tilde{\\nu}_{00}$ of the $0 \\rightarrow 0$ band.</p>",
+   "answer": {
+    "type": "number",
+    "value": 19751.25,
+    "unit": "cm⁻¹",
+    "tol": 0.0005,
+    "generated_by": "ai",
+    "hint": "The 0 → 0 band is $\\tilde{T}_{el}$ plus the zero-point energy of the upper well minus that of the lower well.",
+    "solution": "<p>$\\tilde{\\nu}_{00} = \\tilde{T}_{el} + \\left(\\tfrac12\\tilde{\\nu}'_e - \\tfrac14\\tilde{\\chi}'_e\\tilde{\\nu}'_e\\right) - \\left(\\tfrac12\\tilde{\\nu}''_e - \\tfrac14\\tilde{\\chi}''_e\\tilde{\\nu}''_e\\right)$. The upper zero-point energy is $750 - 3.75 = 746.25$ cm⁻¹ and the lower one is $1000 - 5 = 995$ cm⁻¹, so $\\tilde{\\nu}_{00} = 20\\,000 + 746.25 - 995 = 19\\,751.25$ cm⁻¹. The band lies below $\\tilde{T}_{el}$ because the ground well's zero-point energy is the larger one.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "ai1",
+   "concept": "zero-zero-transition"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-microwave",
+   "kind": "correction",
+   "html": "Microwave and infrared photons drive rotational and vibrational transitions. Electronic transitions need visible or ultraviolet light, as the next sentence says."
+  },
+  {
+   "id": "c-translational",
+   "kind": "correction",
+   "html": "Translational terms."
+  },
+  {
+   "id": "c-order",
+   "kind": "correction",
+   "html": "With $'$ for the upper state and $''$ for the lower, as the rest of the section uses them, an absorption line is the upper level minus the lower: $\\tilde{\\nu}_{obs} = \\tilde{E}'(v') - \\tilde{E}''(v'')$."
+  },
+  {
+   "id": "c-vzero",
+   "kind": "correction",
+   "html": "The lowest level of the lower state, $v'' = 0$."
+  },
+  {
+   "id": "c-vprime",
+   "kind": "correction",
+   "html": "The last two terms of Equation 13.6.4 are in $v'$, the upper state's quantum number: $+\\,\\tilde{\\nu}'_e v' - \\tilde{\\chi}'_e\\tilde{\\nu}'_e v'(v'+1)$."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "band",
+   "what": "the wavenumber of a vibronic band",
+   "source": "Physical Chemistry (LibreTexts), 13.6 Electronic Spectra Contain Electronic, Vibrational, and Rotational Information",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "text": "The band starts from the lowest level of the lower state, $v'' = 0$, and rotation is left out.",
+       "src": "13.6"
+      },
+      {
+       "tex": "\\tilde{E}'(v') = \\kTtel + \\knute'\\left(v'+\\tfrac{1}{2}\\right) - \\tilde{\\chi}'_e\\knute'\\left(v'+\\tfrac{1}{2}\\right)^2",
+       "src": "(13.6.2)"
+      },
+      {
+       "tex": "\\tilde{E}''(v'') = \\knute''\\left(v''+\\tfrac{1}{2}\\right) - \\tilde{\\chi}''_e\\knute''\\left(v''+\\tfrac{1}{2}\\right)^2",
+       "src": "(13.6.2)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{obs}{\\knutobs} = \\mk{up}{\\tilde{E}'(v')} - \\mk{low}{\\tilde{E}''(v'')}",
+      "src": "(13.6.3)"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{obs}{\\knutobs} = \\mk{T}{\\kTtel} + \\mk{lin}{\\knute'\\left(v'+\\tfrac{1}{2}\\right)} - \\mk{sq}{\\tilde{\\chi}'_e\\knute'\\left(v'+\\tfrac{1}{2}\\right)^2} - \\mk{low}{\\tilde{E}''(v'')}",
+       "uses": [
+        1
+       ],
+       "map": {
+        "up": [
+         "T",
+         "lin",
+         "sq"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{obs}{\\knutobs} = \\mk{T}{\\kTtel} + \\mk{lin}{\\knute'\\left(v'+\\tfrac{1}{2}\\right)} - \\mk{sq}{\\tilde{\\chi}'_e\\knute'\\left(v'+\\tfrac{1}{2}\\right)^2} - \\mk{low}{\\left(\\tfrac{1}{2}\\knute'' - \\tfrac{1}{4}\\tilde{\\chi}''_e\\knute''\\right)}",
+       "uses": [
+        0,
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{obs}{\\knutobs} = \\mk{T}{\\kTtel} + \\mk{half}{\\tfrac{1}{2}\\knute'} + \\mk{lin}{\\knute' v'} - \\mk{qa}{\\tfrac{1}{4}\\tilde{\\chi}'_e\\knute'} - \\mk{sq}{\\tilde{\\chi}'_e\\knute' v'(v'+1)} - \\mk{low}{\\left(\\tfrac{1}{2}\\knute'' - \\tfrac{1}{4}\\tilde{\\chi}''_e\\knute''\\right)}",
+       "uses": [],
+       "map": {
+        "lin": [
+         "half",
+         "lin"
+        ],
+        "sq": [
+         "qa",
+         "sq"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{obs}{\\knutobs} = \\mk{T}{\\kTtel} + \\mk{zp}{\\left(\\tfrac{1}{2}\\knute' - \\tfrac{1}{4}\\tilde{\\chi}'_e\\knute'\\right)} - \\mk{low}{\\left(\\tfrac{1}{2}\\knute'' - \\tfrac{1}{4}\\tilde{\\chi}''_e\\knute''\\right)} + \\mk{lin}{\\knute' v'} - \\mk{sq}{\\tilde{\\chi}'_e\\knute' v'(v'+1)}",
+       "uses": [],
+       "map": {
+        "half": "zp",
+        "qa": "zp"
+       }
+      }
+     ],
+     "num": "(13.6.4)",
+     "src": "13.6",
+     "note": "The book prints the last two terms of (13.6.4) in $v''$. They come from the upper state's levels, so they are in $v'$; $v''$ is 0 here."
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "text": "The $0 \\rightarrow 0$ transition ends on the lowest level of the upper state, $v' = 0$.",
+       "src": "13.6"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{obs}{\\knutobs} = \\mk{T}{\\kTtel} + \\mk{zp}{\\left(\\tfrac{1}{2}\\knute' - \\tfrac{1}{4}\\tilde{\\chi}'_e\\knute'\\right)} - \\mk{low}{\\left(\\tfrac{1}{2}\\knute'' - \\tfrac{1}{4}\\tilde{\\chi}''_e\\knute''\\right)} + \\mk{lin}{\\knute' v'} - \\mk{sq}{\\tilde{\\chi}'_e\\knute' v'(v'+1)}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{obs}{\\knutzz} = \\mk{T}{\\kTtel} + \\mk{zp}{\\left(\\tfrac{1}{2}\\knute' - \\tfrac{1}{4}\\tilde{\\chi}'_e\\knute'\\right)} - \\mk{low}{\\left(\\tfrac{1}{2}\\knute'' - \\tfrac{1}{4}\\tilde{\\chi}''_e\\knute''\\right)} + \\mk{lin}{\\knute' \\cdot 0} - \\mk{sq}{\\tilde{\\chi}'_e\\knute' \\cdot 0 \\cdot 1}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{obs}{\\knutzz} = \\mk{T}{\\kTtel} + \\mk{zp}{\\left(\\tfrac{1}{2}\\knute' - \\tfrac{1}{4}\\tilde{\\chi}'_e\\knute'\\right)} - \\mk{low}{\\left(\\tfrac{1}{2}\\knute'' - \\tfrac{1}{4}\\tilde{\\chi}''_e\\knute''\\right)}",
+       "uses": []
+      }
+     ],
+     "src": "13.6"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,222 @@
+{
+ "id": "13.5",
+ "module": "2401",
+ "chapter": "13",
+ "title": "Vibrational Overtones",
+ "short": "Vibrational overtones",
+ "lead": "A real bond is not a perfect spring. Keeping the cubic term of the potential changes the vibrational levels and the selection rule, and with them the lines the infrared spectrum shows beyond the fundamental.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "Adapted from a LibreTexts ChemWiki module curated by Delmar Larsen under CC BY 4.0, with Mark Somoza's Morse curve under CC BY-SA 3.0; Figure 13.5.2 prints Section 5.3's Taylor-series plots again and is drawn once there, and the page's reference list (Nakamoto; McAfee, J. Chem. Educ. 2000, 77, 1122; Stuart, Infrared Spectroscopy, 2004) is left out.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "Both exercises are the book's and are unkeyed; their solutions, Bloom levels and concept tags were written by AI, and the numeric answers were computed. Numeric answers accept a 2% tolerance.",
+ "figures": [
+  {
+   "id": "fig-13-5-1",
+   "kind": "photo",
+   "number": "13.5.1",
+   "widths": [
+    430
+   ],
+   "draws": []
+  },
+  {
+   "id": "sim-overtones",
+   "kind": "sim",
+   "number": "13.5.3",
+   "folds": [
+    "13.5.4"
+   ],
+   "originals": [
+    "/media/ch13/78873-=vib_diatomic_molecule.png",
+    "/media/ch13/78875-=energy_level_compression.png"
+   ],
+   "original_caption": "A diagram for a vibrating diatomic molecule. The levels denoted by vibrational quantum numbers v represent the potential energy for the harmonic (quadratic) oscillator. The transition $0 \\rightarrow 1$ is the fundamental, transitions $0 \\rightarrow n$ (n>1) are called overtones, and transitions $1 \\rightarrow n$ (n > 1) are called hot transitions (hot bands). An exaggerated view of the energy levels. (a) would be the harmonic oscillator, with the evenly spaced out energy levels. (b) would be the anharmonic, with the energy levels compressing until they converge.",
+   "draws": [
+    "energy",
+    "wavenumber"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "opening",
+   "concept": "harmonic-oscillator-limitations",
+   "verb": "reinforces"
+  },
+  {
+   "span": "anharmonicity",
+   "concept": "harmonic-oscillator",
+   "verb": "uses"
+  },
+  {
+   "span": "anharmonicity",
+   "concept": "potential-taylor-expansion",
+   "verb": "reinforces"
+  },
+  {
+   "span": "anharmonicity",
+   "concept": "anharmonicity",
+   "verb": "reinforces"
+  },
+  {
+   "span": "anharmonicity",
+   "concept": "force-constant",
+   "verb": "uses"
+  },
+  {
+   "span": "anharmonicity",
+   "concept": "morse-potential",
+   "verb": "uses"
+  },
+  {
+   "span": "anharmonicity",
+   "concept": "anharmonic-energy-levels",
+   "verb": "reinforces"
+  },
+  {
+   "span": "overtones",
+   "concept": "fundamental-and-overtones",
+   "verb": "uses"
+  },
+  {
+   "span": "overtones",
+   "concept": "overtone-transition",
+   "verb": "reinforces"
+  },
+  {
+   "span": "overtones",
+   "concept": "ir-selection-rules",
+   "verb": "uses"
+  },
+  {
+   "span": "overtones",
+   "concept": "hot-band",
+   "verb": "introduces"
+  },
+  {
+   "span": "overtones",
+   "concept": "anharmonic-selection-rule",
+   "verb": "introduces"
+  },
+  {
+   "span": "overtones",
+   "concept": "overtone-positions",
+   "verb": "introduces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "e1",
+   "source_id": "exr:13.5.1",
+   "source_number": "Exercise 13.5.1",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "overtones",
+   "prompt": "<p>$\\mathrm{HCl}$ has a fundamental band at 2885.9 cm<sup>−1 </sup>and an overtone at 5668.1 cm<sup>−1</sup> Calculate $\\tilde{\\nu}$ and $\\tilde{\\chi_e}$.</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "ν̃",
+      "value": 2989.6,
+      "unit": "cm⁻¹",
+      "tol": 0.001,
+      "hint": "Write both lines as differences of the anharmonic levels: 0 → 1 and 0 → 2."
+     },
+     {
+      "part": "χ̃e",
+      "value": 0.01734,
+      "tol": 0.02
+     }
+    ],
+    "solution": "<p>From $E_v = \\tilde{\\nu}(v + \\tfrac12) - \\tilde{\\chi}_e\\tilde{\\nu}(v + \\tfrac12)^2$, the line from $v = 0$ to $v$ is $E_v - E_0 = v\\tilde{\\nu} - v(v+1)\\tilde{\\chi}_e\\tilde{\\nu}$. So the fundamental is $\\tilde{\\nu} - 2\\tilde{\\chi}_e\\tilde{\\nu} = 2885.9$ cm⁻¹ and the first overtone is $2\\tilde{\\nu} - 6\\tilde{\\chi}_e\\tilde{\\nu} = 5668.1$ cm⁻¹.</p><p>Twice the first equation is $2\\tilde{\\nu} - 4\\tilde{\\chi}_e\\tilde{\\nu} = 5771.8$ cm⁻¹. Subtracting the second gives $2\\tilde{\\chi}_e\\tilde{\\nu} = 103.7$ cm⁻¹, so $\\tilde{\\chi}_e\\tilde{\\nu} = 51.85$ cm⁻¹ and $\\tilde{\\nu} = 2885.9 + 103.7 = 2989.6$ cm⁻¹. Then $\\tilde{\\chi}_e = 51.85/2989.6 = 0.0173$.</p>"
+   }
+  },
+  {
+   "id": "e2",
+   "source_id": "exr:13.5.2",
+   "source_number": "Exercise 13.5.2",
+   "kind": "exercise",
+   "bloom": "Understand",
+   "place": {
+    "at": "end"
+   },
+   "cite": "anharmonicity",
+   "prompt": "<p>Write out the Taylor series, and comment on the trend in the increasing terms. Using a test number $x$, please add terms 3, 4, and 5, then compare this to term 2. How do they compare? We have seen that the anharmonic terms increase the accuracy of our oscillator approximation. Why don't we care so much about terms past the second?</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "Set every derivative to 1 and compare $x^n/n!$ for a small displacement $x$.",
+    "solution": "<p>The series is $V(R) = V(R_e) + \\tfrac{1}{2!}V''(R_e)x^2 + \\tfrac{1}{3!}V'''(R_e)x^3 + \\tfrac{1}{4!}V''''(R_e)x^4 + \\tfrac{1}{5!}V^{(5)}(R_e)x^5 + \\dots$ with $x = R - R_e$; the linear term is zero at the bottom of the well. Each term carries one more power of $x$ and a larger factorial, so for a small displacement the terms shrink quickly.</p><p>With every derivative set to 1 and $x = 0.1$: term 2 is $0.1^2/2 = 5.0\\times10^{-3}$, term 3 is $0.1^3/6 = 1.7\\times10^{-4}$, term 4 is $0.1^4/24 = 4.2\\times10^{-6}$ and term 5 is $0.1^5/120 = 8.3\\times10^{-8}$. Terms 3 to 5 add up to $1.7\\times10^{-4}$, about 3% of term 2, and almost all of that is the cubic term.</p><p>The low vibrational levels keep the bond close to $R_e$, where $x$ is small, so the quadratic term carries nearly all of the energy and the cubic term gives a small correction, the anharmonicity constant $\\tilde{\\chi}_e \\ll 1$. Higher terms change the levels by far less than that and matter only for large stretches near dissociation.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "e1",
+   "concept": "anharmonic-energy-levels"
+  },
+  {
+   "exercise": "e1",
+   "concept": "overtone-positions"
+  },
+  {
+   "exercise": "e2",
+   "concept": "potential-taylor-expansion"
+  },
+  {
+   "exercise": "e2",
+   "concept": "anharmonicity"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-linear",
+   "kind": "correction",
+   "html": "The term that vanishes is the linear one, $(dV/dR)_{R_e}(R-R_e)$, which Equation 13.5.1 already leaves out. The constant $V(R_e)$ is the first term printed, and it stays."
+  },
+  {
+   "id": "c-delta-v",
+   "kind": "correction",
+   "html": "The rule is on the vibrational quantum number: $\\Delta v = $ any number."
+  },
+  {
+   "id": "c-delta-v2",
+   "kind": "correction",
+   "html": "The fundamental transitions are those with $\\Delta v = \\pm 1$."
+  },
+  {
+   "id": "c-table",
+   "kind": "correction",
+   "html": "The last two columns are calculated, not observed. The harmonic column is $v$ times the observed fundamental, 2885.9 cm⁻¹; the anharmonic column is $v\\tilde{\\nu} - v(v+1)\\tilde{\\chi}_e\\tilde{\\nu}$ with $\\tilde{\\nu} = 2990.9$ cm⁻¹ and $\\tilde{\\chi}_e\\tilde{\\nu} = 52.8$ cm⁻¹."
+  }
+ ]
+}

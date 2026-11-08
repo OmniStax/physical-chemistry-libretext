@@ -734,3 +734,31 @@ Tool fix: `md2html.py` braces an exponent written as a bare `\left( … \right)`
 occupations note), which KaTeX refuses; Chapters 1–12's 262 drafts regenerated with the
 old and new script in a scratch folder: identical. `lt2md.py` unchanged, so no source.md
 reconverted. `check:content`: no errors, no warnings.
+
+## Chapter 14 prep · 2026-11-08
+
+Prep only, no section built. Fetched Chapter 14's 36 images into `media/ch14/`, plus the
+five answer images of Soderberg's *Chapter 5 Solutions*, which 14.6's "Solution" links
+point at (6474–6482). Converted the landing page (`intro/`), 14.1–14.9, 14.S (`summary/`)
+and the empty 14.E; wrote `ch14/exploration.md`, `ch14/config.md` (agreed on Chapter 1's
+terms), `ch14/chapter.json` (sections 14.1, 14.4–14.8, the intro and summary records, 70
+variables) and merged `ch14/book-rows.json`: 0 types, 42 symbols, 48 concepts, 73 edges
+(Hasse-checked). Drafts made for all 11 pages.
+
+Found: 14.2 and 14.3 hold Zielinski's uncertainty text again (as 9.11 and 19.E) and 14.9
+reads "under development": not built, left out of `chapter.json`; their exercise is 1.9's
+card already. 14.6 is Soderberg 5.5 with five questions printed as "Example 5.6"–"5.10"
+(keyed by the linked manual; E5.10's key wrong); 14.7 is a Stack Exchange thread (BY-SA
+proposed); 14.8 prints "$H_a$s" for "has" five times. Figures: one moving 3D Sim (Larmor
+precession, 14.5) and five still folds (field strength, n + 1 splitting, two couplings,
+AX → A₂, vinyl dd). Two derivations to build, both in 14.7.
+
+Literature from memory, **unchecked**: that the molecule 14.6 draws for "triclosan" is not
+triclosan (5-chloro-2-(2,4-dichlorophenoxy)phenol). No literature numbers are used in
+figures: γ/2π comes from the book's own 100 MHz ≈ 2.4 T.
+
+Tool fixes: `lt2md.py` repairs half-TeX, half-dollar inline pairs (14.7); Chapters 1–13
+reconverted to scratch, all 154 source.md byte-identical. `md2html.py` sets a repeated
+row `\tag` in an `align*` once, and maps the en dash and micro sign in maths; Chapters
+1–13's drafts regenerated: 9 change, only where an en dash stood for a minus.
+`check:content`: no errors, no warnings.

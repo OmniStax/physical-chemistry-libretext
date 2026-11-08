@@ -1,0 +1,395 @@
+{
+ "id": "13.11",
+ "module": "13674",
+ "chapter": "13",
+ "title": "Time-Dependent Perturbation Theory",
+ "short": "Time-dependent perturbations",
+ "lead": "Light switched on at a given moment is a perturbation that changes with time. Dirac's method follows the amplitudes of the unperturbed states while the perturbation acts, and a system of two levels shows how a transition builds up.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "Adapted from Wikipedia and shared under CC BY-SA 4.0; a stray “{\\displaystyle |j\\rangle }” that the Wikipedia source left in the text is dropped.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The one exercise was written by AI with an AI solution; its Bloom level and concept tags were chosen by AI. Numeric answers accept a 2% tolerance.",
+ "figures": [
+  {
+   "id": "sim-two-level",
+   "kind": "sim",
+   "originals": [
+    "/media/ch13/79089-97011e13-185b-42e8-903b-95b717cf8d76.png",
+    "/media/ch13/79090-5a8be543-3739-4acb-bb73-7cb5d7fd6651.png"
+   ],
+   "original_caption": "Diagram showing two states, |1⟩ and |2⟩, with a pink dashed arrow indicating a transition between them. Graph showing a curve with a peak around the value 1 on the t-axis and labeled axes for ω - ω₀ and t.",
+   "draws": [
+    "frequency",
+    "time"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "time-dependent-perturbations",
+   "concept": "time-dependent-perturbation-theory",
+   "verb": "introduces"
+  },
+  {
+   "span": "time-dependent-perturbations",
+   "concept": "probability-amplitudes",
+   "verb": "introduces"
+  },
+  {
+   "span": "time-dependent-perturbations",
+   "concept": "amplitude-equations",
+   "verb": "introduces"
+  },
+  {
+   "span": "time-dependent-perturbations",
+   "concept": "perturbation-theory",
+   "verb": "uses"
+  },
+  {
+   "span": "time-dependent-perturbations",
+   "concept": "time-dependent-schrodinger-equation",
+   "verb": "uses"
+  },
+  {
+   "span": "time-dependent-perturbations",
+   "concept": "stationary-state",
+   "verb": "uses"
+  },
+  {
+   "span": "time-dependent-perturbations",
+   "concept": "orthonormality",
+   "verb": "uses"
+  },
+  {
+   "span": "two-level-system",
+   "concept": "two-level-system",
+   "verb": "introduces"
+  },
+  {
+   "span": "two-level-system",
+   "concept": "first-order-transition-amplitude",
+   "verb": "introduces"
+  },
+  {
+   "span": "two-level-system",
+   "concept": "transition-probability",
+   "verb": "introduces"
+  },
+  {
+   "span": "two-level-system",
+   "concept": "resonance-condition",
+   "verb": "introduces"
+  },
+  {
+   "span": "two-level-system",
+   "concept": "perturbation-series-breakdown",
+   "verb": "reinforces"
+  },
+  {
+   "span": "two-level-system",
+   "concept": "eulers-formula",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "ai1",
+   "source_id": "should turn off perturbation after time",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "two-level-system",
+   "prompt": "<p>Light is tuned $2.0\\times10^{12}$ rad/s away from the natural frequency of a two-level system, $|\\omega - \\omega_0| = 2.0\\times10^{12}\\ \\text{s}^{-1}$, and its coupling is $|H_{21}|/\\hbar = 2.0\\times10^{11}\\ \\text{s}^{-1}$. The system starts in $|1\\rangle$. (a) After what time is the transition probability $P_{12}$ first at its largest? (b) What is $P_{12}$ then? (c) What would $P_{12}$ be after the same time if the light were exactly on resonance?</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 1.571,
+      "unit": "ps",
+      "hint": "$P_{12}$ is largest when $\\sin^2[(\\omega-\\omega_0)t/2] = 1$."
+     },
+     {
+      "part": "b",
+      "value": 0.01
+     },
+     {
+      "part": "c",
+      "value": 0.0247
+     }
+    ],
+    "solution": "<p>(a) With $P_{12}(t) = \\dfrac{|H_{21}|^2}{\\hbar^2}\\dfrac{\\sin^2[(\\omega-\\omega_0)t/2]}{(\\omega-\\omega_0)^2}$, the sine squared first reaches 1 when $(\\omega-\\omega_0)t/2 = \\pi/2$, so $t = \\pi/|\\omega-\\omega_0| = \\pi/(2.0\\times10^{12}\\ \\text{s}^{-1}) = 1.571\\times10^{-12}$ s, or 1.571 ps.</p><p>(b) There the probability is $\\left(\\dfrac{|H_{21}|/\\hbar}{|\\omega-\\omega_0|}\\right)^2 = \\left(\\dfrac{2.0\\times10^{11}}{2.0\\times10^{12}}\\right)^2 = 0.0100$. Off resonance the upper state never holds more than this, however long the light stays on.</p><p>(c) At resonance the limit of the sine over its argument gives $P_{12} = \\left(\\dfrac{|H_{21}|t}{2\\hbar}\\right)^2 = \\left(\\dfrac{(2.0\\times10^{11}\\ \\text{s}^{-1})(1.571\\times10^{-12}\\ \\text{s})}{2}\\right)^2 = (0.157)^2 = 0.0247$, two and a half times as much, and still growing as $t^2$.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "ai1",
+   "concept": "transition-probability"
+  },
+  {
+   "exercise": "ai1",
+   "concept": "resonance-condition"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-perturbation",
+   "kind": "correction",
+   "html": "“Permutation” means perturbation: these are the matrix elements of $H_1(t)$."
+  },
+  {
+   "id": "c-curve",
+   "kind": "correction",
+   "figure": "sim-two-level",
+   "html": "The book's graph labels its axis $t$, but it plots $P_{12}$ against $\\omega - \\omega_0$ at one time; its peak of 0.25 is $\\sin^2(x/2)/x^2$ at $x = 0$, for $t = 1$."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "amplitude-equations",
+   "what": "the equations for the amplitudes",
+   "source": "Physical Chemistry (LibreTexts), 13.11 Time-Dependent Perturbation Theory",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "H=\\kHzero+\\kHone(\\kt)",
+       "src": "13.11"
+      },
+      {
+       "tex": "|\\kpsi (\\kt)\\rangle =\\sum _{n}c_{n}(\\kt)e^{-i\\kEn\\kt/\\hbar}|n\\rangle",
+       "src": "13.11"
+      },
+      {
+       "tex": "\\kHzero|n\\rangle = \\kEn|n\\rangle",
+       "src": "4.4",
+       "drv": "4.4/stationary-state"
+      },
+      {
+       "tex": "\\langle k|n\\rangle = \\delta_{kn}",
+       "src": "3.5"
+      },
+      {
+       "text": "The perturbation $\\kV(\\kt)$ is the perturbing Hamiltonian $\\kHone(\\kt)$.",
+       "src": "13.11"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{H}{H}\\,\\mk{L}{|\\kpsi(\\kt)\\rangle} = \\mk{R}{i\\hbar\\dfrac{\\partial}{\\partial\\kt}|\\kpsi(\\kt)\\rangle}",
+      "src": "13.11"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{H}{\\left(\\kHzero+\\kHone(\\kt)\\right)}\\mk{L}{\\sum_n c_n(\\kt)e^{-i\\kEn\\kt/\\hbar}|n\\rangle} = \\mk{R}{i\\hbar\\dfrac{\\partial}{\\partial\\kt}\\sum_n c_n(\\kt)e^{-i\\kEn\\kt/\\hbar}|n\\rangle}",
+       "uses": [
+        0,
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\sum_n c_n(\\kt)\\left(\\kEn+\\kHone(\\kt)\\right)e^{-i\\kEn\\kt/\\hbar}|n\\rangle} = \\mk{R}{i\\hbar\\dfrac{\\partial}{\\partial\\kt}\\sum_n c_n(\\kt)e^{-i\\kEn\\kt/\\hbar}|n\\rangle}",
+       "uses": [
+        2
+       ],
+       "map": {
+        "H": "L"
+       }
+      },
+      {
+       "tex": "\\mk{L}{\\sum_n c_n(\\kt)\\left(\\kEn+\\kHone(\\kt)\\right)e^{-i\\kEn\\kt/\\hbar}|n\\rangle} = \\mk{R}{\\sum_n\\left(i\\hbar\\dfrac{\\partial c_n}{\\partial\\kt} + c_n(\\kt)\\kEn\\right)e^{-i\\kEn\\kt/\\hbar}|n\\rangle}",
+       "uses": [],
+       "cap": "$\\partial/\\partial t$ acts by a chain rule on the product $c_n(t)e^{-iE_nt/\\hbar}$, and the derivative of the phase brings down $-iE_n/\\hbar$."
+      },
+      {
+       "tex": "\\mk{S}{\\sum _{n}\\left(i\\hbar {\\dfrac {\\partial c_{n}}{\\partial \\kt}}-c_{n}(\\kt)\\kV(\\kt)\\right)e^{-i\\kEn\\kt/\\hbar}|n\\rangle} = \\mk{z}{0}",
+       "uses": [
+        4
+       ],
+       "map": {
+        "L": "S",
+        "R": "S"
+       },
+       "cap": "The terms in $c_nE_n$ stand on both sides and cancel."
+      },
+      {
+       "tex": "\\mk{S}{i\\hbar\\dfrac{\\partial c_k}{\\partial\\kt}e^{-iE_k\\kt/\\hbar} - \\sum_n\\langle k|\\kHone(\\kt)|n\\rangle\\, c_n(\\kt)e^{-i\\kEn\\kt/\\hbar}} = \\mk{z}{0}",
+       "uses": [
+        3,
+        4
+       ],
+       "cap": "Resolving the identity in front of $V$: taking the product with $\\langle k|$ keeps only the $k$ term of the derivatives, by orthonormality, and leaves the matrix elements of the perturbation."
+      },
+      {
+       "tex": "\\mk{S}{\\dfrac {\\partial c_{n}}{\\partial \\kt}} = \\mk{z}{\\dfrac {-i}{\\hbar }\\sum _{k}\\langle n|\\kHone(\\kt)|k\\rangle \\,c_{k}(\\kt)\\,e^{-i(E_{k}-\\kEn)\\kt/\\hbar }}",
+       "uses": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "transition-probability",
+   "what": "the transition probability of a two-level system",
+   "source": "Physical Chemistry (LibreTexts), 13.11 Time-Dependent Perturbation Theory",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "i \\hbar \\dfrac{\\partial c_2(\\kt)}{\\partial \\kt} = c_2(\\kt) H_{22}(\\kt) + c_1 e^{+i \\komegazero \\kt} H_{21} (\\kt)",
+       "src": "13.11",
+       "drv": "amplitude-equations"
+      },
+      {
+       "tex": "H_{11}=H_{22}=0",
+       "src": "13.11"
+      },
+      {
+       "text": "The system starts in $|1\\rangle$, so $c_1(0) = 1$ and $c_2(0) = 0$.",
+       "src": "13.11"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{i \\hbar \\dfrac{\\partial c_2(\\kt)}{\\partial \\kt}} = \\mk{a}{c_2(\\kt) H_{22}(\\kt)} + \\mk{b}{c_1 e^{+i \\komegazero \\kt} H_{21} (\\kt)}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{i \\hbar \\dfrac{\\partial c_2(\\kt)}{\\partial \\kt}} = \\mk{b}{e^{i \\komegazero \\kt} H_{21} (\\kt)}",
+       "uses": [
+        1,
+        2
+       ],
+       "cap": "To first order the right side keeps the starting amplitudes, $c_1 = 1$, and $H_{22} = 0$ removes the other term."
+      },
+      {
+       "tex": "\\mk{L}{c_2(\\kt)} = \\mk{b}{\\dfrac{-i}{\\hbar}\\int_0^{\\kt} e^{i\\komegazero t'}H_{21}(t')\\,dt'}",
+       "uses": [
+        2
+       ],
+       "cap": "Integrate from $t' = 0$, where $c_2 = 0$."
+      }
+     ],
+     "num": "(13.11.1)",
+     "note": "The book writes the exponential under the integral over $t'$ as $e^{i\\omega_o t}$; it is $e^{i\\omega_0 t'}$."
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "\\kHone(\\kt) = \\cos (\\komega \\kt) \\kV(r)",
+       "src": "13.11"
+      },
+      {
+       "tex": "\\cos x = \\dfrac{e^{ix}+e^{-ix}}{2}",
+       "src": "2.3"
+      },
+      {
+       "tex": "\\komega \\approx \\komegazero",
+       "src": "13.11"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{c_2(\\kt)} = \\mk{b}{\\dfrac{-i}{\\hbar}\\int_0^{\\kt} e^{i\\komegazero t'}H_{21}(t')\\,dt'}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{c_2(\\kt)} = \\mk{b}{\\dfrac{-iH_{21}}{\\hbar}\\int_0^{\\kt} e^{i\\komegazero t'}\\cos(\\komega t')\\,dt'}",
+       "uses": [
+        1
+       ],
+       "cap": "From here $H_{21}$ is the matrix element of the amplitude $V(r)$, the part that does not change in time."
+      },
+      {
+       "tex": "\\mk{L}{c_2(\\kt)} = \\mk{b}{\\dfrac{-iH_{21}}{2\\hbar}\\int_0^{\\kt}\\left(e^{i(\\komegazero+\\komega)t'} + e^{i(\\komegazero-\\komega)t'}\\right)dt'}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{L}{c_2(\\kt)} = \\mk{b}{\\dfrac{-iH_{21}}{2\\hbar}\\int_0^{\\kt} e^{i(\\komegazero-\\komega)t'}\\,dt'}",
+       "uses": [
+        3
+       ],
+       "cap": "Near resonance the first exponential turns many times while the second barely moves, so the first integral stays small and is dropped."
+      },
+      {
+       "tex": "\\mk{L}{c_2(\\kt)} = \\mk{b}{\\dfrac{-iH_{21}}{2\\hbar}\\,\\dfrac{e^{i(\\komegazero-\\komega)\\kt}-1}{i(\\komegazero-\\komega)}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{L}{c_2(\\kt)} = \\mk{b}{-\\dfrac{H_{21}}{\\hbar}\\,\\dfrac{\\sin[(\\komegazero-\\komega)\\kt/2]}{\\komegazero-\\komega}\\,e^{i(\\komegazero-\\komega)\\kt/2}}",
+       "uses": [],
+       "cap": "Take out half the phase: $e^{ix} - 1 = e^{ix/2}\\left(e^{ix/2} - e^{-ix/2}\\right) = 2i\\,e^{ix/2}\\sin(x/2)$."
+      },
+      {
+       "tex": "\\mk{L}{c_2(\\kt)} = \\mk{b}{-\\dfrac{H_{21}}{\\hbar}\\,\\dfrac{\\sin[(\\komega-\\komegazero)\\kt/2]}{\\komega-\\komegazero}\\,e^{i(\\komegazero-\\komega)\\kt/2}}",
+       "uses": [],
+       "cap": "The sine is odd, so $\\sin(-x)/(-y) = \\sin x/y$."
+      }
+     ],
+     "note": "The book prints $c_2(t) = - \\dfrac{2i}{\\hbar} \\dfrac{\\sin (\\omega-\\omega_o)t /2}{ (\\omega-\\omega_o )t} e^{i (\\omega_0-\\omega)t/2} H_{21}$, with an extra $t$ in the denominator and a factor $2i$ too many; its own peak height, $|H_{12}t/2\\hbar|^2$, agrees with the form here."
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "text": "The square of the absolute amplitude $c_n(t)$ is the probability that the system is in state $n$ at time $t$.",
+       "src": "13.11"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{P}{P_{12}(\\kt)} = \\mk{c}{| c_2(\\kt) |^2}",
+      "uses": [
+       1
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{P}{P_{12}(\\kt)} = \\mk{c}{\\left|-\\dfrac{H_{21}}{\\hbar}\\,\\dfrac{\\sin[(\\komega-\\komegazero)\\kt/2]}{\\komega-\\komegazero}\\,e^{i(\\komegazero-\\komega)\\kt/2}\\right|^2}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{P}{P_{12}(\\kt)} = \\mk{c}{\\dfrac{|H_{21}|^2}{\\hbar^2}\\, \\dfrac{\\sin^2 [(\\komega-\\komegazero)\\kt/2]}{(\\komega-\\komegazero)^2}}",
+       "uses": [],
+       "cap": "A phase factor has modulus 1."
+      }
+     ],
+     "note": "The book prints $P_{12}(t) = \\dfrac{4}{\\hbar^2} \\left| \\dfrac{\\sin (\\omega-\\omega_o)t /2}{ (\\omega-\\omega_o )t} \\right|^2 | H_{21} |^2$, which differs from this by a factor $4/t^2$."
+    }
+   ]
+  }
+ ]
+}
