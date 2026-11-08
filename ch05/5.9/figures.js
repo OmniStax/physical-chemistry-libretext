@@ -52,7 +52,7 @@ const Bh = (r) => H_ / (8 * Math.PI ** 2 * MU * AMU * r * r);
   function draw() {
     const ax = AX.value, k = cy.now() / 5, a = 2 * Math.PI * F.ease.smooth(k), ca = C('angle');
     const chair = OBJ.value === 'chair';
-    S.set('axes', F.space.axes([[-1.1, 1.1], [-1.1, 1.1], [-1.1, 1.1]], {}));
+    S.set('axes', F.space.axes([[-1.1, 1.1], [-1.1, 1.1], [-1.1, 1.1]], { ticks: 0 }));
     const idx = 'xyz'.indexOf(ax), u = [0, 0, 0]; u[idx] = 1;
     /* the arc of the turn so far, round the axis near its positive end */
     const arc = Array.from({ length: 41 }, (_, i) => turn(ax === 'x' ? [0.95, 0.22, 0] : ax === 'y' ? [0.22, 0.95, 0] : [0.22, 0, 0.95], ax, a * i / 40));
@@ -97,12 +97,12 @@ const Bh = (r) => H_ / (8 * Math.PI ** 2 * MU * AMU * r * r);
     const b = Bh(R.v * 1e-10) / 1e9, ce = C('energy'), cf = C('frequency');
     const sp = { l: 140, r: 1290, t: 470, b: 620 };
     const ax = F.axes(ctx, sp, [0, 1300], [0, 0.22], { nx: 13, ny: 0, xl: 'frequency (GHz)', xc: cf, fx: (v) => (v % 200 === 0 ? String(v) : '') });
-    const lv = { t: 90, b: 400 }, EY = (j) => lv.b - (j * (j + 1)) / 110 * (lv.b - lv.t);
+    const lv = { t: 130, b: 400 }, EY = (j) => lv.b - (j * (j + 1)) / 110 * (lv.b - lv.t);
     for (let j = 0; j <= 10; j++) {
       line(ctx, sp.l, EY(j), sp.r, EY(j), alpha(ce, j ? 0.5 : 0.8), 2);
-      if (j <= 1 || j % 2 === 0) text(ctx, `J = ${j}`, sp.l - 12, EY(j) - (j === 0 ? -6 : j === 1 ? 10 : 0), ce, { size: 17, align: 'right' });
+      if (j % 2 === 0) text(ctx, `J = ${j}`, sp.l - 12, EY(j), ce, { size: 17, align: 'right' });
     }
-    text(ctx, 'energy (B)', sp.l, lv.t - 40, ce, { size: 20, weight: 600 });
+    text(ctx, 'energy (B)', sp.l, lv.t - 30, ce, { size: 20, weight: 600 });
     for (let j = 0; j < 10; j++) {
       const nu = 2 * b * (j + 1), x = ax.X(nu);
       if (x > sp.r) continue;
@@ -111,8 +111,8 @@ const Bh = (r) => H_ / (8 * Math.PI ** 2 * MU * AMU * r * r);
       line(ctx, x, sp.b, x, ax.Y(GAMMA[j]), cf, 6);
       hits.push({ x, y: ax.Y(GAMMA[j]), r: 14, name: `the line J = ${j} → ${j + 1}, predicted at ${fmt(nu, 1)} GHz` });
     }
-    LINES.forEach((nu, j) => { const x = ax.X(nu / 1000); line(ctx, x, sp.b + 4, x, sp.b + 16, PAL.ink, 3); hits.push({ x, y: sp.b + 10, r: 10, name: `the measured line J = ${j} → ${j + 1}, ${fmt(nu / 1000, 2)} GHz` }); });
-    F.legend(ctx, { l: sp.l, t: sp.t - 50, r: sp.r, b: sp.t }, [{ s: 'predicted line, height γ_max', color: cf, w: 6 }, { s: 'measured (Table 5.9.1)', color: PAL.ink, w: 3 }], { corner: 'above' });
+    LINES.forEach((nu, j) => { const x = ax.X(nu / 1000); dot(ctx, x, ax.Y(GAMMA[j]), PAL.ink, false, 8); hits.push({ x, y: ax.Y(GAMMA[j]), r: 10, name: `the measured line J = ${j} → ${j + 1}, ${fmt(nu / 1000, 2)} GHz` }); });
+    F.legend(ctx, ax, [{ s: 'predicted line, height γ_max', color: cf, w: 6 }, { s: 'measured line (Table 5.9.1)', kind: 'dot', color: PAL.ink }], { corner: 'tr' });
     topline(ctx, `$2B/h = ${fmt(2 * b, 2)}$ GHz: the first line, and the gap between every pair of lines.`);
     tex(d.readout, `\\dfrac{B}{h} = \\dfrac{h}{8\\pi^2 \\kmu \\krzero^2} = ${fmt(b, 2)}\\text{ GHz} \\\\ \\knu = 2\\dfrac{B}{h}(J_i + 1) = ${fmt(2 * b, 2)}\\text{ GHz},\\ ${fmt(4 * b, 2)}\\text{ GHz},\\ ${fmt(6 * b, 2)}\\text{ GHz}, \\ldots`);
   }

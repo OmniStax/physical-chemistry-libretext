@@ -20,7 +20,7 @@ const signed = (m) => (m > 0 ? `+${m}` : m < 0 ? `−${-m}` : '0');
 (function () {
   const d = F.sim(root, 'sim-sphere');
   const B = 1.25;
-  const S = F.space3d(d, { box: [[-B, B], [-B, B], [-B, B]], h: 560, turn: -2.3, tilt: 0.38, fit: 2.4, spin: 'off', zoom: false });
+  const S = F.space3d(d, { box: [[-B, B], [-B, B], [-B, B]], h: 560, turn: -2.3, tilt: 0.38, fit: 3.3, spin: 'off', zoom: false });
   const TH = ctl(d.controls, { label: '\\theta', cls: 'angle', key: 'theta', min: 0, max: 180, step: 1, value: 50, unit: '°', dec: 0, aria: 'the polar angle theta in degrees' });
   const PH = ctl(d.controls, { label: '\\kvarphi', cls: 'angle', key: 'phi', min: 0, max: 360, step: 1, value: 40, unit: '°', dec: 0, aria: 'the azimuthal angle phi in degrees' });
   const ring = (f, n = 96) => Array.from({ length: n + 1 }, (_, i) => f(i / n));
@@ -39,7 +39,7 @@ const signed = (m) => (m > 0 ? `+${m}` : m < 0 ? `−${-m}` : '0');
       { k: 'line', pts: ring((u) => [Math.cos(2 * Math.PI * u), Math.sin(2 * Math.PI * u), 0]), color: alpha(PAL.ink, 0.35), w: 2, name: 'the equator, θ = 90°' },
     ];
     S.set('shell', [{ k: 'sheet', rows: SHELL, color: PAL.soft, alpha: 0.18, name: `the sphere of radius r₀ that the rotor's axis sweeps` }, ...grid]);
-    S.set('axes', F.space.axes([[-B, B], [-B, B], [-B, B]], {}));
+    S.set('axes', F.space.axes([[-B, B], [-B, B], [-B, B]], { ticks: 0 }));
     const R = 0.34;
     const thArc = ring((u) => { const t = th * u; return [R * Math.sin(t) * Math.cos(ph), R * Math.sin(t) * Math.sin(ph), R * Math.cos(t)]; }, 40);
     const phArc = ring((u) => { const p = ph * u; return [R * Math.cos(p), R * Math.sin(p), 0]; }, 60);
@@ -147,7 +147,7 @@ const signed = (m) => (m > 0 ? `+${m}` : m < 0 ? `−${-m}` : '0');
       const rows = [];
       for (let j = 0; j <= 60; j++) { const t = Math.PI * j / 60, r = s.f(t); rows.push(Array.from({ length: 65 }, (_, i) => { const p = 2 * Math.PI * i / 64; return [r * Math.sin(t) * Math.cos(p), r * Math.sin(t) * Math.sin(p), r * Math.cos(t)]; })); }
       S.set('surf', [{ k: 'sheet', rows, color: cp, alpha: 0.85, name: `the surface |Y|² for J = ${s.J}, |m_J| = ${s.m}` }]);
-      S.set('axes', F.space.axes([[-0.42, 0.42], [-0.42, 0.42], [-0.42, 0.42]], {}));
+      S.set('axes', F.space.axes([[-0.42, 0.42], [-0.42, 0.42], [-0.42, 0.42]], { ticks: 0 }));
       const P = [v * Math.sin(th), 0, v * Math.cos(th)], far = [0.42 * Math.sin(th), 0, 0.42 * Math.cos(th)];
       S.set('ray', [{ k: 'line', pts: [[0, 0, 0], far], color: ca, w: 3, dash: [10, 10], name: `the direction θ = ${fmt(TH.v, 0)}° in the xz-plane` }, { k: 'dot', p: P, color: cp, r: 8, name: `|Y|² = ${fmt(v, 3)} at θ = ${fmt(TH.v, 0)}°` }]);
     } else {
