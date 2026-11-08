@@ -1,0 +1,568 @@
+{
+ "id": "5.1",
+ "module": "13413",
+ "chapter": "5",
+ "title": "A Harmonic Oscillator Obeys Hooke's Law",
+ "short": "Hooke's law oscillator",
+ "lead": "A diatomic molecule can translate, rotate and vibrate, and its vibrating bond behaves much like a mass on a spring. The classical spring's force, motion and energy are the picture the quantum oscillator builds on.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "Adapted from Michael Fowler under CC BY-NC-SA 4.0; Figure 5.1.4, which the book gives without a credit, is folded with Figure 5.1.2 into one moving figure.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The three exercises and their keys are the book's, with correction notes where a key slips. Bloom levels and concept tags were chosen by AI. Numeric answers accept a 2% tolerance.",
+ "figures": [
+  {
+   "id": "sim-pair",
+   "kind": "sim",
+   "number": "5.1.1",
+   "originals": [
+    "/media/ch05/177160-ezgif-5-7f2851c68052.gif"
+   ],
+   "original_caption": "Two atoms connected by a vibrating bond. There is a rotation around the common center of mass, and oscillation in bond distance. (CC SA-BY, 3.0; www.cleonis.nl).",
+   "draws": [
+    "mass"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "sim-spring",
+   "kind": "sim",
+   "number": "5.1.2",
+   "folds": [
+    "5.1.4"
+   ],
+   "originals": [
+    "/media/ch05/343400-imageedit_1_4359661853.png",
+    "/media/ch05/122091-220px-Simple_harmonic_motion_animation.gif"
+   ],
+   "original_caption": "5.1.2: A mass connected to a spring that follows Hooke's law is a system that, when displaced from its equilibrium position ($x_o=0$), experiences a restoring force, $F$ that is proportional to the displacement, $x$ from the equilibrium length ($x_o$). (CC BY-NC; Ümit Kaya via LibreTexts). 5.1.4: Solution to the Harmonic Oscillator. Displacement (y-axis) is plotted as a function of time.",
+   "draws": [
+    "force",
+    "force-constant",
+    "mass",
+    "length",
+    "time",
+    "frequency"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "fig-5-1-3",
+   "kind": "figure",
+   "number": "5.1.3",
+   "widths": [
+    638
+   ],
+   "originals": [
+    "/media/ch05/343402-cmm.png"
+   ],
+   "original_caption": "Diagrams of the coordinate systems and relevant vectors for the motion of (a) a two-particle diatomic molecule with atoms of mass $m_1$ and $m_2$ and (b) the equivalent one-particle pseudo-particle of reduced mass $\\mu$. (CC BY-NC; Ümit Kaya via LibreTexts)",
+   "draws": [
+    "length",
+    "mass"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "fig-ex-5-1-1",
+   "kind": "figure",
+   "originals": [
+    "/media/ch05/343401-Screen_Shot_2019-12-09_at_2.53.19_PM.png"
+   ],
+   "draws": [],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "kept as the book prints it"
+    }
+   ]
+  },
+  {
+   "id": "sim-energy",
+   "kind": "sim",
+   "number": "5.1.5",
+   "originals": [
+    "/media/ch05/122089-350px-Harmonic_field.png"
+   ],
+   "original_caption": "The potential $V(x)$ for a harmonic oscillator. Vertical axis energy; horizontal axis displacement $x$. The potential energy $V(x) = ½ kx^2$ is shown in red. (Paul Wormer Wikipedia).",
+   "draws": [
+    "energy",
+    "length",
+    "probability-density",
+    "force-constant",
+    "momentum",
+    "mass"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "opening",
+   "concept": "molecular-motion-separation",
+   "verb": "introduces"
+  },
+  {
+   "span": "opening",
+   "concept": "harmonic-oscillator",
+   "verb": "introduces"
+  },
+  {
+   "span": "opening",
+   "concept": "rigid-rotor",
+   "verb": "introduces"
+  },
+  {
+   "span": "the-classical-harmonic-oscillator",
+   "concept": "hookes-law",
+   "verb": "introduces"
+  },
+  {
+   "span": "the-classical-harmonic-oscillator",
+   "concept": "force-constant",
+   "verb": "introduces"
+  },
+  {
+   "span": "the-classical-harmonic-oscillator",
+   "concept": "harmonic-potential",
+   "verb": "introduces"
+  },
+  {
+   "span": "the-classical-harmonic-oscillator",
+   "concept": "vibrational-coordinate",
+   "verb": "introduces"
+  },
+  {
+   "span": "the-classical-harmonic-oscillator",
+   "concept": "reduced-mass",
+   "verb": "uses"
+  },
+  {
+   "span": "solving-the-harmonic-oscillator-model",
+   "concept": "oscillator-equation-of-motion",
+   "verb": "introduces"
+  },
+  {
+   "span": "solving-the-harmonic-oscillator-model",
+   "concept": "classical-harmonic-motion",
+   "verb": "introduces"
+  },
+  {
+   "span": "solving-the-harmonic-oscillator-model",
+   "concept": "oscillator-frequency",
+   "verb": "introduces"
+  },
+  {
+   "span": "solving-the-harmonic-oscillator-model",
+   "concept": "hookes-law",
+   "verb": "uses"
+  },
+  {
+   "span": "harmonic-oscillator-energies",
+   "concept": "oscillator-energy",
+   "verb": "introduces"
+  },
+  {
+   "span": "harmonic-oscillator-energies",
+   "concept": "turning-points",
+   "verb": "introduces"
+  },
+  {
+   "span": "harmonic-oscillator-energies",
+   "concept": "classical-oscillator-density",
+   "verb": "introduces"
+  },
+  {
+   "span": "harmonic-oscillator-energies",
+   "concept": "harmonic-potential",
+   "verb": "uses"
+  },
+  {
+   "span": "harmonic-oscillator-energies",
+   "concept": "oscillator-frequency",
+   "verb": "reinforces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "e1",
+   "source_id": "exr:5.1.1",
+   "source_number": "Exercise 5.1.1",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "solving-the-harmonic-oscillator-model",
+   "prompt": "<p>Show that sine and cosine functions also are solutions to Equation 5.1.4.</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "source",
+    "hint": "Differentiate $x_o\\sin(\\omega t + \\phi)$ twice and use $\\omega^2 = k/m$.",
+    "solution": "<h4>Answer</h4>\n<p>Using Equation 5.1.4</p>\n$$ \\frac{d^2x(t)}{dt^2} +\\frac{k}{m}x(t)=0 $$\n<p>with $\\omega =\\sqrt{\\frac{k}{m}}$.</p>\n<p>For</p>\n$$ \\begin{aligned} x(t)=x_{o} \\sin(\\omega t+\\phi) \\end{aligned} $$\n<p>Take the second derivative of $x(t)$<sup class=\"fn\" data-note=\"e1-second-derivative\"></sup></p>\n$$ \\begin{aligned} \\frac{d^2x(t)}{dt} &=-\\omega^2x_{o}\\sin(\\omega t+\\phi) \\\\[4pt] &= \\omega^2 x_{o}\\sin(\\omega t+\\phi) \\\\[4pt] &=-\\frac{k}{m}x_{o} \\sin \\left(\\sqrt{\\frac{k}{m}}t+\\phi \\right) \\end{aligned} $$\n<p>Plug in $x(t)$ and the second derivative of $x(t)$ into Equation 5.1.4</p>\n$$ \\begin{aligned} -\\frac{k}{m}x_{o}\\sin \\left(\\sqrt{ \\frac{k}{m}} t + \\phi \\right) + \\frac{k}{m} x_{o} \\sin \\left(\\sqrt{\\frac{k}{m}} t + \\phi \\right) =0 \\end{aligned} $$\n<p>Hence, the sine equation is a solution to Equation 5.1.4</p>\n<p>We do the same for the cosine function</p>\n$$ x(t)=x_{o}\\cos(\\omega t + \\phi) $$\n<p>Take the second derivative of $x(t)$</p>\n$$ \\begin{aligned} \\frac{d^2x(t)}{dt} &=-\\omega^2x_{o}\\cos(\\omega t + \\phi) \\\\[4pt] &= -\\omega^2x_{o}\\cos( \\omega t +\\phi) \\\\[4pt] &=-\\frac{k}{m} x_{o} \\cos\\left( \\sqrt{\\frac{k}{m}} t + \\phi \\right ) \\end{aligned} $$\n<p>Plug in $x(t)$ and the second derivative of $x(t)$ into Equation 5.1.4</p>\n$$ \\begin{aligned} -\\frac{k}{m}x_{o} \\cos\\left( \\sqrt{\\frac{k}{m}} t + \\phi \\right) + \\frac{k}{m}x_{o} \\cos\\left( \\sqrt{\\frac{k}{m}}t + \\phi \\right)=0 \\end{aligned} $$\n<p>The cosine equation is also a solution to Equation 5.1.4.</p>"
+   }
+  },
+  {
+   "id": "e2",
+   "source_id": "exr:5.1.2",
+   "source_number": "Exercise 5.1.2",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "solving-the-harmonic-oscillator-model",
+   "prompt": "<p>Identify what happens to the frequency of the motion as the force constant increases in one case and as the mass increases in another case. If the force constant is increased 9-fold and the mass is increased by 4-fold, by what factor does the frequency change?</p>",
+   "answer": {
+    "type": "number",
+    "value": 1.5,
+    "generated_by": "source",
+    "hint": "Put $9k$ and $4m$ into Equation 5.1.6.",
+    "solution": "<h4>Answer</h4>\n<p>This is a simple application of Equation 5.1.6. As the force constant increases, the frequency of the motion increases, while as the mass increases, the frequency of the motion decreases. If the force constant increased 9-fold and the mass increased 4-fold,</p>\n$$ ω=\\sqrt{\\dfrac{9k}{4m}}= \\dfrac{3}{2} \\left(\\dfrac{k}{m}\\right) $$\n<p><sup class=\"fn\" data-note=\"e2-root\"></sup>The entire frequency of motion would increase by a factor of 3/2.</p>"
+   }
+  },
+  {
+   "id": "e3",
+   "source_id": "exr:5.1.3",
+   "source_number": "Exercise 5.1.3",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "harmonic-oscillator-energies",
+   "prompt": "<p>If a molecular vibration is excited by collision with another molecule and is given a total energy $E_{hit}$ as a result, what is the maximum amplitude of the oscillation? Is there any constraint on the magnitude of energy that can be introduced?</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "source",
+    "hint": "At the largest displacement the kinetic energy is zero.",
+    "solution": "<h4>Answer</h4>\n<p>The equation that defines the energy of a molecular vibration can be approximated is:</p>\n$$ E_{h i t}=T+V=\\frac{p^{2}}{2 m}+\\frac{k}{2} x $$\n<p>The maximum amplitude of a harmonic oscillator is equal to x when the kinetic energy term of total energy equals zero</p>\n$$ E_{hit}=\\frac{k}{2}x $$\n<p><sup class=\"fn\" data-note=\"e3-square\"></sup>Solving for x gives the maximum amplitude:</p>\n$$ x=\\sqrt{\\frac{2}{k} E_{h i t}} $$\n<p>The constraint for the energy that can be introduced cannot be greater than the energy required to break the bond between atoms.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "e1",
+   "concept": "classical-harmonic-motion"
+  },
+  {
+   "exercise": "e1",
+   "concept": "oscillator-equation-of-motion"
+  },
+  {
+   "exercise": "e2",
+   "concept": "oscillator-frequency"
+  },
+  {
+   "exercise": "e3",
+   "concept": "oscillator-energy"
+  },
+  {
+   "exercise": "e3",
+   "concept": "turning-points"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "minus-k",
+   "kind": "correction",
+   "html": "The force constant is $k$, a positive number; Hooke's law makes the force $-k$ times the displacement."
+  },
+  {
+   "id": "ex513-frequency",
+   "kind": "correction",
+   "html": "The energy quoted is the quantum oscillator's $E_v = h\\nu(v + \\tfrac{1}{2})$ of Section 5.2, with the Greek $\\nu$ for the frequency and the Latin $v$ for the quantum number. For a diatomic molecule the mass in $\\omega = \\sqrt{k/m}$ is the reduced mass $\\mu$."
+  },
+  {
+   "id": "e1-second-derivative",
+   "kind": "correction",
+   "html": "The second derivative is $d^2x(t)/dt^2$, not $d^2x(t)/dt$, and the middle line drops its minus sign: it is $-\\omega^2 x_o\\sin(\\omega t+\\phi)$."
+  },
+  {
+   "id": "e2-root",
+   "kind": "correction",
+   "html": "The square root is dropped on the right: $\\sqrt{9k/4m} = \\tfrac{3}{2}\\sqrt{k/m}$, so the frequency grows by the factor 3/2, as the key says."
+  },
+  {
+   "id": "e3-square",
+   "kind": "correction",
+   "html": "The potential energy is $\\tfrac{k}{2}x^2$ (Equation 5.1.2), so the two lines above should read $\\tfrac{k}{2}x^2$; the amplitude $x = \\sqrt{2E_{hit}/k}$ follows from that form."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "oscillator-motion",
+   "what": "the motion of the classical oscillator",
+   "source": "Physical Chemistry (LibreTexts), 5.1 A Harmonic Oscillator Obeys Hooke's Law",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kF = \\km\\dfrac{d^2\\kx(\\kt)}{d\\kt^2}"
+      },
+      {
+       "tex": "\\kF = -\\kk\\kx",
+       "src": "(5.1.1)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{f}{\\kF} = \\mk{a}{\\km\\dfrac{d^2\\kx(\\kt)}{d\\kt^2}}",
+      "why": "Newton's second law for the particle of mass $m$ on the spring."
+     },
+     "steps": [
+      {
+       "tex": "\\mk{a}{\\km\\dfrac{d^2\\kx(\\kt)}{d\\kt^2}} = \\mk{f}{-\\kk\\kx(\\kt)}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "num": "(5.1.3)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      }
+     ],
+     "then": {
+      "tex": "\\mk{a}{\\km\\dfrac{d^2\\kx(\\kt)}{d\\kt^2}} = \\mk{f}{-\\kk\\kx(\\kt)}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{a}{\\dfrac{d^2\\kx(\\kt)}{d\\kt^2}} = \\mk{f}{-\\dfrac{\\kk}{\\km}\\kx(\\kt)}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{a}{\\dfrac{d^2\\kx(\\kt)}{d\\kt^2}} + \\mk{f}{\\dfrac{\\kk}{\\km}\\kx(\\kt)} = \\mk{z}{0}",
+       "uses": []
+      }
+     ],
+     "num": "(5.1.4)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "tex": "\\kx(\\kt) = \\kxlo\\sin(\\komega\\kt+\\phi)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{x}{\\kx(\\kt)} = \\mk{s}{\\kxlo\\sin(\\komega\\kt+\\phi)}",
+      "why": "Equation 5.1.3 is a linear second-order differential equation; the standard method gives a sine, tried here with its amplitude $x_o$, angular frequency $\\omega$ and phase $\\phi$ still to be found."
+     },
+     "steps": [
+      {
+       "tex": "\\mk{x}{\\dfrac{d^2\\kx(\\kt)}{d\\kt^2}} = \\mk{s}{-\\komega^2\\kxlo\\sin(\\komega\\kt+\\phi)}",
+       "uses": [],
+       "cap": "Each derivative of the sine brings out a factor $\\omega$, and two of them turn the sine into minus itself."
+      },
+      {
+       "tex": "\\mk{s}{-\\komega^2\\kxlo\\sin(\\komega\\kt+\\phi)} + \\mk{f}{\\dfrac{\\kk}{\\km}\\kxlo\\sin(\\komega\\kt+\\phi)} = \\mk{z}{0}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{s}{\\left(\\dfrac{\\kk}{\\km}-\\komega^2\\right)\\kxlo\\sin(\\komega\\kt+\\phi)} = \\mk{z}{0}",
+       "uses": [],
+       "map": {
+        "f": "s"
+       }
+      },
+      {
+       "tex": "\\mk{w}{\\komega^2} = \\mk{r}{\\dfrac{\\kk}{\\km}}",
+       "uses": [],
+       "map": {
+        "s": [
+         "w",
+         "r"
+        ]
+       },
+       "cap": "The sine is not zero at every instant, so the equation holds at all times only if its coefficient vanishes."
+      },
+      {
+       "tex": "\\mk{w}{\\komega} = \\mk{r}{\\sqrt{\\dfrac{\\kk}{\\km}}}",
+       "uses": []
+      }
+     ],
+     "num": "(5.1.6)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 2
+      },
+      {
+       "tex": "\\kx(\\kt) = \\kxlo\\sin(\\komega\\kt+\\phi)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{x}{\\kx(\\kt)} = \\mk{s}{\\kxlo\\sin(\\komega\\kt+\\phi)}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{x}{\\kx(\\kt)} = \\mk{s}{\\kxlo\\sin\\left(\\sqrt{\\dfrac{\\kk}{\\km}}\\,\\kt+\\phi\\right)}",
+       "uses": [
+        0
+       ]
+      }
+     ],
+     "num": "(5.1.5)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 3
+      },
+      {
+       "tex": "\\kp = \\km\\kv"
+      },
+      {
+       "tex": "\\kv = \\dfrac{d\\kx}{d\\kt}"
+      },
+      {
+       "step": 2
+      }
+     ],
+     "then": {
+      "tex": "\\mk{p}{\\kp} = \\mk{m}{\\km\\kv}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{p}{\\kp} = \\mk{m}{\\km\\dfrac{d\\kx}{d\\kt}}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{p}{\\kp} = \\mk{m}{\\km\\kxlo\\sqrt{\\dfrac{\\kk}{\\km}}\\cos\\left(\\sqrt{\\dfrac{\\kk}{\\km}}\\,\\kt+\\phi\\right)}",
+       "uses": [
+        0
+       ],
+       "cap": "The derivative of $\\sin(at+\\phi)$ is $a\\cos(at+\\phi)$."
+      },
+      {
+       "tex": "\\mk{p}{\\kp} = \\mk{m}{\\km\\kxlo\\komega\\cos(\\komega\\kt+\\phi)}",
+       "uses": [
+        3
+       ]
+      }
+     ],
+     "src": "5.1"
+    }
+   ]
+  },
+  {
+   "id": "example-5-1-3",
+   "what": "the energy of an oscillator of amplitude A",
+   "source": "Physical Chemistry (LibreTexts), 5.1 A Harmonic Oscillator Obeys Hooke's Law, Example 5.1.3",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "text": "The oscillator moves as $\\kx = \\kA\\cos\\komega\\kt$ (Equation 5.1.5 with $\\phi = \\pi/2$), so its velocity is $\\kv = -\\kA\\komega\\sin\\komega\\kt$."
+      },
+      {
+       "tex": "K = \\tfrac{1}{2}\\km\\kv^2"
+      },
+      {
+       "tex": "\\kV = \\tfrac{1}{2}\\kk\\kx^2",
+       "src": "(5.1.2)"
+      },
+      {
+       "tex": "\\komega = \\sqrt{\\dfrac{\\kk}{\\km}}",
+       "src": "(5.1.6)",
+       "drv": "oscillator-motion"
+      },
+      {
+       "tex": "\\sin^2\\komega\\kt + \\cos^2\\komega\\kt = 1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{e}{\\kE} = \\mk{k}{K} + \\mk{v}{\\kV}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{e}{\\kE} = \\mk{k}{\\tfrac{1}{2}\\km\\kv^2} + \\mk{v}{\\tfrac{1}{2}\\kk\\kx^2}",
+       "uses": [
+        1,
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{e}{\\kE} = \\mk{k}{\\tfrac{1}{2}\\km\\komega^2\\kA^2\\sin^2\\komega\\kt} + \\mk{v}{\\tfrac{1}{2}\\kk\\kA^2\\cos^2\\komega\\kt}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{e}{\\kE} = \\mk{k}{\\tfrac{1}{2}\\kk\\kA^2\\sin^2\\komega\\kt} + \\mk{v}{\\tfrac{1}{2}\\kk\\kA^2\\cos^2\\komega\\kt}",
+       "uses": [
+        3
+       ]
+      },
+      {
+       "tex": "\\mk{e}{\\kE} = \\mk{s}{\\tfrac{1}{2}\\kk\\kA^2\\left(\\sin^2\\komega\\kt+\\cos^2\\komega\\kt\\right)}",
+       "uses": [],
+       "map": {
+        "k": "s",
+        "v": "s"
+       }
+      },
+      {
+       "tex": "\\mk{e}{\\kE} = \\mk{s}{\\tfrac{1}{2}\\kk\\kA^2}",
+       "uses": [
+        4
+       ]
+      }
+     ],
+     "src": "Example 5.1.3"
+    }
+   ]
+  }
+ ]
+}

@@ -126,6 +126,7 @@ class Drafter:
         tex = Drafter.ce(tex)
         tex = re.sub(r"\\mbox\s*\{", r"\\text{", tex)  # KaTeX has \\text, not \\mbox
         tex = tex.replace("\u2206", "\\Delta ")  # the increment sign, which KaTeX has no metrics for
+        tex = tex.replace("\u2011", "-")  # the non-breaking hyphen (6.2's $n‑1$), which KaTeX has no metrics for
         tex = re.sub(r"\\op\s*\{([^{}]*)\}", r"\\hat{\1}", tex)
         # the site's \\braket{a}{b} takes two arguments; KaTeX's takes one, \\braket{a|b} (4.S, 3.S)
         tex = re.sub(r"\\braket\s*\{([^{}]*)\}\s*\{([^{}]*)\}", r"\\braket{\1|\2}", tex)
@@ -369,6 +370,10 @@ class Drafter:
         k = next((i for i, l in enumerate(body) if re.match(r"^\*\*(Answer|Solution)", l)), len(body))
         prompt = "\n".join(self.boxes(body[:k]))
         sol = "\n".join(self.boxes(body[k:]))
+        if not prompt.strip() and not sol.strip():
+            # an empty box the site prints with no number and no words (6.4's last): nothing to keep
+            sys.stderr.write(f"{self.sec}: empty exercise box {num} dropped\n")
+            return ""
         eid = self.uid("e" + num.split(".")[-1].lower())  # two boxes may print one number (3.6); 4.6.2C: e2c
         self.exercises.append({"id": eid, "source_id": f"exr:{num}", "source_number": printed or f"Exercise {num}",
                                "kind": "exercise", "title": title, "prompt": prompt, "book_answer": sol, "keyed": k < len(body)})

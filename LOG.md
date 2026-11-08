@@ -182,3 +182,45 @@ derivations to build. `check:content`: no errors, no warnings. Open for the
 orchestrator: macros for θ (Chapter 2) and B (Chapter 3), the summary's two
 scanned images, the absent Figure 5.7.2, Figure 5.9.5, and derivations that
 work unkeyed exercises on the page.
+
+## Pass 8 · 2026-11-08 · Chapter 4 built and its chapter pass
+
+Chapter 4 was built from the Pass 5 prep: 4.1–4.6 and the summary page (no
+intro: the landing page prints no text). 7 interactive figures, none 3D: 2
+moving (the collapse of 4.3, a figure that replaces the book's two
+unnumbered images; the mixture and energy measurement of 4.4, an extra Sim)
+and 5 still (4.1.1, the fold 4.1.2 + 4.1.3 + 4.1.4, 4.3.1, the expansion
+Sim of 4.3, Example 4.5.1's parity figure); 14 derivations (4.3: 6, 4.4: 2,
+4.5: 5, 4.6: 1); 12 exercises, all `exercise` kind in the Exercises document:
+5 from the book (3 keyed: 4.1.1, 4.5.2, 4.6.2C; 2 with AI solutions: 4.6.1
+and the solution-less Example 4.6.2A) and 7 AI exercises; 25 AI-marked
+corrections.
+
+Chapter pass: `observable` moved to 3.3, where the book first defines it ("A
+physical observable is anything that can be measured"): withdrawn from
+`ch04/book-rows.json` with its edge to 4.1's `classical-state` (a 3.3
+concept cannot rest on a 4.1 one; the edge now runs the other way,
+`classical-state` → `observable`), staged in `ch03/book-rows.json` with
+no prerequisite, `operator-postulate` → `observable` kept; the defining
+sentence spanned in 3.3 with an `introduces` row, 4.2's row made
+`reinforces` (its term "dynamic variable" kept). No redundant edge in
+Chapters 3–4 (two older ones in Chapter 1: `bohr-energy-levels` →
+`coulomb-potential`, `bohr-rydberg-derivation` → `photon`). The two
+`\braket` (summary) are in `\braket{a|b}` form; no bare `\k` script. The
+`ai` fields match Chapter 3's. Figure fixes from the screenshots: 4.1's
+"ψ → ∞" label moved off the curve, 4.3.1's ⟨x⟩ label off its line and the
+outer band shares above the curve, the collapse figure's ticks with true
+minus signs and its readout's x₁, x₂ coloured as positions. 4.5's parity
+figure reads "Figure", as the checker's new rule for a sim that replaces an
+unnumbered book figure asks (plan line updated). `colours:default` rerun
+twice. `check:content`: no errors or warnings from Chapters 1–4 (one error in
+5.7, which waits on 5.5 being built). Every Chapter 4 figure screenshot in
+light, choices and select options included, the 4.4 measurement as a frame
+sequence (energy-level dot and "measured" list checked); 4.4, 4.5 and the
+summary in dark; every derivation rendered; no console or KaTeX error on any
+Chapter 4 page or its document view, nor on 3.3.
+
+Known gaps: the parity figure colours each ψₙ by its index, so ψ₃ is a dark
+green near the probability density's and ψ₄ a magenta near length's; the
+eyebrow rule changed during the pass (another agent's checker change),
+so other books' unnumbered sims may now need "Figure" too.

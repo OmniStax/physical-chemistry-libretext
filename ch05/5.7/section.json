@@ -1,0 +1,363 @@
+{
+ "id": "5.7",
+ "module": "13421",
+ "chapter": "5",
+ "title": "Hermite Polynomials are either Even or Odd Functions",
+ "short": "Even and odd Hermite polynomials",
+ "lead": "A function can be even, odd or neither about the origin. The symmetry of the Hermite polynomials, and of the integrands built from them, makes many integrals over the oscillator's wavefunctions quick to evaluate.",
+ "objectives": [
+  "Understand key properties of the Hermite polynomials including orthogonality and symmetry.",
+  "Be proficient at using symmetries of integrands to quickly solve integrals."
+ ],
+ "summary_html": "",
+ "notes": "Written by Delmar Larsen and shared under CC BY-SA 4.0, with Figure 5.7.1 from Wikipedia under CC BY-SA 3.0; the book cites a Figure 5.7.2 it does not print, and Exercise 5.5.1 is set here.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "medium"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "medium"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "Exercise 5.5.1 is held here from 5.5 because it needs the recurrence relation of this section; the book gives no answer, so its solution was written by AI. Exercises a1 and a2 were written by AI for the recurrence relation and for parity, which the book leaves untested.",
+ "figures": [
+  {
+   "id": "sim-parity",
+   "kind": "sim",
+   "number": "5.7.1",
+   "originals": [
+    "/media/ch05/344450-Hermite_poly_phys_n=0.svg",
+    "/media/ch05/344446-Hermite_poly_phys_n=1.svg",
+    "/media/ch05/344449-Hermite_poly_phys_n=2.svg",
+    "/media/ch05/344448-Hermite_poly_phys_n=3.svg",
+    "/media/ch05/344452-Hermite_poly_phys_n=4.svg",
+    "/media/ch05/344447-Hermite_poly_phys_n=5.svg"
+   ],
+   "original_caption": "The first six Hermite polynomials $H_n(x)$. (CC BY-SA 3.0 Unported; Alessio Damato, Vulpecula and others via Wikipedia)",
+   "widths": [
+    375,
+    375,
+    375,
+    375,
+    375,
+    375
+   ],
+   "draws": [],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "medium",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "sim-parity-integral",
+   "kind": "sim",
+   "number": "5.7.2",
+   "draws": [],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "medium",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "opening",
+   "concept": "hermite-polynomials",
+   "verb": "uses"
+  },
+  {
+   "span": "opening",
+   "concept": "hermite-recurrence",
+   "verb": "introduces"
+  },
+  {
+   "span": "hermite-polynomials-are-symmetric",
+   "concept": "even-function",
+   "verb": "introduces"
+  },
+  {
+   "span": "hermite-polynomials-are-symmetric",
+   "concept": "odd-function",
+   "verb": "introduces"
+  },
+  {
+   "span": "hermite-polynomials-are-symmetric",
+   "concept": "parity-product-rules",
+   "verb": "introduces"
+  },
+  {
+   "span": "hermite-polynomials-are-symmetric",
+   "concept": "hermite-parity",
+   "verb": "introduces"
+  },
+  {
+   "span": "integration-over-symmetric-functions",
+   "concept": "symmetric-interval-integrals",
+   "verb": "introduces"
+  },
+  {
+   "span": "hermite-polynomials-are-orthogonal",
+   "concept": "hermite-orthogonality",
+   "verb": "introduces"
+  },
+  {
+   "span": "hermite-polynomials-are-orthogonal",
+   "concept": "orthogonality",
+   "verb": "reinforces"
+  },
+  {
+   "span": "concluding",
+   "concept": "symmetric-interval-integrals",
+   "verb": "reinforces"
+  },
+  {
+   "span": "concluding",
+   "concept": "parity-product-rules",
+   "verb": "reinforces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "e1",
+   "source_id": "exr:5.5.1",
+   "source_section": "5.5",
+   "source_number": "Exercise 5.5.1",
+   "kind": "exercise",
+   "bloom": "Analyze",
+   "place": {
+    "at": "end"
+   },
+   "cite": "opening",
+   "prompt": "<p>Use one of the Hermite polynomial recursion relations to verify that the second integral in Equation 5.5.10 is 0 unless $v' = v \\pm 1$.</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "Solve the recurrence relation of Equation 5.7.1 for $xH_v(x)$.",
+    "solution": "<p>In the scaled coordinate of 5.6 the wavefunctions are $\\psi_v(x) = N_vH_v(x)e^{-x^2/2}$; in the unscaled one $x$ is only multiplied by the constant $\\beta$, which leaves the conclusion unchanged. Written for $n = v$, the recurrence relation $H_{v+1} = 2xH_v - 2vH_{v-1}$ gives</p>$$ xH_v(x) = \\tfrac{1}{2}H_{v+1}(x) + vH_{v-1}(x) $$<p>Multiplying by $N_ve^{-x^2/2}$ turns each Hermite polynomial back into a wavefunction:</p>$$ x\\psi_v(x) = \\dfrac{N_v}{2N_{v+1}}\\,\\psi_{v+1}(x) + \\dfrac{vN_v}{N_{v-1}}\\,\\psi_{v-1}(x) $$<p>The second integral of Equation 5.5.10 is then</p>$$ \\int_{-\\infty}^{\\infty}\\psi_{v'}^*\\,x\\,\\psi_v\\,dx = \\dfrac{N_v}{2N_{v+1}}\\int_{-\\infty}^{\\infty}\\psi_{v'}^*\\psi_{v+1}\\,dx + \\dfrac{vN_v}{N_{v-1}}\\int_{-\\infty}^{\\infty}\\psi_{v'}^*\\psi_{v-1}\\,dx $$<p>The oscillator wavefunctions are orthogonal, so the first integral on the right is zero unless $v' = v + 1$ and the second is zero unless $v' = v - 1$. For any other $v'$ both vanish, and the transition integral is 0 unless $v' = v \\pm 1$.</p>"
+   }
+  },
+  {
+   "id": "a1",
+   "source_id": "the recurrence relation",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "opening",
+   "prompt": "<p>Starting from $H_0(x) = 1$ and $H_1(x) = 2x$, use the recurrence relation of Equation 5.7.1 to find $H_2(x)$, $H_3(x)$ and $H_4(x)$. Give the values of (a) $H_3(1)$ and (b) $H_4(1)$.</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": -4,
+      "hint": "Find $H_2$ first, with $n = 1$ in the recurrence."
+     },
+     {
+      "part": "b",
+      "value": -20
+     }
+    ],
+    "solution": "<p>With $n = 1$: $H_2 = 2x(2x) - 2(1)(1) = 4x^2 - 2$. With $n = 2$: $H_3 = 2x(4x^2 - 2) - 2(2)(2x) = 8x^3 - 12x$. With $n = 3$: $H_4 = 2x(8x^3 - 12x) - 2(3)(4x^2 - 2) = 16x^4 - 48x^2 + 12$. These are the polynomials listed in 5.6. At $x = 1$, (a) $H_3(1) = 8 - 12 = -4$ and (b) $H_4(1) = 16 - 48 + 12 = -20$.</p>"
+   }
+  },
+  {
+   "id": "a2",
+   "source_id": "Using this symmetry, integrals can be identified to be equal to zero without explicitly solving them",
+   "kind": "exercise",
+   "bloom": "Analyze",
+   "place": {
+    "at": "end"
+   },
+   "cite": "integration-over-symmetric-functions",
+   "prompt": "<p>The oscillator wavefunctions $\\psi_v(x) = N_vH_v(x)e^{-x^2/2}$ have the parity of $H_v$. Which of these integrals is zero by parity alone?</p><ol type=\"i\"><li>$\\displaystyle\\int_{-\\infty}^{\\infty}\\psi_0\\,x\\,\\psi_1\\,dx$</li><li>$\\displaystyle\\int_{-\\infty}^{\\infty}\\psi_0\\,x\\,\\psi_2\\,dx$</li><li>$\\displaystyle\\int_{-\\infty}^{\\infty}\\psi_1\\,x^2\\,\\psi_3\\,dx$</li></ol>",
+   "answer": {
+    "type": "choice",
+    "generated_by": "ai",
+    "options": [
+     "(i) only",
+     "(ii) only",
+     "(iii) only",
+     "(ii) and (iii)"
+    ],
+    "correct": 1,
+    "hint": "$e^{-x^2/2}$ is even, $x$ is odd and $x^2$ is even. Find the parity of each integrand from Table 5.7.1.",
+    "solution": "<p>(i) $\\psi_0$ is even, $x$ odd and $\\psi_1$ odd: odd times odd is even, so the integrand is even and parity says nothing. (ii) $\\psi_0$ even, $x$ odd, $\\psi_2$ even: the integrand is odd, so over the symmetric interval the integral is zero. (iii) $\\psi_1$ odd, $x^2$ even, $\\psi_3$ odd: the integrand is even, so parity does not make it vanish. Only (ii) is zero by parity alone.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "e1",
+   "concept": "ir-selection-rules"
+  },
+  {
+   "exercise": "e1",
+   "concept": "hermite-recurrence"
+  },
+  {
+   "exercise": "a1",
+   "concept": "hermite-recurrence"
+  },
+  {
+   "exercise": "a2",
+   "concept": "hermite-parity"
+  },
+  {
+   "exercise": "a2",
+   "concept": "parity-product-rules"
+  },
+  {
+   "exercise": "a2",
+   "concept": "symmetric-interval-integrals"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-fig-missing",
+   "kind": "correction",
+   "html": "The book prints no Figure 5.7.2. The figure here draws the functions this paragraph names, $x^2$, $\\cos x$, $x^3$, $\\sin x$ and $x^3 + 1$, and their products."
+  },
+  {
+   "id": "c-ff-odd",
+   "kind": "correction",
+   "html": "\"ff\" is the function $f$, doubled on the source page."
+  },
+  {
+   "id": "c-weight",
+   "kind": "correction",
+   "html": "The weight function is $e^{-x^2}$. The norm $2^n n!\\sqrt{\\pi}$ of Equation 5.7.5 belongs to $\\int_{-\\infty}^{\\infty} H_n(x)^2 e^{-x^2}\\,dx$, and Equations 5.7.4 and 5.7.5 should both read $e^{-x^2}$ for $e^{-x^2/2}$, as Example 5.7.1 has it."
+  },
+  {
+   "id": "c-ex2-weight",
+   "kind": "correction",
+   "html": "Orthogonality of the Hermite polynomials is taken with the weight $e^{-x^2}$ (Example 5.7.1), which this integral leaves out. The conclusion stands, since $(4x^2-2)(8x^3-12x)e^{-x^2}$ is odd as well."
+  },
+  {
+   "id": "c-ff-even",
+   "kind": "correction",
+   "html": "\"ff\" is the function $f$, doubled on the source page."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "symmetric-integrals",
+   "what": "integrals over a symmetric interval",
+   "source": "Physical Chemistry (LibreTexts), 5.7 Hermite Polynomials are either Even or Odd Functions",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "I = \\int_{-a}^{a} f(x)\\,dx",
+       "src": "5.7"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{I}{I} = \\mk{all}{\\int_{-a}^{a} f(x)\\,dx}",
+      "src": "5.7"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{I}{I} = \\mk{lft}{\\int_{-a}^{0} f(x)\\,dx} + \\mk{right}{\\int_{0}^{a} f(x)\\,dx}",
+       "uses": [],
+       "map": {
+        "all": [
+         "lft",
+         "right"
+        ]
+       },
+       "cap": "An integral over $[-a, a]$ is the sum of the integrals over $[-a, 0]$ and $[0, a]$."
+      },
+      {
+       "tex": "\\mk{I}{I} = \\mk{left}{\\int_{0}^{a} f(-x)\\,dx} + \\mk{right}{\\int_{0}^{a} f(x)\\,dx}",
+       "uses": [],
+       "map": {
+        "lft": "left"
+       },
+       "cap": "Putting $-x$ for $x$ in the first integral turns $dx$ into $-dx$ and its limits $-a$, $0$ into $a$, $0$; swapping the limits back cancels the sign."
+      }
+     ],
+     "num": "(5.7.3)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "f(-x)=f(x)",
+       "src": "5.7"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{I}{I} = \\mk{left}{\\int_{0}^{a} f(-x)\\,dx} + \\mk{right}{\\int_{0}^{a} f(x)\\,dx}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{I}{I} = \\mk{left}{\\int_{0}^{a} f(x)\\,dx} + \\mk{right}{\\int_{0}^{a} f(x)\\,dx}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{I}{I} = \\mk{right}{2\\int_{0}^{a} f(x)\\,dx}",
+       "uses": [],
+       "map": {
+        "left": "right"
+       }
+      }
+     ],
+     "src": "5.7"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "f(-x)=-f(x)",
+       "src": "5.7"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{I}{I} = \\mk{left}{\\int_{0}^{a} f(-x)\\,dx} + \\mk{right}{\\int_{0}^{a} f(x)\\,dx}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{I}{I} = \\mk{left}{-\\int_{0}^{a} f(x)\\,dx} + \\mk{right}{\\int_{0}^{a} f(x)\\,dx}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{I}{I} = \\mk{zero}{0}",
+       "uses": [],
+       "map": {
+        "left": "zero",
+        "right": "zero"
+       }
+      }
+     ],
+     "src": "5.7"
+    }
+   ]
+  }
+ ]
+}

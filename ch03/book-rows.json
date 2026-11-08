@@ -1180,6 +1180,17 @@
     "accidental degeneracy"
    ],
    "statement": "A degeneracy that arises not from a symmetry such as Lₓ = L_y but from different combinations of nₓ²/Lₓ², n_y²/L_y² and n_z²/L_z² giving the same sum."
+  },
+  {
+   "id": "observable",
+   "kind": "definition",
+   "section": "3.3",
+   "name": "Observable",
+   "terms": [
+    "physical observable",
+    "dynamic variable"
+   ],
+   "statement": "A physical observable is anything about a system that can be measured, such as position, momentum or energy; quantum mechanics has an operator for every observable."
   }
  ],
  "concept_prereqs": [

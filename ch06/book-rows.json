@@ -1,0 +1,1155 @@
+{
+ "types": [],
+ "symbols": [
+  {
+   "sym": "l",
+   "latex": "l"
+  },
+  {
+   "sym": "m_l",
+   "latex": "m_l"
+  },
+  {
+   "sym": "R_f",
+   "latex": "R",
+   "macro": "\\kRf"
+  },
+  {
+   "sym": "R_nl",
+   "latex": "R_{n,l}",
+   "macro": "\\kRnl"
+  },
+  {
+   "sym": "Y_sh",
+   "latex": "Y",
+   "macro": "\\kYsh"
+  },
+  {
+   "sym": "Y_lm",
+   "latex": "Y^{m_l}_l",
+   "macro": "\\kYlm"
+  },
+  {
+   "sym": "psi_nlm",
+   "latex": "\\psi_{n,l,m_l}",
+   "macro": "\\kpsinlm"
+  },
+  {
+   "sym": "M2_hat",
+   "latex": "\\hat{M}^2",
+   "macro": "\\kMsqhat"
+  },
+  {
+   "sym": "L_vec",
+   "latex": "\\vec{L}",
+   "macro": "\\kLvec"
+  },
+  {
+   "sym": "p_x",
+   "latex": "p_x",
+   "macro": "\\kpx"
+  },
+  {
+   "sym": "p_y",
+   "latex": "p_y",
+   "macro": "\\kpy"
+  },
+  {
+   "sym": "p_z",
+   "latex": "p_z",
+   "macro": "\\kpz"
+  },
+  {
+   "sym": "L_nl",
+   "latex": "L_{n,l}"
+  },
+  {
+   "sym": "N_nl",
+   "latex": "N_{n,l}"
+  },
+  {
+   "sym": "P_n",
+   "latex": "P_n",
+   "macro": "\\kPn"
+  },
+  {
+   "sym": "r_max",
+   "latex": "r_{max}",
+   "macro": "\\krmax"
+  },
+  {
+   "sym": "r_bar",
+   "latex": "\\bar{r}",
+   "macro": "\\krbar"
+  },
+  {
+   "sym": "dr",
+   "latex": "\\Delta r",
+   "macro": "\\kdr"
+  },
+  {
+   "sym": "r_1",
+   "latex": "r_1",
+   "macro": "\\kra"
+  },
+  {
+   "sym": "r_2",
+   "latex": "r_2",
+   "macro": "\\krb"
+  },
+  {
+   "sym": "r_12",
+   "latex": "r_{12}",
+   "macro": "\\krab"
+  },
+  {
+   "sym": "r_ij",
+   "latex": "r_{ij}",
+   "macro": "\\krij"
+  },
+  {
+   "sym": "V_1",
+   "latex": "V_1",
+   "macro": "\\kVa"
+  },
+  {
+   "sym": "V_2",
+   "latex": "V_2",
+   "macro": "\\kVb"
+  },
+  {
+   "sym": "V_12",
+   "latex": "V_{12}",
+   "macro": "\\kVab"
+  },
+  {
+   "sym": "V_i",
+   "latex": "V_i",
+   "macro": "\\kVi"
+  },
+  {
+   "sym": "V_ij",
+   "latex": "V_{ij}",
+   "macro": "\\kVij"
+  },
+  {
+   "sym": "varphi_i",
+   "latex": "\\varphi_i",
+   "macro": "\\kvarphii"
+  },
+  {
+   "sym": "eps_i",
+   "latex": "\\epsilon_i",
+   "macro": "\\kepsi"
+  }
+ ],
+ "concepts": [
+  {
+   "id": "hydrogen-reduced-particle",
+   "kind": "idea",
+   "section": "6.1",
+   "name": "Hydrogen atom as a reduced particle",
+   "statement": "The internal motion of the electron and proton about their center of mass is that of one particle of reduced mass μ at the position r of the electron relative to the proton; since the proton is so much heavier, the chapter takes μ as the electron mass and puts the proton at the center of mass."
+  },
+  {
+   "id": "central-potential",
+   "kind": "definition",
+   "section": "6.1",
+   "name": "Central potential",
+   "terms": [
+    "central potential"
+   ],
+   "statement": "A potential energy that depends only on the distance r from a center and on no angle, as the Coulomb attraction between the electron and the proton does."
+  },
+  {
+   "id": "hydrogen-schrodinger-equation",
+   "kind": "result",
+   "section": "6.1",
+   "name": "Schrödinger equation of the hydrogen atom",
+   "statement": "The time-independent Schrödinger equation of the hydrogen atom uses the kinetic energy operator of the rigid rotor in spherical coordinates, with r now free to vary, and the Coulomb potential energy −e²/4πε₀r of the electron and proton.",
+   "forms": [
+    {
+     "id": "hydrogen-tise",
+     "latex": "\\hat {H} (r , \\theta , \\varphi ) \\psi (r , \\theta , \\varphi ) = E \\psi ( r , \\theta , \\varphi)"
+    },
+    {
+     "id": "hydrogen-coulomb",
+     "latex": "\\hat {V} (r) = - \\dfrac {e^2}{4 \\pi \\epsilon _0 r }"
+    },
+    {
+     "id": "hydrogen-hamiltonian",
+     "latex": "\\hat {H} = - \\dfrac {\\hbar ^2}{2 \\mu r^2} \\left [ \\dfrac {\\partial}{\\partial r} \\left (r^2 \\dfrac {\\partial}{\\partial r} \\right ) + \\dfrac {1}{\\sin \\theta } \\dfrac {\\partial}{\\partial \\theta } \\left ( \\sin \\theta \\dfrac {\\partial}{\\partial \\theta} \\right ) + \\dfrac {1}{\\sin ^2 \\theta} \\dfrac {\\partial ^2}{\\partial \\varphi ^2} \\right ] - \\dfrac {e^2}{4 \\pi \\epsilon _0 r }"
+    }
+   ]
+  },
+  {
+   "id": "angular-momentum-squared-operator",
+   "kind": "definition",
+   "section": "6.1",
+   "name": "Square of the angular momentum operator",
+   "symbol": "L2_hat",
+   "type": "operator",
+   "statement": "The operator for the square of the angular momentum, the angular part of the Laplacian times −ħ²; the book writes it M̂² and, for an electron, L̂². It is also the sum of the squares of the three component operators.",
+   "forms": [
+    {
+     "id": "angular-momentum-squared-operator",
+     "latex": "\\hat {M} ^2 = -\\hbar ^2 \\left [\\dfrac {1}{\\sin \\theta } \\dfrac {\\partial}{\\partial \\theta } \\left ( \\sin \\theta \\dfrac {\\partial}{\\partial \\theta} \\right ) + \\dfrac {1}{\\sin ^2 \\theta} \\dfrac {\\partial ^2}{\\partial \\varphi ^2} \\right ]"
+    },
+    {
+     "id": "l2-sum-of-components",
+     "latex": "\\hat{L}^2 = \\hat{L}_x^{\\,2}+\\hat{L}_y^{\\,2}+\\hat{L}_z^{\\,2}",
+     "section": "6.3"
+    }
+   ]
+  },
+  {
+   "id": "hydrogen-separation",
+   "kind": "result",
+   "section": "6.1",
+   "name": "Separating the radial and angular motion",
+   "statement": "Because L̂² does not involve r, a product ψ = R(r)Y(θ, φ) separates the hydrogen atom's equation into a radial differential equation and an angular one, each equal to the same constant λ.",
+   "forms": [
+    {
+     "id": "hydrogen-product",
+     "latex": "\\psi (r , \\theta , \\varphi ) = R (r) Y (\\theta , \\varphi )"
+    },
+    {
+     "id": "hydrogen-angular-equation",
+     "latex": "\\dfrac {1}{Y (\\theta , \\varphi )} \\hat {M} ^2 Y (\\theta , \\varphi ) = \\lambda"
+    }
+   ]
+  },
+  {
+   "id": "angular-momentum-eigenvalues",
+   "kind": "result",
+   "section": "6.1",
+   "name": "Eigenvalues of the square of the angular momentum",
+   "statement": "The spherical harmonics are the eigenfunctions of L̂², with eigenvalue l(l + 1)ħ², the rigid rotor's J(J + 1)ħ² in the notation for electrons.",
+   "forms": [
+    {
+     "id": "l2-eigenvalue",
+     "latex": "\\hat {L} ^2 Y^{m_l}_l (\\theta , \\varphi ) = l (l + 1) \\hbar ^2 Y^{m_l}_l (\\theta , \\varphi )"
+    }
+   ]
+  },
+  {
+   "id": "hydrogen-radial-equation",
+   "kind": "result",
+   "section": "6.1",
+   "name": "Radial equation of the hydrogen atom",
+   "statement": "With λ = l(l + 1)ħ², the radial part of the hydrogen atom's equation is an equation for R(r) alone, in which the angular momentum enters as the term l(l + 1)ħ²/2μr² beside the potential energy.",
+   "forms": [
+    {
+     "id": "hydrogen-radial-equation",
+     "latex": "- \\dfrac {\\hbar ^2}{2 \\mu r^2} \\dfrac {\\partial}{\\partial r} r^2 \\dfrac {\\partial}{\\partial r} R(r) + \\left [ \\dfrac {l(l +1) \\hbar ^2}{2 \\mu r^2} + V (r) - E \\right ] R (r) = 0"
+    }
+   ]
+  },
+  {
+   "id": "radial-function",
+   "kind": "definition",
+   "section": "6.2",
+   "name": "Radial function",
+   "symbol": "R_nl",
+   "terms": [
+    "radial function",
+    "radial functions"
+   ],
+   "type": "wavefunction",
+   "statement": "The factor R(r) of a hydrogen atom wavefunction, a solution of the radial equation, which describes how far the electron is from the proton."
+  },
+  {
+   "id": "hydrogen-wavefunctions",
+   "kind": "result",
+   "section": "6.2",
+   "name": "Hydrogen atom wavefunctions",
+   "symbol": "psi_nlm",
+   "type": "wavefunction",
+   "statement": "The solutions of the hydrogen atom's Schrödinger equation are products of a radial function and a spherical harmonic, labelled by three quantum numbers n, l and m_l; |ψ|² dτ is the probability of finding the electron in the volume element dτ at r, θ, φ.",
+   "forms": [
+    {
+     "id": "hydrogen-wavefunction",
+     "latex": "\\psi _{n, l, m_l } (r, \\theta , \\phi) = R_{n,l} (r) Y^{m_l}_l (\\theta , \\phi)"
+    }
+   ]
+  },
+  {
+   "id": "principal-quantum-number",
+   "kind": "definition",
+   "section": "6.2",
+   "name": "Principal quantum number",
+   "symbol": "n",
+   "terms": [
+    "principal quantum number"
+   ],
+   "statement": "The quantum number n = 1, 2, 3, … of the hydrogen atom, which fixes its energy."
+  },
+  {
+   "id": "angular-momentum-quantum-number",
+   "kind": "definition",
+   "section": "6.2",
+   "name": "Angular momentum quantum number",
+   "symbol": "l",
+   "terms": [
+    "angular momentum quantum number",
+    "azimuthal quantum number",
+    "orbital quantum number"
+   ],
+   "statement": "The quantum number l of the hydrogen atom, which fixes the magnitude of the electron's angular momentum; it is also called the azimuthal or orbital quantum number."
+  },
+  {
+   "id": "magnetic-quantum-number",
+   "kind": "definition",
+   "section": "6.2",
+   "name": "Magnetic quantum number",
+   "symbol": "m_l",
+   "terms": [
+    "magnetic quantum number"
+   ],
+   "statement": "The quantum number m_l of the hydrogen atom, which fixes the z component of the angular momentum; it is named for the dependence of the energy on m_l in a magnetic field."
+  },
+  {
+   "id": "hydrogen-quantum-number-rules",
+   "kind": "result",
+   "section": "6.2",
+   "name": "Allowed values of n, l and m_l",
+   "statement": "The boundary conditions allow n = 1, 2, 3, …; l = 0 to n − 1; and 2l + 1 values of m_l from −l to +l in integer steps.",
+   "forms": [
+    {
+     "id": "hydrogen-l-range",
+     "latex": "0 \\le l \\le n-1"
+    },
+    {
+     "id": "hydrogen-ml-range",
+     "latex": "-l \\le m_l \\le l"
+    }
+   ]
+  },
+  {
+   "id": "hydrogen-degeneracy",
+   "kind": "result",
+   "section": "6.2",
+   "name": "Degeneracy of the hydrogen levels",
+   "statement": "The number of orbitals with a given n, all of one energy, is n².",
+   "forms": [
+    {
+     "id": "hydrogen-degeneracy",
+     "latex": "g_n = n^2"
+    }
+   ]
+  },
+  {
+   "id": "orbital-letter-codes",
+   "kind": "definition",
+   "section": "6.2",
+   "name": "Orbital letters s, p, d, f",
+   "terms": [
+    "s orbital",
+    "p orbital",
+    "d orbital",
+    "s orbitals",
+    "p orbitals",
+    "d orbitals"
+   ],
+   "statement": "The letters that code the value of l: s for 0, p for 1, d for 2, f for 3, then alphabetically from g; they come from early spectroscopy (sharp, principal, diffuse, fundamental)."
+  },
+  {
+   "id": "atomic-orbital",
+   "kind": "definition",
+   "section": "6.2",
+   "name": "Atomic orbital",
+   "terms": [
+    "atomic orbital",
+    "atomic orbitals",
+    "orbital",
+    "orbitals"
+   ],
+   "statement": "A function that describes one electron in an atom; the hydrogen atom wavefunctions are its atomic orbitals, and an electron described by one is said to be in it. An orbital is not an orbit: it gives no trajectory."
+  },
+  {
+   "id": "real-orbitals",
+   "kind": "result",
+   "section": "6.2",
+   "name": "Real orbitals from complex ones",
+   "statement": "Since any combination of degenerate solutions is a solution, the complex wavefunctions with m_l = ±1 (and ±2) can be combined into real ones such as p_x and p_y; only m_l = 0 belongs to one real orbital (p_z, d_z²) by itself."
+  },
+  {
+   "id": "orbital-density-plots",
+   "kind": "idea",
+   "section": "6.2",
+   "name": "Picturing an orbital",
+   "terms": [
+    "probability density plot",
+    "contour map"
+   ],
+   "statement": "An orbital's density is a function of three variables, pictured by shading small volume elements in proportion to ψ*ψ, by contour maps in a plane, or by plotting the radial and angular parts separately."
+  },
+  {
+   "id": "radial-node",
+   "kind": "definition",
+   "section": "6.2",
+   "name": "Radial node",
+   "terms": [
+    "radial node",
+    "radial nodes"
+   ],
+   "statement": "A value of r, other than 0 or ∞, at which the radial function is zero."
+  },
+  {
+   "id": "radial-node-count",
+   "kind": "result",
+   "section": "6.2",
+   "name": "Number of radial nodes",
+   "statement": "A hydrogen wavefunction has n − l − 1 radial nodes: none for 1s, one for 2s, and so on; the roots of its Laguerre polynomial are its radial nodes.",
+   "forms": [
+    {
+     "id": "radial-node-count",
+     "latex": "n - l - 1"
+    }
+   ]
+  },
+  {
+   "id": "s-orbital-at-nucleus",
+   "kind": "result",
+   "section": "6.2",
+   "name": "Only s orbitals are nonzero at the nucleus",
+   "statement": "Every s function has a nonzero value at r = 0, while p, d, f and all other functions go to zero at the origin."
+  },
+  {
+   "id": "radial-probability-density",
+   "kind": "definition",
+   "section": "6.2",
+   "name": "Radial probability density",
+   "terms": [
+    "radial probability density",
+    "radial density"
+   ],
+   "type": "probability-density",
+   "statement": "The square R(r)*R(r) of the radial function, the density of the electron at a point a distance r from the proton."
+  },
+  {
+   "id": "radial-distribution-function",
+   "kind": "definition",
+   "section": "6.2",
+   "name": "Radial distribution function",
+   "terms": [
+    "radial distribution function",
+    "radial distribution functions"
+   ],
+   "type": "probability-density",
+   "statement": "The radial probability density times the area 4πr² of the sphere at r: the probability density of finding the electron anywhere on that sphere. It is zero at r = 0, rises with the r² term and falls once the exponential decay wins.",
+   "forms": [
+    {
+     "id": "radial-distribution-function",
+     "latex": "4 \\pi r^2 R(r) ^* R(r)"
+    }
+   ]
+  },
+  {
+   "id": "orbital-angular-momentum",
+   "kind": "definition",
+   "section": "6.3",
+   "name": "Orbital angular momentum",
+   "symbol": "L_vec",
+   "terms": [
+    "orbital angular momentum",
+    "angular momentum vector"
+   ],
+   "type": "angular-momentum",
+   "statement": "The angular momentum of a particle about the origin, the cross product of its position and its momentum, with components L_x, L_y and L_z; for a circular orbit its magnitude is mvr.",
+   "forms": [
+    {
+     "id": "orbital-angular-momentum",
+     "latex": "\\vec{L} = \\vec{r} \\times \\vec{p}"
+    },
+    {
+     "id": "angular-momentum-z",
+     "latex": "L_z = x\\,p_y - y \\,p_x"
+    },
+    {
+     "id": "circular-orbit-angular-momentum",
+     "latex": "|\\vec{L}| = m v r",
+     "section": "6.6"
+    }
+   ]
+  },
+  {
+   "id": "angular-momentum-component-operators",
+   "kind": "definition",
+   "section": "6.3",
+   "name": "Operators for the components of angular momentum",
+   "type": "operator",
+   "statement": "The operators L̂_x, L̂_y and L̂_z, written from the classical components with the position and momentum operators; in spherical coordinates L̂_z = −iħ ∂/∂φ.",
+   "forms": [
+    {
+     "id": "lx-operator",
+     "latex": "\\hat{L}_x = -{\\rm i}\\,\\hbar\\left(y\\,\\dfrac{\\partial}{\\partial z} - z\\,\\dfrac{\\partial} {\\partial y}\\right)"
+    },
+    {
+     "id": "lz-operator-spherical",
+     "latex": "\\hat{L}_z = -{\\rm i}\\,\\hbar\\,\\dfrac{\\partial}{\\partial\\varphi}"
+    }
+   ]
+  },
+  {
+   "id": "angular-momentum-magnitude",
+   "kind": "result",
+   "section": "6.3",
+   "name": "Magnitude of the angular momentum",
+   "statement": "The square of the angular momentum can take only the values l(l + 1)ħ², so its magnitude is √(l(l + 1)) ħ, with l = 0, 1, 2, …; a state of quantum number l is often said to have angular momentum l for short.",
+   "forms": [
+    {
+     "id": "angular-momentum-magnitude",
+     "latex": "|\\vec{L}| = \\sqrt{l(l+1)}\\, \\hbar"
+    }
+   ]
+  },
+  {
+   "id": "lz-quantization",
+   "kind": "result",
+   "section": "6.3",
+   "name": "Quantized z component of angular momentum",
+   "statement": "The z component of the angular momentum can take only the values m_l ħ, with m_l an integer from −l to l.",
+   "forms": [
+    {
+     "id": "lz-eigenvalue",
+     "latex": "\\hat{L}_z \\,Y_{l}^{m_l} = m_l\\,\\hbar\\,Y_l^{m_l}"
+    }
+   ]
+  },
+  {
+   "id": "angular-momentum-commutation-relations",
+   "kind": "result",
+   "section": "6.3",
+   "name": "Commutation relations of angular momentum",
+   "terms": [
+    "cyclic permutations"
+   ],
+   "statement": "The components of orbital angular momentum do not commute: [L̂_x, L̂_y] = iħL̂_z and its cyclic permutations. Any three operators that satisfy these relations represent the components of some sort of angular momentum.",
+   "forms": [
+    {
+     "id": "lx-ly-commutator",
+     "latex": "[\\hat{L}_x, \\hat{L}_y] = {\\rm i}\\,\\hbar\\, \\hat{L}_z"
+    },
+    {
+     "id": "ly-lz-commutator",
+     "latex": "[\\hat{L}_y, \\hat{L}_z] = {\\rm i}\\,\\hbar\\, \\hat{L}_x"
+    },
+    {
+     "id": "lz-lx-commutator",
+     "latex": "[\\hat{L}_z, \\hat{L}_x] = {\\rm i}\\,\\hbar\\, \\hat{L}_y"
+    }
+   ]
+  },
+  {
+   "id": "vector-model",
+   "kind": "idea",
+   "section": "6.3",
+   "name": "Vector model of angular momentum",
+   "terms": [
+    "vector model"
+   ],
+   "statement": "A state with quantum numbers l and m_l is drawn as a vector of length √(l(l + 1)) ħ whose z component is m_l ħ; since L_x and L_y cannot be known with L_z, every such vector, on a cone about z, represents it equally."
+  },
+  {
+   "id": "radial-asymptotic-behavior",
+   "kind": "result",
+   "section": "6.4",
+   "name": "Radial function far from the nucleus",
+   "statement": "Far from the nucleus the radial function decays as an exponential in r/na₀, like the harmonic oscillator's Gaussian tail but with r in place of r².",
+   "forms": [
+    {
+     "id": "radial-asymptotic",
+     "latex": "R_\\text{asymptotic} (r) \\sim \\exp \\left(-\\dfrac {r}{n a_0} \\right)"
+    }
+   ]
+  },
+  {
+   "id": "associated-laguerre-polynomials",
+   "kind": "definition",
+   "section": "6.4",
+   "name": "Associated Laguerre polynomials",
+   "symbol": "L_nl",
+   "terms": [
+    "associated Laguerre polynomials",
+    "Laguerre polynomial"
+   ],
+   "statement": "The polynomials L_{n,l}(r), from the truncated power series of the radial equation, labelled by n and l; acceptable solutions need n ≥ l + 1.",
+   "forms": [
+    {
+     "id": "laguerre-sum",
+     "latex": "L_{n, l} (r) = \\sum _{i=0}^{n-l-1} c_i r^i"
+    }
+   ]
+  },
+  {
+   "id": "hydrogen-radial-functions",
+   "kind": "result",
+   "section": "6.4",
+   "name": "Hydrogen radial functions",
+   "statement": "The radial functions are products of a normalization constant, (r/a₀)^l, an associated Laguerre polynomial and the decaying exponential, which overpowers the polynomial so that R(r) goes to zero at large r. With the nuclear charge Z they serve every one-electron atom or ion.",
+   "forms": [
+    {
+     "id": "hydrogen-radial-function",
+     "latex": "R (r) = N_{n,l} \\left ( \\dfrac {r}{a_0} \\right ) ^l L_{n,l} (r) e^{-\\frac {r}{n {a_0}}}"
+    }
+   ]
+  },
+  {
+   "id": "hydrogen-energy-levels",
+   "kind": "result",
+   "section": "6.4",
+   "name": "Energy levels of the hydrogen atom",
+   "symbol": "E_n",
+   "type": "energy",
+   "statement": "The condition n ≥ l + 1 quantizes the energy, giving the same levels as the Bohr model: E_n = −μe⁴/8ε₀²h²n², which depend on n alone.",
+   "forms": [
+    {
+     "id": "hydrogen-energy",
+     "latex": "E_n = - \\dfrac {\\mu e^4}{8 \\epsilon ^2_0 h^2 n^2}"
+    }
+   ]
+  },
+  {
+   "id": "bohr-versus-schrodinger",
+   "kind": "idea",
+   "section": "6.4",
+   "name": "Bohr and Schrödinger models compared",
+   "statement": "The Schrödinger model gives no orbits, only probabilities; its angular momentum is √(l(l + 1)) ħ, which can be zero, where Bohr's is a whole number of ħ; and its quantum numbers arise from solving the equation, where Bohr postulated them."
+  },
+  {
+   "id": "electron-density-distribution",
+   "kind": "definition",
+   "section": "6.5",
+   "name": "Electron density distribution",
+   "symbol": "P_n",
+   "terms": [
+    "electron density distribution",
+    "electron density distributions",
+    "electron density",
+    "charge density"
+   ],
+   "type": "probability-density",
+   "statement": "The probability distribution P_n of an electron in a definite energy level, read as the fraction of its charge in each small volume of space; it is measured in electronic charges per unit volume, e⁻/a₀³ in atomic units."
+  },
+  {
+   "id": "s-orbital-spherical",
+   "kind": "result",
+   "section": "6.5",
+   "name": "s orbitals are spherically symmetric",
+   "statement": "For every n one orbital, the s orbital, is independent of direction: its density depends on r alone, so its contours in a plane through the nucleus are circles; the other n² − 1 are concentrated in planes or along axes."
+  },
+  {
+   "id": "spherical-shell-volume",
+   "kind": "result",
+   "section": "6.5",
+   "name": "Volume of a thin spherical shell",
+   "statement": "The volume between spheres of radius r and r + Δr is 4πr²Δr when Δr is small, since the terms in Δr² and Δr³ become negligible.",
+   "forms": [
+    {
+     "id": "shell-volume",
+     "latex": "\\dfrac{4}{3} \\pi \\left[ (r + \\Delta r)^3 -r^3 \\right] \\approx 4 \\pi r^2 \\Delta r"
+    }
+   ]
+  },
+  {
+   "id": "ground-state-radial-maximum",
+   "kind": "result",
+   "section": "6.5",
+   "name": "Most probable radius of the 1s electron",
+   "statement": "The radial distribution function of the hydrogen ground state is zero at the nucleus, rises to a maximum at r_max = a₀ and falls off; since the curve is unsymmetrical, the average r̄ lies beyond r_max.",
+   "forms": [
+    {
+     "id": "ground-state-rmax",
+     "latex": "r_{max} = a_0"
+    }
+   ]
+  },
+  {
+   "id": "torque",
+   "kind": "definition",
+   "section": "6.6",
+   "name": "Torque",
+   "terms": [
+    "torque"
+   ],
+   "statement": "What changes a system's angular momentum, as a force changes its linear momentum."
+  },
+  {
+   "id": "central-force-conserves-angular-momentum",
+   "kind": "result",
+   "section": "6.6",
+   "name": "A central force leaves angular momentum constant",
+   "statement": "A force directed along r, like the attraction of the nucleus, changes only the electron's linear momentum: it exerts no torque, so the angular momentum of the orbit stays constant."
+  },
+  {
+   "id": "conserved-means-quantized",
+   "kind": "idea",
+   "section": "6.6",
+   "name": "Conserved quantities are quantized",
+   "statement": "The book's rule of thumb: any quantity that is constant in a classical system is conserved and quantized in the quantum system, so an undisturbed atom has quantized energy and angular momentum."
+  },
+  {
+   "id": "s-orbital-zero-angular-momentum",
+   "kind": "result",
+   "section": "6.6",
+   "name": "s orbitals carry no angular momentum",
+   "statement": "When l = 0 the angular momentum is zero; only such s electrons have spherical density distributions and place density at the nucleus."
+  },
+  {
+   "id": "hydrogen-node-count",
+   "kind": "result",
+   "section": "6.6",
+   "name": "Number of nodes",
+   "statement": "The number of nodes of a hydrogen orbital grows with its energy and equals n − 1, while the average r grows with n."
+  },
+  {
+   "id": "p-orbital-shape",
+   "kind": "result",
+   "section": "6.6",
+   "name": "Shape of a p orbital",
+   "statement": "A p orbital (l = 1) is concentrated along an axis: positive on one side of the nodal plane through the nucleus and negative on the other, with two lobes of circular cross section and no density at the nucleus."
+  },
+  {
+   "id": "d-orbital-shape",
+   "kind": "result",
+   "section": "6.6",
+   "name": "Shape of a d orbital",
+   "statement": "A d orbital (l = 2) has two angular nodes and no density at the nucleus; only d_z² belongs to one value of m_l (0), the others being combinations."
+  },
+  {
+   "id": "zeeman-effect",
+   "kind": "idea",
+   "section": "6.6",
+   "name": "Zeeman effect",
+   "terms": [
+    "Zeeman effect"
+   ],
+   "statement": "The shift of an orbital's energy in an external magnetic field, which depends on m_l; with no field the 2l + 1 values of m_l have the same energy."
+  },
+  {
+   "id": "electron-electron-repulsion",
+   "kind": "definition",
+   "section": "6.7",
+   "name": "Electron–electron repulsion",
+   "symbol": "V_ij",
+   "type": "energy",
+   "statement": "The Coulomb potential energy e²/4πε₀r_ij of two electrons a distance r_ij apart, positive because like charges repel.",
+   "forms": [
+    {
+     "id": "electron-repulsion",
+     "latex": "V_{12}(r_{12}) = \\dfrac {e^2}{4 \\pi \\epsilon _0 r_{12}}"
+    }
+   ]
+  },
+  {
+   "id": "multi-electron-hamiltonian",
+   "kind": "result",
+   "section": "6.7",
+   "name": "Hamiltonian of a multi-electron atom",
+   "statement": "The Hamiltonian of an atom with nuclear charge Z and n electrons, nucleus fixed at the center of mass, has a kinetic energy term and an attraction to the nucleus for each electron, and a repulsion term for each pair of electrons.",
+   "forms": [
+    {
+     "id": "helium-hamiltonian",
+     "latex": "\\hat {H} = -\\dfrac {\\hbar ^2}{2m_e} (\\nabla ^2_1 + \\nabla ^2_2) + V_1 (r_1) + V_2 (r_2) + V_{12} (r_{12})"
+    },
+    {
+     "id": "multi-electron-hamiltonian",
+     "latex": "\\hat {H} = -\\dfrac {\\hbar ^2}{2m_e} \\sum_i^n \\nabla ^2_i + \\sum_i^n V_i (r_i) + \\sum_{i \\ne j}^{n,n} V_{ij} (r_{ij})"
+    }
+   ]
+  },
+  {
+   "id": "multi-electron-not-separable",
+   "kind": "result",
+   "section": "6.7",
+   "name": "Multi-electron atoms cannot be solved exactly",
+   "statement": "The repulsion terms in 1/r_ij depend on two electrons' coordinates at once, so the Hamiltonian does not separate electron by electron and the Schrödinger equation has no exact solution even for helium."
+  },
+  {
+   "id": "multi-electron-wavefunction",
+   "kind": "definition",
+   "section": "6.7",
+   "name": "Multi-electron wavefunction",
+   "terms": [
+    "multi-electron wavefunction",
+    "multi-electron wavefunctions"
+   ],
+   "statement": "A single function of the coordinates of all the electrons at once, whose square gives the probability of finding the electrons, though not particular ones, in a region."
+  },
+  {
+   "id": "orbital-approximation",
+   "kind": "idea",
+   "section": "6.7",
+   "name": "Orbital approximation",
+   "terms": [
+    "orbital approximation"
+   ],
+   "statement": "Writing a multi-electron wavefunction as a product of one-electron functions, the orbitals, so that the energy is approximately the sum of the one-electron energies.",
+   "forms": [
+    {
+     "id": "orbital-approximation",
+     "latex": "\\psi (r_1, r_2, \\cdots , r_n) \\approx \\varphi _1 (r_1) \\varphi _2 (r_2) \\cdots \\varphi _n(r_n)"
+    },
+    {
+     "id": "orbital-energy-sum",
+     "latex": "E \\approx \\sum_i \\epsilon_i"
+    }
+   ]
+  }
+ ],
+ "concept_prereqs": [
+  {
+   "concept": "hydrogen-reduced-particle",
+   "prereq": "reduced-mass"
+  },
+  {
+   "concept": "central-potential",
+   "prereq": "spherical-coordinates"
+  },
+  {
+   "concept": "central-potential",
+   "prereq": "coulomb-potential"
+  },
+  {
+   "concept": "hydrogen-schrodinger-equation",
+   "prereq": "time-independent-schrodinger-equation"
+  },
+  {
+   "concept": "hydrogen-schrodinger-equation",
+   "prereq": "central-potential"
+  },
+  {
+   "concept": "hydrogen-schrodinger-equation",
+   "prereq": "hydrogen-reduced-particle"
+  },
+  {
+   "concept": "angular-momentum-squared-operator",
+   "prereq": "angular-momentum-operator"
+  },
+  {
+   "concept": "angular-momentum-squared-operator",
+   "prereq": "spherical-coordinates"
+  },
+  {
+   "concept": "hydrogen-separation",
+   "prereq": "hydrogen-schrodinger-equation"
+  },
+  {
+   "concept": "hydrogen-separation",
+   "prereq": "angular-momentum-squared-operator"
+  },
+  {
+   "concept": "angular-momentum-eigenvalues",
+   "prereq": "hydrogen-separation"
+  },
+  {
+   "concept": "angular-momentum-eigenvalues",
+   "prereq": "spherical-harmonics"
+  },
+  {
+   "concept": "hydrogen-radial-equation",
+   "prereq": "angular-momentum-eigenvalues"
+  },
+  {
+   "concept": "radial-function",
+   "prereq": "hydrogen-radial-equation"
+  },
+  {
+   "concept": "hydrogen-wavefunctions",
+   "prereq": "radial-function"
+  },
+  {
+   "concept": "principal-quantum-number",
+   "prereq": "hydrogen-wavefunctions"
+  },
+  {
+   "concept": "angular-momentum-quantum-number",
+   "prereq": "hydrogen-wavefunctions"
+  },
+  {
+   "concept": "magnetic-quantum-number",
+   "prereq": "hydrogen-wavefunctions"
+  },
+  {
+   "concept": "hydrogen-quantum-number-rules",
+   "prereq": "principal-quantum-number"
+  },
+  {
+   "concept": "hydrogen-quantum-number-rules",
+   "prereq": "angular-momentum-quantum-number"
+  },
+  {
+   "concept": "hydrogen-quantum-number-rules",
+   "prereq": "magnetic-quantum-number"
+  },
+  {
+   "concept": "hydrogen-degeneracy",
+   "prereq": "hydrogen-quantum-number-rules"
+  },
+  {
+   "concept": "hydrogen-degeneracy",
+   "prereq": "degeneracy"
+  },
+  {
+   "concept": "orbital-letter-codes",
+   "prereq": "angular-momentum-quantum-number"
+  },
+  {
+   "concept": "atomic-orbital",
+   "prereq": "hydrogen-wavefunctions"
+  },
+  {
+   "concept": "real-orbitals",
+   "prereq": "hydrogen-wavefunctions"
+  },
+  {
+   "concept": "real-orbitals",
+   "prereq": "principle-of-superposition"
+  },
+  {
+   "concept": "orbital-density-plots",
+   "prereq": "atomic-orbital"
+  },
+  {
+   "concept": "radial-node",
+   "prereq": "radial-function"
+  },
+  {
+   "concept": "radial-node",
+   "prereq": "node"
+  },
+  {
+   "concept": "radial-node-count",
+   "prereq": "radial-node"
+  },
+  {
+   "concept": "radial-node-count",
+   "prereq": "hydrogen-quantum-number-rules"
+  },
+  {
+   "concept": "s-orbital-at-nucleus",
+   "prereq": "orbital-letter-codes"
+  },
+  {
+   "concept": "radial-probability-density",
+   "prereq": "radial-function"
+  },
+  {
+   "concept": "radial-distribution-function",
+   "prereq": "radial-probability-density"
+  },
+  {
+   "concept": "orbital-angular-momentum",
+   "prereq": "angular-momentum"
+  },
+  {
+   "concept": "angular-momentum-component-operators",
+   "prereq": "orbital-angular-momentum"
+  },
+  {
+   "concept": "angular-momentum-component-operators",
+   "prereq": "angular-momentum-operator"
+  },
+  {
+   "concept": "angular-momentum-magnitude",
+   "prereq": "angular-momentum-eigenvalues"
+  },
+  {
+   "concept": "lz-quantization",
+   "prereq": "angular-momentum-component-operators"
+  },
+  {
+   "concept": "lz-quantization",
+   "prereq": "hydrogen-quantum-number-rules"
+  },
+  {
+   "concept": "angular-momentum-commutation-relations",
+   "prereq": "angular-momentum-component-operators"
+  },
+  {
+   "concept": "angular-momentum-commutation-relations",
+   "prereq": "commutator"
+  },
+  {
+   "concept": "vector-model",
+   "prereq": "angular-momentum-magnitude"
+  },
+  {
+   "concept": "vector-model",
+   "prereq": "lz-quantization"
+  },
+  {
+   "concept": "vector-model",
+   "prereq": "angular-momentum-commutation-relations"
+  },
+  {
+   "concept": "radial-asymptotic-behavior",
+   "prereq": "hydrogen-radial-equation"
+  },
+  {
+   "concept": "radial-asymptotic-behavior",
+   "prereq": "asymptotic-series-method"
+  },
+  {
+   "concept": "radial-asymptotic-behavior",
+   "prereq": "bohr-radius"
+  },
+  {
+   "concept": "associated-laguerre-polynomials",
+   "prereq": "hydrogen-radial-equation"
+  },
+  {
+   "concept": "associated-laguerre-polynomials",
+   "prereq": "asymptotic-series-method"
+  },
+  {
+   "concept": "hydrogen-radial-functions",
+   "prereq": "radial-asymptotic-behavior"
+  },
+  {
+   "concept": "hydrogen-radial-functions",
+   "prereq": "associated-laguerre-polynomials"
+  },
+  {
+   "concept": "hydrogen-radial-functions",
+   "prereq": "radial-function"
+  },
+  {
+   "concept": "hydrogen-energy-levels",
+   "prereq": "associated-laguerre-polynomials"
+  },
+  {
+   "concept": "hydrogen-energy-levels",
+   "prereq": "principal-quantum-number"
+  },
+  {
+   "concept": "hydrogen-energy-levels",
+   "prereq": "bohr-energy-levels"
+  },
+  {
+   "concept": "bohr-versus-schrodinger",
+   "prereq": "angular-momentum-magnitude"
+  },
+  {
+   "concept": "bohr-versus-schrodinger",
+   "prereq": "hydrogen-energy-levels"
+  },
+  {
+   "concept": "electron-density-distribution",
+   "prereq": "atomic-orbital"
+  },
+  {
+   "concept": "s-orbital-spherical",
+   "prereq": "electron-density-distribution"
+  },
+  {
+   "concept": "s-orbital-spherical",
+   "prereq": "orbital-letter-codes"
+  },
+  {
+   "concept": "s-orbital-spherical",
+   "prereq": "hydrogen-degeneracy"
+  },
+  {
+   "concept": "spherical-shell-volume",
+   "prereq": "volume-element"
+  },
+  {
+   "concept": "ground-state-radial-maximum",
+   "prereq": "radial-distribution-function"
+  },
+  {
+   "concept": "ground-state-radial-maximum",
+   "prereq": "spherical-shell-volume"
+  },
+  {
+   "concept": "ground-state-radial-maximum",
+   "prereq": "bohr-radius"
+  },
+  {
+   "concept": "torque",
+   "prereq": "orbital-angular-momentum"
+  },
+  {
+   "concept": "central-force-conserves-angular-momentum",
+   "prereq": "torque"
+  },
+  {
+   "concept": "central-force-conserves-angular-momentum",
+   "prereq": "central-potential"
+  },
+  {
+   "concept": "conserved-means-quantized",
+   "prereq": "central-force-conserves-angular-momentum"
+  },
+  {
+   "concept": "conserved-means-quantized",
+   "prereq": "energy-quantization"
+  },
+  {
+   "concept": "s-orbital-zero-angular-momentum",
+   "prereq": "angular-momentum-magnitude"
+  },
+  {
+   "concept": "s-orbital-zero-angular-momentum",
+   "prereq": "s-orbital-spherical"
+  },
+  {
+   "concept": "hydrogen-node-count",
+   "prereq": "radial-node-count"
+  },
+  {
+   "concept": "p-orbital-shape",
+   "prereq": "real-orbitals"
+  },
+  {
+   "concept": "p-orbital-shape",
+   "prereq": "orbital-letter-codes"
+  },
+  {
+   "concept": "p-orbital-shape",
+   "prereq": "electron-density-distribution"
+  },
+  {
+   "concept": "d-orbital-shape",
+   "prereq": "p-orbital-shape"
+  },
+  {
+   "concept": "zeeman-effect",
+   "prereq": "lz-quantization"
+  },
+  {
+   "concept": "electron-electron-repulsion",
+   "prereq": "coulomb-potential"
+  },
+  {
+   "concept": "multi-electron-hamiltonian",
+   "prereq": "hydrogen-schrodinger-equation"
+  },
+  {
+   "concept": "multi-electron-hamiltonian",
+   "prereq": "electron-electron-repulsion"
+  },
+  {
+   "concept": "multi-electron-not-separable",
+   "prereq": "multi-electron-hamiltonian"
+  },
+  {
+   "concept": "multi-electron-wavefunction",
+   "prereq": "multi-electron-hamiltonian"
+  },
+  {
+   "concept": "orbital-approximation",
+   "prereq": "multi-electron-wavefunction"
+  },
+  {
+   "concept": "orbital-approximation",
+   "prereq": "multi-electron-not-separable"
+  },
+  {
+   "concept": "orbital-approximation",
+   "prereq": "atomic-orbital"
+  }
+ ]
+}

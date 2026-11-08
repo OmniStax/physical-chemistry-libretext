@@ -1,0 +1,77 @@
+<section id="opening">
+<h2>Two bodies as one</h2>
+<p>For studying the energetics of molecular vibration we take the simplest example, a diatomic heteronuclear molecule $\mathrm{AB}$. Let the respective masses of atoms $\mathrm{A}$ and $\mathrm{B}$ be $\kmA$ and $\kmB$. For diatomic molecules, we define the <span data-concept="reduced-mass">reduced mass</span> $\kmuAB$ by:</p>
+$$ \kmuAB=\dfrac{\kmA\, \kmB}{\kmA+\kmB} \tag{5.2.1} $$
+<p><span data-concept="reduced-mass">Reduced mass</span> is the representation of a two-body system as a single-body one. When the motion (displacement, vibrational, rotational) of two bodies are only under mutual interactions, the inertial mass of the moving body with respect to the body at rest can be simplified to a <span data-concept="reduced-mass">reduced mass</span>.</p>
+</section>
+
+<section id="reduced-mass">
+<h2>Reduced Mass</h2>
+<p>Viewing the multi-body system as a single particle allows the separation of the motion: vibration and rotation, of the particle from the displacement of the center of mass. This approach greatly simplifies many calculations and problems.</p>
+<figure class="sim" id="sim-two-body" data-figure="5.2.1" data-original="/media/ch05/343782-Fig_5.2.1.svg" data-original-caption="a) the individual vectors to the particles $m_1$ and $m_2$ in the coordinate space and the resultant vector. b) center of mass. c) reduced mass. (CC BY-NC; Ümit Kaya via LibreTexts)">
+  <div class="sim-head"><span class="eyebrow">Figure 5.2.1</span><span>The two atoms vibrate about their fixed center of mass while one particle of <span data-concept="reduced-mass">reduced mass</span> $\kmu$ vibrates on the same spring against a wall. Change either <span data-type="mass">mass</span>: the bond lengths match at every instant, and $\kmu$ stays below the lighter atom.</span></div>
+</figure>
+<p>This concept is readily used in the general motion of diatomics, i.e. simple <span data-concept="harmonic-oscillator">harmonic oscillator</span> (vibrational displacement between two bodies, following <span data-concept="hookes-law">Hooke's Law</span>), the <span data-concept="rigid-rotor">rigid rotor</span> approximation (the moment of inertia about the center of mass of a two-body system), spectroscopy, and many other applications.</p>
+<div class="example" id="ex-5-2-1">
+<h3>Example 5.2.1 · Reduced Mass</h3>
+<p>Determine the <span data-concept="reduced-mass">reduced mass</span> of the two body system of a proton and electron with $m_{proton} = 1.6727 \times 10^{-27}\, kg$ and $m_{electron} = 9.110 \times 10^{-31}\, kg$).</p>
+<h4>Answer</h4>
+$$ \begin{aligned} \mu_{pe} &= \dfrac{(1.6727 \times 10^{-27})(9.110 \times 10^{-31})}{1.6727 \times 10^{-27} + 9.110 \times 10^{-31}} \\[4pt] &= 9.105 \times 10^{-31} kg \end{aligned} $$
+</div>
+</section>
+
+<section id="the-quantum-harmonic-oscillator">
+<h2>The Quantum Harmonic Oscillator</h2>
+<p>The classical <span data-concept="harmonic-oscillator">Harmonic Oscillator</span> approximation is a simple yet powerful representation of the energetics of an oscillating spring system. Central to this model is the formulation of the quadratic potential energy</p>
+$$ \kV(\kx) \approx \dfrac {1}{2} \kk\kx^2 \tag{5.2.2} $$
+<p>One problem with this classical formulation is that it is not general. We cannot use it, for example, to describe vibrations of diatomic molecules, where quantum effects are important. This require the formulation for <span data-concept="harmonic-oscillator-schrodinger-equation">Schrödinger Equation</span> using Equation 5.2.2.</p>
+$$ \kH | \kpsi \rangle = \left[ \dfrac {-\hbar^2}{2\kmu} \dfrac {d^2 }{d \kx^2} + \dfrac {1}{2}\kk\kx^2 \right ] | \kpsi \rangle = \kE|\kpsi \rangle $$
+<p>Solving this quantum <span data-concept="harmonic-oscillator">harmonic oscillator</span> is appreciably harder than solving the Schrödinger Equation for the simpler particle-in-the-box model and is outside the scope of this text. However, as with most quantum modules (and in contrast to the classical <span data-concept="harmonic-oscillator">harmonic oscillator</span>), <span data-concept="oscillator-energy-levels">the energies are quantized</span> in terms of a <span data-concept="vibrational-quantum-number">quantum number</span> ($v$ in this case):</p>
+$$ \begin{aligned} \kEv &= \hbar \left(\sqrt {\dfrac {\kk}{\kmu}} \right) \left(v + \dfrac {1}{2} \right) \\[4pt] &= h \knu \left(v+\dfrac {1}{2} \right) \end{aligned} \tag{5.2.3} $$
+<p>with the natural vibrational frequency of the system given as</p>
+$$ \knu = \dfrac{1}{2 \pi}\sqrt {\dfrac {\kk}{\kmu}} \tag{5.2.4} $$
+<p>and the mass, $\kmu$, is the <span data-concept="reduced-mass">reduced mass</span> of the system (Equation 5.2.1).</p>
+<div class="note">
+<div class="eyebrow">Note</div>
+<h3>Warning</h3>
+<p>Be careful to distinguish $\nu$, the symbol for the natural frequency (as a Greek nu) from $v$ the quantum <span data-concept="harmonic-oscillator">harmonic oscillator</span> quantum number (Latin $v$).</p>
+</div>
+<div class="note">
+<div class="eyebrow">Note</div>
+<h3>Caution: Do Not Use Atomic Weights to Calculate Reduced Masses</h3>
+<p>The vibrational frequencies given by Equation 5.2.4 depend on the <span data-concept="force-constant">force constants</span> ($\kk$) and the atomic masses of the vibrating nuclei via the <span data-concept="reduced-mass">reduced mass</span> ($\kmu$). It should be clear that <span data-concept="isotope-effect">the substitution of one isotope of an atom in a molecule for another isotope will affect the atomic masses and therefore the reduced mass (via Equation 5.2.1) and therefore the vibrational frequencies (via Equation 5.2.4)</span>.</p>
+<p>It is important to remember that the Periodic Table gives only atomic weights of elements, which are scaled averages of atoms normally encountered in the laboratory (Table 5.2.1). To properly discuss vibrational frequencies of molecules, we need to know (or denote) the specific isotopes in the molecule. Check Table A4 for that information.</p>
+<div class="book-table">
+  <div class="tcap"><span class="eyebrow">Table 5.2.1</span><span>Atomic Mass and Isotope Composition. Consult Table A4 for more extensive table.</span></div>
+  <table>
+    <thead><tr><th>isotope</th><th>atomic mass (in amu)</th><th>isotopic abundance (%)</th></tr></thead>
+    <tbody>
+      <tr><td><sup>1</sup>H</td><td>1.007825</td><td>99.985</td></tr>
+      <tr><td><sup>2</sup>H</td><td>2.0140</td><td>0.015</td></tr>
+      <tr><td><sup>35</sup>Cl</td><td>35.968852<sup class="fn" data-note="cl35-mass"></sup></td><td>75.77</td></tr>
+      <tr><td><sup>37</sup>Cl</td><td>36.965903</td><td>24.23</td></tr>
+      <tr><td><sup>79</sup>Br</td><td>78.918336</td><td>50.69</td></tr>
+      <tr><td><sup>81</sup>Br</td><td>80.916289</td><td>49.31</td></tr>
+    </tbody>
+  </table>
+</div>
+</div>
+<div class="example" id="ex-5-2-1-2">
+<h3>Example 5.2.1 · Isotope Effect<sup class="fn" data-note="second-example"></sup></h3>
+<p>What are the <span data-concept="reduced-mass">reduced mass</span> for $\mathrm{^{1}H^{35}Cl}$ and $\mathrm{^{1}H^{37}Cl}$? If the <span data-concept="force-constant">spring constants</span> for vibrations of both molecules are equal and estimated at $478 \,N/m$, what are the natural vibrational frequencies of these two molecules?</p>
+<h4>Solution</h4>
+<p>The periodic table gives an atomic weight of 35.45 amu for chlorine, but remember this is the the average of the natural abundances of different chlorine isotopes which is dictated primary by two isotopes: $\mathrm{^{35}Cl}$ and $\mathrm{^{37}Cl}$. For this problem, we need the exact mass of the $\mathrm{^{1}H}$, $\mathrm{^{35}Cl}$, and $\mathrm{^{37}Cl}$ isotopes. Check Table A4 for that information.</p>
+<p>For $\mathrm{^{1}H^{35}Cl}$:</p>
+$$ \begin{aligned} \text{Reduced mass} &= \dfrac{m_1m_2}{m_1+m_2} \\[4pt] &= \dfrac{m_\mathrm{H}m_\mathrm{^{35}Cl}}{m_\mathrm{H}+m_\mathrm{^{35}Cl}} \\[4pt] &= \dfrac{(1.0078)(34.9688)}{1.0078 + 34.9688)}\, amu \\[4pt] &= 0.9796\,amu\end{aligned} $$
+<p>or when converted into kg is $1.629 \times 10^{-27}\,kg$.<sup class="fn" data-note="hcl35-kg"></sup></p>
+<p>For $\mathrm{^{1}H^{37}Cl}$:</p>
+$$ \begin{aligned} \text{Reduced mass} &= \dfrac{m_1m_2}{m_1+m_2} \\[4pt] &= \dfrac{m_\mathrm{H}m_\mathrm{^{37}Cl}}{m_\mathrm{H}+m_\mathrm{^{37}Cl}} \\[4pt] &= \dfrac{(1.0078)(36.965)}{1.0078 + 36.965)}\, amu \\[4pt] &= 0.9810\,amu\end{aligned} $$
+<p>or when converted into kg is $1.6291 \times 10^{-27}\,kg$. This is only 0.29% bigger.<sup class="fn" data-note="percent"></sup></p>
+<p>Equation 5.2.4 is used to predict the respective vibrational frequencies of these two molecules.</p>
+<p>For $\mathrm{^{1}H^{35}Cl}$:</p>
+$$ \begin{aligned} \nu &= \dfrac{1}{2 \pi}\sqrt {\dfrac {k}{\mu}} \\[4pt] &= \dfrac{1}{2 \pi}\sqrt {\dfrac {478 \,N/m}{1.629 \times 10^{-27}\,kg}} \\[4pt] &= 8.6394×10^{13} s^{-1} \end{aligned} $$
+<p>For $\mathrm{^{1}H^{37}Cl}$:</p>
+$$ \begin{aligned} \nu &= \dfrac{1}{2 \pi}\sqrt {\dfrac {k}{\mu}} \\[4pt] &= \dfrac{1}{2 \pi}\sqrt {\dfrac {478 \,N/m}{1.629 \times 10^{-27}\,kg}} \\[4pt] &= 8.621×10^{13} s^{-1} \end{aligned} $$
+<p>As with the differences in the <span data-concept="reduced-mass">reduced masses</span>, the differences in the vibrational frequencies of these two molecules is quite small. However, high resolution IR spectroscopy can easily distinguish the vibrations between these two molecules. Exercise 5.2.1 will demonstrate that this "<strong><span data-concept="isotope-effect">isotope effect</span></strong>" is not always a small effect.</p>
+</div>
+</section>

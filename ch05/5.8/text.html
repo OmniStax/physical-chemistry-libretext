@@ -1,0 +1,127 @@
+<section id="opening">
+<h2>Rigid rotors</h2>
+<p><span data-concept="rigid-rotor">Rigid rotor</span> means when the distance between particles do not change as they rotate. A rigid rotor only approximates a rotating diatomic molecular if vibration is ignored.</p>
+</section>
+
+<section id="the-classical-rigid-rotor-in-3d">
+<h2>The Classical Rigid Rotor in 3D</h2>
+<p>The <strong><span data-concept="rigid-rotor">rigid rotor</span></strong> is a mechanical model that is used to explain rotating systems. The linear rigid rotor model consists of two point masses located at fixed distances from their center of mass. The fixed distance between the two masses and the values of the masses are the only characteristics of the rigid model. However, for many actual diatomics this model is too restrictive since distances are usually not completely fixed and corrections on the rigid model can be made to compensate for small variations in the distance. Even in such a case the rigid rotor model is a useful model system to master.</p>
+<p>For a rigid rotor, the total energy is the sum of kinetic ($\kT$) and potential ($\kV$) energies</p>
+$$ \kEtot = \kT + \kV \tag{5.8.1} $$
+<p>The potential energy, $\kV$, is set to $0$ because the distance between particles does not change within the rigid rotor approximation. However, In reality, $\kV \neq 0$ because even though the average distance between particles does not change, the particles still vibrate. The rigid rotor approximation greatly simplifys our discussion.</p>
+<p>Since $\kV=0$ then $\kEtot = \kT$ and we can also say that:</p>
+$$ \kT = \dfrac{1}{2}\sum{\kmi\kvi^2} \tag{5.8.2} $$
+<p>However, we have to determine $\kvi$ in terms of rotation since we are dealing with rotation motion. Since,</p>
+$$ \komega = \dfrac{\kv}{\kr} \tag{5.8.3} $$
+<p>where $\komega$ is the <strong><span data-concept="angular-velocity">angular velocity</span></strong>, we can say that:</p>
+<figure class="dv" id="drv-rotor-kinetic"></figure>
+<p>where $\kli$ is the <strong><span data-concept="angular-momentum">angular momentum</span></strong> of the <em>i<sup>th</sup></em> particle, and $\kL$ is the <span data-concept="angular-momentum">angular momentum</span> of the <em>entire system</em>. Also, we know from physics that,</p>
+$$ \kL = \kI\komega \tag{5.8.7} $$
+<p>where $\kI$ is <span data-concept="moment-of-inertia">the moment of inertia of the rigid body relative to the axis of rotation</span>.</p>
+<p>Equation 5.8.8 shows that <span data-concept="rotational-kinetic-energy">the energy of the rigid rotor</span> scales with increasing angular frequency (i.e., the faster is rotates) and with increasing moment of inertia (i.e, the inertial resistance to rotation). Also, as expected, the classical rotational energy is not quantized (i.e., all possible rotational frequencies are possible).</p>
+</section>
+
+<section id="the-quantum-rigid-rotor-in-3d">
+<h2>The Quantum Rigid Rotor in 3D</h2>
+<p>It is convenient to discuss rotation with in the <span data-concept="spherical-coordinates">spherical coordinate system</span> rather than the Cartesian system (Figure 5.8.1).</p>
+<figure class="sim" id="sim-sphere" data-figure="5.8.1 + 5.8.4" data-original="/media/ch05/122126-558px-3D_Spherical.svg.png,/media/ch05/15883-Space_for_the_rotor.gif" data-original-width="350,205" data-original-caption="5.8.1: The spherical coordinate system in terms of the Cartesian system. (Public Domain; Andeggs via Wikipedia). 5.8.4: Space for a rigid rotor is restricted to the surface of a sphere of radius r₀. The only degrees of freedom are motions along θ or φ on the surface of the sphere.">
+  <div class="sim-head"><span class="eyebrow">Figure 5.8.1 + 5.8.4</span><span>Change $\theta$ and $\kvarphi$, and the internuclear axis sweeps over the sphere of radius $\krzero$. Two angles fix its direction; the length never changes. Drag to turn the view.</span></div>
+</figure>
+<p>To solve <span data-concept="rigid-rotor-schrodinger-equation">the Schrödinger equation for the rigid rotor</span>, we will separate the variables and form single-variable equations that can be solved independently. Only two variables $\theta$ and $\kvarphi$ are required in the rigid rotor model because the bond length, $\kr$, is taken to be the constant $\krzero$. We first write the rigid rotor wavefunctions as the product of a theta-function depending only on $\theta$ and a phi-function depending only on $\kvarphi$</p>
+$$ | \kpsi (\theta , \kvarphi ) \rangle = | \kThetaf (\theta ) \kPhi (\kvarphi) \rangle \tag{5.8.9} $$
+<p>We then substitute the product wavefunction and the Hamiltonian written in spherical coordinates into the Schrödinger Equation 5.8.10</p>
+<figure class="dv" id="drv-rotor-separation"></figure>
+<p>Equation 5.8.15 says that the function on the left, depending only on the variable $\theta$, always equals the function on the right, depending only on the variable $\kvarphi$, for all values of $\theta$ and $\kvarphi$. The only way two different functions of independent variables can be equal for all values of the variables is if both functions are equal to a constant (review separation of variables). We call this constant $m_J^2$ because soon we will need the square root of it. <span data-concept="separated-rotor-equations">The two differential equations to solve are the $\theta$-equation</span></p>
+$$ \sin \theta \dfrac {d}{d \theta} \left ( \sin \theta \dfrac {d}{d \theta} \right ) \kThetaf (\theta ) + \left ( \klambda \sin ^2 \theta - m_J^2 \right ) \kThetaf (\theta ) = 0 \tag{5.8.16} $$
+<p>and the $\kvarphi$-equation</p>
+$$ \dfrac {d^2}{d \kvarphi ^2} \kPhi (\kvarphi ) + m_J^2 \kPhi (\kvarphi) = 0 \tag{5.8.17} $$
+<p>The partial derivatives have been replaced by total derivatives because only a single variable is involved in each equation.</p>
+<blockquote><p>Often $m_J$ is referred to as just $m$ for convenience.</p></blockquote>
+<h3>Solving the $\kvarphi$ Equation</h3>
+<p>The $\kvarphi$-equation is similar to the Schrödinger Equation for the free particle. Since we already solved this previously, we immediately write the solutions:</p>
+$$ \kPhi _m (\kvarphi) = N e^{\pm im_J \kvarphi} \tag{5.8.18} $$
+<p>where we introduce the number $m$ to track how many wavelengths of the wavefunction occur around one rotation (similar to the wavelength description of the Bohr atom).</p>
+<p>The normalization condition, Equation 5.8.19 is used to find a value for $N$ that satisfies Equation 5.8.18.</p>
+$$ \int \limits ^{2 \pi} _0 \kPhi ^*(\kvarphi) \kPhi (\kvarphi) d \kvarphi = 1 \tag{5.8.19} $$
+<p>The range of the integral is only from $0$ to $2π$ because the angle $\kvarphi$ specifies the position of the internuclear axis relative to the x-axis of the coordinate system and angles greater than $2π$ do not specify additional new positions.</p>
+<p>Values for $m$ are found by using a <strong><span data-concept="cyclic-boundary-condition">cyclic boundary condition</span></strong>. The cyclic boundary condition means that since $\kvarphi$ and $\kvarphi + 2\kvarphi$<sup class="fn" data-note="c-2pi"></sup> refer to the same point in three-dimensional space, $\kPhi (\kvarphi)$ must equal $\kPhi (\kvarphi + 2 \pi )$, i.e.</p>
+<figure class="dv" id="drv-cyclic"></figure>
+<p>In other words $m_J$ can equal <strong>any positive or negative integer or zero.</strong></p>
+<p>Thus, <span data-concept="rotor-phi-functions">the $Φ$ function is</span></p>
+$$ \kPhi _{m_J} (\kvarphi) = \sqrt{\dfrac{1}{2\pi}} e^{\pm i m_J \kvarphi} $$
+<p>with</p>
+$$ m_J = 0, \pm 1, \pm 2, \cdots $$
+<h3>Solving the $\kThetaf (\theta)$ Equation</h3>
+<p>Finding the $\kThetaf (\theta)$ functions that are solutions to the $\theta$-equation (Equation 5.8.16) is a more complicated process. Solutions are found to be a set of power series called <em><span data-concept="associated-legendre-functions">Associated Legendre Functions</span></em> (Table M2), which are power series of trigonometric functions, i.e., products and powers of sine and cosine functions. The $\kThetaf (\theta)$ functions, along with their normalization constants, are shown in the third column of Table 5.8.1.</p>
+<div class="book-table">
+  <div class="tcap"><span class="eyebrow">Table 5.8.1</span><span>Spherical Harmonic Wavefunctions</span></div>
+  <table>
+    <thead><tr><th>$m_J$</th><th>$J$</th><th>$\Theta ^{m_J}_J (\theta)$</th><th>$\Phi (\varphi)$</th><th>$Y^{m_J}_J (\theta , \varphi)$</th></tr></thead>
+    <tbody>
+      <tr><td>0</td><td>0</td><td>$\dfrac {1}{\sqrt {2}}$</td><td>$\dfrac {1}{\sqrt {2 \pi}}$</td><td>$\dfrac {1}{\sqrt {4 \pi}}$</td></tr>
+      <tr><td>0</td><td>1</td><td>$\sqrt {\dfrac {3}{2}}\cos \theta$</td><td>$\dfrac {1}{\sqrt {2 \pi}}$</td><td>$\sqrt {\dfrac {3}{4 \pi}}\cos \theta$</td></tr>
+      <tr><td>1</td><td>1</td><td>$\sqrt {\dfrac {3}{4}}\sin \theta$</td><td>$\dfrac {1}{\sqrt {2 \pi}}e^{i \varphi}$</td><td>$\sqrt {\dfrac {3}{8 \pi}}\sin \theta e^{i \varphi}$</td></tr>
+      <tr><td>-1</td><td>1</td><td>$\sqrt {\dfrac {3}{4}}\sin \theta$</td><td>$\dfrac {1}{\sqrt {2 \pi}}e^{-i\varphi}$</td><td>$\sqrt {\dfrac {3}{8 \pi}}\sin \theta e^{-i \varphi}$</td></tr>
+      <tr><td>0</td><td>2</td><td>$\sqrt {\dfrac {5}{8}}(3\cos ^2 \theta - 1)$</td><td>$\dfrac {1}{\sqrt {2 \pi}}$</td><td>$\sqrt {\dfrac {5}{16\pi}}(3\cos ^2 \theta - 1)$</td></tr>
+      <tr><td>1</td><td>2</td><td>$\sqrt {\dfrac {15}{4}} \sin \theta \cos \theta$</td><td>$\dfrac {1}{\sqrt {2 \pi}}e^{i \varphi}$</td><td>$\sqrt {\dfrac {15}{8\pi}} \sin \theta \cos \theta e^{i\varphi}$</td></tr>
+      <tr><td>-1</td><td>2</td><td>$\sqrt {\dfrac {15}{4}} \sin \theta \cos \theta$</td><td>$\dfrac {1}{\sqrt {2 \pi}}e^{-i\varphi}$</td><td>$\sqrt {\dfrac {15}{8\pi}} \sin \theta \cos \theta e^{-i\varphi}$</td></tr>
+      <tr><td>2</td><td>2</td><td>$\sqrt {\dfrac {15}{16}} \sin ^2 \theta$</td><td>$\dfrac {1}{\sqrt {2 \pi}}e^{2i\varphi}$</td><td>$\sqrt {\dfrac {15}{32\pi}} \sin ^2 \theta e^{2i\varphi}$</td></tr>
+      <tr><td>-2</td><td>2</td><td>$\sqrt {\dfrac {15}{16}} \sin ^2 \theta$</td><td>$\dfrac {1}{\sqrt {2 \pi}}e^{2i\varphi}$<sup class="fn" data-note="c-table"></sup></td><td>$\sqrt {\dfrac {15}{32\pi}} \sin ^2 \theta e^{-2i\varphi}$</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>The solution to the $\theta$-equation requires that $λ$ in Equation 5.8.15 be given by</p>
+$$ \klambda = J (J + 1) \tag{5.8.22} $$
+<p>where</p>
+$$ J \ge |m_J| \tag{5.8.23} $$
+<p><span data-concept="rotor-quantum-numbers">$J$ can be 0 or any positive integer greater than or equal to $m_J$</span>.<sup class="fn" data-note="c-absm"></sup> Each pair of values for the quantum numbers, $J$ and $m_J$, identifies a rotational state with a wavefunction (Equation 5.8.9) and energy (below). Equation 5.8.23 means that $J$ controls the allowed values of $m_J$.</p>
+<blockquote><p>Each pair of values for the quantum numbers, $J$ and $m_J$, identifies a rotational state and hence a specific wavefunction with associated energy.</p></blockquote>
+<p>The combination of Equations 5.8.14 and 5.8.22 reveals that <span data-concept="rotor-energy-levels">the energy of this system is quantized</span>.</p>
+$$ \kE = \dfrac {\hbar ^2 \klambda}{2\kI} = J(J + 1) \dfrac {\hbar ^2}{2\kI} \tag{5.8.24} $$
+<p>Using Equation 5.8.24, you can construct a rotational energy level diagram (Figure 5.8.2). For simplicity, use energy units of $\dfrac {\hbar ^2}{2I}$.</p>
+<ul><li>$J=0$: The lowest energy state has $J = 0$ and $m_J = 0$. This state has an energy $E_0 = 0$. There is only <strong>one state</strong> with this energy, i.e. one set of quantum numbers, one wavefunction, and one set of properties for the molecule.</li><li>$J=1$: The next energy level is $J = 1$ with energy $\dfrac {2\hbar ^2}{2I}$. There are <strong>three states</strong> with this energy because $m_J$ can equal +1, 0, or ‑1. These different states correspond to different orientations of the rotating molecule in space. States with the same energy are said to be degenerate. The degeneracy of an energy level is the number of states with that energy. The degeneracy of the $J = 1$ energy level is 3 because there are three states with the energy $\dfrac {2\hbar ^2}{2I}$.</li><li>$J=2$: The next energy level is for $J = 2$. The energy is $\dfrac {6\hbar ^2}{2I}$, and there are <strong>five states</strong> with this energy corresponding to $m_J = +2, \,+1,\, 0,\, ‑1,\, ‑2$. The energy level degeneracy is five. Note that the spacing between energy levels increases as J increases. Also note that the degeneracy increases. <span data-concept="rotor-degeneracy">The degeneracy is always $2J+1$</span> because $m_J$ ranges from $+J$ to $‑J$ in integer steps, including 0.</li></ul>
+<figure class="sim" id="sim-rotor-levels" data-figure="5.8.2" data-original="/media/ch05/123778-Energy_levels.png" data-original-caption="Energy spacing for a rigid rotor (in 3D). Notice the energy depends only on J and not depend on m_J. That is, the energy of the rotor is not affected by its orientation.">
+  <div class="sim-head"><span class="eyebrow">Figure 5.8.2</span><span>Pick a level $J$. Its $2J + 1$ states share one energy, and the gap to the next level, $2(J + 1)$ in units of $\hbar^2/2\kI$, widens as $J$ climbs.</span></div>
+</figure>
+<blockquote><p>Each allowed energy of rigid rotor is $(2J+1)$-fold degenerate. Hence, there exist $(2J+1)$ different wavefunctions with that energy.</p></blockquote>
+<div class="note">
+<div class="eyebrow">Note</div>
+<h3>Interpretation of Quantum Numbers for a Rigid Rotor</h3>
+<p>The $m_J$ quantum number reflects the component of the angular momentum along the $z$ ­ direction (and hence is sometimes called the azimuthal quantum number). For a fixed value of $J$, the different values of $m_J$ reflect the different <strong>directions</strong> the angular momentum vector could be pointing – for large, positive $m_J$ the angular momentum is mostly along +z; if $m_J$ is zero the angular momentum is orthogonal to $z$. Physically, the energy of the rotation does not depend on the direction, which is reflected in the fact that the energy depends only on $J$ (Equation 5.8.24), which measures the length of the vector, not its direction given by $m_J$.</p>
+</div>
+<div class="example" id="ex-5-8-7">
+<h3>Example 5.8.7 · Molecular Oxygen</h3>
+<p>Calculate $J = 0$ to $J = 1$ rotational transition of the $\mathrm{O_{2}}$ molecule with a bond length of 121 pm.</p>
+<h4>Solution</h4>
+$$ E = \dfrac {\hbar^2}{I} = \dfrac {\hbar^2}{\mu r^2} $$
+$$ \mu_{O2} = \dfrac{m_{O} m_{O}}{m_{O} + m_{O}} = \dfrac{(15.9994)(15.9994)}{15.9994 + 15.9994} = 7.9997 $$
+<p>convert from atomic units to kilogram using the conversion: 1 au<sup class="fn" data-note="c-amu"></sup> = 1.66 x 10<sup>-27</sup> kg. Plug and chug.</p>
+$$ E = 5.71 \times 10^{-27} \;Joules $$
+<p><sup class="fn" data-note="c-o2"></sup></p>
+</div>
+</section>
+
+<section id="spherical-harmonics">
+<h2>Spherical Harmonics</h2>
+<p>A wavefunction that is a solution to the rigid rotor Schrödinger Equation (Equation 5.8.9) can be written as a single function $Y(\theta, \kvarphi)$, which is called a <span data-concept="spherical-harmonics">spherical harmonic function</span>.</p>
+$$ \kYJm (\theta , \kvarphi ) = \kThetaf ^{|m_J|}_J (\theta) \kPhi _{m_J} (\kvarphi) \tag{5.8.25} $$
+<p>The spherical harmonic wavefunction is labeled with $m_J$ and $J$ because its functional form depends on both of these quantum numbers. These functions are tabulated above for $J = 0$ through $J = 2$ and for $J = 3$ in the Spherical Harmonics Table (M4) Polar plots of some of the $\theta$-functions are shown in Figure 5.8.3.</p>
+<figure class="sim" id="sim-ylm" data-figure="5.8.3" data-original="/media/ch05/15884-AngularWF.gif" data-original-caption="Polar plots in which the distance from the center gives the value of the function Y for the indicated angle θ.">
+  <div class="sim-head"><span class="eyebrow">Figure 5.8.3</span><span>Pick a state $(J, m_J)$. The distance from the center is $|\kYJm|^2$ at the angle $\theta$ from the z-axis. In 3D the same curve turns about z, since it does not depend on $\kvarphi$.</span></div>
+</figure>
+<p>The two-dimensional space for a rigid rotor is defined as the surface of a sphere of radius $\krzero$, as shown in Figure 5.8.2.<sup class="fn" data-note="c-fig4"></sup></p>
+<p><span data-concept="rotor-orientation-probability">The probability of finding the internuclear axis</span> at specific coordinates $\theta _0$ and $\kvarphi _0$ within an infinitesimal area $ds$ on this curved surface is given by</p>
+$$ Pr \left [ \theta _0, \kvarphi _0 \right ] = Y^{m_{J*}}_J (\theta _0, \kvarphi _0) Y^{m_J}_J (\theta _0, \kvarphi _0) ds \tag{5.8.26} $$
+<p>where the area element $ds$ is centered at $\theta _0$ and $\kvarphi _0$.</p>
+<p>Within the Copenhagen interpretation of wavefunctions, the absolute square (or modulus squared) of the rigid rotor wavefunction $Y^{m_{J*}}_J (\theta, \kvarphi) Y^{m_J}_J (\theta, \kvarphi)$ gives the probability density for finding the internuclear axis oriented at $\theta$ to the z-axis and $\kvarphi$ to the x-axis. In spherical coordinates the area element used for integrating $\theta$ and $\kvarphi$ is</p>
+$$ ds = \sin \theta\, d \theta \,d \kvarphi \tag{5.8.27} $$
+<p>Consider the significance of the probability density function by examining the $J = 1$, $m_J = 0$ wavefunction. The Spherical Harmonic for this case is</p>
+$$ Y^0_1 = \sqrt{ \dfrac {3}{4 \pi}} \cos \theta \tag{5.8.28} $$
+<p>The polar plot of $( Y^0_1)^2$ is shown in Figure 5.8.3. For $J = 1$ and $m_J = 0$, the probability of finding the internuclear axis is independent of the angle $\kvarphi$ from the x-axis, and greatest for finding the internuclear axis along the z‑axis, but there also is a probability for finding it at other values of $\theta$ as well. So, although the internuclear axis is not always aligned with the z-axis, the probability is highest for this alignment. Also, since the probability is independent of the angle $\kvarphi$, the internuclear axis can be found in any plane containing the z-axis with equal probability.</p>
+<p>The $J = 1$, $m_J = 0$ function is 0 when $\theta$ = 90°. Therefore, the entire xy-plane is a <strong><span data-concept="node">node</span></strong>. This fact means the probability of finding the internuclear axis in this particular horizontal plane is 0 in contradiction to our classical picture of a rotating molecule. In the classical picture, a molecule rotating in a plane perpendicular to the xy‑plane must have the internuclear axis lie in the xy‑plane twice every revolution, but the quantum mechanical description says that the probability of being in the xy-plane is zero. This conclusion means that <span data-concept="quantum-rotor-not-classical">molecules are not rotating in the classical sense</span>, but they still have some, but not all, of the properties associated with classical rotation. The properties they retain are associated with angular momentum.</p>
+</section>
+
+<section id="references">
+<h2>References</h2>
+<ol><li>Anderson, J.M. Introduction to Quantum Chemistry, 1969, W.A. Benjamin, Inc, pg.91-100.</li><li>Atkins, Peter and de Paula, Julio. Physical Chemistry for the Life Sciences. New York: W.H. Freeman and Company. p. 515.</li></ol>
+</section>

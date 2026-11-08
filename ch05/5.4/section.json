@@ -1,0 +1,207 @@
+{
+ "id": "5.4",
+ "module": "13419",
+ "chapter": "5",
+ "title": "The Harmonic Oscillator Energy Levels",
+ "short": "Oscillator energy levels",
+ "lead": "A quantum harmonic oscillator can hold only certain energies, and where it is can be given only as a probability. Its lowest energy, set against the parabola of the potential, fixes how far a classical oscillator with that energy could stretch.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "Adapted from Hanson, Harvey, Sweeney and Zielinski's Quantum States of Atoms and Molecules (Zielinski et al.) under CC BY-NC-SA 4.0. Exercise 5.4.1, which compares the classical and quantum oscillators, is set in Section 5.6, where the wavefunctions are drawn.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book's one exercise here, Exercise 5.4.1, tests the wavefunctions and the correspondence principle of Section 5.6 and is set there with its key. Both exercises below were written by AI with AI solutions, on the zero-point energy and the classical limit, which the book leaves untested. Bloom levels and concept tags were chosen by AI. Numeric answers accept a 2% tolerance.",
+ "figures": [
+  {
+   "id": "sim-ladder",
+   "kind": "sim",
+   "number": "5.4.1",
+   "originals": [
+    "/media/ch05/343783-Fig_5.4.1.svg"
+   ],
+   "original_caption": "Potential energy function and first few energy levels for harmonic oscillator. (CC BY-NC 4.0; Ümit Kaya via LibreTexts)",
+   "widths": [
+    507
+   ],
+   "draws": [
+    "energy",
+    "length",
+    "force-constant",
+    "mass",
+    "frequency"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "quantized-energies",
+   "concept": "oscillator-energy-levels",
+   "verb": "reinforces"
+  },
+  {
+   "span": "quantized-energies",
+   "concept": "oscillator-zero-averages",
+   "verb": "introduces"
+  },
+  {
+   "span": "quantized-energies",
+   "concept": "zero-point-energy",
+   "verb": "reinforces"
+  },
+  {
+   "span": "quantized-energies",
+   "concept": "expectation-value",
+   "verb": "uses"
+  },
+  {
+   "span": "spread-of-the-displacement",
+   "concept": "root-mean-square-displacement",
+   "verb": "introduces"
+  },
+  {
+   "span": "spread-of-the-displacement",
+   "concept": "quantum-uncertainty",
+   "verb": "uses"
+  },
+  {
+   "span": "orthonormal-set",
+   "concept": "oscillator-orthonormality",
+   "verb": "introduces"
+  },
+  {
+   "span": "orthonormal-set",
+   "concept": "orthonormality",
+   "verb": "uses"
+  },
+  {
+   "span": "classical-limit",
+   "concept": "classically-forbidden-region",
+   "verb": "introduces"
+  },
+  {
+   "span": "classical-limit",
+   "concept": "oscillator-zero-point-energy",
+   "verb": "introduces"
+  },
+  {
+   "span": "classical-limit",
+   "concept": "classical-displacement-limit",
+   "verb": "introduces"
+  },
+  {
+   "span": "classical-limit",
+   "concept": "oscillator-frequency",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "ai1",
+   "source_id": "The lowest allowed energy for the quantum mechanical oscillator is called the",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "classical-limit",
+   "prompt": "<p>H<sub>2</sub> and D<sub>2</sub> have the same force constant, 575 N/m, since the bond is the same; only the masses differ. Taking the reduced masses as 0.5039 amu for H<sub>2</sub> and 1.0071 amu for D<sub>2</sub>, compute for each molecule (a, c) the zero-point energy $E_0$ and (b, d) the classical limit $Q_0$ of its displacement.</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 4.37e-20,
+      "unit": "J",
+      "hint": "Find $\\omega = \\sqrt{k/\\mu}$ first, with $\\mu$ in kg."
+     },
+     {
+      "part": "b",
+      "value": 12.3,
+      "unit": "pm"
+     },
+     {
+      "part": "c",
+      "value": 3.09e-20,
+      "unit": "J"
+     },
+     {
+      "part": "d",
+      "value": 10.4,
+      "unit": "pm"
+     }
+    ],
+    "solution": "<p>For H<sub>2</sub>, $\\mu = 0.5039 \\times 1.6605\\times10^{-27}\\ \\text{kg} = 8.368\\times10^{-28}$ kg, so</p>$$ \\omega = \\sqrt{\\dfrac{k}{\\mu}} = \\sqrt{\\dfrac{575\\ \\text{N/m}}{8.368\\times10^{-28}\\ \\text{kg}}} = 8.29\\times10^{14}\\ \\text{rad/s} $$<p>and the zero-point energy is $E_0 = \\hbar\\omega/2 = (1.0546\\times10^{-34}\\ \\text{J s})(8.29\\times10^{14}\\ \\text{s}^{-1})/2 = 4.37\\times10^{-20}$ J. Equation 5.4.5 gives the classical limit:</p>$$ Q_0 = \\sqrt{\\dfrac{\\hbar\\omega}{k}} = \\sqrt{\\dfrac{8.74\\times10^{-20}\\ \\text{J}}{575\\ \\text{N/m}}} = 1.23\\times10^{-11}\\ \\text{m} = 12.3\\ \\text{pm} $$<p>For D<sub>2</sub> the reduced mass is twice as large, so $\\omega$ is smaller by $\\sqrt{2}$: $\\omega = 5.86\\times10^{14}$ rad/s, $E_0 = 3.09\\times10^{-20}$ J and $Q_0 = 10.4$ pm. The heavier molecule sits lower in the same well and stretches less in its ground state.</p>"
+   }
+  },
+  {
+   "id": "ai2",
+   "source_id": "We define this classical limit of the amplitude of the oscillator displacement",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "classical-limit",
+   "prompt": "<p>Equate the energy of the $v = 1$ level to the potential energy at the classical limit of that level, $Q_1$, as Equation 5.4.5 does for $v = 0$. By what factor is $Q_1$ larger than $Q_0$?</p>",
+   "answer": {
+    "type": "number",
+    "value": 1.732,
+    "generated_by": "ai",
+    "hint": "By Equation 5.4.1, $E_1 = \\tfrac{3}{2}\\hbar\\omega$.",
+    "solution": "<p>The $v = 1$ level has $E_1 = \\tfrac{3}{2}\\hbar\\omega$ (Equation 5.4.1). At the classical limit all of it is potential energy:</p>$$ \\dfrac{3\\hbar\\omega}{2} = \\dfrac{kQ_1^2}{2} \\quad\\Rightarrow\\quad Q_1 = \\sqrt{\\dfrac{3\\hbar\\omega}{k}} $$<p>Equation 5.4.5 gives $Q_0 = \\sqrt{\\hbar\\omega/k}$, so $Q_1/Q_0 = \\sqrt{3} = 1.732$. In general the classical limit of level $v$ is $\\sqrt{2v+1}\\,Q_0$.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "ai1",
+   "concept": "oscillator-zero-point-energy"
+  },
+  {
+   "exercise": "ai1",
+   "concept": "classical-displacement-limit"
+  },
+  {
+   "exercise": "ai1",
+   "concept": "reduced-mass"
+  },
+  {
+   "exercise": "ai2",
+   "concept": "classical-displacement-limit"
+  },
+  {
+   "exercise": "ai2",
+   "concept": "oscillator-energy-levels"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "cite-omega",
+   "kind": "correction",
+   "html": "The book cites Equation 5.4.1, the energy levels. The frequency $\\omega = \\sqrt{k/\\mu}$ is the equation that follows, Equation 5.4.6."
+  }
+ ]
+}

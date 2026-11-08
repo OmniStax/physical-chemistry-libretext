@@ -1,0 +1,491 @@
+{
+ "id": "5.5",
+ "module": "13418",
+ "chapter": "5",
+ "title": "The Harmonic Oscillator and Infrared Spectra",
+ "short": "Infrared spectra",
+ "lead": "A molecule absorbs infrared light by moving from one vibrational level to another. The harmonic oscillator says which photon frequency does it, and a transition moment integral says which pairs of levels can be joined at all.",
+ "objectives": [
+  "Understand how the quantum harmonic oscillator model can be used to interpret the infrared spectra of diatomic molecules",
+  "Understand the origin of the transition moment integral and selection rules and how they are related"
+ ],
+ "summary_html": "",
+ "notes": "Adapted from Hanson, Harvey, Sweeney and Zielinski's Quantum States of Atoms and Molecules (Zielinski et al.) under CC BY-NC-SA 4.0. The box the book prints as Example 5.5.2 is kept as a worked example, and Exercise 5.5.1, which needs the Hermite recursion relation, is set in Section 5.7.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "Exercise 5.5.2 and its key are the book's; Exercise 5.5.3, which the book leaves unkeyed, has an AI solution. Exercise 5.5.1 is set in Section 5.7, where the Hermite recursion relation it needs is given. The last exercise, the rest of Example 5.5.1, which the book leaves as an exercise, was written by AI with an AI solution. Bloom levels and concept tags were chosen by AI. Numeric answers accept a 2% tolerance.",
+ "figures": [
+  {
+   "id": "sim-transitions",
+   "kind": "sim",
+   "number": "5.5.1",
+   "originals": [
+    "/media/ch05/348952-5.5.svg"
+   ],
+   "original_caption": "Possible transitions for a harmonic oscillator. Allowed transitions are labeled with blue arrows and forbidden transitions are labeled with red arrows. (CC BY-NC; Ümit Kaya via LibreTexts)",
+   "widths": [
+    535
+   ],
+   "draws": [
+    "energy",
+    "wavefunction",
+    "dipole-moment",
+    "length"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "infrared-spectroscopy-in-chemistry",
+   "concept": "infrared-spectroscopy",
+   "verb": "introduces"
+  },
+  {
+   "span": "ir-spectroscopy",
+   "concept": "oscillator-energy-levels",
+   "verb": "uses"
+  },
+  {
+   "span": "ir-spectroscopy",
+   "concept": "vibrational-quantum-number",
+   "verb": "uses"
+  },
+  {
+   "span": "ir-spectroscopy",
+   "concept": "vibrational-transition-frequency",
+   "verb": "introduces"
+  },
+  {
+   "span": "ir-spectroscopy",
+   "concept": "wavenumber",
+   "verb": "reinforces"
+  },
+  {
+   "span": "ir-spectroscopy",
+   "concept": "oscillator-zero-point-energy",
+   "verb": "uses"
+  },
+  {
+   "span": "selection-rules-for-ir-transitions",
+   "concept": "selection-rule",
+   "verb": "introduces"
+  },
+  {
+   "span": "selection-rules-for-ir-transitions",
+   "concept": "transition-moment-integral",
+   "verb": "introduces"
+  },
+  {
+   "span": "selection-rules-for-ir-transitions",
+   "concept": "forbidden-transition",
+   "verb": "introduces"
+  },
+  {
+   "span": "selection-rules-for-ir-transitions",
+   "concept": "dipole-moment-operator",
+   "verb": "introduces"
+  },
+  {
+   "span": "selection-rules-for-ir-transitions",
+   "concept": "dipole-moment",
+   "verb": "introduces"
+  },
+  {
+   "span": "selection-rules-for-ir-transitions",
+   "concept": "oscillator-orthonormality",
+   "verb": "uses"
+  },
+  {
+   "span": "selection-rules-for-ir-transitions",
+   "concept": "ir-selection-rules",
+   "verb": "introduces"
+  },
+  {
+   "span": "selection-rules-for-ir-transitions",
+   "concept": "overtone-transition",
+   "verb": "introduces"
+  },
+  {
+   "span": "selection-rules-for-ir-transitions",
+   "concept": "anharmonicity",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "e2",
+   "source_id": "exr:5.5.2",
+   "source_number": "Exercise 5.5.2",
+   "kind": "exercise",
+   "bloom": "Understand",
+   "place": {
+    "at": "end"
+   },
+   "cite": "selection-rules-for-ir-transitions",
+   "prompt": "<p>Explain why the molar absorptivity or molar extinction coefficients ($\\epsilon$) in Beer's Law for the IR absorption of some vibrations are greater than others.</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "source",
+    "hint": "The molar absorptivity measures how likely the transition is; Equation 5.5.7 gives that likelihood.",
+    "solution": "<h4>Answer</h4>\n<p>Qualitatively, if the probability of transition is large, then the molar absorptivity is large. And similar if the transition were not allowed, then there will be no intensity and no observed peak in the spectrum. Transitions can be \"partially allowed\" as well, and these bands appear with a lower intensity than the full allowed transitions.</p>\n<p>When looking at the Beer's Law</p>\n$$ A=\\epsilon ~c ~l $$\n<p>where $A$ is absorbance. $\\epsilon$ is the molar absorptivity, $c$ is the molar concentration and $l$ is the optical path length</p>\n<p>We are only looking at the change in the molar absorptivity as the IR absorptions of vibrations vary. To do this we have to look at the transition moment integral</p>\n$$ \\mu_{T}=\\left\\langle\\psi_{v^{\\prime}}|\\not \\hat{\\mu}(x)| \\psi_{v}\\right\\rangle $$<sup class=\"fn\" data-note=\"key-slash\"></sup>\n<p>When the transition moment integral is zero, there is no transition as it is not allowed under the selection rules. This means that the IR is not absorbing any vibrations and therefore the molar absorptivity is zero, which means that absorbance according to Beer's Law is zero. As the transition moment integral increases, the molar absorptivity also increases and the overall absorbance increases.</p>"
+   }
+  },
+  {
+   "id": "e3",
+   "source_id": "exr:5.5.3",
+   "source_number": "Exercise 5.5.3",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "selection-rules-for-ir-transitions",
+   "prompt": "<p>Compute the approximate transition frequencies in wavenumber units for the first and second overtone transitions in $\\mathrm{HCl}$ given that the fundamental is at 2,886 cm<sup>-1</sup>.</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "first overtone",
+      "value": 5772,
+      "unit": "cm⁻¹",
+      "hint": "In the harmonic model the levels are evenly spaced, so a jump of $\\Delta v = 2$ takes twice the energy of the fundamental."
+     },
+     {
+      "part": "second overtone",
+      "value": 8658,
+      "unit": "cm⁻¹"
+     }
+    ],
+    "solution": "<p>The harmonic levels are evenly spaced by the fundamental, $2886\\ \\text{cm}^{-1}$, so a transition with $\\Delta v = n$ absorbs $n$ times that energy. The first overtone, $\\Delta v = 2$, is at about $2 \\times 2886 = 5772\\ \\text{cm}^{-1}$ and the second, $\\Delta v = 3$, at about $3 \\times 2886 = 8658\\ \\text{cm}^{-1}$. These are approximate: the overtones are seen only because the vibration is anharmonic, and anharmonicity brings the upper levels closer together, so the observed overtones fall a little below these multiples.</p>"
+   }
+  },
+  {
+   "id": "ai1",
+   "source_id": "Calculating the above properties for the other molecules remains as an exercise.",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "ir-spectroscopy",
+   "prompt": "<p>Finish Example 5.5.1 for the other five molecules of its table, HF, HBr, HI, CO and NO, taking the reduced mass from the most common isotope of each atom (¹H, ¹⁹F, ⁷⁹Br, ¹²⁷I, ¹²C, ¹⁴N, ¹⁶O). For each, compute the angular frequency, the natural frequency, the period, the separation between energy levels and the wavelength $\\lambda$ absorbed in the transition $v = 0 \\rightarrow v = 1$. Give the five wavelengths in μm.</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "HF",
+      "value": 2.41,
+      "unit": "μm",
+      "hint": "$\\lambda = c/\\nu = 2\\pi c/\\omega$ with $\\omega = \\sqrt{k/\\mu}$."
+     },
+     {
+      "part": "HBr",
+      "value": 3.78,
+      "unit": "μm"
+     },
+     {
+      "part": "HI",
+      "value": 4.29,
+      "unit": "μm"
+     },
+     {
+      "part": "CO",
+      "value": 4.66,
+      "unit": "μm"
+     },
+     {
+      "part": "NO",
+      "value": 5.36,
+      "unit": "μm"
+     }
+    ],
+    "solution": "<p>For each molecule take the reduced mass $\\mu = m_1m_2/(m_1+m_2)$ of its most common isotopes (in amu, times $1.6605\\times10^{-27}$ kg), then $\\omega = \\sqrt{k/\\mu}$, $\\nu = \\omega/2\\pi$, the period $T = 1/\\nu$, the level spacing $\\Delta E = \\hbar\\omega$, and the wavelength of the $v = 0 \\rightarrow 1$ photon $\\lambda = c/\\nu$, since the photon's frequency is the vibration's (Equation 5.5.4). For HF, $\\mu = 0.9571$ amu $= 1.589\\times10^{-27}$ kg and</p>$$ \\omega = \\sqrt{\\dfrac{970\\ \\text{N/m}}{1.589\\times10^{-27}\\ \\text{kg}}} = 7.81\\times10^{14}\\ \\text{rad/s}, \\qquad \\lambda = \\dfrac{2\\pi c}{\\omega} = 2.41\\ \\mu\\text{m} $$<div class=\"book-table\"><table><thead><tr><th>Molecule</th><th>μ (amu)</th><th>ω (rad/s)</th><th>ν (Hz)</th><th>T (s)</th><th>ΔE (J)</th><th>λ (μm)</th></tr></thead><tbody><tr><td>HF</td><td>0.9571</td><td>$7.81\\times10^{14}$</td><td>$1.24\\times10^{14}$</td><td>$8.04\\times10^{-15}$</td><td>$8.24\\times10^{-20}$</td><td>2.41</td></tr><tr><td>HBr</td><td>0.9951</td><td>$4.98\\times10^{14}$</td><td>$7.93\\times10^{13}$</td><td>$1.26\\times10^{-14}$</td><td>$5.25\\times10^{-20}$</td><td>3.78</td></tr><tr><td>HI</td><td>0.9999</td><td>$4.39\\times10^{14}$</td><td>$6.99\\times10^{13}$</td><td>$1.43\\times10^{-14}$</td><td>$4.63\\times10^{-20}$</td><td>4.29</td></tr><tr><td>CO</td><td>6.856</td><td>$4.04\\times10^{14}$</td><td>$6.43\\times10^{13}$</td><td>$1.55\\times10^{-14}$</td><td>$4.26\\times10^{-20}$</td><td>4.66</td></tr><tr><td>NO</td><td>7.466</td><td>$3.51\\times10^{14}$</td><td>$5.59\\times10^{13}$</td><td>$1.79\\times10^{-14}$</td><td>$3.71\\times10^{-20}$</td><td>5.36</td></tr></tbody></table></div><p>Every wavelength falls between 2 and 6 μm, in the middle infrared. The heavier the hydrogen halide's partner atom, the closer $\\mu$ comes to the mass of the hydrogen atom, so the order of the wavelengths follows the force constants.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "e2",
+   "concept": "transition-moment-integral"
+  },
+  {
+   "exercise": "e2",
+   "concept": "selection-rule"
+  },
+  {
+   "exercise": "e3",
+   "concept": "overtone-transition"
+  },
+  {
+   "exercise": "e3",
+   "concept": "vibrational-transition-frequency"
+  },
+  {
+   "exercise": "ai1",
+   "concept": "vibrational-transition-frequency"
+  },
+  {
+   "exercise": "ai1",
+   "concept": "oscillator-frequency"
+  },
+  {
+   "exercise": "ai1",
+   "concept": "reduced-mass"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "note-matches",
+   "kind": "correction",
+   "html": "The book says the frequency of the absorbed radiation \"causes\" the molecular vibrational frequency. It matches it: the radiation absorbed has the frequency of the vibration."
+  },
+  {
+   "id": "cite-wavenumber",
+   "kind": "correction",
+   "html": "The book cites Equation 5.5.3. Equation 5.5.6 is Equation 5.5.4 divided by $hc$, since $\\tilde{\\nu} = \\nu/c$."
+  },
+  {
+   "id": "table-regions",
+   "kind": "correction",
+   "html": "The book repeats the near-IR range, $3.8\\times10^{14}$ to $1.2\\times10^{14}$ Hz, in every row. From the wavenumbers, $\\nu = c\\tilde{\\nu}$ gives $1.2\\times10^{14}$ to $6\\times10^{12}$ Hz for the middle IR, $6\\times10^{12}$ to $3\\times10^{11}$ Hz for the far IR and $1.2\\times10^{14}$ to $2.0\\times10^{13}$ Hz for the most used range. The wavelengths are in μm, and the far IR reaches 1000 μm, not 100."
+  },
+  {
+   "id": "example-omega",
+   "kind": "correction",
+   "html": "$2\\pi(8.646\\times10^{13}\\ \\text{s}^{-1})$ is $5.43\\times10^{14}$ rad/s, not 5.54. With it, $E_0 = 2.86\\times10^{-20}$ J, $Q_0 = 1.09\\times10^{-11}$ m and the extension is 8.6% of the bond length, where the book has $2.916\\times10^{-20}$ J, 0.0110 nm and 8.66%."
+  },
+  {
+   "id": "psi-prime",
+   "kind": "correction",
+   "html": "The second state's wavefunction is $\\psi_{v'}(x)$; the book writes $\\psi'_v(x)$, which reads as a derivative."
+  },
+  {
+   "id": "electron-charge",
+   "kind": "correction",
+   "html": "Equation 5.5.8 writes the electrons' charge as $e$. It is $-e$, as this sentence says."
+  },
+  {
+   "id": "taylor-factorial",
+   "kind": "correction",
+   "html": "The quadratic term of Equation 5.5.9 lacks its $1/2!$: it is $\\dfrac{1}{2}\\left.\\dfrac{d^2\\mu}{dx^2}\\right|_{x=0}x^2$. The two terms kept are unaffected."
+  },
+  {
+   "id": "conjugate",
+   "kind": "correction",
+   "html": "The first integral of Equation 5.5.10 lacks the complex conjugate, $\\int\\psi_{v'}^*(x)\\psi_v(x)\\,dx$, which the second has. The oscillator wavefunctions are real, so the value is the same."
+  },
+  {
+   "id": "no-change",
+   "kind": "correction",
+   "html": "The condition is a change in the dipole moment, as the first sentence says: a symmetric molecule does not absorb because its vibration leaves its dipole moment at zero, which is what the text below says of O₂ and N₂."
+  },
+  {
+   "id": "key-slash",
+   "kind": "correction",
+   "html": "The slash through $\\hat{\\mu}$ is a typing slip. The integral is $\\langle\\psi_{v'}|\\hat{\\mu}(x)|\\psi_v\\rangle$, Equation 5.5.7."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "photon-matches-vibration",
+   "what": "the photon matches the vibration",
+   "source": "Physical Chemistry (LibreTexts), 5.5 The Harmonic Oscillator and Infrared Spectra",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kEv = \\left(v+\\dfrac{1}{2}\\right)h\\knum",
+       "src": "(5.5.2)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{p}{h\\knuph} = \\mk{d}{\\kdE_{vv'}}",
+      "src": "5.5"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{p}{h\\knuph} = \\mk{d}{\\kE_{v'} - \\kE_{v}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{p}{h\\knuph} = \\mk{d}{\\left(v'+\\dfrac{1}{2}\\right)h\\knum - \\left(v+\\dfrac{1}{2}\\right)h\\knum}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{p}{h\\knuph} = \\mk{d}{\\left(v'-v\\right)h\\knum}",
+       "uses": []
+      }
+     ],
+     "num": "(5.5.3)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "text": "Only transitions between adjacent eigenstates are considered, $v' - v = \\pm 1$, positive when an IR photon is absorbed.",
+       "src": "5.5"
+      },
+      {
+       "tex": "h\\knum = \\dfrac{h}{2\\pi}\\sqrt{\\dfrac{\\kk}{\\kmu}}",
+       "src": "(5.5.1), (5.5.2)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{p}{h\\knuph} = \\mk{d}{\\left(v'-v\\right)h\\knum}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{p}{h\\knuph} = \\mk{d}{h\\knum}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{p}{h\\knuph} = \\mk{d}{h\\knum} = \\mk{k}{\\dfrac{h}{2\\pi}\\sqrt{\\dfrac{\\kk}{\\kmu}}}",
+       "uses": [
+        2
+       ]
+      }
+     ],
+     "num": "(5.5.4)"
+    }
+   ]
+  },
+  {
+   "id": "ir-selection-rules",
+   "what": "the IR selection rules",
+   "source": "Physical Chemistry (LibreTexts), 5.5 The Harmonic Oscillator and Infrared Spectra",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kmuT = \\kmuxzero \\int_{-\\infty}^{\\infty}\\kpsi^*_{v'}(\\kx)\\kpsiv(\\kx)\\,d\\kx + \\left.\\dfrac{d\\kmud}{d\\kx}\\right|_{\\kx=0} \\int_{-\\infty}^{\\infty}\\kx\\,\\kpsi^*_{v'}(\\kx)\\kpsiv(\\kx)\\,d\\kx",
+       "src": "(5.5.10)"
+      },
+      {
+       "tex": "\\int_{-\\infty}^{\\infty}\\kpsi^*_{v'}(\\kx)\\kpsiv(\\kx)\\,d\\kx = 0 \\quad (v' \\neq v)",
+       "src": "5.4, (5.4.4)"
+      },
+      {
+       "text": "A transition joins two different states, $v' \\neq v$."
+      }
+     ],
+     "then": {
+      "tex": "\\mk{t}{\\kmuT} = \\mk{a}{\\kmuxzero \\int_{-\\infty}^{\\infty}\\kpsi^*_{v'}(\\kx)\\kpsiv(\\kx)\\,d\\kx} + \\mk{b}{\\left.\\dfrac{d\\kmud}{d\\kx}\\right|_{\\kx=0} \\int_{-\\infty}^{\\infty}\\kx\\,\\kpsi^*_{v'}(\\kx)\\kpsiv(\\kx)\\,d\\kx}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{t}{\\kmuT} = \\mk{a}{\\kmuxzero\\cdot 0} + \\mk{b}{\\left.\\dfrac{d\\kmud}{d\\kx}\\right|_{\\kx=0} \\int_{-\\infty}^{\\infty}\\kx\\,\\kpsi^*_{v'}(\\kx)\\kpsiv(\\kx)\\,d\\kx}",
+       "uses": [
+        1,
+        2
+       ],
+       "cap": "Any two different harmonic oscillator wavefunctions are orthogonal."
+      },
+      {
+       "tex": "\\mk{t}{\\kmuT} = \\mk{b}{\\left.\\dfrac{d\\kmud}{d\\kx}\\right|_{\\kx=0} \\int_{-\\infty}^{\\infty}\\kx\\,\\kpsi^*_{v'}(\\kx)\\kpsiv(\\kx)\\,d\\kx}",
+       "uses": []
+      }
+     ]
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "text": "A transition is observed only if its transition moment is not zero, $\\kmuT \\neq 0$.",
+       "src": "5.5"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{t}{\\kmuT} = \\mk{d}{\\left.\\dfrac{d\\kmud}{d\\kx}\\right|_{\\kx=0}}\\,\\mk{i}{\\int_{-\\infty}^{\\infty}\\kx\\,\\kpsi^*_{v'}(\\kx)\\kpsiv(\\kx)\\,d\\kx}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{d}{\\left.\\dfrac{d\\kmud}{d\\kx}\\right|_{\\kx=0}}\\,\\mk{i}{\\int_{-\\infty}^{\\infty}\\kx\\,\\kpsi^*_{v'}(\\kx)\\kpsiv(\\kx)\\,d\\kx} \\neq \\mk{z}{0}",
+       "uses": [
+        1
+       ]
+      }
+     ]
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      }
+     ],
+     "then": {
+      "tex": "\\mk{d}{\\left.\\dfrac{d\\kmud}{d\\kx}\\right|_{\\kx=0}}\\,\\mk{i}{\\int_{-\\infty}^{\\infty}\\kx\\,\\kpsi^*_{v'}(\\kx)\\kpsiv(\\kx)\\,d\\kx} \\neq \\mk{z}{0}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{d}{\\left.\\dfrac{d\\kmud}{d\\kx}\\right|_{\\kx=0}} \\neq \\mk{z}{0}",
+       "uses": []
+      }
+     ]
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "text": "The integral $\\int_{-\\infty}^{\\infty}\\kx\\,\\kpsi^*_{v'}(\\kx)\\kpsiv(\\kx)\\,d\\kx$ is zero unless $v' = v \\pm 1$.",
+       "src": "Exercise 5.5.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{d}{\\left.\\dfrac{d\\kmud}{d\\kx}\\right|_{\\kx=0}}\\,\\mk{i}{\\int_{-\\infty}^{\\infty}\\kx\\,\\kpsi^*_{v'}(\\kx)\\kpsiv(\\kx)\\,d\\kx} \\neq \\mk{z}{0}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{i}{\\int_{-\\infty}^{\\infty}\\kx\\,\\kpsi^*_{v'}(\\kx)\\kpsiv(\\kx)\\,d\\kx} \\neq \\mk{z}{0}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{i}{v'} = \\mk{z}{v \\pm 1}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{i}{\\Delta v} = \\mk{z}{\\pm 1}",
+       "uses": []
+      }
+     ],
+     "num": "(5.5.12)"
+    }
+   ]
+  }
+ ]
+}

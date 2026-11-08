@@ -1,0 +1,102 @@
+<section id="opening">
+<h2>Motions of a diatomic molecule</h2>
+<p><span data-concept="molecular-motion-separation">The motion of two atoms in a diatomic molecule can be separated into translational, vibrational, and rotational motions.</span> Both rotation and vibrational motions are internal motions that do not change the center of mass for the molecule (Figure 5.1.1), which is described by translational motion. Quantum translational motions can be modeled with the particle in a box model discussed previously and rotation and vibration can be modeled via the <strong><span data-concept="rigid-rotor">rigid rotor</span></strong> and <strong><span data-concept="harmonic-oscillator">harmonic oscillator</span></strong> models, respectively.</p>
+<figure class="sim" id="sim-pair" data-figure="5.1.1" data-original="/media/ch05/177160-ezgif-5-7f2851c68052.gif" data-original-caption="Two atoms connected by a vibrating bond. There is a rotation around the common center of mass, and oscillation in bond distance. (CC SA-BY, 3.0; www.cleonis.nl).">
+  <div class="sim-head"><span class="eyebrow">Figure 5.1.1</span><span>Two atoms vibrate along their bond and turn about their common center of mass, which never moves. Make one atom heavier and watch the lighter one do most of the moving.</span></div>
+</figure>
+<p>Before delving into the quantum mechanical <span data-concept="harmonic-oscillator">harmonic oscillator</span>, we will introduce the classical <span data-concept="harmonic-oscillator">harmonic oscillator</span> (i.e., involving classical mechanics) to build an intuition that we will extend to the quantum world. A classical description of the vibration of a diatomic molecule is needed because the quantum mechanical description begins with replacing the classical energy with the Hamiltonian operator in the Schrödinger equation. It also is interesting to compare and contrast the classical description with the quantum mechanical picture.</p>
+</section>
+
+<section id="the-classical-harmonic-oscillator">
+<h2>The Classical Harmonic Oscillator</h2>
+<p>Simple <span data-concept="harmonic-oscillator">harmonic oscillators</span> about a potential energy minimum can be thought of as a ball rolling frictionlessly in a curved dish or a pendulum swinging frictionlessly back and forth (Figure 5.1.2). The restoring forces are precisely the same in either horizontal direction.</p>
+<figure class="sim" id="sim-spring" data-figure="5.1.2 + 5.1.4" data-original="/media/ch05/343400-imageedit_1_4359661853.png,/media/ch05/122091-220px-Simple_harmonic_motion_animation.gif" data-original-caption="5.1.2: A mass connected to a spring that follows Hooke's law is a system that, when displaced from its equilibrium position ($x_o=0$), experiences a restoring force, $F$ that is proportional to the displacement, $x$ from the equilibrium length ($x_o$). (CC BY-NC; Ümit Kaya via LibreTexts). 5.1.4: Solution to the Harmonic Oscillator. Displacement (y-axis) is plotted as a function of time.">
+  <div class="sim-head"><span class="eyebrow">Figure 5.1.2 + 5.1.4</span><span>The <span data-type="force">restoring force</span> always points back toward $\kx = 0$, and its size grows with the <span data-type="length">displacement</span>. Make the spring stiffer or the mass lighter and the trace beside it swings faster, whatever the amplitude.</span></div>
+</figure>
+<p>If we consider the bond to behave like a mass on a spring (Figure 5.1.2), then this restoring force ($\kF$) is proportional to the displacement ($\kx$) from the equilibrium length ($x_o$) - this is <em><a href="https://phys.libretexts.org/Bookshelves/College_Physics/Book%3A_College_Physics_(OpenStax)/16%3A_Oscillatory_Motion_and_Waves/16.02%3A_Hooke%E2%80%99s_Law_-_Stress_and_Strain_Revisited">Hooke's Law</a>:</em></p>
+$$ \kF = - \kk\kx \tag{5.1.1} $$
+<p>where $\kk$ is the <span data-concept="force-constant">force constant</span>. <span data-concept="hookes-law">Hooke's Law</span> says that the force is proportional to, but in opposite direction to, the displacement ($\kx$). The <span data-concept="force-constant">force constant</span> reflects the <strong><span data-concept="force-constant">stiffness</span></strong> of the spring. The idea incorporated into the application of <span data-concept="hookes-law">Hooke's Law</span> to a diatomic molecule is that when the atoms move away from their equilibrium positions, a restoring force is produced that increases proportionally with the displacement from equilibrium. <span data-concept="harmonic-potential">The potential energy for such a system increases <em>quadratically</em> with the displacement.</span></p>
+$$ \kV (\kx) = \dfrac {1}{2} \kk \kx^2 \tag{5.1.2} $$
+<p><span data-concept="hookes-law">Hooke's Law</span> or the harmonic (i.e. quadratic) potential given by Equation 5.1.2 is an excellent <em>approximation</em> for the vibrational oscillations of molecules. The magnitude of the <span data-concept="force-constant">force constant</span> $\kk$ depends upon the nature of the chemical bond in molecular systems just as it depends on the nature of the spring in mechanical systems. The larger the <span data-concept="force-constant">force constant</span>, the stiffer the spring or the stiffer the bond. Since it is the electron distribution between the two positively charged nuclei that holds them together, a double bond with more electrons has a larger <span data-concept="force-constant">force constant</span> than a single bond, and the nuclei are held together more tightly.</p>
+<div class="note">
+<div class="eyebrow">Note</div>
+<h3>Caution</h3>
+<p>A stiff bond with a large <span data-concept="force-constant">force constant</span> is not necessarily a strong bond with a large dissociation energy. A <span data-concept="harmonic-oscillator">harmonic oscillator</span> has no dissociation energy since it CANNOT be broken - there is always a restoring force to keep the molecule together. This is one of many deficiencies in using the <span data-concept="harmonic-oscillator">harmonic oscillator</span> model to describe molecular vibrations.</p>
+</div>
+<div class="note">
+<div class="eyebrow">Note</div>
+<h3>Two atoms or one?</h3>
+<p>You may have questioned the applicability of the <span data-concept="harmonic-oscillator">harmonic oscillator</span> model involving one moving mass bound to a fix wall via a spring like in Figure 5.1.2 for the vibration of a diatomic molecule with two moving masses like in Figure 5.1.1. It turned out the two are mathematically the same with internal vibration motion described by a single reduced particle with a <span data-concept="reduced-mass">reduced mass</span> $\kmu$.</p>
+<figure class="sim" id="fig-5-1-3" data-figure="5.1.3" data-original="/media/ch05/343402-cmm.png" data-original-width="638" data-original-caption="Diagrams of the coordinate systems and relevant vectors for the motion of (a) a two-particle diatomic molecule with atoms of mass $m_1$ and $m_2$ and (b) the equivalent one-particle pseudo-particle of reduced mass $\mu$. (CC BY-NC; Ümit Kaya via LibreTexts)">
+  <div class="sim-head"><span class="eyebrow">Figure 5.1.3</span><span>Diagrams of the coordinate systems and relevant vectors for the motion of (a) a two-particle diatomic molecule with atoms of mass $\kmone$ and $\kmtwo$ and (b) the equivalent one-particle pseudo-particle of <span data-concept="reduced-mass">reduced mass</span> $\kmu$. (CC BY-NC; Ümit Kaya via LibreTexts)</span></div>
+</figure>
+<p>For a diatomic molecule, Figure 5.1.3, the vector $\krvec$ corresponds to the internuclear axis. The magnitude or length of $r$ is the bond length, and the orientation of $r$ in space gives the orientation of the internuclear axis in space. Changes in the orientation correspond to rotation of the molecule, and changes in the length correspond to vibration. The change in the bond length from the equilibrium bond length is the <strong><span data-concept="vibrational-coordinate">vibrational coordinate</span></strong> for a diatomic molecule.</p>
+</div>
+<div class="example" id="ex-5-1-1">
+<h3>Example 5.1.1</h3>
+<ol type="a"><li>Show that minus the first derivative of the <span data-concept="harmonic-potential">harmonic potential</span> energy function in Equation 5.1.2 with respect to $\kx$ is the <span data-concept="hookes-law">Hooke's Law</span> force in Equation 5.1.1.</li><li>Show that the second derivative is the <span data-concept="force-constant">force constant</span>, $\kk$.</li><li>At what value of $\kx$ is the potential energy a minimum; at what value of $\kx$ is the force zero?</li><li>Sketch graphs to compare the potential energy and the force for a system with a large <span data-concept="force-constant">force constant</span> to one with a small <span data-concept="force-constant">force constant</span>.</li></ol>
+<p><strong>Solution a</strong></p>
+<p><span data-concept="hookes-law">Hooke's Law</span> for a spring entails that the force applied on a spring $\kF$ is equal to the <span data-concept="force-constant">force constant</span>, $-\kk$<sup class="fn" data-note="minus-k"></sup> times the distance compressed or stretched, $\kx$ (Equation 5.1.1). The derivative of $\kV(\kx) = 0.5 \kk \kx^2$ is</p>
+$$ \kV'(\kx) = (2)\left(\dfrac{1}{2}\right)\kk\kx = \kk\kx. $$
+<p>The negative of this is $-\kV'(\kx) = -\kk\kx$ which is exactly equal to <span data-concept="hookes-law">Hooke's Law</span>.</p>
+<p><strong>Solution b</strong></p>
+<p>The second derivative</p>
+$$ \kV''(\kx) = \dfrac{d}{d\kx} \kk\kx = \kk $$
+<p>Thus, the second derivative of this equation for potential energy is equal to the <span data-concept="force-constant">force constant</span>, $\kk$.</p>
+<p><strong>Solution c</strong></p>
+<p>To find the minimum potential energy, it is easiest to set the first derivative equal to zero and solve for x. When $\kV'(\kx) = \kk\kx = 0$ then x must be equal to zero. Thus, the minimum potential energy is when x=0. Plugging this into <span data-concept="hookes-law">Hooke's Law</span>, $\kF(0) = -\kk(0) = 0$ so this is also the value for x when the force is zero.</p>
+<p><strong>Solution d</strong></p>
+<figure class="photo" id="fig-ex-5-1-1">
+  <img src="/media/ch05/343401-Screen_Shot_2019-12-09_at_2.53.19_PM.png" alt="Graph showing two parabolas: one in red for y = x²/2 and one in green for y = x².">
+  <figcaption><span class="eyebrow">Figure</span></figcaption>
+</figure>
+<p>The <span data-concept="force-constant">force constant</span> has a drastic effect on both the potential energy and the force. A system with a large <span data-concept="force-constant">force constant</span> requires minimal change in $\kx$ to have a drastic change in potential energy or force, whereas a system with a small <span data-concept="force-constant">force constant</span> is the exact opposite phenomenon.</p>
+</div>
+</section>
+
+<section id="solving-the-harmonic-oscillator-model">
+<h2>Solving the Harmonic Oscillator Model</h2>
+<p>The classical <span data-concept="oscillator-equation-of-motion">equation of motion</span> for a one-dimensional simple <span data-concept="harmonic-oscillator">harmonic oscillator</span> with a particle of mass $\km$ attached to a spring having <span data-concept="force-constant">spring constant</span> $\kk$ is</p>
+<figure class="dv" id="drv-oscillator-motion"></figure>
+<p>Figure 5.1.4 show the displacement of the bond from its equilibrium length as a function of time. Such motion is called <strong><span data-concept="classical-harmonic-motion">harmonic</span></strong>.</p>
+<div class="example" id="ex-5-1-2">
+<h3>Example 5.1.2</h3>
+<p>Substitute the following functions into Equation 5.1.4 to demonstrate that they are both possible solutions to the classical <span data-concept="oscillator-equation-of-motion">equation of motion</span>.</p>
+<ol type="a"><li>$\kx(\kt) = x_0 e^{i \komega \kt}$</li><li>$\kx(\kt) = x_0 e^{-i \komega \kt}$</li></ol>
+<p>where</p>
+$$ \komega = \sqrt {\dfrac {\kk}{\km}} $$
+<p>Note that the Greek symbol $\komega$ for frequency represents the <span data-concept="oscillator-frequency">angular frequency</span> $2π\nu$.</p>
+<p><strong>Solution a</strong></p>
+<p>This requires simply placing the given function $\kx(\kt) = x_0 e^{i \komega \kt}$ into Equation 5.1.4.</p>
+$$ \begin{aligned} \frac{d^2 \kx(\kt) }{d\kt^2} + \frac{\kk}{\km} \kx(\kt) &= 0 \\[4pt] \frac{d^2 }{d\kt^2} \left( \kxlo e^{i \komega \kt} \right)+ \frac{\kk}{\km}\kxlo e^{i \komega \kt} &= 0\\[4pt] \kxlo \frac{d^2 }{d\kt^2} \left( e^{i \komega \kt} \right)+ \frac{\kk}{\km}\kxlo e^{i \komega \kt} &= 0 \\[4pt] \kxlo i^2 \komega^2 \left( e^{i \komega \kt} \right)+ \frac{\kk}{\km}\kxlo e^{i \komega \kt} &= 0 \\[4pt] \kxlo i^2 \komega^2 e^{i \komega \kt} + \frac{\kk}{\km}\kxlo e^{i \komega \kt} &= 0 \\[4pt] \kxlo i^2 \komega^2 + \frac{\kk}{\km}\kxlo &= 0 \\[4pt] -\kxlo \frac{\kk}{\km}+ \frac{\kk}{\km}\kxlo = 0 \; \textrm{ with } \; \komega &= \sqrt{\frac{\kk}{\km}} \end{aligned} $$
+<p><strong>Solution b</strong></p>
+<p>This requires simply placing the given function $\kx(\kt) = x_0 e^{-i \komega \kt}$ into Equation 5.1.4.</p>
+$$ \begin{aligned} \frac{d^2 \kx(\kt) }{d\kt^2} + \frac{\kk}{\km} \kx(\kt) &= 0 \\[4pt] \frac{d^2 }{d\kt^2} \left( \kxlo e^{-i \komega \kt} \right)+ \frac{\kk}{\km}\kxlo e^{-i \komega \kt}& = 0 \\[4pt] \kxlo \frac{d^2 }{d\kt^2} \left( e^{-i \komega \kt} \right)+ \frac{\kk}{\km}\kxlo e^{-i \komega \kt} &= 0 \\[4pt] \kxlo i^2 \komega^2 \left( e^{-i \komega \kt} \right)+ \frac{\kk}{\km}\kxlo e^{-i \komega \kt} &= 0 \\[4pt] \kxlo i^2 \komega^2 e^{-i \komega \kt} + \frac{\kk}{\km}\kxlo e^{-i \komega \kt}& = 0\\[4pt] \kxlo i^2 \komega^2 + \frac{\kk}{\km}\kxlo &= 0 \\[4pt] -\kxlo \frac{\kk}{\km}+ \frac{\kk}{\km}\kxlo = 0 \; \textrm{ with } \; \komega &= \sqrt{\frac{\kk}{\km}} \end{aligned} $$
+</div>
+</section>
+
+<section id="harmonic-oscillator-energies">
+<h2>Harmonic Oscillator Energies</h2>
+<p>The energy of the vibration is the sum of the kinetic energy and the potential energy. The momentum associated with the <span data-concept="harmonic-oscillator">harmonic oscillator</span> is</p>
+$$ \kp = \km \dfrac {d\kx}{d\kt} \tag{5.1.7} $$
+<p>so combining Equations 5.1.7 and 5.1.2, the <span data-concept="oscillator-energy">total energy</span> can be written as</p>
+$$ \begin{aligned} \kE &= \kT + \kV \\[4pt] &= \dfrac {\kp^2}{2 \km} + \dfrac {\kk}{2} \kx^2  \end{aligned} \tag{5.1.8} $$
+<p>The total energy of the <span data-concept="harmonic-oscillator">harmonic oscillator</span> is equal to the maximum potential energy stored in the spring when $\kx = \pm \kA$, called the <em><span data-concept="turning-points">turning points</span></em> (Figure 5.1.5). The total energy (Equation 5.1.8) is continuously being shifted between potential energy stored in the spring and kinetic energy of the mass.</p>
+<figure class="sim" id="sim-energy" data-figure="5.1.5" data-original="/media/ch05/122089-350px-Harmonic_field.png" data-original-caption="The potential $V(x)$ for a harmonic oscillator. Vertical axis energy; horizontal axis displacement $x$. The potential energy $V(x) = ½ kx^2$ is shown in red. (Paul Wormer Wikipedia).">
+  <div class="sim-head"><span class="eyebrow">Figure 5.1.5</span><span>The ball rides the parabola $\kV(\kx)$ between its <span data-concept="turning-points">turning points</span> while the bars trade <span data-type="energy">energy</span> between $\kT$ and $\kV$. Below, a tally of where the ball has been grows tallest near $\pm\kA$, where it moves slowest.</span></div>
+</figure>
+<p>The motion of a classical oscillator is confined to the region where its kinetic energy is nonnegative, which is what the energy relation Equation 5.1.8 says. Physically, it means that a classical oscillator can never be found beyond its <span data-concept="turning-points">turning points</span>, and its energy depends only on how far the <span data-concept="turning-points">turning points</span> are from its equilibrium position. The energy of a classical oscillator changes in a continuous way. The lowest energy that a classical oscillator may have is zero, which corresponds to a situation where an object is at rest at its equilibrium position. The zero-energy state of a classical oscillator simply means no oscillations and no motion at all (a classical particle sitting at the bottom of the potential well in Figure 5.1.5). When an object oscillates, no matter how big or small its energy may be, it spends the longest time near the <span data-concept="turning-points">turning points</span>, because this is where it slows down and reverses its direction of motion. <span data-concept="classical-oscillator-density">Therefore, the probability of finding a classical oscillator between the turning points is highest near the turning points and lowest at the equilibrium position.</span> (Note that this is not a statement of preference of the object to go to lower energy. It is a statement about how quickly the object moves through various regions.)</p>
+<div class="example" id="ex-5-1-3">
+<h3>Example 5.1.3</h3>
+<ol type="a"><li>What happens to the frequency of the oscillation as the vibration is excited with more and more energy?</li><li>What happens to the maximum amplitude of the vibration as it is excited with more and more energy?</li></ol>
+<h4>Solution</h4>
+<p>a. Frequency</p>
+<p>The energy of the <span data-concept="harmonic-oscillator">harmonic oscillator</span> can be written as</p>
+$$ E_{v}=h v\left(v+\dfrac{1}{2}\right) $$
+<p>and the frequency of oscillation is $\komega=\sqrt{\frac{\kk}{\km}}$.<sup class="fn" data-note="ex513-frequency"></sup> Notice that the frequency depends only on the <span data-concept="force-constant">stiffness</span> ($\kk$) and <span data-concept="reduced-mass">reduced mass</span> ($\kmu$) of the oscillator and not on the energy. Hence, increasing the energy of the vibrations does not affects its frequency.</p>
+<p>b. Amplitude</p>
+<p>The kinetic and potential terms for energy of the <span data-concept="harmonic-oscillator">harmonic oscillator</span> can be written as</p>
+<figure class="dv" id="drv-example-5-1-3"></figure>
+<p>The maximum amplitude of the vibration will <strong>increase</strong> as the energy <strong>increases.</strong></p>
+</div>
+</section>

@@ -141,7 +141,7 @@ const sim = (id, H) => F.sim(root, id, H);
       line(ctx, ax.X(0), ax.Y(y), ax.X(run), ax.Y(y - s * run), PAL.ink, 3, [10, 10]);
       text(ctx, 'two slopes, +1.32 and −1.32', ax.X(0.25), ax.Y(1.7), PAL.ink, { size: 20, base: 'middle' });
     }
-    if (v === 'inf' && at0(x)) text(ctx, 'ψ → ∞', ax.X(0) + 16, box.t + 30, cw, { size: 22, weight: 600 });
+    if (v === 'inf' && at0(x)) text(ctx, 'ψ → ∞', ax.X(0.3), box.t + 30, cw, { size: 22, weight: 600 });
     if (v === 'jump' && at0(x)) text(ctx, 'two values, 0.9 and 0.4', ax.X(0) + 18, ax.Y(0.65), PAL.ink, { size: 20, base: 'middle' });
     if (v === 'multi' && vals.length > 1) text(ctx, `${vals.length} values at one x`, ax.X(x) + 18, box.t + 30, PAL.ink, { size: 20 });
     hits.push({ x: ax.X(x), y: box.b - 20, r: 16, name: `the probe at x = ${fmt(x, 2)}` });

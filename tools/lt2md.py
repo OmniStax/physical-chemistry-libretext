@@ -243,6 +243,12 @@ class Converter:
     def paragraph(self, p):
         """A <p>, which may hold running text, one display or text around displays."""
         raw = self.inline(p)
+        # a bare environment outside \[ … \] is a display too: MathJax processes
+        # environments in running text (6.6's \begin{align*} for p_x and p_y)
+        pieces = re.split(r"(\\\[.+?\\\])", raw, flags=re.S)
+        env = r"(\\begin\{(align|alignat|gather|equation|eqnarray|multline)(\*?)\}.+?\\end\{\2\3\})"
+        raw = "".join(x if k % 2 else re.sub(env, r"\\[\1\\]", x, flags=re.S)
+                      for k, x in enumerate(pieces))
         parts = re.split(r"\\\[(.+?)\\\]", raw, flags=re.S)
         out = []
         for k, part in enumerate(parts):

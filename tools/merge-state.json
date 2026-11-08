@@ -247,5 +247,39 @@
       "dipole-moment",
       "angle"
     ]
+  },
+  "ch06": {
+    "symbols": [
+      "l",
+      "m_l",
+      "R_f",
+      "R_nl",
+      "Y_sh",
+      "Y_lm",
+      "psi_nlm",
+      "M2_hat",
+      "L_vec",
+      "p_x",
+      "p_y",
+      "p_z",
+      "L_nl",
+      "N_nl",
+      "P_n",
+      "r_max",
+      "r_bar",
+      "dr",
+      "r_1",
+      "r_2",
+      "r_12",
+      "r_ij",
+      "V_1",
+      "V_2",
+      "V_12",
+      "V_i",
+      "V_ij",
+      "varphi_i",
+      "eps_i"
+    ],
+    "types": []
   }
 }

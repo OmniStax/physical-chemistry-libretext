@@ -45,14 +45,14 @@ const integ = (f, a, b, K = 2000) => { let s = 0; const h = (b - a) / K; for (le
       const p = integ(dens, a, b, 600); shares.push(p);
       const depth = k === -1 || k === 0 ? 0.55 : k === -2 || k === 1 ? 0.33 : 0.16;
       shade(ctx, ax, dens, 0, a, b, cp, { alpha: depth });
-      const xm = (a + b) / 2, ym = Math.min(yr[1] * 0.92, dens(xm)), inner = ax.Y(0) - ax.Y(ym) > 60 && ax.X(b) - ax.X(a) > 60;
-      text(ctx, `${fmt(100 * p, 1)}%`, ax.X(xm), inner ? ax.Y(ym * 0.4) : ax.Y(ym) - 16, PAL.ink, { size: 17, align: 'center', base: 'middle' });
+      const xm = (a + b) / 2, ym = Math.min(yr[1] * 0.92, dens(xm)), ytop = Math.min(yr[1] * 0.92, Math.max(dens(a), dens(xm), dens(b))), inner = ax.Y(0) - ax.Y(ym) > 60 && ax.X(b) - ax.X(a) > 60;
+      text(ctx, `${fmt(100 * p, 1)}%`, ax.X(xm), inner ? ax.Y(ym * 0.4) : ax.Y(ytop) - 16, PAL.ink, { size: 17, align: 'center', base: 'middle' });
       hits.push({ x: ax.X(xm), y: ax.Y(ym / 2), r: 20, name: `between ${k} and ${k + 1} standard deviations from ⟨x⟩: ${fmt(100 * p, 1)}% of measurements` });
     }
     plot(ctx, ax, dens, cp, { w: 5, x: [lo, hi] });
     for (let k = -3; k <= 3; k++) { const x = m1 + k * sg; if (x > lo && x < hi && k) line(ctx, ax.X(x), bx.t + 20, ax.X(x), bx.b, alpha(cl, 0.5), 2, [4, 8]); }
     line(ctx, ax.X(m1), bx.t + 20, ax.X(m1), bx.b, cl, 3);
-    text(ctx, '⟨x⟩', ax.X(m1), bx.t + 4, cl, { size: 22, weight: 600, align: 'center' });
+    text(ctx, '⟨x⟩', ax.X(m1), bx.t + 14, cl, { size: 22, weight: 600, align: 'center', base: 'bottom' });
     F.hbracket(ctx, ax.X(m1), ax.X(Math.min(hi, m1 + sg)), bx.b + 50, cl, 'σₓ');
     hits.push({ x: ax.X(m1), y: bx.t + 10, r: 18, name: `the expectation value ⟨x⟩ = ${fmt(m1, 2)}${unit}` });
     const within = shares[2] + shares[3];
@@ -161,7 +161,7 @@ const integ = (f, a, b, K = 2000) => { let s = 0; const h = (b - a) / K; for (le
     /* the results so far, on a strip */
     const sy = 520;
     line(ctx, ax.X(-4), sy, ax.X(4), sy, alpha(PAL.ink, 0.5), 2);
-    for (let x = -4; x <= 4; x += 1) { line(ctx, ax.X(x), sy - 6, ax.X(x), sy + 6, alpha(PAL.ink, 0.5), 2); text(ctx, String(x), ax.X(x), sy + 28, cl, { size: 17, align: 'center' }); }
+    for (let x = -4; x <= 4; x += 1) { line(ctx, ax.X(x), sy - 6, ax.X(x), sy + 6, alpha(PAL.ink, 0.5), 2); text(ctx, fmt(x, 0), ax.X(x), sy + 28, cl, { size: 17, align: 'center' }); }
     text(ctx, 'measured x', ax.X(4) + 14, sy, cl, { size: 20, weight: 600, base: 'middle' });
     const done = []; for (let j = 0; j < 3; j++) if (t >= 2 * j + 0.6) done.push(j);
     const seen = {};
@@ -177,7 +177,7 @@ const integ = (f, a, b, K = 2000) => { let s = 0; const h = (b - a) / K; for (le
     if (!fired) topline(ctx, k === 0 ? `System 1 is prepared; nothing has been measured yet.` : `System ${n} is prepared in the same state as the others.`);
     else if (v === 'spread') topline(ctx, `Measurement ${n} finds the particle at $\\kx = ${fmt(xs[k], 2)}$, and the density collapses there.`);
     else topline(ctx, `Measurement ${n} finds $\\kx = 0.50$ again, and the density does not change.`);
-    const lines = done.map((j) => `x_{${j + 1}} = ${fmt(xs[j], 2)}`);
+    const lines = done.map((j) => `\\kx_{${j + 1}} = ${fmt(xs[j], 2)}`);
     tex(d.readout, [`\\kPd(\\kx) = |\\kpsi(\\kx)|^2`].concat(lines).join(' \\\\ '), false, { values: false });
   }
   register(d.fig, { update: (dt) => cy.step(dt, () => 1), draw });

@@ -129,16 +129,6 @@
    "statement": "Because the wavefunction must satisfy the Schrödinger equation, a second-order differential equation, its second derivative must exist, so its first derivative must exist too: a wavefunction with a break or a kink is not acceptable."
   },
   {
-   "id": "observable",
-   "kind": "definition",
-   "section": "4.2",
-   "name": "Observable",
-   "terms": [
-    "dynamic variable"
-   ],
-   "statement": "An observable is a dynamic variable of a system that can be experimentally measured, such as position, momentum and kinetic energy; classically it is a real-valued function."
-  },
-  {
    "id": "operator-postulate",
    "kind": "axiom",
    "section": "4.2",
@@ -442,14 +432,6 @@
    "prereq": "time-independent-schrodinger-equation"
   },
   {
-   "concept": "observable",
-   "prereq": "classical-state"
-  },
-  {
-   "concept": "operator-postulate",
-   "prereq": "observable"
-  },
-  {
    "concept": "operator-postulate",
    "prereq": "operator"
   },
@@ -592,6 +574,14 @@
   {
    "concept": "angular-momentum-commutation",
    "prereq": "angular-momentum-operator"
+  },
+  {
+   "concept": "operator-postulate",
+   "prereq": "observable"
+  },
+  {
+   "concept": "classical-state",
+   "prereq": "observable"
   }
  ]
 }

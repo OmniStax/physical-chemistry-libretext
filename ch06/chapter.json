@@ -1,0 +1,953 @@
+{
+ "id": "6",
+ "dir": "ch06",
+ "title": "The Hydrogen Atom",
+ "intro": {
+  "module": "11783",
+  "slug": "06:_The_Hydrogen_Atom"
+ },
+ "summary": {
+  "module": "550557",
+  "slug": "06:_The_Hydrogen_Atom/6.S:_The_Hydrogen_Atom_(Summary)"
+ },
+ "sections": [
+  {
+   "id": "6.1",
+   "module": "13426",
+   "title": "The Schrodinger Equation for the Hydrogen Atom Can Be Solved Exactly",
+   "slug": "06:_The_Hydrogen_Atom/6.01:_The_Schrodinger_Equation_for_the_Hydrogen_Atom_Can_Be_Solved_Exactly"
+  },
+  {
+   "id": "6.2",
+   "module": "13427",
+   "title": "The Wavefunctions of a Rigid Rotator are Called Spherical Harmonics",
+   "slug": "06:_The_Hydrogen_Atom/6.02:_The_Wavefunctions_of_a_Rigid_Rotator_are_Called_Spherical_Harmonics"
+  },
+  {
+   "id": "6.3",
+   "module": "13428",
+   "title": "The Three Components of Angular Momentum Cannot be Measured Simultaneously with Arbitrary Precision",
+   "slug": "06:_The_Hydrogen_Atom/6.03:_The_Three_Components_of_Angular_Momentum_Cannot_be_Measured_Simultaneously_with_Arbitrary_Precision"
+  },
+  {
+   "id": "6.4",
+   "module": "13429",
+   "title": "Hydrogen Atomic Orbitals Depend upon Three Quantum Numbers",
+   "slug": "06:_The_Hydrogen_Atom/6.04:_Hydrogen_Atomic_Orbitals_Depend_upon_Three_Quantum_Numbers"
+  },
+  {
+   "id": "6.5",
+   "module": "13430",
+   "title": "s-orbitals are Spherically Symmetric",
+   "slug": "06:_The_Hydrogen_Atom/6.05:_s-orbitals_are_Spherically_Symmetric"
+  },
+  {
+   "id": "6.6",
+   "module": "13431",
+   "title": "Orbital Angular Momentum and the p-Orbitals",
+   "slug": "06:_The_Hydrogen_Atom/6.06:_Orbital_Angular_Momentum_and_the_p-Orbitals"
+  },
+  {
+   "id": "6.7",
+   "module": "13432",
+   "title": "The Helium Atom Cannot Be Solved Exactly",
+   "slug": "06:_The_Hydrogen_Atom/6.07:_The_Helium_Atom_Cannot_Be_Solved_Exactly"
+  }
+ ],
+ "variables": [
+  {
+   "sym": "r",
+   "type": "length",
+   "meaning": "the distance of the electron from the nucleus",
+   "unit": "m",
+   "section": "6.1"
+  },
+  {
+   "sym": "r_vec",
+   "type": "length",
+   "meaning": "the position of the particle relative to the origin",
+   "unit": "m",
+   "section": "6.1"
+  },
+  {
+   "sym": "mu",
+   "concept": "reduced-mass",
+   "meaning": "the reduced mass of the electron and proton",
+   "unit": "kg",
+   "section": "6.1"
+  },
+  {
+   "sym": "m_e",
+   "type": "mass",
+   "meaning": "the mass of the electron",
+   "unit": "kg",
+   "section": "6.1"
+  },
+  {
+   "sym": "theta",
+   "type": "angle",
+   "meaning": "the polar angle of the electron, measured from the z axis",
+   "unit": "rad",
+   "section": "6.1"
+  },
+  {
+   "sym": "varphi",
+   "type": "angle",
+   "meaning": "the azimuthal angle of the electron, measured from the x axis",
+   "unit": "rad",
+   "section": "6.1"
+  },
+  {
+   "sym": "psi",
+   "concept": "wavefunction",
+   "meaning": "a hydrogen atom wavefunction, a function of r, θ and φ",
+   "section": "6.1"
+  },
+  {
+   "sym": "H_op",
+   "concept": "hamiltonian-operator",
+   "meaning": "the Hamiltonian operator of the atom",
+   "section": "6.1"
+  },
+  {
+   "sym": "E",
+   "type": "energy",
+   "meaning": "the energy of the atom",
+   "unit": "J",
+   "section": "6.1"
+  },
+  {
+   "sym": "V",
+   "concept": "coulomb-potential",
+   "meaning": "the Coulomb potential energy of the electron and proton",
+   "unit": "J",
+   "section": "6.1"
+  },
+  {
+   "sym": "V_hat",
+   "concept": "potential-energy-operator",
+   "meaning": "the potential energy operator",
+   "section": "6.1"
+  },
+  {
+   "sym": "T_hat",
+   "type": "operator",
+   "meaning": "the kinetic energy operator",
+   "section": "6.1"
+  },
+  {
+   "sym": "e",
+   "type": "charge",
+   "meaning": "the elementary charge",
+   "unit": "C",
+   "section": "6.1"
+  },
+  {
+   "sym": "M2_hat",
+   "concept": "angular-momentum-squared-operator",
+   "meaning": "the operator for the square of the angular momentum",
+   "section": "6.1"
+  },
+  {
+   "sym": "L2_hat",
+   "concept": "angular-momentum-squared-operator",
+   "meaning": "the operator for the square of the angular momentum",
+   "section": "6.1"
+  },
+  {
+   "sym": "R_f",
+   "concept": "radial-function",
+   "meaning": "the radial function, the factor of ψ that depends on r",
+   "section": "6.1"
+  },
+  {
+   "sym": "Y_sh",
+   "concept": "spherical-harmonics",
+   "meaning": "the angular function of θ and φ, a spherical harmonic",
+   "section": "6.1"
+  },
+  {
+   "sym": "Y_lm",
+   "concept": "spherical-harmonics",
+   "meaning": "the spherical harmonic with quantum numbers l and m_l",
+   "section": "6.1"
+  },
+  {
+   "sym": "lambda",
+   "meaning": "the separation constant, the eigenvalue of L̂² in units of ħ² once divided by it",
+   "section": "6.1",
+   "redefines": true
+  },
+  {
+   "sym": "l",
+   "concept": "angular-momentum-quantum-number",
+   "meaning": "the angular momentum quantum number",
+   "section": "6.1"
+  },
+  {
+   "sym": "m_l",
+   "concept": "magnetic-quantum-number",
+   "meaning": "the magnetic quantum number",
+   "section": "6.1"
+  },
+  {
+   "sym": "psi_nlm",
+   "concept": "hydrogen-wavefunctions",
+   "meaning": "the hydrogen atom wavefunction with quantum numbers n, l and m_l",
+   "section": "6.2"
+  },
+  {
+   "sym": "psi",
+   "concept": "wavefunction",
+   "meaning": "a hydrogen atom wavefunction, a function of r, θ and φ",
+   "section": "6.2"
+  },
+  {
+   "sym": "R_nl",
+   "concept": "radial-function",
+   "meaning": "the radial function with quantum numbers n and l",
+   "section": "6.2"
+  },
+  {
+   "sym": "R_f",
+   "concept": "radial-function",
+   "meaning": "the radial function, the factor of ψ that depends on r",
+   "section": "6.2"
+  },
+  {
+   "sym": "Y_lm",
+   "concept": "spherical-harmonics",
+   "meaning": "the spherical harmonic with quantum numbers l and m_l",
+   "section": "6.2"
+  },
+  {
+   "sym": "n",
+   "concept": "principal-quantum-number",
+   "meaning": "the principal quantum number",
+   "section": "6.2"
+  },
+  {
+   "sym": "l",
+   "concept": "angular-momentum-quantum-number",
+   "meaning": "the angular momentum quantum number",
+   "section": "6.2"
+  },
+  {
+   "sym": "m_l",
+   "concept": "magnetic-quantum-number",
+   "meaning": "the magnetic quantum number",
+   "section": "6.2"
+  },
+  {
+   "sym": "r",
+   "type": "length",
+   "meaning": "the distance of the electron from the nucleus",
+   "unit": "m",
+   "section": "6.2"
+  },
+  {
+   "sym": "theta",
+   "type": "angle",
+   "meaning": "the polar angle of the electron, measured from the z axis",
+   "unit": "rad",
+   "section": "6.2"
+  },
+  {
+   "sym": "phi",
+   "type": "angle",
+   "meaning": "the azimuthal angle of the electron, written φ here",
+   "unit": "rad",
+   "section": "6.2",
+   "redefines": true
+  },
+  {
+   "sym": "Phi",
+   "concept": "rotor-phi-functions",
+   "meaning": "the function of φ alone in the spherical harmonic",
+   "section": "6.2"
+  },
+  {
+   "sym": "Theta_f",
+   "type": "wavefunction",
+   "meaning": "the function of θ alone in the spherical harmonic",
+   "section": "6.2"
+  },
+  {
+   "sym": "Z",
+   "meaning": "the atomic number of the nucleus",
+   "section": "6.2"
+  },
+  {
+   "sym": "a_0",
+   "concept": "bohr-radius",
+   "meaning": "the Bohr radius, 52.9 pm",
+   "unit": "m",
+   "section": "6.2"
+  },
+  {
+   "sym": "rho",
+   "meaning": "the scaled distance Zr/a₀",
+   "section": "6.2",
+   "redefines": true
+  },
+  {
+   "sym": "L_vec",
+   "concept": "orbital-angular-momentum",
+   "meaning": "the orbital angular momentum",
+   "unit": "J·s",
+   "section": "6.3"
+  },
+  {
+   "sym": "r_vec",
+   "type": "length",
+   "meaning": "the position of the particle relative to the origin",
+   "unit": "m",
+   "section": "6.3"
+  },
+  {
+   "sym": "x",
+   "type": "length",
+   "meaning": "the x coordinate",
+   "unit": "m",
+   "section": "6.3"
+  },
+  {
+   "sym": "y",
+   "type": "length",
+   "meaning": "the y coordinate",
+   "unit": "m",
+   "section": "6.3"
+  },
+  {
+   "sym": "z",
+   "type": "length",
+   "meaning": "the z coordinate",
+   "unit": "m",
+   "section": "6.3"
+  },
+  {
+   "sym": "p_x",
+   "type": "momentum",
+   "meaning": "the x component of the particle's linear momentum",
+   "unit": "kg·m/s",
+   "section": "6.3"
+  },
+  {
+   "sym": "p_y",
+   "type": "momentum",
+   "meaning": "the y component of the particle's linear momentum",
+   "unit": "kg·m/s",
+   "section": "6.3"
+  },
+  {
+   "sym": "p_z",
+   "type": "momentum",
+   "meaning": "the z component of the particle's linear momentum",
+   "unit": "kg·m/s",
+   "section": "6.3"
+  },
+  {
+   "sym": "L_x",
+   "concept": "orbital-angular-momentum",
+   "meaning": "the x component of the orbital angular momentum",
+   "unit": "J·s",
+   "section": "6.3",
+   "redefines": true
+  },
+  {
+   "sym": "L_y",
+   "concept": "orbital-angular-momentum",
+   "meaning": "the y component of the orbital angular momentum",
+   "unit": "J·s",
+   "section": "6.3",
+   "redefines": true
+  },
+  {
+   "sym": "L_z",
+   "concept": "orbital-angular-momentum",
+   "meaning": "the z component of the orbital angular momentum",
+   "unit": "J·s",
+   "section": "6.3",
+   "redefines": true
+  },
+  {
+   "sym": "Lx_hat",
+   "concept": "angular-momentum-component-operators",
+   "meaning": "the operator for the x component of the angular momentum",
+   "section": "6.3"
+  },
+  {
+   "sym": "Ly_hat",
+   "concept": "angular-momentum-component-operators",
+   "meaning": "the operator for the y component of the angular momentum",
+   "section": "6.3"
+  },
+  {
+   "sym": "Lz_hat",
+   "concept": "angular-momentum-component-operators",
+   "meaning": "the operator for the z component of the angular momentum",
+   "section": "6.3"
+  },
+  {
+   "sym": "L2_hat",
+   "concept": "angular-momentum-squared-operator",
+   "meaning": "the operator for the square of the angular momentum",
+   "section": "6.3"
+  },
+  {
+   "sym": "theta",
+   "type": "angle",
+   "meaning": "the polar angle of the electron, measured from the z axis",
+   "unit": "rad",
+   "section": "6.3"
+  },
+  {
+   "sym": "varphi",
+   "type": "angle",
+   "meaning": "the azimuthal angle of the electron, measured from the x axis",
+   "unit": "rad",
+   "section": "6.3"
+  },
+  {
+   "sym": "r",
+   "type": "length",
+   "meaning": "the distance of the electron from the nucleus",
+   "unit": "m",
+   "section": "6.3"
+  },
+  {
+   "sym": "psi",
+   "concept": "wavefunction",
+   "meaning": "a hydrogen atom wavefunction, a function of r, θ and φ",
+   "section": "6.3"
+  },
+  {
+   "sym": "R_f",
+   "concept": "radial-function",
+   "meaning": "the radial function, the factor of ψ that depends on r",
+   "section": "6.3"
+  },
+  {
+   "sym": "Y_sh",
+   "concept": "spherical-harmonics",
+   "meaning": "the angular function of θ and φ, a spherical harmonic",
+   "section": "6.3"
+  },
+  {
+   "sym": "Y_lm",
+   "concept": "spherical-harmonics",
+   "meaning": "the spherical harmonic with quantum numbers l and m_l",
+   "section": "6.3"
+  },
+  {
+   "sym": "lambda",
+   "meaning": "the separation constant, the eigenvalue of L̂² in units of ħ² once divided by it",
+   "section": "6.3"
+  },
+  {
+   "sym": "l",
+   "concept": "angular-momentum-quantum-number",
+   "meaning": "the angular momentum quantum number",
+   "section": "6.3"
+  },
+  {
+   "sym": "m_l",
+   "concept": "magnetic-quantum-number",
+   "meaning": "the magnetic quantum number",
+   "section": "6.3"
+  },
+  {
+   "sym": "A_hat",
+   "concept": "operator",
+   "meaning": "an operator, standing for an observable",
+   "section": "6.3"
+  },
+  {
+   "sym": "B_hat",
+   "concept": "operator",
+   "meaning": "a second operator, standing for an observable",
+   "section": "6.3"
+  },
+  {
+   "sym": "psi_nlm",
+   "concept": "hydrogen-wavefunctions",
+   "meaning": "the hydrogen atom wavefunction with quantum numbers n, l and m_l",
+   "section": "6.4"
+  },
+  {
+   "sym": "psi",
+   "concept": "wavefunction",
+   "meaning": "a hydrogen atom wavefunction, a function of r, θ and φ",
+   "section": "6.4"
+  },
+  {
+   "sym": "R_nl",
+   "concept": "radial-function",
+   "meaning": "the radial function with quantum numbers n and l",
+   "section": "6.4"
+  },
+  {
+   "sym": "R_f",
+   "concept": "radial-function",
+   "meaning": "the radial function, the factor of ψ that depends on r",
+   "section": "6.4"
+  },
+  {
+   "sym": "Y_lm",
+   "concept": "spherical-harmonics",
+   "meaning": "the spherical harmonic with quantum numbers l and m_l",
+   "section": "6.4"
+  },
+  {
+   "sym": "n",
+   "concept": "principal-quantum-number",
+   "meaning": "the principal quantum number",
+   "section": "6.4"
+  },
+  {
+   "sym": "l",
+   "concept": "angular-momentum-quantum-number",
+   "meaning": "the angular momentum quantum number",
+   "section": "6.4"
+  },
+  {
+   "sym": "m_l",
+   "concept": "magnetic-quantum-number",
+   "meaning": "the magnetic quantum number",
+   "section": "6.4"
+  },
+  {
+   "sym": "r",
+   "type": "length",
+   "meaning": "the distance of the electron from the nucleus",
+   "unit": "m",
+   "section": "6.4"
+  },
+  {
+   "sym": "theta",
+   "type": "angle",
+   "meaning": "the polar angle of the electron, measured from the z axis",
+   "unit": "rad",
+   "section": "6.4"
+  },
+  {
+   "sym": "varphi",
+   "type": "angle",
+   "meaning": "the azimuthal angle of the electron, measured from the x axis",
+   "unit": "rad",
+   "section": "6.4"
+  },
+  {
+   "sym": "a_0",
+   "concept": "bohr-radius",
+   "meaning": "the Bohr radius, 52.9 pm",
+   "unit": "m",
+   "section": "6.4"
+  },
+  {
+   "sym": "L_nl",
+   "concept": "associated-laguerre-polynomials",
+   "meaning": "the associated Laguerre polynomial with indices n and l",
+   "section": "6.4"
+  },
+  {
+   "sym": "c_i",
+   "meaning": "the constant coefficients of the Laguerre polynomial",
+   "section": "6.4"
+  },
+  {
+   "sym": "N_nl",
+   "meaning": "the normalization constant of the radial function",
+   "section": "6.4"
+  },
+  {
+   "sym": "Z",
+   "meaning": "the atomic number of the nucleus",
+   "section": "6.4"
+  },
+  {
+   "sym": "rho",
+   "meaning": "the scaled distance Zr/a₀",
+   "section": "6.4"
+  },
+  {
+   "sym": "E_n",
+   "concept": "hydrogen-energy-levels",
+   "meaning": "the energy of the hydrogen atom in level n",
+   "unit": "J",
+   "section": "6.4"
+  },
+  {
+   "sym": "mu",
+   "concept": "reduced-mass",
+   "meaning": "the reduced mass of the electron and proton",
+   "unit": "kg",
+   "section": "6.4"
+  },
+  {
+   "sym": "e",
+   "type": "charge",
+   "meaning": "the elementary charge",
+   "unit": "C",
+   "section": "6.4"
+  },
+  {
+   "sym": "psi",
+   "concept": "wavefunction",
+   "meaning": "a hydrogen atom wavefunction, a function of r, θ and φ",
+   "section": "6.5"
+  },
+  {
+   "sym": "psi_n",
+   "concept": "hydrogen-wavefunctions",
+   "meaning": "the wavefunction of the level with principal quantum number n",
+   "section": "6.5"
+  },
+  {
+   "sym": "P_n",
+   "concept": "electron-density-distribution",
+   "meaning": "the probability distribution, or electron density, of level n",
+   "unit": "e⁻/a₀³",
+   "section": "6.5"
+  },
+  {
+   "sym": "n",
+   "concept": "principal-quantum-number",
+   "meaning": "the principal quantum number",
+   "section": "6.5"
+  },
+  {
+   "sym": "l",
+   "concept": "angular-momentum-quantum-number",
+   "meaning": "the angular momentum quantum number",
+   "section": "6.5"
+  },
+  {
+   "sym": "m_l",
+   "concept": "magnetic-quantum-number",
+   "meaning": "the magnetic quantum number",
+   "section": "6.5"
+  },
+  {
+   "sym": "r",
+   "type": "length",
+   "meaning": "the distance of the electron from the nucleus",
+   "unit": "m",
+   "section": "6.5"
+  },
+  {
+   "sym": "theta",
+   "type": "angle",
+   "meaning": "the polar angle of the electron, measured from the z axis",
+   "unit": "rad",
+   "section": "6.5"
+  },
+  {
+   "sym": "varphi",
+   "type": "angle",
+   "meaning": "the azimuthal angle of the electron, measured from the x axis",
+   "unit": "rad",
+   "section": "6.5"
+  },
+  {
+   "sym": "a_0",
+   "concept": "bohr-radius",
+   "meaning": "the Bohr radius, 52.9 pm",
+   "unit": "m",
+   "section": "6.5"
+  },
+  {
+   "sym": "R_f",
+   "concept": "radial-function",
+   "meaning": "the radial function, the factor of ψ that depends on r",
+   "section": "6.5"
+  },
+  {
+   "sym": "dr",
+   "type": "length",
+   "meaning": "the thickness of a thin spherical shell",
+   "unit": "m",
+   "section": "6.5"
+  },
+  {
+   "sym": "r_max",
+   "type": "length",
+   "meaning": "the radius at which the radial distribution function is largest",
+   "unit": "m",
+   "section": "6.5"
+  },
+  {
+   "sym": "r_bar",
+   "type": "length",
+   "meaning": "the average distance of the electron from the nucleus",
+   "unit": "m",
+   "section": "6.5"
+  },
+  {
+   "sym": "E_n",
+   "concept": "hydrogen-energy-levels",
+   "meaning": "the energy of the hydrogen atom in level n",
+   "unit": "J",
+   "section": "6.5"
+  },
+  {
+   "sym": "rho",
+   "meaning": "the scaled distance Zr/a₀",
+   "section": "6.5"
+  },
+  {
+   "sym": "L_vec",
+   "concept": "orbital-angular-momentum",
+   "meaning": "the orbital angular momentum",
+   "unit": "J·s",
+   "section": "6.6"
+  },
+  {
+   "sym": "L_z",
+   "concept": "orbital-angular-momentum",
+   "meaning": "the z component of the orbital angular momentum",
+   "unit": "J·s",
+   "section": "6.6"
+  },
+  {
+   "sym": "m",
+   "type": "mass",
+   "meaning": "the mass of the electron",
+   "unit": "kg",
+   "section": "6.6"
+  },
+  {
+   "sym": "v",
+   "type": "velocity",
+   "meaning": "the linear velocity of the electron",
+   "unit": "m/s",
+   "section": "6.6"
+  },
+  {
+   "sym": "r",
+   "type": "length",
+   "meaning": "the radius of the electron's classical circular orbit",
+   "unit": "m",
+   "section": "6.6",
+   "redefines": true
+  },
+  {
+   "sym": "l",
+   "concept": "angular-momentum-quantum-number",
+   "meaning": "the angular momentum quantum number",
+   "section": "6.6"
+  },
+  {
+   "sym": "m_l",
+   "concept": "magnetic-quantum-number",
+   "meaning": "the magnetic quantum number",
+   "section": "6.6"
+  },
+  {
+   "sym": "n",
+   "concept": "principal-quantum-number",
+   "meaning": "the principal quantum number",
+   "section": "6.6"
+  },
+  {
+   "sym": "psi_nlm",
+   "concept": "hydrogen-wavefunctions",
+   "meaning": "the hydrogen atom wavefunction with quantum numbers n, l and m_l",
+   "section": "6.6"
+  },
+  {
+   "sym": "R_f",
+   "concept": "radial-function",
+   "meaning": "the radial function, the factor of ψ that depends on r",
+   "section": "6.6"
+  },
+  {
+   "sym": "theta",
+   "type": "angle",
+   "meaning": "the polar angle of the electron, measured from the z axis",
+   "unit": "rad",
+   "section": "6.6"
+  },
+  {
+   "sym": "phi",
+   "type": "angle",
+   "meaning": "the azimuthal angle of the electron, written φ here",
+   "unit": "rad",
+   "section": "6.6"
+  },
+  {
+   "sym": "Z",
+   "meaning": "the atomic number of the nucleus",
+   "section": "6.6"
+  },
+  {
+   "sym": "a_0",
+   "concept": "bohr-radius",
+   "meaning": "the Bohr radius, 52.9 pm",
+   "unit": "m",
+   "section": "6.6"
+  },
+  {
+   "sym": "x",
+   "type": "length",
+   "meaning": "the x coordinate",
+   "unit": "m",
+   "section": "6.6"
+  },
+  {
+   "sym": "y",
+   "type": "length",
+   "meaning": "the y coordinate",
+   "unit": "m",
+   "section": "6.6"
+  },
+  {
+   "sym": "z",
+   "type": "length",
+   "meaning": "the z coordinate",
+   "unit": "m",
+   "section": "6.6"
+  },
+  {
+   "sym": "H_op",
+   "concept": "hamiltonian-operator",
+   "meaning": "the Hamiltonian operator of the atom",
+   "section": "6.7"
+  },
+  {
+   "sym": "T_hat",
+   "type": "operator",
+   "meaning": "the kinetic energy operator",
+   "section": "6.7"
+  },
+  {
+   "sym": "V_hat",
+   "concept": "potential-energy-operator",
+   "meaning": "the potential energy operator",
+   "section": "6.7"
+  },
+  {
+   "sym": "r_1",
+   "type": "length",
+   "meaning": "the position of electron 1 relative to the nucleus",
+   "unit": "m",
+   "section": "6.7"
+  },
+  {
+   "sym": "r_2",
+   "type": "length",
+   "meaning": "the position of electron 2 relative to the nucleus",
+   "unit": "m",
+   "section": "6.7"
+  },
+  {
+   "sym": "r_12",
+   "type": "length",
+   "meaning": "the distance between electrons 1 and 2",
+   "unit": "m",
+   "section": "6.7"
+  },
+  {
+   "sym": "r_i",
+   "type": "length",
+   "meaning": "the position of electron i relative to the nucleus",
+   "unit": "m",
+   "section": "6.7",
+   "redefines": true
+  },
+  {
+   "sym": "r_ij",
+   "type": "length",
+   "meaning": "the distance between electrons i and j",
+   "unit": "m",
+   "section": "6.7"
+  },
+  {
+   "sym": "V_1",
+   "type": "energy",
+   "meaning": "the attraction of electron 1 to the nucleus",
+   "unit": "J",
+   "section": "6.7"
+  },
+  {
+   "sym": "V_2",
+   "type": "energy",
+   "meaning": "the attraction of electron 2 to the nucleus",
+   "unit": "J",
+   "section": "6.7"
+  },
+  {
+   "sym": "V_12",
+   "concept": "electron-electron-repulsion",
+   "meaning": "the repulsion between electrons 1 and 2",
+   "unit": "J",
+   "section": "6.7"
+  },
+  {
+   "sym": "V_i",
+   "type": "energy",
+   "meaning": "the attraction of electron i to the nucleus",
+   "unit": "J",
+   "section": "6.7"
+  },
+  {
+   "sym": "V_ij",
+   "concept": "electron-electron-repulsion",
+   "meaning": "the repulsion between electrons i and j",
+   "unit": "J",
+   "section": "6.7"
+  },
+  {
+   "sym": "m_e",
+   "type": "mass",
+   "meaning": "the mass of the electron",
+   "unit": "kg",
+   "section": "6.7"
+  },
+  {
+   "sym": "e",
+   "type": "charge",
+   "meaning": "the elementary charge",
+   "unit": "C",
+   "section": "6.7"
+  },
+  {
+   "sym": "Z",
+   "meaning": "the atomic number of the nucleus",
+   "section": "6.7"
+  },
+  {
+   "sym": "psi",
+   "concept": "multi-electron-wavefunction",
+   "meaning": "the multi-electron wavefunction, a function of every electron's coordinates",
+   "section": "6.7",
+   "redefines": true
+  },
+  {
+   "sym": "varphi_i",
+   "type": "wavefunction",
+   "meaning": "the one-electron wavefunction, or orbital, of electron i",
+   "section": "6.7"
+  },
+  {
+   "sym": "E",
+   "type": "energy",
+   "meaning": "the energy of the atom",
+   "unit": "J",
+   "section": "6.7"
+  },
+  {
+   "sym": "eps_i",
+   "type": "energy",
+   "meaning": "the energy of the one-electron orbital i",
+   "unit": "J",
+   "section": "6.7"
+  },
+  {
+   "sym": "n",
+   "meaning": "the number of electrons in the atom",
+   "section": "6.7",
+   "redefines": true
+  }
+ ]
+}

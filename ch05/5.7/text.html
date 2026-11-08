@@ -1,0 +1,99 @@
+<section id="opening">
+<h2>Hermite's polynomials</h2>
+<p>Hermite polynomials were defined by Laplace (1810) though in scarcely recognizable form, and studied in detail by Chebyshev (1859). Chebyshev's work was overlooked and they were named later after Charles Hermite who wrote on the polynomials in 1864 describing them as new. They were consequently not new although in later 1865 papers Hermite was the first to define the multidimensional polynomials. The first six <span data-concept="hermite-polynomials">Hermite polynomial</span> are plotted in Figure 5.7.1.</p>
+<figure class="sim" id="sim-parity" data-figure="5.7.1" data-original="/media/ch05/344450-Hermite_poly_phys_n=0.svg,/media/ch05/344446-Hermite_poly_phys_n=1.svg,/media/ch05/344449-Hermite_poly_phys_n=2.svg,/media/ch05/344448-Hermite_poly_phys_n=3.svg,/media/ch05/344452-Hermite_poly_phys_n=4.svg,/media/ch05/344447-Hermite_poly_phys_n=5.svg" data-original-width="375,375,375,375,375,375" data-original-caption="The first six Hermite polynomials $H_n(x)$. (CC BY-SA 3.0 Unported; Alessio Damato, Vulpecula and others via Wikipedia)">
+  <div class="sim-head"><span class="eyebrow">Figure 5.7.1</span><span>Step through the degree $n$ and compare $H_n(x)$ with its mirror image $H_n(-x)$. For even $n$ the two curves coincide; for odd $n$ the mirror image is the curve turned upside down.</span></div>
+</figure>
+<div class="note">
+<div class="eyebrow">Note</div>
+<h3>Generating Formula</h3>
+<p>Any <span data-concept="hermite-polynomials">Hermite polynomial</span> $H_n(x)$ can be generated from a previous one $H_{n-1}(x)$ via the following using <span data-concept="hermite-recurrence">the recurrence relation</span></p>
+$$ H_{n+1} (x)=2xH_n (x)-2nH_{n-1} (x). \tag{5.7.1} $$
+</div>
+</section>
+
+<section id="hermite-polynomials-are-symmetric">
+<h2>Hermite Polynomials are Symmetric</h2>
+<p>Let $f(x)$ be a real-valued function of a real variable.</p>
+<ul><li><p>Then $f$ is <strong><span data-concept="even-function">even</span></strong> if the following equation holds for all x and -x in the domain of f</p>
+$$ f(x) = f(-x) $$</li><li><p>Then $f$ is <strong><span data-concept="odd-function">odd</span></strong> if the following equation holds for all x and -x in the domain of f</p>
+$$ -f(x) = f(-x) $$</li></ul>
+<p>Even and odd are terms used to describe particularly well-behaved functions. An <em><span data-concept="even-function">even</span></em> function is symmetric about the y-axis (Figure 5.7.2; left).<sup class="fn" data-note="c-fig-missing"></sup> That is, if we reflect the graph of the function in the $y$-axis, then it does not change. Formally, we say that $f$ is even if, for all $x$ and $−x$ in the domain of $f$, we have</p>
+$$ f(-x)=f(x) $$
+<p>Two examples of <span data-concept="even-function">even functions</span> are $f(x)=x^2$ and $f(x)=\cos x$.</p>
+<p>An <em><span data-concept="odd-function">odd</span></em> function has rotational symmetry of order two about the origin (Figure 5.7.2; middle). That is, if we rotate the graph of the function 180° about the origin, then it does not change. Formally, we say that ff is odd<sup class="fn" data-note="c-ff-odd"></sup> if, for all $x$ and $−x$ in the domain of $f$, we have</p>
+$$ f(-x)=-f(x) $$
+<p>Examples of <span data-concept="odd-function">odd functions</span> are $f(x)=x^3$ and $f(x)=\sin x$.</p>
+<p>Naturally, not all functions can be classified as even or odd. For example $f=x^3+1$ shown in the right side of Figure 5.7.2, is neither.</p>
+<figure class="sim" id="sim-parity-integral" data-figure="5.7.2">
+  <div class="sim-head"><span class="eyebrow">Figure 5.7.2</span><span>Pick two functions and look at their product below. When the product is odd, its area left of the origin cancels its area to the right for every $a$.</span></div>
+</figure>
+<div class="note">
+<div class="eyebrow">Note</div>
+<p>You can also think of these properties as symmetry conditions at the origin. More symmetries in 3D space are discussed in Group Theory.</p>
+</div>
+<p>Without proof, we can identify several key features involving multiplication properties of <span data-concept="even-function">even</span> and <span data-concept="odd-function">odd functions</span>:</p>
+<ul><li><span data-concept="parity-product-rules">The product of two <strong>even</strong> functions is an <strong>even</strong> function.</span></li><li>The product of two <strong>odd</strong> functions is an <strong>even</strong> function.</li><li>The product of an <strong>even</strong> function and an <strong>odd</strong> function is an odd function.</li></ul>
+<p>This can be shown graphically as a product table like that in Table 5.7.1.</p>
+<div class="book-table">
+  <div class="tcap"><span class="eyebrow">Table 5.7.1</span><span>Product table of 1D Functions</span></div>
+  <table>
+    <thead><tr><th>Product table</th><th>Odd Function (anti-symmetric)</th><th>Even Function (symmetric)</th><th>No symmetry (neither)</th></tr></thead>
+    <tbody>
+      <tr><td>Odd Function (anti-symmetric)</td><td>Even Function (symmetric)</td><td>Odd Function (anti-symmetric)</td><td>who knows</td></tr>
+      <tr><td>Even Function (symmetric)</td><td>Odd Function (anti-symmetric)</td><td>Even Function (symmetric)</td><td>who knows</td></tr>
+      <tr><td>No symmetry (neither)</td><td>who knows</td><td>who knows</td><td>who knows</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>Notice that the <span data-concept="hermite-polynomials">Hermite polynomials</span> in Figure 5.7.1 oscillate from even to odd. We can take advantage of that aspect in our calculation of Harmonic Oscillator wavefunctions. <span data-concept="hermite-parity">Hermite Polynomial is an even or odd function depends on its degree $n$</span>. Based on</p>
+$$ H_n(-x) = (-1)^n H_n(x) \tag{5.7.2} $$
+<ul><li>$H_n(x)$ is an even function, when $n$ is even.</li><li>$H_n(x)$ is an odd function, when $n$ is odd.</li></ul>
+</section>
+
+<section id="integration-over-symmetric-functions">
+<h2>Integration over Symmetric Functions</h2>
+<p>You often consider integrals of the form</p>
+$$ I=\int_{-a}^a f(x)\,\mathrm{d}x $$
+<p>If $f$ is odd or even, then sometimes you can make solving this integral easier. For example, we can rewrite that integral in the following way:</p>
+<figure class="dv" id="drv-symmetric-integrals"></figure>
+<p>That’s what it means to simplify the integration: <span data-concept="symmetric-interval-integrals">the integral of an odd or even function over the interval $[−L,L]$ can be put into a nicer form</span> (and sometimes we can see that it vanishes without ever computing an integral).</p>
+<div class="example" id="ex-5-7-1">
+<h3>Example 5.7.1</h3>
+<p>Technically, evaluating the orthogonality of <span data-concept="hermite-polynomials">Hermite polynomials</span> requires integrating over the $\exp(-x^2)$ weight function (Equations 5.7.4 and 5.7.5).</p>
+<h4>Solution</h4>
+<p>For the <span data-concept="hermite-polynomials">Hermite polynomials</span> $H_n(x)$, the relevant inner product (using Dirac Notation)</p>
+$$ \langle f,g \rangle=\int_{-\infty}^\infty f(x)g(x)\exp(-x^2)\,\mathrm dx $$
+<p>While the $H_2(x)H_3(x)$ product is indeed an <span data-concept="odd-function">odd function</span> (Table 5.7.1), while $\exp(−x^2)$ is even. Their product is odd, and thus $\langle f,g \rangle$ certainly ought to be zero.</p>
+</div>
+<p>Symmetry is an important aspect of quantum mechanics and mathematics, especially in calculating integrals. Using this symmetry, integrals can be identified to be equal to zero without explicitly solving them. For example, <span data-concept="symmetric-interval-integrals">the integral of an odd integrand over all possible values will <strong>always</strong> be zero</span> irrespective of the exact nature of the function:</p>
+$$ \int_{-\infty}^{\infty} f(x) \, dx= 0 $$
+<p>This simplifies calculations greatly as demonstrated in the following chapters.</p>
+</section>
+
+<section id="hermite-polynomials-are-orthogonal">
+<h2>Hermite Polynomials are Orthogonal</h2>
+<p><span data-concept="hermite-polynomials">Hermite polynomials</span> $H_n(x)$ are <em>n</em>th-degree polynomials for <em>n</em> = 0, 1, 2, 3 and <span data-concept="hermite-orthogonality">form an orthogonal set of functions for the weight function $e^{-x^2/2}$</span>.<sup class="fn" data-note="c-weight"></sup> The exact relation is:</p>
+$$ \int_{-\infty}^{\infty} H_m(x)H_n(x) e^{-x^2/2} dx = 0 \tag{5.7.4} $$
+<p>if $m \neq n$ and</p>
+$$ \int_{-\infty}^{\infty} H_m(x)H_n(x) e^{-x^2/2} dx = 2^n n! \sqrt{\pi} \tag{5.7.5} $$
+<p>if $m = n$.</p>
+<p>This will not be proved, but can the demonstrated using any of the <span data-concept="hermite-polynomials">Hermite polynomials</span> listed in the previous section. The <span data-concept="orthogonality">orthogonality</span> property becomes important when solving the Harmonic oscillator problems. Note that the integral of Equation 5.7.5 is important for normalizing the quantum harmonic oscillator wavefunctions discussed in last Section.</p>
+<div class="example" id="ex-5-7-2">
+<h3>Example 5.7.2 · Hermite Polynomials are Orthogonal</h3>
+<p>Demonstrate that $H_2(x)$ and $H_3(x)$ are orthogonal.</p>
+<h4>Solution</h4>
+<p>We need to confirm<sup class="fn" data-note="c-ex2-weight"></sup></p>
+$$ \int_{-\infty}^{\infty}H_2(x)H_3(x) dx=0 $$
+<p>or when substituted</p>
+$$ \int_{-\infty}^{\infty} (4x^2-2)(8x^3-12x) dx=0 $$
+<p>because it says I need to show it's orthogonal on $[ -\infty, \infty ]$ or we can just evaluate it on a finite interval $[−L,L]$, where $L$ is a constant.</p>
+$$ \begin{aligned} \int_{-L}^{L} (4x^2-2)(8x^3-12x) dx &=\left. 8 \left(\dfrac{2 x^6}{3}-2 x^4+\dfrac{3 x^2}{2}\right)\right|_{-L}^{L} \\[4pt] &= 8 \left(\dfrac{2 L^6}{3}-2 L^4+\frac{3 L^2}{2}\right)-8 \left(\dfrac{2 (-L)^6}{3}-2 (-L)^4+\dfrac{3 (-L)^2}{2}\right) \\[4pt] &=0. \end{aligned} $$
+</div>
+</section>
+
+<section id="concluding">
+<h2>Concluding</h2>
+<p><span data-concept="hermite-polynomials">Hermite polynomials</span> are a component in the harmonic oscillator wavefunction that dictates the symmetry of the wavefunctions. If your integration interval is symmetric around 0, then <span data-concept="symmetric-interval-integrals">the integral over <em>any</em> integrable odd function is zero, no exception</span>. Therefore as soon as you've found that your integrand is odd and your integration interval is symmetric, you're done. Also, for general functions, if you can easily split them into even and odd parts, you only have to consider the integral over the even part for symmetric integration intervals.</p>
+<p>Another important property is that <span data-concept="parity-product-rules">the product of two even or of two odd functions is even, and the product of an even and an odd function is odd</span>. For example, if ff is even,<sup class="fn" data-note="c-ff-even"></sup> $x↦f(x)\sin(x)$ is odd, and therefore the integral over it is zero (provided it is well defined).</p>
+</section>
