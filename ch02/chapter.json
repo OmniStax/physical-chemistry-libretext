@@ -160,38 +160,32 @@
   },
   {
    "sym": "X",
-   "type": null,
    "meaning": "the factor of u(x,t) that depends on x only",
    "section": "2.2"
   },
   {
    "sym": "T_t",
-   "type": null,
    "meaning": "the factor of u(x,t) that depends on t only",
    "section": "2.2"
   },
   {
    "sym": "K",
-   "type": null,
    "meaning": "the constant both sides of the separated wave equation are set equal to",
    "section": "2.2"
   },
   {
    "sym": "k",
-   "type": null,
    "meaning": "a real constant in the homogeneous equation d²y/dx² − k²y = 0",
    "section": "2.2",
    "redefines": true
   },
   {
    "sym": "alpha",
-   "type": null,
    "meaning": "the constant in the trial solution y = e^{αx}, fixed by the equation",
    "section": "2.2"
   },
   {
    "sym": "K",
-   "type": null,
    "meaning": "the separation constant of the wave equation, here negative",
    "section": "2.3"
   },
@@ -204,7 +198,6 @@
   },
   {
    "sym": "X",
-   "type": null,
    "meaning": "the spatial factor of the wave on the string",
    "section": "2.3"
   },
@@ -224,19 +217,16 @@
   },
   {
    "sym": "X",
-   "type": null,
    "meaning": "the spatial factor of the solution, X(x)",
    "section": "2.4"
   },
   {
    "sym": "T_t",
-   "type": null,
    "meaning": "the temporal factor of the solution, T(t)",
    "section": "2.4"
   },
   {
    "sym": "K",
-   "type": null,
    "meaning": "the separation constant, K = −p²",
    "section": "2.4"
   },
@@ -304,7 +294,6 @@
   },
   {
    "sym": "E",
-   "type": null,
    "meaning": "a constant of the temporal solution T(t), multiplying cos ω_n t",
    "section": "2.4",
    "redefines": true
@@ -369,9 +358,10 @@
   {
    "sym": "k",
    "concept": "angular-wavenumber",
-   "meaning": "the wavenumber of a one-dimensional harmonic wave",
+   "meaning": "the wavenumber of a one-dimensional traveling harmonic wave u = A sin(kx − ωt)",
    "unit": "rad/m",
-   "section": "2.5"
+   "section": "2.5",
+   "redefines": true
   },
   {
    "sym": "omega",
@@ -429,7 +419,6 @@
   },
   {
    "sym": "theta",
-   "type": null,
    "meaning": "the polar angle on the circular membrane",
    "unit": "rad",
    "section": "2.5"
@@ -442,7 +431,6 @@
   },
   {
    "sym": "lambda_mn",
-   "type": null,
    "meaning": "the constant of the (m, n) mode of the circular membrane",
    "section": "2.5"
   },

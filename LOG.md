@@ -33,3 +33,24 @@ of Figures 1.2.3 and 1.7.0, which do not exist and carry corrections.
 Known gaps: the derivation graphs and mid-motion frames were not screenshot
 by the builders; the equation numbers follow the page's labelled displays and
 were not checked one by one against the live page.
+
+## Pass 2 · 2026-11-08 · Chapter 2 prepared
+
+Prep only, no section built. Fetched Chapter 2's images (`fetch.py --media 2`,
+14 into `media/ch02/`), converted the landing page, 2.1–2.5 and the empty
+2.E; wrote `ch02/exploration.md`, `ch02/config.md` (agreed on Chapter 1's
+terms), `ch02/chapter.json` (5 sections, the intro, 61 variables) and merged
+`ch02/book-rows.json`: 2 new types (displacement, time), 29 symbols, 39
+concepts, 49 edges. `npm run colours:default` was rerun for the new types;
+it reassigned the hues of the existing types too, Chapter 1's included.
+Drafts made for 2.1–2.5.
+
+Tool fixes: `lt2md.py` takes a figure's own caption rather than its first
+panel's (Figure 2.5.1 had come out unnumbered) and keeps panel captions,
+numbers each row of an unstarred `align` as MathJax does, and drops U+00A0
+in displays; `md2html.py` takes its numbers from the converter, sets
+displays inside list items, and tags an align row by row. Chapter 1 was not
+reconverted; under the row rule its two-row aligns would take two numbers.
+
+Exercises: 4 inline, all keyed; 6 AI exercises proposed. `check:content`:
+no errors.
