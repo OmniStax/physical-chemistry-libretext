@@ -72,7 +72,7 @@ function spins(ctx, x, y, s, col) {
     hits.push({ x: xL, y: y0 - 20, r: 32, name: `the 1s orbital of ${s.aL[0]}` });
     hits.push({ x: xR, y: y0 - 20, r: 32, name: `the 1s orbital of ${s.aL[1]}` });
     const sgn = (v) => (v < 0 ? `-${fmt(-v, 3)}` : `+${fmt(v, 3)}`);
-    tex(d.readout, `\\text{bond order} = \\dfrac{${nb} - ${na}}{2} = ${halfTex(nb - na)} \\\\ \\small ${nb}\\,\\Delta E_+ + ${na}\\,\\Delta E_- = ${nb}(${fmt(DP, 3)}) + ${na}(${fmt(DM, 3)}) = ${sgn(net)}\\ E_h`);
+    tex(d.readout, `\\text{bond order} = \\dfrac{${nb} - ${na}}{2} = ${halfTex(nb - na)} \\\\ \\small ${nb}\\,\\kdE_{+} + ${na}\\,\\kdE_{-} = ${nb}(${fmt(DP, 3)}) + ${na}(${fmt(DM, 3)}) = ${sgn(net)}\\ E_h`);
   }
   register(d.fig, { update: () => {}, draw });
 })();
@@ -177,7 +177,7 @@ function spins(ctx, x, y, s, col) {
     hits.push({ x: X(RM), y: ax.Y(-EPS), r: 16, name: `the bottom of the well, −${fmt(EPS, 2)} K at ${fmt(RM, 2)} Å` });
     if (s) {
       topline(ctx, `$${iso.t}$ is bound by ${fmt(-s.E * 1e3, 2)} mK in a well ${fmt(EPS, 0)} K deep; ${fmt(100 * s.out, 0)}% of its density lies beyond the turning point.`);
-      tex(d.readout, `E = -${fmt(-s.E * 1e3, 2)}\\ \\text{mK} = -${fmt(-s.E * 8.314462e-3 * 1e5, 2)} \\times 10^{-5}\\ \\text{kJ/mol} \\\\ \\kR_{\\text{t}} = ${fmt(s.Rt, 1)}\\ \\text{Å} \\\\ \\langle \\kR \\rangle = ${fmt(s.mean, 1)}\\ \\text{Å} \\\\ \\small P(\\kR > \\kR_{\\text{t}}) = ${fmt(s.out, 2)}`);
+      tex(d.readout, `\\kE = -${fmt(-s.E * 1e3, 2)}\\ \\text{mK} = -${fmt(-s.E * 8.314462e-3 * 1e5, 2)} \\times 10^{-5}\\ \\text{kJ/mol} \\\\ \\kR_{\\text{t}} = ${fmt(s.Rt, 1)}\\ \\text{Å} \\\\ \\langle \\kR \\rangle = ${fmt(s.mean, 1)}\\ \\text{Å} \\\\ \\small P(\\kR > \\kR_{\\text{t}}) = ${fmt(s.out, 2)}`);
     } else {
       topline(ctx, `$${iso.t}$ is lighter, and the same ${fmt(EPS, 0)} K well holds no bound level.`);
       tex(d.readout, `\\mu = ${fmt(iso.mu, 3)}\\ \\text{u}: \\ \\text{no bound level} \\\\ \\small \\mu(^4\\mathrm{He}_2) = ${fmt(ISO[44].mu, 3)}\\ \\text{u}`);

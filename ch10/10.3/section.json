@@ -1,0 +1,322 @@
+{
+ "id": "10.3",
+ "module": "13472",
+ "chapter": "10",
+ "title": "BeH₂ is Linear and H₂O is Bent",
+ "short": "BeH₂ and H₂O",
+ "lead": "The molecular orbitals of a polyatomic molecule spread over all its atoms. Built for an AH₂ molecule, straight and bent, they follow the bond angle in a Walsh diagram and take symmetry labels in water.",
+ "objectives": [],
+ "summary_html": "<p>Walsh correlation diagram is a plot of molecular orbital energy as a function of some systematic change in molecular geometry. For example, the correlation between orbital energies and bond angle for an $\\mathrm{AH_2}$ molecule. The geometry of a molecule is determined by which possible structure is lowest in energy. We can use the Walsh diagram to determine the energy trends based on which orbitals are occupied.</p>",
+ "notes": "By Emily V. Eames and Mark Tuckerman, shared under CC BY-NC-SA 4.0, with diagrams the book does not credit.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercise here; the one card is an AI exercise with an AI solution, written for Walsh's diagram and rule. Its Bloom level and concept tags were chosen by AI.",
+ "figures": [
+  {
+   "id": "fig-beh2",
+   "kind": "figure",
+   "number": "10.3.2",
+   "folds": [
+    "10.3.3"
+   ],
+   "originals": [
+    "/media/ch10/77677-BeH2-MOs.png",
+    "/media/ch10/77678-BeH2-MO-diagram.png"
+   ],
+   "original_caption": "Forming molecular orbitals for $\\mathrm{BeH_2}$. Molecular orbitals diagram for $\\mathrm{BeH_2}$.",
+   "draws": [
+    "energy",
+    "wavefunction"
+   ],
+   "conventions": [
+    "Be",
+    "H"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "sim-walsh",
+   "kind": "sim",
+   "number": "10.3.1",
+   "folds": [
+    "10.3.4"
+   ],
+   "originals": [
+    "/media/ch10/77959-==Linear_MO.gif",
+    "/media/ch10/77753-Walshdiagram.gif"
+   ],
+   "original_caption": "The six molecular orbitals for the $\\mathrm{AH_2}$ molecule constrained to a linear geometry. The symmetry labels for each molecular orbital are indicated.",
+   "draws": [
+    "energy",
+    "angle",
+    "wavefunction"
+   ],
+   "conventions": [
+    "Be",
+    "B",
+    "C",
+    "N",
+    "O",
+    "H"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "sim-water-mo",
+   "kind": "sim",
+   "number": "10.3.5",
+   "originals": [
+    "/media/ch10/77757-1920px-H2O-MO-Diagram.svg.png"
+   ],
+   "original_caption": "MO diagram for water. (CC-SA-BY-3.0; Officer781 via [Wikipedia](https://commons.wikimedia.org/wiki/File:H2O-MO-Diagram.svg)).",
+   "withheld": "The second image the book prints as Figure 10.3.5, Anna Krylov's computed orbitals of water, is not shown, since the page gives no licence for it.",
+   "widths": [
+    641
+   ],
+   "draws": [
+    "energy",
+    "wavefunction"
+   ],
+   "conventions": [
+    "O",
+    "H"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "opening",
+   "concept": "canonical-orbitals",
+   "verb": "introduces"
+  },
+  {
+   "span": "opening",
+   "concept": "molecular-orbital",
+   "verb": "uses"
+  },
+  {
+   "span": "opening",
+   "concept": "lcao-approximation",
+   "verb": "uses"
+  },
+  {
+   "span": "opening",
+   "concept": "valence-bond-theory",
+   "verb": "uses"
+  },
+  {
+   "span": "opening",
+   "concept": "hybrid-orbital",
+   "verb": "uses"
+  },
+  {
+   "span": "ah-molecules",
+   "concept": "linear-ah2-orbitals",
+   "verb": "introduces"
+  },
+  {
+   "span": "ah-molecules",
+   "concept": "secular-determinant",
+   "verb": "uses"
+  },
+  {
+   "span": "ah-molecules",
+   "concept": "gerade-ungerade",
+   "verb": "reinforces"
+  },
+  {
+   "span": "ah-molecules",
+   "concept": "bonding-molecular-orbital",
+   "verb": "uses"
+  },
+  {
+   "span": "ah-molecules",
+   "concept": "antibonding-molecular-orbital",
+   "verb": "uses"
+  },
+  {
+   "span": "ah-molecules",
+   "concept": "nonbonding-molecular-orbital",
+   "verb": "reinforces"
+  },
+  {
+   "span": "beryllium-hydride-is-linear",
+   "concept": "beh2-bonding",
+   "verb": "introduces"
+  },
+  {
+   "span": "beryllium-hydride-is-linear",
+   "concept": "walsh-diagram",
+   "verb": "introduces"
+  },
+  {
+   "span": "beryllium-hydride-is-linear",
+   "concept": "frontier-orbitals",
+   "verb": "introduces"
+  },
+  {
+   "span": "beryllium-hydride-is-linear",
+   "concept": "walsh-rule",
+   "verb": "introduces"
+  },
+  {
+   "span": "beryllium-hydride-is-linear",
+   "concept": "water-molecular-orbitals",
+   "verb": "introduces"
+  },
+  {
+   "span": "beryllium-hydride-is-linear",
+   "concept": "sp-hybrids",
+   "verb": "uses"
+  },
+  {
+   "span": "beryllium-hydride-is-linear",
+   "concept": "mo-symmetry-labels",
+   "verb": "reinforces"
+  },
+  {
+   "span": "beryllium-hydride-is-linear",
+   "concept": "nonbonding-molecular-orbital",
+   "verb": "uses"
+  },
+  {
+   "span": "beryllium-hydride-is-linear",
+   "concept": "water-hybrids",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "Walsh's rule for predicting shapes of molecules states",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "beryllium-hydride-is-linear",
+   "prompt": "<p>In the Walsh diagram of an AH₂ molecule (Figure 10.3.4), the valence orbitals in order of energy are 2a₁, 1b₂, 3a₁ and 1b₁, then the empty ones. Bending the molecule lowers 2a₁ a little, raises 1b₂, lowers 3a₁ steeply and leaves 1b₁ alone. With 4, 5, 6, 7 and 8 valence electrons in BeH₂, BH₂, CH₂, NH₂ and H₂O, which of these molecules does the diagram predict to be linear?</p>",
+   "answer": {
+    "type": "choice",
+    "options": [
+     "BeH₂ only",
+     "BeH₂ and BH₂",
+     "BeH₂, BH₂ and CH₂",
+     "All five"
+    ],
+    "correct": 0,
+    "generated_by": "ai",
+    "hint": "Fill the levels two electrons at a time and ask, for each molecule, whether 3a₁ holds any electrons.",
+    "solution": "<p>BeH₂'s four valence electrons fill only 2a₁ and 1b₂. Its HOMO, 1b₂, is lowest in the straight molecule, where it is 1σ_u, and rises on bending more than 2a₁ falls, so by Walsh's rule BeH₂ is linear.</p><p>BH₂'s fifth electron goes into 3a₁, which drops steeply as the angle closes, so BH₂ bends, and CH₂ with two electrons in 3a₁ bends further. In NH₂ and H₂O the HOMO is 1b₁, which bending leaves alone; by the second half of Walsh's rule the next occupied orbital, 3a₁, decides, and these molecules are bent too. Only BeH₂ is linear.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "walsh-diagram"
+  },
+  {
+   "exercise": "a1",
+   "concept": "walsh-rule"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-equal",
+   "kind": "correction",
+   "html": "Equal H coefficients hold only for the orbitals built from $2s$, the σ_g ones. $2p_z$ changes sign across A, so in the orbitals built from it the two H coefficients have opposite signs: $a_1|1s\\rangle_{H_1} - a_1|1s\\rangle_{H_2}$."
+  },
+  {
+   "id": "c-mixing",
+   "kind": "correction",
+   "html": "Meant are how quickly A's $2s$ orbital decays with distance, and the relative size of A's and H's contributions; the two hydrogens contribute equally."
+  },
+  {
+   "id": "c-chi1",
+   "kind": "correction",
+   "html": "$|\\chi_1\\rangle$ is bonding because A's $2s$ orbital and both H $1s$ orbitals have the same sign where they overlap, between the nuclei."
+  },
+  {
+   "id": "c-chi6",
+   "kind": "correction",
+   "html": "$|\\chi_6\\rangle$ is even, as its form shows, so it is a σ_g orbital: 3σ_g, the antibonding partner of 2σ_g."
+  },
+  {
+   "id": "c-chi2",
+   "kind": "correction",
+   "html": "$|\\chi_2\\rangle$ is bonding, not antibonding, and odd. Its H coefficients have opposite signs, $a_1|1s\\rangle_{H_1} - a_1|1s\\rangle_{H_2} + a_6|2p_z\\rangle_A$, as $2p_z$ does across A."
+  },
+  {
+   "id": "c-chi5",
+   "kind": "correction",
+   "html": "$|\\chi_5\\rangle$ is the antibonding partner of $|\\chi_2\\rangle$, odd like it, so its label is 2σ_u: $a_1|1s\\rangle_{H_1} - a_1|1s\\rangle_{H_2} - a_6|2p_z\\rangle_A$, with the opposite relative sign of $2p_z$."
+  },
+  {
+   "id": "c-bef2",
+   "kind": "correction",
+   "html": "BeH₂ is meant, the molecule this subsection treats."
+  },
+  {
+   "id": "c-3a1",
+   "kind": "correction",
+   "html": "This is 3a₁, the orbital just below 1b₁; 2a₁ is the lowest of the valence orbitals."
+  },
+  {
+   "id": "c-config",
+   "kind": "correction",
+   "html": "The labels need their numbers: the valence configuration is $(2a_1)^2(1b_2)^2(3a_1)^2(1b_1)^2$, or $(1a_1)^2(2a_1)^2(1b_2)^2(3a_1)^2(1b_1)^2$ with oxygen's 1s pair, as 10.4 writes it."
+  },
+  {
+   "id": "c-table",
+   "kind": "correction",
+   "html": "The table leaves out oxygen's 1s orbital, so its 1a₁, 2a₁ and 3a₁ are the 2a₁, 3a₁ and 4a₁ of the text and of Figure 10.3.5. The energies are in electronvolts."
+  },
+  {
+   "id": "c-fig-linear",
+   "kind": "correction",
+   "figure": "sim-walsh",
+   "html": "The book's Figure 10.3.1 labels its top two orbitals 2σ_g and 3σ_u. With A's 1s core as 1σ_g, they are 3σ_g (the top one) and 2σ_u."
+  },
+  {
+   "id": "c-fig-licence",
+   "kind": "correction",
+   "figure": "sim-water-mo",
+   "html": "The licence is CC BY-SA 3.0."
+  }
+ ]
+}

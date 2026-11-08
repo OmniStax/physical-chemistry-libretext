@@ -1,0 +1,215 @@
+{
+ "id": "11.4",
+ "module": "13479",
+ "chapter": "11",
+ "title": "Orbital Polarization and Diffuse Terms in Basis Sets",
+ "short": "Polarization and diffuse functions",
+ "lead": "Split-valence basis sets still miss two shapes: density pushed to one side of an atom by its bond, and density spread far from the nuclei, as in anions and excited states. Polarization and diffuse functions supply them, and Pople's stars and pluses name them.",
+ "objectives": [],
+ "summary_html": "<p>For atoms whose ground-state electronic configurations include occupied $s$ and $p$ orbitals, a common approach is to introduce a set of $d$-type <strong>polarization functions</strong> that allow the electron density to deform beyond the shapes described by the original $s$- and $p$-type functions, providing a more flexible description of the electronic distribution during chemical bonding.</p><p>The addition of <strong>diffuse functions</strong> improve the representation of electron density that extends far from the atomic nuclei. They are typically added as an extra set of uncontracted Gaussian functions with the same angular momentum types as the valence orbitals. These are very shallow Gaussian basis functions, which more accurately represent the \"tail\" portion of the atomic orbitals, which are distant from the atomic nuclei. These additional basis functions can be important when considering anions and other large, \"soft\" molecular systems.</p>",
+ "notes": "Adapted from Wikipedia under CC BY-NC-SA 4.0, with Figure 11.4.1 by Rifleman 82 under its own CC BY-SA 3.0; nothing is left out, and the figures use the polarization exponents of 6-31G* and 6-31G** and hydrogen's diffuse exponent in 6-311++G.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book prints no exercises for this section; the exercise on methane's basis functions and its solution were written by AI, and its Bloom level and concept tags were chosen by AI.",
+ "figures": [
+  {
+   "id": "sim-polarization",
+   "kind": "sim",
+   "number": "11.4.1",
+   "originals": [
+    "/media/ch11/78139-1920px-D-polarization_function.png"
+   ],
+   "original_caption": "A d-polarization function added to a p orbital. (CC-BY-SA-3.0; [Rifleman 82](https://commons.wikimedia.org/wiki/User:Rifleman_82))",
+   "widths": [
+    393
+   ],
+   "draws": [
+    "wavefunction",
+    "length"
+   ],
+   "conventions": [
+    "C",
+    "H"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "sim-diffuse",
+   "kind": "sim",
+   "draws": [
+    "probability-density",
+    "length",
+    "wavefunction"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "polarization-functions",
+   "concept": "polarization-function",
+   "verb": "introduces"
+  },
+  {
+   "span": "polarization-functions",
+   "concept": "split-valence-basis",
+   "verb": "uses"
+  },
+  {
+   "span": "polarization-functions",
+   "concept": "angular-momentum-quantum-number",
+   "verb": "uses"
+  },
+  {
+   "span": "polarization-functions",
+   "concept": "pople-split-valence-basis",
+   "verb": "reinforces"
+  },
+  {
+   "span": "polarization-functions",
+   "concept": "contraction-notation",
+   "verb": "reinforces"
+  },
+  {
+   "span": "diffuse-functions",
+   "concept": "diffuse-function",
+   "verb": "introduces"
+  },
+  {
+   "span": "diffuse-functions",
+   "concept": "basis-set-tradeoff",
+   "verb": "introduces"
+  },
+  {
+   "span": "diffuse-functions",
+   "concept": "effective-core-potential",
+   "verb": "introduces"
+  },
+  {
+   "span": "diffuse-functions",
+   "concept": "basis-set-flexibility",
+   "verb": "reinforces"
+  },
+  {
+   "span": "diffuse-functions",
+   "concept": "orbital-function",
+   "verb": "uses"
+  },
+  {
+   "span": "diffuse-functions",
+   "concept": "electronic-hamiltonian",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "Additional examples are given in Table 11.4.2",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "diffuse-functions",
+   "prompt": "<p>Count the orbital functions of methane, CH₄, in the three basis sets below, from Tables 11.4.1 and 11.4.2, counting five functions in a set of $d$ functions as the tables do. A 6-31+G* basis is 6-31G* with one diffuse $s$ function and one diffuse set of $p$ functions added to each atom heavier than helium. Then say which of the three you would choose for a calculation on the fluoride ion, F⁻, and why.</p><ol type=\"a\"><li>6-31G*</li><li>6-31+G*</li><li>6-311++G**</li></ol>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 22,
+      "hint": "Count one carbon and four hydrogens; a single star adds nothing to hydrogen."
+     },
+     {
+      "part": "b",
+      "value": 26
+     },
+     {
+      "part": "c",
+      "value": 50
+     }
+    ],
+    "solution": "<p>(a) In 6-31G* carbon has 14 orbital functions and each hydrogen 2: $14 + 4(2) = 22$.</p><p>(b) The single plus gives carbon a diffuse $3s$ and three diffuse $3p$ functions, 4 more, and leaves hydrogen alone: $18 + 4(2) = 26$.</p><p>(c) In 6-311++G** carbon is $(12s6p1d)\\to[5s4p1d]$, $5 + 12 + 5 = 22$ functions (Table 11.4.2 prints 18; see its note), and each hydrogen is $(6s1p)\\to[4s1p]$, $4 + 3 = 7$: $22 + 4(7) = 50$.</p><p>For F⁻ the basis needs diffuse functions on fluorine, because the anion's extra electron spreads far from the nucleus, so 6-31G* is the wrong choice. 6-31+G* is the cheapest of the three that has them; 6-311++G** is more flexible and costs more, and its diffuse and polarization functions on hydrogen do nothing for an ion with no hydrogen.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "polarization-function"
+  },
+  {
+   "exercise": "a1",
+   "concept": "diffuse-function"
+  },
+  {
+   "exercise": "a1",
+   "concept": "basis-set-tradeoff"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-isis",
+   "kind": "correction",
+   "html": "It is almost mandatory."
+  },
+  {
+   "id": "c-t1-header",
+   "kind": "correction",
+   "html": "The table's header row was lost at the source, and \"(l)2-4 (l)5-7\" is left over from its LaTeX rules. The first group of Contraction, OF and GTO is 6-31G*, the second 6-311G**. The page does not say what the dagger in the Na–Ar row marks."
+  },
+  {
+   "id": "c-t1-h",
+   "kind": "correction",
+   "html": "$(5s1p)\\to[3s1p]$ gives 3 $s$ and 3 $p$ functions, 6 orbital functions, from $5 + 3 = 8$ primitives; the table prints 4 and 6."
+  },
+  {
+   "id": "c-t1-li",
+   "kind": "correction",
+   "html": "6-31G* adds one set of $d$ functions to the $(10s4p)$ of 6-31G in Table 11.3.2, so the contraction is $(10s4p1d)\\to[3s2p1d]$: 14 orbital functions from $10 + 12 + 5 = 27$ primitives. The printed 5p gives the printed 30."
+  },
+  {
+   "id": "c-t2-header",
+   "kind": "correction",
+   "html": "The table's header row was lost at the source, and \"(l)2-4 (l)5-7\" is left over from its LaTeX rules. The first group of Contraction, OF and GTO is 6-311++G, the second 6-311++G**. The page does not say what the daggers mark."
+  },
+  {
+   "id": "c-t2-li",
+   "kind": "correction",
+   "html": "$(12s6p1d)\\to[5s4p1d]$ gives $5 + 12 + 5 = 22$ orbital functions from $12 + 18 + 5 = 35$ primitives; the table prints 18 and 31, the counts of 6-311G** in Table 11.4.1."
+  },
+  {
+   "id": "c-t2-na",
+   "kind": "correction",
+   "html": "The contraction is $[6s5p1d]$, the $[6s5p]$ of 6-311++G with one set of $d$ functions added. It gives the printed 26 orbital functions, $6 + 15 + 5$; $[7s6p1d]$ would give 30."
+  }
+ ]
+}

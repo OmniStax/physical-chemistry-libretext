@@ -1,0 +1,305 @@
+{
+ "id": "11.1",
+ "module": "165359",
+ "chapter": "11",
+ "title": "Overview of Quantum Calculations",
+ "short": "Overview of quantum calculations",
+ "lead": "Electrons need a wavefunction that changes sign when two of them are exchanged, and a Slater determinant builds one for any number of electrons. A modern <em>ab initio</em> calculation uses a single determinant of molecular orbitals written in a basis of Gaussian functions, as Huo's 1965 calculation on carbon monoxide did.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "Written by Theodore Zielinski and shared under CC BY-NC-SA 4.0; the first half repeats Sections 8.5 and 8.6, which work its steps.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercise_notes": "The book sets no exercise here. The one exercise is new and AI-written; its Bloom level and concept tags were chosen by AI. Numeric answers accept a 2% tolerance.",
+ "figures": [],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "multielectron-electronic-wavefunctions",
+   "concept": "exchange-phase",
+   "verb": "reinforces"
+  },
+  {
+   "span": "multielectron-electronic-wavefunctions",
+   "concept": "two-electron-antisymmetric-combination",
+   "verb": "reinforces"
+  },
+  {
+   "span": "multielectron-electronic-wavefunctions",
+   "concept": "slater-determinant",
+   "verb": "reinforces"
+  },
+  {
+   "span": "multielectron-electronic-wavefunctions",
+   "concept": "spin-orbital",
+   "verb": "reinforces"
+  },
+  {
+   "span": "multielectron-electronic-wavefunctions",
+   "concept": "antisymmetry-principle",
+   "verb": "uses"
+  },
+  {
+   "span": "multielectron-electronic-wavefunctions",
+   "concept": "pauli-exclusion-principle",
+   "verb": "uses"
+  },
+  {
+   "span": "multielectron-electronic-wavefunctions",
+   "concept": "electron-configuration",
+   "verb": "uses"
+  },
+  {
+   "span": "multielectron-electronic-wavefunctions",
+   "concept": "multi-electron-wavefunction",
+   "verb": "uses"
+  },
+  {
+   "span": "hartree-fock-limit",
+   "concept": "ab-initio-calculation",
+   "verb": "introduces"
+  },
+  {
+   "span": "hartree-fock-limit",
+   "concept": "mo-basis-expansion",
+   "verb": "introduces"
+  },
+  {
+   "span": "hartree-fock-limit",
+   "concept": "hartree-fock-limit",
+   "verb": "introduces"
+  },
+  {
+   "span": "hartree-fock-limit",
+   "concept": "restricted-hartree-fock",
+   "verb": "introduces"
+  },
+  {
+   "span": "hartree-fock-limit",
+   "concept": "carbon-monoxide-orbitals",
+   "verb": "introduces"
+  },
+  {
+   "span": "hartree-fock-limit",
+   "concept": "electronic-hamiltonian",
+   "verb": "uses"
+  },
+  {
+   "span": "hartree-fock-limit",
+   "concept": "slater-determinant",
+   "verb": "uses"
+  },
+  {
+   "span": "hartree-fock-limit",
+   "concept": "contracted-gaussian-function",
+   "verb": "uses"
+  },
+  {
+   "span": "hartree-fock-limit",
+   "concept": "self-consistent-field-method",
+   "verb": "uses"
+  },
+  {
+   "span": "hartree-fock-limit",
+   "concept": "linear-variational-method",
+   "verb": "uses"
+  },
+  {
+   "span": "hartree-fock-limit",
+   "concept": "variational-principle",
+   "verb": "uses"
+  },
+  {
+   "span": "hartree-fock-limit",
+   "concept": "hartree-fock-energy",
+   "verb": "uses"
+  },
+  {
+   "span": "hartree-fock-limit",
+   "concept": "hartree-fock-method",
+   "verb": "uses"
+  },
+  {
+   "span": "hartree-fock-limit",
+   "concept": "nonlinear-variational-method",
+   "verb": "uses"
+  },
+  {
+   "span": "hartree-fock-limit",
+   "concept": "hybrid-orbital",
+   "verb": "uses"
+  },
+  {
+   "span": "hartree-fock-limit",
+   "concept": "nonbonding-molecular-orbital",
+   "verb": "uses"
+  },
+  {
+   "span": "hartree-fock-limit",
+   "concept": "bonding-molecular-orbital",
+   "verb": "uses"
+  },
+  {
+   "span": "hartree-fock-limit",
+   "concept": "antibonding-molecular-orbital",
+   "verb": "uses"
+  },
+  {
+   "span": "hartree-fock-limit",
+   "concept": "basis-functions",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "Using unrestricted orbitals is particular beneficial when a molecule contains an odd number of electrons",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "hartree-fock-limit",
+   "prompt": "<p>The methyl radical, CH<sub>3</sub>, has nine electrons. In its ground state one more of them has spin $\\alpha$ than has spin $\\beta$.</p><ol type=\"a\"><li>How many electrons have spin $\\alpha$?</li><li>In an unrestricted Hartree-Fock calculation, the $\\alpha$ and $\\beta$ electrons each get their own spatial orbitals. How many different spatial orbitals does the ground-state determinant of CH<sub>3</sub> use?</li><li>How many would a restricted calculation use, with every $\\beta$ electron sharing the spatial orbital of an $\\alpha$ electron?</li><li>In Huo's calculation on CO (Example 11.1.1), the occupied molecular orbitals are filled in order of energy, with the two degenerate π orbitals counted separately. Counting from the lowest, which orbital holds the electrons that carbon donates to iron?</li></ol>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 5,
+      "hint": "Split nine electrons so that the two counts differ by one."
+     },
+     {
+      "part": "b",
+      "value": 9
+     },
+     {
+      "part": "c",
+      "value": 5
+     },
+     {
+      "part": "d",
+      "value": 7,
+      "hint": "List the orbitals of the example in order and count the π pair as two."
+     }
+    ],
+    "solution": "<p>(a) With $n_\\alpha + n_\\beta = 9$ and $n_\\alpha - n_\\beta = 1$, there are 5 electrons of spin $\\alpha$ and 4 of spin $\\beta$.</p><p>(b) In an unrestricted calculation the 5 $\\alpha$ electrons occupy 5 spatial orbitals and the 4 $\\beta$ electrons occupy 4 others of their own, so the determinant uses 9 spatial orbitals.</p><p>(c) In a restricted calculation the 4 $\\beta$ electrons share the spatial orbitals of 4 of the $\\alpha$ electrons, so only 5 spatial orbitals are used: 4 doubly occupied and 1 singly occupied. This is the note's point: the unrestricted description needs nearly twice as many spatial orbitals, and it pays off for an odd number of electrons like this one.</p><p>(d) In order of energy the occupied orbitals are $1\\sigma$, $2\\sigma$, $3\\sigma$, $4\\sigma$, the two $1\\pi$ orbitals and $5\\sigma$. That makes $5\\sigma$ the 7th, the highest occupied orbital. It is the nonbonding sp hybrid on carbon, pointing away from oxygen, and its electrons are the ones donated to iron.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "restricted-hartree-fock"
+  },
+  {
+   "exercise": "a1",
+   "concept": "carbon-monoxide-orbitals"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-r-l",
+   "kind": "correction",
+   "html": "The coordinates of particle 1 are $r_1$, printed $r_l$."
+  },
+  {
+   "id": "c-swap-args",
+   "kind": "correction",
+   "html": "The exchanged wavefunction is $\\psi(r_2, r_1)$, as the middle of Equation 11.1.1 writes it; the text prints $\\psi(r_1, r_2)$."
+  },
+  {
+   "id": "c-permuted",
+   "kind": "correction",
+   "html": "The relation is between the wavefunctions after and before the exchange, $\\psi(r_2, r_1) = e^{i\\varphi}\\psi(r_1, r_2)$; the book prints $\\psi(r_1, r_2)$ on both sides."
+  },
+  {
+   "id": "c-conjugate",
+   "kind": "correction",
+   "html": "Only the first factor of Equation 11.1.2 is a complex conjugate: $\\left(e^{-i\\varphi}\\psi(r_1, r_2)^*\\right)\\left(e^{i\\varphi}\\psi(r_1, r_2)\\right) = \\psi(r_1, r_2)^*\\psi(r_1, r_2)$. The book puts a $^*$ on the second factor too."
+  },
+  {
+   "id": "c-electrons",
+   "kind": "correction",
+   "html": "“Elections” is electrons."
+  },
+  {
+   "id": "c-eq-864",
+   "kind": "correction",
+   "html": "Equation 8.6.4 is Chapter 8's number for the H<sub>2</sub> determinant printed just above, which has no number here."
+  },
+  {
+   "id": "c-shorthand",
+   "kind": "correction",
+   "html": "Each $\\chi$ already includes its spin function, so the shorthand needs no extra $\\alpha$ and $\\beta$: $\\psi(\\mathbf{r}_1, \\mathbf{r}_2) = 2^{-1/2}\\,\\mathrm{Det}\\,|\\chi_{\\sigma_{1s}\\alpha}(\\mathbf{r}_1)\\ \\chi_{\\sigma_{1s}\\beta}(\\mathbf{r}_2)|$. For H<sub>2</sub> the spatial orbital is the molecular orbital $\\sigma_{1s}$, which the book writes as 1s."
+  },
+  {
+   "id": "c-multi-electron",
+   "kind": "correction",
+   "html": "“Multe-electrom atom” is multi-electron atom."
+  },
+  {
+   "id": "c-det-column",
+   "kind": "correction",
+   "html": "In the determinant below, every row of the second column holds the spin-orbital of row 1, $\\chi_1\\beta$, so rows 2 and $N$ read $\\chi_1(\\mathbf{r}_2)\\beta$ and $\\chi_1(\\mathbf{r}_N)\\beta$. The book prints $\\chi_2$ there."
+  },
+  {
+   "id": "c-mo-letters",
+   "kind": "correction",
+   "html": "Equation 11.1.6 swaps its letters. As the sentence before it says, the molecular orbitals $\\psi_j$ are sums of the basis functions $\\varphi_k$: $\\psi_j = \\sum_k c_{jk}\\varphi_k$."
+  },
+  {
+   "id": "c-verb",
+   "kind": "correction",
+   "html": "The sentence has a doubled “the” and no verb. It means that the optimum coefficients $c_{jk}$ are found by using the Self Consistent Field Method and the Linear Variational Method."
+  },
+  {
+   "id": "c-braket",
+   "kind": "correction",
+   "html": "The denominator of the bra-ket form is $\\langle \\Psi | \\Psi \\rangle$, the same wavefunction as in the numerator, not $\\langle \\psi | \\psi \\rangle$."
+  },
+  {
+   "id": "c-ls",
+   "kind": "correction",
+   "html": "“ls” is 1s."
+  },
+  {
+   "id": "c-seven",
+   "kind": "correction",
+   "html": "CO has 14 electrons, so its ground-state determinant holds seven molecular orbitals, $1\\sigma^2 2\\sigma^2 3\\sigma^2 4\\sigma^2 1\\pi^4 5\\sigma^2$, counting the two degenerate π orbitals separately, not five."
+  },
+  {
+   "id": "c-ckj",
+   "kind": "correction",
+   "html": "These are the coefficients $c_{jk}$ of Equation 11.1.6."
+  },
+  {
+   "id": "c-sigma-labels",
+   "kind": "correction",
+   "html": "The orbitals printed $1s$, $2s$, $3s$ and $4s$ in this list are the σ orbitals $1\\sigma$, $2\\sigma$, $3\\sigma$ and $4\\sigma$, as the text goes on to call them."
+  },
+  {
+   "id": "c-sigma-plane",
+   "kind": "correction",
+   "html": "A σ orbital is symmetric under reflection in any plane that contains both nuclei. CO is linear, so it has no single plane of the molecule."
+  },
+  {
+   "id": "c-pi-labels",
+   "kind": "correction",
+   "html": "Both orbitals are $1\\pi$, the degenerate pair built from the $p_x$ and $p_y$ orbitals; the book labels the second one $2\\pi$."
+  },
+  {
+   "id": "c-2sc",
+   "kind": "correction",
+   "html": "$2_{sC}$ and $2_{pC}$ are $2s_C$ and $2p_{zC}$, the 2s and 2p<sub>z</sub> orbitals of carbon."
+  }
+ ]
+}

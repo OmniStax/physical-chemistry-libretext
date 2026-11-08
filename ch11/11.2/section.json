@@ -1,0 +1,312 @@
+{
+ "id": "11.2",
+ "module": "13476",
+ "chapter": "11",
+ "title": "Gaussian Basis Sets",
+ "short": "Gaussian basis sets",
+ "lead": "Integrals over Slater-type orbitals are slow to compute, so most calculations build their basis functions from Gaussians instead. A fixed sum of a few primitive Gaussians, a contracted function, stands in for each Slater orbital, and the names of the common basis sets count those primitives.",
+ "objectives": [],
+ "summary_html": "<p>STOs are computationally difficult and it was later realized by Frank Boys that these Slater-type orbitals could in turn be approximated as linear combinations of Gaussian orbitals instead. Because it is easier to calculate overlap and other integrals with Gaussian basis functions, this led to huge computational savings</p>",
+ "notes": "Shared by LibreTexts under CC BY-NC-SA 4.0, with Figures 11.2.1 and 11.2.2 by Ümit Kaya under CC BY 4.0, and the STO-NG coefficients drawn with them taken from Hehre, Stewart and Pople (1969).",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercise_notes": "Example 11.2.2 prints no solution and is set as an exercise, with a solution written by AI. The other two exercises are new and AI-written. Bloom levels and concept tags were chosen by AI. Numeric answers accept a 2% tolerance.",
+ "figures": [
+  {
+   "id": "sim-sto-ng",
+   "kind": "sim",
+   "number": "11.2.1",
+   "folds": [
+    "11.2.2",
+    "11.2.3"
+   ],
+   "originals": [
+    "/media/ch11/437549-11.2.1-a.svg",
+    "/media/ch11/437550-11.2.1-b.svg",
+    "/media/ch11/437548-11.2.2.svg"
+   ],
+   "original_caption": "(11.2.1) Radial Dependence of Slater and Gaussian Basis Functions. (CC BY 4.0; Ümit Kaya via LibreTexts) (11.2.2) To better represent the cusp in the electron density at the nuclei, GTO basis sets are constructed from fixed linear-combinations of Gaussian functions, contracted GTOs (CGTO). The earliest CGTO basis sets, where constructed from N GTOs that best fit the desired STO. These are called STO-NG basis sets. (CC BY 4.0; Ümit Kaya via LibreTexts) (11.2.3) STO-NG basis functions for the $1s$ STO.",
+   "withheld": "The book's Figure 11.2.3 is an uncredited scan of a printed textbook's figure and is not reproduced.",
+   "draws": [
+    "wavefunction",
+    "length"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "sim-fit",
+   "kind": "sim",
+   "draws": [
+    "wavefunction",
+    "length"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "opening",
+   "concept": "gaussian-integral-efficiency",
+   "verb": "introduces"
+  },
+  {
+   "span": "opening",
+   "concept": "slater-type-orbital",
+   "verb": "uses"
+  },
+  {
+   "span": "opening",
+   "concept": "gaussian-type-orbital",
+   "verb": "uses"
+  },
+  {
+   "span": "gaussian-type-orbitals-gto",
+   "concept": "cartesian-gaussian-orbital",
+   "verb": "introduces"
+  },
+  {
+   "span": "gaussian-type-orbitals-gto",
+   "concept": "cartesian-function-count",
+   "verb": "introduces"
+  },
+  {
+   "span": "gaussian-type-orbitals-gto",
+   "concept": "gaussian-nuclear-cusp",
+   "verb": "introduces"
+  },
+  {
+   "span": "gaussian-type-orbitals-gto",
+   "concept": "primitive-gaussian",
+   "verb": "introduces"
+  },
+  {
+   "span": "gaussian-type-orbitals-gto",
+   "concept": "contracted-gaussian-function",
+   "verb": "introduces"
+  },
+  {
+   "span": "gaussian-type-orbitals-gto",
+   "concept": "sto-ng-basis",
+   "verb": "introduces"
+  },
+  {
+   "span": "gaussian-type-orbitals-gto",
+   "concept": "fitting-sto-with-gaussians",
+   "verb": "introduces"
+  },
+  {
+   "span": "gaussian-type-orbitals-gto",
+   "concept": "pople-basis-notation",
+   "verb": "introduces"
+  },
+  {
+   "span": "gaussian-type-orbitals-gto",
+   "concept": "gaussian-integral-efficiency",
+   "verb": "reinforces"
+  },
+  {
+   "span": "gaussian-type-orbitals-gto",
+   "concept": "slater-type-orbital",
+   "verb": "reinforces"
+  },
+  {
+   "span": "gaussian-type-orbitals-gto",
+   "concept": "gaussian-type-orbital",
+   "verb": "reinforces"
+  },
+  {
+   "span": "gaussian-type-orbitals-gto",
+   "concept": "basis-functions",
+   "verb": "reinforces"
+  },
+  {
+   "span": "gaussian-type-orbitals-gto",
+   "concept": "lcao-approximation",
+   "verb": "uses"
+  },
+  {
+   "span": "gaussian-type-orbitals-gto",
+   "concept": "spherical-harmonics",
+   "verb": "uses"
+  },
+  {
+   "span": "gaussian-type-orbitals-gto",
+   "concept": "angular-momentum-quantum-number",
+   "verb": "uses"
+  },
+  {
+   "span": "gaussian-type-orbitals-gto",
+   "concept": "normalization-condition",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "e1",
+   "source_id": "ex:11.2.2",
+   "source_number": "Example 11.2.2",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "gaussian-type-orbitals-gto",
+   "prompt": "<p>The 1s Slater-type orbital $S_1 (r) = \\sqrt {4 \\zeta _1 e^{-\\zeta _1 r}}$<sup class=\"fn\" data-note=\"c-s1\"></sup> with $\\zeta _1 = 1.24$ is represented as a sum of three primitive Gaussian functions,</p>$$ S_G (r) = \\sum _{j=1}^3 C_j e^{-\\alpha _j r^2} $$<p>This sum is the contracted Gaussian function for the STO.</p><ol><li><p>Make plots of the STO and the contracted Gaussian function on the same graph so they can be compared easily. All distances should be in units of the Bohr radius. Use the following values for the coefficients, C, and the exponential parameters, $\\alpha$.</p><table><thead><tr><th>index j</th><th>$\\alpha _j$</th><th>$C_j$</th></tr></thead><tbody><tr><td>1</td><td>0.1688</td><td>0.4</td></tr><tr><td>2</td><td>0.6239</td><td>0.7</td></tr><tr><td>3</td><td>3.425</td><td>1.3</td></tr></tbody></table></li><li>Change the values of the coefficients and exponential parameters to see if a better fit can be obtained.</li><li>Comment on the ability of a linear combination of Gaussian functions to accurately describe a STO.</li></ol>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "Compare the two functions at $r = 0$, near $r = 1$ and beyond $r = 3$ before changing anything.",
+    "solution": "<p>1. With $S_1(r) = 2\\zeta_1^{3/2}e^{-\\zeta_1 r} = 2.76\\,e^{-1.24r}$ and the printed coefficients, the two functions compare as follows.</p><table><thead><tr><th>$r$ ($a_0$)</th><th>0</th><th>0.5</th><th>1</th><th>2</th><th>3</th><th>4</th></tr></thead><tbody><tr><td>$S_1$</td><td>2.76</td><td>1.49</td><td>0.80</td><td>0.231</td><td>0.067</td><td>0.019</td></tr><tr><td>$S_G$</td><td>2.40</td><td>1.53</td><td>0.76</td><td>0.261</td><td>0.090</td><td>0.027</td></tr></tbody></table><p>The sum is flat at the nucleus and 0.36 short of the cusp, close through the middle, and a little too large from $r \\approx 1.5$ to 4. Their normalized overlap, $\\langle S_1|S_G\\rangle / \\sqrt{\\langle S_1|S_1\\rangle\\langle S_G|S_G\\rangle}$ with the weight $r^2$, is 0.9958.</p><p>2. Keeping the exponents and fitting the coefficients by least squares over all space gives $C_1 = 0.296$, $C_2 = 0.950$, $C_3 = 0.981$, which are the STO-3G coefficients of hydrogen. The overlap rises to 0.99983 and the tail now follows $S_1$ to within 0.002 beyond $r = 2$. The value at the nucleus falls to 2.23, though, because points near $r = 0$ hold little of the orbital's volume, so the best fit gives them up.</p><p>3. Three Gaussians reproduce the Slater orbital well where most of the electron is, with an overlap above 0.999, but no sum of Gaussians has a cusp: every Gaussian has zero slope at $r = 0$, so the sum is always flat and too low there, and its tail eventually falls off faster than $e^{-\\zeta r}$. More Gaussians push both errors closer to the nucleus and farther out without removing them.</p>"
+   }
+  },
+  {
+   "id": "a1",
+   "source_id": "the number of Cartesian functions that can be formed for a given",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "gaussian-type-orbitals-gto",
+   "prompt": "<p>An f shell has $\\ell = 3$.</p><ol type=\"a\"><li>How many Cartesian Gaussian functions $x^a y^b z^c e^{-\\alpha r^2}$ have $a + b + c = 3$?</li><li>How many spherical-harmonic f functions are there?</li><li>The extra Cartesian functions combine into functions of lower $\\ell$. How many extra functions are there?</li></ol>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 10,
+      "hint": "Use $(\\ell+1)(\\ell+2)/2$."
+     },
+     {
+      "part": "b",
+      "value": 7
+     },
+     {
+      "part": "c",
+      "value": 3
+     }
+    ],
+    "solution": "<p>(a) $(\\ell+1)(\\ell+2)/2 = (4)(5)/2 = 10$: $x^3$, $y^3$, $z^3$, $x^2y$, $x^2z$, $y^2x$, $y^2z$, $z^2x$, $z^2y$ and $xyz$.</p><p>(b) $2\\ell + 1 = 7$, one for each $m = 3, 2, \\ldots, -3$.</p><p>(c) $10 - 7 = 3$. They are $x(x^2 + y^2 + z^2)$, $y(x^2 + y^2 + z^2)$ and $z(x^2 + y^2 + z^2)$, which are $r^2$ times $x$, $y$ and $z$: a set of p-type functions with $\\ell = 1$, in the same way that $d_{xx} + d_{yy} + d_{zz}$ is an s function.</p>"
+   }
+  },
+  {
+   "id": "a2",
+   "source_id": "The biggest limitation of GTOs is that they do not have quite the right shape close to the nucleus",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "gaussian-type-orbitals-gto",
+   "prompt": "<p>Hydrogen's normalized 1s Slater orbital with $\\zeta = 1.24$ is $\\phi_{\\text{STO}}(r) = \\sqrt{\\zeta^3/\\pi}\\,e^{-\\zeta r}$. Its STO-1G replacement is a single normalized Gaussian, $\\phi_{\\text{STO-1G}}(r) = (2\\alpha/\\pi)^{3/4} e^{-\\alpha r^2}$ with $\\alpha = 0.4166\\ a_0^{-2}$.</p><ol type=\"a\"><li>Find $\\phi_{\\text{STO}}(0)$ in $a_0^{-3/2}$.</li><li>Find $\\phi_{\\text{STO-1G}}(0)$ in $a_0^{-3/2}$.</li><li>What fraction of the Slater orbital's value at the nucleus does the Gaussian reach?</li></ol>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 0.779,
+      "unit": "a₀^−3/2"
+     },
+     {
+      "part": "b",
+      "value": 0.37,
+      "unit": "a₀^−3/2",
+      "hint": "At $r = 0$ the exponential is 1, so only the normalization constant is left."
+     },
+     {
+      "part": "c",
+      "value": 0.474
+     }
+    ],
+    "solution": "<p>(a) $\\phi_{\\text{STO}}(0) = \\sqrt{1.24^3/\\pi} = \\sqrt{1.907/3.1416} = 0.779\\ a_0^{-3/2}$.</p><p>(b) $\\phi_{\\text{STO-1G}}(0) = (2 \\times 0.4166/\\pi)^{3/4} = (0.2652)^{3/4} = 0.370\\ a_0^{-3/2}$.</p><p>(c) $0.370/0.779 = 0.474$. The Gaussian reaches less than half the Slater orbital's height at the nucleus, even though the two overlap at 0.978. It has no cusp: it is flat at $r = 0$, and to spread the same normalized density over the middle distances it must stay low there.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "e1",
+   "concept": "fitting-sto-with-gaussians"
+  },
+  {
+   "exercise": "e1",
+   "concept": "gaussian-nuclear-cusp"
+  },
+  {
+   "exercise": "e1",
+   "concept": "contracted-gaussian-function"
+  },
+  {
+   "exercise": "a1",
+   "concept": "cartesian-function-count"
+  },
+  {
+   "exercise": "a2",
+   "concept": "gaussian-nuclear-cusp"
+  },
+  {
+   "exercise": "a2",
+   "concept": "sto-ng-basis"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-cusp",
+   "kind": "correction",
+   "html": "The difference is in how the exponent depends on $r$: linear in the Slater orbital, $e^{-\\zeta r}$, and quadratic in the Gaussian, $e^{-\\alpha r^2}$. The book writes $r^{-1}$ and $r^{-2}$."
+  },
+  {
+   "id": "c-bse",
+   "kind": "correction",
+   "html": "The Basis Set Exchange has since moved to basissetexchange.org."
+  },
+  {
+   "id": "c-a-being",
+   "kind": "correction",
+   "html": "“The set a being Gaussian” means the set as being Gaussian."
+  },
+  {
+   "id": "c-table",
+   "kind": "correction",
+   "html": "The counts are the basis functions on one atom from Li to Ne. The 6-31G* and 6-31+G* counts use six Cartesian d functions; with the five spherical d functions the note above assumes, they are 14 and 18. The 6-311G* and 6-311+G* counts already use five, which the unexplained asterisks on 18 and 22 probably mark."
+  },
+  {
+   "id": "c-caption",
+   "kind": "correction",
+   "figure": "sim-sto-ng",
+   "html": "In the caption of Figure 11.2.2, “where constructed” is were constructed."
+  },
+  {
+   "id": "c-s1",
+   "kind": "correction",
+   "html": "The normalized 1s radial function is $S_1(r) = \\sqrt{4\\zeta_1^3}\\,e^{-\\zeta_1 r} = 2\\zeta_1^{3/2}e^{-\\zeta_1 r}$, which is 2.76 at $r = 0$. The printed $\\sqrt{4\\zeta_1 e^{-\\zeta_1 r}}$ is a different function, and the coefficients in the table, which sum to 2.4, are meant for the normalized one."
+  }
+ ]
+}

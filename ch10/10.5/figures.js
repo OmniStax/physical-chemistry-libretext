@@ -19,15 +19,15 @@ const rng = (s) => () => { s |= 0; s = (s + 0x6d2b79f5) | 0; let t = Math.imul(s
    the molecule in the xy plane, z up (the book's convention, out of the
    plane). The sigma bonds are schematic: 1600 points of a Gaussian along
    each bond, drawn in muted ink since their sign is one throughout. The pi
-   bond is phi1 + phi2 with phi = z e^(-zeta r), zeta = 2 per angstrom
-   (one exponent, schematic), 4000 points drawn from |psi|^2 as in 9.7 and
+   bond is phi1 + phi2 with phi = z e^(-zeta r), zeta = 2.8 per angstrom
+   (one exponent, schematic), 2600 points drawn from |psi|^2 as in 9.7 and
    split by sign. The molecular plane is a faint sheet, the pi orbital's
    nodal plane. Orbit free in azimuth, elevation +-85 deg; no buttons.
 ===================================================================== */
 (function () {
   const d = F.sim(root, 'sim-ethylene-frameworks');
   const BX = 3, BY = 3.2, BZ = 2.2;
-  const S3 = F.space3d(d, { box: [[-BX, BX], [-BY, BY], [-BZ, BZ]], h: 520, turn: -0.5, tilt: 0.42, fit: 2.4, pitch: [-85 * Math.PI / 180, 85 * Math.PI / 180], spin: 'off', zoom: false });
+  const S3 = F.space3d(d, { box: [[-BX, BX], [-BY, BY], [-BZ, BZ]], h: 520, turn: -1.75, tilt: 0.3, fit: 1.9, pitch: [-85 * Math.PI / 180, 85 * Math.PI / 180], spin: 'off', zoom: false });
   const K = F.choice(d.controls, { label: '\\text{framework}', key: 'framework', options: [{ value: 'both', label: 'both' }, { value: 's', label: '$\\sigma$ bonds' }, { value: 'p', label: '$\\pi$ bond' }], value: 'both', aria: 'which bonding framework of ethylene is drawn' });
   const leg = F.makeCanvas(d.stage, 56);
   const CC = 1.33, CH = 1.08, half = 117 / 2 * Math.PI / 180;
@@ -53,10 +53,10 @@ const rng = (s) => () => { s |= 0; s = (s + 0x6d2b79f5) | 0; let t = Math.imul(s
   })();
   /* the pi bond: phi1 + phi2 sampled as 9.7 samples its clouds */
   const pi = (() => {
-    const rnd = rng(1052), Z = 2, plus = [], minus = [];
+    const rnd = rng(1052), Z = 2.8, plus = [], minus = [];
     const phi = (c, p) => { const v = [p[0] - c[0], p[1] - c[1], p[2] - c[2]], r = Math.hypot(...v); return v[2] * Math.exp(-Z * r); };
     let guard = 0;
-    while (plus.length + minus.length < 4000 && guard++ < 400000) {
+    while (plus.length + minus.length < 2600 && guard++ < 400000) {
       const c = rnd() < 0.5 ? C1 : C2;
       const r = -Math.log(rnd() * rnd() * rnd() * rnd() * rnd() + 1e-300) / (2 * Z);
       const z = 2 * rnd() - 1, ph = 2 * Math.PI * rnd(), s = Math.sqrt(1 - z * z), u = [s * Math.cos(ph), s * Math.sin(ph), z];
@@ -76,7 +76,7 @@ const rng = (s) => () => { s |= 0; s = (s + 0x6d2b79f5) | 0; let t = Math.imul(s
     if (key !== last) {
       last = key;
       S3.set('plane', [{ k: 'faces', faces: [[[-2.2, -2.6, 0], [2.2, -2.6, 0], [2.2, 2.6, 0], [-2.2, 2.6, 0]]], color: PAL.ink, alpha: 0.08, name: 'the molecular plane, where the π orbital changes sign' }]);
-      S3.set('sigma', k === 'p' ? [] : [{ k: 'points', pts: sigma, color: 'muted', r: 3, name: 'the five σ bonds, four C–H and one C–C, in the molecular plane' }]);
+      S3.set('sigma', k === 'p' ? [] : [{ k: 'points', pts: sigma, color: 'muted', r: 4, name: 'the five σ bonds, four C–H and one C–C, in the molecular plane' }]);
       S3.set('pi', k === 's' ? [] : [
         { k: 'points', pts: pi.plus, color: up, r: 3, name: 'the π bond above the plane, where ψ > 0' },
         { k: 'points', pts: pi.minus, color: down, r: 3, name: 'the π bond below the plane, where ψ < 0' },
@@ -115,7 +115,7 @@ const rng = (s) => () => { s |= 0; s = (s + 0x6d2b79f5) | 0; let t = Math.imul(s
   F.hover(d.stage, () => hits);
   function draw() {
     const { ctx } = begin(d.c);
-    const cs = F.cat(0), cp = F.cat(1), ee = F.el('e-');
+    const cs = F.cat(2), cp = F.cat(1), ee = F.el('e-');
     const bar = (x, y, w, col, dash) => line(ctx, x - w / 2, y, x + w / 2, y, col, 5, dash);
     const tie = (x1, y1, x2, y2, col) => line(ctx, x1, y1, x2, y2, alpha(col, 0.6), 2.5, [8, 8]);
     const spin = (x, y, up, col) => (up ? arrow(ctx, x, y + 18, x, y - 26, col, 3) : arrow(ctx, x, y - 26, x, y + 18, col, 3));
@@ -141,7 +141,7 @@ const rng = (s) => () => { s |= 0; s = (s + 0x6d2b79f5) | 0; let t = Math.imul(s
     text(ctx, 'σ*', xM, yStar - 30, cs, { size: 28, align: 'center' });
     text(ctx, 'π*', xM, yPiS + 34, cp, { size: 28, align: 'center' });
     text(ctx, 'π', xM, yPi + 46, cp, { size: 28, align: 'center' });
-    text(ctx, 'σ', xM, ySig + 46, cs, { size: 28, align: 'center' });
+    text(ctx, 'σ', xM - 120, ySig, cs, { size: 28, align: 'right', base: 'middle' });
     text(ctx, 'p orbital', xR - 60, yP, PAL.ink, { size: 22, base: 'middle' });
     text(ctx, 'sp² hybrids', xR + 140, ySp, PAL.ink, { size: 22, base: 'middle' });
     text(ctx, 'carbon 1', xL, 590, PAL.muted, { size: 22, align: 'center' });
@@ -208,11 +208,11 @@ const rng = (s) => () => { s |= 0; s = (s + 0x6d2b79f5) | 0; let t = Math.imul(s
     text(ctx, 'C₂', xb + 60, yc + 6, PAL.ink, { size: 24, base: 'middle' });
     if (c1 * c2 < -1e-3) text(ctx, 'node', (xa + xb) / 2, yc - 136, PAL.muted, { size: 20, align: 'center' });
     /* the graph */
-    const ax = axes(ctx, { l: 160, r: 1300, t: 380, b: 590 }, [0, 180], [-90, 90], { nx: 4, ny: 2, xl: 'mixing angle θ (°)', yl: 'E − α (kJ/mol)', yc: cE });
+    const ax = axes(ctx, { l: 160, r: 1300, t: 370, b: 560 }, [0, 180], [-90, 90], { nx: 4, ny: 2, xl: 'mixing angle θ (°)', yl: 'E − α (kJ/mol)', yc: cE });
     plot(ctx, ax, () => BETA, alpha(cE, 0.6), { w: 3, dash: [10, 10] });
     plot(ctx, ax, () => -BETA, alpha(cE, 0.6), { w: 3, dash: [10, 10] });
-    text(ctx, 'α + β, π₁', ax.X(180) - 8, ax.Y(BETA) + 22, cE, { size: 20, align: 'right' });
-    text(ctx, 'α − β, π₂', ax.X(180) - 8, ax.Y(-BETA) - 12, cE, { size: 20, align: 'right' });
+    text(ctx, 'α + β, π₁', ax.X(178), ax.Y(BETA) - 12, cE, { size: 20, align: 'right' });
+    text(ctx, 'α − β, π₂', ax.X(2), ax.Y(-BETA) + 26, cE, { size: 20 });
     plot(ctx, ax, (x) => BETA * Math.sin(2 * x * Math.PI / 180), cE, { w: 5 });
     F.dot(ctx, ax.X(T.v), ax.Y(e), cE, true, 10);
     hits.length = 0;

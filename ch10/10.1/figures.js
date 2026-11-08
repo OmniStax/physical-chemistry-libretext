@@ -15,13 +15,13 @@ const pct = (v) => `${fmt(100 * v, 0)}%`;
    FIGURE 10.1.3 + 10.1.7 + 10.1.8: the sp, sp2 and sp3 hybrids.
    Mathematical 3D (root 28.3): a hybrid's lobes and the angles between the
    members of a set are an arrangement in space. Still: no clock.
-   The hybrid chi = sqrt(s) psi_2s + sqrt(1 - s) psi_2p(n), with hydrogen's
-   2s and 2p (Z = 1, a0 = 1; both share the factor e^(-r/2) / 4 sqrt(2 pi)),
-   so chi ~ e^(-r/2) [sqrt(s)(r - 2) + sqrt(1 - s)(x . n)], the 2s taken with
-   the sign that is positive outside its node, as the book's pictures draw it, so that
-   s + p points along +n. Its density is
-   sampled by rejection from one fixed set of candidates (seeded), so the
-   cloud morphs as s moves rather than jumping. The bright hybrid is the
+   The hybrid chi = sqrt(s) phi_2s + sqrt(1 - s) phi_2p(n), with Slater 2s and 2p
+   orbitals sharing one exponent (zeta = 1/2, a0 = 1): phi_2s = (zeta^5/3pi)^1/2 r e^(-zeta r),
+   phi_2p = (zeta^5/pi)^1/2 r e^(-zeta r) cos(theta), so chi ~ r e^(-r/2) [sqrt(s/3) + sqrt(1 - s) cos(theta_n)].
+   Hydrogen's own 2s was tried first: its inner part, larger than the lobe, swamps
+   the picture, and the book's drawings have no 2s node either. Its density is
+   sampled from one fixed set of candidates (seeded), so the cloud morphs as
+   s moves rather than jumping. The bright hybrid is the
    set's chi_1 at the slider's s; the set's other hybrids stand faint at the
    set's own s along their directions, the book's (10.1.18), (10.1.24),
    (10.1.25): sp along +z and -z; sp2 at 180 deg and +-60 deg in the xy plane
@@ -31,7 +31,7 @@ const pct = (v) => `${fmt(100 * v, 0)}%`;
 ===================================================================== */
 (function () {
   const d = F.sim(root, 'sim-hybrids');
-  const B = 16, NC = 160000, MAXP = 4200, FAINT = 1400;
+  const B = 16, NC = 40000, MAXP = 5000, FAINT = 1600;
   const S = F.space3d(d, { box: [[-B, B], [-B, B], [-B, B]], h: 600, turn: -0.6, tilt: 0.45, fit: 2.6, pitch: [-85 * Math.PI / 180, 85 * Math.PI / 180], spin: 'off', zoom: false });
   const r3 = Math.sqrt(3);
   const SETS = {
@@ -43,18 +43,27 @@ const pct = (v) => `${fmt(100 * v, 0)}%`;
     onInput: (v) => Sc.set(SETS[v].s) });
   const Sc = ctl(d.controls, { label: '\\text{s character}', cls: '', key: 's', min: 0, max: 0.5, step: 0.01, value: 0.5, unit: '', fmt: pct,
     specials: [{ at: 1 / 4, label: 'sp³, 25%' }, { at: 1 / 3, label: 'sp², 33%' }, { at: 1 / 2, label: 'sp, 50%' }] });
-  /* candidates in the hybrid's own frame (n = +z), uniform in the box, each with its own threshold */
-  const rnd = rng(1013), cx = new Float32Array(NC), cy = new Float32Array(NC), cz = new Float32Array(NC), cu = new Float32Array(NC);
-  for (let i = 0; i < NC; i++) { cx[i] = (2 * rnd() - 1) * B; cy[i] = (2 * rnd() - 1) * B; cz[i] = (2 * rnd() - 1) * B; cu[i] = rnd(); }
-  const amp = (s, i) => { const r = Math.hypot(cx[i], cy[i], cz[i]); return Math.exp(-r / 2) * (Math.sqrt(s) * (r - 2) + Math.sqrt(1 - s) * cz[i]); };
+  /* candidates in the hybrid's own frame (n = +z): r from a gamma law of shape 5 and rate 1, so their
+     density per volume is r^2 e^(-1 r), the radial part of a Slater 2s or 2p squared; the direction uniform.
+     The hybrid's density over that is its angular bracket squared, at most (sqrt(s/3) + sqrt(1 - s))^2, so
+     each candidate is kept against its own fixed threshold and the cloud morphs as s moves */
+  const rnd = rng(1013), cx = new Float32Array(NC), cy = new Float32Array(NC), cz = new Float32Array(NC), cu = new Float32Array(NC), cr = new Float32Array(NC);
+  for (let i = 0; i < NC; i++) {
+    let r = 0; for (let k = 0; k < 5; k++) r -= Math.log(1 - rnd()); r /= 1;
+    const zc = 2 * rnd() - 1, ph = 2 * Math.PI * rnd(), sc = Math.sqrt(1 - zc * zc);
+    cx[i] = r * sc * Math.cos(ph); cy[i] = r * sc * Math.sin(ph); cz[i] = r * zc; cr[i] = r; cu[i] = rnd();
+  }
+  const amp = (s, i) => Math.sqrt(s / 3) + Math.sqrt(1 - s) * cz[i] / cr[i];
   /* the accepted points of the hybrid at s along +z: [position, sign] */
+  /* only where the density is at least CUT of its peak, so each cloud shows the orbital's own lobes */
+  const CUT = 0.12;
   const memo = new Map();
   function cloud(s, cap) {
     const key = s.toFixed(3) + '|' + cap; if (memo.has(key)) return memo.get(key);
-    const a = new Float32Array(NC); let mx = 0;
-    for (let i = 0; i < NC; i++) { const v = amp(s, i); a[i] = v; if (v * v > mx) mx = v * v; }
+    const mx = (Math.sqrt(s / 3) + Math.sqrt(1 - s)) ** 2, a = new Float32Array(NC), w = new Float32Array(NC);
+    for (let i = 0; i < NC; i++) { const v = amp(s, i); a[i] = v; w[i] = v * v; }
     const out = [];
-    for (let i = 0; i < NC && out.length < cap; i++) if (cu[i] * mx < a[i] * a[i]) out.push([cx[i], cy[i], cz[i], a[i] >= 0 ? 1 : -1]);
+    for (let i = 0; i < NC && out.length < cap; i++) if (cr[i] < B && cu[i] * mx < w[i] && w[i] * (cr[i] * Math.exp(1 - 0.5 * cr[i]) * 0.5) ** 2 > CUT * mx) out.push([cx[i], cy[i], cz[i], a[i] >= 0 ? 1 : -1]);
     if (memo.size > 60) memo.clear();
     memo.set(key, out); return out;
   }
@@ -70,7 +79,7 @@ const pct = (v) => `${fmt(100 * v, 0)}%`;
   let last = '';
   function draw() {
     const set = SETS[K.value], s = Sc.v;
-    const cw = C('wavefunction'), up = cw, down = otherSign(cw), fu = F.mixColor(up, PAL.panel, 0.62), fd = F.mixColor(down, PAL.panel, 0.62);
+    const cw = C('wavefunction'), up = cw, down = otherSign(cw), fu = F.mixColor(PAL.ink, PAL.panel, 0.55), fd = F.mixColor(PAL.ink, PAL.panel, 0.75);
     const key = [K.value, s.toFixed(3), up, down, PAL.ink, PAL.panel].join('|');
     if (key !== last) {
       last = key;
@@ -101,7 +110,7 @@ const pct = (v) => `${fmt(100 * v, 0)}%`;
       const c = b / r3;
       p = `+ ${fmt(c, 3)}\\,\\psi_{2p_x} + ${fmt(c, 3)}\\,\\psi_{2p_y} + ${fmt(c, 3)}\\,\\psi_{2p_z}`;
     } else p = `${set.sign < 0 ? '-' : '+'} ${fmt(b, 3)}\\,\\psi_{${set.p}}`;
-    tex(d.readout, `\\kchi_1 = ${fmt(a, 3)}\\,\\psi_{2s} ${p} \\\\ \\small \\text{s character} = (${fmt(a, 3)})^2 = ${pct(s)}`);
+    tex(d.readout, `\\kchi_1 = ${fmt(a, 3)}\\,\\psi_{2s} ${p} \\\\ \\small \\text{s character} = (${fmt(a, 3)})^2 = ${fmt(100 * s, 0)}\\%`);
   }
   register(d.fig, { update: () => {}, draw });
 })();
@@ -124,7 +133,7 @@ const pct = (v) => `${fmt(100 * v, 0)}%`;
 (function () {
   const d = F.sim(root, 'sim-rotate', 600);
   const K = F.choice(d.controls, { label: '\\text{start}', options: [{ value: 'py', label: '$2p_y$' }, { value: 'my', label: '$-2p_y$' }], value: 'py', aria: 'the orbital turned', key: 'start' });
-  const T = ctl(d.controls, { label: '\\text{turn}', cls: 'angle', key: 'turn', min: -90, max: 90, step: 1, value: -30, unit: '°', dec: 0,
+  const T = ctl(d.controls, { label: '\\text{turn}', cls: 'angle', key: 'turn', min: -90, max: 90, step: 1, value: -30, unit: '°', dec: 0, fmt: (v) => `${fmt(v, 0)}°`,
     specials: [{ at: -30, label: '−30°, Figure 10.1.5' }, { at: 30, label: '+30°, Figure 10.1.6' }] });
   const hits = [];
   F.hover(d.stage, () => hits);
@@ -141,7 +150,8 @@ const pct = (v) => `${fmt(100 * v, 0)}%`;
   }
   function atom(ctx, x, y, sym, r) {
     ctx.save(); ctx.beginPath(); ctx.arc(x, y, r, 0, 2 * Math.PI); ctx.fillStyle = F.el(sym); ctx.fill(); ctx.strokeStyle = alpha(PAL.ink, 0.6); ctx.lineWidth = 2; ctx.stroke(); ctx.restore();
-    text(ctx, sym, x, y + 1, PAL.ink, { size: 22, weight: 600, align: 'center', base: 'middle' });
+    const f = lightOf(F.el(sym)), ink = Math.abs(lightOf(PAL.ink) - f) > Math.abs(lightOf(PAL.panel) - f) ? PAL.ink : PAL.panel;
+    text(ctx, sym, x, y + 1, ink, { size: 22, weight: 600, align: 'center', base: 'middle' });
   }
   function draw() {
     const { ctx, W } = begin(d.c);
@@ -149,7 +159,7 @@ const pct = (v) => `${fmt(100 * v, 0)}%`;
     const cy = sg * Math.cos(rad), cx = -sg * Math.sin(rad);
     const cw = C('wavefunction'), up = cw, down = otherSign(cw);
     /* the plane */
-    const X0 = 380, Y0 = 320, L = 250, bond = 175;
+    const X0 = 380, Y0 = 345, L = 225, bond = 175;
     F.arrow(ctx, X0 - L, Y0, X0 + L, Y0, alpha(PAL.ink, 0.5), 3); F.arrow(ctx, X0, Y0 + L, X0, Y0 - L, alpha(PAL.ink, 0.5), 3);
     text(ctx, 'x', X0 + L + 16, Y0 + 6, PAL.ink, { size: 24, weight: 600 }); text(ctx, 'y', X0 - 6, Y0 - L - 18, PAL.ink, { size: 24, weight: 600, align: 'center' });
     hits.length = 0;
@@ -165,6 +175,7 @@ const pct = (v) => `${fmt(100 * v, 0)}%`;
     hits.push({ x: X0, y: Y0, r: 26, name: 'the boron atom' });
     const tipx = X0 + 150 * Math.cos(plus), tipy = Y0 - 150 * Math.sin(plus);
     hits.push({ x: (X0 + tipx) / 2, y: (Y0 + tipy) / 2, r: 40, name: `the turned orbital's positive lobe, at ${fmt(((plus * 180 / Math.PI) % 360 + 360) % 360, 0)}°` });
+    hits.push({ x: (3 * X0 - tipx) / 2, y: (3 * Y0 - tipy) / 2, r: 40, name: 'the turned orbital\'s negative lobe' });
     /* its two parts, drawn at their weights */
     const parts = [{ c: cy, th: Math.PI / 2, n: '2p_y', x: 900 }, { c: cx, th: 0, n: '2p_x', x: 1190 }];
     text(ctx, '=', 760, Y0 + 8, PAL.ink, { size: 40, align: 'center', base: 'middle' });
@@ -174,7 +185,7 @@ const pct = (v) => `${fmt(100 * v, 0)}%`;
       line(ctx, q.x - 125, Y0, q.x + 125, Y0, alpha(PAL.ink, 0.2), 2); line(ctx, q.x, Y0 + 125, q.x, Y0 - 125, alpha(PAL.ink, 0.2), 2);
       if (R > 1) porb(ctx, q.x, Y0, q.th + (q.c < 0 ? Math.PI : 0), R, up, down, 0.55);
       dot(ctx, q.x, Y0, alpha(PAL.ink, 0.6), true, 5);
-      text(ctx, `${fmt(q.c, 3)} ψ_{${q.n}}`, q.x, Y0 + 175, PAL.ink, { size: 24, weight: 600, align: 'center' });
+      text(ctx, `${fmt(q.c, 3)} × ${q.n}`, q.x, Y0 + 175, PAL.ink, { size: 24, weight: 600, align: 'center' });
       hits.push({ x: q.x, y: Y0, r: 110, name: `${q.n.replace('_', '')} with weight ${fmt(q.c, 3)}` });
     });
     F.topline(ctx, `Turned by ${fmt(del, 0)}°, the orbital is $${fmt(cy, 3)}\\,2p_y ${cx < 0 ? '-' : '+'} ${fmt(Math.abs(cx), 3)}\\,2p_x$.`);

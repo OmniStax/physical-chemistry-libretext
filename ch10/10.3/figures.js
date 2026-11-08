@@ -56,7 +56,7 @@ function eig(A) {
     { value: 'NH2', label: 'NH₂', A: 'N', n: 7 }, { value: 'H2O', label: 'H₂O', A: 'O', n: 8 },
   ];
   const K = F.choice(d.controls, { label: '\\text{molecule}', options: MOL.map((m) => ({ value: m.value, label: m.label })), value: 'H2O', aria: 'the molecule, by its number of valence electrons', key: 'molecule' });
-  const TH = ctl(d.controls, { label: '\\text{H–A–H}', cls: 'angle', key: 'angle', min: 90, max: 180, step: 0.5, value: 104.5, unit: '°', dec: 1,
+  const TH = ctl(d.controls, { label: '\\text{H–A–H}', cls: 'angle', key: 'angle', min: 90, max: 180, step: 0.5, value: 104.5, fmt: (v) => `${fmt(v, 1)}°`,
     detents: [{ v: 104.5, label: 'water' }], snap: true, aria: 'the H–A–H bond angle in degrees', specials: [{ at: 180, label: 'linear' }] });
   const aS = -21, aP = -11, aH = -13.6, bS = -5.0, bP = -4.6;
   const bHH = (th) => -3.0 * Math.exp(-1.6 * (2 * Math.sin(th / 2) - 1));
@@ -161,15 +161,15 @@ function eig(A) {
     blob(cx, cy, 20 + 60 * Math.abs(cs) / big, cs);
     lobe(0, -1, cpz); lobe(1, 0, cpy);
     if (Math.abs(cpx) > 0.04 * big) {   /* px stands out of the page: its near lobe face on, the far one a ring behind */
-      ctx.save(); ctx.globalAlpha = 0.55; ctx.strokeStyle = col(-cpx); ctx.lineWidth = 8; ctx.beginPath(); ctx.arc(cx, cy, 64, 0, 2 * Math.PI); ctx.stroke();
-      ctx.fillStyle = col(cpx); ctx.beginPath(); ctx.arc(cx, cy, 56, 0, 2 * Math.PI); ctx.fill(); ctx.restore();
+      ctx.save(); ctx.globalAlpha = 0.55; ctx.strokeStyle = col(-cpx); ctx.lineWidth = 8; ctx.beginPath(); ctx.arc(cx, cy, 50, 0, 2 * Math.PI); ctx.stroke();
+      ctx.fillStyle = col(cpx); ctx.beginPath(); ctx.arc(cx, cy, 44, 0, 2 * Math.PI); ctx.fill(); ctx.restore();
     }
     blob(H1[0], H1[1], 14 + 46 * Math.abs(ch1) / big, ch1);
     blob(H2[0], H2[1], 14 + 46 * Math.abs(ch2) / big, ch2);
     line(ctx, cx, cy, H1[0], H1[1], alpha(PAL.ink, 0.6), 3); line(ctx, cx, cy, H2[0], H2[1], alpha(PAL.ink, 0.6), 3);
     dot(ctx, cx, cy, F.el(mol.A), true, 16); dot(ctx, H1[0], H1[1], F.el('H'), true, 11); dot(ctx, H2[0], H2[1], F.el('H'), true, 11);
     text(ctx, mol.A, cx + 26, cy - 22, PAL.ink, { size: 20, weight: 600, bg: PAL.panel });
-    F.angleArc(ctx, { x: cx, y: cy }, 44, Math.PI / 2 - th / 2, Math.PI / 2 + th / 2, `${fmt(deg, 1)}°`);
+    text(ctx, `${fmt(deg, 1)}°`, cx, cy + R * c + 40, C('angle'), { size: 20, weight: 600, align: 'center', bg: PAL.panel });
     hits.push({ x: cx, y: cy, r: 40, name: `atom ${mol.A}${Math.abs(cpx) > 0.04 * big ? ', with its 2p_x orbital standing out of the page' : ''}` }, { x: H1[0], y: H1[1], r: 30, name: 'a hydrogen atom' }, { x: H2[0], y: H2[1], r: 30, name: 'a hydrogen atom' });
     F.legend(ctx, { l: 900, r: 1380, t: 470, b: 560 }, [{ s: 'ψ > 0', color: cw, kind: 'swatch' }, { s: 'ψ < 0', color: cw2, kind: 'swatch' }], { corner: 'top', panel: false, row: true });
     /* readout: the sum of the occupied levels */
@@ -271,9 +271,9 @@ function eig(A) {
 ===================================================================== */
 (function () {
   const d = F.sim(root, 'sim-water-mo');
-  const BX = 4.2;
-  const S = F.space3d(d, { box: [[-BX, BX], [-BX, BX], [-BX, BX]], h: 520, turn: -2.6, tilt: 0.35, fit: 2.6, pitch: [-85 * Math.PI / 180, 85 * Math.PI / 180], spin: 'off', zoom: false });
-  const dia = F.makeCanvas(d.stage, 330);
+  const BX = 3;
+  const S = F.space3d(d, { box: [[-BX, BX], [-BX, BX], [-BX, BX]], h: 520, turn: -2.6, tilt: 0.35, fit: 2.4, pitch: [-85 * Math.PI / 180, 85 * Math.PI / 180], spin: 'off', zoom: false });
+  const dia = F.makeCanvas(d.stage, 470);
   /* Table 10.3.1: [s(H1), s(O), px, py, pz, s(H2)], energy, the table's label */
   const ORB = [
     { id: '2a1', lab: '2a_1', t: '1a_1', E: -40.032, c: [0.315, 0.884, 0, 0, -0.143, 0.315] },
@@ -335,10 +335,10 @@ function eig(A) {
     const { ctx } = begin(dia);
     hits.length = 0;
     const ce = C('energy');
-    const Y = (E) => 300 - (E + 42) * (270 / 52);
+    const Y = (E) => 440 - (E + 42) * (410 / 52);
     const XO = 260, XM = 700, XH = 1140;
     const AO = { s: { x: XO, E: -32.4, lab: '2s' }, p: { x: XO, E: -15.9, lab: '2p' }, sg: { x: XH, E: -13.6, lab: 'σ (a₁)' }, su: { x: XH, E: -13.6, lab: 'σ* (b₂)' } };
-    F.arrow(ctx, 70, 315, 70, 20, ce, 4); text(ctx, 'E', 52, 160, ce, { size: 24, weight: 600, align: 'right' });
+    F.arrow(ctx, 70, 455, 70, 20, ce, 4); text(ctx, 'E', 52, 230, ce, { size: 24, weight: 600, align: 'right' });
     line(ctx, XO - 40, Y(AO.s.E), XO + 40, Y(AO.s.E), ce, 4); text(ctx, 'O 2s', XO - 52, Y(AO.s.E), PAL.ink, { size: 18, align: 'right', base: 'middle' });
     line(ctx, XO - 40, Y(AO.p.E), XO + 40, Y(AO.p.E), ce, 4); text(ctx, 'O 2p', XO - 52, Y(AO.p.E), PAL.ink, { size: 18, align: 'right', base: 'middle' });
     line(ctx, XH - 40, Y(-13.6) - 5, XH + 40, Y(-13.6) - 5, ce, 4); line(ctx, XH - 40, Y(-13.6) + 5, XH + 40, Y(-13.6) + 5, ce, 4);
@@ -351,8 +351,8 @@ function eig(A) {
       if (q.c[0]) from.push([XH, Y(-13.6)]);
       from.forEach(([x, yy]) => line(ctx, x < XM ? x + 44 : XM + w / 2 + 4, x < XM ? yy : y, x < XM ? XM - w / 2 - 4 : x - 44, x < XM ? y : yy, alpha(PAL.ink, sel ? 0.7 : 0.3), sel ? 3 : 2, [6, 6]));
       line(ctx, XM - w / 2, y, XM + w / 2, y, sel ? ce : alpha(ce, 0.55), sel ? 7 : 4);
-      if (i < 4) { F.arrow(ctx, XM - 8, y + 11, XM - 8, y - 11, PAL.ink, 2); F.arrow(ctx, XM + 8, y - 11, XM + 8, y + 11, PAL.ink, 2); }
-      text(ctx, UNI[q.id], XM + w / 2 + 14 + (i === 5 ? 48 : 0), y, sel ? PAL.ink : PAL.muted, { size: 19, weight: sel ? 600 : 400, base: 'middle', bg: PAL.panel });
+      if (i < 4) { F.arrow(ctx, XM - 8, y + 8, XM - 8, y - 8, PAL.ink, 2); F.arrow(ctx, XM + 8, y - 8, XM + 8, y + 8, PAL.ink, 2); }
+      text(ctx, UNI[q.id], XM + w / 2 + 14 + (i === 5 || i === 3 ? 48 : 0), y, sel ? PAL.ink : PAL.muted, { size: 19, weight: sel ? 600 : 400, base: 'middle', bg: PAL.panel });
       hits.push({ x: XM, y, r: 16, name: `${UNI[q.id]}: ${minus(fmt(q.E, 3))} eV${i < 4 ? ', two electrons' : ', empty'}` });
     });
     const terms = [['1s', 'H_1', 0], ['2s', 'O', 1], ['2p_x', 'O', 2], ['2p_y', 'O', 3], ['2p_z', 'O', 4], ['1s', 'H_2', 5]].filter((t) => o.c[t[2]]);

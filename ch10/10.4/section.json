@@ -1,0 +1,423 @@
+{
+ "id": "10.4",
+ "module": "13473",
+ "chapter": "10",
+ "title": "Photoelectron Spectroscopy",
+ "short": "Photoelectron spectroscopy",
+ "lead": "Photoelectron spectroscopy ionizes molecules with photons of one energy and measures the kinetic energies of the electrons that leave. Read through Koopmans' theorem, the spectra of H₂, N₂, HCl and water become pictures of their occupied orbitals.",
+ "objectives": [
+  "Demonstrate how photoelectron spectroscopy can be used to resolve the absolute energies of molecular orbitals."
+ ],
+ "summary_html": "<p>A photoelecton spectrum can show the relative energies of occupied molecular orbitals by ionization. (i.e. ejection of an electron). A photoelectron spectrum can also be used to determine energy spacing between vibrational levels of a given electronic state. Each orbital energy band has a structure showing ionization to different vibrational levels.</p>",
+ "notes": "By Roger Nix, CC BY 4.0 at the source and shared here under CC BY-NC-SA 4.0.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercise here; the one card is an AI exercise with an AI solution, on the kinetic energy of water's photoelectrons. Its Bloom level and concept tags were chosen by AI. The numeric answer accepts a 2% tolerance.",
+ "figures": [
+  {
+   "id": "sim-analyzer",
+   "kind": "sim",
+   "number": "10.4.1",
+   "originals": [
+    "/media/ch10/347589-10.4.1.svg"
+   ],
+   "original_caption": "Diagram of a basic, typical PES instrument used in UPS, where the radiation source is an UV light source. When the sample is irradiated, the released photoelectrons pass through the lens system which slows them down before they enter the energy analyzer. The analyzer shown is a spherical deflection analyzer which the photoelectrons pass through before they are collected at the collector slit. (CC BY 4.0; Ümit Kaya via LibreTexts)",
+   "widths": [
+    575
+   ],
+   "draws": [
+    "energy"
+   ],
+   "conventions": [
+    "e-"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "sim-pes",
+   "kind": "sim",
+   "number": "10.4.3",
+   "folds": [
+    "10.4.5",
+    "10.4.6",
+    "10.4.7",
+    "10.4.8"
+   ],
+   "originals": [
+    "/media/ch10/347590-10.4.3.svg",
+    "/media/ch10/347604-Example_10.4.1.svg",
+    "/media/ch10/347605-Example_10.4.2.svg",
+    "/media/ch10/347602-10.4.5.svg",
+    "/media/ch10/347603-10.4.6.svg",
+    "/media/ch10/347601-10.4.7.svg"
+   ],
+   "original_caption": "Within Koopmans' Theorem, the energies of the orbitals $\\epsilon$ have an attractively simple physical interpretation: they give the amount of energy necessary to remove (ionize) the electron out of the molecular orbital, which corresponds to the negative of the experimentally observable ionization potential ($I$). (CC BY 4.0; Ümit Kaya via LibreTexts)",
+   "withheld": "The scanned spectrum of water the book prints as Figure 10.4.8 is not shown, since the page gives no credit or licence for it.",
+   "widths": [
+    349,
+    596,
+    739,
+    810,
+    505,
+    688
+   ],
+   "draws": [
+    "energy"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "sim-franck",
+   "kind": "sim",
+   "number": "10.4.2",
+   "folds": [
+    "10.4.4"
+   ],
+   "originals": [
+    "/media/ch10/347588-10.4.2.svg",
+    "/media/ch10/347591-10.4.4.svg"
+   ],
+   "original_caption": "Vertical ionization process for molecular hydrogen. (CC BY 4.0; Ümit Kaya via LibreTexts)",
+   "widths": [
+    492,
+    394
+   ],
+   "draws": [
+    "energy",
+    "length"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "photoelectron-spectroscopy",
+   "concept": "photoelectron-spectroscopy",
+   "verb": "introduces"
+  },
+  {
+   "span": "photoelectron-spectroscopy",
+   "concept": "photon",
+   "verb": "uses"
+  },
+  {
+   "span": "photoionization",
+   "concept": "photoelectron-energy-balance",
+   "verb": "introduces"
+  },
+  {
+   "span": "photoionization",
+   "concept": "vertical-ionization-energy",
+   "verb": "introduces"
+  },
+  {
+   "span": "photoionization",
+   "concept": "einstein-photoelectric-equation",
+   "verb": "reinforces"
+  },
+  {
+   "span": "photoionization",
+   "concept": "work-function",
+   "verb": "reinforces"
+  },
+  {
+   "span": "koopmans",
+   "concept": "pes-bands-orbitals",
+   "verb": "introduces"
+  },
+  {
+   "span": "koopmans",
+   "concept": "koopmans-theorem",
+   "verb": "reinforces"
+  },
+  {
+   "span": "vertical-adiabatic",
+   "concept": "adiabatic-ionization-energy",
+   "verb": "introduces"
+  },
+  {
+   "span": "vertical-adiabatic",
+   "concept": "vertical-ionization-energy",
+   "verb": "reinforces"
+  },
+  {
+   "span": "vertical-adiabatic",
+   "concept": "pes-vibrational-structure",
+   "verb": "introduces"
+  },
+  {
+   "span": "vertical-adiabatic",
+   "concept": "bonding-molecular-orbital",
+   "verb": "uses"
+  },
+  {
+   "span": "vertical-adiabatic",
+   "concept": "antibonding-molecular-orbital",
+   "verb": "uses"
+  },
+  {
+   "span": "hydrogen-chloride",
+   "concept": "nonbonding-molecular-orbital",
+   "verb": "reinforces"
+  },
+  {
+   "span": "water",
+   "concept": "water-photoelectron-spectrum",
+   "verb": "introduces"
+  },
+  {
+   "span": "water",
+   "concept": "water-molecular-orbitals",
+   "verb": "reinforces"
+  },
+  {
+   "span": "water",
+   "concept": "valence-bond-theory",
+   "verb": "uses"
+  },
+  {
+   "span": "water",
+   "concept": "sp3-hybrids",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "Photoelectron spectroscopy uses monochromatic sources of radiation",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "water",
+   "prompt": "<p>A helium lamp gives photons of 21.22 eV. (a) What kinetic energy do photoelectrons from water's 1b₁ orbital have, given its measured ionization energy of 12.6 eV? (b) Why does a spectrum taken with this lamp show no band for the 2a₁ orbital, whose ionization energy is 32.2 eV?</p>",
+   "answer": {
+    "type": "number",
+    "value": 8.62,
+    "unit": "eV",
+    "part": "a",
+    "generated_by": "ai",
+    "hint": "Use $KE = h\\nu - IE$ (Equation 10.4.5).",
+    "solution": "<p>(a) By Equation 10.4.5, $KE = h\\nu - IE = 21.22\\ \\text{eV} - 12.6\\ \\text{eV} = 8.62\\ \\text{eV}$.</p><p>(b) Removing an electron from 2a₁ takes 32.2 eV, more than the 21.22 eV a photon brings; the kinetic energy would come out negative, so no 2a₁ electrons are ejected and the band is missing.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "photoelectron-energy-balance"
+  },
+  {
+   "exercise": "a1",
+   "concept": "water-photoelectron-spectrum"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-always",
+   "kind": "correction",
+   "html": "The vertical ionization energy is never less than the adiabatic one; the two are equal when the ion keeps the neutral's geometry."
+  },
+  {
+   "id": "c-h2-label",
+   "kind": "correction",
+   "html": "Numbered like the bonding orbital, the antibonding one is $1\\sigma_u^*$."
+  },
+  {
+   "id": "c-h2-vib",
+   "kind": "correction",
+   "html": "The electrons all leave from the neutral's lowest vibrational level; it is the ion that is left in a range of vibrational levels."
+  },
+  {
+   "id": "c-n2-bonding",
+   "kind": "correction",
+   "html": "$3\\sigma_g$ is weakly bonding and $2\\sigma_u$ weakly antibonding."
+  },
+  {
+   "id": "c-n2-2sg",
+   "kind": "correction",
+   "html": "The valence orbital the photons do not reach is $2\\sigma_g$; $1\\sigma_g$ is built from the 1s core orbitals."
+  },
+  {
+   "id": "c-hcl-3p",
+   "kind": "correction",
+   "html": "Chlorine's valence orbitals are 3s and 3p, here and in the points below."
+  },
+  {
+   "id": "c-hcl-4s",
+   "kind": "correction",
+   "html": "The antibonding orbital is 4σ, as the point above names it."
+  },
+  {
+   "id": "c-hcl-labels",
+   "kind": "correction",
+   "html": "The two bands are those of the 1π and 3σ orbitals."
+  },
+  {
+   "id": "c-h2o-plus",
+   "kind": "correction",
+   "html": "This is the configuration of the neutral H₂O molecule."
+  },
+  {
+   "id": "c-relax",
+   "kind": "correction",
+   "html": "The page has not explained this before: when one electron leaves, the others rearrange, which Koopmans' theorem ignores by freezing them."
+  },
+  {
+   "id": "c-fig-1048",
+   "kind": "correction",
+   "html": "Water's spectrum is Figure 10.4.8; Figure 10.4.6 is that of HCl."
+  },
+  {
+   "id": "c-fig-1047",
+   "kind": "correction",
+   "html": "The molecular orbitals are those of Figure 10.4.7."
+  },
+  {
+   "id": "c-1b1",
+   "kind": "correction",
+   "html": "$1b_1$ is on oxygen alone; it is $1b_2$, with $2a_1$ and $3a_1$, that has contributions from all three atoms."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "photoelectron-ke",
+   "what": "the kinetic energy of a photoelectron",
+   "source": "Physical Chemistry (LibreTexts), 10.4 Photoelectron Spectroscopy",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "text": "Energy is conserved in the photoionization $A + \\text{photon} \\rightarrow A^+ + e^-$.",
+       "src": "(10.4.2)"
+      },
+      {
+       "tex": "\\kE = h\\knu",
+       "src": "(10.4.1)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{a}{E(A)} + \\mk{p}{\\kE} = \\mk{i}{E(A^+)} + \\mk{e}{E(e^-)}",
+      "uses": [
+       0
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{a}{E(A)} + \\mk{p}{h\\knu} = \\mk{i}{E(A^+)} + \\mk{e}{E(e^-)}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "num": "(10.4.3)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "E(e^-) = \\kKE",
+       "src": "10.4"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{a}{E(A)} + \\mk{p}{h\\knu} = \\mk{i}{E(A^+)} + \\mk{e}{E(e^-)}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{a}{E(A)} + \\mk{p}{h\\knu} = \\mk{i}{E(A^+)} + \\mk{e}{\\kKE}",
+       "uses": [
+        1
+       ],
+       "cap": "A free electron has no internal energy, so its energy is all kinetic."
+      },
+      {
+       "tex": "\\mk{e}{\\kKE} = \\mk{p}{h\\knu} - \\left[\\mk{i}{E(A^+)} - \\mk{a}{E(A)}\\right]"
+      }
+     ],
+     "num": "(10.4.4)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "tex": "\\kIE = E(A^+) - E(A)",
+       "src": "10.4"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{e}{\\kKE} = \\mk{p}{h\\knu} - \\left[\\mk{i}{E(A^+)} - \\mk{a}{E(A)}\\right]"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{e}{\\kKE} = \\mk{p}{h\\knu} - \\mk{ie}{\\kIE}",
+       "uses": [
+        1
+       ],
+       "map": {
+        "i": "ie",
+        "a": "ie"
+       },
+       "cap": "The difference in energy between the ion and the neutral is the vertical ionization energy of the ejected electron."
+      }
+     ],
+     "num": "(10.4.5)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 2
+      }
+     ],
+     "then": {
+      "tex": "\\mk{e}{\\kKE} = \\mk{p}{h\\knu} - \\mk{ie}{\\kIE}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{ie}{\\kIE} = \\mk{p}{h\\knu} - \\mk{e}{\\kKE}"
+      }
+     ],
+     "num": "(10.4.6)"
+    }
+   ]
+  }
+ ]
+}

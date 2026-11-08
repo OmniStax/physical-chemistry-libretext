@@ -465,11 +465,28 @@ class Drafter:
             if h.lower().startswith("summary"):
                 rec["summary_html"] = "".join(self.boxes(body))
                 continue
+            if re.search(r"^solutions? to (practice )?problems", h, re.I):
+                # the key to the list just before it: item k (with the lines under it) answers question k
+                keys, cur_k = [], None
+                for x in body:
+                    if re.match(r"^\d+\.(\s|$)", x):
+                        cur_k = [re.sub(r"^\d+\.\s*", "", x)]
+                        keys.append(cur_k)
+                    elif cur_k is not None:
+                        cur_k.append(x)
+                listed = [e for e in self.exercises if e["id"].startswith("cq")]
+                for e, k in zip(listed, keys):
+                    e["book_answer"] = "".join(self.boxes(k))
+                    e["keyed"] = True
+                continue
             if re.search(r"conceptual questions|problems", h, re.I):
                 items = [re.sub(r"^\d+\. ", "", x) for x in body if re.match(r"^\d+\. ", x)]
+                # an image under the last item belongs to it (12.14's BeH2 orbitals)
+                after = [x for x in body[max((k for k, x in enumerate(body) if re.match(r"^\d+\. ", x)), default=len(body)) + 1:] if x.strip()]
+                extra = "".join(self.boxes(after)) if items and after and all(re.match(r"^\[?!\[", x) for x in after) else ""
                 for n, q in enumerate(items, 1):
                     self.exercises.append({"id": f"cq{n}", "source_id": re.sub(r"<[^>]+>|[$*{}]", "", q)[:40].strip(), "source_number": f"{h} {n}",
-                                           "kind": "question", "prompt": self.inline(q), "book_answer": "", "keyed": False})
+                                           "kind": "question", "prompt": self.inline(q) + (extra if n == len(items) else ""), "book_answer": "", "keyed": False})
                 continue
             inner = self.boxes(body)
             if not inner and not h:

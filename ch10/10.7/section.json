@@ -1,0 +1,393 @@
+{
+ "id": "10.7",
+ "module": "53694",
+ "chapter": "10",
+ "title": "Benzene and Aromaticity",
+ "short": "Benzene and aromaticity",
+ "lead": "Closing a conjugated chain into a ring changes its Hückel determinant and the pattern of its π levels. Benzene is the case worked here, and heats of hydrogenation measure what its π electrons gain.",
+ "objectives": [
+  "Apply Hückel theory to describing the pi bonding in cyclical conjugated system",
+  "Identify the origin of aromaticity within Hückel theory to describe extra stabilization in certain cyclical conjugated systems"
+ ],
+ "summary_html": "",
+ "notes": "Written by William Reusch and shared under CC BY-NC-SA 4.0; Figure 10.7.2 carries no credit in the book and is shared under the page's licence.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "medium"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "medium"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercise here. The exercise on cyclobutadiene is new and AI-written; its Bloom level and concept tags were chosen by AI. Numeric answers accept a 2% tolerance.",
+ "figures": [
+  {
+   "id": "fig-10-7-1",
+   "kind": "photo",
+   "number": "10.7.1",
+   "draws": []
+  },
+  {
+   "id": "fig-10-7-2",
+   "kind": "photo",
+   "number": "10.7.2",
+   "widths": [
+    396
+   ],
+   "draws": []
+  },
+  {
+   "id": "sim-ring",
+   "kind": "sim",
+   "number": "10.7.3",
+   "widths": [
+    748
+   ],
+   "originals": [
+    "/media/ch10/78117-benzeneMOs.png"
+   ],
+   "original_caption": "The $\\pi$ molecular orbitals for benzene. The dashed lines represent the energy of an isolated p orbitals and all orbitals below this line are bonding. All orbitals above it are antibonding. (CC BY-NC-SA 4.0; Nick Greeves via ChemTube3D)",
+   "draws": [
+    "energy",
+    "wavefunction"
+   ],
+   "conventions": [
+    "e-"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "medium",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "fig-10-7-4",
+   "kind": "figure",
+   "number": "10.7.4",
+   "widths": [
+    457
+   ],
+   "originals": [
+    "/media/ch10/78115-benzthrm.gif"
+   ],
+   "original_caption": "Experimental evidence for aromatic stabilization energy in benzene from the heat of hydrogenation. Energies are in kcal/mol. (CC BY-NC-SA 4.0; William Resuch);",
+   "draws": [
+    "energy"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "medium",
+     "part": "redrawn as the book draws it"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "rings-of-carbon",
+   "concept": "benzene-structure",
+   "verb": "introduces"
+  },
+  {
+   "span": "rings-of-carbon",
+   "concept": "resonance-stabilization",
+   "verb": "uses"
+  },
+  {
+   "span": "rings-of-carbon",
+   "concept": "delocalization-energy",
+   "verb": "reinforces"
+  },
+  {
+   "span": "benzene-levels",
+   "concept": "benzene-pi-orbitals",
+   "verb": "introduces"
+  },
+  {
+   "span": "benzene-levels",
+   "concept": "benzene-delocalization-energy",
+   "verb": "introduces"
+  },
+  {
+   "span": "benzene-levels",
+   "concept": "huckel-determinant",
+   "verb": "uses"
+  },
+  {
+   "span": "benzene-levels",
+   "concept": "degeneracy",
+   "verb": "uses"
+  },
+  {
+   "span": "benzene-levels",
+   "concept": "total-pi-energy",
+   "verb": "uses"
+  },
+  {
+   "span": "benzene-levels",
+   "concept": "delocalization-energy",
+   "verb": "reinforces"
+  },
+  {
+   "span": "aromaticity",
+   "concept": "huckel-rule",
+   "verb": "introduces"
+  },
+  {
+   "span": "aromaticity",
+   "concept": "closed-shell",
+   "verb": "uses"
+  },
+  {
+   "span": "aromaticity",
+   "concept": "benzene-delocalization-energy",
+   "verb": "reinforces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "many other molecules exist like cyclobutadiene",
+   "kind": "exercise",
+   "bloom": "Analyze",
+   "place": {
+    "at": "end"
+   },
+   "cite": "aromaticity",
+   "prompt": "<p>Cyclobutadiene, $\\mathrm{C_4H_4}$, is a ring of four carbons with four $\\pi$ electrons. Its Hückel determinant is that of butadiene with a 1 added in the two corners for the bond that closes the ring. Solve it, place the four electrons, and find (a) the coefficient of $\\beta$ in the total $\\pi$ energy and (b) the number of unpaired electrons. Is cyclobutadiene aromatic?</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 4,
+      "hint": "Expanding the determinant gives $x^4 - 4x^2 = 0$."
+     },
+     {
+      "part": "b",
+      "value": 2
+     }
+    ],
+    "solution": "<p>The determinant $\\left|\\begin{array}{cccc}x&1&0&1\\\\1&x&1&0\\\\0&1&x&1\\\\1&0&1&x\\end{array}\\right| = x^4 - 4x^2 = x^2(x^2 - 4) = 0$ has roots $x = \\pm 2, 0, 0$. The levels are $\\alpha + 2\\beta$, then $\\alpha$ twice, then $\\alpha - 2\\beta$.</p><p>(a) Two electrons fill $\\alpha + 2\\beta$; by Hund's rule the other two go one into each of the degenerate pair at $\\alpha$, spins parallel. $E_{\\pi} = 2(\\alpha + 2\\beta) + 2\\alpha = 4\\alpha + 4\\beta$, the coefficient of $\\beta$ being 4.</p><p>(b) Two electrons are unpaired. Two isolated double bonds have $2 \\times 2(\\alpha + \\beta) = 4\\alpha + 4\\beta$ as well, so the delocalization energy is zero, and the shell is open. Four $\\pi$ electrons are not $4n + 2$ for any whole $n$: cyclobutadiene is not aromatic.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "huckel-rule"
+  },
+  {
+   "exercise": "a1",
+   "concept": "huckel-determinant"
+  },
+  {
+   "exercise": "a1",
+   "concept": "delocalization-energy"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-psi2-psi4",
+   "kind": "correction",
+   "html": "$|\\psi_2\\rangle$ and $|\\psi_4\\rangle$ as printed do not solve Equation 10.7.1. The solutions are $|\\psi_2\\rangle = \\tfrac{1}{2}\\left[|2p_{z2}\\rangle + |2p_{z3}\\rangle - |2p_{z5}\\rangle - |2p_{z6}\\rangle\\right]$ and $|\\psi_4\\rangle = \\tfrac{1}{2}\\left[|2p_{z2}\\rangle - |2p_{z3}\\rangle + |2p_{z5}\\rangle - |2p_{z6}\\rangle\\right]$."
+  },
+  {
+   "id": "c-equation",
+   "kind": "correction",
+   "html": "Equation 10.7.2 is the total $\\pi$ energy, $6\\alpha + 8\\beta$; the $2\\beta$ is the delocalization energy that follows from it."
+  },
+  {
+   "id": "c-n-values",
+   "kind": "correction",
+   "html": "The numbers 2, 6, 10 … are the counts of $\\pi$ electrons, $4n + 2$ for $n = 0, 1, 2 \\ldots$, as the text above says."
+  },
+  {
+   "id": "c-kj-heats",
+   "kind": "correction",
+   "html": "These are Figure 10.7.4's kcal/mol values converted wrongly. Cyclohexene releases 28.6 kcal/mol, about 120 kJ/mol; the expected cyclohexadiene and cyclohexatriene values are 57.2 and 85.8 kcal/mol, about 239 and 359 kJ/mol."
+  },
+  {
+   "id": "c-kj-stability",
+   "kind": "correction",
+   "html": "From Figure 10.7.4, 1,3-cyclohexadiene releases 55.4 kcal/mol against the 57.2 expected, 1.8 kcal/mol or about 7.5 kJ/mol less; benzene releases 49.8 kcal/mol against 85.8, 36 kcal/mol or about 150 kJ/mol less, which agrees with the −152 kJ/mol above."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "benzene-delocalization",
+   "what": "the delocalization energy of benzene",
+   "source": "Physical Chemistry (LibreTexts), 10.7 Benzene and Aromaticity",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\left|\\begin{array}{cccccc}x&1&0&0&0&1\\\\1&x&1&0&0&0\\\\0&1&x&1&0&0\\\\0&0&1&x&1&0\\\\0&0&0&1&x&1\\\\1&0&0&0&1&x\\end{array}\\right|=0",
+       "src": "(10.7.1)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{D}{\\left|\\begin{array}{cccccc}x&1&0&0&0&1\\\\1&x&1&0&0&0\\\\0&1&x&1&0&0\\\\0&0&1&x&1&0\\\\0&0&0&1&x&1\\\\1&0&0&0&1&x\\end{array}\\right|}=0"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{D}{x^{6}-6x^{4}+9x^{2}-4}=0",
+       "cap": "Expanding the $6 \\times 6$ determinant along its rows, as for butadiene's, leaves a polynomial of sixth order."
+      },
+      {
+       "tex": "\\mk{D}{(x^{2}-4)(x^{2}-1)^{2}}=0",
+       "cap": "The polynomial is a cubic in $x^{2}$ with the root $x^{2} = 1$ twice and $x^{2} = 4$ once."
+      },
+      {
+       "tex": "\\mk{x}{x} = \\mk{r}{\\pm2,\\pm1,\\pm1}",
+       "map": {
+        "D": [
+         "x",
+         "r"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "x=\\dfrac{\\kalphaH-\\kE}{\\kbetaH}",
+       "src": "10.6, (10.6.5)"
+      },
+      {
+       "text": "$\\beta$ is negative.",
+       "src": "10.5"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{x}{x} = \\mk{r}{\\pm2,\\pm1,\\pm1}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{E}{\\kE} = \\mk{a}{\\kalphaH} - \\mk{r}{(\\pm2,\\pm1,\\pm1)}\\,\\mk{b}{\\kbetaH}",
+       "uses": [
+        1
+       ],
+       "map": {
+        "x": [
+         "E",
+         "a",
+         "b"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{L}{\\kEone = \\kalphaH + 2\\kbetaH,\\ \\kEtwo = \\kEthree = \\kalphaH + \\kbetaH,\\ \\kEfour = \\kEfive = \\kalphaH - \\kbetaH,\\ \\kEsix = \\kalphaH - 2\\kbetaH}",
+       "uses": [
+        2
+       ],
+       "map": {
+        "E": "L",
+        "a": "L",
+        "r": "L",
+        "b": "L"
+       },
+       "cap": "With $\\beta$ negative, $x = -2$ gives the lowest energy and $x = +2$ the highest."
+      }
+     ]
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "text": "Each carbon gives one electron to the $\\pi$-bonding framework, so benzene's six $\\pi$ electrons fill the three lowest orbitals: $\\pi_1^2 \\pi_2^2 \\pi_3^2$.",
+       "src": "10.7"
+      },
+      {
+       "tex": "\\kEtot = \\sum_i n_i E_i",
+       "src": "10.6"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{P}{\\kEtot} = \\mk{s}{\\sum_i n_i E_i}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{P}{\\kEtot (\\text{benzene})} = \\mk{s}{2\\kEone + 2\\kEtwo + 2\\kEthree}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{P}{\\kEtot (\\text{benzene})} = \\mk{s}{2(\\kalphaH+2\\kbetaH)+4(\\kalphaH+\\kbetaH)}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{P}{\\kEtot (\\text{benzene})} = \\mk{s}{6\\kalphaH + 8\\kbetaH}"
+      }
+     ],
+     "num": "(10.7.2)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 2
+      },
+      {
+       "tex": "\\kEtot (\\text{ethylene}) = 2(\\kalphaH+\\kbetaH)",
+       "src": "10.5",
+       "drv": "10.5/ethylene-pi"
+      },
+      {
+       "text": "The delocalization energy of benzene is its $\\pi$ energy less that of three localized double bonds.",
+       "src": "10.7"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{D}{\\kdE} = \\mk{a}{\\kEtot (\\text{benzene})} \\mk{b}{- 3 \\kEtot (\\text{ethylene})}",
+      "uses": [
+       2
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{D}{\\kdE} = \\mk{a}{(6\\kalphaH+8\\kbetaH )} \\mk{b}{- 3 \\kEtot (\\text{ethylene})}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{D}{\\kdE} = \\mk{a}{(6\\kalphaH+8\\kbetaH )} \\mk{b}{- 3 \\times 2 (\\kalphaH+\\kbetaH)}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{D}{\\kdE} = \\mk{r}{2\\kbetaH}",
+       "map": {
+        "a": "r",
+        "b": "r"
+       }
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

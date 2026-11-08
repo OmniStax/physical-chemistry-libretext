@@ -1,0 +1,26 @@
+{
+ "id": "summary",
+ "module": "550566",
+ "chapter": "10",
+ "title": "Bonding in Polyatomic Molecules (Summary)",
+ "short": "Summary",
+ "lead": "",
+ "notes": "Written by Kyle Crabtree and shared under the book's CC BY-NC-SA 4.0.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "medium"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "figures": [],
+ "footnotes": [
+  {
+   "id": "c-ab-initio",
+   "kind": "correction",
+   "html": "This chapter does not take up ab initio methods: they are the subject of Chapter 11, as the note on the limitations of Hückel theory in Section 10.5 says."
+  }
+ ]
+}

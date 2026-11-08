@@ -1,0 +1,410 @@
+{
+ "id": "11.3",
+ "module": "13478",
+ "chapter": "11",
+ "title": "Extended Basis Sets (Double Zeta and Split-Valence)",
+ "short": "Extended basis sets",
+ "lead": "The smallest basis gives each atomic orbital one function. Double- and triple-zeta sets give it several functions of different ζ, split-valence sets do so only for the valence orbitals, and Pople's names say how many Gaussians each function holds.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "From the book's page under CC BY-NC-SA 4.0, curated by Delmar Larsen (LibreTexts), with nothing left out; the double- and triple-zeta exponents in Figure 11.3.1 + 11.3.2 (0.80 and 1.60; 0.60, 1.20 and 2.00) are values chosen to bracket hydrogen's 1.24, not a published basis.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book prints no exercises for this section; both exercises and their solutions were written by AI, on counting the functions of Pople basis sets and on the cost of a double-zeta basis. Bloom levels and concept tags were chosen by AI.",
+ "figures": [
+  {
+   "id": "sim-multiple-zeta",
+   "kind": "sim",
+   "number": "11.3.1",
+   "folds": [
+    "11.3.2"
+   ],
+   "originals": [
+    "/media/ch11/511539-clipboard_e32e684c9ce34cf2bfe95a1ef39384dd7.png",
+    "/media/ch11/511540-clipboard_e7975f9265f797fc9ec4b9a6906926582.png"
+   ],
+   "original_caption": "A \"double zeta\" basis set with each Atomic Orbital is represented by 2 orbital functions with different ζ values. A \"triple zeta\" basis with each Atomic Orbital is represented by 3 orbital functions with different ζ values.",
+   "widths": [
+    409,
+    557
+   ],
+   "draws": [
+    "probability-density",
+    "length",
+    "wavefunction"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "minimal-basis",
+   "concept": "minimal-basis-set",
+   "verb": "introduces"
+  },
+  {
+   "span": "minimal-basis",
+   "concept": "electron-configuration",
+   "verb": "uses"
+  },
+  {
+   "span": "minimal-basis",
+   "concept": "slater-type-orbital",
+   "verb": "uses"
+  },
+  {
+   "span": "minimal-basis",
+   "concept": "slater-orbital-exponents",
+   "verb": "reinforces"
+  },
+  {
+   "span": "minimal-basis",
+   "concept": "basis-functions",
+   "verb": "uses"
+  },
+  {
+   "span": "multiple-gaussian-representation",
+   "concept": "orbital-function",
+   "verb": "introduces"
+  },
+  {
+   "span": "multiple-gaussian-representation",
+   "concept": "contraction-notation",
+   "verb": "introduces"
+  },
+  {
+   "span": "multiple-gaussian-representation",
+   "concept": "single-zeta-basis",
+   "verb": "introduces"
+  },
+  {
+   "span": "multiple-gaussian-representation",
+   "concept": "sto-ng-basis",
+   "verb": "reinforces"
+  },
+  {
+   "span": "multiple-gaussian-representation",
+   "concept": "primitive-gaussian",
+   "verb": "reinforces"
+  },
+  {
+   "span": "multiple-gaussian-representation",
+   "concept": "contracted-gaussian-function",
+   "verb": "reinforces"
+  },
+  {
+   "span": "multiple-gaussian-representation",
+   "concept": "hamiltonian-matrix-element",
+   "verb": "uses"
+  },
+  {
+   "span": "multiple-gaussian-representation",
+   "concept": "lcao-mo-method",
+   "verb": "uses"
+  },
+  {
+   "span": "multiple-zeta-basis-sets",
+   "concept": "multiple-zeta-basis",
+   "verb": "introduces"
+  },
+  {
+   "span": "multiple-zeta-basis-sets",
+   "concept": "basis-set-flexibility",
+   "verb": "introduces"
+  },
+  {
+   "span": "multiple-zeta-basis-sets",
+   "concept": "basis-set-cost",
+   "verb": "introduces"
+  },
+  {
+   "span": "multiple-zeta-basis-sets",
+   "concept": "hamiltonian-is-hermitian",
+   "verb": "uses"
+  },
+  {
+   "span": "split-valence-basis-sets",
+   "concept": "split-valence-basis",
+   "verb": "introduces"
+  },
+  {
+   "span": "split-valence-basis-sets",
+   "concept": "pople-split-valence-basis",
+   "verb": "introduces"
+  },
+  {
+   "span": "split-valence-basis-sets",
+   "concept": "pople-basis-notation",
+   "verb": "reinforces"
+  },
+  {
+   "span": "split-valence-basis-sets",
+   "concept": "contraction-notation",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "More examples are shown in Table 11.3.2",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "split-valence-basis-sets",
+   "prompt": "<p>Count the orbital functions and the Gaussian primitives of a water molecule, H₂O, in three basis sets. In STO-3G each orbital function of the minimal basis is a contraction of three primitives; for 3-21G and 6-31G use Table 11.3.2.</p><ol type=\"a\"><li>orbital functions in STO-3G</li><li>primitives in STO-3G</li><li>orbital functions in 3-21G</li><li>primitives in 3-21G</li><li>orbital functions in 6-31G</li><li>primitives in 6-31G</li></ol>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 7,
+      "hint": "The minimal basis of oxygen is 1s, 2s and three 2p; each hydrogen has a 1s."
+     },
+     {
+      "part": "b",
+      "value": 21
+     },
+     {
+      "part": "c",
+      "value": 13
+     },
+     {
+      "part": "d",
+      "value": 21
+     },
+     {
+      "part": "e",
+      "value": 13
+     },
+     {
+      "part": "f",
+      "value": 30
+     }
+    ],
+    "solution": "<p>Oxygen's minimal basis is 1s, 2s and three 2p orbitals, 5 orbital functions, and each hydrogen has one 1s. In STO-3G that makes 5 + 1 + 1 = 7 orbital functions, each from three primitives, so 3 × 7 = 21 primitives.</p><p>In 3-21G oxygen, in the Li–Ne row of Table 11.3.2, has 9 orbital functions from 15 primitives, and each hydrogen has 2 from 3: 9 + 2(2) = 13 orbital functions and 15 + 2(3) = 21 primitives.</p><p>In 6-31G oxygen has 9 orbital functions from 22 primitives, and each hydrogen 2 from 4: 13 orbital functions and 22 + 2(4) = 30 primitives.</p><p>Both split-valence sets nearly double the number of orbital functions, and with it the size of the Hamiltonian matrix. 3-21G does so with no more primitives than STO-3G.</p>"
+   }
+  },
+  {
+   "id": "a2",
+   "source_id": "there will be about 3–4 times more matrix elements to evaluate",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "multiple-zeta-basis-sets",
+   "prompt": "<p>A calculation on a molecule uses a single-zeta basis of $N = 10$ orbital functions. Taking the Hermiticity of the Hamiltonian into account, how many distinct matrix elements $H_{ij}$ must be evaluated</p><ol type=\"a\"><li>in this basis,</li><li>in a double-zeta basis for the same molecule?</li><li>By what factor does the number grow?</li></ol>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 55,
+      "hint": "Since $H_{ji} = H_{ij}^*$, only the diagonal and the elements on one side of it are distinct."
+     },
+     {
+      "part": "b",
+      "value": 210
+     },
+     {
+      "part": "c",
+      "value": 3.82
+     }
+    ],
+    "solution": "<p>Because the Hamiltonian is Hermitian, $H_{ji} = H_{ij}^*$, so only the $N$ diagonal elements and the elements above the diagonal need evaluating: $N(N+1)/2 = 10 \\times 11/2 = 55$.</p><p>The double-zeta basis has $2N = 20$ orbital functions, so $20 \\times 21/2 = 210$ distinct elements.</p><p>The number grows by $210/55 = 3.82$. That lies between the 3 and 4 the text gives: the factor is $2(2N+1)/(N+1)$, which is 3 at $N = 1$ and approaches 4 as $N$ grows.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "pople-split-valence-basis"
+  },
+  {
+   "exercise": "a1",
+   "concept": "contraction-notation"
+  },
+  {
+   "exercise": "a1",
+   "concept": "minimal-basis-set"
+  },
+  {
+   "exercise": "a2",
+   "concept": "basis-set-cost"
+  },
+  {
+   "exercise": "a2",
+   "concept": "hamiltonian-is-hermitian"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-fluorine",
+   "kind": "correction",
+   "html": "Fluorine's 1s exponent is 8.65 (Clementi and Raimondi's 8.6501), as Table 7.3.1's note gives it; 8.56 swaps two digits."
+  },
+  {
+   "id": "c-important",
+   "kind": "correction",
+   "html": "It will be important."
+  },
+  {
+   "id": "c-sto3g",
+   "kind": "correction",
+   "html": "The third line is the function on atom B, $\\ket{\\phi_{\\text{STO-3G},B}}$. Hehre, Stewart and Pople's third coefficient is 0.44463454, printed 0.44463545. Each primitive also carries its normalization factor $(2\\alpha/\\pi)^{3/4}$, which the display leaves out: the coefficients belong to normalized Gaussians."
+  },
+  {
+   "id": "c-section",
+   "kind": "correction",
+   "html": "Section 1.5.3.2 is a section of the course this page was taken from; this book has none."
+  },
+  {
+   "id": "c-figure",
+   "kind": "correction",
+   "html": "The double-zeta basis is Figure 11.3.1; Figure 11.3.2 is the triple-zeta one."
+  },
+  {
+   "id": "c-begin",
+   "kind": "correction",
+   "html": "The orbital functions begin to lose their original meaning as atomic orbitals."
+  },
+  {
+   "id": "c-forfor",
+   "kind": "correction",
+   "html": "The prize was awarded \"for his development of computational methods in quantum chemistry\"; the first \"for\" doubles the citation's own."
+  },
+  {
+   "id": "c-t2-header",
+   "kind": "correction",
+   "html": "The table's header row was lost at the source, and \"(l)2-4 (l)5-7 (l)8-10\" is left over from its LaTeX rules. The three groups of Contraction, OF and GTO are 3-21G, 6-31G and 6-311G, in that order, as the H–He contractions (3s)→[2s], (4s)→[2s] and (5s)→[3s] show."
+  },
+  {
+   "id": "c-t3",
+   "kind": "correction",
+   "html": "The table is scrambled at the source: its first row holds the headings of its columns (polarized, diffuse functions, both), and the other rows repeat names and run to unequal lengths. It lists the families 3-21G, 4-21G, 4-31G, 6-21G, 6-31G and 6-311G, with polarization functions (*), diffuse functions (+) or both (+*), as in 3-21G*, 3-21+G, 3-21+G*, 6-31G*, 6-31+G* and 6-311+G*, and 6-31G(3df, 3pd), which adds three sets of d functions and one of f to the heavy atoms and three of p and one of d to hydrogen. Which name belonged in which cell cannot be recovered."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "double-zeta-cost",
+   "what": "the cost of a double-zeta basis",
+   "source": "Physical Chemistry (LibreTexts), 11.3 Extended Basis Sets",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "text": "A single-zeta basis of $N$ orbital functions gives an $N\\times N$ Hamiltonian matrix.",
+       "src": "11.3"
+      },
+      {
+       "tex": "H_{ji} = H_{ij}^*",
+       "src": "3.2"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{n}{n_{\\text{SZ}}} = \\mk{d}{N} + \\mk{o}{\\dfrac{N^2 - N}{2}}",
+      "uses": [
+       0,
+       1
+      ],
+      "why": "Of the $N^2$ elements, $N$ lie on the diagonal. Since $H_{ji} = H_{ij}^*$, each element below the diagonal repeats one above it, so only half of the other $N^2 - N$ need evaluating."
+     },
+     "steps": [
+      {
+       "tex": "\\mk{n}{n_{\\text{SZ}}} = \\mk{d}{\\dfrac{N(N+1)}{2}}",
+       "uses": [],
+       "map": {
+        "o": "d"
+       }
+      }
+     ],
+     "src": "11.3"
+    },
+    {
+     "assumes": [
+      {
+       "text": "A double-zeta basis for the same molecule has $2N$ orbital functions, so its Hamiltonian is a $2N\\times 2N$ matrix.",
+       "src": "11.3"
+      },
+      {
+       "step": 0
+      }
+     ],
+     "then": {
+      "tex": "\\mk{n}{n_{\\text{DZ}}} = \\mk{d}{\\dfrac{2N(2N+1)}{2}}",
+      "uses": [
+       0,
+       1
+      ],
+      "why": "The count holds for a basis of any size; here $2N$ functions take the place of $N$."
+     },
+     "steps": [
+      {
+       "tex": "\\mk{n}{n_{\\text{DZ}}} = \\mk{d}{N(2N+1)}",
+       "uses": []
+      }
+     ],
+     "src": "11.3"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "step": 1
+      }
+     ],
+     "then": {
+      "tex": "\\mk{q}{\\dfrac{n_{\\text{DZ}}}{n_{\\text{SZ}}}} = \\mk{f}{\\dfrac{N(2N+1)}{N(N+1)/2}}",
+      "uses": [
+       0,
+       1
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{q}{\\dfrac{n_{\\text{DZ}}}{n_{\\text{SZ}}}} = \\mk{f}{\\dfrac{2(2N+1)}{N+1}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{q}{\\dfrac{n_{\\text{DZ}}}{n_{\\text{SZ}}}} = \\mk{f}{4 - \\dfrac{2}{N+1}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{lo}{3} \\le \\mk{q}{\\dfrac{n_{\\text{DZ}}}{n_{\\text{SZ}}}} < \\mk{f}{4}",
+       "uses": [],
+       "cap": "The smallest basis has $N = 1$, where $2/(N+1) = 1$. As $N$ grows, $2/(N+1)$ shrinks toward zero, so the ratio rises from 3 toward 4."
+      }
+     ],
+     "src": "11.3"
+    }
+   ]
+  }
+ ]
+}

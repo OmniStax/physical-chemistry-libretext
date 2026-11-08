@@ -30,7 +30,8 @@
     "ch08",
     "ch09",
     "ch10",
-    "ch11"
+    "ch11",
+    "ch12"
   ],
   "types": [
     {
@@ -160,6 +161,18 @@
       "id": "magnetic-moment",
       "label": "magnetic moment",
       "dimension": "J/T"
+    },
+    {
+      "id": "symmetry-operation",
+      "label": "symmetry operation"
+    },
+    {
+      "id": "representation",
+      "label": "representation"
+    },
+    {
+      "id": "character",
+      "label": "character"
     }
   ],
   "symbols": [
@@ -2299,6 +2312,182 @@
     {
       "sym": "c_4",
       "latex": "c_4"
+    },
+    {
+      "sym": "E_op",
+      "latex": "E",
+      "macro": "\\kEop"
+    },
+    {
+      "sym": "C_n",
+      "latex": "C_n",
+      "macro": "\\kCn"
+    },
+    {
+      "sym": "sigma_op",
+      "latex": "\\sigma",
+      "macro": "\\ksigmaop"
+    },
+    {
+      "sym": "sigma_v",
+      "latex": "\\sigma_v",
+      "macro": "\\ksigmav"
+    },
+    {
+      "sym": "sigma_h",
+      "latex": "\\sigma_h",
+      "macro": "\\ksigmah"
+    },
+    {
+      "sym": "sigma_d",
+      "latex": "\\sigma_d",
+      "macro": "\\ksigmad"
+    },
+    {
+      "sym": "i_op",
+      "latex": "i",
+      "macro": "\\kiop"
+    },
+    {
+      "sym": "S_n",
+      "latex": "S_n",
+      "macro": "\\kSn"
+    },
+    {
+      "sym": "C_3",
+      "latex": "C_3",
+      "macro": "\\kCthree"
+    },
+    {
+      "sym": "C_2",
+      "latex": "C_2",
+      "macro": "\\kCtwo"
+    },
+    {
+      "sym": "sigma_vp",
+      "latex": "\\sigma_v'",
+      "macro": "\\ksigmavp"
+    },
+    {
+      "sym": "sigma_vpp",
+      "latex": "\\sigma_v''",
+      "macro": "\\ksigmavpp"
+    },
+    {
+      "sym": "g_op",
+      "latex": "g",
+      "macro": "\\kgop"
+    },
+    {
+      "sym": "Gamma_rep",
+      "latex": "\\Gamma",
+      "macro": "\\kGamma"
+    },
+    {
+      "sym": "Gamma_vib",
+      "latex": "\\Gamma_{\\text{vib}}",
+      "macro": "\\kGammavib"
+    },
+    {
+      "sym": "chi_char",
+      "latex": "\\chi",
+      "macro": "\\kchar"
+    },
+    {
+      "sym": "chi_k",
+      "latex": "\\chi_k",
+      "macro": "\\kchik"
+    },
+    {
+      "sym": "s_N",
+      "latex": "s_N",
+      "macro": "\\ksN"
+    },
+    {
+      "sym": "s_3",
+      "latex": "s_3"
+    },
+    {
+      "sym": "s_H",
+      "latex": "s_H",
+      "macro": "\\ksH"
+    },
+    {
+      "sym": "s_Hp",
+      "latex": "s_H'",
+      "macro": "\\ksHp"
+    },
+    {
+      "sym": "s_O",
+      "latex": "s_O",
+      "macro": "\\ksO"
+    },
+    {
+      "sym": "f_i",
+      "latex": "f_i",
+      "macro": "\\kfi"
+    },
+    {
+      "sym": "b_j",
+      "latex": "b_j"
+    },
+    {
+      "sym": "h_order",
+      "latex": "h"
+    },
+    {
+      "sym": "n_C",
+      "latex": "n_C"
+    },
+    {
+      "sym": "a_k",
+      "latex": "a_k"
+    },
+    {
+      "sym": "d_i",
+      "latex": "d_i"
+    },
+    {
+      "sym": "c_ji",
+      "latex": "c_{ji}"
+    },
+    {
+      "sym": "C_mat",
+      "latex": "C"
+    },
+    {
+      "sym": "epsilon_n",
+      "latex": "\\epsilon"
+    },
+    {
+      "sym": "R_x",
+      "latex": "R_x"
+    },
+    {
+      "sym": "R_y",
+      "latex": "R_y"
+    },
+    {
+      "sym": "R_z",
+      "latex": "R_z"
+    },
+    {
+      "sym": "alpha_pol",
+      "latex": "\\alpha"
+    },
+    {
+      "sym": "E_field",
+      "latex": "\\vec{E}"
+    },
+    {
+      "sym": "Psi_i",
+      "latex": "\\Psi_i",
+      "macro": "\\kPsii"
+    },
+    {
+      "sym": "Psi_f",
+      "latex": "\\Psi_f",
+      "macro": "\\kPsif"
     }
   ],
   "exercise_kinds": [
@@ -10189,6 +10378,711 @@
         "effective core potentials"
       ],
       "statement": "A potential added to the Hamiltonian in place of many of an atom's core electrons, which cuts the number of integrals for heavy atoms; it fails for properties sensitive to the wavefunction near the nucleus, such as X-ray spectra and NMR shielding."
+    },
+    {
+      "id": "symmetry-simplifies-calculations",
+      "kind": "idea",
+      "section": "12.1",
+      "name": "Symmetry simplifies quantum calculations",
+      "terms": [
+        "group theory"
+      ],
+      "statement": "The symmetry of a molecule can show, rigorously and without computing them, that many of the Hamiltonian matrix elements and overlap integrals of a secular determinant are zero, so qualitative information about molecular orbitals, rotations and vibrations comes without the full calculation. Group theory is the mathematics of that symmetry."
+    },
+    {
+      "id": "basis-change-invariance",
+      "kind": "result",
+      "section": "12.1",
+      "name": "A change of basis leaves the roots unchanged",
+      "statement": "Any basis spanning the same space can represent the secular determinant; a linear combination of the original basis functions changes the matrix but not its roots, as a curve is the same in Cartesian or polar coordinates. Benzene's Hückel determinant has the roots ±2, ±1, ±1 in either basis.",
+      "forms": [
+        {
+          "id": "benzene-huckel-polynomial",
+          "latex": "x^6-6x^4+9x^2-4=0"
+        }
+      ]
+    },
+    {
+      "id": "block-diagonal-determinant",
+      "kind": "result",
+      "section": "12.1",
+      "name": "A block-diagonal determinant factors",
+      "statement": "In a basis of suitable linear combinations the secular determinant takes a block-diagonal form, which expands into the product of the smaller determinants of its blocks; benzene's 6 × 6 determinant becomes two 1 × 1 and two 2 × 2 blocks.",
+      "forms": [
+        {
+          "id": "benzene-block-factored",
+          "latex": "\\dfrac{9}{16}(x+2)(x-2)(x+1)^2(x-1)^2=0"
+        }
+      ]
+    },
+    {
+      "id": "symmetry-operation",
+      "kind": "definition",
+      "section": "12.2",
+      "name": "Symmetry operation",
+      "type": "symmetry-operation",
+      "terms": [
+        "symmetry operation"
+      ],
+      "statement": "An action that leaves an object looking the same after it has been carried out: a permutation of the atoms that leaves the molecule indistinguishable from its starting state, every point moving to an equivalent position."
+    },
+    {
+      "id": "symmetry-element",
+      "kind": "definition",
+      "section": "12.2",
+      "name": "Symmetry element",
+      "terms": [
+        "symmetry element",
+        "symmetry axis",
+        "plane of symmetry"
+      ],
+      "statement": "The point, line (axis) or plane with respect to which a symmetry operation is carried out: all the points that stay in the same place when the operation is performed."
+    },
+    {
+      "id": "identity-operation",
+      "kind": "definition",
+      "section": "12.2",
+      "name": "Identity",
+      "type": "symmetry-operation",
+      "symbol": "E_op",
+      "terms": [
+        "identity"
+      ],
+      "statement": "The operation E of doing nothing, whose symmetry element is the whole molecule; every molecule has it."
+    },
+    {
+      "id": "proper-rotation",
+      "kind": "definition",
+      "section": "12.2",
+      "name": "n-fold rotation",
+      "type": "symmetry-operation",
+      "symbol": "C_n",
+      "terms": [
+        "proper rotation",
+        "n-fold axis of rotation"
+      ],
+      "statement": "The operation C_n rotates the object counterclockwise about an axis by 2π/n (360°/n); n successive C_n return it to the start, and C_n^m is written in lowest terms.",
+      "forms": [
+        {
+          "id": "rotation-n-times",
+          "latex": "C_n^n=E"
+        }
+      ]
+    },
+    {
+      "id": "principal-axis",
+      "kind": "definition",
+      "section": "12.2",
+      "name": "Principal axis",
+      "terms": [
+        "principal axis"
+      ],
+      "statement": "Of a molecule's rotation axes, the one with the highest n; by convention the z axis lies along it."
+    },
+    {
+      "id": "reflection-operation",
+      "kind": "definition",
+      "section": "12.2",
+      "name": "Reflection",
+      "type": "symmetry-operation",
+      "symbol": "sigma_op",
+      "terms": [
+        "reflection",
+        "mirror plane",
+        "vertical mirror plane",
+        "horizontal mirror plane",
+        "dihedral mirror plane"
+      ],
+      "statement": "The operation σ reflects the object in a mirror plane. A plane containing the principal axis is vertical, σ_v; one perpendicular to it is horizontal, σ_h; a vertical plane bisecting two C₂ axes is dihedral, σ_d. Two reflections in the same plane are the identity.",
+      "forms": [
+        {
+          "id": "reflection-twice",
+          "latex": "\\sigma\\sigma=\\sigma^2=E"
+        }
+      ]
+    },
+    {
+      "id": "inversion-operation",
+      "kind": "definition",
+      "section": "12.2",
+      "name": "Inversion",
+      "type": "symmetry-operation",
+      "symbol": "i_op",
+      "terms": [
+        "inversion",
+        "center of inversion"
+      ],
+      "statement": "The operation i passes every point through the centre of symmetry to the same distance on the other side; a molecule has at most one inversion centre, and two inversions are the identity.",
+      "forms": [
+        {
+          "id": "inversion-twice",
+          "latex": "ii=i^2=E"
+        }
+      ]
+    },
+    {
+      "id": "improper-rotation",
+      "kind": "definition",
+      "section": "12.2",
+      "name": "Improper rotation",
+      "type": "symmetry-operation",
+      "symbol": "S_n",
+      "terms": [
+        "improper rotation",
+        "rotation-reflection"
+      ],
+      "statement": "The rotation-reflection S_n: a rotation C_n about an axis followed by a reflection in the plane perpendicular to it. S₁ is a reflection and S₂ an inversion; S_n^n = E for even n, while for odd n S_n^n = σ and S_n^{2n} = E."
+    },
+    {
+      "id": "proper-improper-operations",
+      "kind": "definition",
+      "section": "12.2",
+      "name": "Proper and improper operations",
+      "terms": [
+        "proper symmetry operations",
+        "improper symmetry operations"
+      ],
+      "statement": "The identity and rotations can actually be carried out on a molecule and are proper symmetry operations; reflections, inversions and improper rotations can only be imagined and are improper."
+    },
+    {
+      "id": "molecular-axis-convention",
+      "kind": "definition",
+      "section": "12.2",
+      "name": "Axes of a molecule",
+      "statement": "The convention for Cartesian axes on a molecule: the origin at the central atom or centre, z along the principal axis, x in the molecular plane (or the plane holding the most atoms), y completing a right-handed set."
+    },
+    {
+      "id": "point-group",
+      "kind": "definition",
+      "section": "12.2",
+      "name": "Point group",
+      "terms": [
+        "point group",
+        "Schönflies notation",
+        "Hermann-Mauguin"
+      ],
+      "statement": "The complete collection of symmetry elements a molecule possesses, which classifies it; at least one point stays unchanged under every operation. Chemists name them in Schönflies notation (C₂ᵥ, D₆ₕ, T_d …), crystallographers in Hermann–Mauguin notation."
+    },
+    {
+      "id": "point-group-families",
+      "kind": "idea",
+      "section": "12.2",
+      "name": "Families of point groups",
+      "statement": "The common point groups fall into nonrotational groups (C₁, C_i, C_s), single-axis groups (C_n, C_nv, C_nh, S_n), dihedral groups with n C₂ axes perpendicular to the principal axis (D_n, D_nd, D_nh, D_∞h) and cubic groups with several high-order axes (T, T_d, T_h, O, O_h, I_h)."
+    },
+    {
+      "id": "assigning-point-group",
+      "kind": "skill",
+      "section": "12.2",
+      "name": "Assigning a point group",
+      "statement": "Finding a molecule's point group by asking, in the flowchart's order, whether it is linear, has several high-order axes, a C_n axis, perpendicular C₂ axes, a σ_h, vertical or dihedral planes, or an S_2n axis."
+    },
+    {
+      "id": "polarity-from-symmetry",
+      "kind": "result",
+      "section": "12.2",
+      "name": "Which molecules can be polar",
+      "statement": "A dipole moment must lie along every C_n axis and cannot be reversed by any operation, so only molecules of the groups C_n, C_nv and C_s can be polar, with the dipole along the axis in C_n and C_nv."
+    },
+    {
+      "id": "chirality-from-symmetry",
+      "kind": "result",
+      "section": "12.2",
+      "name": "Which molecules can be chiral",
+      "terms": [
+        "chiral",
+        "enantiomers"
+      ],
+      "statement": "A molecule is chiral, not superimposable on its mirror image, exactly when it has no improper rotation axis S_n; a centre of inversion or any mirror plane rules chirality out."
+    },
+    {
+      "id": "group",
+      "kind": "definition",
+      "section": "12.3",
+      "name": "Group",
+      "terms": [
+        "group",
+        "closure",
+        "associative law",
+        "identity"
+      ],
+      "statement": "A set of elements with a rule for combining them that obeys four criteria: it contains the identity, it is closed (every product is an element), the combination is associative, and every element has an inverse in the set. A molecule's symmetry operations, combined by applying one after another, form a group.",
+      "forms": [
+        {
+          "id": "group-identity",
+          "latex": "Eg_i=g_iE=g_i"
+        },
+        {
+          "id": "group-inverse",
+          "latex": "g_ig_i^{-1}=g_i^{-1}g_i=E"
+        },
+        {
+          "id": "group-associativity",
+          "latex": "(g_ig_j)g_k=g_i(g_jg_k)"
+        }
+      ]
+    },
+    {
+      "id": "group-order",
+      "kind": "definition",
+      "section": "12.3",
+      "name": "Order of a group",
+      "symbol": "h_order",
+      "terms": [
+        "order"
+      ],
+      "statement": "The number of elements h of a group."
+    },
+    {
+      "id": "abelian-group",
+      "kind": "definition",
+      "section": "12.3",
+      "name": "Abelian group",
+      "terms": [
+        "Abelian",
+        "non-Abelian"
+      ],
+      "statement": "A group whose elements all commute, g_ig_k = g_kg_i; group elements need not commute, and a group whose do not is non-Abelian (C₃ᵥ: σ_vC₃ ≠ C₃σ_v)."
+    },
+    {
+      "id": "symmetry-class",
+      "kind": "definition",
+      "section": "12.3",
+      "name": "Class",
+      "terms": [
+        "class"
+      ],
+      "statement": "Symmetry operations related to each other by other operations of the group belong to the same class: in NH₃ the three mirror planes form one class and C₃⁺ and C₃⁻ another."
+    },
+    {
+      "id": "group-multiplication-table",
+      "kind": "definition",
+      "section": "12.3",
+      "name": "Group multiplication table",
+      "terms": [
+        "group multiplication table"
+      ],
+      "statement": "A table of the products of every pair of a group's operations, the operation along the top applied first and the one at the side second; every row and column holds every operation once."
+    },
+    {
+      "id": "matrix-representation",
+      "kind": "definition",
+      "section": "12.4",
+      "name": "Matrix representation",
+      "type": "representation",
+      "symbol": "Gamma_rep",
+      "terms": [
+        "transformation matrices",
+        "representative",
+        "matrix representation",
+        "basis set",
+        "span"
+      ],
+      "statement": "A set of transformation matrices Γ(g), one representative for each symmetry operation g, acting on a chosen basis (unit vectors, atomic orbitals); the representatives multiply as the operations do and obey every condition of a group. The basis is said to span the representation."
+    },
+    {
+      "id": "symmetry-operation-matrices",
+      "kind": "result",
+      "section": "12.4",
+      "name": "Matrices of the symmetry operations",
+      "statement": "On the vector (x, y, z) the identity is the unit matrix, a reflection changes the sign of the coordinate normal to its plane, inversion changes all three, and C_n about z is the rotation matrix through 2π/n.",
+      "forms": [
+        {
+          "id": "reflection-xy-matrix",
+          "latex": "\\sigma(xy)\\begin{pmatrix}x\\\\y\\\\z\\end{pmatrix}=\\begin{pmatrix}x\\\\y\\\\-z\\end{pmatrix}"
+        },
+        {
+          "id": "rotation-z-matrix",
+          "latex": "R_z(\\theta)=\\begin{pmatrix}\\cos\\theta&-\\sin\\theta&0\\\\\\sin\\theta&\\cos\\theta&0\\\\0&0&1\\end{pmatrix}"
+        }
+      ]
+    },
+    {
+      "id": "reducible-representation",
+      "kind": "definition",
+      "section": "12.5",
+      "name": "Reducible representation",
+      "type": "representation",
+      "terms": [
+        "reducible representation"
+      ],
+      "statement": "A matrix representation in a basis such as NH₃'s four valence s orbitals, whose matrices can be reduced to the irreducible representations of the character table; different bases are chosen to extract different properties."
+    },
+    {
+      "id": "similarity-transform",
+      "kind": "result",
+      "section": "12.6",
+      "name": "Similarity transform",
+      "statement": "The representatives of an operation in two bases related by a matrix of coefficients C are related by a similarity transform.",
+      "forms": [
+        {
+          "id": "similarity-transform",
+          "latex": "\\Gamma(g)=C\\Gamma'(g)C^{-1}"
+        },
+        {
+          "id": "similarity-transform-inverse",
+          "latex": "\\Gamma'(g)=C^{-1}\\Gamma(g)C"
+        }
+      ]
+    },
+    {
+      "id": "character",
+      "kind": "definition",
+      "section": "12.6",
+      "name": "Character",
+      "type": "character",
+      "symbol": "chi_char",
+      "terms": [
+        "character"
+      ],
+      "statement": "The trace χ(g) of a matrix representative Γ(g). It is unchanged by a similarity transform, and operations of one class have the same character in a given representation."
+    },
+    {
+      "id": "character-table",
+      "kind": "definition",
+      "section": "12.6",
+      "name": "Character table",
+      "terms": [
+        "character table"
+      ],
+      "statement": "The table of a point group's irreducible representations (rows) against its classes of operations (columns), with the characters in the body, the order h, and the functions (x, y, z, R_x, R_y, R_z and their products) that transform as each representation."
+    },
+    {
+      "id": "character-shortcut",
+      "kind": "skill",
+      "section": "12.6",
+      "name": "Characters by inspection",
+      "statement": "Finding a character without the matrix: for each basis function add 1 if the operation leaves it unchanged, −1 if it changes its sign and 0 if it moves; an axis rotated through θ contributes cos θ.",
+      "forms": [
+        {
+          "id": "rotation-character-e",
+          "latex": "\\chi(C_3)=2\\cos 120^\\circ=-1"
+        }
+      ]
+    },
+    {
+      "id": "irreducible-representation",
+      "kind": "definition",
+      "section": "12.7",
+      "name": "Irreducible representation",
+      "type": "representation",
+      "terms": [
+        "symmetry species",
+        "irreducible representation"
+      ],
+      "statement": "One of the limited number of ways a function can transform under a group's operations, its symmetry species; functions transforming alike form bases for the same representation and are said to have the same symmetry. Labels: A or B (nondegenerate, symmetric or antisymmetric under the principal rotation), E and T (doubly and triply degenerate), Σ, Π, Δ in infinite groups, with g/u, primes and subscripts 1, 2 for further symmetry."
+    },
+    {
+      "id": "complex-irreps",
+      "kind": "result",
+      "section": "12.7",
+      "name": "Complex characters come in pairs",
+      "statement": "Where characters are complex, in powers of ε = exp(2πi/n), the irreducible representations come in conjugate pairs; chemists add each pair into one real representation (C₃'s E: 2, −1, −1)."
+    },
+    {
+      "id": "correlation-diagram",
+      "kind": "definition",
+      "section": "12.7",
+      "name": "Correlation of a group with a subgroup",
+      "terms": [
+        "correlation diagrams"
+      ],
+      "statement": "When a molecule's symmetry descends to a subgroup, each irreducible representation of the group correlates with one or a sum of the subgroup's (a degenerate E or T may split); correlation diagrams and tables show these relations, and an infinite group is reduced through a finite subgroup (C₂ᵥ for C_∞v, D₂ₕ for D_∞h)."
+    },
+    {
+      "id": "direct-product",
+      "kind": "definition",
+      "section": "12.7",
+      "name": "Direct product of representations",
+      "type": "representation",
+      "statement": "The representation whose characters are the products of the characters of its factors at each operation; its dimension is the product of theirs. It may be reducible, and it contains the totally symmetric representation only when a representation is multiplied by itself.",
+      "forms": [
+        {
+          "id": "direct-product-characters",
+          "latex": "\\chi_a(R)\\chi_b(R)\\chi_c(R)=\\chi_{abc}(R)"
+        }
+      ]
+    },
+    {
+      "id": "vanishing-integral-rule",
+      "kind": "result",
+      "section": "12.8",
+      "name": "When an integral must vanish",
+      "terms": [
+        "totally symmetric irreducible representation"
+      ],
+      "statement": "An integral is a number and is invariant to every symmetry operation, so it can be non-zero only if its integrand transforms as, or contains, the totally symmetric irreducible representation; group theory identifies integrals that are necessarily zero."
+    },
+    {
+      "id": "homogeneous-equations-solvable",
+      "kind": "result",
+      "section": "12.8",
+      "name": "Homogeneous equations need a zero determinant",
+      "statement": "A set of simultaneous linear equations Ax = b has a unique solution only when det A ≠ 0; homogeneous equations (b = 0), such as the secular equations, have a non-trivial solution only when det A = 0, and any multiple of a solution is one, so the orbitals can be normalized."
+    },
+    {
+      "id": "reduction-formula",
+      "kind": "result",
+      "section": "12.8",
+      "name": "Reduction formula",
+      "symbol": "a_k",
+      "statement": "The number of times the kth irreducible representation appears in a representation: the sum over classes of the class size times the two characters, divided by the order of the group.",
+      "forms": [
+        {
+          "id": "reduction-formula",
+          "latex": "a_k=\\dfrac{1}{h}\\sum_C n_C\\,\\chi(g)\\,\\chi_k(g)"
+        }
+      ]
+    },
+    {
+      "id": "mo-construction-steps",
+      "kind": "skill",
+      "section": "12.8",
+      "name": "Building molecular orbitals with symmetry",
+      "statement": "Choose a basis of valence orbitals, find the irreducible representations it spans, build the SALCs of each, combine those of the same species into molecular orbitals, write and solve the secular determinant, back-substitute for the coefficients and normalize."
+    },
+    {
+      "id": "two-by-two-secular-roots",
+      "kind": "result",
+      "section": "12.8",
+      "name": "Energies from a 2 × 2 secular determinant",
+      "statement": "With normalized functions (S₁₁ = S₂₂ = 1) the 2 × 2 secular determinant is a quadratic in E whose two roots are the orbital energies; where H₁₂ = S₁₂ = 0 the roots are H₁₁ and H₂₂ themselves.",
+      "forms": [
+        {
+          "id": "two-by-two-secular-quadratic",
+          "latex": "E^2(1-S_{12}^2)+E(2H_{12}S_{12}-H_{11}-H_{22})+(H_{11}H_{22}-H_{12}^2)=0"
+        }
+      ]
+    },
+    {
+      "id": "ammonia-s-orbitals",
+      "kind": "result",
+      "section": "12.8",
+      "name": "Ammonia's orbitals from s SALCs",
+      "statement": "NH₃'s valence s basis spans 2A₁ + E: the two A₁ SALCs, s_N and (s₁ + s₂ + s₃)/√3, mix into a bonding and an antibonding orbital, while the two E SALCs do not mix (H₃₄ = S₃₄ = 0) and form a degenerate pair."
+    },
+    {
+      "id": "degrees-of-freedom",
+      "kind": "definition",
+      "section": "12.10",
+      "name": "Degrees of freedom",
+      "terms": [
+        "degrees of freedom"
+      ],
+      "statement": "The number of independent ways a molecule can move; each atom has three, along x, y and z, so a molecule of N atoms has 3N."
+    },
+    {
+      "id": "cartesian-3n-basis",
+      "kind": "definition",
+      "section": "12.10",
+      "name": "The 3N Cartesian basis",
+      "terms": [
+        "3N Cartesian basis"
+      ],
+      "statement": "A set of x, y, z axes on each of a molecule's N atoms, the basis for its motions; its character under an operation is the character of (x, y, z) times the number of atoms the operation leaves unshifted."
+    },
+    {
+      "id": "vibrational-representation",
+      "kind": "result",
+      "section": "12.10",
+      "name": "Symmetries of the vibrations",
+      "symbol": "Gamma_vib",
+      "statement": "Subtracting the translations (the characters of x, y, z) and the rotations (of R_x, R_y, R_z) from the 3N Cartesian characters leaves the representation of the vibrations, which reduces to their symmetries: H₂O vibrates as 2A₁ + B₁.",
+      "forms": [
+        {
+          "id": "vibrational-characters",
+          "latex": "\\chi_{\\text{Vib}}=\\chi_{3N}-\\chi_{\\text{Trans}}-\\chi_{\\text{Rot}}"
+        }
+      ]
+    },
+    {
+      "id": "tabular-reduction",
+      "kind": "skill",
+      "section": "12.11",
+      "name": "Reducing a representation by table",
+      "statement": "Reducing a representation by a table: for each irreducible representation multiply class size, its character and the reducible character, sum each row and divide by h. NH₃'s motions give Γ = 3A₁ + A₂ + 4E, and Γ_vib = 2A₁ + 2E once A₁ + E (translations) and A₂ + E (rotations) are taken off."
+    },
+    {
+      "id": "molecular-normal-modes",
+      "kind": "definition",
+      "section": "12.12",
+      "name": "Normal modes of a molecule",
+      "terms": [
+        "normal modes of vibration",
+        "vibrational mode"
+      ],
+      "statement": "The vibrations of a polyatomic molecule, each a concerted motion of groups of bonds (stretching, bending, torsion) that transforms as one irreducible representation of the molecule's point group."
+    },
+    {
+      "id": "vibrational-mode-count",
+      "kind": "result",
+      "section": "12.12",
+      "name": "Number of vibrational modes",
+      "statement": "Three of a molecule's 3N degrees of freedom are translations and three rotations (two for a linear molecule, whose spin about its axis moves no atom), leaving 3N − 6 vibrational modes for a nonlinear molecule and 3N − 5 for a linear one.",
+      "forms": [
+        {
+          "id": "modes-nonlinear",
+          "latex": "3N-6"
+        },
+        {
+          "id": "modes-linear",
+          "latex": "3N-5"
+        }
+      ]
+    },
+    {
+      "id": "symmetry-selection-rule",
+      "kind": "result",
+      "section": "12.13",
+      "name": "Selection rules from symmetry",
+      "statement": "A transition is allowed by symmetry only if the direct product of the symmetries of the initial state, the transition operator and the final state contains the totally symmetric irreducible representation.",
+      "forms": [
+        {
+          "id": "transition-moment-braket",
+          "latex": "\\int \\Psi_i^*\\mu\\Psi_f\\,d\\tau=\\langle\\Psi_i|\\mu|\\Psi_f\\rangle"
+        }
+      ]
+    },
+    {
+      "id": "ir-active-symmetry",
+      "kind": "result",
+      "section": "12.13",
+      "name": "Which vibrations are IR active",
+      "statement": "A vibration that changes the dipole moment absorbs infrared light: light polarized along x, y or z excites vibrations of the same symmetry as x, y or z in the character table (in H₂O, z-polarized light the A₁ modes and x-polarized the B₁ stretch).",
+      "forms": [
+        {
+          "id": "ir-activity",
+          "latex": "\\left(\\dfrac{d\\mu}{dq}\\right)_{eq}\\neq 0"
+        }
+      ]
+    },
+    {
+      "id": "raman-scattering",
+      "kind": "definition",
+      "section": "12.13",
+      "name": "Raman scattering",
+      "terms": [
+        "Raman scattering",
+        "virtual state"
+      ],
+      "statement": "A two-photon process: a photon lifts the molecule to a short-lived virtual state, not an eigenstate of the molecule, which emits a photon and leaves it in a different vibrational state."
+    },
+    {
+      "id": "raman-active-symmetry",
+      "kind": "result",
+      "section": "12.13",
+      "name": "Which vibrations are Raman active",
+      "statement": "Since two photons of possibly different polarizations take part, a Raman transition transforms as a Cartesian product (x², xy, yz …); a vibration of the same symmetry as one of them is Raman active."
+    },
+    {
+      "id": "polarizability",
+      "kind": "definition",
+      "section": "12.13",
+      "name": "Polarizability",
+      "symbol": "alpha_pol",
+      "statement": "The constant (in fact a tensor) α relating the dipole a field induces to the field.",
+      "forms": [
+        {
+          "id": "induced-dipole",
+          "latex": "\\vec{\\mu}=\\alpha\\vec{E}"
+        }
+      ]
+    },
+    {
+      "id": "salc",
+      "kind": "definition",
+      "section": "12.14",
+      "name": "Symmetry-adapted linear combination",
+      "type": "wavefunction",
+      "terms": [
+        "Symmetry Adapted Linear Combinations",
+        "SALCs"
+      ],
+      "statement": "A linear combination of basis functions (bond stretching vectors or atomic orbitals) that transforms as one irreducible representation; SALCs show the symmetries of stretches and, built from atomic orbitals, the LCAO molecular orbitals.",
+      "forms": [
+        {
+          "id": "salc-sum",
+          "latex": "\\phi_i=\\sum_j c_{ij}b_j"
+        }
+      ]
+    },
+    {
+      "id": "projection-operator",
+      "kind": "result",
+      "section": "12.14",
+      "name": "Projection operator",
+      "statement": "Applying each operation of the group to one basis function, weighting the image by the character of an irreducible representation and summing gives a SALC of that symmetry, or zero where the basis does not span it.",
+      "forms": [
+        {
+          "id": "projection-operator",
+          "latex": "\\phi_i=\\sum_j \\chi_i(j)T_j\\nu"
+        },
+        {
+          "id": "projection-operator-g",
+          "latex": "\\phi_i=\\sum_g\\chi_k(g)\\,g\\,f_i",
+          "section": "12.8"
+        }
+      ]
+    },
+    {
+      "id": "salc-normalization",
+      "kind": "skill",
+      "section": "12.14",
+      "name": "Normalizing a SALC",
+      "statement": "Multiplying a SALC by one over the square root of the sum of the squares of its coefficients.",
+      "forms": [
+        {
+          "id": "salc-normalization",
+          "latex": "N=\\dfrac{1}{\\sqrt{\\sum_j c_{ij}^2}}"
+        }
+      ]
+    },
+    {
+      "id": "stretching-salcs",
+      "kind": "result",
+      "section": "12.14",
+      "name": "SALCs of bond stretches",
+      "statement": "The stretching vectors of a molecule combine into SALCs whose symmetries are those of its stretching modes: water's two O–H stretches give a symmetric A₁ and an antisymmetric combination, (b₁ ± b₂)/√2; para- and ortho-difluorobenzene's C–H stretches give different sets."
+    },
+    {
+      "id": "same-symmetry-bonding",
+      "kind": "result",
+      "section": "12.15",
+      "name": "Only orbitals of one symmetry bond",
+      "statement": "The overlap of two atomic orbitals transforms as the direct product of their symmetries and is non-zero only if it contains the totally symmetric representation, so two orbitals can bond only if they belong to the same symmetry species.",
+      "forms": [
+        {
+          "id": "overlap-integral-symmetry",
+          "latex": "S_{ij}=\\langle\\phi_i|\\phi_j\\rangle=\\int\\phi_i^*\\phi_j\\,d\\tau"
+        }
+      ]
+    },
+    {
+      "id": "mo-from-salcs",
+      "kind": "result",
+      "section": "12.15",
+      "name": "Molecular orbitals from SALCs",
+      "statement": "A molecular orbital is a linear combination of the SALCs of one symmetry species; group theory gives its form but not the coefficients or energies, which the secular equations do. Water's valence basis spans 3A₁ + 2B₁ + B₂.",
+      "forms": [
+        {
+          "id": "mo-a1-nh3",
+          "latex": "\\Psi(A_1)=c_1\\phi_1+c_2\\phi_2"
+        }
+      ]
+    },
+    {
+      "id": "electronic-state-symmetry",
+      "kind": "result",
+      "section": "12.15",
+      "name": "Symmetry of an electronic state",
+      "statement": "The symmetry of an electronic state is the direct product of the symmetries of the orbitals holding unpaired electrons; a closed-shell ground state is totally symmetric."
+    },
+    {
+      "id": "electronic-selection-symmetry",
+      "kind": "result",
+      "section": "12.15",
+      "name": "Which electronic transitions light can drive",
+      "statement": "Light polarized along x, y or z transforms as x, y or z, so from a totally symmetric ground state it reaches only excited states of that symmetry: NH₃'s x, y light reaches E states and z light A₁; H₂O's (1B₂)¹(2B₁)¹ state, of A₂ symmetry, cannot be reached by one photon."
     }
   ],
   "concept_prereqs": [
@@ -13731,6 +14625,354 @@
     {
       "concept": "effective-core-potential",
       "prereq": "electronic-hamiltonian"
+    },
+    {
+      "concept": "symmetry-simplifies-calculations",
+      "prereq": "basis-change-invariance"
+    },
+    {
+      "concept": "basis-change-invariance",
+      "prereq": "benzene-pi-orbitals"
+    },
+    {
+      "concept": "block-diagonal-determinant",
+      "prereq": "basis-change-invariance"
+    },
+    {
+      "concept": "symmetry-element",
+      "prereq": "symmetry-operation"
+    },
+    {
+      "concept": "identity-operation",
+      "prereq": "symmetry-operation"
+    },
+    {
+      "concept": "proper-rotation",
+      "prereq": "symmetry-element"
+    },
+    {
+      "concept": "proper-rotation",
+      "prereq": "identity-operation"
+    },
+    {
+      "concept": "principal-axis",
+      "prereq": "proper-rotation"
+    },
+    {
+      "concept": "reflection-operation",
+      "prereq": "principal-axis"
+    },
+    {
+      "concept": "inversion-operation",
+      "prereq": "symmetry-element"
+    },
+    {
+      "concept": "improper-rotation",
+      "prereq": "reflection-operation"
+    },
+    {
+      "concept": "improper-rotation",
+      "prereq": "inversion-operation"
+    },
+    {
+      "concept": "proper-improper-operations",
+      "prereq": "improper-rotation"
+    },
+    {
+      "concept": "molecular-axis-convention",
+      "prereq": "principal-axis"
+    },
+    {
+      "concept": "point-group",
+      "prereq": "proper-improper-operations"
+    },
+    {
+      "concept": "point-group-families",
+      "prereq": "point-group"
+    },
+    {
+      "concept": "assigning-point-group",
+      "prereq": "point-group-families"
+    },
+    {
+      "concept": "polarity-from-symmetry",
+      "prereq": "point-group"
+    },
+    {
+      "concept": "polarity-from-symmetry",
+      "prereq": "dipole-moment"
+    },
+    {
+      "concept": "chirality-from-symmetry",
+      "prereq": "point-group"
+    },
+    {
+      "concept": "group",
+      "prereq": "point-group"
+    },
+    {
+      "concept": "group-order",
+      "prereq": "group"
+    },
+    {
+      "concept": "abelian-group",
+      "prereq": "group"
+    },
+    {
+      "concept": "symmetry-class",
+      "prereq": "group"
+    },
+    {
+      "concept": "group-multiplication-table",
+      "prereq": "group"
+    },
+    {
+      "concept": "matrix-representation",
+      "prereq": "group-multiplication-table"
+    },
+    {
+      "concept": "symmetry-operation-matrices",
+      "prereq": "matrix-representation"
+    },
+    {
+      "concept": "reducible-representation",
+      "prereq": "matrix-representation"
+    },
+    {
+      "concept": "similarity-transform",
+      "prereq": "reducible-representation"
+    },
+    {
+      "concept": "character",
+      "prereq": "similarity-transform"
+    },
+    {
+      "concept": "character",
+      "prereq": "symmetry-class"
+    },
+    {
+      "concept": "character-table",
+      "prereq": "character"
+    },
+    {
+      "concept": "character-table",
+      "prereq": "group-order"
+    },
+    {
+      "concept": "character-shortcut",
+      "prereq": "character"
+    },
+    {
+      "concept": "irreducible-representation",
+      "prereq": "character-table"
+    },
+    {
+      "concept": "complex-irreps",
+      "prereq": "irreducible-representation"
+    },
+    {
+      "concept": "correlation-diagram",
+      "prereq": "irreducible-representation"
+    },
+    {
+      "concept": "direct-product",
+      "prereq": "irreducible-representation"
+    },
+    {
+      "concept": "vanishing-integral-rule",
+      "prereq": "direct-product"
+    },
+    {
+      "concept": "vanishing-integral-rule",
+      "prereq": "symmetric-interval-integrals"
+    },
+    {
+      "concept": "homogeneous-equations-solvable",
+      "prereq": "secular-equations"
+    },
+    {
+      "concept": "homogeneous-equations-solvable",
+      "prereq": "determinant"
+    },
+    {
+      "concept": "reduction-formula",
+      "prereq": "irreducible-representation"
+    },
+    {
+      "concept": "mo-construction-steps",
+      "prereq": "reduction-formula"
+    },
+    {
+      "concept": "mo-construction-steps",
+      "prereq": "homogeneous-equations-solvable"
+    },
+    {
+      "concept": "mo-construction-steps",
+      "prereq": "lcao-mo-method"
+    },
+    {
+      "concept": "two-by-two-secular-roots",
+      "prereq": "homogeneous-equations-solvable"
+    },
+    {
+      "concept": "ammonia-s-orbitals",
+      "prereq": "mo-construction-steps"
+    },
+    {
+      "concept": "ammonia-s-orbitals",
+      "prereq": "two-by-two-secular-roots"
+    },
+    {
+      "concept": "ammonia-s-orbitals",
+      "prereq": "degeneracy"
+    },
+    {
+      "concept": "degrees-of-freedom",
+      "prereq": "molecular-motion-separation"
+    },
+    {
+      "concept": "cartesian-3n-basis",
+      "prereq": "degrees-of-freedom"
+    },
+    {
+      "concept": "cartesian-3n-basis",
+      "prereq": "character-shortcut"
+    },
+    {
+      "concept": "vibrational-representation",
+      "prereq": "cartesian-3n-basis"
+    },
+    {
+      "concept": "vibrational-representation",
+      "prereq": "reduction-formula"
+    },
+    {
+      "concept": "tabular-reduction",
+      "prereq": "vibrational-representation"
+    },
+    {
+      "concept": "molecular-normal-modes",
+      "prereq": "normal-mode"
+    },
+    {
+      "concept": "molecular-normal-modes",
+      "prereq": "irreducible-representation"
+    },
+    {
+      "concept": "vibrational-mode-count",
+      "prereq": "degrees-of-freedom"
+    },
+    {
+      "concept": "vibrational-mode-count",
+      "prereq": "molecular-normal-modes"
+    },
+    {
+      "concept": "symmetry-selection-rule",
+      "prereq": "vanishing-integral-rule"
+    },
+    {
+      "concept": "symmetry-selection-rule",
+      "prereq": "transition-moment-integral"
+    },
+    {
+      "concept": "ir-active-symmetry",
+      "prereq": "symmetry-selection-rule"
+    },
+    {
+      "concept": "ir-active-symmetry",
+      "prereq": "ir-selection-rules"
+    },
+    {
+      "concept": "ir-active-symmetry",
+      "prereq": "molecular-normal-modes"
+    },
+    {
+      "concept": "raman-scattering",
+      "prereq": "infrared-spectroscopy"
+    },
+    {
+      "concept": "raman-active-symmetry",
+      "prereq": "raman-scattering"
+    },
+    {
+      "concept": "raman-active-symmetry",
+      "prereq": "symmetry-selection-rule"
+    },
+    {
+      "concept": "polarizability",
+      "prereq": "dipole-moment"
+    },
+    {
+      "concept": "salc",
+      "prereq": "irreducible-representation"
+    },
+    {
+      "concept": "salc",
+      "prereq": "lcao-approximation"
+    },
+    {
+      "concept": "projection-operator",
+      "prereq": "salc"
+    },
+    {
+      "concept": "salc-normalization",
+      "prereq": "salc"
+    },
+    {
+      "concept": "salc-normalization",
+      "prereq": "normalizing-a-wavefunction"
+    },
+    {
+      "concept": "stretching-salcs",
+      "prereq": "projection-operator"
+    },
+    {
+      "concept": "stretching-salcs",
+      "prereq": "salc-normalization"
+    },
+    {
+      "concept": "stretching-salcs",
+      "prereq": "molecular-normal-modes"
+    },
+    {
+      "concept": "same-symmetry-bonding",
+      "prereq": "vanishing-integral-rule"
+    },
+    {
+      "concept": "same-symmetry-bonding",
+      "prereq": "pi-orbital"
+    },
+    {
+      "concept": "mo-from-salcs",
+      "prereq": "same-symmetry-bonding"
+    },
+    {
+      "concept": "mo-from-salcs",
+      "prereq": "projection-operator"
+    },
+    {
+      "concept": "mo-from-salcs",
+      "prereq": "mo-construction-steps"
+    },
+    {
+      "concept": "mo-from-salcs",
+      "prereq": "water-molecular-orbitals"
+    },
+    {
+      "concept": "electronic-state-symmetry",
+      "prereq": "direct-product"
+    },
+    {
+      "concept": "electronic-state-symmetry",
+      "prereq": "molecular-electron-configuration"
+    },
+    {
+      "concept": "electronic-selection-symmetry",
+      "prereq": "electronic-state-symmetry"
+    },
+    {
+      "concept": "electronic-selection-symmetry",
+      "prereq": "symmetry-selection-rule"
     }
   ],
   "colours": {
@@ -13840,6 +15082,18 @@
       "magnetic-moment": {
         "light": "#795C01",
         "dark": "#C89A01"
+      },
+      "symmetry-operation": {
+        "light": "#914900",
+        "dark": "#F37F0A"
+      },
+      "representation": {
+        "light": "#014F23",
+        "dark": "#0FEC76"
+      },
+      "character": {
+        "light": "#556301",
+        "dark": "#9DB509"
       }
     },
     "pins": {
@@ -13890,5 +15144,16 @@
       4,
       21
     ]
-  }
+  },
+  "exercise_sources": [
+    {
+      "id": "zielinski-quantum-states",
+      "title": "Quantum States of Atoms and Molecules",
+      "short": "Quantum States of Atoms and Molecules",
+      "author": "David M. Hanson, Erica Harvey, Robert Sweeney, Theresa Julia Zielinski",
+      "url": "https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Book%3A_Quantum_States_of_Atoms_and_Molecules_(Zielinksi_et_al)",
+      "license": "CC BY-NC-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+    }
+  ]
 }

@@ -1,0 +1,419 @@
+{
+ "id": "10.2",
+ "module": "13471",
+ "chapter": "10",
+ "title": "Hybrid Orbitals in Water",
+ "short": "Hybrids in water",
+ "lead": "Pure p orbitals on oxygen would make water's bonds meet at 90°, yet they meet at 104.45°. Hybrids with unequal shares of s and p connect a molecule's measured bond angle to the makeup of its orbitals, lone pairs included.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "By Andrew Wolff and Martin (Stackexchange), shared under CC BY-NC-SA 4.0; the book credits neither its box diagram nor its water drawing, and Figure 10.2.1 is shown as a PNG of the book's BMP.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercise in this section. The one here, on ammonia's hybrids, was written by AI with its solution, Bloom level and concept tags.",
+ "figures": [
+  {
+   "id": "sim-water",
+   "kind": "sim",
+   "number": "10.2.1",
+   "folds": [
+    "10.2.2"
+   ],
+   "originals": [
+    "/media/ch10/77739-Alevel-porbitals.png",
+    "/media/ch10/77738-363px-Water_molecule_dimensions.svg.png",
+    "/media/ch10/77751-bondin14.gif"
+   ],
+   "original_caption": "10.2.1: The three p-orbitals are aligned along perpendicular axis (CC-SA-BY-NC; Nick Greeves via ChemTube3D); 10.2.2: Experimentally determined geometry of the water molecule (CC BY-SA 3.0; Booyabazooka). 10.2.4: Among the four hybrid orbitals, two are half filled and the remaining two are completely filled.",
+   "draws": [
+    "wavefunction",
+    "angle"
+   ],
+   "conventions": [
+    "O",
+    "H"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "fig-10-2-4",
+   "kind": "photo",
+   "number": "10.2.4",
+   "widths": [
+    609
+   ],
+   "draws": [],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "kept as the book prints it"
+    }
+   ]
+  },
+  {
+   "id": "fig-co2",
+   "kind": "figure",
+   "originals": [
+    "/media/ch10/77752-800px-Carbon_dioxide_3D_ball.png"
+   ],
+   "draws": [],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "kept as the book prints it"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "opening",
+   "concept": "valence-bond-theory",
+   "verb": "uses"
+  },
+  {
+   "span": "opening",
+   "concept": "hybrid-orbital",
+   "verb": "uses"
+  },
+  {
+   "span": "four-hybrids",
+   "concept": "sp3-hybrids",
+   "verb": "reinforces"
+  },
+  {
+   "span": "estimating-character",
+   "concept": "spx-notation",
+   "verb": "introduces"
+  },
+  {
+   "span": "estimating-character",
+   "concept": "hybrid-character",
+   "verb": "introduces"
+  },
+  {
+   "span": "estimating-character",
+   "concept": "bond-angle-hybrid-relation",
+   "verb": "introduces"
+  },
+  {
+   "span": "estimating-character",
+   "concept": "water-hybrids",
+   "verb": "introduces"
+  },
+  {
+   "span": "estimating-character",
+   "concept": "normalization-condition",
+   "verb": "uses"
+  },
+  {
+   "span": "lone-pairs",
+   "concept": "hybrid-character-sum",
+   "verb": "introduces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "ai1",
+   "source_id": "Without a bond angle to start from",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "lone-pairs",
+   "prompt": "<p>Ammonia's H–N–H bond angle is 106.7°. Treat its three N–H bonding hybrids as equivalent and its lone pair as the fourth hybrid. (a) What is the s character of each N–H hybrid, in percent? (b) Using the rule that the hybrids of one atom share out its one s and three p orbitals, what is the s character of the lone-pair hybrid, in percent?</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 22.3,
+      "unit": "%",
+      "hint": "Equation 10.2.8 gives γ² from the angle; Equation 10.2.7 turns γ² into the s character."
+     },
+     {
+      "part": "b",
+      "value": 33.0,
+      "unit": "%",
+      "hint": "The s characters of the four hybrids add up to 1, as the p characters add up to 3."
+     }
+    ],
+    "solution": "<p>(a) By Equation 10.2.8, $\\gamma^2 = -\\cos 106.7^\\circ = 0.2874$. By Equation 10.2.7 the s character is $\\dfrac{\\gamma^2}{1+\\gamma^2} = \\dfrac{0.2874}{1.2874} = 0.223$, about 22.3% (and 77.7% p).</p><p>(b) The p characters of the four hybrids add up to 3, so their s characters add up to 1: $3(0.223) + x_s = 1$, giving $x_s = 0.330$, about 33.0%. As in water, the lone pair has more s character than the bonds.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "ai1",
+   "concept": "bond-angle-hybrid-relation"
+  },
+  {
+   "exercise": "ai1",
+   "concept": "hybrid-character"
+  },
+  {
+   "exercise": "ai1",
+   "concept": "hybrid-character-sum"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-box",
+   "html": "The book prints this diagram as Figure 10.2.4, the number it also gives the lone-pair picture below. It is carbon's diagram, $2s^2\\,2p^2$ promoted to four half-filled $sp^3$ hybrids, where oxygen's $2s^2\\,2p^4$ would fill two of the four. Its caption describes the unhybridized model of Equations 10.2.1 and 10.2.2, in which the orbitals left for the lone pairs are $2s$ and $2p_x$, not $2s$ and $2p_z$.",
+   "kind": "correction"
+  },
+  {
+   "id": "c-gamma",
+   "html": "For a pure $sp^3$ hybrid, $\\gamma^2 = 1/3$ and $\\gamma = 0.577$; 0.25 is its s character, $\\gamma^2/(1+\\gamma^2)$.",
+   "kind": "correction"
+  },
+  {
+   "id": "c-s-square",
+   "html": "Equation 10.2.7 squares $\\gamma^2$ where it should square $\\gamma$: $\\left(\\dfrac{\\gamma}{\\sqrt{1+\\gamma^2}}\\right)^2 = \\dfrac{\\gamma^2}{1+\\gamma^2}$.",
+   "kind": "correction"
+  },
+  {
+   "id": "c-apply",
+   "html": "The bond angle gives $\\gamma$ through Equation 10.2.8, $\\cos\\theta = -\\gamma^2$; Equation 10.2.7 then gives the s character.",
+   "kind": "correction"
+  },
+  {
+   "id": "c-percent",
+   "html": "The p character is 0.80, that is 80%, not 0.80%.",
+   "kind": "correction"
+  },
+  {
+   "id": "c-lone",
+   "html": "From $1/(1+\\gamma^2) = 0.7$, $\\gamma^2 = 1/0.7 - 1 = 0.43$, so $\\cos\\theta = -0.43$ and $\\theta = 115°$. The printed $1/(0.7 - 1)$ would give $-3.3$.",
+   "kind": "correction"
+  },
+  {
+   "id": "c-credit",
+   "figure": "sim-water",
+   "html": "Figure 10.2.1's licence is CC BY-NC-SA, printed as CC-SA-BY-NC.",
+   "kind": "correction"
+  }
+ ],
+ "derivations": [
+  {
+   "id": "normalized-hybrid",
+   "what": "the normalized spˣ hybrid",
+   "source": "Physical Chemistry (LibreTexts), 10.2 Hybrid Orbitals in Water",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "|\\kchii \\rangle = N ( p + \\gamma s)",
+       "src": "(10.2.3)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\langle \\kchii | \\kchii \\rangle} = 1",
+      "src": "3.5"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\langle N ( p + \\gamma s) | N ( p + \\gamma s) \\rangle} = 1",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{l}{\\int N^2 ( p + \\gamma s)^2 d\\tau} = 1",
+       "uses": [],
+       "cap": "In integral notation, with $d\\tau$ standing for all space; the orbitals are real."
+      },
+      {
+       "tex": "\\mk{pp}{N^2 \\int p^2\\; d\\tau} + \\mk{sp}{N^2 2 \\gamma \\int sp\\; d\\tau} + \\mk{ss}{N^2 \\gamma^2 \\int s^2 \\; d\\tau} = 1",
+       "uses": [],
+       "map": {
+        "l": [
+         "pp",
+         "sp",
+         "ss"
+        ]
+       }
+      }
+     ],
+     "num": "(10.2.4)",
+     "src": "10.2"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "text": "The atomic orbitals $p$ and $s$ are each normalized: $\\int p^2\\,d\\tau = \\int s^2\\,d\\tau = 1$."
+      },
+      {
+       "text": "The atomic orbitals $p$ and $s$ are orthogonal: $\\int sp\\,d\\tau = 0$."
+      }
+     ],
+     "then": {
+      "tex": "\\mk{pp}{N^2 \\int p^2\\; d\\tau} + \\mk{sp}{N^2 2 \\gamma \\int sp\\; d\\tau} + \\mk{ss}{N^2 \\gamma^2 \\int s^2 \\; d\\tau} = 1"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{pp}{N^2} + \\mk{ss}{N^2 \\gamma^2} = 1",
+       "uses": [
+        1,
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{pp}{N^2 (1+\\gamma^2)} = 1",
+       "uses": [],
+       "map": {
+        "ss": "pp"
+       }
+      },
+      {
+       "tex": "\\mk{pp}{N} = \\dfrac{1}{\\sqrt{1+\\gamma^2}}",
+       "uses": []
+      }
+     ],
+     "src": "10.2"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "|\\kchii \\rangle = N ( p + \\gamma s)",
+       "src": "(10.2.3)"
+      },
+      {
+       "step": 1
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{|\\kchii \\rangle} = \\mk{n}{N}\\mk{r}{( p + \\gamma s)}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{|\\kchii \\rangle} = \\mk{n}{\\dfrac{1}{\\sqrt{1+\\gamma^2}}}\\mk{r}{( p + \\gamma s)}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "num": "(10.2.5)",
+     "src": "10.2"
+    }
+   ]
+  },
+  {
+   "id": "bond-angle",
+   "what": "the bond angle from the hybrids",
+   "source": "Physical Chemistry (LibreTexts), 10.2 Hybrid Orbitals in Water",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "|\\kchi_1\\rangle = N(p_1 + \\gamma s)",
+       "src": "(10.2.3)"
+      },
+      {
+       "tex": "|\\kchi_2\\rangle = N(p_2 + \\gamma s)",
+       "src": "(10.2.3)"
+      },
+      {
+       "text": "A $p$ orbital pointing along the unit vector $\\mathbf{u}$ is $u_x p_x + u_y p_y + u_z p_z$, as the turned orbitals of Section 10.1 are; $p_1$ points along one bond, $p_2$ along the other.",
+       "src": "(10.1.20)"
+      },
+      {
+       "text": "The orbitals $s$, $p_x$, $p_y$ and $p_z$ are normalized and mutually orthogonal.",
+       "src": "10.1"
+      },
+      {
+       "text": "The two bonds, and so $\\mathbf{u}_1$ and $\\mathbf{u}_2$, meet at the bond angle $\\theta$."
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\langle \\kchi_1 | \\kchi_2 \\rangle} = 0",
+      "src": "(10.1.10)"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\langle N(p_1 + \\gamma s) | N(p_2 + \\gamma s) \\rangle} = 0",
+       "uses": [
+        0,
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{n}{N^2}\\left(\\mk{pp}{\\langle p_1|p_2\\rangle} + \\mk{ps}{\\gamma\\langle p_1|s\\rangle} + \\mk{sp}{\\gamma\\langle s|p_2\\rangle} + \\mk{ss}{\\gamma^2\\langle s|s\\rangle}\\right) = 0",
+       "uses": [],
+       "map": {
+        "l": [
+         "n",
+         "pp",
+         "ps",
+         "sp",
+         "ss"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{n}{N^2}\\left(\\mk{pp}{\\langle p_1|p_2\\rangle} + \\mk{ss}{\\gamma^2}\\right) = 0",
+       "uses": [
+        2,
+        3
+       ],
+       "cap": "Each $p_i$ is a sum of $p_x$, $p_y$ and $p_z$, all orthogonal to $s$, so the cross terms vanish."
+      },
+      {
+       "tex": "\\mk{n}{N^2}\\left(\\mk{pp}{\\mathbf{u}_1\\cdot\\mathbf{u}_2} + \\mk{ss}{\\gamma^2}\\right) = 0",
+       "uses": [
+        2,
+        3
+       ],
+       "cap": "With orthonormal $p_x$, $p_y$, $p_z$, the overlap of two such orbitals is the dot product of their direction vectors."
+      },
+      {
+       "tex": "\\mk{n}{N^2}\\left(\\mk{pp}{\\cos \\ktheta} + \\mk{ss}{\\gamma^2}\\right) = 0",
+       "uses": [
+        4
+       ]
+      },
+      {
+       "tex": "\\mk{pp}{\\cos \\ktheta} + \\mk{ss}{\\gamma^2} = 0",
+       "uses": [],
+       "cap": "$N$ is not zero."
+      },
+      {
+       "tex": "\\mk{pp}{\\cos \\ktheta} = \\mk{ss}{- \\gamma^2}",
+       "uses": []
+      }
+     ],
+     "num": "(10.2.8)",
+     "src": "10.2"
+    }
+   ]
+  }
+ ]
+}

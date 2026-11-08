@@ -537,5 +537,52 @@
       "c_4"
     ],
     "types": []
+  },
+  "ch12": {
+    "symbols": [
+      "E_op",
+      "C_n",
+      "sigma_op",
+      "sigma_v",
+      "sigma_h",
+      "sigma_d",
+      "i_op",
+      "S_n",
+      "C_3",
+      "C_2",
+      "sigma_vp",
+      "sigma_vpp",
+      "g_op",
+      "Gamma_rep",
+      "Gamma_vib",
+      "chi_char",
+      "chi_k",
+      "s_N",
+      "s_3",
+      "s_H",
+      "s_Hp",
+      "s_O",
+      "f_i",
+      "b_j",
+      "h_order",
+      "n_C",
+      "a_k",
+      "d_i",
+      "c_ji",
+      "C_mat",
+      "epsilon_n",
+      "R_x",
+      "R_y",
+      "R_z",
+      "alpha_pol",
+      "E_field",
+      "Psi_i",
+      "Psi_f"
+    ],
+    "types": [
+      "symmetry-operation",
+      "representation",
+      "character"
+    ]
   }
 }

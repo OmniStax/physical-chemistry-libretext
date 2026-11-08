@@ -72,22 +72,10 @@
    "slug": "09:_Chemical_Bonding_in_Diatomic_Molecules/9.10:_Molecular_Orbital_Theory_Predicts_that_Molecular_Oxygen_is_Paramagnetic"
   },
   {
-   "id": "9.11",
-   "module": "13463",
-   "title": "Photoelectron Spectra Support the Existence of Molecular Orbitals",
-   "slug": "09:_Chemical_Bonding_in_Diatomic_Molecules/9.11:_Photoelectron_Spectra_Support_the_Existence_of_Molecular_Orbitals"
-  },
-  {
    "id": "9.12",
    "module": "13464",
    "title": "Molecular-Orbital Theory Also Applies to Heteronuclear Diatomic Molecules",
    "slug": "09:_Chemical_Bonding_in_Diatomic_Molecules/9.12:_Molecular-Orbital_Theory_Also_Applies_to_Heteronuclear_Diatomic_Molecules"
-  },
-  {
-   "id": "9.13",
-   "module": "13465",
-   "title": "SCF-LCAO-MO Wavefunctions are Molecular Orbitals formed from a Linear Combination of Atomic Orbitals and Whose Coefficients Are Determined Self-Consistently",
-   "slug": "09:_Chemical_Bonding_in_Diatomic_Molecules/9.13:_SCF-LCAO-MO_Wavefunctions_are_Molecular_Orbitals_formed_from_a_Linear_Combination_of_Atomic_Orbitals_and_Whose_Coefficients_Are_Determined_Self-Consistently"
   },
   {
    "id": "9.14",
@@ -100,12 +88,6 @@
    "module": "13467",
    "title": "Molecular Term Symbols Designate Symmetry",
    "slug": "09:_Chemical_Bonding_in_Diatomic_Molecules/9.15:_Molecular_Term_Symbols_Designate_Symmetry"
-  },
-  {
-   "id": "9.16",
-   "module": "13468",
-   "title": "Most Molecules Have Excited Electronic States",
-   "slug": "09:_Chemical_Bonding_in_Diatomic_Molecules/9.16:_Most_Molecules_Have_Excited_Electronic_States"
   }
  ],
  "variables": [
@@ -884,26 +866,6 @@
    "redefines": true
   },
   {
-   "sym": "dx",
-   "concept": "heisenberg-uncertainty-principle",
-   "type": "length",
-   "meaning": "the uncertainty in the position of a particle",
-   "section": "9.11"
-  },
-  {
-   "sym": "dp",
-   "concept": "heisenberg-uncertainty-principle",
-   "type": "momentum",
-   "meaning": "the uncertainty in the momentum of a particle",
-   "section": "9.11"
-  },
-  {
-   "sym": "hbar",
-   "concept": "reduced-plancks-constant",
-   "meaning": "the reduced Planck constant h/2π",
-   "section": "9.11"
-  },
-  {
    "sym": "chi_A",
    "meaning": "the electronegativity of atom A",
    "section": "9.12"
@@ -957,6 +919,70 @@
    "sym": "m_s2",
    "meaning": "the spin magnetic quantum number of electron 2",
    "section": "9.15"
+  },
+  {
+   "sym": "R",
+   "concept": "internuclear-distance",
+   "meaning": "the distance between the two nuclei",
+   "unit": "pm",
+   "section": "9.5"
+  },
+  {
+   "sym": "R",
+   "concept": "internuclear-distance",
+   "meaning": "the distance between the two nuclei",
+   "unit": "pm",
+   "section": "9.6"
+  },
+  {
+   "sym": "psi",
+   "concept": "molecular-orbital",
+   "meaning": "a molecular orbital, a one-electron wavefunction of the molecule",
+   "section": "9.5"
+  },
+  {
+   "sym": "psi",
+   "concept": "molecular-orbital",
+   "meaning": "a molecular orbital, a one-electron wavefunction of the molecule",
+   "section": "9.7"
+  },
+  {
+   "sym": "psi",
+   "concept": "molecular-orbital",
+   "meaning": "a molecular orbital, a one-electron wavefunction of the molecule",
+   "section": "9.15"
+  },
+  {
+   "sym": "sigma_1s",
+   "concept": "bonding-molecular-orbital",
+   "meaning": "the bonding σ molecular orbital formed from two 1s orbitals",
+   "section": "9.8"
+  },
+  {
+   "sym": "sigma_1s_st",
+   "concept": "antibonding-molecular-orbital",
+   "meaning": "the antibonding σ* molecular orbital formed from two 1s orbitals",
+   "section": "9.8"
+  },
+  {
+   "sym": "dE",
+   "concept": "h2plus-energy-curve",
+   "meaning": "the shift of a molecular orbital from the 1s level: ΔE₊ for σ1s, ΔE₋ for σ*1s",
+   "unit": "E_h",
+   "section": "9.8"
+  },
+  {
+   "sym": "E",
+   "type": "energy",
+   "meaning": "the energy of the helium dimer's bound level, measured from two separated atoms",
+   "unit": "mK",
+   "section": "9.8"
+  },
+  {
+   "sym": "E",
+   "type": "energy",
+   "meaning": "the energy of a molecular orbital, a root of the two-orbital secular determinant",
+   "section": "9.12"
   }
  ]
 }

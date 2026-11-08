@@ -23,27 +23,37 @@ const deg = (c) => Math.acos(Math.max(-1, Math.min(1, c))) * 180 / Math.PI;
    115.4 deg for water (the second 10.2.4). Bonding hybrids in the xz plane
    about +z, lone pairs in the yz plane about -z; the four are orthonormal at
    every setting (checked: s_b s_l + ... cos = 0). Orbitals hydrogen-like
-   2s and 2p with Z = 4.45 (Clementi's effective charge for O 2p), so
-   chi ~ e^(-Zr/2)[sqrt(s)(Zr - 2) + sqrt(1 - s) Z (x . n)]; r in a0, box
+   Slater 2s and 2p sharing Slater's effective charge for oxygen, Z = 4.55
+   (zeta = Z/2), so chi ~ r e^(-Zr/2)[sqrt(s/3) + sqrt(1 - s) cos(theta_n)]; r in a0, box
    +-2.4 a0; the H atoms at the measured 0.9584 A = 1.811 a0 along the
    bonding hybrids. Orbit free, no buttons; flat without WebGL.
 ===================================================================== */
 (function () {
   const d = F.sim(root, 'sim-water');
-  const Z = 4.45, B = 2.4, ROH = 1.811, NC = 160000, MAXP = 2600;
+  const Z = 4.55, B = 2.4, ROH = 1.811, NC = 40000, MAXP = 2200;
   const S = F.space3d(d, { box: [[-B, B], [-B, B], [-B, B]], h: 600, turn: -0.9, tilt: 0.35, fit: 2.6, pitch: [-85 * Math.PI / 180, 85 * Math.PI / 180], spin: 'off', zoom: false });
   const Sb = ctl(d.controls, { label: '\\text{s character of O–H hybrids}', cls: '', key: 's', min: 0, max: 0.5, step: 0.01, value: 0.2, unit: '', fmt: pct,
     specials: [{ at: 0, label: 'pure p, 90°' }, { at: 0.2, label: 'water, 104.5°' }, { at: 0.25, label: 'sp³, 109.5°' }, { at: 0.5, label: 'sp, 180°' }] });
-  const rnd = rng(2027), cx = new Float32Array(NC), cy = new Float32Array(NC), cz = new Float32Array(NC), cu = new Float32Array(NC);
-  for (let i = 0; i < NC; i++) { cx[i] = (2 * rnd() - 1) * B; cy[i] = (2 * rnd() - 1) * B; cz[i] = (2 * rnd() - 1) * B; cu[i] = rnd(); }
-  const amp = (s, i) => { const r = Math.hypot(cx[i], cy[i], cz[i]); return Math.exp(-Z * r / 2) * (Math.sqrt(s) * (Z * r - 2) + Math.sqrt(1 - s) * Z * cz[i]); };
+  /* candidates in the hybrid's own frame (n = +z): r from a gamma law of shape 5 and rate Z, so their
+     density per volume is r^2 e^(-Z r), the radial part of a Slater 2s or 2p squared; the direction uniform.
+     The hybrid's density over that is its angular bracket squared, at most (sqrt(s/3) + sqrt(1 - s))^2, so
+     each candidate is kept against its own fixed threshold and the cloud morphs as s moves */
+  const rnd = rng(2027), cx = new Float32Array(NC), cy = new Float32Array(NC), cz = new Float32Array(NC), cu = new Float32Array(NC), cr = new Float32Array(NC);
+  for (let i = 0; i < NC; i++) {
+    let r = 0; for (let k = 0; k < 5; k++) r -= Math.log(1 - rnd()); r /= Z;
+    const zc = 2 * rnd() - 1, ph = 2 * Math.PI * rnd(), sc = Math.sqrt(1 - zc * zc);
+    cx[i] = r * sc * Math.cos(ph); cy[i] = r * sc * Math.sin(ph); cz[i] = r * zc; cr[i] = r; cu[i] = rnd();
+  }
+  const amp = (s, i) => Math.sqrt(s / 3) + Math.sqrt(1 - s) * cz[i] / cr[i];
+  /* only where the density is at least CUT of its peak, so each cloud shows the orbital's own lobes */
+  const CUT = 0.12;
   const memo = new Map();
   function cloud(s) {
     const key = s.toFixed(3); if (memo.has(key)) return memo.get(key);
-    const a = new Float32Array(NC); let mx = 0;
-    for (let i = 0; i < NC; i++) { const v = amp(s, i); a[i] = v; if (v * v > mx) mx = v * v; }
+    const mx = (Math.sqrt(s / 3) + Math.sqrt(1 - s)) ** 2, a = new Float32Array(NC), w = new Float32Array(NC);
+    for (let i = 0; i < NC; i++) { const v = amp(s, i); a[i] = v; w[i] = v * v; }
     const out = [];
-    for (let i = 0; i < NC && out.length < MAXP; i++) if (cu[i] * mx < a[i] * a[i]) out.push([cx[i], cy[i], cz[i], a[i] >= 0 ? 1 : -1]);
+    for (let i = 0; i < NC && out.length < MAXP; i++) if (cr[i] < B && cu[i] * mx < w[i] && w[i] * (cr[i] * Math.exp(1 - (Z / 2) * cr[i]) * (Z / 2)) ** 2 > CUT * mx) out.push([cx[i], cy[i], cz[i], a[i] >= 0 ? 1 : -1]);
     if (memo.size > 80) memo.clear();
     memo.set(key, out); return out;
   }
@@ -58,16 +68,17 @@ const deg = (c) => Math.acos(Math.max(-1, Math.min(1, c))) * 180 / Math.PI;
     const sb = Math.min(0.5, Math.max(0, Sb.v)), sl = 0.5 - sb;
     const g2b = sb / (1 - sb), g2l = sl / (1 - sl), thb = deg(-g2b), thl = deg(-g2l);
     const cw = C('wavefunction'), up = cw, down = otherSign(cw);
-    const key = [sb.toFixed(3), up, down, PAL.ink].join('|');
+    const key = [sb.toFixed(3), up, down, PAL.ink, PAL.panel].join('|');
     if (key !== last) {
       last = key;
       const hb = thb * Math.PI / 360, hl = thl * Math.PI / 360;
       const bond = cloud(sb), lone = cloud(sl);
-      const lay = (pts, t, f, what) => { const R = onto(t, f), plus = [], minus = []; for (const p of pts) (p[3] > 0 ? plus : minus).push(R(p));
-        return [{ k: 'points', pts: plus, color: up, r: 2.6, name: `${what}, where it is positive` }, { k: 'points', pts: minus, color: down, r: 2.6, name: `${what}, where it is negative` }]; };
+      const lay = (pts, t, f, what, u, dn) => { const R = onto(t, f), plus = [], minus = []; for (const p of pts) (p[3] > 0 ? plus : minus).push(R(p));
+        return [{ k: 'points', pts: plus, color: u, r: 2.4, name: `${what}, where it is positive` }, { k: 'points', pts: minus, color: dn, r: 2.4, name: `${what}, where it is negative` }]; };
+      const fu = F.mixColor(PAL.ink, PAL.panel, 0.5), fd = F.mixColor(PAL.ink, PAL.panel, 0.72);
       S.set('axes', F.space.axes([[-B, B], [-B, B], [-B, B]], {}));
-      S.set('bonds', [...lay(bond, hb, 0, `an O–H bonding hybrid, ${pct(sb)} s`), ...lay(bond, -hb, 0, `an O–H bonding hybrid, ${pct(sb)} s`)]);
-      S.set('lone', [...lay(lone, Math.PI - hl, Math.PI / 2, `a lone-pair hybrid, ${pct(sl)} s`), ...lay(lone, Math.PI + hl, Math.PI / 2, `a lone-pair hybrid, ${pct(sl)} s`)]);
+      S.set('bonds', [...lay(bond, hb, 0, `an O–H bonding hybrid, ${pct(sb)} s`, up, down), ...lay(bond, -hb, 0, `an O–H bonding hybrid, ${pct(sb)} s`, up, down)]);
+      S.set('lone', [...lay(lone, Math.PI - hl, Math.PI / 2, `a lone-pair hybrid, ${pct(sl)} s`, fu, fd), ...lay(lone, Math.PI + hl, Math.PI / 2, `a lone-pair hybrid, ${pct(sl)} s`, fu, fd)]);
       const H = (sg) => [sg * ROH * Math.sin(hb), 0, ROH * Math.cos(hb)];
       S.set('atoms', [
         { k: 'points', pts: [[0, 0, 0]], color: F.el('O'), r: 9, name: 'the oxygen nucleus' },
@@ -78,8 +89,9 @@ const deg = (c) => Math.acos(Math.max(-1, Math.min(1, c))) * 180 / Math.PI;
     S.headline(`With ${pct(sb)} s in each O–H hybrid the bond angle is ${fmt(thb, 1)}°, and the lone pairs, ${pct(sl)} s, are ${fmt(thl, 1)}° apart.`);
     const { ctx, W } = begin(leg);
     F.legend(ctx, { l: 0, t: 0, r: W, b: 56 }, [
-      { s: '$\\kchi > 0$', color: up, kind: 'dot' },
+      { s: 'O–H hybrid, $\\kchi > 0$', color: up, kind: 'dot' },
       { s: '$\\kchi < 0$', color: down, kind: 'dot' },
+      { s: 'lone pairs', color: F.mixColor(PAL.ink, PAL.panel, 0.5), kind: 'dot' },
       { s: 'O', color: F.el('O'), kind: 'dot' },
       { s: 'H', color: F.el('H'), kind: 'dot' },
     ], { corner: 'top', panel: false, row: true });

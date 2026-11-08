@@ -1,0 +1,767 @@
+{
+ "id": "12",
+ "dir": "ch12",
+ "title": "Group Theory - The Exploitation of Symmetry",
+ "intro": {
+  "module": "11807",
+  "slug": "12:_Group_Theory_-_The_Exploitation_of_Symmetry"
+ },
+ "summary": {
+  "module": "550567",
+  "slug": "12:_Group_Theory_-_The_Exploitation_of_Symmetry/12.S:_Group_Theory_-_The_Exploitation_of_Symmetry_(Summary)"
+ },
+ "sections": [
+  {
+   "id": "12.1",
+   "module": "13484",
+   "title": "The Exploitation of Symmetry Can Help Simplify Numerical Calculations",
+   "slug": "12:_Group_Theory_-_The_Exploitation_of_Symmetry/12.01:_The_Exploitation_of_Symmetry_Can_Help_Simplify_Numerical_Calculations"
+  },
+  {
+   "id": "12.2",
+   "module": "13485",
+   "title": "Symmetry Elements and Operations Define the Point Groups",
+   "slug": "12:_Group_Theory_-_The_Exploitation_of_Symmetry/12.02:_Symmetry_Elements_and_Operations_Define_the_Point_Groups"
+  },
+  {
+   "id": "12.3",
+   "module": "13486",
+   "title": "Symmetry Operations Define Groups",
+   "slug": "12:_Group_Theory_-_The_Exploitation_of_Symmetry/12.03:_Symmetry_Operations_Define_Groups"
+  },
+  {
+   "id": "12.4",
+   "module": "13487",
+   "title": "Symmetry Operations as Matrices",
+   "slug": "12:_Group_Theory_-_The_Exploitation_of_Symmetry/12.04:_Symmetry_Operations_as_Matrices"
+  },
+  {
+   "id": "12.5",
+   "module": "13488",
+   "title": "Molecules can be Represented by Reducible Representations",
+   "slug": "12:_Group_Theory_-_The_Exploitation_of_Symmetry/12.05:_Molecules_can_be_Represented_by_Reducible_Representations"
+  },
+  {
+   "id": "12.6",
+   "module": "13489",
+   "title": "Character Tables Summarize the Properties of a Point Group",
+   "slug": "12:_Group_Theory_-_The_Exploitation_of_Symmetry/12.06:_Character_Tables_Summarize_the_Properties_of_a_Point_Group"
+  },
+  {
+   "id": "12.7",
+   "module": "13490",
+   "title": "Characters of Irreducible Representations",
+   "slug": "12:_Group_Theory_-_The_Exploitation_of_Symmetry/12.07:_Characters_of_Irreducible_Representations"
+  },
+  {
+   "id": "12.8",
+   "module": "13491",
+   "title": "Using Symmetry to Solve Secular Determinants",
+   "slug": "12:_Group_Theory_-_The_Exploitation_of_Symmetry/12.08:_Using_Symmetry_to_Solve_Secular_Determinants"
+  },
+  {
+   "id": "12.10",
+   "module": "433871",
+   "title": "Molecular Motions of a Molecule can be Represented by a Reducible Reperesentation",
+   "slug": "12:_Group_Theory_-_The_Exploitation_of_Symmetry/12.10:_Molecular_Motions_of_a_Molecule_can_be_Represented_by_a_Reducible_Reperesentation"
+  },
+  {
+   "id": "12.11",
+   "module": "433848",
+   "title": "Reducible Representations are Comprised of Irreducible Representations",
+   "slug": "12:_Group_Theory_-_The_Exploitation_of_Symmetry/12.11:_Reducible_Representations_are_Comprised_of_Irreducible_Representations"
+  },
+  {
+   "id": "12.12",
+   "module": "433954",
+   "title": "Normal Modes of Vibrations Describe how Molecules Vibrate",
+   "slug": "12:_Group_Theory_-_The_Exploitation_of_Symmetry/12.12:_Normal_Modes_of_Vibrations_Describe_how_Molecules_Vibrate"
+  },
+  {
+   "id": "12.13",
+   "module": "433991",
+   "title": "Symmetry of Vibrations Describes their Spectroscopic Behavior",
+   "slug": "12:_Group_Theory_-_The_Exploitation_of_Symmetry/12.13:_Symmetry_of_Vibrations_Describes_their_Spectroscopic_Behavior"
+  },
+  {
+   "id": "12.14",
+   "module": "433984",
+   "title": "Symmetry Adapted Linear Combinations are the Sum over all Basis functions",
+   "slug": "12:_Group_Theory_-_The_Exploitation_of_Symmetry/12.14:_Symmetry_Adapted_Linear_Combinations_are_the_Sum_over_all_Basis_functions"
+  },
+  {
+   "id": "12.15",
+   "module": "433985",
+   "title": "Molecular Orbitals can be Constructed on the Basis of Symmetry",
+   "slug": "12:_Group_Theory_-_The_Exploitation_of_Symmetry/12.15:_Molecular_Orbitals_can_be_Constructed_on_the_Basis_of_Symmetry"
+  }
+ ],
+ "variables": [
+  {
+   "sym": "x",
+   "concept": "huckel-x",
+   "meaning": "the Hückel variable (α − E)/β of benzene's secular determinant",
+   "section": "12.1"
+  },
+  {
+   "sym": "H_ij",
+   "concept": "hamiltonian-matrix-element",
+   "meaning": "the Hamiltonian matrix element ⟨φᵢ|Ĥ|φⱼ⟩ of benzene's basis functions",
+   "section": "12.1"
+  },
+  {
+   "sym": "S_ij",
+   "concept": "overlap-integral",
+   "meaning": "the overlap integral ⟨φᵢ|φⱼ⟩ of benzene's basis functions",
+   "section": "12.1"
+  },
+  {
+   "sym": "phi_i",
+   "type": "wavefunction",
+   "meaning": "the ith function of the new basis, a combination of benzene's 2p_z orbitals",
+   "section": "12.1"
+  },
+  {
+   "sym": "E",
+   "type": "energy",
+   "meaning": "the energy in the secular determinant",
+   "section": "12.1"
+  },
+  {
+   "sym": "H_op",
+   "concept": "hamiltonian-operator",
+   "meaning": "the Hamiltonian operator",
+   "section": "12.1"
+  },
+  {
+   "sym": "E_op",
+   "concept": "identity-operation",
+   "meaning": "the identity operation, doing nothing",
+   "section": "12.2"
+  },
+  {
+   "sym": "C_n",
+   "concept": "proper-rotation",
+   "meaning": "rotation by 360°/n about an n-fold axis",
+   "section": "12.2"
+  },
+  {
+   "sym": "C_2",
+   "concept": "proper-rotation",
+   "meaning": "rotation by 180° about a two-fold axis",
+   "section": "12.2"
+  },
+  {
+   "sym": "C_3",
+   "concept": "proper-rotation",
+   "meaning": "rotation by 120° about a three-fold axis",
+   "section": "12.2"
+  },
+  {
+   "sym": "sigma_op",
+   "concept": "reflection-operation",
+   "meaning": "reflection in a mirror plane",
+   "section": "12.2"
+  },
+  {
+   "sym": "sigma_v",
+   "concept": "reflection-operation",
+   "meaning": "reflection in a vertical mirror plane, one containing the principal axis",
+   "section": "12.2"
+  },
+  {
+   "sym": "sigma_h",
+   "concept": "reflection-operation",
+   "meaning": "reflection in the horizontal mirror plane, perpendicular to the principal axis",
+   "section": "12.2"
+  },
+  {
+   "sym": "sigma_d",
+   "concept": "reflection-operation",
+   "meaning": "reflection in a dihedral mirror plane, bisecting two C₂ axes",
+   "section": "12.2"
+  },
+  {
+   "sym": "i_op",
+   "concept": "inversion-operation",
+   "meaning": "inversion through the centre of symmetry",
+   "section": "12.2"
+  },
+  {
+   "sym": "S_n",
+   "concept": "improper-rotation",
+   "meaning": "the improper rotation: C_n followed by reflection in the plane perpendicular to the axis",
+   "section": "12.2"
+  },
+  {
+   "sym": "n",
+   "meaning": "the order of a rotation axis: C_n turns by 360°/n",
+   "section": "12.2"
+  },
+  {
+   "sym": "g_op",
+   "concept": "symmetry-operation",
+   "meaning": "an element of a group, here a symmetry operation",
+   "section": "12.3"
+  },
+  {
+   "sym": "h_order",
+   "concept": "group-order",
+   "meaning": "the order of the group, its number of elements",
+   "section": "12.3"
+  },
+  {
+   "sym": "E_op",
+   "concept": "identity-operation",
+   "meaning": "the identity element of the group",
+   "section": "12.3"
+  },
+  {
+   "sym": "C_3",
+   "concept": "proper-rotation",
+   "meaning": "the rotation by 120° about NH₃'s three-fold axis, C₃⁺ anticlockwise and C₃⁻ clockwise",
+   "section": "12.3"
+  },
+  {
+   "sym": "sigma_v",
+   "concept": "reflection-operation",
+   "meaning": "reflection in the first of NH₃'s three vertical mirror planes",
+   "section": "12.3"
+  },
+  {
+   "sym": "sigma_vp",
+   "concept": "reflection-operation",
+   "meaning": "reflection in the second of NH₃'s vertical mirror planes",
+   "section": "12.3"
+  },
+  {
+   "sym": "sigma_vpp",
+   "concept": "reflection-operation",
+   "meaning": "reflection in the third of NH₃'s vertical mirror planes",
+   "section": "12.3"
+  },
+  {
+   "sym": "Gamma_rep",
+   "concept": "matrix-representation",
+   "meaning": "the matrix representative Γ(g) of an operation, or the whole representation",
+   "section": "12.4"
+  },
+  {
+   "sym": "C_n",
+   "concept": "proper-rotation",
+   "meaning": "rotation by 2π/n about the z axis",
+   "section": "12.4"
+  },
+  {
+   "sym": "C_2",
+   "concept": "proper-rotation",
+   "meaning": "rotation by 180° about the z axis",
+   "section": "12.4"
+  },
+  {
+   "sym": "sigma_v",
+   "concept": "reflection-operation",
+   "meaning": "reflection in the xz plane (in the allyl radical, the plane of the carbons)",
+   "section": "12.4"
+  },
+  {
+   "sym": "sigma_vp",
+   "concept": "reflection-operation",
+   "meaning": "reflection in the yz plane",
+   "section": "12.4"
+  },
+  {
+   "sym": "i_op",
+   "concept": "inversion-operation",
+   "meaning": "inversion through the origin, printed I",
+   "section": "12.4"
+  },
+  {
+   "sym": "theta",
+   "type": "angle",
+   "meaning": "the angle of a rotation about an axis",
+   "section": "12.4"
+  },
+  {
+   "sym": "x",
+   "type": "length",
+   "meaning": "the x component of the vector u",
+   "section": "12.4",
+   "redefines": true
+  },
+  {
+   "sym": "E_op",
+   "concept": "identity-operation",
+   "meaning": "the identity operation, whose matrix is the unit matrix",
+   "section": "12.4"
+  },
+  {
+   "sym": "Gamma_rep",
+   "concept": "reducible-representation",
+   "meaning": "a matrix representative of C₃ᵥ in NH₃'s valence s basis",
+   "section": "12.5"
+  },
+  {
+   "sym": "s_N",
+   "type": "wavefunction",
+   "meaning": "the valence s orbital of nitrogen",
+   "section": "12.5"
+  },
+  {
+   "sym": "s_1",
+   "type": "wavefunction",
+   "meaning": "the s orbital of hydrogen 1 of NH₃",
+   "section": "12.5"
+  },
+  {
+   "sym": "s_2",
+   "type": "wavefunction",
+   "meaning": "the s orbital of hydrogen 2 of NH₃",
+   "section": "12.5"
+  },
+  {
+   "sym": "s_3",
+   "type": "wavefunction",
+   "meaning": "the s orbital of hydrogen 3 of NH₃",
+   "section": "12.5"
+  },
+  {
+   "sym": "Gamma_rep",
+   "concept": "matrix-representation",
+   "meaning": "the matrix representative Γ(g) in the original basis x",
+   "section": "12.6"
+  },
+  {
+   "sym": "C_mat",
+   "meaning": "the matrix of coefficients relating the new basis to the old",
+   "section": "12.6"
+  },
+  {
+   "sym": "c_ji",
+   "meaning": "the coefficient of the original function xᵢ in the new function x′ⱼ",
+   "section": "12.6"
+  },
+  {
+   "sym": "chi_char",
+   "concept": "character",
+   "meaning": "the character, the trace of a matrix representative",
+   "section": "12.6"
+  },
+  {
+   "sym": "theta",
+   "type": "angle",
+   "meaning": "the angle through which a rotation turns the x and y axes",
+   "section": "12.6"
+  },
+  {
+   "sym": "h_order",
+   "concept": "group-order",
+   "meaning": "the order of the group",
+   "section": "12.6"
+  },
+  {
+   "sym": "d_i",
+   "meaning": "the dimension (degeneracy) of an irreducible representation",
+   "section": "12.7"
+  },
+  {
+   "sym": "epsilon_n",
+   "meaning": "the complex number exp(2πi/n) in which complex characters are written",
+   "section": "12.7"
+  },
+  {
+   "sym": "chi_char",
+   "concept": "character",
+   "meaning": "the character of a representation under an operation R",
+   "section": "12.7"
+  },
+  {
+   "sym": "Gamma_rep",
+   "concept": "direct-product",
+   "meaning": "a representation, here of a direct product",
+   "section": "12.7",
+   "redefines": true
+  },
+  {
+   "sym": "h_order",
+   "concept": "group-order",
+   "meaning": "the order of the group",
+   "section": "12.7"
+  },
+  {
+   "sym": "H_ij",
+   "concept": "hamiltonian-matrix-element",
+   "meaning": "the Hamiltonian matrix element between SALCs i and j",
+   "section": "12.8"
+  },
+  {
+   "sym": "S_ij",
+   "concept": "overlap-integral",
+   "meaning": "the overlap integral between SALCs i and j",
+   "section": "12.8"
+  },
+  {
+   "sym": "c_1",
+   "meaning": "the coefficient of the first SALC in NH₃'s molecular orbital",
+   "section": "12.8"
+  },
+  {
+   "sym": "c_2",
+   "meaning": "the coefficient of the second SALC in NH₃'s molecular orbital",
+   "section": "12.8"
+  },
+  {
+   "sym": "E",
+   "type": "energy",
+   "meaning": "the energy of a molecular orbital",
+   "section": "12.8"
+  },
+  {
+   "sym": "E_pm",
+   "concept": "two-by-two-secular-roots",
+   "meaning": "the energies E₊ and E₋ of the two roots of a 2 × 2 secular determinant",
+   "section": "12.8"
+  },
+  {
+   "sym": "phi_i",
+   "concept": "salc",
+   "meaning": "the ith SALC of NH₃'s valence s orbitals",
+   "section": "12.8",
+   "redefines": true
+  },
+  {
+   "sym": "Psi",
+   "type": "wavefunction",
+   "meaning": "a molecular orbital of NH₃",
+   "section": "12.8"
+  },
+  {
+   "sym": "a_k",
+   "concept": "reduction-formula",
+   "meaning": "the number of times the kth irreducible representation appears in a representation",
+   "section": "12.8"
+  },
+  {
+   "sym": "h_order",
+   "concept": "group-order",
+   "meaning": "the order of the group",
+   "section": "12.8"
+  },
+  {
+   "sym": "n_C",
+   "meaning": "the number of operations in class C",
+   "section": "12.8"
+  },
+  {
+   "sym": "chi_char",
+   "concept": "character",
+   "meaning": "the character of the reducible representation under g",
+   "section": "12.8"
+  },
+  {
+   "sym": "chi_k",
+   "concept": "character",
+   "meaning": "the character of the kth irreducible representation under g",
+   "section": "12.8"
+  },
+  {
+   "sym": "f_i",
+   "type": "wavefunction",
+   "meaning": "the ith function of the basis set, a valence atomic orbital",
+   "section": "12.8"
+  },
+  {
+   "sym": "g_op",
+   "concept": "symmetry-operation",
+   "meaning": "a symmetry operation of the group",
+   "section": "12.8"
+  },
+  {
+   "sym": "s_N",
+   "type": "wavefunction",
+   "meaning": "the valence s orbital of nitrogen",
+   "section": "12.8"
+  },
+  {
+   "sym": "N",
+   "meaning": "the number of atoms in the molecule",
+   "section": "12.10"
+  },
+  {
+   "sym": "chi_char",
+   "concept": "character",
+   "meaning": "the character of a basis under an operation (χ₃N, χ_Trans, χ_Rot, χ_Vib)",
+   "section": "12.10"
+  },
+  {
+   "sym": "C_2",
+   "concept": "proper-rotation",
+   "meaning": "rotation by 180° about water's two-fold axis",
+   "section": "12.10"
+  },
+  {
+   "sym": "sigma_v",
+   "concept": "reflection-operation",
+   "meaning": "reflection in the xz plane, σᵥ(xz)",
+   "section": "12.10"
+  },
+  {
+   "sym": "sigma_vp",
+   "concept": "reflection-operation",
+   "meaning": "reflection in the yz plane, σᵥ′(yz)",
+   "section": "12.10"
+  },
+  {
+   "sym": "E_op",
+   "concept": "identity-operation",
+   "meaning": "the identity operation",
+   "section": "12.10"
+  },
+  {
+   "sym": "R_x",
+   "meaning": "rotation of the molecule about the x axis",
+   "section": "12.10"
+  },
+  {
+   "sym": "R_y",
+   "meaning": "rotation of the molecule about the y axis",
+   "section": "12.10"
+  },
+  {
+   "sym": "R_z",
+   "meaning": "rotation of the molecule about the z axis",
+   "section": "12.10"
+  },
+  {
+   "sym": "h_order",
+   "concept": "group-order",
+   "meaning": "the order of the group, 4 for C₂ᵥ",
+   "section": "12.10"
+  },
+  {
+   "sym": "Gamma_rep",
+   "concept": "reducible-representation",
+   "meaning": "the reducible representation of NH₃'s motions",
+   "section": "12.11",
+   "redefines": true
+  },
+  {
+   "sym": "Gamma_vib",
+   "concept": "vibrational-representation",
+   "meaning": "the representation of the vibrations, Γ − Γ_trans − Γ_rot",
+   "section": "12.11"
+  },
+  {
+   "sym": "h_order",
+   "concept": "group-order",
+   "meaning": "the order of the group, 6 for C₃ᵥ",
+   "section": "12.11"
+  },
+  {
+   "sym": "chi_char",
+   "concept": "character",
+   "meaning": "the character of the reducible representation, printed χ_r",
+   "section": "12.11"
+  },
+  {
+   "sym": "chi_k",
+   "concept": "character",
+   "meaning": "the character of an irreducible representation, printed χᵢ",
+   "section": "12.11"
+  },
+  {
+   "sym": "N",
+   "meaning": "the number of atoms in the molecule",
+   "section": "12.12"
+  },
+  {
+   "sym": "Gamma_rep",
+   "concept": "reducible-representation",
+   "meaning": "a representation of ammonia's motions (Γ_xyz, Γ_total, Γ_translational, Γ_rotational)",
+   "section": "12.12",
+   "redefines": true
+  },
+  {
+   "sym": "Gamma_vib",
+   "concept": "vibrational-representation",
+   "meaning": "the representation of ammonia's vibrations, Γ_vibrational",
+   "section": "12.12"
+  },
+  {
+   "sym": "Psi_i",
+   "type": "wavefunction",
+   "meaning": "the initial state of a transition",
+   "section": "12.13"
+  },
+  {
+   "sym": "Psi_f",
+   "type": "wavefunction",
+   "meaning": "the final state of a transition",
+   "section": "12.13"
+  },
+  {
+   "sym": "mu_hat",
+   "concept": "dipole-moment-operator",
+   "meaning": "the transition moment operator, which couples the two states",
+   "section": "12.13"
+  },
+  {
+   "sym": "mu_d",
+   "concept": "dipole-moment",
+   "meaning": "the dipole moment",
+   "section": "12.13"
+  },
+  {
+   "sym": "alpha_pol",
+   "concept": "polarizability",
+   "meaning": "the polarizability, a constant (in fact a tensor)",
+   "section": "12.13"
+  },
+  {
+   "sym": "E_field",
+   "meaning": "the electric field",
+   "section": "12.13"
+  },
+  {
+   "sym": "q",
+   "concept": "vibrational-coordinate",
+   "meaning": "the vibrational coordinate along which the dipole changes",
+   "section": "12.13"
+  },
+  {
+   "sym": "phi_i",
+   "concept": "salc",
+   "meaning": "the ith SALC",
+   "section": "12.14",
+   "redefines": true
+  },
+  {
+   "sym": "b_j",
+   "meaning": "the jth basis function, a bond stretching vector",
+   "section": "12.14"
+  },
+  {
+   "sym": "c_ij",
+   "meaning": "the coefficient of bⱼ in the ith SALC",
+   "section": "12.14"
+  },
+  {
+   "sym": "N_norm",
+   "meaning": "the normalization constant of a SALC",
+   "section": "12.14"
+  },
+  {
+   "sym": "N",
+   "meaning": "the number of atoms in the molecule",
+   "section": "12.14"
+  },
+  {
+   "sym": "h_order",
+   "concept": "group-order",
+   "meaning": "the order of the point group",
+   "section": "12.14"
+  },
+  {
+   "sym": "a_k",
+   "concept": "reduction-formula",
+   "meaning": "the number of times the irreducible representation appears, printed aᵢ",
+   "section": "12.14"
+  },
+  {
+   "sym": "chi_char",
+   "concept": "character",
+   "meaning": "the character of operation R in the reducible representation, printed X^R",
+   "section": "12.14"
+  },
+  {
+   "sym": "chi_k",
+   "concept": "character",
+   "meaning": "the character of operation R in the irreducible representation, printed Xᵢ^R",
+   "section": "12.14"
+  },
+  {
+   "sym": "n_C",
+   "meaning": "the number of members in the class of R, printed C^R",
+   "section": "12.14"
+  },
+  {
+   "sym": "S_ij",
+   "concept": "overlap-integral",
+   "meaning": "the overlap integral of atomic orbitals φᵢ and φⱼ",
+   "section": "12.15"
+  },
+  {
+   "sym": "phi_i",
+   "concept": "salc",
+   "meaning": "the ith SALC of water's valence orbitals",
+   "section": "12.15"
+  },
+  {
+   "sym": "s_H",
+   "type": "wavefunction",
+   "meaning": "the 1s orbital of the first hydrogen of H₂O",
+   "section": "12.15"
+  },
+  {
+   "sym": "s_Hp",
+   "type": "wavefunction",
+   "meaning": "the 1s orbital of the second hydrogen of H₂O",
+   "section": "12.15"
+  },
+  {
+   "sym": "s_O",
+   "type": "wavefunction",
+   "meaning": "the 2s orbital of oxygen",
+   "section": "12.15"
+  },
+  {
+   "sym": "Psi",
+   "concept": "mo-from-salcs",
+   "meaning": "a molecular orbital built from SALCs of one symmetry species",
+   "section": "12.15",
+   "redefines": true
+  },
+  {
+   "sym": "chi_char",
+   "concept": "character",
+   "meaning": "the character of the representation under g",
+   "section": "12.15"
+  },
+  {
+   "sym": "chi_k",
+   "concept": "character",
+   "meaning": "the character of the kth irreducible representation under g",
+   "section": "12.15"
+  },
+  {
+   "sym": "a_k",
+   "concept": "reduction-formula",
+   "meaning": "the number of times the kth irreducible representation appears",
+   "section": "12.15"
+  },
+  {
+   "sym": "f_i",
+   "type": "wavefunction",
+   "meaning": "the ith valence atomic orbital of the basis",
+   "section": "12.15"
+  },
+  {
+   "sym": "mu_hat",
+   "concept": "dipole-moment-operator",
+   "meaning": "the electric dipole operator",
+   "section": "12.15"
+  },
+  {
+   "sym": "Psi_i",
+   "type": "wavefunction",
+   "meaning": "the initial state",
+   "section": "12.15"
+  },
+  {
+   "sym": "Psi_f",
+   "type": "wavefunction",
+   "meaning": "the final state",
+   "section": "12.15"
+  }
+ ]
+}

@@ -60,7 +60,7 @@ const otherSign = (cw) => { const l = lightOf(cw), far = Math.abs(lightOf(PAL.in
     line(ctx, 160, ya, 440, ya, alpha(PAL.ink, 0.4), 2, [10, 10]);
     text(ctx, 'α', 150, ya, PAL.muted, { size: 24, align: 'right', base: 'middle' });
     /* rows on the right, highest energy at the top */
-    const top = 120, bot = 690, rowH = (bot - top) / n, x0 = 640, x1 = 1300, dx = (x1 - x0) / (n + 1);
+    const top = 120, bot = 690, rowH = (bot - top) / n, x0 = 640, x1 = 1250, dx = (x1 - x0) / (n + 1);
     hits.length = 0;
     lv.forEach((l, i) => {
       const y = Y(l.m), yr = top + (n - 1 - i + 0.5) * rowH;
