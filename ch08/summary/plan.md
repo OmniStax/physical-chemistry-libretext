@@ -5,7 +5,7 @@ Untagged page, so the book's CC BY-NC-SA 4.0; credit Kyle Crabtree (tag).
 
 ## Blocks
 
-1. `multielectron-atoms` **Multielectron atoms** (ours; the exploration proposed "Multielectron Atoms in Brief", trimmed of the summary label): the seven bullets. Bullets link the block that works them: `#8.3-hartree-approximation`, `#8.4-spin-eigenstates`, `#8.5-pauli-exclusion`, `#8.6-determinantal-wavefunctions`, `#8.8-constructing-term-symbols`, `#8.10-hunds-rules`.
+1. `multielectron-atoms` **Multielectron atoms** (ours; the exploration proposed "Multielectron Atoms in Brief", trimmed of the summary label): the seven bullets. Bullets link the block that works them: `#8.3-scf` (the shielding note and Figure 8.3.2; the chapter pass moved it from `#8.3-hartree-approximation`, which never mentions shielding), `#8.4-spin-eigenstates`, `#8.5-pauli-exclusion`, `#8.6-determinantal-wavefunctions`, `#8.8-constructing-term-symbols`, `#8.10-hunds-rules`.
 
 ## Figures, exercises, derivations
 
