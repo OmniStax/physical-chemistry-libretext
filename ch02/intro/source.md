@@ -1,0 +1,4 @@
+<!-- LibreTexts page 11779: Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Physical_Chemistry_(LibreTexts)/02:_The_Classical_Wave_Equation -->
+# The Classical Wave Equation
+
+The aim of this section is to give a fairly brief review of waves in various shaped elastic media—beginning with a taut string, then going on to an elastic sheet, a drumhead, first of rectangular shape then circular, and finally considering elastic waves on a spherical surface, like a balloon. The reason we look at this material here is that these are “real waves”, hopefully not too difficult to think about, and yet mathematically they are the solutions of the same wave equation the Schrödinger wavefunction obeys in various contexts, so should be helpful in visualizing solutions to that equation, in particular for the hydrogen atom.

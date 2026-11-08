@@ -16,9 +16,12 @@ answers and Bloom levels). What it does:
   draft-only field the builder turns into `notes`); a `## Conceptual
   Questions` or `## Problems` list to exercises of kind question.
 - every other `##` opens a `<section id>` block with the book's header.
-- `$$ … $$ {eq:label}` becomes `$$ … \\tag{N.M.K} $$`, numbering the labelled
-  displays of the page in order, and `[ref:eq:label]` becomes that number;
-  `align`/`align*` become `aligned` so KaTeX can tag them.
+- `$$ … $$ {eq:label} n=K` becomes `$$ … \\tag{N.M.K} $$` with the
+  converter's K (MathJax's count: every display without \\nonumber, and each
+  row of an unstarred align), and `[ref:eq:label]` becomes that number;
+  `align`/`align*` become `aligned` so KaTeX can tag them, except an align
+  with several numbered rows, which keeps `align` with a `\\tag` per row.
+- a figure of panels keeps each panel's caption in the row's `_panels`.
 - `{term:…}` becomes `<strong>`, `*…*` `<em>`.
 - a FIGURE becomes a `photo` figure with its number, image and caption; an
   IMAGE a `figure` row with no number; the builder replaces those it turns
@@ -86,15 +89,29 @@ class Drafter:
     def refs(self, s):
         return re.sub(r"\[ref:eq:([^\]]+)\]", lambda m: self.eqnum.get(m.group(1), m.group(1)), s)
 
+    MARK = re.compile(r"(?:\{eq:([^}]+)\} )?n=(\d+)")
+
     def display(self, line):
-        m = re.match(r"\$\$ (.*) \$\$(?: \{eq:([^}]+)\})?(?: n=\d+)?\s*$", line)
-        tex, lab = m.group(1), m.group(2)
-        tex = re.sub(r"\\begin\{align\*?\}", r"\\begin{aligned}", tex)
-        tex = re.sub(r"\\end\{align\*?\}", r"\\end{aligned}", tex)
+        m = re.match(r"\$\$ (.*) \$\$((?: (?:\{eq:[^}]+\} )?n=\d+)*)\s*$", line)
+        tex, marks = m.group(1), self.MARK.findall(m.group(2))
         tex = self.refs(tex)
         tex = re.sub(r"\\ce\{([^{}]*)\}", r"\\mathrm{\1}", tex)  # the app's KaTeX has no mhchem
-        if lab:
-            tex += f" \\tag{{{self.eqnum[lab]}}}"
+        nums = [f"{self.sec}.{n}" for lab, n in marks]
+        if len(nums) > 1 and re.search(r"\\begin\{align\}", tex):
+            # several numbered rows: KaTeX's align takes a \tag per row and keeps \nonumber
+            body = re.search(r"\\begin\{align\}(.*)\\end\{align\}", tex, re.S)
+            rows = re.split(r"(\\\\(?:\[[^\]]*\])?)", body.group(1))
+            it = iter(nums)
+            for k in range(0, len(rows), 2):
+                if rows[k].strip() and "\\nonumber" not in rows[k] and "\\notag" not in rows[k]:
+                    rows[k] = rows[k].rstrip() + f" \\tag{{{next(it, '')}}} "
+            tex = tex[:body.start(1)] + "".join(rows) + tex[body.end(1):]
+            return f"$$ {tex} $$"
+        tex = tex.replace("\\nonumber", "").replace("\\notag", "")
+        tex = re.sub(r"\\begin\{align\*?\}", r"\\begin{aligned}", tex)
+        tex = re.sub(r"\\end\{align\*?\}", r"\\end{aligned}", tex)
+        if nums:
+            tex += f" \\tag{{{nums[0]}}}"
         return f"$$ {tex} $$"
 
     # ---- blocks ----
@@ -140,13 +157,13 @@ class Drafter:
                 alpha = bool(re.match(r"^[a-z]\. ", l))
                 while j < len(lines) and (re.match(r"^(-|\d+\.|[a-z]\.) ", lines[j]) or lines[j].startswith("   ")):
                     if lines[j].startswith("   "):
-                        items[-1] += " " + lines[j].strip()
+                        items[-1].append(lines[j].strip())
                     else:
-                        items.append(re.sub(r"^(-|\d+\.|[a-z]\.) ", "", lines[j]))
+                        items.append([re.sub(r"^(-|\d+\.|[a-z]\.) ", "", lines[j])])
                     j += 1
                 tag = "ol" if ordered else "ul"
                 attr = ' type="a"' if alpha else ""
-                out.append(f"<{tag}{attr}>" + "".join(f"<li>{self.inline(x)}</li>" for x in items) + f"</{tag}>")
+                out.append(f"<{tag}{attr}>" + "".join(f"<li>{self.item(x)}</li>" for x in items) + f"</{tag}>")
                 i = j
             elif l.startswith("**") and l.rstrip().endswith("**"):
                 out.append(f"<h4>{self.inline(l.strip()[2:-2])}</h4>")
@@ -159,6 +176,22 @@ class Drafter:
                 i += 1
         return out
 
+    def item(self, ls):
+        """A list item: one run of prose, or paragraphs around a display it holds."""
+        if not any(x.startswith("$$") for x in ls):
+            return self.inline(" ".join(x for x in ls if x))
+        paras, cur = [], []
+        for x in ls + [""]:
+            if x.startswith("$$") or not x:
+                if cur:
+                    paras.append(" ".join(cur))
+                    cur = []
+                if x:
+                    paras.append(x)
+            else:
+                cur.append(x)
+        return "\n".join(self.blocks(paras))
+
     def figure(self, ls):
         head = ls[0]
         src = re.search(r"src=media/(\S+)", head)
@@ -166,12 +199,14 @@ class Drafter:
         alt = next((x[7:] for x in ls if x.startswith("> alt: ")), "")
         cap = next((x[11:] for x in ls if x.startswith("> caption: ")), "")
         parts = [re.search(r"src=media/(\S+)", x).group(1) for x in ls[1:] if x.startswith("> part ")]
+        panels = [x[9:] for x in ls if x.startswith("> panel: ")]
         num = re.search(r"\{fig:([^}]+)\}", head)
         if num:
             n = num.group(1)
             fid = self.uid("fig-" + n.replace(".", "-"))
             self.figures.append({"id": fid, "kind": "photo", "number": n, "draws": [],
-                                 "_src": [src] + [f"/media/{self.chdir}/{p}" for p in parts], "_caption": cap})
+                                 "_src": [src] + [f"/media/{self.chdir}/{p}" for p in parts], "_caption": cap,
+                                 **({"_panels": panels} if panels else {})})
             imgs = "".join(f'<img src="{s}" alt="{html.escape(alt)}">' for s in [src] + [f"/media/{self.chdir}/{p}" for p in parts])
             return (f'<figure class="photo" id="{fid}" data-figure="{n}">\n  {imgs}\n'
                     f'  <figcaption><span class="eyebrow">Figure {n}</span><span>{self.inline(cap)}</span></figcaption>\n</figure>')
@@ -250,12 +285,13 @@ class Drafter:
         lines = md.split("\n")
         lines = [l for l in lines if not l.startswith("<!--")]
         # number labelled displays in page order
-        k = 0
+        # the converter's n=K is MathJax's count (tags: all, a row of an align each)
         for l in lines:
-            m = re.match(r"\$\$ .* \$\$ \{eq:([^}]+)\}", l)
-            if m and m.group(1) not in self.eqnum:
-                k += 1
-                self.eqnum[m.group(1)] = f"{self.sec}.{k}"
+            l = l.strip()
+            if l.startswith("$$"):
+                for lab, n in self.MARK.findall(l.rsplit("$$", 1)[-1]):
+                    if lab and lab not in self.eqnum:
+                        self.eqnum[lab] = f"{self.sec}.{n}"
         self.figures, self.exercises = [], []
         title = lines[0][2:] if lines and lines[0].startswith("# ") else ""
         chunks, cur = [], ("", [])

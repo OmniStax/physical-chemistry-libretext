@@ -59,5 +59,42 @@
       "charge",
       "force"
     ]
+  },
+  "ch02": {
+    "symbols": [
+      "u",
+      "y",
+      "x",
+      "z",
+      "t",
+      "A_o",
+      "A_nm",
+      "k",
+      "k_vec",
+      "omega",
+      "omega_n",
+      "omega_nm",
+      "nu_n",
+      "u_n",
+      "L",
+      "a",
+      "b_m",
+      "p_n",
+      "phi",
+      "K",
+      "X",
+      "T_t",
+      "alpha",
+      "n_x",
+      "n_y",
+      "theta",
+      "J_m",
+      "lambda_mn",
+      "m_q"
+    ],
+    "types": [
+      "displacement",
+      "time"
+    ]
   }
 }

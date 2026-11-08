@@ -19,9 +19,13 @@ The book prints no `<h2>`; root rule 3 gives four blocks:
 
 ## Figures
 
-- `sim-de-broglie` · Sim · de-broglie-wavelength · variation by slider: the reader picks an electron, proton, neutron or baseball and moves its speed over many decades, seeing the wavelength beside a row of atoms 0.1 nm apart and on a logarithmic ruler of lengths (nucleus, atom, visible light, baseball), which no figure of the book shows · arrows: none · still: λ = h/mv has no time in it · particle choice (electron, proton, neutron, baseball); log10 v slider (velocity), its range per particle, defaults the book's: electron at 1000 eV (Example 1.6.1), proton at the same speed (Exercise 1.6.2), neutron at Example 1.7.1's 0.18 nm, baseball at 44.7 m/s (Exercise 1.6.1) · headline: v, λ and λ against the atom spacing · scene above the ruler · 2D. Conventions: `e-`, `p+`, `n0`. Atoms, nucleus, light and baseball marks carry hover names; a wavelength under 2 pm is shaded as a band with its count of waves per 0.1 nm.
+- `sim-de-broglie` · Sim · de-broglie-wavelength · variation by slider: the reader picks an electron, proton, neutron or baseball and moves its speed over many decades, seeing the matter wave drawn to scale over a row of atoms 0.1 nm apart, which no figure of the book shows · arrows: none · still: λ = h/mv has no time in it · particle choice (electron, proton, neutron, baseball); speed slider (velocity) over the power of ten, its value shown as the speed in m/s, range per particle, defaults the book's: electron at 1000 eV (Example 1.6.1), proton at the same speed (Exercise 1.6.2), neutron at Example 1.7.1's 0.18 nm, baseball at 44.7 m/s (Exercise 1.6.1) · headline: the wave against the atoms, biggest and central ("an electron at v has λ = 3.88 × 10⁻¹¹ m, 0.39 times the gap between atoms") · a slim log ruler below places λ among nucleus, atom, light and baseball · 2D. Atoms, ruler marks and the wave carry hover names; a wavelength under 4 pm is shaded as a band with its count of waves per 0.1 nm.
 
 Extra simulations: none proposed.
+
+## Rework (rule 14, 2026-11-08)
+
+- `sim-de-broglie` before: a four-sentence caption, a particle dot and its label off to the left, a full-weight ruler with a footnote title competing with the wave, and a slider reading log₁₀(v/m s⁻¹) = 7.27 that the reader must decode. After: the wave over the atoms fills the frame, the ruler is a thin strip with four landmarks, the speed reads in m/s, the caption is two sentences.
 
 ## Exercises
 

@@ -37,11 +37,6 @@
     "wavelength",
     "velocity"
    ],
-   "conventions": [
-    "e-",
-    "p+",
-    "n0"
-   ],
    "ai": [
     {
      "model": "claude-opus-5-5",

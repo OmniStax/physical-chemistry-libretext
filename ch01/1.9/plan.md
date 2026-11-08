@@ -18,11 +18,16 @@ The opening has no header and gets one; the book's three `<h2>` headers are kept
 
 ## Figures
 
-- `sim-electron-buildup` · Figure 1.9.1 · quantum-probability · flow by animation: electrons land one at a time and the counts grow into the predicted distribution, which the three still photographs only sample · arrows: kinematic (the electron in flight) · moving: the clock is the number of electrons · choice which slit (not watched / watched → single-slit pattern, the text's catch), v slider 1.5–4 × 10⁶ m/s · headline: count and what shows · scene + histogram beside · 2D. Convention e⁻.
-- `sim-wave-packet` · Figure 1.9.2 · wave-packet, heisenberg-uncertainty-principle · variation: the Δx slider narrows the packet and widens its momentum distribution, Δp = ħ/2Δx, with seven component waves faint behind · arrows: none · still (the book's GIF moves, but the idea has no time in it) · Δx 25–600 pm, detent 150 pm (Example 1.9.1: Δv = 3.9 × 10⁵ m/s on load) · headline: Δx, Δp, Δv · packet above, momenta below · 2D.
+- `sim-electron-buildup` · Figure 1.9.1 · quantum-probability · flow by animation: electrons land one at a time and the counts grow into the predicted distribution, which the three still photographs only sample · arrows: none (the dots appear where they land; the apparatus is 1.7's figure) · moving: the clock is the number of electrons · choice which slit (not watched / watched → single-slit pattern, the text's catch), v slider 1.5–4 × 10⁶ m/s · headline: the screen face on, as wide as the figure, where single dots become bands; the line gives the count and what shows · histogram below on the same x, with the smooth predicted curve, as the book sets its curve under the photographs · 2D. Convention e⁻.
+- `sim-wave-packet` · Figure 1.9.2 · wave-packet, heisenberg-uncertainty-principle · variation: the Δx slider narrows the packet and widens its momentum distribution, Δp = ħ/2Δx · arrows: none · still (the book's GIF moves, but the idea has no time in it) · Δx 25–600 pm, detent 150 pm (Example 1.9.1: Δv = 3.9 × 10⁵ m/s on load) · headline: the two shaded widths, ±Δx on the packet and ±Δp on its momenta, one shrinking as the other grows · packet above, momenta below · 2D.
 - YouTube embed: dropped, named in `notes`.
 
 Extra simulations: none proposed.
+
+## Rework (rule 14, 2026-11-08)
+
+- `sim-electron-buildup` before: source box, barrier, edge-on screen, face-on screen and a sideways histogram all in one row, the screen a small box among them, and a five-sentence caption. After: the face-on screen spans the figure with the counts directly beneath it on the same axis; the apparatus is gone (1.7 draws it); caption two sentences.
+- `sim-wave-packet` before: seven faint component waves filled the packet's frame and made it hard to read, and the caption ran five sentences. After: the components are gone; ±Δx and ±Δp are shaded bands of the same weight so the trade between them is what the eye takes in; caption two sentences.
 
 ## Exercises
 

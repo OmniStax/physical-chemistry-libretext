@@ -1,0 +1,953 @@
+{
+ "types": [
+  {
+   "id": "displacement",
+   "label": "wave displacement",
+   "dimension": "m"
+  },
+  {
+   "id": "time",
+   "label": "time",
+   "dimension": "s"
+  }
+ ],
+ "symbols": [
+  {
+   "sym": "u",
+   "latex": "u",
+   "macro": "\\ku"
+  },
+  {
+   "sym": "y",
+   "latex": "y",
+   "macro": "\\ky"
+  },
+  {
+   "sym": "x",
+   "latex": "x",
+   "macro": "\\kx"
+  },
+  {
+   "sym": "z",
+   "latex": "z",
+   "macro": "\\kz"
+  },
+  {
+   "sym": "t",
+   "latex": "t",
+   "macro": "\\kt"
+  },
+  {
+   "sym": "A_o",
+   "latex": "A_o",
+   "macro": "\\kAo"
+  },
+  {
+   "sym": "A_nm",
+   "latex": "A_{nm}",
+   "macro": "\\kAnm"
+  },
+  {
+   "sym": "k",
+   "latex": "k",
+   "macro": "\\kk"
+  },
+  {
+   "sym": "k_vec",
+   "latex": "\\vec{k}",
+   "macro": "\\kkvec"
+  },
+  {
+   "sym": "omega",
+   "latex": "\\omega",
+   "macro": "\\komega"
+  },
+  {
+   "sym": "omega_n",
+   "latex": "\\omega_n",
+   "macro": "\\komegan"
+  },
+  {
+   "sym": "omega_nm",
+   "latex": "\\omega_{nm}",
+   "macro": "\\komeganm"
+  },
+  {
+   "sym": "nu_n",
+   "latex": "\\nu_n",
+   "macro": "\\knun"
+  },
+  {
+   "sym": "u_n",
+   "latex": "u_n",
+   "macro": "\\kun"
+  },
+  {
+   "sym": "L",
+   "latex": "L",
+   "macro": "\\kL"
+  },
+  {
+   "sym": "a",
+   "latex": "a",
+   "macro": "\\ka"
+  },
+  {
+   "sym": "b_m",
+   "latex": "b",
+   "macro": "\\kbm"
+  },
+  {
+   "sym": "p_n",
+   "latex": "p",
+   "macro": "\\kpn"
+  },
+  {
+   "sym": "phi",
+   "latex": "\\phi"
+  },
+  {
+   "sym": "K",
+   "latex": "K"
+  },
+  {
+   "sym": "X",
+   "latex": "X"
+  },
+  {
+   "sym": "T_t",
+   "latex": "T"
+  },
+  {
+   "sym": "alpha",
+   "latex": "\\alpha"
+  },
+  {
+   "sym": "n_x",
+   "latex": "n_x"
+  },
+  {
+   "sym": "n_y",
+   "latex": "n_y"
+  },
+  {
+   "sym": "theta",
+   "latex": "\\theta"
+  },
+  {
+   "sym": "J_m",
+   "latex": "J_m"
+  },
+  {
+   "sym": "lambda_mn",
+   "latex": "\\lambda_{mn}"
+  },
+  {
+   "sym": "m_q",
+   "latex": "m"
+  }
+ ],
+ "concepts": [
+  {
+   "id": "sine-wave",
+   "kind": "definition",
+   "section": "2.1",
+   "name": "Sine wave",
+   "terms": [
+    "sine wave"
+   ],
+   "statement": "The simplest wave is the one-dimensional sine wave, whose amplitude at position x and time t is A(x,t) = A_o sin(kx − ωt + φ).",
+   "forms": [
+    {
+     "id": "sine-wave",
+     "latex": "A(x,t) = A_o \\sin (kx - \\omega t + \\phi)",
+     "ktex": "A(\\kx,\\kt) = \\kAo \\sin (\\kk\\kx - \\komega \\kt + \\phi)"
+    }
+   ]
+  },
+  {
+   "id": "amplitude",
+   "kind": "definition",
+   "section": "2.1",
+   "name": "Amplitude",
+   "symbol": "A_o",
+   "terms": [
+    "amplitude",
+    "maximum amplitude"
+   ],
+   "type": "displacement",
+   "statement": "The maximum amplitude of a wave is the largest distance of the medium from its equilibrium position during one wave cycle, from the crest to the baseline."
+  },
+  {
+   "id": "angular-wavenumber",
+   "kind": "definition",
+   "section": "2.1",
+   "name": "Wavenumber (angular)",
+   "symbol": "k",
+   "terms": [
+    "wavenumber"
+   ],
+   "type": "wavenumber",
+   "statement": "The wavenumber k of a sine wave sets how fast its phase advances along x, 2π radians per wavelength."
+  },
+  {
+   "id": "angular-frequency",
+   "kind": "definition",
+   "section": "2.1",
+   "name": "Angular frequency",
+   "symbol": "omega",
+   "terms": [
+    "angular frequency"
+   ],
+   "type": "frequency",
+   "statement": "The angular frequency ω of a wave sets how fast its phase advances in time at a fixed position, 2π radians per period."
+  },
+  {
+   "id": "phase-constant",
+   "kind": "definition",
+   "section": "2.1",
+   "name": "Phase constant",
+   "symbol": "phi",
+   "terms": [
+    "phase constant"
+   ],
+   "statement": "The phase constant φ fixes where in its cycle the wave is at x = 0 and t = 0."
+  },
+  {
+   "id": "traveling-wave",
+   "kind": "definition",
+   "section": "2.1",
+   "name": "Traveling wave",
+   "terms": [
+    "traveling wave",
+    "traveling waves"
+   ],
+   "statement": "A traveling wave moves through space and time, carrying energy from one place to another; on a rope it travels at constant speed and keeps its shape, so its displacement is y(x,t) = f(x − vt).",
+   "forms": [
+    {
+     "id": "traveling-wave",
+     "latex": "y(x,t)=f(x-v t)",
+     "ktex": "\\ky(\\kx,\\kt)=f(\\kx-\\kv \\kt)"
+    }
+   ]
+  },
+  {
+   "id": "wave-velocity",
+   "kind": "definition",
+   "section": "2.1",
+   "name": "Wave velocity",
+   "symbol": "v",
+   "terms": [
+    "velocity of the wave"
+   ],
+   "type": "velocity",
+   "statement": "The velocity of a wave is the speed at which its shape moves along the medium, the v by which f(x) is shifted to f(x − vt)."
+  },
+  {
+   "id": "standing-wave",
+   "kind": "definition",
+   "section": "2.1",
+   "name": "Standing wave",
+   "terms": [
+    "standing wave",
+    "standing waves",
+    "stationary wave",
+    "stationary waves"
+   ],
+   "statement": "A standing (stationary) wave stays in one place, with crests and troughs at fixed intervals separated by nodes; it only vibrates up and down, and no energy travels along it."
+  },
+  {
+   "id": "node",
+   "kind": "definition",
+   "section": "2.1",
+   "name": "Node",
+   "terms": [
+    "node",
+    "nodes"
+   ],
+   "statement": "A node is a point (or line) of a standing wave that does not move while the rest of the medium vibrates."
+  },
+  {
+   "id": "antinode",
+   "kind": "definition",
+   "section": "2.1",
+   "name": "Antinode",
+   "terms": [
+    "antinode",
+    "antinodes"
+   ],
+   "statement": "An antinode is a place of maximum oscillation in a standing wave, halfway between neighbouring nodes."
+  },
+  {
+   "id": "classical-wave-equation",
+   "kind": "axiom",
+   "section": "2.1",
+   "name": "Classical wave equation",
+   "terms": [
+    "classical wave equation",
+    "wave equation",
+    "one-dimensional wave equation"
+   ],
+   "statement": "The displacement u(x,t) of a one-dimensional wave, traveling or standing, obeys the linear partial differential equation ∂²u/∂x² = (1/v²) ∂²u/∂t².",
+   "forms": [
+    {
+     "id": "wave-equation-1d",
+     "latex": "\\dfrac{\\partial^2 u(x,t)}{\\partial x^2} = \\dfrac{1}{v^2} \\dfrac{\\partial^2 u(x,t)}{\\partial t^2}",
+     "ktex": "\\dfrac{\\partial^2 \\ku(\\kx,\\kt)}{\\partial \\kx^2} = \\dfrac{1}{\\kv^2} \\dfrac{\\partial^2 \\ku(\\kx,\\kt)}{\\partial \\kt^2}"
+    }
+   ]
+  },
+  {
+   "id": "boundary-conditions",
+   "kind": "definition",
+   "section": "2.1",
+   "name": "Boundary conditions",
+   "terms": [
+    "boundary conditions",
+    "boundary condition"
+   ],
+   "statement": "Boundary conditions fix what happens at the ends of the medium; for a string of length L held taut at both ends, u(0,t) = 0 and u(L,t) = 0 for all t.",
+   "forms": [
+    {
+     "id": "string-bc-left",
+     "latex": "u(0,t)=0",
+     "ktex": "\\ku(0,\\kt)=0"
+    },
+    {
+     "id": "string-bc-right",
+     "latex": "u(L,t)=0",
+     "ktex": "\\ku(\\kL,\\kt)=0"
+    }
+   ]
+  },
+  {
+   "id": "initial-conditions",
+   "kind": "definition",
+   "section": "2.1",
+   "name": "Initial conditions",
+   "terms": [
+    "initial conditions",
+    "initial condition"
+   ],
+   "statement": "Initial conditions fix how the wave is produced: the values of the solution (and its rate of change) at a starting time."
+  },
+  {
+   "id": "partial-differential-equation",
+   "kind": "definition",
+   "section": "2.2",
+   "name": "Partial differential equation",
+   "terms": [
+    "partial differential equation",
+    "PDE",
+    "PDEs"
+   ],
+   "statement": "A partial differential equation (PDE) involves a function of two or more independent variables and its partial derivatives; the wave equation is a second-order PDE in x and t."
+  },
+  {
+   "id": "ordinary-differential-equation",
+   "kind": "definition",
+   "section": "2.2",
+   "name": "Ordinary differential equation",
+   "terms": [
+    "ordinary differential equation",
+    "ordinary differential equations",
+    "ODE",
+    "ODEs"
+   ],
+   "statement": "An ordinary differential equation (ODE) contains a function or functions of one independent variable and its derivatives."
+  },
+  {
+   "id": "separation-of-variables",
+   "kind": "skill",
+   "section": "2.2",
+   "name": "Separating the variables of a PDE",
+   "terms": [
+    "separation of variables",
+    "method of separation of variables"
+   ],
+   "statement": "Assume the solution is a product of functions of one variable each, u(x,t) = X(x)T(t), substitute it into the PDE and collect each variable on its own side, turning the PDE into ordinary differential equations; sums of such solutions are solutions of a linear equation.",
+   "forms": [
+    {
+     "id": "separable-product",
+     "latex": "u(x,t)= X(x)T(t)",
+     "ktex": "\\ku(\\kx,\\kt)= X(\\kx)T(\\kt)"
+    },
+    {
+     "id": "separable-sum",
+     "latex": "u(x,t)=\\sum_i c_i X_i(x)T_i(t)",
+     "ktex": "\\ku(\\kx,\\kt)=\\sum_i c_i X_i(\\kx)T_i(\\kt)"
+    }
+   ]
+  },
+  {
+   "id": "separated-wave-equation",
+   "kind": "result",
+   "section": "2.2",
+   "name": "Separated wave equation",
+   "statement": "Substituting u = X(x)T(t) into the wave equation and dividing by XT leaves a side in x only and a side in t only, so each equals one constant K, giving two ordinary differential equations.",
+   "forms": [
+    {
+     "id": "separated-time",
+     "latex": "\\dfrac{d^2T(t)}{dt^2} - Kv^2 T(t) = 0",
+     "ktex": "\\dfrac{d^2T(\\kt)}{d\\kt^2} - K\\kv^2 T(\\kt) = 0"
+    },
+    {
+     "id": "separated-space",
+     "latex": "\\dfrac{d^2X(x)}{dx^2} - K X(x) = 0",
+     "ktex": "\\dfrac{d^2X(\\kx)}{d\\kx^2} - K X(\\kx) = 0"
+    }
+   ]
+  },
+  {
+   "id": "trivial-solution",
+   "kind": "definition",
+   "section": "2.2",
+   "name": "Trivial solution",
+   "terms": [
+    "trivial solution"
+   ],
+   "statement": "The trivial solution u = 0 satisfies the equation and its boundary conditions but describes no wave, so it is ignored."
+  },
+  {
+   "id": "exponential-solutions",
+   "kind": "result",
+   "section": "2.2",
+   "name": "Exponential solutions of a second-order linear equation",
+   "statement": "Trying y = e^{αx} in d²y/dx² − k²y = 0 gives α² − k² = 0, so α = ±k and the general solution is any linear combination y = c₁e^{kx} + c₂e^{−kx}.",
+   "forms": [
+    {
+     "id": "exp-general",
+     "latex": "y(x) = c_1 e^{k\\, x} + c_2 e^{-k\\, x}"
+    },
+    {
+     "id": "exp-roots",
+     "latex": "\\alpha = \\pm k"
+    },
+    {
+     "id": "exp-ode",
+     "latex": "\\dfrac{d^2y(x)}{dx^2} - k^2 y(x) = 0"
+    }
+   ]
+  },
+  {
+   "id": "eulers-formula",
+   "kind": "result",
+   "section": "2.3",
+   "name": "Euler's formula",
+   "terms": [
+    "Euler formula",
+    "Euler's formula"
+   ],
+   "statement": "A complex exponential is a combination of a cosine and a sine: e^{iθ} = cos θ + i sin θ.",
+   "forms": [
+    {
+     "id": "euler",
+     "latex": "e^{i \\theta} = \\cos \\theta + i\\sin \\theta"
+    }
+   ]
+  },
+  {
+   "id": "oscillatory-solutions",
+   "kind": "result",
+   "section": "2.3",
+   "name": "Oscillatory solutions",
+   "statement": "When the separation constant is negative, K = −p², the spatial equation is d²X/dx² + p²X = 0, whose general solution X = Ae^{ipx} + Be^{−ipx} can be written X = c₁ cos(px) + c₂ sin(px).",
+   "forms": [
+    {
+     "id": "oscillatory-trig",
+     "latex": "X(x) = c_1 \\cos (px) + c_2 \\sin (px)",
+     "ktex": "X(\\kx) = c_1 \\cos (\\kpn\\kx) + c_2 \\sin (\\kpn\\kx)"
+    },
+    {
+     "id": "negative-k",
+     "latex": "K = - p^2",
+     "ktex": "K = - \\kpn^2"
+    },
+    {
+     "id": "oscillatory-ode",
+     "latex": "\\dfrac{d^2X(x)}{dx^2} +p^2 X(x) = 0",
+     "ktex": "\\dfrac{d^2X(\\kx)}{d\\kx^2} +\\kpn^2 X(\\kx) = 0"
+    },
+    {
+     "id": "oscillatory-exp",
+     "latex": "X(x) = A e^{ipx} + B e^{-ipx}",
+     "ktex": "X(\\kx) = A e^{i\\kpn\\kx} + B e^{-i\\kpn\\kx}"
+    }
+   ]
+  },
+  {
+   "id": "quantization-by-boundary-conditions",
+   "kind": "result",
+   "section": "2.3",
+   "name": "Quantization by boundary conditions",
+   "terms": [
+    "quantization"
+   ],
+   "statement": "Requiring X(0) = 0 and X(L) = 0 forces c₁ = 0 and sin(pL) = 0, so pL = nπ with n = 1, 2, 3, …: only solutions with specific wavelengths exist.",
+   "forms": [
+    {
+     "id": "quantized-p",
+     "latex": "p = \\dfrac{n\\pi}{L}",
+     "ktex": "\\kpn = \\dfrac{n\\pi}{\\kL}"
+    },
+    {
+     "id": "quantized-pl",
+     "latex": "pL= n\\pi",
+     "ktex": "\\kpn\\kL= n\\pi"
+    }
+   ]
+  },
+  {
+   "id": "string-spatial-solutions",
+   "kind": "result",
+   "section": "2.4",
+   "name": "Spatial solutions of a string fixed at both ends",
+   "statement": "The spatial part of the wave equation's solution for a string held at zero at both ends is X(x) = D sin(nπx/L), an infinite set distinguished by n.",
+   "forms": [
+    {
+     "id": "string-x",
+     "latex": "X(x) = D \\sin \\left(\\dfrac{n\\pi x}{L} \\right)",
+     "ktex": "X(\\kx) = D \\sin \\left(\\dfrac{n\\pi \\kx}{\\kL} \\right)"
+    }
+   ]
+  },
+  {
+   "id": "quantum-number",
+   "kind": "definition",
+   "section": "2.4",
+   "name": "Quantum number",
+   "symbol": "n",
+   "terms": [
+    "quantum number",
+    "quantum numbers"
+   ],
+   "statement": "A quantum number is the integer parameter, introduced by the boundary conditions, that distinguishes the allowed solutions of a system from each other."
+  },
+  {
+   "id": "string-temporal-solutions",
+   "kind": "result",
+   "section": "2.4",
+   "name": "Temporal solutions of a string fixed at both ends",
+   "statement": "With K = −(nπ/L)², the temporal equation is d²T/dt² + ω_n²T = 0 with ω_n = nvπ/L, solved by T(t) = E cos(ω_n t) + F sin(ω_n t); no boundary condition fixes E and F.",
+   "forms": [
+    {
+     "id": "string-t",
+     "latex": "T(t) = E \\cos (\\omega_n t) + F \\sin (\\omega_n t)",
+     "ktex": "T(\\kt) = E \\cos (\\komegan \\kt) + F \\sin (\\komegan \\kt)"
+    },
+    {
+     "id": "string-omega-n",
+     "latex": "\\omega_n= \\dfrac{n v \\pi}{L}",
+     "ktex": "\\komegan= \\dfrac{n \\kv \\pi}{\\kL}"
+    }
+   ]
+  },
+  {
+   "id": "normal-mode",
+   "kind": "definition",
+   "section": "2.4",
+   "name": "Normal mode",
+   "symbol": "u_n",
+   "terms": [
+    "normal mode",
+    "normal modes"
+   ],
+   "type": "displacement",
+   "statement": "Each solution u_n(x,t) = [G_n cos(ω_n t) + H_n sin(ω_n t)] sin(nπx/L) of the wave equation for a string held at both ends is a normal mode, a standing wave with its own frequency.",
+   "forms": [
+    {
+     "id": "normal-mode",
+     "latex": "u_n(x,t) = \\left[ G_n \\cos (\\omega_n t) + H_n \\sin (\\omega_n t) \\right] \\sin \\left(\\dfrac{n\\pi x}{L} \\right)",
+     "ktex": "\\kun(\\kx,\\kt) = \\left[ G_n \\cos (\\komegan \\kt) + H_n \\sin (\\komegan \\kt) \\right] \\sin \\left(\\dfrac{n\\pi \\kx}{\\kL} \\right)"
+    }
+   ]
+  },
+  {
+   "id": "fundamental-and-overtones",
+   "kind": "definition",
+   "section": "2.4",
+   "name": "Fundamental and overtones",
+   "terms": [
+    "fundamental",
+    "overtone",
+    "overtones",
+    "harmonic"
+   ],
+   "statement": "The normal mode with n = 1 is the fundamental; each subsequent mode is an overtone, or harmonic."
+  },
+  {
+   "id": "linear-differential-equation",
+   "kind": "definition",
+   "section": "2.4",
+   "name": "Linear differential equation",
+   "terms": [
+    "linear differential equation",
+    "linear equation"
+   ],
+   "statement": "A differential equation is linear when the sum of any two of its solutions, and any af + bg with constants a and b, is also a solution."
+  },
+  {
+   "id": "principle-of-superposition",
+   "kind": "result",
+   "section": "2.4",
+   "name": "Principle of Superposition",
+   "terms": [
+    "Principle of Superposition",
+    "superposition",
+    "superpose",
+    "interference"
+   ],
+   "statement": "The sum of two or more solutions of the wave equation is also a solution: where waves meet, the displacement at each point is the sum of the displacements of the waves singly, which is interference."
+  },
+  {
+   "id": "normal-mode-expansion",
+   "kind": "result",
+   "section": "2.4",
+   "name": "General solution as a superposition of normal modes",
+   "statement": "Since the wave equation is linear and homogeneous, its total solution for the string is the sum of all its normal modes, u(x,t) = Σ_n [G_n cos(ω_n t) + H_n sin(ω_n t)] sin(nπx/L).",
+   "forms": [
+    {
+     "id": "normal-mode-sum",
+     "latex": "u(x,t) = \\sum_{n=1}^{\\infty} \\left( G_n \\cos (\\omega_n t) + H_n \\sin (\\omega_n t) \\right) \\sin \\left(\\dfrac{n\\pi x}{L}\\right)",
+     "ktex": "\\ku(\\kx,\\kt) = \\sum_{n=1}^{\\infty} \\left( G_n \\cos (\\komegan \\kt) + H_n \\sin (\\komegan \\kt) \\right) \\sin \\left(\\dfrac{n\\pi \\kx}{\\kL}\\right)"
+    }
+   ]
+  },
+  {
+   "id": "normal-mode-frequency",
+   "kind": "result",
+   "section": "2.4",
+   "name": "Frequencies of the normal modes",
+   "symbol": "nu_n",
+   "terms": [
+    "natural frequencies",
+    "natural frequency"
+   ],
+   "type": "frequency",
+   "statement": "The nth normal mode of a string oscillates at the natural frequency ν_n = ω_n/2π = nv/2L, so the more curved the mode, the faster it oscillates.",
+   "forms": [
+    {
+     "id": "normal-mode-frequency",
+     "latex": "\\nu_n = \\dfrac{\\omega_n}{2 \\pi} = \\dfrac{nv}{2L}",
+     "ktex": "\\knun = \\dfrac{\\komegan}{2 \\pi} = \\dfrac{n\\kv}{2\\kL}"
+    }
+   ]
+  },
+  {
+   "id": "multidimensional-wave-equation",
+   "kind": "axiom",
+   "section": "2.5",
+   "name": "Wave equation in two and three dimensions",
+   "statement": "The displacement of a wave in two or three dimensions obeys the wave equation with one second derivative per spatial direction, ∇²u = (1/v²) ∂²u/∂t², because the medium curves in every direction at once.",
+   "forms": [
+    {
+     "id": "wave-equation-2d",
+     "latex": "\\dfrac{ \\partial^2 u(x,y,t)}{\\partial x^2} + \\dfrac{ \\partial^2 u(x,y,t)}{\\partial y^2} = \\dfrac{1}{v^2} \\dfrac{ \\partial^2 u(x,y,t)}{\\partial t^2}",
+     "ktex": "\\dfrac{ \\partial^2 \\ku(\\kx,\\ky,\\kt)}{\\partial \\kx^2} + \\dfrac{ \\partial^2 \\ku(\\kx,\\ky,\\kt)}{\\partial \\ky^2} = \\dfrac{1}{\\kv^2} \\dfrac{ \\partial^2 \\ku(\\kx,\\ky,\\kt)}{\\partial \\kt^2}"
+    },
+    {
+     "id": "wave-equation-3d",
+     "latex": "\\dfrac{ \\partial^2 u}{\\partial x^2} + \\dfrac{ \\partial^2 u}{\\partial y^2} + \\dfrac{ \\partial^2 u}{\\partial z^2} = \\dfrac{1}{v^2} \\dfrac{ \\partial^2 u}{\\partial t^2}"
+    },
+    {
+     "id": "wave-equation-laplacian",
+     "latex": "\\nabla^2 u(x,y,z,t) = \\dfrac{1}{v^2} \\dfrac{\\partial^2 u(x,y,z,t)}{\\partial t^2}"
+    }
+   ]
+  },
+  {
+   "id": "laplacian",
+   "kind": "definition",
+   "section": "2.5",
+   "name": "Laplacian",
+   "terms": [
+    "Laplacian"
+   ],
+   "statement": "The Laplacian ∇² is the shorthand for the sum of the second partial derivatives in space, ∂²/∂x² + ∂²/∂y² + ∂²/∂z².",
+   "forms": [
+    {
+     "id": "laplacian",
+     "latex": "\\nabla^2 = \\dfrac{ \\partial^2}{\\partial x^2} + \\dfrac{ \\partial^2}{\\partial y^2} + \\dfrac{ \\partial^2}{\\partial z^2}"
+    }
+   ]
+  },
+  {
+   "id": "wave-vector",
+   "kind": "definition",
+   "section": "2.5",
+   "name": "Wave vector",
+   "symbol": "k_vec",
+   "type": "wavenumber",
+   "statement": "The wave vector k points in the direction a harmonic wave in three dimensions is moving; its magnitude is |k| = √(k_x² + k_y² + k_z²)."
+  },
+  {
+   "id": "plane-wave",
+   "kind": "result",
+   "section": "2.5",
+   "name": "Harmonic plane wave",
+   "statement": "The three-dimensional wave equation has harmonic solutions u = A sin(k_x x + k_y y + k_z z − ωt) with ω = v|k|, the form of the fields in a radio or light wave.",
+   "forms": [
+    {
+     "id": "plane-wave",
+     "latex": "u(x,y,z,t) = A \\sin (k_x x +k_y y +k_z z -\\omega t)"
+    },
+    {
+     "id": "plane-wave-dispersion",
+     "latex": "\\omega = v |\\vec{k}|",
+     "ktex": "\\komega = \\kv |\\kkvec|"
+    }
+   ]
+  },
+  {
+   "id": "rectangular-membrane-modes",
+   "kind": "result",
+   "section": "2.5",
+   "name": "Modes of a rectangular membrane",
+   "statement": "Separating variables with the edges held fixed gives the modes of a rectangular membrane of length a and width b, u = A_nm cos(ω_nm t + φ_nm) sin(n_xπx/a) sin(n_yπy/b), with one quantum number in each dimension.",
+   "forms": [
+    {
+     "id": "rect-membrane",
+     "latex": "u(x,y,t) = A_{nm} \\cos(\\omega_{nm} t + \\phi_{nm}) \\sin \\left(\\dfrac {n_x \\pi x}{a}\\right) \\sin\\left(\\dfrac {n_y\\pi y}{b}\\right)",
+     "ktex": "\\ku(\\kx,\\ky,\\kt) = \\kAnm \\cos(\\komeganm \\kt + \\phi_{nm}) \\sin \\left(\\dfrac {n_x \\pi \\kx}{\\ka}\\right) \\sin\\left(\\dfrac {n_y\\pi \\ky}{\\kbm}\\right)"
+    }
+   ]
+  },
+  {
+   "id": "nodal-line",
+   "kind": "definition",
+   "section": "2.5",
+   "name": "Nodal line",
+   "terms": [
+    "nodal diameters",
+    "nodal circles",
+    "radial nodes",
+    "angular nodes"
+   ],
+   "statement": "On a two-dimensional membrane the nodes are lines that do not move: straight lines across a rectangle, and diameters (angular nodes, at fixed angles) and circles (radial nodes, at fixed radii) on a circle."
+  },
+  {
+   "id": "bessel-function",
+   "kind": "definition",
+   "section": "2.5",
+   "name": "Bessel function",
+   "symbol": "J_m",
+   "terms": [
+    "Bessel functions",
+    "Bessel function"
+   ],
+   "statement": "Bessel functions J_m are oscillatory functions that give the radial shape of the modes of a circular membrane."
+  },
+  {
+   "id": "circular-membrane-modes",
+   "kind": "result",
+   "section": "2.5",
+   "name": "Modes of a circular membrane",
+   "statement": "The modes of a circular membrane, in polar coordinates, are u(r,θ,t) = J_m(λ_mn r) cos mθ cos cλ_mn t, with two quantum numbers m and n that play the roles of n_x and n_y.",
+   "forms": [
+    {
+     "id": "circ-membrane",
+     "latex": "u(r, \\theta, t)=J_{m}\\left(\\lambda_{m n} r\\right) \\cos m \\theta \\cos c \\lambda_{m n} t",
+     "ktex": "\\ku(\\kr, \\theta, \\kt)=J_{m}\\left(\\lambda_{m n} \\kr\\right) \\cos m \\theta \\cos c \\lambda_{m n} \\kt"
+    }
+   ]
+  }
+ ],
+ "concept_prereqs": [
+  {
+   "concept": "sine-wave",
+   "prereq": "amplitude"
+  },
+  {
+   "concept": "sine-wave",
+   "prereq": "angular-wavenumber"
+  },
+  {
+   "concept": "sine-wave",
+   "prereq": "angular-frequency"
+  },
+  {
+   "concept": "sine-wave",
+   "prereq": "phase-constant"
+  },
+  {
+   "concept": "traveling-wave",
+   "prereq": "wave-velocity"
+  },
+  {
+   "concept": "standing-wave",
+   "prereq": "node"
+  },
+  {
+   "concept": "standing-wave",
+   "prereq": "antinode"
+  },
+  {
+   "concept": "standing-wave",
+   "prereq": "traveling-wave"
+  },
+  {
+   "concept": "classical-wave-equation",
+   "prereq": "wave-velocity"
+  },
+  {
+   "concept": "classical-wave-equation",
+   "prereq": "partial-differential-equation"
+  },
+  {
+   "concept": "boundary-conditions",
+   "prereq": "classical-wave-equation"
+  },
+  {
+   "concept": "initial-conditions",
+   "prereq": "classical-wave-equation"
+  },
+  {
+   "concept": "ordinary-differential-equation",
+   "prereq": "partial-differential-equation"
+  },
+  {
+   "concept": "separation-of-variables",
+   "prereq": "ordinary-differential-equation"
+  },
+  {
+   "concept": "separated-wave-equation",
+   "prereq": "separation-of-variables"
+  },
+  {
+   "concept": "separated-wave-equation",
+   "prereq": "classical-wave-equation"
+  },
+  {
+   "concept": "exponential-solutions",
+   "prereq": "ordinary-differential-equation"
+  },
+  {
+   "concept": "exponential-solutions",
+   "prereq": "trivial-solution"
+  },
+  {
+   "concept": "oscillatory-solutions",
+   "prereq": "separated-wave-equation"
+  },
+  {
+   "concept": "oscillatory-solutions",
+   "prereq": "exponential-solutions"
+  },
+  {
+   "concept": "oscillatory-solutions",
+   "prereq": "eulers-formula"
+  },
+  {
+   "concept": "quantization-by-boundary-conditions",
+   "prereq": "oscillatory-solutions"
+  },
+  {
+   "concept": "quantization-by-boundary-conditions",
+   "prereq": "boundary-conditions"
+  },
+  {
+   "concept": "string-spatial-solutions",
+   "prereq": "quantization-by-boundary-conditions"
+  },
+  {
+   "concept": "quantum-number",
+   "prereq": "quantization-by-boundary-conditions"
+  },
+  {
+   "concept": "string-temporal-solutions",
+   "prereq": "quantization-by-boundary-conditions"
+  },
+  {
+   "concept": "normal-mode",
+   "prereq": "string-spatial-solutions"
+  },
+  {
+   "concept": "normal-mode",
+   "prereq": "string-temporal-solutions"
+  },
+  {
+   "concept": "normal-mode",
+   "prereq": "standing-wave"
+  },
+  {
+   "concept": "fundamental-and-overtones",
+   "prereq": "normal-mode"
+  },
+  {
+   "concept": "fundamental-and-overtones",
+   "prereq": "quantum-number"
+  },
+  {
+   "concept": "linear-differential-equation",
+   "prereq": "partial-differential-equation"
+  },
+  {
+   "concept": "principle-of-superposition",
+   "prereq": "linear-differential-equation"
+  },
+  {
+   "concept": "principle-of-superposition",
+   "prereq": "classical-wave-equation"
+  },
+  {
+   "concept": "normal-mode-expansion",
+   "prereq": "normal-mode"
+  },
+  {
+   "concept": "normal-mode-expansion",
+   "prereq": "principle-of-superposition"
+  },
+  {
+   "concept": "normal-mode-frequency",
+   "prereq": "string-temporal-solutions"
+  },
+  {
+   "concept": "normal-mode-frequency",
+   "prereq": "angular-frequency"
+  },
+  {
+   "concept": "multidimensional-wave-equation",
+   "prereq": "classical-wave-equation"
+  },
+  {
+   "concept": "multidimensional-wave-equation",
+   "prereq": "laplacian"
+  },
+  {
+   "concept": "plane-wave",
+   "prereq": "multidimensional-wave-equation"
+  },
+  {
+   "concept": "plane-wave",
+   "prereq": "wave-vector"
+  },
+  {
+   "concept": "plane-wave",
+   "prereq": "sine-wave"
+  },
+  {
+   "concept": "wave-vector",
+   "prereq": "angular-wavenumber"
+  },
+  {
+   "concept": "rectangular-membrane-modes",
+   "prereq": "multidimensional-wave-equation"
+  },
+  {
+   "concept": "rectangular-membrane-modes",
+   "prereq": "normal-mode"
+  },
+  {
+   "concept": "nodal-line",
+   "prereq": "rectangular-membrane-modes"
+  },
+  {
+   "concept": "circular-membrane-modes",
+   "prereq": "rectangular-membrane-modes"
+  },
+  {
+   "concept": "circular-membrane-modes",
+   "prereq": "bessel-function"
+  }
+ ]
+}

@@ -21,7 +21,10 @@ dropped. Needs BeautifulSoup 4. Markers, in the order a page prints them:
                                   page (LibreTexts numbers equations N.M.K by
                                   order on the page; the number follows the
                                   marker as n=K). One with \\nonumber has no
-                                  marker and no number.
+                                  marker and no number. An unstarred align (or
+                                  gather, eqnarray) numbers each row that has no
+                                  \\nonumber, as MathJax does, and keeps its
+                                  \\nonumber rows: `{eq:a} n=14 {eq:b} n=15`.
   [ref:eq:label]                  \\ref{label}: a reference to an equation of
                                   this page, as the book writes "Equation \\ref{…}".
   {term:…}                        a bold (strong or b) word or phrase in prose,
@@ -29,6 +32,8 @@ dropped. Needs BeautifulSoup 4. Markers, in the order a page prints them:
                                   *…* is emphasis.
   > FIGURE {fig:N.M.K} src=media/<file> width=…
   > alt: …  > caption: …          a <figure> whose caption begins "Figure N.M.K".
+  > panel: …                      after an image's alt: the caption of the inner
+                                  <figure> that holds it, where a figure is panels.
   > IMAGE {img:K} src=… width=…   an <img> outside a numbered figure (an
   > alt: …                        unnumbered figure, or an image inside an
                                   example, an exercise or a table).
@@ -154,25 +159,52 @@ class Converter:
 
     # ---- display maths --------------------------------------------------
     def display(self, tex):
-        tex = re.sub(r"\s*<br>\s*", " ", tex).strip()
+        tex = re.sub(r"\s*<br>\s*", " ", tex).replace("\xa0", " ").strip()  # KaTeX refuses U+00A0
+        rows_env = re.search(r"\\begin\{(align|alignat|gather|eqnarray|flalign)\}", tex)
         nonumber = "\\nonumber" in tex or "\\notag" in tex
         labels = re.findall(r"\\label\s*\{\s*([^}]+?)\s*\}", tex)
-        tex = re.sub(r"\\label\s*\{[^}]*\}", "", tex)
-        tex = tex.replace("\\nonumber", "").replace("\\notag", "").strip()
-        tex = self.refs(tex)
-        line = f"$$ {tex} $$"
-        if labels:
-            for lab in labels:
-                if lab in self.labels:
-                    warn(f"equation label {lab} used twice")
-            if not nonumber:
+        for lab in labels:
+            if lab in self.labels:
+                warn(f"equation label {lab} used twice")
+        marks = []  # (label or None, number), one per numbered row
+        if rows_env:
+            # MathJax numbers every row of an unstarred align-type environment
+            # that carries no \nonumber, and a \label names its own row
+            body = tex[rows_env.end():tex.find("\\end{" + rows_env.group(1) + "}")]
+            for row in re.split(r"\\\\(?:\[[^\]]*\])?", body):
+                if not row.strip():
+                    continue
+                lab = re.search(r"\\label\s*\{\s*([^}]+?)\s*\}", row)
+                if "\\nonumber" in row or "\\notag" in row:
+                    if lab:
+                        warn(f"equation label {lab.group(1)} on an unnumbered row")
+                    continue
                 self.eq_count += 1
-                self.labels[labels[0]] = self.eq_count
-                line += f" {{eq:{labels[0]}}} n={self.eq_count}"
-        elif not nonumber and "\\begin{align" not in tex:
-            # MathJax tags every display (tags: all); the book's own numbers are by label
+                marks.append((lab.group(1) if lab else None, self.eq_count))
+        elif "\\begin{align*" in tex or "\\begin{gather*" in tex or "\\begin{alignat*" in tex:
+            pass  # a starred environment is never numbered
+        elif not nonumber:
+            # MathJax tags every display (tags: all); the book's own names are its labels
             self.eq_count += 1
-            line += f" n={self.eq_count}"
+            marks.append((labels[0] if labels else None, self.eq_count))
+        tex = re.sub(r"\\label\s*\{[^}]*\}", "", tex)
+        def strip(t):
+            return t.replace("\\nonumber", "").replace("\\notag", "")
+        if rows_env:
+            # keep a row's \nonumber inside the environment, where the draft needs it
+            end = tex.find("\\end{" + rows_env.group(1) + "}")
+            end = len(tex) if end < 0 else end + len("\\end{" + rows_env.group(1) + "}")
+            a = tex.find("\\begin{" + rows_env.group(1) + "}")
+            tex = strip(tex[:a]) + tex[a:end] + strip(tex[end:])
+        else:
+            tex = strip(tex)
+        tex = self.refs(tex.strip())
+        line = f"$$ {tex} $$"
+        for lab, n in marks:
+            if lab:
+                self.labels[lab] = n
+        for lab, n in marks:
+            line += (f" {{eq:{lab}}}" if lab else "") + f" n={n}"
         return line
 
     def paragraph(self, p):
@@ -209,7 +241,9 @@ class Converter:
         return "\n".join(lines)
 
     def figure(self, fig):
-        cap = fig.find("figcaption")
+        # the figure's own caption is its direct child; a figcaption deeper in is
+        # a panel's (Figure 2.5.1: four panels, each captioned, under one caption)
+        cap = fig.find("figcaption", recursive=False) or fig.find("figcaption")
         captxt = re.sub(r"\s+", " ", self.inline(cap)).strip() if cap else ""
         m = re.match(r"(?:\{term:)?Figure\s*(\d+(?:\.\d+)*)\s*\}?\s*[:.]?\s*", captxt)
         imgs = fig.find_all("img")
@@ -217,7 +251,12 @@ class Converter:
             return self.children(fig)
         if not m:
             warn(f"unnumbered figure: {captxt[:60]!r}")
-            out = [self.image(i) for i in imgs]
+            out = []
+            for i in imgs:
+                out.append(self.image(i))
+                panel = self.panel_caption(i, fig, cap)
+                if panel:
+                    out.append(f"> panel: {panel}")
             if captxt:
                 out.append(f"> caption: {captxt}")
             return "\n".join(out)
@@ -231,8 +270,21 @@ class Converter:
             alt = (img.get("alt") or "").strip()
             if alt:
                 lines.append(f"> alt: {alt}")
+            panel = self.panel_caption(img, fig, cap)
+            if panel:
+                lines.append(f"> panel: {panel}")
         lines.append(f"> caption: {captxt[m.end():].strip()}")
         return "\n".join(lines)
+
+    def panel_caption(self, img, fig, cap):
+        """The caption of the inner <figure> that holds img, where it is not the figure's own."""
+        inner = img.find_parent("figure")
+        if inner is None or inner is fig:
+            return ""
+        c = inner.find("figcaption")
+        if c is None or c is cap:
+            return ""
+        return re.sub(r"\s+", " ", self.inline(c)).strip()
 
     def table(self, t):
         self.tab_count += 1
