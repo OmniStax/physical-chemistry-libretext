@@ -1,0 +1,339 @@
+{
+ "id": "3.2",
+ "module": "13392",
+ "chapter": "3",
+ "title": "Linear Operators in Quantum Mechanics",
+ "short": "Linear operators",
+ "lead": "The bracket of the time-independent Schrödinger equation is an operator, a rule that turns one function into another. Operators add and multiply by their own rules, the order of two of them can matter, and two properties, linearity and being Hermitian, mark the operators quantum mechanics uses.",
+ "objectives": [
+  "Classical-Mechanical quantities are represented by linear operators in Quantum Mechanics",
+  "Understand that \"algebra\" of scalars and functions do not always to operators (specifically the commutative property)"
+ ],
+ "summary_html": "",
+ "notes": "Adapted from S. M. Blinder under CC BY-NC-SA 4.0.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "Exercise 3.2.1 and its key are the book's. The two questions on the commutator and on Hermitian operators, with their solutions, were written by AI. Bloom levels and concept tags were chosen by AI.",
+ "figures": [],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "operators",
+   "concept": "time-independent-schrodinger-equation",
+   "verb": "uses"
+  },
+  {
+   "span": "operators",
+   "concept": "operator",
+   "verb": "introduces"
+  },
+  {
+   "span": "operators",
+   "concept": "hamiltonian-operator",
+   "verb": "introduces"
+  },
+  {
+   "span": "operators",
+   "concept": "eigenvalue-equation",
+   "verb": "introduces"
+  },
+  {
+   "span": "operators",
+   "concept": "eigenfunction",
+   "verb": "introduces"
+  },
+  {
+   "span": "operators",
+   "concept": "eigenvalue",
+   "verb": "introduces"
+  },
+  {
+   "span": "fundamental-properties",
+   "concept": "operator-algebra",
+   "verb": "introduces"
+  },
+  {
+   "span": "fundamental-properties",
+   "concept": "commutator",
+   "verb": "introduces"
+  },
+  {
+   "span": "linear-operators",
+   "concept": "operator",
+   "verb": "uses"
+  },
+  {
+   "span": "linear-operators",
+   "concept": "linear-operator",
+   "verb": "introduces"
+  },
+  {
+   "span": "hermitian-operators",
+   "concept": "hamiltonian-operator",
+   "verb": "uses"
+  },
+  {
+   "span": "hermitian-operators",
+   "concept": "eigenfunction",
+   "verb": "uses"
+  },
+  {
+   "span": "hermitian-operators",
+   "concept": "hermitian-operator",
+   "verb": "introduces"
+  },
+  {
+   "span": "hermitian-operators",
+   "concept": "hamiltonian-is-hermitian",
+   "verb": "introduces"
+  },
+  {
+   "span": "hermitian-operators",
+   "concept": "hermitian-observables",
+   "verb": "introduces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "e1",
+   "source_id": "exr:3.2.1",
+   "source_number": "Exercise 3.2.1",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "linear-operators",
+   "prompt": "<p>Confirm if the square root operator $\\sqrt{f(\\kx)}$ linear or not?</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "source",
+    "solution": "<p>To confirm is an operator is linear, both conditions in Equations 3.2.5 and 3.2.6 must be demonstrated. Let's look first at Condition B.</p><p>Does Condition B (Equation 3.2.6) hold?</p>$$ \\kOhat cf(\\kx) = c\\kOhat{ f(\\kx) } $$ $$ \\sqrt{c f(\\kx) } \\neq c\\sqrt{f(\\kx)} $$<p>Condition B does not hold, therefore the square root operator is not linear.</p>"
+   }
+  },
+  {
+   "id": "a1",
+   "source_id": "eq:comlaw",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "fundamental-properties",
+   "prompt": "<p>Let $\\hat{x}$ be the operator that multiplies a function by $\\kx$. Find the commutator $[\\hat{x}, d/d\\kx]$ by letting it act on a function $f(\\kx)$. What is $[\\hat{x}, d/d\\kx]\\,f(\\kx)$?</p>",
+   "answer": {
+    "type": "choice",
+    "generated_by": "ai",
+    "options": [
+     "$f(\\kx)$",
+     "$-f(\\kx)$",
+     "$0$",
+     "$2\\kx\\,f'(\\kx)$"
+    ],
+    "correct": 1,
+    "hint": "Use the product rule on $\\dfrac{d}{d\\kx}\\left[\\kx f(\\kx)\\right]$.",
+    "solution": "<p>By the product of two operators, $\\hat{x}\\dfrac{d}{d\\kx}f = \\kx f'(\\kx)$, while $\\dfrac{d}{d\\kx}\\hat{x}f = \\dfrac{d}{d\\kx}\\left[\\kx f(\\kx)\\right] = f(\\kx) + \\kx f'(\\kx)$. The commutator is the difference: $[\\hat{x}, d/d\\kx]\\,f = \\kx f' - f - \\kx f' = -f(\\kx)$. It is not zero, so $\\hat{x}$ and $d/d\\kx$ do not commute.</p>"
+   }
+  },
+  {
+   "id": "a2",
+   "source_id": "eq:3",
+   "kind": "exercise",
+   "bloom": "Analyze",
+   "place": {
+    "at": "end"
+   },
+   "cite": "hermitian-operators",
+   "prompt": "<p>Let $f(\\kx)$ and $g(\\kx)$ vanish at $\\kx = 0$ and $\\kx = \\ka$. Integrate by parts once to compare $\\displaystyle\\int_0^{\\ka} f^*\\,\\dfrac{dg}{d\\kx}\\,\\mathrm{d}\\kx$ with $\\left(\\displaystyle\\int_0^{\\ka} g^*\\,\\dfrac{df}{d\\kx}\\,\\mathrm{d}\\kx\\right)^*$. Is $d/d\\kx$ a Hermitian operator?</p>",
+   "answer": {
+    "type": "choice",
+    "generated_by": "ai",
+    "options": [
+     "Yes: the two integrals are equal",
+     "No: the first is the negative of the second, and $-i\\hbar\\,d/d\\kx$ is Hermitian instead",
+     "No: the boundary terms do not vanish",
+     "Only for real functions"
+    ],
+    "correct": 1,
+    "hint": "The boundary term vanishes; watch the sign that integration by parts leaves.",
+    "solution": "<p>Integration by parts gives $\\int_0^{\\ka} f^* g'\\,\\mathrm{d}\\kx = f^* g\\Big|_0^{\\ka} - \\int_0^{\\ka} g\\,(f')^*\\,\\mathrm{d}\\kx = -\\int_0^{\\ka} g\\,(f')^*\\,\\mathrm{d}\\kx$, since the functions vanish at both ends. The other integral is $\\left(\\int_0^{\\ka} g^* f'\\,\\mathrm{d}\\kx\\right)^* = \\int_0^{\\ka} g\\,(f')^*\\,\\mathrm{d}\\kx$. The first is the negative of the second, for real functions too, so $d/d\\kx$ is not Hermitian. A factor $-i$ fixes the sign, because it becomes $+i$ under the complex conjugate: $\\int f^*(-ig')\\,\\mathrm{d}\\kx = i\\int g\\,(f')^*\\,\\mathrm{d}\\kx = \\left(\\int g^*(-if')\\,\\mathrm{d}\\kx\\right)^*$. So $-i\\hbar\\,d/d\\kx$, the momentum operator of Example 3.2.1, is Hermitian.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "e1",
+   "concept": "linear-operator"
+  },
+  {
+   "exercise": "a1",
+   "concept": "commutator"
+  },
+  {
+   "exercise": "a1",
+   "concept": "operator-algebra"
+  },
+  {
+   "exercise": "a2",
+   "concept": "hermitian-operator"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "in-1d",
+   "kind": "correction",
+   "html": "The equation is written in three dimensions, with $\\nabla^2$ and $\\vec{r}$."
+  },
+  {
+   "id": "both-conditions",
+   "kind": "correction",
+   "html": "The two conditions are Equations 3.2.5 and 3.2.6."
+  },
+  {
+   "id": "types-of-matrices",
+   "kind": "correction",
+   "html": "The book means specific types of matrices."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "hamiltonian-hermitian",
+   "what": "the Hamiltonian is Hermitian",
+   "source": "Physical Chemistry (LibreTexts), 3.2 Linear Operators in Quantum Mechanics",
+   "nodes": [
+    {
+     "then": {
+      "tex": "\\mk{H}{\\kH} = \\mk{D}{-\\dfrac{\\hbar^2}{2\\km}\\dfrac{d^2}{d\\kx^2}}",
+      "src": "3.2"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{H}{\\int_0^{\\ka} f(\\kx)\\,\\kH\\,g(\\kx)\\,\\mathrm{d}\\kx} = \\mk{D}{-\\dfrac{\\hbar^2}{2\\km}\\int_0^{\\ka} f(\\kx)\\,g''(\\kx)\\,\\mathrm{d}\\kx}",
+       "uses": [],
+       "cap": "Both sides act on $g(\\kx)$, are multiplied by $f(\\kx)$ and are integrated across the box."
+      }
+     ],
+     "src": "3.2"
+    },
+    {
+     "then": {
+      "tex": "\\mk{L}{\\int_0^{\\ka} u\\,v'\\,\\mathrm{d}\\kx} = \\mk{B}{u\\,v\\Big|_0^{\\ka}} - \\mk{R}{\\int_0^{\\ka} u'\\,v\\,\\mathrm{d}\\kx}",
+      "src": "3.2",
+      "why": "Integration by parts."
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\int_0^{\\ka} f(\\kx)\\,g''(\\kx)\\,\\mathrm{d}\\kx} = -\\mk{R}{\\int_0^{\\ka} f'(\\kx)\\,g'(\\kx)\\,\\mathrm{d}\\kx} + \\mk{B}{f(\\kx)\\,g'(\\kx)\\Big|_0^{\\ka}}",
+       "uses": [],
+       "cap": "Here $u = f(\\kx)$ and $v = g'(\\kx)$, so that $v' = g''(\\kx)$."
+      }
+     ],
+     "num": "(3.2.7)",
+     "src": "3.2"
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "text": "$f(\\kx)$ and $g(\\kx)$ vanish at $\\kx = 0$ and $\\kx = \\ka$.",
+       "src": "3.2"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\int_0^{\\ka} f(\\kx)\\,g''(\\kx)\\,\\mathrm{d}\\kx} = -\\mk{R}{\\int_0^{\\ka} f'(\\kx)\\,g'(\\kx)\\,\\mathrm{d}\\kx} + \\mk{B}{f(\\kx)\\,g'(\\kx)\\Big|_0^{\\ka}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\int_0^{\\ka} f(\\kx)\\,g''(\\kx)\\,\\mathrm{d}\\kx} = -\\mk{R}{\\int_0^{\\ka} f'(\\kx)\\,g'(\\kx)\\,\\mathrm{d}\\kx}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "src": "3.2"
+    },
+    {
+     "assumes": [
+      {
+       "step": 2
+      },
+      {
+       "tex": "\\int_0^{\\ka} u\\,v'\\,\\mathrm{d}\\kx = u\\,v\\Big|_0^{\\ka} - \\int_0^{\\ka} u'\\,v\\,\\mathrm{d}\\kx",
+       "src": "3.2"
+      },
+      {
+       "text": "$f(\\kx)$ and $g(\\kx)$ vanish at $\\kx = 0$ and $\\kx = \\ka$.",
+       "src": "3.2"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\int_0^{\\ka} f(\\kx)\\,g''(\\kx)\\,\\mathrm{d}\\kx} = -\\mk{R}{\\int_0^{\\ka} f'(\\kx)\\,g'(\\kx)\\,\\mathrm{d}\\kx}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\int_0^{\\ka} f(\\kx)\\,g''(\\kx)\\,\\mathrm{d}\\kx} = \\mk{R}{\\int_0^{\\ka} f''(\\kx)\\,g(\\kx)\\,\\mathrm{d}\\kx} - \\mk{B}{f'(\\kx)\\,g(\\kx)\\Big|_0^{\\ka}}",
+       "uses": [
+        1
+       ],
+       "cap": "A second integration by parts, with $u = f'(\\kx)$ and $v = g(\\kx)$, moves the second derivative onto $f$."
+      },
+      {
+       "tex": "\\mk{L}{\\int_0^{\\ka} f(\\kx)\\,g''(\\kx)\\,\\mathrm{d}\\kx} = \\mk{R}{\\int_0^{\\ka} f''(\\kx)\\,g(\\kx)\\,\\mathrm{d}\\kx}",
+       "uses": [
+        2
+       ]
+      }
+     ],
+     "src": "3.2",
+     "note": "The book prints only the right-hand side of the first line, without the integral it equals."
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "step": 3
+      },
+      {
+       "tex": "\\kH = -\\dfrac{\\hbar^2}{2\\km}\\dfrac{d^2}{d\\kx^2}",
+       "src": "3.2"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{H}{\\int_0^{\\ka} f(\\kx)\\,\\kH\\,g(\\kx)\\,\\mathrm{d}\\kx} = \\mk{D}{-\\dfrac{\\hbar^2}{2\\km}\\int_0^{\\ka} f(\\kx)\\,g''(\\kx)\\,\\mathrm{d}\\kx}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{H}{\\int_0^{\\ka} f(\\kx)\\,\\kH\\,g(\\kx)\\,\\mathrm{d}\\kx} = \\mk{D}{-\\dfrac{\\hbar^2}{2\\km}\\int_0^{\\ka} f''(\\kx)\\,g(\\kx)\\,\\mathrm{d}\\kx}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{H}{\\int_0^{\\ka} f(\\kx)\\,\\kH\\,g(\\kx)\\,\\mathrm{d}\\kx} = \\mk{D}{\\int_0^{\\ka} g(\\kx)\\left(-\\dfrac{\\hbar^2}{2\\km}f''(\\kx)\\right)\\mathrm{d}\\kx}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{H}{\\int_0^{\\ka} f(\\kx)\\,\\kH\\,g(\\kx)\\,\\mathrm{d}\\kx} = \\mk{D}{\\int_0^{\\ka} g(\\kx)\\,\\kH\\,f(\\kx)\\,\\mathrm{d}\\kx}",
+       "uses": [
+        2
+       ]
+      }
+     ],
+     "src": "3.2"
+    }
+   ]
+  }
+ ]
+}

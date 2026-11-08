@@ -1,0 +1,234 @@
+{
+ "id": "3.3",
+ "module": "13393",
+ "chapter": "3",
+ "title": "The Schrödinger Equation is an Eigenvalue Problem",
+ "short": "An eigenvalue problem",
+ "lead": "When an operator returns its function multiplied by a constant, the function is an eigenfunction and the constant its eigenvalue. Every measurable quantity has an operator whose eigenvalues are the values a measurement can give, and the operator of the energy is the Hamiltonian of the Schrödinger equation.",
+ "objectives": [
+  "To recognize that each quantum mechanical observable is determined by solve by an eigenvalue problem with different operators for different observable",
+  "Confirm if a specific wavefunction is an eigenfunction of a specific operation and extract the corresponding obserable (the eigenvalue)",
+  "To recognize that the Schrödinger equation, just like all measurable, is also an eigenvalue problem with the eigenvalue ascribed to total energy",
+  "Identity and manipulate several common quantum mechanical operators"
+ ],
+ "summary_html": "",
+ "notes": "Adapted from Hanson, Harvey, Sweeney and Zielinski's Quantum States of Atoms and Molecules under CC BY-NC-SA 4.0.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "Exercise 3.3.1 and its key are the book's; the key's kinetic-energy eigenvalue is corrected in a note. Its Bloom level and concept tags were chosen by AI.",
+ "figures": [
+  {
+   "id": "sim-operator-bench",
+   "kind": "sim",
+   "draws": [
+    "wavefunction",
+    "operator",
+    "length"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "eigenvalue-problems",
+   "concept": "operator",
+   "verb": "uses"
+  },
+  {
+   "span": "eigenvalue-problems",
+   "concept": "eigenfunction",
+   "verb": "reinforces"
+  },
+  {
+   "span": "eigenvalue-problems",
+   "concept": "eigenvalue",
+   "verb": "reinforces"
+  },
+  {
+   "span": "eigenvalue-problems",
+   "concept": "eigenvalue-equation",
+   "verb": "uses"
+  },
+  {
+   "span": "eigenvalue-problems",
+   "concept": "observables-as-eigenvalues",
+   "verb": "introduces"
+  },
+  {
+   "span": "hamiltonian",
+   "concept": "operator",
+   "verb": "uses"
+  },
+  {
+   "span": "hamiltonian",
+   "concept": "hamiltonian-operator",
+   "verb": "reinforces"
+  },
+  {
+   "span": "hamiltonian",
+   "concept": "time-dependent-schrodinger-equation",
+   "verb": "uses"
+  },
+  {
+   "span": "hamiltonian",
+   "concept": "time-independent-schrodinger-equation",
+   "verb": "uses"
+  },
+  {
+   "span": "hamiltonian",
+   "concept": "schrodinger-eigenvalue-problem",
+   "verb": "introduces"
+  },
+  {
+   "span": "hamiltonian",
+   "concept": "correspondence-principle",
+   "verb": "introduces"
+  },
+  {
+   "span": "hamiltonian",
+   "concept": "eigenfunction",
+   "verb": "uses"
+  },
+  {
+   "span": "hamiltonian",
+   "concept": "eigenstate",
+   "verb": "introduces"
+  },
+  {
+   "span": "common-operators",
+   "concept": "momentum-operator",
+   "verb": "introduces"
+  },
+  {
+   "span": "common-operators",
+   "concept": "position-operator",
+   "verb": "introduces"
+  },
+  {
+   "span": "common-operators",
+   "concept": "kinetic-energy-operator",
+   "verb": "introduces"
+  },
+  {
+   "span": "common-operators",
+   "concept": "angular-momentum-operator",
+   "verb": "introduces"
+  },
+  {
+   "span": "common-operators",
+   "concept": "hamiltonian-operator",
+   "verb": "uses"
+  },
+  {
+   "span": "common-operators",
+   "concept": "time-dependent-schrodinger-equation",
+   "verb": "uses"
+  },
+  {
+   "span": "eigenstates",
+   "concept": "wavefunction",
+   "verb": "reinforces"
+  },
+  {
+   "span": "eigenstates",
+   "concept": "eigenstate",
+   "verb": "reinforces"
+  },
+  {
+   "span": "eigenstates",
+   "concept": "eigenvalue",
+   "verb": "uses"
+  },
+  {
+   "span": "eigenstates",
+   "concept": "eigenstate-superposition",
+   "verb": "introduces"
+  },
+  {
+   "span": "eigenstates",
+   "concept": "wavefunction-collapse",
+   "verb": "introduces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "e1",
+   "source_id": "exr:3.3.1",
+   "source_number": "Exercise 3.3.1",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "eigenstates",
+   "prompt": "<p>Are $\\kpsi = M e^{-b\\kx}$ functions eigenstates of linear momentum and kinetic energy (or neither or both)?</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "source",
+    "solution": "<p>$\\kpsi$ is an eigenstate of linear momentum with a eigenvalue of $bi\\hbar$ and also an eigenstate of kinetic energy with an eigenvalue of $b^2$.<sup class=\"fn\" data-note=\"ke-eigenvalue\"></sup></p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "e1",
+   "concept": "momentum-operator"
+  },
+  {
+   "exercise": "e1",
+   "concept": "kinetic-energy-operator"
+  },
+  {
+   "exercise": "e1",
+   "concept": "eigenstate"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "only-tise",
+   "kind": "correction",
+   "html": "Only the time-independent equation, $\\hat{H}\\psi = E\\psi$, is an eigenvalue equation. The time-dependent one has the time derivative $i\\hbar\\,\\partial\\Psi/\\partial t$ on its right side, not a constant times $\\Psi$."
+  },
+  {
+   "id": "eq-3-3-19",
+   "kind": "correction",
+   "html": "The Hamiltonian is the right-hand side of Equation 3.3.19."
+  },
+  {
+   "id": "phi-eigenstate",
+   "kind": "correction",
+   "html": "$\\phi_i$ names the eigenstates of the operator, not the operator itself."
+  },
+  {
+   "id": "p-minus-one",
+   "kind": "correction",
+   "html": "The derivative brings down $-i\\hbar(-i/\\hbar) = -1$, so the momentum is $p_x = -1$; the constant $N$ cancels from both sides."
+  },
+  {
+   "id": "ke-eigenvalue",
+   "kind": "correction",
+   "html": "The kinetic-energy eigenvalue is $-\\hbar^2b^2/2m$, since $-\\dfrac{\\hbar^2}{2m}\\dfrac{d^2}{dx^2}Me^{-bx} = -\\dfrac{\\hbar^2b^2}{2m}Me^{-bx}$."
+  }
+ ]
+}

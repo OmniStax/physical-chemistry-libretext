@@ -1,0 +1,509 @@
+{
+ "id": "3.1",
+ "module": "13391",
+ "chapter": "3",
+ "title": "The Schrödinger Equation",
+ "short": "The Schrödinger equation",
+ "lead": "Schrödinger built his equation by analogy with light, writing a traveling wave and replacing its frequency and wavelength by a particle's energy and momentum. With a potential energy added, the equation becomes a postulate of quantum mechanics, and a system of constant energy has a time-independent form of it.",
+ "objectives": [
+  "To be introduced to the general properties of the Schrödinger equation and its solutions."
+ ],
+ "summary_html": "",
+ "notes": "Adapted from Michael Fowler (University of Virginia) under CC BY-NC-SA 4.0; the red the book prints the time-independent Schrödinger equation in is left out.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book prints no exercises here; both questions and their solutions were written by AI. The numeric answer accepts a 2% tolerance.",
+ "figures": [
+  {
+   "id": "sim-free-wave",
+   "kind": "sim",
+   "draws": [
+    "wavefunction",
+    "probability-density",
+    "length",
+    "momentum",
+    "wavelength",
+    "energy"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "opening",
+   "concept": "photon",
+   "verb": "uses"
+  },
+  {
+   "span": "opening",
+   "concept": "de-broglie-wavelength",
+   "verb": "uses"
+  },
+  {
+   "span": "a-better-approach",
+   "concept": "wavefunction",
+   "verb": "introduces"
+  },
+  {
+   "span": "a-better-approach",
+   "concept": "reduced-plancks-constant",
+   "verb": "introduces"
+  },
+  {
+   "span": "a-better-approach",
+   "concept": "matter-plane-wave",
+   "verb": "introduces"
+  },
+  {
+   "span": "a-better-approach",
+   "concept": "free-particle-schrodinger-equation",
+   "verb": "introduces"
+  },
+  {
+   "span": "a-better-approach",
+   "concept": "time-dependent-schrodinger-equation",
+   "verb": "introduces"
+  },
+  {
+   "span": "a-better-approach",
+   "concept": "stationary-state",
+   "verb": "introduces"
+  },
+  {
+   "span": "a-better-approach",
+   "concept": "time-independent-schrodinger-equation",
+   "verb": "introduces"
+  },
+  {
+   "span": "a-better-approach",
+   "concept": "bohr-model",
+   "verb": "uses"
+  },
+  {
+   "span": "a-better-approach",
+   "concept": "wave-particle-duality",
+   "verb": "uses"
+  },
+  {
+   "span": "a-better-approach",
+   "concept": "multidimensional-wave-equation",
+   "verb": "uses"
+  },
+  {
+   "span": "a-better-approach",
+   "concept": "classical-wave-equation",
+   "verb": "uses"
+  },
+  {
+   "span": "a-better-approach",
+   "concept": "eulers-formula",
+   "verb": "uses"
+  },
+  {
+   "span": "a-better-approach",
+   "concept": "traveling-wave",
+   "verb": "uses"
+  },
+  {
+   "span": "a-better-approach",
+   "concept": "plancks-constant",
+   "verb": "uses"
+  },
+  {
+   "span": "a-better-approach",
+   "concept": "de-broglie-wavelength",
+   "verb": "uses"
+  },
+  {
+   "span": "a-better-approach",
+   "concept": "separation-of-variables",
+   "verb": "uses"
+  },
+  {
+   "span": "a-better-approach",
+   "concept": "laplacian",
+   "verb": "reinforces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "eq:3.1.14",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "a-better-approach",
+   "prompt": "<p>Show that the matter wave $\\kPsi(\\kx,\\kt)=\\exp\\left[i(\\kp\\kx-\\kE\\kt)/\\hbar\\right]$ satisfies the free-particle equation $i\\hbar\\,\\partial\\kPsi/\\partial\\kt = -(\\hbar^2/2\\km)\\,\\partial^2\\kPsi/\\partial\\kx^2$ when $\\kE = \\kp^2/2\\km$.</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "Work out each side separately and write both as a number times $\\kPsi$.",
+    "solution": "<p>Differentiating with respect to $\\kt$ brings down $-i\\kE/\\hbar$, so $i\\hbar\\,\\partial\\kPsi/\\partial\\kt = i\\hbar(-i\\kE/\\hbar)\\kPsi = \\kE\\kPsi$. Each derivative with respect to $\\kx$ brings down $i\\kp/\\hbar$, so $\\partial^2\\kPsi/\\partial\\kx^2 = (i\\kp/\\hbar)^2\\kPsi = -(\\kp^2/\\hbar^2)\\kPsi$, and the right side is $-(\\hbar^2/2\\km)(-\\kp^2/\\hbar^2)\\kPsi = (\\kp^2/2\\km)\\kPsi$. The two sides are $\\kE\\kPsi$ and $(\\kp^2/2\\km)\\kPsi$, which are equal because $\\kE = \\kp^2/2\\km$ for a free particle.</p>"
+   }
+  },
+  {
+   "id": "a2",
+   "source_id": "eq:3.1.18",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "a-better-approach",
+   "prompt": "<p>A particle is in a state of energy $\\kE = 1.0$ eV, so its wavefunction is $\\kPsi(\\krvec,\\kt)=\\kpsi(\\krvec)e^{-i\\kE\\kt/\\hbar}$. At what frequency does the phase factor $e^{-i\\kE\\kt/\\hbar}$ return to its starting value? ($1\\ \\text{eV} = 1.602\\times10^{-19}$ J, $h = 6.626\\times10^{-34}$ J s.)</p>",
+   "answer": {
+    "type": "number",
+    "value": 242000000000000.0,
+    "unit": "Hz",
+    "generated_by": "ai",
+    "hint": "The phase $\\kE\\kt/\\hbar$ must grow by $2\\pi$.",
+    "solution": "<p>The factor repeats when $\\kE\\kt/\\hbar$ grows by $2\\pi$, that is after a time $2\\pi\\hbar/\\kE = h/\\kE$. Its frequency is $\\knu = \\kE/h = (1.602\\times10^{-19}\\ \\text{J})/(6.626\\times10^{-34}\\ \\text{J s}) = 2.42\\times10^{14}$ Hz, the Planck relation $\\kE = h\\knu$ again.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "free-particle-schrodinger-equation"
+  },
+  {
+   "exercise": "a1",
+   "concept": "matter-plane-wave"
+  },
+  {
+   "exercise": "a2",
+   "concept": "stationary-state"
+  },
+  {
+   "exercise": "a2",
+   "concept": "plancks-constant"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "eq-2-1-2",
+   "kind": "correction",
+   "html": "The one-dimensional wave equation is Equation 2.1.2."
+  },
+  {
+   "id": "eq-3-1-7",
+   "kind": "correction",
+   "html": "The wave of a particle with energy $E$ and momentum $p$ is Equation 3.1.7."
+  },
+  {
+   "id": "eq-3-1-14",
+   "kind": "correction",
+   "html": "The equation generalized here is the free-particle equation, Equation 3.1.14."
+  },
+  {
+   "id": "eq-3-1-16",
+   "kind": "correction",
+   "html": "The equation expanded to three dimensions is the one-dimensional one, Equation 3.1.16."
+  },
+  {
+   "id": "xyz",
+   "kind": "correction",
+   "html": "The book prints $\\nabla f(x,y,x)$ for $\\nabla f(x,y,z)$."
+  },
+  {
+   "id": "time-independent",
+   "kind": "correction",
+   "html": "The book means a time-independent wavefunction: $\\psi(\\vec{r})$ depends on the space coordinates only."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "free-particle",
+   "what": "the Schrödinger equation of a free particle",
+   "source": "Physical Chemistry (LibreTexts), 3.1 The Schrödinger Equation",
+   "nodes": [
+    {
+     "then": {
+      "tex": "\\mk{L}{\\kPsi(\\kx,\\kt)} = \\mk{R}{\\exp\\left[\\dfrac{i(\\kp\\kx-\\kE\\kt)}{\\hbar}\\right]}",
+      "src": "(3.1.7)"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\dfrac{\\partial\\kPsi}{\\partial\\kt}} = \\mk{R}{-\\left(\\dfrac{i\\kE}{\\hbar}\\right)\\exp\\left[\\dfrac{i(\\kp\\kx-\\kE\\kt)}{\\hbar}\\right]}",
+       "uses": [],
+       "cap": "Differentiating an exponential brings down the derivative of its exponent with respect to $\\kt$, which is $-i\\kE/\\hbar$."
+      }
+     ],
+     "num": "(3.1.9)",
+     "src": "3.1"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "\\kPsi(\\kx,\\kt) = \\exp\\left[\\dfrac{i(\\kp\\kx-\\kE\\kt)}{\\hbar}\\right]",
+       "src": "(3.1.7)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\dfrac{\\partial\\kPsi}{\\partial\\kt}} = \\mk{R}{-\\left(\\dfrac{i\\kE}{\\hbar}\\right)\\exp\\left[\\dfrac{i(\\kp\\kx-\\kE\\kt)}{\\hbar}\\right]}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\dfrac{\\partial\\kPsi}{\\partial\\kt}} = \\mk{R}{-\\dfrac{i\\kE}{\\hbar}\\kPsi}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{L}{i\\hbar\\dfrac{\\partial\\kPsi}{\\partial\\kt}} = \\mk{R}{\\kE\\kPsi}",
+       "uses": []
+      }
+     ],
+     "num": "(3.1.10)",
+     "src": "3.1"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\kPsi(\\kx,\\kt) = \\exp\\left[\\dfrac{i(\\kp\\kx-\\kE\\kt)}{\\hbar}\\right]",
+       "src": "(3.1.7)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\kPsi(\\kx,\\kt)} = \\mk{R}{\\exp\\left[\\dfrac{i(\\kp\\kx-\\kE\\kt)}{\\hbar}\\right]}",
+      "src": "(3.1.7)"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\dfrac{\\partial\\kPsi}{\\partial\\kx}} = \\mk{R}{\\dfrac{i\\kp}{\\hbar}\\exp\\left[\\dfrac{i(\\kp\\kx-\\kE\\kt)}{\\hbar}\\right]}",
+       "uses": [],
+       "cap": "This time the derivative of the exponent is taken with respect to $\\kx$, which brings down $i\\kp/\\hbar$."
+      },
+      {
+       "tex": "\\mk{L}{\\dfrac{\\partial\\kPsi}{\\partial\\kx}} = \\mk{R}{\\dfrac{i\\kp}{\\hbar}\\kPsi}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{L}{-i\\hbar\\dfrac{\\partial\\kPsi}{\\partial\\kx}} = \\mk{R}{\\kp\\kPsi}",
+       "uses": []
+      }
+     ],
+     "num": "(3.1.11)",
+     "src": "3.1",
+     "note": "The book says this comes from differentiating Equation 3.1.9 with respect to $x$; the $x$ derivative is taken of Equation 3.1.7."
+    },
+    {
+     "assumes": [
+      {
+       "step": 2
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{-i\\hbar\\dfrac{\\partial\\kPsi}{\\partial\\kx}} = \\mk{R}{\\kp\\kPsi}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{-i\\hbar\\dfrac{\\partial}{\\partial\\kx}\\left(-i\\hbar\\dfrac{\\partial\\kPsi}{\\partial\\kx}\\right)} = \\mk{R}{\\kp\\left(-i\\hbar\\dfrac{\\partial\\kPsi}{\\partial\\kx}\\right)}",
+       "uses": [],
+       "cap": "Both sides are acted on by $-i\\hbar\\,\\partial/\\partial\\kx$ once more; $\\kp$ is a constant and stays outside."
+      },
+      {
+       "tex": "\\mk{L}{-i\\hbar\\dfrac{\\partial}{\\partial\\kx}\\left(-i\\hbar\\dfrac{\\partial\\kPsi}{\\partial\\kx}\\right)} = \\mk{R}{\\kp^2\\kPsi}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{L}{-\\hbar^2\\dfrac{\\partial^2\\kPsi}{\\partial\\kx^2}} = \\mk{R}{\\kp^2\\kPsi}",
+       "uses": []
+      }
+     ],
+     "num": "(3.1.12)",
+     "src": "3.1"
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "step": 3
+      }
+     ],
+     "then": {
+      "tex": "\\mk{E}{\\kE} = \\mk{K}{\\dfrac{\\kp^2}{2\\km}}",
+      "src": "(3.1.13)",
+      "why": "All the energy of a nonrelativistic free particle is kinetic."
+     },
+     "steps": [
+      {
+       "tex": "\\mk{E}{\\kE\\kPsi} = \\mk{K}{\\dfrac{\\kp^2\\kPsi}{2\\km}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{E}{i\\hbar\\dfrac{\\partial\\kPsi}{\\partial\\kt}} = \\mk{K}{\\dfrac{\\kp^2\\kPsi}{2\\km}}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{E}{i\\hbar\\dfrac{\\partial\\kPsi}{\\partial\\kt}} = \\mk{K}{-\\dfrac{\\hbar^2}{2\\km}\\dfrac{\\partial^2\\kPsi}{\\partial\\kx^2}}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "num": "(3.1.14)",
+     "src": "3.1"
+    }
+   ]
+  },
+  {
+   "id": "time-independent",
+   "what": "the time-independent Schrödinger equation",
+   "source": "Physical Chemistry (LibreTexts), 3.1 The Schrödinger Equation",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kPsi(\\krvec,\\kt)=\\kpsi(\\krvec)e^{-i\\kE\\kt/\\hbar}",
+       "src": "(3.1.20)"
+      },
+      {
+       "text": "The potential energy $\\kV(\\krvec)$ depends on position only, so the bracket acts on the space coordinates alone.",
+       "src": "3.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{i\\hbar\\dfrac{\\partial}{\\partial\\kt}\\kPsi(\\krvec,\\kt)} = \\mk{R}{\\left[-\\dfrac{\\hbar^2}{2\\km}\\knabla+\\kV(\\krvec)\\right]\\kPsi(\\krvec,\\kt)}",
+      "src": "(3.1.17)"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{i\\hbar\\dfrac{\\partial}{\\partial\\kt}\\left[\\kpsi(\\krvec)e^{-i\\kE\\kt/\\hbar}\\right]} = \\mk{R}{\\left[-\\dfrac{\\hbar^2}{2\\km}\\knabla+\\kV(\\krvec)\\right]\\kpsi(\\krvec)e^{-i\\kE\\kt/\\hbar}}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{L}{i\\hbar\\left(-\\dfrac{i\\kE}{\\hbar}\\right)\\kpsi(\\krvec)e^{-i\\kE\\kt/\\hbar}} = \\mk{R}{\\left[-\\dfrac{\\hbar^2}{2\\km}\\knabla+\\kV(\\krvec)\\right]\\kpsi(\\krvec)e^{-i\\kE\\kt/\\hbar}}",
+       "uses": [],
+       "cap": "$\\kpsi(\\krvec)$ does not depend on $\\kt$, so only the exponential is differentiated."
+      },
+      {
+       "tex": "\\mk{L}{\\kE\\kpsi(\\krvec)e^{-i\\kE\\kt/\\hbar}} = \\mk{R}{\\left[-\\dfrac{\\hbar^2}{2\\km}\\knabla+\\kV(\\krvec)\\right]\\kpsi(\\krvec)e^{-i\\kE\\kt/\\hbar}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{L}{\\kE\\kpsi(\\krvec)e^{-i\\kE\\kt/\\hbar}} = \\mk{R}{e^{-i\\kE\\kt/\\hbar}\\left[-\\dfrac{\\hbar^2}{2\\km}\\knabla+\\kV(\\krvec)\\right]\\kpsi(\\krvec)}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\kE\\kpsi(\\krvec)} = \\mk{R}{\\left[-\\dfrac{\\hbar^2}{2\\km}\\knabla+\\kV(\\krvec)\\right]\\kpsi(\\krvec)}",
+       "uses": [],
+       "cap": "The exponential factor is never zero, so both sides can be divided by it."
+      },
+      {
+       "tex": "\\mk{R}{\\left[-\\dfrac{\\hbar^2}{2\\km}\\knabla+\\kV(\\krvec)\\right]\\kpsi(\\krvec)} = \\mk{L}{\\kE\\kpsi(\\krvec)}",
+       "uses": []
+      }
+     ],
+     "num": "(3.1.21)",
+     "src": "3.1"
+    }
+   ]
+  },
+  {
+   "id": "real-imaginary",
+   "what": "the real and imaginary parts of Ψ",
+   "source": "Physical Chemistry (LibreTexts), 3.1 The Schrödinger Equation",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "e^{\\pm i\\theta}=\\cos\\theta \\pm i \\sin\\theta",
+       "src": "(3.1.4)"
+      }
+     ],
+     "then": {
+      "tex": "\\kPsi(\\krvec,\\kt)=\\mk{psi}{\\kpsi(\\krvec)}\\mk{e}{e^{-i\\kE\\kt/\\hbar}}",
+      "src": "(3.1.20)"
+     },
+     "steps": [
+      {
+       "tex": "\\kPsi(\\krvec,\\kt)=\\mk{psi}{\\kpsi(\\krvec)}\\mk{e}{\\left(\\cos \\dfrac{\\kE\\kt}{\\hbar} - i \\, \\sin \\dfrac{\\kE\\kt}{\\hbar}\\right)}",
+       "uses": [
+        0
+       ],
+       "cap": "Euler's formula with $\\theta = \\kE\\kt/\\hbar$ and the lower sign. The total wavefunction has a real part and an imaginary part."
+      }
+     ],
+     "num": "(3.1.22)",
+     "src": "3.1"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "\\sin\\theta = \\cos(\\theta - \\pi/2)",
+       "src": "3.1"
+      }
+     ],
+     "then": {
+      "tex": "\\kPsi(\\krvec,\\kt)=\\mk{psi}{\\kpsi(\\krvec)}\\mk{e}{\\left(\\cos \\dfrac{\\kE\\kt}{\\hbar} - i \\, \\sin \\dfrac{\\kE\\kt}{\\hbar}\\right)}"
+     },
+     "steps": [
+      {
+       "tex": "\\kPsi(\\krvec,\\kt)=\\mk{re}{\\kpsi(\\krvec)\\cos\\left(\\dfrac{\\kE\\kt}{\\hbar}\\right)} - \\mk{im}{i\\kpsi(\\krvec)\\sin\\left(\\dfrac{\\kE\\kt}{\\hbar}\\right)}",
+       "uses": [],
+       "map": {
+        "psi": [
+         "re",
+         "im"
+        ],
+        "e": [
+         "re",
+         "im"
+        ]
+       }
+      },
+      {
+       "tex": "\\kPsi(\\krvec,\\kt)=\\mk{re}{\\kpsi(\\krvec)\\cos\\left(\\dfrac{\\kE\\kt}{\\hbar}\\right)} - \\mk{im}{i\\kpsi(\\krvec)\\cos\\left(\\dfrac{\\kE\\kt}{\\hbar} - \\dfrac{\\pi}{2}\\right)}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "src": "3.1"
+    }
+   ]
+  }
+ ]
+}
