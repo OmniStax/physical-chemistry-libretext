@@ -10,6 +10,9 @@ dropped. Needs BeautifulSoup 4. Markers, in the order a page prints them:
   # Title                         the page title, without its number.
   ## Learning Objectives {section:objectives}
                                   a section.box-objectives; its list follows.
+                                  A div.box-objectives (18.9, inside an
+                                  mt-include) is the same box, its title a
+                                  p.box-legend.
   ## Heading / ### / ####         an h2, h3, h4 of the narrative. LibreTexts
                                   wraps every header in div.mt-section; only
                                   the header survives.
@@ -419,6 +422,13 @@ class Converter:
         if name in ("script", "style", "header") or "mt-guide-content" in cls or "noindex" in cls:
             return ""
         if name == "section" and any(c.startswith("box-") for c in cls):
+            return self.box(node)
+        if name == "div" and "box-objectives" in cls:
+            # 18.9 prints its objectives in a div (an mt-include), titled by a
+            # p.box-legend; only this box is read from a div, so that the div
+            # exercise boxes of 9.11 and 14.2-14.3 come through as before
+            for legend in node.find_all("p", class_="box-legend"):
+                legend.decompose()
             return self.box(node)
         if name in ("h1", "h2", "h3", "h4"):
             t = re.sub(r"\s+", " ", self.math_inline(node.get_text(" ", strip=True)))

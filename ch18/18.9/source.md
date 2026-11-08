@@ -1,7 +1,7 @@
 <!-- LibreTexts page 13699: Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Physical_Chemistry_(LibreTexts)/18:_Partition_Functions_and_Ideal_Gases/18.09:_Molar_Heat_Capacities -->
 # Molar Heat Capacities
 
-Learning Objectives
+## Learning Objectives {section:objectives}
 
 - {term:Goal}: Specific heat capacity data for a wide range of elements are used to assess the accuracy and limitations of the Dulong-Petit Law.
 - {term:Prerequisites}: An introductory knowledge of statistical thermodynamics including the derivation of the vibrational (harmonic oscillator) contributions to the heat capacity are recommended.
