@@ -215,7 +215,7 @@ const lor = (x, x0, w) => (w * w) / ((x - x0) * (x - x0) + w * w);
     const full = (p.n1 + 1) * (p.n2 + 1), seen = ls.length;
     const eq = Math.abs(j1 - j2) < 0.05;
     topline(ctx, eq ? `With $\\kJcc_{1} = \\kJcc_{2}$ the ${full} lines of ${p.lab} fall on ${seen} subpeaks: it looks like a ${NAMES[seen - 1] || seen + '-line multiplet'}.`
-      : `${p.lab}: split ${p.n1 === 1 ? 'into a doublet' : 'into a triplet'} by ${fmt(j1, 1)}\u00a0Hz, then each line into a doublet by ${fmt(j2, 1)}\u00a0Hz: ${seen} lines.`);
+      : `${p.lab}: split ${p.n1 === 1 ? 'into a doublet' : 'into a triplet'} by $${fmt(j1, 1)}\\ \\text{Hz}$, then each line into a doublet by $${fmt(j2, 1)}\\ \\text{Hz}$: ${seen} lines.`);
     /* the tree */
     const X = (hz) => CX + hz * PX, t0 = 150, lh = 64;
     line(ctx, CX, t0 - 20, CX, t0, PAL.ink, 3);

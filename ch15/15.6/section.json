@@ -1,0 +1,194 @@
+{
+ "id": "15.6",
+ "module": "13652",
+ "chapter": "15",
+ "title": "The Helium-Neon Laser",
+ "short": "Helium-neon laser",
+ "lead": "The helium-neon laser was the first laser to run continuously. An electric discharge excites helium, collisions pass the energy to neon, and neon's transitions give the light, most often red at 632.8 nm. Its levels, its lines and the tube that holds the gas.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "Adapted from Newman, Maleki and Neils (tagged CC BY 4.0) and shared under CC BY-NC-SA 4.0 with the rest of the book; Figure 15.6.2 is the drawing already shown as Figure 15.5.2, and Figure 15.6.3, a copyrighted photograph, is not reproduced.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The section prints no exercises; both here are new and AI-written, their answers checked by computation, with Bloom levels and concept tags chosen by AI. Numeric answers accept a 2% tolerance.",
+ "figures": [
+  {
+   "id": "sim-hene",
+   "kind": "sim",
+   "number": "15.6.1",
+   "originals": [
+    "/media/ch15/402427-energy_diagram_for_He-Ne_laser.svg"
+   ],
+   "widths": [
+    611
+   ],
+   "original_caption": "An energy level diagram for He and Ne in a He-Ne laser. The pumping creates helium atoms in two excited states. These excited states have energies similar to two sets of four excited states in the Ne atoms. Thus, collisions between the excited He atoms and Ne atoms can lead to nonradiative energy transfer. The excited state Ne atoms have lifetimes that enable a population inversion and lasing. (CC BY-NC; Ümit Kaya via LibreTexts)",
+   "draws": [
+    "energy",
+    "wavelength"
+   ],
+   "conventions": [
+    "He",
+    "Ne",
+    "e-"
+   ],
+   "facts": [
+    "spectrum"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "first-continuous-laser",
+   "concept": "helium-neon-laser",
+   "verb": "introduces"
+  },
+  {
+   "span": "first-continuous-laser",
+   "concept": "four-level-laser",
+   "verb": "uses"
+  },
+  {
+   "span": "first-continuous-laser",
+   "concept": "cw-and-pulsed-lasers",
+   "verb": "uses"
+  },
+  {
+   "span": "helium-feeds-neon",
+   "concept": "excitation-transfer",
+   "verb": "introduces"
+  },
+  {
+   "span": "helium-feeds-neon",
+   "concept": "metastable-state",
+   "verb": "uses"
+  },
+  {
+   "span": "helium-feeds-neon",
+   "concept": "pumping",
+   "verb": "uses"
+  },
+  {
+   "span": "helium-feeds-neon",
+   "concept": "population-inversion",
+   "verb": "uses"
+  },
+  {
+   "span": "helium-feeds-neon",
+   "concept": "einstein-coefficients",
+   "verb": "uses"
+  },
+  {
+   "span": "inside-the-tube",
+   "concept": "optical-cavity",
+   "verb": "uses"
+  },
+  {
+   "span": "inside-the-tube",
+   "concept": "laser-efficiency",
+   "verb": "reinforces"
+  },
+  {
+   "span": "inside-the-tube",
+   "concept": "helium-neon-laser",
+   "verb": "reinforces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "This means that for every 1 Watt of input power from the power supply, 1 mW of laser light is produced.",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "inside-the-tube",
+   "prompt": "<p>A He-Ne laser gives 5.0 mW of light at an overall efficiency of 0.10%. How much power does it draw from its power supply?</p>",
+   "answer": {
+    "type": "number",
+    "value": 5.0,
+    "unit": "W",
+    "generated_by": "ai",
+    "hint": "Efficiency is output power over input power.",
+    "solution": "<p>Efficiency is the ratio of output to input, so the input is $5.0\\ \\text{mW} / 0.0010 = 5.0\\ \\text{W}$. That is the book's 1 mW of light per watt drawn, five times over.</p>"
+   }
+  },
+  {
+   "id": "a2",
+   "source_id": "A typical commercially available He-Ne produces about a few mW of 632.8 nm light",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "inside-the-tube",
+   "prompt": "<p>How many photons per second does a He-Ne laser emit when it gives 1.0 mW of light at 632.8 nm? ($h = 6.626 \\times 10^{-34}$ J·s, $c = 2.998 \\times 10^{8}$ m/s)</p>",
+   "answer": {
+    "type": "number",
+    "value": 3190000000000000.0,
+    "unit": "photons/s",
+    "generated_by": "ai",
+    "hint": "Divide the power by the energy of one photon, hc/λ.",
+    "solution": "<p>One photon carries $E = hc/\\lambda = (6.626 \\times 10^{-34}\\ \\text{J·s})(2.998 \\times 10^{8}\\ \\text{m/s})/(632.8 \\times 10^{-9}\\ \\text{m}) = 3.139 \\times 10^{-19}$ J. The beam carries $1.0 \\times 10^{-3}$ J each second, so it holds $(1.0 \\times 10^{-3}\\ \\text{J/s})/(3.139 \\times 10^{-19}\\ \\text{J}) = 3.19 \\times 10^{15}$ photons per second.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "laser-efficiency"
+  },
+  {
+   "exercise": "a1",
+   "concept": "helium-neon-laser"
+  },
+  {
+   "exercise": "a2",
+   "concept": "helium-neon-laser"
+  },
+  {
+   "exercise": "a2",
+   "concept": "bohr-frequency-condition"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-bennett",
+   "kind": "correction",
+   "html": "The name is Bennett: William R. Bennett Jr."
+  },
+  {
+   "id": "c-same-drawing",
+   "kind": "correction",
+   "html": "Figure 15.6.2 is the drawing shown as Figure 15.5.2 in section 15.5; the book prints it after this paragraph, not above it."
+  },
+  {
+   "id": "c-no-photo",
+   "kind": "correction",
+   "html": "The book's Figure 15.6.3, a photograph of a commercial He-Ne tube beside a meter stick, with the thicker ballast cylinder next to the thin bore and the two concave mirrors that seal it, is under copyright and is not reproduced. It is on the book's page, <a href=\"https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Physical_Chemistry_(LibreTexts)/15%3A_Lasers_Laser_Spectroscopy_and_Photochemistry/15.06%3A_The_Helium-Neon_Laser\">15.6 The Helium-Neon Laser</a> at LibreTexts."
+  }
+ ]
+}

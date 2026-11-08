@@ -1,0 +1,483 @@
+{
+ "id": "15.4",
+ "module": "13650",
+ "chapter": "15",
+ "title": "Population Inversion can be Achieved in a Three-Level System",
+ "short": "Three-level systems",
+ "lead": "Two levels pumped by light can at best be equally populated. Adding a third, metastable level gives the pumped atoms somewhere to collect. The ruby laser and the copper vapor laser use the two possible lasing transitions of such a system, and their rate equations say when each one inverts.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "Adapted from Newman, Maleki and Neils, shared under CC BY-NC-SA 4.0; the left panel of Figure 15.4.1, Guy Immega's copy of a Maiman laser (CC0, https://upload.wikimedia.org/wikipedia/commons/1/11/2_Maiman_Laser_Left_Side.jpg), is not shown, and the page's one uncited reference, D. W. Coutts in the Encyclopedia of Modern Optics (2005), p. 460, is left out.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The section prints no exercises; both here are new and AI-written, the numeric one checked by computation, with Bloom levels and concept tags chosen by AI. Numeric answers accept a 2% tolerance.",
+ "figures": [
+  {
+   "id": "fig-15-4-1",
+   "kind": "photo",
+   "number": "15.4.1",
+   "draws": []
+  },
+  {
+   "id": "sim-three-level",
+   "kind": "sim",
+   "number": "15.4.2",
+   "folds": [
+    "15.4.3",
+    "15.4.4"
+   ],
+   "originals": [
+    "/media/ch15/400526-Three_level_laser_transitions.svg",
+    "/media/ch15/400525-level_2_to_level_1_laser.svg",
+    "/media/ch15/400527-Level_3_to_level_2_laser.svg"
+   ],
+   "original_caption": "The nine possible events in a three-level system. (CC BY-NC; Ümit Kaya via LibreTexts) Lasing from level 2 to level 1 in a three-level laser. (CC BY-NC; Ümit Kaya via LibreTexts) Lasing from level 3 to level 2 in a three-level laser. (CC BY-NC; Ümit Kaya via LibreTexts)",
+   "draws": [
+    "frequency",
+    "time",
+    "energy-density"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "opening",
+   "concept": "three-level-laser",
+   "verb": "introduces"
+  },
+  {
+   "span": "opening",
+   "concept": "pumping",
+   "verb": "uses"
+  },
+  {
+   "span": "opening",
+   "concept": "metastable-state",
+   "verb": "uses"
+  },
+  {
+   "span": "opening",
+   "concept": "two-level-no-inversion",
+   "verb": "reinforces"
+  },
+  {
+   "span": "opening",
+   "concept": "population-inversion",
+   "verb": "reinforces"
+  },
+  {
+   "span": "lasing-in-three-level-systems",
+   "concept": "ruby-laser",
+   "verb": "introduces"
+  },
+  {
+   "span": "lasing-in-three-level-systems",
+   "concept": "three-level-laser",
+   "verb": "uses"
+  },
+  {
+   "span": "lasing-in-three-level-systems",
+   "concept": "metastable-state",
+   "verb": "reinforces"
+  },
+  {
+   "span": "transition-rates-in-three-level-systems",
+   "concept": "three-level-transitions",
+   "verb": "introduces"
+  },
+  {
+   "span": "transition-rates-in-three-level-systems",
+   "concept": "metastable-level-inversion",
+   "verb": "introduces"
+  },
+  {
+   "span": "transition-rates-in-three-level-systems",
+   "concept": "gain-medium",
+   "verb": "introduces"
+  },
+  {
+   "span": "transition-rates-in-three-level-systems",
+   "concept": "three-level-steady-state",
+   "verb": "introduces"
+  },
+  {
+   "span": "transition-rates-in-three-level-systems",
+   "concept": "einstein-coefficients",
+   "verb": "uses"
+  },
+  {
+   "span": "transition-rates-in-three-level-systems",
+   "concept": "spontaneous-emission",
+   "verb": "uses"
+  },
+  {
+   "span": "transition-rates-in-three-level-systems",
+   "concept": "stimulated-emission",
+   "verb": "uses"
+  },
+  {
+   "span": "transition-rates-in-three-level-systems",
+   "concept": "level-population",
+   "verb": "uses"
+  },
+  {
+   "span": "transition-rates-in-three-level-systems",
+   "concept": "population-inversion",
+   "verb": "reinforces"
+  },
+  {
+   "span": "four-level-lasers",
+   "concept": "four-level-laser",
+   "verb": "introduces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "which rearranges to",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "transition-rates-in-three-level-systems",
+   "prompt": "<p>In a three-level laser that lases from level 3 to level 2, light at $\\nu_{32}$ gives $\\rho_{\\nu}(\\nu_{32})B_{32} = 2.0 \\times 10^{7}\\ \\text{s}^{-1}$. Use Equation 15.4.3 to find the steady-state ratio $N_3/N_2$ (a) when $A_{21} = 5.0 \\times 10^{7}\\ \\text{s}^{-1}$ and $A_{32} = 1.0 \\times 10^{7}\\ \\text{s}^{-1}$, and (b) when the two decay constants are swapped.</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 2.33,
+      "hint": "Add the same stimulated term to both decay constants in Equation 15.4.3."
+     },
+     {
+      "part": "b",
+      "value": 0.429
+     }
+    ],
+    "solution": "<p>(a) $N_3/N_2 = (5.0 + 2.0)/(1.0 + 2.0) = 7.0/3.0 = 2.33$, so levels 3 and 2 are inverted. (b) $N_3/N_2 = (1.0 + 2.0)/(5.0 + 2.0) = 3.0/7.0 = 0.429$: level 2 now empties more slowly than level 3 feeds it, and there is no inversion. In both cases the shared term $\\rho_{\\nu}(\\nu_{32})B_{32}$ pulls the ratio toward 1.</p>"
+   }
+  },
+  {
+   "id": "a2",
+   "source_id": "These lasers can be more efficiently pumped, because the lower level of the lasing transition is not the ground state.",
+   "kind": "exercise",
+   "bloom": "Understand",
+   "place": {
+    "at": "end"
+   },
+   "cite": "four-level-lasers",
+   "prompt": "<p>Why does a ruby laser, which lases down to the ground state, need a very strong flash lamp, while a four-level laser can be pumped far more gently?</p>",
+   "answer": {
+    "type": "choice",
+    "generated_by": "ai",
+    "options": [
+     "To invert the ruby, the pump must move more than half of all the atoms out of the ground state; a four-level laser's lower lasing level starts nearly empty and drains quickly, so a few excited atoms already outnumber it.",
+     "The ruby's lasing frequency is higher than its pump frequency, so the pump must supply extra energy.",
+     "Stimulated emission is weaker in a crystal than in a gas.",
+     "A four-level laser needs no pump at all, since its upper lasing level is metastable."
+    ],
+    "correct": 0,
+    "hint": "Compare the lower level of each lasing transition: how full is it before the pump starts?",
+    "solution": "<p>In the ruby the lower lasing level is the ground state, which holds nearly every atom to begin with. Level 2 outnumbers it only after the pump has emptied more than half of the ground state, which takes a pump rate above $A_{21}$ and so a very strong lamp. In a four-level laser the lower lasing level lies above the ground state, holds almost no atoms and empties fast, so the upper level outnumbers it as soon as any atoms arrive. That is why four-level lasers can be pumped more efficiently.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "three-level-steady-state"
+  },
+  {
+   "exercise": "a2",
+   "concept": "ruby-laser"
+  },
+  {
+   "exercise": "a2",
+   "concept": "four-level-laser"
+  },
+  {
+   "exercise": "a2",
+   "concept": "metastable-level-inversion"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-ruby-pump",
+   "kind": "correction",
+   "html": "Only for a strong enough pump. At steady state, before lasing starts, $N_2/N_1 = \\rho_{\\nu}(\\nu_{13})B_{13}/A_{21}$ (the derivation below), so level 2 outnumbers the ground state only once the pump rate per ground-state atom exceeds $A_{21}$. That is why the ruby needs a very strong flash lamp."
+  },
+  {
+   "id": "c-copper-pump",
+   "kind": "correction",
+   "html": "A copper vapor laser is pumped by pulses of electric discharge through the vapor, not by a flash lamp."
+  },
+  {
+   "id": "c-metastable-label",
+   "kind": "correction",
+   "figure": "sim-three-level",
+   "html": "Figure 15.4.4 labels level 2 the metastable level. For lasing from level 3 to level 2, level 2 has to empty faster than level 3 feeds it ($A_{21} > A_{32}$, Equation 15.4.3), so the long-lived level there is level 3."
+  },
+  {
+   "id": "c-cw-ruby",
+   "kind": "correction",
+   "html": "Most continuous lasers are four-level lasers, but a three-level laser can run continuously under a strong enough pump: a ruby laser was operated continuously in 1962."
+  },
+  {
+   "id": "c-nd-yag",
+   "kind": "correction",
+   "html": "Section 15.6 describes the He-Ne laser only; Nd:YAG appears in Table 15.5.1."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "ruby-inversion",
+   "what": "the ruby's inversion",
+   "source": "Physical Chemistry (LibreTexts), 15.4 Population Inversion can be Achieved in a Three-Level System",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "text": "The pump lifts atoms from level 1 to level 3 at the rate $\\krhonu(\\knuonethree)B_{13}N_1$.",
+       "src": "15.4"
+      },
+      {
+       "text": "Atoms leave level 3 almost only by spontaneous emission to level 2, at the rate $A_{32}N_3$.",
+       "src": "15.4"
+      },
+      {
+       "text": "At steady state the population of each level stays constant.",
+       "src": "15.4"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{d}{\\dfrac{dN_3}{d\\kt}} = \\mk{p}{\\krhonu(\\knuonethree)B_{13}N_1} - \\mk{s}{A_{32}N_3}",
+      "uses": [
+       0,
+       1
+      ],
+      "why": "Level 3 gains the pumped atoms and loses those that decay to level 2."
+     },
+     "steps": [
+      {
+       "tex": "\\mk{d}{0} = \\mk{p}{\\krhonu(\\knuonethree)B_{13}N_1} - \\mk{s}{A_{32}N_3}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{s}{A_{32}N_3} = \\mk{p}{\\krhonu(\\knuonethree)B_{13}N_1}",
+       "uses": []
+      }
+     ]
+    },
+    {
+     "assumes": [
+      {
+       "text": "Atoms leave level 3 almost only by spontaneous emission to level 2, at the rate $A_{32}N_3$.",
+       "src": "15.4"
+      },
+      {
+       "text": "Before any lasing light builds up, atoms leave level 2 by spontaneous emission to level 1, at the rate $A_{21}N_2$.",
+       "src": "15.4"
+      },
+      {
+       "text": "At steady state the population of each level stays constant.",
+       "src": "15.4"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{d}{\\dfrac{dN_2}{d\\kt}} = \\mk{s}{A_{32}N_3} - \\mk{h}{A_{21}N_2}",
+      "uses": [
+       0,
+       1
+      ],
+      "why": "Level 2 gains what level 3 sheds and loses its own spontaneous decay."
+     },
+     "steps": [
+      {
+       "tex": "\\mk{d}{0} = \\mk{s}{A_{32}N_3} - \\mk{h}{A_{21}N_2}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{h}{A_{21}N_2} = \\mk{s}{A_{32}N_3}",
+       "uses": []
+      }
+     ]
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "step": 0
+      }
+     ],
+     "then": {
+      "tex": "\\mk{h}{A_{21}N_2} = \\mk{s}{A_{32}N_3}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{h}{A_{21}N_2} = \\mk{p}{\\krhonu(\\knuonethree)B_{13}N_1}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{r}{\\dfrac{N_2}{N_1}} = \\mk{k}{\\dfrac{\\krhonu(\\knuonethree)B_{13}}{A_{21}}}",
+       "uses": [],
+       "map": {
+        "h": [
+         "r",
+         "k"
+        ],
+        "p": [
+         "r",
+         "k"
+        ]
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "three-two-inversion",
+   "what": "inversion between levels 3 and 2",
+   "source": "Physical Chemistry (LibreTexts), 15.4 Population Inversion can be Achieved in a Three-Level System",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "text": "Level 2 loses atoms by absorption to level 3, $\\krhonu(\\knuthreetwo)B_{32}N_2$, and by spontaneous emission to level 1, $A_{21}N_2$; it gains them by spontaneous and stimulated emission from level 3, $A_{32}N_3$ and $\\krhonu(\\knuthreetwo)B_{32}N_3$.",
+       "src": "15.4"
+      },
+      {
+       "tex": "0 = \\dfrac{dN_1(\\kt)}{d\\kt} = \\dfrac{dN_2(\\kt)}{d\\kt} = \\dfrac{dN_3(\\kt)}{d\\kt}",
+       "src": "15.4"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{d}{\\dfrac{dN_2(\\kt)}{d\\kt}} = \\mk{a}{-\\krhonu(\\knuthreetwo)B_{32}N_2} + \\mk{b}{A_{32}N_3} - \\mk{c}{A_{21}N_2} + \\mk{e}{\\krhonu(\\knuthreetwo)B_{32}N_3}",
+      "uses": [
+       0
+      ],
+      "why": "Each of the four events adds to or takes from level 2 at its own rate."
+     },
+     "steps": [
+      {
+       "tex": "\\mk{d}{\\dfrac{dN_2(\\kt)}{d\\kt}} = \\mk{a}{-\\krhonu(\\knuthreetwo)B_{32}N_2} + \\mk{b}{A_{32}N_3} - \\mk{c}{A_{21}N_2} + \\mk{e}{\\krhonu(\\knuthreetwo)B_{32}N_3} = \\mk{z}{0}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "num": "(15.4.1)",
+     "note": "The book prints the left side as $N_2(t)/dt$; it is the rate of change $dN_2(t)/dt$."
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      }
+     ],
+     "then": {
+      "tex": "\\mk{a}{-\\krhonu(\\knuthreetwo)B_{32}N_2} + \\mk{b}{A_{32}N_3} - \\mk{c}{A_{21}N_2} + \\mk{e}{\\krhonu(\\knuthreetwo)B_{32}N_3} = \\mk{z}{0}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{N_2(A_{21} + \\krhonu(\\knuthreetwo)B_{32})} = \\mk{r}{N_3(A_{32} + \\krhonu(\\knuthreetwo)B_{32})}",
+       "uses": [],
+       "map": {
+        "a": "l",
+        "c": "l",
+        "b": "r",
+        "e": "r"
+       }
+      }
+     ],
+     "num": "(15.4.2)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{N_2(A_{21} + \\krhonu(\\knuthreetwo)B_{32})} = \\mk{r}{N_3(A_{32} + \\krhonu(\\knuthreetwo)B_{32})}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{q}{\\dfrac{N_3}{N_2}} = \\mk{f}{\\dfrac{A_{21} + \\krhonu(\\knuthreetwo)B_{32}}{A_{32} + \\krhonu(\\knuthreetwo)B_{32}}}",
+       "uses": [],
+       "map": {
+        "l": [
+         "q",
+         "f"
+        ],
+        "r": [
+         "q",
+         "f"
+        ]
+       }
+      }
+     ],
+     "num": "(15.4.3)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 2
+      },
+      {
+       "text": "Atoms in state 2 decay to the ground state more rapidly than atoms in state 3 decay to state 2, $A_{21} > A_{32}$.",
+       "src": "15.4"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{q}{\\dfrac{N_3}{N_2}} = \\mk{f}{\\dfrac{A_{21} + \\krhonu(\\knuthreetwo)B_{32}}{A_{32} + \\krhonu(\\knuthreetwo)B_{32}}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{q}{\\dfrac{N_3}{N_2}} > \\mk{o}{1}",
+       "uses": [
+        1
+       ],
+       "map": {
+        "f": "o"
+       },
+       "cap": "Both sides of the fraction carry the same $\\krhonu(\\knuthreetwo)B_{32}$, so the larger $A_{21}$ makes the numerator the larger."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

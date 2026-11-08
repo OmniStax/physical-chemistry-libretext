@@ -1,0 +1,522 @@
+{
+ "id": "15.1",
+ "module": "13647",
+ "chapter": "15",
+ "title": "Electronically Excited Molecules can Relax by a Number of Processes",
+ "short": "Relaxation of excited molecules",
+ "lead": "A molecule that has absorbed light has several ways back to its ground state. Some give the energy back as light, as fluorescence or phosphorescence, and others turn it into heat. The spin of the excited state and the speed of each process decide which way it goes.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "Adapted from a LibreTexts page credited to Chris P. Schaller (College of Saint Benedict / Saint John's University), Diana Wong (UC Davis) and Tom Neils (Grand Rapids Community College) under CC BY-NC-SA 4.0, with Tyler Matthews's public-domain Figure 15.1.1; the page's uncited references (Skoog and others, Principles of Instrumental Analysis; Harris and Bertolucci, Symmetry and Spectroscopy) are left out.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "Exercises 15.1.1 and 15.1.2 and their keys are the book's. The two others, on the order of the relaxation steps and on the red shift of fluorescence, were written by AI with AI solutions. Bloom levels and concept tags were chosen by AI. Numeric answers accept a 2% tolerance.",
+ "figures": [
+  {
+   "id": "fig-15-1-1",
+   "kind": "figure",
+   "number": "15.1.1",
+   "widths": [
+    288
+   ],
+   "originals": [
+    "/media/ch15/73600-ISC_excited_states.png"
+   ],
+   "original_caption": "Spin in the ground and excited states (Tyler Matthews - Paint Shop Pro, Public Domain, https://commons.wikimedia.org/w/index.php?curid=64926546)",
+   "draws": [],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "redrawn as the book draws it"
+    }
+   ]
+  },
+  {
+   "id": "sim-jablonski",
+   "kind": "sim",
+   "number": "15.1.2",
+   "folds": [
+    "15.1.3"
+   ],
+   "withheld": "The book's Figure 15.1.2, credited to Bill Reusch (Michigan State University), carries no licence, and its Figure 15.1.3 is served from employees.csbsju.edu/cschaller/Reactivity/photochem/PCfluoresce.png, which could not be fetched, so neither image is shown.",
+   "draws": [
+    "energy",
+    "wavelength",
+    "time"
+   ],
+   "facts": [
+    "spectrum"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "sim-relaxation",
+   "kind": "sim",
+   "number": "15.1.4",
+   "folds": [
+    "15.1.5",
+    "15.1.8",
+    "15.1.10",
+    "15.1.11"
+   ],
+   "widths": [
+    470,
+    463,
+    399,
+    390,
+    429
+   ],
+   "originals": [
+    "/media/ch15/73613-PCFranckCondon.png",
+    "/media/ch15/73612-PCvibrationalrelax.png",
+    "/media/ch15/73610-PCinternalconversion.png",
+    "/media/ch15/73608-PCintersystem.png",
+    "/media/ch15/73614-PCphosphoresce.png"
+   ],
+   "original_caption": "Transition from the ground state to an excited vibrational state within the excited electronic state. Excitation, followed by vibrational relaxation, and then emission. Relaxation of an excited state particle to the ground state through the nonradiative process of internal conversion. Intersystem crossing from a singlet excited state to a triplet excited state. The process of phosphorescence - excitation, followed by vibrational relaxation, intersystem crossing, and phosphorescence.",
+   "draws": [
+    "energy",
+    "length",
+    "wavelength"
+   ],
+   "facts": [
+    "spectrum"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "sim-mirror",
+   "kind": "sim",
+   "number": "15.1.6",
+   "widths": [
+    684
+   ],
+   "originals": [
+    "/media/ch15/399302-Absorption_and_Fluorescence_Transitions1.svg"
+   ],
+   "original_caption": "Absorption and fluorescence transitions in a hypothetical diatomic molecule in which the equilibrium bond length of the ground state is equal to the equilibrium bond length of the excited state. (CC BY-NC; Ümit Kaya, via LibreTexts)",
+   "draws": [
+    "energy",
+    "wavelength"
+   ],
+   "facts": [
+    "spectrum"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "sim-collision",
+   "kind": "sim",
+   "number": "15.1.7",
+   "widths": [
+    603
+   ],
+   "originals": [
+    "/media/ch15/73611-PCcollision.png"
+   ],
+   "original_caption": "The transfer of vibrational energy (heat) through a collision.",
+   "draws": [
+    "energy",
+    "frequency"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "fig-15-1-9",
+   "kind": "figure",
+   "number": "15.1.9",
+   "widths": [
+    431
+   ],
+   "originals": [
+    "/media/ch15/73609-PCspinmax.png"
+   ],
+   "original_caption": "The diagram on the left shows the energetically stable quartet spin state. The diagram on the right shows the less stable doublet spin state.",
+   "draws": [],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "redrawn as the book draws it"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "opening",
+   "concept": "fluorescence",
+   "verb": "introduces"
+  },
+  {
+   "span": "opening",
+   "concept": "phosphorescence",
+   "verb": "introduces"
+  },
+  {
+   "span": "spin-multiplicity",
+   "concept": "diamagnetism",
+   "verb": "introduces"
+  },
+  {
+   "span": "spin-multiplicity",
+   "concept": "excited-singlet-and-triplet",
+   "verb": "introduces"
+  },
+  {
+   "span": "spin-multiplicity",
+   "concept": "spin-forbidden-transitions",
+   "verb": "introduces"
+  },
+  {
+   "span": "spin-multiplicity",
+   "concept": "pauli-exclusion-principle",
+   "verb": "uses"
+  },
+  {
+   "span": "spin-multiplicity",
+   "concept": "spin-multiplicity",
+   "verb": "uses"
+  },
+  {
+   "span": "spin-multiplicity",
+   "concept": "total-spin-quantum-number",
+   "verb": "uses"
+  },
+  {
+   "span": "spin-multiplicity",
+   "concept": "spin-magnetic-quantum-number",
+   "verb": "uses"
+  },
+  {
+   "span": "spin-multiplicity",
+   "concept": "paramagnetism",
+   "verb": "uses"
+  },
+  {
+   "span": "jablonski-diagrams",
+   "concept": "jablonski-diagram",
+   "verb": "introduces"
+  },
+  {
+   "span": "jablonski-diagrams",
+   "concept": "spin-multiplicity",
+   "verb": "uses"
+  },
+  {
+   "span": "deactivation-processes",
+   "concept": "deactivation-pathways",
+   "verb": "introduces"
+  },
+  {
+   "span": "deactivation-processes",
+   "concept": "vibrational-relaxation",
+   "verb": "introduces"
+  },
+  {
+   "span": "deactivation-processes",
+   "concept": "fluorescence-red-shift",
+   "verb": "introduces"
+  },
+  {
+   "span": "deactivation-processes",
+   "concept": "absorption-fluorescence-spectra",
+   "verb": "introduces"
+  },
+  {
+   "span": "deactivation-processes",
+   "concept": "radiationless-transition",
+   "verb": "introduces"
+  },
+  {
+   "span": "deactivation-processes",
+   "concept": "internal-conversion",
+   "verb": "introduces"
+  },
+  {
+   "span": "deactivation-processes",
+   "concept": "intersystem-crossing",
+   "verb": "introduces"
+  },
+  {
+   "span": "deactivation-processes",
+   "concept": "external-conversion",
+   "verb": "introduces"
+  },
+  {
+   "span": "deactivation-processes",
+   "concept": "franck-condon-principle",
+   "verb": "uses"
+  },
+  {
+   "span": "deactivation-processes",
+   "concept": "vibronic-transition",
+   "verb": "uses"
+  },
+  {
+   "span": "deactivation-processes",
+   "concept": "hunds-rules",
+   "verb": "uses"
+  },
+  {
+   "span": "deactivation-processes",
+   "concept": "jablonski-diagram",
+   "verb": "uses"
+  },
+  {
+   "span": "deactivation-processes",
+   "concept": "fluorescence",
+   "verb": "reinforces"
+  },
+  {
+   "span": "deactivation-processes",
+   "concept": "phosphorescence",
+   "verb": "reinforces"
+  },
+  {
+   "span": "deactivation-processes",
+   "concept": "spin-forbidden-transitions",
+   "verb": "reinforces"
+  },
+  {
+   "span": "rates",
+   "concept": "relaxation-timescales",
+   "verb": "introduces"
+  },
+  {
+   "span": "rates",
+   "concept": "fluorescence",
+   "verb": "reinforces"
+  },
+  {
+   "span": "rates",
+   "concept": "phosphorescence",
+   "verb": "reinforces"
+  },
+  {
+   "span": "rates",
+   "concept": "spin-forbidden-transitions",
+   "verb": "reinforces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "e1",
+   "source_id": "exr:15.1.1",
+   "source_number": "Exercise 15.1.1",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "deactivation-processes",
+   "prompt": "<p>How does the energy of an electronic absorption compare to other processes? To find out, you might consider the excitation of an entire mole of molecules, rather than a single molecule absorbing a single photon. Calculate the energy in kJ/mol for the following transitions.</p>\n<ol type=\"a\"><li>absorbance at 180 nm (ultraviolet)</li><li>absorbance at 476 nm (blue)</li><li>absorbance at 645 nm (red)</li></ol>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "source",
+    "parts": [
+     {
+      "part": "a",
+      "value": 665.0,
+      "unit": "kJ/mol",
+      "hint": "Find the energy of one photon from $E = hc/\\lambda$, then multiply by Avogadro's number."
+     },
+     {
+      "part": "b",
+      "value": 251.5,
+      "unit": "kJ/mol"
+     },
+     {
+      "part": "c",
+      "value": 185.6,
+      "unit": "kJ/mol"
+     }
+    ],
+    "solution": "<p>One method to carry out this calculation: $\\dfrac{1}{x \\text{nm}} \\times \\dfrac{1 \\, \\text{nm}}{1x10^{-9} \\, \\text{m}} \\times 6.626 x 10^{-34} \\text{Js} \\times \\dfrac{3.000 x 10^8 \\text{m}}{\\text{s}} \\times \\dfrac{6.022 x 10^{23} \\text{photons}}{ 1.000 \\text{mole}} \\times \\dfrac{1 \\text{kJ}}{1000 \\text{J}}$</p><ol type=\"a\"><li>665.0 kJ/mol</li><li>251.5 kJ/mol</li><li>185.6 kJ/mol</li></ol>"
+   }
+  },
+  {
+   "id": "e2",
+   "source_id": "exr:15.1.2",
+   "source_number": "Exercise 15.1.2",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "deactivation-processes",
+   "prompt": "<p>How does the energy of an excitation between vibrational states compare to that of an electronic excitation? Typically, infrared absorptions are reported in cm<sup>-1</sup>, which is simply what it looks like: the reciprocal of the wavelength in cm. Because wavelength and frequency are inversely related, wavenumbers are considered a frequency unit. Calculate the energy in kJ/mol for the following transitions.</p>\n<ol type=\"a\"><li>absorbance at 3105 cm<sup>-1</sup></li><li>absorbance at 1695 cm<sup>-1</sup></li><li>absorbance at 963 cm<sup>-1</sup></li></ol>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "source",
+    "parts": [
+     {
+      "part": "a",
+      "value": 37.14,
+      "unit": "kJ/mol",
+      "hint": "Turn the wavenumber into m⁻¹ first; the photon's energy is $hc\\tilde{\\nu}$."
+     },
+     {
+      "part": "b",
+      "value": 20.27,
+      "unit": "kJ/mol"
+     },
+     {
+      "part": "c",
+      "value": 11.52,
+      "unit": "kJ/mol"
+     }
+    ],
+    "solution": "<p>One method to carry out this calculation: $x \\text{cm}^{-1} \\times \\dfrac{100 \\, \\text{cm}}{1 \\, \\text{m}} \\times 6.626 x 10^{-34} \\text{Js} \\times \\dfrac{3.000 x 10^8 \\text{m}}{\\text{s}} \\times \\dfrac{6.022 x 10^{23} \\text{photons}}{ 1.000 \\text{mole}} \\times \\dfrac{1 \\text{kJ}}{1000 \\text{J}}$</p><ol type=\"a\"><li>37.14 kJ/mol</li><li>20.27 kJ/mol</li><li>11.52 kJ/mol</li></ol><p>By comparing these answers with those from Exercise 15.1.1, we can see that the energy difference between vibrational states is an order of magnitude less than the energy difference between electronic states.</p>"
+   }
+  },
+  {
+   "id": "ai1",
+   "source_id": "Rates of Absorption and Emission comparison",
+   "kind": "exercise",
+   "bloom": "Analyze",
+   "place": {
+    "at": "end"
+   },
+   "cite": "rates",
+   "prompt": "<p>A molecule absorbs a photon and lands on a high vibrational level of $S_2$. Using the timescales in Table 15.1.1, which path back to the ground state is the most likely one for a molecule that fluoresces?</p>",
+   "answer": {
+    "type": "choice",
+    "generated_by": "ai",
+    "options": [
+     "Vibrational relaxation and internal conversion bring it to the bottom of $S_1$ within about $10^{-11}$ s; it fluoresces from there after $10^{-9}$ to $10^{-6}$ s.",
+     "It fluoresces straight from the vibrational level of $S_2$ it landed on, then relaxes in $S_0$.",
+     "It crosses to $T_2$ and emits from there.",
+     "It relaxes to the bottom of $S_1$ and emits after $10^{-3}$ to 100 s."
+    ],
+    "correct": 0,
+    "hint": "Compare how long the radiationless steps take with how long the fastest emission takes.",
+    "solution": "<p>Internal conversion ($10^{-14}$ to $10^{-11}$ s) and vibrational relaxation ($10^{-12}$ to $10^{-10}$ s) finish long before fluorescence, which takes at least $10^{-9}$ s. So the molecule reaches the lowest vibrational level of $S_1$ before it can emit, and the fluorescence comes from there, $S_1 \\rightarrow S_0$. Emission from $S_2$ would have to beat processes a thousand times faster. Emitting after $10^{-3}$ to 100 s from a triplet is phosphorescence, not fluorescence. So the only photon in this path is the fluorescence photon; every other step is radiationless.</p>"
+   }
+  },
+  {
+   "id": "ai2",
+   "source_id": "Low temperature and high viscosity lead to enhanced fluorescence",
+   "kind": "exercise",
+   "bloom": "Understand",
+   "place": {
+    "at": "end"
+   },
+   "cite": "deactivation-processes",
+   "prompt": "<p>Explain why a fluorescing molecule gives out light of a longer wavelength than the light that excited it, and why cooling the solution or using a more viscous solvent makes the fluorescence brighter.</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "Think about what happens in the excited state between absorption and emission, and about what the solvent molecules do to an excited molecule.",
+    "solution": "<p>Absorption usually lands the molecule on a high vibrational level of the excited state (the Franck-Condon principle). Vibrational relaxation, at $10^{-12}$ to $10^{-10}$ s, is faster than fluorescence, so the molecule loses that vibrational energy as heat and emits from the lowest vibrational level of $S_1$, often onto a vibrational level of $S_0$ above $v'' = 0$. The emitted photon carries less energy than the absorbed one, and $E = hc/\\lambda$ makes its wavelength longer.</p><p>External conversion takes the excitation away by collisions with solvent and solute molecules, with no photon. At low temperature and high viscosity there are fewer collisions, so less of the excitation is lost that way and more of it leaves as fluorescence.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "e1",
+   "concept": "photon"
+  },
+  {
+   "exercise": "e2",
+   "concept": "photon"
+  },
+  {
+   "exercise": "e2",
+   "concept": "wavenumber"
+  },
+  {
+   "exercise": "ai1",
+   "concept": "relaxation-timescales"
+  },
+  {
+   "exercise": "ai1",
+   "concept": "deactivation-pathways"
+  },
+  {
+   "exercise": "ai1",
+   "concept": "fluorescence"
+  },
+  {
+   "exercise": "ai2",
+   "concept": "fluorescence-red-shift"
+  },
+  {
+   "exercise": "ai2",
+   "concept": "external-conversion"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-magnetic",
+   "kind": "correction",
+   "html": "Diamagnetic molecules are weakly repelled by a magnetic field, and the unpaired electrons of free radicals make them attracted to one. Neither effect comes from an electric field."
+  },
+  {
+   "id": "c-ms",
+   "kind": "correction",
+   "html": "The quantum number that is $+1/2$ for spin up and $-1/2$ for spin down is $m_s$ (Section 8.4); $s = 1/2$ for every electron."
+  },
+  {
+   "id": "c-factor",
+   "kind": "correction",
+   "html": "A factor has no unit: the triplet state lives roughly $10^4$ times longer than the singlet state."
+  },
+  {
+   "id": "c-previous-page",
+   "kind": "correction",
+   "html": "In this book the Franck-Condon principle is in <a class=\"xref\" href=\"#13.7-franck-condon\">Section 13.7</a>."
+  },
+  {
+   "id": "c-equal-bond",
+   "kind": "correction",
+   "html": "If the two states had the same bond length and the same vibrational frequency, only the $v'' = 0 \\rightarrow v' = 0$ line would appear in each spectrum (Section 13.7). The progressions drawn in Figure 15.1.6 need an excited state whose bond is longer than the ground state's."
+  },
+  {
+   "id": "c-mirror-caption",
+   "kind": "correction",
+   "figure": "sim-mirror",
+   "html": "With equal bond lengths each spectrum would hold only the $0 \\rightarrow 0$ line. The spectra drawn need an excited state whose bond is longer than the ground state's."
+  }
+ ]
+}

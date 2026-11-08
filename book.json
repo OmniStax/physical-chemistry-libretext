@@ -34,7 +34,8 @@
     "ch12",
     "ch13",
     "ch14",
-    "ch15"
+    "ch15",
+    "ch16"
   ],
   "types": [
     {
@@ -180,6 +181,26 @@
     {
       "id": "electric-field",
       "label": "electric field"
+    },
+    {
+      "id": "pressure",
+      "label": "pressure",
+      "dimension": "Pa"
+    },
+    {
+      "id": "volume",
+      "label": "volume",
+      "dimension": "m³"
+    },
+    {
+      "id": "molar-volume",
+      "label": "molar volume",
+      "dimension": "m³/mol"
+    },
+    {
+      "id": "amount",
+      "label": "amount of substance",
+      "dimension": "mol"
     }
   ],
   "symbols": [
@@ -3143,6 +3164,207 @@
     {
       "sym": "v_qpp",
       "latex": "v''"
+    },
+    {
+      "sym": "n_mol",
+      "latex": "n",
+      "macro": "\\knmol"
+    },
+    {
+      "sym": "V_bar",
+      "latex": "\\bar{V}",
+      "macro": "\\kVbar"
+    },
+    {
+      "sym": "v_bar",
+      "latex": "\\bar{v}",
+      "macro": "\\kvbar"
+    },
+    {
+      "sym": "V_m",
+      "latex": "V_m",
+      "macro": "\\kVm"
+    },
+    {
+      "sym": "b_vdw",
+      "latex": "b",
+      "macro": "\\kbvdw"
+    },
+    {
+      "sym": "sigma_hs",
+      "latex": "\\sigma",
+      "macro": "\\ksigmahs"
+    },
+    {
+      "sym": "sigma_lj",
+      "latex": "\\sigma",
+      "macro": "\\ksigmalj"
+    },
+    {
+      "sym": "epsilon",
+      "latex": "\\epsilon",
+      "macro": "\\kepsilon"
+    },
+    {
+      "sym": "F_x",
+      "latex": "F_x",
+      "macro": "\\kFx"
+    },
+    {
+      "sym": "v_x",
+      "latex": "v_x",
+      "macro": "\\kvx"
+    },
+    {
+      "sym": "a_x",
+      "latex": "a_x"
+    },
+    {
+      "sym": "dv_x",
+      "latex": "\\Delta v_x",
+      "macro": "\\kdvx"
+    },
+    {
+      "sym": "dt",
+      "latex": "\\Delta t",
+      "macro": "\\kdt"
+    },
+    {
+      "sym": "P_c",
+      "latex": "P_c",
+      "macro": "\\kPc"
+    },
+    {
+      "sym": "T_c",
+      "latex": "T_c",
+      "macro": "\\kTc"
+    },
+    {
+      "sym": "V_c",
+      "latex": "V_c",
+      "macro": "\\kVc"
+    },
+    {
+      "sym": "P_r",
+      "latex": "P_r",
+      "macro": "\\kPr"
+    },
+    {
+      "sym": "T_r",
+      "latex": "T_r",
+      "macro": "\\kTr"
+    },
+    {
+      "sym": "V_r",
+      "latex": "V_r",
+      "macro": "\\kVr"
+    },
+    {
+      "sym": "Vbar_r",
+      "latex": "\\bar{V}_r",
+      "macro": "\\kVbarr"
+    },
+    {
+      "sym": "P_sat",
+      "latex": "P^{sat}",
+      "macro": "\\kPsat"
+    },
+    {
+      "sym": "P_vdw",
+      "latex": "P_{VDW}",
+      "macro": "\\kPvdw"
+    },
+    {
+      "sym": "P_real",
+      "latex": "P_{Real}",
+      "macro": "\\kPreal"
+    },
+    {
+      "sym": "F_net",
+      "latex": "\\bar{F}_{Net}",
+      "macro": "\\kFnet"
+    },
+    {
+      "sym": "F_impact",
+      "latex": "\\bar{F}_{Impact}",
+      "macro": "\\kFimpact"
+    },
+    {
+      "sym": "F_attract",
+      "latex": "\\bar{F}_{Attract}",
+      "macro": "\\kFattract"
+    },
+    {
+      "sym": "B_2",
+      "latex": "B_2",
+      "macro": "\\kBtwo"
+    },
+    {
+      "sym": "B_3",
+      "latex": "B_3"
+    },
+    {
+      "sym": "B_2V",
+      "latex": "B_{2V}",
+      "macro": "\\kBtwoV"
+    },
+    {
+      "sym": "Phi_12",
+      "latex": "\\Phi_{12}",
+      "macro": "\\kPhionetwo"
+    },
+    {
+      "sym": "u_o",
+      "latex": "u_o",
+      "macro": "\\kuo"
+    },
+    {
+      "sym": "U_2",
+      "latex": "U_2",
+      "macro": "\\kUtwo"
+    },
+    {
+      "sym": "U_3",
+      "latex": "U_3",
+      "macro": "\\kUthree"
+    },
+    {
+      "sym": "Z_1",
+      "latex": "Z_1"
+    },
+    {
+      "sym": "Z_2",
+      "latex": "Z_2"
+    },
+    {
+      "sym": "Z_3",
+      "latex": "Z_3"
+    },
+    {
+      "sym": "r_min",
+      "latex": "r_{min}",
+      "macro": "\\krmin"
+    },
+    {
+      "sym": "R_curv",
+      "latex": "R",
+      "macro": "\\kRcurv"
+    },
+    {
+      "sym": "y_i",
+      "latex": "y_i"
+    },
+    {
+      "sym": "a_ij",
+      "latex": "a_{ij}"
+    },
+    {
+      "sym": "a_m",
+      "latex": "a_m"
+    },
+    {
+      "sym": "b_i",
+      "latex": "b_i"
     }
   ],
   "exercise_kinds": [
@@ -13972,6 +14194,933 @@
         "nonlinear spectroscopies"
       ],
       "statement": "High laser intensities make a sample behave in ways a weaker source cannot stimulate, which the nonlinear spectroscopies use."
+    },
+    {
+      "id": "ideal-gas",
+      "kind": "definition",
+      "section": "16.1",
+      "name": "Ideal gas",
+      "terms": [
+        "ideal gas",
+        "ideal gases"
+      ],
+      "statement": "An ideal gas is made of particles that exert no forces on each other; they feel a force only when they collide, elastically, with the walls of the container."
+    },
+    {
+      "id": "pressure",
+      "kind": "definition",
+      "section": "16.1",
+      "name": "Pressure",
+      "symbol": "P",
+      "terms": [
+        "pressure"
+      ],
+      "type": "pressure",
+      "statement": "The mechanical definition of pressure is the average force exerted on a wall divided by the wall's area.",
+      "forms": [
+        {
+          "id": "pressure-mechanical",
+          "latex": "P = \\dfrac{\\langle F \\rangle}{A}"
+        },
+        {
+          "id": "pressure-force-area",
+          "latex": "P=\\frac{F}{A}",
+          "section": "16.2"
+        }
+      ]
+    },
+    {
+      "id": "pressure-from-collisions",
+      "kind": "result",
+      "section": "16.1",
+      "name": "Pressure from wall collisions",
+      "statement": "A particle that bounces elastically between walls a distance a apart pushes on a wall with the force mv_x²/a; summed over N particles in a cubic box, the pressure is Nm⟨v_x²⟩/a³.",
+      "forms": [
+        {
+          "id": "wall-force",
+          "latex": "F_x = \\dfrac{mv_x^2}{a}"
+        },
+        {
+          "id": "pressure-kinetic",
+          "latex": "P = \\dfrac{N m \\langle v_x^2 \\rangle}{a^3}"
+        }
+      ]
+    },
+    {
+      "id": "mean-square-velocity-component",
+      "kind": "result",
+      "section": "16.1",
+      "name": "Mean square velocity component",
+      "statement": "From the Maxwell–Boltzmann distribution, the average of the square of a molecule's velocity along x is k_BT/m.",
+      "forms": [
+        {
+          "id": "mean-square-vx",
+          "latex": "\\langle v_x ^2 \\rangle = \\dfrac{k_B T}{m}"
+        }
+      ]
+    },
+    {
+      "id": "ideal-gas-law",
+      "kind": "result",
+      "section": "16.1",
+      "name": "Ideal gas law",
+      "terms": [
+        "ideal gas law"
+      ],
+      "statement": "The pressure, volume and temperature of an ideal gas are related by PV = Nk_BT = nRT, which per mole reads P V̄ = RT.",
+      "forms": [
+        {
+          "id": "ideal-gas-law-N",
+          "latex": "P = \\dfrac{N k_B T}{V}"
+        },
+        {
+          "id": "ideal-gas-law-n",
+          "latex": "P = \\dfrac{n R T}{V}"
+        },
+        {
+          "id": "ideal-gas-law-PV",
+          "latex": "P V = n R T"
+        },
+        {
+          "id": "ideal-gas-law-molar",
+          "latex": "P \\bar{V} = R T"
+        }
+      ]
+    },
+    {
+      "id": "equation-of-state",
+      "kind": "definition",
+      "section": "16.1",
+      "name": "Equation of state",
+      "terms": [
+        "equation of state",
+        "equations of state"
+      ],
+      "statement": "An equation of state is a relation between the variables that describes the state of matter under a set of given physical conditions, such as the relation between P, V and T."
+    },
+    {
+      "id": "isotherm",
+      "kind": "definition",
+      "section": "16.1",
+      "name": "Isotherm",
+      "terms": [
+        "isotherms",
+        "isotherm"
+      ],
+      "statement": "An isotherm is a graph of P against V at a fixed temperature; for an ideal gas the isotherms are hyperbolas."
+    },
+    {
+      "id": "isochore",
+      "kind": "definition",
+      "section": "16.1",
+      "name": "Isochore",
+      "terms": [
+        "isochores"
+      ],
+      "statement": "An isochore is a graph of P against T at a fixed volume; for an ideal gas it is a straight line whose slope grows with the density."
+    },
+    {
+      "id": "ideal-gas-never-condenses",
+      "kind": "idea",
+      "section": "16.1",
+      "name": "An ideal gas never condenses",
+      "statement": "An ideal gas can exist only as a gas: it cannot condense into an ideal liquid, so a phase transition from gas to liquid can be modeled only if the interactions between particles are accounted for."
+    },
+    {
+      "id": "compressibility-factor",
+      "kind": "definition",
+      "section": "16.1",
+      "name": "Compressibility factor",
+      "symbol": "Z",
+      "terms": [
+        "compressibility factor",
+        "compressibility"
+      ],
+      "statement": "The compressibility factor Z = PV/nRT is 1 for an ideal gas at every pressure, so for a real gas it measures how far the gas deviates from ideal behavior.",
+      "forms": [
+        {
+          "id": "compressibility-factor",
+          "latex": "Z = \\dfrac{PV}{nRT}"
+        },
+        {
+          "id": "compressibility-molar",
+          "latex": "Z = \\dfrac{P\\bar{V}}{RT}"
+        },
+        {
+          "id": "compressibility-density",
+          "latex": "Z = \\dfrac{P}{\\rho RT}"
+        }
+      ]
+    },
+    {
+      "id": "dilute-gases-ideal",
+      "kind": "result",
+      "section": "16.1",
+      "name": "Dilute gases behave ideally",
+      "statement": "At sufficiently low pressures, and so low densities, every real gas approaches ideal-gas behavior: its compressibility factor goes to 1."
+    },
+    {
+      "id": "thermodynamic-system",
+      "kind": "definition",
+      "section": "16.1",
+      "name": "System and surroundings",
+      "terms": [
+        "system",
+        "surroundings",
+        "boundary",
+        "universe"
+      ],
+      "statement": "Thermodynamics divides the universe into a system and its surroundings with a boundary between them; the three together are the thermodynamic universe."
+    },
+    {
+      "id": "extensive-and-intensive",
+      "kind": "definition",
+      "section": "16.1",
+      "name": "Extensive and intensive properties",
+      "terms": [
+        "extensive",
+        "intensive"
+      ],
+      "statement": "If a system is grown with the ratio N/V held constant, a property that grows with it is extensive (N, n, V, m, energy) and one that stays the same is intensive (P, ρ, T, molar heat capacity)."
+    },
+    {
+      "id": "molar-volume",
+      "kind": "definition",
+      "section": "16.1",
+      "name": "Molar volume",
+      "symbol": "V_bar",
+      "terms": [
+        "molar volume"
+      ],
+      "type": "molar-volume",
+      "statement": "The molar volume V̄ = V/n is the volume per mole, an intensive quantity.",
+      "forms": [
+        {
+          "id": "molar-volume",
+          "latex": "\\bar{V} = V/n"
+        }
+      ]
+    },
+    {
+      "id": "number-density",
+      "kind": "definition",
+      "section": "16.1",
+      "name": "Density",
+      "symbol": "rho",
+      "terms": [
+        "density"
+      ],
+      "statement": "The density ρ = N/V is the number of particles per unit volume, an intensive quantity.",
+      "forms": [
+        {
+          "id": "number-density",
+          "latex": "\\rho = N/V"
+        }
+      ]
+    },
+    {
+      "id": "van-der-waals-equation",
+      "kind": "axiom",
+      "section": "16.2",
+      "name": "Van der Waals equation of state",
+      "terms": [
+        "van der Waals equation of state",
+        "van der Waals equation"
+      ],
+      "statement": "The van der Waals equation adjusts the ideal gas law for the nonzero volume of the molecules, through b, and for the attraction between them, through a; with a and b zero it reduces to PV = nRT.",
+      "forms": [
+        {
+          "id": "vdw-equation",
+          "latex": "P = \\dfrac{nRT}{V - nb} - \\dfrac{an^2}{V^2}"
+        },
+        {
+          "id": "vdw-equation-product",
+          "latex": "\\left(P+{\\dfrac {n^{2}a}{V^{2}}}\\right)\\left(V-nb\\right)=nRT"
+        },
+        {
+          "id": "vdw-equation-molar",
+          "latex": "\\left(P+\\frac{a}{V_m^2}\\right)\\left(V_m-b\\right)=R T",
+          "section": "16.4"
+        },
+        {
+          "id": "vdw-equation-molar-P",
+          "latex": "P=\\frac{RT}{\\bar{V}-b}-\\frac{a}{\\bar{V}^2}",
+          "section": "16.7"
+        }
+      ]
+    },
+    {
+      "id": "hard-sphere-potential",
+      "kind": "definition",
+      "section": "16.2",
+      "name": "Hard-sphere potential",
+      "terms": [
+        "hard-wall potential",
+        "hard sphere"
+      ],
+      "statement": "The hard-wall potential treats molecules as billiard balls of diameter σ: no force acts until their centres are σ apart, and they can come no closer."
+    },
+    {
+      "id": "hard-sphere-diameter",
+      "kind": "definition",
+      "section": "16.2",
+      "name": "Hard-sphere diameter",
+      "symbol": "sigma_hs",
+      "type": "length",
+      "statement": "The diameter σ of a hard sphere is the distance between the centres of two spheres at closest contact."
+    },
+    {
+      "id": "excluded-volume",
+      "kind": "definition",
+      "section": "16.2",
+      "name": "Van der Waals constant b",
+      "symbol": "b_vdw",
+      "terms": [
+        "excluded volume",
+        "co-volume"
+      ],
+      "type": "molar-volume",
+      "statement": "The constant b is the volume excluded by a mole of molecules: two hard spheres exclude a sphere of radius σ, 4πσ³/3, half of it to each, so b = (2/3)πσ³N₀ and n moles leave a volume V − nb free.",
+      "forms": [
+        {
+          "id": "vdw-b-hard-sphere",
+          "latex": "b = \\dfrac{2}{3} \\pi \\sigma^3 N_0"
+        }
+      ]
+    },
+    {
+      "id": "attraction-lowers-pressure",
+      "kind": "result",
+      "section": "16.2",
+      "name": "Attraction lowers the pressure",
+      "statement": "The net force on the wall is the force of the impacts less the attraction of the other molecules, so a real gas presses less than an ideal one; the correction an²/V² grows with the square of the density.",
+      "forms": [
+        {
+          "id": "net-wall-force",
+          "latex": "{\\bar{F}}_{Net}={\\bar{F}}_{Impact}-{\\bar{F}}_{Attract}"
+        },
+        {
+          "id": "vdw-pressure-correction",
+          "latex": "P=P_{Real}+\\frac{an^2}{V^2}"
+        }
+      ]
+    },
+    {
+      "id": "vdw-attraction-constant",
+      "kind": "definition",
+      "section": "16.2",
+      "name": "Van der Waals constant a",
+      "symbol": "a",
+      "statement": "The constant a measures the attraction between the molecules of a substance; it lowers the pressure by an²/V². Like b, it depends on the substance."
+    },
+    {
+      "id": "cubic-equation-of-state",
+      "kind": "definition",
+      "section": "16.2",
+      "name": "Cubic equation of state",
+      "terms": [
+        "cubic equation of state",
+        "cubic equations of state"
+      ],
+      "statement": "Van der Waals-type equations of state are cubic: cubic polynomials in the molar volume and in the compressibility factor."
+    },
+    {
+      "id": "redlich-kwong-equation",
+      "kind": "axiom",
+      "section": "16.2",
+      "name": "Redlich–Kwong equation of state",
+      "terms": [
+        "Redlich–Kwong equation of state",
+        "Redlich-Kwong equation of state"
+      ],
+      "statement": "Redlich and Kwong (1949) made the attraction term of van der Waals depend on temperature, as a/√T, and put the co-volume b into its denominator; the equation is generally more accurate than van der Waals above the critical temperature.",
+      "forms": [
+        {
+          "id": "rk-equation",
+          "latex": "\\left( P + \\dfrac{a}{\\sqrt{T} \\bar{V} (\\bar{V} + b)} \\right) ( \\bar{V}-b) = RT"
+        }
+      ]
+    },
+    {
+      "id": "rk-cubic-in-z",
+      "kind": "result",
+      "section": "16.2",
+      "name": "Redlich–Kwong cubic in Z",
+      "statement": "With A = aP/R²T^2.5 and B = bP/RT, the Redlich–Kwong equation becomes a cubic in the compressibility factor.",
+      "forms": [
+        {
+          "id": "rk-cubic-z",
+          "latex": "Z^3 -Z^2 + (A -B -B^2) Z -AB =0"
+        },
+        {
+          "id": "rk-A",
+          "latex": "A = \\dfrac{aP}{R^2T^{2.5}}"
+        },
+        {
+          "id": "rk-B",
+          "latex": "B =\\dfrac{bP}{RT}"
+        }
+      ]
+    },
+    {
+      "id": "rk-constants",
+      "kind": "result",
+      "section": "16.2",
+      "name": "Redlich–Kwong constants",
+      "statement": "Imposing the criticality conditions on the Redlich–Kwong equation ties a and b to the critical temperature and pressure of the substance.",
+      "forms": [
+        {
+          "id": "rk-a",
+          "latex": "a =0.42748 \\dfrac{R^2T_c^{2.5}}{P_c}"
+        },
+        {
+          "id": "rk-b",
+          "latex": "b =0.086640 \\dfrac{RT_c}{P_c}"
+        }
+      ]
+    },
+    {
+      "id": "rk-corresponding-states",
+      "kind": "result",
+      "section": "16.2",
+      "name": "Redlich–Kwong equation in reduced variables",
+      "statement": "Written in P_r and T_r, the Redlich–Kwong cubic holds the same for every gas: any two gases at the same reduced pressure and temperature have the same compressibility factor.",
+      "forms": [
+        {
+          "id": "rk-reduced",
+          "latex": "Z^3-Z^2+\\dfrac{P_r}{T_r} \\left( \\dfrac{0.42748}{T_r^{1.5}} -0.08664-0.007506 \\dfrac{P_r}{T_r} \\right)Z-0.03704 \\dfrac{P^2_r}{T^{3.5}_r}=0"
+        }
+      ]
+    },
+    {
+      "id": "mixing-rules",
+      "kind": "definition",
+      "section": "16.2",
+      "name": "Mixing rules",
+      "terms": [
+        "mixing rules"
+      ],
+      "statement": "A cubic equation of state is applied to a mixture as to a pseudo pure substance whose a and b are averages of the components' over their mole fractions.",
+      "forms": [
+        {
+          "id": "mixing-a",
+          "latex": "a_m = \\sum_i \\sum_j y_iy_j a_{ij}"
+        },
+        {
+          "id": "mixing-aij",
+          "latex": "a_{ij} = \\sqrt{a_ia_j}"
+        },
+        {
+          "id": "mixing-b",
+          "latex": "b_{m}=\\sum_i y_ib_i"
+        }
+      ]
+    },
+    {
+      "id": "van-der-waals-loop",
+      "kind": "idea",
+      "section": "16.3",
+      "name": "The van der Waals loop",
+      "statement": "Below the critical temperature a van der Waals isotherm turns S-shaped, with a stretch where P and V increase together; there the curve is no longer physical."
+    },
+    {
+      "id": "tie-line",
+      "kind": "definition",
+      "section": "16.3",
+      "name": "Tie line",
+      "terms": [
+        "tie line"
+      ],
+      "statement": "In reality the pressure stays constant between the liquid and gas ends of the loop; the horizontal tie line represents gas–liquid coexistence, at the vapor pressure of the liquid."
+    },
+    {
+      "id": "maxwell-construction",
+      "kind": "definition",
+      "section": "16.3",
+      "name": "Maxwell's construction",
+      "terms": [
+        "Maxwell's construction",
+        "Maxwell's equal area rule"
+      ],
+      "statement": "The tie line is placed so that the area between it and the isotherm above the line equals the area below it."
+    },
+    {
+      "id": "critical-point",
+      "kind": "definition",
+      "section": "16.3",
+      "name": "Critical point",
+      "terms": [
+        "critical point"
+      ],
+      "statement": "On the critical isotherm the tie line shrinks to a single point, the critical point, where liquid and vapor become the same and the isotherm has an inflection."
+    },
+    {
+      "id": "critical-temperature",
+      "kind": "definition",
+      "section": "16.3",
+      "name": "Critical temperature",
+      "symbol": "T_c",
+      "terms": [
+        "critical temperature"
+      ],
+      "type": "temperature",
+      "statement": "The critical temperature T_c is the one temperature at which the critical point exists, the highest at which a gas–liquid transition can occur."
+    },
+    {
+      "id": "supercritical-fluid",
+      "kind": "definition",
+      "section": "16.3",
+      "name": "Supercritical fluid",
+      "terms": [
+        "supercritical fluid"
+      ],
+      "statement": "Above the critical temperature there is no liquid–gas transition; the fluid resembles a liquid at higher pressures and a gas at lower ones."
+    },
+    {
+      "id": "critical-point-conditions",
+      "kind": "result",
+      "section": "16.3",
+      "name": "Criticality conditions",
+      "statement": "At the critical point the first and second derivatives of P with respect to V vanish.",
+      "forms": [
+        {
+          "id": "critical-first-derivative",
+          "latex": "\\left(\\frac{\\partial P}{\\partial V}\\right)_{T_c} = 0"
+        },
+        {
+          "id": "critical-second-derivative",
+          "latex": "\\left(\\frac{\\partial^2 P}{\\partial V^2}\\right)_{T_c} = 0"
+        }
+      ]
+    },
+    {
+      "id": "critical-volume",
+      "kind": "definition",
+      "section": "16.3",
+      "name": "Critical volume",
+      "symbol": "V_c",
+      "terms": [
+        "critical volume"
+      ],
+      "type": "volume",
+      "statement": "The critical volume V_c is the volume at the critical point."
+    },
+    {
+      "id": "critical-pressure",
+      "kind": "definition",
+      "section": "16.3",
+      "name": "Critical pressure",
+      "symbol": "P_c",
+      "terms": [
+        "critical pressure"
+      ],
+      "type": "pressure",
+      "statement": "The critical pressure P_c is the pressure at the critical point."
+    },
+    {
+      "id": "vdw-critical-constants",
+      "kind": "result",
+      "section": "16.3",
+      "name": "Van der Waals critical constants",
+      "statement": "The criticality conditions applied to the van der Waals equation give V_c = 3nb, RT_c = 8a/27b and P_c = a/27b².",
+      "forms": [
+        {
+          "id": "vdw-Vc",
+          "latex": "V_c = 3nb"
+        },
+        {
+          "id": "vdw-Tc",
+          "latex": "RT_c = \\dfrac{8a}{27b}"
+        },
+        {
+          "id": "vdw-Pc",
+          "latex": "P_c = \\dfrac{a}{27b^2}"
+        },
+        {
+          "id": "vdw-Vc-molar",
+          "latex": "V_c =3b",
+          "section": "16.4"
+        },
+        {
+          "id": "vdw-Tc-molar",
+          "latex": "T_c =\\dfrac{8a}{27b R}",
+          "section": "16.4"
+        }
+      ]
+    },
+    {
+      "id": "cubic-roots",
+      "kind": "result",
+      "section": "16.3",
+      "name": "Roots of a cubic equation of state",
+      "statement": "A cubic equation of state has one real root above the critical temperature, three equal roots at the critical point, and three real roots below it only for pressures across the S-shaped loop; the smallest is the liquid's molar volume, the largest the vapor's, and the middle one has no physical meaning."
+    },
+    {
+      "id": "coexistence-region",
+      "kind": "definition",
+      "section": "16.3",
+      "name": "Gas–liquid coexistence region",
+      "statement": "The curve through the ends of the tie lines peaks at the critical point; inside it gas and liquid coexist."
+    },
+    {
+      "id": "compressibility-chart",
+      "kind": "idea",
+      "section": "16.3",
+      "name": "Compressibility chart",
+      "statement": "Standing and Katz's chart (1942) plots measured compressibility factors against pressure; graphical reading of such charts was widespread until computers."
+    },
+    {
+      "id": "reduced-variables",
+      "kind": "definition",
+      "section": "16.4",
+      "name": "Reduced variables",
+      "terms": [
+        "reduced state",
+        "reduced variables"
+      ],
+      "statement": "The reduced pressure, volume and temperature measure a substance's state against its own critical point: P_r = P/P_c, V_r = V/V_c, T_r = T/T_c.",
+      "forms": [
+        {
+          "id": "reduced-variables",
+          "latex": "P_r = \\dfrac{P}{P_c} \\qquad V_r = \\dfrac{V}{V_c} \\qquad T_r = \\dfrac{T}{T_c}"
+        },
+        {
+          "id": "reduced-pressure",
+          "latex": "P_r=\\frac{P}{P_c}",
+          "section": "16.2"
+        },
+        {
+          "id": "reduced-temperature",
+          "latex": "T_r=\\frac{T}{T_c}",
+          "section": "16.2"
+        }
+      ]
+    },
+    {
+      "id": "reduced-vdw-equation",
+      "kind": "result",
+      "section": "16.4",
+      "name": "Van der Waals equation in reduced variables",
+      "statement": "In reduced variables the van der Waals equation takes one universal form, with no constant of the substance left in it.",
+      "forms": [
+        {
+          "id": "vdw-reduced",
+          "latex": "\\left( P_r + \\dfrac{3}{\\bar{V}_r^2} \\right) \\left( \\bar{V}_r - \\dfrac{1}{3} \\right) = \\dfrac{8}{3} T_r"
+        }
+      ]
+    },
+    {
+      "id": "law-of-corresponding-states",
+      "kind": "axiom",
+      "section": "16.4",
+      "name": "Law of corresponding states",
+      "terms": [
+        "Law of Corresponding States",
+        "corresponding states"
+      ],
+      "statement": "Different gases at the same reduced temperature and reduced pressure behave alike: two gases are in corresponding states when their reduced pressure, volume and temperature are the same."
+    },
+    {
+      "id": "vdw-critical-compressibility",
+      "kind": "result",
+      "section": "16.4",
+      "name": "Critical compressibility of a van der Waals gas",
+      "statement": "The van der Waals equation gives Z = 3/8 at the critical point, which does not agree well with measurement."
+    },
+    {
+      "id": "reduced-compressibility",
+      "kind": "result",
+      "section": "16.4",
+      "name": "Compressibility factor in reduced variables",
+      "statement": "The van der Waals compressibility factor is a universal function of the reduced volume and temperature.",
+      "forms": [
+        {
+          "id": "z-reduced",
+          "latex": "Z=\\dfrac{\\bar{V}_r}{\\bar{V}_r-\\dfrac{1}{3}} - \\dfrac{9}{8\\bar{V}_r T_r}"
+        }
+      ]
+    },
+    {
+      "id": "generalized-compressibility-chart",
+      "kind": "idea",
+      "section": "16.4",
+      "name": "Generalized compressibility chart",
+      "statement": "Measured Z of different fluids plotted against reduced pressure fall on one set of curves; simple hydrocarbons, noble gases and diatomic molecules conform closely, while strongly polar or hydrogen-bonded fluids such as water, ammonia and HF deviate."
+    },
+    {
+      "id": "virial-equation-of-state",
+      "kind": "definition",
+      "section": "16.5",
+      "name": "Virial equation of state",
+      "terms": [
+        "virial equation of state",
+        "third virial coefficient",
+        "virial coefficient"
+      ],
+      "statement": "The virial equation of state expresses the deviation from ideality as a power series in the density, with the second, third, … virial coefficients as the coefficients.",
+      "forms": [
+        {
+          "id": "virial-equation",
+          "latex": "\\dfrac{P}{kT} = \\rho + B_2(T)\\rho^2 + B_3(T)\\rho^3 + ..."
+        }
+      ]
+    },
+    {
+      "id": "intermolecular-pair-potential",
+      "kind": "definition",
+      "section": "16.5",
+      "name": "Intermolecular pair potential",
+      "symbol": "Phi_12",
+      "terms": [
+        "intermolecular pair potential",
+        "pair potential"
+      ],
+      "type": "energy",
+      "statement": "The intermolecular pair potential is the potential energy of two molecules as a function of their separation."
+    },
+    {
+      "id": "mayer-f-function",
+      "kind": "definition",
+      "section": "16.5",
+      "name": "Mayer f-function",
+      "statement": "The Mayer f-function, exp(−Φ₁₂/k_BT) − 1, is zero where the pair potential vanishes, −1 where it is infinitely repulsive and positive where it is attractive."
+    },
+    {
+      "id": "configuration-integral",
+      "kind": "definition",
+      "section": "16.5",
+      "name": "Configuration integral",
+      "terms": [
+        "configuration integrals"
+      ],
+      "statement": "A configuration integral Z_j integrates the Boltzmann factor of the interaction energy of j molecules over all their positions; Z₁ = V.",
+      "forms": [
+        {
+          "id": "configuration-integral-2",
+          "latex": "Z_2 = \\int e^{-U_2/kT}dr_1\\;dr_2"
+        }
+      ]
+    },
+    {
+      "id": "second-virial-coefficient",
+      "kind": "definition",
+      "section": "16.5",
+      "name": "Second virial coefficient",
+      "symbol": "B_2",
+      "terms": [
+        "second virial coefficient"
+      ],
+      "statement": "The second virial coefficient gives the contribution of the pair potential to the pressure, the initial departure from ideal-gas behavior; it is an integral of the Mayer f-function over the separation.",
+      "forms": [
+        {
+          "id": "b2-mayer",
+          "latex": "B_{2}(T)= - \\dfrac{1}{2} \\int \\left( \\exp\\left(-\\dfrac{\\Phi_{12}({\\mathbf r})}{k_BT}\\right) -1 \\right) 4 \\pi r^2 dr"
+        },
+        {
+          "id": "b2-radial",
+          "latex": "B_2(T) = -2 \\pi \\int [ e^{-\\beta u(r)} - 1 ] r^2 \\; dr"
+        },
+        {
+          "id": "b2-excluded-volume",
+          "latex": "B_{2}= \\dfrac{1}{2} \\iint v_{\\mathrm {excluded}} (\\Omega,\\Omega') f(\\Omega) f(\\Omega')~ {\\mathrm d}\\Omega {\\mathrm d}\\Omega'"
+        }
+      ]
+    },
+    {
+      "id": "hard-sphere-b2",
+      "kind": "result",
+      "section": "16.5",
+      "name": "Second virial coefficient of hard spheres",
+      "statement": "For hard spheres of diameter σ, B₂ = 2πσ³/3, independent of temperature.",
+      "forms": [
+        {
+          "id": "b2-hard-sphere",
+          "latex": "B_{2}= \\dfrac{2\\pi\\sigma^3}{3}"
+        }
+      ]
+    },
+    {
+      "id": "isihara-hadwiger-formula",
+      "kind": "result",
+      "section": "16.5",
+      "name": "Isihara–Hadwiger formula",
+      "terms": [
+        "Isihara-Hadwiger formula"
+      ],
+      "statement": "For any hard convex body, B₂ = RS + V exactly, where V is its volume, S its surface area and R its mean radius of curvature.",
+      "forms": [
+        {
+          "id": "isihara-hadwiger",
+          "latex": "B_2=RS+V"
+        },
+        {
+          "id": "isihara-hadwiger-alpha",
+          "latex": "\\dfrac{B_2}{V}=1+3 \\alpha"
+        }
+      ]
+    },
+    {
+      "id": "vdw-second-virial",
+      "kind": "result",
+      "section": "16.5",
+      "name": "Second virial coefficient of a van der Waals gas",
+      "statement": "For the van der Waals equation of state, B₂ = b − a/RT: the excluded volume raises it and the attraction lowers it, more so the colder the gas.",
+      "forms": [
+        {
+          "id": "b2-vdw",
+          "latex": "B_{2}(T)= b -\\dfrac{a}{RT}"
+        },
+        {
+          "id": "b2v-vdw",
+          "latex": "B_{2V}(T)=b-\\frac{a}{RT}",
+          "section": "16.7"
+        }
+      ]
+    },
+    {
+      "id": "lennard-jones-potential",
+      "kind": "definition",
+      "section": "16.6",
+      "name": "Lennard-Jones potential",
+      "terms": [
+        "Lennard-Jones potential",
+        "12-6 Lennard-Jones model"
+      ],
+      "type": "energy",
+      "statement": "The Lennard-Jones potential describes the potential energy of two nonbonding atoms or molecules against their separation: a steep r⁻¹² repulsive term and a smoother r⁻⁶ attractive term.",
+      "forms": [
+        {
+          "id": "lj-potential",
+          "latex": "V(r)= 4 \\epsilon \\left [ {\\left (\\dfrac{\\sigma}{r} \\right )}^{12}-{\\left (\\dfrac{\\sigma}{r} \\right )}^{6} \\right]"
+        },
+        {
+          "id": "lj-potential-AB",
+          "latex": "V(r) = \\frac{A}{r^{12}}- \\dfrac{B}{r^6}"
+        },
+        {
+          "id": "lj-A",
+          "latex": "A= 4\\epsilon \\sigma^{12}"
+        },
+        {
+          "id": "lj-B",
+          "latex": "B= 4\\epsilon \\sigma^{6}"
+        }
+      ]
+    },
+    {
+      "id": "lj-sigma",
+      "kind": "definition",
+      "section": "16.6",
+      "name": "Lennard-Jones σ",
+      "symbol": "sigma_lj",
+      "type": "length",
+      "statement": "σ is the separation at which the Lennard-Jones potential is zero, a measure of how close two nonbonding particles can get."
+    },
+    {
+      "id": "van-der-waals-radius",
+      "kind": "definition",
+      "section": "16.6",
+      "name": "Van der Waals radius",
+      "terms": [
+        "van der Waals radius"
+      ],
+      "type": "length",
+      "statement": "The van der Waals radius is one-half of the internuclear distance between nonbonding particles, σ/2.",
+      "forms": [
+        {
+          "id": "vdw-radius",
+          "latex": "r = \\sigma/2"
+        }
+      ]
+    },
+    {
+      "id": "intermolecular-attractions",
+      "kind": "idea",
+      "section": "16.6",
+      "name": "Kinds of intermolecular attraction",
+      "terms": [
+        "London interactions",
+        "London dispersion forces",
+        "dipole-dipole",
+        "dipole-induced dipole"
+      ],
+      "statement": "Neutral molecules attract one another through dipole–dipole, dipole–induced dipole and London (dispersion) interactions."
+    },
+    {
+      "id": "lj-repulsion-and-attraction",
+      "kind": "idea",
+      "section": "16.6",
+      "name": "Repulsion and attraction in the Lennard-Jones potential",
+      "statement": "Far apart, two particles barely interact; brought closer they attract and become bound, down to an equilibrium separation; pressed closer still, their electrons are forced into each other's orbitals and the repulsion soars."
+    },
+    {
+      "id": "lj-forces",
+      "kind": "result",
+      "section": "16.6",
+      "name": "Forces along the Lennard-Jones curve",
+      "statement": "A particle feels a repulsive force closer than the equilibrium distance r_min, an attractive force beyond it and no force at it, slightly beyond σ, where the potential is at its minimum and the pair is most stable."
+    },
+    {
+      "id": "evaluating-lj-potential",
+      "kind": "skill",
+      "section": "16.6",
+      "name": "Evaluating the Lennard-Jones potential",
+      "statement": "Given ε, σ and a separation r, substitute into V(r) = 4ε[(σ/r)¹² − (σ/r)⁶] to find the intermolecular potential, and read off from σ whether it should be positive or negative."
+    },
+    {
+      "id": "vdw-virial-expansion",
+      "kind": "result",
+      "section": "16.7",
+      "name": "Virial expansion of the van der Waals equation",
+      "statement": "Expanding 1/(1 − b/V̄) as a series turns the van der Waals equation into a virial series whose second coefficient is b − a/RT.",
+      "forms": [
+        {
+          "id": "vdw-virial",
+          "latex": "Z = \\frac{P\\bar{V}}{RT} = 1+\\left(b-\\frac{a}{RT}\\right)\\frac{1}{\\bar{V}}+\\frac{b^2}{\\bar{V}^2}+\\cdots"
+        }
+      ]
+    },
+    {
+      "id": "dispersion-coefficient",
+      "kind": "definition",
+      "section": "16.7",
+      "name": "Dispersion coefficient C₆",
+      "symbol": "C_6",
+      "statement": "C₆ is the strength of the intermolecular attraction that falls off as r⁻⁶."
+    },
+    {
+      "id": "hard-sphere-attractive-potential",
+      "kind": "definition",
+      "section": "16.7",
+      "name": "Hard sphere with an r⁻⁶ attraction",
+      "statement": "Combining the hard sphere with the attractive part of the Lennard-Jones potential gives an infinite wall at σ and −C₆/r⁶ beyond it.",
+      "forms": [
+        {
+          "id": "hs-r6-potential",
+          "latex": "u(r) = \\begin{cases} \\infty & r \\leq \\sigma \\\\ -\\dfrac{C_6}{r^6} & r > \\sigma \\end{cases}"
+        }
+      ]
+    },
+    {
+      "id": "molecular-vdw-constants",
+      "kind": "result",
+      "section": "16.7",
+      "name": "Van der Waals constants from molecular parameters",
+      "statement": "For hard spheres with an r⁻⁶ attraction, B₂ takes the van der Waals form b − a/RT with b = (2/3)πN₀σ³, four times the volume of the molecules, and a proportional to C₆: van der Waals assumes hard spheres at small distances and weak attractions at larger ones.",
+      "forms": [
+        {
+          "id": "b2-hs-r6",
+          "latex": "B_2(T) = \\dfrac{2}{3} \\pi N_0 \\sigma^3 \\left[ 1 - \\dfrac{C_6}{k_B T \\sigma^6} \\right]"
+        },
+        {
+          "id": "vdw-b-molecular",
+          "latex": "b = \\dfrac{2}{3} \\pi N_0 \\sigma^3"
+        },
+        {
+          "id": "vdw-a-molecular",
+          "latex": "a = \\dfrac{2 \\pi N_0^2 C_6}{3 \\sigma^3}"
+        }
+      ]
     }
   ],
   "concept_prereqs": [
@@ -19010,6 +20159,406 @@
     {
       "concept": "nonlinear-spectroscopy",
       "prereq": "laser-spectroscopy"
+    },
+    {
+      "concept": "pressure-from-collisions",
+      "prereq": "ideal-gas"
+    },
+    {
+      "concept": "pressure-from-collisions",
+      "prereq": "pressure"
+    },
+    {
+      "concept": "mean-square-velocity-component",
+      "prereq": "boltzmann-distribution"
+    },
+    {
+      "concept": "ideal-gas-law",
+      "prereq": "pressure-from-collisions"
+    },
+    {
+      "concept": "ideal-gas-law",
+      "prereq": "mean-square-velocity-component"
+    },
+    {
+      "concept": "isotherm",
+      "prereq": "equation-of-state"
+    },
+    {
+      "concept": "isochore",
+      "prereq": "equation-of-state"
+    },
+    {
+      "concept": "ideal-gas-never-condenses",
+      "prereq": "ideal-gas-law"
+    },
+    {
+      "concept": "compressibility-factor",
+      "prereq": "ideal-gas-law"
+    },
+    {
+      "concept": "dilute-gases-ideal",
+      "prereq": "compressibility-factor"
+    },
+    {
+      "concept": "extensive-and-intensive",
+      "prereq": "thermodynamic-system"
+    },
+    {
+      "concept": "molar-volume",
+      "prereq": "extensive-and-intensive"
+    },
+    {
+      "concept": "number-density",
+      "prereq": "extensive-and-intensive"
+    },
+    {
+      "concept": "hard-sphere-diameter",
+      "prereq": "hard-sphere-potential"
+    },
+    {
+      "concept": "excluded-volume",
+      "prereq": "hard-sphere-diameter"
+    },
+    {
+      "concept": "attraction-lowers-pressure",
+      "prereq": "pressure"
+    },
+    {
+      "concept": "vdw-attraction-constant",
+      "prereq": "attraction-lowers-pressure"
+    },
+    {
+      "concept": "van-der-waals-equation",
+      "prereq": "ideal-gas-law"
+    },
+    {
+      "concept": "van-der-waals-equation",
+      "prereq": "excluded-volume"
+    },
+    {
+      "concept": "van-der-waals-equation",
+      "prereq": "vdw-attraction-constant"
+    },
+    {
+      "concept": "van-der-waals-equation",
+      "prereq": "equation-of-state"
+    },
+    {
+      "concept": "cubic-equation-of-state",
+      "prereq": "van-der-waals-equation"
+    },
+    {
+      "concept": "cubic-equation-of-state",
+      "prereq": "molar-volume"
+    },
+    {
+      "concept": "cubic-equation-of-state",
+      "prereq": "compressibility-factor"
+    },
+    {
+      "concept": "redlich-kwong-equation",
+      "prereq": "van-der-waals-equation"
+    },
+    {
+      "concept": "rk-cubic-in-z",
+      "prereq": "redlich-kwong-equation"
+    },
+    {
+      "concept": "rk-cubic-in-z",
+      "prereq": "cubic-equation-of-state"
+    },
+    {
+      "concept": "rk-constants",
+      "prereq": "redlich-kwong-equation"
+    },
+    {
+      "concept": "rk-constants",
+      "prereq": "critical-point-conditions"
+    },
+    {
+      "concept": "rk-constants",
+      "prereq": "critical-pressure"
+    },
+    {
+      "concept": "rk-constants",
+      "prereq": "critical-temperature"
+    },
+    {
+      "concept": "rk-corresponding-states",
+      "prereq": "rk-cubic-in-z"
+    },
+    {
+      "concept": "rk-corresponding-states",
+      "prereq": "rk-constants"
+    },
+    {
+      "concept": "rk-corresponding-states",
+      "prereq": "reduced-variables"
+    },
+    {
+      "concept": "mixing-rules",
+      "prereq": "van-der-waals-equation"
+    },
+    {
+      "concept": "van-der-waals-loop",
+      "prereq": "van-der-waals-equation"
+    },
+    {
+      "concept": "van-der-waals-loop",
+      "prereq": "isotherm"
+    },
+    {
+      "concept": "tie-line",
+      "prereq": "van-der-waals-loop"
+    },
+    {
+      "concept": "maxwell-construction",
+      "prereq": "tie-line"
+    },
+    {
+      "concept": "critical-point",
+      "prereq": "tie-line"
+    },
+    {
+      "concept": "critical-temperature",
+      "prereq": "critical-point"
+    },
+    {
+      "concept": "supercritical-fluid",
+      "prereq": "critical-temperature"
+    },
+    {
+      "concept": "critical-point-conditions",
+      "prereq": "critical-point"
+    },
+    {
+      "concept": "critical-volume",
+      "prereq": "critical-point"
+    },
+    {
+      "concept": "critical-pressure",
+      "prereq": "critical-point"
+    },
+    {
+      "concept": "vdw-critical-constants",
+      "prereq": "critical-point-conditions"
+    },
+    {
+      "concept": "vdw-critical-constants",
+      "prereq": "critical-volume"
+    },
+    {
+      "concept": "vdw-critical-constants",
+      "prereq": "critical-temperature"
+    },
+    {
+      "concept": "vdw-critical-constants",
+      "prereq": "critical-pressure"
+    },
+    {
+      "concept": "cubic-roots",
+      "prereq": "cubic-equation-of-state"
+    },
+    {
+      "concept": "cubic-roots",
+      "prereq": "critical-point"
+    },
+    {
+      "concept": "coexistence-region",
+      "prereq": "critical-point"
+    },
+    {
+      "concept": "compressibility-chart",
+      "prereq": "compressibility-factor"
+    },
+    {
+      "concept": "reduced-variables",
+      "prereq": "critical-pressure"
+    },
+    {
+      "concept": "reduced-variables",
+      "prereq": "critical-volume"
+    },
+    {
+      "concept": "reduced-variables",
+      "prereq": "critical-temperature"
+    },
+    {
+      "concept": "reduced-vdw-equation",
+      "prereq": "reduced-variables"
+    },
+    {
+      "concept": "reduced-vdw-equation",
+      "prereq": "vdw-critical-constants"
+    },
+    {
+      "concept": "law-of-corresponding-states",
+      "prereq": "reduced-variables"
+    },
+    {
+      "concept": "vdw-critical-compressibility",
+      "prereq": "vdw-critical-constants"
+    },
+    {
+      "concept": "vdw-critical-compressibility",
+      "prereq": "compressibility-factor"
+    },
+    {
+      "concept": "reduced-compressibility",
+      "prereq": "reduced-vdw-equation"
+    },
+    {
+      "concept": "reduced-compressibility",
+      "prereq": "vdw-critical-compressibility"
+    },
+    {
+      "concept": "generalized-compressibility-chart",
+      "prereq": "law-of-corresponding-states"
+    },
+    {
+      "concept": "generalized-compressibility-chart",
+      "prereq": "compressibility-chart"
+    },
+    {
+      "concept": "virial-equation-of-state",
+      "prereq": "number-density"
+    },
+    {
+      "concept": "virial-equation-of-state",
+      "prereq": "dilute-gases-ideal"
+    },
+    {
+      "concept": "virial-equation-of-state",
+      "prereq": "equation-of-state"
+    },
+    {
+      "concept": "mayer-f-function",
+      "prereq": "intermolecular-pair-potential"
+    },
+    {
+      "concept": "mayer-f-function",
+      "prereq": "boltzmann-distribution"
+    },
+    {
+      "concept": "configuration-integral",
+      "prereq": "intermolecular-pair-potential"
+    },
+    {
+      "concept": "configuration-integral",
+      "prereq": "boltzmann-distribution"
+    },
+    {
+      "concept": "second-virial-coefficient",
+      "prereq": "virial-equation-of-state"
+    },
+    {
+      "concept": "second-virial-coefficient",
+      "prereq": "mayer-f-function"
+    },
+    {
+      "concept": "second-virial-coefficient",
+      "prereq": "configuration-integral"
+    },
+    {
+      "concept": "hard-sphere-b2",
+      "prereq": "second-virial-coefficient"
+    },
+    {
+      "concept": "hard-sphere-b2",
+      "prereq": "hard-sphere-potential"
+    },
+    {
+      "concept": "isihara-hadwiger-formula",
+      "prereq": "second-virial-coefficient"
+    },
+    {
+      "concept": "vdw-second-virial",
+      "prereq": "second-virial-coefficient"
+    },
+    {
+      "concept": "vdw-second-virial",
+      "prereq": "van-der-waals-equation"
+    },
+    {
+      "concept": "lennard-jones-potential",
+      "prereq": "intermolecular-pair-potential"
+    },
+    {
+      "concept": "lennard-jones-potential",
+      "prereq": "well-depth"
+    },
+    {
+      "concept": "lj-sigma",
+      "prereq": "lennard-jones-potential"
+    },
+    {
+      "concept": "van-der-waals-radius",
+      "prereq": "lj-sigma"
+    },
+    {
+      "concept": "intermolecular-attractions",
+      "prereq": "polarizability"
+    },
+    {
+      "concept": "lj-repulsion-and-attraction",
+      "prereq": "lennard-jones-potential"
+    },
+    {
+      "concept": "lj-repulsion-and-attraction",
+      "prereq": "intermolecular-attractions"
+    },
+    {
+      "concept": "lj-forces",
+      "prereq": "lj-repulsion-and-attraction"
+    },
+    {
+      "concept": "lj-forces",
+      "prereq": "lj-sigma"
+    },
+    {
+      "concept": "evaluating-lj-potential",
+      "prereq": "lennard-jones-potential"
+    },
+    {
+      "concept": "vdw-virial-expansion",
+      "prereq": "van-der-waals-equation"
+    },
+    {
+      "concept": "vdw-virial-expansion",
+      "prereq": "virial-equation-of-state"
+    },
+    {
+      "concept": "dispersion-coefficient",
+      "prereq": "intermolecular-attractions"
+    },
+    {
+      "concept": "hard-sphere-attractive-potential",
+      "prereq": "hard-sphere-potential"
+    },
+    {
+      "concept": "hard-sphere-attractive-potential",
+      "prereq": "dispersion-coefficient"
+    },
+    {
+      "concept": "hard-sphere-attractive-potential",
+      "prereq": "lennard-jones-potential"
+    },
+    {
+      "concept": "molecular-vdw-constants",
+      "prereq": "hard-sphere-attractive-potential"
+    },
+    {
+      "concept": "molecular-vdw-constants",
+      "prereq": "hard-sphere-b2"
+    },
+    {
+      "concept": "molecular-vdw-constants",
+      "prereq": "vdw-second-virial"
+    },
+    {
+      "concept": "molecular-vdw-constants",
+      "prereq": "vdw-virial-expansion"
     }
   ],
   "sheets": [
@@ -19149,6 +20698,22 @@
       "electric-field": {
         "light": "#4A04B5",
         "dark": "#BBB6FD"
+      },
+      "pressure": {
+        "light": "#740549",
+        "dark": "#FEAAD0"
+      },
+      "volume": {
+        "light": "#8D6C09",
+        "dark": "#B1890E"
+      },
+      "molar-volume": {
+        "light": "#654D09",
+        "dark": "#DDAB0A"
+      },
+      "amount": {
+        "light": "#700486",
+        "dark": "#E99AFF"
       }
     },
     "pins": {

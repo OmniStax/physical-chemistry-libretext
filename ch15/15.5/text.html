@@ -1,0 +1,80 @@
+<section id="laser-parts">
+<h2>The parts of a laser</h2>
+<p><span data-concept="laser-components">Most lasers consist of three basic components</span>:</p>
+<ol><li>the <span data-concept="gain-medium">gain medium</span> from which light of a specific <span data-type="frequency">frequency</span> is emitted</li><li>the <span data-concept="pumping">pump source</span> which provides energy to the gain medium to create the light</li><li>the <span data-concept="optical-cavity">laser optical cavity</span> in which the light is amplified by repeatedly passing through the gain medium</li></ol>
+</section>
+
+<section id="the-gain-medium">
+<h2>The Gain Medium</h2>
+<p>The <span data-concept="gain-medium">gain medium</span>, or <span data-concept="gain-medium">active medium</span>, is a collection of atoms or molecules that can undergo <span data-concept="stimulated-emission">stimulated emission</span>. The <span data-concept="gain-medium">active medium</span> can be in a gaseous, liquid, or solid form. It can be a pure substance or a solution. Because the emitted light of a laser is created by the transition between two quantized states of the <span data-concept="gain-medium">gain medium</span>, laser light is always <span data-concept="laser-light-properties">monochromatic</span>. Laser light is also always <span data-concept="laser-light-properties">coherent</span>, meaning that the light waves emitted by the laser are all in phase.<sup class="fn" data-note="c-always"></sup></p>
+<h3>Solids</h3>
+<p>The first laser, <span data-concept="ruby-laser">Maiman's ruby laser</span>, described in section 15.4, used a solid rod of synthetic ruby as the <span data-concept="gain-medium">gain medium</span> (<a class="figref" href="#15.4-fig-15-4-1">Figure 15.5.1</a>).<sup class="fn" data-note="c-same-photo"></sup></p>
+<p>Ruby is a gem variety of the mineral corundum, Al<sub>2</sub>O<sub>3</sub>, in which Cr<sup>3</sup><sup>+</sup> ions replace roughly 0.05% (by mass) of the Al<sup>3</sup><sup>+</sup> ions. The electronic structure of the Cr<sup>3</sup><sup>+</sup> impurities enables to ruby to act as a <span data-concept="gain-medium">gain medium</span>. However, synthetic ruby must be used because natural rubies have too many crystal defects. Other solid-state gain media are shown in Table 15.5.1.</p>
+<div class="book-table">
+  <div class="tcap"><span class="eyebrow">Table 15.5.1</span><span>Solid-phase gain media</span></div>
+  <table>
+    <thead><tr><th>Solid-state Host</th><th>Active Ion</th><th>Wavelength (nm)</th><th>Output</th><th>Lifetime<sup class="fn" data-note="c-lifetime"></sup></th></tr></thead>
+    <tbody>
+      <tr><td>Al<sub>2</sub>O<sub>3</sub></td><td>Ti<sup>3</sup><sup>+</sup></td><td>780</td><td>continuous and pulsed</td><td>10 fs - 5 ps</td></tr>
+      <tr><td>Al<sub>2</sub>O<sub>3</sub></td><td>Cr<sup>3</sup><sup>+</sup></td><td>694.3</td><td>pulsed</td><td>10 ps<sup class="fn" data-note="c-ruby-ps"></sup></td></tr>
+      <tr><td>Glass (SiO<sub>2</sub>)</td><td>Nd<sup>3</sup><sup>+</sup></td><td>1059</td><td>pulsed</td><td>1 ps</td></tr>
+      <tr><td>YAG Y<sub>3</sub>Al<sub>5</sub>O<sub>15</sub><sup class="fn" data-note="c-yag"></sup></td><td>Nd<sup>3</sup><sup>+</sup></td><td>1064.1</td><td>continuous and pulsed</td><td>10-150 ps</td></tr>
+      <tr><td>YLF Y<sub>3</sub>LixFy<sup class="fn" data-note="c-ylf"></sup></td><td>Nd<sup>3</sup><sup>+</sup></td><td>1054.3</td><td>continuous and pulsed</td><td>10-100 ps</td></tr>
+    </tbody>
+  </table>
+</div>
+<h3>Gases</h3>
+<p>A basic He-Ne laser is shown in figure 15.5.2. The <span data-concept="gain-medium">gain medium</span> is the gas mixture through which the laser beam passes.</p>
+<figure class="photo" id="fig-15-5-2" data-figure="15.5.2">
+  <img src="/media/ch15/402031-HeNe_laser_cavity.svg" data-width="584" alt="A He-Ne laser tube between two mirrors, with electrodes along it wired to a power supply and the beam leaving through one mirror.">
+  <figcaption><span class="eyebrow">Figure 15.5.2</span><span>Internal view of a He-Ne laser. (CC BY-NC; Ümit Kaya via LibreTexts)</span></figcaption>
+</figure>
+<p>Other common gas-phase media include noble gases and molecules, but also metal cations, and metal atoms as shown in Table 15.5.2.</p>
+<div class="book-table">
+  <div class="tcap"><span class="eyebrow">Table 15.5.2</span><span>Gas-phase gain media</span></div>
+  <table>
+    <thead><tr><th>Gaseous Gain Medium</th><th>Wavelength (nm)</th><th>Output</th><th>Pulse Duration</th></tr></thead>
+    <tbody>
+      <tr><td>N<sub>2</sub></td><td>337</td><td>pulsed</td><td>1 ns</td></tr>
+      <tr><td>Cu</td><td>510</td><td>pulsed</td><td>30 ns</td></tr>
+      <tr><td>CO<sub>2</sub>, He, N<sub>2</sub></td><td>tunable near 10,000</td><td>pulsed</td><td>> 100 ns</td></tr>
+      <tr><td>He, Ne</td><td>3391, 1152, 632, 544</td><td>continuous</td><td>continuous</td></tr>
+      <tr><td>He, Cd</td><td>441, 325</td><td>continuous</td><td>continuous</td></tr>
+      <tr><td>Ar<sup>+</sup></td><td>488, 515</td><td>continuous</td><td>continuous</td></tr>
+      <tr><td>K<sup>+</sup><sup class="fn" data-note="c-krypton"></sup></td><td>647</td><td>continuous</td><td>continuous.</td></tr>
+    </tbody>
+  </table>
+</div>
+<h3>Exciplex Lasers</h3>
+<p><span data-concept="exciplex-laser">Exciplex lasers</span> involve the formation of an <span data-concept="exciplex-laser">exciplex</span>, a gaseous species that forms and exists only in an excited state. Because only the upper, excited state can exist, there is no population in the lower, dissociated state, thus a <span data-concept="population-inversion">population inversion</span> is obtained. The lasing transition occurs as the excited state <span data-concept="exciplex-laser">exciplex</span> emits its excitation energy and simultaneously falls apart. Two common <span data-concept="exciplex-laser">exciplex lasers</span> are XeCl* (308 nm) and KrF* ((249 nm). These lasers are often referred to as <span data-concept="exciplex-laser">excimer laser</span>, but the term "<span data-concept="exciplex-laser">excimer</span>" refers to an excited dimer, AA*, and so should not be used to describe an <span data-concept="exciplex-laser">exciplex</span>, AB*.</p>
+<h3>Liquid Solutions</h3>
+<p>Many <span data-concept="dye-laser">dye lasers</span> use an organic dye, usually dissolved in a solution, as the <span data-concept="gain-medium">gain medium</span>. One advantage of using a dye solution as the <span data-concept="gain-medium">gain medium</span> is that it can create a <span data-concept="dye-laser">tunable laser</span>, which allows for continuous tuning over a wide range of <span data-type="wavelength">wavelengths</span>. For example, rhodamine 6G is a dye that can be tuned from <span data-type="wavelength">635 nm to 560 nm</span>. The dye solution enters the laser cavity by passing through a cell or by streaming through the air using a dye jet. (Figure 15.5.3).</p>
+<figure class="photo" id="fig-15-5-3" data-figure="15.5.3">
+  <img src="/media/ch15/401739-Dye_laser_alignment_intra-cavity_beam_@_589nm.jpg" data-width="773" alt="Optics of a dye laser on a table, with a yellow beam crossing between mirrors.">
+  <figcaption><span class="eyebrow">Figure 15.5.3</span><span>A dye laser in use. The dye is entering the dye cell through the yellow tube in the left foreground. (CC BY-SA 4.0, By Zaereth - Own work, <a href="https://commons.wikimedia.org/w/index.php?curid=55762750">https://commons.wikimedia.org/w/inde...curid=55762750</a>)</span></figcaption>
+</figure>
+<p>Some common laser dyes other than rhodamine 6G and the rhodamines, include various coumarins, stilbenes, and fluorescein. There are solid state dye lasers (SSDL), in which the dye is dispersed uniformly within a solid polymer matrix.</p>
+</section>
+
+<section id="the-pump-source">
+<h2>The Pump Source</h2>
+<p>For lasing to take place, the <span data-concept="gain-medium">gain medium</span> must be <span data-concept="pumping">pumped</span> into an <em>excited state</em> capable of undergoing <span data-concept="stimulated-emission">stimulated emission</span>. The energy required for excitation is often supplied by an electric current or an intense light source, such as a flashlamp or an excitation laser. <span data-concept="diode-laser">Diode lasers</span>, <span data-concept="exciplex-laser">excimer lasers</span>, and YAG lasers have all been used as <span data-concept="pumping">pump sources</span>.</p>
+<p>Lasers are categorized as having either a <span data-concept="cw-and-pulsed-lasers">continuous beam</span> or a <span data-concept="cw-and-pulsed-lasers">pulsed beam</span>. In theory, any laser could be run as a <span data-concept="cw-and-pulsed-lasers">pulsed beam</span> laser if the <span data-concept="pumping">pump source</span> is set to deliver the excitation energy in regularly repeated bursts. Not all lasers can operate as <span data-concept="cw-and-pulsed-lasers">continuous-wave (CW)</span> lasers, though, because there are <span data-concept="gain-medium">gain media</span> in which it is not possible to maintain a continuous <span data-concept="population-inversion">population inversion</span>. The <span data-concept="ruby-laser">ruby laser</span> is an example of a laser that cannot produce a continuous wave.<sup class="fn" data-note="c-cw-ruby"></sup></p>
+</section>
+
+<section id="the-laser-optical-cavity">
+<h2>The Laser Optical Cavity</h2>
+<p>Figure 15.5.4 shows the main components of a generic <span data-concept="optical-cavity">laser optical (or resonator) cavity</span>. The <span data-concept="optical-cavity">optical cavity</span> is formed by a pair of mirrors that surround the <span data-concept="gain-medium">gain medium</span> and enable feedback of light into the medium. This feedback is critical to the operation of a laser because it is where the amplification of the signal occurs. The <span data-concept="gain-medium">gain medium</span> is excited by an external <span data-concept="pumping">pump source</span>, such as a flash lamp, electric current, or another laser. The <span data-concept="optical-cavity">output coupler</span> is a partially reflective mirror that allows a portion of the laser radiation to leave the cavity but reflects a majority of the light back through the <span data-concept="gain-medium">gain medium</span>. The light trapped between the mirrors forms <span data-concept="standing-wave">standing wave</span> structures called <span data-concept="optical-cavity">modes</span>. Although beyond the scope of this discussion, the reader interested in cavity modes can consult the “<a href="https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Supplemental_Modules_(Analytical_Chemistry)/Instrumentation_and_Analysis/Introduction_to_Lasers/03_Basic_Principles/01_Laser_Radiation_Properties">Laser Radiation Properties</a>” module.</p>
+<figure class="sim" id="sim-cavity" data-figure="15.5.4" data-original="/media/ch15/401857-Laser_cavity.svg" data-original-width="626" data-original-caption="A schematic of a generic laser cavity. (CC BY-NC; Ümit Kaya via LibreTexts)">
+  <div class="sim-head"><span class="eyebrow">Figure 15.5.4</span><span>Light from one spontaneous photon grows on every pass through the gain medium until the gain per round trip, shrinking as the light uses up the inversion, just pays for what the output coupler lets out. Lower the coupler's reflectivity or the pump and watch where the light levels off, or whether it builds at all.</span></div>
+</figure>
+<p>Figure 15.5.5 shows the laser cavity of a <span data-concept="dye-laser">tunable dye laser</span>. The laser is tunable because the <span data-concept="pumping">pump source</span> provides several excitation energies, which result in the creation of several possible energies for the lasing beam.<sup class="fn" data-note="c-dye-tuning"></sup> The user chooses the desired lasing energy by means of a <span data-concept="dye-laser">tuning element</span>, which is often a movable diffraction grating.</p>
+<figure class="sim" id="sim-dye" data-figure="15.5.5" data-original="/media/ch15/402685-Dye_Laser.svg" data-original-width="650" data-original-caption="A schematic of a dye laser cavity with a dye jet. (CC BY-NC; Ümit Kaya via LibreTexts)">
+  <div class="sim-head"><span class="eyebrow">Figure 15.5.5</span><span>Turn the tuning element. The dye can lase anywhere across its broad band, and the grating sends only one <span data-type="wavelength">wavelength</span> back through it, so the beam's colour follows the grating.</span></div>
+</figure>
+</section>
+
+<section id="diode-lasers">
+<h2>Diode Lasers</h2>
+<p><span data-concept="diode-laser">Diode lasers</span> do not lase in the same manner as the lasers described above. There is no laser optical cavity, and thus there is no stimulated emission.<sup class="fn" data-note="c-diode"></sup> Diodes made of materials such as GaAs emit light when the recombination of an electron and a hole in a semiconductor releases energy in the form of photons. A <span data-concept="population-inversion">population inversion</span> is maintained by rapidly removing the electrons that are falling into the holes of the p-type semiconductor. A pseudo-optical cavity is formed because the semiconductor materials generally have a very high refractive index, causing the photons to be trapped in the crystal of the semiconductor due to the large and abrupt difference in the refractive indices at the surfaces of the crystal. GaAs emits infrared light, but it can be doped to create a material that emits at another wavelength. For example, GaAs<sub>0.6</sub>P<sub>0.4</sub> emits red light.</p>
+</section>

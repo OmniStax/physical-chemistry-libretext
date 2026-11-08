@@ -1,0 +1,302 @@
+{
+ "id": "15.5",
+ "module": "13651",
+ "chapter": "15",
+ "title": "What is Inside a Laser?",
+ "short": "Inside a laser",
+ "lead": "A laser has a gain medium, a pump that excites it, and a pair of mirrors that send its light back through it. Gain media come as solids, gases, exciplexes and dye solutions; pumps run continuously or in bursts; and the cavity is where the light is amplified and let out.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "Shared under CC BY-NC-SA 4.0; Figure 15.5.1 is the photograph already shown as Figure 15.4.1 and is not repeated.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The section prints no exercises; both here are new and AI-written, with Bloom levels and concept tags chosen by AI.",
+ "figures": [
+  {
+   "id": "fig-15-5-2",
+   "kind": "photo",
+   "number": "15.5.2",
+   "widths": [
+    584
+   ],
+   "draws": []
+  },
+  {
+   "id": "fig-15-5-3",
+   "kind": "photo",
+   "number": "15.5.3",
+   "widths": [
+    773
+   ],
+   "draws": []
+  },
+  {
+   "id": "sim-cavity",
+   "kind": "sim",
+   "number": "15.5.4",
+   "originals": [
+    "/media/ch15/401857-Laser_cavity.svg"
+   ],
+   "widths": [
+    626
+   ],
+   "original_caption": "A schematic of a generic laser cavity. (CC BY-NC; Ümit Kaya via LibreTexts)",
+   "draws": [],
+   "facts": [
+    "#e8302a"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "sim-dye",
+   "kind": "sim",
+   "number": "15.5.5",
+   "originals": [
+    "/media/ch15/402685-Dye_Laser.svg"
+   ],
+   "widths": [
+    650
+   ],
+   "original_caption": "A schematic of a dye laser cavity with a dye jet. (CC BY-NC; Ümit Kaya via LibreTexts)",
+   "draws": [
+    "wavelength",
+    "energy"
+   ],
+   "facts": [
+    "spectrum",
+    "#f0641e"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "laser-parts",
+   "concept": "laser-components",
+   "verb": "introduces"
+  },
+  {
+   "span": "laser-parts",
+   "concept": "gain-medium",
+   "verb": "uses"
+  },
+  {
+   "span": "laser-parts",
+   "concept": "pumping",
+   "verb": "uses"
+  },
+  {
+   "span": "laser-parts",
+   "concept": "optical-cavity",
+   "verb": "uses"
+  },
+  {
+   "span": "the-gain-medium",
+   "concept": "exciplex-laser",
+   "verb": "introduces"
+  },
+  {
+   "span": "the-gain-medium",
+   "concept": "dye-laser",
+   "verb": "introduces"
+  },
+  {
+   "span": "the-gain-medium",
+   "concept": "gain-medium",
+   "verb": "reinforces"
+  },
+  {
+   "span": "the-gain-medium",
+   "concept": "laser-light-properties",
+   "verb": "reinforces"
+  },
+  {
+   "span": "the-gain-medium",
+   "concept": "ruby-laser",
+   "verb": "reinforces"
+  },
+  {
+   "span": "the-gain-medium",
+   "concept": "population-inversion",
+   "verb": "uses"
+  },
+  {
+   "span": "the-pump-source",
+   "concept": "cw-and-pulsed-lasers",
+   "verb": "introduces"
+  },
+  {
+   "span": "the-pump-source",
+   "concept": "pumping",
+   "verb": "reinforces"
+  },
+  {
+   "span": "the-laser-optical-cavity",
+   "concept": "optical-cavity",
+   "verb": "introduces"
+  },
+  {
+   "span": "the-laser-optical-cavity",
+   "concept": "standing-wave",
+   "verb": "uses"
+  },
+  {
+   "span": "the-laser-optical-cavity",
+   "concept": "dye-laser",
+   "verb": "reinforces"
+  },
+  {
+   "span": "diode-lasers",
+   "concept": "diode-laser",
+   "verb": "introduces"
+  },
+  {
+   "span": "diode-lasers",
+   "concept": "population-inversion",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "The output coupler is a partially reflective mirror",
+   "kind": "exercise",
+   "bloom": "Understand",
+   "place": {
+    "at": "end"
+   },
+   "cite": "the-laser-optical-cavity",
+   "prompt": "<p>A laser's output coupler is replaced: the old one reflected 98% of the light, the new one reflects 80%. The pump and gain medium are unchanged. What happens?</p>",
+   "answer": {
+    "type": "choice",
+    "generated_by": "ai",
+    "options": [
+     "Ten times as much of the light leaves on each pass, so the gain medium must amplify much more per round trip to keep the light from dying away; if it cannot, the laser stops lasing.",
+     "Nothing changes, since the beam's power is set by the pump alone.",
+     "The beam becomes more monochromatic, because fewer modes fit between the mirrors.",
+     "The laser lases more easily, because the high reflector now does all the amplifying."
+    ],
+    "correct": 0,
+    "hint": "Compare what the coupler lets out per pass, 2% against 20%, with what the gain medium adds per pass.",
+    "solution": "<p>The output coupler lets out $1 - R$ of the light that reaches it: 2% before, 20% after, ten times as much. Light builds up between the mirrors only while the gain medium adds more on each round trip than the mirrors let out, so the new coupler raises the gain the medium must supply. A medium that easily paid for a 2% loss may not pay for a 20% one, and then no beam builds up. A strongly pumped medium keeps lasing and lets out a larger share of its light each pass.</p>"
+   }
+  },
+  {
+   "id": "a2",
+   "source_id": "Exciplex lasers involve the formation of an exciplex",
+   "kind": "exercise",
+   "bloom": "Remember",
+   "place": {
+    "at": "end"
+   },
+   "cite": "the-gain-medium",
+   "prompt": "<p>Which of these lasing species is an excimer rather than an exciplex?</p>",
+   "answer": {
+    "type": "choice",
+    "generated_by": "ai",
+    "options": [
+     "XeCl*",
+     "KrF*",
+     "Xe<sub>2</sub>*",
+     "ArF*"
+    ],
+    "correct": 2,
+    "hint": "An excimer is an excited dimer, AA*.",
+    "solution": "<p>An excimer is an excited dimer AA*, two atoms of the same element, so Xe<sub>2</sub>* is one. XeCl*, KrF* and ArF* join two different atoms, AB*, and are exciplexes. Either kind exists only in its excited state: the lower state falls apart, holds no population, and the medium is inverted as soon as the exciplex or excimer forms.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "optical-cavity"
+  },
+  {
+   "exercise": "a1",
+   "concept": "laser-components"
+  },
+  {
+   "exercise": "a2",
+   "concept": "exciplex-laser"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-always",
+   "kind": "correction",
+   "html": "Laser light is very nearly monochromatic and coherent, not perfectly so: every lasing line has some width, and some lasers are built to give broadband light, as 15.7 describes."
+  },
+  {
+   "id": "c-same-photo",
+   "kind": "correction",
+   "html": "Figure 15.5.1 is the same photograph as Figure 15.4.1, shown in section 15.4."
+  },
+  {
+   "id": "c-lifetime",
+   "kind": "correction",
+   "html": "The column lists pulse durations, how long a light pulse from each laser lasts, not the lifetime of an excited state."
+  },
+  {
+   "id": "c-ruby-ps",
+   "kind": "correction",
+   "html": "Section 15.4 gives a ruby laser's pulse as about 0.1 ms; pulses as short as picoseconds need the special pulse-shortening methods it mentions."
+  },
+  {
+   "id": "c-yag",
+   "kind": "correction",
+   "html": "YAG, yttrium aluminum garnet, is Y<sub>3</sub>Al<sub>5</sub>O<sub>12</sub>."
+  },
+  {
+   "id": "c-ylf",
+   "kind": "correction",
+   "html": "YLF, yttrium lithium fluoride, is LiYF<sub>4</sub>."
+  },
+  {
+   "id": "c-krypton",
+   "kind": "correction",
+   "html": "The 647 nm line is that of the krypton ion, Kr<sup>+</sup>."
+  },
+  {
+   "id": "c-cw-ruby",
+   "kind": "correction",
+   "html": "Most continuous lasers are four-level lasers, but a three-level laser can run continuously under a strong enough pump: a ruby laser was operated continuously in 1962."
+  },
+  {
+   "id": "c-dye-tuning",
+   "kind": "correction",
+   "html": "A dye laser is tunable because the dye emits over a broad band of wavelengths: its many vibrational levels in the excited and ground states blur its emission into a continuous band (15.1). The pump only excites the dye, and the tuning element picks one wavelength out of the band."
+  },
+  {
+   "id": "c-diode",
+   "kind": "correction",
+   "html": "A diode laser does lase by stimulated emission. The faces of the semiconductor crystal reflect light back into it and act as the optical cavity, the pseudo-optical cavity the next sentences describe."
+  }
+ ]
+}

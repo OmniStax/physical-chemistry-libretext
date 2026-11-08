@@ -889,3 +889,41 @@ restate wavefunctions and conditions the text prints just before them (the prose
 reading); 13.7's intermediate displays (13.7.2)–(13.7.4) carry no number on the derivation,
 since they are steps, not node results; 13.9.1's flat fallback (no WebGL) projection was not
 checked against the new view.
+
+## Chapter 14 pass · 2026-11-08
+
+Built: the intro, 14.1, 14.4–14.8 and the summary page (14.2, 14.3 and 14.9 empty or stray,
+not built; 14.E empty). 27 figure rows: 5 interactive (one moving 3D Sim, the Larmor
+precession of 14.5; four still folds: 14.6's field strength, n + 1 splitting and two
+couplings, 14.7's AX → A₂ levels and spectrum) and 22 kept images. 3 derivations, all in
+14.7 (the two-spin levels, the NMR selection rules, the coupling commuting with the total
+spin). 14 exercises in the Exercises document: 5 book questions (14.6's "Example 5.6"–"5.10",
+keyed by Soderberg's linked manual) and 9 AI exercises. 19 AI-marked corrections in footnotes,
+besides E5.10's key correction under its card.
+
+Chapter pass: 1.9's `exercise_notes` now names Exercises 14.2.1 and 14.3.1 beside 9.11.1 and
+19.E.1 as prints of card `e3`. 14.6's readouts write `\knuo` as the spectrometer frequency,
+which 14.5's row ("the resonance frequency of the standard") only half said: a 14.6 row of
+`nu_0` added (the same quantity, worded for the spectrometer, MHz); `\knu` in force from 14.5
+is right. 14.6's spectrum readout wrote "J = 6.1 Hz = 6.1 Hz / 300 MHz", untrue as written:
+now J/ν₀ = …. 14.5's readout multiplied 41.67 MHz/T by B_loc and printed the product of
+41.6667: it now prints the factor it uses and B_loc to eight places. 14.6's two-coupling
+headline broke "6.5 | Hz" over two lines (the headline wraps at any space): the values are
+TeX runs now; its n = 1 headline reads "its spin". 14.7's `equivalent-levels` derivation
+never stated |1⟩ = |α₁α₂⟩ and |4⟩ = |β₁β₂⟩, which the book's display and the selection-rule
+derivation use: added to its last step, with the reason. Two 14.7 footnotes link the
+finding-the-states block (`xref`) and the AB figure (`figref`). Notes: 14.1 names its
+LibreTexts page and CC BY-SA 4.0, the intro says CC BY-SA 4.0, 14.4 says the page credits
+no author. `node --check` on the three `figures.js`: clean. No two-argument `\braket`, no bare
+`\k` script, no U+2011 or U+FEFF; every in-book link carries `xref`/`figref`; every page has
+`ai`, `built` and `notes`, and no objectives (the book prints none). `colours:default` rerun
+(every type kept its colour). `check:content`: no errors; one warning, from 15.3, which
+links 15.2, not yet built (Chapter 15's work). Every figure screenshot in light and dark,
+with states at the slider extremes; no console or KaTeX error on any Chapter 14 page or
+derivation.
+
+Known gaps: 14.7's dropped book connectives "Therefore in this basis the Hamiltonian matrix
+is" and "Finding the eigenvectors … is again left to the reader" (method, not content) are
+not in the derivation; 14.5's "standard" and "proton" labels sit on their cones; at 60 MHz
+14.6's enlargements let neighbouring signals rise past the panel top; 14.7's derivations
+write Î₁ₓ, Î₁ᵧ plain beside the typed Î₁z (no x, y variables rows for nucleus 1 and 2).

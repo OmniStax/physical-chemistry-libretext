@@ -1,0 +1,904 @@
+{
+ "id": "16",
+ "dir": "ch16",
+ "title": "The Properties of Gases",
+ "intro": {
+  "module": "11811",
+  "slug": "16:_The_Properties_of_Gases"
+ },
+ "summary": {
+  "module": "550570",
+  "slug": "16:_The_Properties_of_Gases/16.S:_The_Properties_of_Gases_(Summary)"
+ },
+ "sections": [
+  {
+   "id": "16.1",
+   "module": "13656",
+   "title": "All Dilute Gases Behave Ideally",
+   "slug": "16:_The_Properties_of_Gases/16.01:_All_Dilute_Gases_Behave_Ideally"
+  },
+  {
+   "id": "16.2",
+   "module": "13657",
+   "title": "van der Waals and Redlich-Kwong Equations of State",
+   "slug": "16:_The_Properties_of_Gases/16.02:_van_der_Waals_and_Redlich-Kwong_Equations_of_State"
+  },
+  {
+   "id": "16.3",
+   "module": "13658",
+   "title": "A Cubic Equation of State",
+   "slug": "16:_The_Properties_of_Gases/16.03:_A_Cubic_Equation_of_State"
+  },
+  {
+   "id": "16.4",
+   "module": "13659",
+   "title": "The Law of Corresponding States",
+   "slug": "16:_The_Properties_of_Gases/16.04:_The_Law_of_Corresponding_States"
+  },
+  {
+   "id": "16.5",
+   "module": "13660",
+   "title": "The Second Virial Coefficient",
+   "slug": "16:_The_Properties_of_Gases/16.05:_The_Second_Virial_Coefficient"
+  },
+  {
+   "id": "16.6",
+   "module": "13661",
+   "title": "The Repulsive Term in the Lennard-Jones Potential",
+   "slug": "16:_The_Properties_of_Gases/16.06:_The_Repulsive_Term_in_the_Lennard-Jones_Potential"
+  },
+  {
+   "id": "16.7",
+   "module": "13662",
+   "title": "Van der Waals Constants in Terms of Molecular Parameters",
+   "slug": "16:_The_Properties_of_Gases/16.07:_Van_der_Waals_Constants_in_Terms_of_Molecular_Parameters"
+  }
+ ],
+ "variables": [
+  {
+   "sym": "a",
+   "type": "length",
+   "meaning": "the edge length of the cubic box holding the gas",
+   "unit": "m",
+   "section": "16.1"
+  },
+  {
+   "sym": "F_x",
+   "type": "force",
+   "meaning": "the force along x that a particle exerts on the wall it strikes; the wall exerts −Fₓ on the particle",
+   "unit": "N",
+   "section": "16.1"
+  },
+  {
+   "sym": "m",
+   "type": "mass",
+   "meaning": "the mass of a gas particle",
+   "unit": "kg",
+   "section": "16.1"
+  },
+  {
+   "sym": "a_x",
+   "meaning": "the acceleration of the particle along x",
+   "section": "16.1"
+  },
+  {
+   "sym": "dv_x",
+   "type": "velocity",
+   "meaning": "the change in the particle's velocity along x in a collision, −2vₓ for an elastic one",
+   "unit": "m/s",
+   "section": "16.1"
+  },
+  {
+   "sym": "dt",
+   "type": "time",
+   "meaning": "the time between two collisions of the particle with the same wall, 2a/vₓ",
+   "unit": "s",
+   "section": "16.1"
+  },
+  {
+   "sym": "v_x",
+   "type": "velocity",
+   "meaning": "the component of a particle's velocity along x",
+   "unit": "m/s",
+   "section": "16.1"
+  },
+  {
+   "sym": "P",
+   "concept": "pressure",
+   "meaning": "the pressure of the gas",
+   "unit": "Pa",
+   "section": "16.1"
+  },
+  {
+   "sym": "F",
+   "type": "force",
+   "meaning": "the average force exerted by all the particles on a wall",
+   "unit": "N",
+   "section": "16.1"
+  },
+  {
+   "sym": "A",
+   "meaning": "the area of a wall of the box, a²",
+   "unit": "m²",
+   "section": "16.1"
+  },
+  {
+   "sym": "N",
+   "meaning": "the number of particles",
+   "section": "16.1"
+  },
+  {
+   "sym": "k_B",
+   "meaning": "Boltzmann's constant",
+   "section": "16.1"
+  },
+  {
+   "sym": "T",
+   "type": "temperature",
+   "meaning": "the temperature of the gas",
+   "unit": "K",
+   "section": "16.1"
+  },
+  {
+   "sym": "V",
+   "type": "volume",
+   "meaning": "the volume of the gas, a³ for the box",
+   "unit": "m³",
+   "section": "16.1"
+  },
+  {
+   "sym": "n_mol",
+   "type": "amount",
+   "meaning": "the amount of gas in moles",
+   "unit": "mol",
+   "section": "16.1"
+  },
+  {
+   "sym": "R",
+   "meaning": "the gas constant",
+   "unit": "J K⁻¹ mol⁻¹",
+   "section": "16.1"
+  },
+  {
+   "sym": "rho",
+   "concept": "number-density",
+   "meaning": "the density N/V, the number of particles per unit volume",
+   "unit": "m⁻³",
+   "section": "16.1"
+  },
+  {
+   "sym": "Z",
+   "concept": "compressibility-factor",
+   "meaning": "the compressibility factor PV/nRT",
+   "section": "16.1"
+  },
+  {
+   "sym": "V_bar",
+   "concept": "molar-volume",
+   "meaning": "the molar volume V/n",
+   "unit": "m³/mol",
+   "section": "16.1"
+  },
+  {
+   "sym": "P",
+   "concept": "pressure",
+   "meaning": "the pressure of the gas",
+   "unit": "bar",
+   "section": "16.2"
+  },
+  {
+   "sym": "V",
+   "type": "volume",
+   "meaning": "the volume of the container",
+   "unit": "L",
+   "section": "16.2"
+  },
+  {
+   "sym": "n_mol",
+   "type": "amount",
+   "meaning": "the amount of gas in moles",
+   "unit": "mol",
+   "section": "16.2"
+  },
+  {
+   "sym": "R",
+   "meaning": "the gas constant",
+   "unit": "L bar K⁻¹ mol⁻¹",
+   "section": "16.2"
+  },
+  {
+   "sym": "T",
+   "type": "temperature",
+   "meaning": "the temperature of the gas",
+   "unit": "K",
+   "section": "16.2"
+  },
+  {
+   "sym": "a",
+   "concept": "vdw-attraction-constant",
+   "meaning": "the van der Waals constant for the attraction between molecules",
+   "unit": "L² bar/mol²",
+   "section": "16.2",
+   "redefines": true
+  },
+  {
+   "sym": "b_vdw",
+   "concept": "excluded-volume",
+   "meaning": "the van der Waals constant b, the volume excluded by a mole of molecules",
+   "unit": "L/mol",
+   "section": "16.2"
+  },
+  {
+   "sym": "u_o",
+   "concept": "hard-sphere-potential",
+   "type": "energy",
+   "meaning": "the hard-wall potential between two molecules",
+   "unit": "J",
+   "section": "16.2"
+  },
+  {
+   "sym": "sigma_hs",
+   "concept": "hard-sphere-diameter",
+   "meaning": "the diameter of a hard sphere, the distance between the centres of two spheres at closest contact",
+   "unit": "m",
+   "section": "16.2"
+  },
+  {
+   "sym": "N_0",
+   "meaning": "Avogadro's number",
+   "section": "16.2"
+  },
+  {
+   "sym": "F",
+   "type": "force",
+   "meaning": "the force on the wall of the container",
+   "unit": "N",
+   "section": "16.2"
+  },
+  {
+   "sym": "F_net",
+   "type": "force",
+   "meaning": "the net force on the wall: the force of the impacts less the attraction",
+   "unit": "N",
+   "section": "16.2"
+  },
+  {
+   "sym": "F_impact",
+   "type": "force",
+   "meaning": "the force of the molecules striking the wall",
+   "unit": "N",
+   "section": "16.2"
+  },
+  {
+   "sym": "F_attract",
+   "type": "force",
+   "meaning": "the force of the other molecules' attraction pulling a molecule back from the wall",
+   "unit": "N",
+   "section": "16.2"
+  },
+  {
+   "sym": "P_vdw",
+   "type": "pressure",
+   "meaning": "the pressure in the van der Waals equation, with the attraction corrected for",
+   "unit": "bar",
+   "section": "16.2"
+  },
+  {
+   "sym": "P_real",
+   "type": "pressure",
+   "meaning": "the pressure the real gas exerts",
+   "unit": "bar",
+   "section": "16.2"
+  },
+  {
+   "sym": "V_bar",
+   "concept": "molar-volume",
+   "meaning": "the molar volume",
+   "unit": "L/mol",
+   "section": "16.2"
+  },
+  {
+   "sym": "v_bar",
+   "concept": "molar-volume",
+   "meaning": "the molar volume, written v̄ in the cubic form of the Redlich–Kwong equation",
+   "unit": "L/mol",
+   "section": "16.2"
+  },
+  {
+   "sym": "T_c",
+   "concept": "critical-temperature",
+   "meaning": "the critical temperature",
+   "unit": "K",
+   "section": "16.2"
+  },
+  {
+   "sym": "P_c",
+   "concept": "critical-pressure",
+   "meaning": "the critical pressure",
+   "unit": "bar",
+   "section": "16.2"
+  },
+  {
+   "sym": "A",
+   "concept": "rk-cubic-in-z",
+   "meaning": "the dimensionless Redlich–Kwong parameter aP/R²T^2.5",
+   "section": "16.2",
+   "redefines": true
+  },
+  {
+   "sym": "B",
+   "concept": "rk-cubic-in-z",
+   "meaning": "the dimensionless Redlich–Kwong parameter bP/RT",
+   "section": "16.2"
+  },
+  {
+   "sym": "Z",
+   "concept": "compressibility-factor",
+   "meaning": "the compressibility factor Pv̄/RT",
+   "section": "16.2"
+  },
+  {
+   "sym": "P_r",
+   "concept": "reduced-variables",
+   "type": "pressure",
+   "meaning": "the reduced pressure P/P_c",
+   "section": "16.2"
+  },
+  {
+   "sym": "T_r",
+   "concept": "reduced-variables",
+   "type": "temperature",
+   "meaning": "the reduced temperature T/T_c",
+   "section": "16.2"
+  },
+  {
+   "sym": "a_m",
+   "concept": "mixing-rules",
+   "meaning": "the attraction constant of a mixture",
+   "section": "16.2"
+  },
+  {
+   "sym": "a_ij",
+   "concept": "mixing-rules",
+   "meaning": "the attraction constant between components i and j, √(aᵢaⱼ)",
+   "section": "16.2"
+  },
+  {
+   "sym": "a_i",
+   "concept": "mixing-rules",
+   "meaning": "the attraction constant of pure component i",
+   "section": "16.2"
+  },
+  {
+   "sym": "b_m",
+   "concept": "mixing-rules",
+   "meaning": "the co-volume of a mixture",
+   "section": "16.2"
+  },
+  {
+   "sym": "b_i",
+   "concept": "mixing-rules",
+   "meaning": "the co-volume of pure component i",
+   "section": "16.2"
+  },
+  {
+   "sym": "y_i",
+   "meaning": "the mole fraction of component i",
+   "section": "16.2"
+  },
+  {
+   "sym": "P",
+   "concept": "pressure",
+   "meaning": "the pressure of the gas",
+   "unit": "Pa",
+   "section": "16.3"
+  },
+  {
+   "sym": "V",
+   "type": "volume",
+   "meaning": "the volume of the gas",
+   "unit": "m³",
+   "section": "16.3"
+  },
+  {
+   "sym": "V_bar",
+   "concept": "molar-volume",
+   "meaning": "the molar volume V/n",
+   "unit": "m³/mol",
+   "section": "16.3"
+  },
+  {
+   "sym": "T",
+   "type": "temperature",
+   "meaning": "the temperature",
+   "unit": "K",
+   "section": "16.3"
+  },
+  {
+   "sym": "R",
+   "meaning": "the gas constant",
+   "unit": "J K⁻¹ mol⁻¹",
+   "section": "16.3"
+  },
+  {
+   "sym": "n_mol",
+   "type": "amount",
+   "meaning": "the amount of gas in moles",
+   "unit": "mol",
+   "section": "16.3"
+  },
+  {
+   "sym": "a",
+   "concept": "vdw-attraction-constant",
+   "meaning": "the van der Waals constant for the attraction between molecules",
+   "unit": "m⁶ Pa/mol²",
+   "section": "16.3",
+   "redefines": true
+  },
+  {
+   "sym": "b_vdw",
+   "concept": "excluded-volume",
+   "meaning": "the van der Waals constant b, the volume excluded by a mole of molecules",
+   "unit": "m³/mol",
+   "section": "16.3"
+  },
+  {
+   "sym": "T_c",
+   "concept": "critical-temperature",
+   "meaning": "the critical temperature",
+   "unit": "K",
+   "section": "16.3"
+  },
+  {
+   "sym": "V_c",
+   "concept": "critical-volume",
+   "meaning": "the critical volume",
+   "unit": "m³",
+   "section": "16.3"
+  },
+  {
+   "sym": "P_c",
+   "concept": "critical-pressure",
+   "meaning": "the critical pressure",
+   "unit": "Pa",
+   "section": "16.3"
+  },
+  {
+   "sym": "P_sat",
+   "concept": "tie-line",
+   "type": "pressure",
+   "meaning": "the saturation (vapor) pressure, the pressure of the tie line",
+   "unit": "Pa",
+   "section": "16.3"
+  },
+  {
+   "sym": "Z",
+   "concept": "compressibility-factor",
+   "meaning": "the compressibility factor",
+   "section": "16.3"
+  },
+  {
+   "sym": "P",
+   "concept": "pressure",
+   "meaning": "the pressure",
+   "unit": "Pa",
+   "section": "16.4"
+  },
+  {
+   "sym": "V",
+   "type": "volume",
+   "meaning": "the volume",
+   "unit": "m³",
+   "section": "16.4"
+  },
+  {
+   "sym": "V_m",
+   "concept": "molar-volume",
+   "meaning": "the molar volume",
+   "unit": "m³/mol",
+   "section": "16.4"
+  },
+  {
+   "sym": "T",
+   "type": "temperature",
+   "meaning": "the temperature",
+   "unit": "K",
+   "section": "16.4"
+  },
+  {
+   "sym": "R",
+   "meaning": "the gas constant",
+   "unit": "J K⁻¹ mol⁻¹",
+   "section": "16.4"
+  },
+  {
+   "sym": "a",
+   "concept": "vdw-attraction-constant",
+   "meaning": "the van der Waals constant for the attraction between molecules",
+   "section": "16.4",
+   "redefines": true
+  },
+  {
+   "sym": "b_vdw",
+   "concept": "excluded-volume",
+   "meaning": "the van der Waals constant b",
+   "section": "16.4"
+  },
+  {
+   "sym": "P_c",
+   "concept": "critical-pressure",
+   "meaning": "the critical pressure",
+   "unit": "Pa",
+   "section": "16.4"
+  },
+  {
+   "sym": "V_c",
+   "concept": "critical-volume",
+   "meaning": "the critical volume",
+   "unit": "m³",
+   "section": "16.4"
+  },
+  {
+   "sym": "T_c",
+   "concept": "critical-temperature",
+   "meaning": "the critical temperature",
+   "unit": "K",
+   "section": "16.4"
+  },
+  {
+   "sym": "P_r",
+   "concept": "reduced-variables",
+   "type": "pressure",
+   "meaning": "the reduced pressure P/P_c",
+   "section": "16.4"
+  },
+  {
+   "sym": "V_r",
+   "concept": "reduced-variables",
+   "type": "volume",
+   "meaning": "the reduced volume V/V_c",
+   "section": "16.4"
+  },
+  {
+   "sym": "Vbar_r",
+   "concept": "reduced-variables",
+   "type": "volume",
+   "meaning": "the reduced molar volume",
+   "section": "16.4"
+  },
+  {
+   "sym": "T_r",
+   "concept": "reduced-variables",
+   "type": "temperature",
+   "meaning": "the reduced temperature T/T_c",
+   "section": "16.4"
+  },
+  {
+   "sym": "Z",
+   "concept": "compressibility-factor",
+   "meaning": "the compressibility factor PV/RT",
+   "section": "16.4"
+  },
+  {
+   "sym": "P",
+   "concept": "pressure",
+   "meaning": "the pressure of the gas",
+   "unit": "Pa",
+   "section": "16.5"
+  },
+  {
+   "sym": "k",
+   "meaning": "Boltzmann's constant, written k",
+   "section": "16.5"
+  },
+  {
+   "sym": "k_B",
+   "meaning": "Boltzmann's constant",
+   "section": "16.5"
+  },
+  {
+   "sym": "T",
+   "type": "temperature",
+   "meaning": "the temperature",
+   "unit": "K",
+   "section": "16.5"
+  },
+  {
+   "sym": "rho",
+   "concept": "number-density",
+   "meaning": "the density, the number of molecules per unit volume",
+   "unit": "m⁻³",
+   "section": "16.5"
+  },
+  {
+   "sym": "B_2",
+   "concept": "second-virial-coefficient",
+   "type": "volume",
+   "meaning": "the second virial coefficient",
+   "unit": "m³",
+   "section": "16.5"
+  },
+  {
+   "sym": "B_3",
+   "concept": "virial-equation-of-state",
+   "meaning": "the third virial coefficient",
+   "section": "16.5"
+  },
+  {
+   "sym": "Phi_12",
+   "concept": "intermolecular-pair-potential",
+   "meaning": "the intermolecular pair potential",
+   "unit": "J",
+   "section": "16.5"
+  },
+  {
+   "sym": "u",
+   "concept": "intermolecular-pair-potential",
+   "meaning": "the pair potential of two monatomic particles, a function of their separation only",
+   "unit": "J",
+   "section": "16.5"
+  },
+  {
+   "sym": "beta",
+   "meaning": "1/kT",
+   "section": "16.5"
+  },
+  {
+   "sym": "r",
+   "type": "length",
+   "meaning": "the separation of two molecules",
+   "unit": "m",
+   "section": "16.5"
+  },
+  {
+   "sym": "r_12",
+   "type": "length",
+   "meaning": "the separation |r₂ − r₁| of particles 1 and 2",
+   "unit": "m",
+   "section": "16.5"
+  },
+  {
+   "sym": "Z_1",
+   "concept": "configuration-integral",
+   "meaning": "the configuration integral of one molecule, V",
+   "section": "16.5"
+  },
+  {
+   "sym": "Z_2",
+   "concept": "configuration-integral",
+   "meaning": "the configuration integral of two molecules",
+   "section": "16.5"
+  },
+  {
+   "sym": "Z_3",
+   "concept": "configuration-integral",
+   "meaning": "the configuration integral of three molecules",
+   "section": "16.5"
+  },
+  {
+   "sym": "U_2",
+   "type": "energy",
+   "meaning": "the interaction energy of two molecules",
+   "unit": "J",
+   "section": "16.5"
+  },
+  {
+   "sym": "U_3",
+   "type": "energy",
+   "meaning": "the interaction energy of three molecules",
+   "unit": "J",
+   "section": "16.5"
+  },
+  {
+   "sym": "sigma_hs",
+   "concept": "hard-sphere-diameter",
+   "meaning": "the hard-sphere diameter, where the infinite repulsive wall stands",
+   "unit": "m",
+   "section": "16.5"
+  },
+  {
+   "sym": "V",
+   "type": "volume",
+   "meaning": "a volume: the volume the gas occupies, and the volume of a hard convex body in the Isihara–Hadwiger formula",
+   "unit": "m³",
+   "section": "16.5"
+  },
+  {
+   "sym": "S",
+   "meaning": "the surface area of a hard convex body",
+   "unit": "m²",
+   "section": "16.5"
+  },
+  {
+   "sym": "R_curv",
+   "type": "length",
+   "meaning": "the mean radius of curvature of a hard convex body",
+   "unit": "m",
+   "section": "16.5"
+  },
+  {
+   "sym": "alpha",
+   "meaning": "RS/3V, the nonsphericity of a hard convex body",
+   "section": "16.5"
+  },
+  {
+   "sym": "R",
+   "meaning": "the gas constant",
+   "section": "16.5"
+  },
+  {
+   "sym": "a",
+   "concept": "vdw-attraction-constant",
+   "meaning": "the van der Waals constant for the attraction between molecules",
+   "section": "16.5",
+   "redefines": true
+  },
+  {
+   "sym": "b_vdw",
+   "concept": "excluded-volume",
+   "meaning": "the van der Waals constant b",
+   "section": "16.5"
+  },
+  {
+   "sym": "V",
+   "concept": "lennard-jones-potential",
+   "meaning": "the intermolecular potential between two atoms or molecules",
+   "unit": "kJ/mol",
+   "section": "16.6",
+   "redefines": true
+  },
+  {
+   "sym": "r",
+   "type": "length",
+   "meaning": "the distance of separation between the centres of two particles",
+   "unit": "Å",
+   "section": "16.6"
+  },
+  {
+   "sym": "epsilon",
+   "concept": "well-depth",
+   "meaning": "the well depth, a measure of how strongly two particles attract each other",
+   "unit": "kJ/mol",
+   "section": "16.6"
+  },
+  {
+   "sym": "sigma_lj",
+   "concept": "lj-sigma",
+   "meaning": "the distance at which the intermolecular potential between two particles is zero",
+   "unit": "Å",
+   "section": "16.6"
+  },
+  {
+   "sym": "A",
+   "meaning": "the coefficient 4εσ¹² of the repulsive term",
+   "section": "16.6",
+   "redefines": true
+  },
+  {
+   "sym": "B",
+   "meaning": "the coefficient 4εσ⁶ of the attractive term",
+   "section": "16.6",
+   "redefines": true
+  },
+  {
+   "sym": "Phi_12",
+   "concept": "intermolecular-pair-potential",
+   "meaning": "the intermolecular pair potential, the Lennard-Jones V(r)",
+   "unit": "kJ/mol",
+   "section": "16.6"
+  },
+  {
+   "sym": "r_min",
+   "type": "length",
+   "meaning": "the separation at which the potential is at its minimum, the equilibrium distance",
+   "unit": "Å",
+   "section": "16.6"
+  },
+  {
+   "sym": "P",
+   "concept": "pressure",
+   "meaning": "the pressure",
+   "unit": "Pa",
+   "section": "16.7"
+  },
+  {
+   "sym": "R",
+   "meaning": "the gas constant",
+   "section": "16.7"
+  },
+  {
+   "sym": "T",
+   "type": "temperature",
+   "meaning": "the temperature",
+   "unit": "K",
+   "section": "16.7"
+  },
+  {
+   "sym": "V_bar",
+   "concept": "molar-volume",
+   "meaning": "the molar volume",
+   "unit": "m³/mol",
+   "section": "16.7"
+  },
+  {
+   "sym": "a",
+   "concept": "vdw-attraction-constant",
+   "meaning": "the van der Waals constant for the attraction between molecules",
+   "section": "16.7",
+   "redefines": true
+  },
+  {
+   "sym": "b_vdw",
+   "concept": "excluded-volume",
+   "meaning": "the van der Waals constant b",
+   "unit": "m³/mol",
+   "section": "16.7"
+  },
+  {
+   "sym": "x",
+   "meaning": "the variable of the binomial series 1/(1 − x)",
+   "section": "16.7"
+  },
+  {
+   "sym": "Z",
+   "concept": "compressibility-factor",
+   "meaning": "the compressibility factor PV̄/RT",
+   "section": "16.7"
+  },
+  {
+   "sym": "B_2V",
+   "concept": "second-virial-coefficient",
+   "type": "molar-volume",
+   "meaning": "the second virial coefficient of the van der Waals equation, per mole",
+   "unit": "m³/mol",
+   "section": "16.7"
+  },
+  {
+   "sym": "B_2",
+   "concept": "second-virial-coefficient",
+   "type": "molar-volume",
+   "meaning": "the second virial coefficient per mole, the coefficient of 1/V̄ in the virial series",
+   "unit": "m³/mol",
+   "section": "16.7",
+   "redefines": true
+  },
+  {
+   "sym": "u",
+   "concept": "intermolecular-pair-potential",
+   "meaning": "the pair potential: a hard sphere with an r⁻⁶ attraction",
+   "unit": "J",
+   "section": "16.7"
+  },
+  {
+   "sym": "r",
+   "type": "length",
+   "meaning": "the separation of two molecules",
+   "unit": "m",
+   "section": "16.7"
+  },
+  {
+   "sym": "sigma_hs",
+   "concept": "hard-sphere-diameter",
+   "meaning": "the hard-sphere diameter",
+   "unit": "m",
+   "section": "16.7"
+  },
+  {
+   "sym": "C_6",
+   "concept": "dispersion-coefficient",
+   "meaning": "the coefficient of the r⁻⁶ attraction between two molecules",
+   "unit": "J m⁶",
+   "section": "16.7"
+  },
+  {
+   "sym": "N_0",
+   "meaning": "Avogadro's number",
+   "section": "16.7"
+  },
+  {
+   "sym": "k_B",
+   "meaning": "Boltzmann's constant",
+   "section": "16.7"
+  }
+ ]
+}

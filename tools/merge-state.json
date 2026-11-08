@@ -737,5 +737,57 @@
       "v_qpp"
     ],
     "types": []
+  },
+  "ch16": {
+    "symbols": [
+      "n_mol",
+      "V_bar",
+      "v_bar",
+      "V_m",
+      "b_vdw",
+      "sigma_hs",
+      "sigma_lj",
+      "epsilon",
+      "F_x",
+      "v_x",
+      "a_x",
+      "dv_x",
+      "dt",
+      "P_c",
+      "T_c",
+      "V_c",
+      "P_r",
+      "T_r",
+      "V_r",
+      "Vbar_r",
+      "P_sat",
+      "P_vdw",
+      "P_real",
+      "F_net",
+      "F_impact",
+      "F_attract",
+      "B_2",
+      "B_3",
+      "B_2V",
+      "Phi_12",
+      "u_o",
+      "U_2",
+      "U_3",
+      "Z_1",
+      "Z_2",
+      "Z_3",
+      "r_min",
+      "R_curv",
+      "y_i",
+      "a_ij",
+      "a_m",
+      "b_i"
+    ],
+    "types": [
+      "pressure",
+      "volume",
+      "molar-volume",
+      "amount"
+    ]
   }
 }

@@ -1,0 +1,466 @@
+{
+ "id": "15.2",
+ "module": "13648",
+ "chapter": "15",
+ "title": "The Dynamics of Transitions can be Modeled by Rate Equations",
+ "short": "Einstein's rate equations",
+ "lead": "Light and a two-level atom exchange energy by three processes that Einstein named: absorption, spontaneous emission and stimulated emission. Each has a rate equation with its own coefficient, and asking thermal equilibrium to reproduce Planck's law ties the coefficients together.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "Adapted from a LibreTexts page credited to Andrea M. Mitofsky (Trine University), Tom Weideman (UC Davis) and Tom Neils (Grand Rapids Community College), which includes text from Wikipedia's article on Einstein coefficients and is shared under CC BY-SA 4.0; Figure 15.2.1 is Ümit Kaya's, under CC BY-NC 4.0.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercise in this section. The two exercises, on thermal populations and on the Einstein coefficients of the helium-neon line, were written by AI with AI solutions, their answers computed; their Bloom levels and concept tags were chosen by AI.",
+ "figures": [
+  {
+   "id": "sim-einstein",
+   "kind": "sim",
+   "number": "15.2.1",
+   "widths": [
+    736
+   ],
+   "originals": [
+    "/media/ch15/399463-abs_spon_emiss_stim_emiss.svg"
+   ],
+   "original_caption": "The three processes that can occur during the formation of a spectral line. A) Absorption of a photon, leading to the promotion of an electron to a higher electronic energy level. B) The spontaneous emission of a photon created by the relaxation of an electron back to the ground state. C) The stimulated emission of a photon created by the influence of a passing photon, accompanied by the relaxation of an electron back to the ground state. (CC BY-NC 4.0; Ümit Kaya via LibreTexts)",
+   "draws": [
+    "energy",
+    "frequency"
+   ],
+   "conventions": [
+    "e-"
+   ],
+   "facts": [
+    "spectrum"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "interaction",
+   "concept": "stimulated-emission",
+   "verb": "introduces"
+  },
+  {
+   "span": "interaction",
+   "concept": "laser",
+   "verb": "introduces"
+  },
+  {
+   "span": "interaction",
+   "concept": "level-population",
+   "verb": "introduces"
+  },
+  {
+   "span": "interaction",
+   "concept": "thermal-population-ratio",
+   "verb": "introduces"
+  },
+  {
+   "span": "interaction",
+   "concept": "no-lasing-at-equilibrium",
+   "verb": "introduces"
+  },
+  {
+   "span": "interaction",
+   "concept": "boltzmann-distribution",
+   "verb": "uses"
+  },
+  {
+   "span": "interaction",
+   "concept": "photon",
+   "verb": "uses"
+  },
+  {
+   "span": "einstein-coefficients",
+   "concept": "einstein-coefficients",
+   "verb": "introduces"
+  },
+  {
+   "span": "einstein-coefficients",
+   "concept": "photon-absorption",
+   "verb": "introduces"
+  },
+  {
+   "span": "einstein-coefficients",
+   "concept": "spontaneous-emission",
+   "verb": "introduces"
+  },
+  {
+   "span": "einstein-coefficients",
+   "concept": "spectral-energy-density",
+   "verb": "uses"
+  },
+  {
+   "span": "einstein-coefficients",
+   "concept": "level-population",
+   "verb": "uses"
+  },
+  {
+   "span": "einstein-coefficients",
+   "concept": "bohr-frequency-condition",
+   "verb": "uses"
+  },
+  {
+   "span": "einstein-coefficients",
+   "concept": "stimulated-emission",
+   "verb": "reinforces"
+  },
+  {
+   "span": "relationship",
+   "concept": "two-level-rate-equation",
+   "verb": "introduces"
+  },
+  {
+   "span": "relationship",
+   "concept": "einstein-relations",
+   "verb": "introduces"
+  },
+  {
+   "span": "relationship",
+   "concept": "net-upper-state-rate",
+   "verb": "introduces"
+  },
+  {
+   "span": "relationship",
+   "concept": "population-inversion",
+   "verb": "introduces"
+  },
+  {
+   "span": "relationship",
+   "concept": "plancks-distribution-law",
+   "verb": "uses"
+  },
+  {
+   "span": "relationship",
+   "concept": "boltzmann-distribution",
+   "verb": "uses"
+  },
+  {
+   "span": "relationship",
+   "concept": "degree-of-degeneracy",
+   "verb": "uses"
+  },
+  {
+   "span": "relationship",
+   "concept": "einstein-coefficients",
+   "verb": "uses"
+  },
+  {
+   "span": "relationship",
+   "concept": "thermal-population-ratio",
+   "verb": "reinforces"
+  },
+  {
+   "span": "relationship",
+   "concept": "laser",
+   "verb": "reinforces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "ai1",
+   "source_id": "but how much greater?",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "interaction",
+   "prompt": "<p>Two levels of an atom are 2.0 eV apart and have the same degeneracy, $g_1 = g_2$. In thermal equilibrium, find the ratio $N_2/N_1$ (a) at 300 K and (b) at 3000 K. Take $k_B = 8.617 \\times 10^{-5}$ eV/K.</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 2.52e-34,
+      "tol": 0.1,
+      "hint": "Work out $k_BT$ in eV first, then $\\Delta E/k_BT$."
+     },
+     {
+      "part": "b",
+      "value": 0.000437,
+      "tol": 0.05
+     }
+    ],
+    "solution": "<p>With $g_1 = g_2$, $N_2/N_1 = e^{-\\Delta E/k_BT}$.</p><p>(a) $k_BT = (8.617 \\times 10^{-5}\\ \\text{eV/K})(300\\ \\text{K}) = 0.02585$ eV, so $\\Delta E/k_BT = 2.0/0.02585 = 77.4$ and $N_2/N_1 = e^{-77.4} = 2.5 \\times 10^{-34}$.</p><p>(b) $k_BT = 0.2585$ eV, $\\Delta E/k_BT = 7.74$ and $N_2/N_1 = e^{-7.74} = 4.4 \\times 10^{-4}$.</p><p>Even at 3000 K fewer than one atom in two thousand is in the upper level, so a photon at this frequency is far more likely to be absorbed than to stimulate emission.</p>"
+   }
+  },
+  {
+   "id": "ai2",
+   "source_id": "If we know one of the Einstein coefficients",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "relationship",
+   "prompt": "<p>The red line of a helium-neon laser is at 632.8 nm. (a) Find $A_{21}/B_{21}$ for this transition. (b) If $A_{21} = 6.56 \\times 10^{6}\\ \\text{s}^{-1}$, find $B_{21}$.</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 6.57e-14,
+      "unit": "J·s/m³",
+      "hint": "Find $\\nu_{12} = c/\\lambda$ and use Equation 15.2.10."
+     },
+     {
+      "part": "b",
+      "value": 9.98e+19,
+      "unit": "m³ J⁻¹ s⁻²"
+     }
+    ],
+    "solution": "<p>(a) $\\nu_{12} = c/\\lambda = (2.998 \\times 10^{8}\\ \\text{m/s})/(632.8 \\times 10^{-9}\\ \\text{m}) = 4.738 \\times 10^{14}$ Hz. From Equation 15.2.10, $A_{21}/B_{21} = 8\\pi h\\nu_{12}^3/c^3 = 8\\pi(6.626 \\times 10^{-34}\\ \\text{J·s})(4.738 \\times 10^{14}\\ \\text{s}^{-1})^3/(2.998 \\times 10^{8}\\ \\text{m/s})^3 = 6.57 \\times 10^{-14}$ J·s/m³.</p><p>(b) $B_{21} = A_{21}/(6.57 \\times 10^{-14}\\ \\text{J·s/m}^3) = (6.56 \\times 10^{6}\\ \\text{s}^{-1})/(6.57 \\times 10^{-14}\\ \\text{J·s/m}^3) = 9.98 \\times 10^{19}\\ \\text{m}^3\\,\\text{J}^{-1}\\,\\text{s}^{-2}$.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "ai1",
+   "concept": "thermal-population-ratio"
+  },
+  {
+   "exercise": "ai1",
+   "concept": "no-lasing-at-equilibrium"
+  },
+  {
+   "exercise": "ai2",
+   "concept": "einstein-relations"
+  },
+  {
+   "exercise": "ai2",
+   "concept": "einstein-coefficients"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-energy-of-state",
+   "kind": "correction",
+   "html": "The second product is the number of atoms in the excited state multiplied by the energy of that state."
+  },
+  {
+   "id": "c-kt",
+   "kind": "correction",
+   "html": "At room temperature $k_BT$ is about 1/40 eV (0.026 eV at 300 K), which is what the factor $e^{40}$ for a 1 eV gap uses."
+  },
+  {
+   "id": "c-exponential",
+   "kind": "correction",
+   "html": "What falls exponentially is the population of a level, with the level's energy divided by $k_BT$. Raising the temperature raises the upper level's share."
+  },
+  {
+   "id": "c-degeneracy",
+   "kind": "correction",
+   "html": "$g_1$ and $g_2$ are the degeneracies of the two levels: the number of states that share each level's energy, not a number of electrons."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "einstein-relations",
+   "what": "the relations between the Einstein coefficients",
+   "source": "Physical Chemistry (LibreTexts), 15.2 The Dynamics of Transitions can be Modeled by Rate Equations",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\dfrac{dN_2(\\kt)}{d\\kt} = B_{12}\\krhonu(\\knuonetwo) N_1(\\kt) - A_{21}N_2(\\kt) - B_{21}\\krhonu(\\knutwoone) N_2(\\kt)",
+       "src": "(15.2.2)"
+      },
+      {
+       "text": "In thermal equilibrium the populations $N_1$ and $N_2$ are constant.",
+       "src": "15.2"
+      },
+      {
+       "tex": "h\\knutwoone = \\kEtwo - \\kEone = h\\knuonetwo",
+       "src": "15.2"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{d}{\\dfrac{dN_2(\\kt)}{d\\kt}} = \\mk{a}{B_{12}\\krhonu(\\knuonetwo) N_1(\\kt)} - \\mk{s}{A_{21}N_2(\\kt)} - \\mk{e}{B_{21}\\krhonu(\\knutwoone) N_2(\\kt)}",
+      "src": "(15.2.2)"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{d}{0} = \\mk{a}{B_{12}\\krhonu(\\knuonetwo) N_1} - \\mk{s}{A_{21}N_2} - \\mk{e}{B_{21}\\krhonu(\\knutwoone) N_2}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{d}{0} = \\mk{a}{B_{12}\\krhonu(\\knuonetwo) N_1} - \\mk{s}{A_{21}N_2} - \\mk{e}{B_{21}\\krhonu(\\knuonetwo) N_2}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{r}{\\krhonu(\\knuonetwo)}\\,\\mk{p}{(B_{12}N_1 - B_{21}N_2)} = \\mk{s}{A_{21}N_2}",
+       "uses": [],
+       "map": {
+        "a": [
+         "r",
+         "p"
+        ],
+        "e": [
+         "r",
+         "p"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{r}{\\krhonu(\\knuonetwo)} = \\dfrac{\\mk{s}{A_{21}N_2}}{\\mk{p}{B_{12}N_1 - B_{21}N_2}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{r}{\\krhonu(\\knuonetwo)} = \\dfrac{\\mk{s}{A_{21}}}{\\mk{p}{(N_1/N_2)B_{12} - B_{21}}}",
+       "uses": []
+      }
+     ],
+     "num": "(15.2.4)"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "N_2/N_1 = \\dfrac{g_2}{g_1} e^{-h\\knuonetwo/k_B\\kT}",
+       "src": "(15.2.5); 13.2"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{q}{N_2/N_1} = \\mk{g}{\\dfrac{g_2}{g_1}}\\,\\mk{x}{e^{-h\\knuonetwo/k_B\\kT}}",
+      "src": "(15.2.5)"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{q}{N_1/N_2} = \\mk{g}{\\dfrac{g_1}{g_2}}\\,\\mk{x}{e^{h\\knuonetwo/k_B\\kT}}",
+       "uses": []
+      }
+     ],
+     "num": "(15.2.6)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "step": 1
+      }
+     ],
+     "then": {
+      "tex": "\\mk{r}{\\krhonu(\\knuonetwo)} = \\dfrac{\\mk{s}{A_{21}}}{\\mk{q}{(N_1/N_2)}\\mk{b}{B_{12}} - \\mk{c}{B_{21}}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{r}{\\krhonu(\\knuonetwo)} = \\dfrac{\\mk{s}{A_{21}}}{\\mk{q}{\\left(\\dfrac{g_1}{g_2} e^{h\\knuonetwo/k_B\\kT}\\right)}\\mk{b}{B_{12}} - \\mk{c}{B_{21}}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{r}{\\krhonu(\\knuonetwo)} = \\dfrac{\\mk{s}{\\dfrac{A_{21}}{B_{21}}}}{\\mk{b}{\\dfrac{g_1B_{12}}{g_2B_{21}}}\\,\\mk{q}{e^{h\\knuonetwo/k_B\\kT}} - \\mk{c}{1}}",
+       "uses": []
+      }
+     ],
+     "num": "(15.2.8)"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\krhonu(\\knuonetwo) = \\dfrac{8\\pi h}{c^3} \\dfrac{\\knuonetwo^3}{e^{h\\knuonetwo/k_B\\kT} -1}",
+       "src": "(15.2.1); 1.2"
+      },
+      {
+       "step": 2
+      }
+     ],
+     "then": {
+      "tex": "\\mk{r}{\\krhonu(\\knuonetwo)} = \\mk{P}{\\dfrac{8\\pi h}{c^3} \\dfrac{\\knuonetwo^3}{e^{h\\knuonetwo/k_B\\kT} -1}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{P}{\\dfrac{8\\pi h}{c^3} \\dfrac{\\knuonetwo^3}{e^{h\\knuonetwo/k_B\\kT} -1}} = \\mk{r}{\\dfrac{\\dfrac{A_{21}}{B_{21}}}{\\dfrac{g_1B_{12}}{g_2B_{21}}\\,e^{h\\knuonetwo/k_B\\kT} - 1}}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "num": "(15.2.9)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 3
+      },
+      {
+       "text": "Planck's law and the rate equations both hold at every temperature $T$.",
+       "src": "15.2"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{P}{\\dfrac{8\\pi h}{c^3} \\dfrac{\\knuonetwo^3}{e^{h\\knuonetwo/k_B\\kT} -1}} = \\mk{r}{\\dfrac{\\dfrac{A_{21}}{B_{21}}}{\\dfrac{g_1B_{12}}{g_2B_{21}}\\,e^{h\\knuonetwo/k_B\\kT} - 1}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{r}{\\dfrac{g_1B_{12}}{g_2B_{21}}} = 1",
+       "uses": [
+        1
+       ],
+       "cap": "The left side depends on $T$ only through $e^{h\\nu_{12}/k_BT} - 1$. For the right side to follow it at every temperature, the factor in front of its exponential must be 1."
+      }
+     ],
+     "num": "(15.2.11)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 3
+      },
+      {
+       "step": 4
+      }
+     ],
+     "then": {
+      "tex": "\\mk{P}{\\dfrac{8\\pi h}{c^3} \\dfrac{\\knuonetwo^3}{e^{h\\knuonetwo/k_B\\kT} -1}} = \\mk{r}{\\dfrac{\\dfrac{A_{21}}{B_{21}}}{\\dfrac{g_1B_{12}}{g_2B_{21}}\\,e^{h\\knuonetwo/k_B\\kT} - 1}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{P}{\\dfrac{8\\pi h}{c^3} \\dfrac{\\knuonetwo^3}{e^{h\\knuonetwo/k_B\\kT} -1}} = \\mk{r}{\\dfrac{A_{21}/B_{21}}{e^{h\\knuonetwo/k_B\\kT} - 1}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{r}{\\dfrac{A_{21}}{B_{21}}} = \\mk{P}{\\dfrac{8\\pi h \\knuonetwo^3}{c^3}}",
+       "uses": []
+      }
+     ],
+     "num": "(15.2.10)"
+    }
+   ]
+  }
+ ]
+}
