@@ -4,7 +4,7 @@
  "chapter": "6",
  "title": "The Schrodinger Equation for the Hydrogen Atom Can Be Solved Exactly",
  "short": "The hydrogen atom's equation",
- "lead": "The hydrogen atom is one particle of reduced mass moving in the Coulomb potential of the nucleus. Written in spherical coordinates, its Schrödinger equation splits into an equation for the angles, already met with the rigid rotor, and an equation for the distance.",
+ "lead": "The hydrogen atom is one particle of reduced mass moving in the Coulomb potential of the nucleus. Its Schrödinger equation is written in spherical coordinates and separated into an angular part, met before with the rigid rotor, and a radial part.",
  "objectives": [],
  "summary_html": "",
  "notes": "Adapted from David M. Hanson, Erica Harvey, Robert Sweeney and Theresa Julia Zielinski's Quantum States of Atoms and Molecules, under CC BY-NC-SA 4.0; the book gives no credit for Figure 6.1.1.",
@@ -521,7 +521,7 @@
       },
       {
        "tex": "\\klambda = l(l + 1)\\hbar^2",
-       "src": "(6.1.12); 5.8"
+       "src": "(6.1.12)"
       }
      ],
      "then": {

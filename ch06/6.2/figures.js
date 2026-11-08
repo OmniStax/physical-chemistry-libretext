@@ -121,7 +121,7 @@ const formOf = (l, m) => FORMS[`${l},${m}`] ?? `P_{${l}}^{${Math.abs(m)}}(\\cos\
     S.set('axes', F.space.axes(BB, { ticks: 0 }));
     const eq = cones.some((t) => Math.abs(t - PI / 2) < 0.01), nc = cones.length - (eq ? 1 : 0), np = planes.length;
     const NUM = ['no', 'one', 'two', 'three', 'four', 'five'];
-    const parts = [...(nc ? [`${NUM[nc]} nodal cone${nc > 1 ? 's' : ''} about z`] : []), ...(eq ? ['the xy-plane'] : []), ...(np ? [`${NUM[np]} nodal plane${np > 1 ? 's' : ''} through z`] : [])];
+    const parts = [...(nc ? [`${NUM[nc]} nodal cone${nc > 1 ? 's' : ''} about z`] : []), ...(eq ? ['a nodal plane in the xy-plane'] : []), ...(np ? [`${NUM[np]} nodal plane${np > 1 ? 's' : ''} through z`] : [])];
     const said = parts.length ? parts.length === 1 ? parts[0] : `${parts.slice(0, -1).join(', ')} and ${parts[parts.length - 1]}` : 'no angular node: the same value in every direction';
     S.headline(`$l = ${l}$, $m_l = ${signed(m)}$: ${said}`);
     tex(d.readout, `\\kYlm(\\theta, \\phi) \\propto ${formOf(l, m)} \\\\ \\text{angular nodes} = l = ${l} = (l - |m_l|) + |m_l| = ${l - Math.abs(m)} + ${Math.abs(m)}`);
