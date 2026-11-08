@@ -701,3 +701,36 @@ plan's prose-first reading); the bond-angle result cos θ = −γ² carries
 (10.2.8) both in the text and on the derivation; the 3D scenes of water's
 hybrids and ethylene's frameworks read as one crowded cloud at rest until
 turned.
+
+## Chapter 13 prep · 2026-11-08
+
+Prep only, no section built. Fetched Chapter 13's images (39 used, into `media/ch13/`),
+converted the landing page (one paragraph: an `intro/` page), 13.1–13.14, the summary
+13.S (to `ch13/summary/`) and the empty 13.E; wrote `ch13/exploration.md`,
+`ch13/config.md` (agreed on Chapter 1's terms), `ch13/chapter.json` (14 sections, the
+intro and summary records, 188 variables) and merged `ch13/book-rows.json`: 1 new type
+(`electric-field`; `colours:default` rerun, no other type moved), 67 symbols, 76
+concepts (the Boltzmann distribution enters the book here, in 13.2), 126 edges. Drafts
+made for the intro, the 14 sections and the summary.
+
+Found: 13.E empty; much repeats Chapters 5, 9, 10 and 12 (cited, not rebuilt: 13.5.2 is
+5.3.2's files, 13.13's example is 5.5's derivation, 13.10's water modes are 12.10's
+figure, with 13.10/13.14 putting water in the yz plane where 12.10 uses xz); 13.2 prints
+two Figure 13.2.3s and cites a 13.2.2; 13.11 and 13.12 are CC BY-SA. Exercises: 3 boxes,
+0 keyed, all for AI solutions; 14 AI exercises proposed. 9 derivations to build.
+Figures: 6 moving (the EM wave, the spectrum built line by line, the spinning non-rigid
+rotor, the vertical transition, CO's normal coordinate, the driven two-level system)
+plus the CH₂ and PtCl₄²⁻ modes in physical 3D; the rest still. Notable corrections:
+13.7's S₀₁ prefactor and S ratio, 13.11's P₁₂, 13.12's missing x and recurrence, 13.6's
+v′, 13.3's backward spacing claims.
+
+Literature data proposed from memory, **unchecked**: HCl's vibration–rotation constant
+α ≈ 0.31 cm⁻¹ (13.3.1's figure) and I₂'s X and B constants (T_e ≈ 15 769, ν̃′_e ≈ 125.7,
+χ̃′_eν̃′_e ≈ 0.76, ν̃″_e ≈ 214.5, χ̃″_eν̃″_e ≈ 0.61 cm⁻¹; 13.6's figure), both Huber–Herzberg;
+the builder checks them against the NIST WebBook before use. Table 13.5.1's anharmonic
+column was checked against ν̃ = 2990.9, χ̃_eν̃ = 52.8 cm⁻¹ (recovered from the table).
+
+Tool fix: `md2html.py` braces an exponent written as a bare `\left( … \right)` (13.2's
+occupations note), which KaTeX refuses; Chapters 1–12's 262 drafts regenerated with the
+old and new script in a scratch folder: identical. `lt2md.py` unchanged, so no source.md
+reconverted. `check:content`: no errors, no warnings.

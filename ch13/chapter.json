@@ -1030,8 +1030,9 @@
   {
    "sym": "omega",
    "type": "frequency",
-   "meaning": "the frequency of the incident light",
-   "section": "13.11"
+   "meaning": "the angular frequency of the incident light",
+   "section": "13.11",
+   "redefines": true
   },
   {
    "sym": "P_12",
@@ -1118,7 +1119,8 @@
   {
    "sym": "N",
    "meaning": "the normalization constant N_JM of a spherical harmonic",
-   "section": "13.12"
+   "section": "13.12",
+   "redefines": true
   },
   {
    "sym": "psi_v",
@@ -1145,8 +1147,9 @@
   {
    "sym": "x",
    "concept": "vibrational-coordinate",
-   "meaning": "the displacement of the oscillator",
-   "section": "13.13"
+   "meaning": "the displacement of the harmonic oscillator from equilibrium",
+   "section": "13.13",
+   "redefines": true
   },
   {
    "sym": "mu_z",
@@ -1210,8 +1213,9 @@
   },
   {
    "sym": "N",
-   "meaning": "the number of atoms, 3N = 9 for water",
-   "section": "13.14"
+   "meaning": "the number of atoms in the molecule, 3N = 9 for water",
+   "section": "13.14",
+   "redefines": true
   }
  ]
 }
