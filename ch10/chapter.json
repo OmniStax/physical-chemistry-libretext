@@ -566,6 +566,18 @@
    "meaning": "the heat of hydrogenation",
    "unit": "kJ/mol",
    "section": "10.7"
+  },
+  {
+   "sym": "E",
+   "type": "energy",
+   "meaning": "the energy of a molecular orbital of AH₂ or of water",
+   "section": "10.3"
+  },
+  {
+   "sym": "R",
+   "concept": "internuclear-distance",
+   "meaning": "the bond length of H₂ or H₂⁺",
+   "section": "10.4"
   }
  ]
 }
