@@ -26,8 +26,8 @@ const rng = (s) => () => { s |= 0; s = (s + 0x6d2b79f5) | 0; let t = Math.imul(s
 ===================================================================== */
 (function () {
   const d = F.sim(root, 'sim-ethylene-frameworks');
-  const BX = 3, BY = 3.2, BZ = 2.2;
-  const S3 = F.space3d(d, { box: [[-BX, BX], [-BY, BY], [-BZ, BZ]], h: 520, turn: -1.75, tilt: 0.3, fit: 1.9, pitch: [-85 * Math.PI / 180, 85 * Math.PI / 180], spin: 'off', zoom: false });
+  const BX = 2.2, BY = 2.6, BZ = 1.8;
+  const S3 = F.space3d(d, { box: [[-BX, BX], [-BY, BY], [-BZ, BZ]], h: 520, tilt: 0.3, fit: 1.9, pitch: [-85 * Math.PI / 180, 85 * Math.PI / 180], spin: 'off', zoom: false });
   const K = F.choice(d.controls, { label: '\\text{framework}', key: 'framework', options: [{ value: 'both', label: 'both' }, { value: 's', label: '$\\sigma$ bonds' }, { value: 'p', label: '$\\pi$ bond' }], value: 'both', aria: 'which bonding framework of ethylene is drawn' });
   const leg = F.makeCanvas(d.stage, 56);
   const CC = 1.33, CH = 1.08, half = 117 / 2 * Math.PI / 180;
@@ -75,7 +75,7 @@ const rng = (s) => () => { s |= 0; s = (s + 0x6d2b79f5) | 0; let t = Math.imul(s
     const key = [k, up, down, cC, cH, PAL.ink].join('|');
     if (key !== last) {
       last = key;
-      S3.set('plane', [{ k: 'faces', faces: [[[-2.2, -2.6, 0], [2.2, -2.6, 0], [2.2, 2.6, 0], [-2.2, 2.6, 0]]], color: PAL.ink, alpha: 0.08, name: 'the molecular plane, where the π orbital changes sign' }]);
+      S3.set('plane', [{ k: 'faces', faces: [[[-1.9, -2.4, 0], [1.9, -2.4, 0], [1.9, 2.4, 0], [-1.9, 2.4, 0]]], color: PAL.ink, alpha: 0.08, name: 'the molecular plane, where the π orbital changes sign' }]);
       S3.set('sigma', k === 'p' ? [] : [{ k: 'points', pts: sigma, color: 'muted', r: 4, name: 'the five σ bonds, four C–H and one C–C, in the molecular plane' }]);
       S3.set('pi', k === 's' ? [] : [
         { k: 'points', pts: pi.plus, color: up, r: 3, name: 'the π bond above the plane, where ψ > 0' },
