@@ -60,11 +60,11 @@ OPS.forEach((B) => OPS.forEach((A, j) => { if (prod(B, A) !== BOOK[B][j]) consol
     hits.length = 0;
     /* the mirror planes, seen edge on, and the C3 axis end on */
     ['s', 'sp', 'spp'].forEach((g) => {
-      const th = ang(SITE[g]), e = [1.45 * Math.cos(th), 1.45 * Math.sin(th), 0], f = [-1.2 * Math.cos(th), -1.2 * Math.sin(th), 0];
+      const th = ang(SITE[g]), e = [1.3 * Math.cos(th), 1.3 * Math.sin(th), 0], f = [-1.25 * Math.cos(th), -1.25 * Math.sin(th), 0];
       const lit = active === g && qa > 0 && qa < 1 || done && ab === g;
       const [x1, y1] = P(e), [x2, y2] = P(f);
       line(ctx, x2, y2, x1, y1, lit ? C('symmetry-operation') : alpha(C('symmetry-operation'), 0.45), lit ? 5 : 3, [10, 8]);
-      const [lx, ly] = P([1.62 * Math.cos(th), 1.62 * Math.sin(th), 0]);
+      const [lx, ly] = P([-1.4 * Math.cos(th), -1.4 * Math.sin(th), 0]);
       text(ctx, NAME[g], lx, ly + 8, C('symmetry-operation'), { size: 24, weight: 600, align: 'center', bg: PAL.panel });
       hits.push({ x: (x1 + x2) / 2 * 0.3 + x1 * 0.7, y: (y1 + y2) / 2 * 0.3 + y1 * 0.7, r: 26, name: `the mirror plane of ${NAME[g]}, seen edge on` });
     });

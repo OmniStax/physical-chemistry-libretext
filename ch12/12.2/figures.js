@@ -154,7 +154,8 @@ function elementMarks(o, lit) {
     const names = named(m.atoms, M.name);
     /* after a whole application, is every atom on the start site of an atom of its own element? */
     let wrong = null;
-    if (done) m.atoms.forEach((a, i) => { const k = m.atoms.findIndex((b) => Math.hypot(...sub(b.p, pos[i])) < 1e-3); if (!wrong && k >= 0 && m.atoms[k].el !== a.el) wrong = [a.el, m.atoms[k].el]; });
+    const whole = m.atoms.map((a) => { let p = a.p; for (let k = 0; k < Math.min(j, 1); k++) p = partway(o, p, 1); return p; });
+    if (j >= 1) m.atoms.forEach((a, i) => { const k = m.atoms.findIndex((b) => Math.hypot(...sub(b.p, whole[i])) < 1e-3); if (!wrong && k >= 0 && m.atoms[k].el !== a.el) wrong = [a.el, m.atoms[k].el]; });
     S.set('element', o.kind === 'E' ? [] : elementMarks(o, q > 0 && q < 1));
     S.set('ghosts', m.atoms.map((a) => ({ k: 'dot', p: a.p, color: alpha(colour(a.el), 0.22), r: RADIUS[a.el] + 2 })));
     S.set('molecule', [
