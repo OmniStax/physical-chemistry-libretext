@@ -58,7 +58,7 @@ const sim = (id, H) => F.sim(root, id, H);
     line(ctx, ax.X(t), ax.Y(cv), ax.X(t), box.b, alpha(C('temperature'), 0.8), 3, [4, 8]);
     dot(ctx, ax.X(t), ax.Y(cv), C('heat-capacity'), true, 10);
     hov.push({ x: ax.X(50.5), y: ax.Y(2.069), r: 14, name: 'the equilibrium peak: 2.07R near 50 K' });
-    legend(ctx, ax, [{ s: 'equilibrium', color: C('heat-capacity'), w: 5 }, { s: '3:1', color: C('heat-capacity'), w: 3, dash: [10, 10] }, { s: 'ortho', color: ORTHO, w: 3 }, { s: 'para', color: PARA, w: 3 }], { corner: 'tr' });
+    legend(ctx, ax, [{ s: 'equilibrium', color: C('heat-capacity'), w: 5 }, { s: '3:1', color: C('heat-capacity'), w: 3, dash: [10, 10] }, { s: 'ortho', color: ORTHO, w: 3 }, { s: 'para', color: PARA, w: 3 }]);
     /* the ratio against T */
     const b2 = { l: 620, r: W - 50, t: 450, b: 590 };
     const a2 = axes(ctx, b2, [0, 330], [0, 3.2], { nx: 0, ny: 0, xl: 'T (K)', xc: C('temperature'), yl: 'N_{o}/N_{p}' });

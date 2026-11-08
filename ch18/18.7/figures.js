@@ -19,7 +19,7 @@ const TAU = 2 * Math.PI;
    real one, with an amplitude that grows as √(2⟨v⟩ + 1), drawn about 2.6 times the zero-point swing. */
 (function () {
   const d = sim('sim-water-mode-factors', 680);
-  const LG = ctl(d.controls, { label: '\\kT', cls: 'temperature', min: Math.log10(300), max: 4, step: 0.001, value: Math.log10(300), unit: 'K',
+  const LG = ctl(d.controls, { label: '\\kT', cls: 'temperature', min: Math.log10(300), max: 4, step: (4 - Math.log10(300)) / 1500, value: Math.log10(300), unit: 'K',
     fmt: (lg) => `${fmt(10 ** lg, 0)} K`, detents: [{ v: Math.log10(300), label: '300 K' }], snap: true });
   const HCK = 1.438777;   /* hc/k, cm K */
   const ATOMS = [{ s: 'O', x: 0, z: 0.0656, name: 'oxygen' }, { s: 'H', x: 0.757, z: -0.5203, name: 'hydrogen' }, { s: 'H', x: -0.757, z: -0.5203, name: 'hydrogen' }];
@@ -64,7 +64,7 @@ const TAU = 2 * Math.PI;
       if (k === 0 && bh > 16) text(ctx, 'kT', xr + 18, y0 - bh, C('temperature'), { size: 17 });
       for (let v = 0; v < LV; v++) {
         const y = y0 - v * m.nu * SC, f = (1 - x) * x ** v;
-        line(ctx, xl, y, xr, y, alpha(C('energy'), 0.85), 2);
+        line(ctx, xl, Math.round(y), xr, Math.round(y), C('energy'), 3);
         if (f > 0.002) { ctx.save(); ctx.fillStyle = alpha(PAL.ink, 0.5); ctx.fillRect(xl, y - 10, (xr - xl) * f, 8); ctx.restore(); }
         if (k === 0) text(ctx, `v = ${v}`, xl - 22, y, PAL.muted, { size: 17, align: 'right' });
         hov.push({ x: (xl + xr) / 2, y: y - 4, r: 14, name: `level v = ${v} of the ${m.name}, holding a fraction ${f < 1e-4 ? f.toExponential(1) : fmt(f, 4)} of the molecules` });
