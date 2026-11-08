@@ -59,8 +59,7 @@ const sim = (id, H) => F.sim(root, id, H);
     /* the results so far in this loop */
     const res = [];
     for (let j = 0; j <= k; j++) if (j < k || done) res.push(`E_${outcome(j)}`);
-    text(ctx, 'measured', lx0, 650, PAL.muted, { size: 17 });
-    if (res.length) text(ctx, res.join('  '), lx0, 684, ce, { size: 22, weight: 600 });
+    if (res.length) { text(ctx, 'measured', lx0, 650, PAL.muted, { size: 17 }); text(ctx, res.join('  '), lx0, 684, ce, { size: 22, weight: 600 }); }
     hits.push({ x: lx0 + 60, y: 676, r: 30, name: 'the energies measured in the runs so far' });
     if (done) {
       topline(ctx, `Run ${k + 1} of 3: the energy measured is $\\kE_${n}$, so the state is now $\\kpsi_${n}$ and its density stands still.`);

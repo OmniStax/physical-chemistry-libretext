@@ -88,12 +88,42 @@ class Drafter:
         return "".join(out)
 
     @staticmethod
+    def ce(tex):
+        """\\ce{…} (mhchem) as upright text with mhchem's two habits a formula needs:
+        a count after an element is a subscript (O2, Li2) and a mass number after
+        ^ a superscript of all its digits (^35Cl, ^1H). The braces are matched, so
+        a formula with its own groups survives (H^{35}Cl, ^{12}C^{16}O, Li^{2+})."""
+        out, i = [], 0
+        while True:
+            k = tex.find("\\ce", i)
+            j = k + 3
+            while 0 <= k and j < len(tex) and tex[j] == " ":
+                j += 1
+            if k < 0 or j >= len(tex) or tex[j] != "{":
+                out.append(tex[i:] if k < 0 else tex[i:j])
+                if k < 0:
+                    return "".join(out)
+                i = j
+                continue
+            depth, a = 0, j
+            while j < len(tex):
+                depth += {"{": 1, "}": -1}.get(tex[j], 0)
+                j += 1
+                if depth == 0:
+                    break
+            body = tex[a + 1:j - 1]
+            body = re.sub(r"\^(\d+)", r"^{\1}", body)
+            body = re.sub(r"(?<=[A-Za-z)])(\d+)(?![^{]*\})", r"_{\1}", body)
+            out.append(tex[i:k] + "\\mathrm{" + body + "}")
+            i = j
+
+    @staticmethod
     def katex(tex):
         """What the site's MathJax has and the app's KaTeX lacks: \\ce (mhchem),
         \\op (the site's operator hat), \\cancelto (the cancel package), \\mbox,
         the two-argument \\braket,
         and the increment sign U+2206, which KaTeX has no metrics for."""
-        tex = re.sub(r"\\ce\{([^{}]*)\}", r"\\mathrm{\1}", tex)
+        tex = Drafter.ce(tex)
         tex = re.sub(r"\\mbox\s*\{", r"\\text{", tex)  # KaTeX has \\text, not \\mbox
         tex = tex.replace("\u2206", "\\Delta ")  # the increment sign, which KaTeX has no metrics for
         tex = re.sub(r"\\op\s*\{([^{}]*)\}", r"\\hat{\1}", tex)
