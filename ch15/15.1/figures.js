@@ -94,7 +94,7 @@ const supPow = (t) => { const k = Math.round(Math.log10(t)); return k === 0 ? '1
   const VIB = 0.18, S = [0, 2.75, 3.55, 4.30], T = [null, 2.25, 3.10, 3.95];
   let done = 0;
   const restart = () => { done = 0; cy.reset(); };
-  const LAND = F.choice(d.controls, { label: 'light lands in', key: 'land', options: [{ value: '1', label: '$S_1$' }, { value: '2', label: '$S_2$' }, { value: '3', label: '$S_3$' }], value: '1', onInput: restart });
+  const LAND = F.choice(d.controls, { label: '\\text{light lands in}', key: 'land', options: [{ value: '1', label: '$S_1$' }, { value: '2', label: '$S_2$' }, { value: '3', label: '$S_3$' }], value: '1', onInput: restart });
   const P = ctl(d.controls, { label: 'S_1 \\to T_1', cls: '', key: 'share', min: 0, max: 100, step: 5, value: 25, unit: '%', dec: 0, aria: 'the share of molecules in S1 that cross to T1', onInput: restart });
   const crosses = (j, p) => Math.floor((j + 1) * p + 1e-9) > Math.floor(j * p + 1e-9);
   const Y = (E) => 560 - 86 * E;
@@ -154,7 +154,7 @@ const supPow = (t) => { const k = Math.round(Math.log10(t)); return k === 0 ? '1
     hits.length = 0;
     /* the levels: bold v = 0, thin vibrational levels above it */
     const levels = (E, xs, name) => {
-      for (let v = 4; v >= 0; v--) line(ctx, xs[0], Y(E + v * VIB), xs[1], Y(E + v * VIB), v ? alpha(ink, 0.3) : ink, v ? 2 : 4);
+      for (let v = 3; v >= 0; v--) line(ctx, xs[0], Y(E + v * VIB), xs[1], Y(E + v * VIB), v ? alpha(ink, 0.3) : ink, v ? 2 : 4);
       hits.push({ x: (xs[0] + xs[1]) / 2, y: Y(E + 2 * VIB), r: 40, name });
     };
     S.forEach((E, m) => { levels(E, XS, m ? `S${sub(m)}, an excited singlet state, with its vibrational levels` : 'S₀, the singlet ground state, with its vibrational levels'); text(ctx, `S${sub(m)}`, XS[0] - 16, Y(E) + 2, ink, { size: 24, weight: 600, align: 'right', base: 'middle' }); });
@@ -205,7 +205,7 @@ const supPow = (t) => { const k = Math.round(Math.log10(t)); return k === 0 ? '1
       line(ctx, x, CK.y - 6, x, CK.y + 6, alpha(ink, 0.5), 2);
       if ((e - CK.lo) % 3 === 0 || e === CK.hi) text(ctx, pow10(e), x, CK.y + 30, ink, { size: 17, align: 'center' });
     }
-    text(ctx, 'time since absorption (s)', CK.l - 16, CK.y + 2, ct, { size: 20, weight: 600, align: 'right', base: 'middle' });
+    text(ctx, 'time since absorption (s), log scale', CK.l, CK.y - 26, ct, { size: 20, weight: 600, align: 'left' });
     const tx0 = CX(Math.max(1e-15, tNow));
     st.slice(0, i).forEach((s) => dot(ctx, CX(s.t), CK.y, alpha(ct, 0.5), true, 6));
     dot(ctx, tx0, CK.y, ct, true, 10);
@@ -229,7 +229,7 @@ const supPow = (t) => { const k = Math.round(Math.log10(t)); return k === 0 ? '1
 (function () {
   const d = sim('sim-relaxation', 660);
   const W = 0.2, G1 = 2.6, GT = 2.4;
-  const ROUTE = F.choice(d.controls, { label: 'way back', key: 'route', options: [{ value: 'fl', label: 'fluorescence' }, { value: 'ic', label: 'internal conversion' }, { value: 'isc', label: 'intersystem crossing' }], value: 'fl', onInput: () => cy.reset() });
+  const ROUTE = F.choice(d.controls, { label: '\\text{way back}', key: 'route', options: [{ value: 'fl', label: 'fluorescence' }, { value: 'ic', label: 'internal conversion' }, { value: 'isc', label: 'intersystem crossing' }], value: 'fl', onInput: () => cy.reset() });
   const D = ctl(d.controls, { label: '\\text{bond shift}', cls: '', key: 'shift', min: 0, max: 3, step: 0.05, value: 2, dec: 2,
     aria: 'how far the excited-state curves are shifted to longer bonds', specials: [{ at: 0, label: 'no shift' }], onInput: () => cy.reset() });
   const V0 = (x) => 0.5 * W * x * x;
@@ -286,17 +286,17 @@ const supPow = (t) => { const k = Math.round(Math.log10(t)); return k === 0 ? '1
     };
     topline(ctx, heads[cur.k]);
     const box = { l: 150, r: 1300, t: 120, b: 560 };
-    const ax = axes(ctx, box, [-4.5, 7.5], [0, 4.4], { nx: 0, ny: 4, xl: 'nuclear separation', xc: C('length'), yl: 'energy (eV)', yc: ce });
+    const ax = axes(ctx, box, [-6, 8], [0, 4], { nx: 0, ny: 4, xl: 'nuclear separation', xc: C('length'), yl: 'energy (eV)', yc: ce });
     const V1 = (x) => G1 + 0.5 * W * (x - dd) ** 2, VT = (x) => GT + 0.5 * W * (x - dT) ** 2;
-    const ladder = (E0, xc, n, a) => { for (let v = 0; v < n; v++) { const h = (v + 0.5) * W, e = E0 + h; if (e > 4.4) break; const s = Math.sqrt(2 * h / W); line(ctx, ax.X(xc - s), ax.Y(e), ax.X(xc + s), ax.Y(e), alpha(ce, a), 2); } };
-    ladder(0, 0, 22, 0.22); ladder(G1, dd, 9, 0.4);
+    const ladder = (E0, xc, n, a) => { ctx.save(); ctx.beginPath(); ctx.rect(box.l, box.t, box.r - box.l, box.b - box.t); ctx.clip(); for (let v = 0; v < n; v++) { const h = (v + 0.5) * W, e = E0 + h; if (e > 4) break; const s = Math.sqrt(2 * h / W); line(ctx, ax.X(xc - s), ax.Y(e), ax.X(xc + s), ax.Y(e), alpha(ce, a), 2); } ctx.restore(); };
+    ladder(0, 0, 16, 0.2); ladder(G1, dd, 9, 0.4);
     if (r === 'isc') ladder(GT, dT, 10, 0.4);
     F.plot(ctx, ax, V0, ce, { w: 4 });
     F.plot(ctx, ax, V1, ce, { w: 4 });
     if (r === 'isc') F.plot(ctx, ax, VT, alpha(ce, 0.75), { w: 4, dash: [10, 10] });
-    text(ctx, 'singlet ground state S₀', ax.X(-1.6), ax.Y(V0(-1.6)) + 26, ce, { size: 20, weight: 600, align: 'left', bg: PAL.panel });
-    text(ctx, 'singlet excited state S₁', ax.X(dd - 2.0) - 12, ax.Y(V1(dd - 2.0)), ce, { size: 20, weight: 600, align: 'right', bg: PAL.panel });
-    if (r === 'isc') text(ctx, 'triplet T₁', ax.X(dT + 2.9) + 12, ax.Y(VT(dT + 2.9)), ce, { size: 20, weight: 600, align: 'left', bg: PAL.panel });
+    text(ctx, 'singlet ground state S₀', ax.X(-3.2) - 14, ax.Y(V0(-3.2)), ce, { size: 20, weight: 600, align: 'right', bg: PAL.panel });
+    text(ctx, 'singlet excited state S₁', ax.X(dd - 3.4) - 14, ax.Y(V1(dd - 3.4)), ce, { size: 20, weight: 600, align: 'right', bg: PAL.panel });
+    if (r === 'isc') text(ctx, 'triplet T₁', ax.X(dT + 2.2) + 14, ax.Y(VT(dT + 2.2)) + 10, ce, { size: 20, weight: 600, align: 'left', bg: PAL.panel });
     hits.length = 0;
     hits.push({ x: ax.X(0), y: ax.Y(0.1), r: 20, name: 'S₀, v = 0: where every molecule starts' });
     hits.push({ x: ax.X(dd), y: ax.Y(G1 + 0.1), r: 18, name: 'S₁, v′ = 0: the bottom of the excited state' });
@@ -354,7 +354,7 @@ const supPow = (t) => { const k = Math.round(Math.log10(t)); return k === 0 ? '1
       : `The strongest lines are absorption 0 → ${vm} at ${fmt(abs(vm), 0)} nm and fluorescence 0 → ${vm} at ${fmt(flu(vm), 0)} nm, either side of the 0 → 0 line at ${fmt(nmOf(E00), 0)} nm.`);
     hits.length = 0;
     /* the ladders */
-    const gy = (v) => 330 - 17 * v, ey = (v) => 205 - 17 * v;
+    const gy = (v) => 332 - 14 * v, ey = (v) => 190 - 14 * v;
     [[300, 620], [800, 1120]].forEach(([l, r]) => {
       for (let v = 0; v < 6; v++) { line(ctx, l, gy(v), r, gy(v), v ? alpha(ink, 0.35) : ink, v ? 2 : 4); line(ctx, l, ey(v), r, ey(v), v ? alpha(ink, 0.35) : ink, v ? 2 : 4); }
     });

@@ -927,3 +927,31 @@ is" and "Finding the eigenvectors … is again left to the reader" (method, not 
 not in the derivation; 14.5's "standard" and "proton" labels sit on their cones; at 60 MHz
 14.6's enlargements let neighbouring signals rise past the panel top; 14.7's derivations
 write Î₁ₓ, Î₁ᵧ plain beside the typed Î₁z (no x, y variables rows for nucleus 1 and 2).
+
+## Chapter 16 prep · 2026-11-08
+
+Prep only, no section built. Fetched Chapter 16's 15 images into `media/ch16/`. Converted the
+landing page (`intro/`), 16.1–16.7, 16.S (`summary/`) and the empty 16.E; wrote
+`ch16/exploration.md`, `ch16/config.md` (agreed on Chapter 1's terms), `ch16/chapter.json`
+(7 sections, the intro and summary records, 127 variables) and merged `ch16/book-rows.json`:
+4 types (pressure, volume, molar-volume, amount), 42 symbols (33 with macros), 65 concepts,
+100 edges (Hasse-checked), 63 forms. `colours:default` rerun: the four new types dealt
+colours, every existing colour kept. Drafts made for all 9 pages.
+
+Found: 16.E empty; the only exercises are 16.6's two boxes, both keyed; 3 worked examples; 13
+AI exercises proposed. 16.3.1 repeats 16.1.1's ideal isotherms (folded) and 16.3.4 is
+16.4.1's chart (one figure). Figures: 2 moving (wall pressure, attraction at the wall), 7
+still sims, 1 faithful copy, 2 kept images. Eight derivation records, five hidden or partly
+hidden. Corrections checked by computation: 16.7's (16.7.2) and (16.7.3) carry a spurious
+factor of 3 (correct: [1 − C₆/k_BTσ⁶], a = 2πN₀²C₆/3σ³), (16.2.3)'s 0.42780 is 0.42748,
+(16.2.5) drops an a, Example 16.6.2 rounds to −0.96 where −0.94 kJ/mol is right.
+
+Literature from memory, **unchecked** (no figure uses them; corrections or notes only):
+Peng–Robinson (16.4's "Peng-Robertson"); CRC's N₂ a of about 1.37–1.41 L² bar mol⁻² against
+Table 16.2.1's 1.43 (no footnote planned); SklogWiki's licence CC BY-NC-SA 3.0 (16.5); the
+licence of Wikipedia's van der Waals CO₂ figure (16.3.2).
+
+Tool fixes: none needed. `lt2md.py` and `md2html.py` handle every page (16.1's `<img src="/">`
+is a broken tag at the source, dropped); every maths span of the drafts sets under KaTeX in
+strict mode. `check:content`: no errors; the one warning is Chapter 15's (a derivation link to
+an unbuilt 15.2).

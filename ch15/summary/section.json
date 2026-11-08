@@ -1,0 +1,15 @@
+{
+ "id": "summary",
+ "module": "550572",
+ "chapter": "15",
+ "title": "Lasers, Laser Spectroscopy, and Photochemistry (Summary)",
+ "short": "Summary",
+ "lead": "",
+ "notes": "Written by Kyle Crabtree; the chapter's learning objectives, which the book prints on this page, are kept here.",
+ "ai": {"text": [{"model": "claude-opus-5-5", "effort": "low"}], "figures": []},
+ "built": "2026-11-08",
+ "figures": [],
+ "footnotes": [
+  {"id": "c-untaught", "kind": "correction", "html": "This chapter's pages do not teach spectral and temporal resolution, why cw lasers suit high-resolution spectroscopy, why pulsed lasers are used in photodissociation studies, quantum yield, duty cycle, or average and peak power; the objectives and skill goals that name them refer to material the built pages leave out."}
+ ]
+}

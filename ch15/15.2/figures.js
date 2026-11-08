@@ -31,15 +31,15 @@ function packet(ctx, cx, cy, ux, uy, color, wl, len = 90) {
 
 /* ---------- Figure 15.2.1: absorption, spontaneous emission, stimulated emission ----------
    Three lanes, the book's A, B and C, each a two-level atom at x = 600 to 760 with the gap drawn 40 px per eV.
-   Photons travel at 330 px/s, their drawn wavelength a tenth of the real one in nm. A: a photon arrives at 1.6 s and
-   lifts the electron. B: the electron, in E2, drops at a moment and sends its photon off in a direction that change
-   with every loop (a fixed sequence, so a scrub replays it). C: a photon arrives at 1.7 s, the electron drops, and
+   Photons travel at 230 px/s, their drawn wavelength a tenth of the real one in nm. A: a photon arrives at 2.5 s and
+   lifts the electron. B: the electron, in E2, drops at a moment and sends its photon off in a direction that changes
+   with every loop (a fixed sequence, so a scrub replays it). C: a photon arrives at 2.5 s, the electron drops, and
    two packets leave together to the right, crest on crest. The gap 1.65 to 3.10 eV spans the visible; it opens on
    1.96 eV, the He-Ne laser's 633 nm line of 15.6. Moving: 5 s a loop, hold 1 s. */
 (function () {
   const d = sim('sim-einstein', 640);
   const GAP = ctl(d.controls, { label: '\\kEtwo - \\kEone', cls: 'energy', key: 'gap', min: 1.65, max: 3.10, step: 0.01, value: 1.96, unit: 'eV', dec: 2, onInput: () => cy.reset() });
-  const RUN = 5, V = 330, AX = 680;
+  const RUN = 5, V = 230, AX = 680;
   let loops = 0;
   const cy = F.cycle(() => RUN, 1.0);
   const rnd = (n, s) => { const x = Math.sin(n * 127.1 + s * 311.7) * 43758.5453; return x - Math.floor(x); };
@@ -67,7 +67,7 @@ function packet(ctx, cx, cy, ux, uy, color, wl, len = 90) {
         if (t < tA) { const x = 110 + V * t; packet(ctx, x, (y1 + y2) / 2, 1, 0, col, wl); hits.push({ x, y: (y1 + y2) / 2, r: 40, name: 'the incoming photon' }); }
         ey = y1 + (y2 - y1) * k;
       } else if (i === 1) {
-        const ts = 0.9 + 1.6 * rnd(loops, 1), th = Math.PI * (2 * rnd(loops, 2) - 1), k = smooth((t - ts) / 0.3);
+        const ts = 0.8 + 1.8 * rnd(loops, 1), th = Math.PI * (2 * rnd(loops, 2) - 1), k = smooth((t - ts) / 0.3);
         ey = y2 + (y1 - y2) * k;
         if (t > ts) {
           const r = 40 + V * (t - ts), ux = Math.cos(th), uy = Math.sin(th) * 0.45, n = Math.hypot(ux, uy), x = AX + r * ux / n, y = (y1 + y2) / 2 + r * uy / n;
