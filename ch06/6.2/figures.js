@@ -159,13 +159,13 @@ const plainLab = (k) => labOf(k).replace(/_\{?([^}]*)\}?/, (_, s) => s.replace('
    inside its lobes.
 ===================================================================== */
 (function () {
-  const d = sim('sim-contour', 720);
+  const d = sim('sim-contour', 790);
   const opts = Object.keys(ORB).map((k) => ({ value: k, label: plainLab(k) }));
   const A = F.select(d.controls, { label: '\\text{left}', key: 'left', options: opts, value: '2px', aria: 'the orbital on the left' });
   const B = F.select(d.controls, { label: '\\text{right}', key: 'right', options: opts, value: '3px', aria: 'the orbital on the right' });
   const RAMP = ['#440154', '#3b528b', '#21918c', '#5ec962', '#fde725'];
   const ramp = (v) => { const k = Math.max(0, Math.min(1, v)) * (RAMP.length - 1), i = Math.min(RAMP.length - 2, Math.floor(k)); return mixColor(F.fact(RAMP[i]), F.fact(RAMP[i + 1]), k - i); };
-  const WIN = { 1: 6, 2: 14, 3: 25 }, NG = 120, LEVELS = [0.1, 0.3, 0.5, 0.7, 0.9];
+  const WIN = { 1: 6, 2: 14, 3: 25 }, NG = 120, LEVELS = [0.02, 0.1, 0.3, 0.5, 0.7, 0.9];
   let hits = []; F.hover(d.stage, () => hits);
   const cache = {};
   function grid(k) {
@@ -181,7 +181,7 @@ const plainLab = (k) => labOf(k).replace(/_\{?([^}]*)\}?/, (_, s) => s.replace('
     const cw = (box.r - box.l) / NG, ch = (box.b - box.t) / NG;
     for (let j = 0; j < NG; j++) for (let i = 0; i < NG; i++) {
       const v = (g[j][i] + g[j][i + 1] + g[j + 1][i] + g[j + 1][i + 1]) / 4;
-      ctx.fillStyle = ramp(v); ctx.fillRect(box.l + i * cw, box.b - (j + 1) * ch, cw + 0.6, ch + 0.6);
+      ctx.fillStyle = ramp(v); ctx.fillRect(Math.floor(box.l + i * cw), Math.floor(box.b - (j + 1) * ch), Math.ceil(cw) + 1, Math.ceil(ch) + 1);
     }
     const ink = alpha(F.fact('#ffffff'), 0.75);
     LEVELS.forEach((c) => {
@@ -191,7 +191,13 @@ const plainLab = (k) => labOf(k).replace(/_\{?([^}]*)\}?/, (_, s) => s.replace('
         ctx.stroke(); ctx.restore();
       });
     });
-    text(ctx, `$\\kpsi_{${labOf(k)}}$`, (box.l + box.r) / 2, box.t - 24, PAL.ink, { size: 24, align: 'center', tex: true });
+    /* the radial nodes, dashed circles where the density is zero */
+    (ORB[k].nodes ?? []).forEach((rn) => {
+      const cx = ax.X(0), cy = ax.Y(0), rx = ax.X(rn) - cx;
+      ctx.save(); ctx.strokeStyle = alpha(F.fact('#ffffff'), 0.9); ctx.lineWidth = 2.5; ctx.setLineDash([10, 10]); ctx.beginPath(); ctx.arc(cx, cy, rx, 0, 2 * PI); ctx.stroke(); ctx.restore();
+      hits.push({ x: cx + rx * Math.SQRT1_2, y: cy - rx * Math.SQRT1_2, r: 16, name: `a radial node of ${plainLab(k)}, the circle r = ${fmt(rn, 2)} a₀` });
+    });
+    text(ctx, `$\\kpsi_{${labOf(k)}}$`, (box.l + box.r) / 2, box.t - 40, PAL.ink, { size: 24, align: 'center', tex: true });
     hits.push({ x: (box.l + box.r) / 2, y: (box.t + box.b) / 2, r: (box.r - box.l) / 2, name: `|ψ|² of ${plainLab(k)} in the xy-plane; its greatest value is ${fmt(mx * 1e3, 3)} × 10⁻³ a₀⁻³` });
     return ax;
   }
@@ -203,9 +209,9 @@ const plainLab = (k) => labOf(k).replace(/_\{?([^}]*)\}?/, (_, s) => s.replace('
   function draw() {
     const { ctx } = begin(d.c);
     hits = [];
-    panel(ctx, A.value, { l: 130, r: 630, t: 90, b: 590 });
-    panel(ctx, B.value, { l: 850, r: 1350, t: 90, b: 590 });
-    F.legend(ctx, { l: 130, r: 1350, t: 90, b: 640 }, [{ ramp: RAMP.map((h) => F.fact(h)), ends: ['0', '1'], s: '|ψ|² as a fraction of its greatest value in the plane' }], { corner: 'bottom', panel: false });
+    panel(ctx, A.value, { l: 130, r: 630, t: 110, b: 610 });
+    panel(ctx, B.value, { l: 850, r: 1350, t: 110, b: 610 });
+    F.legend(ctx, { l: 130, r: 1350, t: 690, b: 780 }, [{ ramp: RAMP.map((h) => F.fact(h)), ends: ['0', '1'], s: '|ψ|² as a fraction of its greatest value in the plane' }], { corner: 'top', panel: false });
     tex(d.readout, `\\kpsi_{${labOf(A.value)}} = ${ORB[A.value].tex} \\\\ ${nodeLine(A.value)} \\\\ \\kpsi_{${labOf(B.value)}} = ${ORB[B.value].tex} \\\\ ${nodeLine(B.value)}`);
   }
   register(d.fig, { update: () => {}, draw });
@@ -252,7 +258,7 @@ const plainLab = (k) => labOf(k).replace(/_\{?([^}]*)\}?/, (_, s) => s.replace('
     const fR = (k) => RAD[k].f, f2 = (k) => (x) => RAD[k].f(x) ** 2, fP = (k) => (x) => x * x * RAD[k].f(x) ** 2;
     const rangeOf = (key) => K.mix((k) => RAD[k][key]);
     const L = 170, Rr = W - 70;
-    const boxes = [{ l: L, r: Rr, t: 70, b: 270 }, { l: L, r: Rr, t: 330, b: 530 }, { l: L, r: Rr, t: 590, b: 790 }];
+    const boxes = [{ l: L, r: Rr, t: 70, b: 245 }, { l: L, r: Rr, t: 335, b: 510 }, { l: L, r: Rr, t: 600, b: 775 }];
     const ax1 = axes(ctx, boxes[0], [0, 25], rangeOf('yR'), { nx: 5, ny: 3, nice: true, xl: '', yl: 'R (a₀^{−3/2})', yc: cw });
     const ax2 = axes(ctx, boxes[1], [0, 25], rangeOf('y2'), { nx: 5, ny: 3, nice: true, xl: '', yl: 'R² (a₀^{−3})', yc: cp });
     const ax3 = axes(ctx, boxes[2], [0, 25], rangeOf('yP'), { nx: 5, ny: 3, nice: true, xl: 'distance r (a₀)', yl: 'r²R² (a₀^{−1})', xc: cl, yc: cp });

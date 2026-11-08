@@ -265,3 +265,42 @@ printed as that page's number (7.S cites 5.S.1); U+FEFF is dropped from maths.
 Chapters 1–7 reconvert to the same bytes. `check:content`: no errors, no
 warnings. Open for the orchestrator: the two figures printed 7.4.1, the
 tilted box in 7.4.1's figure, the unstated ⟨n⁰|n¹⟩ = 0, Table 7.3.1's F value.
+
+## Chapter 5 pass · 2026-11-08
+
+Built: the intro, 5.1–5.9 and the summary page. 24 figures (18 interactive
+sims; 6 kept as figures: Figure 5.1.3, Example 5.1.1's plot and the summary's
+four copies), 7 moving, 3 with a 3D view (the rotor's sphere, 5.8.3's turned
+polar plot, the chair and CO rotations); 12 derivations; 42 exercises, all
+`exercise` kind in the Exercises document: 13 keyed, 21 with AI solutions, 8
+AI exercises; 63 AI-marked corrections.
+
+Chapter pass: `\ktheta` staged in Chapter 2 (symbol `theta`) and `\kB` in
+Chapter 3 (symbol `B`). Chapter 2's θ (the polar angle on a membrane) and
+Chapter 3's B (a constant of the cosine solution) are other quantities, but
+`redefines` is per chapter and θ, B first appear in Chapter 5 at 5.8 and 5.9,
+so no ch05 row changes; 2.5's θ row now wears `angle` so the summary page's
+θ inherits it. θ converted in 5.8's text, figures and derivation lines, 5.9's
+text and the summary; B in 5.9's text, readouts, Figure 5.9.3 + 5.9.4's
+caption and derivation (B in frequency units, "B (in freq)" and "$2B$" as a
+frequency, stays plain; exercises, footnotes and captions in derivation
+reasons stay plain, as the chapter writes them). Prose restored after
+derivations (rule 29.2): 5.9's "both ν and ν̄ are important to calculate",
+5.8's "this λ has no connection to a wavelength". 5.6's objective restored
+(a copy of 5.2's title is still the book's objective). `reduced-mass` stays
+introduced in 5.2, where the book defines it; 5.1's mentions are `uses`
+(a row added for its second block). 5.3's red, blue and green curves get the
+correction `book-colors`: curves of one category have no fact colour.
+5.2's footnote marker in the second Example 5.2.1 heading renders after its
+text. U+2011 in 5.8's maths (`$‑J$`, the m_J list) made a hyphen-minus. No
+`\braket`, no bare `\k` script. `colours:default` rerun (twice: a new
+chapter landed mid-pass). `check:content`: no errors, no warnings. Every
+figure screenshot in light, 5.3 and 5.9 in dark; every derivation rendered;
+no console or KaTeX error on any Chapter 5 page.
+
+Known gaps: Chapter 5's forms carry no `ktex` (earlier chapters' do); other
+connective sentences under derivations stay folded into them (5.6's
+"because the integral from 0 to Q₀ … cannot", carried by the node's
+correction; 5.9's "with J_i and J_f representing …"; 5.1's "Equation 5.1.4a
+is a linear second-order differential equation …", carried by a reason);
+Chapter 6's text still writes θ plain.
