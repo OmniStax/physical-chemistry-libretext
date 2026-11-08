@@ -150,12 +150,11 @@ function elementMarks(o, lit) {
     const ease = q * q * (3 - 2 * q);
     /* applied j whole times, then the (j+1)th a fraction of the way */
     const pos = m.atoms.map((a) => { let p = a.p; for (let k = 0; k < j; k++) p = partway(o, p, 1); return j < N ? partway(o, p, ease) : p; });
-    const done = j >= 1 && (q === 0 || j >= N);
     const names = named(m.atoms, M.name);
-    /* after a whole application, is every atom on the start site of an atom of its own element? */
+    /* after a whole application, does every atom point where an atom of its own element pointed? (CHFClBr's bonds differ in length, so directions are compared) */
     let wrong = null;
     const whole = m.atoms.map((a) => { let p = a.p; for (let k = 0; k < Math.min(j, 1); k++) p = partway(o, p, 1); return p; });
-    if (j >= 1) m.atoms.forEach((a, i) => { const k = m.atoms.findIndex((b) => Math.hypot(...sub(b.p, whole[i])) < 1e-3); if (!wrong && k >= 0 && m.atoms[k].el !== a.el) wrong = [a.el, m.atoms[k].el]; });
+    if (j >= 1) m.atoms.forEach((a, i) => { const k = m.atoms.findIndex((b) => (Math.hypot(...b.p) < 1e-3 ? Math.hypot(...whole[i]) < 1e-3 : Math.hypot(...whole[i]) > 1e-3 && Math.hypot(...sub(unit(b.p), unit(whole[i]))) < 1e-3)); if (!wrong && k >= 0 && m.atoms[k].el !== a.el) wrong = [a.el, m.atoms[k].el]; });
     S.set('element', o.kind === 'E' ? [] : elementMarks(o, q > 0 && q < 1));
     S.set('ghosts', m.atoms.map((a) => ({ k: 'dot', p: a.p, color: alpha(colour(a.el), 0.22), r: RADIUS[a.el] + 2 })));
     S.set('molecule', [

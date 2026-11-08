@@ -1,0 +1,1972 @@
+{
+ "types": [
+  {
+   "id": "electric-field",
+   "label": "electric field"
+  }
+ ],
+ "symbols": [
+  {
+   "sym": "A_t",
+   "latex": "A_t",
+   "macro": "\\kAt"
+  },
+  {
+   "sym": "A_e",
+   "latex": "A_e",
+   "macro": "\\kAe"
+  },
+  {
+   "sym": "A_m",
+   "latex": "A_m",
+   "macro": "\\kAm"
+  },
+  {
+   "sym": "E_u",
+   "latex": "E_u",
+   "macro": "\\kEu"
+  },
+  {
+   "sym": "E_l",
+   "latex": "E_l",
+   "macro": "\\kEl"
+  },
+  {
+   "sym": "F_rot",
+   "latex": "F",
+   "macro": "\\kFrot"
+  },
+  {
+   "sym": "G_vib",
+   "latex": "G",
+   "macro": "\\kGvib"
+  },
+  {
+   "sym": "S_term",
+   "latex": "S",
+   "macro": "\\kSterm"
+  },
+  {
+   "sym": "E_r",
+   "latex": "E_r",
+   "macro": "\\kEr"
+  },
+  {
+   "sym": "N_J",
+   "latex": "N_J"
+  },
+  {
+   "sym": "N_0",
+   "latex": "N_0"
+  },
+  {
+   "sym": "J_max",
+   "latex": "J_{max}"
+  },
+  {
+   "sym": "nut_R",
+   "latex": "\\tilde{\\nu}_R",
+   "macro": "\\knutR"
+  },
+  {
+   "sym": "nut_P",
+   "latex": "\\tilde{\\nu}_P",
+   "macro": "\\knutP"
+  },
+  {
+   "sym": "Et_vJ",
+   "latex": "\\tilde{E}_{v,J}",
+   "macro": "\\kEtvJ"
+  },
+  {
+   "sym": "Bt_v",
+   "latex": "\\tilde{B}_v",
+   "macro": "\\kBtv"
+  },
+  {
+   "sym": "F_c",
+   "latex": "F_c",
+   "macro": "\\kFc"
+  },
+  {
+   "sym": "r_c",
+   "latex": "r_c",
+   "macro": "\\krc"
+  },
+  {
+   "sym": "D_t",
+   "latex": "\\tilde{D}",
+   "macro": "\\kDt"
+  },
+  {
+   "sym": "chit_e",
+   "latex": "\\tilde{\\chi}_e"
+  },
+  {
+   "sym": "nut_e",
+   "latex": "\\tilde{\\nu}_e",
+   "macro": "\\knute"
+  },
+  {
+   "sym": "nut_el",
+   "latex": "\\tilde{\\nu}_{el}",
+   "macro": "\\knutel"
+  },
+  {
+   "sym": "Tt_el",
+   "latex": "\\tilde{T}_{el}",
+   "macro": "\\kTtel"
+  },
+  {
+   "sym": "Et_total",
+   "latex": "\\tilde{E}_{total}",
+   "macro": "\\kEttotal"
+  },
+  {
+   "sym": "nut_obs",
+   "latex": "\\tilde{\\nu}_{obs}",
+   "macro": "\\knutobs"
+  },
+  {
+   "sym": "nut_00",
+   "latex": "\\tilde{\\nu}_{00}",
+   "macro": "\\knutzz"
+  },
+  {
+   "sym": "S_00",
+   "latex": "S_{00}"
+  },
+  {
+   "sym": "S_01",
+   "latex": "S_{01}"
+  },
+  {
+   "sym": "Q_e",
+   "latex": "Q_e",
+   "macro": "\\kQe"
+  },
+  {
+   "sym": "psi_nuc",
+   "latex": "\\psi_{nuc}",
+   "macro": "\\kpsinuc"
+  },
+  {
+   "sym": "psi_el",
+   "latex": "\\psi_{el}",
+   "macro": "\\kpsiel"
+  },
+  {
+   "sym": "I_xx",
+   "latex": "I_{xx}",
+   "macro": "\\kIxx"
+  },
+  {
+   "sym": "I_yy",
+   "latex": "I_{yy}",
+   "macro": "\\kIyy"
+  },
+  {
+   "sym": "I_zz",
+   "latex": "I_{zz}",
+   "macro": "\\kIzz"
+  },
+  {
+   "sym": "I_xy",
+   "latex": "I_{xy}",
+   "macro": "\\kIxy"
+  },
+  {
+   "sym": "I_xz",
+   "latex": "I_{xz}",
+   "macro": "\\kIxz"
+  },
+  {
+   "sym": "I_yz",
+   "latex": "I_{yz}",
+   "macro": "\\kIyz"
+  },
+  {
+   "sym": "I_a",
+   "latex": "I_a",
+   "macro": "\\kIa"
+  },
+  {
+   "sym": "I_b",
+   "latex": "I_b",
+   "macro": "\\kIb"
+  },
+  {
+   "sym": "I_c",
+   "latex": "I_c",
+   "macro": "\\kIc"
+  },
+  {
+   "sym": "H_rot",
+   "latex": "H_{rot}",
+   "macro": "\\kHrot"
+  },
+  {
+   "sym": "J_a",
+   "latex": "J_a",
+   "macro": "\\kJa"
+  },
+  {
+   "sym": "J_b",
+   "latex": "J_b",
+   "macro": "\\kJb"
+  },
+  {
+   "sym": "J_c",
+   "latex": "J_c",
+   "macro": "\\kJc"
+  },
+  {
+   "sym": "J_Z",
+   "latex": "J_Z",
+   "macro": "\\kJZ"
+  },
+  {
+   "sym": "J_sq",
+   "latex": "J^2",
+   "macro": "\\kJsq"
+  },
+  {
+   "sym": "chi_euler",
+   "latex": "\\chi",
+   "macro": "\\kchieuler"
+  },
+  {
+   "sym": "M",
+   "latex": "M"
+  },
+  {
+   "sym": "E_JKM",
+   "latex": "E(J,K,M)",
+   "macro": "\\kEJKM"
+  },
+  {
+   "sym": "Q_j",
+   "latex": "Q_j",
+   "macro": "\\kQj"
+  },
+  {
+   "sym": "f_ij",
+   "latex": "f_{ij}",
+   "macro": "\\kfij"
+  },
+  {
+   "sym": "F_j",
+   "latex": "F_j",
+   "macro": "\\kFj"
+  },
+  {
+   "sym": "dV",
+   "latex": "\\Delta V",
+   "macro": "\\kdV"
+  },
+  {
+   "sym": "H_vib",
+   "latex": "\\hat{H}_{vib}",
+   "macro": "\\kHvib"
+  },
+  {
+   "sym": "psi_vib",
+   "latex": "\\psi_{vib}",
+   "macro": "\\kpsivib"
+  },
+  {
+   "sym": "E_vib",
+   "latex": "E_{vib}",
+   "macro": "\\kEvib"
+  },
+  {
+   "sym": "nu_j",
+   "latex": "\\nu_j",
+   "macro": "\\knuj"
+  },
+  {
+   "sym": "N_vib",
+   "latex": "N_{vib}"
+  },
+  {
+   "sym": "H_0",
+   "latex": "H_0",
+   "macro": "\\kHzero"
+  },
+  {
+   "sym": "H_1",
+   "latex": "H_1",
+   "macro": "\\kHone"
+  },
+  {
+   "sym": "omega_0",
+   "latex": "\\omega_0",
+   "macro": "\\komegazero"
+  },
+  {
+   "sym": "H_mn",
+   "latex": "H_{mn}",
+   "macro": "\\kHmn"
+  },
+  {
+   "sym": "P_12",
+   "latex": "P_{12}"
+  },
+  {
+   "sym": "mu_z",
+   "latex": "\\mu_z",
+   "macro": "\\kmuz"
+  },
+  {
+   "sym": "E0_field",
+   "latex": "E_0",
+   "macro": "\\kEzerofield"
+  },
+  {
+   "sym": "M_trans",
+   "latex": "M",
+   "macro": "\\kMtrans"
+  },
+  {
+   "sym": "phi_vib",
+   "latex": "\\phi",
+   "macro": "\\kphivib"
+  }
+ ],
+ "concepts": [
+  {
+   "id": "electromagnetic-radiation",
+   "kind": "definition",
+   "section": "13.1",
+   "name": "Electromagnetic radiation",
+   "terms": [
+    "Electromagnetic radiation",
+    "light"
+   ],
+   "statement": "A form of energy made of oscillating electric and magnetic fields, perpendicular to each other and to the direction of propagation, travelling in a straight line at constant velocity, c = 2.99792 × 10⁸ m/s in a vacuum; refraction is best described by treating it as a wave, absorption and emission by treating it as particles."
+  },
+  {
+   "id": "oscillating-electric-field",
+   "kind": "result",
+   "section": "13.1",
+   "name": "Oscillating field of a light wave",
+   "type": "electric-field",
+   "symbol": "A_t",
+   "statement": "At any point along the propagating wave the electric field oscillates as A_t = A_e sin(2πνt + φ), with A_e its maximum amplitude, ν the number of oscillations per unit time and φ a phase angle; the magnetic field follows the identical equation with its own amplitude A_m.",
+   "forms": [
+    {
+     "id": "em-electric-field",
+     "latex": "A_t = A_e\\sin(2\\pi\\nu t + \\phi)"
+    },
+    {
+     "id": "em-magnetic-field",
+     "latex": "A_t = A_m\\sin(2\\pi\\nu t + \\phi)"
+    }
+   ]
+  },
+  {
+   "id": "plane-polarized-radiation",
+   "kind": "definition",
+   "section": "13.1",
+   "name": "Plane-polarized radiation",
+   "terms": [
+    "plane-polarized electromagnetic radiation"
+   ],
+   "statement": "Radiation with a single oscillating electric field and a single oscillating magnetic field, each in one plane; normally radiation is unpolarized, its fields present in all planes perpendicular to the direction of propagation."
+  },
+  {
+   "id": "wavelength-frequency-relation",
+   "kind": "result",
+   "section": "13.1",
+   "name": "Wavelength and frequency of light",
+   "type": "wavelength",
+   "statement": "The wavelength, the distance between successive maxima, and the frequency of electromagnetic radiation are related through the speed of light, λ = c/ν; the wavenumber is the reciprocal of the wavelength, usually in cm⁻¹.",
+   "forms": [
+    {
+     "id": "lambda-c-over-nu",
+     "latex": "\\lambda = \\dfrac{c}{\\nu}"
+    }
+   ]
+  },
+  {
+   "id": "electromagnetic-spectrum",
+   "kind": "definition",
+   "section": "13.1",
+   "name": "Electromagnetic spectrum",
+   "terms": [
+    "electromagnetic spectrum"
+   ],
+   "statement": "Electromagnetic radiation divided into regions by the type of atomic or molecular transition that absorbs or emits it, from γ-rays (nuclear) through X-rays, ultraviolet and visible (electrons), infrared (molecular vibrations) and microwaves (rotations) to radio waves (spins); the boundaries are not rigid."
+  },
+  {
+   "id": "spectroscopic-energy-exchange",
+   "kind": "idea",
+   "section": "13.1",
+   "name": "Spectroscopy by exchange of energy",
+   "statement": "A spectroscopic measurement is possible only when the photon's interaction with the sample changes one of its properties; in one broad class of techniques energy passes between photon and sample by absorption, emission, photoluminescence or chemiluminescence, each region of the spectrum giving its own technique (Table 13.1.1)."
+  },
+  {
+   "id": "bohr-frequency-condition",
+   "kind": "result",
+   "section": "13.1",
+   "name": "Energy of a spectroscopic transition",
+   "type": "energy",
+   "statement": "A transition between an upper and a lower energy level absorbs or emits radiation whose frequency matches the energy difference, ΔE = E_u − E_l = hν.",
+   "forms": [
+    {
+     "id": "transition-energy-hnu",
+     "latex": "\\Delta E = E_u - E_l = h\\nu"
+    }
+   ]
+  },
+  {
+   "id": "spectral-regions-molecular-motions",
+   "kind": "idea",
+   "section": "13.1",
+   "name": "Spectral regions and molecular motions",
+   "statement": "Microwave radiation (10⁹–10¹¹ Hz) drives transitions between rotational levels, infrared (10¹³–10¹⁴ Hz) between vibrational levels with rotational ones alongside, and visible and ultraviolet light (10¹⁴–10¹⁶ Hz) between electronic levels with vibrational and rotational ones alongside."
+  },
+  {
+   "id": "rovibrational-spectrum",
+   "kind": "definition",
+   "section": "13.2",
+   "name": "Rovibrational spectrum",
+   "terms": [
+    "rovibrational spectra",
+    "rovibrational transitions"
+   ],
+   "statement": "The spectrum of vibrational transitions coupled with rotational transitions: closely spaced rotational levels (1–10 cm⁻¹ apart) ride on vibrational levels about 1000 cm⁻¹ apart, so each vibrational band breaks into lines from which the average bond length can be found."
+  },
+  {
+   "id": "rotational-term",
+   "kind": "definition",
+   "section": "13.2",
+   "name": "Rotational term",
+   "type": "wavenumber",
+   "symbol": "F_rot",
+   "statement": "The rotational energy divided by h or hc, F(J) = E_r/h = BJ(J + 1) in frequency or F̃(J) = E_r/hc = B̃J(J + 1) in wavenumbers; the rotational constant is written B in either unit.",
+   "forms": [
+    {
+     "id": "rotational-term-freq",
+     "latex": "F(J)=\\dfrac{E_r}{h}=\\dfrac{h}{8\\pi^2I} J(J+1)=BJ(J+1)"
+    },
+    {
+     "id": "rotational-term-wavenumber",
+     "latex": "\\tilde{F}(J)=\\dfrac{E_r}{hc}=\\dfrac{h}{8\\pi^2cI} J(J+1)=\\tilde{B}J(J+1)"
+    }
+   ]
+  },
+  {
+   "id": "rovibrational-term",
+   "kind": "result",
+   "section": "13.2",
+   "name": "Rovibrational term",
+   "type": "wavenumber",
+   "symbol": "S_term",
+   "statement": "In the rigid rotor–harmonic oscillator picture the total nuclear energy is the vibrational term plus the rotational term, S(v, J) = G(v) + F(J) = ν₀(v + ½) + BJ(J + 1).",
+   "forms": [
+    {
+     "id": "rovib-term-sum",
+     "latex": "S(v,J)=G(v)+F(J)"
+    },
+    {
+     "id": "rovib-term",
+     "latex": "S(v,J)=\\nu_0 \\left(v+\\dfrac{1}{2}\\right) +BJ(J+1)"
+    }
+   ]
+  },
+  {
+   "id": "rovibrational-selection-rules",
+   "kind": "result",
+   "section": "13.2",
+   "name": "Rovibrational selection rules",
+   "terms": [
+    "Vibrational Transition Selection Rules",
+    "Rotational Transition Selection Rules"
+   ],
+   "statement": "A vibrational transition changes v by ±1, and since at room temperature only v = 0 is populated, Δv = +1; the rotational quantum number must change at the same time, ΔJ = ±1, since a photon carries one quantum of angular momentum, so the pure vibrational line (ΔJ = 0) is not observed in most cases.",
+   "forms": [
+    {
+     "id": "rovib-selection",
+     "latex": "\\Delta v = +1,\\quad \\Delta J = \\pm 1"
+    }
+   ]
+  },
+  {
+   "id": "r-branch",
+   "kind": "result",
+   "section": "13.2",
+   "name": "R branch",
+   "type": "energy",
+   "terms": [
+    "R-branch"
+   ],
+   "statement": "The lines with ΔJ = +1, labelled R(J) by the lower level's J, at ΔE = hν₀ + 2hB(J + 1), J = 0, 1, 2, …, on the high-energy side of the band.",
+   "forms": [
+    {
+     "id": "r-branch-energy",
+     "latex": "\\Delta E = h\\nu_0 + 2hB(J+1)"
+    }
+   ]
+  },
+  {
+   "id": "p-branch",
+   "kind": "result",
+   "section": "13.2",
+   "name": "P branch",
+   "type": "energy",
+   "terms": [
+    "P-branch"
+   ],
+   "statement": "The lines with ΔJ = −1, labelled P(J) by the lower level's J, at ΔE = hν₀ − 2hBJ, J = 1, 2, 3, …, on the low-energy side of the band.",
+   "forms": [
+    {
+     "id": "p-branch-energy",
+     "latex": "\\Delta E = h\\nu_0 - 2hBJ"
+    }
+   ]
+  },
+  {
+   "id": "q-branch",
+   "kind": "result",
+   "section": "13.2",
+   "name": "Q branch",
+   "type": "energy",
+   "terms": [
+    "Q-branch"
+   ],
+   "statement": "Lines with ΔJ = 0 would all fall at the band origin, ΔE = hν₀; the Q branch is observed in polyatomic molecules and in diatomics with electronic angular momentum in the ground state, such as NO, and is absent in most diatomics.",
+   "forms": [
+    {
+     "id": "q-branch-energy",
+     "latex": "\\Delta E = h\\nu_0"
+    }
+   ]
+  },
+  {
+   "id": "zero-gap",
+   "kind": "result",
+   "section": "13.2",
+   "name": "Zero gap",
+   "terms": [
+    "zero gap"
+   ],
+   "statement": "In the rigid rotor–harmonic oscillator picture the P and R lines are equally spaced, 2B apart, while P(1) and R(0) are 4B apart, the gap where the Q branch would stand; the spacing gives the bond length without pure rotational spectroscopy."
+  },
+  {
+   "id": "boltzmann-distribution",
+   "kind": "axiom",
+   "section": "13.2",
+   "name": "Boltzmann distribution",
+   "terms": [
+    "Boltzmann distribution"
+   ],
+   "statement": "In thermal equilibrium at temperature T the number of molecules in a level relative to another falls off as the Boltzmann factor e^(−ΔE/kT) of their energy difference, multiplied by the level's degeneracy."
+  },
+  {
+   "id": "rotational-populations",
+   "kind": "result",
+   "section": "13.2",
+   "name": "Rotational populations",
+   "symbol": "N_J",
+   "statement": "The population of rotational level J relative to J = 0 is N_J/N₀ = (2J + 1)e^(−E_r/kT): the degeneracy grows with J and the exponential falls, so the population peaks at J_max = (kT/2hB)^½ − ½ and shifts to higher J in heavier molecules and at higher temperature.",
+   "forms": [
+    {
+     "id": "rotational-population",
+     "latex": "\\dfrac{N_J}{N_0}=(2J+1)e^{-E_r/kT}"
+    },
+    {
+     "id": "j-max",
+     "latex": "J_{max}=\\left(\\dfrac{kT}{2hB}\\right)^{1/2}-\\dfrac{1}{2}"
+    }
+   ]
+  },
+  {
+   "id": "rovibrational-line-intensities",
+   "kind": "result",
+   "section": "13.2",
+   "name": "Intensities of rovibrational lines",
+   "statement": "The relative intensity of each P or R line is set by the population of its lower J level, so the lines rise to a maximum and fall away as J grows; the overall intensity of the band depends on the vibrational transition dipole moment."
+  },
+  {
+   "id": "vibration-rotation-interaction",
+   "kind": "result",
+   "section": "13.3",
+   "name": "Vibration–rotation interaction",
+   "type": "energy",
+   "symbol": "Bt_v",
+   "terms": [
+    "rotational-vibrational coupling",
+    "vibrational-rotational interaction"
+   ],
+   "statement": "The bond length grows with the vibrational state because higher states have larger amplitudes and the anharmonic well lets the bond stretch further; since B̃ = h/8π²cμR_e² falls as the bond lengthens, the rotational constant depends on v, B̃_v, with B̃₁ < B̃₀."
+  },
+  {
+   "id": "branch-lines-with-interaction",
+   "kind": "result",
+   "section": "13.3",
+   "name": "Branch lines with a vibration-dependent B",
+   "type": "wavenumber",
+   "symbol": "nut_R",
+   "statement": "With B̃_v in the term values, the v = 0 → 1 lines lie at ν̃_R = ν̃ + 2B̃₁ + (3B̃₁ − B̃₀)J + (B̃₁ − B̃₀)J² for J = 0, 1, 2, … and ν̃_P = ν̃ − (B̃₁ + B̃₀)J + (B̃₁ − B̃₀)J² for J = 1, 2, 3, ….",
+   "forms": [
+    {
+     "id": "r-branch-interaction",
+     "latex": "\\tilde{\\nu}_R = \\tilde{\\nu}+2\\tilde{B}_1+(3\\tilde{B}_1-\\tilde{B}_0)J+(\\tilde{B}_1-\\tilde{B}_0)J^2"
+    },
+    {
+     "id": "p-branch-interaction",
+     "latex": "\\tilde{\\nu}_P = \\tilde{\\nu}-(\\tilde{B}_1+\\tilde{B}_0)J+(\\tilde{B}_1-\\tilde{B}_0)J^2"
+    }
+   ]
+  },
+  {
+   "id": "unequal-branch-spacing",
+   "kind": "result",
+   "section": "13.3",
+   "name": "Unequal spacing of the branches",
+   "statement": "Because B̃₁ − B̃₀ is negative, the J² term pulls the R lines closer together as J increases and pushes the P lines further apart, so real rovibrational spectra lose the equal 2B̃ spacing."
+  },
+  {
+   "id": "centrifugal-force",
+   "kind": "definition",
+   "section": "13.4",
+   "name": "Centrifugal force",
+   "type": "force",
+   "symbol": "F_c",
+   "terms": [
+    "centrifugal force"
+   ],
+   "statement": "The force that, in a rotating molecule, tends to fly the reduced mass away from the axis of rotation, F_c = μr_cω² = L²/μr_c³.",
+   "forms": [
+    {
+     "id": "centrifugal-force",
+     "latex": "F_c = \\mu r_c \\omega^2 = \\dfrac{L^2}{\\mu r_c^3}"
+    }
+   ]
+  },
+  {
+   "id": "non-rigid-rotor",
+   "kind": "idea",
+   "section": "13.4",
+   "name": "Non-rigid rotor",
+   "terms": [
+    "non-rigid rotator",
+    "centrifugal distortion"
+   ],
+   "statement": "A rotating molecule whose bond is elastic: the bond stretches from r_e to r_c until the restoring force k(r_c − r_e) balances the centrifugal force, and the work done is stored as potential energy, so the rotational energy is kinetic plus potential.",
+   "forms": [
+    {
+     "id": "nonrigid-stretch",
+     "latex": "r_c - r_e = \\dfrac{L^2}{k\\mu r_c^3} \\cong \\dfrac{L^2}{k\\mu r_e^3}"
+    },
+    {
+     "id": "nonrigid-energy",
+     "latex": "E_r = \\dfrac{L^2}{2\\mu r_c^2} + \\dfrac{1}{2}k(r_c - r_e)^2"
+    }
+   ]
+  },
+  {
+   "id": "nonrigid-rotor-energy-levels",
+   "kind": "result",
+   "section": "13.4",
+   "name": "Levels of the non-rigid rotor",
+   "type": "wavenumber",
+   "symbol": "F_rot",
+   "statement": "The rotational terms of a non-rigid rotor are F(J) = B̃J(J + 1) − D̃J²(J + 1)², the rigid-rotor term less a centrifugal stretching term, so each level lies slightly lower than the rigid rotor's, more so as J grows.",
+   "forms": [
+    {
+     "id": "nonrigid-levels",
+     "latex": "F(J) = \\tilde{B} J(J + 1) - \\tilde{D} J^2(J + 1)^2"
+    },
+    {
+     "id": "nonrigid-levels-energy",
+     "latex": "E_r = \\dfrac{\\hbar^2 J(J + 1)}{2 \\mu r_e^2} - \\dfrac{\\hbar^4 J^2(J + 1)^2}{2k\\mu^2 r_e^6}"
+    }
+   ]
+  },
+  {
+   "id": "centrifugal-distortion-constant",
+   "kind": "definition",
+   "section": "13.4",
+   "name": "Centrifugal distortion constant",
+   "type": "energy",
+   "symbol": "D_t",
+   "terms": [
+    "centrifugal stretching constant"
+   ],
+   "statement": "The constant D̃ = ħ³/4πkμ²r_e⁶c (in cm⁻¹) of the centrifugal stretching term; it measures the influence of the centrifugal force and, through the force constant k, the interaction of rotation and vibration, and is very small beside B̃ (for HCl about 0.0004 against 10.4 cm⁻¹).",
+   "forms": [
+    {
+     "id": "centrifugal-d",
+     "latex": "\\tilde{D} = \\dfrac{\\hbar^3}{4\\pi k\\mu^2 r_e^6 c}"
+    },
+    {
+     "id": "rotational-b-wavenumber",
+     "latex": "\\tilde{B} = \\dfrac{\\hbar}{4\\pi\\mu r_e^2 c}"
+    }
+   ]
+  },
+  {
+   "id": "nonrigid-line-spacing",
+   "kind": "result",
+   "section": "13.4",
+   "name": "Line spacing of a non-rigid rotor",
+   "statement": "With ΔJ = ±1 the rotational lines of a non-rigid rotor draw closer together as J increases, unlike the even spacing of the rigid rotor; the effect is significant only at large J since D̃ ≪ B̃."
+  },
+  {
+   "id": "hot-band",
+   "kind": "definition",
+   "section": "13.5",
+   "name": "Hot band",
+   "terms": [
+    "hot transitions",
+    "hot bands",
+    "hot"
+   ],
+   "statement": "A transition starting from an excited vibrational level, such as 1 → n, which appears when the sample is warm enough to populate v = 1."
+  },
+  {
+   "id": "anharmonic-selection-rule",
+   "kind": "result",
+   "section": "13.5",
+   "name": "Selection rule of the anharmonic oscillator",
+   "statement": "For the anharmonic oscillator Δv may be any number, so overtones 0 → 2, 0 → 3, … appear beside the fundamental, their probability falling rapidly as Δv grows.",
+   "forms": [
+    {
+     "id": "anharmonic-selection",
+     "latex": "\\Delta v = \\text{any number}"
+    }
+   ]
+  },
+  {
+   "id": "overtone-positions",
+   "kind": "result",
+   "section": "13.5",
+   "name": "Positions of the overtones",
+   "statement": "Because the anharmonic levels close up as v increases, an overtone lies below the whole multiple of the fundamental that the harmonic oscillator predicts, increasingly so for higher overtones (HCl: 5668.0 against 5771.8 cm⁻¹ for 0 → 2)."
+  },
+  {
+   "id": "vibronic-transition",
+   "kind": "definition",
+   "section": "13.6",
+   "name": "Vibronic transition",
+   "terms": [
+    "vibronic",
+    "electronic transitions"
+   ],
+   "statement": "An electronic transition accompanied by vibrational (and rotational) transitions, drawn as a jump between two electronic potential curves with their vibrational levels; the rotational part is usually small enough to ignore."
+  },
+  {
+   "id": "electronic-term-energy",
+   "kind": "definition",
+   "section": "13.6",
+   "name": "Electronic term",
+   "type": "wavenumber",
+   "symbol": "Tt_el",
+   "statement": "The electronic energy change of a transition in wavenumbers, ν̃_el or T̃_el, measured between the minima of the two electronic potential curves."
+  },
+  {
+   "id": "vibronic-energy",
+   "kind": "result",
+   "section": "13.6",
+   "name": "Total energy of a diatomic molecule",
+   "type": "wavenumber",
+   "symbol": "Et_total",
+   "statement": "In the anharmonic oscillator–non-rigid rotor picture the energy of a diatomic, translation excluded, is the electronic term plus the vibrational and rotational terms, Ẽ_total = ν̃_el + G(v) + F(J), with ν̃_e and χ̃_e depending on the electronic state.",
+   "forms": [
+    {
+     "id": "vibronic-energy-sum",
+     "latex": "\\tilde{E}_{total} = \\tilde{\\nu}_{el} + G(v) + F(J)"
+    },
+    {
+     "id": "vibronic-energy-expanded",
+     "latex": "\\tilde{E}_{total} = \\tilde{\\nu}_{el} + \\tilde{\\nu}_e \\left(v + \\dfrac{1}{2}\\right) - \\tilde{\\chi}_e \\tilde{\\nu}_e \\left(v + \\dfrac{1}{2}\\right)^2 + \\tilde{B} J(J + 1) - \\tilde{D} J^2(J + 1)^2"
+    }
+   ]
+  },
+  {
+   "id": "vibronic-band-wavenumber",
+   "kind": "result",
+   "section": "13.6",
+   "name": "Wavenumber of a vibronic band",
+   "type": "wavenumber",
+   "symbol": "nut_obs",
+   "statement": "From the v″ = 0 level of the lower state, rotation ignored, a band lands at ν̃_obs = T̃_el + (½ν̃′_e − ¼χ̃′_eν̃′_e) − (½ν̃″_e − ¼χ̃″_eν̃″_e) + ν̃′_ev′ − χ̃′_eν̃′_ev′(v′ + 1), which depends mainly on the upper state's constants.",
+   "forms": [
+    {
+     "id": "vibronic-band",
+     "latex": "\\tilde{\\nu}_{obs} = \\tilde{T}_{el} + \\left( \\dfrac{1}{2} \\tilde{\\nu}'_e - \\dfrac{1}{4} \\tilde{\\chi}'_e \\tilde{\\nu}_e' \\right) - \\left( \\dfrac{1}{2} \\tilde{\\nu}''_e - \\dfrac{1}{4} \\tilde{\\chi}''_e \\tilde{\\nu}_e'' \\right) + \\tilde{\\nu}'_e v' - \\tilde{\\chi}'_e \\tilde{\\nu}_e' v'(v'+1)"
+    }
+   ]
+  },
+  {
+   "id": "zero-zero-transition",
+   "kind": "result",
+   "section": "13.6",
+   "name": "0–0 transition",
+   "type": "wavenumber",
+   "symbol": "nut_00",
+   "statement": "The transition between the v = 0 levels of the two states, ν̃₀₀ = T̃_el + (½ν̃′_e − ¼χ̃′_eν̃′_e) − (½ν̃″_e − ¼χ̃″_eν̃″_e), the lowest energy observable in an electronic band, though possibly weak.",
+   "forms": [
+    {
+     "id": "nu-zero-zero",
+     "latex": "\\tilde{\\nu}_{00} = \\tilde{T}_{el} + \\left( \\dfrac{1}{2} \\tilde{\\nu}'_e - \\dfrac{1}{4} \\tilde{\\chi}'_e \\tilde{\\nu}_e' \\right) - \\left( \\dfrac{1}{2} \\tilde{\\nu}''_e - \\dfrac{1}{4} \\tilde{\\chi}''_e \\tilde{\\nu}_e'' \\right)"
+    }
+   ]
+  },
+  {
+   "id": "vibronic-band-structure",
+   "kind": "definition",
+   "section": "13.6",
+   "name": "Bands, lines and band heads",
+   "terms": [
+    "band",
+    "lines",
+    "band head",
+    "visible band system"
+   ],
+   "statement": "In an electronic spectrum each peak from one vibrational level to another is a band, made of hundreds of rotational lines; the region of maximum absorption where many lines fall together is the band head, and the set of all bands of one electronic transition is a band system."
+  },
+  {
+   "id": "convergence-limit",
+   "kind": "result",
+   "section": "13.6",
+   "name": "Convergence limit",
+   "terms": [
+    "convergence limit"
+   ],
+   "statement": "As v′ increases the spacing of the upper state's levels, and so of the bands, falls to zero at the convergence limit, beyond which the spectrum is continuous because the excited molecule is not bound; the energy to dissociate it is D₀′, not D_e′, because it cannot have less than the zero-point energy."
+  },
+  {
+   "id": "franck-condon-principle",
+   "kind": "axiom",
+   "section": "13.7",
+   "name": "Franck–Condon principle",
+   "terms": [
+    "Franck-Condon Principle",
+    "Franck–Condon state"
+   ],
+   "statement": "An electronic transition is so fast compared with nuclear motion that the nuclear configuration does not change during it; the nuclei then find themselves out of equilibrium in the new electronic state and must vibrate. In its quantum form, the intensity of a vibronic transition is proportional to the square of the overlap of the vibrational wavefunctions of the two states."
+  },
+  {
+   "id": "condon-approximation",
+   "kind": "definition",
+   "section": "13.7",
+   "name": "Condon approximation",
+   "terms": [
+    "Condon approximation"
+   ],
+   "statement": "The assumption that the electronic transition occurs on a time scale short compared to nuclear motion, so that the transition probability can be calculated at a fixed nuclear position."
+  },
+  {
+   "id": "vertical-transition",
+   "kind": "definition",
+   "section": "13.7",
+   "name": "Vertical transition",
+   "terms": [
+    "vertical transition"
+   ],
+   "statement": "A transition drawn as a vertical line from the lower potential curve to the upper one at an unchanged internuclear distance, as the Franck–Condon principle requires."
+  },
+  {
+   "id": "franck-condon-factor",
+   "kind": "result",
+   "section": "13.7",
+   "name": "Franck–Condon factor",
+   "symbol": "S_00",
+   "terms": [
+    "Franck-Condon overlap integral",
+    "nuclear overlap"
+   ],
+   "statement": "Since the transition dipole acts only on the electrons, the Born–Oppenheimer transition moment factors into the nuclear overlap ⟨ψ_nuc,f|ψ_nuc,i⟩ times the electronic moment; the probability of a vibronic transition is weighted by the square of that overlap, and a transition whose overlap is zero is not observed.",
+   "forms": [
+    {
+     "id": "fc-separation",
+     "latex": "\\langle \\psi_{total, f} | \\hat{\\mu} | \\psi_{total, i} \\rangle = \\langle \\psi_{nuc, f} | \\psi_{nuc, i} \\rangle \\langle \\psi_{el, f} | \\hat{\\mu} | \\psi_{el, i} \\rangle"
+    }
+   ]
+  },
+  {
+   "id": "gaussian-integral",
+   "kind": "result",
+   "section": "13.7",
+   "name": "Gaussian integral",
+   "terms": [
+    "Gaussian integral"
+   ],
+   "statement": "The integral of a Gaussian over the whole line, ∫ e^(−z²) dz = √π from −∞ to ∞, found from a table of integrals.",
+   "forms": [
+    {
+     "id": "gaussian-integral",
+     "latex": "\\int_{-\\infty}^{\\infty} e^{-z^2}\\,dz = \\sqrt{\\pi}"
+    }
+   ]
+  },
+  {
+   "id": "displaced-oscillator-overlaps",
+   "kind": "result",
+   "section": "13.7",
+   "name": "Overlaps of displaced oscillators",
+   "symbol": "S_00",
+   "statement": "For harmonic wells of the same α = √(mk)/ħ with minima at R_e and Q_e, the v = 0 functions overlap by S₀₀ = e^(−α(R_e−Q_e)²/4), and v = 0 with the upper v′ = 1 by S₀₁ = √(α/2)(R_e − Q_e)e^(−α(R_e−Q_e)²/4).",
+   "forms": [
+    {
+     "id": "s00",
+     "latex": "S_{00} = e^{-\\alpha(R_e-Q_e)^2/4}"
+    },
+    {
+     "id": "s01",
+     "latex": "S_{01} = \\sqrt{\\dfrac{\\alpha}{2}} (R_e-Q_e) e^{-\\alpha(R_e-Q_e)^2/4}"
+    }
+   ]
+  },
+  {
+   "id": "franck-condon-progression",
+   "kind": "result",
+   "section": "13.7",
+   "name": "Franck–Condon progression",
+   "terms": [
+    "Franck-Condon progression"
+   ],
+   "statement": "An absorption band made of transitions from v = 0 to the successive upper levels, each with its own overlap and energy; a small displacement of the upper well leaves the 0–0 band strongest, a large one moves the maximum to higher levels, and so the band's shape tells whether the equilibrium bond length changed."
+  },
+  {
+   "id": "line-broadening",
+   "kind": "definition",
+   "section": "13.7",
+   "name": "Homogeneous and inhomogeneous broadening",
+   "terms": [
+    "homogeneous broadening",
+    "inhomogeneous broadening"
+   ],
+   "statement": "Spectral lines are not infinitely narrow: the finite lifetime of a state broadens every molecule's line alike (homogeneous broadening), and small differences in each molecule's environment spread them further (inhomogeneous broadening)."
+  },
+  {
+   "id": "excited-state-bond-length",
+   "kind": "result",
+   "section": "13.7",
+   "name": "Bond length in the excited state",
+   "statement": "When an electron moves from a bonding orbital to a non-bonding or antibonding one, the bond order is lower in the excited state and the equilibrium bond length grows, Q_e > R_e."
+  },
+  {
+   "id": "inertia-tensor",
+   "kind": "definition",
+   "section": "13.8",
+   "name": "Inertia tensor",
+   "type": "moment-of-inertia",
+   "symbol": "I_xx",
+   "terms": [
+    "inertia tensor"
+   ],
+   "statement": "The 3 × 3 matrix of moments of inertia of a body in lab-based Cartesian coordinates, I_xx = Σm_k(y_k² + z_k²), …, with products of inertia I_xy = −Σm_kx_ky_k, …; it is real and symmetric.",
+   "forms": [
+    {
+     "id": "inertia-xx",
+     "latex": "I_{xx}=\\sum_{k=1}^{N}m_{k}(y_{k}^{2}+z_{k}^{2})"
+    },
+    {
+     "id": "inertia-xy",
+     "latex": "I_{xy}=-\\sum_{k=1}^{N}m_{k}x_{k}y_{k}"
+    }
+   ]
+  },
+  {
+   "id": "principal-moments-of-inertia",
+   "kind": "definition",
+   "section": "13.8",
+   "name": "Principal moments of inertia",
+   "type": "moment-of-inertia",
+   "symbol": "I_a",
+   "statement": "The diagonal moments I_a, I_b, I_c of the inertia tensor in molecule-fixed axes a, b, c, labelled so that I_a < I_b < I_c.",
+   "forms": [
+    {
+     "id": "principal-order",
+     "latex": "I_a<I_b<I_c"
+    }
+   ]
+  },
+  {
+   "id": "polyatomic-rotational-hamiltonian",
+   "kind": "result",
+   "section": "13.8",
+   "name": "Rotational Hamiltonian of a polyatomic molecule",
+   "type": "operator",
+   "symbol": "H_rot",
+   "statement": "The rotational kinetic energy operator of a rigid non-linear molecule, H_rot = J_a²/2I_a + J_b²/2I_b + J_c²/2I_c, in terms of the angular momentum components along the principal axes.",
+   "forms": [
+    {
+     "id": "rotational-hamiltonian",
+     "latex": "H_{rot} = \\dfrac{J_a^2}{2I_a} + \\dfrac{J_b^2}{2I_b} + \\dfrac{J_c^2}{2I_c}"
+    }
+   ]
+  },
+  {
+   "id": "euler-angles",
+   "kind": "definition",
+   "section": "13.8",
+   "name": "Euler angles",
+   "type": "angle",
+   "symbol": "chi_euler",
+   "terms": [
+    "Euler angles"
+   ],
+   "statement": "The three angles θ, φ and χ that specify the orientation of a rigid molecule relative to a laboratory-fixed coordinate system."
+  },
+  {
+   "id": "spherical-top",
+   "kind": "definition",
+   "section": "13.8",
+   "name": "Spherical top",
+   "terms": [
+    "spherical top"
+   ],
+   "statement": "A molecule whose three principal moments of inertia are equal, so that H_rot = J²/2I and its eigenfunctions are those of J², J_a and J_Z."
+  },
+  {
+   "id": "spherical-top-energy-levels",
+   "kind": "result",
+   "section": "13.8",
+   "name": "Levels of a spherical top",
+   "type": "energy",
+   "symbol": "E_JKM",
+   "statement": "A spherical top has E = ħ²J(J + 1)/2I, independent of K and M, each ranging from −J to J, so each level is (2J + 1)²-fold degenerate.",
+   "forms": [
+    {
+     "id": "spherical-top-energy",
+     "latex": "E(J,K,M) = \\dfrac{\\hbar^2 J(J+1)}{2I}"
+    }
+   ]
+  },
+  {
+   "id": "symmetric-top",
+   "kind": "definition",
+   "section": "13.8",
+   "name": "Symmetric top",
+   "terms": [
+    "symmetrical tops",
+    "oblate symmetrical top",
+    "prolate symmetrical top"
+   ],
+   "statement": "A molecule with two equal principal moments of inertia and one different: an oblate top (a frisbee) when the unique axis has the greater moment, a prolate top (a football) when it has the smaller."
+  },
+  {
+   "id": "symmetric-top-energy-levels",
+   "kind": "result",
+   "section": "13.8",
+   "name": "Levels of a symmetric top",
+   "type": "energy",
+   "symbol": "E_JKM",
+   "statement": "With J² and the component along the unique axis, a prolate top has E = ħ²J(J + 1)/2I + ħ²K²(1/2I_a − 1/2I) and an oblate top the same with I_c; the energy depends on K, so each level is only (2J + 1)-fold degenerate.",
+   "forms": [
+    {
+     "id": "prolate-energy",
+     "latex": "E(J,K,M) = \\dfrac{\\hbar^2 J(J+1)}{2I} + \\hbar^2 K^2 \\left( \\dfrac{1}{2I_a} - \\dfrac{1}{2I} \\right)"
+    },
+    {
+     "id": "oblate-energy",
+     "latex": "E(J,K,M) = \\dfrac{\\hbar^2 J(J+1)}{2I} + \\hbar^2 K^2 \\left( \\dfrac{1}{2I_c} - \\dfrac{1}{2I} \\right)"
+    }
+   ]
+  },
+  {
+   "id": "rotation-matrix-functions",
+   "kind": "definition",
+   "section": "13.8",
+   "name": "Symmetric-top wavefunctions",
+   "type": "wavefunction",
+   "statement": "The eigenfunctions |J, M, K⟩ = √((2J + 1)/8π²) D*_{J,M,K}(θ, φ, χ) of J², J_Z and J_a, with eigenvalues ħ²J(J + 1), ħM and ħK, given by the rotation matrices.",
+   "forms": [
+    {
+     "id": "jmk-function",
+     "latex": "|J,M,K \\rangle = \\sqrt{ \\dfrac{2J + 1}{8 \\pi^2}} D^* _{J,M,K} ( \\theta , \\phi , \\chi )"
+    }
+   ]
+  },
+  {
+   "id": "asymmetric-top",
+   "kind": "result",
+   "section": "13.8",
+   "name": "Asymmetric top",
+   "terms": [
+    "asymmetric top"
+   ],
+   "statement": "A molecule whose three principal moments differ has no closed-form levels: H_rot is set up as a matrix in the |J, M, K⟩ basis and diagonalized; J still commutes with H_rot, so each eigenstate keeps one J."
+  },
+  {
+   "id": "vibrational-motion-types",
+   "kind": "definition",
+   "section": "13.9",
+   "name": "Kinds of vibrational motion",
+   "terms": [
+    "Symmetricical Stretching",
+    "Asymmetrical Stretching",
+    "Wagging",
+    "Twisting",
+    "Scissoring",
+    "Rocking"
+   ],
+   "statement": "The internal motions of a group of atoms are named by their pattern: symmetric and asymmetric stretching, which change bond lengths, and wagging, twisting, scissoring and rocking, which change angles in or out of the plane."
+  },
+  {
+   "id": "polyatomic-harmonic-potential",
+   "kind": "result",
+   "section": "13.9",
+   "name": "Harmonic potential of a polyatomic molecule",
+   "type": "energy",
+   "symbol": "dV",
+   "statement": "Near equilibrium, anharmonic terms neglected, the potential energy of a molecule's vibrations is the quadratic form ΔV = ½ΣΣ f_ij q_iq_j of the displacements, with force constants f_ij = ∂²V/∂q_i∂q_j.",
+   "forms": [
+    {
+     "id": "polyatomic-potential",
+     "latex": "\\Delta V = \\dfrac{1}{2}\\sum_{i=1}^{N_{vib}} \\sum_{j=1}^{N_{vib}} f_{ij} q_iq_j"
+    }
+   ]
+  },
+  {
+   "id": "normal-coordinates",
+   "kind": "definition",
+   "section": "13.9",
+   "name": "Normal coordinates",
+   "type": "length",
+   "symbol": "Q_j",
+   "terms": [
+    "normal coordinates",
+    "normal modes"
+   ],
+   "statement": "A set of coordinates Q_j, found by matrix algebra, in which the potential has no cross terms, ΔV = ½ΣF_jQ_j²; each follows the path of one normal mode, an independent motion of the atoms orthogonal to the others.",
+   "forms": [
+    {
+     "id": "normal-coordinate-potential",
+     "latex": "\\Delta{V} = \\dfrac{1}{2} \\sum_{j=1}^{N_{vib}}{F_jQ_j^2}"
+    }
+   ]
+  },
+  {
+   "id": "separable-vibrational-hamiltonian",
+   "kind": "result",
+   "section": "13.9",
+   "name": "Separation of the vibrations",
+   "type": "operator",
+   "symbol": "H_vib",
+   "statement": "In normal coordinates the vibrational Hamiltonian is a sum of independent harmonic oscillators, Ĥ_vib = ΣĤ_vib,j, so the vibrational wavefunction is a product of one-mode wavefunctions and each mode can be treated as a harmonic oscillator.",
+   "forms": [
+    {
+     "id": "vibrational-hamiltonian",
+     "latex": "\\hat{H}_{vib} = -\\sum_{j=1}^{N_{vib}} \\dfrac{\\hbar^2}{2\\mu_j} \\dfrac{d^2}{dQ_j^2} + \\dfrac{1}{2} \\sum_{j=1}^{N_{vib}}F_jQ_j^2"
+    }
+   ]
+  },
+  {
+   "id": "polyatomic-vibrational-energy",
+   "kind": "result",
+   "section": "13.9",
+   "name": "Vibrational energy of a polyatomic molecule",
+   "type": "energy",
+   "symbol": "E_vib",
+   "statement": "The total vibrational energy is the sum of the energies of the N_vib independent oscillators, E_vib = Σhν_j(v_j + ½), v_j = 0, 1, 2, ….",
+   "forms": [
+    {
+     "id": "polyatomic-vibrational-energy",
+     "latex": "E_{vib} = \\sum_{j=1}^{N_{vib}} h\\nu_j \\left(v_j + \\dfrac{1}{2}\\right)"
+    }
+   ]
+  },
+  {
+   "id": "normal-mode-symmetry",
+   "kind": "result",
+   "section": "13.10",
+   "name": "Symmetry of a normal mode",
+   "statement": "Every normal coordinate, and the vibrational wavefunctions that go with it, forms a basis for an irreducible representation of the molecule's point group, which decides whether the mode is IR or Raman active."
+  },
+  {
+   "id": "assigning-mode-symmetry",
+   "kind": "skill",
+   "section": "13.10",
+   "name": "Assigning a mode's symmetry species",
+   "statement": "Apply each symmetry operation of the point group to a mode's displacement arrows, write +1 where they go to themselves and −1 where they reverse, and match the row to the character table: water's three modes give Γ_vib = 2a₁ + b₂."
+  },
+  {
+   "id": "time-dependent-perturbation-theory",
+   "kind": "definition",
+   "section": "13.11",
+   "name": "Time-dependent perturbation theory",
+   "type": "operator",
+   "symbol": "H_1",
+   "terms": [
+    "time-dependent perturbation theory",
+    "static",
+    "time-independent Hamiltonian"
+   ],
+   "statement": "Dirac's method for the effect of a time-dependent perturbation V(t) on a system with a time-independent Hamiltonian H₀, H = H₀ + H₁(t): since the energy levels and eigenstates of the perturbed system change in time, it asks for time-dependent expectation values and for the time-dependent amplitudes of the unperturbed eigenstates.",
+   "forms": [
+    {
+     "id": "perturbed-hamiltonian-t",
+     "latex": "H=H_{0}+H_1(t)"
+    }
+   ]
+  },
+  {
+   "id": "probability-amplitudes",
+   "kind": "definition",
+   "section": "13.11",
+   "name": "Amplitudes",
+   "symbol": "c_n",
+   "terms": [
+    "amplitudes"
+   ],
+   "statement": "The complex coefficients c_n(t) of the unperturbed eigenstates in |ψ(t)⟩ = Σc_n(t)e^(−iE_nt/ħ)|n⟩, with the phase factors taken out so that without a perturbation they stay constant; |c_n(t)|² is the probability that the system is in state n at time t.",
+   "forms": [
+    {
+     "id": "amplitude-expansion",
+     "latex": "|\\psi (t)\\rangle =\\sum _{n}c_{n}(t)e^{-iE_{n}t/\\hbar }|n\\rangle"
+    }
+   ]
+  },
+  {
+   "id": "amplitude-equations",
+   "kind": "result",
+   "section": "13.11",
+   "name": "Equations for the amplitudes",
+   "statement": "Substituting the expansion into the time-dependent Schrödinger equation gives ∂c_n/∂t = (−i/ħ)Σ_k⟨n|H₁(t)|k⟩c_k(t)e^(−i(E_k−E_n)t/ħ): the matrix elements of H₁ shift amplitude between states, and the phase factor modulates the direction of the shift.",
+   "forms": [
+    {
+     "id": "amplitude-equation",
+     "latex": "\\dfrac {\\partial c_{n}}{\\partial t}=\\dfrac {-i}{\\hbar }\\sum _{k}\\langle n|H_1(t)|k\\rangle \\,c_{k}(t)\\,e^{-i(E_{k}-E_{n})t/\\hbar }"
+    }
+   ]
+  },
+  {
+   "id": "two-level-system",
+   "kind": "definition",
+   "section": "13.11",
+   "name": "Two-level system",
+   "terms": [
+    "two level system"
+   ],
+   "statement": "A system of two states |1⟩ and |2⟩ coupled by a perturbation, whose amplitudes obey iħ ∂c₁/∂t = c₁H₁₁ + c₂e^(−iω₀t)H₁₂ and iħ ∂c₂/∂t = c₂H₂₂ + c₁e^(iω₀t)H₂₁.",
+   "forms": [
+    {
+     "id": "two-level-c1",
+     "latex": "i \\hbar \\dfrac{\\partial c_1(t)}{\\partial t} = c_1(t) H_{11}(t) + c_2 e^{-i \\omega_0 t} H_{12} (t)"
+    },
+    {
+     "id": "two-level-c2",
+     "latex": "i \\hbar \\dfrac{\\partial c_2(t)}{\\partial t} = c_2(t) H_{22}(t) + c_1 e^{+i \\omega_0 t} H_{21} (t)"
+    }
+   ]
+  },
+  {
+   "id": "first-order-transition-amplitude",
+   "kind": "result",
+   "section": "13.11",
+   "name": "First-order amplitude of the upper state",
+   "symbol": "c_n",
+   "statement": "Starting in |1⟩ with H₁₁ = H₂₂ = 0, to first order c₂(t) = (−i/ħ)∫₀ᵗ e^(iω₀t′)H₂₁(t′)dt′; for light H₁(t) = V cos ωt near resonance, ω ≈ ω₀, this is c₂(t) = −(i/ħ)H₂₁e^(i(ω₀−ω)t/2) sin[(ω − ω₀)t/2]/(ω − ω₀).",
+   "forms": [
+    {
+     "id": "c2-first-order",
+     "latex": "c_2(t) = \\dfrac{-i}{\\hbar} \\int_0^t e^{i \\omega_0 t'} H_{21}(t')\\, dt'"
+    }
+   ]
+  },
+  {
+   "id": "transition-probability",
+   "kind": "result",
+   "section": "13.11",
+   "name": "Transition probability",
+   "symbol": "P_12",
+   "statement": "The probability of finding the system in |2⟩ after time t, P₁₂(t) = |c₂(t)|² = |H₂₁|² sin²[(ω − ω₀)t/2]/ħ²(ω − ω₀)², oscillates in time; as a function of ω it peaks at ω = ω₀ with height |H₁₂t/2ħ|² and width 4π/t, growing higher and narrower until first-order theory breaks down, since P₁₂ cannot exceed 1.",
+   "forms": [
+    {
+     "id": "transition-probability",
+     "latex": "P_{12}(t) = | c_2(t) |^2 = \\dfrac{|H_{21}|^2}{\\hbar^2}\\, \\dfrac{\\sin^2 [(\\omega-\\omega_0)t/2]}{(\\omega-\\omega_0)^2}"
+    }
+   ]
+  },
+  {
+   "id": "resonance-condition",
+   "kind": "result",
+   "section": "13.11",
+   "name": "Resonance condition",
+   "type": "frequency",
+   "symbol": "omega_0",
+   "statement": "Light causes appreciable transitions between two stationary states only when its frequency is nearly equal to their energy difference, ω ≈ ω₀ = (E₂ − E₁)/ħ, and the transition is fullest when the perturbation is turned off after π/|ω − ω₀| or an odd multiple of it.",
+   "forms": [
+    {
+     "id": "resonance",
+     "latex": "\\omega \\approx \\omega_0"
+    }
+   ]
+  },
+  {
+   "id": "gross-and-specific-selection-rules",
+   "kind": "definition",
+   "section": "13.12",
+   "name": "Gross and specific selection rules",
+   "terms": [
+    "gross selection rule",
+    "specific selection rule"
+   ],
+   "statement": "A selection rule has two parts: the gross selection rule, a requirement the atom or molecule must meet to show a spectrum of a given kind (a permanent dipole for a microwave spectrum), and the specific selection rule, which says which changes of quantum number may happen."
+  },
+  {
+   "id": "transition-dipole-coupling",
+   "kind": "idea",
+   "section": "13.12",
+   "name": "Light couples through the transition dipole",
+   "type": "electric-field",
+   "symbol": "E0_field",
+   "statement": "Incident radiation presents an oscillating electric field E₀ cos ωt that interacts with the transition dipole (μ_z)₁₂ = ∫Ψ₁*μ_zΨ₂dτ, a transient polarization created by the radiation; if it is zero the transition is forbidden.",
+   "forms": [
+    {
+     "id": "transition-dipole-z",
+     "latex": "(\\mu_z)_{12}=\\int\\Psi_1^{*}\\mu_z\\Psi_2\\,d\\tau"
+    }
+   ]
+  },
+  {
+   "id": "legendre-recurrence",
+   "kind": "result",
+   "section": "13.12",
+   "name": "Recurrence of the associated Legendre functions",
+   "statement": "x times an associated Legendre function is a combination of its two neighbours in J: (2J + 1)xP_J^{|M|}(x) = (J − |M| + 1)P_{J+1}^{|M|}(x) + (J + |M|)P_{J−1}^{|M|}(x).",
+   "forms": [
+    {
+     "id": "legendre-recurrence",
+     "latex": "(2J+1)x\\,P_{J}^{|M|}(x)=(J-|M|+1)P_{J+1}^{|M|}(x)+(J+|M|)P_{J-1}^{|M|}(x)"
+    }
+   ]
+  },
+  {
+   "id": "rigid-rotor-transition-moment",
+   "kind": "result",
+   "section": "13.12",
+   "name": "Transition moment of the rigid rotor",
+   "statement": "For z-polarized light the rotor's transition moment, an integral of two spherical harmonics with μ cos θ, vanishes unless the molecule has a permanent dipole, M′ = M and J′ = J ± 1; the same rules apply to orbital angular momentum (Δl = ±1, Δm = 0).",
+   "forms": [
+    {
+     "id": "rotor-transition-moment",
+     "latex": "(\\mu_z)_{J,M,J',M'}=\\int_{0}^{2\\pi } \\int_{0}^{\\pi }Y_{J'}^{M'*}(\\theta,\\phi )\\,\\mu_z\\,Y_{J}^{M}(\\theta,\\phi)\\sin\\theta\\,d\\theta\\,d\\phi"
+    }
+   ]
+  },
+  {
+   "id": "ir-activity-dipole-change",
+   "kind": "result",
+   "section": "13.14",
+   "name": "A vibration must change the dipole",
+   "symbol": "M_trans",
+   "statement": "If the dipole moment did not change during a vibration it could be taken out of M(v → v′) = ⟨φ(v′)|μ|φ(0)⟩, leaving the overlap of two orthogonal vibrational functions, zero; so a transition is IR allowed only if the dipole moment changes, which is why homonuclear diatomics have no IR spectrum, and Raman allowed only if the polarizability changes.",
+   "forms": [
+    {
+     "id": "ir-transition-moment",
+     "latex": "M(v \\rightarrow v') = \\langle \\phi(v') | \\vec{\\mu} | \\phi (v=0) \\rangle"
+    },
+    {
+     "id": "raman-transition-moment",
+     "latex": "M(v \\rightarrow v') = \\langle \\phi(v') | \\alpha | \\phi (v=0) \\rangle"
+    }
+   ]
+  },
+  {
+   "id": "stretch-bend-analysis",
+   "kind": "skill",
+   "section": "13.14",
+   "name": "Separating stretches from bends",
+   "statement": "Draw a double-headed arrow on each bond, find how the arrows transform under each operation to get Γ_stretch, reduce it, and take Γ_bend = Γ_vib − Γ_stretch: water has Γ_stretch = a₁ + b₂ and Γ_bend = a₁.",
+   "forms": [
+    {
+     "id": "gamma-bend",
+     "latex": "\\Gamma_{bend} = \\Gamma_{vib} - \\Gamma_{stretch}"
+    }
+   ]
+  }
+ ],
+ "concept_prereqs": [
+  {
+   "concept": "electromagnetic-radiation",
+   "prereq": "photon"
+  },
+  {
+   "concept": "electromagnetic-radiation",
+   "prereq": "wave-particle-duality"
+  },
+  {
+   "concept": "electromagnetic-radiation",
+   "prereq": "traveling-wave"
+  },
+  {
+   "concept": "oscillating-electric-field",
+   "prereq": "electromagnetic-radiation"
+  },
+  {
+   "concept": "oscillating-electric-field",
+   "prereq": "amplitude"
+  },
+  {
+   "concept": "oscillating-electric-field",
+   "prereq": "phase-constant"
+  },
+  {
+   "concept": "plane-polarized-radiation",
+   "prereq": "oscillating-electric-field"
+  },
+  {
+   "concept": "wavelength-frequency-relation",
+   "prereq": "electromagnetic-radiation"
+  },
+  {
+   "concept": "wavelength-frequency-relation",
+   "prereq": "wavenumber"
+  },
+  {
+   "concept": "electromagnetic-spectrum",
+   "prereq": "wavelength-frequency-relation"
+  },
+  {
+   "concept": "spectroscopic-energy-exchange",
+   "prereq": "electromagnetic-spectrum"
+  },
+  {
+   "concept": "bohr-frequency-condition",
+   "prereq": "plancks-quantum-hypothesis"
+  },
+  {
+   "concept": "bohr-frequency-condition",
+   "prereq": "photon"
+  },
+  {
+   "concept": "spectral-regions-molecular-motions",
+   "prereq": "electromagnetic-spectrum"
+  },
+  {
+   "concept": "spectral-regions-molecular-motions",
+   "prereq": "bohr-frequency-condition"
+  },
+  {
+   "concept": "spectral-regions-molecular-motions",
+   "prereq": "molecular-motion-separation"
+  },
+  {
+   "concept": "rovibrational-spectrum",
+   "prereq": "spectral-regions-molecular-motions"
+  },
+  {
+   "concept": "rovibrational-spectrum",
+   "prereq": "vibrational-transition-frequency"
+  },
+  {
+   "concept": "rovibrational-spectrum",
+   "prereq": "rotational-transition-energies"
+  },
+  {
+   "concept": "rotational-term",
+   "prereq": "rotational-constant"
+  },
+  {
+   "concept": "rovibrational-term",
+   "prereq": "rotational-term"
+  },
+  {
+   "concept": "rovibrational-term",
+   "prereq": "oscillator-energy-levels"
+  },
+  {
+   "concept": "rovibrational-selection-rules",
+   "prereq": "ir-selection-rules"
+  },
+  {
+   "concept": "rovibrational-selection-rules",
+   "prereq": "rotational-selection-rules"
+  },
+  {
+   "concept": "r-branch",
+   "prereq": "rovibrational-term"
+  },
+  {
+   "concept": "r-branch",
+   "prereq": "rovibrational-selection-rules"
+  },
+  {
+   "concept": "p-branch",
+   "prereq": "rovibrational-term"
+  },
+  {
+   "concept": "p-branch",
+   "prereq": "rovibrational-selection-rules"
+  },
+  {
+   "concept": "q-branch",
+   "prereq": "rovibrational-term"
+  },
+  {
+   "concept": "q-branch",
+   "prereq": "rovibrational-selection-rules"
+  },
+  {
+   "concept": "zero-gap",
+   "prereq": "r-branch"
+  },
+  {
+   "concept": "zero-gap",
+   "prereq": "p-branch"
+  },
+  {
+   "concept": "rotational-populations",
+   "prereq": "boltzmann-distribution"
+  },
+  {
+   "concept": "rotational-populations",
+   "prereq": "rotor-degeneracy"
+  },
+  {
+   "concept": "rotational-populations",
+   "prereq": "rotor-energy-levels"
+  },
+  {
+   "concept": "rovibrational-line-intensities",
+   "prereq": "rotational-populations"
+  },
+  {
+   "concept": "rovibrational-line-intensities",
+   "prereq": "transition-moment-integral"
+  },
+  {
+   "concept": "rovibrational-line-intensities",
+   "prereq": "rovibrational-spectrum"
+  },
+  {
+   "concept": "vibration-rotation-interaction",
+   "prereq": "rotational-constant"
+  },
+  {
+   "concept": "vibration-rotation-interaction",
+   "prereq": "anharmonicity"
+  },
+  {
+   "concept": "branch-lines-with-interaction",
+   "prereq": "vibration-rotation-interaction"
+  },
+  {
+   "concept": "branch-lines-with-interaction",
+   "prereq": "r-branch"
+  },
+  {
+   "concept": "branch-lines-with-interaction",
+   "prereq": "p-branch"
+  },
+  {
+   "concept": "unequal-branch-spacing",
+   "prereq": "branch-lines-with-interaction"
+  },
+  {
+   "concept": "centrifugal-force",
+   "prereq": "angular-momentum"
+  },
+  {
+   "concept": "centrifugal-force",
+   "prereq": "reduced-mass"
+  },
+  {
+   "concept": "non-rigid-rotor",
+   "prereq": "centrifugal-force"
+  },
+  {
+   "concept": "non-rigid-rotor",
+   "prereq": "hookes-law"
+  },
+  {
+   "concept": "non-rigid-rotor",
+   "prereq": "centrifugal-stretching"
+  },
+  {
+   "concept": "nonrigid-rotor-energy-levels",
+   "prereq": "non-rigid-rotor"
+  },
+  {
+   "concept": "nonrigid-rotor-energy-levels",
+   "prereq": "rotor-energy-levels"
+  },
+  {
+   "concept": "nonrigid-rotor-energy-levels",
+   "prereq": "rotational-term"
+  },
+  {
+   "concept": "centrifugal-distortion-constant",
+   "prereq": "nonrigid-rotor-energy-levels"
+  },
+  {
+   "concept": "nonrigid-line-spacing",
+   "prereq": "nonrigid-rotor-energy-levels"
+  },
+  {
+   "concept": "nonrigid-line-spacing",
+   "prereq": "rotational-line-spacing"
+  },
+  {
+   "concept": "hot-band",
+   "prereq": "vibrational-quantum-number"
+  },
+  {
+   "concept": "hot-band",
+   "prereq": "overtone-transition"
+  },
+  {
+   "concept": "anharmonic-selection-rule",
+   "prereq": "anharmonicity"
+  },
+  {
+   "concept": "anharmonic-selection-rule",
+   "prereq": "ir-selection-rules"
+  },
+  {
+   "concept": "overtone-positions",
+   "prereq": "anharmonic-energy-levels"
+  },
+  {
+   "concept": "overtone-positions",
+   "prereq": "overtone-transition"
+  },
+  {
+   "concept": "overtone-positions",
+   "prereq": "anharmonic-selection-rule"
+  },
+  {
+   "concept": "vibronic-transition",
+   "prereq": "potential-energy-curve"
+  },
+  {
+   "concept": "vibronic-transition",
+   "prereq": "rovibrational-spectrum"
+  },
+  {
+   "concept": "electronic-term-energy",
+   "prereq": "potential-energy-curve"
+  },
+  {
+   "concept": "vibronic-energy",
+   "prereq": "electronic-term-energy"
+  },
+  {
+   "concept": "vibronic-energy",
+   "prereq": "anharmonic-energy-levels"
+  },
+  {
+   "concept": "vibronic-energy",
+   "prereq": "nonrigid-rotor-energy-levels"
+  },
+  {
+   "concept": "vibronic-energy",
+   "prereq": "born-oppenheimer-approximation"
+  },
+  {
+   "concept": "vibronic-band-wavenumber",
+   "prereq": "vibronic-energy"
+  },
+  {
+   "concept": "vibronic-band-wavenumber",
+   "prereq": "vibronic-transition"
+  },
+  {
+   "concept": "zero-zero-transition",
+   "prereq": "vibronic-band-wavenumber"
+  },
+  {
+   "concept": "vibronic-band-structure",
+   "prereq": "vibronic-band-wavenumber"
+  },
+  {
+   "concept": "convergence-limit",
+   "prereq": "vibronic-band-wavenumber"
+  },
+  {
+   "concept": "convergence-limit",
+   "prereq": "dissociation-energy"
+  },
+  {
+   "concept": "franck-condon-principle",
+   "prereq": "born-oppenheimer-approximation"
+  },
+  {
+   "concept": "franck-condon-principle",
+   "prereq": "vibronic-transition"
+  },
+  {
+   "concept": "condon-approximation",
+   "prereq": "franck-condon-principle"
+  },
+  {
+   "concept": "vertical-transition",
+   "prereq": "franck-condon-principle"
+  },
+  {
+   "concept": "vertical-transition",
+   "prereq": "potential-energy-curve"
+  },
+  {
+   "concept": "franck-condon-factor",
+   "prereq": "franck-condon-principle"
+  },
+  {
+   "concept": "franck-condon-factor",
+   "prereq": "born-oppenheimer-wavefunction"
+  },
+  {
+   "concept": "franck-condon-factor",
+   "prereq": "transition-moment-integral"
+  },
+  {
+   "concept": "franck-condon-factor",
+   "prereq": "overlap-integral"
+  },
+  {
+   "concept": "displaced-oscillator-overlaps",
+   "prereq": "franck-condon-factor"
+  },
+  {
+   "concept": "displaced-oscillator-overlaps",
+   "prereq": "oscillator-wavefunctions"
+  },
+  {
+   "concept": "displaced-oscillator-overlaps",
+   "prereq": "gaussian-integral"
+  },
+  {
+   "concept": "franck-condon-progression",
+   "prereq": "displaced-oscillator-overlaps"
+  },
+  {
+   "concept": "franck-condon-progression",
+   "prereq": "vibronic-band-structure"
+  },
+  {
+   "concept": "excited-state-bond-length",
+   "prereq": "franck-condon-progression"
+  },
+  {
+   "concept": "excited-state-bond-length",
+   "prereq": "bond-order"
+  },
+  {
+   "concept": "inertia-tensor",
+   "prereq": "moment-of-inertia"
+  },
+  {
+   "concept": "principal-moments-of-inertia",
+   "prereq": "inertia-tensor"
+  },
+  {
+   "concept": "polyatomic-rotational-hamiltonian",
+   "prereq": "principal-moments-of-inertia"
+  },
+  {
+   "concept": "polyatomic-rotational-hamiltonian",
+   "prereq": "rotational-kinetic-energy"
+  },
+  {
+   "concept": "polyatomic-rotational-hamiltonian",
+   "prereq": "angular-momentum"
+  },
+  {
+   "concept": "euler-angles",
+   "prereq": "spherical-coordinates"
+  },
+  {
+   "concept": "spherical-top",
+   "prereq": "polyatomic-rotational-hamiltonian"
+  },
+  {
+   "concept": "spherical-top-energy-levels",
+   "prereq": "spherical-top"
+  },
+  {
+   "concept": "spherical-top-energy-levels",
+   "prereq": "rotation-matrix-functions"
+  },
+  {
+   "concept": "symmetric-top",
+   "prereq": "polyatomic-rotational-hamiltonian"
+  },
+  {
+   "concept": "symmetric-top-energy-levels",
+   "prereq": "symmetric-top"
+  },
+  {
+   "concept": "symmetric-top-energy-levels",
+   "prereq": "rotation-matrix-functions"
+  },
+  {
+   "concept": "rotation-matrix-functions",
+   "prereq": "euler-angles"
+  },
+  {
+   "concept": "rotation-matrix-functions",
+   "prereq": "spherical-harmonics"
+  },
+  {
+   "concept": "asymmetric-top",
+   "prereq": "polyatomic-rotational-hamiltonian"
+  },
+  {
+   "concept": "asymmetric-top",
+   "prereq": "rotation-matrix-functions"
+  },
+  {
+   "concept": "vibrational-motion-types",
+   "prereq": "molecular-normal-modes"
+  },
+  {
+   "concept": "polyatomic-harmonic-potential",
+   "prereq": "potential-taylor-expansion"
+  },
+  {
+   "concept": "polyatomic-harmonic-potential",
+   "prereq": "degrees-of-freedom"
+  },
+  {
+   "concept": "normal-coordinates",
+   "prereq": "polyatomic-harmonic-potential"
+  },
+  {
+   "concept": "normal-coordinates",
+   "prereq": "molecular-normal-modes"
+  },
+  {
+   "concept": "separable-vibrational-hamiltonian",
+   "prereq": "normal-coordinates"
+  },
+  {
+   "concept": "separable-vibrational-hamiltonian",
+   "prereq": "harmonic-oscillator-schrodinger-equation"
+  },
+  {
+   "concept": "polyatomic-vibrational-energy",
+   "prereq": "separable-vibrational-hamiltonian"
+  },
+  {
+   "concept": "polyatomic-vibrational-energy",
+   "prereq": "oscillator-energy-levels"
+  },
+  {
+   "concept": "normal-mode-symmetry",
+   "prereq": "normal-coordinates"
+  },
+  {
+   "concept": "normal-mode-symmetry",
+   "prereq": "irreducible-representation"
+  },
+  {
+   "concept": "assigning-mode-symmetry",
+   "prereq": "normal-mode-symmetry"
+  },
+  {
+   "concept": "assigning-mode-symmetry",
+   "prereq": "character-table"
+  },
+  {
+   "concept": "time-dependent-perturbation-theory",
+   "prereq": "perturbation-theory"
+  },
+  {
+   "concept": "time-dependent-perturbation-theory",
+   "prereq": "time-dependent-schrodinger-equation"
+  },
+  {
+   "concept": "probability-amplitudes",
+   "prereq": "time-dependent-perturbation-theory"
+  },
+  {
+   "concept": "probability-amplitudes",
+   "prereq": "stationary-state"
+  },
+  {
+   "concept": "probability-amplitudes",
+   "prereq": "expansion-coefficients"
+  },
+  {
+   "concept": "amplitude-equations",
+   "prereq": "probability-amplitudes"
+  },
+  {
+   "concept": "amplitude-equations",
+   "prereq": "orthonormality"
+  },
+  {
+   "concept": "two-level-system",
+   "prereq": "amplitude-equations"
+  },
+  {
+   "concept": "first-order-transition-amplitude",
+   "prereq": "two-level-system"
+  },
+  {
+   "concept": "first-order-transition-amplitude",
+   "prereq": "eulers-formula"
+  },
+  {
+   "concept": "transition-probability",
+   "prereq": "first-order-transition-amplitude"
+  },
+  {
+   "concept": "resonance-condition",
+   "prereq": "transition-probability"
+  },
+  {
+   "concept": "resonance-condition",
+   "prereq": "bohr-frequency-condition"
+  },
+  {
+   "concept": "gross-and-specific-selection-rules",
+   "prereq": "selection-rule"
+  },
+  {
+   "concept": "transition-dipole-coupling",
+   "prereq": "transition-moment-integral"
+  },
+  {
+   "concept": "transition-dipole-coupling",
+   "prereq": "oscillating-electric-field"
+  },
+  {
+   "concept": "legendre-recurrence",
+   "prereq": "associated-legendre-functions"
+  },
+  {
+   "concept": "rigid-rotor-transition-moment",
+   "prereq": "transition-dipole-coupling"
+  },
+  {
+   "concept": "rigid-rotor-transition-moment",
+   "prereq": "legendre-recurrence"
+  },
+  {
+   "concept": "rigid-rotor-transition-moment",
+   "prereq": "spherical-harmonics"
+  },
+  {
+   "concept": "rigid-rotor-transition-moment",
+   "prereq": "gross-and-specific-selection-rules"
+  },
+  {
+   "concept": "ir-activity-dipole-change",
+   "prereq": "transition-moment-integral"
+  },
+  {
+   "concept": "ir-activity-dipole-change",
+   "prereq": "oscillator-orthonormality"
+  },
+  {
+   "concept": "ir-activity-dipole-change",
+   "prereq": "polarizability"
+  },
+  {
+   "concept": "stretch-bend-analysis",
+   "prereq": "vibrational-representation"
+  },
+  {
+   "concept": "stretch-bend-analysis",
+   "prereq": "stretching-salcs"
+  }
+ ]
+}

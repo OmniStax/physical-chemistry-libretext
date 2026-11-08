@@ -45,8 +45,8 @@ const atoms = (pO, p1, p2, faint) => [
   ]),
 ];
 const axesMarks = () => [
-  { k: 'line', pts: [[0, 0, -1.8], [0, 0, 2.2]], color: 'guide', w: 2, dash: [6, 8], name: 'the z axis, which carries the C₂ axis' },
-  { k: 'label', s: '$z$', p: [0, 0, 2.4], color: PAL.muted, cls: 'bare' },
+  { k: 'line', pts: [[0, 0, -1.8], [0, 0, 1.8]], color: 'guide', w: 2, dash: [6, 8], name: 'the z axis, which carries the C₂ axis' },
+  { k: 'label', s: '$z$', p: [0, 0, 2.0], color: PAL.muted, cls: 'bare' },
   { k: 'line', pts: [[-2.3, 0, 0], [2.3, 0, 0]], color: 'guide', w: 2, dash: [6, 8], name: 'the x axis, in the plane of the molecule' },
   { k: 'label', s: '$x$', p: [2.5, 0, 0], color: PAL.muted, cls: 'bare' },
   { k: 'line', pts: [[0, -2.3, 0], [0, 2.3, 0]], color: 'guide', w: 2, dash: [6, 8], name: 'the y axis, square to the molecule' },
@@ -62,7 +62,7 @@ const axesMarks = () => [
    and s_H, the book's "Rotation" example. */
 (function () {
   const d = sim('sim-water-basis');
-  const S = F.space3d(d, { box: BOX, h: 440, turn: -0.35, tilt: 0.28, fit: 2.3, ...ORBIT });
+  const S = F.space3d(d, { box: BOX, h: 440, turn: -0.35, tilt: 0.28, fit: 3.3, ...ORBIT });
   const mat = F.makeCanvas(d.stage, 330);
   const OPS = {
     E: { tx: '\\kEop', txt: 'E', perm: [[0, 1], [1, 1], [2, 1], [3, 1], [4, 1], [5, 1]], name: 'E leaves everything where it is' },
@@ -103,10 +103,10 @@ const axesMarks = () => [
     const M = carry(op, k), [to, sg] = OPS[op].perm[j];
     S.set('axes', axesMarks());
     S.set('elements', [
-      { k: 'faces', faces: [[[-2.2, 0, -1.7], [2.2, 0, -1.7], [2.2, 0, 2.1], [-2.2, 0, 2.1]]], color: C('symmetry-operation'), alpha: op === 'sv' ? 0.16 : 0.05, name: 'the mirror plane σᵥ(xz), the plane of the molecule' },
-      { k: 'faces', faces: [[[0, -2.2, -1.7], [0, 2.2, -1.7], [0, 2.2, 2.1], [0, -2.2, 2.1]]], color: C('symmetry-operation'), alpha: op === 'svp' ? 0.16 : 0.05, name: 'the mirror plane σᵥ′(yz), square to the molecule' },
-      { k: 'line', pts: [[0, 0, -1.7], [0, 0, 2.1]], color: C('symmetry-operation'), w: op === 'C2' ? 5 : 2.5, name: 'the C₂ axis' },
-      { k: 'label', s: '$C_2$', p: [0.25, 0, 2.15], color: C('symmetry-operation'), cls: 'bare' },
+      { k: 'faces', faces: [[[-2.2, 0, -1.6], [2.2, 0, -1.6], [2.2, 0, 1.6], [-2.2, 0, 1.6]]], color: C('symmetry-operation'), alpha: op === 'sv' ? 0.16 : 0.05, name: 'the mirror plane σᵥ(xz), the plane of the molecule' },
+      { k: 'faces', faces: [[[0, -2.2, -1.6], [0, 2.2, -1.6], [0, 2.2, 1.6], [0, -2.2, 1.6]]], color: C('symmetry-operation'), alpha: op === 'svp' ? 0.16 : 0.05, name: 'the mirror plane σᵥ′(yz), square to the molecule' },
+      { k: 'line', pts: [[0, 0, -1.6], [0, 0, 1.6]], color: C('symmetry-operation'), w: op === 'C2' ? 5 : 2.5, name: 'the C₂ axis' },
+      { k: 'label', s: '$C_2$', p: [0.3, 0, 1.55], color: C('symmetry-operation'), cls: 'bare' },
     ]);
     const moved = op !== 'E' && k > 0;
     S.set('start', moved ? atoms(O, HP, HM, true) : []);
@@ -119,6 +119,7 @@ const axesMarks = () => [
     S.headline(op === 'E' ? `E leaves ${FN[j].html} as it is.` : `${OPS[op].txt} carries ${FN[j].html} onto ${lands}.`);
     /* the representative, its chosen column filling as the orbital lands */
     const { ctx, W } = begin(mat);
+    F.legend(ctx, { l: 20, t: 10, r: 300, b: 120 }, [{ s: 'ψ > 0', color: signCol(1), kind: 'swatch' }, { s: 'ψ < 0', color: signCol(-1), kind: 'swatch' }], { corner: 'tl' });
     const perm = OPS[op].perm, cw = 92, ch = 38, x0 = (W - 6 * cw) / 2 + 60, y0 = 70;
     text(ctx, `Γ(${OPS[op].txt}) =`, x0 - 40, y0 + 3 * ch, C('representation'), { size: 24, weight: 600, align: 'right', base: 'middle' });
     FN.forEach((f, c) => text(ctx, f.txt, x0 + c * cw + cw / 2, y0 - 22, c === j ? C('wavefunction') : PAL.muted, { size: 20, weight: c === j ? 600 : 400, align: 'center' }));
@@ -152,8 +153,8 @@ const axesMarks = () => [
    light reaches it, from the direct product of the two half-filled orbitals' species. */
 (function () {
   const d = sim('sim-water-mos');
-  const S = F.space3d(d, { box: BOX, h: 420, turn: -0.35, tilt: 0.28, fit: 2.3, ...ORBIT });
-  const lad = F.makeCanvas(d.stage, 360);
+  const S = F.space3d(d, { box: BOX, h: 420, turn: -0.35, tilt: 0.28, fit: 3.3, ...ORBIT });
+  const lad = F.makeCanvas(d.stage, 390);
   /* [id, species, energy in eV (the book's), bonding?, the parts drawn: [kind, sign]] */
   const MO = [
     { id: '1a1', sp: 'A_1', html: '1A<sub>1</sub>', txt: '1A₁', e: -37.03, kind: 'bonding', parts: [['sO', 1, 0.75], ['sH', 1], ['sHp', 1]], form: 'c_1\\phi_1 + c_2\\phi_2 + c_3\\phi_3' },
@@ -179,7 +180,7 @@ const axesMarks = () => [
       if (w === 'sHp') return sOrb(HM, s, 0.5, name);
       if (w === 'sO') return sOrb(O, s, r || 0.62, name);
       const ax = { px: [1, 0, 0], py: [0, 1, 0], pz: [0, 0, 1] }[w];
-      return pOrb(O, ax, s, 0.55, name);
+      return pOrb(O, ax, s, 0.7, name);
     });
   }
   function draw() {
@@ -190,8 +191,9 @@ const axesMarks = () => [
     S.headline(`${m.html} is ${m.kind}, built only from SALCs of ${m.sp.replace('_', '<sub>')}</sub> symmetry.`);
     /* the ladder: schematic spacing, the book's energies beside the levels */
     const { ctx, W } = begin(lad);
-    const x0 = W / 2 - 150, x1 = W / 2 + 150, yOf = (i) => 320 - i * 50 - (i >= 4 ? 30 : 0);
+    const x0 = W / 2 - 150, x1 = W / 2 + 150, yOf = (i) => 360 - i * 48 - (i >= 4 ? 24 : 0);
     hits.length = 0;
+    F.legend(ctx, { l: 20, t: 50, r: 380, b: 160 }, [{ s: 'ψ > 0', color: signCol(1), kind: 'swatch' }, { s: 'ψ < 0', color: signCol(-1), kind: 'swatch' }], { corner: 'tl' });
     text(ctx, 'antibonding', x1 + 190, (yOf(4) + yOf(5)) / 2, PAL.muted, { size: 18, base: 'middle' });
     text(ctx, 'bonding', x1 + 190, (yOf(0) + yOf(3)) / 2, PAL.muted, { size: 18, base: 'middle' });
     MO.forEach((o, i) => {
@@ -209,7 +211,7 @@ const axesMarks = () => [
     if (st.to) {
       const i = MO.findIndex((o) => o.id === st.to), xa = x0 + 40;
       F.arrow(ctx, xa, yOf(3) - 6, xa, yOf(i) + 8, st.pol ? C('energy') : alpha(PAL.ink, 0.45), 4);
-      text(ctx, st.pol ? `${st.pol}-polarized photon` : 'no single photon', xa - 14, (yOf(3) + yOf(i)) / 2, st.pol ? C('energy') : PAL.muted, { size: 18, align: 'right', base: 'middle' });
+      text(ctx, st.pol ? `${st.pol}-polarized photon` : 'no single photon', xa - 14, (yOf(3) + yOf(4)) / 2, st.pol ? C('energy') : PAL.muted, { size: 18, align: 'right', base: 'middle' });
     }
     text(ctx, st.to ? STATES[ST.value].head : 'Ground state: every orbital doubly filled, so the state is A₁.', W / 2, 24, PAL.ink, { size: 20, align: 'center', base: 'middle' });
     const stateTex = st.to ? `\\Gamma = ${st.prod}` : '\\Gamma = B_2 \\otimes B_2 = A_1';
