@@ -30,6 +30,8 @@ const gauss = () => { let u = 0; while (!u) u = Math.random(); return Math.sqrt(
   function reset() {
     const s = Math.sqrt(KB * T.v / MASS), a = A.v;
     ps = []; for (let i = 0; i < N.v; i++) ps.push({ x: Math.random() * a, y: Math.random() * a, vx: gauss() * s, vy: gauss() * s });
+    /* the sample's own <vx²> set to kBT/m, so the long-run average is the prediction and not this draw's */
+    const k = Math.sqrt(N.v * s * s / ps.reduce((q, p) => q + p.vx * p.vx, 0)); ps.forEach((p) => { p.vx *= k; });
     bins = []; cur = 0; curT = 0; totJ = 0; totT = 0; hits = 0; kicks = []; cy.reset();
   }
   function step(dtReal) {
@@ -37,7 +39,7 @@ const gauss = () => { let u = 0; while (!u) u = Math.random(); return Math.sqrt(
     for (const p of ps) {
       p.x += p.vx * dt; p.y += p.vy * dt;
       while (p.x < 0 || p.x > a) {
-        if (p.x > a) { p.x = 2 * a - p.x; const J = 2 * MASS * Math.abs(p.vx); cur += J; totJ += J; hits++; kicks.push({ y: p.y, J, life: 0.5 }); p.vx = -Math.abs(p.vx); }
+        if (p.x > a) { p.x = 2 * a - p.x; const J = 2 * MASS * Math.abs(p.vx); cur += J; totJ += J; hits++; if (kicks.length < 40) kicks.push({ y: p.y, J, life: 0.5 }); p.vx = -Math.abs(p.vx); }
         else { p.x = -p.x; p.vx = Math.abs(p.vx); }
       }
       while (p.y < 0 || p.y > a) { if (p.y > a) { p.y = 2 * a - p.y; p.vy = -Math.abs(p.vy); } else { p.y = -p.y; p.vy = Math.abs(p.vy); } }
@@ -76,14 +78,14 @@ const gauss = () => { let u = 0; while (!u) u = Math.random(); return Math.sqrt(
     if (ps[0]) hov.push({ x: x0 + ps[0].x * K, y: y0 + S - ps[0].y * K, r: 12, name: `a gas particle, mass ${fmt(MASS * 1e26, 2)} × 10⁻²⁶ kg` });
     /* the force on the wall against time */
     const box = { l: 640, r: W - 60, t: 150, b: 470 };
-    const ax = axes(ctx, box, [-WIN, 0], [0, 3], { nx: 5, ny: 3, xl: 'time before now (ns)', yl: 'force on the right wall ÷ Nk_BT/a', xc: PAL.ink, yc: C('force') });
+    const ax = axes(ctx, box, [-WIN, 0], [0, 3], { nx: 5, ny: 3, xl: 'time before now (ns)', yl: 'force on the right wall ÷ Nk_{B}T/a', xc: PAL.ink, yc: C('force') });
     const off = bins.length * BIN;
     ctx.save(); ctx.beginPath(); ctx.rect(box.l, box.t, box.r - box.l, box.b - box.t); ctx.clip();
     ctx.fillStyle = alpha(C('force'), 0.35);
     bins.forEach((b, i) => { const x = ax.X(-off + i * BIN), w = ax.X(-off + (i + 1) * BIN) - x, y = ax.Y(Math.min(3.2, b.f / Fpred)); ctx.fillRect(x, y, Math.max(1, w - 0.5), box.b - y); });
     ctx.restore();
     line(ctx, box.l, ax.Y(1), box.r, ax.Y(1), alpha(PAL.ink, 0.6), 3, [10, 10]);
-    text(ctx, 'prediction, Nk_BT/a', box.l + 10, ax.Y(1) - 16, alpha(PAL.ink, 0.8), { size: 17 });
+    text(ctx, 'prediction, Nk_{B}T/a', box.l + 10, ax.Y(1) - 16, alpha(PAL.ink, 0.8), { size: 17 });
     if (bins.length > 1) {
       ctx.save(); ctx.strokeStyle = C('force'); ctx.lineWidth = 5; ctx.beginPath();
       bins.forEach((b, i) => { const x = ax.X(-off + (i + 0.5) * BIN), y = ax.Y(Math.min(3, b.avg / Fpred)); if (i) ctx.lineTo(x, y); else ctx.moveTo(x, y); });
@@ -117,7 +119,7 @@ const gauss = () => { let u = 0; while (!u) u = Math.random(); return Math.sqrt(
     const axL = axes(ctx, bl, [0, 40], [0, 10], { nx: 4, ny: 5, xl: 'volume V (L)', yl: 'pressure P (bar)', xc: C('volume'), yc: C('pressure') });
     const axR = axes(ctx, br, [0, 600], [0, 10], { nx: 6, ny: 5, xl: 'temperature T (K)', yl: 'pressure P (bar)', xc: C('temperature'), yc: C('pressure') });
     const faint = alpha(PAL.ink, 0.3);
-    [200, 400, 600].forEach((tt) => { plot(ctx, axL, (x) => P(x, tt), faint, { w: 3, x: [2, 40] }); text(ctx, `${tt} K`, axL.X(40) - 4, axL.Y(P(40, tt)) - 14, alpha(C('temperature'), 0.75), { size: 17, align: 'right' }); });
+    [200, 400, 600].forEach((tt) => { plot(ctx, axL, (x) => P(x, tt), faint, { w: 3, x: [2, 40] }); const lv = tt === 200 ? 3 : 8; text(ctx, `${tt} K`, axL.X(lv) + 10, axL.Y(P(lv, tt)) - 12, alpha(C('temperature'), 0.75), { size: 17 }); });
     [5, 10, 20].forEach((vv) => { plot(ctx, axR, (x) => P(vv, x), faint, { w: 3 }); const xe = Math.min(600, 10 * vv / RL); text(ctx, `${vv} L`, axR.X(xe) + (xe < 600 ? 10 : -4), axR.Y(P(vv, xe)) + (xe < 600 ? 4 : -14), alpha(C('volume'), 0.75), { size: 17, align: xe < 600 ? 'left' : 'right' }); });
     /* the rectangle PV under the point, and its twin on the same isotherm */
     const v2 = v < 20 ? Math.min(40, 2.5 * v) : v / 2.5, p2 = P(v2, t);
@@ -126,7 +128,7 @@ const gauss = () => { let u = 0; while (!u) u = Math.random(); return Math.sqrt(
     plot(ctx, axL, (x) => P(x, t), C('pressure'), { w: 5, x: [2, 40] });
     plot(ctx, axR, (x) => P(v, x), C('pressure'), { w: 5 });
     const lx = axL.X(Math.min(v, v2) / 2), ly = axL.Y(Math.min(p, p2) / 2);
-    text(ctx, `${fmt(pv, 1)} L bar`, lx, ly, C('energy'), { size: 20, weight: 600, align: 'center', bg: true });
+    text(ctx, `${fmt(pv, 1)} L bar`, lx, ly, C('energy'), { size: 20, weight: 600, align: 'center' });
     dL.draw(ctx, axL, C('pressure'));
     dR.draw(ctx, axR, C('pressure'));
     hov.length = 0;

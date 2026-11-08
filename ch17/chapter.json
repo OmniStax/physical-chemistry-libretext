@@ -1,0 +1,915 @@
+{
+ "id": "17",
+ "dir": "ch17",
+ "title": "Boltzmann Factor and Partition Functions",
+ "intro": {
+  "module": "11813",
+  "slug": "17:_Boltzmann_Factor_and_Partition_Functions"
+ },
+ "summary": {
+  "module": "550571",
+  "slug": "17:_Boltzmann_Factor_and_Partition_Functions/17.S:_Boltzmann_Factor_and_Partition_Functions_(Summary)"
+ },
+ "sections": [
+  {
+   "id": "17.1",
+   "module": "2405",
+   "title": "The Boltzmann Factor is used to Approximate the Fraction of Particles in a Large System",
+   "slug": "17:_Boltzmann_Factor_and_Partition_Functions/17.01:_The_Boltzmann_Factor_is_used_to_Approximate_the_Fraction_of_Particles_in_a_Large_System"
+  },
+  {
+   "id": "17.2",
+   "module": "13680",
+   "title": "The Boltzmann Distribution represents a Thermally Equilibrated Distribution",
+   "slug": "17:_Boltzmann_Factor_and_Partition_Functions/17.02:_The_Boltzmann_Distribution_represents_a_Thermally_Equilibrated_Distribution"
+  },
+  {
+   "id": "17.3",
+   "module": "13682",
+   "title": "The Average Ensemble Energy is Equal to the Observed Energy of a System",
+   "slug": "17:_Boltzmann_Factor_and_Partition_Functions/17.03:_The_Average_Ensemble_Energy_is_Equal_to_the_Observed_Energy_of_a_System"
+  },
+  {
+   "id": "17.4",
+   "module": "13683",
+   "title": "Heat Capacity at Constant Volume is the Change in Internal Energy with Temperature",
+   "slug": "17:_Boltzmann_Factor_and_Partition_Functions/17.04:_Heat_Capacity_at_Constant_Volume_is_the_Change_in_Internal_Energy_with_Temperature"
+  },
+  {
+   "id": "17.5",
+   "module": "13684",
+   "title": "Pressure can be Expressed in Terms of the Canonical Partition Function",
+   "slug": "17:_Boltzmann_Factor_and_Partition_Functions/17.05:_Pressure_can_be_Expressed_in_Terms_of_the_Canonical_Partition_Function"
+  },
+  {
+   "id": "17.6",
+   "module": "13685",
+   "title": "The Partition Function of Distinguishable, Independent Molecules is the Product of the Molecular Partition Functions",
+   "slug": "17:_Boltzmann_Factor_and_Partition_Functions/17.06:_The_Partition_Function_of_Distinguishable_Independent_Molecules_is_the_Product_of_the_Molecular_Partition_Functions"
+  },
+  {
+   "id": "17.7",
+   "module": "13689",
+   "title": "Partition Functions of Indistinguishable Molecules Must Avoid Over Counting States",
+   "slug": "17:_Boltzmann_Factor_and_Partition_Functions/17.07:_Partition_Functions_of_Indistinguishable_Molecules_Must_Avoid_Over_Counting_States"
+  },
+  {
+   "id": "17.8",
+   "module": "57665",
+   "title": "Partition Functions can be Decomposed into Partition Functions of Each Degree of Freedom",
+   "slug": "17:_Boltzmann_Factor_and_Partition_Functions/17.08:_Partition_Functions_can_be_Decomposed_into_Partition_Functions_of_Each_Degree_of_Freedom"
+  }
+ ],
+ "variables": [
+  {
+   "sym": "N",
+   "meaning": "the number of classical particles in the system",
+   "section": "17.1"
+  },
+  {
+   "sym": "V",
+   "type": "volume",
+   "meaning": "the volume of the container",
+   "unit": "m³",
+   "section": "17.1"
+  },
+  {
+   "sym": "r_i_vec",
+   "type": "length",
+   "meaning": "the position of particle i, the vector of its three coordinates (x_i, y_i, z_i)",
+   "unit": "m",
+   "section": "17.1"
+  },
+  {
+   "sym": "v_i_vec",
+   "type": "velocity",
+   "meaning": "the velocity of particle i, the time derivative of its position",
+   "unit": "m/s",
+   "section": "17.1"
+  },
+  {
+   "sym": "t",
+   "type": "time",
+   "meaning": "the time",
+   "unit": "s",
+   "section": "17.1"
+  },
+  {
+   "sym": "F_i",
+   "concept": "force-field",
+   "type": "force",
+   "meaning": "the force on particle i, a function of all the particle positions",
+   "unit": "N",
+   "section": "17.1"
+  },
+  {
+   "sym": "m_i",
+   "type": "mass",
+   "meaning": "the mass of particle i",
+   "unit": "kg",
+   "section": "17.1"
+  },
+  {
+   "sym": "k",
+   "concept": "boltzmann-constant",
+   "meaning": "Boltzmann's constant, written k",
+   "unit": "J/K",
+   "section": "17.1"
+  },
+  {
+   "sym": "k_B",
+   "concept": "boltzmann-constant",
+   "meaning": "Boltzmann's constant",
+   "unit": "J/K",
+   "section": "17.1"
+  },
+  {
+   "sym": "T",
+   "type": "temperature",
+   "meaning": "the absolute temperature",
+   "unit": "K",
+   "section": "17.1"
+  },
+  {
+   "sym": "E_thermal",
+   "concept": "thermal-energy",
+   "meaning": "the thermal energy of the system, kT",
+   "unit": "J",
+   "section": "17.1"
+  },
+  {
+   "sym": "E_i",
+   "type": "energy",
+   "meaning": "the energy of state i",
+   "unit": "J",
+   "section": "17.1"
+  },
+  {
+   "sym": "beta",
+   "concept": "thermodynamic-beta",
+   "meaning": "1/kT, the reciprocal of the thermal energy",
+   "unit": "J⁻¹",
+   "section": "17.1"
+  },
+  {
+   "sym": "N",
+   "meaning": "the number of particles in the system",
+   "section": "17.2"
+  },
+  {
+   "sym": "p_N",
+   "meaning": "the probability of the system, W_N p_i",
+   "section": "17.2"
+  },
+  {
+   "sym": "W_N",
+   "meaning": "the total number of different possible arrangements of the N particles in the system",
+   "section": "17.2"
+  },
+  {
+   "sym": "p_i",
+   "meaning": "the probability of each separate arrangement",
+   "section": "17.2"
+  },
+  {
+   "sym": "V",
+   "type": "volume",
+   "meaning": "the volume of each box of the canonical ensemble",
+   "unit": "m³",
+   "section": "17.2"
+  },
+  {
+   "sym": "T",
+   "type": "temperature",
+   "meaning": "the temperature of the ensemble",
+   "unit": "K",
+   "section": "17.2"
+  },
+  {
+   "sym": "E_j",
+   "type": "energy",
+   "meaning": "the energy of state j of the system",
+   "unit": "J",
+   "section": "17.2"
+  },
+  {
+   "sym": "A",
+   "meaning": "the number of systems in the ensemble",
+   "section": "17.2"
+  },
+  {
+   "sym": "a_j",
+   "concept": "occupation-number",
+   "meaning": "the number of systems of the ensemble in quantum state j",
+   "section": "17.2"
+  },
+  {
+   "sym": "W",
+   "concept": "distribution-weight",
+   "meaning": "the number of microstates of the distribution a_1, a_2, …, A!/(a_1!a_2!…)",
+   "section": "17.2"
+  },
+  {
+   "sym": "P_j",
+   "concept": "boltzmann-probability",
+   "meaning": "the probability that a system is in the jth quantum state",
+   "section": "17.2"
+  },
+  {
+   "sym": "M",
+   "meaning": "any property averaged over the ensemble, ⟨M⟩",
+   "section": "17.2"
+  },
+  {
+   "sym": "M_j",
+   "meaning": "the value of the property M in state j",
+   "section": "17.2"
+  },
+  {
+   "sym": "E_total",
+   "type": "energy",
+   "meaning": "the total energy of the ensemble",
+   "unit": "J",
+   "section": "17.2"
+  },
+  {
+   "sym": "e_j",
+   "type": "energy",
+   "meaning": "the energy of the jth quantum state",
+   "unit": "J",
+   "section": "17.2"
+  },
+  {
+   "sym": "x",
+   "meaning": "the number whose factorial Stirling's approximation estimates",
+   "section": "17.2"
+  },
+  {
+   "sym": "alpha",
+   "meaning": "the undetermined multiplier of the constraint on the number of systems",
+   "section": "17.2"
+  },
+  {
+   "sym": "beta",
+   "concept": "thermodynamic-beta",
+   "meaning": "1/kT, the reciprocal of the thermal energy",
+   "unit": "J⁻¹",
+   "section": "17.2"
+  },
+  {
+   "sym": "k",
+   "concept": "boltzmann-constant",
+   "meaning": "Boltzmann's constant, written k",
+   "unit": "J/K",
+   "section": "17.2"
+  },
+  {
+   "sym": "k_B",
+   "concept": "boltzmann-constant",
+   "meaning": "Boltzmann's constant",
+   "unit": "J/K",
+   "section": "17.2"
+  },
+  {
+   "sym": "q_mol",
+   "concept": "molecular-partition-function",
+   "meaning": "the molecular partition function, the sum of e^(−βe_j) over the states of a molecule",
+   "section": "17.2"
+  },
+  {
+   "sym": "Q_sys",
+   "concept": "canonical-partition-function",
+   "meaning": "the partition function of the ensemble, Q(N, V, T)",
+   "section": "17.2"
+  },
+  {
+   "sym": "q_i",
+   "concept": "molecular-partition-function",
+   "meaning": "the molecular partition function of molecule i, a sum over the states accessible to that molecule",
+   "section": "17.2"
+  },
+  {
+   "sym": "N",
+   "meaning": "the number of molecules in the collection",
+   "section": "17.3"
+  },
+  {
+   "sym": "n_i",
+   "meaning": "the number of molecules with energy E_i",
+   "section": "17.3"
+  },
+  {
+   "sym": "E_i",
+   "type": "energy",
+   "meaning": "the energy of state i",
+   "unit": "J",
+   "section": "17.3"
+  },
+  {
+   "sym": "P_i",
+   "concept": "boltzmann-probability",
+   "meaning": "the probability of finding a molecule with energy E_i, the fraction n_i/N",
+   "section": "17.3"
+  },
+  {
+   "sym": "k",
+   "concept": "boltzmann-constant",
+   "meaning": "Boltzmann's constant, written k",
+   "unit": "J/K",
+   "section": "17.3"
+  },
+  {
+   "sym": "T",
+   "type": "temperature",
+   "meaning": "the temperature",
+   "unit": "K",
+   "section": "17.3"
+  },
+  {
+   "sym": "Q_sys",
+   "concept": "canonical-partition-function",
+   "meaning": "the partition function, the sum of e^(−E_i/kT) over the states",
+   "section": "17.3"
+  },
+  {
+   "sym": "E_avg",
+   "concept": "average-ensemble-energy",
+   "meaning": "the average energy, Σ_i E_iP_i",
+   "unit": "J",
+   "section": "17.3"
+  },
+  {
+   "sym": "beta",
+   "concept": "thermodynamic-beta",
+   "meaning": "1/kT, the reciprocal of the thermal energy",
+   "unit": "J⁻¹",
+   "section": "17.3"
+  },
+  {
+   "sym": "Z",
+   "concept": "canonical-partition-function",
+   "meaning": "another notation for the partition function Q",
+   "section": "17.3"
+  },
+  {
+   "sym": "E_bar",
+   "concept": "average-ensemble-energy",
+   "meaning": "another notation for the average energy ⟨E⟩",
+   "unit": "J",
+   "section": "17.3"
+  },
+  {
+   "sym": "C_V",
+   "concept": "constant-volume-heat-capacity",
+   "meaning": "the heat capacity at constant volume",
+   "unit": "J/K",
+   "section": "17.4"
+  },
+  {
+   "sym": "U",
+   "concept": "internal-energy",
+   "meaning": "the internal energy of the system",
+   "unit": "J",
+   "section": "17.4"
+  },
+  {
+   "sym": "T",
+   "type": "temperature",
+   "meaning": "the temperature",
+   "unit": "K",
+   "section": "17.4"
+  },
+  {
+   "sym": "N",
+   "meaning": "the number of particles; in Einstein's model the number of atoms in the lattice",
+   "section": "17.4"
+  },
+  {
+   "sym": "V",
+   "type": "volume",
+   "meaning": "the volume of the system",
+   "unit": "m³",
+   "section": "17.4"
+  },
+  {
+   "sym": "E",
+   "concept": "average-ensemble-energy",
+   "meaning": "the energy of the system, −∂ln Q/∂β",
+   "unit": "J",
+   "section": "17.4"
+  },
+  {
+   "sym": "Q_sys",
+   "concept": "canonical-partition-function",
+   "meaning": "the partition function of the system, Q(N, V, β)",
+   "section": "17.4"
+  },
+  {
+   "sym": "beta",
+   "concept": "thermodynamic-beta",
+   "meaning": "1/kT, the reciprocal of the thermal energy",
+   "unit": "J⁻¹",
+   "section": "17.4"
+  },
+  {
+   "sym": "k",
+   "concept": "boltzmann-constant",
+   "meaning": "Boltzmann's constant, written k",
+   "unit": "J/K",
+   "section": "17.4"
+  },
+  {
+   "sym": "R",
+   "concept": "ideal-gas-constant",
+   "meaning": "the gas constant",
+   "unit": "J K⁻¹ mol⁻¹",
+   "section": "17.4"
+  },
+  {
+   "sym": "n_mol",
+   "type": "amount",
+   "meaning": "the amount of substance in moles",
+   "unit": "mol",
+   "section": "17.4"
+  },
+  {
+   "sym": "theta_E",
+   "concept": "einstein-temperature",
+   "meaning": "the Einstein temperature, hν/k",
+   "unit": "K",
+   "section": "17.4"
+  },
+  {
+   "sym": "h",
+   "concept": "plancks-constant",
+   "meaning": "Planck's constant",
+   "unit": "J s",
+   "section": "17.4"
+  },
+  {
+   "sym": "nu",
+   "concept": "oscillator-frequency",
+   "meaning": "the oscillator frequency of the atoms inside the solid",
+   "unit": "Hz",
+   "section": "17.4"
+  },
+  {
+   "sym": "kappa",
+   "type": "force-constant",
+   "meaning": "the force constant of the oscillator",
+   "unit": "N/m",
+   "section": "17.4"
+  },
+  {
+   "sym": "mu",
+   "type": "mass",
+   "meaning": "the reduced mass of the oscillator",
+   "unit": "kg",
+   "section": "17.4"
+  },
+  {
+   "sym": "P_avg",
+   "type": "pressure",
+   "meaning": "the average pressure",
+   "unit": "Pa",
+   "section": "17.5"
+  },
+  {
+   "sym": "P_i",
+   "concept": "boltzmann-probability",
+   "meaning": "the probability of state i, e^(−E_i/kT)/Q",
+   "section": "17.5"
+  },
+  {
+   "sym": "P_i_press",
+   "concept": "state-pressure",
+   "meaning": "the pressure of the system in state i, −(∂E_i/∂V)_N",
+   "unit": "Pa",
+   "section": "17.5"
+  },
+  {
+   "sym": "E_i",
+   "type": "energy",
+   "meaning": "the energy of state i, E_i(N, V)",
+   "unit": "J",
+   "section": "17.5"
+  },
+  {
+   "sym": "N",
+   "meaning": "the number of particles",
+   "section": "17.5"
+  },
+  {
+   "sym": "V",
+   "type": "volume",
+   "meaning": "the volume",
+   "unit": "m³",
+   "section": "17.5"
+  },
+  {
+   "sym": "T",
+   "type": "temperature",
+   "meaning": "the temperature",
+   "unit": "K",
+   "section": "17.5"
+  },
+  {
+   "sym": "k",
+   "concept": "boltzmann-constant",
+   "meaning": "Boltzmann's constant, written k",
+   "unit": "J/K",
+   "section": "17.5"
+  },
+  {
+   "sym": "beta",
+   "concept": "thermodynamic-beta",
+   "meaning": "1/kT, the reciprocal of the thermal energy",
+   "unit": "J⁻¹",
+   "section": "17.5"
+  },
+  {
+   "sym": "Q_sys",
+   "concept": "canonical-partition-function",
+   "meaning": "the canonical partition function Q(N, V, T)",
+   "section": "17.5"
+  },
+  {
+   "sym": "q_trans",
+   "concept": "translational-partition-function",
+   "meaning": "the translational partition function q(V, β) of one molecule",
+   "section": "17.5"
+  },
+  {
+   "sym": "m",
+   "type": "mass",
+   "meaning": "the mass of a gas particle",
+   "unit": "kg",
+   "section": "17.5"
+  },
+  {
+   "sym": "h",
+   "concept": "plancks-constant",
+   "meaning": "Planck's constant",
+   "unit": "J s",
+   "section": "17.5"
+  },
+  {
+   "sym": "P",
+   "concept": "pressure",
+   "meaning": "the pressure of the gas",
+   "unit": "Pa",
+   "section": "17.5"
+  },
+  {
+   "sym": "n_mol",
+   "type": "amount",
+   "meaning": "the number of moles",
+   "unit": "mol",
+   "section": "17.5"
+  },
+  {
+   "sym": "R",
+   "concept": "ideal-gas-constant",
+   "meaning": "the universal gas constant, N_Ak",
+   "unit": "J K⁻¹ mol⁻¹",
+   "section": "17.5"
+  },
+  {
+   "sym": "N_A",
+   "meaning": "Avogadro's number",
+   "section": "17.5"
+  },
+  {
+   "sym": "F",
+   "type": "force",
+   "meaning": "the magnitude of the force the piston exerts on the system, and the system on the piston",
+   "unit": "N",
+   "section": "17.5"
+  },
+  {
+   "sym": "z",
+   "type": "length",
+   "meaning": "the position along the axis the piston pushes in",
+   "unit": "m",
+   "section": "17.5"
+  },
+  {
+   "sym": "E",
+   "type": "energy",
+   "meaning": "the energy of the system",
+   "unit": "J",
+   "section": "17.5"
+  },
+  {
+   "sym": "A",
+   "meaning": "the area of the piston",
+   "unit": "m²",
+   "section": "17.5",
+   "redefines": true
+  },
+  {
+   "sym": "x",
+   "meaning": "a point of phase space, the positions and momenta of all the particles",
+   "section": "17.5",
+   "redefines": true
+  },
+  {
+   "sym": "E_cal",
+   "type": "energy",
+   "meaning": "the mechanical energy at the phase-space point x, 𝓔(x)",
+   "unit": "J",
+   "section": "17.5"
+  },
+  {
+   "sym": "C_N",
+   "meaning": "the constant that normalizes the phase-space integral of the partition function",
+   "section": "17.5"
+  },
+  {
+   "sym": "p_i_vec",
+   "type": "momentum",
+   "meaning": "the momentum of particle i",
+   "unit": "kg·m/s",
+   "section": "17.5"
+  },
+  {
+   "sym": "E_tot",
+   "type": "energy",
+   "meaning": "the total energy of the system, the sum of the energies of its molecules",
+   "unit": "J",
+   "section": "17.6"
+  },
+  {
+   "sym": "eps_i",
+   "type": "energy",
+   "meaning": "the energy of a molecule in state i; ε_i^a is molecule a's",
+   "unit": "J",
+   "section": "17.6"
+  },
+  {
+   "sym": "E_l",
+   "type": "energy",
+   "meaning": "the energy of the system in state l, the sum of the molecules' energies",
+   "unit": "J",
+   "section": "17.6"
+  },
+  {
+   "sym": "N",
+   "meaning": "the number of molecules",
+   "section": "17.6"
+  },
+  {
+   "sym": "V",
+   "type": "volume",
+   "meaning": "the volume",
+   "unit": "m³",
+   "section": "17.6"
+  },
+  {
+   "sym": "beta",
+   "concept": "thermodynamic-beta",
+   "meaning": "1/kT, the reciprocal of the thermal energy",
+   "unit": "J⁻¹",
+   "section": "17.6"
+  },
+  {
+   "sym": "Q_sys",
+   "concept": "canonical-partition-function",
+   "meaning": "the partition function of the system, Q(N, V, β)",
+   "section": "17.6"
+  },
+  {
+   "sym": "q_mol",
+   "concept": "molecular-partition-function",
+   "meaning": "the molecular partition function q(V, β) shared by every molecule",
+   "section": "17.6"
+  },
+  {
+   "sym": "q_i",
+   "concept": "molecular-partition-function",
+   "meaning": "the partition function of molecule i",
+   "section": "17.6"
+  },
+  {
+   "sym": "q_a",
+   "concept": "molecular-partition-function",
+   "meaning": "the partition function of molecule a",
+   "section": "17.6"
+  },
+  {
+   "sym": "q_b",
+   "concept": "molecular-partition-function",
+   "meaning": "the partition function of molecule b",
+   "section": "17.6"
+  },
+  {
+   "sym": "q_c",
+   "concept": "molecular-partition-function",
+   "meaning": "the partition function of molecule c",
+   "section": "17.6"
+  },
+  {
+   "sym": "Q_sys",
+   "concept": "canonical-partition-function",
+   "meaning": "the partition function, the sum of e^(−βE_i) over the states of the system",
+   "section": "17.7"
+  },
+  {
+   "sym": "E_i",
+   "type": "energy",
+   "meaning": "the energy of state i of the system",
+   "unit": "J",
+   "section": "17.7"
+  },
+  {
+   "sym": "beta",
+   "concept": "thermodynamic-beta",
+   "meaning": "1/kT, the reciprocal of the thermal energy",
+   "unit": "J⁻¹",
+   "section": "17.7"
+  },
+  {
+   "sym": "E_1",
+   "type": "energy",
+   "meaning": "the lower energy level, E_1 = 0",
+   "unit": "J",
+   "section": "17.7"
+  },
+  {
+   "sym": "E_2",
+   "type": "energy",
+   "meaning": "the upper energy level, E_2 = ε",
+   "unit": "J",
+   "section": "17.7"
+  },
+  {
+   "sym": "epsilon",
+   "type": "energy",
+   "meaning": "the energy of the upper level of the two-level system",
+   "unit": "J",
+   "section": "17.7"
+  },
+  {
+   "sym": "Q_dist",
+   "concept": "canonical-partition-function",
+   "meaning": "the partition function of two distinguishable particles on two levels",
+   "section": "17.7"
+  },
+  {
+   "sym": "q_mol",
+   "concept": "molecular-partition-function",
+   "meaning": "the molecular partition function",
+   "section": "17.7"
+  },
+  {
+   "sym": "N",
+   "meaning": "the number of molecules",
+   "section": "17.7"
+  },
+  {
+   "sym": "V",
+   "type": "volume",
+   "meaning": "the volume",
+   "unit": "m³",
+   "section": "17.7"
+  },
+  {
+   "sym": "Q_sys",
+   "concept": "canonical-partition-function",
+   "meaning": "the partition function of N indistinguishable, independent molecules",
+   "section": "17.8"
+  },
+  {
+   "sym": "E_i",
+   "type": "energy",
+   "meaning": "the energy of state i of the system",
+   "unit": "J",
+   "section": "17.8"
+  },
+  {
+   "sym": "N",
+   "meaning": "the number of molecules",
+   "section": "17.8"
+  },
+  {
+   "sym": "beta",
+   "concept": "thermodynamic-beta",
+   "meaning": "1/kT, the reciprocal of the thermal energy",
+   "unit": "J⁻¹",
+   "section": "17.8"
+  },
+  {
+   "sym": "E_avg",
+   "concept": "average-ensemble-energy",
+   "meaning": "the average energy of the system",
+   "unit": "J",
+   "section": "17.8"
+  },
+  {
+   "sym": "k",
+   "concept": "boltzmann-constant",
+   "meaning": "Boltzmann's constant, written k",
+   "unit": "J/K",
+   "section": "17.8"
+  },
+  {
+   "sym": "T",
+   "type": "temperature",
+   "meaning": "the temperature",
+   "unit": "K",
+   "section": "17.8"
+  },
+  {
+   "sym": "q_mol",
+   "concept": "molecular-partition-function",
+   "meaning": "the molecular partition function q(V, T)",
+   "section": "17.8"
+  },
+  {
+   "sym": "eps_i",
+   "type": "energy",
+   "meaning": "the energy of state i of a particle",
+   "unit": "J",
+   "section": "17.8"
+  },
+  {
+   "sym": "eps_avg",
+   "concept": "average-molecular-energy",
+   "meaning": "the average energy of a single particle",
+   "unit": "J",
+   "section": "17.8"
+  },
+  {
+   "sym": "pi_i",
+   "concept": "boltzmann-probability",
+   "meaning": "the probability that a particle is in state i",
+   "section": "17.8"
+  },
+  {
+   "sym": "V",
+   "type": "volume",
+   "meaning": "the volume",
+   "unit": "m³",
+   "section": "17.8"
+  },
+  {
+   "sym": "eps_trans",
+   "type": "energy",
+   "meaning": "the translational energy of the molecule",
+   "unit": "J",
+   "section": "17.8"
+  },
+  {
+   "sym": "eps_rot",
+   "type": "energy",
+   "meaning": "the rotational energy of the molecule",
+   "unit": "J",
+   "section": "17.8"
+  },
+  {
+   "sym": "eps_vib",
+   "type": "energy",
+   "meaning": "the vibrational energy of the molecule",
+   "unit": "J",
+   "section": "17.8"
+  },
+  {
+   "sym": "eps_elec",
+   "type": "energy",
+   "meaning": "the electronic energy of the molecule",
+   "unit": "J",
+   "section": "17.8"
+  },
+  {
+   "sym": "q_trans",
+   "concept": "translational-partition-function",
+   "meaning": "the translational partition function",
+   "section": "17.8"
+  },
+  {
+   "sym": "q_rot",
+   "type": "partition-function",
+   "meaning": "the rotational partition function",
+   "section": "17.8"
+  },
+  {
+   "sym": "q_vib",
+   "type": "partition-function",
+   "meaning": "the vibrational partition function, the sum of e^(−ε_i/kT) over the vibrational states",
+   "section": "17.8"
+  },
+  {
+   "sym": "q_elec",
+   "type": "partition-function",
+   "meaning": "the electronic partition function",
+   "section": "17.8"
+  },
+  {
+   "sym": "eps_vib_avg",
+   "type": "energy",
+   "meaning": "the average vibrational energy",
+   "unit": "J",
+   "section": "17.8"
+  }
+ ]
+}

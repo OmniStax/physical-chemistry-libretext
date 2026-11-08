@@ -789,5 +789,58 @@
       "molar-volume",
       "amount"
     ]
+  },
+  "ch17": {
+    "symbols": [
+      "Q_sys",
+      "q_mol",
+      "q_i",
+      "q_a",
+      "q_b",
+      "q_c",
+      "q_trans",
+      "q_rot",
+      "q_vib",
+      "q_elec",
+      "Q_dist",
+      "W",
+      "W_N",
+      "p_N",
+      "p_i",
+      "P_j",
+      "P_i",
+      "M_j",
+      "n_i",
+      "N_A",
+      "C_N",
+      "pi_i",
+      "P_i_press",
+      "P_avg",
+      "e_j",
+      "E_j",
+      "E_total",
+      "E_thermal",
+      "E_avg",
+      "E_bar",
+      "E_cal",
+      "eps_avg",
+      "eps_trans",
+      "eps_rot",
+      "eps_vib",
+      "eps_elec",
+      "eps_vib_avg",
+      "C_V",
+      "U",
+      "theta_E",
+      "kappa",
+      "F_i",
+      "r_i_vec",
+      "v_i_vec",
+      "p_i_vec"
+    ],
+    "types": [
+      "heat-capacity",
+      "partition-function"
+    ]
   }
 }

@@ -1,0 +1,22 @@
+<section id="virial-form">
+<h2>The van der Waals equation as a virial series</h2>
+<p>The <span data-concept="van-der-waals-equation">van der Waals equation</span> can be written as:</p>
+<figure class="dv" id="drv-vdw-virial"></figure>
+</section>
+
+<section id="molecular-parameters">
+<h2>a and b from molecular parameters</h2>
+<p>Using <span data-concept="hard-sphere-attractive-potential">a combination of the hard sphere model and the Lennard-Jones potential</span>, we obtain:</p>
+$$ \ku(\kr) = \begin{cases} \infty & \kr \leq \ksigmahs \\ -\dfrac{C_6}{\kr^6} & \kr > \ksigmahs \end{cases} \tag{16.7.1} $$
+<p>We can write the <span data-concept="second-virial-coefficient">second Virial coefficient</span> as</p>
+$$ \kBtwo(\kT) = \dfrac{2}{3} \pi N_0 \ksigmahs^3 \left[ 1 - \dfrac{C_6}{3 k_B \kT \ksigmahs^6} \right] \tag{16.7.2} $$<sup class="fn" data-note="c-factor-3"></sup>
+<p>Let us introduce to simplifying variables</p>
+$$ \begin{aligned} \kbvdw &= \dfrac{2}{3} \pi N_0 \ksigmahs^3 \\ a &= \dfrac{2 \pi N_0^2 C_6}{9 \ksigmahs^3} \end{aligned} \tag{16.7.3} $$<sup class="fn" data-note="c-factor-9"></sup>
+<p>In which the <span data-concept="second-virial-coefficient">second Virial coefficient</span> becomes:</p>
+$$ \kBtwo(\kT) = \kbvdw - \dfrac{a}{R\kT} \tag{16.7.4} $$
+<p><span data-concept="molecular-vdw-constants">From these equations, we can see that $a$ is directly proportional to $c_6$</span>, <span data-concept="dispersion-coefficient">the intermolecular attraction between particles with a force proportional to $\kr^{-6}$</span>.<sup class="fn" data-note="c-force"></sup> Likewise, $\kbvdw$ is equivalent to four times the volume of the particle. In other words, the van der Waals equations assumes the <span data-concept="hard-sphere-potential">hard sphere</span> model at small distances and weak interactions (attractive forces) at larger distances.</p>
+<figure class="dv" id="drv-molecular-vdw"></figure>
+<figure class="sim" id="sim-b2-potential">
+  <div class="sim-head"><span class="eyebrow">Sim</span><span>The hard core of argon gives $\kbvdw$ and the attractive tail pulls $\kBtwo$ down. Lower <span data-type="temperature">the temperature</span> and the series (16.7.2) drifts away from the full integral.</span></div>
+</figure>
+</section>

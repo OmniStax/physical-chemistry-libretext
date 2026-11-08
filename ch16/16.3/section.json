@@ -1,0 +1,447 @@
+{
+ "id": "16.3",
+ "module": "13658",
+ "chapter": "16",
+ "title": "A Cubic Equation of State",
+ "short": "A cubic equation of state",
+ "lead": "Below a certain temperature the van der Waals isotherms of a gas turn S-shaped. A horizontal tie line repairs them where gas and liquid coexist, the loop closes at the critical point, and the cubic's three roots tell liquid, vapor and the unphysical middle apart.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "Adapted from Jerry LaRue (Chapman University) and Michael Adewumi (The Pennsylvania State University). Figure 16.3.1 repeats the ideal isotherms of Figure 16.1.1 and is folded into it; Figure 16.3.4 is the generalized compressibility chart of Figure 16.4.1 and is folded into that figure.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book prints no exercises for this section; both questions and their solutions were written by AI, with Figure 16.3.2's CO₂ constants (a = 3.66 L² bar mol⁻², b = 0.0429 L/mol) and R = 8.314 J K⁻¹ mol⁻¹, the root counts checked by solving the cubic. Numeric answers accept a 2% tolerance.",
+ "figures": [
+  {
+   "id": "sim-vdw-isotherms",
+   "kind": "sim",
+   "number": "16.3.2",
+   "originals": [
+    "/media/ch16/79136-722px-Vanderwaals_equation_of_state.png"
+   ],
+   "widths": [
+    588
+   ],
+   "original_caption": "Different isotherms (curves of constant temperature) of the van der Waals equation of state using parameters $a$ and $b$ computed for carbon dioxide. The dashed line from A to B is drawn in accordance with Maxwell's equal area rule. The carbon dioxide molecule (CO₂) has $p_C$ = 7.37 MPa and $T_C$ = 304.1 K = 31 ˚C , which gives a = 0.366 $m^6$ Pa and b = 42.9 $10^{-6}$ $m^3$. The critical pressure is at 73.7 bar = 7370 kPa.",
+   "draws": [
+    "pressure",
+    "molar-volume",
+    "temperature",
+    "energy"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "sim-cubic-roots",
+   "kind": "sim",
+   "number": "16.3.3",
+   "originals": [
+    "/media/ch16/344851-figure1001.gif"
+   ],
+   "original_caption": "Multiple Roots in Cubic EOS",
+   "draws": [
+    "pressure",
+    "molar-volume",
+    "temperature"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "isotherms",
+   "concept": "van-der-waals-loop",
+   "verb": "introduces"
+  },
+  {
+   "span": "isotherms",
+   "concept": "tie-line",
+   "verb": "introduces"
+  },
+  {
+   "span": "isotherms",
+   "concept": "maxwell-construction",
+   "verb": "introduces"
+  },
+  {
+   "span": "isotherms",
+   "concept": "isotherm",
+   "verb": "reinforces"
+  },
+  {
+   "span": "isotherms",
+   "concept": "van-der-waals-equation",
+   "verb": "reinforces"
+  },
+  {
+   "span": "critical-point",
+   "concept": "critical-point",
+   "verb": "introduces"
+  },
+  {
+   "span": "critical-point",
+   "concept": "critical-temperature",
+   "verb": "introduces"
+  },
+  {
+   "span": "critical-point",
+   "concept": "supercritical-fluid",
+   "verb": "introduces"
+  },
+  {
+   "span": "critical-point",
+   "concept": "critical-point-conditions",
+   "verb": "introduces"
+  },
+  {
+   "span": "critical-point",
+   "concept": "critical-volume",
+   "verb": "introduces"
+  },
+  {
+   "span": "critical-point",
+   "concept": "critical-pressure",
+   "verb": "introduces"
+  },
+  {
+   "span": "critical-point",
+   "concept": "vdw-critical-constants",
+   "verb": "introduces"
+  },
+  {
+   "span": "critical-point",
+   "concept": "cubic-roots",
+   "verb": "introduces"
+  },
+  {
+   "span": "critical-point",
+   "concept": "coexistence-region",
+   "verb": "introduces"
+  },
+  {
+   "span": "critical-point",
+   "concept": "compressibility-chart",
+   "verb": "introduces"
+  },
+  {
+   "span": "critical-point",
+   "concept": "cubic-equation-of-state",
+   "verb": "uses"
+  },
+  {
+   "span": "critical-point",
+   "concept": "compressibility-factor",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "fig:16.3.2",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "critical-point",
+   "prompt": "<p>For CO₂, $\\ka = 0.366$ m⁶ Pa mol⁻² and $\\kbvdw = 42.9\\times10^{-6}$ m³ mol⁻¹. Find (a) the critical temperature and (b) the critical pressure that the van der Waals equation predicts. ($\\kR = 8.314$ J K⁻¹ mol⁻¹.)</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 304.0,
+      "unit": "K",
+      "hint": "Use $\\kR\\kTc = 8\\ka/27\\kbvdw$."
+     },
+     {
+      "part": "b",
+      "value": 73.7,
+      "unit": "bar",
+      "hint": "Use $\\kPc = \\ka/27\\kbvdw^2$, then 1 bar = 10⁵ Pa."
+     }
+    ],
+    "solution": "<p>(a) $\\kTc = 8\\ka/(27\\kR\\kbvdw) = 8(0.366)/[27(8.314)(42.9\\times10^{-6})] = 2.928/(9.630\\times10^{-3}) = 304.0$ K, the 31 °C of Figure 16.3.2. (b) $\\kPc = \\ka/(27\\kbvdw^2) = 0.366/[27(42.9\\times10^{-6})^2] = 7.37\\times10^{6}$ Pa $= 73.7$ bar.</p>"
+   }
+  },
+  {
+   "id": "a2",
+   "source_id": "fig:16.3.3",
+   "kind": "exercise",
+   "bloom": "Analyze",
+   "place": {
+    "at": "end"
+   },
+   "cite": "critical-point",
+   "prompt": "<p>The van der Waals isotherm of CO₂ at 10 °C dips to 46.1 bar and peaks at 58.7 bar; the critical temperature is 31 °C. How many real roots does the cubic in $\\kVbar$ have (a) at 10 °C and 30 bar, (b) at 10 °C and 50 bar, (c) at 10 °C and 70 bar, and (d) at 50 °C and 70 bar?</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 1,
+      "tol": 0.01
+     },
+     {
+      "part": "b",
+      "value": 3,
+      "tol": 0.01
+     },
+     {
+      "part": "c",
+      "value": 1,
+      "tol": 0.01
+     },
+     {
+      "part": "d",
+      "value": 1,
+      "tol": 0.01
+     }
+    ],
+    "solution": "<p>An isobar cuts a subcritical isotherm three times only between the loop's dip and peak. (a) 30 bar is below the dip, so the isobar cuts once, on the vapor side ($\\kVbar = 0.653$ L/mol); the other two roots are a complex pair. (b) 50 bar lies between 46.1 and 58.7 bar: three real roots, 0.0873, 0.116 and 0.311 L/mol (liquid, meaningless, vapor). (c) 70 bar is above the peak: one real root, the liquid at 0.0778 L/mol. (d) 50 °C is above the critical temperature, so every isobar cuts the isotherm once: one real root, 0.257 L/mol.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "vdw-critical-constants"
+  },
+  {
+   "exercise": "a1",
+   "concept": "critical-temperature"
+  },
+  {
+   "exercise": "a1",
+   "concept": "critical-pressure"
+  },
+  {
+   "exercise": "a2",
+   "concept": "cubic-roots"
+  },
+  {
+   "exercise": "a2",
+   "concept": "van-der-waals-loop"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-units",
+   "kind": "correction",
+   "figure": "sim-vdw-isotherms",
+   "html": "The constants are per mole: $a = 0.366$ m⁶ Pa mol⁻² and $b = 42.9\\times10^{-6}$ m³ mol⁻¹."
+  },
+  {
+   "id": "c-pb-prime",
+   "kind": "correction",
+   "html": "The loop's dip is A′ and its peak B (Figure 16.3.3), so the range of metastability is $P_{A'} < P < P_B$, the bound the next sentences use."
+  },
+  {
+   "id": "c-standing-katz",
+   "kind": "correction",
+   "html": "Figure 16.3.4 is a generalized chart of $Z$ against reduced pressure at several reduced temperatures, the chart of Figure 16.4.1, not Standing and Katz's natural-gas chart against pressure."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "vdw-critical-constants",
+   "what": "the van der Waals critical constants",
+   "source": "Physical Chemistry (LibreTexts), 16.3 A Cubic Equation of State",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kP = \\dfrac{\\knmol\\kR\\kT}{\\kV - \\knmol\\kbvdw} - \\dfrac{\\ka\\knmol^2}{\\kV^2}",
+       "src": "(16.2.1)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{d}{\\left(\\frac{\\partial \\kP}{\\partial \\kV}\\right)_{\\kTc}} = 0",
+      "src": "16.3"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{t}{-\\dfrac{\\knmol\\kR\\kTc}{\\left( \\kVc - \\knmol\\kbvdw \\right)^2}} \\mk{a}{+ \\dfrac{2 \\ka\\knmol^2}{\\kVc^3}} = 0",
+       "uses": [
+        0
+       ],
+       "map": {
+        "d": [
+         "t",
+         "a"
+        ]
+       },
+       "cap": "Differentiating the van der Waals equation with respect to $\\kV$ at constant temperature, then setting $\\kT = \\kTc$ and $\\kV = \\kVc$."
+      }
+     ],
+     "src": "16.3"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\kP = \\dfrac{\\knmol\\kR\\kT}{\\kV - \\knmol\\kbvdw} - \\dfrac{\\ka\\knmol^2}{\\kV^2}",
+       "src": "(16.2.1)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{d}{\\left(\\frac{\\partial^2 \\kP}{\\partial \\kV^2}\\right)_{\\kTc}} = 0",
+      "src": "16.3"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{t}{\\dfrac{2\\knmol\\kR\\kTc}{\\left(\\kVc - \\knmol\\kbvdw \\right)^3}} \\mk{a}{- \\dfrac{6\\ka\\knmol^2}{\\kVc^4}} = 0",
+       "uses": [
+        0
+       ],
+       "map": {
+        "d": [
+         "t",
+         "a"
+        ]
+       },
+       "cap": "Differentiating a second time."
+      }
+     ],
+     "src": "16.3"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "step": 1
+      }
+     ],
+     "then": {
+      "tex": "\\mk{t}{-\\dfrac{\\knmol\\kR\\kTc}{\\left( \\kVc - \\knmol\\kbvdw \\right)^2}} \\mk{a}{+ \\dfrac{2 \\ka\\knmol^2}{\\kVc^3}} = 0"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{t}{\\dfrac{\\knmol\\kR\\kTc}{\\left( \\kVc - \\knmol\\kbvdw \\right)^2}} = \\mk{a}{\\dfrac{2\\ka\\knmol^2}{\\kVc^3}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{t}{\\dfrac{\\kVc - \\knmol\\kbvdw}{2}} = \\mk{a}{\\dfrac{\\kVc}{3}}",
+       "uses": [
+        1
+       ],
+       "cap": "Dividing by the second condition written as $\\frac{2nRT_c}{(V_c - nb)^3} = \\frac{6an^2}{V_c^4}$ cancels $\\knmol\\kR\\kTc$ on the left and $\\ka\\knmol^2$ on the right."
+      },
+      {
+       "tex": "\\mk{t}{3\\kVc - 3\\knmol\\kbvdw} = \\mk{a}{2\\kVc}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{t}{\\kVc} = \\mk{a}{3\\knmol\\kbvdw}",
+       "uses": []
+      }
+     ],
+     "src": "16.3"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "step": 2
+      }
+     ],
+     "then": {
+      "tex": "\\mk{t}{-\\dfrac{\\knmol\\kR\\kTc}{\\left( \\kVc - \\knmol\\kbvdw \\right)^2}} \\mk{a}{+ \\dfrac{2 \\ka\\knmol^2}{\\kVc^3}} = 0"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{t}{\\dfrac{\\knmol\\kR\\kTc}{\\left( \\kVc - \\knmol\\kbvdw \\right)^2}} = \\mk{a}{\\dfrac{2\\ka\\knmol^2}{\\kVc^3}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{t}{\\dfrac{\\knmol\\kR\\kTc}{\\left( 3\\knmol\\kbvdw - \\knmol\\kbvdw \\right)^2}} = \\mk{a}{\\dfrac{2\\ka\\knmol^2}{\\left( 3\\knmol\\kbvdw \\right)^3}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{t}{\\dfrac{\\knmol\\kR\\kTc}{4\\knmol^2\\kbvdw^2}} = \\mk{a}{\\dfrac{2\\ka\\knmol^2}{27\\knmol^3\\kbvdw^3}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{t}{\\kR\\kTc} = \\mk{a}{\\dfrac{8\\ka}{27\\kbvdw}}",
+       "uses": []
+      }
+     ],
+     "src": "16.3"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\kP = \\dfrac{\\knmol\\kR\\kT}{\\kV - \\knmol\\kbvdw} - \\dfrac{\\ka\\knmol^2}{\\kV^2}",
+       "src": "(16.2.1)"
+      },
+      {
+       "step": 2
+      },
+      {
+       "step": 3
+      }
+     ],
+     "then": {
+      "tex": "\\mk{P}{\\kPc} = \\mk{R}{\\dfrac{\\knmol\\kR\\kTc}{\\kVc - \\knmol\\kbvdw} - \\dfrac{\\ka\\knmol^2}{\\kVc^2}}",
+      "uses": [
+       0
+      ],
+      "why": "The critical point lies on the van der Waals isotherm at $\\kTc$."
+     },
+     "steps": [
+      {
+       "tex": "\\mk{P}{\\kPc} = \\mk{R}{\\dfrac{8\\ka\\knmol/27\\kbvdw}{3\\knmol\\kbvdw - \\knmol\\kbvdw} - \\dfrac{\\ka\\knmol^2}{\\left( 3\\knmol\\kbvdw \\right)^2}}",
+       "uses": [
+        1,
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{P}{\\kPc} = \\mk{R}{\\dfrac{4\\ka}{27\\kbvdw^2} - \\dfrac{3\\ka}{27\\kbvdw^2}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{P}{\\kPc} = \\mk{R}{\\dfrac{\\ka}{27\\kbvdw^2}}",
+       "uses": []
+      }
+     ],
+     "src": "16.3"
+    }
+   ]
+  }
+ ]
+}

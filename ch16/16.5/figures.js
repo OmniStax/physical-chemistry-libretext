@@ -18,7 +18,7 @@ const b2 = (g, T) => 1000 * (g.b - g.a / (R * T));
 const zeroT = (g) => g.a / (R * g.b);
 
 /* ---------- Sim: B₂ against temperature ----------
-   x: T 100 to 2500 K (water's B₂ = 0 sits at 2180 K); y: B₂ −300 to 100 cm³/mol, fixed.
+   x: T 0 to 2500 K, curves from 100 K (water's B₂ = 0 sits at 2180 K); y: B₂ −200 to 100 cm³/mol, fixed.
    The chosen gas is drawn in the B₂ colour, the other three faint behind it, and the hard-sphere value
    b (the flat line B₂ would keep with no attraction) dashed. The slider T marks the reader's temperature;
    its dashed circle is where b = a/RT and B₂ crosses zero. Still: no time in it. */
@@ -33,15 +33,15 @@ const zeroT = (g) => g.a / (R * g.b);
     hits = [];
     const g = byKey(G.value), t = T.v, cv = C('volume');
     const box = { l: 160, r: 1300, t: 120, b: 500 };
-    const ax = axes(ctx, box, [100, 2500], [-300, 100], { nx: 6, ny: 4, xl: 'temperature T (K)', yl: 'second virial coefficient B₂ (cm³/mol)', xc: C('temperature'), yc: cv });
+    const ax = axes(ctx, box, [0, 2500], [-200, 100], { nx: 5, ny: 6, xl: 'temperature T (K)', yl: 'second virial coefficient B₂ (cm³/mol)', xc: C('temperature'), yc: cv });
     line(ctx, box.l, ax.Y(0), box.r, ax.Y(0), alpha(PAL.ink, 0.4), 2);
-    GASES.forEach((h) => { if (h !== g) plot(ctx, ax, (x) => b2(h, x), alpha(PAL.ink, 0.22), { w: 3 }); });
+    GASES.forEach((h) => { if (h !== g) plot(ctx, ax, (x) => b2(h, x), alpha(PAL.ink, 0.22), { w: 3, x: [100, 2500] }); });
     GASES.forEach((h) => { if (h !== g) { const x = 2420, y = b2(h, x); hits.push({ x: ax.X(x), y: ax.Y(y), r: 16, name: `${h.name}: B₂ = b − a/RT` }); } });
     /* the hard-sphere value b, and the curve the attraction pulls below it */
     const bb = 1000 * g.b;
-    plot(ctx, ax, () => bb, alpha(cv, 0.8), { w: 3, dash: [10, 10] });
+    plot(ctx, ax, () => bb, alpha(cv, 0.8), { w: 3, dash: [10, 10], x: [100, 2500] });
     text(ctx, `hard spheres alone, b = ${fmt(bb, 1)} cm³/mol`, box.r - 10, ax.Y(bb) - 16, cv, { size: 20, align: 'right' });
-    plot(ctx, ax, (x) => b2(g, x), cv, { w: 5 });
+    plot(ctx, ax, (x) => b2(g, x), cv, { w: 5, x: [100, 2500] });
     const tz = zeroT(g);
     if (tz <= 2500) { dot(ctx, ax.X(tz), ax.Y(0), PAL.ink, false, 9); hits.push({ x: ax.X(tz), y: ax.Y(0), r: 14, name: `B₂ = 0 at ${fmt(tz, 0)} K, where b = a/RT` }); }
     const y = b2(g, t), p = F.pinned(ctx, box, ax.X, ax.Y, t, y, cv);

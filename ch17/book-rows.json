@@ -1,0 +1,1399 @@
+{
+ "types": [
+  {
+   "id": "heat-capacity",
+   "label": "heat capacity",
+   "dimension": "J/K"
+  },
+  {
+   "id": "partition-function",
+   "label": "partition function"
+  }
+ ],
+ "symbols": [
+  {
+   "sym": "Q_sys",
+   "latex": "Q",
+   "macro": "\\kQsys"
+  },
+  {
+   "sym": "q_mol",
+   "latex": "q",
+   "macro": "\\kqmol"
+  },
+  {
+   "sym": "q_i",
+   "latex": "q_i",
+   "macro": "\\kqi"
+  },
+  {
+   "sym": "q_a",
+   "latex": "q_a",
+   "macro": "\\kqa"
+  },
+  {
+   "sym": "q_b",
+   "latex": "q_b",
+   "macro": "\\kqb"
+  },
+  {
+   "sym": "q_c",
+   "latex": "q_c",
+   "macro": "\\kqc"
+  },
+  {
+   "sym": "q_trans",
+   "latex": "q_\\text{trans}",
+   "macro": "\\kqtrans"
+  },
+  {
+   "sym": "q_rot",
+   "latex": "q_\\text{rot}",
+   "macro": "\\kqrot"
+  },
+  {
+   "sym": "q_vib",
+   "latex": "q_\\text{vib}",
+   "macro": "\\kqvib"
+  },
+  {
+   "sym": "q_elec",
+   "latex": "q_\\text{elec}",
+   "macro": "\\kqelec"
+  },
+  {
+   "sym": "Q_dist",
+   "latex": "Q_{\\text{distinguishable}}",
+   "macro": "\\kQdist"
+  },
+  {
+   "sym": "W",
+   "latex": "W"
+  },
+  {
+   "sym": "W_N",
+   "latex": "W_N"
+  },
+  {
+   "sym": "p_N",
+   "latex": "p_N"
+  },
+  {
+   "sym": "p_i",
+   "latex": "p_i"
+  },
+  {
+   "sym": "P_j",
+   "latex": "P_j"
+  },
+  {
+   "sym": "P_i",
+   "latex": "P_i"
+  },
+  {
+   "sym": "M_j",
+   "latex": "M_j"
+  },
+  {
+   "sym": "n_i",
+   "latex": "n_i"
+  },
+  {
+   "sym": "N_A",
+   "latex": "N_A"
+  },
+  {
+   "sym": "C_N",
+   "latex": "C_N"
+  },
+  {
+   "sym": "pi_i",
+   "latex": "\\pi_i"
+  },
+  {
+   "sym": "P_i_press",
+   "latex": "P_i",
+   "macro": "\\kPipress"
+  },
+  {
+   "sym": "P_avg",
+   "latex": "\\langle P \\rangle",
+   "macro": "\\kPavg"
+  },
+  {
+   "sym": "e_j",
+   "latex": "e_j",
+   "macro": "\\kej"
+  },
+  {
+   "sym": "E_j",
+   "latex": "E_j",
+   "macro": "\\kEj"
+  },
+  {
+   "sym": "E_total",
+   "latex": "E_{total}",
+   "macro": "\\kEtotal"
+  },
+  {
+   "sym": "E_thermal",
+   "latex": "E_{thermal}",
+   "macro": "\\kEthermal"
+  },
+  {
+   "sym": "E_avg",
+   "latex": "\\langle E \\rangle",
+   "macro": "\\kEavg"
+  },
+  {
+   "sym": "E_bar",
+   "latex": "\\bar{E}",
+   "macro": "\\kEbar"
+  },
+  {
+   "sym": "E_cal",
+   "latex": "\\mathcal{E}",
+   "macro": "\\kEcal"
+  },
+  {
+   "sym": "eps_avg",
+   "latex": "\\langle \\epsilon \\rangle",
+   "macro": "\\kepsavg"
+  },
+  {
+   "sym": "eps_trans",
+   "latex": "\\epsilon_\\text{trans}",
+   "macro": "\\kepstrans"
+  },
+  {
+   "sym": "eps_rot",
+   "latex": "\\epsilon_\\text{rot}",
+   "macro": "\\kepsrot"
+  },
+  {
+   "sym": "eps_vib",
+   "latex": "\\epsilon_\\text{vib}",
+   "macro": "\\kepsvib"
+  },
+  {
+   "sym": "eps_elec",
+   "latex": "\\epsilon_\\text{elec}",
+   "macro": "\\kepselec"
+  },
+  {
+   "sym": "eps_vib_avg",
+   "latex": "\\langle \\epsilon_\\text{vib} \\rangle",
+   "macro": "\\kepsvibavg"
+  },
+  {
+   "sym": "C_V",
+   "latex": "C_V",
+   "macro": "\\kCV"
+  },
+  {
+   "sym": "U",
+   "latex": "U",
+   "macro": "\\kU"
+  },
+  {
+   "sym": "theta_E",
+   "latex": "\\theta_E",
+   "macro": "\\kthetaE"
+  },
+  {
+   "sym": "kappa",
+   "latex": "\\kappa",
+   "macro": "\\kkappa"
+  },
+  {
+   "sym": "F_i",
+   "latex": "\\textbf{F}_i",
+   "macro": "\\kFi"
+  },
+  {
+   "sym": "r_i_vec",
+   "latex": "\\textbf{r}_i",
+   "macro": "\\krivec"
+  },
+  {
+   "sym": "v_i_vec",
+   "latex": "\\textbf{v}_i",
+   "macro": "\\kvivec"
+  },
+  {
+   "sym": "p_i_vec",
+   "latex": "\\textbf{p}_i",
+   "macro": "\\kpivec"
+  }
+ ],
+ "concepts": [
+  {
+   "id": "newtons-second-law",
+   "kind": "axiom",
+   "section": "17.1",
+   "name": "Newton's second law",
+   "terms": [
+    "Newton’s second law"
+   ],
+   "statement": "Particles move under the forces they exert on each other and any external fields: each particle's mass times its acceleration equals the force on it, m_i r̈_i = F_i(r_1, …, r_N).",
+   "forms": [
+    {
+     "id": "newton-second-law-particles",
+     "latex": "m_i \\ddot{\\textbf{r}}_i = \\textbf{F}_i (\\textbf{r}_1, \\ldots, \\textbf{r}_N)"
+    }
+   ]
+  },
+  {
+   "id": "force-field",
+   "kind": "definition",
+   "section": "17.1",
+   "name": "Force field",
+   "terms": [
+    "force field"
+   ],
+   "statement": "The forces on the particles, written as functions of all the particle positions, F_i(r_1, …, r_N), are known as a force field.",
+   "forms": [
+    {
+     "id": "force-field",
+     "latex": "\\textbf{F}_i = \\textbf{F}_i(\\textbf{r}_1, \\ldots, \\textbf{r}_N)"
+    }
+   ]
+  },
+  {
+   "id": "classical-trajectory",
+   "kind": "idea",
+   "section": "17.1",
+   "name": "Trajectories from initial conditions",
+   "statement": "Newton's equations for N particles are 3N coupled second-order differential equations; given the initial positions and velocities, their solution gives every coordinate and velocity for all time."
+  },
+  {
+   "id": "kinetic-temperature",
+   "kind": "result",
+   "section": "17.1",
+   "name": "Temperature and kinetic energy",
+   "statement": "The temperature is set by the average kinetic energy of the particles: (3/2)NkT equals the sum of ½m_iv_i² over the N particles.",
+   "forms": [
+    {
+     "id": "kinetic-energy-temperature",
+     "latex": "\\dfrac{3}{2} NkT = \\sum_{i=1}^N \\dfrac{1}{2}m_i \\textbf{v}_i^2"
+    },
+    {
+     "id": "temperature-from-kinetic-energy",
+     "latex": "T = \\dfrac{2}{3k} \\left( \\dfrac{1}{N} \\sum_{i=1}^N \\dfrac{1}{2}m_i \\textbf{v}_i^2 \\right)"
+    },
+    {
+     "id": "ideal-gas-energy",
+     "latex": "E = \\dfrac{3}{2}NkT = \\dfrac{3}{2}nRT",
+     "section": "17.5"
+    }
+   ]
+  },
+  {
+   "id": "many-microstates-one-macrostate",
+   "kind": "idea",
+   "section": "17.1",
+   "name": "Many microscopic states, one macroscopic state",
+   "statement": "Specifying the trajectory of some 10²³ particles would take essentially infinite information, but the detail is not needed: enormous numbers of microscopic states give rise to the same macroscopic observable, such as the same temperature."
+  },
+  {
+   "id": "ensemble",
+   "kind": "definition",
+   "section": "17.1",
+   "name": "Ensemble",
+   "terms": [
+    "ensemble"
+   ],
+   "statement": "An ensemble is a large collection of systems described by the same microscopic forces and sharing the same macroscopic thermodynamic variables, such as total energy, number of moles and volume, each evolving from a different initial condition."
+  },
+  {
+   "id": "ensemble-concept",
+   "kind": "axiom",
+   "section": "17.1",
+   "name": "Ensemble concept",
+   "terms": [
+    "ensemble concept"
+   ],
+   "statement": "Macroscopic observables can be calculated by averaging over the systems of an ensemble; for time-independent properties such as temperature and pressure the average may be taken at one instant."
+  },
+  {
+   "id": "thermal-energy",
+   "kind": "definition",
+   "section": "17.1",
+   "name": "Thermal energy",
+   "symbol": "E_thermal",
+   "terms": [
+    "thermal energy"
+   ],
+   "type": "energy",
+   "statement": "Boltzmann looked at temperature as a form of energy: the thermal energy of a system is directly proportional to the absolute temperature, E_thermal = kT.",
+   "forms": [
+    {
+     "id": "thermal-energy",
+     "latex": "E_{thermal} = k T"
+    }
+   ]
+  },
+  {
+   "id": "boltzmann-constant",
+   "kind": "definition",
+   "section": "17.1",
+   "name": "Boltzmann constant",
+   "symbol": "k_B",
+   "terms": [
+    "Boltzmann constant"
+   ],
+   "statement": "The Boltzmann constant k (or k_B) is the proportionality constant between thermal energy and absolute temperature, and plays a central role in all of statistical thermodynamics."
+  },
+  {
+   "id": "thermodynamic-beta",
+   "kind": "definition",
+   "section": "17.1",
+   "name": "Thermodynamic beta",
+   "symbol": "beta",
+   "statement": "β is the reciprocal of the thermal energy, 1/kT.",
+   "forms": [
+    {
+     "id": "beta-definition",
+     "latex": "\\beta=\\frac{1}{k T}"
+    }
+   ]
+  },
+  {
+   "id": "boltzmann-factor",
+   "kind": "definition",
+   "section": "17.1",
+   "name": "Boltzmann factor",
+   "terms": [
+    "Boltzmann factor"
+   ],
+   "statement": "The Boltzmann factor e^(−βE_i) of a state of energy E_i, with β = 1/kT, approximates the fraction of particles of a large system that are in that state.",
+   "forms": [
+    {
+     "id": "boltzmann-factor",
+     "latex": "e^{-\\beta E_i}"
+    }
+   ]
+  },
+  {
+   "id": "activation-energy",
+   "kind": "definition",
+   "section": "17.1",
+   "name": "Activation energy",
+   "terms": [
+    "activation energy"
+   ],
+   "statement": "The activation energy is the energy a particle must carry to cross the energy barrier of an activation process."
+  },
+  {
+   "id": "activated-processes-boltzmann",
+   "kind": "result",
+   "section": "17.1",
+   "name": "Activated processes follow the Boltzmann factor",
+   "terms": [
+    "activation processes"
+   ],
+   "statement": "The rates of many physical processes are set by the Boltzmann factor: the fraction of particles with enough energy to cross an activation barrier, such as escaping a surface, is about proportional to it, so a higher temperature sends more particles across."
+  },
+  {
+   "id": "canonical-ensemble",
+   "kind": "definition",
+   "section": "17.2",
+   "name": "Canonical ensemble",
+   "terms": [
+    "canonical ensemble"
+   ],
+   "statement": "The canonical ensemble holds N, V and T fixed: a collection of boxes of equal volume and number of particles, the whole collection kept in thermal equilibrium. It is the most practical ensemble."
+  },
+  {
+   "id": "occupation-number",
+   "kind": "definition",
+   "section": "17.2",
+   "name": "Occupation number",
+   "symbol": "a_j",
+   "statement": "In an ensemble of A systems, a_j is the number of systems in quantum state j; the set a_1, a_2, … is a distribution."
+  },
+  {
+   "id": "distribution-weight",
+   "kind": "definition",
+   "section": "17.2",
+   "name": "Weight of a distribution",
+   "symbol": "W",
+   "statement": "The number of microstates that realize a distribution a_1, a_2, … of A systems over the quantum states is W = A!/(a_1!a_2!…).",
+   "forms": [
+    {
+     "id": "distribution-weight",
+     "latex": "W(a_1,a_2,...) = \\frac{A!}{a_1!a_2!...}"
+    }
+   ]
+  },
+  {
+   "id": "ensemble-average",
+   "kind": "definition",
+   "section": "17.2",
+   "name": "Ensemble average",
+   "terms": [
+    "ensemble average"
+   ],
+   "statement": "The probability P_j that a system is in state j is the average of a_j/A over the allowed distributions, and any thermodynamic property is the average ⟨M⟩ = Σ_j M_jP_j.",
+   "forms": [
+    {
+     "id": "ensemble-average",
+     "latex": "\\langle M \\rangle = \\sum_j M_j P_j"
+    },
+    {
+     "id": "state-probability-average",
+     "latex": "P_j = \\dfrac{\\langle a_j \\rangle}{A}"
+    }
+   ]
+  },
+  {
+   "id": "most-probable-distribution",
+   "kind": "axiom",
+   "section": "17.2",
+   "name": "Method of the most probable distribution",
+   "terms": [
+    "most probable distribution"
+   ],
+   "statement": "A system tends toward the distribution of a_j that maximizes the number of microstates W, and with so many particles the fluctuations from the mean are immeasurably small, so the average distribution is this most probable one.",
+   "forms": [
+    {
+     "id": "most-probable-occupation",
+     "latex": "P_j = \\dfrac{\\langle a_j \\rangle}{A} = \\dfrac{a_j}{A}"
+    }
+   ]
+  },
+  {
+   "id": "distribution-constraints",
+   "kind": "definition",
+   "section": "17.2",
+   "name": "Constraints on a distribution",
+   "statement": "A distribution must conserve energy, E_total = Σ_j a_je_j, and the number of systems, A = Σ_j a_j.",
+   "forms": [
+    {
+     "id": "energy-constraint",
+     "latex": "E_{total} = \\sum_j a_j e_j"
+    },
+    {
+     "id": "number-constraint",
+     "latex": "A = \\sum_j a_j"
+    }
+   ]
+  },
+  {
+   "id": "lagrange-multipliers",
+   "kind": "definition",
+   "section": "17.2",
+   "name": "Method of Lagrange multipliers",
+   "terms": [
+    "method of Lagrange multipliers",
+    "Lagrange undetermined multipliers"
+   ],
+   "statement": "The method of Lagrange multipliers finds the local maxima and minima of a function subject to equality constraints by adding each constraint times an undetermined multiplier."
+  },
+  {
+   "id": "stirlings-approximation",
+   "kind": "result",
+   "section": "17.2",
+   "name": "Stirling's approximation",
+   "terms": [
+    "Stirling's approximation"
+   ],
+   "statement": "For large x, ln x! is approximately x ln x − x.",
+   "forms": [
+    {
+     "id": "stirling",
+     "latex": "\\ln x! \\approx x\\ln x - x"
+    }
+   ]
+  },
+  {
+   "id": "boltzmann-probability",
+   "kind": "result",
+   "section": "17.2",
+   "name": "Probability of a state in the Boltzmann distribution",
+   "symbol": "P_j",
+   "statement": "Maximizing W while the energy and the number of systems stay fixed gives the most probable distribution, a thermally equilibrated distribution over all energy levels: the fraction of systems in state j is P_j = e^(−βe_j)/Σ_j e^(−βe_j).",
+   "forms": [
+    {
+     "id": "boltzmann-probability",
+     "latex": "P_j= \\dfrac{a_j}{A} = \\dfrac{ e^{-\\beta e_j}} {\\sum_j e^{-\\beta e_j}}"
+    },
+    {
+     "id": "boltzmann-fraction-molecules",
+     "latex": "P_i = \\dfrac{n_i}{N} = \\dfrac{e^{-E_i/kT}}{Q}",
+     "section": "17.3"
+    },
+    {
+     "id": "boltzmann-probability-particle",
+     "latex": "\\pi_i = \\dfrac{e^{-\\epsilon_i/kT}}{q(V,T)} = \\dfrac{e^{-\\epsilon_i/kT}}{\\sum_i{e^{-\\epsilon_i/kT}}}",
+     "section": "17.8"
+    }
+   ]
+  },
+  {
+   "id": "populations-fall-with-energy",
+   "kind": "result",
+   "section": "17.2",
+   "name": "Lower states hold more molecules",
+   "statement": "In the Boltzmann distribution a state of lower energy always has a higher population than one of higher energy, and above absolute zero every upper level has a non-zero population however large the spacing; at higher temperatures more of the upper states are populated, each less."
+  },
+  {
+   "id": "molecular-partition-function",
+   "kind": "definition",
+   "section": "17.2",
+   "name": "Molecular partition function",
+   "symbol": "q_mol",
+   "terms": [
+    "molecular partition function"
+   ],
+   "type": "partition-function",
+   "statement": "The molecular partition function is the sum of the Boltzmann factors over the states of one molecule, q = Σ_j e^(−βe_j); it is a number.",
+   "forms": [
+    {
+     "id": "molecular-partition-function",
+     "latex": "q = \\sum_j e^{-\\beta e_j}"
+    }
+   ]
+  },
+  {
+   "id": "partition-function-counts-states",
+   "kind": "idea",
+   "section": "17.2",
+   "name": "The partition function counts accessible states",
+   "statement": "The molecular partition function indicates the average number of states thermally accessible to a molecule at the temperature of the system: the larger q, the more states the molecule can occupy."
+  },
+  {
+   "id": "canonical-partition-function",
+   "kind": "definition",
+   "section": "17.2",
+   "name": "Canonical partition function",
+   "symbol": "Q_sys",
+   "terms": [
+    "canonical partition function",
+    "partition function"
+   ],
+   "type": "partition-function",
+   "statement": "The partition function of the ensemble, Q(N, V, T), sums the Boltzmann factors over every state accessible to the system, counting every combination of the occupations of the molecules' states.",
+   "forms": [
+    {
+     "id": "canonical-partition-function",
+     "latex": "Q(N,V,T) = \\sum_{i,j,k ...} e^{-\\beta ( e_i + e_j +e_k ...)}"
+    },
+    {
+     "id": "partition-function-sum-states",
+     "latex": "Q = \\sum_i{e^{-\\beta E_i}}",
+     "section": "17.3"
+    }
+   ]
+  },
+  {
+   "id": "distinguishable-partition-function",
+   "kind": "result",
+   "section": "17.2",
+   "name": "Partition function of distinguishable, independent molecules",
+   "statement": "For independent molecules that can be told apart, the partition function of the system is the product of the molecular ones, Q = q_iq_jq_k…, which is Q = q^N when every molecule has the same states.",
+   "forms": [
+    {
+     "id": "distinguishable-power",
+     "latex": "Q = q^N"
+    },
+    {
+     "id": "distinguishable-product",
+     "latex": "Q = q_iq_jq_k…"
+    },
+    {
+     "id": "distinguishable-product-pi",
+     "latex": "Q(N,V,\\beta) = \\prod_i{q_i}",
+     "section": "17.6"
+    }
+   ]
+  },
+  {
+   "id": "indistinguishable-partition-function",
+   "kind": "result",
+   "section": "17.2",
+   "name": "Partition function of indistinguishable molecules",
+   "statement": "If the molecules cannot be told apart, q^N counts N! states too many, since N! is how many times the indices can be swapped without changing anything; the partition function is then Q = q^N/N!.",
+   "forms": [
+    {
+     "id": "indistinguishable-q-n",
+     "latex": "Q(N,V,\\beta) = \\dfrac{q(V,\\beta)^N}{N!}",
+     "section": "17.7"
+    },
+    {
+     "id": "indistinguishable-sum",
+     "latex": "Q(N,V,\\beta) = \\dfrac{\\sum_i{e^{-\\beta E_i}}}{N!}",
+     "section": "17.7"
+    }
+   ]
+  },
+  {
+   "id": "average-ensemble-energy",
+   "kind": "result",
+   "section": "17.3",
+   "name": "Average ensemble energy",
+   "symbol": "E_avg",
+   "type": "energy",
+   "statement": "The average energy is each energy times its Boltzmann probability, summed: ⟨E⟩ = Σ_i E_iP_i = Σ_i E_ie^(−E_i/kT)/Q. It is the observed energy of the system.",
+   "forms": [
+    {
+     "id": "average-energy-sum",
+     "latex": "\\langle E \\rangle = \\sum_i E_i P_i"
+    },
+    {
+     "id": "average-energy-boltzmann",
+     "latex": "\\langle E \\rangle = \\sum_i{ \\dfrac{E_ie^{-E_i/ kT}}{Q}}"
+    }
+   ]
+  },
+  {
+   "id": "average-energy-from-q",
+   "kind": "result",
+   "section": "17.3",
+   "name": "Average energy from the partition function",
+   "statement": "The average energy is a derivative of ln Q: ⟨E⟩ = kT²(∂ln Q/∂T) = −(∂ln Q/∂β).",
+   "forms": [
+    {
+     "id": "energy-from-lnq-t",
+     "latex": "\\langle E \\rangle = kT^2 \\left(\\dfrac{\\partial \\ln{Q}}{\\partial T}\\right)"
+    },
+    {
+     "id": "energy-from-lnq-beta",
+     "latex": "\\langle E \\rangle = -\\left(\\dfrac{\\partial \\ln{Q}}{\\partial\\beta}\\right)"
+    }
+   ]
+  },
+  {
+   "id": "internal-energy",
+   "kind": "definition",
+   "section": "17.4",
+   "name": "Internal energy",
+   "symbol": "U",
+   "terms": [
+    "internal energy"
+   ],
+   "type": "energy",
+   "statement": "The internal energy U is the energy of the system, which statistical mechanics computes as the average ensemble energy."
+  },
+  {
+   "id": "constant-volume-heat-capacity",
+   "kind": "definition",
+   "section": "17.4",
+   "name": "Heat capacity at constant volume",
+   "symbol": "C_V",
+   "terms": [
+    "heat capacity at constant volume",
+    "heat capacity"
+   ],
+   "type": "heat-capacity",
+   "statement": "The heat capacity at constant volume is the change in internal energy with temperature, C_V = (∂U/∂T)_{N,V}.",
+   "forms": [
+    {
+     "id": "cv-definition",
+     "latex": "C_V = \\left( \\dfrac{\\partial U}{\\partial T} \\right)_{N, V}"
+    }
+   ]
+  },
+  {
+   "id": "heat-capacity-from-q",
+   "kind": "result",
+   "section": "17.4",
+   "name": "Heat capacity from the partition function",
+   "statement": "The heat capacity at constant volume is a second derivative of ln Q with respect to β: C_V = (1/kT²)∂²ln Q/∂β² = kβ²∂²ln Q/∂β².",
+   "forms": [
+    {
+     "id": "cv-from-lnq",
+     "latex": "C_V = k \\beta^2 \\dfrac{\\partial^2}{\\partial \\beta^2} \\: \\ln Q(N, V, \\beta)"
+    }
+   ]
+  },
+  {
+   "id": "dulong-petit-law",
+   "kind": "axiom",
+   "section": "17.4",
+   "name": "Dulong–Petit law",
+   "terms": [
+    "Dulong-Petit Law"
+   ],
+   "statement": "Dulong and Petit found in 1819 that solids have a heat capacity of about 2.49 × 10⁴ J kmol⁻¹ K⁻¹ near room temperature, explained by treating each atom as an oscillator with six degrees of freedom: C_V = 6R/2 = 3R.",
+   "forms": [
+    {
+     "id": "dulong-petit",
+     "latex": "C_V=\\dfrac{6R}{2}=3R"
+    }
+   ]
+  },
+  {
+   "id": "heat-capacity-vanishes",
+   "kind": "axiom",
+   "section": "17.4",
+   "name": "Heat capacities fall toward zero at low temperature",
+   "statement": "Experiment shows that the heat capacity of a solid decreases as the temperature approaches absolute zero, which the Dulong–Petit law cannot explain."
+  },
+  {
+   "id": "einstein-solid",
+   "kind": "idea",
+   "section": "17.4",
+   "name": "Einstein model of a solid",
+   "statement": "Einstein treated a solid of N atoms as 3N independent oscillators: each atom moves in three dimensions within the lattice, the atoms do not interact, and all of them vibrate at the same frequency ν."
+  },
+  {
+   "id": "einstein-temperature",
+   "kind": "definition",
+   "section": "17.4",
+   "name": "Einstein temperature",
+   "symbol": "theta_E",
+   "terms": [
+    "Einstein temperature"
+   ],
+   "type": "temperature",
+   "statement": "The Einstein temperature Θ_E = hν/k writes the oscillator frequency ν of the atoms in a solid as a temperature.",
+   "forms": [
+    {
+     "id": "einstein-temperature",
+     "latex": "\\theta_E=\\dfrac{h\\nu}{k}"
+    }
+   ]
+  },
+  {
+   "id": "einstein-heat-capacity",
+   "kind": "result",
+   "section": "17.4",
+   "name": "Einstein heat capacity",
+   "type": "heat-capacity",
+   "statement": "In Einstein's model the heat capacity of a solid is C_V = 3Nk(Θ_E/T)²e^(Θ_E/T)/(e^(Θ_E/T) − 1)², set by how accessible the vibrational energy is at the temperature T.",
+   "forms": [
+    {
+     "id": "einstein-cv",
+     "latex": "C_V = 3Nk\\left(\\dfrac{\\theta_E}{T}\\right)^2 \\dfrac{e^{\\theta_E/T}}{\\left(e^{\\theta_E/T} -1\\right)^2}"
+    }
+   ]
+  },
+  {
+   "id": "einstein-high-temperature-limit",
+   "kind": "result",
+   "section": "17.4",
+   "name": "High-temperature limit of the Einstein heat capacity",
+   "statement": "When the temperature is very large compared with the Einstein temperature, C_V ≈ 3Nk = 3nR, the value of Dulong and Petit.",
+   "forms": [
+    {
+     "id": "einstein-high-t",
+     "latex": "C_V \\approx 3Nk=3nR"
+    }
+   ]
+  },
+  {
+   "id": "einstein-low-temperature-limit",
+   "kind": "result",
+   "section": "17.4",
+   "name": "Low-temperature limit of the Einstein heat capacity",
+   "statement": "When the temperature is small compared with the Einstein temperature, C_V ≈ 3Nk(Θ_E/T)²e^(−Θ_E/T), which goes to zero with T, as experiment shows.",
+   "forms": [
+    {
+     "id": "einstein-low-t",
+     "latex": "C_V=3Nk\\left(\\dfrac{\\theta_E}{T}\\right)^2e^{-\\theta_E/T}"
+    }
+   ]
+  },
+  {
+   "id": "stiff-light-solids",
+   "kind": "result",
+   "section": "17.4",
+   "name": "Stiff, light solids have low heat capacities",
+   "statement": "Since ν = (1/2π)√(κ/μ), a solid with a high force constant or a low reduced mass, such as diamond, has a high Einstein temperature, and its heat capacity stays low until the temperature is high."
+  },
+  {
+   "id": "einstein-model-limits",
+   "kind": "idea",
+   "section": "17.4",
+   "name": "Where the Einstein model falls short",
+   "statement": "Einstein's model fits the heat capacity of a solid at high temperatures, but at the lowest temperatures (below about 15 K for lead) it departs from experiment: the atoms of a real solid interact, which Debye's model takes up."
+  },
+  {
+   "id": "state-pressure",
+   "kind": "definition",
+   "section": "17.5",
+   "name": "Pressure of a state",
+   "symbol": "P_i_press",
+   "type": "pressure",
+   "statement": "The pressure of a system in state i is the negative change of that state's energy with volume, P_i = −(∂E_i/∂V)_N.",
+   "forms": [
+    {
+     "id": "state-pressure",
+     "latex": "P(N,V) = -\\left(\\dfrac{\\partial E_i}{\\partial V}\\right)_N"
+    }
+   ]
+  },
+  {
+   "id": "pressure-from-q",
+   "kind": "result",
+   "section": "17.5",
+   "name": "Pressure from the partition function",
+   "statement": "The average pressure is a derivative of ln Q with respect to volume: ⟨P⟩ = kT(∂ln Q/∂V)_{N,β}.",
+   "forms": [
+    {
+     "id": "pressure-from-lnq",
+     "latex": "\\langle P \\rangle = kT\\left(\\dfrac{\\partial \\ln{Q}}{\\partial V}\\right)_{N,\\beta}"
+    }
+   ]
+  },
+  {
+   "id": "translational-partition-function",
+   "kind": "result",
+   "section": "17.5",
+   "name": "Translational partition function",
+   "symbol": "q_trans",
+   "terms": [
+    "translational partition function"
+   ],
+   "type": "partition-function",
+   "statement": "The translational partition function of a molecule of mass m in a volume V is q = (2πm/h²β)^{3/2}V.",
+   "forms": [
+    {
+     "id": "translational-q",
+     "latex": "q(V,\\beta) = \\left(\\dfrac{2\\pi m}{h^2\\beta}\\right)^{3/2}V"
+    }
+   ]
+  },
+  {
+   "id": "ideal-gas-constant",
+   "kind": "definition",
+   "section": "17.5",
+   "name": "Gas constant",
+   "symbol": "R",
+   "terms": [
+    "universal gas constant"
+   ],
+   "statement": "R, the universal gas constant (8.314 J/mol-K), is Boltzmann's constant multiplied by Avogadro's number, N_Ak = R; it converts from a per-molecule to a per-mole basis, so Nk = nR.",
+   "forms": [
+    {
+     "id": "gas-constant-boltzmann",
+     "latex": "N_Ak = R"
+    },
+    {
+     "id": "nk-nr",
+     "latex": "Nk = nR"
+    }
+   ]
+  },
+  {
+   "id": "pressure-energy-volume",
+   "kind": "result",
+   "section": "17.5",
+   "name": "Pressure as the energy change with volume",
+   "statement": "A system pushing on a piston of area A exerts the force F = dE/dz; since A dz = −dV, the pressure is P = −dE/dV.",
+   "forms": [
+    {
+     "id": "piston-force",
+     "latex": "F = \\dfrac{dE}{dz}"
+    },
+    {
+     "id": "piston-pressure",
+     "latex": "P = \\dfrac{dE}{Adz}"
+    }
+   ]
+  },
+  {
+   "id": "classical-partition-function",
+   "kind": "definition",
+   "section": "17.5",
+   "name": "Classical canonical partition function",
+   "statement": "For classical particles the canonical partition function is an integral of e^(−β𝓔(x)) over every point x of phase space, 𝓔(x) being the mechanical energy there; for N identical particles the integral carries the factor 1/(N!h^{3N}).",
+   "forms": [
+    {
+     "id": "classical-q-ideal-gas",
+     "latex": "Q(N, V, T) = \\dfrac{1}{N!h^{3N}} \\int dx \\: e^{-\\beta \\sum_{i=1}^N \\textbf{p}_i^2/2m}"
+    }
+   ]
+  },
+  {
+   "id": "ideal-gas-partition-function",
+   "kind": "result",
+   "section": "17.5",
+   "name": "Canonical partition function of an ideal gas",
+   "statement": "Evaluating the Gaussian integrals over the momenta gives the canonical partition function of an ideal gas, Q(N, V, T) = (1/N!)[(V/h³)(2πm/β)^{3/2}]^N.",
+   "forms": [
+    {
+     "id": "ideal-gas-q",
+     "latex": "Q(N, V, T) = \\dfrac{1}{N!} \\left[ \\dfrac{V}{h^3} \\left( \\dfrac{2 \\pi m}{\\beta} \\right)^{3/2} \\right]^N"
+    }
+   ]
+  },
+  {
+   "id": "independent-energy-additivity",
+   "kind": "axiom",
+   "section": "17.6",
+   "name": "Energies of independent molecules add",
+   "statement": "The energy of a system of independent molecules is the sum of their energies, each molecule in its own state: E_l = ε_i^a + ε_j^b + ε_k^c + ⋯.",
+   "forms": [
+    {
+     "id": "energy-additivity",
+     "latex": "E_l(N,V) = \\epsilon_i^a (V) + \\epsilon_j^b (V) + \\epsilon_k^c (V) + \\cdots"
+    }
+   ]
+  },
+  {
+   "id": "distinguishable-particles",
+   "kind": "definition",
+   "section": "17.6",
+   "name": "Distinguishable molecules",
+   "terms": [
+    "distinguishable"
+   ],
+   "statement": "Molecules are distinguishable when each can be told apart from the others, as the molecules of a crystal can be by the fixed sites they move around."
+  },
+  {
+   "id": "two-particle-two-level-states",
+   "kind": "result",
+   "section": "17.7",
+   "name": "Two particles on two levels",
+   "statement": "Two particles on the levels 0 and ε have four states if they can be told apart, Q = 1 + 2e^(−βε) + e^(−2βε) = q², but only three if they cannot, Q = 1 + e^(−βε) + e^(−2βε), which is not q².",
+   "forms": [
+    {
+     "id": "two-level-distinguishable",
+     "latex": "Q_{\\text{distinguishable}}=e^0+ e^{-\\beta\\epsilon} +  e^{-\\beta\\epsilon} + e^{-2 \\beta\\epsilon}=q^2"
+    },
+    {
+     "id": "two-level-indistinguishable",
+     "latex": "Q(N,V,\\beta) =e^0+ e^{-\\beta\\epsilon} + e^{-2 \\beta\\epsilon} \\neq q^2"
+    }
+   ]
+  },
+  {
+   "id": "n-factorial-validity",
+   "kind": "result",
+   "section": "17.7",
+   "name": "When dividing by N! works",
+   "statement": "Dividing q^N by N! counts the states of indistinguishable molecules only approximately, well when they rarely share a state, as in a large system with many accessible states; for two particles on two levels q²/2 is not the true partition function."
+  },
+  {
+   "id": "average-molecular-energy",
+   "kind": "result",
+   "section": "17.8",
+   "name": "Average energy of a molecule",
+   "symbol": "eps_avg",
+   "type": "energy",
+   "statement": "The average energy of a single particle is its energies weighted by their Boltzmann probabilities, ⟨ε⟩ = Σ_i ε_ie^(−ε_i/kT)/q.",
+   "forms": [
+    {
+     "id": "average-molecular-energy",
+     "latex": "\\langle \\epsilon \\rangle = \\sum_i{\\epsilon_i \\dfrac{e^{-\\epsilon_i/kT}}{q(V,T)}}"
+    }
+   ]
+  },
+  {
+   "id": "independent-molecule-energy",
+   "kind": "result",
+   "section": "17.8",
+   "name": "Average energy of independent molecules",
+   "statement": "For N independent, indistinguishable molecules the average energy is N times that of one molecule: ⟨E⟩ = NkT²(∂ln q/∂T)_V = N⟨ε⟩.",
+   "forms": [
+    {
+     "id": "energy-from-lnq-molecular",
+     "latex": "\\langle E \\rangle = NkT^2 \\left(\\dfrac{\\partial \\ln{q}}{\\partial T}\\right)_V"
+    },
+    {
+     "id": "energy-n-times-molecular",
+     "latex": "\\langle E \\rangle = N \\langle \\epsilon \\rangle"
+    }
+   ]
+  },
+  {
+   "id": "molecular-energy-separation",
+   "kind": "axiom",
+   "section": "17.8",
+   "name": "Energy of a molecule by degree of freedom",
+   "statement": "The energy of a molecule is the sum of the energies of its degrees of freedom: ε = ε_trans + ε_rot + ε_vib + ε_elec.",
+   "forms": [
+    {
+     "id": "molecular-energy-sum",
+     "latex": "\\epsilon = \\epsilon_\\text{trans} + \\epsilon_\\text{rot} + \\epsilon_\\text{vib} + \\epsilon_\\text{elec}"
+    }
+   ]
+  },
+  {
+   "id": "partition-function-factorization",
+   "kind": "result",
+   "section": "17.8",
+   "name": "Molecular partition function as a product",
+   "statement": "Because the energy of a molecule is a sum over its degrees of freedom, its partition function is the product of theirs: q = q_trans q_rot q_vib q_elec.",
+   "forms": [
+    {
+     "id": "q-product",
+     "latex": "q(V,T) = q_\\text{trans} q_\\text{rot} q_\\text{vib} q_\\text{elec}"
+    }
+   ]
+  },
+  {
+   "id": "degree-of-freedom-partition-function",
+   "kind": "definition",
+   "section": "17.8",
+   "name": "Partition function of a degree of freedom",
+   "statement": "Each degree of freedom has its own partition function, a sum of Boltzmann factors over its states such as q_vib = Σ_i e^(−ε_i/kT), and its own average energy, ⟨ε_vib⟩ = kT²∂ln q_vib/∂T = −∂ln q_vib/∂β.",
+   "forms": [
+    {
+     "id": "q-vib-sum",
+     "latex": "q_\\text{vib} = \\sum_i{e^{-\\epsilon_i/kT}}"
+    },
+    {
+     "id": "average-vib-energy",
+     "latex": "\\langle \\epsilon_\\text{vib} \\rangle = kT^2\\dfrac{\\partial \\ln{q_\\text{vib}}}{\\partial T} = -\\dfrac{\\partial \\ln{q_\\text{vib}}}{\\partial \\beta}"
+    }
+   ]
+  }
+ ],
+ "concept_prereqs": [
+  {
+   "concept": "newtons-second-law",
+   "prereq": "classical-state"
+  },
+  {
+   "concept": "newtons-second-law",
+   "prereq": "force-field"
+  },
+  {
+   "concept": "classical-trajectory",
+   "prereq": "newtons-second-law"
+  },
+  {
+   "concept": "kinetic-temperature",
+   "prereq": "mean-square-velocity-component"
+  },
+  {
+   "concept": "kinetic-temperature",
+   "prereq": "boltzmann-constant"
+  },
+  {
+   "concept": "many-microstates-one-macrostate",
+   "prereq": "classical-trajectory"
+  },
+  {
+   "concept": "many-microstates-one-macrostate",
+   "prereq": "kinetic-temperature"
+  },
+  {
+   "concept": "ensemble",
+   "prereq": "many-microstates-one-macrostate"
+  },
+  {
+   "concept": "ensemble-concept",
+   "prereq": "ensemble"
+  },
+  {
+   "concept": "boltzmann-constant",
+   "prereq": "thermal-energy"
+  },
+  {
+   "concept": "thermodynamic-beta",
+   "prereq": "thermal-energy"
+  },
+  {
+   "concept": "boltzmann-factor",
+   "prereq": "thermodynamic-beta"
+  },
+  {
+   "concept": "activated-processes-boltzmann",
+   "prereq": "boltzmann-factor"
+  },
+  {
+   "concept": "activated-processes-boltzmann",
+   "prereq": "activation-energy"
+  },
+  {
+   "concept": "canonical-ensemble",
+   "prereq": "ensemble"
+  },
+  {
+   "concept": "occupation-number",
+   "prereq": "ensemble"
+  },
+  {
+   "concept": "distribution-weight",
+   "prereq": "occupation-number"
+  },
+  {
+   "concept": "ensemble-average",
+   "prereq": "ensemble-concept"
+  },
+  {
+   "concept": "ensemble-average",
+   "prereq": "distribution-weight"
+  },
+  {
+   "concept": "most-probable-distribution",
+   "prereq": "ensemble-average"
+  },
+  {
+   "concept": "distribution-constraints",
+   "prereq": "occupation-number"
+  },
+  {
+   "concept": "boltzmann-probability",
+   "prereq": "most-probable-distribution"
+  },
+  {
+   "concept": "boltzmann-probability",
+   "prereq": "distribution-constraints"
+  },
+  {
+   "concept": "boltzmann-probability",
+   "prereq": "lagrange-multipliers"
+  },
+  {
+   "concept": "boltzmann-probability",
+   "prereq": "stirlings-approximation"
+  },
+  {
+   "concept": "boltzmann-probability",
+   "prereq": "boltzmann-factor"
+  },
+  {
+   "concept": "populations-fall-with-energy",
+   "prereq": "boltzmann-probability"
+  },
+  {
+   "concept": "molecular-partition-function",
+   "prereq": "boltzmann-factor"
+  },
+  {
+   "concept": "partition-function-counts-states",
+   "prereq": "molecular-partition-function"
+  },
+  {
+   "concept": "canonical-partition-function",
+   "prereq": "canonical-ensemble"
+  },
+  {
+   "concept": "canonical-partition-function",
+   "prereq": "molecular-partition-function"
+  },
+  {
+   "concept": "distinguishable-partition-function",
+   "prereq": "canonical-partition-function"
+  },
+  {
+   "concept": "distinguishable-partition-function",
+   "prereq": "distinguishable-particles"
+  },
+  {
+   "concept": "distinguishable-partition-function",
+   "prereq": "independent-energy-additivity"
+  },
+  {
+   "concept": "indistinguishable-partition-function",
+   "prereq": "distinguishable-partition-function"
+  },
+  {
+   "concept": "indistinguishable-partition-function",
+   "prereq": "indistinguishable-particles"
+  },
+  {
+   "concept": "average-ensemble-energy",
+   "prereq": "boltzmann-probability"
+  },
+  {
+   "concept": "average-ensemble-energy",
+   "prereq": "canonical-partition-function"
+  },
+  {
+   "concept": "average-energy-from-q",
+   "prereq": "average-ensemble-energy"
+  },
+  {
+   "concept": "internal-energy",
+   "prereq": "average-ensemble-energy"
+  },
+  {
+   "concept": "constant-volume-heat-capacity",
+   "prereq": "internal-energy"
+  },
+  {
+   "concept": "heat-capacity-from-q",
+   "prereq": "constant-volume-heat-capacity"
+  },
+  {
+   "concept": "heat-capacity-from-q",
+   "prereq": "average-energy-from-q"
+  },
+  {
+   "concept": "dulong-petit-law",
+   "prereq": "constant-volume-heat-capacity"
+  },
+  {
+   "concept": "dulong-petit-law",
+   "prereq": "degrees-of-freedom"
+  },
+  {
+   "concept": "heat-capacity-vanishes",
+   "prereq": "dulong-petit-law"
+  },
+  {
+   "concept": "einstein-solid",
+   "prereq": "degrees-of-freedom"
+  },
+  {
+   "concept": "einstein-temperature",
+   "prereq": "einstein-solid"
+  },
+  {
+   "concept": "einstein-temperature",
+   "prereq": "boltzmann-constant"
+  },
+  {
+   "concept": "einstein-temperature",
+   "prereq": "plancks-constant"
+  },
+  {
+   "concept": "einstein-heat-capacity",
+   "prereq": "einstein-temperature"
+  },
+  {
+   "concept": "einstein-heat-capacity",
+   "prereq": "constant-volume-heat-capacity"
+  },
+  {
+   "concept": "einstein-heat-capacity",
+   "prereq": "oscillator-energy-levels"
+  },
+  {
+   "concept": "einstein-heat-capacity",
+   "prereq": "average-energy-from-q"
+  },
+  {
+   "concept": "einstein-heat-capacity",
+   "prereq": "distinguishable-partition-function"
+  },
+  {
+   "concept": "einstein-high-temperature-limit",
+   "prereq": "einstein-heat-capacity"
+  },
+  {
+   "concept": "einstein-high-temperature-limit",
+   "prereq": "dulong-petit-law"
+  },
+  {
+   "concept": "einstein-low-temperature-limit",
+   "prereq": "einstein-heat-capacity"
+  },
+  {
+   "concept": "einstein-low-temperature-limit",
+   "prereq": "heat-capacity-vanishes"
+  },
+  {
+   "concept": "stiff-light-solids",
+   "prereq": "einstein-temperature"
+  },
+  {
+   "concept": "stiff-light-solids",
+   "prereq": "oscillator-frequency"
+  },
+  {
+   "concept": "einstein-model-limits",
+   "prereq": "einstein-heat-capacity"
+  },
+  {
+   "concept": "state-pressure",
+   "prereq": "pressure"
+  },
+  {
+   "concept": "pressure-from-q",
+   "prereq": "state-pressure"
+  },
+  {
+   "concept": "pressure-from-q",
+   "prereq": "ensemble-average"
+  },
+  {
+   "concept": "pressure-from-q",
+   "prereq": "canonical-partition-function"
+  },
+  {
+   "concept": "translational-partition-function",
+   "prereq": "molecular-partition-function"
+  },
+  {
+   "concept": "translational-partition-function",
+   "prereq": "particle-in-a-3d-box"
+  },
+  {
+   "concept": "ideal-gas-constant",
+   "prereq": "boltzmann-constant"
+  },
+  {
+   "concept": "pressure-energy-volume",
+   "prereq": "pressure"
+  },
+  {
+   "concept": "classical-partition-function",
+   "prereq": "indistinguishable-partition-function"
+  },
+  {
+   "concept": "ideal-gas-partition-function",
+   "prereq": "classical-partition-function"
+  },
+  {
+   "concept": "ideal-gas-partition-function",
+   "prereq": "translational-partition-function"
+  },
+  {
+   "concept": "two-particle-two-level-states",
+   "prereq": "canonical-partition-function"
+  },
+  {
+   "concept": "two-particle-two-level-states",
+   "prereq": "distinguishable-particles"
+  },
+  {
+   "concept": "two-particle-two-level-states",
+   "prereq": "indistinguishable-particles"
+  },
+  {
+   "concept": "n-factorial-validity",
+   "prereq": "indistinguishable-partition-function"
+  },
+  {
+   "concept": "n-factorial-validity",
+   "prereq": "two-particle-two-level-states"
+  },
+  {
+   "concept": "average-molecular-energy",
+   "prereq": "molecular-partition-function"
+  },
+  {
+   "concept": "average-molecular-energy",
+   "prereq": "boltzmann-probability"
+  },
+  {
+   "concept": "independent-molecule-energy",
+   "prereq": "average-energy-from-q"
+  },
+  {
+   "concept": "independent-molecule-energy",
+   "prereq": "indistinguishable-partition-function"
+  },
+  {
+   "concept": "independent-molecule-energy",
+   "prereq": "average-molecular-energy"
+  },
+  {
+   "concept": "molecular-energy-separation",
+   "prereq": "degrees-of-freedom"
+  },
+  {
+   "concept": "partition-function-factorization",
+   "prereq": "molecular-energy-separation"
+  },
+  {
+   "concept": "partition-function-factorization",
+   "prereq": "molecular-partition-function"
+  },
+  {
+   "concept": "degree-of-freedom-partition-function",
+   "prereq": "partition-function-factorization"
+  },
+  {
+   "concept": "degree-of-freedom-partition-function",
+   "prereq": "average-molecular-energy"
+  }
+ ]
+}

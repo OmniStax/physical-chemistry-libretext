@@ -1,0 +1,44 @@
+{
+ "id": "summary",
+ "module": "550570",
+ "chapter": "16",
+ "title": "The Properties of Gases (Summary)",
+ "short": "Summary",
+ "lead": "",
+ "notes": "Written by Kyle Crabtree; the chapter's learning objectives, which the book prints on this page, are kept here.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": []
+ },
+ "built": "2026-11-08",
+ "figures": [
+  {
+   "id": "fig-7-1",
+   "kind": "photo",
+   "number": "7.1",
+   "widths": [
+    499
+   ],
+   "draws": [],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "kept as the book prints it"
+    }
+   ]
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-untaught",
+   "kind": "correction",
+   "html": "This chapter's pages do not teach how intermolecular forces connect the quantum properties of isolated molecules to bulk properties, dipole moments, polarizabilities and ionization energies as the source of the attraction, calculating $c_6$ from molecular parameters, the square-well potential, or phase diagrams; the objectives and skill goals that name them refer to material the built pages leave out."
+  }
+ ]
+}

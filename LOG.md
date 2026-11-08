@@ -992,3 +992,29 @@ ruby, diode lasers) stay unchecked; 15.4's figure caption says the ruby needs a 
 than A₂₁, which its derivation (by the orchestrator's decision) does not show; derivation
 facts in 15.2–15.4 restate the rate terms the text lists just before them (the prose-first
 reading); 15.5's pump arrows reach the top of the light graph.
+
+## Chapter 17 prep · 2026-11-08
+
+Prep only, no section built. Fetched Chapter 17's 10 images into `media/ch17/`. Converted the
+landing page (`intro/`), 17.1–17.8, 17.S (`summary/`) and the empty 17.E; wrote
+`ch17/exploration.md`, `ch17/config.md` (agreed on Chapter 1's terms), `ch17/chapter.json`
+(8 sections, the intro and summary records, 131 variables) and merged `ch17/book-rows.json`:
+2 types (heat-capacity, partition-function), 45 symbols (34 with macros), 58 concepts, 88
+edges (Hasse-checked, 5 redundant removed), 56 forms; 8.5's `indistinguishable-particles`
+reused. `colours:default` rerun: the two new types dealt colours, every existing colour kept.
+Drafts made for all 10 pages.
+
+Found: 17.E empty; the only exercises are the Problems of 17.1 and 17.2, 10 unkeyed (17.1's
+fifth held for 17.2); 12 AI exercises proposed. Figures: 3 folds and 1 replacement, all still
+(level populations, Einstein solid with 17.4.4's metals, piston levels, two particles on two
+levels); 2 kept images; 4 extra Sims offered, one moving (random exchange of quanta). Nine
+derivation records, one hidden (the Einstein heat capacity, score 12). Corrections checked by
+computation: 17.2's d(x ln x)/dx signs and (17.2.4), the Einstein display's split product,
+Figure 17.4.3's axis stretched eightfold against T/Θ_E, 17.5's sign in ln Q, 17.7's N! rule
+(many states per particle, not large N), 17.1's quadruple precision (16 bytes).
+
+Literature from memory, **unchecked** (no figure uses them; corrections or notes only):
+OpenStax's licence for 17.4.1 (CC BY 4.0 against the printed CC BY-SA 4.0).
+
+Tool fixes: none needed. `lt2md.py` and `md2html.py` handle every page; every maths span of
+the drafts (319) sets under KaTeX in strict mode. `check:content`: no errors, no warnings.
