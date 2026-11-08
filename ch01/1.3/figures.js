@@ -50,7 +50,7 @@ const lightColour = (nm) => (nm >= 380 && nm <= 780 ? F.fact(spectral(nm)) : PAL
     specials: [{ at: () => { const k = kemax(); return k > 0 ? k : null; }, label: 'stopping voltage' }] });
 
   /* the bench, in canvas units */
-  const CX = 440, AX = 1000, TOP = 200, BOT = 380, GAP = AX - CX, K = 420, LAMP = { x: 640, y: 482 };
+  const CX = 440, AX = 1000, TOP = 236, BOT = 416, GAP = AX - CX, K = 420, LAMP = { x: 640, y: 520 };
   const photons = [], electrons = [];
   let due = 0;
   function step(dt) {
@@ -106,7 +106,7 @@ const lightColour = (nm) => (nm >= 380 && nm <= 780 ? F.fact(spectral(nm)) : PAL
     ctx.save(); ctx.fillStyle = light; ctx.globalAlpha = 0.3 + 0.7 * I.v / 100; ctx.fillRect(LAMP.x - 30, LAMP.y - 22, 60, 10); ctx.restore();
     text(ctx, 'lamp', LAMP.x + 56, LAMP.y - 4, PAL.ink, { size: 20 });
     /* the circuit over the top: ammeter and the retarding source, collector negative */
-    const WY = 104;
+    const WY = 130;
     line(ctx, CX, TOP - 10, CX, WY, PAL.ink, 2); line(ctx, AX, TOP - 10, AX, WY, PAL.ink, 2);
     line(ctx, CX, WY, 600, WY, PAL.ink, 2); line(ctx, 640, WY, 820, WY, PAL.ink, 2); line(ctx, 836, WY, AX, WY, PAL.ink, 2);
     ctx.save(); ctx.fillStyle = PAL.panel; ctx.strokeStyle = PAL.ink; ctx.lineWidth = 2; ctx.beginPath(); ctx.arc(620, WY, 20, 0, 2 * Math.PI); ctx.fill(); ctx.stroke(); ctx.restore();
@@ -120,20 +120,20 @@ const lightColour = (nm) => (nm >= 380 && nm <= 780 ? F.fact(spectral(nm)) : PAL
     electrons.forEach((e) => dot(ctx, CX + 14 + e.x, e.y, F.el('e-'), true, 7));
     /* a legend for the two kinds */
     const LX = 1150;
-    wavelet(ctx, LX, 230, 0, light); text(ctx, 'photon', LX + 30, 230, PAL.ink, { size: 20 });
-    dot(ctx, LX, 280, F.el('e-'), true, 7); text(ctx, 'electron', LX + 30, 280, PAL.ink, { size: 20 });
-    text(ctx, `Φ = ${fmt(phi, 2)} eV`, LX - 10, 340, C('energy'), { size: 20, weight: 600 });
+    wavelet(ctx, LX, 260, 0, light); text(ctx, 'photon', LX + 30, 260, PAL.ink, { size: 20 });
+    dot(ctx, LX, 310, F.el('e-'), true, 7); text(ctx, 'electron', LX + 30, 310, PAL.ink, { size: 20 });
+    text(ctx, `Φ = ${fmt(phi, 2)} eV`, LX - 10, 370, C('energy'), { size: 20, weight: 600 });
 
     /* graph A: greatest kinetic energy against frequency */
-    const ba = { l: 130, r: 620, t: 600, b: 860 };
+    const ba = { l: 130, r: 620, t: 630, b: 870 };
     const ga = axes(ctx, ba, [0, 15], [0, 5], { nx: 5, ny: 5, xl: 'frequency ν (10¹⁴ Hz)', yl: 'greatest KE (eV)', xc: C('frequency'), yc: C('energy') });
-    plot(ctx, ga, [{ f: () => 0, x: [0, Math.min(nu0, 15)], ends: '[]' }, { f: (x) => h * x * 1e14 / EV - phi, x: [Math.min(nu0, 15), 15], ends: '[)' }], C('energy'), { w: 5 });
+    plot(ctx, ga, [{ f: () => 0, x: [0, Math.min(nu0, 15)], ends: '--' }, { f: (x) => h * x * 1e14 / EV - phi, x: [Math.min(nu0, 15), 15], ends: '--' }], C('energy'), { w: 5 });
     if (nu0 <= 15) { line(ctx, ga.X(nu0), ba.b, ga.X(nu0), ba.b - 40, alpha(C('frequency'), 0.8), 3, [4, 8]); text(ctx, 'ν₀', ga.X(nu0), ba.b - 56, C('frequency'), { size: 22, weight: 600, align: 'center' }); }
     line(ctx, ba.l, ga.Y(Math.min(V.v, 5)), ba.r, ga.Y(Math.min(V.v, 5)), alpha(C('potential'), 0.8), 3, [10, 10]);
     text(ctx, 'eV', ba.r + 10, ga.Y(Math.min(V.v, 5)), C('potential'), { size: 20, weight: 600 });
     dot(ctx, ga.X(nu), ga.Y(Math.max(0, Math.min(ke, 5))), C('energy'), true, 10);
     /* graph D: electrons emitted per second against intensity */
-    const bd = { l: 850, r: 1330, t: 600, b: 860 };
+    const bd = { l: 850, r: 1330, t: 630, b: 870 };
     const gd = axes(ctx, bd, [0, 100], [0, 40], { nx: 5, ny: 4, xl: 'intensity (% of full)', yl: 'electrons emitted per second' });
     plot(ctx, gd, (x) => (ke > 0 ? 0.4 * x : 0), PAL.ink, { w: 5 });
     dot(ctx, gd.X(I.v), gd.Y(rate), PAL.ink, true, 10);

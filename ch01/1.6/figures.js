@@ -92,7 +92,7 @@ const sciS = (x, dg = 2) => { const [m, e] = sciParts(x, dg); return e === 0 ? m
     const r = lam / 1e-10;
     const cmp = r < 0.01 ? `$${sciT(1 / r, 1)}$ times shorter than the spacing of atoms in a solid`
       : r > 100 ? `$${sciT(r, 1)}$ times the spacing of atoms in a solid`
-        : `${fmt(r, 2)} times the 0.1 nm spacing of atoms in a solid`;
+        : `${fmt(r, r >= 10 ? 0 : 2)} times the 0.1 nm spacing of atoms in a solid`;
     topline(ctx, `${b.an} ${b.name} at $\\kv = ${sciT(v)}\\ \\text{m/s}$ has $\\klambda = ${sciT(lam)}\\ \\text{m}$, ${cmp}.`);
     tex(d.readout, `\\klambda = \\dfrac{h}{\\km\\kv} = \\dfrac{6.626\\times10^{-34}\\ \\text{J s}}{(${b.mT}\\ \\text{kg})(${sciT(v)}\\ \\text{m/s})} = ${sciT(lam)}\\ \\text{m}`);
   }

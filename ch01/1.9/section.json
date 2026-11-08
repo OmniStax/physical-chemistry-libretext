@@ -1,0 +1,207 @@
+{
+ "id": "1.9",
+ "module": "13389",
+ "chapter": "1",
+ "title": "The Heisenberg Uncertainty Principle",
+ "short": "Uncertainty principle",
+ "lead": "Because a particle is also a wave, where it will be found can only be given as a probability. The section follows that idea from electrons arriving one by one at a screen to Heisenberg’s limit on how well the position and the momentum of a particle can be known together, and pictures the limit with a wave packet.",
+ "objectives": [
+  "To understand that sometime you cannot know everything about a quantum system as demonstrated by the Heisenberg uncertainly principle."
+ ],
+ "summary_html": "",
+ "notes": "The page is adapted from OpenStax College Physics and the LibreTexts uncertainty-principle module under CC BY 4.0, and the embedded YouTube video on wave packets and the slit experiment is left out, its idea carried by the wave-packet figure.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The two exercises are the book’s, keyed by the book; their Bloom levels and concept tags are AI-chosen, and the key of Exercise 1.9.2 carries two corrections. Numeric answers accept 2% tolerance.",
+ "figures": [
+  {
+   "id": "sim-electron-buildup",
+   "kind": "sim",
+   "number": "1.9.1",
+   "originals": [
+    "/media/ch01/122965-Figure_30_07_01a.jpg"
+   ],
+   "original_caption": "The building up of the diffraction pattern of electrons scattered from a crystal surface. Each electron arrives at a definite location, which cannot be precisely predicted. The overall distribution shown at the bottom can be predicted as the diffraction of waves having the de Broglie wavelength of the electrons (CC BY 4.0; OpenStax).",
+   "draws": [
+    "wavelength",
+    "velocity"
+   ],
+   "conventions": [
+    "e-"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "sim-wave-packet",
+   "kind": "sim",
+   "number": "1.9.2",
+   "originals": [
+    "/media/ch01/54683-reality_wavepacket.gif"
+   ],
+   "original_caption": "The animation shows the relevant spreads in the uncertainty for position and momentum of light/photons (light wave's corresponding photon particle). From the result of de Broglie, we know that for a particle with known momentum, p will have a precise value for its de Broglie wavelength can be determined (and hence a specific color of the light).",
+   "draws": [
+    "length",
+    "momentum",
+    "velocity",
+    "wavelength"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "limits",
+   "concept": "heisenberg-uncertainty-principle",
+   "verb": "introduces"
+  },
+  {
+   "span": "probability",
+   "concept": "wave-particle-duality",
+   "verb": "uses"
+  },
+  {
+   "span": "probability",
+   "concept": "quantum-probability",
+   "verb": "introduces"
+  },
+  {
+   "span": "probability",
+   "concept": "de-broglie-wavelength",
+   "verb": "uses"
+  },
+  {
+   "span": "probability",
+   "concept": "interference-and-diffraction",
+   "verb": "uses"
+  },
+  {
+   "span": "heisenberg",
+   "concept": "de-broglie-wavelength",
+   "verb": "uses"
+  },
+  {
+   "span": "heisenberg",
+   "concept": "heisenberg-uncertainty-principle",
+   "verb": "reinforces"
+  },
+  {
+   "span": "wave-packets",
+   "concept": "wave-particle-duality",
+   "verb": "uses"
+  },
+  {
+   "span": "wave-packets",
+   "concept": "wave-packet",
+   "verb": "introduces"
+  },
+  {
+   "span": "wave-packets",
+   "concept": "heisenberg-uncertainty-principle",
+   "verb": "reinforces"
+  },
+  {
+   "span": "wave-packets",
+   "concept": "bohr-model",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "e1",
+   "source_id": "exr:1.9.1",
+   "source_number": "Exercise 1.9.1",
+   "kind": "exercise",
+   "bloom": "Understand",
+   "place": {
+    "at": "end"
+   },
+   "cite": "heisenberg",
+   "prompt": "<p>What is the maximum uncertainty of velocity the electron described in Example 1.9.1 ?</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "source",
+    "hint": "Equation 1.9.5 is an inequality: which way does it bound $\\Delta v$?",
+    "solution": "<p>Infinity. There is no limit in the maximum uncertainty, just the minimum uncertainty.</p>"
+   }
+  },
+  {
+   "id": "e2",
+   "source_id": "exr:1.9.2",
+   "source_number": "Exercise 1.9.2",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "heisenberg",
+   "prompt": "<p>Estimate the minimum uncertainty in the speed of an electron confined to a hydrogen atom within a diameter of $1 \\times 10^{-10} m$?</p>",
+   "answer": {
+    "type": "number",
+    "generated_by": "source",
+    "value": 1150000.0,
+    "unit": "m/s",
+    "hint": "The uncertainty in position is half the diameter; then $\\Delta v \\ge \\hbar/(2 m \\Delta x)$.",
+    "solution": "<p>We need to quantify the uncertainty of the electron in position. We can estimate that as $\\pm 5 \\times 10^{-10} m$<sup class=\"fn\" data-note=\"dx-half\"></sup>. Hence, substituting the relavant numbers into Equation 1.9.5 and solving for $\\Delta v$ we get</p>\n$$ \\Delta v= 1.15 \\times 10^6\\, km/s $$<sup class=\"fn\" data-note=\"dv-unit\"></sup>\n<p>Notice that the uncertainty is significantly greater for the electron in a hydrogen atom than in the magnesium atom (Example 1.9.1) as expected since the magnesium atom is appreciably bigger.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "e1",
+   "concept": "heisenberg-uncertainty-principle"
+  },
+  {
+   "exercise": "e2",
+   "concept": "heisenberg-uncertainty-principle"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "photon-momentum",
+   "kind": "correction",
+   "html": "The momentum of a photon is not its frequency: it is $h/\\lambda$, which equals $h\\nu/c$, so it is proportional to the frequency."
+  },
+  {
+   "id": "double-slit-ref",
+   "kind": "correction",
+   "html": "Figure 1.9.2 is a wave packet; the patterns built up by single particles are those of Figure 1.9.1, and the double slit is the experiment of Section 1.7."
+  },
+  {
+   "id": "dx-half",
+   "kind": "correction",
+   "html": "Half of a diameter of $1 \\times 10^{-10}$ m is $\\pm 5 \\times 10^{-11}$ m, not $\\pm 5 \\times 10^{-10}$ m; the speed below is the one this smaller value gives."
+  },
+  {
+   "id": "dv-unit",
+   "kind": "correction",
+   "html": "The unit is m/s: $\\hbar/(2 m_e \\Delta x) = 1.0546\\times10^{-34}/(2 \\times 9.109\\times10^{-31} \\times 5\\times10^{-11}) = 1.16 \\times 10^{6}$ m/s."
+  }
+ ]
+}

@@ -81,7 +81,7 @@ function spectral(nm) {
     if (e - en > 0.05) line(ctx, sx, Y(en) - 2 * r - 4, sx, Y(e) + 2, alpha(PAL.ink, 0.4), 2, [4, 8]);
     text(ctx, 'ramp: any energy', (r0 + r1) / 2, box.b + 40, PAL.ink, { size: 22, align: 'center' });
     text(ctx, 'stairs: whole steps only', (s0 + s1) / 2, box.b + 40, PAL.ink, { size: 22, align: 'center' });
-    text(ctx, `n = ${n}`, Math.min(sx + 26, s1 - 10), sy - 6, PAL.ink, { size: 22, weight: 600, bg: true });
+    text(ctx, `n = ${n}`, sx, sy - r - 22, PAL.ink, { size: 22, weight: 600, align: 'center' });
     tex(d.readout, `\\kE = n h\\knu = ${n} \\times (6.626\\times10^{-34}\\ \\text{J·s})(${fmt(NU.v, 1)}\\times10^{13}\\ \\text{Hz}) = ${n === 0 ? '0' : sci(en * 1e-20, 2)}\\ \\text{J}`);
   }
   register(d.fig, { update: () => {}, draw });
@@ -126,7 +126,7 @@ function spectral(nm) {
     text(ctx, 'Rayleigh–Jeans', ax.X(ll) + 14, ax.Y(yl), C('energy-density'), { size: 20 });
     const yp = planck(lmax, t) / Y;
     text(ctx, 'Planck', ax.X(Math.max(lmax, lam + 120)) + 40, ax.Y(yp) - 10, C('energy-density'), { size: 20, weight: 600 });
-    text(ctx, 'the Sun, measured', ax.X(1750), ax.Y(0.7), PAL.ink, { size: 20, align: 'center' });
+    text(ctx, 'the Sun, measured', ax.X(900), ax.Y(2.2), PAL.ink, { size: 20, align: 'center' });
     tex(d.readout, `\\krho(\\klambda,\\kT) = \\dfrac{8\\pi hc}{\\klambda^5}\\dfrac{1}{e^{hc/\\klambda k_B\\kT}-1} = \\dfrac{8\\pi hc}{(${fmt(lam, 0)}\\ \\text{nm})^5}\\dfrac{1}{e^{${fmt(x, 2)}}-1} = ${sci(rho, 2)}\\ \\text{J/m}^4`);
   }
   register(d.fig, { update: () => {}, draw });
