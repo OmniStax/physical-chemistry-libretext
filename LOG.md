@@ -1018,3 +1018,31 @@ OpenStax's licence for 17.4.1 (CC BY 4.0 against the printed CC BY-SA 4.0).
 
 Tool fixes: none needed. `lt2md.py` and `md2html.py` handle every page; every maths span of
 the drafts (319) sets under KaTeX in strict mode. `check:content`: no errors, no warnings.
+
+## Chapter 18 prep · 2026-11-08
+
+Prep only, no section built. Fetched Chapter 18's 6 images into `media/ch18/`. Converted the
+landing page (`intro/`), 18.1–18.11 and the empty 18.E (no summary page); wrote
+`ch18/exploration.md`, `ch18/config.md` (agreed on Chapter 1's terms), `ch18/chapter.json` (11
+sections, the intro record, 256 variables) and merged `ch18/book-rows.json`: no new type, 86
+symbols (68 with macros), 58 concepts, 121 edges (Hasse-checked, 13 redundant removed), 52 forms;
+17's q_trans, q_rot, q_vib, q_elec and `translational-partition-function` reused, not re-staged.
+Drafts made for all 12 pages.
+
+Found: 18.E empty; exercises are 18.5.1 (keyed) and 18.9's five lab exercises (unkeyed; 1–4 need
+CRC data); 12 AI exercises proposed. Figures: 18.4.1 folded with the unnumbered Cl₂ population
+chart (still), 18.7.1 water's modes (moving), 18.10.1 ortho/para (still), 18.11.1 the C̄_V
+staircase on a log axis (still); the HCl rotational chart kept, linked to 13.2's `sim-rovib`; 2
+extra Sims offered (thermal wavelength recommended). Twelve derivation records. Corrections
+checked by computation: 18.1's Λ and the 10²⁰ estimate, 18.2's 10⁴ K, Table 18.4.1's NO ω and N₂,
+HI Θ_rot, kT/hc = 208.5 cm⁻¹, the Cl₂ chart against Θ_vib = 805 K, 18.7.1's water Θ, the
+symmetric top's missing π^{3/2}, 18.10's (−1)^J and e^(−6Θ_R/T), 18.11's sign; the ortho/para
+curves of 18.10.1 reproduced from Θ_R = 87.6 K.
+
+Literature from memory, **unchecked** (no figure uses them; corrections or notes only): NO's
+121 cm⁻¹ spin–orbit level; NO₂'s bending mode near 750 cm⁻¹; the improved polyatomic q_rot's
+terms; ¹⁶O₂ allowing only odd rotational levels; CO₂ and NO₂ C_V,m near 28.8 and 28.9 J K⁻¹ mol⁻¹.
+
+Tool fixes: `lt2md.py` reads a `div.box-objectives` (18.9's); `md2html.py` reads a `## Exercises`
+list and an unbraced `\ce X`. Chapters 1–17 reconverted to scratch: 196 of 197 source.md
+byte-identical, the other (1.3) from an earlier converter change. `check:content`: no errors.
