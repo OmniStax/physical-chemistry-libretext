@@ -4,7 +4,7 @@
  "chapter": "1",
  "title": "Photoelectric Effect Explained with Quantum Hypothesis",
  "short": "Photoelectric effect",
- "lead": "Light shining on a metal can knock electrons out of it. The section follows the experiments of Lenard and Millikan on how the number and energy of those electrons depend on the light's intensity and colour, Einstein's explanation in terms of quanta of light, and the workfunction that holds an electron in a metal.",
+ "lead": "Light shining on a metal can knock electrons out of it. Lenard and Millikan measured how the number and energy of those electrons depend on the light's intensity and colour, and Einstein accounted for their results with quanta of light and the workfunction that holds an electron in a metal.",
  "objectives": [
   "To be familiar with the photoelectron effect for bulk materials",
   "Understand how the photoelectron kinetic energy and intensity vary as a function of incident light wavelength",
@@ -13,7 +13,7 @@
   "Describe the photoelectric effect with Einstein's quantized photon model of light"
  ],
  "summary_html": "<p>Although Hertz discovered the photoelectron in 1887, it was not until 1905 that a theory was proposed that explained the effect completely. The theory was proposed by Einstein and it made the claim that electromagnetic radiation had to be thought of as a series of particles, called photons, which collide with the electrons on the surface and emit them. This theory ran contrary to the belief that electromagnetic radiation was a wave and thus it was not recognized as correct until 1916 when Robert Millikan experimentally confirmed the theory</p><p>The photoelectric effect is the process in which electromagnetic radiation ejects electrons from a material. Einstein proposed photons to be quanta of electromagnetic radiation having energy $E=h\\nu$ is the frequency of the radiation. All electromagnetic radiation is composed of photons. As Einstein explained, all characteristics of the photoelectric effect are due to the interaction of individual photons with individual electrons. The maximum kinetic energy $KE_e$ of ejected electrons (photoelectrons) is given by $KE_e=h\\nu – \\Phi$, where $h\\nu$ is the photon energy and $\\Phi$ is the workfunction (or binding energy) of the electron to the particular material.</p>",
- "notes": "The page is adapted from Michael Fowler (University of Virginia), Mark Tuckerman (New York University), Hanson, Harvey, Sweeney and Zielinski’s Quantum States of Atoms and Molecules and OpenStax Chemistry (CC BY 4.0), and its four figures of the photoelectric experiment are folded into one live bench.",
+ "notes": "Adapted from Michael Fowler (University of Virginia), Mark Tuckerman (New York University), Hanson, Harvey, Sweeney and Zielinski's Quantum States of Atoms and Molecules and OpenStax Chemistry (CC BY 4.0). The four figures of the photoelectric experiment are folded into one live bench.",
  "ai": {
   "text": [
    {
@@ -30,7 +30,7 @@
  },
  "built": "2026-11-08",
  "exercises_lead": "",
- "exercise_notes": "Exercises 1.3.1 and 1.3.2 are the book’s, keyed by the book; the five Conceptual Questions carry no answers in the book, so their solutions are AI-written. Bloom levels and concept tags are AI-chosen. Numeric answers accept 2% tolerance.",
+ "exercise_notes": "Exercises 1.3.1 and 1.3.2 and their keys are the book's. The book gives no answers to the five Conceptual Questions, so their solutions are AI-written. Bloom levels and concept tags were chosen by AI. Numeric answers accept a 2% tolerance.",
  "figures": [
   {
    "id": "sim-photoelectric",
@@ -209,7 +209,7 @@
    "answer": {
     "type": "open",
     "generated_by": "ai",
-    "solution": "<p>Without photons one cannot explain: that the kinetic energy of the ejected electrons does not depend on the intensity of the light (Lenard’s $V_{stop}$); that it rises linearly with frequency, with slope $h$ (or $h/e$ for $V_{stop}$); that there is a threshold frequency $\\nu_0$ below which no electron is ejected however bright the light; and that electrons leave at once, with no delay even in very dim light. Without photons one can explain that light ejects electrons at all, since a wave carries energy, and that more intense light ejects more electrons. These are not inconsistent with photons: in Einstein’s picture more intense light is more photons per second, and each photon ejects at most one electron, so the number of electrons, the current, is proportional to the intensity, which is what is observed.</p>"
+    "solution": "<p>Without photons one cannot explain: that the kinetic energy of the ejected electrons does not depend on the intensity of the light (Lenard's $V_{stop}$); that it rises linearly with frequency, with slope $h$ (or $h/e$ for $V_{stop}$); that there is a threshold frequency $\\nu_0$ below which no electron is ejected however bright the light; and that electrons leave at once, with no delay even in very dim light. Without photons one can explain that light ejects electrons at all, since a wave carries energy, and that more intense light ejects more electrons. Both fit the photon picture too: in Einstein's picture more intense light is more photons per second, and each photon ejects at most one electron, so the number of electrons, the current, is proportional to the intensity, as observed.</p>"
    }
   },
   {
@@ -225,7 +225,7 @@
    "answer": {
     "type": "open",
     "generated_by": "ai",
-    "solution": "<p>Of the particle character. A wave delivers energy in proportion to its intensity, so it predicts faster electrons from brighter light, no threshold frequency and a delay in dim light, and none of these is observed. The effect follows directly from light arriving as particles, photons of energy $E = h\\nu$, each absorbed whole by one electron, which keeps $KE = h\\nu - \\Phi$. The wave character still enters only through the frequency $\\nu$, and hence the wavelength, that fixes each photon’s energy.</p>"
+    "solution": "<p>Of the particle character. A wave delivers energy in proportion to its intensity, so it predicts faster electrons from brighter light, no threshold frequency and a delay in dim light, and none of these is observed. The effect follows directly from light arriving as particles, photons of energy $E = h\\nu$, each absorbed whole by one electron, which keeps $KE = h\\nu - \\Phi$. The wave character still enters only through the frequency $\\nu$, and hence the wavelength, that fixes each photon's energy.</p>"
    }
   },
   {
@@ -241,7 +241,7 @@
    "answer": {
     "type": "open",
     "generated_by": "ai",
-    "solution": "<p>The free charges that make a metal a good conductor are its delocalized electrons, which are not bound to any one atom and move through the whole lattice. Little energy is needed to pull one of them out of the surface, so a metal’s workfunction is small, smaller than the ionization energy of its atoms (Table 1.3.1). An insulator has no such free electrons: each one is held in its own atom or bond, and removing it costs an energy closer to an ionization energy. Its higher $\\Phi$ means a higher threshold frequency $\\nu_0 = \\Phi/h$, so only higher-energy photons, far in the ultraviolet, can eject electrons. The same looseness of binding that lets a metal’s electrons carry a current lets low-energy photons eject them.</p>"
+    "solution": "<p>The free charges that make a metal a good conductor are its delocalized electrons, which are not bound to any one atom and move through the whole lattice. Little energy is needed to pull one of them out of the surface, so a metal's workfunction is small, smaller than the ionization energy of its atoms (Table 1.3.1). An insulator has no such free electrons: each one is held in its own atom or bond, and removing it costs an energy closer to an ionization energy. Its higher $\\Phi$ means a higher threshold frequency $\\nu_0 = \\Phi/h$, so only higher-energy photons, far in the ultraviolet, can eject electrons. The same looseness of binding that lets a metal's electrons carry a current lets low-energy photons eject them.</p>"
    }
   },
   {
@@ -257,7 +257,7 @@
    "answer": {
     "type": "open",
     "generated_by": "ai",
-    "solution": "<p>When you shake the metal, the energy goes into the motion of the whole piece: every electron moves along with the lattice, and the energy each one gets is tiny. Shaking at 1 m/s gives an electron $\\tfrac12 m_e v^2 = \\tfrac12(9.11\\times10^{-31}\\,kg)(1\\,m/s)^2 = 4.6\\times10^{-31}\\,J$, about $3\\times10^{-12}$ eV, while escaping takes the workfunction, a few eV. So no electron falls out. Heating gives the metal’s particles random thermal energy, distributed unevenly: the average per particle is of order $k_BT$ (0.17 eV at 2000 K), but a small fraction of the electrons have far more than the average, and at high temperature some of them have more than $\\Phi$ and escape from the surface. What matters, as in the photoelectric effect, is the energy one electron receives compared with $\\Phi$, not the total energy put into the metal.</p>"
+    "solution": "<p>When you shake the metal, the energy goes into the motion of the whole piece: every electron moves along with the lattice, and the energy each one gets is tiny. Shaking at 1 m/s gives an electron $\\tfrac12 m_e v^2 = \\tfrac12(9.11\\times10^{-31}\\,kg)(1\\,m/s)^2 = 4.6\\times10^{-31}\\,J$, about $3\\times10^{-12}$ eV, while escaping takes the workfunction, a few eV, so no electron falls out. Heating gives the metal's particles random thermal energy, distributed unevenly: the average per particle is of order $k_BT$ (0.17 eV at 2000 K), but a small fraction of the electrons have far more than the average, and at high temperature some of them have more than $\\Phi$ and escape from the surface. As in the photoelectric effect, an electron escapes only when it alone receives more than $\\Phi$, however much energy the metal as a whole takes in.</p>"
    }
   }
  ],
@@ -316,7 +316,7 @@
   {
    "id": "c-retarding",
    "kind": "correction",
-   "html": "A retarding potential is a voltage: an electron of 0.25 eV is stopped by a retarding potential of 0.25 V, not 0.26 eV."
+   "html": "The book gives 0.26 eV, but a retarding potential is a voltage, and an electron of 0.25 eV is stopped by a retarding potential of 0.25 V."
   }
  ]
 }

@@ -4,7 +4,7 @@
  "chapter": "1",
  "title": "Blackbody Radiation Cannot Be Explained Classically",
  "short": "Blackbody radiation",
- "lead": "Every warm body glows, and a perfect absorber glows in a way that depends only on its temperature. The section follows the measurements of that glow, the two laws read off them, and the classical theory that tried to explain them.",
+ "lead": "Any warm body glows. Measurements of the glow from a perfect absorber gave two empirical laws, and Rayleigh and Jeans tried to derive its spectrum from classical physics.",
  "objectives": [
   "Be familiar with black-body radiators",
   "Apply Stefan-Boltzmann’s Law to estimate total light output from a radiator",
@@ -12,7 +12,7 @@
   "Understand the Rayleigh-Jeans Law and how it fails to properly model black-body radiation"
  ],
  "summary_html": "",
- "notes": "The page is adapted from Michael Fowler (University of Virginia), Hanson, Harvey, Sweeney and Zielinski’s Quantum States of Atoms and Molecules, OpenStax Chemistry and ACuriousMind, under CC BY 4.0, and the image of Figure 1.1.5, which repeats as Figure 1.2.1, is folded into the live spectrum.",
+ "notes": "Adapted from Michael Fowler (University of Virginia), Hanson, Harvey, Sweeney and Zielinski's Quantum States of Atoms and Molecules, OpenStax Chemistry and ACuriousMind, under CC BY 4.0. Figure 1.1.5, which the book repeats as Figure 1.2.1, is folded into the live spectrum.",
  "ai": {
   "text": [
    {
@@ -29,7 +29,7 @@
  },
  "built": "2026-11-08",
  "exercises_lead": "",
- "exercise_notes": "The one exercise is the book’s, keyed by the book; its Bloom level and concept tag are AI-chosen. Numeric answers accept 2% tolerance.",
+ "exercise_notes": "The one exercise and its key are the book's; its Bloom level and concept tag were chosen by AI. Numeric answers accept a 2% tolerance.",
  "figures": [
   {
    "id": "fig-1-1-1",
@@ -180,7 +180,7 @@
       "part": "a",
       "value": 500,
       "unit": "nm",
-      "hint": "Wien’s law gives the peak wavelength as b divided by the temperature."
+      "hint": "Wien's law gives the peak wavelength as b divided by the temperature."
      },
      {
       "part": "b",

@@ -4,12 +4,12 @@
  "chapter": "1",
  "title": "Quantum Hypothesis Used for Blackbody Radiation Law",
  "short": "Planck's quantum hypothesis",
- "lead": "Classical physics could not account for the spectrum of a blackbody. The section follows Planck's proposal that the oscillators in a hot body gain and lose energy only in whole quanta, the constant that sets the size of a quantum, and the radiation law he built on it.",
+ "lead": "Classical physics could not account for the spectrum of a blackbody. Planck proposed that the oscillators in a hot body gain and lose energy only in whole quanta, whose size is set by a new constant, and built a radiation law on that idea.",
  "objectives": [
   "To understand how energy is quantized in blackbody radiation"
  ],
  "summary_html": "<p>The agreement between Planck’s theory and the experimental observation provided strong evidence that the energy of electron motion in matter is quantized. In the next two sections, we will see that the energy carried by light also is quantized in units of $h \\bar {\\nu}$. These packets of energy are called “photons.”</p>",
- "notes": "The page is adapted from Michael Fowler (University of Virginia) and Hanson, Harvey, Sweeney and Zielinski’s Quantum States of Atoms and Molecules; the image of Figure 1.2.1, which repeats Figure 1.1.5, is folded with Figure 1.2.2 into the live Planck spectrum, and the Max Planck Society logo in the note is left out.",
+ "notes": "Adapted from Michael Fowler (University of Virginia) and Hanson, Harvey, Sweeney and Zielinski's Quantum States of Atoms and Molecules. Figure 1.2.1, which repeats Figure 1.1.5, is folded with Figure 1.2.2 into the live Planck spectrum. The Max Planck Society logo in the note is left out.",
  "ai": {
   "text": [
    {
@@ -26,7 +26,7 @@
  },
  "built": "2026-11-08",
  "exercises_lead": "",
- "exercise_notes": "Exercise 1.2.1 is the book’s, which prints no answer, so its solution is AI-written; the two exercises on Planck’s distribution law are new and AI-written, computed with the book’s constants. Bloom levels and concept tags are AI-chosen. Numeric answers accept 2% tolerance.",
+ "exercise_notes": "Exercise 1.2.1 is the book's, but the book prints no answer, so its solution is AI-written. The two exercises on Planck's distribution law are new and AI-written, computed with the book's constants. Bloom levels and concept tags were chosen by AI. Numeric answers accept a 2% tolerance.",
  "figures": [
   {
    "id": "sim-ladder",
@@ -162,7 +162,7 @@
     "type": "open",
     "generated_by": "ai",
     "hint": "Write the unit of each factor in Equation 1.2.3 and check that the exponent is a pure number.",
-    "solution": "<p>The exponent $hc/\\lambda k_B T$ has units $(J\\cdot s)(m/s)/\\big((m)(J/K)(K)\\big) = 1$, so it is a pure number and the factor $1/(e^{hc/\\lambda k_BT}-1)$ carries no units. What is left is $8\\pi hc/\\lambda^5$, with units $(J\\cdot s)(m/s)/m^5 = J/m^4$: $\\rho(\\lambda,T)$ is an energy per volume per unit wavelength. Multiplying by $d\\lambda$, a length in m, gives $\\rho(\\lambda,T)\\,d\\lambda$ in $J/m^4 \\cdot m = J/m^3$, an energy per unit volume, as an energy density should be.</p>"
+    "solution": "<p>The exponent $hc/\\lambda k_B T$ has units $(J\\cdot s)(m/s)/\\big((m)(J/K)(K)\\big) = 1$, so it is a pure number and the factor $1/(e^{hc/\\lambda k_BT}-1)$ carries no units. That leaves $8\\pi hc/\\lambda^5$, with units $(J\\cdot s)(m/s)/m^5 = J/m^4$, so $\\rho(\\lambda,T)$ is an energy per volume per unit wavelength. Multiplying by $d\\lambda$, a length in m, gives $\\rho(\\lambda,T)\\,d\\lambda$ in $J/m^4 \\cdot m = J/m^3$, an energy per unit volume.</p>"
    }
   },
   {
@@ -193,13 +193,13 @@
     "at": "end"
    },
    "cite": "quantizing-electrons",
-   "prompt": "<p>Use Equation 1.2.3 to find by what factor the energy density $\\rho(\\lambda,T)$ at $\\lambda = 400$ nm grows when a blackbody is heated from 3000 K to 6000 K. Compare the factor of 2 by which the Rayleigh-Jeans law would have it grow.</p>",
+   "prompt": "<p>Use Equation 1.2.3 to find the factor by which the energy density $\\rho(\\lambda,T)$ at $\\lambda = 400$ nm grows when a blackbody is heated from 3000 K to 6000 K. Compare it with the factor of 2 that the Rayleigh-Jeans law gives.</p>",
    "answer": {
     "type": "number",
     "value": 405,
     "generated_by": "ai",
     "hint": "The prefactor $8\\pi hc/\\lambda^5$ is the same at both temperatures, so the ratio is the ratio of the two factors $1/(e^{hc/\\lambda k_BT}-1)$.",
-    "solution": "<p>At 400 nm, $hc/\\lambda k_B = (6.626\\times10^{-34})(3.00\\times10^{8})/\\big((400\\times10^{-9})(1.38\\times10^{-23})\\big) = 3.60\\times10^{4}\\,K$. At 3000 K the exponent is 12.0, at 6000 K it is 6.00. The ratio is $\\dfrac{e^{12.0}-1}{e^{6.00}-1} = \\dfrac{1.63\\times10^{5}}{403} = 405$ (from $\\rho = 2.99\\times10^{3}$ and $1.21\\times10^{6}\\,J/m^4$). Doubling the temperature raises the violet energy density about 405-fold, not twofold: at 3000 K a 400 nm quantum is twelve times $k_BT$ and is very rarely emitted, while at 6000 K it is only six times $k_BT$.</p>"
+    "solution": "<p>At 400 nm, $hc/\\lambda k_B = (6.626\\times10^{-34})(3.00\\times10^{8})/\\big((400\\times10^{-9})(1.38\\times10^{-23})\\big) = 3.60\\times10^{4}\\,K$. At 3000 K the exponent is 12.0, at 6000 K it is 6.00. The ratio is $\\dfrac{e^{12.0}-1}{e^{6.00}-1} = \\dfrac{1.63\\times10^{5}}{403} = 405$ (from $\\rho = 2.99\\times10^{3}$ and $1.21\\times10^{6}\\,J/m^4$). Doubling the temperature raises the violet energy density about 405-fold, where the Rayleigh-Jeans law gives a factor of 2. At 3000 K a 400 nm quantum is twelve times $k_BT$ and is very rarely emitted; at 6000 K it is only six times $k_BT$.</p>"
    }
   }
  ],
@@ -225,12 +225,12 @@
   {
    "id": "c-radiance",
    "kind": "correction",
-   "html": "The first line prints $dB_\\nu(\\nu,T) = \\rho_\\nu(T)\\,d\\nu$, but the radiance is not the energy density: $dB_\\nu(\\nu,T) = \\dfrac{c}{4\\pi}\\rho_\\nu(T)\\,d\\nu$, which with Equation 1.2.2 gives the second line, $\\dfrac{2h\\nu^3}{c^2}\\dfrac{1}{e^{h\\nu/k_BT}-1}\\,d\\nu$."
+   "html": "The first line prints $dB_\\nu(\\nu,T) = \\rho_\\nu(T)\\,d\\nu$. The radiance and the energy density differ by a factor $c/4\\pi$: $dB_\\nu(\\nu,T) = \\dfrac{c}{4\\pi}\\rho_\\nu(T)\\,d\\nu$, which with Equation 1.2.2 gives the second line, $\\dfrac{2h\\nu^3}{c^2}\\dfrac{1}{e^{h\\nu/k_BT}-1}\\,d\\nu$."
   },
   {
    "id": "c-figure-number",
    "kind": "correction",
-   "html": "The page has no Figure 1.2.3; the comparison of Planck’s formula with experiment it points to is Figure 1.2.2."
+   "html": "The page has no Figure 1.2.3. The comparison of Planck's formula with experiment that it points to is Figure 1.2.2."
   }
  ]
 }

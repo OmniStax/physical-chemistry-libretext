@@ -85,7 +85,7 @@ function sciU(x, d = 2) { const e = expOf(x), m = x / Math.pow(10, e); return m.
     text(ctx, 'electrons counted at each height', (HB.l + HB.r) / 2, SCR.b + 26, PAL.ink, { size: 18, align: 'center' });
     const l = lam();
     readout(d.readout, `\\klambda = \\dfrac{h}{\\km \\kv} = \\dfrac{6.626\\times10^{-34}\\ \\text{kg m}^{2}\\text{/s}}{(9.109\\times10^{-31}\\ \\text{kg})(${fmt(v.v, 2)}\\times10^{6}\\ \\text{m/s})} = ${sciT(l)}\\ \\text{m}`,
-      watched ? 'Knowing the slit leaves a single-slit pattern, its first dark bands $\\klambda L/a$ = ' + fmt(l * LS / AS * 1e6, 2) + ' µm from the centre.' : 'The bands stand $\\klambda L/d$ = ' + fmt(l * LS / DS * 1e6, 3) + ' µm apart on the screen.');
+      watched ? 'With the slit known, only the single-slit pattern is left, its first dark bands $\\klambda L/a$ = ' + fmt(l * LS / AS * 1e6, 2) + ' µm from the centre.' : 'The bands stand $\\klambda L/d$ = ' + fmt(l * LS / DS * 1e6, 3) + ' µm apart on the screen.');
   }
   register(d.fig, { update: (dt) => cy.step(dt, () => 1), draw });
 })();

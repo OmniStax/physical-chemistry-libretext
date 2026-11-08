@@ -97,14 +97,14 @@ function spectral(nm) {
   const SUN = [2.50, 3.87, 5.60, 5.99, 6.97, 6.66, 10.67, 10.18, 12.17, 12.47, 12.01, 11.56, 11.60, 11.42, 11.32, 11.09, 10.64, 10.27, 9.64, 9.46, 9.01, 8.57, 8.19, 7.87, 7.54, 7.20, 6.88, 6.54, 6.15, 5.95, 5.76, 5.55, 5.33, 5.06, 4.85, 4.69, 4.46, 4.26, 4.08, 3.89, 3.70, 3.61, 3.48, 3.37, 3.24, 3.13, 3.03, 2.92, 2.81, 2.73, 2.59, 2.50, 2.39, 2.31, 2.24, 2.17, 2.09, 2.02, 1.95, 1.90, 1.84, 1.78, 1.73, 1.67, 1.61, 1.56, 1.51, 1.46, 1.39, 1.35, 1.29, 1.25, 1.19, 1.15, 1.11, 1.07, 1.02, 0.99, 0.95, 0.89, 0.88, 0.85, 0.82, 0.78, 0.76, 0.73, 0.71, 0.68, 0.66, 0.63, 0.60, 0.59, 0.57, 0.55, 0.53, 0.52, 0.50, 0.49, 0.47, 0.45, 0.44, 0.43, 0.41, 0.40, 0.39, 0.37, 0.36, 0.35, 0.34, 0.33, 0.32];
   const sun = (nm) => { const i = (nm - 290) / 20; if (i < 0 || i > SUN.length - 1) return NaN; const j = Math.floor(i), f = i - j; return j >= SUN.length - 1 ? SUN[j] : SUN[j] * (1 - f) + SUN[j + 1] * f; };
   const T = ctl(d.controls, { label: '\\kT', cls: 'temperature', min: 3000, max: 6000, step: 1, value: 5777, unit: 'K', dec: 0,
-    specials: [{ at: 5777, label: 'the Sun’s effective temperature' }] });
+    specials: [{ at: 5777, label: "the Sun's effective temperature" }] });
   const L = ctl(d.controls, { label: '\\klambda', cls: 'wavelength', min: 200, max: 2500, step: 1, value: 500, unit: 'nm', dec: 0,
     specials: [{ at: () => peak(T.v), label: 'the peak' }] });
   const Y = 1e5;
   function draw() {
     const { ctx, W } = begin(d.c);
     const t = T.v, lam = L.v, lmax = peak(t), x = h * c / (lam * 1e-9 * kB * t), rho = planck(lam, t), q = h * c / (lam * 1e-9);
-    topline(ctx, `At $\\kT = ${fmt(t, 0)}$ K Planck’s law peaks at $\\klmax = ${fmt(lmax, 0)}$ nm; at $\\klambda = ${fmt(lam, 0)}$ nm one quantum carries $\\kE = ${sci(q, 2)}$ J, which is $${fmt(x, 1)}\\,k_B\\kT$.`);
+    topline(ctx, `At $\\kT = ${fmt(t, 0)}$ K Planck's law peaks at $\\klmax = ${fmt(lmax, 0)}$ nm; at $\\klambda = ${fmt(lam, 0)}$ nm one quantum carries $\\kE = ${sci(q, 2)}$ J, which is $${fmt(x, 1)}\\,k_B\\kT$.`);
     const box = { l: 130, r: W - 80, t: 120, b: 520 };
     const ax = axes(ctx, box, [0, 2500], [0, 14], { nx: 5, ny: 7, xl: 'wavelength λ (nm)', yl: 'spectral energy density ρ (10⁵ J/m⁴)', xc: C('wavelength'), yc: C('energy-density') });
     /* the visible band, in its own colours, as a strip under the axis */
@@ -123,7 +123,7 @@ function spectral(nm) {
     if (py <= 14) dot(ctx, ax.X(lam), ax.Y(py), C('energy-density'), true, 9);
     /* names, on the curves */
     const yl = 9, ll = Math.min(2300, Math.pow(8 * Math.PI * kB * t / (yl * Y), 0.25) * 1e9);
-    text(ctx, 'Rayleigh–Jeans', ax.X(ll) + 14, ax.Y(yl), C('energy-density'), { size: 20 });
+    text(ctx, 'Rayleigh-Jeans', ax.X(ll) + 14, ax.Y(yl), C('energy-density'), { size: 20 });
     const yp = planck(lmax, t) / Y;
     text(ctx, 'Planck', ax.X(Math.max(lmax, lam + 120)) + 40, ax.Y(yp) - 10, C('energy-density'), { size: 20, weight: 600 });
     text(ctx, 'the Sun, measured', ax.X(900), ax.Y(2.2), PAL.ink, { size: 20, align: 'center' });

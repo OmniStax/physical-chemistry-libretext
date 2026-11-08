@@ -76,7 +76,7 @@ function glow(T) {
     }
     /* which curve is which, on the curves themselves at long wavelength */
     const lx = 2200;
-    text(ctx, 'Rayleigh–Jeans', ax.X(lx) + 6, ax.Y(Math.min(rj(lx, t) / Y, 9.6)) - 16, C('energy-density'), { size: 20 });
+    text(ctx, 'Rayleigh-Jeans', ax.X(lx) + 6, ax.Y(Math.min(rj(lx, t) / Y, 9.6)) - 16, C('energy-density'), { size: 20 });
     text(ctx, 'observed', ax.X(lmax) + 30, ax.Y(Math.min(yp, 10)) - 6, C('energy-density'), { size: 20, weight: 600 });
     /* the glowing body */
     const gx = W - 130, gy = 300;
@@ -101,7 +101,7 @@ function glow(T) {
   function draw() {
     const { ctx, W } = begin(d.c);
     const t = T.v, p = SIGMA * Math.pow(t, 4);
-    topline(ctx, `A surface at $\\kT = ${fmt(t, 0)}\\ \\text{K}$ radiates $\\kP = ${fmt(p, 0)}\\ \\text{W/m}^2$; double the temperature and the power grows sixteenfold.`);
+    topline(ctx, `A surface at $\\kT = ${fmt(t, 0)}\\ \\text{K}$ radiates $\\kP = ${fmt(p, 0)}\\ \\text{W/m}^2$. Doubling the temperature multiplies the power by sixteen.`);
     const box = { l: 150, r: W - 90, t: 110, b: 470 };
     const ax = axes(ctx, box, [0, 400], [0, 1400], { nx: 8, ny: 7, xl: 'temperature T (K)', yl: 'radiated power P (W/m²)', xc: C('temperature'), yc: C('power') });
     plot(ctx, ax, (x) => SIGMA * Math.pow(x, 4), C('power'), { w: 5 });

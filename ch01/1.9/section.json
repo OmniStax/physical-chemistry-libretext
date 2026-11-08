@@ -4,12 +4,12 @@
  "chapter": "1",
  "title": "The Heisenberg Uncertainty Principle",
  "short": "Uncertainty principle",
- "lead": "Because a particle is also a wave, where it will be found can only be given as a probability. The section follows that idea from electrons arriving one by one at a screen to Heisenberg’s limit on how well the position and the momentum of a particle can be known together, and pictures the limit with a wave packet.",
+ "lead": "Because a particle is also a wave, where it will be found can only be given as a probability. The idea runs from electrons arriving one by one at a screen to Heisenberg's limit on how well the position and the momentum of a particle can be known together, a limit a wave packet makes visible.",
  "objectives": [
   "To understand that sometime you cannot know everything about a quantum system as demonstrated by the Heisenberg uncertainly principle."
  ],
  "summary_html": "",
- "notes": "The page is adapted from OpenStax College Physics and the LibreTexts uncertainty-principle module under CC BY 4.0, and the embedded YouTube video on wave packets and the slit experiment is left out, its idea carried by the wave-packet figure.",
+ "notes": "Adapted from OpenStax College Physics and the LibreTexts uncertainty-principle module under CC BY 4.0. The embedded YouTube video on wave packets and the slit experiment is left out; the wave-packet figure carries its idea.",
  "ai": {
   "text": [
    {
@@ -26,7 +26,7 @@
  },
  "built": "2026-11-08",
  "exercises_lead": "",
- "exercise_notes": "The two exercises are the book’s, keyed by the book; their Bloom levels and concept tags are AI-chosen, and the key of Exercise 1.9.2 carries two corrections. Numeric answers accept 2% tolerance.",
+ "exercise_notes": "The two exercises and their keys are the book's. Their Bloom levels and concept tags are AI-chosen, and the key of Exercise 1.9.2 carries two corrections. Numeric answers accept a 2% tolerance.",
  "figures": [
   {
    "id": "sim-electron-buildup",
