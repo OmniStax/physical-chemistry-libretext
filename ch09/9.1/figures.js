@@ -157,8 +157,8 @@ const TAU = 2 * Math.PI;
       { k: 'line', pts: [[0, 0, 0], [0, 0, ZS]], color: 'guide', w: 2 },
       { k: 'label', s: 'r (nm)', p: [0.5, -0.2, 0], color: cl, cls: 'bare' },
       { k: 'label', s: '0.12', p: [xr(0.12), -0.09, 0], cls: 'tick' }, { k: 'label', s: '0.16', p: [1, -0.09, 0], cls: 'tick' },
-      { k: 'label', s: 'θ (°)', p: [-0.24, 0.5, 0], color: ca, cls: 'bare' },
-      { k: 'label', s: '60', p: [-0.09, 0.02, 0], cls: 'tick' }, { k: 'label', s: '150', p: [-0.09, 1, 0], cls: 'tick' },
+      { k: 'label', s: 'θ (°)', p: [1.26, 0.62, 0], color: ca, cls: 'bare' },
+      { k: 'label', s: '90', p: [1.09, yt(90), 0], cls: 'tick' }, { k: 'label', s: '150', p: [1.09, 1, 0], cls: 'tick' },
       { k: 'label', s: 'E (eV)', p: [0, 0, ZS + 0.08], color: ce, cls: 'bare' },
       { k: 'dot', p: [xr(RE), yt(TE), 0], color: 'muted', r: 6, name: 'below the lowest point: water\'s shape, 0.0958 nm and 104.5°' },
     ]);

@@ -53,3 +53,15 @@ document (`place: end`).
 
 None yet; the open questions are at the end of the agent's report and in
 `exploration.md` (marked *Orchestrator*).
+
+## Decisions taken by the orchestrator (2026-11-08)
+
+- **12.9** is empty at the source: not built, left out of `chapter.json` (Chapter 9 precedent).
+- **12.T pages**: two `table` sheets, `character-tables` and `correlation-tables`, built by a new `tools/sheets.py`. The errors the orthogonality check found (7 + 3) are table notes.
+- **Vallance's `\tag`s** (11 displays in 12.6, 12.10, 12.13 and 12.15, numbered from his own source): renumbered into the page's N.M.K sequence. A footnote names his citations ("(15.20)", "Section 9", "Appendix B") as referring to his original notes.
+- **12.S's chapter objectives** are kept verbatim as the summary page's first block.
+- **Images of text**: 12.15's transition integral is set as maths, and Tables 12.14.3 and 12.14.4 are rebuilt as book tables. Neither image is shipped.
+- **Not shipped**: the Sigma-Aldrich spectra (12.14.7, 12.14.8), with no replacement, and the Otterbein renders (12.2.1–5; no stated licence, as with 9.8.2). The 3D scene replaces them, and `notes` credits Otterbein's site.
+- **12.3's figure** stands beside display (12.3.5); the display stays printed. The Raman figure leaves out anti-Stokes, which the text doesn't discuss. (12.8.1) stays printed.
+- **Extra simulations**: none of the three offered.
+- **Captions** have no fixed length.
