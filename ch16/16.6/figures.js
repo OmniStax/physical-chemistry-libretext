@@ -36,17 +36,17 @@ const sim = (id, H) => F.sim(root, id, H);
     hits.push({ x: x1, y: cy, r: rad, name: `atom 1, radius σ/2 = ${fmt(sg / 2, 2)} Å` });
     hits.push({ x: x2, y: cy, r: rad, name: `atom 2, ${fmt(r, 2)} Å from atom 1` });
     /* the forces, symbolic: apart inside r_min, together outside it */
-    const f = force(r), len = Math.max(-170, Math.min(170, 160 * f));
-    if (Math.abs(len) > 6) {
+    const f = force(r), len = Math.sign(f) * Math.max(16, Math.min(170, 160 * Math.abs(f)));
+    if (Math.abs(r - rmin) >= 0.015) {
       arrow(ctx, x2, cy - rad - 26, x2 + len, cy - rad - 26, cf, 5);
       arrow(ctx, x1, cy - rad - 26, x1 - len, cy - rad - 26, cf, 5);
       text(ctx, f > 0 ? 'repulsive force' : 'attractive force', 700, cy + rad + 30, cf, { size: 20, align: 'center' });
     } else text(ctx, 'no force', 700, cy + rad + 30, cf, { size: 20, align: 'center' });
     /* the curve and its two terms */
     line(ctx, box.l, ax.Y(0), box.r, ax.Y(0), alpha(PAL.ink, 0.4), 2);
-    plot(ctx, ax, rep, alpha(ce, 0.6), { w: 3, dash: [10, 10] });
-    plot(ctx, ax, att, alpha(ce, 0.6), { w: 3, dash: [3, 7] });
-    plot(ctx, ax, V, ce, { w: 5 });
+    plot(ctx, ax, rep, alpha(ce, 0.6), { w: 3, dash: [10, 10], x: [2, 10] });
+    plot(ctx, ax, att, alpha(ce, 0.6), { w: 3, dash: [3, 7], x: [2, 10] });
+    plot(ctx, ax, V, ce, { w: 5, x: [2, 10] });
     /* σ where V = 0, and the well of depth ε at r_min */
     line(ctx, ax.X(sg), ax.Y(0) + 8, ax.X(sg), box.b, alpha(cl, 0.7), 2, [4, 8]);
     text(ctx, 'σ', ax.X(sg) - 12, box.b - 14, cl, { size: 22, align: 'right' });

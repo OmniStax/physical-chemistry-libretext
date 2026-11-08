@@ -29,7 +29,7 @@ function readout(host, main, small) { tex(host, main); if (small) { const s = el
     hits = [];
     const t = T.v, y = yOf(t), cm = C('molar-volume'), cl = C('length');
     /* the integrand */
-    const top = { l: 170, r: 1300, t: 110, b: 380 };
+    const top = { l: 170, r: 1300, t: 150, b: 400 };
     const ax1 = axes(ctx, top, [0, 10], [-15, 45], { nx: 5, ny: 4, xl: 'separation r (Å)', yl: '[e^{−u/kT} − 1] r² (Å²)', xc: cl, yc: PAL.ink });
     const g = (r) => (r <= SIG ? -r * r : (Math.exp(y * Math.pow(SIG / r, 6)) - 1) * r * r);
     line(ctx, top.l, ax1.Y(0), top.r, ax1.Y(0), alpha(PAL.ink, 0.4), 2);
@@ -54,7 +54,7 @@ function readout(host, main, small) { tex(host, main); if (small) { const s = el
     hits.push({ x: pe.x, y: pe.y, r: 14, name: `the full integral at ${fmt(t, 0)} K: B₂ = ${fmt(be, 1)} cm³/mol` });
     hits.push({ x: ps.x, y: ps.y, r: 14, name: `the series (16.7.2) at ${fmt(t, 0)} K: B₂ = ${fmt(bs, 1)} cm³/mol` });
     F.legend(ctx, ax2, [{ s: 'full integral', color: cm, w: 5 }, { s: 'series (16.7.2)', color: cm, w: 3, dash: [10, 10] }, { s: 'b, hard spheres alone', color: alpha(PAL.ink, 0.55), w: 3, dash: [3, 7] }], { corner: 'br' });
-    topline(ctx, `At $\\kT = ${fmt(t, 0)}$ K, $C_6/k_B\\kT\\ksigmahs^6 = ${fmt(y, 2)}$: the series gives $\\kBtwo = ${fmt(bs, 1)}$ cm³/mol and the full integral ${fmt(be, 1)} cm³/mol.`);
+    topline(ctx, `At $\\kT = ${fmt(t, 0)}$ K, $C_6/k_B\\kT\\ksigmahs^6 = ${fmt(y, 2)}$: the series gives $\\kBtwo = ${fmt(bs, 1)}$ cm³/mol, the full integral ${fmt(be, 1)}.`);
     const bb = +b.toFixed(1), yy = +y.toFixed(2);
     readout(d.readout,
       `\\kBtwo(\\kT) = \\dfrac{2}{3}\\pi N_0\\ksigmahs^3\\left[1 - \\dfrac{C_6}{k_B\\kT\\ksigmahs^6}\\right] \\\\ \\kBtwo = (${fmt(bb, 1)}\\ \\text{cm}^3\\text{/mol})(1 - ${fmt(yy, 2)}) = ${fmt(bb * (1 - yy), 1)}\\ \\text{cm}^3\\text{/mol}`,

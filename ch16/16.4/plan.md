@@ -21,7 +21,7 @@ Two AI exercises (config): ethane's temperature corresponding to argon at 225 K 
 
 ## Derivations
 
-- `reduced-vdw` · "Derivation · the van der Waals equation in reduced variables": hidden ("By substitution", "can also be cast"), score 9, built. Nodes: (16.4.2) from (16.4.1), the reduced definitions and 16.3's critical constants; Z_c = 3/8; Z in reduced variables. Placed after the reduced-Z display (the last result). The critical-constants fact carries `drv: "16.3/vdw-critical-constants"` (16.3 unbuilt when this was written; the id is a guess, see Wanted).
+- `reduced-vdw` · "Derivation · the van der Waals equation in reduced variables": hidden ("By substitution", "can also be cast"), score 9, built. Nodes: (16.4.2) from (16.4.1), the reduced definitions and 16.3's critical constants; Z_c = 3/8; Z in reduced variables. Placed after the reduced-Z display (the last result). The critical-constants fact carries `drv: "16.3/vdw-critical-constants"` (16.3's id, checked).
 
 ## Corrections
 
@@ -29,4 +29,4 @@ Two AI exercises (config): ethane's temperature corresponding to argon at 225 K 
 
 ## Wanted at chapter level
 
-- The derivation id of 16.3's van der Waals critical constants: this page's fact links `16.3/vdw-critical-constants`; if 16.3 uses another id, change the two `drv` values in `16.4/section.json` (derivation `reduced-vdw`, nodes 0 and 1).
+None.

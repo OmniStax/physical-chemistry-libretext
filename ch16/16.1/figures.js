@@ -119,7 +119,7 @@ const gauss = () => { let u = 0; while (!u) u = Math.random(); return Math.sqrt(
     const axL = axes(ctx, bl, [0, 40], [0, 10], { nx: 4, ny: 5, xl: 'volume V (L)', yl: 'pressure P (bar)', xc: C('volume'), yc: C('pressure') });
     const axR = axes(ctx, br, [0, 600], [0, 10], { nx: 6, ny: 5, xl: 'temperature T (K)', yl: 'pressure P (bar)', xc: C('temperature'), yc: C('pressure') });
     const faint = alpha(PAL.ink, 0.3);
-    [200, 400, 600].forEach((tt) => { plot(ctx, axL, (x) => P(x, tt), faint, { w: 3, x: [2, 40] }); const lv = tt === 200 ? 3 : 8; text(ctx, `${tt} K`, axL.X(lv) + 10, axL.Y(P(lv, tt)) - 12, alpha(C('temperature'), 0.75), { size: 17 }); });
+    [200, 400, 600].forEach((tt) => { plot(ctx, axL, (x) => P(x, tt), faint, { w: 3, x: [2, 40] }); const lv = tt === 200 ? 33 : 8; text(ctx, `${tt} K`, axL.X(lv) + 10, axL.Y(P(lv, tt)) + (tt === 200 ? 16 : -12), alpha(C('temperature'), 0.75), { size: 17 }); });
     [5, 10, 20].forEach((vv) => { plot(ctx, axR, (x) => P(vv, x), faint, { w: 3 }); const xe = Math.min(600, 10 * vv / RL); text(ctx, `${vv} L`, axR.X(xe) + (xe < 600 ? 10 : -4), axR.Y(P(vv, xe)) + (xe < 600 ? 4 : -14), alpha(C('volume'), 0.75), { size: 17, align: xe < 600 ? 'left' : 'right' }); });
     /* the rectangle PV under the point, and its twin on the same isotherm */
     const v2 = v < 20 ? Math.min(40, 2.5 * v) : v / 2.5, p2 = P(v2, t);
