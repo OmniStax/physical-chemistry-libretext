@@ -43,18 +43,18 @@ $$ \kLz = m_l \hbar $$
 <h3>Which $m_l$ Number Corresponds to which p-Orbital?</h3>
 <p>The answer is complicated; while $m_l=0$ corresponds to the $p_z$, the orbitals for $m_l=+1$ and $m_l=−1$ lie in the xy-plane (see Spherical Harmonics), but not on the axes. The reason for this outcome is that the wavefunctions are usually formulated in spherical coordinates to make the math easier, but graphs in the Cartesian coordinates make more intuitive sense for humans. The $p_x$ and $p_y$ orbitals are constructed via a linear combination approach from radial and angular wavefunctions and converted into $xy$ (this was discussed previously). Thus, it is not possible to directly correlate the values of $m_l=±1$ with specific orbitals. The notion that we can do so is sometimes presented in introductory courses to make a complex mathematical model just a little bit simpler and more intuitive, but it is incorrect.</p>
 <p>The three wavefunctions for $n=2$ and $l=1$ are as follows.</p>
-$$ \begin{aligned} |\kpsi_{2,1,0} \rangle &=\kr \cos θ\,\kRf(\kr) \\[4pt] |\kpsi_{2,1,+1} \rangle &=−\dfrac{\kr}{2} \sinθ e^{iϕ} \kRf(\kr) \\[4pt] |\kpsi_{2,1,-1} \rangle &=+\dfrac{\kr}{2} \sinθ e^{-iϕ} \kRf(\kr) \end{aligned} \tag{6.6.2} $$
+$$ \begin{aligned} |\kpsi_{2,1,0} \rangle &=\kr \cos\ktheta\,\kRf(\kr) \\[4pt] |\kpsi_{2,1,+1} \rangle &=−\dfrac{\kr}{2} \sin\ktheta  e^{iϕ} \kRf(\kr) \\[4pt] |\kpsi_{2,1,-1} \rangle &=+\dfrac{\kr}{2} \sin\ktheta  e^{-iϕ} \kRf(\kr) \end{aligned} \tag{6.6.2} $$
 <p><sup class="fn" data-note="c-norm"></sup></p>
-<p>The notation is $|\kpsinlm \rangle$ with $\kRf(\kr)$ is the radial component of this wavefuction, $θ$ is the angle with respect to the z-axis and $ϕ$ is the angle with respect to the $xz$-plane.</p>
+<p>The notation is $|\kpsinlm \rangle$ with $\kRf(\kr)$ is the radial component of this wavefuction, $\ktheta$ is the angle with respect to the z-axis and $ϕ$ is the angle with respect to the $xz$-plane.</p>
 $$ \kRf(\kr)=\sqrt{\dfrac{Z^5}{32\pi \kao^5}}\mathrm{e}^{-Z\kr/2\kao} $$
 <p>in which $Z$ is the atomic number (or probably better nuclear charge) and $\kao$ is the <span data-concept="bohr-radius">Bohr radius</span>.</p>
-<p>In switching from spherical to Cartesian coordinates, we make the substitution $\kz=\kr \cosθ$, so:</p>
+<p>In switching from spherical to Cartesian coordinates, we make the substitution $\kz=\kr \cos\ktheta $, so:</p>
 $$ |\kpsi_{2,1,0} \rangle =\kz \kRf(\kr) $$
 <p>This is $\kpsi_{2p_z}$ since the value of $\kpsi$ is dependent on $\kz$: when $\kz=0$; $\kpsi =0$, which is expected since $\kz=0$ describes the $xy$-plane.</p>
 <p>The other two wavefunctions are degenerate in the $xy$-plane. An equivalent statement is that these two orbitals do not lie on the x- and y-axes, but rather bisect them. Thus it is typical to take linear combinations of them to make the equation look prettier. If any set of wavefunctions is a solution to the Schrödinger equation, then any set of linear combinations of these wavefunctions must also be a solution (Section 2.4). We can do this because of the linearity of the Schrödinger equation.</p>
 <p>In the equations below, we're going to make use of some trigonometry, notably Euler's formula:</p>
 $$ \begin{aligned} \mathrm{e}^{\mathrm{i}\phi} &=\cos{\phi}+\mathrm{i}\sin{\phi}\\[4pt] \sin{\phi} &= \dfrac{\mathrm{e}^{\mathrm{i}\phi}-\mathrm{e}^{-\mathrm{i}\phi}}{2\mathrm{i}}\\[4pt] \cos{\phi} &= \dfrac{\mathrm{e}^{\mathrm{i}\phi}+\mathrm{e}^{-\mathrm{i}\phi}}{2} \end{aligned} \tag{6.6.3} $$
-<p>We're also going to use $\kx=\sin θ\cos ϕ$ and $\ky=\sin θ \sinϕ$.<sup class="fn" data-note="c-xy"></sup></p>
+<p>We're also going to use $\kx=\sin\ktheta \cos ϕ$ and $\ky=\sin\ktheta  \sinϕ$.<sup class="fn" data-note="c-xy"></sup></p>
 <figure class="dv" id="drv-px-py"></figure>
 <p>So, while $m_l=0$ corresponds to $|p_z \rangle$, $m_l=+1$ and $m_l=−1$ <strong>cannot</strong> be directly assigned to either $|p_x \rangle$ or $|p_y \rangle$, but rather a combination of $|p_x \rangle$ and $|p_y \rangle$. <span data-concept="real-orbitals">An alternative description is that $m_l=+1$ might correspond to $(|p_x \rangle\ + |p_y \rangle )$ and $m_l=−1$ might correspond to $(|p_x \rangle\ - |p_y \rangle)$.</span><sup class="fn" data-note="c-combination"></sup></p>
 </div>

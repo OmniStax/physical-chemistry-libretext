@@ -1,0 +1,1402 @@
+{
+ "id": "8",
+ "dir": "ch08",
+ "title": "Multielectron Atoms",
+ "intro": {
+  "module": "11785",
+  "slug": "08:_Multielectron_Atoms"
+ },
+ "summary": {
+  "module": "550559",
+  "slug": "08:_Multielectron_Atoms/8.S:_Multielectron_Atoms_(Summary)"
+ },
+ "sections": [
+  {
+   "id": "8.1",
+   "module": "13439",
+   "title": "Atomic and Molecular Calculations are Expressed in Atomic Units",
+   "slug": "08:_Multielectron_Atoms/8.01:_Atomic_and_Molecular_Calculations_are_Expressed_in_Atomic_Units"
+  },
+  {
+   "id": "8.2",
+   "module": "13440",
+   "title": "Perturbation Theory and the Variational Method for Helium",
+   "slug": "08:_Multielectron_Atoms/8.02:_Perturbation_Theory_and_the_Variational_Method_for_Helium"
+  },
+  {
+   "id": "8.3",
+   "module": "13441",
+   "title": "Hartree-Fock Equations are Solved by the Self-Consistent Field Method",
+   "slug": "08:_Multielectron_Atoms/8.03:_Hartree-Fock_Equations_are_Solved_by_the_Self-Consistent_Field_Method"
+  },
+  {
+   "id": "8.4",
+   "module": "13442",
+   "title": "An Electron has an Intrinsic Spin Angular Momentum",
+   "slug": "08:_Multielectron_Atoms/8.04:_An_Electron_has_an_Intrinsic_Spin_Angular_Momentum"
+  },
+  {
+   "id": "8.5",
+   "module": "13443",
+   "title": "Wavefunctions must be Antisymmetric to Interchange of any Two Electrons",
+   "slug": "08:_Multielectron_Atoms/8.05:_Wavefunctions_must_be_Antisymmetric_to_Interchange_of_any_Two_Electrons"
+  },
+  {
+   "id": "8.6",
+   "module": "13444",
+   "title": "Antisymmetric Wavefunctions can be Represented by Slater Determinants",
+   "slug": "08:_Multielectron_Atoms/8.06:_Antisymmetric_Wavefunctions_can_be_Represented_by_Slater_Determinants"
+  },
+  {
+   "id": "8.7",
+   "module": "13445",
+   "title": "Hartree-Fock Calculations Give Good Agreement with Experimental Data",
+   "slug": "08:_Multielectron_Atoms/8.07:_Hartree-Fock_Calculations_Give_Good_Agreement_with_Experimental_Data"
+  },
+  {
+   "id": "8.8",
+   "module": "13446",
+   "title": "Term Symbols Gives a Detailed Description of an Electron Configuration",
+   "slug": "08:_Multielectron_Atoms/8.08:_Term_Symbols_Gives_a_Detailed_Description_of_an_Electron_Configuration"
+  },
+  {
+   "id": "8.9",
+   "module": "13447",
+   "title": "The Allowed Values of J - the Total Angular Momentum Quantum Number",
+   "slug": "08:_Multielectron_Atoms/8.09:_The_Allowed_Values_of_J_-_the_Total_Angular_Momentum_Quantum_Number"
+  },
+  {
+   "id": "8.10",
+   "module": "13448",
+   "title": "Hund's Rules Determine the Term Symbols of the Ground Electronic States",
+   "slug": "08:_Multielectron_Atoms/8.10:_Hund's_Rules_Determine_the_Term_Symbols_of_the_Ground_Electronic_States"
+  },
+  {
+   "id": "8.11",
+   "module": "13449",
+   "title": "Using Atomic Term Symbols to Interpret Atomic Spectra",
+   "slug": "08:_Multielectron_Atoms/8.11:_Using_Atomic_Term_Symbols_to_Interpret_Atomic_Spectra"
+  }
+ ],
+ "variables": [
+  {
+   "sym": "m",
+   "type": "mass",
+   "meaning": "the mass of a particle",
+   "unit": "m_e",
+   "section": "8.1"
+  },
+  {
+   "sym": "m_e",
+   "type": "mass",
+   "meaning": "the rest mass of the electron, 1 in atomic units",
+   "unit": "kg",
+   "section": "8.1"
+  },
+  {
+   "sym": "e",
+   "type": "charge",
+   "meaning": "the elementary charge, 1 in atomic units",
+   "unit": "C",
+   "section": "8.1"
+  },
+  {
+   "sym": "hbar",
+   "concept": "reduced-plancks-constant",
+   "meaning": "the reduced Planck constant h/2π, 1 in atomic units",
+   "section": "8.1"
+  },
+  {
+   "sym": "h",
+   "concept": "plancks-constant",
+   "meaning": "Planck's constant",
+   "section": "8.1"
+  },
+  {
+   "sym": "k_e",
+   "meaning": "the Coulomb force constant 1/4πε₀, 1 in atomic units",
+   "section": "8.1"
+  },
+  {
+   "sym": "epsilon_0",
+   "meaning": "the permittivity of free space",
+   "section": "8.1"
+  },
+  {
+   "sym": "a_0",
+   "concept": "bohr-radius",
+   "meaning": "the bohr, the atomic unit of length, 0.529 Å",
+   "unit": "m",
+   "section": "8.1"
+  },
+  {
+   "sym": "E_h",
+   "concept": "hartree",
+   "meaning": "the hartree, the atomic unit of energy, 27.21 eV",
+   "unit": "J",
+   "section": "8.1"
+  },
+  {
+   "sym": "alpha_fs",
+   "concept": "fine-structure-constant",
+   "meaning": "the fine-structure constant, about 1/137",
+   "section": "8.1"
+  },
+  {
+   "sym": "c",
+   "meaning": "the speed of light, 1/α ≈ 137 in atomic units",
+   "section": "8.1"
+  },
+  {
+   "sym": "H_op",
+   "concept": "hamiltonian-operator",
+   "meaning": "the Hamiltonian of the atom",
+   "section": "8.1"
+  },
+  {
+   "sym": "nabla2",
+   "concept": "laplacian",
+   "meaning": "the Laplacian in the coordinates of one electron",
+   "section": "8.1"
+  },
+  {
+   "sym": "r_1",
+   "type": "length",
+   "meaning": "the position of electron 1, at the distance r₁ from the nucleus",
+   "section": "8.1"
+  },
+  {
+   "sym": "r_2",
+   "type": "length",
+   "meaning": "the position of electron 2, at the distance r₂ from the nucleus",
+   "section": "8.1"
+  },
+  {
+   "sym": "r_12",
+   "type": "length",
+   "meaning": "the distance between the two electrons",
+   "section": "8.1"
+  },
+  {
+   "sym": "H_op",
+   "concept": "hamiltonian-operator",
+   "meaning": "the Hamiltonian of the atom",
+   "section": "8.2"
+  },
+  {
+   "sym": "H0_hat",
+   "concept": "zero-order-hamiltonian",
+   "meaning": "the zero-order Hamiltonian, the part that can be solved exactly: for helium, two hydrogen-like Hamiltonians",
+   "section": "8.2"
+  },
+  {
+   "sym": "H1_hat",
+   "concept": "perturbation-theory",
+   "type": "operator",
+   "meaning": "the perturbation, for helium the electron–electron repulsion 1/r₁₂",
+   "section": "8.2"
+  },
+  {
+   "sym": "nabla2",
+   "concept": "laplacian",
+   "meaning": "the Laplacian in the coordinates of one electron",
+   "section": "8.2"
+  },
+  {
+   "sym": "r_1",
+   "type": "length",
+   "meaning": "the position of electron 1, at the distance r₁ from the nucleus",
+   "section": "8.2"
+  },
+  {
+   "sym": "r_2",
+   "type": "length",
+   "meaning": "the position of electron 2, at the distance r₂ from the nucleus",
+   "section": "8.2"
+  },
+  {
+   "sym": "r_12",
+   "type": "length",
+   "meaning": "the distance between the two electrons",
+   "section": "8.2"
+  },
+  {
+   "sym": "E0_pt",
+   "type": "energy",
+   "meaning": "the zero-order energy of helium, −108.8 eV",
+   "unit": "eV",
+   "section": "8.2"
+  },
+  {
+   "sym": "E1_pt",
+   "concept": "helium-first-order-energy",
+   "meaning": "the first-order correction to helium's energy, +34.0 eV",
+   "unit": "eV",
+   "section": "8.2"
+  },
+  {
+   "sym": "E_approx",
+   "type": "energy",
+   "meaning": "helium's energy to first order in perturbation theory, −74.8 eV",
+   "unit": "eV",
+   "section": "8.2"
+  },
+  {
+   "sym": "psi0_pt",
+   "type": "wavefunction",
+   "meaning": "the zero-order wavefunction of helium, a product of two 1s orbitals",
+   "section": "8.2"
+  },
+  {
+   "sym": "varphi_1s",
+   "type": "wavefunction",
+   "meaning": "the hydrogen-like 1s orbital",
+   "section": "8.2"
+  },
+  {
+   "sym": "E_h",
+   "concept": "hartree",
+   "meaning": "the hartree, the atomic unit of energy, 27.21 eV",
+   "unit": "J",
+   "section": "8.2"
+  },
+  {
+   "sym": "R_H",
+   "concept": "rydberg-constant",
+   "meaning": "the Rydberg constant",
+   "section": "8.2"
+  },
+  {
+   "sym": "h",
+   "concept": "plancks-constant",
+   "meaning": "Planck's constant",
+   "section": "8.2"
+  },
+  {
+   "sym": "c",
+   "meaning": "the speed of light, 1/α ≈ 137 in atomic units",
+   "section": "8.2"
+  },
+  {
+   "sym": "E_trial",
+   "concept": "variational-energy",
+   "meaning": "the variational energy of a trial wavefunction",
+   "unit": "E_h",
+   "section": "8.2"
+  },
+  {
+   "sym": "psi_trial",
+   "concept": "trial-wavefunction",
+   "meaning": "a trial wavefunction for the two electrons of helium",
+   "section": "8.2"
+  },
+  {
+   "sym": "E_exp",
+   "concept": "helium-ground-state-energy",
+   "meaning": "the experimental ground-state energy of helium, −2.90372 E_h",
+   "unit": "E_h",
+   "section": "8.2"
+  },
+  {
+   "sym": "I_1",
+   "concept": "ionization-energy",
+   "meaning": "the first ionization energy of helium",
+   "unit": "E_h",
+   "section": "8.2"
+  },
+  {
+   "sym": "I_2",
+   "concept": "ionization-energy",
+   "meaning": "the second ionization energy of helium",
+   "unit": "E_h",
+   "section": "8.2"
+  },
+  {
+   "sym": "alpha",
+   "meaning": "the scale factor (orbital exponent) of a hydrogenic orbital in a trial function, a variational parameter",
+   "section": "8.2"
+  },
+  {
+   "sym": "beta",
+   "meaning": "a second variational parameter: another orbital exponent in trial functions 2 and 3, the weight of r₁₂ in trial function 4",
+   "section": "8.2"
+  },
+  {
+   "sym": "gamma",
+   "meaning": "the weight of the r₁₂ term in Chandrasekhar's trial function, a variational parameter",
+   "section": "8.2"
+  },
+  {
+   "sym": "Z",
+   "meaning": "the atomic number, the nuclear charge in units of e",
+   "section": "8.2"
+  },
+  {
+   "sym": "Z",
+   "meaning": "the atomic number, the nuclear charge in units of e",
+   "section": "8.3"
+  },
+  {
+   "sym": "R_vec",
+   "type": "length",
+   "meaning": "the position of the nucleus",
+   "section": "8.3"
+  },
+  {
+   "sym": "r_vec",
+   "type": "length",
+   "meaning": "the position of an electron",
+   "section": "8.3"
+  },
+  {
+   "sym": "V_ne",
+   "type": "energy",
+   "meaning": "the potential energy of attraction between an electron and the nucleus",
+   "unit": "E_h",
+   "section": "8.3"
+  },
+  {
+   "sym": "V_ee",
+   "concept": "electron-electron-repulsion",
+   "meaning": "the potential energy of repulsion between two electrons",
+   "unit": "E_h",
+   "section": "8.3"
+  },
+  {
+   "sym": "H_op",
+   "concept": "multi-electron-hamiltonian",
+   "type": "operator",
+   "meaning": "the Hamiltonian of the atom",
+   "section": "8.3"
+  },
+  {
+   "sym": "m_e",
+   "type": "mass",
+   "meaning": "the rest mass of the electron, 1 in atomic units",
+   "unit": "kg",
+   "section": "8.3"
+  },
+  {
+   "sym": "hbar",
+   "concept": "reduced-plancks-constant",
+   "meaning": "the reduced Planck constant h/2π, 1 in atomic units",
+   "section": "8.3"
+  },
+  {
+   "sym": "nabla2",
+   "concept": "laplacian",
+   "meaning": "the Laplacian in the coordinates of one electron",
+   "section": "8.3"
+  },
+  {
+   "sym": "psi_i",
+   "type": "wavefunction",
+   "meaning": "the orbital (one-electron wavefunction) of electron i",
+   "section": "8.3"
+  },
+  {
+   "sym": "eps_i",
+   "concept": "hartree-orbital-energy",
+   "meaning": "the energy of orbital i",
+   "unit": "J",
+   "section": "8.3"
+  },
+  {
+   "sym": "H_e",
+   "type": "operator",
+   "meaning": "the one-electron Hamiltonian of the Hartree approximation",
+   "section": "8.3"
+  },
+  {
+   "sym": "V",
+   "type": "energy",
+   "meaning": "the potential energy of one electron",
+   "unit": "J",
+   "section": "8.3"
+  },
+  {
+   "sym": "V_nuc",
+   "type": "energy",
+   "meaning": "the potential energy of an electron in the field of the nucleus",
+   "unit": "J",
+   "section": "8.3"
+  },
+  {
+   "sym": "V_el",
+   "concept": "mean-field-potential",
+   "meaning": "the mean-field potential energy of an electron in the smeared charge of the other electrons",
+   "unit": "J",
+   "section": "8.3"
+  },
+  {
+   "sym": "rho_e",
+   "concept": "electron-charge-density",
+   "meaning": "the charge density of the electrons in the occupied orbitals",
+   "section": "8.3"
+  },
+  {
+   "sym": "e",
+   "type": "charge",
+   "meaning": "the elementary charge, 1 in atomic units",
+   "unit": "C",
+   "section": "8.3"
+  },
+  {
+   "sym": "N",
+   "meaning": "the number of electrons",
+   "section": "8.3"
+  },
+  {
+   "sym": "phi_j",
+   "type": "wavefunction",
+   "meaning": "the orbital j whose energy is computed",
+   "section": "8.3"
+  },
+  {
+   "sym": "phi_k",
+   "type": "wavefunction",
+   "meaning": "another occupied orbital k",
+   "section": "8.3"
+  },
+  {
+   "sym": "J_jk",
+   "concept": "coulomb-integral",
+   "meaning": "the Coulomb integral between the electrons in orbitals j and k",
+   "unit": "J",
+   "section": "8.3"
+  },
+  {
+   "sym": "KE",
+   "type": "energy",
+   "meaning": "the average kinetic energy of an electron in its orbital",
+   "unit": "J",
+   "section": "8.3"
+  },
+  {
+   "sym": "Z_eff",
+   "concept": "effective-nuclear-charge",
+   "meaning": "the effective nuclear charge used in place of Z in a screened hydrogen-like orbital",
+   "section": "8.3"
+  },
+  {
+   "sym": "B_vec",
+   "concept": "magnetic-field",
+   "meaning": "the magnetic field",
+   "unit": "T",
+   "section": "8.4"
+  },
+  {
+   "sym": "B_z",
+   "concept": "magnetic-field",
+   "meaning": "the magnetic field along the z axis",
+   "unit": "T",
+   "section": "8.4"
+  },
+  {
+   "sym": "mu_m",
+   "concept": "magnetic-dipole-moment",
+   "meaning": "the magnetic dipole moment",
+   "unit": "J/T",
+   "section": "8.4"
+  },
+  {
+   "sym": "E_B",
+   "concept": "magnetic-dipole-energy",
+   "meaning": "the energy of a magnetic dipole in the field",
+   "unit": "J",
+   "section": "8.4"
+  },
+  {
+   "sym": "E_n",
+   "concept": "hydrogen-energy-levels",
+   "meaning": "the energy of a hydrogen state in the absence of the field",
+   "unit": "J",
+   "section": "8.4"
+  },
+  {
+   "sym": "m_l",
+   "concept": "magnetic-quantum-number",
+   "meaning": "the magnetic quantum number of one electron",
+   "section": "8.4"
+  },
+  {
+   "sym": "mu_B",
+   "concept": "bohr-magneton",
+   "meaning": "the Bohr magneton, 9.2732 × 10⁻²⁴ J/T",
+   "unit": "J/T",
+   "section": "8.4"
+  },
+  {
+   "sym": "gamma_e",
+   "concept": "gyromagnetic-ratio",
+   "meaning": "the gyromagnetic ratio of the electron's orbital motion",
+   "section": "8.4"
+  },
+  {
+   "sym": "e",
+   "type": "charge",
+   "meaning": "the elementary charge, 1 in atomic units",
+   "unit": "C",
+   "section": "8.4"
+  },
+  {
+   "sym": "m_e",
+   "type": "mass",
+   "meaning": "the rest mass of the electron, 1 in atomic units",
+   "unit": "kg",
+   "section": "8.4"
+  },
+  {
+   "sym": "hbar",
+   "concept": "reduced-plancks-constant",
+   "meaning": "the reduced Planck constant h/2π, 1 in atomic units",
+   "section": "8.4"
+  },
+  {
+   "sym": "L2_hat",
+   "concept": "angular-momentum-squared-operator",
+   "meaning": "the operator for the square of the orbital angular momentum",
+   "section": "8.4"
+  },
+  {
+   "sym": "Lz_hat",
+   "type": "operator",
+   "meaning": "the operator for the z component of the orbital angular momentum",
+   "section": "8.4"
+  },
+  {
+   "sym": "Y_lm",
+   "concept": "spherical-harmonics",
+   "meaning": "a spherical harmonic, an eigenfunction of L̂² and L̂_z",
+   "section": "8.4"
+  },
+  {
+   "sym": "l",
+   "concept": "angular-momentum-quantum-number",
+   "meaning": "the orbital angular momentum quantum number of one electron",
+   "section": "8.4"
+  },
+  {
+   "sym": "S_vec",
+   "concept": "spin-angular-momentum",
+   "meaning": "the spin angular momentum",
+   "unit": "J·s",
+   "section": "8.4"
+  },
+  {
+   "sym": "S2_hat",
+   "concept": "spin-operators",
+   "meaning": "the operator for the square of the spin angular momentum",
+   "section": "8.4"
+  },
+  {
+   "sym": "Sz_hat",
+   "concept": "spin-operators",
+   "meaning": "the operator for the z component of the spin angular momentum",
+   "section": "8.4"
+  },
+  {
+   "sym": "sigma_spin",
+   "type": "wavefunction",
+   "meaning": "a spin wavefunction with quantum numbers s and m_s",
+   "section": "8.4"
+  },
+  {
+   "sym": "s",
+   "concept": "spin-quantum-number",
+   "meaning": "the spin quantum number, ½ for an electron",
+   "section": "8.4"
+  },
+  {
+   "sym": "m_s",
+   "concept": "spin-magnetic-quantum-number",
+   "meaning": "the spin magnetic quantum number, +½ or −½",
+   "section": "8.4"
+  },
+  {
+   "sym": "S_z",
+   "concept": "spin-angular-momentum",
+   "meaning": "the z component of the spin angular momentum, m_sħ",
+   "unit": "J·s",
+   "section": "8.4"
+  },
+  {
+   "sym": "S_za",
+   "concept": "spin-angular-momentum",
+   "meaning": "the z component of the spin in state α, +ħ/2",
+   "unit": "J·s",
+   "section": "8.4"
+  },
+  {
+   "sym": "S_zb",
+   "concept": "spin-angular-momentum",
+   "meaning": "the z component of the spin in state β, −ħ/2",
+   "unit": "J·s",
+   "section": "8.4"
+  },
+  {
+   "sym": "alpha_s",
+   "concept": "spin-states",
+   "meaning": "the spin state α, with m_s = +½",
+   "section": "8.4"
+  },
+  {
+   "sym": "beta_s",
+   "concept": "spin-states",
+   "meaning": "the spin state β, with m_s = −½",
+   "section": "8.4"
+  },
+  {
+   "sym": "nu",
+   "type": "frequency",
+   "meaning": "the frequency of the microwave photon absorbed, 28 GHz in a field of 10⁴ G",
+   "unit": "Hz",
+   "section": "8.4"
+  },
+  {
+   "sym": "h",
+   "concept": "plancks-constant",
+   "meaning": "Planck's constant",
+   "section": "8.4"
+  },
+  {
+   "sym": "dE",
+   "type": "energy",
+   "meaning": "the energy difference between the two spin states",
+   "unit": "J",
+   "section": "8.4"
+  },
+  {
+   "sym": "E_alpha",
+   "type": "energy",
+   "meaning": "the energy of the electron in spin state α",
+   "unit": "J",
+   "section": "8.4"
+  },
+  {
+   "sym": "E_beta",
+   "type": "energy",
+   "meaning": "the energy of the electron in spin state β",
+   "unit": "J",
+   "section": "8.4"
+  },
+  {
+   "sym": "E_1s",
+   "type": "energy",
+   "meaning": "the energy of the electron in the 1s orbital",
+   "unit": "J",
+   "section": "8.4"
+  },
+  {
+   "sym": "mu_s",
+   "concept": "magnetic-dipole-moment",
+   "meaning": "the spin magnetic dipole moment of the electron",
+   "unit": "J/T",
+   "section": "8.4"
+  },
+  {
+   "sym": "mu_sa",
+   "concept": "magnetic-dipole-moment",
+   "meaning": "the spin magnetic moment in state α",
+   "unit": "J/T",
+   "section": "8.4"
+  },
+  {
+   "sym": "mu_sb",
+   "concept": "magnetic-dipole-moment",
+   "meaning": "the spin magnetic moment in state β",
+   "unit": "J/T",
+   "section": "8.4"
+  },
+  {
+   "sym": "gamma_s",
+   "concept": "spin-gyromagnetic-ratio",
+   "meaning": "the spin gyromagnetic ratio, 2.0023 γ_e",
+   "section": "8.4"
+  },
+  {
+   "sym": "g",
+   "concept": "electron-g-factor",
+   "meaning": "the g-factor of the free electron, 2.0023",
+   "section": "8.4"
+  },
+  {
+   "sym": "psi",
+   "concept": "multi-electron-wavefunction",
+   "type": "wavefunction",
+   "meaning": "the wavefunction of two or more electrons",
+   "section": "8.5"
+  },
+  {
+   "sym": "r_1",
+   "type": "length",
+   "meaning": "the position of electron 1, at the distance r₁ from the nucleus",
+   "section": "8.5"
+  },
+  {
+   "sym": "r_2",
+   "type": "length",
+   "meaning": "the position of electron 2, at the distance r₂ from the nucleus",
+   "section": "8.5"
+  },
+  {
+   "sym": "hbar",
+   "concept": "reduced-plancks-constant",
+   "meaning": "the reduced Planck constant h/2π, 1 in atomic units",
+   "section": "8.5"
+  },
+  {
+   "sym": "m",
+   "type": "mass",
+   "meaning": "the mass of a particle",
+   "unit": "kg",
+   "section": "8.5"
+  },
+  {
+   "sym": "nabla2",
+   "concept": "laplacian",
+   "meaning": "the Laplacian in the coordinates of one electron",
+   "section": "8.5"
+  },
+  {
+   "sym": "V",
+   "type": "energy",
+   "meaning": "the potential energy of one electron",
+   "unit": "J",
+   "section": "8.5"
+  },
+  {
+   "sym": "V_12",
+   "type": "energy",
+   "meaning": "the interaction energy of the two particles",
+   "unit": "J",
+   "section": "8.5"
+  },
+  {
+   "sym": "E",
+   "type": "energy",
+   "meaning": "the energy",
+   "unit": "J",
+   "section": "8.5"
+  },
+  {
+   "sym": "varphi_a",
+   "concept": "spin-orbital",
+   "meaning": "a one-particle spin-orbital, a",
+   "section": "8.5"
+  },
+  {
+   "sym": "varphi_b",
+   "concept": "spin-orbital",
+   "meaning": "a second one-particle spin-orbital, b",
+   "section": "8.5"
+  },
+  {
+   "sym": "varphi",
+   "type": "angle",
+   "meaning": "the phase a wavefunction picks up when two particles are interchanged, 0 or π",
+   "unit": "rad",
+   "section": "8.5"
+  },
+  {
+   "sym": "P12_hat",
+   "concept": "exchange-operator",
+   "meaning": "the exchange operator, which swaps the labels of particles 1 and 2",
+   "section": "8.5"
+  },
+  {
+   "sym": "psi_minus",
+   "concept": "two-electron-antisymmetric-combination",
+   "meaning": "the antisymmetric two-particle combination",
+   "section": "8.5"
+  },
+  {
+   "sym": "psi_plus",
+   "type": "wavefunction",
+   "meaning": "a symmetric two-particle combination",
+   "section": "8.5"
+  },
+  {
+   "sym": "C_ab",
+   "meaning": "an expansion and normalization coefficient of the symmetric combination",
+   "section": "8.5"
+  },
+  {
+   "sym": "varphi_1s",
+   "type": "wavefunction",
+   "meaning": "the hydrogen-like 1s orbital",
+   "section": "8.5"
+  },
+  {
+   "sym": "psi",
+   "concept": "multi-electron-wavefunction",
+   "type": "wavefunction",
+   "meaning": "the wavefunction of two or more electrons",
+   "section": "8.6"
+  },
+  {
+   "sym": "varphi_1s",
+   "type": "wavefunction",
+   "meaning": "the hydrogen-like 1s orbital",
+   "section": "8.6"
+  },
+  {
+   "sym": "varphi_2s",
+   "type": "wavefunction",
+   "meaning": "the 2s orbital",
+   "section": "8.6"
+  },
+  {
+   "sym": "alpha_s",
+   "concept": "spin-states",
+   "meaning": "the spin state α, with m_s = +½",
+   "section": "8.6"
+  },
+  {
+   "sym": "beta_s",
+   "concept": "spin-states",
+   "meaning": "the spin state β, with m_s = −½",
+   "section": "8.6"
+  },
+  {
+   "sym": "r_1",
+   "type": "length",
+   "meaning": "the position of electron 1, at the distance r₁ from the nucleus",
+   "section": "8.6"
+  },
+  {
+   "sym": "r_2",
+   "type": "length",
+   "meaning": "the position of electron 2, at the distance r₂ from the nucleus",
+   "section": "8.6"
+  },
+  {
+   "sym": "N",
+   "meaning": "the number of electrons",
+   "section": "8.6"
+  },
+  {
+   "sym": "varphi_i",
+   "concept": "spin-orbital",
+   "meaning": "a spin-orbital, i",
+   "section": "8.6"
+  },
+  {
+   "sym": "Psi",
+   "concept": "multi-electron-wavefunction",
+   "type": "wavefunction",
+   "meaning": "the many-electron wavefunction",
+   "section": "8.7"
+  },
+  {
+   "sym": "r_vec",
+   "type": "length",
+   "meaning": "the position of an electron",
+   "section": "8.7"
+  },
+  {
+   "sym": "psi_i",
+   "type": "wavefunction",
+   "meaning": "the orbital (one-electron wavefunction) of electron i",
+   "section": "8.7"
+  },
+  {
+   "sym": "N",
+   "meaning": "the number of electrons",
+   "section": "8.7"
+  },
+  {
+   "sym": "hbar",
+   "concept": "reduced-plancks-constant",
+   "meaning": "the reduced Planck constant h/2π, 1 in atomic units",
+   "section": "8.7"
+  },
+  {
+   "sym": "nabla2",
+   "concept": "laplacian",
+   "meaning": "the Laplacian in the coordinates of one electron",
+   "section": "8.7"
+  },
+  {
+   "sym": "V_nuc",
+   "type": "energy",
+   "meaning": "the potential energy of an electron in the field of the nucleus",
+   "unit": "J",
+   "section": "8.7"
+  },
+  {
+   "sym": "V_el",
+   "concept": "mean-field-potential",
+   "meaning": "the mean-field potential energy of an electron in the smeared charge of the other electrons",
+   "unit": "J",
+   "section": "8.7"
+  },
+  {
+   "sym": "eps_i",
+   "concept": "hartree-fock-orbital-energy",
+   "meaning": "the Hartree–Fock energy of spin-orbital i",
+   "unit": "J",
+   "section": "8.7",
+   "redefines": true
+  },
+  {
+   "sym": "F_hat",
+   "concept": "fock-operator",
+   "meaning": "the Fock operator",
+   "section": "8.7"
+  },
+  {
+   "sym": "varphi_i",
+   "type": "wavefunction",
+   "meaning": "a spin-orbital, i",
+   "section": "8.7"
+  },
+  {
+   "sym": "H0_hat",
+   "concept": "hamiltonian-operator",
+   "meaning": "the hydrogen-like one-electron operator in the Fock operator: an electron's kinetic energy and its attraction to the nucleus",
+   "section": "8.7",
+   "redefines": true
+  },
+  {
+   "sym": "J_hat",
+   "type": "operator",
+   "meaning": "the Coulomb operator of orbital j",
+   "section": "8.7"
+  },
+  {
+   "sym": "K_hat",
+   "type": "operator",
+   "meaning": "the exchange operator of orbital j",
+   "section": "8.7"
+  },
+  {
+   "sym": "J_jk",
+   "concept": "coulomb-integral",
+   "meaning": "the Coulomb integral between the electrons in orbitals j and k",
+   "unit": "J",
+   "section": "8.7"
+  },
+  {
+   "sym": "J_ij",
+   "concept": "coulomb-integral",
+   "meaning": "the Coulomb integral between spin-orbitals i and j",
+   "unit": "J",
+   "section": "8.7"
+  },
+  {
+   "sym": "K_ij",
+   "concept": "exchange-integral",
+   "meaning": "the exchange integral between spin-orbitals i and j",
+   "unit": "J",
+   "section": "8.7"
+  },
+  {
+   "sym": "phi_i",
+   "type": "wavefunction",
+   "meaning": "spin-orbital i of the determinant",
+   "section": "8.7"
+  },
+  {
+   "sym": "Z",
+   "meaning": "the atomic number, the nuclear charge in units of e",
+   "section": "8.7"
+  },
+  {
+   "sym": "e",
+   "type": "charge",
+   "meaning": "the elementary charge, 1 in atomic units",
+   "unit": "C",
+   "section": "8.7"
+  },
+  {
+   "sym": "epsilon_0",
+   "meaning": "the permittivity of free space",
+   "section": "8.7"
+  },
+  {
+   "sym": "r",
+   "type": "length",
+   "meaning": "the distance of the electron from the nucleus",
+   "unit": "m",
+   "section": "8.7"
+  },
+  {
+   "sym": "E_N",
+   "type": "energy",
+   "meaning": "the energy of the N-electron determinant",
+   "unit": "J",
+   "section": "8.7"
+  },
+  {
+   "sym": "E_Np",
+   "type": "energy",
+   "meaning": "the energy of the (N + 1)-electron determinant",
+   "unit": "J",
+   "section": "8.7"
+  },
+  {
+   "sym": "E_Nm",
+   "type": "energy",
+   "meaning": "the energy of the (N − 1)-electron determinant",
+   "unit": "J",
+   "section": "8.7"
+  },
+  {
+   "sym": "eps_k",
+   "concept": "hartree-fock-orbital-energy",
+   "meaning": "the energy of the spin-orbital k that loses or gains the electron",
+   "unit": "J",
+   "section": "8.7"
+  },
+  {
+   "sym": "n_r",
+   "type": "probability-density",
+   "meaning": "the conditional density of the other electrons at distance r from an electron at r = 0",
+   "section": "8.7"
+  },
+  {
+   "sym": "R_H",
+   "concept": "rydberg-constant",
+   "meaning": "the Rydberg constant",
+   "section": "8.7"
+  },
+  {
+   "sym": "l",
+   "concept": "angular-momentum-quantum-number",
+   "meaning": "the orbital angular momentum quantum number of one electron",
+   "section": "8.8"
+  },
+  {
+   "sym": "l_1",
+   "meaning": "the orbital angular momentum quantum number of electron 1",
+   "section": "8.8"
+  },
+  {
+   "sym": "l_2",
+   "meaning": "the orbital angular momentum quantum number of electron 2",
+   "section": "8.8"
+  },
+  {
+   "sym": "m_l",
+   "concept": "magnetic-quantum-number",
+   "meaning": "the magnetic quantum number of one electron",
+   "section": "8.8"
+  },
+  {
+   "sym": "m_l1",
+   "meaning": "the magnetic quantum number of electron 1",
+   "section": "8.8"
+  },
+  {
+   "sym": "m_l2",
+   "meaning": "the magnetic quantum number of electron 2",
+   "section": "8.8"
+  },
+  {
+   "sym": "m_s1",
+   "meaning": "the spin magnetic quantum number of electron 1",
+   "section": "8.8"
+  },
+  {
+   "sym": "m_s2",
+   "meaning": "the spin magnetic quantum number of electron 2",
+   "section": "8.8"
+  },
+  {
+   "sym": "s_1",
+   "meaning": "the spin quantum number of electron 1",
+   "section": "8.8"
+  },
+  {
+   "sym": "s_2",
+   "meaning": "the spin quantum number of electron 2",
+   "section": "8.8"
+  },
+  {
+   "sym": "L",
+   "concept": "total-orbital-angular-momentum-quantum-number",
+   "meaning": "the total orbital angular momentum quantum number",
+   "section": "8.8"
+  },
+  {
+   "sym": "M_l",
+   "concept": "total-magnetic-quantum-number",
+   "meaning": "the total magnetic quantum number, the sum of the electrons' m_l",
+   "section": "8.8"
+  },
+  {
+   "sym": "M_s",
+   "concept": "total-spin-magnetic-quantum-number",
+   "meaning": "the total spin magnetic quantum number, the sum of the electrons' m_s",
+   "section": "8.8"
+  },
+  {
+   "sym": "S",
+   "concept": "total-spin-quantum-number",
+   "meaning": "the total spin quantum number",
+   "section": "8.8"
+  },
+  {
+   "sym": "J",
+   "concept": "total-angular-momentum-quantum-number",
+   "meaning": "the total angular momentum quantum number",
+   "section": "8.8"
+  },
+  {
+   "sym": "M_mult",
+   "concept": "spin-multiplicity",
+   "meaning": "the spin multiplicity, 2S + 1",
+   "section": "8.8"
+  },
+  {
+   "sym": "m_s",
+   "concept": "spin-magnetic-quantum-number",
+   "meaning": "the spin magnetic quantum number, +½ or −½",
+   "section": "8.8"
+  },
+  {
+   "sym": "hbar",
+   "concept": "reduced-plancks-constant",
+   "meaning": "the reduced Planck constant h/2π, 1 in atomic units",
+   "section": "8.8"
+  },
+  {
+   "sym": "L",
+   "concept": "total-orbital-angular-momentum-quantum-number",
+   "meaning": "the total orbital angular momentum quantum number",
+   "section": "8.9"
+  },
+  {
+   "sym": "S",
+   "concept": "total-spin-quantum-number",
+   "meaning": "the total spin quantum number",
+   "section": "8.9"
+  },
+  {
+   "sym": "J",
+   "concept": "total-angular-momentum-quantum-number",
+   "meaning": "the total angular momentum quantum number",
+   "section": "8.9"
+  },
+  {
+   "sym": "l_i",
+   "meaning": "the orbital angular momentum quantum number of electron i",
+   "section": "8.9"
+  },
+  {
+   "sym": "l",
+   "concept": "angular-momentum-quantum-number",
+   "meaning": "the orbital angular momentum quantum number of one electron",
+   "section": "8.9"
+  },
+  {
+   "sym": "s",
+   "concept": "spin-quantum-number",
+   "meaning": "the spin quantum number, ½ for an electron",
+   "section": "8.9"
+  },
+  {
+   "sym": "j",
+   "meaning": "the total angular momentum quantum number of the electron",
+   "section": "8.9"
+  },
+  {
+   "sym": "m_l",
+   "concept": "magnetic-quantum-number",
+   "meaning": "the magnetic quantum number of one electron",
+   "section": "8.9"
+  },
+  {
+   "sym": "m_s",
+   "concept": "spin-magnetic-quantum-number",
+   "meaning": "the spin magnetic quantum number, +½ or −½",
+   "section": "8.9"
+  },
+  {
+   "sym": "m_j",
+   "meaning": "the projection quantum number of the total angular momentum, m_l + m_s",
+   "section": "8.9"
+  },
+  {
+   "sym": "j_1",
+   "meaning": "the angular momentum quantum number of the first of two momenta coupled",
+   "section": "8.9"
+  },
+  {
+   "sym": "j_2",
+   "meaning": "the angular momentum quantum number of the second",
+   "section": "8.9"
+  },
+  {
+   "sym": "L_vec",
+   "concept": "orbital-angular-momentum",
+   "meaning": "the orbital angular momentum",
+   "unit": "J·s",
+   "section": "8.9"
+  },
+  {
+   "sym": "S_vec",
+   "concept": "spin-angular-momentum",
+   "meaning": "the spin angular momentum",
+   "unit": "J·s",
+   "section": "8.9"
+  },
+  {
+   "sym": "J_vec",
+   "concept": "angular-momentum-magnitudes",
+   "meaning": "the total angular momentum vector",
+   "unit": "J·s",
+   "section": "8.9"
+  },
+  {
+   "sym": "L_z",
+   "concept": "orbital-angular-momentum",
+   "meaning": "the z projection of the orbital angular momentum",
+   "unit": "J·s",
+   "section": "8.9"
+  },
+  {
+   "sym": "S_z",
+   "concept": "spin-angular-momentum",
+   "meaning": "the z component of the spin angular momentum, m_sħ",
+   "unit": "J·s",
+   "section": "8.9"
+  },
+  {
+   "sym": "J_z",
+   "concept": "angular-momentum-magnitudes",
+   "meaning": "the z projection of the total angular momentum",
+   "unit": "J·s",
+   "section": "8.9"
+  },
+  {
+   "sym": "m_J",
+   "meaning": "the z projection quantum number of the total angular momentum, from +J to −J",
+   "section": "8.9"
+  },
+  {
+   "sym": "hbar",
+   "concept": "reduced-plancks-constant",
+   "meaning": "the reduced Planck constant h/2π, 1 in atomic units",
+   "section": "8.9"
+  },
+  {
+   "sym": "n",
+   "concept": "principal-quantum-number",
+   "meaning": "the principal quantum number",
+   "section": "8.9"
+  },
+  {
+   "sym": "S",
+   "concept": "total-spin-quantum-number",
+   "meaning": "the total spin quantum number",
+   "section": "8.10"
+  },
+  {
+   "sym": "L",
+   "concept": "total-orbital-angular-momentum-quantum-number",
+   "meaning": "the total orbital angular momentum quantum number",
+   "section": "8.10"
+  },
+  {
+   "sym": "J",
+   "concept": "total-angular-momentum-quantum-number",
+   "meaning": "the total angular momentum quantum number",
+   "section": "8.10"
+  },
+  {
+   "sym": "S_vec",
+   "concept": "spin-angular-momentum",
+   "meaning": "the spin angular momentum",
+   "unit": "J·s",
+   "section": "8.11"
+  },
+  {
+   "sym": "L_vec",
+   "concept": "orbital-angular-momentum",
+   "meaning": "the orbital angular momentum",
+   "unit": "J·s",
+   "section": "8.11"
+  },
+  {
+   "sym": "S_hat",
+   "concept": "spin-operators",
+   "meaning": "the spin angular momentum operator",
+   "section": "8.11"
+  },
+  {
+   "sym": "L_hat",
+   "type": "operator",
+   "meaning": "the orbital angular momentum operator",
+   "section": "8.11"
+  },
+  {
+   "sym": "E_so",
+   "concept": "spin-orbit-interaction",
+   "meaning": "the spin–orbit interaction energy",
+   "unit": "J",
+   "section": "8.11"
+  },
+  {
+   "sym": "Hso_hat",
+   "type": "operator",
+   "meaning": "the spin–orbit term added to the Hamiltonian",
+   "section": "8.11"
+  },
+  {
+   "sym": "l",
+   "concept": "angular-momentum-quantum-number",
+   "meaning": "the orbital angular momentum quantum number of one electron",
+   "section": "8.11"
+  },
+  {
+   "sym": "m_l",
+   "concept": "magnetic-quantum-number",
+   "meaning": "the magnetic quantum number of one electron",
+   "section": "8.11"
+  },
+  {
+   "sym": "m_s",
+   "concept": "spin-magnetic-quantum-number",
+   "meaning": "the spin magnetic quantum number, +½ or −½",
+   "section": "8.11"
+  },
+  {
+   "sym": "S",
+   "concept": "total-spin-quantum-number",
+   "meaning": "the total spin quantum number",
+   "section": "8.11"
+  },
+  {
+   "sym": "L",
+   "concept": "total-orbital-angular-momentum-quantum-number",
+   "meaning": "the total orbital angular momentum quantum number",
+   "section": "8.11"
+  },
+  {
+   "sym": "J",
+   "concept": "total-angular-momentum-quantum-number",
+   "meaning": "the total angular momentum quantum number",
+   "section": "8.11"
+  },
+  {
+   "sym": "m_J",
+   "meaning": "the z projection quantum number of the total angular momentum, from +J to −J",
+   "section": "8.11"
+  },
+  {
+   "sym": "n",
+   "concept": "principal-quantum-number",
+   "meaning": "the principal quantum number",
+   "section": "8.11"
+  },
+  {
+   "sym": "lambda",
+   "type": "wavelength",
+   "meaning": "the wavelength of a spectral line",
+   "unit": "nm",
+   "section": "8.11"
+  }
+ ]
+}

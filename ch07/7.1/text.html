@@ -1,0 +1,78 @@
+<section id="opening">
+<h2>Beyond independent electrons</h2>
+<p>In this section we introduce the powerful and versatile <span data-concept="variational-method">variational method</span> and use it to improve the approximate solutions we found for the helium atom using the <span data-concept="independent-electron-approximation">independent electron approximation</span>.</p>
+</section>
+
+<section id="true-energy">
+<h2>The True (Experimentally Determined) Energy of the Helium Atom</h2>
+<p>The helium atom has two electrons bound to a nucleus with charge $Z = 2$. The <em>successive</em> removal of the two electrons can be considered stepwise:</p>
+$$ \mathrm{He} \xrightarrow {\kIone} \mathrm{He}^+ + e^-\xrightarrow {\kItwo}\mathrm{He}^{++}+2e^- \tag{7.1.1} $$
+<p>The <em><span data-concept="ionization-energy">first ionization energy</span></em> $\kIone$ is the minimum energy required to remove the first electron from helium gas and is experimentally determined:</p>
+$$ \begin{aligned} \kIone=-\textit{E}_{1\textit{s}}(\mathrm{He}) = 24.59\;eV \end{aligned} $$
+<p>While the <span data-concept="ionization-energy">second ionization energy</span>, $\kItwo$ can be experimentally determined, it can also be calculated exactly from the hydrogen atom solutions since $\mathrm{He^{+}}$ is a hydrogen-like ion with $Z=2$. Hence, we have<sup class="fn" data-note="c-i2-unit"></sup></p>
+$$ \begin{aligned} \kItwo &=-\textit{E}_{ 1\textit{s}}(\mathrm{He}^+) \\[4pt] &=\dfrac{Z^2}{2n^2} \\[4pt] &=54.42\text{ eV} \end{aligned} $$
+<p>The energy of the three separated particles on the right side of Equation 7.1.1 is zero (by definition). Therefore the <span data-concept="helium-ground-state-energy">ground-state energy of helium atom</span> is given by</p>
+$$ \begin{aligned} \kEtrue&=-(\kIone+\kItwo) \\[4pt] &=-79.02\text{ eV}.\end{aligned} $$
+<p>which can be expressed in terms of the <strong><em><span data-concept="rydberg-constant">Rydberg</span></em></strong> constant ($R_H=13.6 \; eV$) that also describes the lowest energy of the hydrogen atom</p>
+$$ \kEtrue = -5.8066\,R_H $$
+<p>We will attempt to reproduce this <strong><span data-concept="helium-ground-state-energy">true value</span></strong>, as close as possible, by different theoretical approaches (all approximations).</p>
+</section>
+
+<section id="ignorance-is-bliss">
+<h2>The "Ignorance is Bliss" Approximation</h2>
+<p>The <span data-concept="multi-electron-hamiltonian">Hamiltonian for the Helium atom</span> is:</p>
+<figure class="dv" id="drv-helium-independent"></figure>
+<p>This approximation significantly overestimates the true energy of the helium atom $E_{He_{1s}} = -5.8066\,R$.<sup class="fn" data-note="c-overestimates"></sup> This is a poor approximation and we need to address <span data-concept="electron-electron-repulsion">electron-electron repulsion</span> properly (or better at least).</p>
+</section>
+
+<section id="shielding">
+<h2>Shielding and Penetration</h2>
+<p>One way to take <span data-concept="electron-electron-repulsion">electron-electron repulsion</span> into account is to modify the form of the wavefunction. A logical modification is to change the nuclear charge, $Z$, in the wavefunctions to an <span data-concept="effective-nuclear-charge">effective nuclear charge</span> ($Z_{eff}$), from +2 to a smaller value. The rationale for making this modification is that <span data-ref="electron-1">one electron</span> partially <span data-concept="shielding">shields</span> the nuclear charge from <span data-ref="electron-2">the other electron</span>, as shown in Figure 7.1.1.</p>
+<figure class="sim" id="sim-shielding" data-figure="7.1.1" data-original="/media/ch07/346364-Shielding_effect.svg" data-original-width="581" data-original-caption="Electron-electron shielding leading to a reduced effective nuclear charge. The attractive force of the nucleus on the outer electron is partially countered by the repulsive force between inner electrons and the outer electron. (CC BY-SA; Ümit Kaya via LibreTexts)">
+  <div class="sim-head"><span class="eyebrow">Figure 7.1.1</span><span>Move <span data-ref="electron-2">electron 2</span> out through the charge cloud of <span data-ref="electron-1">electron 1</span>. Close to the nucleus it feels nearly the full <span data-type="charge">+2</span>; far out, the cloud lies inside its orbit and the <span data-concept="effective-nuclear-charge">effective nuclear charge</span> falls toward <span data-type="charge">+1</span>.</span></div>
+</figure>
+<p>A region of negative charge density between <span data-ref="electron-2">one of the electrons</span> and the +2 nucleus makes the potential energy between them more positive (decreases the attraction between them). We can effect this change mathematically by using $\zeta &lt; 2$ in the wavefunction expression. If the <span data-concept="shielding">shielding</span> were complete, then $Z_{eff}$ would equal 1. If there is no <span data-concept="shielding">shielding</span>, then $Z_{eff}= 2$. So a way to take into account the electron-electron interaction is by saying it produces a <span data-concept="shielding">shielding effect</span>. The <span data-concept="shielding">shielding</span> is not zero, and it is not complete, so the <span data-concept="effective-nuclear-charge">effective nuclear charge</span> varies between one and two.</p>
+<p>In general, a theory should be able to make predictions in advance of knowledge of the experimental result. Consequently, a principle and method for choosing the best value for $Z_{eff}$ or any other adjustable parameter that is to be optimized in a calculation is needed. The <span data-concept="variational-principle">Variational Principle</span> provides the required criterion and method and says that the best value for any variable parameter in an approximate wavefunction is the value that gives the <strong>lowest energy for the ground state</strong>; i.e., the value that minimizes the energy. The <span data-concept="variational-method">variational method</span> is the procedure that is used to find the lowest energy and the best values for the variable parameters.</p>
+</section>
+
+<section id="variational-method">
+<h2>A Better Approximation: The Variational Method</h2>
+<p>The <span data-concept="variational-method">variational method</span> is one way of finding approximations to the lowest energy eigenstate or <span data-concept="ground-state">ground state</span>, and some excited states. This allows calculating approximate wavefunctions and is the variational principle.<sup class="fn" data-note="c-method-principle"></sup> The method consists in choosing a "<span data-concept="trial-wavefunction">trial wavefunction</span>" depending on one or more parameters, and finding the values of these parameters for which the <span data-concept="expectation-value">expectation value</span> of the energy is the lowest possible. The wavefunction obtained by fixing the parameters to such values is then an approximation to the ground state wavefunction, and the expectation value of the energy in that state is an <strong><span data-concept="variational-principle">upper bound</span></strong> to the ground state energy.</p>
+<p>The <span data-concept="variational-principle">variational principle</span> means that the expectation value for the binding energy obtained using an approximate wavefunction and the exact Hamiltonian operator will be higher than or equal to the true energy for the system. This idea is really powerful. When implemented, it permits us to find the best approximate wavefunction from a given wavefunction that contains one or more adjustable parameters, called a <strong><span data-concept="trial-wavefunction">trial wavefunction</span></strong>. A mathematical statement of the <span data-concept="variational-principle">variational principle</span> is</p>
+$$ \kEtrial \ge \kEtrue \tag{7.1.6} $$
+<p>where</p>
+$$ \begin{aligned} \kEtrial &= \dfrac{ \langle \kpsitrial| \kH | \kpsitrial \rangle}{\langle \kpsitrial | \kpsitrial \rangle} \\[4pt] &= \dfrac {\displaystyle \int \kpsitrial ^* \kH \kpsitrial d \tau}{\displaystyle \int \kpsitrial ^* \kpsitrial d\tau }  \end{aligned} \tag{7.1.7} $$
+<p>Equation 7.1.6 is called the <span data-concept="variational-principle">variational theorem</span> and states that for a time-independent Hamiltonian operator, any trial wavefunction will have an <span data-concept="variational-energy">variational energy</span> (i.e., expectation value) that is <strong>greater than or equal</strong> to the true ground state wavefunction<sup class="fn" data-note="c-energy-not-wavefunction"></sup> corresponding to the given Hamiltonian (Equation 7.1.6). Because of this, the <span data-concept="variational-energy">variational energy</span> is an upper bound to the true ground state energy of a given molecule. The general approach of this method consists in choosing a "trial wavefunction" depending on one or more parameters, and finding the values of these parameters for which the expectation value of the energy is the lowest possible (Figure 7.1.2).</p>
+<figure class="sim" id="fig-7-1-2" data-figure="7.1.2" data-original="/media/ch07/87522-Variational_Method_Flow_Chart.jpg" data-original-width="379" data-original-caption="Simplified algorithmic flowchart of the Variational Method approximation">
+  <div class="sim-head"><span class="eyebrow">Figure 7.1.2</span><span>Simplified algorithmic flowchart of the <span data-concept="variational-method">Variational Method</span> approximation</span></div>
+</figure>
+<blockquote><p>The <span data-concept="variational-energy">variational energy</span> $\kEtrial$ is only equal to the true energy $\kEtrue$ when the the corresponding trial wavefunction $\kpsitrial$ is equal to the true wavefunction $\kpsitrue$.</p></blockquote>
+</section>
+
+<section id="helium-ground-state">
+<h2>Application to the Helium atom Ground State</h2>
+<p>Often the expectation values (numerator) and normalization integrals (denominator) in Equation 7.1.7 can be evaluated analytically. For the case of the He atom, let's consider the trial wavefunction as the product wavefunction given by Equation 7.1.8 (this is called the <strong><span data-concept="orbital-approximation">orbital approximation</span></strong>),</p>
+$$ \kpsi (\kra , \krb) \approx \kvarphiorb (\kra) \kvarphiorb (\krb) \tag{7.1.8} $$
+<p>The adjustable or variable parameter in the trial wavefunction is the <span data-concept="effective-nuclear-charge">effective nuclear charge</span> $\zeta$, and the Hamiltonian is the complete form given below<sup class="fn" data-note="c-zeta-hamiltonian"></sup> (Note: quantum calculations typically refer to effective nuclear charge as $\zeta$ rather than $Z_{eff}$ as we used previously).</p>
+$$ \kH = -\dfrac {\hbar ^2}{2m} \knabla_1 - \dfrac {\zeta \ke^2}{4 \pi \epsilon _0 \kra} - \dfrac {\hbar ^2}{2m} \knabla_2 - \dfrac {\zeta \ke^2}{4 \pi \epsilon _0 \krb} + \dfrac {\ke^2}{4 \pi \epsilon _0 \krab} \tag{7.1.9} $$
+<p>the adjustable or variable parameter in the trial wavefunction is the <span data-concept="effective-nuclear-charge">effective nuclear charge</span> $\zeta$ (would be equal to $\zeta=2$ if fully unshielded), and the Hamiltonian is the complete form. When the expectation value for the trial energy (Equation 7.1.7) is evaluated for helium, the result is <span data-concept="helium-variational-energy">a variational energy that depends on the adjustable parameter, $\zeta$</span>.<sup class="fn" data-note="c-h-squared"></sup></p>
+$$ \kEtrial (\zeta) = \dfrac {\kmu \ke^4}{4 \epsilon ^2_0 h} \left ( \zeta ^2 - \dfrac {27}{8} \zeta \right ) \tag{7.1.10} $$
+<p>This function is plotted in Figure 7.1.3 as a function of $\zeta$. According to the <span data-concept="variational-principle">variational principle</span> (Equation 7.1.6), the minimum value of the energy on this graph is the best approximation of the true energy of the system, and the associated value of $\zeta$ is the best value for the adjustable parameter.</p>
+<figure class="sim" id="sim-trial-energy" data-figure="7.1.3" data-original="/media/ch07/51423-minimizeE.gif" data-original-width="445" data-original-caption="Graph of trial energies for helium atom as a function of the adjustable parameter $\zeta$ in Equation 7.1.10 that represents the effective nuclear charge felt by the electrons.">
+  <div class="sim-head"><span class="eyebrow">Figure 7.1.3</span><span>Slide $\zeta$ to find the lowest <span data-type="energy">trial energy</span>. Every $\zeta$ gives an energy above the measured <span data-type="energy">−79.0 eV</span>, and at the minimum the orbital spreads wider than it would with the full charge of 2.</span></div>
+</figure>
+<p>Using the mathematical function for the energy of a system, the minimum energy with respect to the adjustable parameter can be found by taking the derivative of the energy with respect to that parameter, setting the resulting expression equal to zero, and solving for the parameter, in this case $\zeta$. This is a standard method in calculus for finding<a href="https://math.libretexts.org/TextMaps/Calculus/Book%3A_Calculus_(Apex)/3%3A_The_Graphical_Behavior_of_Functions/3.1%3A_Extreme_Values"> maxima and minima</a>.</p>
+<p>From Exercise 7.1.1, the $\zeta = 1.6875$ and the approximate energy we calculate using this approximation method, E<sub>approx</sub> = <span data-type="energy">-77.483 eV</span>. Table 7.1.1 show that a substantial improvement in the accuracy of the computed binding energy is obtained by using <span data-concept="shielding">shielding</span> to account for the electron-electron interaction. Including the effect of electron <span data-concept="shielding">shielding</span> in the wavefunction reduces the error in the binding energy to about 2%. This idea is very simple, elegant, and significant.</p>
+<div class="book-table">
+  <div class="tcap"><span class="eyebrow">Table 7.1.1</span><span>Comparison of the results of three approximation methods to experiment.<sup class="fn" data-note="c-table-caption"></sup></span></div>
+  <table>
+    <thead><tr><th>Method</th><th>He binding energy (eV)</th></tr></thead>
+    <tbody>
+      <tr><td>"Ignorance is Bliss" Approximation (neglect repulsion between electrons)</td><td>-108.8</td></tr>
+      <tr><td>Variational method with variable effective charge</td><td>-77.483</td></tr>
+      <tr><td>Experimental</td><td>-79.0</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>The improvement we have seen in the total energy calculations using a variable parameter $\zeta$ indicates that an important contribution of electron-electron interaction or repulsion to the total binding energy arises from the fact that each electron <span data-concept="shielding">shields</span> the nuclear charge from the other electron. It is reasonable to assume the electrons are independent; i.e., that they move independently, but the <span data-concept="shielding">shielding</span> must be taken into account in order to fine-tune the wavefunctions. The inclusion of optimizable parameters in the wavefunction allows us to develop a clear physical image of the consequences of our variation calculation. Calculating energies correctly is important, and it is also important to be able to visualize electron densities for multi-electron systems. In the next two sections, we take a temporary break from our consideration of approximation methods in order to examine multi-electron wavefunctions more closely.</p>
+</section>

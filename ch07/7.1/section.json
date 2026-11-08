@@ -1,0 +1,551 @@
+{
+ "id": "7.1",
+ "module": "13434",
+ "chapter": "7",
+ "title": "The Variational Method Approximation",
+ "short": "The variational method",
+ "lead": "Helium's two electrons repel each other, so its Schrödinger equation has no exact solution. Its measured energy is the target for two approximations: ignoring the repulsion, and a trial wavefunction whose effective nuclear charge is varied until its energy is lowest, as the variational principle prescribes.",
+ "objectives": [
+  "Appreciate the complexity of solving muliti-electron atoms",
+  "Characterize multi-electron interactions within shielding and penetration concepts",
+  "Use the variational method as an approximation to study insolvable problems",
+  "User variational method to evaluate the effective nuclear charge for a specific atom"
+ ],
+ "summary_html": "",
+ "notes": "Written by Theodore Zielinski and shared under CC BY-NC-SA 4.0, with the original of Figure 7.1.1 by Ümit Kaya under CC BY-SA; the book gives no credit for Figures 7.1.2 and 7.1.3, which are shown under the page's licence.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "Exercise 7.1.1 and its key are the book's, with a correction under the card giving the energy and error the key skips. The exercises on the trial energy at two values of ζ and on the independent-electron energy were written by AI with AI solutions. Bloom levels and concept tags were chosen by AI. Numeric answers accept a 2% tolerance.",
+ "figures": [
+  {
+   "id": "sim-shielding",
+   "kind": "sim",
+   "number": "7.1.1",
+   "widths": [
+    581
+   ],
+   "originals": [
+    "/media/ch07/346364-Shielding_effect.svg"
+   ],
+   "original_caption": "Electron-electron shielding leading to a reduced effective nuclear charge. The attractive force of the nucleus on the outer electron is partially countered by the repulsive force between inner electrons and the outer electron. (CC BY-SA; Ümit Kaya via LibreTexts)",
+   "draws": [
+    "length",
+    "charge"
+   ],
+   "conventions": [
+    "He",
+    "e-"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "fig-7-1-2",
+   "kind": "figure",
+   "number": "7.1.2",
+   "widths": [
+    379
+   ],
+   "originals": [
+    "/media/ch07/87522-Variational_Method_Flow_Chart.jpg"
+   ],
+   "original_caption": "Simplified algorithmic flowchart of the Variational Method approximation",
+   "draws": [],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "sim-trial-energy",
+   "kind": "sim",
+   "number": "7.1.3",
+   "widths": [
+    445
+   ],
+   "originals": [
+    "/media/ch07/51423-minimizeE.gif"
+   ],
+   "original_caption": "Graph of trial energies for helium atom as a function of the adjustable parameter $\\zeta$ in Equation 7.1.10 that represents the effective nuclear charge felt by the electrons.",
+   "draws": [
+    "energy",
+    "length",
+    "probability-density"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [
+  {
+   "id": "electron-1",
+   "label": "electron 1",
+   "figures": [
+    "sim-shielding"
+   ]
+  },
+  {
+   "id": "electron-2",
+   "label": "electron 2",
+   "figures": [
+    "sim-shielding"
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "span": "opening",
+   "concept": "variational-method",
+   "verb": "uses"
+  },
+  {
+   "span": "true-energy",
+   "concept": "ionization-energy",
+   "verb": "introduces"
+  },
+  {
+   "span": "true-energy",
+   "concept": "helium-ground-state-energy",
+   "verb": "introduces"
+  },
+  {
+   "span": "true-energy",
+   "concept": "rydberg-constant",
+   "verb": "uses"
+  },
+  {
+   "span": "ignorance-is-bliss",
+   "concept": "independent-electron-approximation",
+   "verb": "introduces"
+  },
+  {
+   "span": "ignorance-is-bliss",
+   "concept": "additive-electron-energies",
+   "verb": "introduces"
+  },
+  {
+   "span": "ignorance-is-bliss",
+   "concept": "multi-electron-hamiltonian",
+   "verb": "reinforces"
+  },
+  {
+   "span": "ignorance-is-bliss",
+   "concept": "electron-electron-repulsion",
+   "verb": "reinforces"
+  },
+  {
+   "span": "ignorance-is-bliss",
+   "concept": "hydrogen-energy-levels",
+   "verb": "uses"
+  },
+  {
+   "span": "shielding",
+   "concept": "shielding",
+   "verb": "introduces"
+  },
+  {
+   "span": "shielding",
+   "concept": "effective-nuclear-charge",
+   "verb": "introduces"
+  },
+  {
+   "span": "shielding",
+   "concept": "variational-principle",
+   "verb": "uses"
+  },
+  {
+   "span": "variational-method",
+   "concept": "trial-wavefunction",
+   "verb": "introduces"
+  },
+  {
+   "span": "variational-method",
+   "concept": "variational-energy",
+   "verb": "introduces"
+  },
+  {
+   "span": "variational-method",
+   "concept": "variational-principle",
+   "verb": "introduces"
+  },
+  {
+   "span": "variational-method",
+   "concept": "variational-method",
+   "verb": "introduces"
+  },
+  {
+   "span": "variational-method",
+   "concept": "expectation-value",
+   "verb": "reinforces"
+  },
+  {
+   "span": "variational-method",
+   "concept": "ground-state",
+   "verb": "uses"
+  },
+  {
+   "span": "helium-ground-state",
+   "concept": "helium-variational-energy",
+   "verb": "introduces"
+  },
+  {
+   "span": "helium-ground-state",
+   "concept": "orbital-approximation",
+   "verb": "reinforces"
+  },
+  {
+   "span": "helium-ground-state",
+   "concept": "variational-method",
+   "verb": "uses"
+  },
+  {
+   "span": "helium-ground-state",
+   "concept": "shielding",
+   "verb": "reinforces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "e1",
+   "source_id": "exr:7.1.1",
+   "source_number": "Exercise 7.1.1",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "helium-ground-state",
+   "prompt": "<p>Find the value for $\\zeta$ that minimizes the helium binding energy for the product trial wavefunction in Equation 7.1.8 with the Hamiltonian in Equation 7.1.9. and compare the binding energy to the experimental value. What is the percent error in the calculated value?</p>",
+   "answer": {
+    "type": "number",
+    "value": 1.6875,
+    "generated_by": "source",
+    "hint": "Set the derivative of Equation 7.1.10 with respect to $\\zeta$ to zero.",
+    "solution": "<h4>Solution</h4>\n<p>The variational method requires following the workflow in Figure 7.1.2.</p>\n<ul><li>Step 1: Define the Hamiltonian - This is given by Equation 7.1.9.</li><li>Step 2: Define the trial wavefunction as a function of at least one parameter - This is given by Equation 7.1.8.</li><li>Step 3: Evaluate variational energy ($E_{trial}$ integral (Equation 7.1.7) - This procedure was already above in Equation 7.1.10.</li><li><p>Step 4: Minimize the variational energy as a function of the parameter(s) - Following the standard approach to find <a href=\"https://math.libretexts.org/Bookshelves/Calculus/Book%3A_Calculus_(OpenStax)/04%3A_Applications_of_Derivatives/4.03%3A_Maxima_and_Minima\">extrema in calculus</a>, evaluate the derivative of $E_{trial}$ with respect to $\\zeta$ and set to zero:</p>\n$$ \\dfrac{dE_{trial}}{d\\zeta} = \\dfrac {\\mu e^4}{4 \\epsilon ^2_0 h} \\left ( 2 \\zeta - \\dfrac {27}{8} \\right ) =0 $$\n<p>then find solve for the roots of this polynomial</p>\n$$ 2 \\zeta - \\dfrac {27}{8}=0 $$\n<p>or</p>\n$$ \\zeta = \\dfrac {27}{16} \\approx 1.6875 $$</li><li>Step 5-6: The question does not ask for the optimized wavefunction (Step 5) or to compare the result with the true value to evaluate the quality of the approximation (Step 6). We can skip these steps.</li></ul><sup class=\"fn\" data-note=\"c-ex711\"></sup>"
+   }
+  },
+  {
+   "id": "a1",
+   "source_id": "the minimum value of the energy on this graph is the best approximation of the true energy of the system",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "helium-ground-state",
+   "prompt": "<p>Use Equation 7.1.10, with $E_h = 27.21$ eV for its prefactor, to find the trial energy of helium for (a) $\\zeta = 2$, no shielding, and (b) $\\zeta = 1$, complete shielding. Why must both lie above the experimental energy, −79.0 eV?</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": -74.8,
+      "unit": "eV",
+      "hint": "Put $\\zeta = 2$ into $\\zeta^2 - \\tfrac{27}{8}\\zeta$ and multiply by 27.21 eV."
+     },
+     {
+      "part": "b",
+      "value": -64.6,
+      "unit": "eV"
+     }
+    ],
+    "solution": "<p>a. $E_{trial}(2) = 27.21\\text{ eV}\\,(4 - \\tfrac{27}{4}) = 27.21\\text{ eV} \\times (-2.75) = -74.8$ eV.</p><p>b. $E_{trial}(1) = 27.21\\text{ eV}\\,(1 - \\tfrac{27}{8}) = 27.21\\text{ eV} \\times (-2.375) = -64.6$ eV.</p><p>Each trial function is a product of two 1s functions, and its energy is the expectation value of the complete Hamiltonian, repulsion included. The variational principle (Equation 7.1.6) then holds for every $\\zeta$: no trial energy can fall below $E_{true} = -79.0$ eV. Both values also lie above the lowest one, −77.5 eV at $\\zeta = 27/16$.</p>"
+   }
+  },
+  {
+   "id": "a2",
+   "source_id": "This is a poor approximation and we need to address electron-electron repulsion properly",
+   "kind": "exercise",
+   "bloom": "Analyze",
+   "place": {
+    "at": "end"
+   },
+   "cite": "ignorance-is-bliss",
+   "prompt": "<p>Ignoring the repulsion between the electrons gives helium the energy $-8R_H$. Find (a) this energy in eV, with $R_H = 13.6$ eV, and (b) its percent error against the experimental −79.0 eV. Why is this energy no upper bound to the true energy, as a variational energy is?</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": -108.8,
+      "unit": "eV"
+     },
+     {
+      "part": "b",
+      "value": 37.7,
+      "unit": "%",
+      "hint": "Divide the difference between the two energies by the experimental one."
+     }
+    ],
+    "solution": "<p>a. $-8R_H = -8 \\times 13.6\\text{ eV} = -108.8$ eV.</p><p>b. $(108.8 - 79.0)/79.0 = 0.377$, an error of about 38%.</p><p>The variational principle bounds the expectation value of the exact Hamiltonian. This energy is an eigenvalue of another Hamiltonian, $h_1 + h_2$, which leaves out the positive repulsion $e^2/4\\pi\\epsilon_0 r_{12}$. Without that term the energy can only be lower, and nothing keeps it above $E_{true}$: it falls 29.8 eV below.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "e1",
+   "concept": "variational-method"
+  },
+  {
+   "exercise": "e1",
+   "concept": "helium-variational-energy"
+  },
+  {
+   "exercise": "a1",
+   "concept": "helium-variational-energy"
+  },
+  {
+   "exercise": "a1",
+   "concept": "variational-principle"
+  },
+  {
+   "exercise": "a2",
+   "concept": "additive-electron-energies"
+  },
+  {
+   "exercise": "a2",
+   "concept": "independent-electron-approximation"
+  },
+  {
+   "exercise": "a2",
+   "concept": "variational-principle"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-i2-unit",
+   "kind": "correction",
+   "html": "The second line, $Z^2/2n^2$, is the energy in hartrees: $Z^2E_h/2n^2$ with $E_h = 27.21$ eV gives 54.42 eV for $Z = 2$ and $n = 1$."
+  },
+  {
+   "id": "c-overestimates",
+   "kind": "correction",
+   "html": "The independent-electron energy, $-8R_H = -108.8$ eV, lies 29.8 eV below the true energy, so it is the binding that is overestimated. The value quoted, $-5.8066\\,R_H$, is the true energy $E_{true}$, not $E_{He_{1s}}$."
+  },
+  {
+   "id": "c-method-principle",
+   "kind": "correction",
+   "html": "The variational principle is the statement $E_{trial} \\ge E_{true}$ of Equation 7.1.6; the method rests on it."
+  },
+  {
+   "id": "c-energy-not-wavefunction",
+   "kind": "correction",
+   "html": "The variational energy is greater than or equal to the true ground-state energy."
+  },
+  {
+   "id": "c-zeta-hamiltonian",
+   "kind": "correction",
+   "html": "The complete Hamiltonian keeps the true nuclear charge, $Z = 2$, in its two attraction terms; $\\zeta$ belongs only to the trial wavefunction. Equation 7.1.10 is the expectation value of that Hamiltonian, so Equation 7.1.9 should read $Z$ where it prints $\\zeta$."
+  },
+  {
+   "id": "c-h-squared",
+   "kind": "correction",
+   "html": "The prefactor of Equation 7.1.10 is $m_e e^4/4\\epsilon_0^2h^2 = E_h = 27.21$ eV, the hartree; the book prints $h$ for $h^2$. Its $\\mu$ differs from $m_e$ by less than 0.02% for helium."
+  },
+  {
+   "id": "c-table-caption",
+   "kind": "correction",
+   "html": "The table compares two approximations, ignoring the repulsion and the variational method, with experiment."
+  },
+  {
+   "id": "c-ex711",
+   "kind": "correction",
+   "html": "The solution stops at $\\zeta = 27/16$. The question also asks for the energy and its error: Equation 7.1.10 gives $E_{trial} = -(27/16)^2E_h = -77.49$ eV, 1.5 eV or 1.9% above the experimental −79.02 eV, as the text after the exercise says. The prefactor in Step 4 is $m_e e^4/4\\epsilon_0^2h^2 = E_h$."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "helium-independent",
+   "what": "helium's energy without electron repulsion",
+   "source": "Physical Chemistry (LibreTexts), 7.1 The Variational Method Approximation",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kH = -\\dfrac{\\hbar^2}{2\\kme}\\knabla_{el_{1}} -\\dfrac{\\hbar^2}{2\\kme}\\knabla_{el_{2}} - \\dfrac{Z\\ke^2}{4\\pi\\epsilon_0 \\kra} - \\dfrac{Z\\ke^2}{4\\pi\\epsilon_0 \\krb} + \\dfrac{\\ke^2}{4\\pi\\epsilon_0 \\krab}",
+       "src": "(7.1.2)"
+      },
+      {
+       "text": "We simply ignore the electron-electron repulsion term."
+      },
+      {
+       "text": "$h_1$ and $h_2$ are one electron Hamiltonians for electron 1 and 2, respectively, and are just the hydrogen-like Hamiltonians."
+      }
+     ],
+     "then": {
+      "tex": "\\mk{H}{\\kH} = \\mk{T1}{-\\dfrac{\\hbar^2}{2\\kme}\\knabla_{el_{1}}} \\mk{T2}{-\\dfrac{\\hbar^2}{2\\kme}\\knabla_{el_{2}}} \\mk{V1}{- \\dfrac{Z\\ke^2}{4\\pi\\epsilon_0 \\kra}} \\mk{V2}{- \\dfrac{Z\\ke^2}{4\\pi\\epsilon_0 \\krb}} \\mk{R}{+ \\dfrac{\\ke^2}{4\\pi\\epsilon_0 \\krab}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{H}{\\kH} \\approx \\mk{T1}{-\\dfrac{\\hbar^2}{2\\kme}\\knabla_{el_{1}}} \\mk{V1}{- \\dfrac{Z\\ke^2}{4\\pi\\epsilon_0 \\kra}} \\mk{T2}{-\\dfrac{\\hbar^2}{2\\kme}\\knabla_{el_{2}}} \\mk{V2}{- \\dfrac{Z\\ke^2}{4\\pi\\epsilon_0 \\krb}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{H}{\\kH} \\approx \\mk{h1}{\\khone(\\kra)} + \\mk{h2}{\\khtwo(\\krb)}",
+       "uses": [
+        2
+       ],
+       "map": {
+        "T1": "h1",
+        "V1": "h1",
+        "T2": "h2",
+        "V2": "h2"
+       }
+      }
+     ],
+     "num": "(7.1.3)",
+     "note": "The book prints Equation 7.1.2 with the repulsion term already struck through, before the text drops it; the Hamiltonian of helium keeps it."
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "text": "Electron 1 is separable from electron 2, so the two-electron wavefunction is approximated as a product of two one-electron wavefunctions, $\\Psi_{total} = \\psi_{el_1}\\psi_{el_2}$.",
+       "src": "(7.1.4)"
+      },
+      {
+       "tex": "\\khone\\kpsiela = \\kEna\\kpsiela",
+       "src": "6.1"
+      },
+      {
+       "tex": "\\khtwo\\kpsielb = \\kEnb\\kpsielb",
+       "src": "6.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{H}{\\kH} \\approx \\mk{h1}{\\khone(\\kra)} + \\mk{h2}{\\khtwo(\\krb)}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\kH\\kPsitot} = \\mk{h}{(\\khone + \\khtwo)}\\mk{P}{\\kPsitot}",
+       "map": {
+        "H": "L",
+        "h1": "h",
+        "h2": "h"
+       }
+      },
+      {
+       "tex": "\\mk{L}{\\kH\\kPsitot} = \\mk{h}{(\\khone + \\khtwo)}\\mk{P}{\\kpsiela\\kpsielb}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\kH\\kPsitot} = \\mk{a}{\\khone\\kpsiela\\,\\kpsielb} + \\mk{b}{\\kpsiela\\,\\khtwo\\kpsielb}",
+       "map": {
+        "h": [
+         "a",
+         "b"
+        ],
+        "P": [
+         "a",
+         "b"
+        ]
+       },
+       "cap": "$h_1$ acts only on the coordinates of electron 1, so $\\psi_{el_2}$ passes through it as a constant, and likewise $\\psi_{el_1}$ through $h_2$."
+      },
+      {
+       "tex": "\\mk{L}{\\kH\\kPsitot} = \\mk{a}{\\kEna\\kpsiela\\kpsielb} + \\mk{b}{\\kEnb\\kpsiela\\kpsielb}",
+       "uses": [
+        2,
+        3
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\kH\\kPsitot} = \\mk{E}{(\\kEna + \\kEnb)}\\mk{P}{\\kpsiela\\kpsielb}",
+       "map": {
+        "a": [
+         "E",
+         "P"
+        ],
+        "b": [
+         "E",
+         "P"
+        ]
+       }
+      }
+     ],
+     "note": "The book's bra-ket form of the product, Equation 7.1.5, reads $|\\Psi_{total}\\rangle = \\hat{H}|\\psi_{el_1}\\psi_{el_2}\\rangle$; there is no $\\hat{H}$ in it: $|\\Psi_{total}\\rangle = |\\psi_{el_1}\\psi_{el_2}\\rangle$."
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "tex": "E_n = -\\dfrac{Z^2}{n^2}R_H",
+       "src": "(1.8.21)"
+      },
+      {
+       "text": "In the ground state of helium both electrons are in the lowest state, $n_1 = n_2 = 1$."
+      },
+      {
+       "text": "The helium nucleus has charge $Z = 2$."
+      }
+     ],
+     "then": {
+      "tex": "\\mk{E}{E_{He_{1s}}} = \\mk{a}{\\kEna} + \\mk{b}{\\kEnb}",
+      "uses": [
+       0
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{E}{E_{He_{1s}}} = \\mk{a}{-R_H\\left(\\dfrac{Z^2}{1}\\right)} \\mk{b}{-R_H\\left(\\dfrac{Z^2}{1}\\right)}",
+       "uses": [
+        1,
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{E}{E_{He_{1s}}} = \\mk{a}{-4R_H} \\mk{b}{-4R_H}",
+       "uses": [
+        3
+       ]
+      },
+      {
+       "tex": "\\mk{E}{E_{He_{1s}}} = \\mk{s}{-8R_H}",
+       "map": {
+        "a": "s",
+        "b": "s"
+       }
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

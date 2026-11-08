@@ -315,20 +315,20 @@
     {
      "assumes": [
       {
-       "tex": "\\kH(\\kr, \\theta, \\kvarphi)\\kpsi(\\kr, \\theta, \\kvarphi) = \\kE \\kpsi(\\kr, \\theta, \\kvarphi)",
+       "tex": "\\kH(\\kr, \\ktheta, \\kvarphi)\\kpsi(\\kr, \\ktheta, \\kvarphi) = \\kE \\kpsi(\\kr, \\ktheta, \\kvarphi)",
        "src": "(6.1.1)"
       },
       {
-       "tex": "\\kH(\\kr, \\theta, \\kvarphi) = -\\dfrac{\\hbar^2}{2\\kmu\\kr^2}\\left[\\dfrac{\\partial}{\\partial \\kr}\\left(\\kr^2\\dfrac{\\partial}{\\partial \\kr}\\right) + \\dfrac{1}{\\sin\\theta}\\dfrac{\\partial}{\\partial\\theta}\\left(\\sin\\theta\\dfrac{\\partial}{\\partial\\theta}\\right) + \\dfrac{1}{\\sin^2\\theta}\\dfrac{\\partial^2}{\\partial\\kvarphi^2}\\right] - \\dfrac{\\ke^2}{4\\pi\\epsilon_0\\kr}",
+       "tex": "\\kH(\\kr, \\ktheta, \\kvarphi) = -\\dfrac{\\hbar^2}{2\\kmu\\kr^2}\\left[\\dfrac{\\partial}{\\partial \\kr}\\left(\\kr^2\\dfrac{\\partial}{\\partial \\kr}\\right) + \\dfrac{1}{\\sin\\ktheta}\\dfrac{\\partial}{\\partial\\ktheta}\\left(\\sin\\ktheta\\dfrac{\\partial}{\\partial\\ktheta}\\right) + \\dfrac{1}{\\sin^2\\ktheta}\\dfrac{\\partial^2}{\\partial\\kvarphi^2}\\right] - \\dfrac{\\ke^2}{4\\pi\\epsilon_0\\kr}",
        "src": "(6.1.3)"
       }
      ],
      "then": {
-      "tex": "\\mk{L}{\\kH(\\kr, \\theta, \\kvarphi)\\kpsi(\\kr, \\theta, \\kvarphi)} = \\mk{R}{\\kE \\kpsi(\\kr, \\theta, \\kvarphi)}"
+      "tex": "\\mk{L}{\\kH(\\kr, \\ktheta, \\kvarphi)\\kpsi(\\kr, \\ktheta, \\kvarphi)} = \\mk{R}{\\kE \\kpsi(\\kr, \\ktheta, \\kvarphi)}"
      },
      "steps": [
       {
-       "tex": "\\mk{L}{\\left\\{ -\\dfrac{\\hbar^2}{2\\kmu\\kr^2}\\left[\\dfrac{\\partial}{\\partial \\kr}\\left(\\kr^2\\dfrac{\\partial}{\\partial \\kr}\\right) + \\dfrac{1}{\\sin\\theta}\\dfrac{\\partial}{\\partial\\theta}\\left(\\sin\\theta\\dfrac{\\partial}{\\partial\\theta}\\right) + \\dfrac{1}{\\sin^2\\theta}\\dfrac{\\partial^2}{\\partial\\kvarphi^2}\\right] - \\dfrac{\\ke^2}{4\\pi\\epsilon_0\\kr} \\right\\} \\kpsi(\\kr, \\theta, \\kvarphi)} = \\mk{R}{\\kE \\kpsi(\\kr, \\theta, \\kvarphi)}",
+       "tex": "\\mk{L}{\\left\\{ -\\dfrac{\\hbar^2}{2\\kmu\\kr^2}\\left[\\dfrac{\\partial}{\\partial \\kr}\\left(\\kr^2\\dfrac{\\partial}{\\partial \\kr}\\right) + \\dfrac{1}{\\sin\\ktheta}\\dfrac{\\partial}{\\partial\\ktheta}\\left(\\sin\\ktheta\\dfrac{\\partial}{\\partial\\ktheta}\\right) + \\dfrac{1}{\\sin^2\\ktheta}\\dfrac{\\partial^2}{\\partial\\kvarphi^2}\\right] - \\dfrac{\\ke^2}{4\\pi\\epsilon_0\\kr} \\right\\} \\kpsi(\\kr, \\ktheta, \\kvarphi)} = \\mk{R}{\\kE \\kpsi(\\kr, \\ktheta, \\kvarphi)}",
        "uses": [
         1
        ]
@@ -344,11 +344,11 @@
       }
      ],
      "then": {
-      "tex": "\\mk{L}{\\left\\{ -\\dfrac{\\hbar^2}{2\\kmu\\kr^2}\\left[\\dfrac{\\partial}{\\partial \\kr}\\left(\\kr^2\\dfrac{\\partial}{\\partial \\kr}\\right) + \\dfrac{1}{\\sin\\theta}\\dfrac{\\partial}{\\partial\\theta}\\left(\\sin\\theta\\dfrac{\\partial}{\\partial\\theta}\\right) + \\dfrac{1}{\\sin^2\\theta}\\dfrac{\\partial^2}{\\partial\\kvarphi^2}\\right] - \\dfrac{\\ke^2}{4\\pi\\epsilon_0\\kr} \\right\\} \\kpsi(\\kr, \\theta, \\kvarphi)} = \\mk{R}{\\kE \\kpsi(\\kr, \\theta, \\kvarphi)}"
+      "tex": "\\mk{L}{\\left\\{ -\\dfrac{\\hbar^2}{2\\kmu\\kr^2}\\left[\\dfrac{\\partial}{\\partial \\kr}\\left(\\kr^2\\dfrac{\\partial}{\\partial \\kr}\\right) + \\dfrac{1}{\\sin\\ktheta}\\dfrac{\\partial}{\\partial\\ktheta}\\left(\\sin\\ktheta\\dfrac{\\partial}{\\partial\\ktheta}\\right) + \\dfrac{1}{\\sin^2\\ktheta}\\dfrac{\\partial^2}{\\partial\\kvarphi^2}\\right] - \\dfrac{\\ke^2}{4\\pi\\epsilon_0\\kr} \\right\\} \\kpsi(\\kr, \\ktheta, \\kvarphi)} = \\mk{R}{\\kE \\kpsi(\\kr, \\ktheta, \\kvarphi)}"
      },
      "steps": [
       {
-       "tex": "\\mk{T}{-\\dfrac{\\hbar^2}{2\\kmu\\kr^2}\\left[\\dfrac{\\partial}{\\partial \\kr}\\left(\\kr^2\\dfrac{\\partial}{\\partial \\kr}\\right) + \\dfrac{1}{\\sin\\theta}\\dfrac{\\partial}{\\partial\\theta}\\left(\\sin\\theta\\dfrac{\\partial}{\\partial\\theta}\\right) + \\dfrac{1}{\\sin^2\\theta}\\dfrac{\\partial^2}{\\partial\\kvarphi^2}\\right]\\kpsi(\\kr, \\theta, \\kvarphi)} - \\mk{V}{\\dfrac{\\ke^2}{4\\pi\\epsilon_0\\kr}\\kpsi(\\kr, \\theta, \\kvarphi)} = \\mk{R}{\\kE \\kpsi(\\kr, \\theta, \\kvarphi)}",
+       "tex": "\\mk{T}{-\\dfrac{\\hbar^2}{2\\kmu\\kr^2}\\left[\\dfrac{\\partial}{\\partial \\kr}\\left(\\kr^2\\dfrac{\\partial}{\\partial \\kr}\\right) + \\dfrac{1}{\\sin\\ktheta}\\dfrac{\\partial}{\\partial\\ktheta}\\left(\\sin\\ktheta\\dfrac{\\partial}{\\partial\\ktheta}\\right) + \\dfrac{1}{\\sin^2\\ktheta}\\dfrac{\\partial^2}{\\partial\\kvarphi^2}\\right]\\kpsi(\\kr, \\ktheta, \\kvarphi)} - \\mk{V}{\\dfrac{\\ke^2}{4\\pi\\epsilon_0\\kr}\\kpsi(\\kr, \\ktheta, \\kvarphi)} = \\mk{R}{\\kE \\kpsi(\\kr, \\ktheta, \\kvarphi)}",
        "uses": [],
        "map": {
         "L": [
@@ -358,11 +358,11 @@
        }
       },
       {
-       "tex": "\\mk{T}{\\hbar^2\\left[\\dfrac{\\partial}{\\partial \\kr}\\left(\\kr^2\\dfrac{\\partial}{\\partial \\kr}\\right) + \\dfrac{1}{\\sin\\theta}\\dfrac{\\partial}{\\partial\\theta}\\left(\\sin\\theta\\dfrac{\\partial}{\\partial\\theta}\\right) + \\dfrac{1}{\\sin^2\\theta}\\dfrac{\\partial^2}{\\partial\\kvarphi^2}\\right]\\kpsi(\\kr, \\theta, \\kvarphi)} + \\mk{V}{2\\kmu\\kr^2\\dfrac{\\ke^2}{4\\pi\\epsilon_0\\kr}\\kpsi(\\kr, \\theta, \\kvarphi)} = \\mk{R}{-2\\kmu\\kr^2\\kE \\kpsi(\\kr, \\theta, \\kvarphi)}",
+       "tex": "\\mk{T}{\\hbar^2\\left[\\dfrac{\\partial}{\\partial \\kr}\\left(\\kr^2\\dfrac{\\partial}{\\partial \\kr}\\right) + \\dfrac{1}{\\sin\\ktheta}\\dfrac{\\partial}{\\partial\\ktheta}\\left(\\sin\\ktheta\\dfrac{\\partial}{\\partial\\ktheta}\\right) + \\dfrac{1}{\\sin^2\\ktheta}\\dfrac{\\partial^2}{\\partial\\kvarphi^2}\\right]\\kpsi(\\kr, \\ktheta, \\kvarphi)} + \\mk{V}{2\\kmu\\kr^2\\dfrac{\\ke^2}{4\\pi\\epsilon_0\\kr}\\kpsi(\\kr, \\ktheta, \\kvarphi)} = \\mk{R}{-2\\kmu\\kr^2\\kE \\kpsi(\\kr, \\ktheta, \\kvarphi)}",
        "uses": []
       },
       {
-       "tex": "\\mk{rad}{\\hbar^2\\dfrac{\\partial}{\\partial \\kr}\\left(\\kr^2\\dfrac{\\partial}{\\partial \\kr}\\right)\\kpsi(\\kr, \\theta, \\kvarphi)} + \\mk{ang}{\\hbar^2\\left[\\dfrac{1}{\\sin\\theta}\\dfrac{\\partial}{\\partial\\theta}\\left(\\sin\\theta\\dfrac{\\partial}{\\partial\\theta}\\right) + \\dfrac{1}{\\sin^2\\theta}\\dfrac{\\partial^2}{\\partial\\kvarphi^2}\\right]\\kpsi(\\kr, \\theta, \\kvarphi)} + \\mk{V}{2\\kmu\\kr^2\\dfrac{\\ke^2}{4\\pi\\epsilon_0\\kr}\\kpsi(\\kr, \\theta, \\kvarphi)} = \\mk{R}{-2\\kmu\\kr^2\\kE \\kpsi(\\kr, \\theta, \\kvarphi)}",
+       "tex": "\\mk{rad}{\\hbar^2\\dfrac{\\partial}{\\partial \\kr}\\left(\\kr^2\\dfrac{\\partial}{\\partial \\kr}\\right)\\kpsi(\\kr, \\ktheta, \\kvarphi)} + \\mk{ang}{\\hbar^2\\left[\\dfrac{1}{\\sin\\ktheta}\\dfrac{\\partial}{\\partial\\ktheta}\\left(\\sin\\ktheta\\dfrac{\\partial}{\\partial\\ktheta}\\right) + \\dfrac{1}{\\sin^2\\ktheta}\\dfrac{\\partial^2}{\\partial\\kvarphi^2}\\right]\\kpsi(\\kr, \\ktheta, \\kvarphi)} + \\mk{V}{2\\kmu\\kr^2\\dfrac{\\ke^2}{4\\pi\\epsilon_0\\kr}\\kpsi(\\kr, \\ktheta, \\kvarphi)} = \\mk{R}{-2\\kmu\\kr^2\\kE \\kpsi(\\kr, \\ktheta, \\kvarphi)}",
        "uses": [],
        "map": {
         "T": [
@@ -372,7 +372,7 @@
        }
       },
       {
-       "tex": "\\mk{rad}{\\hbar^2\\dfrac{\\partial}{\\partial \\kr}\\left(\\kr^2\\dfrac{\\partial}{\\partial \\kr}\\kpsi(\\kr, \\theta, \\kvarphi)\\right)} + \\mk{V}{2\\kmu\\kr^2\\left[\\kE + \\dfrac{\\ke^2}{4\\pi\\epsilon_0\\kr}\\right]\\kpsi(\\kr, \\theta, \\kvarphi)} = \\mk{ang}{-\\hbar^2\\left[\\dfrac{1}{\\sin\\theta}\\dfrac{\\partial}{\\partial\\theta}\\left(\\sin\\theta\\dfrac{\\partial}{\\partial\\theta}\\right) + \\dfrac{1}{\\sin^2\\theta}\\dfrac{\\partial^2}{\\partial\\kvarphi^2}\\right]\\kpsi(\\kr, \\theta, \\kvarphi)}",
+       "tex": "\\mk{rad}{\\hbar^2\\dfrac{\\partial}{\\partial \\kr}\\left(\\kr^2\\dfrac{\\partial}{\\partial \\kr}\\kpsi(\\kr, \\ktheta, \\kvarphi)\\right)} + \\mk{V}{2\\kmu\\kr^2\\left[\\kE + \\dfrac{\\ke^2}{4\\pi\\epsilon_0\\kr}\\right]\\kpsi(\\kr, \\ktheta, \\kvarphi)} = \\mk{ang}{-\\hbar^2\\left[\\dfrac{1}{\\sin\\ktheta}\\dfrac{\\partial}{\\partial\\ktheta}\\left(\\sin\\ktheta\\dfrac{\\partial}{\\partial\\ktheta}\\right) + \\dfrac{1}{\\sin^2\\ktheta}\\dfrac{\\partial^2}{\\partial\\kvarphi^2}\\right]\\kpsi(\\kr, \\ktheta, \\kvarphi)}",
        "uses": [],
        "map": {
         "R": "V"
@@ -388,7 +388,7 @@
        "step": 1
       },
       {
-       "tex": "\\kMsqhat = -\\hbar^2\\left[\\dfrac{1}{\\sin\\theta}\\dfrac{\\partial}{\\partial\\theta}\\left(\\sin\\theta\\dfrac{\\partial}{\\partial\\theta}\\right) + \\dfrac{1}{\\sin^2\\theta}\\dfrac{\\partial^2}{\\partial\\kvarphi^2}\\right]",
+       "tex": "\\kMsqhat = -\\hbar^2\\left[\\dfrac{1}{\\sin\\ktheta}\\dfrac{\\partial}{\\partial\\ktheta}\\left(\\sin\\ktheta\\dfrac{\\partial}{\\partial\\ktheta}\\right) + \\dfrac{1}{\\sin^2\\ktheta}\\dfrac{\\partial^2}{\\partial\\kvarphi^2}\\right]",
        "src": "(6.1.6)"
       },
       {
@@ -397,17 +397,17 @@
       }
      ],
      "then": {
-      "tex": "\\mk{rad}{\\hbar^2\\dfrac{\\partial}{\\partial \\kr}\\left(\\kr^2\\dfrac{\\partial}{\\partial \\kr}\\kpsi(\\kr, \\theta, \\kvarphi)\\right)} + \\mk{m}{2\\kmu\\kr^2}\\left[\\mk{E}{\\kE} + \\mk{C}{\\dfrac{\\ke^2}{4\\pi\\epsilon_0\\kr}}\\right]\\mk{p}{\\kpsi(\\kr, \\theta, \\kvarphi)} = \\mk{ang}{-\\hbar^2\\left[\\dfrac{1}{\\sin\\theta}\\dfrac{\\partial}{\\partial\\theta}\\left(\\sin\\theta\\dfrac{\\partial}{\\partial\\theta}\\right) + \\dfrac{1}{\\sin^2\\theta}\\dfrac{\\partial^2}{\\partial\\kvarphi^2}\\right]\\kpsi(\\kr, \\theta, \\kvarphi)}"
+      "tex": "\\mk{rad}{\\hbar^2\\dfrac{\\partial}{\\partial \\kr}\\left(\\kr^2\\dfrac{\\partial}{\\partial \\kr}\\kpsi(\\kr, \\ktheta, \\kvarphi)\\right)} + \\mk{m}{2\\kmu\\kr^2}\\left[\\mk{E}{\\kE} + \\mk{C}{\\dfrac{\\ke^2}{4\\pi\\epsilon_0\\kr}}\\right]\\mk{p}{\\kpsi(\\kr, \\ktheta, \\kvarphi)} = \\mk{ang}{-\\hbar^2\\left[\\dfrac{1}{\\sin\\ktheta}\\dfrac{\\partial}{\\partial\\ktheta}\\left(\\sin\\ktheta\\dfrac{\\partial}{\\partial\\ktheta}\\right) + \\dfrac{1}{\\sin^2\\ktheta}\\dfrac{\\partial^2}{\\partial\\kvarphi^2}\\right]\\kpsi(\\kr, \\ktheta, \\kvarphi)}"
      },
      "steps": [
       {
-       "tex": "\\mk{rad}{\\hbar^2\\dfrac{\\partial}{\\partial \\kr}\\left(\\kr^2\\dfrac{\\partial}{\\partial \\kr}\\kpsi(\\kr, \\theta, \\kvarphi)\\right)} + \\mk{m}{2\\kmu\\kr^2}\\left[\\mk{E}{\\kE} + \\mk{C}{\\dfrac{\\ke^2}{4\\pi\\epsilon_0\\kr}}\\right]\\mk{p}{\\kpsi(\\kr, \\theta, \\kvarphi)} = \\mk{ang}{\\kMsqhat \\kpsi(\\kr, \\theta, \\kvarphi)}",
+       "tex": "\\mk{rad}{\\hbar^2\\dfrac{\\partial}{\\partial \\kr}\\left(\\kr^2\\dfrac{\\partial}{\\partial \\kr}\\kpsi(\\kr, \\ktheta, \\kvarphi)\\right)} + \\mk{m}{2\\kmu\\kr^2}\\left[\\mk{E}{\\kE} + \\mk{C}{\\dfrac{\\ke^2}{4\\pi\\epsilon_0\\kr}}\\right]\\mk{p}{\\kpsi(\\kr, \\ktheta, \\kvarphi)} = \\mk{ang}{\\kMsqhat \\kpsi(\\kr, \\ktheta, \\kvarphi)}",
        "uses": [
         1
        ]
       },
       {
-       "tex": "\\mk{rad}{\\hbar^2\\dfrac{\\partial}{\\partial \\kr}\\left(\\kr^2\\dfrac{\\partial}{\\partial \\kr}\\kpsi(\\kr, \\theta, \\kvarphi)\\right)} + \\mk{m}{2\\kmu\\kr^2}\\left[\\mk{E}{\\kE} \\mk{C}{- \\kVhat}\\right]\\mk{p}{\\kpsi(\\kr, \\theta, \\kvarphi)} = \\mk{ang}{\\kMsqhat \\kpsi(\\kr, \\theta, \\kvarphi)}",
+       "tex": "\\mk{rad}{\\hbar^2\\dfrac{\\partial}{\\partial \\kr}\\left(\\kr^2\\dfrac{\\partial}{\\partial \\kr}\\kpsi(\\kr, \\ktheta, \\kvarphi)\\right)} + \\mk{m}{2\\kmu\\kr^2}\\left[\\mk{E}{\\kE} \\mk{C}{- \\kVhat}\\right]\\mk{p}{\\kpsi(\\kr, \\ktheta, \\kvarphi)} = \\mk{ang}{\\kMsqhat \\kpsi(\\kr, \\ktheta, \\kvarphi)}",
        "uses": [
         2
        ]
@@ -422,7 +422,7 @@
        "step": 2
       },
       {
-       "tex": "\\kpsi(\\kr, \\theta, \\kvarphi) = \\kRf(\\kr)\\kYsh(\\theta, \\kvarphi)",
+       "tex": "\\kpsi(\\kr, \\ktheta, \\kvarphi) = \\kRf(\\kr)\\kYsh(\\ktheta, \\kvarphi)",
        "src": "(6.1.8)"
       },
       {
@@ -431,24 +431,24 @@
       }
      ],
      "then": {
-      "tex": "\\mk{rad}{\\hbar^2\\dfrac{\\partial}{\\partial \\kr}\\left(\\kr^2\\dfrac{\\partial}{\\partial \\kr}\\kpsi(\\kr, \\theta, \\kvarphi)\\right)} + \\mk{V}{2\\kmu\\kr^2\\left[\\kE - \\kVhat\\right]\\kpsi(\\kr, \\theta, \\kvarphi)} = \\mk{ang}{\\kMsqhat \\kpsi(\\kr, \\theta, \\kvarphi)}"
+      "tex": "\\mk{rad}{\\hbar^2\\dfrac{\\partial}{\\partial \\kr}\\left(\\kr^2\\dfrac{\\partial}{\\partial \\kr}\\kpsi(\\kr, \\ktheta, \\kvarphi)\\right)} + \\mk{V}{2\\kmu\\kr^2\\left[\\kE - \\kVhat\\right]\\kpsi(\\kr, \\ktheta, \\kvarphi)} = \\mk{ang}{\\kMsqhat \\kpsi(\\kr, \\ktheta, \\kvarphi)}"
      },
      "steps": [
       {
-       "tex": "\\mk{rad}{\\hbar^2\\dfrac{\\partial}{\\partial \\kr}\\left(\\kr^2\\dfrac{\\partial}{\\partial \\kr}\\kRf(\\kr)\\kYsh(\\theta, \\kvarphi)\\right)} + \\mk{V}{2\\kmu\\kr^2\\left[\\kE - \\kVhat\\right]\\kRf(\\kr)\\kYsh(\\theta, \\kvarphi)} = \\mk{ang}{\\kMsqhat \\kRf(\\kr)\\kYsh(\\theta, \\kvarphi)}",
+       "tex": "\\mk{rad}{\\hbar^2\\dfrac{\\partial}{\\partial \\kr}\\left(\\kr^2\\dfrac{\\partial}{\\partial \\kr}\\kRf(\\kr)\\kYsh(\\ktheta, \\kvarphi)\\right)} + \\mk{V}{2\\kmu\\kr^2\\left[\\kE - \\kVhat\\right]\\kRf(\\kr)\\kYsh(\\ktheta, \\kvarphi)} = \\mk{ang}{\\kMsqhat \\kRf(\\kr)\\kYsh(\\ktheta, \\kvarphi)}",
        "uses": [
         1
        ]
       },
       {
-       "tex": "\\mk{rad}{\\kYsh(\\theta, \\kvarphi)\\,\\hbar^2\\dfrac{\\partial}{\\partial\\kr}\\kr^2\\dfrac{\\partial}{\\partial\\kr}\\kRf(\\kr)} + \\mk{V}{2\\kmu\\kr^2[\\kE - \\kV]\\kRf(\\kr)\\kYsh(\\theta, \\kvarphi)} = \\mk{ang}{\\kRf(\\kr)\\,\\kMsqhat \\kYsh(\\theta, \\kvarphi)}",
+       "tex": "\\mk{rad}{\\kYsh(\\ktheta, \\kvarphi)\\,\\hbar^2\\dfrac{\\partial}{\\partial\\kr}\\kr^2\\dfrac{\\partial}{\\partial\\kr}\\kRf(\\kr)} + \\mk{V}{2\\kmu\\kr^2[\\kE - \\kV]\\kRf(\\kr)\\kYsh(\\ktheta, \\kvarphi)} = \\mk{ang}{\\kRf(\\kr)\\,\\kMsqhat \\kYsh(\\ktheta, \\kvarphi)}",
        "uses": [
         2
        ],
        "cap": "$Y(\\theta, \\varphi)$ is a constant to the derivatives in $r$ and $R(r)$ is a constant to $\\hat{M}^2$, so each passes outside the operator that does not act on it; $\\hat{V}$ only multiplies by $V(r)$."
       },
       {
-       "tex": "\\mk{rad}{\\dfrac{\\hbar^2}{\\kRf(\\kr)}\\dfrac{\\partial}{\\partial\\kr}\\kr^2\\dfrac{\\partial}{\\partial\\kr}\\kRf(\\kr)} + \\mk{V}{\\dfrac{2\\kmu\\kr^2}{\\kRf(\\kr)}[\\kE - \\kV]\\kRf(\\kr)} = \\mk{ang}{\\dfrac{1}{\\kYsh(\\theta, \\kvarphi)}\\kMsqhat \\kYsh(\\theta, \\kvarphi)}",
+       "tex": "\\mk{rad}{\\dfrac{\\hbar^2}{\\kRf(\\kr)}\\dfrac{\\partial}{\\partial\\kr}\\kr^2\\dfrac{\\partial}{\\partial\\kr}\\kRf(\\kr)} + \\mk{V}{\\dfrac{2\\kmu\\kr^2}{\\kRf(\\kr)}[\\kE - \\kV]\\kRf(\\kr)} = \\mk{ang}{\\dfrac{1}{\\kYsh(\\ktheta, \\kvarphi)}\\kMsqhat \\kYsh(\\ktheta, \\kvarphi)}",
        "uses": []
       }
      ],
@@ -465,7 +465,7 @@
       }
      ],
      "then": {
-      "tex": "\\mk{L}{\\dfrac{\\hbar^2}{\\kRf(\\kr)}\\dfrac{\\partial}{\\partial\\kr}\\kr^2\\dfrac{\\partial}{\\partial\\kr}\\kRf(\\kr) + \\dfrac{2\\kmu\\kr^2}{\\kRf(\\kr)}[\\kE - \\kV]\\kRf(\\kr)} = \\mk{A}{\\dfrac{1}{\\kYsh(\\theta, \\kvarphi)}\\kMsqhat \\kYsh(\\theta, \\kvarphi)}"
+      "tex": "\\mk{L}{\\dfrac{\\hbar^2}{\\kRf(\\kr)}\\dfrac{\\partial}{\\partial\\kr}\\kr^2\\dfrac{\\partial}{\\partial\\kr}\\kRf(\\kr) + \\dfrac{2\\kmu\\kr^2}{\\kRf(\\kr)}[\\kE - \\kV]\\kRf(\\kr)} = \\mk{A}{\\dfrac{1}{\\kYsh(\\ktheta, \\kvarphi)}\\kMsqhat \\kYsh(\\ktheta, \\kvarphi)}"
      },
      "steps": [
       {
@@ -488,17 +488,17 @@
       }
      ],
      "then": {
-      "tex": "\\mk{L}{\\dfrac{\\hbar^2}{\\kRf(\\kr)}\\dfrac{\\partial}{\\partial\\kr}\\kr^2\\dfrac{\\partial}{\\partial\\kr}\\kRf(\\kr) + \\dfrac{2\\kmu\\kr^2}{\\kRf(\\kr)}[\\kE - \\kV]\\kRf(\\kr)} = \\mk{A}{\\dfrac{1}{\\kYsh(\\theta, \\kvarphi)}\\kMsqhat \\kYsh(\\theta, \\kvarphi)}"
+      "tex": "\\mk{L}{\\dfrac{\\hbar^2}{\\kRf(\\kr)}\\dfrac{\\partial}{\\partial\\kr}\\kr^2\\dfrac{\\partial}{\\partial\\kr}\\kRf(\\kr) + \\dfrac{2\\kmu\\kr^2}{\\kRf(\\kr)}[\\kE - \\kV]\\kRf(\\kr)} = \\mk{A}{\\dfrac{1}{\\kYsh(\\ktheta, \\kvarphi)}\\kMsqhat \\kYsh(\\ktheta, \\kvarphi)}"
      },
      "steps": [
       {
-       "tex": "\\mk{L}{\\klambda} = \\mk{A}{\\dfrac{1}{\\kYsh(\\theta, \\kvarphi)}\\kMsqhat \\kYsh(\\theta, \\kvarphi)}",
+       "tex": "\\mk{L}{\\klambda} = \\mk{A}{\\dfrac{1}{\\kYsh(\\ktheta, \\kvarphi)}\\kMsqhat \\kYsh(\\ktheta, \\kvarphi)}",
        "uses": [
         1
        ]
       },
       {
-       "tex": "\\mk{A}{\\dfrac{1}{\\kYsh(\\theta, \\kvarphi)}\\kMsqhat \\kYsh(\\theta, \\kvarphi)} = \\mk{L}{\\klambda}",
+       "tex": "\\mk{A}{\\dfrac{1}{\\kYsh(\\ktheta, \\kvarphi)}\\kMsqhat \\kYsh(\\ktheta, \\kvarphi)} = \\mk{L}{\\klambda}",
        "uses": []
       }
      ],

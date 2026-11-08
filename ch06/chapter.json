@@ -703,6 +703,13 @@
    "section": "6.6"
   },
   {
+   "sym": "L",
+   "concept": "orbital-angular-momentum",
+   "meaning": "the magnitude of the orbital angular momentum",
+   "unit": "J·s",
+   "section": "6.6"
+  },
+  {
    "sym": "L_z",
    "concept": "orbital-angular-momentum",
    "meaning": "the z component of the orbital angular momentum",
@@ -747,6 +754,12 @@
    "sym": "n",
    "concept": "principal-quantum-number",
    "meaning": "the principal quantum number",
+   "section": "6.6"
+  },
+  {
+   "sym": "psi",
+   "concept": "hydrogen-wavefunctions",
+   "meaning": "a hydrogen atom wavefunction, its quantum numbers or orbital name written as subscripts",
    "section": "6.6"
   },
   {
@@ -831,14 +844,16 @@
    "type": "length",
    "meaning": "the position of electron 1 relative to the nucleus",
    "unit": "m",
-   "section": "6.7"
+   "section": "6.7",
+   "ref": "electron-1"
   },
   {
    "sym": "r_2",
    "type": "length",
    "meaning": "the position of electron 2 relative to the nucleus",
    "unit": "m",
-   "section": "6.7"
+   "section": "6.7",
+   "ref": "electron-2"
   },
   {
    "sym": "r_12",
@@ -867,14 +882,16 @@
    "type": "energy",
    "meaning": "the attraction of electron 1 to the nucleus",
    "unit": "J",
-   "section": "6.7"
+   "section": "6.7",
+   "ref": "electron-1"
   },
   {
    "sym": "V_2",
    "type": "energy",
    "meaning": "the attraction of electron 2 to the nucleus",
    "unit": "J",
-   "section": "6.7"
+   "section": "6.7",
+   "ref": "electron-2"
   },
   {
    "sym": "V_12",

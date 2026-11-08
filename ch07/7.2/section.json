@@ -1,0 +1,741 @@
+{
+ "id": "7.2",
+ "module": "13435",
+ "chapter": "7",
+ "title": "Linear Variational Method and the Secular Determinant",
+ "short": "The linear variational method",
+ "lead": "A trial wavefunction can be a linear combination of fixed basis functions, with the coefficients as the parameters to vary. Minimizing the energy over the coefficients leads to the secular equations and the secular determinant, the working tools of the LCAO method.",
+ "objectives": [
+  "Understand how the variational method can be expanded to include trial wavefunctions that are a linear combination of functions with coefficients that are the parameters to be varied.",
+  "To be able to construct secular equations to solve the minimization procedure intrinsic to the variational method approach.",
+  "To map the secular equations into the secular determinant",
+  "To understand how the Linear Combination of Atomic Orbital (LCAO) approximation is a specific application of the linear variational method."
+ ],
+ "summary_html": "",
+ "notes": "Written by Claire Vallance and shared under CC BY-NC-SA 4.0, with the original of Figure 7.2.1 by Rudolf Winter (Aberystwyth University) under CC BY-NC-SA; the book gives no credit for Figure 7.2.2, which is shown under the page's licence.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercises in this section. The two here, a secular problem with an orthonormal basis and one with overlap, were written by AI with AI solutions; their Bloom levels and concept tags were chosen by AI. Numeric answers accept a 2% tolerance.",
+ "figures": [
+  {
+   "id": "sim-landscape",
+   "kind": "sim",
+   "number": "7.2.1",
+   "widths": [
+    279
+   ],
+   "originals": [
+    "/media/ch07/124241-potland.png"
+   ],
+   "original_caption": "Linear Variational Principle in action. Two (or more) wavefunctions are mixed by linear combination. The coefficients $a_1$, $a_2$ determine the weight each of them is given. The optimum coefficients are found by searching for minima in the potential landscape spanned by $a_1$ and $a_2$. (CC BY-SA-NC; Rudolf Winter; Aberystwyth University).",
+   "draws": [
+    "energy"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "fig-7-2-2",
+   "kind": "figure",
+   "number": "7.2.2",
+   "originals": [
+    "/media/ch07/87528-Variational_Method_Flow_Chart.jpg"
+   ],
+   "original_caption": "Simplified algorithmic flowchart of the linear Variational Method approximation. Compared to the similar algorithmic flowchart for the \"normal\" Variational Method approximation.",
+   "draws": [],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "opening",
+   "concept": "linear-variation-function",
+   "verb": "introduces"
+  },
+  {
+   "span": "opening",
+   "concept": "basis-functions",
+   "verb": "introduces"
+  },
+  {
+   "span": "opening",
+   "concept": "hamiltonian-matrix-element",
+   "verb": "introduces"
+  },
+  {
+   "span": "opening",
+   "concept": "linear-variational-energy",
+   "verb": "introduces"
+  },
+  {
+   "span": "opening",
+   "concept": "overlap-integral",
+   "verb": "reinforces"
+  },
+  {
+   "span": "opening",
+   "concept": "variational-energy",
+   "verb": "uses"
+  },
+  {
+   "span": "opening",
+   "concept": "trial-wavefunction",
+   "verb": "reinforces"
+  },
+  {
+   "span": "minimizing",
+   "concept": "secular-equations",
+   "verb": "introduces"
+  },
+  {
+   "span": "minimizing",
+   "concept": "bracketing-theorem",
+   "verb": "introduces"
+  },
+  {
+   "span": "minimizing",
+   "concept": "hermitian-operator",
+   "verb": "reinforces"
+  },
+  {
+   "span": "minimizing",
+   "concept": "hamiltonian-is-hermitian",
+   "verb": "reinforces"
+  },
+  {
+   "span": "minimizing",
+   "concept": "kronecker-delta",
+   "verb": "uses"
+  },
+  {
+   "span": "minimizing",
+   "concept": "orthonormality",
+   "verb": "uses"
+  },
+  {
+   "span": "minimizing",
+   "concept": "variational-method",
+   "verb": "reinforces"
+  },
+  {
+   "span": "secular-determinant",
+   "concept": "determinant",
+   "verb": "introduces"
+  },
+  {
+   "span": "secular-determinant",
+   "concept": "secular-determinant",
+   "verb": "introduces"
+  },
+  {
+   "span": "secular-determinant",
+   "concept": "characteristic-equation",
+   "verb": "introduces"
+  },
+  {
+   "span": "secular-determinant",
+   "concept": "linear-variational-method",
+   "verb": "introduces"
+  },
+  {
+   "span": "secular-determinant",
+   "concept": "lcao-approximation",
+   "verb": "introduces"
+  },
+  {
+   "span": "secular-determinant",
+   "concept": "slater-type-orbital",
+   "verb": "introduces"
+  },
+  {
+   "span": "secular-determinant",
+   "concept": "gaussian-type-orbital",
+   "verb": "introduces"
+  },
+  {
+   "span": "secular-determinant",
+   "concept": "spherical-harmonics",
+   "verb": "uses"
+  },
+  {
+   "span": "secular-determinant",
+   "concept": "atomic-orbital",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "To obtain the approximate wavefunction for a particular state, we substitute the appropriate energy into the secular equations",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "secular-determinant",
+   "prompt": "<p>A trial function $|\\psi_{trial}\\rangle = a_1|\\phi_1\\rangle + a_2|\\phi_2\\rangle$ is built from two orthonormal functions with $H_{11} = -1.0\\,E_h$, $H_{22} = -0.5\\,E_h$ and $H_{12} = -0.2\\,E_h$. Find (a) the lower and (b) the higher root of the secular determinant, and the coefficients (c) $a_1$ and (d) $a_2$ of the normalized lower state, taking $a_1 > 0$.</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": -1.07,
+      "unit": "Eₕ",
+      "hint": "With an orthonormal basis, $S_{11} = S_{22} = 1$ and $S_{12} = 0$."
+     },
+     {
+      "part": "b",
+      "value": -0.43,
+      "unit": "Eₕ"
+     },
+     {
+      "part": "c",
+      "value": 0.944
+     },
+     {
+      "part": "d",
+      "value": 0.331
+     }
+    ],
+    "solution": "<p>With $S_{11} = S_{22} = 1$ and $S_{12} = 0$ the secular determinant is</p>$$ \\begin{vmatrix} -1.0 - E & -0.2 \\\\ -0.2 & -0.5 - E \\end{vmatrix} = (-1.0 - E)(-0.5 - E) - 0.04 = 0 $$<p>or $E^2 + 1.5E + 0.46 = 0$, whose roots are $E = -0.75 \\mp \\sqrt{0.0625 + 0.04}$: (a) $E = -1.070\\,E_h$ and (b) $E = -0.430\\,E_h$. The lower root lies below $H_{11}$ and the higher above $H_{22}$.</p><p>Putting the lower root into the first secular equation, $a_1(H_{11} - E) + a_2H_{12} = 0$, gives $a_2 = a_1(0.0702/0.2) = 0.351\\,a_1$. Normalizing, $a_1^2 + a_2^2 = 1$, so (c) $a_1 = 1/\\sqrt{1 + 0.351^2} = 0.944$ and (d) $a_2 = 0.331$.</p>"
+   }
+  },
+  {
+   "id": "a2",
+   "source_id": "That generates a polynomial",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "secular-determinant",
+   "prompt": "<p>Two normalized functions that are not orthogonal have $H_{11} = H_{22} = -0.5\\,E_h$, $H_{12} = -0.4\\,E_h$ and overlap $S_{12} = 0.25$. Expand the secular determinant into its characteristic equation and find (a) the lower and (b) the higher root.</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": -0.72,
+      "unit": "Eₕ",
+      "hint": "With $H_{11} = H_{22}$ the determinant is a difference of two squares."
+     },
+     {
+      "part": "b",
+      "value": -0.133,
+      "unit": "Eₕ"
+     }
+    ],
+    "solution": "<p>Since $S_{11} = S_{22} = 1$ and $H_{22} = H_{11}$, the determinant is $(H_{11} - E)^2 - (H_{12} - ES_{12})^2 = 0$. Expanded, the characteristic equation is $(1 - S_{12}^2)E^2 - 2(H_{11} - H_{12}S_{12})E + H_{11}^2 - H_{12}^2 = 0$, here $0.9375E^2 + 0.8E + 0.09 = 0$.</p><p>As a difference of squares it factors into $H_{11} - E = \\pm(H_{12} - ES_{12})$, so $E = (H_{11} + H_{12})/(1 + S_{12})$ or $E = (H_{11} - H_{12})/(1 - S_{12})$: (a) $E = -0.9/1.25 = -0.72\\,E_h$ and (b) $E = -0.1/0.75 = -0.133\\,E_h$. Without the overlap the roots would be $-0.9\\,E_h$ and $-0.1\\,E_h$; the overlap raises the lower root by $0.18\\,E_h$ and lowers the higher by only $0.03\\,E_h$.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "secular-determinant"
+  },
+  {
+   "exercise": "a1",
+   "concept": "secular-equations"
+  },
+  {
+   "exercise": "a1",
+   "concept": "linear-variational-method"
+  },
+  {
+   "exercise": "a2",
+   "concept": "characteristic-equation"
+  },
+  {
+   "exercise": "a2",
+   "concept": "secular-determinant"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-eigenfunctions",
+   "kind": "correction",
+   "html": "The basis functions are not eigenfunctions of the Hamiltonian; its eigenvalues are numbers."
+  },
+  {
+   "id": "c-hermitian-conjugate",
+   "kind": "correction",
+   "html": "The condition carries a complex conjugate, $\\langle \\phi_i|\\hat{A}|\\phi_j\\rangle = \\langle \\phi_j|\\hat{A}|\\phi_i\\rangle^*$, which is the $A_{ij} = A_{ji}^*$ written below. Without it the formula holds only for real matrix elements."
+  },
+  {
+   "id": "c-hermitian-converse",
+   "kind": "correction",
+   "html": "The postulate runs the other way: an operator that represents an observable is Hermitian, and so its eigenvalues are real. An operator with real eigenvalues need not be Hermitian."
+  },
+  {
+   "id": "c-eigenvectors",
+   "kind": "correction",
+   "html": "The eigenvectors are the sets of coefficients $\\{a_i\\}$."
+  },
+  {
+   "id": "c-example-ref-1",
+   "kind": "correction",
+   "html": "The functions of $|\\psi_{trial}\\rangle$ are those of Equation 7.2.1, which the book's link prints as Example 7.2.1."
+  },
+  {
+   "id": "c-example-ref-2",
+   "kind": "correction",
+   "html": "The trial wavefunction meant is that of Equation 7.2.1, which the book's link prints as Example 7.2.1."
+  },
+  {
+   "id": "c-general-determinant",
+   "kind": "correction",
+   "html": "Equation 7.2.15 is the determinant of the general secular equations, Equation 7.2.12, with the overlaps $S_{ik}$. For orthonormal functions it becomes $|H_{ik} - E\\delta_{ik}| = 0$."
+  },
+  {
+   "id": "c-nontrivial",
+   "kind": "correction",
+   "html": "A non-trivial solution needs the coefficients $a_i$ not all zero; some of them may be zero."
+  },
+  {
+   "id": "c-lennard-jones",
+   "kind": "correction",
+   "html": "Lennard-Jones is one person, John Lennard-Jones."
+  },
+  {
+   "id": "c-citation",
+   "kind": "correction",
+   "html": "The first author of the second paper is R. Ditchfield, and the journal is J. Chem. Phys."
+  },
+  {
+   "id": "c-landscape-dips",
+   "kind": "correction",
+   "figure": "sim-landscape",
+   "html": "A linear variation has no false dips. Its energy is a ratio of two quadratic forms in the coefficients, whose stationary points are the roots of the secular determinant, so the landscape has one minimum, the lowest root. The licence is CC BY-NC-SA."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "linear-energy",
+   "what": "the variational energy of a linear trial function",
+   "source": "Physical Chemistry (LibreTexts), 7.2 Linear Variational Method and the Secular Determinant",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "|\\kpsitrial\\rangle = \\sum_{j=1}^N a_j|\\kphij\\rangle",
+       "src": "(7.2.1)"
+      },
+      {
+       "tex": "\\langle\\kpsitrial| = \\sum_{i=1}^N a_i^*\\langle\\phi_i|",
+       "src": "(7.2.2)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{n}{\\langle\\kpsitrial|\\kH|\\kpsitrial\\rangle} = \\mk{b}{\\Big(\\sum_{i}^{N} a_i^*\\langle\\phi_i|\\Big)}\\,\\mk{h}{\\kH}\\,\\mk{k}{\\Big(\\sum_{j}^{N} a_j|\\kphij\\rangle\\Big)}",
+      "uses": [
+       0,
+       1
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{n}{\\langle\\kpsitrial|\\kH|\\kpsitrial\\rangle} = \\mk{s}{\\sum_{i}^{N} \\sum_{j}^{N}a_i^{*} a_j \\langle \\phi_i|\\kH|\\kphij \\rangle}",
+       "map": {
+        "b": "s",
+        "h": "s",
+        "k": "s"
+       },
+       "cap": "$\\hat{H}$ is a linear operator, so the constants $a_j$ and the sum over $j$ pass through it."
+      },
+      {
+       "tex": "\\mk{n}{\\langle\\kpsitrial|\\kH|\\kpsitrial\\rangle} = \\mk{s}{\\sum_{i,\\,j}^{N,\\,N}a_i^{*} a_j \\langle \\phi_i|\\kH|\\kphij \\rangle}"
+      }
+     ],
+     "num": "(7.2.4)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "\\kHij = \\langle \\phi_i|\\kH|\\kphij \\rangle"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{n}{\\langle\\kpsitrial|\\kH|\\kpsitrial\\rangle} = \\mk{s}{\\sum_{i,\\,j}^{N,\\,N}a_i^{*} a_j \\langle \\phi_i|\\kH|\\kphij \\rangle}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{n}{\\langle\\kpsitrial|\\kH|\\kpsitrial\\rangle} = \\mk{s}{\\sum_{i,\\,j}^{N,\\,N}a_i^{*} a_j \\kHij}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "num": "(7.2.5)"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "|\\kpsitrial\\rangle = \\sum_{j=1}^N a_j|\\kphij\\rangle",
+       "src": "(7.2.1)"
+      },
+      {
+       "tex": "\\langle\\kpsitrial| = \\sum_{i=1}^N a_i^*\\langle\\phi_i|",
+       "src": "(7.2.2)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{d}{\\langle\\kpsitrial|\\kpsitrial\\rangle} = \\mk{b}{\\Big(\\sum_{i}^{N} a_i^*\\langle\\phi_i|\\Big)}\\mk{k}{\\Big(\\sum_{j}^{N} a_j|\\kphij\\rangle\\Big)}",
+      "uses": [
+       0,
+       1
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{d}{\\langle\\kpsitrial|\\kpsitrial\\rangle} = \\mk{s}{\\sum_{i,\\,j}^{N,\\,N}a_i^{*} a_j \\langle \\phi_i|\\kphij \\rangle}",
+       "map": {
+        "b": "s",
+        "k": "s"
+       }
+      }
+     ],
+     "num": "(7.2.6)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 2
+      },
+      {
+       "tex": "S_{ij} = \\langle \\phi_i|\\kphij \\rangle"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{d}{\\langle\\kpsitrial|\\kpsitrial\\rangle} = \\mk{s}{\\sum_{i,\\,j}^{N,\\,N}a_i^{*} a_j \\langle \\phi_i|\\kphij \\rangle}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{d}{\\langle\\kpsitrial|\\kpsitrial\\rangle} = \\mk{s}{\\sum_{i,\\,j}^{N,\\,N}a_i^{*} a_j S_{ij}}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "num": "(7.2.7)"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\kEtrial = \\dfrac{ \\langle \\kpsitrial| \\kH | \\kpsitrial \\rangle}{\\langle \\kpsitrial | \\kpsitrial \\rangle}",
+       "src": "7.1, (7.1.7)"
+      },
+      {
+       "step": 1
+      },
+      {
+       "step": 3
+      }
+     ],
+     "then": {
+      "tex": "\\mk{E}{\\kEtrial} = \\dfrac{\\mk{n}{\\langle\\kpsitrial|\\kH|\\kpsitrial\\rangle}}{\\mk{d}{\\langle\\kpsitrial|\\kpsitrial\\rangle}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{E}{\\kEtrial} = \\dfrac{\\mk{n}{\\sum_{i,\\,j}^{N,\\,N}a_i^{*} a_j \\kHij}}{\\mk{d}{\\langle\\kpsitrial|\\kpsitrial\\rangle}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{E}{\\kEtrial} = \\dfrac{\\mk{n}{\\sum_{i,\\,j}^{N,\\,N}a_i^{*} a_j \\kHij}}{\\mk{d}{\\sum_{i,\\,j}^{N,\\,N}a_i^{*} a_j S_{ij}}}",
+       "uses": [
+        2
+       ]
+      }
+     ],
+     "num": "(7.2.8)"
+    }
+   ]
+  },
+  {
+   "id": "secular",
+   "what": "the secular equations",
+   "source": "Physical Chemistry (LibreTexts), 7.2 Linear Variational Method and the Secular Determinant",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kEtrial = \\dfrac{\\sum_{i,\\,j}^{N,\\,N}a_i^{*} a_j \\kHij}{\\sum_{i,\\,j}^{N,\\,N}a_i^{*} a_j S_{ij}}",
+       "src": "(7.2.8)",
+       "drv": "linear-energy"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{E}{\\kEtrial} = \\dfrac{\\mk{n}{\\sum_{i,\\,j}^{N,\\,N}a_i^{*} a_j \\kHij}}{\\mk{d}{\\sum_{i,\\,j}^{N,\\,N}a_i^{*} a_j S_{ij}}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{E}{\\kEtrial}\\mk{d}{\\sum_{i,\\,j}^{N,\\,N}a_i^*a_j S_{ij}} = \\mk{n}{\\sum_{i,\\,j}^{N,\\,N}a_i^* a_j \\kHij}"
+      }
+     ],
+     "num": "(7.2.9)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      }
+     ],
+     "then": {
+      "tex": "\\mk{E}{\\kEtrial}\\mk{d}{\\sum_{i,\\,j}^{N,\\,N}a_i^*a_j S_{ij}} = \\mk{n}{\\sum_{i,\\,j}^{N,\\,N}a_i^* a_j \\kHij}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{a}{\\dfrac{\\partial \\kEtrial}{\\partial a_k} \\sum_{i,\\,j}^{N,\\,N} a_i^*a_j S_{ij}} + \\mk{b}{\\kEtrial \\sum_i \\sum_j \\left[ \\dfrac{ \\partial a_i^*}{\\partial a_k} a_j + \\dfrac {\\partial a_j}{\\partial a_k} a_i^* \\right ]S_{ij}} = \\mk{n}{\\sum_{i,\\,j}^{N,\\,N}\\left [ \\dfrac{\\partial a_i^*}{\\partial a_k} a_j + \\dfrac{ \\partial a_j}{\\partial a_k}a_i^* \\right] \\kHij}",
+       "map": {
+        "E": [
+         "a",
+         "b"
+        ],
+        "d": [
+         "a",
+         "b"
+        ]
+       },
+       "cap": "Differentiate both sides with respect to the $k^{th}$ coefficient, by the product rule: once on $E_{trial}$, and once on each product $a_i^*a_j$."
+      }
+     ],
+     "num": "(7.2.10)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "text": "Since the coefficients are independent, $\\dfrac{\\partial a_i^*}{\\partial a_k} = \\delta_{ik}$, and likewise $\\dfrac{\\partial a_j}{\\partial a_k} = \\delta_{jk}$."
+      },
+      {
+       "tex": "S_{ij} = S_{ji}"
+      },
+      {
+       "text": "Since the Hamiltonian is a Hermitian operator, $H_{ij} = H_{ji}$."
+      }
+     ],
+     "then": {
+      "tex": "\\mk{a}{\\dfrac{\\partial \\kEtrial}{\\partial a_k} \\sum_{i,\\,j}^{N,\\,N} a_i^*a_j S_{ij}} + \\mk{b}{\\kEtrial \\sum_i \\sum_j \\left[ \\dfrac{ \\partial a_i^*}{\\partial a_k} a_j + \\dfrac {\\partial a_j}{\\partial a_k} a_i^* \\right ]S_{ij}} = \\mk{n}{\\sum_{i,\\,j}^{N,\\,N}\\left [ \\dfrac{\\partial a_i^*}{\\partial a_k} a_j + \\dfrac{ \\partial a_j}{\\partial a_k}a_i^* \\right] \\kHij}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{a}{\\dfrac{\\partial \\kEtrial}{\\partial a_k} \\sum_{i,\\,j}^{N,\\,N} a_i^*a_j S_{ij}} + \\mk{b}{\\kEtrial \\Big(\\sum_j a_j S_{kj} + \\sum_i a_i S_{ik}\\Big)} = \\mk{n}{\\sum_j a_j H_{kj} + \\sum_i a_i H_{ik}}",
+       "uses": [
+        1
+       ],
+       "cap": "The Kronecker delta keeps only the term $i = k$ of the first part of each bracket and the term $j = k$ of the second."
+      },
+      {
+       "tex": "\\mk{a}{\\dfrac{\\partial \\kEtrial}{\\partial a_k} \\sum_{i,\\,j}^{N,\\,N} a_i^*a_j S_{ij}} + \\mk{b}{\\kEtrial \\Big(\\sum_i a_i S_{ik} + \\sum_i a_i S_{ik}\\Big)} = \\mk{n}{\\sum_i a_i H_{ik} + \\sum_i a_i H_{ik}}",
+       "uses": [
+        2,
+        3
+       ],
+       "cap": "Renaming the index $j$ of the first sum as $i$ and swapping the indices of $S_{ki}$ and $H_{ki}$ makes the two sums in each bracket the same."
+      },
+      {
+       "tex": "\\mk{a}{\\dfrac{\\partial \\kEtrial}{\\partial a_k} \\sum_{i,\\,j}^{N,\\,N} a_i^*a_j S_{ij}} + \\mk{b}{2\\kEtrial \\sum_i a_i S_{ik}} = \\mk{n}{2 \\sum_i a_i H_{ik}}"
+      }
+     ],
+     "num": "(7.2.11)",
+     "note": "Setting $\\partial a_i^*/\\partial a_k = \\delta_{ik}$ and $H_{ij} = H_{ji}$ assumes real coefficients and real basis functions: Hermiticity alone gives $H_{ij} = H_{ji}^*$. With complex coefficients, varying $a_k^*$ independently of $a_k$ leads to the same secular equations."
+    },
+    {
+     "assumes": [
+      {
+       "step": 2
+      },
+      {
+       "text": "At the minimum variational energy, $\\dfrac{\\partial E_{trial}}{\\partial a_k} = 0$."
+      }
+     ],
+     "then": {
+      "tex": "\\mk{a}{\\dfrac{\\partial \\kEtrial}{\\partial a_k} \\sum_{i,\\,j}^{N,\\,N} a_i^*a_j S_{ij}} + \\mk{b}{2\\kEtrial \\sum_i a_i S_{ik}} = \\mk{n}{2 \\sum_i a_i H_{ik}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{b}{2\\kEtrial \\sum_i a_i S_{ik}} = \\mk{n}{2 \\sum_i a_i H_{ik}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{s}{\\sum_i^N a_i (H_{ik} - \\kEtrial S_{ik})} = 0",
+       "map": {
+        "b": "s",
+        "n": "s"
+       }
+      }
+     ],
+     "num": "(7.2.12)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 3
+      },
+      {
+       "text": "If the functions $\\{|\\phi_j\\rangle\\}$ are orthonormal, the overlap matrix $S$ reduces to the unit matrix, $S_{ik} = \\delta_{ik}$."
+      },
+      {
+       "tex": "H_{ik} = H_{ki}"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{s}{\\sum_i^N a_i (H_{ik} - \\kEtrial S_{ik})} = 0"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{h}{\\sum_i^N a_i H_{ik}} - \\mk{e}{\\kEtrial \\sum_i^N a_i \\delta_{ik}} = 0",
+       "uses": [
+        1
+       ],
+       "map": {
+        "s": [
+         "h",
+         "e"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{h}{\\sum_i^N a_i H_{ik}} = \\mk{e}{\\kEtrial a_k}",
+       "cap": "Only the term $i = k$ of the sum over the Kronecker delta survives."
+      },
+      {
+       "tex": "\\mk{h}{\\sum_i^N H_{ki} a_i} = \\mk{e}{\\kEtrial a_k}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{h}{\\sum_j^N \\kHij a_j} = \\mk{e}{\\kEtrial a_i}"
+      }
+     ],
+     "num": "(7.2.14)",
+     "note": "The book prints $\\sum_i^N H_{ij}a_j = E_{trial}a_i$; the sum runs over $j$, the index of the coefficient."
+    }
+   ]
+  },
+  {
+   "id": "example-7-2-1",
+   "what": "the secular determinant of two basis functions",
+   "source": "Physical Chemistry (LibreTexts), 7.2 Linear Variational Method and the Secular Determinant, Example 7.2.1",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "| H_{ik}-\\kE S_{ik}| = 0",
+       "src": "(7.2.15)"
+      },
+      {
+       "tex": "\\begin{vmatrix}a&b\\\\c&d\\end{vmatrix}=ad-bc"
+      },
+      {
+       "text": "For two basis functions, $H_{21} = H_{12}$ and $S_{21} = S_{12}$."
+      }
+     ],
+     "then": {
+      "tex": "\\mk{D}{\\begin{vmatrix} H_{11}-\\kEtrial S_{11}&H_{12}-\\kEtrial S_{12} \\\\ H_{12}-\\kEtrial S_{12}&H_{22}-\\kEtrial S_{22}\\end{vmatrix}} = 0",
+      "uses": [
+       0,
+       2
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{p}{(H_{11}-\\kEtrial S_{11})(H_{22}-\\kEtrial S_{22})} - \\mk{q}{(H_{12}-\\kEtrial S_{12})^2} = 0",
+       "uses": [
+        1
+       ],
+       "map": {
+        "D": [
+         "p",
+         "q"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{a}{(S_{11}S_{22} - S_{12}^2)\\kEtrial^2} - \\mk{b}{(H_{11}S_{22} + H_{22}S_{11} - 2H_{12}S_{12})\\kEtrial} + \\mk{c}{(H_{11}H_{22} - H_{12}^2)} = 0",
+       "map": {
+        "p": [
+         "a",
+         "b",
+         "c"
+        ],
+        "q": [
+         "a",
+         "b",
+         "c"
+        ]
+       }
+      }
+     ],
+     "src": "Example 7.2.1",
+     "note": "The book's solution prints $a_1^2 H_{11} + 2a_1 a_2 H_{12}+ a_2^2 H_{22}=0$ as the expansion of the determinant. That sum is the numerator of $E_{trial}$ for real coefficients, and it is not zero; the expansion is the quadratic in $E_{trial}$, the characteristic equation."
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\sum_i^N a_i (H_{ik} - \\kEtrial S_{ik}) = 0",
+       "src": "(7.2.12)",
+       "drv": "secular"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{s}{\\sum_{i=1}^{2} a_i (H_{i2} - \\kEtrial S_{i2})} = 0",
+      "uses": [
+       0
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{a}{a_1(H_{12} - \\kEtrial S_{12})} + \\mk{b}{a_2(H_{22} - \\kEtrial S_{22})} = 0",
+       "map": {
+        "s": [
+         "a",
+         "b"
+        ]
+       }
+      }
+     ],
+     "src": "Example 7.2.1"
+    }
+   ]
+  }
+ ]
+}

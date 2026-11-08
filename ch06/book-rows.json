@@ -463,7 +463,8 @@
     {
      "id": "circular-orbit-angular-momentum",
      "latex": "|\\vec{L}| = m v r",
-     "section": "6.6"
+     "section": "6.6",
+     "anchor": "6.6-classical-orbital-angular-momentum"
     }
    ]
   },
@@ -732,7 +733,8 @@
    "forms": [
     {
      "id": "electron-repulsion",
-     "latex": "V_{12}(r_{12}) = \\dfrac {e^2}{4 \\pi \\epsilon _0 r_{12}}"
+     "latex": "V_{12}(r_{12}) = \\dfrac {e^2}{4 \\pi \\epsilon _0 r_{12}}",
+     "anchor": "6.7-multi-electron-hamiltonians"
     }
    ]
   },
@@ -745,11 +747,13 @@
    "forms": [
     {
      "id": "helium-hamiltonian",
-     "latex": "\\hat {H} = -\\dfrac {\\hbar ^2}{2m_e} (\\nabla ^2_1 + \\nabla ^2_2) + V_1 (r_1) + V_2 (r_2) + V_{12} (r_{12})"
+     "latex": "\\hat {H} = -\\dfrac {\\hbar ^2}{2m_e} (\\nabla ^2_1 + \\nabla ^2_2) + V_1 (r_1) + V_2 (r_2) + V_{12} (r_{12})",
+     "anchor": "6.7-multi-electron-hamiltonians"
     },
     {
      "id": "multi-electron-hamiltonian",
-     "latex": "\\hat {H} = -\\dfrac {\\hbar ^2}{2m_e} \\sum_i^n \\nabla ^2_i + \\sum_i^n V_i (r_i) + \\sum_{i \\ne j}^{n,n} V_{ij} (r_{ij})"
+     "latex": "\\hat {H} = -\\dfrac {\\hbar ^2}{2m_e} \\sum_i^n \\nabla ^2_i + \\sum_i^n V_i (r_i) + \\sum_{i \\ne j}^{n,n} V_{ij} (r_{ij})",
+     "anchor": "6.7-multi-electron-hamiltonians"
     }
    ]
   },
@@ -783,11 +787,13 @@
    "forms": [
     {
      "id": "orbital-approximation",
-     "latex": "\\psi (r_1, r_2, \\cdots , r_n) \\approx \\varphi _1 (r_1) \\varphi _2 (r_2) \\cdots \\varphi _n(r_n)"
+     "latex": "\\psi (r_1, r_2, \\cdots , r_n) \\approx \\varphi _1 (r_1) \\varphi _2 (r_2) \\cdots \\varphi _n(r_n)",
+     "anchor": "6.7-multi-electron-wavefunctions"
     },
     {
      "id": "orbital-energy-sum",
-     "latex": "E \\approx \\sum_i \\epsilon_i"
+     "latex": "E \\approx \\sum_i \\epsilon_i",
+     "anchor": "6.7-multi-electron-wavefunctions"
     }
    ]
   }

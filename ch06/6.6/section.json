@@ -332,11 +332,11 @@
     {
      "assumes": [
       {
-       "tex": "\\kpsi_{2,1,+1} = -\\dfrac{\\kr}{\\sqrt{2}}\\sin\\theta\\, e^{i\\phi}\\kRf(\\kr)",
+       "tex": "\\kpsi_{2,1,+1} = -\\dfrac{\\kr}{\\sqrt{2}}\\sin\\ktheta\\, e^{i\\phi}\\kRf(\\kr)",
        "src": "(6.6.2)"
       },
       {
-       "tex": "\\kpsi_{2,1,-1} = \\dfrac{\\kr}{\\sqrt{2}}\\sin\\theta\\, e^{-i\\phi}\\kRf(\\kr)",
+       "tex": "\\kpsi_{2,1,-1} = \\dfrac{\\kr}{\\sqrt{2}}\\sin\\ktheta\\, e^{-i\\phi}\\kRf(\\kr)",
        "src": "(6.6.2)"
       },
       {
@@ -344,7 +344,7 @@
        "src": "(6.6.3)"
       },
       {
-       "tex": "\\kx = \\kr\\sin\\theta\\cos\\phi",
+       "tex": "\\kx = \\kr\\sin\\ktheta\\cos\\phi",
        "src": "5.8"
       }
      ],
@@ -354,14 +354,14 @@
      },
      "steps": [
       {
-       "tex": "\\mk{p}{\\kpsi_{2p_x}} = \\mk{c}{\\dfrac{1}{\\sqrt{2}}\\left(\\dfrac{\\kr}{\\sqrt{2}}\\sin\\theta\\, e^{-i\\phi}\\kRf(\\kr)+\\dfrac{\\kr}{\\sqrt{2}}\\sin\\theta\\, e^{i\\phi}\\kRf(\\kr)\\right)}",
+       "tex": "\\mk{p}{\\kpsi_{2p_x}} = \\mk{c}{\\dfrac{1}{\\sqrt{2}}\\left(\\dfrac{\\kr}{\\sqrt{2}}\\sin\\ktheta\\, e^{-i\\phi}\\kRf(\\kr)+\\dfrac{\\kr}{\\sqrt{2}}\\sin\\ktheta\\, e^{i\\phi}\\kRf(\\kr)\\right)}",
        "uses": [
         0,
         1
        ]
       },
       {
-       "tex": "\\mk{p}{\\kpsi_{2p_x}} = \\mk{e}{\\dfrac{1}{2}\\left(e^{i\\phi}+e^{-i\\phi}\\right)}\\mk{s}{\\kr\\sin\\theta}\\,\\mk{R}{\\kRf(\\kr)}",
+       "tex": "\\mk{p}{\\kpsi_{2p_x}} = \\mk{e}{\\dfrac{1}{2}\\left(e^{i\\phi}+e^{-i\\phi}\\right)}\\mk{s}{\\kr\\sin\\ktheta}\\,\\mk{R}{\\kRf(\\kr)}",
        "uses": [],
        "map": {
         "c": [
@@ -372,7 +372,7 @@
        }
       },
       {
-       "tex": "\\mk{p}{\\kpsi_{2p_x}} = \\mk{x}{\\kr\\sin\\theta\\cos\\phi}\\,\\mk{R}{\\kRf(\\kr)}",
+       "tex": "\\mk{p}{\\kpsi_{2p_x}} = \\mk{x}{\\kr\\sin\\ktheta\\cos\\phi}\\,\\mk{R}{\\kRf(\\kr)}",
        "uses": [
         2
        ],
@@ -394,11 +394,11 @@
     {
      "assumes": [
       {
-       "tex": "\\kpsi_{2,1,+1} = -\\dfrac{\\kr}{\\sqrt{2}}\\sin\\theta\\, e^{i\\phi}\\kRf(\\kr)",
+       "tex": "\\kpsi_{2,1,+1} = -\\dfrac{\\kr}{\\sqrt{2}}\\sin\\ktheta\\, e^{i\\phi}\\kRf(\\kr)",
        "src": "(6.6.2)"
       },
       {
-       "tex": "\\kpsi_{2,1,-1} = \\dfrac{\\kr}{\\sqrt{2}}\\sin\\theta\\, e^{-i\\phi}\\kRf(\\kr)",
+       "tex": "\\kpsi_{2,1,-1} = \\dfrac{\\kr}{\\sqrt{2}}\\sin\\ktheta\\, e^{-i\\phi}\\kRf(\\kr)",
        "src": "(6.6.2)"
       },
       {
@@ -406,7 +406,7 @@
        "src": "(6.6.3)"
       },
       {
-       "tex": "\\ky = \\kr\\sin\\theta\\sin\\phi",
+       "tex": "\\ky = \\kr\\sin\\ktheta\\sin\\phi",
        "src": "5.8"
       }
      ],
@@ -416,14 +416,14 @@
      },
      "steps": [
       {
-       "tex": "\\mk{p}{\\kpsi_{2p_y}} = \\mk{c}{\\dfrac{i}{\\sqrt{2}}\\left(-\\dfrac{\\kr}{\\sqrt{2}}\\sin\\theta\\, e^{i\\phi}\\kRf(\\kr)+\\dfrac{\\kr}{\\sqrt{2}}\\sin\\theta\\, e^{-i\\phi}\\kRf(\\kr)\\right)}",
+       "tex": "\\mk{p}{\\kpsi_{2p_y}} = \\mk{c}{\\dfrac{i}{\\sqrt{2}}\\left(-\\dfrac{\\kr}{\\sqrt{2}}\\sin\\ktheta\\, e^{i\\phi}\\kRf(\\kr)+\\dfrac{\\kr}{\\sqrt{2}}\\sin\\ktheta\\, e^{-i\\phi}\\kRf(\\kr)\\right)}",
        "uses": [
         0,
         1
        ]
       },
       {
-       "tex": "\\mk{p}{\\kpsi_{2p_y}} = \\mk{e}{\\dfrac{1}{2i}\\left(e^{i\\phi}-e^{-i\\phi}\\right)}\\mk{s}{\\kr\\sin\\theta}\\,\\mk{R}{\\kRf(\\kr)}",
+       "tex": "\\mk{p}{\\kpsi_{2p_y}} = \\mk{e}{\\dfrac{1}{2i}\\left(e^{i\\phi}-e^{-i\\phi}\\right)}\\mk{s}{\\kr\\sin\\ktheta}\\,\\mk{R}{\\kRf(\\kr)}",
        "uses": [],
        "map": {
         "c": [
@@ -435,7 +435,7 @@
        "cap": "Since $i = -1/i$, the factor $\\frac{i}{2}\\left(e^{-i\\phi}-e^{i\\phi}\\right)$ is $\\frac{1}{2i}\\left(e^{i\\phi}-e^{-i\\phi}\\right)$."
       },
       {
-       "tex": "\\mk{p}{\\kpsi_{2p_y}} = \\mk{y}{\\kr\\sin\\theta\\sin\\phi}\\,\\mk{R}{\\kRf(\\kr)}",
+       "tex": "\\mk{p}{\\kpsi_{2p_y}} = \\mk{y}{\\kr\\sin\\ktheta\\sin\\phi}\\,\\mk{R}{\\kRf(\\kr)}",
        "uses": [
         2
        ],

@@ -1,0 +1,788 @@
+{
+ "id": "7.4",
+ "module": "13437",
+ "chapter": "7",
+ "title": "Perturbation Theory Expresses the Solutions in Terms of Solved Problems",
+ "short": "Perturbation theory",
+ "lead": "Perturbation theory starts from a problem already solved, such as the particle in a box or the harmonic oscillator, and treats what the harder problem adds as a small correction. The energies and states are expanded in powers of that correction and found order by order.",
+ "objectives": [
+  "Use perturbation theory to approximate the energies of systems as a series of perturbation of a solved system.",
+  "Use perturbation theory to approximate the wavefunctions of systems as a series of perturbation of a solved system."
+ ],
+ "summary_html": "",
+ "notes": "Adapted from Delmar Larsen's page under CC BY-NC-SA 4.0, with nothing left out.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "Exercise 7.4.3 and its key are the book's, with corrections under the card. The two exercises after it, the first-order shift of a box with a tilted floor and the states a cubic term mixes into the oscillator's ground state, were written by AI. Bloom levels and concept tags were chosen by AI.",
+ "figures": [
+  {
+   "id": "sim-box-levels",
+   "kind": "sim",
+   "number": "7.4.1",
+   "originals": [
+    "/media/ch07/87329-Perturbed_Energy_Spectrum.png"
+   ],
+   "original_caption": "Perturbed Energy Spectrum. (CC BY-SA 2.0, [Frontier](https://en.wikibooks.org/wiki/User:Frontier) via Wikipedia)",
+   "draws": [
+    "energy",
+    "length",
+    "probability-density"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "sim-oscillator-mixing",
+   "kind": "sim",
+   "number": "7.4.2",
+   "originals": [
+    "/media/ch07/90887-Slide1.PNG"
+   ],
+   "original_caption": "The first order perturbation of the ground-state wavefunction for a perturbed (left potential) can be expressed as a linear combination of all excited-state wavefunctions of the unperturbed potential (Equation 7.4.26), shown as a harmonic oscillator in this example (right potential). Note that the ground-state harmonic oscillator wavefunction is not part of this expression and all wavefunctions need to be included in the expression, not just the first eight wavefunctions shown here. (CC BY 4.0; Delmar Larsen)",
+   "draws": [
+    "energy",
+    "wavefunction",
+    "frequency"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "fig-perturbation-flowchart",
+   "kind": "figure",
+   "originals": [
+    "/media/ch07/87531-Pert1.jpg"
+   ],
+   "draws": [],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "kept as the book prints it"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "perturbation-theory",
+   "concept": "perturbation-theory",
+   "verb": "introduces"
+  },
+  {
+   "span": "perturbation-theory",
+   "concept": "hamiltonian-operator",
+   "verb": "uses"
+  },
+  {
+   "span": "perturbation-theory",
+   "concept": "schrodinger-eigenvalue-problem",
+   "verb": "uses"
+  },
+  {
+   "span": "power-series",
+   "concept": "perturbation-expansion",
+   "verb": "introduces"
+  },
+  {
+   "span": "power-series",
+   "concept": "order-by-order-equations",
+   "verb": "introduces"
+  },
+  {
+   "span": "zero-order-terms",
+   "concept": "order-by-order-equations",
+   "verb": "reinforces"
+  },
+  {
+   "span": "first-order-expression-of-energy",
+   "concept": "first-order-energy-correction",
+   "verb": "introduces"
+  },
+  {
+   "span": "first-order-expression-of-energy",
+   "concept": "order-by-order-equations",
+   "verb": "uses"
+  },
+  {
+   "span": "first-order-expression-of-energy",
+   "concept": "expectation-value",
+   "verb": "reinforces"
+  },
+  {
+   "span": "first-order-expression-of-energy",
+   "concept": "orthonormality",
+   "verb": "uses"
+  },
+  {
+   "span": "first-order-expression-of-energy",
+   "concept": "particle-in-a-box",
+   "verb": "uses"
+  },
+  {
+   "span": "first-order-expression-of-energy",
+   "concept": "pib-wavefunctions",
+   "verb": "uses"
+  },
+  {
+   "span": "first-order-expression-of-wavefunction",
+   "concept": "first-order-wavefunction-correction",
+   "verb": "introduces"
+  },
+  {
+   "span": "first-order-expression-of-wavefunction",
+   "concept": "complete-set",
+   "verb": "uses"
+  },
+  {
+   "span": "first-order-expression-of-wavefunction",
+   "concept": "harmonic-oscillator",
+   "verb": "uses"
+  },
+  {
+   "span": "first-order-expression-of-wavefunction",
+   "concept": "oscillator-wavefunctions",
+   "verb": "uses"
+  },
+  {
+   "span": "first-order-expression-of-wavefunction",
+   "concept": "oscillator-wavefunction-parity",
+   "verb": "uses"
+  },
+  {
+   "span": "first-order-expression-of-wavefunction",
+   "concept": "hermite-polynomials",
+   "verb": "uses"
+  },
+  {
+   "span": "first-order-expression-of-wavefunction",
+   "concept": "first-order-energy-correction",
+   "verb": "reinforces"
+  },
+  {
+   "span": "second-order-terms",
+   "concept": "perturbation-series-breakdown",
+   "verb": "introduces"
+  },
+  {
+   "span": "second-order-terms",
+   "concept": "perturbation-theory",
+   "verb": "reinforces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "e3",
+   "source_id": "exr:7.4.3",
+   "source_number": "Exercise 7.4.3",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "first-order-expression-of-energy",
+   "prompt": "<p><strong>Harmonic Oscillator with a Quartic Perturbation</strong></p><p>Use perturbation theory to estimate the energy of the ground-state wavefunction associated with this Hamiltonian</p>\n$$ \\hat{H} = \\dfrac{-\\hbar}{2m} \\dfrac{d^2}{dx^2} + \\dfrac{1}{2} kx^2 + \\gamma x^4 . $$<sup class=\"fn\" data-note=\"c-ex-hbar\"></sup>",
+   "answer": {
+    "type": "open",
+    "generated_by": "source",
+    "hint": "The ground state is even and so is $x^4$, so the first-order shift is $\\gamma\\langle x^4\\rangle$ in the oscillator's ground state.",
+    "solution": "<p>The model that we are using is the harmonic oscillator model which has a Hamiltonian</p>\n$$ H^{0}=-\\frac{\\hbar}{2 m} \\frac{d^2}{dx^2}+\\dfrac{1}{2} k x^2 $$\n<p>Making the perturbed Hamiltonian</p>\n$$ H^{1}=\\gamma x^{4} $$\n<p>To find the perturbed energy we approximate it using Equation 7.4.18</p>\n$$ E^{1}= \\langle n^{0}\\left|H^{1}\\right| n^{0} \\rangle $$\n<p>where is the wavefunction of the ground state harmonic oscillator</p>\n$$ n^{0}=\\left(\\frac{a}{\\pi}\\right)^{\\left(\\frac{1}{4}\\right)} e^{-\\frac{ax^2}{2}} $$\n<p>When we substitute in the Hamiltonian and the wavefunction we get</p>\n$$ E^{1}=\\left\\langle\\left(\\frac{a}{\\pi}\\right)^{\\left(\\frac{1}{4}\\right)} e^{-\\frac{ax^2}{2}}\\right|\\gamma x^{4}\\left|\\left(\\frac{a}{\\pi}\\right)^{\\left(\\frac{1}{4}\\right)} e^{-\\frac{ax^2}{2}} \\right \\rangle $$\n<p>Changing this into integral form, and combining the wavefunctions,</p>\n$$ \\begin{aligned} E^{1} &=\\int_{-\\infty}^{\\infty}\\left(\\frac{a}{\\pi}\\right)^{\\left(\\frac{1}{2}\\right)} e^{\\frac{-ax^2}{2}} \\gamma x^{4} dx \\\\[4pt] &=\\gamma\\left(\\frac{a}{\\pi}\\right)^{\\frac{1}{2}} \\int_{-\\infty}^{\\infty} x^{4} e^{-a x^2} d x \\end{aligned} $$\n<p>Now we use the integral table value</p>\n$$ \\int_{0}^{\\infty} x^{2 \\pi} e^{-a x^2} dx=\\frac{1 \\cdot 3 \\cdot 5 \\ldots (2 n-1)}{2^{m+1} a^{n}}\\left(\\frac{\\pi}{a}\\right)^{\\frac{1}{2}} $$\n<p>Where we plug in $\\mathrm{n}=2$ and $\\mathrm{a}=\\alpha$ for our integral</p>\n$$ \\begin{aligned} E^{1} &=2 \\gamma\\left(\\frac{a}{\\pi}\\right)^{\\left(\\frac{1}{2}\\right)} \\int_{0}^{\\infty} x^{4} e^{-a x^2} d x \\\\[4pt] &=2 \\gamma\\left(\\frac{a}{\\pi}\\right)^{\\left(\\frac{1}{2}\\right)} \\frac{1\\cdot 3}{2^{3} a^2}\\left(\\frac{\\pi}{a}\\right)^{\\frac{1}{2}}\\end{aligned} $$\n<p>This is our perturbed energy.</p>\n<p>Now we have to find our ground state energy using the formula for the energy of a harmonic oscillator that we already know,</p>\n$$ E_{r}^{0}=\\left(v+\\dfrac{1}{2}\\right) h \\nu $$\n<p>Where in the ground state $v=0$ so the energy for the ground state of the quantum harmonic oscillator is</p>\n$$ E_{\\mathrm{r}}^{0}=\\frac{1}{2} h \\nu $$\n<p>Putting both of our energy terms together gives us the ground state energy of the wavefunction of the given Hamiltonian,</p>\n$$ \\begin{aligned} E &=E^{0}+E^{1} \\\\[4pt] &=\\frac{1}{2} h\\nu + \\gamma \\frac{3}{4 a^2} \\end{aligned} $$<sup class=\"fn\" data-note=\"c-ex-key\"></sup>"
+   }
+  },
+  {
+   "id": "a1",
+   "source_id": "the first-order perturbation to any particle-in-the-box state can be easily derived",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "first-order-expression-of-energy",
+   "prompt": "<p>The floor of a particle in a box of length $L$ is tilted, so that the perturbation is $\\hat{H}^1 = V_o\\,x/L$ for $0 \\leq x \\leq L$. Use Equation 7.4.17 to find the first-order energy correction $E_n^1$ of any state $n$. Give $E_1^1$ as a fraction of $V_o$.</p>",
+   "answer": {
+    "type": "number",
+    "value": 0.5,
+    "generated_by": "ai",
+    "hint": "$E_n^1 = (V_o/L)\\langle x\\rangle$, and the probability density of every box state is symmetric about the middle of the box.",
+    "solution": "<p>By Equation 7.4.17, $E_n^1 = \\langle n^o|V_o x/L|n^o\\rangle = \\dfrac{V_o}{L}\\displaystyle\\int_0^L \\dfrac{2}{L}\\sin^2\\left(\\dfrac{n\\pi x}{L}\\right)x\\,dx$. Each density $\\sin^2(n\\pi x/L)$ is symmetric about $x = L/2$, so the integral is the average position $\\langle x\\rangle = L/2$ for every $n$. Then $E_n^1 = \\dfrac{V_o}{L}\\cdot\\dfrac{L}{2} = \\dfrac{V_o}{2}$ for every state, and $E_1^1/V_o = 0.5$. To first order each level rises by the potential at the middle of the box, the same shift as the step of Example 7.4.1B.</p>"
+   }
+  },
+  {
+   "id": "a2",
+   "source_id": "Since the perturbation is an odd function",
+   "kind": "exercise",
+   "bloom": "Analyze",
+   "place": {
+    "at": "end"
+   },
+   "cite": "first-order-expression-of-wavefunction",
+   "prompt": "<p>A harmonic oscillator is perturbed by $\\hat{H}^1 = \\epsilon x^3$, as in Example 7.4.2. Which unperturbed states $|m^o\\rangle$ have a nonzero weight $c_{m,0}$ in the first-order correction to the ground state?</p>",
+   "answer": {
+    "type": "choice",
+    "generated_by": "ai",
+    "options": [
+     "Only $m = 1$ and $m = 3$",
+     "Every odd $m$: 1, 3, 5, 7, …",
+     "Only $m = 2$ and $m = 4$",
+     "Every $m \\neq 0$"
+    ],
+    "correct": 0,
+    "hint": "Parity removes the even states. Then ask how far $x$ can move an oscillator state up the ladder, and apply it three times.",
+    "solution": "<p>$c_{m,0} = \\langle m^o|\\epsilon x^3|0^o\\rangle/(E_0^o - E_m^o)$ (Equation 7.4.27). The ground state is even and $x^3$ is odd, so the integrand is odd for every even $m$ and those weights vanish. Multiplying an oscillator state by $x$ gives a combination of only the levels one above and one below it, so $x^3|0^o\\rangle$ reaches no higher than $|3^o\\rangle$: in the oscillator's scaled coordinate, $x^3|0^o\\rangle = \\tfrac{1}{2\\sqrt{2}}(3|1^o\\rangle + \\sqrt{6}\\,|3^o\\rangle)$. Only $m = 1$ and $m = 3$ mix in, and the sum in Equation 7.4.28 stops there. With $E_m^o - E_0^o = m h\\nu$, the weights are $c_{1,0} = -\\dfrac{3}{2\\sqrt2}\\,\\dfrac{\\epsilon}{\\alpha^{3/2}h\\nu}$ and $c_{3,0} = -\\dfrac{\\sqrt3}{6}\\,\\dfrac{\\epsilon}{\\alpha^{3/2}h\\nu}$.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "e3",
+   "concept": "first-order-energy-correction"
+  },
+  {
+   "exercise": "e3",
+   "concept": "oscillator-wavefunctions"
+  },
+  {
+   "exercise": "a1",
+   "concept": "first-order-energy-correction"
+  },
+  {
+   "exercise": "a1",
+   "concept": "pib-wavefunctions"
+  },
+  {
+   "exercise": "a2",
+   "concept": "first-order-wavefunction-correction"
+  },
+  {
+   "exercise": "a2",
+   "concept": "oscillator-wavefunction-parity"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-lower-limit",
+   "kind": "correction",
+   "html": "The first sum also runs from $i = 0$: $|n\\rangle = \\sum_{i=0}^m \\lambda^i|n^i\\rangle$."
+  },
+  {
+   "id": "c-series-cite",
+   "kind": "correction",
+   "html": "The two series share one display, Equation 7.4.5; Equation 7.4.8 is the equation they are put into."
+  },
+  {
+   "id": "c-lambda-order",
+   "kind": "correction",
+   "html": "$\\lambda$ is set to 1 at every order. The order is the power of $\\lambda$ kept: first-order theory keeps the terms in $\\lambda^1$, and the headers' $\\lambda=0$, $\\lambda=1$ and $\\lambda=2$ name the powers $\\lambda^0$, $\\lambda^1$ and $\\lambda^2$."
+  },
+  {
+   "id": "c-cite-7418",
+   "kind": "correction",
+   "html": "The first-order energies are those of Equation 7.4.18, below; Equation 7.4.12 is the first-order equation they come from."
+  },
+  {
+   "id": "c-step",
+   "kind": "correction",
+   "html": "The potential is also zero on the right half of the box, $V(x) = 0$ for $L/2 < x \\leq L$, which the second integral of the solution uses."
+  },
+  {
+   "id": "c-example-cite",
+   "kind": "correction",
+   "html": "The example with an odd integrand is Example 7.4.2."
+  },
+  {
+   "id": "c-hbar",
+   "kind": "correction",
+   "html": "The kinetic term is $-\\dfrac{\\hbar^2}{2m}\\dfrac{d^2}{dx^2}$, here and in $\\hat{H}^{(0)}$ below."
+  },
+  {
+   "id": "c-k",
+   "kind": "correction",
+   "html": "$m = 2k + 1$ gives $m = 1, 3, 5$ for $k = 0, 1, 2$."
+  },
+  {
+   "id": "c-m5",
+   "kind": "correction",
+   "html": "Parity alone allows every odd $m$, but $\\langle 5^o|x^3|0^o\\rangle = 0$: multiplying by $x$ moves an oscillator state up or down by one level, so $x^3$ reaches no higher than $|3^o\\rangle$. Only $|1^o\\rangle$ and $|3^o\\rangle$ mix in, and for a cubic perturbation the sum is finite."
+  },
+  {
+   "id": "c-flowchart",
+   "kind": "correction",
+   "html": "The book prints this flowchart as a second Figure 7.4.1, the number it also gives the energy-level figure at the top of the page."
+  },
+  {
+   "id": "c-ex-hbar",
+   "kind": "correction",
+   "html": "The kinetic term is $-\\dfrac{\\hbar^2}{2m}\\dfrac{d^2}{dx^2}$, in the question and in $H^0$ of the answer."
+  },
+  {
+   "id": "c-ex-key",
+   "kind": "correction",
+   "html": "The result is right with $a = \\alpha = \\sqrt{k\\mu/\\hbar^2}$: $E = \\tfrac{1}{2}h\\nu + \\dfrac{3\\gamma}{4\\alpha^2}$. On the way the key slips: the table integral is $\\int_0^\\infty x^{2n}e^{-ax^2}dx = \\dfrac{1\\cdot3\\cdot5\\cdots(2n-1)}{2^{n+1}a^n}\\left(\\dfrac{\\pi}{a}\\right)^{1/2}$, with $x^{2n}$ and $2^{n+1}$ for its $x^{2\\pi}$ and $2^{m+1}$; the ground state it calls $n^0$ is $\\psi_0(x) = (\\alpha/\\pi)^{1/4}e^{-\\alpha x^2/2}$, and $E_r^0$ is $E_0^o$."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "powers-of-lambda",
+   "what": "the perturbed Schrödinger equation in powers of λ",
+   "source": "Physical Chemistry (LibreTexts), 7.4 Perturbation Theory Expresses the Solutions in Terms of Solved Problems",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "(\\kHzerohat + \\kHonehat)|n\\rangle = \\kEn|n\\rangle",
+       "src": "(7.4.2)"
+      },
+      {
+       "text": "The dimensionless parameter $\\lambda$ always goes with $\\hat{H}^1$.",
+       "src": "7.4"
+      }
+     ],
+     "then": {
+      "tex": "(\\mk{h0}{\\kHzerohat} + \\mk{h1}{\\kHonehat})\\mk{s}{|n\\rangle} = \\mk{e}{\\kEn}\\mk{t}{|n\\rangle}"
+     },
+     "steps": [
+      {
+       "tex": "(\\mk{h0}{\\kHzerohat} + \\mk{h1}{\\lambda \\kHonehat})\\mk{s}{|n\\rangle} = \\mk{e}{\\kEn}\\mk{t}{|n\\rangle}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "num": "(7.4.7)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "|n\\rangle = \\sum_{i=0}^m \\lambda^i|n^i\\rangle",
+       "src": "(7.4.5)"
+      },
+      {
+       "tex": "\\kEn = \\sum_{i=0}^m \\lambda^i \\kEni",
+       "src": "(7.4.5)"
+      }
+     ],
+     "then": {
+      "tex": "(\\mk{h}{\\kHzerohat + \\lambda \\kHonehat})\\mk{s}{|n\\rangle} = \\mk{e}{\\kEn}\\mk{t}{|n\\rangle}"
+     },
+     "steps": [
+      {
+       "tex": "(\\mk{h}{\\kHzerohat + \\lambda \\kHonehat})\\mk{s}{\\left(\\sum_{i=0}^m \\lambda^i|n^i\\rangle\\right)} = \\mk{e}{\\kEn}\\mk{t}{\\left(\\sum_{i=0}^m \\lambda^i|n^i\\rangle\\right)}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "(\\mk{h}{\\kHzerohat + \\lambda \\kHonehat})\\mk{s}{\\left(\\sum_{i=0}^m \\lambda^i|n^i\\rangle\\right)} = \\mk{e}{\\left(\\sum_{i=0}^m \\lambda^i \\kEni\\right)}\\mk{t}{\\left(\\sum_{i=0}^m \\lambda^i|n^i\\rangle\\right)}",
+       "uses": [
+        2
+       ]
+      }
+     ],
+     "num": "(7.4.8)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      }
+     ],
+     "then": {
+      "tex": "(\\mk{h}{\\kHzerohat + \\lambda \\kHonehat})\\mk{s}{\\left(\\sum_{i=0}^m \\lambda^i|n^i\\rangle\\right)} = \\mk{e}{\\left(\\sum_{i=0}^m \\lambda^i \\kEni\\right)}\\mk{t}{\\left(\\sum_{i=0}^m \\lambda^i|n^i\\rangle\\right)}"
+     },
+     "steps": [
+      {
+       "tex": "(\\mk{h}{\\kHzerohat + \\lambda \\kHonehat})\\mk{s}{(|n^o\\rangle + \\lambda |n^1\\rangle)} = \\mk{e}{(\\kEnzero + \\lambda \\kEnone)}\\mk{t}{(|n^o\\rangle + \\lambda |n^1\\rangle)}",
+       "uses": [],
+       "cap": "Keep the first few terms of each series, $i = 0$ and $i = 1$."
+      },
+      {
+       "tex": "\\mk{a}{\\kHzerohat|n^o\\rangle} + \\mk{b}{\\lambda \\kHonehat|n^o\\rangle} + \\mk{c}{\\lambda \\kHzerohat|n^1\\rangle} + \\mk{d}{\\lambda^2 \\kHonehat|n^1\\rangle} = \\mk{p}{\\kEnzero|n^o\\rangle} + \\mk{q}{\\lambda \\kEnone|n^o\\rangle} + \\mk{r}{\\lambda \\kEnzero|n^1\\rangle} + \\mk{u}{\\lambda^2 \\kEnone|n^1\\rangle}",
+       "uses": [],
+       "map": {
+        "h": [
+         "a",
+         "b",
+         "c",
+         "d"
+        ],
+        "s": [
+         "a",
+         "b",
+         "c",
+         "d"
+        ],
+        "e": [
+         "p",
+         "q",
+         "r",
+         "u"
+        ],
+        "t": [
+         "p",
+         "q",
+         "r",
+         "u"
+        ]
+       }
+      }
+     ],
+     "num": "(7.4.9)"
+    }
+   ]
+  },
+  {
+   "id": "first-order-energy",
+   "what": "the first-order energy correction",
+   "source": "Physical Chemistry (LibreTexts), 7.4 Perturbation Theory Expresses the Solutions in Terms of Solved Problems",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kHzerohat|n^1\\rangle + \\kHonehat|n^o\\rangle = \\kEnzero|n^1\\rangle + \\kEnone|n^o\\rangle",
+       "src": "(7.4.12)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{a}{\\kHzerohat|n^1\\rangle} + \\mk{b}{\\kHonehat|n^o\\rangle} = \\mk{c}{\\kEnzero|n^1\\rangle} + \\mk{d}{\\kEnone|n^o\\rangle}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{a}{\\langle n^o|\\kHzerohat|n^1\\rangle} + \\mk{b}{\\langle n^o|\\kHonehat|n^o\\rangle} = \\mk{c}{\\langle n^o|\\kEnzero|n^1\\rangle} + \\mk{d}{\\langle n^o|\\kEnone|n^o\\rangle}",
+       "uses": [],
+       "cap": "Multiply both sides on the left by the bra $\\langle n^o|$ and integrate: the inner product with $\\langle n^o|$."
+      }
+     ],
+     "num": "(7.4.13)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "\\langle n^o|\\kHzerohat = \\langle n^o|\\kEnzero",
+       "src": "(7.4.14)"
+      },
+      {
+       "tex": "\\langle n^o|n^o\\rangle = 1",
+       "src": "(7.4.15)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{a}{\\langle n^o|\\kHzerohat|n^1\\rangle} + \\mk{b}{\\langle n^o|\\kHonehat|n^o\\rangle} = \\mk{c}{\\langle n^o|\\kEnzero|n^1\\rangle} + \\mk{d}{\\langle n^o|\\kEnone|n^o\\rangle}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{a}{\\kEnzero\\langle n^o|n^1\\rangle} + \\mk{b}{\\langle n^o|\\kHonehat|n^o\\rangle} = \\mk{c}{\\langle n^o|\\kEnzero|n^1\\rangle} + \\mk{d}{\\langle n^o|\\kEnone|n^o\\rangle}",
+       "uses": [
+        1
+       ],
+       "cap": "$\\hat{H}^0$ is Hermitian, so it acts on the bra $\\langle n^o|$ as the unperturbed Schrödinger equation (7.4.11) says."
+      },
+      {
+       "tex": "\\mk{a}{\\kEnzero\\langle n^o|n^1\\rangle} + \\mk{b}{\\langle n^o|\\kHonehat|n^o\\rangle} = \\mk{c}{\\kEnzero\\langle n^o|n^1\\rangle} + \\mk{d}{\\kEnone\\langle n^o|n^o\\rangle}",
+       "uses": [],
+       "cap": "$E_n^o$ and $E_n^1$ are numbers, so they come out of the brackets."
+      },
+      {
+       "tex": "\\mk{a}{\\kEnzero\\langle n^o|n^1\\rangle} + \\mk{b}{\\langle n^o|\\kHonehat|n^o\\rangle} = \\mk{c}{\\kEnzero\\langle n^o|n^1\\rangle} + \\mk{d}{\\kEnone}",
+       "uses": [
+        2
+       ]
+      }
+     ],
+     "num": "(7.4.16)",
+     "note": "The book introduces this line as Equation 7.4.6 simplified; it is Equation 7.4.13 that is simplified. Its printed (7.4.16) also closes the bracket of $\\langle n^o|n^o\\rangle$ outside the cancelled term."
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      }
+     ],
+     "then": {
+      "tex": "\\mk{a}{\\kEnzero\\langle n^o|n^1\\rangle} + \\mk{b}{\\langle n^o|\\kHonehat|n^o\\rangle} = \\mk{c}{\\kEnzero\\langle n^o|n^1\\rangle} + \\mk{d}{\\kEnone}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{b}{\\langle n^o|\\kHonehat|n^o\\rangle} = \\mk{d}{\\kEnone}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{d}{\\kEnone} = \\mk{b}{\\langle n^o|\\kHonehat|n^o\\rangle}",
+       "uses": []
+      }
+     ],
+     "num": "(7.4.17)",
+     "note": "The book says the terms $E_n^o\\langle n^o|n^1\\rangle$ cancel because the unperturbed states are orthogonal. They cancel because $\\hat{H}^0$ acting on the bra gives the same term on both sides (7.4.14); orthonormality only sets $\\langle n^o|n^o\\rangle = 1$."
+    }
+   ]
+  },
+  {
+   "id": "first-order-wavefunction",
+   "what": "the first-order wavefunction correction",
+   "source": "Physical Chemistry (LibreTexts), 7.4 Perturbation Theory Expresses the Solutions in Terms of Solved Problems",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kHzerohat|n^1\\rangle + \\kHonehat|n^o\\rangle = \\kEnzero|n^1\\rangle + \\kEnone|n^o\\rangle",
+       "src": "(7.4.12)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{a}{\\kHzerohat|n^1\\rangle} + \\mk{b}{\\kHonehat|n^o\\rangle} = \\mk{c}{\\kEnzero|n^1\\rangle} + \\mk{d}{\\kEnone|n^o\\rangle}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{a}{\\langle m^o|\\kHzerohat|n^1\\rangle} + \\mk{b}{\\langle m^o|\\kHonehat|n^o\\rangle} = \\mk{c}{\\langle m^o|\\kEnzero|n^1\\rangle} + \\mk{d}{\\langle m^o|\\kEnone|n^o\\rangle}",
+       "uses": [],
+       "cap": "Take the inner product with $\\langle m^o|$, for a state $m \\neq n$."
+      }
+     ],
+     "num": "(7.4.19)"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\langle m^o|n^o\\rangle = 0",
+       "src": "(7.4.21)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\langle m^o|\\kEnone|n^o\\rangle} = \\mk{r}{\\kEnone\\langle m^o|n^o\\rangle}",
+      "src": "(7.4.20)"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\langle m^o|\\kEnone|n^o\\rangle} = \\mk{r}{0}",
+       "uses": [
+        0
+       ],
+       "cap": "Unperturbed states with $m \\neq n$ are orthogonal."
+      }
+     ],
+     "src": "7.4, the last term on the right side of Equation 7.4.19"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\langle m^o|\\kHzerohat = \\langle m^o|E_m^o",
+       "src": "(7.4.23)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\langle m^o|\\kHzerohat} = \\mk{r}{\\langle m^o|E_m^o}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\langle m^o|\\kHzerohat|n^1\\rangle} = \\mk{r}{\\langle m^o|E_m^o|n^1\\rangle}",
+       "uses": [],
+       "cap": "Both sides act on $|n^1\\rangle$."
+      },
+      {
+       "tex": "\\mk{l}{\\langle m^o|\\kHzerohat|n^1\\rangle} = \\mk{r}{E_m^o\\langle m^o|n^1\\rangle}",
+       "uses": []
+      }
+     ],
+     "num": "(7.4.22)",
+     "note": "The book heads this part \"First term on right side of Equation 7.4.19\"; $\\langle m^o|\\hat{H}^0|n^1\\rangle$ is the first term on the left side."
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "step": 1
+      },
+      {
+       "step": 2
+      }
+     ],
+     "then": {
+      "tex": "\\mk{a}{\\langle m^o|\\kHzerohat|n^1\\rangle} + \\mk{b}{\\langle m^o|\\kHonehat|n^o\\rangle} = \\mk{c}{\\langle m^o|\\kEnzero|n^1\\rangle} + \\mk{d}{\\langle m^o|\\kEnone|n^o\\rangle}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{a}{E_m^o\\langle m^o|n^1\\rangle} + \\mk{b}{\\langle m^o|\\kHonehat|n^o\\rangle} = \\mk{c}{\\langle m^o|\\kEnzero|n^1\\rangle} + \\mk{d}{\\langle m^o|\\kEnone|n^o\\rangle}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{a}{E_m^o\\langle m^o|n^1\\rangle} + \\mk{b}{\\langle m^o|\\kHonehat|n^o\\rangle} = \\mk{c}{\\langle m^o|\\kEnzero|n^1\\rangle}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{a}{E_m^o\\langle m^o|n^1\\rangle} + \\mk{b}{\\langle m^o|\\kHonehat|n^o\\rangle} = \\mk{c}{\\kEnzero\\langle m^o|n^1\\rangle}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{b}{\\langle m^o|\\kHonehat|n^o\\rangle} = \\mk{c}{(\\kEnzero - E_m^o)\\langle m^o|n^1\\rangle}",
+       "uses": [],
+       "map": {
+        "a": "c"
+       }
+      },
+      {
+       "tex": "\\mk{k}{\\langle m^o|n^1\\rangle} = \\mk{b}{\\dfrac{\\langle m^o|\\kHonehat|n^o\\rangle}{\\kEnzero - E_m^o}}",
+       "uses": [],
+       "map": {
+        "c": [
+         "k",
+         "b"
+        ]
+       }
+      }
+     ],
+     "num": "(7.4.24)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 3
+      },
+      {
+       "text": "The unperturbed states form a complete basis set, so $|n^1\\rangle = \\sum_m |m^o\\rangle\\langle m^o|n^1\\rangle$.",
+       "src": "4.3"
+      },
+      {
+       "tex": "|n\\rangle \\approx |n^o\\rangle + |n^1\\rangle",
+       "src": "(7.4.6)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{|n^1\\rangle} = \\mk{r}{\\sum_m |m^o\\rangle\\langle m^o|n^1\\rangle}",
+      "uses": [
+       1
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{|n^1\\rangle} = \\mk{r}{\\sum_{m \\neq n} |m^o\\rangle\\langle m^o|n^1\\rangle}",
+       "uses": [],
+       "cap": "The correction can always be chosen with no part along $|n^o\\rangle$, $\\langle n^o|n^1\\rangle = 0$, since such a part only rescales $|n\\rangle$; the $m = n$ term drops out."
+      },
+      {
+       "tex": "\\mk{l}{|n^1\\rangle} = \\mk{r}{\\sum_{m \\neq n} \\dfrac{|m^o\\rangle\\langle m^o|\\kHonehat|n^o\\rangle}{\\kEnzero - E_m^o}}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "|n\\rangle \\approx |n^o\\rangle + \\mk{l}{|n^1\\rangle} = |n^o\\rangle + \\mk{r}{\\sum_{m \\neq n} \\dfrac{|m^o\\rangle\\langle m^o|\\kHonehat|n^o\\rangle}{\\kEnzero - E_m^o}}",
+       "uses": [
+        2
+       ]
+      }
+     ],
+     "num": "(7.4.25)",
+     "note": "The book drops the $m = n$ term from the sum without saying why: it takes $\\langle n^o|n^1\\rangle = 0$."
+    }
+   ]
+  },
+  {
+   "id": "example-7-4-1b",
+   "what": "the first-order energy of a box with a step over half its length",
+   "source": "Physical Chemistry (LibreTexts), 7.4 Perturbation Theory Expresses the Solutions in Terms of Solved Problems, Example 7.4.1B",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kEnone = \\langle n^o|\\kHonehat|n^o\\rangle",
+       "src": "(7.4.17)",
+       "drv": "first-order-energy"
+      },
+      {
+       "tex": "|n^o\\rangle = \\sqrt{\\dfrac{2}{\\kL}}\\sin\\left(\\dfrac{n\\pi}{\\kL}\\kx\\right)",
+       "src": "(3.5.16)",
+       "drv": "3.5/pib-normalization"
+      },
+      {
+       "tex": "\\kHonehat = \\begin{cases} \\kVo & 0 \\leq \\kx \\leq \\kL/2 \\\\ 0 & \\kL/2 < \\kx \\leq \\kL \\end{cases}"
+      },
+      {
+       "tex": "\\int \\sin^2(ax)\\,dx = \\dfrac{x}{2} - \\dfrac{1}{2a}\\cos(ax)\\sin(ax)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{e}{\\kEnone} = \\mk{i}{\\langle n^o|\\kHonehat|n^o\\rangle}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{e}{\\kEnone} = \\mk{i}{\\int_0^{\\kL/2} \\sqrt{\\dfrac{2}{\\kL}}\\sin\\left(\\dfrac{n\\pi}{\\kL}\\kx\\right)\\,\\kVo\\,\\sqrt{\\dfrac{2}{\\kL}}\\sin\\left(\\dfrac{n\\pi}{\\kL}\\kx\\right)\\,d\\kx} + \\mk{z}{\\int_{\\kL/2}^{\\kL} \\sqrt{\\dfrac{2}{\\kL}}\\sin\\left(\\dfrac{n\\pi}{\\kL}\\kx\\right)\\,0\\,\\sqrt{\\dfrac{2}{\\kL}}\\sin\\left(\\dfrac{n\\pi}{\\kL}\\kx\\right)\\,d\\kx}",
+       "uses": [
+        1,
+        2
+       ],
+       "map": {
+        "i": [
+         "i",
+         "z"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{e}{\\kEnone} = \\mk{i}{\\dfrac{2}{\\kL}\\int_0^{\\kL/2} \\kVo \\sin^2\\left(\\dfrac{n\\pi}{\\kL}\\kx\\right)\\,d\\kx}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{e}{\\kEnone} = \\mk{i}{\\dfrac{2\\kVo}{\\kL}\\left[-\\dfrac{\\kL}{2n\\pi}\\cos\\left(\\dfrac{n\\pi}{\\kL}\\kx\\right)\\sin\\left(\\dfrac{n\\pi}{\\kL}\\kx\\right) + \\dfrac{\\kx}{2}\\right]_0^{\\kL/2}}",
+       "uses": [
+        3
+       ],
+       "cap": "The antiderivative of $\\sin^2(ax)$ with $a = n\\pi/L$."
+      },
+      {
+       "tex": "\\mk{e}{\\kEnone} = \\mk{i}{\\dfrac{2\\kVo}{\\kL}\\left[-\\dfrac{\\kL}{2n\\pi}\\cos\\dfrac{n\\pi}{2}\\sin\\dfrac{n\\pi}{2} + \\dfrac{\\kL}{4}\\right]}",
+       "uses": [],
+       "cap": "At the lower limit $x = 0$ both terms vanish."
+      },
+      {
+       "tex": "\\mk{e}{\\kEnone} = \\mk{i}{\\dfrac{2\\kVo}{\\kL}\\cdot\\dfrac{\\kL}{4}}",
+       "uses": [],
+       "cap": "$\\cos\\frac{n\\pi}{2}\\sin\\frac{n\\pi}{2} = \\tfrac{1}{2}\\sin n\\pi = 0$ for every integer $n$."
+      },
+      {
+       "tex": "\\mk{e}{\\kEnone} = \\mk{i}{\\dfrac{\\kVo}{2}}",
+       "uses": []
+      }
+     ],
+     "src": "Example 7.4.1B",
+     "note": "The book writes the antiderivative's $\\frac{-1}{2\\frac{\\pi n}{a}}$ with $a$ for the box length $L$, and its potential leaves out $V = 0$ on $L/2 < x \\leq L$, which its second integral uses."
+    }
+   ]
+  }
+ ]
+}

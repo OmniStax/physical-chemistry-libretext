@@ -10,16 +10,16 @@ $$ \kLxhat = -{\rm i}\,\hbar\left(\ky\,\dfrac{\partial}{\partial \kz} - \kz\,\df
 $$ \kLyhat = -{\rm i}\,\hbar\left(\kz\,\dfrac{\partial}{\partial \kx} - \kx\,\dfrac{\partial} {\partial \kz}\right) \tag{6.3.2} $$
 $$ \kLzhat = -{\rm i}\,\hbar\left(\kx\,\dfrac{\partial}{\partial \ky} - \ky\,\dfrac{\partial} {\partial \kx}\right) \tag{6.3.3} $$
 <p>These can be transforming to operators in standard <span data-concept="spherical-coordinates">spherical polar coordinates</span>,</p>
-$$ \begin{aligned} \kx &= \kr \,\sin\theta\, \cos\kvarphi  \\[4pt] \ky &= \kr\, \sin\theta\, \sin\kvarphi  \\[4pt] \kz &=\kr \cos \theta  \end{aligned} $$
+$$ \begin{aligned} \kx &= \kr \,\sin\ktheta\, \cos\kvarphi  \\[4pt] \ky &= \kr\, \sin\ktheta\, \sin\kvarphi  \\[4pt] \kz &=\kr \cos \ktheta  \end{aligned} $$
 <p>we obtain</p>
-$$ \begin{aligned} \kLxhat &= {\rm i}\,\hbar\,\left(\sin\kvarphi\, \dfrac{\partial}{\partial \theta} + \cot\theta \cos\kvarphi\,\dfrac{\partial}{\partial \kvarphi}\right)  \\[4pt] \kLyhat &= -{\rm i} \,\hbar\,\left(\cos\kvarphi\, \dfrac{\partial}{\partial\theta} -\cot\theta \sin\kvarphi \,\dfrac{\partial}{\partial \kvarphi}\right) \end{aligned} $$
+$$ \begin{aligned} \kLxhat &= {\rm i}\,\hbar\,\left(\sin\kvarphi\, \dfrac{\partial}{\partial \ktheta} + \cot\ktheta \cos\kvarphi\,\dfrac{\partial}{\partial \kvarphi}\right)  \\[4pt] \kLyhat &= -{\rm i} \,\hbar\,\left(\cos\kvarphi\, \dfrac{\partial}{\partial\ktheta} -\cot\ktheta \sin\kvarphi \,\dfrac{\partial}{\partial \kvarphi}\right) \end{aligned} $$
 <figure class="dv" id="drv-lz-spherical"></figure>
 <p>We can introduce a new operator $\kLsqhat$:</p>
-$$ \begin{aligned} \kLsqhat &= \kLxhat^{\,2}+\kLyhat^{\,2}+\kLzhat^{\,2}  \\[4pt] &= - \hbar^2\left( \dfrac{1}{\sin\theta}\dfrac{\partial}{\partial \theta} \sin \theta \dfrac{\partial}{\partial \theta} + \dfrac{1}{\sin^2\theta}\dfrac{\partial^2} {\partial\kvarphi^2}\right)  \end{aligned} \tag{6.3.4} $$
+$$ \begin{aligned} \kLsqhat &= \kLxhat^{\,2}+\kLyhat^{\,2}+\kLzhat^{\,2}  \\[4pt] &= - \hbar^2\left( \dfrac{1}{\sin\ktheta}\dfrac{\partial}{\partial \ktheta} \sin \ktheta \dfrac{\partial}{\partial \ktheta} + \dfrac{1}{\sin^2\ktheta}\dfrac{\partial^2} {\partial\kvarphi^2}\right)  \end{aligned} \tag{6.3.4} $$
 <p>The eigenvalue problem for $\kLsqhat$ takes the form</p>
 $$ \kLsqhat | \kpsi \rangle = \lambda \,\hbar^2 | \kpsi \rangle \tag{6.3.5} $$
-<p>where $\kpsi(\kr, \theta, \kvarphi)$ is the wavefunction, and $\lambda$ is a number. Let us write</p>
-$$ \kpsi(\kr, \theta, \kvarphi) = \kRf(\kr) \,\kYsh(\theta, \kvarphi) \tag{6.3.6} $$
+<p>where $\kpsi(\kr, \ktheta, \kvarphi)$ is the wavefunction, and $\lambda$ is a number. Let us write</p>
+$$ \kpsi(\kr, \ktheta, \kvarphi) = \kRf(\kr) \,\kYsh(\ktheta, \kvarphi) \tag{6.3.6} $$
 </section>
 
 <section id="quantized-angular-momentum">

@@ -97,7 +97,7 @@ const rng = (s) => () => { s |= 0; s = (s + 0x6d2b79f5) | 0; let t = Math.imul(s
 (function () {
   const d = F.sim(root, 'sim-orbitals');
   const B = 20, NPTS = 4000;
-  const S = F.space3d(d, { box: [[-B, B], [-B, B], [-B, B]], h: 600, tilt: 0.35, fit: 2.9, pitch: [-85 * Math.PI / 180, 85 * Math.PI / 180], spin: 'off', zoom: false });
+  const S = F.space3d(d, { box: [[-B, B], [-B, B], [-B, B]], h: 600, turn: -2.75, tilt: 0.7, fit: 2.9, pitch: [-85 * Math.PI / 180, 85 * Math.PI / 180], spin: 'off', zoom: false });
   /* each orbital: n, its radial factor's shape f(r) (a0 = 1), its angular factor on a unit vector, the largest |angular| and its nodes */
   const ORB = {
     '2px': { n: 2, name: '2p_x', f: (r) => r * Math.exp(-r / 2), a: (x) => x[0], m: 1, nodes: ['x'] },
@@ -112,19 +112,19 @@ const rng = (s) => () => { s |= 0; s = (s + 0x6d2b79f5) | 0; let t = Math.imul(s
   };
   /* Table 6.2.2's forms */
   const FORM = {
-    '2px': '\\dfrac{1}{\\sqrt{32\\pi}}\\left(\\dfrac{Z}{\\kao}\\right)^{5/2}\\kr e^{-Z\\kr/2\\kao}\\sin\\theta\\cos\\phi',
-    '2py': '\\dfrac{1}{\\sqrt{32\\pi}}\\left(\\dfrac{Z}{\\kao}\\right)^{5/2}\\kr e^{-Z\\kr/2\\kao}\\sin\\theta\\sin\\phi',
-    '2pz': '\\dfrac{1}{\\sqrt{32\\pi}}\\left(\\dfrac{Z}{\\kao}\\right)^{5/2}\\kr e^{-Z\\kr/2\\kao}\\cos\\theta',
-    '3px': '\\dfrac{\\sqrt{2}}{81\\sqrt{\\pi}}\\left(\\dfrac{Z}{\\kao}\\right)^{5/2}\\kr\\left(6 - \\dfrac{Z\\kr}{\\kao}\\right)e^{-Z\\kr/3\\kao}\\sin\\theta\\cos\\phi',
-    '3dz2': '\\dfrac{1}{81\\sqrt{6\\pi}}\\left(\\dfrac{Z}{\\kao}\\right)^{7/2}\\kr^2 e^{-Z\\kr/3\\kao}\\left(3\\cos^2\\theta - 1\\right)',
-    '3dxz': '\\dfrac{\\sqrt{2}}{81\\sqrt{\\pi}}\\left(\\dfrac{Z}{\\kao}\\right)^{7/2}\\kr^2 e^{-Z\\kr/3\\kao}\\sin\\theta\\cos\\theta\\cos\\phi',
-    '3dyz': '\\dfrac{\\sqrt{2}}{81\\sqrt{\\pi}}\\left(\\dfrac{Z}{\\kao}\\right)^{7/2}\\kr^2 e^{-Z\\kr/3\\kao}\\sin\\theta\\cos\\theta\\sin\\phi',
-    '3dxy': '\\dfrac{1}{81\\sqrt{2\\pi}}\\left(\\dfrac{Z}{\\kao}\\right)^{7/2}\\kr^2 e^{-Z\\kr/3\\kao}\\sin^2\\theta\\sin 2\\phi',
-    '3dx2y2': '\\dfrac{1}{81\\sqrt{2\\pi}}\\left(\\dfrac{Z}{\\kao}\\right)^{7/2}\\kr^2 e^{-Z\\kr/3\\kao}\\sin^2\\theta\\cos 2\\phi',
+    '2px': '\\dfrac{1}{\\sqrt{32\\pi}}\\left(\\dfrac{Z}{\\kao}\\right)^{5/2}\\kr e^{-Z\\kr/2\\kao}\\sin\\ktheta\\cos\\phi',
+    '2py': '\\dfrac{1}{\\sqrt{32\\pi}}\\left(\\dfrac{Z}{\\kao}\\right)^{5/2}\\kr e^{-Z\\kr/2\\kao}\\sin\\ktheta\\sin\\phi',
+    '2pz': '\\dfrac{1}{\\sqrt{32\\pi}}\\left(\\dfrac{Z}{\\kao}\\right)^{5/2}\\kr e^{-Z\\kr/2\\kao}\\cos\\ktheta',
+    '3px': '\\dfrac{\\sqrt{2}}{81\\sqrt{\\pi}}\\left(\\dfrac{Z}{\\kao}\\right)^{5/2}\\kr\\left(6 - \\dfrac{Z\\kr}{\\kao}\\right)e^{-Z\\kr/3\\kao}\\sin\\ktheta\\cos\\phi',
+    '3dz2': '\\dfrac{1}{81\\sqrt{6\\pi}}\\left(\\dfrac{Z}{\\kao}\\right)^{7/2}\\kr^2 e^{-Z\\kr/3\\kao}\\left(3\\cos^2\\ktheta - 1\\right)',
+    '3dxz': '\\dfrac{\\sqrt{2}}{81\\sqrt{\\pi}}\\left(\\dfrac{Z}{\\kao}\\right)^{7/2}\\kr^2 e^{-Z\\kr/3\\kao}\\sin\\ktheta\\cos\\ktheta\\cos\\phi',
+    '3dyz': '\\dfrac{\\sqrt{2}}{81\\sqrt{\\pi}}\\left(\\dfrac{Z}{\\kao}\\right)^{7/2}\\kr^2 e^{-Z\\kr/3\\kao}\\sin\\ktheta\\cos\\ktheta\\sin\\phi',
+    '3dxy': '\\dfrac{1}{81\\sqrt{2\\pi}}\\left(\\dfrac{Z}{\\kao}\\right)^{7/2}\\kr^2 e^{-Z\\kr/3\\kao}\\sin^2\\ktheta\\sin 2\\phi',
+    '3dx2y2': '\\dfrac{1}{81\\sqrt{2\\pi}}\\left(\\dfrac{Z}{\\kao}\\right)^{7/2}\\kr^2 e^{-Z\\kr/3\\kao}\\sin^2\\ktheta\\cos 2\\phi',
   };
   const NODES = {
     '2px': '\\text{the plane } \\kx = 0', '2py': '\\text{the plane } \\ky = 0', '2pz': '\\text{the plane } \\kz = 0',
-    '3px': '\\text{the plane } \\kx = 0 \\text{ and the sphere } \\kr = 6\\kao', '3dz2': '\\text{the cones } \\theta = 54.7^\\circ \\text{ and } 125.3^\\circ',
+    '3px': '\\text{the plane } \\kx = 0 \\text{ and the sphere } \\kr = 6\\kao', '3dz2': '\\text{the cones } \\ktheta = 54.7^\\circ \\text{ and } 125.3^\\circ',
     '3dxz': '\\text{the planes } \\kx = 0 \\text{ and } \\kz = 0', '3dyz': '\\text{the planes } \\ky = 0 \\text{ and } \\kz = 0', '3dxy': '\\text{the planes } \\kx = 0 \\text{ and } \\ky = 0',
     '3dx2y2': '\\text{the planes } \\kx = \\ky \\text{ and } \\kx = -\\ky',
   };

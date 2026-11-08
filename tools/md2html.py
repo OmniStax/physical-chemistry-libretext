@@ -21,7 +21,7 @@ answers and Bloom levels). What it does:
   converter's K (one per display without \\nonumber, an align included), and `[ref:eq:label]` becomes that number;
   `align`/`align*` become `aligned` so KaTeX can tag the display once.
 - a figure of panels keeps each panel's caption in the row's `_panels`.
-- `{term:…}` becomes `<strong>`, `*…*` `<em>`.
+- `{term:…}` becomes `<strong>`, `*…*` `<em>`, `~~…~~` `<s>`.
 - a FIGURE becomes a `photo` figure with its number, image and caption; an
   IMAGE a `figure` row with no number; the builder replaces those it turns
   into simulations.
@@ -83,6 +83,7 @@ class Drafter:
             p = re.sub(r"\[([^\]]+)\]\((https?://(?:[^()\s]|\([^()\s]*\))+)\)", r'<a href="\2">\1</a>', p)
             p = re.sub(r"\{term:([^{}]+)\}", r"<strong>\1</strong>", p)
             p = re.sub(r"(?<![\w*])\*([^*\n]+?)\*(?![\w*])", r"<em>\1</em>", p)
+            p = re.sub(r"~~([^~\n]+?)~~", r"<s>\1</s>", p)
             p = p.replace("$", "&#36;")
             out.append(p)
         return "".join(out)
@@ -128,6 +129,11 @@ class Drafter:
         tex = tex.replace("\u2206", "\\Delta ")  # the increment sign, which KaTeX has no metrics for
         tex = tex.replace("\u2011", "-")  # the non-breaking hyphen (6.2's $n‑1$), which KaTeX has no metrics for
         tex = tex.replace("\ufeff", "")  # a stray zero-width no-break space (7.4's E_n^o\ufeff +), which KaTeX has no metrics for
+        tex = tex.replace("\u2010", "-")  # the hyphen U+2010 written for a minus (8.8's $M_l = ‐4$), which KaTeX has no metrics for
+        tex = tex.replace("\u2019", "'")  # a right quote written for a prime (8.3's $r’$)
+        tex = tex.replace("\u00bd", "\\tfrac{1}{2}")  # the vulgar fraction ½ (8.8's $^2S_{½}$), which KaTeX has no metrics for
+        tex = tex.replace("\u0127", "\\hbar ")  # ħ typed in maths (8.4's $+ħ/2$)
+        tex = re.sub(r"\\label(?!\s*\{)", "", tex)  # a bare \\label with no argument (8.4's γ_s display), which KaTeX cannot parse
         tex = re.sub(r"\\op\s*\{([^{}]*)\}", r"\\hat{\1}", tex)
         # the site's \\braket{a}{b} takes two arguments; KaTeX's takes one, \\braket{a|b} (4.S, 3.S)
         tex = re.sub(r"\\braket\s*\{([^{}]*)\}\s*\{([^{}]*)\}", r"\\braket{\1|\2}", tex)

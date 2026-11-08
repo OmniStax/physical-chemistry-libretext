@@ -308,18 +308,18 @@
     {
      "assumes": [
       {
-       "text": "The chain rule: a derivative with respect to $\\kvarphi$ at fixed $\\kr$ and $\\theta$ is $\\dfrac{\\partial}{\\partial\\kvarphi} = \\dfrac{\\partial\\kx}{\\partial\\kvarphi}\\dfrac{\\partial}{\\partial\\kx} + \\dfrac{\\partial\\ky}{\\partial\\kvarphi}\\dfrac{\\partial}{\\partial\\ky} + \\dfrac{\\partial\\kz}{\\partial\\kvarphi}\\dfrac{\\partial}{\\partial\\kz}$."
+       "text": "The chain rule: a derivative with respect to $\\kvarphi$ at fixed $\\kr$ and $\\ktheta$ is $\\dfrac{\\partial}{\\partial\\kvarphi} = \\dfrac{\\partial\\kx}{\\partial\\kvarphi}\\dfrac{\\partial}{\\partial\\kx} + \\dfrac{\\partial\\ky}{\\partial\\kvarphi}\\dfrac{\\partial}{\\partial\\ky} + \\dfrac{\\partial\\kz}{\\partial\\kvarphi}\\dfrac{\\partial}{\\partial\\kz}$."
       },
       {
-       "tex": "\\kx = \\kr\\sin\\theta\\cos\\kvarphi",
+       "tex": "\\kx = \\kr\\sin\\ktheta\\cos\\kvarphi",
        "src": "6.3"
       },
       {
-       "tex": "\\ky = \\kr\\sin\\theta\\sin\\kvarphi",
+       "tex": "\\ky = \\kr\\sin\\ktheta\\sin\\kvarphi",
        "src": "6.3"
       },
       {
-       "tex": "\\kz = \\kr\\cos\\theta",
+       "tex": "\\kz = \\kr\\cos\\ktheta",
        "src": "6.3"
       }
      ],
@@ -331,13 +331,13 @@
      },
      "steps": [
       {
-       "tex": "\\mk{d}{\\dfrac{\\partial}{\\partial\\kvarphi}} = \\mk{a}{-\\kr\\sin\\theta\\sin\\kvarphi\\,\\dfrac{\\partial}{\\partial\\kx}} + \\mk{b}{\\kr\\sin\\theta\\cos\\kvarphi\\,\\dfrac{\\partial}{\\partial\\ky}} + \\mk{c}{0}",
+       "tex": "\\mk{d}{\\dfrac{\\partial}{\\partial\\kvarphi}} = \\mk{a}{-\\kr\\sin\\ktheta\\sin\\kvarphi\\,\\dfrac{\\partial}{\\partial\\kx}} + \\mk{b}{\\kr\\sin\\ktheta\\cos\\kvarphi\\,\\dfrac{\\partial}{\\partial\\ky}} + \\mk{c}{0}",
        "uses": [
         1,
         2,
         3
        ],
-       "cap": "Only $\\kvarphi$ changes, so $\\kr$ and $\\theta$ are constants: the derivative of $\\cos\\kvarphi$ is $-\\sin\\kvarphi$, that of $\\sin\\kvarphi$ is $\\cos\\kvarphi$, and $\\kz$ holds no $\\kvarphi$ at all."
+       "cap": "Only $\\kvarphi$ changes, so $\\kr$ and $\\ktheta$ are constants: the derivative of $\\cos\\kvarphi$ is $-\\sin\\kvarphi$, that of $\\sin\\kvarphi$ is $\\cos\\kvarphi$, and $\\kz$ holds no $\\kvarphi$ at all."
       },
       {
        "tex": "\\mk{d}{\\dfrac{\\partial}{\\partial\\kvarphi}} = \\mk{a}{-\\ky\\,\\dfrac{\\partial}{\\partial\\kx}} + \\mk{b}{\\kx\\,\\dfrac{\\partial}{\\partial\\ky}}",
@@ -545,7 +545,8 @@
        "tex": "\\mk{l}{[\\kLsqhat, \\kLxhat]} = \\mk{b}{\\kLyhat[\\kLyhat, \\kLxhat] + [\\kLyhat, \\kLxhat]\\kLyhat} + \\mk{c}{\\kLzhat[\\kLzhat, \\kLxhat] + [\\kLzhat, \\kLxhat]\\kLzhat}",
        "uses": [
         2
-       ]
+       ],
+       "cap": "The first two terms and the final two terms can be rewritten as different commutators, by the rule for a square."
       },
       {
        "tex": "\\mk{l}{[\\kLsqhat, \\kLxhat]} = \\mk{b}{-{\\rm i}\\hbar\\,(\\kLyhat\\kLzhat + \\kLzhat\\kLyhat)} + \\mk{c}{\\kLzhat[\\kLzhat, \\kLxhat] + [\\kLzhat, \\kLxhat]\\kLzhat}",

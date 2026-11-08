@@ -39,11 +39,11 @@ function nodes(l, m) {
 }
 /* the angular part of Table 6.2.2's real orbitals, where l <= 2 */
 const FORMS = {
-  '0,0': '1', '1,0': '\\cos\\theta', '1,1': '\\sin\\theta\\cos\\phi', '1,-1': '\\sin\\theta\\sin\\phi',
-  '2,0': '3\\cos^2\\theta - 1', '2,1': '\\sin\\theta\\cos\\theta\\cos\\phi', '2,-1': '\\sin\\theta\\cos\\theta\\sin\\phi',
-  '2,2': '\\sin^2\\theta\\cos 2\\phi', '2,-2': '\\sin^2\\theta\\sin 2\\phi',
+  '0,0': '1', '1,0': '\\cos\\ktheta', '1,1': '\\sin\\ktheta\\cos\\phi', '1,-1': '\\sin\\ktheta\\sin\\phi',
+  '2,0': '3\\cos^2\\ktheta - 1', '2,1': '\\sin\\ktheta\\cos\\ktheta\\cos\\phi', '2,-1': '\\sin\\ktheta\\cos\\ktheta\\sin\\phi',
+  '2,2': '\\sin^2\\ktheta\\cos 2\\phi', '2,-2': '\\sin^2\\ktheta\\sin 2\\phi',
 };
-const formOf = (l, m) => FORMS[`${l},${m}`] ?? `P_{${l}}^{${Math.abs(m)}}(\\cos\\theta)${m > 0 ? `\\cos ${m}\\phi` : m < 0 ? `\\sin ${-m}\\phi` : ''}`;
+const formOf = (l, m) => FORMS[`${l},${m}`] ?? `P_{${l}}^{${Math.abs(m)}}(\\cos\\ktheta)${m > 0 ? `\\cos ${m}\\phi` : m < 0 ? `\\sin ${-m}\\phi` : ''}`;
 
 /* =====================================================================
    FIGURE 6.2.1: the pyramid of real spherical harmonics, l = 0 to 5.
@@ -90,7 +90,7 @@ const formOf = (l, m) => FORMS[`${l},${m}`] ?? `P_{${l}}^{${Math.abs(m)}}(\\cos\
   let lastP = '';
   function draw() {
     const l = +Lc.value, m = Math.max(-l, Math.min(l, +Mc.value)), cw = C('wavefunction');
-    const pos = cw, neg = mixColor(cw, PAL.panel, 0.6);
+    const pos = cw, neg = mixColor(cw, PAL.ink, 0.42);   /* the other sign a clear step toward ink: darker on the light ground, paler on the dark, as in 6.6 */
     /* the pyramid, rebuilt only when a colour or the choice changes */
     const sig = `${pos}|${neg}|${l},${m}|${PAL.ink}`;
     if (sig !== lastP) {
@@ -124,7 +124,7 @@ const formOf = (l, m) => FORMS[`${l},${m}`] ?? `P_{${l}}^{${Math.abs(m)}}(\\cos\
     const parts = [...(nc ? [`${NUM[nc]} nodal cone${nc > 1 ? 's' : ''} about z`] : []), ...(eq ? ['a nodal plane in the xy-plane'] : []), ...(np ? [`${NUM[np]} nodal plane${np > 1 ? 's' : ''} through z`] : [])];
     const said = parts.length ? parts.length === 1 ? parts[0] : `${parts.slice(0, -1).join(', ')} and ${parts[parts.length - 1]}` : 'no angular node: the same value in every direction';
     S.headline(`$l = ${l}$, $m_l = ${signed(m)}$: ${said}`);
-    tex(d.readout, `\\kYlm(\\theta, \\phi) \\propto ${formOf(l, m)} \\\\ \\text{angular nodes} = l = ${l} = (l - |m_l|) + |m_l| = ${l - Math.abs(m)} + ${Math.abs(m)}`);
+    tex(d.readout, `\\kYlm(\\ktheta, \\phi) \\propto ${formOf(l, m)} \\\\ \\text{angular nodes} = l = ${l} = (l - |m_l|) + |m_l| = ${l - Math.abs(m)} + ${Math.abs(m)}`);
   }
   register(d.fig, { update: () => {}, draw });
 })();
@@ -134,14 +134,14 @@ const E = Math.exp, SQ = Math.sqrt;
 const ORB = {
   '1s': { n: 1, l: 0, f: (x, y, z, r) => E(-r) / SQ(PI), tex: '\\dfrac{1}{\\sqrt{\\pi}}\\left(\\dfrac{Z}{\\kao}\\right)^{3/2}e^{-Z\\kr/\\kao}' },
   '2s': { n: 2, l: 0, f: (x, y, z, r) => (2 - r) * E(-r / 2) / SQ(32 * PI), tex: '\\dfrac{1}{\\sqrt{32\\pi}}\\left(\\dfrac{Z}{\\kao}\\right)^{3/2}\\left(2 - \\dfrac{Z\\kr}{\\kao}\\right)e^{-Z\\kr/2\\kao}', nodes: [2] },
-  '2px': { n: 2, l: 1, f: (x, y, z, r) => x * E(-r / 2) / SQ(32 * PI), tex: '\\dfrac{1}{\\sqrt{32\\pi}}\\left(\\dfrac{Z}{\\kao}\\right)^{5/2}\\kr e^{-Z\\kr/2\\kao}\\sin\\theta\\cos\\phi', lab: '2p_x' },
-  '2py': { n: 2, l: 1, f: (x, y, z, r) => y * E(-r / 2) / SQ(32 * PI), tex: '\\dfrac{1}{\\sqrt{32\\pi}}\\left(\\dfrac{Z}{\\kao}\\right)^{5/2}\\kr e^{-Z\\kr/2\\kao}\\sin\\theta\\sin\\phi', lab: '2p_y' },
+  '2px': { n: 2, l: 1, f: (x, y, z, r) => x * E(-r / 2) / SQ(32 * PI), tex: '\\dfrac{1}{\\sqrt{32\\pi}}\\left(\\dfrac{Z}{\\kao}\\right)^{5/2}\\kr e^{-Z\\kr/2\\kao}\\sin\\ktheta\\cos\\phi', lab: '2p_x' },
+  '2py': { n: 2, l: 1, f: (x, y, z, r) => y * E(-r / 2) / SQ(32 * PI), tex: '\\dfrac{1}{\\sqrt{32\\pi}}\\left(\\dfrac{Z}{\\kao}\\right)^{5/2}\\kr e^{-Z\\kr/2\\kao}\\sin\\ktheta\\sin\\phi', lab: '2p_y' },
   '3s': { n: 3, l: 0, f: (x, y, z, r) => (27 - 18 * r + 2 * r * r) * E(-r / 3) / (81 * SQ(3 * PI)), tex: '\\dfrac{1}{81\\sqrt{3\\pi}}\\left(\\dfrac{Z}{\\kao}\\right)^{3/2}\\left(27 - 18\\dfrac{Z\\kr}{\\kao} + 2\\dfrac{Z^2\\kr^2}{\\kao^2}\\right)e^{-Z\\kr/3\\kao}', nodes: [(18 - SQ(108)) / 4, (18 + SQ(108)) / 4] },
-  '3px': { n: 3, l: 1, f: (x, y, z, r) => SQ(2) / (81 * SQ(PI)) * x * (6 - r) * E(-r / 3), tex: '\\dfrac{\\sqrt{2}}{81\\sqrt{\\pi}}\\left(\\dfrac{Z}{\\kao}\\right)^{5/2}\\kr\\left(6 - \\dfrac{Z\\kr}{\\kao}\\right)e^{-Z\\kr/3\\kao}\\sin\\theta\\cos\\phi', nodes: [6], lab: '3p_x' },
-  '3py': { n: 3, l: 1, f: (x, y, z, r) => SQ(2) / (81 * SQ(PI)) * y * (6 - r) * E(-r / 3), tex: '\\dfrac{\\sqrt{2}}{81\\sqrt{\\pi}}\\left(\\dfrac{Z}{\\kao}\\right)^{5/2}\\kr\\left(6 - \\dfrac{Z\\kr}{\\kao}\\right)e^{-Z\\kr/3\\kao}\\sin\\theta\\sin\\phi', nodes: [6], lab: '3p_y' },
-  '3dz2': { n: 3, l: 2, f: (x, y, z, r) => (3 * z * z - r * r) * E(-r / 3) / (81 * SQ(6 * PI)), tex: '\\dfrac{1}{81\\sqrt{6\\pi}}\\left(\\dfrac{Z}{\\kao}\\right)^{7/2}\\kr^2e^{-Z\\kr/3\\kao}\\left(3\\cos^2\\theta - 1\\right)', lab: '3d_{z^2}' },
-  '3dx2y2': { n: 3, l: 2, f: (x, y, z, r) => (x * x - y * y) * E(-r / 3) / (81 * SQ(2 * PI)), tex: '\\dfrac{1}{81\\sqrt{2\\pi}}\\left(\\dfrac{Z}{\\kao}\\right)^{7/2}\\kr^2e^{-Z\\kr/3\\kao}\\sin^2\\theta\\cos 2\\phi', lab: '3d_{x^2-y^2}' },
-  '3dxy': { n: 3, l: 2, f: (x, y, z, r) => 2 * x * y * E(-r / 3) / (81 * SQ(2 * PI)), tex: '\\dfrac{1}{81\\sqrt{2\\pi}}\\left(\\dfrac{Z}{\\kao}\\right)^{7/2}\\kr^2e^{-Z\\kr/3\\kao}\\sin^2\\theta\\sin 2\\phi', lab: '3d_{xy}' },
+  '3px': { n: 3, l: 1, f: (x, y, z, r) => SQ(2) / (81 * SQ(PI)) * x * (6 - r) * E(-r / 3), tex: '\\dfrac{\\sqrt{2}}{81\\sqrt{\\pi}}\\left(\\dfrac{Z}{\\kao}\\right)^{5/2}\\kr\\left(6 - \\dfrac{Z\\kr}{\\kao}\\right)e^{-Z\\kr/3\\kao}\\sin\\ktheta\\cos\\phi', nodes: [6], lab: '3p_x' },
+  '3py': { n: 3, l: 1, f: (x, y, z, r) => SQ(2) / (81 * SQ(PI)) * y * (6 - r) * E(-r / 3), tex: '\\dfrac{\\sqrt{2}}{81\\sqrt{\\pi}}\\left(\\dfrac{Z}{\\kao}\\right)^{5/2}\\kr\\left(6 - \\dfrac{Z\\kr}{\\kao}\\right)e^{-Z\\kr/3\\kao}\\sin\\ktheta\\sin\\phi', nodes: [6], lab: '3p_y' },
+  '3dz2': { n: 3, l: 2, f: (x, y, z, r) => (3 * z * z - r * r) * E(-r / 3) / (81 * SQ(6 * PI)), tex: '\\dfrac{1}{81\\sqrt{6\\pi}}\\left(\\dfrac{Z}{\\kao}\\right)^{7/2}\\kr^2e^{-Z\\kr/3\\kao}\\left(3\\cos^2\\ktheta - 1\\right)', lab: '3d_{z^2}' },
+  '3dx2y2': { n: 3, l: 2, f: (x, y, z, r) => (x * x - y * y) * E(-r / 3) / (81 * SQ(2 * PI)), tex: '\\dfrac{1}{81\\sqrt{2\\pi}}\\left(\\dfrac{Z}{\\kao}\\right)^{7/2}\\kr^2e^{-Z\\kr/3\\kao}\\sin^2\\ktheta\\cos 2\\phi', lab: '3d_{x^2-y^2}' },
+  '3dxy': { n: 3, l: 2, f: (x, y, z, r) => 2 * x * y * E(-r / 3) / (81 * SQ(2 * PI)), tex: '\\dfrac{1}{81\\sqrt{2\\pi}}\\left(\\dfrac{Z}{\\kao}\\right)^{7/2}\\kr^2e^{-Z\\kr/3\\kao}\\sin^2\\ktheta\\sin 2\\phi', lab: '3d_{xy}' },
 };
 const labOf = (k) => ORB[k].lab ?? k;
 const plainLab = (k) => labOf(k).replace(/_\{?([^}]*)\}?/, (_, s) => s.replace('^2', '²'));

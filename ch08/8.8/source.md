@@ -261,7 +261,7 @@ We know that there will at least one each of S, P, D, F and G. It isn’t immedi
 
 Attacking the chart one row at a time. Ask yourself, how many ways can I arrange the two electrons to give me $M_l = 4$? It turns out there is only one possible combination that does this:
 
-![alt](/)![Line graph illustrating fractions: -5, -3, -2, and 1 with corresponding points marked on a number line.](media/182586-8.8.1.png)
+![Line graph illustrating fractions: -5, -3, -2, and 1 with corresponding points marked on a number line.](media/182586-8.8.1.png)
 
 This state is has $M_s = 0$. This means that there is only 1 microstate that corresponds to $M_l =4$ and $M_s = 0$, and none that correspond to $M_l =4$ and $M_s = \pm ‐1$. We add this microstate to the chart like this:
 
@@ -352,7 +352,7 @@ Attacking the chart from the top, we can see that the $M_l = 4$ $M_s = 0$ state 
 
 | $M_l$ | $M_s= -1$ | $M_s= 0$ | $M_s= +1$ |
 | --- | --- | --- | --- |
-| 4 | 0 | 1 | 0 |
+| ~~4~~ | ~~0~~ | ~~1~~ | ~~0~~ |
 | 3 | 1 | 2 | 1 |
 | 2 | 1 | 3 | 1 |
 | 1 | 2 | 4 | 2 |
@@ -360,7 +360,7 @@ Attacking the chart from the top, we can see that the $M_l = 4$ $M_s = 0$ state 
 | -1 | 2 | 4 | 2 |
 | -2 | 1 | 3 | 1 |
 | -3 | 1 | 2 | 1 |
-| -4 | 0 | 1 | 0 |
+| ~~-4~~ | ~~0~~ | ~~1~~ | ~~0~~ |
 
 The strickthough configurations all belong to the $^1 G$ state. Let's subtract them from the chart to indicate that they are not available for other term symbols.
 

@@ -1,0 +1,146 @@
+<section id="perturbation-theory">
+<h2>Solvable and perturbation parts</h2>
+<p>It is easier to compute the changes in the energy levels and wavefunctions with a scheme of successive corrections to the zero-field values. This method, termed <strong><span data-concept="perturbation-theory">perturbation theory</span></strong>, is the single most important method of solving problems in quantum mechanics and is widely used in atomic physics, condensed matter and particle physics. <span data-concept="perturbation-theory">Perturbation theory</span> is another approach to finding approximate solutions to a problem, by starting from the exact solution of a related, simpler problem. A critical feature of the technique is a middle step that breaks the problem into "solvable" and "perturbation" parts. <span data-concept="perturbation-theory">Perturbation theory</span> is applicable if the problem at hand cannot be solved exactly, but can be formulated by adding a "small" term to the mathematical description of the exactly solvable problem.</p>
+<figure class="sim" id="sim-box-levels" data-figure="7.4.1" data-original="/media/ch07/87329-Perturbed_Energy_Spectrum.png" data-original-caption="Perturbed Energy Spectrum. (CC BY-SA 2.0, Frontier via Wikipedia)">
+  <div class="sim-head"><span class="eyebrow">Figure 7.4.1</span><span>Pick the perturbation of Example 7.4.1A or 7.4.1B and raise $\kVo$. The middle column adds <span data-concept="first-order-energy-correction">the first-order shift</span> $\kEnone$ to each <span data-type="energy">level</span>, and the right column is the exact energy. For the constant shift the two agree at every $\kVo$; for the step over half the box they part once $\kVo$ is no longer small next to the spacing of the levels. Pick $n$ to see the density whose average over the step sets the shift.</span></div>
+</figure>
+<p>We begin with a <span data-concept="hamiltonian-operator">Hamiltonian</span> $\kHzerohat$ having known eigenstates and eigenenergies:</p>
+$$ \hat{H}^o | n^o \rangle = \kEnzero | n^o \rangle \tag{7.4.1} $$
+<p>The task is to find how these eigenstates and eigenenergies change if a small term $H^1$ (an external field, for example) is added to the <span data-concept="hamiltonian-operator">Hamiltonian</span>, so:</p>
+$$ ( \kHzerohat + \kHonehat ) | n \rangle = \kEn | n \rangle \tag{7.4.2} $$
+<p>That is to say, on switching on $\kHonehat$ changes the wavefunctions:</p>
+$$ \underbrace{ | n^o \rangle }_{\text{unperturbed}} \Rightarrow \underbrace{|n \rangle }_{\text{Perturbed}} \tag{7.4.3} $$
+<p>and energies (<a href="#7.4-sim-box-levels">Figure 7.4.1</a>):</p>
+$$ \underbrace{ \kEnzero }_{\text{unperturbed}} \Rightarrow \underbrace{\kEn }_{\text{Perturbed}} \tag{7.4.4} $$
+<blockquote><p>The basic assumption in <span data-concept="perturbation-theory">perturbation theory</span> is that $H^1$ is sufficiently small that the leading corrections are the same order of magnitude as $H^1$ itself, and the true energies can be better and better approximated by a successive series of corrections, each of order $H^1/H^o$ compared with the previous one.</p></blockquote>
+</section>
+
+<section id="power-series">
+<h2>Power series in $\lambda$</h2>
+<p>The strategy is to <strong>expand</strong> the true wavefunction and corresponding eigenenergy as series in $\kHonehat/\hat{H}^o$. These series are then fed into Equation 7.4.2, and terms of the same order of magnitude in $\kHonehat/\hat{H}^o$ on the two sides are set equal. The equations thus generated are solved one by one to give progressively more accurate results.</p>
+<p>To make it easier to identify terms of the same order in $\kHonehat/\hat{H}^o$ on the two sides of the equation, it is convenient to introduce a dimensionless parameter $\lambda$ which always goes with $\kHonehat$, and then <span data-concept="perturbation-expansion">expand both eigenstates and eigenenergies as power series in $\lambda$</span>,</p>
+$$ \begin{aligned} | n \rangle &= \sum _ i^m \lambda ^i| n^i \rangle  \\[4pt] \kEn &= \sum_{i=0}^m \lambda ^i \kEni  \end{aligned} \tag{7.4.5} $$<sup class="fn" data-note="c-lower-limit"></sup>
+<p>where $m$ is how many terms in the expansion we are considering. The ket $|n^i \rangle$ is multiplied by $\lambda^i$ and is therefore of order $(H^1/H^o)^i$.</p>
+<blockquote><p>$\lambda$ is purely a bookkeeping device: we will set it equal to 1 when we are through! It’s just there to keep track of the orders of magnitudes of the various terms.</p></blockquote>
+<p>For example, in first order <span data-concept="perturbation-theory">perturbation theory</span>, Equations 7.4.5 are truncated at $m=1$ (and setting $\lambda=1$):</p>
+$$ \begin{aligned} | n \rangle &\approx | n^o \rangle + | n^1 \rangle  \\[4pt] \kEn &\approx \kEnzero + \kEnone  \end{aligned} \tag{7.4.6} $$
+<p>However, let's consider the general case for now. Adding the full expansions for the eigenstate (Equation 7.4.5) and energies (Equation 7.4.5) into the Schrödinger equation for the perturbation Equation 7.4.2 in</p>
+<figure class="dv" id="drv-powers-of-lambda"></figure>
+<p><span data-concept="order-by-order-equations">We’re now ready to match the two sides term by term in powers of $\lambda$.</span> Note that the zeroth-order term, of course, just gives back the unperturbed Schrödinger Equation (Equation 7.4.1).</p>
+<p>Collecting terms in order of $\lambda$ and coloring to indicate different orders</p>
+$$ \underset{\text{zero order}}{\hat{H}^o | n ^o \rangle} + \color{red} \underset{\text{1st order}}{\lambda ( \hat{H}^1 | n ^o \rangle + \hat{H}^o | n^1 \rangle )} + \color{blue} \underset{\text{2nd order}} {\lambda^2 \hat{H}^1| n^1 \rangle} =\color{black}\underset{\text{zero order}}{E _n^0 | n ^o \rangle} + \color{red} \underset{\text{1st order}}{ \lambda (E_n^1 | n ^o \rangle + E _n^0 | n ^1 \rangle )} +\color{blue}\underset{\text{2nd order}}{\lambda^2 E_n^1 | n^1 \rangle} \tag{7.4.10} $$
+<p>If we expanded Equation 7.4.8 further we could express the energies and wavefunctions in higher order components.</p>
+</section>
+
+<section id="zero-order-terms">
+<h2>Zero-Order Terms ($\lambda=0$)</h2>
+<p>Collecting the zero order terms in the expansion (black terms in Equation 7.4.10) results in just the Schrödinger Equation for the unperturbed system</p>
+$$ \hat{H}^o | n^o \rangle = \kEnzero | n^o \rangle \tag{7.4.11} $$
+</section>
+
+<section id="first-order-expression-of-energy">
+<h2>First-Order Expression of Energy ($\lambda=1$)</h2>
+<p>The summations in Equations 7.4.5, 7.4.5, and 7.4.8<sup class="fn" data-note="c-series-cite"></sup> can be truncated at any order of $\lambda$. For example, the first order <span data-concept="perturbation-theory">perturbation theory</span> has the truncation at $\lambda=1$.<sup class="fn" data-note="c-lambda-order"></sup> <span data-concept="order-by-order-equations">Matching the terms that linear in $\lambda$ (red terms in Equation 7.4.10) and setting $\lambda=1$ on both sides of Equation 7.4.10:</span></p>
+$$ \hat{H}^o | n^1 \rangle + \kHonehat | n^o \rangle = \kEnzero | n^1 \rangle + \kEnone | n^o \rangle \tag{7.4.12} $$
+<p>Equation 7.4.12 is the key to finding <span data-concept="first-order-energy-correction">the first-order change in energy $\kEnone$</span>. Taking the <strong>inner product</strong> of both sides with $\langle n^o |$:</p>
+<figure class="dv" id="drv-first-order-energy"></figure>
+<blockquote><p><span data-concept="first-order-energy-correction">The first-order change in the energy of a state resulting from adding a perturbing term $\kHonehat$ to the Hamiltonian is just the <strong><span data-concept="expectation-value">expectation value</span></strong> of $\kHonehat$ in the <strong>unperturbed</strong> wavefunctions.</span></p></blockquote>
+<p>That is, the first order energies (Equation 7.4.12)<sup class="fn" data-note="c-cite-7418"></sup> are given by</p>
+$$ \begin{aligned} \kEn &\approx \kEnzero + \kEnone \\[4pt] &\approx \underbrace{ \kEnzero + \langle n^o | H^1 | n^o \rangle}_{\text{First Order Perturbation}}  \end{aligned} \tag{7.4.18} $$
+<div class="example" id="ex-7-4-1a">
+<h3>Example 7.4.1A · A Perturbed Particle in a Box</h3>
+<p>Estimate the energy of the ground-state and first excited-state wavefunction within first-order <span data-concept="perturbation-theory">perturbation theory</span> of a system with the following potential energy</p>
+$$ V(\kx)=\begin{cases} \kVo & 0\leq \kx\leq \kL \\ \infty & \kx< 0 \;\text{and} \; \kx> \kL \end{cases} $$
+<h4>Solution</h4>
+<p>The first step in any perturbation problem is to write the <span data-concept="hamiltonian-operator">Hamiltonian</span> in terms of a unperturbed component that the solutions (both eigenstates and energy) are known and a perturbation component (Equation 7.4.2). For this system, the unperturbed Hamilonian and solutions is the <span data-concept="particle-in-a-box">particle in an infiinitely high box</span> and the perturbation is a shift of the potential within the box by $\kVo$.</p>
+$$ \kHonehat = \kVo $$
+<p>Using Equation 7.4.17 for the first-order term in the energy of the ground-state</p>
+$$ \kEnone = \langle n^o | H^1 | n^o \rangle $$
+<p>with the wavefunctions known from the <span data-concept="particle-in-a-box">particle in the box</span> problem</p>
+$$ | n^o \rangle = \sqrt{\dfrac{2}{\kL}} \sin \left ( \dfrac {n \pi}{\kL} \kx \right) $$
+<p>At this stage we can do two problems independently (i.e., the ground-state with $| 1 \rangle$ and the first excited-state $| 2 \rangle$). However, in this case, the first-order perturbation to any particle-in-the-box state can be easily derived.</p>
+$$ \kEnone = \int_0^{\kL} \sqrt{\dfrac{2}{\kL}} \sin \left ( \dfrac {n \pi}{\kL} \kx \right) \kVo \sqrt{\dfrac{2}{\kL}} \sin \left ( \dfrac {n \pi}{\kL} \kx \right) d\kx $$
+<p>or better yet, instead of evaluating this integrals we can simplify the expression</p>
+$$ \kEnone = \langle n^o | H^1 | n^o \rangle = \langle n^o | \kVo | n^o \rangle = \kVo \langle n^o | n^o \rangle = \kVo $$
+<p>so via Equation 7.4.18, the energy of each perturbed eigenstate is</p>
+$$ \begin{aligned} \kEn &\approx \kEnzero + \kEnone \\[4pt] &\approx \dfrac{h^2}{8\km\kL^2}n^2 + \kVo \end{aligned} $$
+<p>While this is the first order perturbation to the energy, it is also the exact value.</p>
+</div>
+<div class="example" id="ex-7-4-1b">
+<h3>Example 7.4.1B · An Even More Perturbed Particle in a Box</h3>
+<p>Estimate the energy of the ground-state wavefunction within first-order <span data-concept="perturbation-theory">perturbation theory</span> of a system with the following potential energy</p>
+$$ V(\kx)=\begin{cases} \kVo & 0\leq \kx\leq \kL/2 \\ \infty & \kx< 0 \; and\; \kx> \kL \end{cases} $$<sup class="fn" data-note="c-step"></sup>
+<h4>Solution</h4>
+<p>As with Example 7.4.1, we recognize that unperturbed component of the problem (Equation 7.4.2) is the <span data-concept="particle-in-a-box">particle in an infinitely high well</span>. For this system, the unperturbed <span data-concept="hamiltonian-operator">Hamiltonian</span> and solution is the <span data-concept="particle-in-a-box">particle in an infinitely high box</span> and the perturbation is a shift of the potential within half a box by $\kVo$. This is essentially a step function.</p>
+<figure class="dv" id="drv-example-7-4-1b"></figure>
+<p>The energy of each perturbed eigenstate, via Equation 7.4.18, is</p>
+$$ \begin{aligned} \kEn &\approx \kEnzero + \dfrac{\kVo}{2} \\[4pt] &\approx \dfrac{h^2}{8\km\kL^2}n^2 + \dfrac{\kVo}{2} \end{aligned} $$
+</div>
+</section>
+
+<section id="first-order-expression-of-wavefunction">
+<h2>First-Order Expression of Wavefunction ($\lambda=1$)</h2>
+<p>The general expression for <span data-concept="first-order-wavefunction-correction">the first-order change in the <em>wavefunction</em></span> is found by taking the inner product of the first-order expansion (Equation 7.4.12) with the bra $\langle m^o |$ with $m \neq n$,</p>
+<figure class="dv" id="drv-first-order-wavefunction"></figure>
+<p>Equation 7.4.25 is essentially is an expansion of the unknown wavefunction correction as a <strong>linear combination</strong> of known unperturbed wavefunctions 7.4.26:</p>
+$$ \begin{aligned} | n \rangle &\approx | n^o \rangle + | n^1 \rangle \\[4pt] &\approx | n^o \rangle + \sum _{m \neq n} c_{m,n} |m^o \rangle  \end{aligned} \tag{7.4.26} $$
+<p>with the expansion coefficients determined by</p>
+$$ c_{m,n} = \dfrac{\langle m^o | H^1| n^o \rangle }{E_n^o - E_m^o} \tag{7.4.27} $$
+<p>This is justified since the set of original zero-order wavefunctions forms a <strong><span data-concept="complete-set">complete basis set</span></strong> that can describe any function.</p>
+<figure class="sim" id="sim-oscillator-mixing" data-figure="7.4.2" data-original="/media/ch07/90887-Slide1.PNG" data-original-caption="The first order perturbation of the ground-state wavefunction for a perturbed (left potential) can be expressed as a linear combination of all excited-state wavefunctions of the unperturbed potential (Equation 7.4.26), shown as a harmonic oscillator in this example (right potential). Note that the ground-state harmonic oscillator wavefunction is not part of this expression and all wavefunctions need to be included in the expression, not just the first eight wavefunctions shown here. (CC BY 4.0; Delmar Larsen)">
+  <div class="sim-head"><span class="eyebrow">Figure 7.4.2</span><span>Pick the cubic perturbation of Example 7.4.2 or the quartic one of Exercise 7.4.3 and raise its strength. The bars are the weights $c_{m,0}$ of the excited <span data-concept="oscillator-wavefunctions">oscillator states</span> in the first-order ground state. A cubic term mixes in only $m$ = 1 and 3 and shifts the ground state toward the softer side of the well; a quartic term mixes in only $m$ = 2 and 4 and squeezes it.</span></div>
+</figure>
+<p>Calculating the first order perturbation to the wavefunctions is in general an infinite sum of off diagonal matrix elements of $H^1$ (<a href="#7.4-sim-oscillator-mixing">Figure 7.4.2</a>).</p>
+<ul><li>However, the denominator argues that terms in this sum will be weighted by states that are of <strong>comparable energy</strong>. That means in principle, these sum can be truncated easily based off of some criterion.</li><li>Another point to consider is that many of these matrix elements will equal zero depending on the symmetry of the $\{| n^o \rangle \}$ basis and $H^1$ (e.g., some $\langle m^o | H^1| n^o \rangle$ integrals in Equation 7.4.25 could be zero due to the integrand having an odd symmetry; see Example 7.4.3<sup class="fn" data-note="c-example-cite"></sup>).</li></ul>
+<blockquote><p>The denominators in Equation 7.4.25 argues that terms in this sum will be preferentially dictated by states that are of <strong>comparable energy</strong>. That is, eigenstates that have energies significantly greater or lower than the unperturbed eigenstate will weakly contribute to the perturbed wavefunction.</p></blockquote>
+<div class="example" id="ex-7-4-2">
+<h3>Example 7.4.2 · A Harmonic Oscillator with a Cubic Perturbation</h3>
+<p>Estimate the energy of the ground-state wavefunction associated with the <span data-concept="hamiltonian-operator">Hamiltonian</span> using <span data-concept="perturbation-theory">perturbation theory</span></p>
+$$ \hat{H} = \dfrac{-\hbar}{2\km} \dfrac{d^2}{d\kx^2} + \dfrac{1}{2} \kk\kx^2 + \epsilon \kx^3 $$<sup class="fn" data-note="c-hbar"></sup>
+<h4>Solution</h4>
+<p>The first step in a perturbation theory problem is to identify the reference system with the known eigenstates and energies. For this example, this is clearly the <span data-concept="harmonic-oscillator">harmonic oscillator</span> model.</p>
+<h4>Energy</h4>
+<p>The first steps in flowchart for applying <span data-concept="perturbation-theory">perturbation theory</span> (<a href="#7.4-fig-perturbation-flowchart">Figure 7.4.1</a>) is to separate the <span data-concept="hamiltonian-operator">Hamiltonian</span> of the difficult (or unsolvable) problem into a solvable one with a perturbation. For this case, we can rewrite the <span data-concept="hamiltonian-operator">Hamiltonian</span> as</p>
+$$ \hat{H}^{o} + \hat{H}^{1} $$
+<p>where</p>
+<ul><li><p>$\hat{H}^{o}$ is the Hamitonian for the standard <span data-concept="harmonic-oscillator">Harmonic Oscillator</span> with <strong>known</strong> eigenstates and eigenenergies</p>
+$$ \hat{H}^{(0)}= \dfrac{-\hbar}{2\km} \dfrac{d^2}{d\kx^2} + \dfrac{1}{2} \kk\kx^2 $$</li><li><p>$\hat{H}^{1}$ is the pertubtiation</p>
+$$ \hat{H}^{1} = \epsilon \kx^3 $$</li></ul>
+<p>The first order perturbation is given by Equation 7.4.17, which for this problem is</p>
+$$ \kEnone = \langle n^o | \epsilon \kx^3 | n^o \rangle $$
+<p>Notice that the integrand has an odd symmetry (i.e., $f(x)=-f(-x)$) with the perturbation Hamiltonian being odd and the ground state <span data-concept="oscillator-wavefunctions">harmonic oscillator wavefunctions</span> being even. So</p>
+$$ \kEnone=0 $$
+<p>This means to first order pertubation theory, this cubic terms does not alter the ground state energy (via Equation $7.4.18)$. However, this is not the case if second-order <span data-concept="perturbation-theory">perturbation theory</span> were used, which is more accurate (not shown).</p>
+<h4>Wavefunction</h4>
+<p>Calculating the first order perturbation to the wavefunctions (Equation 7.4.25) is more difficult than energy since multiple integrals must be evaluated (an infinite number if symmetry arguments are not applicable). The <span data-concept="oscillator-wavefunctions">harmonic oscillator wavefunctions</span> are often written in terms of $\kQ$, the unscaled displacement coordinate:</p>
+$$ | \Psi _v (x) \rangle = N_v'' H_v (\sqrt{\alpha} \kQ) e^{-\alpha \kQ^2/ 2} $$
+<p>with $\alpha$</p>
+$$ \alpha =1/\sqrt{\kbeta} = \sqrt{\dfrac{\kk \kmu}{\hbar ^2}} $$
+<p>and</p>
+$$ N_v'' = \sqrt {\dfrac {1}{2^v v!}} \left(\dfrac{\alpha}{\pi}\right)^{1/4} $$
+<p>Let's consider only the first six wavefunctions that use these <span data-concept="hermite-polynomials">Hermite polynomials</span> $H_v (x)$:</p>
+<ul><li>$H_0 = 1$</li><li>$H_1 = 2x$</li><li>$H_2 = -2 + 4x^2$</li><li>$H_3 = -12x + 8x^3$</li><li>$H_4 = 12 - 48x^2 +16x^4$</li><li>$H_5 = 120x - 160x^3 + 32x^5$</li></ul>
+<p>The first order perturbation to the ground-state wavefunction (Equation 7.4.25)</p>
+$$ | 0^1 \rangle = \sum _{m \neq 0}^5 \dfrac{|m^o \rangle \langle m^o | H^1| 0^o \rangle }{E_0^o - E_m^o} \tag{7.4.28} $$
+<p>given these truncated wavefunctions (we should technically use the infinite sum) and that we are considering only the ground state with $n=0$:</p>
+$$ | 0^1 \rangle = \dfrac{ \langle 1^o | H^1| 0^o \rangle }{E_0^o - E_1^o} |1^o \rangle + \dfrac{ \langle 2^o | H^1| 0^o \rangle }{E_0^o - E_2^o} |2^o \rangle + \dfrac{ \langle 3^o | H^1| 0^o \rangle }{E_0^o - E_3^o} |3^o \rangle + \dfrac{ \langle 4^o | H^1| 0^o \rangle }{E_0^o - E_4^o} |4^o \rangle + \dfrac{ \langle 5^o | H^1| 0^o \rangle }{E_0^o - E_5^o} |5^o \rangle $$
+<p>We can use symmetry of the perturbation and unperturbed wavefunctions to solve the integrals above. We know that the unperturbed <span data-concept="oscillator-wavefunction-parity">harmonic oscillator wavefunctions $\{|n^{0}\} \rangle$ alternate between even (when $v$ is even) and odd (when $v$ is odd)</span> as shown previously. Since the perturbation is an odd function, only when $m= 2k+1$ with $k=1,2,3$<sup class="fn" data-note="c-k"></sup> would these integrals be non-zero (i.e., for $m=1,3,5, ...$).</p>
+<p>So of the original five unperturbed wavefunctions, only $|m=1\rangle$, $|m=3\rangle$, and $|m=5 \rangle$ mix<sup class="fn" data-note="c-m5"></sup> to make the first-order perturbed ground-state wavefunction so</p>
+$$ | 0^1 \rangle = \dfrac{ \langle 1^o | H^1| 0^o \rangle }{E_0^o - E_1^o} |1^o \rangle + \dfrac{ \langle 3^o | H^1| 0^o \rangle }{E_0^o - E_3^o} |3^o \rangle + \dfrac{ \langle 5^o | H^1| 0^o \rangle }{E_0^o - E_5^o} |5^o \rangle $$
+<p>At this stage, the integrals have to be manually calculated using the defined wavefuctions above, which is left as an exercise. Notice that each unperturbed wavefunction that can "mix" to generate the perturbed wavefunction will have a reciprocally decreasing contribution (w.r.t. energy) due to the growing denominator in Equation 7.4.28.</p>
+</div>
+</section>
+
+<section id="second-order-terms">
+<h2>Second-Order Terms ($\lambda=2$)</h2>
+<p>There are higher energy terms in the expansion of Equation 7.4.5 (e.g., the blue terms in Equation 7.4.10), but are not discussed further here other than noting the whole perturbation process is an infinite series of corrections that ideally converge to the correct answer. It is truncating this series as a finite number of steps that is the approximation. The general approach to <span data-concept="perturbation-theory">perturbation theory</span> applications is giving in the flowchart in <a href="#7.4-fig-perturbation-flowchart">Figure 7.4.1</a>.</p>
+<figure class="photo" id="fig-perturbation-flowchart">
+  <img src="/media/ch07/87531-Pert1.jpg" alt="Flowchart of perturbation theory in three columns: zero order (define the unperturbed Hamiltonian, solve its Schrödinger equation, define the perturbation), first order and second order (evaluate the perturbed wavefunctions and energy, compare with known data, and go on to the next order if not good enough).">
+  <figcaption><span class="eyebrow">Figure</span><span>Simplified algorithmic flowchart of the <span data-concept="perturbation-theory">Perturbation Theory</span> approximation showing the first two perturbation orders. The process can be continued to third and higher orders. (CC BY 4.0; Delmar Larsen)<sup class="fn" data-note="c-flowchart"></sup></span></figcaption>
+</figure>
+<div class="note">
+<div class="eyebrow">Note</div>
+<h3>Perturbation Theory Does not always Work</h3>
+<p><span data-concept="perturbation-series-breakdown">It should be noted that there <em>are</em> problems that cannot be solved using perturbation theory, even when the perturbation is very weak, although such problems are the exception rather than the rule.</span> One such case is the one-dimensional problem of free particles perturbed by a localized potential of strength $\lambda$. Switching on an arbitrarily weak attractive potential causes the $k=0$ free particle wavefunction to drop below the continuum of plane wave energies and become a localized bound state with binding energy of order $\lambda^2$. However, changing the sign of $\lambda$ to give a repulsive potential there is no bound state, the lowest energy plane wave state stays at energy zero. Therefore the energy shift on switching on the perturbation <strong>cannot</strong> be represented as a power series in $\lambda$, the strength of the perturbation.</p>
+</div>
+</section>

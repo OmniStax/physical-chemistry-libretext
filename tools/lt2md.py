@@ -31,7 +31,8 @@ dropped. Needs BeautifulSoup 4. Markers, in the order a page prints them:
                                   this page, as the book writes "Equation \\ref{…}".
   {term:…}                        a bold (strong or b) word or phrase in prose,
                                   which is how the book marks a term it defines;
-                                  *…* is emphasis.
+                                  *…* is emphasis; ~~…~~ is struck through (s,
+                                  del, strike: 8.8's microstate charts).
   > FIGURE {fig:N.M.K} src=media/<file> width=…
   > alt: …  > caption: …          a <figure> whose caption begins "Figure N.M.K".
   > panel: …                      after an image's alt: the caption of the inner
@@ -63,7 +64,8 @@ dropped. Needs BeautifulSoup 4. Markers, in the order a page prints them:
                                   the credits that close most pages, kept.
 
 Warnings go to stderr: a figure without a number, an equation label used
-twice, a box of a class the list above does not know.
+twice, a box of a class the list above does not know, an image with no file
+(src "/", dropped).
 """
 import json
 import re
@@ -131,6 +133,10 @@ class Converter:
             return self.keep_space(raw, f"*{t}*" if t else "")
         if name in ("sub", "sup"):
             return f"<{name}>{self.inline(c)}</{name}>"
+        if name in ("s", "del", "strike"):
+            raw = self.inline(c)
+            t = raw.strip()
+            return self.keep_space(raw, f"~~{t}~~" if t else "")
         if name == "a":
             t = self.inline(c)
             href = c.get("href", "")
@@ -269,6 +275,9 @@ class Converter:
         return url
 
     def image(self, img, inline=False):
+        if img.get("src", "").strip() in ("", "/"):
+            warn(f"image without a file dropped (alt {img.get('alt', '')!r})")
+            return ""
         self.img_count += 1
         width = img.get("width") or ""
         alt = (img.get("alt") or "").strip()

@@ -1,0 +1,219 @@
+{
+ "id": "7.3",
+ "module": "13436",
+ "chapter": "7",
+ "title": "Trial Functions Can Be Linear Combinations of Functions That Also Contain Variational Parameters",
+ "short": "Sums of exponentials",
+ "lead": "A single-electron function can be built as a sum of exponentials, each with its own decay constant ζ and its own coefficient. Varying the coefficients is the linear variational method, and varying the exponents is the nonlinear one.",
+ "objectives": [
+  "Demonstrate that variational problems can include changing parameters within the elements (normal variational method) and changing coefficients of a basis set (linear variational method)"
+ ],
+ "summary_html": "",
+ "notes": "Adapted from Theodore Zielinski's page under CC BY-NC-SA 4.0, with nothing left out.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "Exercise 7.3.2 and its key are the book's, with a correction under the card; Exercise 7.3.1 has no key and its solution was written by AI, as was the last exercise, on linear and nonlinear parameters. Bloom levels and concept tags were chosen by AI.",
+ "figures": [
+  {
+   "id": "sim-three-exponentials",
+   "kind": "sim",
+   "draws": [
+    "wavefunction",
+    "length"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "sums-of-exponentials",
+   "concept": "sum-of-exponentials-orbital",
+   "verb": "introduces"
+  },
+  {
+   "span": "sums-of-exponentials",
+   "concept": "basis-functions",
+   "verb": "reinforces"
+  },
+  {
+   "span": "sums-of-exponentials",
+   "concept": "linear-variation-function",
+   "verb": "reinforces"
+  },
+  {
+   "span": "sums-of-exponentials",
+   "concept": "slater-type-orbital",
+   "verb": "reinforces"
+  },
+  {
+   "span": "sums-of-exponentials",
+   "concept": "effective-nuclear-charge",
+   "verb": "reinforces"
+  },
+  {
+   "span": "sums-of-exponentials",
+   "concept": "shielding",
+   "verb": "uses"
+  },
+  {
+   "span": "sums-of-exponentials",
+   "concept": "radial-function",
+   "verb": "uses"
+  },
+  {
+   "span": "linear-and-nonlinear",
+   "concept": "nonlinear-variational-method",
+   "verb": "introduces"
+  },
+  {
+   "span": "linear-and-nonlinear",
+   "concept": "slater-orbital-exponents",
+   "verb": "introduces"
+  },
+  {
+   "span": "linear-and-nonlinear",
+   "concept": "linear-variational-method",
+   "verb": "reinforces"
+  },
+  {
+   "span": "linear-and-nonlinear",
+   "concept": "basis-functions",
+   "verb": "uses"
+  },
+  {
+   "span": "linear-and-nonlinear",
+   "concept": "slater-type-orbital",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "e1",
+   "source_id": "exr:7.3.1",
+   "source_number": "Exercise 7.3.1",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "sums-of-exponentials",
+   "prompt": "<p>Make plots of $\\varphi$ in Equation 7.3.1 using three equally weighted terms with $\\zeta$ = 1.0, 2.0, and 5.0. Also plot each term separately.</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "Write the sum as $\\varphi(r) = e^{-r/a_0} + e^{-2r/a_0} + e^{-5r/a_0}$ and evaluate it at a few distances.",
+    "solution": "<p>With three equal weights (take $c_j = 1$) the function is $\\varphi_{1s}(r) = e^{-r/a_0} + e^{-2r/a_0} + e^{-5r/a_0}$. All three terms equal 1 at the nucleus, so $\\varphi_{1s}(0) = 3$. The $\\zeta = 5.0$ term is gone by $r \\approx a_0$ ($e^{-5} = 0.007$), the $\\zeta = 2.0$ term by about $2a_0$ ($e^{-4} = 0.018$), and beyond that the sum is just the slow $e^{-r/a_0}$ term.</p><table><thead><tr><th>$r/a_0$</th><th>$e^{-r/a_0}$</th><th>$e^{-2r/a_0}$</th><th>$e^{-5r/a_0}$</th><th>$\\varphi_{1s}$</th></tr></thead><tbody><tr><td>0</td><td>1.000</td><td>1.000</td><td>1.000</td><td>3.000</td></tr><tr><td>0.5</td><td>0.607</td><td>0.368</td><td>0.082</td><td>1.057</td></tr><tr><td>1</td><td>0.368</td><td>0.135</td><td>0.007</td><td>0.510</td></tr><tr><td>2</td><td>0.135</td><td>0.018</td><td>0.000</td><td>0.154</td></tr><tr><td>3</td><td>0.050</td><td>0.002</td><td>0.000</td><td>0.052</td></tr></tbody></table><p>The plot of the sum falls steeply near the nucleus and then flattens into the tail of $e^{-r/a_0}$. Its decay rate, $-d\\ln\\varphi_{1s}/d(r/a_0)$, is $(1 + 2 + 5)/3 = 2.67$ at $r = 0$, about 1.32 at $r = a_0$, and approaches 1.0 far out. The sum behaves like an exponential whose $\\zeta$, and so whose effective nuclear charge, shrinks with distance from the nucleus.</p>"
+   }
+  },
+  {
+   "id": "e2",
+   "source_id": "exr:7.3.2",
+   "source_number": "Exercise 7.3.2",
+   "kind": "exercise",
+   "bloom": "Analyze",
+   "place": {
+    "at": "end"
+   },
+   "cite": "linear-and-nonlinear",
+   "prompt": "<p>Compare the value $\\zeta _{1s}$ = 1.24 in Table 7.3.1 for hydrogen with the value you obtained in Exercise 7.3.1. and comment on possible reasons for any difference. Why are the zeta values larger for 1s than for 2s and 2p orbitals? Why do the $\\zeta _{1s}$ values increase by essentially one unit for each element from He to Ne while the increase for the $\\zeta _{2s, 2p}$ values is much smaller?</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "source",
+    "solution": "<p>ζ values represent the rate of decay in the radial function of an orbital. ζ values are larger for 1s than 2s and 2p orbitals because 1s orbitals have a smaller radial function. As a result, 1s orbitals decrease faster in radial function as you move further from the nucleus, and have a larger ζ value to represent this faster decay. The ζ values for 1s increase essentially by one unit for each element from He to Ne because the 1s orbital is closest to the nucleus, and experiences the greatest effects from change in electronegativity as nuclear density increases from He to Ne. This increase in electronegativity causes the radial function to decay more and more rapidly as atomic number/nucleus density increase. The 2s and 2p orbitals don't experience as great a change in radial function decay rate because they are shielded by the 1s orbital.<sup class=\"fn\" data-note=\"c-key732\"></sup></p>"
+   }
+  },
+  {
+   "id": "a1",
+   "source_id": "each time a zeta parameter is changed, all of the integrals need to be recalculated",
+   "kind": "exercise",
+   "bloom": "Understand",
+   "place": {
+    "at": "end"
+   },
+   "cite": "linear-and-nonlinear",
+   "prompt": "<p>A trial function for one electron is $\\varphi = c_1 e^{-\\zeta_1 r/a_0} + c_2 e^{-\\zeta_2 r/a_0}$. A calculation varies $c_1$ and $c_2$ to minimize the energy while $\\zeta_1$ and $\\zeta_2$ are held at fixed values. Which statement is right?</p>",
+   "answer": {
+    "type": "choice",
+    "generated_by": "ai",
+    "options": [
+     "It is a linear variational calculation, and the integrals over the basis functions are computed once.",
+     "It is a nonlinear variational calculation, because each exponential is a nonlinear function of $r$.",
+     "It is a linear variational calculation, but every change of $c_1$ or $c_2$ means recomputing the integrals.",
+     "It is a nonlinear variational calculation, and the integrals change whenever $c_1$ changes."
+    ],
+    "correct": 0,
+    "hint": "Ask which quantities the function depends on linearly, and which ones change the basis functions themselves.",
+    "solution": "<p>$\\varphi$ depends linearly on the coefficients $c_1$ and $c_2$, so varying only them is the linear variational method. With $\\zeta_1$ and $\\zeta_2$ fixed the basis functions $e^{-\\zeta_j r/a_0}$ do not change, so the integrals between them are computed once and the coefficients come from the secular equations. Varying $\\zeta_1$ or $\\zeta_2$ instead would change the basis functions themselves; that is the nonlinear variational method, and every new $\\zeta$ requires all the integrals to be recalculated. How $\\varphi$ depends on $r$ has no bearing on the name.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "e1",
+   "concept": "sum-of-exponentials-orbital"
+  },
+  {
+   "exercise": "e1",
+   "concept": "effective-nuclear-charge"
+  },
+  {
+   "exercise": "e2",
+   "concept": "slater-orbital-exponents"
+  },
+  {
+   "exercise": "e2",
+   "concept": "effective-nuclear-charge"
+  },
+  {
+   "exercise": "a1",
+   "concept": "nonlinear-variational-method"
+  },
+  {
+   "exercise": "a1",
+   "concept": "linear-variational-method"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-spin",
+   "kind": "correction",
+   "html": "These are the hydrogen-like orbitals; spin plays no part here."
+  },
+  {
+   "id": "c-rj",
+   "kind": "correction",
+   "html": "Every term depends on the same electron's distance $r_1$: $\\varphi_{1s}(r_1) = \\sum_j c_j e^{-\\zeta_j r_1/a_0}$. There is no separate $r_j$ for each term, and $a_o$ is the Bohr radius $a_0$."
+  },
+  {
+   "id": "c-fluorine",
+   "kind": "correction",
+   "html": "Hehre, Stewart and Pople (J. Chem. Phys. 51, 2657 (1969)), the source of these exponents, give $\\zeta_{1s} = 8.65$ for fluorine. That value keeps the step of about one unit per element, from 7.66 for oxygen to 9.64 for neon."
+  },
+  {
+   "id": "c-key732",
+   "kind": "correction",
+   "html": "The $\\zeta_{1s}$ values rise by about one per element because the nuclear charge $Z$ rises by one per element, and the other 1s electron screens only about 0.3 of it, so $\\zeta_{1s} \\approx Z - 0.3$; electronegativity and nuclear density play no part. The 2s and 2p electrons are screened by both 1s electrons and by each other, so their $\\zeta$ grows more slowly. The key also skips the comparison the question asks for. Exercise 7.3.1 fixes the exponents at 1.0, 2.0 and 5.0 and gives no single $\\zeta$; its decay rate runs from 2.67 at the nucleus down to 1.0 far out. The free hydrogen atom's exact 1s function has $\\zeta = 1$, and 1.24 is the value optimized for hydrogen bonded in molecules, whose electron is drawn in closer."
+  }
+ ]
+}

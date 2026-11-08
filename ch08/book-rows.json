@@ -1,0 +1,2310 @@
+{
+ "types": [
+  {
+   "id": "magnetic-field",
+   "label": "magnetic field",
+   "dimension": "T"
+  },
+  {
+   "id": "magnetic-moment",
+   "label": "magnetic moment",
+   "dimension": "J/T"
+  }
+ ],
+ "symbols": [
+  {
+   "sym": "E_h",
+   "latex": "E_h",
+   "macro": "\\kEh"
+  },
+  {
+   "sym": "k_e",
+   "latex": "k_e"
+  },
+  {
+   "sym": "alpha_fs",
+   "latex": "\\alpha"
+  },
+  {
+   "sym": "E0_pt",
+   "latex": "E^0",
+   "macro": "\\kEpzero"
+  },
+  {
+   "sym": "E1_pt",
+   "latex": "E^1",
+   "macro": "\\kEpone"
+  },
+  {
+   "sym": "E_approx",
+   "latex": "E_{approx2}",
+   "macro": "\\kEapprox"
+  },
+  {
+   "sym": "E_exp",
+   "latex": "E_{\\exp}",
+   "macro": "\\kEexp"
+  },
+  {
+   "sym": "psi0_pt",
+   "latex": "\\psi^{0}",
+   "macro": "\\kpsipzero"
+  },
+  {
+   "sym": "V_ne",
+   "latex": "V_{\\text{nuclear-electron}}",
+   "macro": "\\kVne"
+  },
+  {
+   "sym": "V_ee",
+   "latex": "V_{\\text{electron-electron}}",
+   "macro": "\\kVee"
+  },
+  {
+   "sym": "psi_i",
+   "latex": "\\psi_i",
+   "macro": "\\kpsii"
+  },
+  {
+   "sym": "H_e",
+   "latex": "H_e",
+   "macro": "\\kHe"
+  },
+  {
+   "sym": "V_nuc",
+   "latex": "V_{nucleus}",
+   "macro": "\\kVnuc"
+  },
+  {
+   "sym": "V_el",
+   "latex": "V_{electron}",
+   "macro": "\\kVel"
+  },
+  {
+   "sym": "rho_e",
+   "latex": "\\rho",
+   "macro": "\\krhoe"
+  },
+  {
+   "sym": "J_jk",
+   "latex": "J_{j,k}",
+   "macro": "\\kJjk"
+  },
+  {
+   "sym": "phi_k",
+   "latex": "\\phi_k",
+   "macro": "\\kphik"
+  },
+  {
+   "sym": "B_vec",
+   "latex": "\\vec{B}",
+   "macro": "\\kBvec"
+  },
+  {
+   "sym": "B_z",
+   "latex": "B_z",
+   "macro": "\\kBz"
+  },
+  {
+   "sym": "mu_m",
+   "latex": "\\vec{\\mu}_m",
+   "macro": "\\kmum"
+  },
+  {
+   "sym": "E_B",
+   "latex": "E_B",
+   "macro": "\\kEB"
+  },
+  {
+   "sym": "mu_B",
+   "latex": "\\mu_B"
+  },
+  {
+   "sym": "gamma_e",
+   "latex": "\\gamma_e"
+  },
+  {
+   "sym": "gamma_s",
+   "latex": "\\gamma_s"
+  },
+  {
+   "sym": "g",
+   "latex": "g"
+  },
+  {
+   "sym": "S_vec",
+   "latex": "\\vec{S}",
+   "macro": "\\kSvec"
+  },
+  {
+   "sym": "S2_hat",
+   "latex": "\\hat{S}^2",
+   "macro": "\\kSsqhat"
+  },
+  {
+   "sym": "Sz_hat",
+   "latex": "\\hat{S}_z",
+   "macro": "\\kSzhat"
+  },
+  {
+   "sym": "sigma_spin",
+   "latex": "\\sigma^{m_s}_s",
+   "macro": "\\ksigspin"
+  },
+  {
+   "sym": "m_s",
+   "latex": "m_s"
+  },
+  {
+   "sym": "S_z",
+   "latex": "S_z",
+   "macro": "\\kSz"
+  },
+  {
+   "sym": "S_za",
+   "latex": "S_{z,\\alpha}",
+   "macro": "\\kSza"
+  },
+  {
+   "sym": "S_zb",
+   "latex": "S_{z,\\beta}",
+   "macro": "\\kSzb"
+  },
+  {
+   "sym": "alpha_s",
+   "latex": "\\alpha",
+   "macro": "\\kalphas"
+  },
+  {
+   "sym": "beta_s",
+   "latex": "\\beta",
+   "macro": "\\kbetas"
+  },
+  {
+   "sym": "E_alpha",
+   "latex": "E_{\\alpha}",
+   "macro": "\\kEalpha"
+  },
+  {
+   "sym": "E_beta",
+   "latex": "E_{\\beta}",
+   "macro": "\\kEbeta"
+  },
+  {
+   "sym": "E_1s",
+   "latex": "E_{1s}",
+   "macro": "\\kEones"
+  },
+  {
+   "sym": "mu_s",
+   "latex": "\\mu_s",
+   "macro": "\\kmus"
+  },
+  {
+   "sym": "mu_sa",
+   "latex": "\\mu_{s,\\alpha}",
+   "macro": "\\kmusa"
+  },
+  {
+   "sym": "mu_sb",
+   "latex": "\\mu_{s,\\beta}",
+   "macro": "\\kmusb"
+  },
+  {
+   "sym": "P12_hat",
+   "latex": "\\hat{P}_{12}",
+   "macro": "\\kPonetwo"
+  },
+  {
+   "sym": "varphi_a",
+   "latex": "\\varphi_a",
+   "macro": "\\kvarphia"
+  },
+  {
+   "sym": "varphi_b",
+   "latex": "\\varphi_b",
+   "macro": "\\kvarphib"
+  },
+  {
+   "sym": "psi_minus",
+   "latex": "\\psi^{-}",
+   "macro": "\\kpsiminus"
+  },
+  {
+   "sym": "psi_plus",
+   "latex": "\\psi^{+}",
+   "macro": "\\kpsiplus"
+  },
+  {
+   "sym": "C_ab",
+   "latex": "C_{ab}"
+  },
+  {
+   "sym": "varphi_2s",
+   "latex": "\\varphi_{2s}",
+   "macro": "\\kvarphitwos"
+  },
+  {
+   "sym": "F_hat",
+   "latex": "\\hat{F}",
+   "macro": "\\kFhat"
+  },
+  {
+   "sym": "J_hat",
+   "latex": "\\hat{J}_j",
+   "macro": "\\kJhat"
+  },
+  {
+   "sym": "K_hat",
+   "latex": "\\hat{K}_j",
+   "macro": "\\kKhat"
+  },
+  {
+   "sym": "J_ij",
+   "latex": "J_{i,j}",
+   "macro": "\\kJij"
+  },
+  {
+   "sym": "K_ij",
+   "latex": "K_{i,j}",
+   "macro": "\\kKij"
+  },
+  {
+   "sym": "E_N",
+   "latex": "E_N",
+   "macro": "\\kEN"
+  },
+  {
+   "sym": "E_Np",
+   "latex": "E_{N+1}",
+   "macro": "\\kENp"
+  },
+  {
+   "sym": "E_Nm",
+   "latex": "E_{N-1}",
+   "macro": "\\kENm"
+  },
+  {
+   "sym": "eps_k",
+   "latex": "\\epsilon_k",
+   "macro": "\\kepsk"
+  },
+  {
+   "sym": "n_r",
+   "latex": "n(r)",
+   "macro": "\\knr"
+  },
+  {
+   "sym": "l_1",
+   "latex": "l_1"
+  },
+  {
+   "sym": "l_2",
+   "latex": "l_2"
+  },
+  {
+   "sym": "m_l1",
+   "latex": "m_{l1}"
+  },
+  {
+   "sym": "m_l2",
+   "latex": "m_{l2}"
+  },
+  {
+   "sym": "M_l",
+   "latex": "M_l"
+  },
+  {
+   "sym": "M_s",
+   "latex": "M_s"
+  },
+  {
+   "sym": "m_s1",
+   "latex": "m_{s1}"
+  },
+  {
+   "sym": "m_s2",
+   "latex": "m_{s2}"
+  },
+  {
+   "sym": "s_1",
+   "latex": "s_1"
+  },
+  {
+   "sym": "s_2",
+   "latex": "s_2"
+  },
+  {
+   "sym": "S",
+   "latex": "S"
+  },
+  {
+   "sym": "M_mult",
+   "latex": "M"
+  },
+  {
+   "sym": "J_vec",
+   "latex": "\\vec{J}",
+   "macro": "\\kJvec"
+  },
+  {
+   "sym": "J_z",
+   "latex": "J_z",
+   "macro": "\\kJz"
+  },
+  {
+   "sym": "j",
+   "latex": "j"
+  },
+  {
+   "sym": "m_j",
+   "latex": "m_j"
+  },
+  {
+   "sym": "j_1",
+   "latex": "j_1"
+  },
+  {
+   "sym": "j_2",
+   "latex": "j_2"
+  },
+  {
+   "sym": "E_so",
+   "latex": "E_{s-o}",
+   "macro": "\\kEso"
+  },
+  {
+   "sym": "Hso_hat",
+   "latex": "\\hat{H}_{s-o}",
+   "macro": "\\kHsohat"
+  },
+  {
+   "sym": "S_hat",
+   "latex": "\\hat{S}",
+   "macro": "\\kShat"
+  }
+ ],
+ "concepts": [
+  {
+   "id": "atomic-units",
+   "kind": "definition",
+   "section": "8.1",
+   "name": "Atomic units",
+   "terms": [
+    "atomic units",
+    "au",
+    "a.u."
+   ],
+   "statement": "The Hartree system of natural units for atomic calculations, in which the electron's mass m_e, the elementary charge e, the reduced Planck constant ħ and the Coulomb force constant 1/4πε₀ are each 1, so a quantity is written as a multiple of the atomic unit of its dimension."
+  },
+  {
+   "id": "hartree",
+   "kind": "definition",
+   "section": "8.1",
+   "name": "Hartree",
+   "terms": [
+    "hartree",
+    "hartrees"
+   ],
+   "type": "energy",
+   "symbol": "E_h",
+   "statement": "The atomic unit of energy, E_h = m_e e⁴/(4πε₀ħ)² = 4.359 × 10⁻¹⁸ J, or 27.2 eV; it is twice the Rydberg energy.",
+   "forms": [
+    {
+     "id": "hartree-energy",
+     "latex": "E_h = \\dfrac{m_e e^4}{(4\\pi\\epsilon_0\\hbar)^2}"
+    },
+    {
+     "id": "hartree-alpha",
+     "latex": "E_h = \\alpha^2 m_e c^2"
+    },
+    {
+     "id": "hartree-rydberg",
+     "latex": "E_h = 2R_H hc",
+     "section": "8.2"
+    }
+   ]
+  },
+  {
+   "id": "fine-structure-constant",
+   "kind": "definition",
+   "section": "8.1",
+   "name": "Fine-structure constant",
+   "symbol": "alpha_fs",
+   "statement": "The dimensionless constant α ≈ 1/137 that ties the atomic units to the speed of light: c is 1/α ≈ 137 in atomic units, a₀ = ħ/(m_e cα) and E_h = α²m_e c²."
+  },
+  {
+   "id": "helium-hamiltonian-atomic-units",
+   "kind": "result",
+   "section": "8.1",
+   "name": "Helium Hamiltonian in atomic units",
+   "statement": "In atomic units every constant drops out of the helium Hamiltonian, leaving Ĥ = −½(∇₁² + ∇₂²) − 2/r₁ − 2/r₂ + 1/r₁₂: the kinetic energies, the two attractions to the nucleus and the repulsion between the electrons.",
+   "forms": [
+    {
+     "id": "helium-hamiltonian-au",
+     "latex": "\\hat{H} = -\\dfrac{1}{2}(\\nabla^2_1 + \\nabla^2_2) - \\dfrac{2}{r_1} - \\dfrac{2}{r_2} + \\dfrac{1}{r_{12}}"
+    }
+   ]
+  },
+  {
+   "id": "zero-order-hamiltonian",
+   "kind": "definition",
+   "section": "8.2",
+   "name": "Zero-order Hamiltonian",
+   "terms": [
+    "zero-order Hamiltonian",
+    "zero order term"
+   ],
+   "type": "operator",
+   "symbol": "H0_hat",
+   "statement": "The part Ĥ⁰ of a Hamiltonian that can be solved exactly; the rest, Ĥ¹, is treated as a correction, so Ĥ = Ĥ⁰ + Ĥ¹.",
+   "forms": [
+    {
+     "id": "zero-order-split",
+     "latex": "\\hat{H} = \\hat{H}^0 + \\hat{H}^1"
+    }
+   ]
+  },
+  {
+   "id": "helium-perturbation-split",
+   "kind": "result",
+   "section": "8.2",
+   "name": "Perturbation treatment of helium",
+   "statement": "For helium the zero-order Hamiltonian is two hydrogen-like Hamiltonians with Z = 2, solved by a product of two 1s orbitals, and the perturbation is the electron–electron repulsion Ĥ¹ = 1/r₁₂.",
+   "forms": [
+    {
+     "id": "helium-h1",
+     "latex": "\\hat{H}^1 = \\dfrac{1}{r_{12}}"
+    }
+   ]
+  },
+  {
+   "id": "helium-first-order-energy",
+   "kind": "result",
+   "section": "8.2",
+   "name": "First-order energy of helium",
+   "type": "energy",
+   "symbol": "E1_pt",
+   "statement": "The first-order correction is the average repulsion of two electrons in the unperturbed 1s orbitals, E¹ = +34.0 eV, which raises the zero-order −108.8 eV to −74.8 eV; adding E² gives −79.2 eV, within 0.3% of experiment, and agreement within the experimental uncertainty takes thirteenth order.",
+   "forms": [
+    {
+     "id": "helium-e1-integral",
+     "latex": "E^1 = \\iint \\varphi_{1s}(r_1)\\varphi_{1s}(r_2)\\dfrac{1}{r_{12}}\\varphi_{1s}(r_1)\\varphi_{1s}(r_2)\\,d\\tau_1 d\\tau_2"
+    },
+    {
+     "id": "helium-first-order-total",
+     "latex": "E_{approx2} = E^0 + E^1 = -74.8\\ \\text{eV}"
+    }
+   ]
+  },
+  {
+   "id": "approximation-error",
+   "kind": "skill",
+   "section": "8.2",
+   "name": "Judging an approximation against experiment",
+   "terms": [
+    "deviation"
+   ],
+   "statement": "Comparing a calculated energy with the measured one through the relative deviation |(E_trial − E_exp)/E_exp|; an approximation is only as good as its agreement with experiment.",
+   "forms": [
+    {
+     "id": "relative-deviation",
+     "latex": "\\left|\\dfrac{E_{trial} - E_{\\exp}}{E_{\\exp}}\\right|"
+    }
+   ]
+  },
+  {
+   "id": "electron-correlation",
+   "kind": "idea",
+   "section": "8.2",
+   "name": "Electron correlation",
+   "terms": [
+    "uncorrelated wavefunction",
+    "electron-electron interactions",
+    "correlations",
+    "electron correlation"
+   ],
+   "statement": "Electrons repel and tend to avoid one another, so the motion of each depends on where the others are; an orbital (product) wavefunction is uncorrelated and gives the electrons too much independence, and building their avoidance into the wavefunction lowers the energy toward experiment."
+  },
+  {
+   "id": "helium-trial-wavefunctions",
+   "kind": "result",
+   "section": "8.2",
+   "name": "Variational energies of helium",
+   "type": "energy",
+   "statement": "Five trial wavefunctions for helium give −2.84766, −2.86035, −2.87566, −2.89112 and −2.90143 E_h against the experimental −2.90372 E_h: each adds more electron–electron interaction, from one scaled 1s orbital to Chandrasekhar's three-parameter function, and the error falls from 1.93% to 0.08%.",
+   "forms": [
+    {
+     "id": "helium-trial-1",
+     "latex": "\\psi(1,2) = \\exp[-\\alpha(r_1 + r_2)]"
+    },
+    {
+     "id": "helium-trial-3",
+     "latex": "\\psi(1,2) = e^{-\\alpha r_1}e^{-\\beta r_2} + e^{-\\beta r_1}e^{-\\alpha r_2}"
+    }
+   ]
+  },
+  {
+   "id": "hylleraas-wavefunction",
+   "kind": "definition",
+   "section": "8.2",
+   "name": "Hylleraas wavefunction",
+   "type": "wavefunction",
+   "statement": "A trial wavefunction that puts the interelectronic distance into the function itself, ψ = e^{−α(r₁ + r₂)}(1 + βr₁₂), so the wavefunction grows when the electrons are far apart.",
+   "forms": [
+    {
+     "id": "hylleraas-trial",
+     "latex": "\\psi_{trial}(1,2) = e^{-\\alpha(r_1 + r_2)}(1 + \\beta r_{12})"
+    }
+   ]
+  },
+  {
+   "id": "hartree-approximation",
+   "kind": "definition",
+   "section": "8.3",
+   "name": "Hartree approximation",
+   "terms": [
+    "Hartree approximation",
+    "Hartree method",
+    "an average way",
+    "one-electron functions",
+    "Hartree-level of theory"
+   ],
+   "statement": "The approximation of an N-electron wavefunction by a product of one-electron orbitals, each electron moving independently in the field of the nucleus and the averaged (mean-field) charge of the other N − 1 electrons.",
+   "forms": [
+    {
+     "id": "hartree-product",
+     "latex": "\\psi(\\mathbf{r}_1, \\ldots, \\mathbf{r}_N) \\approx \\psi_1(\\mathbf{r}_1)\\psi_2(\\mathbf{r}_2)\\ldots\\psi_N(\\mathbf{r}_N)"
+    }
+   ]
+  },
+  {
+   "id": "electron-charge-density",
+   "kind": "definition",
+   "section": "8.3",
+   "name": "Electron charge density",
+   "type": "probability-density",
+   "symbol": "rho_e",
+   "statement": "The smooth density of the electrons summed over the occupied orbitals, ρ(r) = Σ|ψ_i(r)|², which stands in for the other electrons in the Hartree approximation.",
+   "forms": [
+    {
+     "id": "charge-density-sum",
+     "latex": "\\rho(\\mathbf{r}) = \\sum_i^{\\text{occupied}} |\\psi_i(\\mathbf{r})|^2"
+    }
+   ]
+  },
+  {
+   "id": "mean-field-potential",
+   "kind": "definition",
+   "section": "8.3",
+   "name": "Mean-field potential",
+   "terms": [
+    "mean field",
+    "mean-field Coulomb potential"
+   ],
+   "type": "energy",
+   "symbol": "V_el",
+   "statement": "The potential an electron feels from the other electrons smeared out into their charge density, V_electron(r) = −e∫ρ(r′)/|r − r′| dr′, added to the nucleus's attraction.",
+   "forms": [
+    {
+     "id": "mean-field",
+     "latex": "V_{electron}(\\mathbf{r}) = -e\\int d\\mathbf{r}'\\,\\rho(\\mathbf{r}')\\dfrac{1}{|\\mathbf{r} - \\mathbf{r}'|}"
+    }
+   ]
+  },
+  {
+   "id": "hartree-equations",
+   "kind": "result",
+   "section": "8.3",
+   "name": "Hartree equations",
+   "terms": [
+    "Hartree Equations",
+    "Hartree equations"
+   ],
+   "statement": "Under the Hartree approximation the N-electron problem separates into one-electron Schrödinger equations, −(ħ²/2m)∇²ψ_i + V(r)ψ_i = ε_iψ_i, where V is the nucleus's potential plus the mean field of the other electrons.",
+   "forms": [
+    {
+     "id": "hartree-equation",
+     "latex": "-\\dfrac{\\hbar^2}{2m}\\nabla^2\\psi_i(\\mathbf{r}) + V(\\mathbf{r})\\psi_i(\\mathbf{r}) = \\epsilon_i\\psi_i(\\mathbf{r})"
+    }
+   ]
+  },
+  {
+   "id": "coulomb-integral",
+   "kind": "definition",
+   "section": "8.3",
+   "name": "Coulomb integral",
+   "terms": [
+    "Coulomb integral"
+   ],
+   "type": "energy",
+   "symbol": "J_jk",
+   "statement": "The six-dimensional integral J_{j,k} = ∫|φ_j(r)|²|φ_k(r′)|² e²/|r − r′| dr dr′, the Coulomb repulsion between the charge densities of an electron in φ_j and one in φ_k.",
+   "forms": [
+    {
+     "id": "coulomb-integral-def",
+     "latex": "J_{j,k} = \\int |\\phi_j(r)|^2 |\\phi_k(r')|^2 \\dfrac{e^2}{|r - r'|}\\,dr\\,dr'"
+    }
+   ]
+  },
+  {
+   "id": "hartree-orbital-energy",
+   "kind": "result",
+   "section": "8.3",
+   "name": "Orbital energy in the Hartree approximation",
+   "terms": [
+    "three energies"
+   ],
+   "type": "energy",
+   "symbol": "eps_i",
+   "statement": "The energy of orbital φ_j is the sum of its kinetic energy, its attraction to the nucleus and its Coulomb repulsion with the electrons in every other occupied orbital (k ≠ j, so the electron does not repel itself).",
+   "forms": [
+    {
+     "id": "hartree-orbital-energy-sum",
+     "latex": "\\epsilon_j = \\langle\\phi_j|-\\tfrac{\\hbar^2}{2m}\\nabla^2|\\phi_j\\rangle + \\langle\\phi_j|\\tfrac{-Ze^2}{|\\mathbf{r} - \\mathbf{R}|}|\\phi_j\\rangle + \\sum_{k \\neq j} J_{j,k}"
+    }
+   ]
+  },
+  {
+   "id": "self-consistent-field-method",
+   "kind": "definition",
+   "section": "8.3",
+   "name": "Self-consistent field method",
+   "terms": [
+    "Self-Consistant Field",
+    "SCF",
+    "self-consistent field",
+    "self-consistency"
+   ],
+   "statement": "The iterative solution of nonlinear one-electron equations whose potential depends on their own solutions: guess the orbitals, build the charge density and the potential, solve for new orbitals, and repeat until the density no longer changes."
+  },
+  {
+   "id": "screening-model-limits",
+   "kind": "idea",
+   "section": "8.3",
+   "name": "Limits of the screening model",
+   "statement": "Hydrogen-like orbitals with a screened nuclear charge Z_eff describe atoms only qualitatively: their energies do not match measured ionization energies and miss the trends in orbital energies, such as 4s lying below 3d in potassium and calcium and above it from scandium on."
+  },
+  {
+   "id": "magnetic-field",
+   "kind": "definition",
+   "section": "8.4",
+   "name": "Magnetic field",
+   "terms": [
+    "magnetic field"
+   ],
+   "type": "magnetic-field",
+   "symbol": "B_vec",
+   "statement": "The field set up by moving charges, measured in gauss or tesla (1 T = 10⁴ G), which exerts a torque on a magnetic dipole and shifts its energy."
+  },
+  {
+   "id": "magnetic-dipole-moment",
+   "kind": "definition",
+   "section": "8.4",
+   "name": "Magnetic dipole moment",
+   "terms": [
+    "magnetic dipole",
+    "magnetic moment",
+    "magnetic dipole moment"
+   ],
+   "type": "magnetic-moment",
+   "symbol": "mu_m",
+   "statement": "The vector μ_m that a circulating charge carries because of its angular momentum, like a small bar magnet; an electron's orbital or spin motion gives it one."
+  },
+  {
+   "id": "magnetic-dipole-energy",
+   "kind": "axiom",
+   "section": "8.4",
+   "name": "Energy of a magnetic dipole in a field",
+   "type": "energy",
+   "symbol": "E_B",
+   "statement": "A magnetic dipole in a magnetic field has the energy E_B = −μ_m · B: lowest with the moment along the field, highest against it.",
+   "forms": [
+    {
+     "id": "magnetic-dipole-energy-dot",
+     "latex": "E_B = -\\vec{\\mu}_m \\cdot \\vec{B}"
+    }
+   ]
+  },
+  {
+   "id": "gyromagnetic-ratio",
+   "kind": "definition",
+   "section": "8.4",
+   "name": "Gyromagnetic ratio",
+   "terms": [
+    "gyromagnetic ratio"
+   ],
+   "symbol": "gamma_e",
+   "statement": "The constant γ that relates a magnetic moment to the angular momentum that produces it, μ = γL; for the orbital motion of an electron it is γ_e = −e/2m_e."
+  },
+  {
+   "id": "bohr-magneton",
+   "kind": "definition",
+   "section": "8.4",
+   "name": "Bohr magneton",
+   "terms": [
+    "Bohr magneton"
+   ],
+   "symbol": "mu_B",
+   "statement": "The fundamental magnetic moment μ_B = eħ/2m_e = −γ_eħ = 9.2732 × 10⁻²⁴ J/T (9.2732 × 10⁻²¹ erg/G), which converts a magnetic field into an energy for any particle with the electron's charge and mass.",
+   "forms": [
+    {
+     "id": "bohr-magneton-def",
+     "latex": "\\mu_B = \\dfrac{e\\hbar}{2m_e} = -\\gamma_e\\hbar"
+    }
+   ]
+  },
+  {
+   "id": "zeeman-energy",
+   "kind": "result",
+   "section": "8.4",
+   "name": "Zeeman energy",
+   "type": "energy",
+   "statement": "In a field B_z a hydrogen state's energy shifts in proportion to its magnetic quantum number, ⟨E⟩ = E_n + μ_B B_z m_l, so the field lifts the m_l degeneracy: a 2p level splits into three and its emission line into three.",
+   "forms": [
+    {
+     "id": "zeeman-energy-shift",
+     "latex": "\\langle E\\rangle = E_n + \\mu_B B_z m_l"
+    }
+   ]
+  },
+  {
+   "id": "electron-spin",
+   "kind": "axiom",
+   "section": "8.4",
+   "name": "Electron spin",
+   "terms": [
+    "electron spin",
+    "spin",
+    "intrinsic angular moment"
+   ],
+   "statement": "The electron has an intrinsic angular momentum, its spin, with a magnetic moment of its own; it is postulated to explain experiments such as the microwave absorption of hydrogen and the Stern–Gerlach splitting, and it is not the rotation of a charged ball."
+  },
+  {
+   "id": "stern-gerlach-experiment",
+   "kind": "idea",
+   "section": "8.4",
+   "name": "Stern–Gerlach experiment",
+   "statement": "A beam of silver atoms sent through an inhomogeneous magnetic field splits into two beams, not a spread, because the atom's one unpaired electron has a spin moment whose component along the field takes only two values."
+  },
+  {
+   "id": "spin-angular-momentum",
+   "kind": "definition",
+   "section": "8.4",
+   "name": "Spin angular momentum",
+   "terms": [
+    "spin angular momentum"
+   ],
+   "type": "angular-momentum",
+   "symbol": "S_vec",
+   "statement": "The angular momentum vector S of the electron's spin, defined by analogy with the orbital angular momentum L and described by spin operators with the same properties."
+  },
+  {
+   "id": "spin-operators",
+   "kind": "definition",
+   "section": "8.4",
+   "name": "Spin operators",
+   "type": "operator",
+   "symbol": "Sz_hat",
+   "statement": "The operators Ŝ² and Ŝ_z of the spin angular momentum, built with the properties of L̂² and L̂_z."
+  },
+  {
+   "id": "spin-quantum-number",
+   "kind": "definition",
+   "section": "8.4",
+   "name": "Spin quantum number",
+   "terms": [
+    "spin quantum number"
+   ],
+   "symbol": "s",
+   "statement": "The quantum number s that fixes the magnitude of the spin angular momentum through Ŝ²σ = s(s + 1)ħ²σ, playing the part l plays for orbital motion."
+  },
+  {
+   "id": "spin-magnetic-quantum-number",
+   "kind": "definition",
+   "section": "8.4",
+   "name": "Spin magnetic quantum number",
+   "terms": [
+    "Electron Spin Quantum Number",
+    "fourth quantum number"
+   ],
+   "symbol": "m_s",
+   "statement": "The fourth quantum number m_s, the projection of the spin on the z axis in units of ħ, which runs from −s to +s in integer steps."
+  },
+  {
+   "id": "spin-eigenvalues",
+   "kind": "result",
+   "section": "8.4",
+   "name": "Spin eigenvalue equations",
+   "statement": "Spin states are eigenfunctions of Ŝ² with eigenvalue s(s + 1)ħ² and of Ŝ_z with eigenvalue m_sħ, so the z component of spin is S_z = m_sħ.",
+   "forms": [
+    {
+     "id": "spin-squared-eigen",
+     "latex": "\\hat{S}^2|\\sigma^{m_s}_s\\rangle = s(s+1)\\hbar^2|\\sigma^{m_s}_s\\rangle"
+    },
+    {
+     "id": "spin-z-eigen",
+     "latex": "\\hat{S}_z|\\sigma^{m_s}_s\\rangle = m_s\\hbar|\\sigma^{m_s}_s\\rangle"
+    },
+    {
+     "id": "spin-z-value",
+     "latex": "S_z = m_s\\hbar"
+    }
+   ]
+  },
+  {
+   "id": "spin-one-half",
+   "kind": "result",
+   "section": "8.4",
+   "name": "The electron's spin is one half",
+   "statement": "One observed transition means two spin states, m_s = +s and −s, one integer step apart, so 2s = 1 and s = ½: m_s is +½ or −½.",
+   "forms": [
+    {
+     "id": "spin-half",
+     "latex": "s = \\dfrac{1}{2}"
+    }
+   ]
+  },
+  {
+   "id": "spin-states",
+   "kind": "definition",
+   "section": "8.4",
+   "name": "Spin states α and β",
+   "terms": [
+    "α",
+    "β",
+    "spin up",
+    "spin down"
+   ],
+   "type": "wavefunction",
+   "symbol": "alpha_s",
+   "statement": "The two spin wavefunctions of an electron: α with m_s = +½ (S_z = +ħ/2) and β with m_s = −½ (S_z = −ħ/2); their functional form is unknown, and they are taken to be normalized and orthogonal over the spin variable.",
+   "forms": [
+    {
+     "id": "spin-normalized",
+     "latex": "\\langle\\alpha|\\alpha\\rangle = \\langle\\beta|\\beta\\rangle = 1"
+    },
+    {
+     "id": "spin-orthogonal",
+     "latex": "\\langle\\alpha|\\beta\\rangle = \\langle\\beta|\\alpha\\rangle = 0"
+    }
+   ]
+  },
+  {
+   "id": "electron-spin-resonance",
+   "kind": "idea",
+   "section": "8.4",
+   "name": "Electron spin resonance",
+   "terms": [
+    "electron spin resonance",
+    "microwave spectrometer"
+   ],
+   "type": "energy",
+   "statement": "Hydrogen atoms in their ground state absorb microwaves in a magnetic field, at 28 GHz in 10⁴ G and at a frequency proportional to the field: the field splits two spin states of equal energy, and a photon is absorbed when hν = E_α − E_β.",
+   "forms": [
+    {
+     "id": "spin-transition",
+     "latex": "h\\nu = E_{\\alpha} - E_{\\beta} = (\\mu_{s,\\beta} - \\mu_{s,\\alpha}) \\cdot B"
+    }
+   ]
+  },
+  {
+   "id": "spin-gyromagnetic-ratio",
+   "kind": "definition",
+   "section": "8.4",
+   "name": "Spin gyromagnetic ratio",
+   "terms": [
+    "spin gyromagnetic ratio"
+   ],
+   "symbol": "gamma_s",
+   "statement": "The constant γ_s relating the spin magnetic moment to the spin angular momentum, μ_s = γ_s S.",
+   "forms": [
+    {
+     "id": "spin-moment",
+     "latex": "\\mu_s = \\gamma_s S"
+    }
+   ]
+  },
+  {
+   "id": "electron-g-factor",
+   "kind": "result",
+   "section": "8.4",
+   "name": "Electron g-factor",
+   "terms": [
+    "g-factor"
+   ],
+   "symbol": "g",
+   "statement": "The microwave line gives hν/B = −γ_sħ, about twice the Bohr magneton: γ_s = 2.0023γ_e. The factor g = 2.0023 for a free electron measures how far the spin's moment-to-angular-momentum ratio departs from the orbital one; Dirac's relativistic theory predicts it.",
+   "forms": [
+    {
+     "id": "spin-ratio",
+     "latex": "\\dfrac{h\\nu}{B} = -\\gamma_s\\hbar"
+    },
+    {
+     "id": "g-factor-gamma",
+     "latex": "\\gamma_s = 2.0023\\,\\gamma_e"
+    }
+   ]
+  },
+  {
+   "id": "indistinguishable-particles",
+   "kind": "axiom",
+   "section": "8.5",
+   "name": "Indistinguishability of identical particles",
+   "terms": [
+    "indistinguishable",
+    "indistinguishability",
+    "artificial labels"
+   ],
+   "statement": "Identical particles such as electrons cannot be told apart by any experiment, so a description of them may not depend on labels: the probability density must be unchanged when two of them are interchanged.",
+   "forms": [
+    {
+     "id": "exchange-density",
+     "latex": "|\\psi(\\mathbf{r}_2, \\mathbf{r}_1)|^2 = |\\psi(\\mathbf{r}_1, \\mathbf{r}_2)|^2"
+    }
+   ]
+  },
+  {
+   "id": "spin-orbital",
+   "kind": "definition",
+   "section": "8.5",
+   "name": "Spin-orbital",
+   "terms": [
+    "spin-orbital",
+    "spin-orbitals",
+    "spinorbitals"
+   ],
+   "type": "wavefunction",
+   "statement": "A one-electron wavefunction with both a spatial part (an orbital, set by n, l and m_l) and a spin part (α or β, set by m_s)."
+  },
+  {
+   "id": "exchange-phase",
+   "kind": "result",
+   "section": "8.5",
+   "name": "Exchange changes a wavefunction by ±1",
+   "statement": "Interchanging two identical particles may change the wavefunction only by a phase e^{iφ}; doing it twice restores the original, so e^{2iφ} = 1 and the factor is +1 or −1.",
+   "forms": [
+    {
+     "id": "exchange-phase-factor",
+     "latex": "e^{i\\varphi}e^{i\\varphi} = e^{2i\\varphi} = 1"
+    }
+   ]
+  },
+  {
+   "id": "exchange-operator",
+   "kind": "definition",
+   "section": "8.5",
+   "name": "Exchange operator",
+   "terms": [
+    "exchange operator"
+   ],
+   "type": "operator",
+   "symbol": "P12_hat",
+   "statement": "The operator P̂₁₂ that swaps the labels of particles 1 and 2 in a many-particle wavefunction; it commutes with any physical Hamiltonian, and its eigenvalues are +1 and −1.",
+   "forms": [
+    {
+     "id": "exchange-eigen",
+     "latex": "\\hat{P}_{12}\\psi(\\mathbf{r}_1, \\mathbf{r}_2) = \\pm\\,\\psi(\\mathbf{r}_1, \\mathbf{r}_2)"
+    }
+   ]
+  },
+  {
+   "id": "permutation-symmetry",
+   "kind": "definition",
+   "section": "8.5",
+   "name": "Permutation symmetry",
+   "terms": [
+    "permutation symmetry",
+    "symmetric",
+    "antisymmetric"
+   ],
+   "statement": "A wavefunction is symmetric when interchanging two particles leaves it unchanged (eigenvalue +1 of P̂₁₂) and antisymmetric when the interchange changes its sign (eigenvalue −1)."
+  },
+  {
+   "id": "boson",
+   "kind": "definition",
+   "section": "8.5",
+   "name": "Boson",
+   "terms": [
+    "bosons",
+    "boson"
+   ],
+   "statement": "A particle of integer spin, such as a photon or a deuterium nucleus, whose many-particle wavefunction is symmetric to interchange."
+  },
+  {
+   "id": "fermion",
+   "kind": "definition",
+   "section": "8.5",
+   "name": "Fermion",
+   "terms": [
+    "fermions",
+    "fermion"
+   ],
+   "statement": "A particle of half-integer spin, such as an electron, proton or neutrino, whose many-particle wavefunction is antisymmetric to interchange."
+  },
+  {
+   "id": "antisymmetry-principle",
+   "kind": "axiom",
+   "section": "8.5",
+   "name": "Antisymmetry of electronic wavefunctions",
+   "statement": "Because electrons are fermions, every wavefunction of several electrons must change sign when any two of them are interchanged, including one built from single-electron functions."
+  },
+  {
+   "id": "two-electron-antisymmetric-combination",
+   "kind": "result",
+   "section": "8.5",
+   "name": "Antisymmetric two-electron wavefunction",
+   "type": "wavefunction",
+   "symbol": "psi_minus",
+   "statement": "A simple product of two spin-orbitals is neither symmetric nor antisymmetric; the antisymmetric combination is ψ⁻ = (1/√2)[φ_a(1)φ_b(2) − φ_a(2)φ_b(1)], while the symmetric ones may also put both particles in one state.",
+   "forms": [
+    {
+     "id": "antisymmetric-pair",
+     "latex": "\\psi^{-} = \\dfrac{1}{\\sqrt{2}}[\\varphi_a(\\mathbf{r}_1)\\varphi_b(\\mathbf{r}_2) - \\varphi_a(\\mathbf{r}_2)\\varphi_b(\\mathbf{r}_1)]"
+    }
+   ]
+  },
+  {
+   "id": "pauli-exclusion-principle",
+   "kind": "result",
+   "section": "8.5",
+   "name": "Pauli exclusion principle",
+   "terms": [
+    "Pauli exclusion principle",
+    "Pauli Exclusion Principle"
+   ],
+   "statement": "No two electrons can be described by the same spin-orbital: if φ_a = φ_b the antisymmetric combination vanishes, so an orbital holds at most two electrons, of opposite spin, and no two electrons share all four quantum numbers."
+  },
+  {
+   "id": "electron-configuration",
+   "kind": "definition",
+   "section": "8.6",
+   "name": "Electron configuration",
+   "terms": [
+    "configuration",
+    "electron configuration",
+    "electronic configuration"
+   ],
+   "statement": "The list of the orbitals an atom's electrons occupy with how many in each, written like 1s²2s⁰2p⁰ for ground-state helium or 1s²2s²2p² for carbon."
+  },
+  {
+   "id": "microstate",
+   "kind": "definition",
+   "section": "8.6",
+   "name": "Microstate",
+   "terms": [
+    "microstate",
+    "microstates"
+   ],
+   "statement": "One particular way of placing the electrons of a configuration in its spin-orbitals, drawn as a diagram with each electron's orbital and spin; the 1s¹2s¹ configuration of helium has four."
+  },
+  {
+   "id": "two-electron-spin-functions",
+   "kind": "result",
+   "section": "8.6",
+   "name": "Spatial and spin parts of two-electron wavefunctions",
+   "statement": "A two-electron wavefunction can often be written as a spatial part times a spin part, one symmetric and the other antisymmetric: ground-state helium is 1s(1)1s(2) times (1/√2)[α(1)β(2) − α(2)β(1)], and the 1s¹2s¹ states pair the antisymmetric spatial function with the three symmetric spin functions αα, αβ + βα and ββ, and the symmetric one with αβ − βα.",
+   "forms": [
+    {
+     "id": "helium-ground-spin",
+     "latex": "\\psi(\\mathbf{r}_1, \\mathbf{r}_2) = \\dfrac{1}{\\sqrt{2}}\\varphi_{1s}(1)\\varphi_{1s}(2)[\\alpha(1)\\beta(2) - \\alpha(2)\\beta(1)]"
+    }
+   ]
+  },
+  {
+   "id": "slater-determinant",
+   "kind": "definition",
+   "section": "8.6",
+   "name": "Slater determinant",
+   "terms": [
+    "Slater determinant",
+    "Slater determinants",
+    "determinantal wavefunctions"
+   ],
+   "type": "wavefunction",
+   "statement": "An antisymmetric N-electron wavefunction written as a determinant of spin-orbitals, one row per electron and one column per spin-orbital, normalized by 1/√N!; expanded it has N! terms.",
+   "forms": [
+    {
+     "id": "slater-general",
+     "latex": "\\psi(\\mathbf{r}_1, \\ldots, \\mathbf{r}_N) = \\dfrac{1}{\\sqrt{N!}}\\begin{vmatrix} \\varphi_1(\\mathbf{r}_1) & \\cdots & \\varphi_N(\\mathbf{r}_1) \\\\ \\vdots & \\ddots & \\vdots \\\\ \\varphi_1(\\mathbf{r}_N) & \\cdots & \\varphi_N(\\mathbf{r}_N) \\end{vmatrix}"
+    },
+    {
+     "id": "slater-helium",
+     "latex": "\\psi(\\mathbf{r}_1, \\mathbf{r}_2) = \\dfrac{1}{\\sqrt{2}}\\begin{vmatrix} \\varphi_{1s}(1)\\alpha(1) & \\varphi_{1s}(1)\\beta(1) \\\\ \\varphi_{1s}(2)\\alpha(2) & \\varphi_{1s}(2)\\beta(2) \\end{vmatrix}"
+    }
+   ]
+  },
+  {
+   "id": "determinant-antisymmetry",
+   "kind": "result",
+   "section": "8.6",
+   "name": "Antisymmetry of a Slater determinant",
+   "statement": "Interchanging two electrons interchanges two rows of the determinant and changes its sign, so a Slater determinant is antisymmetric by construction, and two identical columns (one spin-orbital used twice) make it vanish."
+  },
+  {
+   "id": "slater-determinant-combinations",
+   "kind": "result",
+   "section": "8.6",
+   "name": "Combinations of Slater determinants",
+   "statement": "One Slater determinant corresponds to one microstate diagram; where a state cannot be written as a spatial part times a spin part, as for two of helium's 1s¹2s¹ states, it is a combination of determinants, ψ₁ ∝ φ_a − φ_c and ψ₃ ∝ φ_a + φ_c."
+  },
+  {
+   "id": "hartree-fock-method",
+   "kind": "definition",
+   "section": "8.7",
+   "name": "Hartree–Fock method",
+   "terms": [
+    "Hartree-Fock",
+    "Hartree-Fock method",
+    "HF",
+    "Hartree-Fock (HF)"
+   ],
+   "statement": "Fock's improvement of the Hartree method: the wavefunction is a Slater determinant of spin-orbitals, so it is antisymmetric, and the variational principle then gives one-electron equations that carry an exchange term besides the Hartree terms; they are solved by the self-consistent field method."
+  },
+  {
+   "id": "exchange-integral",
+   "kind": "definition",
+   "section": "8.7",
+   "name": "Exchange integral",
+   "terms": [
+    "exchange term",
+    "exchange"
+   ],
+   "type": "energy",
+   "symbol": "K_ij",
+   "statement": "The two-electron integral K_{i,j} that resembles the Coulomb integral with the electrons' labels interchanged in one orbital pair; it arises only between electrons of the same spin and lowers their repulsion."
+  },
+  {
+   "id": "hartree-fock-equations",
+   "kind": "result",
+   "section": "8.7",
+   "name": "Hartree–Fock equations",
+   "terms": [
+    "Hartree-Fock equations"
+   ],
+   "statement": "N one-electron equations: kinetic energy, attraction to the nucleus and the Hartree (Coulomb) term as in the Hartree equations, minus an exchange term that acts only between electrons of the same spin and keeps them apart.",
+   "forms": [
+    {
+     "id": "hf-equation",
+     "latex": "-\\dfrac{\\hbar^2}{2m}\\nabla^2\\psi_i + V_{nucleus}\\psi_i + V_{electron}\\psi_i - \\sum_j \\int d\\mathbf{r}'\\,\\dfrac{\\psi_j^*(\\mathbf{r}')\\psi_i(\\mathbf{r}')\\psi_j(\\mathbf{r})}{|\\mathbf{r} - \\mathbf{r}'|} = \\epsilon_i\\psi_i"
+    }
+   ]
+  },
+  {
+   "id": "fock-operator",
+   "kind": "definition",
+   "section": "8.7",
+   "name": "Fock operator",
+   "terms": [
+    "Fock operator",
+    "Coulomb and exchange operators"
+   ],
+   "type": "operator",
+   "symbol": "F_hat",
+   "statement": "The one-electron operator F̂ = Ĥ⁰ + Σ_j(2Ĵ_j − K̂_j) whose eigenfunctions are the Hartree–Fock orbitals: the hydrogen-like operator plus Coulomb and exchange operators built from every occupied orbital, so F̂φ_i = ε_iφ_i must be solved iteratively.",
+   "forms": [
+    {
+     "id": "fock-eigen",
+     "latex": "\\hat{F}|\\varphi_i\\rangle = \\epsilon_i|\\varphi_i\\rangle"
+    },
+    {
+     "id": "fock-def",
+     "latex": "\\hat{F} = \\hat{H}^0 + \\sum_{j=1}^N(2\\hat{J}_j - \\hat{K}_j)"
+    }
+   ]
+  },
+  {
+   "id": "exchange-interaction",
+   "kind": "idea",
+   "section": "8.7",
+   "name": "Exchange interaction",
+   "terms": [
+    "exchange interaction",
+    "exchange force",
+    "Pauli repulsion",
+    "exchange energy"
+   ],
+   "statement": "A quantum effect between identical particles that comes from the symmetry of their wavefunction under exchange, not a true force: for fermions it acts as a repulsion of like spins (Pauli repulsion), for bosons as an attraction."
+  },
+  {
+   "id": "hartree-fock-orbital-energy",
+   "kind": "result",
+   "section": "8.7",
+   "name": "Hartree–Fock orbital energy",
+   "terms": [
+    "orbital energies"
+   ],
+   "type": "energy",
+   "symbol": "eps_i",
+   "statement": "ε_i is the kinetic and nuclear-attraction energy of an electron in φ_i plus its Coulomb-minus-exchange interaction with the electrons in all the occupied spin-orbitals; for an occupied orbital the j = i term cancels, so ε_i counts N − 1 partners.",
+   "forms": [
+    {
+     "id": "hf-orbital-energy",
+     "latex": "\\epsilon_i = \\langle\\phi_i|T + V|\\phi_i\\rangle + \\sum_{j(\\text{occupied})}[J_{i,j} - K_{i,j}]"
+    }
+   ]
+  },
+  {
+   "id": "virtual-orbital",
+   "kind": "definition",
+   "section": "8.7",
+   "name": "Virtual orbital",
+   "terms": [
+    "virtual spin-orbital",
+    "virtual orbitals"
+   ],
+   "statement": "An unoccupied Hartree–Fock spin-orbital; its energy counts interactions with all N occupied spin-orbitals, so it describes an electron added to an N-electron system."
+  },
+  {
+   "id": "hartree-fock-energy",
+   "kind": "definition",
+   "section": "8.7",
+   "name": "Hartree–Fock energy",
+   "terms": [
+    "Hartree-Fock wavefunctions",
+    "Hartree-Fock energy",
+    "lowest possible total energy"
+   ],
+   "type": "energy",
+   "statement": "The total energy of the best single-determinant wavefunction, the lowest the complete Hamiltonian gives for any such function; it reaches about 99% of the experimental energy (helium −5.72 against −5.80 R_H) and misses the electron correlation."
+  },
+  {
+   "id": "frozen-orbital-approximation",
+   "kind": "idea",
+   "section": "8.7",
+   "name": "Frozen-orbital approximation",
+   "terms": [
+    "frozen orbital approximation",
+    "orbital relaxation"
+   ],
+   "statement": "Removing or adding an electron without re-optimizing the other spin-orbitals, so the parent's Hartree–Fock orbitals describe the ion as well; it neglects orbital relaxation."
+  },
+  {
+   "id": "koopmans-theorem",
+   "kind": "result",
+   "section": "8.7",
+   "name": "Koopmans' theorem",
+   "terms": [
+    "Koopmans' theorem",
+    "Koopmans’ theorem"
+   ],
+   "statement": "Within the frozen-orbital model the ionization energy is minus the energy of the occupied spin-orbital emptied, E_{N−1} − E_N = −ε_k, and the electron affinity is minus the energy of the virtual one filled, E_N − E_{N+1} = −ε_k; the estimates are often within about 0.5 eV.",
+   "forms": [
+    {
+     "id": "koopmans-ionization",
+     "latex": "E_{N-1} - E_N = -\\epsilon_k"
+    },
+    {
+     "id": "koopmans-affinity",
+     "latex": "E_N - E_{N+1} = -\\epsilon_k"
+    }
+   ]
+  },
+  {
+   "id": "exchange-hole",
+   "kind": "idea",
+   "section": "8.7",
+   "name": "Exchange hole",
+   "terms": [
+    "exchange hole",
+    "conditional electron probability"
+   ],
+   "statement": "Around an electron the density of other electrons with the same spin is reduced: the Hartree approximation gives a structureless conditional density, while the antisymmetric Hartree–Fock wavefunction carves a hole near r = 0; electrons of opposite spin are unaffected."
+  },
+  {
+   "id": "closed-shell",
+   "kind": "definition",
+   "section": "8.8",
+   "name": "Closed and open shells",
+   "terms": [
+    "closed-shell",
+    "open-shell",
+    "closed shells",
+    "open‐shell electrons"
+   ],
+   "statement": "A completely filled subshell is closed: its electrons' orbital and spin angular momenta cancel, so only the electrons of partly filled (open) subshells set an atom's state."
+  },
+  {
+   "id": "total-orbital-angular-momentum-quantum-number",
+   "kind": "definition",
+   "section": "8.8",
+   "name": "Total orbital angular momentum quantum number",
+   "terms": [
+    "total orbital angular momentum"
+   ],
+   "symbol": "L",
+   "statement": "The quantum number L of the orbital angular momenta of an atom's electrons added as vectors, from l₁ + l₂ down to |l₁ − l₂| in integer steps for two electrons.",
+   "forms": [
+    {
+     "id": "total-l-range",
+     "latex": "L = |l_1 + l_2|, |l_1 + l_2 - 1|, \\ldots, |l_1 - l_2|"
+    }
+   ]
+  },
+  {
+   "id": "total-magnetic-quantum-number",
+   "kind": "definition",
+   "section": "8.8",
+   "name": "Total magnetic quantum number",
+   "terms": [
+    "Total Magnetic Quantum Number"
+   ],
+   "symbol": "M_l",
+   "statement": "M_l, the total z component of the electrons' orbital angular momentum, the sum of their m_l, which can be negative and runs from m_{l1} + m_{l2} down to its negative.",
+   "forms": [
+    {
+     "id": "total-ml-range",
+     "latex": "M_l = m_{l1} + m_{l2}, m_{l1} + m_{l2} - 1, \\ldots, -m_{l1} - m_{l2}"
+    }
+   ]
+  },
+  {
+   "id": "total-spin-magnetic-quantum-number",
+   "kind": "definition",
+   "section": "8.8",
+   "name": "Total spin magnetic quantum number",
+   "terms": [
+    "Total Spin Magnetic Quantum Number"
+   ],
+   "symbol": "M_s",
+   "statement": "M_s, the total z component of the electrons' spins, the sum of their m_s: 1, 0 or −1 for two electrons."
+  },
+  {
+   "id": "total-spin-quantum-number",
+   "kind": "definition",
+   "section": "8.8",
+   "name": "Total spin quantum number",
+   "terms": [
+    "Total Intrinsic Spin Quantum Number"
+   ],
+   "symbol": "S",
+   "statement": "S, the quantum number of the resultant of all the electrons' spin vectors, never negative: S = s₁ + s₂, …, |s₁ − s₂|, so 1 or 0 for two open-shell electrons and 3/2 or ½ for three.",
+   "forms": [
+    {
+     "id": "total-s-range",
+     "latex": "S = |s_1 + s_2|, |s_1 + s_2 - 1|, \\ldots, |s_1 - s_2|"
+    }
+   ]
+  },
+  {
+   "id": "total-angular-momentum-quantum-number",
+   "kind": "definition",
+   "section": "8.8",
+   "name": "Total angular momentum quantum number",
+   "terms": [
+    "Total Angular Momentum Quantum Number"
+   ],
+   "symbol": "J",
+   "statement": "J, the quantum number of the total angular momentum formed by combining the total orbital and total spin angular momenta, from L + S down to |L − S|.",
+   "forms": [
+    {
+     "id": "total-j-range",
+     "latex": "J = L + S, \\ldots, |L - S|"
+    }
+   ]
+  },
+  {
+   "id": "spin-multiplicity",
+   "kind": "definition",
+   "section": "8.8",
+   "name": "Spin multiplicity",
+   "terms": [
+    "multiplicity",
+    "spin multiplicity",
+    "singlet",
+    "triplet",
+    "doublet"
+   ],
+   "symbol": "M_mult",
+   "statement": "The number 2S + 1 of spin states of a level: a singlet (S = 0) has one, a doublet (S = ½) two and a triplet (S = 1) three, since two electron spins combine to S = 1 in three ways and to S = 0 in one.",
+   "forms": [
+    {
+     "id": "multiplicity-def",
+     "latex": "M = 2S + 1"
+    }
+   ]
+  },
+  {
+   "id": "term-symbol",
+   "kind": "definition",
+   "section": "8.8",
+   "name": "Term symbol",
+   "terms": [
+    "term symbol",
+    "term symbols",
+    "atomic term symbols",
+    "Russell-Saunders term symbol",
+    "terms"
+   ],
+   "statement": "The label ^{2S+1}L_J of an atomic energy level: the code letter S, P, D, F, G, H for L = 0, 1, 2, 3, 4, 5, the multiplicity as a left superscript and J as a right subscript; a closed-shell atom is ¹S₀.",
+   "forms": [
+    {
+     "id": "term-symbol-form",
+     "latex": "^{2S+1}L_J"
+    }
+   ]
+  },
+  {
+   "id": "terms-from-microstates",
+   "kind": "skill",
+   "section": "8.8",
+   "name": "Finding the terms of a configuration",
+   "terms": [
+    "microstate chart"
+   ],
+   "statement": "Tabulating every microstate of the open-shell electrons by M_l and M_s, then repeatedly taking the largest remaining M_l and claiming a centred block of the table for one term (a ¹G takes M_l = 4 to −4 at M_s = 0, a ³F takes M_l = 3 to −3 at all three M_s), until nothing is left."
+  },
+  {
+   "id": "hunds-rules",
+   "kind": "axiom",
+   "section": "8.8",
+   "name": "Hund's rules",
+   "terms": [
+    "Hund's rules",
+    "Hund's rule",
+    "Hunds three rules"
+   ],
+   "statement": "Empirical rules that order the terms of a configuration and reliably give its ground term: the highest multiplicity lies lowest; among equal multiplicities, the highest L; then for a subshell less than half full the lowest J, and for one more than half full the highest J."
+  },
+  {
+   "id": "electron-hole-equivalence",
+   "kind": "result",
+   "section": "8.8",
+   "name": "Electrons and holes give the same terms",
+   "terms": [
+    "holes"
+   ],
+   "statement": "A subshell missing k electrons has the same terms as one holding k: p¹ and p⁵ alike, p² and p⁴ alike, and so for d and f."
+  },
+  {
+   "id": "ls-coupling",
+   "kind": "definition",
+   "section": "8.9",
+   "name": "L–S coupling",
+   "terms": [
+    "L-S coupling",
+    "Russell-Saunders coupling",
+    "R-S coupling",
+    "LS coupling"
+   ],
+   "statement": "Russell–Saunders coupling, used for the lighter elements: the electrons' orbital angular momenta add to L and their spins to S, and then L and S add to the total J.",
+   "forms": [
+    {
+     "id": "ls-l",
+     "latex": "L = \\sum_i l_i"
+    },
+    {
+     "id": "ls-s",
+     "latex": "S = \\sum_i s_i"
+    },
+    {
+     "id": "ls-j",
+     "latex": "J = L + S"
+    }
+   ]
+  },
+  {
+   "id": "jj-coupling",
+   "kind": "definition",
+   "section": "8.9",
+   "name": "j–j coupling",
+   "terms": [
+    "j-j coupling",
+    "jj-coupling"
+   ],
+   "statement": "The coupling scheme for heavy elements (Z above about 40): each electron's orbital and spin angular momenta first combine to its own j, and the j add to J; there L and S stop being good quantum numbers."
+  },
+  {
+   "id": "spin-orbit-interaction",
+   "kind": "idea",
+   "section": "8.9",
+   "name": "Spin–orbit interaction",
+   "terms": [
+    "spin-orbit interaction",
+    "spin-orbit coupling",
+    "spin‐orbit interaction"
+   ],
+   "type": "energy",
+   "symbol": "E_so",
+   "statement": "The magnetic interaction of an electron's spin moment with the moment of its orbital motion, proportional to S · L; because of it L and S no longer commute with the Hamiltonian separately, but J does and is conserved.",
+   "forms": [
+    {
+     "id": "spin-orbit-energy",
+     "latex": "E_{s-o} \\propto S \\cdot L",
+     "section": "8.11"
+    },
+    {
+     "id": "spin-orbit-hamiltonian",
+     "latex": "\\hat{H}_{s-o} \\propto \\hat{S} \\cdot \\hat{L}",
+     "section": "8.11"
+    }
+   ]
+  },
+  {
+   "id": "angular-momentum-magnitudes",
+   "kind": "result",
+   "section": "8.9",
+   "name": "Magnitudes and projections of L, S and J",
+   "type": "angular-momentum",
+   "symbol": "J_vec",
+   "statement": "Each angular momentum has magnitude ħ√(q(q + 1)) and z projection m_qħ: |L| = ħ√(l(l + 1)) with L_z = m_lħ, |S| = ħ√(s(s + 1)) with S_z = m_sħ, |J| = ħ√(j(j + 1)) with J_z = m_jħ, and m_j = m_l + m_s.",
+   "forms": [
+    {
+     "id": "j-magnitude",
+     "latex": "|\\vec{J}| = \\hbar\\sqrt{j(j+1)}"
+    },
+    {
+     "id": "j-projection",
+     "latex": "J_z = m_j\\hbar"
+    },
+    {
+     "id": "s-magnitude",
+     "latex": "|\\vec{S}| = \\hbar\\sqrt{s(s+1)}"
+    }
+   ]
+  },
+  {
+   "id": "term-degeneracy",
+   "kind": "result",
+   "section": "8.9",
+   "name": "Degeneracy of a term",
+   "statement": "A level ^{2S+1}L_J is 2J + 1-fold degenerate, one state for each z projection m_J from +J to −J; hydrogen's ²S₁/₂ ground state is two-fold.",
+   "forms": [
+    {
+     "id": "term-degeneracy-count",
+     "latex": "g_J = 2J + 1"
+    }
+   ]
+  },
+  {
+   "id": "aufbau-principle",
+   "kind": "idea",
+   "section": "8.10",
+   "name": "Aufbau principle",
+   "terms": [
+    "Aufbau"
+   ],
+   "statement": "Electrons fill the lowest-energy orbitals first and move to higher ones only when the lower ones are full; it does not say how to fill orbitals of equal energy."
+  },
+  {
+   "id": "hunds-first-rule-origin",
+   "kind": "idea",
+   "section": "8.10",
+   "name": "Why parallel spins lie lowest",
+   "statement": "Putting two electrons in separate orbitals removes the Coulomb repulsion of sharing one, and giving them parallel spins gains the favorable exchange energy, which grows with the number of possible exchanges between electrons of the same spin."
+  },
+  {
+   "id": "ground-term-from-hunds-rules",
+   "kind": "skill",
+   "section": "8.10",
+   "name": "Finding a ground-state term symbol",
+   "statement": "Applying Hund's rules to a configuration in turn: maximize S, then L, then pick J = |L − S| for a subshell less than half full or J = L + S for one more than half full."
+  },
+  {
+   "id": "fine-structure",
+   "kind": "definition",
+   "section": "8.11",
+   "name": "Fine structure",
+   "terms": [
+    "fine structure",
+    "multiplet",
+    "multiplets",
+    "doublet"
+   ],
+   "statement": "The splitting of a spectral line into a multiplet of closely spaced lines (a doublet, a triplet) by spin–orbit coupling and relativistic effects; hydrogen's Hα line is a doublet 0.326 cm⁻¹ apart."
+  },
+  {
+   "id": "one-electron-selection-rules",
+   "kind": "result",
+   "section": "8.11",
+   "name": "One-electron selection rules",
+   "statement": "When light moves one electron between atomic orbitals, Δl = ±1 and Δm_l = 0, ±1, because the photon carries one unit of angular momentum.",
+   "forms": [
+    {
+     "id": "delta-l",
+     "latex": "\\Delta l = \\pm 1"
+    },
+    {
+     "id": "delta-ml",
+     "latex": "\\Delta m_l = 0, \\pm 1"
+    }
+   ]
+  },
+  {
+   "id": "russell-saunders-selection-rules",
+   "kind": "result",
+   "section": "8.11",
+   "name": "Russell–Saunders selection rules",
+   "terms": [
+    "Russell-Saunders selection rules"
+   ],
+   "statement": "In L–S coupling an allowed transition has ΔS = 0, ΔL = 0, ±1 and ΔJ = 0, ±1 (not J = 0 to 0), with Δm_J = 0, ±1 (not 0 to 0 when ΔJ = 0); they fail in heavy atoms, where singlet–triplet lines are seen.",
+   "forms": [
+    {
+     "id": "rs-delta-s",
+     "latex": "\\Delta S = 0"
+    },
+    {
+     "id": "rs-delta-l",
+     "latex": "\\Delta L = 0, \\pm 1"
+    },
+    {
+     "id": "rs-delta-j",
+     "latex": "\\Delta J = 0, \\pm 1"
+    },
+    {
+     "id": "rs-delta-mj",
+     "latex": "\\Delta m_J = 0, \\pm 1"
+    }
+   ]
+  },
+  {
+   "id": "hydrogen-fine-structure",
+   "kind": "result",
+   "section": "8.11",
+   "name": "Fine structure of hydrogen's n = 2 and n = 3 levels",
+   "statement": "Hydrogen's n = 2 level holds the terms ²S₁/₂, ²P₁/₂ and ²P₃/₂ (8 states) and n = 3 five terms (18 states); terms of the same n and J have the same energy, and of the five allowed 3 → 2 transitions two strong ones make the Hα doublet, 0.364 − 0.036 = 0.328 cm⁻¹ apart against 0.326 cm⁻¹ measured."
+  },
+  {
+   "id": "sodium-d-lines",
+   "kind": "result",
+   "section": "8.11",
+   "name": "Sodium D lines",
+   "terms": [
+    "D-line",
+    "D line"
+   ],
+   "statement": "Sodium's yellow D line is a doublet, D₁ at 589.6 nm and D₂ at 589.0 nm, because the 3p level of its one valence electron splits by spin–orbit coupling into ²P₁/₂ and ²P₃/₂; every line ending or starting on 3p is doubled the same way."
+  }
+ ],
+ "concept_prereqs": [
+  {
+   "concept": "atomic-units",
+   "prereq": "reduced-plancks-constant"
+  },
+  {
+   "concept": "atomic-units",
+   "prereq": "coulomb-potential"
+  },
+  {
+   "concept": "hartree",
+   "prereq": "atomic-units"
+  },
+  {
+   "concept": "hartree",
+   "prereq": "rydberg-constant"
+  },
+  {
+   "concept": "fine-structure-constant",
+   "prereq": "atomic-units"
+  },
+  {
+   "concept": "helium-hamiltonian-atomic-units",
+   "prereq": "atomic-units"
+  },
+  {
+   "concept": "helium-hamiltonian-atomic-units",
+   "prereq": "multi-electron-hamiltonian"
+  },
+  {
+   "concept": "zero-order-hamiltonian",
+   "prereq": "perturbation-theory"
+  },
+  {
+   "concept": "helium-perturbation-split",
+   "prereq": "zero-order-hamiltonian"
+  },
+  {
+   "concept": "helium-perturbation-split",
+   "prereq": "helium-hamiltonian-atomic-units"
+  },
+  {
+   "concept": "helium-perturbation-split",
+   "prereq": "additive-electron-energies"
+  },
+  {
+   "concept": "helium-first-order-energy",
+   "prereq": "helium-perturbation-split"
+  },
+  {
+   "concept": "helium-first-order-energy",
+   "prereq": "first-order-energy-correction"
+  },
+  {
+   "concept": "approximation-error",
+   "prereq": "variational-energy"
+  },
+  {
+   "concept": "approximation-error",
+   "prereq": "helium-ground-state-energy"
+  },
+  {
+   "concept": "electron-correlation",
+   "prereq": "orbital-approximation"
+  },
+  {
+   "concept": "helium-trial-wavefunctions",
+   "prereq": "helium-variational-energy"
+  },
+  {
+   "concept": "helium-trial-wavefunctions",
+   "prereq": "electron-correlation"
+  },
+  {
+   "concept": "helium-trial-wavefunctions",
+   "prereq": "approximation-error"
+  },
+  {
+   "concept": "hylleraas-wavefunction",
+   "prereq": "trial-wavefunction"
+  },
+  {
+   "concept": "hylleraas-wavefunction",
+   "prereq": "electron-correlation"
+  },
+  {
+   "concept": "hartree-approximation",
+   "prereq": "orbital-approximation"
+  },
+  {
+   "concept": "electron-charge-density",
+   "prereq": "atomic-orbital"
+  },
+  {
+   "concept": "mean-field-potential",
+   "prereq": "electron-charge-density"
+  },
+  {
+   "concept": "hartree-equations",
+   "prereq": "hartree-approximation"
+  },
+  {
+   "concept": "hartree-equations",
+   "prereq": "mean-field-potential"
+  },
+  {
+   "concept": "hartree-equations",
+   "prereq": "schrodinger-eigenvalue-problem"
+  },
+  {
+   "concept": "coulomb-integral",
+   "prereq": "electron-electron-repulsion"
+  },
+  {
+   "concept": "coulomb-integral",
+   "prereq": "electron-charge-density"
+  },
+  {
+   "concept": "hartree-orbital-energy",
+   "prereq": "hartree-equations"
+  },
+  {
+   "concept": "hartree-orbital-energy",
+   "prereq": "coulomb-integral"
+  },
+  {
+   "concept": "hartree-orbital-energy",
+   "prereq": "expectation-value"
+  },
+  {
+   "concept": "self-consistent-field-method",
+   "prereq": "hartree-equations"
+  },
+  {
+   "concept": "screening-model-limits",
+   "prereq": "effective-nuclear-charge"
+  },
+  {
+   "concept": "screening-model-limits",
+   "prereq": "hydrogen-wavefunctions"
+  },
+  {
+   "concept": "screening-model-limits",
+   "prereq": "ionization-energy"
+  },
+  {
+   "concept": "magnetic-dipole-moment",
+   "prereq": "angular-momentum"
+  },
+  {
+   "concept": "magnetic-dipole-energy",
+   "prereq": "magnetic-dipole-moment"
+  },
+  {
+   "concept": "magnetic-dipole-energy",
+   "prereq": "magnetic-field"
+  },
+  {
+   "concept": "gyromagnetic-ratio",
+   "prereq": "magnetic-dipole-moment"
+  },
+  {
+   "concept": "gyromagnetic-ratio",
+   "prereq": "orbital-angular-momentum"
+  },
+  {
+   "concept": "bohr-magneton",
+   "prereq": "gyromagnetic-ratio"
+  },
+  {
+   "concept": "zeeman-energy",
+   "prereq": "bohr-magneton"
+  },
+  {
+   "concept": "zeeman-energy",
+   "prereq": "magnetic-dipole-energy"
+  },
+  {
+   "concept": "zeeman-energy",
+   "prereq": "zeeman-effect"
+  },
+  {
+   "concept": "electron-spin",
+   "prereq": "magnetic-dipole-moment"
+  },
+  {
+   "concept": "electron-spin",
+   "prereq": "orbital-angular-momentum"
+  },
+  {
+   "concept": "stern-gerlach-experiment",
+   "prereq": "electron-spin"
+  },
+  {
+   "concept": "stern-gerlach-experiment",
+   "prereq": "magnetic-dipole-energy"
+  },
+  {
+   "concept": "spin-angular-momentum",
+   "prereq": "electron-spin"
+  },
+  {
+   "concept": "spin-operators",
+   "prereq": "spin-angular-momentum"
+  },
+  {
+   "concept": "spin-operators",
+   "prereq": "angular-momentum-squared-operator"
+  },
+  {
+   "concept": "spin-operators",
+   "prereq": "angular-momentum-component-operators"
+  },
+  {
+   "concept": "spin-quantum-number",
+   "prereq": "spin-operators"
+  },
+  {
+   "concept": "spin-quantum-number",
+   "prereq": "angular-momentum-quantum-number"
+  },
+  {
+   "concept": "spin-magnetic-quantum-number",
+   "prereq": "spin-quantum-number"
+  },
+  {
+   "concept": "spin-magnetic-quantum-number",
+   "prereq": "magnetic-quantum-number"
+  },
+  {
+   "concept": "spin-eigenvalues",
+   "prereq": "spin-magnetic-quantum-number"
+  },
+  {
+   "concept": "spin-one-half",
+   "prereq": "spin-eigenvalues"
+  },
+  {
+   "concept": "spin-one-half",
+   "prereq": "electron-spin-resonance"
+  },
+  {
+   "concept": "spin-states",
+   "prereq": "spin-one-half"
+  },
+  {
+   "concept": "spin-states",
+   "prereq": "orthonormality"
+  },
+  {
+   "concept": "electron-spin-resonance",
+   "prereq": "electron-spin"
+  },
+  {
+   "concept": "electron-spin-resonance",
+   "prereq": "magnetic-dipole-energy"
+  },
+  {
+   "concept": "electron-spin-resonance",
+   "prereq": "plancks-quantum-hypothesis"
+  },
+  {
+   "concept": "spin-gyromagnetic-ratio",
+   "prereq": "gyromagnetic-ratio"
+  },
+  {
+   "concept": "spin-gyromagnetic-ratio",
+   "prereq": "spin-angular-momentum"
+  },
+  {
+   "concept": "electron-g-factor",
+   "prereq": "spin-gyromagnetic-ratio"
+  },
+  {
+   "concept": "electron-g-factor",
+   "prereq": "bohr-magneton"
+  },
+  {
+   "concept": "electron-g-factor",
+   "prereq": "spin-states"
+  },
+  {
+   "concept": "indistinguishable-particles",
+   "prereq": "multi-electron-wavefunction"
+  },
+  {
+   "concept": "indistinguishable-particles",
+   "prereq": "square-of-the-modulus"
+  },
+  {
+   "concept": "spin-orbital",
+   "prereq": "atomic-orbital"
+  },
+  {
+   "concept": "spin-orbital",
+   "prereq": "spin-states"
+  },
+  {
+   "concept": "exchange-phase",
+   "prereq": "indistinguishable-particles"
+  },
+  {
+   "concept": "exchange-operator",
+   "prereq": "exchange-phase"
+  },
+  {
+   "concept": "exchange-operator",
+   "prereq": "commuting-operators"
+  },
+  {
+   "concept": "permutation-symmetry",
+   "prereq": "exchange-operator"
+  },
+  {
+   "concept": "boson",
+   "prereq": "permutation-symmetry"
+  },
+  {
+   "concept": "fermion",
+   "prereq": "permutation-symmetry"
+  },
+  {
+   "concept": "fermion",
+   "prereq": "spin-one-half"
+  },
+  {
+   "concept": "antisymmetry-principle",
+   "prereq": "fermion"
+  },
+  {
+   "concept": "two-electron-antisymmetric-combination",
+   "prereq": "antisymmetry-principle"
+  },
+  {
+   "concept": "two-electron-antisymmetric-combination",
+   "prereq": "spin-orbital"
+  },
+  {
+   "concept": "pauli-exclusion-principle",
+   "prereq": "two-electron-antisymmetric-combination"
+  },
+  {
+   "concept": "electron-configuration",
+   "prereq": "pauli-exclusion-principle"
+  },
+  {
+   "concept": "microstate",
+   "prereq": "electron-configuration"
+  },
+  {
+   "concept": "two-electron-spin-functions",
+   "prereq": "two-electron-antisymmetric-combination"
+  },
+  {
+   "concept": "slater-determinant",
+   "prereq": "antisymmetry-principle"
+  },
+  {
+   "concept": "slater-determinant",
+   "prereq": "determinant"
+  },
+  {
+   "concept": "slater-determinant",
+   "prereq": "spin-orbital"
+  },
+  {
+   "concept": "determinant-antisymmetry",
+   "prereq": "slater-determinant"
+  },
+  {
+   "concept": "slater-determinant-combinations",
+   "prereq": "slater-determinant"
+  },
+  {
+   "concept": "slater-determinant-combinations",
+   "prereq": "microstate"
+  },
+  {
+   "concept": "slater-determinant-combinations",
+   "prereq": "two-electron-spin-functions"
+  },
+  {
+   "concept": "hartree-fock-method",
+   "prereq": "slater-determinant"
+  },
+  {
+   "concept": "hartree-fock-method",
+   "prereq": "self-consistent-field-method"
+  },
+  {
+   "concept": "exchange-integral",
+   "prereq": "coulomb-integral"
+  },
+  {
+   "concept": "exchange-integral",
+   "prereq": "determinant-antisymmetry"
+  },
+  {
+   "concept": "hartree-fock-equations",
+   "prereq": "hartree-fock-method"
+  },
+  {
+   "concept": "hartree-fock-equations",
+   "prereq": "exchange-integral"
+  },
+  {
+   "concept": "fock-operator",
+   "prereq": "hartree-fock-equations"
+  },
+  {
+   "concept": "fock-operator",
+   "prereq": "zero-order-hamiltonian"
+  },
+  {
+   "concept": "exchange-interaction",
+   "prereq": "exchange-integral"
+  },
+  {
+   "concept": "hartree-fock-orbital-energy",
+   "prereq": "fock-operator"
+  },
+  {
+   "concept": "virtual-orbital",
+   "prereq": "hartree-fock-orbital-energy"
+  },
+  {
+   "concept": "hartree-fock-energy",
+   "prereq": "hartree-fock-method"
+  },
+  {
+   "concept": "hartree-fock-energy",
+   "prereq": "variational-principle"
+  },
+  {
+   "concept": "hartree-fock-energy",
+   "prereq": "electron-correlation"
+  },
+  {
+   "concept": "frozen-orbital-approximation",
+   "prereq": "hartree-fock-orbital-energy"
+  },
+  {
+   "concept": "koopmans-theorem",
+   "prereq": "frozen-orbital-approximation"
+  },
+  {
+   "concept": "koopmans-theorem",
+   "prereq": "virtual-orbital"
+  },
+  {
+   "concept": "koopmans-theorem",
+   "prereq": "ionization-energy"
+  },
+  {
+   "concept": "exchange-hole",
+   "prereq": "hartree-fock-equations"
+  },
+  {
+   "concept": "exchange-hole",
+   "prereq": "exchange-interaction"
+  },
+  {
+   "concept": "closed-shell",
+   "prereq": "electron-configuration"
+  },
+  {
+   "concept": "total-orbital-angular-momentum-quantum-number",
+   "prereq": "closed-shell"
+  },
+  {
+   "concept": "total-magnetic-quantum-number",
+   "prereq": "total-orbital-angular-momentum-quantum-number"
+  },
+  {
+   "concept": "total-spin-magnetic-quantum-number",
+   "prereq": "spin-magnetic-quantum-number"
+  },
+  {
+   "concept": "total-spin-quantum-number",
+   "prereq": "total-spin-magnetic-quantum-number"
+  },
+  {
+   "concept": "total-angular-momentum-quantum-number",
+   "prereq": "total-orbital-angular-momentum-quantum-number"
+  },
+  {
+   "concept": "total-angular-momentum-quantum-number",
+   "prereq": "total-spin-quantum-number"
+  },
+  {
+   "concept": "spin-multiplicity",
+   "prereq": "total-spin-quantum-number"
+  },
+  {
+   "concept": "term-symbol",
+   "prereq": "spin-multiplicity"
+  },
+  {
+   "concept": "term-symbol",
+   "prereq": "total-angular-momentum-quantum-number"
+  },
+  {
+   "concept": "term-symbol",
+   "prereq": "orbital-letter-codes"
+  },
+  {
+   "concept": "terms-from-microstates",
+   "prereq": "microstate"
+  },
+  {
+   "concept": "terms-from-microstates",
+   "prereq": "term-symbol"
+  },
+  {
+   "concept": "terms-from-microstates",
+   "prereq": "total-magnetic-quantum-number"
+  },
+  {
+   "concept": "hunds-rules",
+   "prereq": "term-symbol"
+  },
+  {
+   "concept": "electron-hole-equivalence",
+   "prereq": "term-symbol"
+  },
+  {
+   "concept": "ls-coupling",
+   "prereq": "total-angular-momentum-quantum-number"
+  },
+  {
+   "concept": "jj-coupling",
+   "prereq": "ls-coupling"
+  },
+  {
+   "concept": "spin-orbit-interaction",
+   "prereq": "ls-coupling"
+  },
+  {
+   "concept": "angular-momentum-magnitudes",
+   "prereq": "angular-momentum-magnitude"
+  },
+  {
+   "concept": "angular-momentum-magnitudes",
+   "prereq": "total-angular-momentum-quantum-number"
+  },
+  {
+   "concept": "term-degeneracy",
+   "prereq": "term-symbol"
+  },
+  {
+   "concept": "term-degeneracy",
+   "prereq": "angular-momentum-magnitudes"
+  },
+  {
+   "concept": "term-degeneracy",
+   "prereq": "degeneracy"
+  },
+  {
+   "concept": "aufbau-principle",
+   "prereq": "electron-configuration"
+  },
+  {
+   "concept": "hunds-first-rule-origin",
+   "prereq": "hunds-rules"
+  },
+  {
+   "concept": "hunds-first-rule-origin",
+   "prereq": "exchange-interaction"
+  },
+  {
+   "concept": "ground-term-from-hunds-rules",
+   "prereq": "hunds-rules"
+  },
+  {
+   "concept": "ground-term-from-hunds-rules",
+   "prereq": "terms-from-microstates"
+  },
+  {
+   "concept": "fine-structure",
+   "prereq": "spin-orbit-interaction"
+  },
+  {
+   "concept": "fine-structure",
+   "prereq": "line-spectrum"
+  },
+  {
+   "concept": "one-electron-selection-rules",
+   "prereq": "selection-rule"
+  },
+  {
+   "concept": "one-electron-selection-rules",
+   "prereq": "magnetic-quantum-number"
+  },
+  {
+   "concept": "russell-saunders-selection-rules",
+   "prereq": "one-electron-selection-rules"
+  },
+  {
+   "concept": "russell-saunders-selection-rules",
+   "prereq": "ls-coupling"
+  },
+  {
+   "concept": "russell-saunders-selection-rules",
+   "prereq": "term-symbol"
+  },
+  {
+   "concept": "hydrogen-fine-structure",
+   "prereq": "fine-structure"
+  },
+  {
+   "concept": "hydrogen-fine-structure",
+   "prereq": "russell-saunders-selection-rules"
+  },
+  {
+   "concept": "hydrogen-fine-structure",
+   "prereq": "term-degeneracy"
+  },
+  {
+   "concept": "hydrogen-fine-structure",
+   "prereq": "hydrogen-spectral-series"
+  },
+  {
+   "concept": "sodium-d-lines",
+   "prereq": "fine-structure"
+  },
+  {
+   "concept": "sodium-d-lines",
+   "prereq": "russell-saunders-selection-rules"
+  }
+ ]
+}
