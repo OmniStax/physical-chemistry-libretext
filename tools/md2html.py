@@ -73,7 +73,8 @@ class Drafter:
         out = []
         for k, p in enumerate(parts):
             if k % 2:
-                out.append(self.katex(self.refs(p)))
+                # inline maths takes no number, so a \\nonumber there names nothing (4.6's Example 4.6.1)
+                out.append(self.katex(self.refs(re.sub(r"\s*\\(?:nonumber|notag)\b", "", p))))
                 continue
             p = self.refs(p)
             p = re.sub(r"!\[([^\]]*)\]\(media/([^)]+)\)", lambda m: f'<img src="/media/{self.chdir}/{m.group(2)}" alt="{html.escape(m.group(1))}">', p)
@@ -89,11 +90,14 @@ class Drafter:
     def katex(tex):
         """What the site's MathJax has and the app's KaTeX lacks: \\ce (mhchem),
         \\op (the site's operator hat), \\cancelto (the cancel package), \\mbox,
+        the two-argument \\braket,
         and the increment sign U+2206, which KaTeX has no metrics for."""
         tex = re.sub(r"\\ce\{([^{}]*)\}", r"\\mathrm{\1}", tex)
         tex = re.sub(r"\\mbox\s*\{", r"\\text{", tex)  # KaTeX has \\text, not \\mbox
         tex = tex.replace("\u2206", "\\Delta ")  # the increment sign, which KaTeX has no metrics for
         tex = re.sub(r"\\op\s*\{([^{}]*)\}", r"\\hat{\1}", tex)
+        # the site's \\braket{a}{b} takes two arguments; KaTeX's takes one, \\braket{a|b} (4.S, 3.S)
+        tex = re.sub(r"\\braket\s*\{([^{}]*)\}\s*\{([^{}]*)\}", r"\\braket{\1|\2}", tex)
         tex = re.sub(r"\\op\s+(\\?\w)", r"\\hat{\1}", tex)
         out, i = [], 0
         while True:
@@ -244,7 +248,16 @@ class Drafter:
             self.figures.append({"id": fid, "kind": "photo", "number": n, "draws": [],
                                  "_src": [src] + [f"/media/{self.chdir}/{p}" for p in parts], "_caption": cap,
                                  **({"_panels": panels} if panels else {})})
-            imgs = "".join(f'<img src="{s}" alt="{html.escape(alt)}">' for s in [src] + [f"/media/{self.chdir}/{p}" for p in parts])
+            # each panel keeps its own alt text, the one under its `> part` line (4.1.4)
+            alts, k = [], -1
+            for x in ls:
+                if x is head or x.startswith("> part "):
+                    k += 1
+                    alts.append("")
+                elif x.startswith("> alt: ") and k >= 0 and not alts[k]:
+                    alts[k] = x[7:]
+            srcs = [src] + [f"/media/{self.chdir}/{p}" for p in parts]
+            imgs = "".join(f'<img src="{s}" alt="{html.escape(alts[i] if i < len(alts) and alts[i] else alt)}">' for i, s in enumerate(srcs))
             return (f'<figure class="photo" id="{fid}" data-figure="{n}">\n  {imgs}\n'
                     f'  <figcaption><span class="eyebrow">Figure {n}</span><span>{self.inline(cap)}</span></figcaption>\n</figure>')
         fid = self.uid("img-" + slug(os.path.basename(src))[:24])
@@ -316,7 +329,7 @@ class Drafter:
         m = re.match(r"\{(?:ex|exr):([^}]+)\}\s*(?:\{printed:([^}]+)\}\s*)?(.*)", head)
         num, printed, title = (m.group(1), m.group(2), m.group(3)) if m else ("?", None, head)
         if kind == "example":
-            eid = self.uid("ex-" + num.replace(".", "-"))
+            eid = self.uid("ex-" + num.replace(".", "-").lower())  # 4.6's "Example 4.6.2A": ex-4-6-2a
             inner = "\n".join(self.boxes(body))
             # the label the book prints, where it names the other kind (3.7's "Exercise 3.7.2")
             t = (printed or f"Example {num}") + (f" · {self.inline(title)}" if title else "")
@@ -325,7 +338,7 @@ class Drafter:
         k = next((i for i, l in enumerate(body) if re.match(r"^\*\*(Answer|Solution)", l)), len(body))
         prompt = "\n".join(self.boxes(body[:k]))
         sol = "\n".join(self.boxes(body[k:]))
-        eid = self.uid("e" + num.split(".")[-1])  # two boxes may print one number (3.6)
+        eid = self.uid("e" + num.split(".")[-1].lower())  # two boxes may print one number (3.6); 4.6.2C: e2c
         self.exercises.append({"id": eid, "source_id": f"exr:{num}", "source_number": printed or f"Exercise {num}",
                                "kind": "exercise", "title": title, "prompt": prompt, "book_answer": sol, "keyed": k < len(body)})
         return ""

@@ -154,5 +154,31 @@
       "probability-density",
       "operator"
     ]
+  },
+  "ch04": {
+    "symbols": [
+      "T_hat",
+      "Tx_hat",
+      "pv_hat",
+      "V_hat",
+      "E_hat",
+      "Lx_hat",
+      "Ly_hat",
+      "Lz_hat",
+      "L2_hat",
+      "psi_a",
+      "psi_ap",
+      "psi_app",
+      "phi_f",
+      "p_dens",
+      "sigma_x",
+      "sigma2_x",
+      "sigma_A",
+      "sigma_B",
+      "S_ov",
+      "N",
+      "delta_ij"
+    ],
+    "types": []
   }
 }

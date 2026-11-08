@@ -203,6 +203,8 @@ class Converter:
                     marks.append((lab, self.eq_count))
         elif "\\begin{align*" in tex or "\\begin{gather*" in tex or "\\begin{alignat*" in tex:
             pass  # a starred environment is never numbered
+        elif re.search(r"\\tag\s*\{", tex):
+            pass  # a display with its own \tag prints that tag and takes no number (4.S)
         elif not nonumber:
             # MathJax tags every display (tags: all); the book's own names are its labels
             self.eq_count += 1
@@ -356,7 +358,8 @@ class Converter:
         if cls in ("box-example", "box-exercise"):
             kind = "example" if cls == "box-example" else "exercise"
             pref = "ex" if kind == "example" else "exr"
-            m = re.match(r"(?:Example|Exercise)\s*(\d+(?:\.\d+)*)\s*:?\s*(.*)", title)
+            # a letter suffix is part of the number (4.6: "Example 4.6.2A", "4.6.2B", "Exercise 4.6.2C")
+            m = re.match(r"(?:Example|Exercise)\s*(\d+(?:\.\d+)*(?:[A-Z](?=[\s:]|$))?)\s*:?\s*(.*)", title)
             num, rest = (m.group(1), m.group(2)) if m else ("?", title)
             if not m:
                 warn(f"{kind} without a number: {title!r}")

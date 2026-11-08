@@ -103,3 +103,23 @@ Chapters 1 and 2 reconvert to the same bytes.
 Exercises: 14 distinct questions, 8 keyed, 6 for AI solutions, 6 AI
 exercises proposed; three held for 3.5 and one merged into 3.4.
 `check:content`: no errors, no warnings.
+
+## Pass 5 · 2026-11-08 · Chapter 4 prepared
+
+Prep only, no section built. Fetched Chapter 4's images (13, into
+`media/ch04/`), converted 4.1–4.6, the landing page (no text: the chapter
+gets no `intro/` page), the summary page 4.S (to `ch04/summary/`) and the
+empty 4.E; wrote `ch04/exploration.md`, `ch04/config.md` (agreed on Chapter
+1's terms), `ch04/chapter.json` (6 sections, the summary record, 80
+variables) and merged `ch04/book-rows.json`: no new type, 21 symbols, 23
+concepts, 43 edges. Drafts made for 4.1–4.6 and the summary.
+
+Tool fixes: `lt2md.py` keeps a letter in a box number (Example 4.6.2A) and
+gives a display with its own `\tag` no number (4.S); `md2html.py` keeps each
+panel's alt text, writes `\braket{a}{b}` as `\braket{a|b}`, drops inline
+`\nonumber` and lower-cases lettered ids. Chapters 1–3 reconvert to the same
+bytes; 3.S's built page still has the two-argument `\braket`.
+
+Exercises: 5 questions (Example 4.6.2A among them), 3 keyed, 2 for AI
+solutions, 7 AI exercises proposed. `check:content`: no errors; one warning,
+the stored colours stale against the pages built since.

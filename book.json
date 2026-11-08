@@ -22,7 +22,8 @@
   "chapters": [
     "ch01",
     "ch02",
-    "ch03"
+    "ch03",
+    "ch04"
   ],
   "types": [
     {
@@ -680,6 +681,105 @@
       "sym": "E_nnn",
       "latex": "E_{n_x,n_y,n_z}",
       "macro": "\\kEnnn"
+    },
+    {
+      "sym": "T_hat",
+      "latex": "\\hat{T}",
+      "macro": "\\kThat"
+    },
+    {
+      "sym": "Tx_hat",
+      "latex": "\\hat{T}_x",
+      "macro": "\\kTxhat"
+    },
+    {
+      "sym": "pv_hat",
+      "latex": "\\hat{p}",
+      "macro": "\\kpvhat"
+    },
+    {
+      "sym": "V_hat",
+      "latex": "\\hat{V}",
+      "macro": "\\kVhat"
+    },
+    {
+      "sym": "E_hat",
+      "latex": "\\hat{E}",
+      "macro": "\\kEhat"
+    },
+    {
+      "sym": "Lx_hat",
+      "latex": "\\hat{L}_x",
+      "macro": "\\kLxhat"
+    },
+    {
+      "sym": "Ly_hat",
+      "latex": "\\hat{L}_y",
+      "macro": "\\kLyhat"
+    },
+    {
+      "sym": "Lz_hat",
+      "latex": "\\hat{L}_z",
+      "macro": "\\kLzhat"
+    },
+    {
+      "sym": "L2_hat",
+      "latex": "\\hat{L}^2",
+      "macro": "\\kLsqhat"
+    },
+    {
+      "sym": "psi_a",
+      "latex": "\\psi_a",
+      "macro": "\\kpsia"
+    },
+    {
+      "sym": "psi_ap",
+      "latex": "\\psi_a'",
+      "macro": "\\kpsiap"
+    },
+    {
+      "sym": "psi_app",
+      "latex": "\\psi_a''",
+      "macro": "\\kpsiapp"
+    },
+    {
+      "sym": "phi_f",
+      "latex": "\\phi",
+      "macro": "\\kphif"
+    },
+    {
+      "sym": "p_dens",
+      "latex": "p",
+      "macro": "\\kpdens"
+    },
+    {
+      "sym": "sigma_x",
+      "latex": "\\sigma_x",
+      "macro": "\\ksigx"
+    },
+    {
+      "sym": "sigma2_x",
+      "latex": "\\sigma^2_x"
+    },
+    {
+      "sym": "sigma_A",
+      "latex": "\\sigma_A"
+    },
+    {
+      "sym": "sigma_B",
+      "latex": "\\sigma_B"
+    },
+    {
+      "sym": "S_ov",
+      "latex": "S"
+    },
+    {
+      "sym": "N",
+      "latex": "N"
+    },
+    {
+      "sym": "delta_ij",
+      "latex": "\\delta_{ij}"
     }
   ],
   "exercise_kinds": [
@@ -2820,6 +2920,323 @@
         "accidental degeneracy"
       ],
       "statement": "A degeneracy that arises not from a symmetry such as Lₓ = L_y but from different combinations of nₓ²/Lₓ², n_y²/L_y² and n_z²/L_z² giving the same sum."
+    },
+    {
+      "id": "classical-state",
+      "kind": "idea",
+      "section": "4.1",
+      "name": "Classical state",
+      "statement": "In classical mechanics the configuration or state of a system is a point (x, p) in the space of coordinates and momenta, which fixes every observable Q(x, p) in a fully deterministic way."
+    },
+    {
+      "id": "state-postulate",
+      "kind": "axiom",
+      "section": "4.1",
+      "name": "Postulate I: the wavefunction specifies the state",
+      "terms": [
+        "first Postulate of quantum mechanics",
+        "Postulate I",
+        "state function"
+      ],
+      "statement": "The state of a system is completely specified by its wavefunction ψ(r, t), sometimes called the state function: all possible information about the system can be found in it."
+    },
+    {
+      "id": "wavefunction-derivative-condition",
+      "kind": "result",
+      "section": "4.1",
+      "name": "A wavefunction has a first derivative",
+      "statement": "Because the wavefunction must satisfy the Schrödinger equation, a second-order differential equation, its second derivative must exist, so its first derivative must exist too: a wavefunction with a break or a kink is not acceptable."
+    },
+    {
+      "id": "observable",
+      "kind": "definition",
+      "section": "4.2",
+      "name": "Observable",
+      "terms": [
+        "dynamic variable"
+      ],
+      "statement": "An observable is a dynamic variable of a system that can be experimentally measured, such as position, momentum and kinetic energy; classically it is a real-valued function."
+    },
+    {
+      "id": "operator-postulate",
+      "kind": "axiom",
+      "section": "4.2",
+      "name": "Postulate II: an operator for every observable",
+      "terms": [
+        "Postulate II"
+      ],
+      "statement": "For every observable property of a system there is a corresponding quantum mechanical operator: an observable written classically as Q(x, p) has the operator Q(x̂, p̂). The book calls this the Correspondence Principle.",
+      "forms": [
+        {
+          "id": "operator-postulate",
+          "latex": "Q(x,p) \\rightarrow Q(\\hat{x},\\hat{p})"
+        }
+      ]
+    },
+    {
+      "id": "potential-energy-operator",
+      "kind": "definition",
+      "section": "4.2",
+      "name": "Potential energy operator",
+      "symbol": "V_hat",
+      "type": "operator",
+      "statement": "The potential energy operator V̂(x, y, z) multiplies the wavefunction by the potential energy V(x, y, z); with the kinetic energy operator it makes up the Hamiltonian, Ĥ = T̂ + V̂.",
+      "forms": [
+        {
+          "id": "hamiltonian-t-plus-v",
+          "latex": "\\hat{H} = \\hat{T} + \\hat{V}",
+          "ktex": "\\kH = \\kThat + \\kVhat"
+        }
+      ]
+    },
+    {
+      "id": "eigenstate-zero-variance",
+      "kind": "result",
+      "section": "4.3",
+      "name": "An eigenstate has no spread",
+      "statement": "In an eigenstate ψ_a of Â the expectation value of A is the eigenvalue a and that of A² is a², so the variance of A is zero: every measurement of A in that state yields a.",
+      "forms": [
+        {
+          "id": "eigenstate-zero-variance",
+          "latex": "\\sigma_A^{2} = \\langle A^2\\rangle - \\langle A\\rangle^2 = a^2-a^2 = 0"
+        }
+      ]
+    },
+    {
+      "id": "expectation-value-unnormalized",
+      "kind": "result",
+      "section": "4.3",
+      "name": "Expectation value with an unnormalized wavefunction",
+      "statement": "With a wavefunction that is not normalized, the expectation value of an observable is ∫ψ*Âψ dx divided by the normalization integral ∫ψ*ψ dx.",
+      "forms": [
+        {
+          "id": "expectation-value-unnormalized",
+          "latex": "\\langle a \\rangle = \\dfrac{\\displaystyle \\int_{-\\infty}^{\\infty} \\psi^* \\hat{A} \\psi\\, dx}{\\displaystyle \\int_{-\\infty}^{\\infty} \\psi^* \\psi\\, dx}",
+          "ktex": "\\langle a \\rangle = \\dfrac{\\displaystyle \\int_{-\\infty}^{\\infty} \\kpsi^* \\kAhat \\kpsi\\, d\\kx}{\\displaystyle \\int_{-\\infty}^{\\infty} \\kpsi^* \\kpsi\\, d\\kx}"
+        }
+      ]
+    },
+    {
+      "id": "variance",
+      "kind": "definition",
+      "section": "4.3",
+      "name": "Variance",
+      "symbol": "sigma2_x",
+      "terms": [
+        "variance"
+      ],
+      "statement": "The variance of x, σ²ₓ = ∫(x − ⟨x⟩)²|ψ|² dx = ⟨x²⟩ − ⟨x⟩², measures how far the results of many measurements of x scatter around the expectation value ⟨x⟩; its square root σₓ is the standard deviation.",
+      "forms": [
+        {
+          "id": "variance",
+          "latex": "\\sigma^2_x = \\int_{-\\infty}^{\\infty} \\left(x-\\langle x\\rangle \\right)^2 |\\psi|^{2} dx \\equiv \\langle x^2\\rangle -\\langle x\\rangle^{2}",
+          "ktex": "\\sigma^2_x = \\int_{-\\infty}^{\\infty} \\left(\\kx-\\kxavg \\right)^2 |\\kpsi|^{2} d\\kx \\equiv \\kxsqavg -\\kxavg^{2}"
+        }
+      ]
+    },
+    {
+      "id": "complete-set",
+      "kind": "result",
+      "section": "4.3",
+      "name": "Completeness of eigenstates",
+      "terms": [
+        "complete set"
+      ],
+      "statement": "The eigenstates of an operator attributed to an observable form a complete set: any general wavefunction can be written as a linear combination of them, ψ = Σ cᵢφᵢ, with complex weights cᵢ."
+    },
+    {
+      "id": "expansion-coefficients",
+      "kind": "result",
+      "section": "4.3",
+      "name": "Expansion coefficients",
+      "statement": "The weight of an eigenstate φᵢ in the expansion of a wavefunction ψ is the overlap cᵢ = ∫φᵢ*ψ dx, because the eigenstates are orthonormal.",
+      "forms": [
+        {
+          "id": "expansion-coefficients",
+          "latex": "c_i = \\int_{-\\infty}^\\infty \\phi_i^\\ast \\psi\\, dx",
+          "ktex": "c_i = \\int_{-\\infty}^\\infty \\kphii^\\ast \\kpsi\\, d\\kx"
+        }
+      ]
+    },
+    {
+      "id": "expansion-normalization",
+      "kind": "result",
+      "section": "4.3",
+      "name": "The squared expansion coefficients sum to one",
+      "statement": "For a properly normalized wavefunction the squared moduli of its expansion coefficients add up to one, Σ|cᵢ|² = 1.",
+      "forms": [
+        {
+          "id": "expansion-normalization",
+          "latex": "\\sum_i \\vert c_i\\vert^2 =1"
+        }
+      ]
+    },
+    {
+      "id": "stationary-density-constant",
+      "kind": "result",
+      "section": "4.4",
+      "name": "A stationary state's probability density is constant",
+      "statement": "A system prepared in an eigenstate ψₙ of the Hamiltonian evolves as Ψ(x,t) = ψₙ(x)e^{−iEₙt/ħ}, which satisfies the time-dependent Schrödinger equation; its probability density |Ψ(x,t)|² = |ψₙ(x)|² does not change in time, and its energy stays fixed at Eₙ.",
+      "forms": [
+        {
+          "id": "stationary-state-evolution",
+          "latex": "\\Psi (x,t) =\\psi_n (x)e^{-iE_n t/\\hbar}",
+          "ktex": "\\kPsi (\\kx,\\kt) =\\kpsin (\\kx)e^{-i\\kEn \\kt/\\hbar}"
+        },
+        {
+          "id": "stationary-density",
+          "latex": "p(x,t) = |\\psi_n (x)|^2 =p(x,0)",
+          "ktex": "\\kpdens(\\kx,\\kt) = |\\kpsin (\\kx)|^2 =\\kpdens(\\kx,0)"
+        }
+      ]
+    },
+    {
+      "id": "nonstationary-state",
+      "kind": "result",
+      "section": "4.4",
+      "name": "Nonstationary state",
+      "terms": [
+        "Nonstationary States"
+      ],
+      "statement": "A linear combination of eigenstates of different energies, such as Ψ(x,0) = [ψ₁(x) + ψ₂(x)]/√2, is not a stationary state: its probability density changes with time.",
+      "forms": [
+        {
+          "id": "nonstationary-state",
+          "latex": "p(x,t) = |\\Psi (x,t)|^2 \\neq p(x,0)",
+          "ktex": "\\kpdens(\\kx,\\kt) = |\\kPsi (\\kx,\\kt)|^2 \\neq \\kpdens(\\kx,0)"
+        }
+      ]
+    },
+    {
+      "id": "observer-effect",
+      "kind": "idea",
+      "section": "4.4",
+      "name": "Observer effect",
+      "terms": [
+        "observer effect"
+      ],
+      "statement": "Measuring a quantum system changes how it evolves in time, so the experimenter is coupled to the system and the act of observing influences the phenomenon observed; a classical system evolves by Newton's laws whether or not it is observed."
+    },
+    {
+      "id": "real-eigenvalues",
+      "kind": "axiom",
+      "section": "4.5",
+      "name": "Eigenvalues of observables are real",
+      "statement": "The eigenvalues of operators associated with experimental measurements are all real, a* = a, since they are the values measured.",
+      "forms": [
+        {
+          "id": "real-eigenvalues",
+          "latex": "a^* = a"
+        }
+      ]
+    },
+    {
+      "id": "orthogonality-theorem",
+      "kind": "result",
+      "section": "4.5",
+      "name": "Orthogonality theorem",
+      "terms": [
+        "Orthogonality Theorem"
+      ],
+      "statement": "Eigenfunctions of a Hermitian operator are orthogonal if they have different eigenvalues: nondegenerate eigenfunctions of the same operator are orthogonal.",
+      "forms": [
+        {
+          "id": "orthogonality-theorem",
+          "latex": "\\int_{-\\infty}^\\infty\\psi_a^\\ast \\psi_{a'}\\, dx = 0",
+          "ktex": "\\int_{-\\infty}^\\infty\\kpsia^\\ast \\kpsiap\\, d\\kx = 0",
+          "condition": "a ≠ a′"
+        }
+      ]
+    },
+    {
+      "id": "overlap-integral",
+      "kind": "definition",
+      "section": "4.5",
+      "name": "Overlap integral",
+      "symbol": "S_ov",
+      "terms": [
+        "overlap integral"
+      ],
+      "statement": "The overlap integral of two normalized functions, S = ∫ψₐ*ψₐ′ dx, measures how far they fail to be orthogonal: it is zero for orthogonal functions.",
+      "forms": [
+        {
+          "id": "overlap-integral",
+          "latex": "S= \\int_{-\\infty}^\\infty \\psi_a^\\ast \\psi_a' dx",
+          "ktex": "S= \\int_{-\\infty}^\\infty \\kpsia^\\ast \\kpsiap d\\kx"
+        }
+      ]
+    },
+    {
+      "id": "gram-schmidt-orthogonalization",
+      "kind": "skill",
+      "section": "4.5",
+      "name": "Orthogonalizing degenerate eigenfunctions",
+      "terms": [
+        "Gram-Schmidt Orthogonalization"
+      ],
+      "statement": "Degenerate eigenfunctions are not automatically orthogonal, but can be made so by the Gram–Schmidt orthogonalization: subtracting from ψₐ′ its overlap with ψₐ, ψₐ″ = ψₐ′ − Sψₐ, gives an eigenfunction of the same eigenvalue orthogonal to ψₐ.",
+      "forms": [
+        {
+          "id": "gram-schmidt",
+          "latex": "\\psi_a'' = \\psi'_a - S\\psi_a",
+          "ktex": "\\kpsiapp = \\kpsiap - S\\kpsia"
+        }
+      ]
+    },
+    {
+      "id": "orthogonal-eigenstates",
+      "kind": "result",
+      "section": "4.5",
+      "name": "Eigenstates can be chosen orthogonal",
+      "terms": [
+        "mutually orthogonal"
+      ],
+      "statement": "The eigenstates of a Hermitian operator are, or can be chosen to be, mutually orthogonal: those of different eigenvalues are orthogonal already, and degenerate ones can be combined into orthogonal ones."
+    },
+    {
+      "id": "commuting-operators",
+      "kind": "result",
+      "section": "4.6",
+      "name": "Commuting operators share eigenfunctions",
+      "statement": "If two operators commute, ÂB̂ = B̂Â, they can have the same set of eigenfunctions, and the corresponding physical quantities can be measured exactly simultaneously, with no limit on the uncertainty.",
+      "forms": [
+        {
+          "id": "commuting-operators",
+          "latex": "\\hat {A}\\hat {B} = \\hat {B} \\hat {A}",
+          "ktex": "\\kAhat\\kBhat = \\kBhat \\kAhat"
+        }
+      ]
+    },
+    {
+      "id": "general-uncertainty-principle",
+      "kind": "result",
+      "section": "4.6",
+      "name": "General Heisenberg uncertainty principle",
+      "terms": [
+        "General Heisenberg Uncertainty Principle"
+      ],
+      "statement": "If two operators do not commute, the standard deviations of their quantities in any state are bounded below by the expectation value of their commutator, so neither can be zero unless the other is infinite; if they commute, there is no restriction.",
+      "forms": [
+        {
+          "id": "general-uncertainty-principle",
+          "latex": "\\sigma _A \\sigma _B \\ge \\frac{1}{2}\\left| \\int \\psi ^* [ \\hat {A} \\hat {B} - \\hat {B} \\hat {A} ] \\psi \\,d\\tau \\right|",
+          "ktex": "\\sigma _A \\sigma _B \\ge \\frac{1}{2}\\left| \\int \\kpsi ^* [ \\kAhat \\kBhat - \\kBhat \\kAhat ] \\kpsi \\,d\\tau \\right|"
+        }
+      ]
+    },
+    {
+      "id": "angular-momentum-commutation",
+      "kind": "result",
+      "section": "4.6",
+      "name": "Commutation of angular momentum",
+      "statement": "The square of the angular momentum commutes with each of its components, but the components do not commute with one another, so the magnitude of the angular momentum and one component (usually z) can be known at the same time while nothing is known about the other components.",
+      "forms": [
+        {
+          "id": "angular-momentum-commutation",
+          "latex": "\\left[\\hat{L}^2, \\hat{L}^2_x\\right] = \\left[\\hat{L}^2, \\hat{L}^2_y\\right] = \\left[\\hat{L}^2, \\hat{L}^2_z\\right] = 0",
+          "ktex": "\\left[\\kLsqhat, \\kLxhat^2\\right] = \\left[\\kLsqhat, \\kLyhat^2\\right] = \\left[\\kLsqhat, \\kLzhat^2\\right] = 0"
+        }
+      ]
     }
   ],
   "concept_prereqs": [
@@ -3550,6 +3967,178 @@
     {
       "concept": "accidental-degeneracy",
       "prereq": "particle-in-a-3d-box"
+    },
+    {
+      "concept": "classical-state",
+      "prereq": "heisenberg-uncertainty-principle"
+    },
+    {
+      "concept": "state-postulate",
+      "prereq": "classical-state"
+    },
+    {
+      "concept": "state-postulate",
+      "prereq": "born-interpretation"
+    },
+    {
+      "concept": "wavefunction-derivative-condition",
+      "prereq": "well-behaved-wavefunction"
+    },
+    {
+      "concept": "wavefunction-derivative-condition",
+      "prereq": "time-independent-schrodinger-equation"
+    },
+    {
+      "concept": "observable",
+      "prereq": "classical-state"
+    },
+    {
+      "concept": "operator-postulate",
+      "prereq": "observable"
+    },
+    {
+      "concept": "operator-postulate",
+      "prereq": "operator"
+    },
+    {
+      "concept": "potential-energy-operator",
+      "prereq": "operator-postulate"
+    },
+    {
+      "concept": "potential-energy-operator",
+      "prereq": "hamiltonian-operator"
+    },
+    {
+      "concept": "eigenstate-zero-variance",
+      "prereq": "variance"
+    },
+    {
+      "concept": "eigenstate-zero-variance",
+      "prereq": "normalization-condition"
+    },
+    {
+      "concept": "expectation-value-unnormalized",
+      "prereq": "quantum-expectation-value"
+    },
+    {
+      "concept": "expectation-value-unnormalized",
+      "prereq": "normalization-condition"
+    },
+    {
+      "concept": "variance",
+      "prereq": "quantum-expectation-value"
+    },
+    {
+      "concept": "complete-set",
+      "prereq": "eigenstate-superposition"
+    },
+    {
+      "concept": "complete-set",
+      "prereq": "operator-postulate"
+    },
+    {
+      "concept": "expansion-coefficients",
+      "prereq": "complete-set"
+    },
+    {
+      "concept": "expansion-coefficients",
+      "prereq": "orthonormality"
+    },
+    {
+      "concept": "expansion-normalization",
+      "prereq": "expansion-coefficients"
+    },
+    {
+      "concept": "stationary-density-constant",
+      "prereq": "stationary-state"
+    },
+    {
+      "concept": "stationary-density-constant",
+      "prereq": "probability-density"
+    },
+    {
+      "concept": "nonstationary-state",
+      "prereq": "stationary-density-constant"
+    },
+    {
+      "concept": "nonstationary-state",
+      "prereq": "eigenstate-superposition"
+    },
+    {
+      "concept": "observer-effect",
+      "prereq": "wavefunction-collapse"
+    },
+    {
+      "concept": "observer-effect",
+      "prereq": "nonstationary-state"
+    },
+    {
+      "concept": "real-eigenvalues",
+      "prereq": "observables-as-eigenvalues"
+    },
+    {
+      "concept": "orthogonality-theorem",
+      "prereq": "hermitian-operator"
+    },
+    {
+      "concept": "orthogonality-theorem",
+      "prereq": "real-eigenvalues"
+    },
+    {
+      "concept": "orthogonality-theorem",
+      "prereq": "orthogonality"
+    },
+    {
+      "concept": "overlap-integral",
+      "prereq": "orthogonality"
+    },
+    {
+      "concept": "gram-schmidt-orthogonalization",
+      "prereq": "overlap-integral"
+    },
+    {
+      "concept": "gram-schmidt-orthogonalization",
+      "prereq": "degeneracy"
+    },
+    {
+      "concept": "orthogonal-eigenstates",
+      "prereq": "orthogonality-theorem"
+    },
+    {
+      "concept": "orthogonal-eigenstates",
+      "prereq": "gram-schmidt-orthogonalization"
+    },
+    {
+      "concept": "commuting-operators",
+      "prereq": "commutator"
+    },
+    {
+      "concept": "commuting-operators",
+      "prereq": "eigenfunction"
+    },
+    {
+      "concept": "commuting-operators",
+      "prereq": "observables-as-eigenvalues"
+    },
+    {
+      "concept": "general-uncertainty-principle",
+      "prereq": "commutator"
+    },
+    {
+      "concept": "general-uncertainty-principle",
+      "prereq": "quantum-uncertainty"
+    },
+    {
+      "concept": "general-uncertainty-principle",
+      "prereq": "heisenberg-uncertainty-principle"
+    },
+    {
+      "concept": "angular-momentum-commutation",
+      "prereq": "commuting-operators"
+    },
+    {
+      "concept": "angular-momentum-commutation",
+      "prereq": "angular-momentum-operator"
     }
   ],
   "colours": {

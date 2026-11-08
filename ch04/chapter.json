@@ -1,0 +1,561 @@
+{
+ "id": "4",
+ "dir": "ch04",
+ "title": "Postulates and Principles of Quantum Mechanics",
+ "summary": {
+  "module": "550564",
+  "slug": "04:_Postulates_and_Principles_of_Quantum_Mechanics/4.S:_Postulates_and_Principles_of_Quantum_Mechanics_(Summary)"
+ },
+ "sections": [
+  {
+   "id": "4.1",
+   "module": "13406",
+   "title": "The Wavefunction Specifies the State of a System",
+   "slug": "04:_Postulates_and_Principles_of_Quantum_Mechanics/4.01:_The_Wavefunction_Specifies_the_State_of_a_System"
+  },
+  {
+   "id": "4.2",
+   "module": "13407",
+   "title": "Quantum Operators Represent Classical Variables",
+   "slug": "04:_Postulates_and_Principles_of_Quantum_Mechanics/4.02:_Quantum_Operators_Represent_Classical_Variables"
+  },
+  {
+   "id": "4.3",
+   "module": "13408",
+   "title": "Observable Quantities Must Be Eigenvalues of Quantum Mechanical Operators",
+   "slug": "04:_Postulates_and_Principles_of_Quantum_Mechanics/4.03:_Observable_Quantities_Must_Be_Eigenvalues_of_Quantum_Mechanical_Operators"
+  },
+  {
+   "id": "4.4",
+   "module": "13409",
+   "title": "The Time-Dependent Schrödinger Equation",
+   "slug": "04:_Postulates_and_Principles_of_Quantum_Mechanics/4.04:_The_Time-Dependent_Schrodinger_Equation"
+  },
+  {
+   "id": "4.5",
+   "module": "13410",
+   "title": "Eigenfunctions of Operators are Orthogonal",
+   "slug": "04:_Postulates_and_Principles_of_Quantum_Mechanics/4.05:_Eigenfunctions_of_Operators_are_Orthogonal"
+  },
+  {
+   "id": "4.6",
+   "module": "13411",
+   "title": "Commuting Operators Allow Infinite Precision",
+   "slug": "04:_Postulates_and_Principles_of_Quantum_Mechanics/4.06:_Commuting_Operators_Allow_Infinite_Precision"
+  }
+ ],
+ "variables": [
+  {
+   "sym": "x",
+   "type": "length",
+   "meaning": "the position",
+   "unit": "m",
+   "section": "4.1"
+  },
+  {
+   "sym": "p",
+   "type": "momentum",
+   "meaning": "the momentum",
+   "unit": "kg·m/s",
+   "section": "4.1"
+  },
+  {
+   "sym": "psi",
+   "concept": "wavefunction",
+   "meaning": "the wavefunction, which completely specifies the state of the system",
+   "section": "4.1"
+  },
+  {
+   "sym": "r",
+   "type": "length",
+   "meaning": "the set of spatial coordinates of the system's particles, (x₁, y₁, z₁, …, xₙ, yₙ, zₙ)",
+   "unit": "m",
+   "section": "4.1"
+  },
+  {
+   "sym": "t",
+   "type": "time",
+   "meaning": "the time",
+   "unit": "s",
+   "section": "4.1"
+  },
+  {
+   "sym": "P_dens",
+   "concept": "probability-density",
+   "meaning": "the probability density of finding the particle at x",
+   "section": "4.1"
+  },
+  {
+   "sym": "N",
+   "meaning": "the normalization constant of the wavefunction",
+   "section": "4.1"
+  },
+  {
+   "sym": "k",
+   "type": "wavenumber",
+   "meaning": "the wavenumber of the oscillating wavefunction Ne^{ikx}",
+   "unit": "m⁻¹",
+   "section": "4.1"
+  },
+  {
+   "sym": "x",
+   "type": "length",
+   "meaning": "the position along x",
+   "unit": "m",
+   "section": "4.2"
+  },
+  {
+   "sym": "p",
+   "type": "momentum",
+   "meaning": "the linear momentum",
+   "unit": "kg·m/s",
+   "section": "4.2"
+  },
+  {
+   "sym": "r_vec",
+   "type": "length",
+   "meaning": "the position vector (x, y, z) of the particle",
+   "unit": "m",
+   "section": "4.2"
+  },
+  {
+   "sym": "p_hat",
+   "concept": "momentum-operator",
+   "meaning": "the operator for the x component of the linear momentum",
+   "section": "4.2"
+  },
+  {
+   "sym": "Tx_hat",
+   "concept": "kinetic-energy-operator",
+   "meaning": "the kinetic energy operator in one dimension",
+   "section": "4.2"
+  },
+  {
+   "sym": "pv_hat",
+   "concept": "momentum-operator",
+   "meaning": "the linear momentum operator in three dimensions",
+   "section": "4.2"
+  },
+  {
+   "sym": "T_hat",
+   "concept": "kinetic-energy-operator",
+   "meaning": "the kinetic energy operator in three dimensions",
+   "section": "4.2"
+  },
+  {
+   "sym": "nabla2",
+   "concept": "laplacian",
+   "type": "operator",
+   "meaning": "the Laplacian",
+   "unit": "m⁻²",
+   "section": "4.2"
+  },
+  {
+   "sym": "H_op",
+   "concept": "hamiltonian-operator",
+   "meaning": "the Hamiltonian operator, the total energy operator",
+   "section": "4.2"
+  },
+  {
+   "sym": "V_hat",
+   "concept": "potential-energy-operator",
+   "meaning": "the potential energy operator",
+   "section": "4.2"
+  },
+  {
+   "sym": "V",
+   "type": "energy",
+   "meaning": "the potential energy",
+   "unit": "J",
+   "section": "4.2"
+  },
+  {
+   "sym": "m",
+   "type": "mass",
+   "meaning": "the mass of the particle",
+   "unit": "kg",
+   "section": "4.2"
+  },
+  {
+   "sym": "F",
+   "type": "force",
+   "meaning": "the force on the particle",
+   "unit": "N",
+   "section": "4.2"
+  },
+  {
+   "sym": "E",
+   "type": "energy",
+   "meaning": "the total energy",
+   "unit": "J",
+   "section": "4.2"
+  },
+  {
+   "sym": "E_hat",
+   "concept": "operator",
+   "meaning": "the total energy operator",
+   "section": "4.2"
+  },
+  {
+   "sym": "Lx_hat",
+   "concept": "angular-momentum-operator",
+   "meaning": "the operator for the x component of the angular momentum",
+   "section": "4.2"
+  },
+  {
+   "sym": "Ly_hat",
+   "concept": "angular-momentum-operator",
+   "meaning": "the operator for the y component of the angular momentum",
+   "section": "4.2"
+  },
+  {
+   "sym": "Lz_hat",
+   "concept": "angular-momentum-operator",
+   "meaning": "the operator for the z component of the angular momentum",
+   "section": "4.2"
+  },
+  {
+   "sym": "H_op",
+   "concept": "hamiltonian-operator",
+   "meaning": "the Hamiltonian operator",
+   "section": "4.3"
+  },
+  {
+   "sym": "psi",
+   "concept": "wavefunction",
+   "meaning": "the wavefunction, which completely specifies the state of the system",
+   "section": "4.3"
+  },
+  {
+   "sym": "E",
+   "type": "energy",
+   "meaning": "the energy, an eigenvalue of the Hamiltonian",
+   "unit": "J",
+   "section": "4.3"
+  },
+  {
+   "sym": "A_hat",
+   "concept": "operator",
+   "meaning": "the operator of an observable",
+   "section": "4.3"
+  },
+  {
+   "sym": "Psi",
+   "concept": "wavefunction",
+   "meaning": "the wavefunction of a system in an eigenstate of Â",
+   "section": "4.3"
+  },
+  {
+   "sym": "a",
+   "meaning": "the eigenvalue of Â",
+   "section": "4.3"
+  },
+  {
+   "sym": "psi_a",
+   "concept": "eigenstate",
+   "meaning": "the eigenstate of A that belongs to the eigenvalue a",
+   "section": "4.3"
+  },
+  {
+   "sym": "x",
+   "type": "length",
+   "meaning": "the position of the particle",
+   "unit": "m",
+   "section": "4.3"
+  },
+  {
+   "sym": "t",
+   "type": "time",
+   "meaning": "the time",
+   "unit": "s",
+   "section": "4.3"
+  },
+  {
+   "sym": "x_avg",
+   "concept": "quantum-expectation-value",
+   "type": "length",
+   "meaning": "the expectation value of the position, the mean of many measurements",
+   "unit": "m",
+   "section": "4.3"
+  },
+  {
+   "sym": "sigma2_x",
+   "concept": "variance",
+   "meaning": "the variance of x",
+   "unit": "m²",
+   "section": "4.3"
+  },
+  {
+   "sym": "sigma_x",
+   "concept": "quantum-uncertainty",
+   "type": "length",
+   "meaning": "the standard deviation of x, the square root of its variance",
+   "unit": "m",
+   "section": "4.3"
+  },
+  {
+   "sym": "phi_i",
+   "concept": "eigenstate",
+   "meaning": "the ith normalized eigenstate of Â",
+   "section": "4.3"
+  },
+  {
+   "sym": "c_i",
+   "meaning": "the complex weight of the eigenstate φᵢ in the expansion of ψ",
+   "section": "4.3"
+  },
+  {
+   "sym": "delta_ij",
+   "concept": "kronecker-delta",
+   "meaning": "the Kronecker delta",
+   "section": "4.3"
+  },
+  {
+   "sym": "L",
+   "type": "length",
+   "meaning": "the length of the box",
+   "unit": "m",
+   "section": "4.3"
+  },
+  {
+   "sym": "m",
+   "type": "mass",
+   "meaning": "the mass of the particle",
+   "unit": "kg",
+   "section": "4.3"
+  },
+  {
+   "sym": "p_avg",
+   "concept": "quantum-expectation-value",
+   "type": "momentum",
+   "meaning": "the expectation value of the linear momentum",
+   "unit": "kg·m/s",
+   "section": "4.3"
+  },
+  {
+   "sym": "H_op",
+   "concept": "hamiltonian-operator",
+   "meaning": "the Hamiltonian operator",
+   "section": "4.4"
+  },
+  {
+   "sym": "psi",
+   "concept": "wavefunction",
+   "meaning": "the time-independent wavefunction, an eigenfunction of the Hamiltonian",
+   "section": "4.4",
+   "redefines": true
+  },
+  {
+   "sym": "E",
+   "type": "energy",
+   "meaning": "the energy, an eigenvalue of the Hamiltonian",
+   "unit": "J",
+   "section": "4.4"
+  },
+  {
+   "sym": "x",
+   "type": "length",
+   "meaning": "the position of the particle",
+   "unit": "m",
+   "section": "4.4"
+  },
+  {
+   "sym": "t",
+   "type": "time",
+   "meaning": "the time",
+   "unit": "s",
+   "section": "4.4"
+  },
+  {
+   "sym": "m",
+   "type": "mass",
+   "meaning": "the mass of the particle",
+   "unit": "kg",
+   "section": "4.4"
+  },
+  {
+   "sym": "F",
+   "type": "force",
+   "meaning": "the force on the particle",
+   "unit": "N",
+   "section": "4.4"
+  },
+  {
+   "sym": "Psi",
+   "concept": "wavefunction",
+   "meaning": "the wavefunction at time t, which starts from Ψ(x,0)",
+   "section": "4.4"
+  },
+  {
+   "sym": "p_dens",
+   "concept": "probability-density",
+   "meaning": "the probability density at x and time t, |Ψ(x,t)|²",
+   "section": "4.4"
+  },
+  {
+   "sym": "psi_n",
+   "concept": "eigenstate",
+   "meaning": "the nth eigenstate of the Hamiltonian",
+   "section": "4.4"
+  },
+  {
+   "sym": "E_n",
+   "type": "energy",
+   "meaning": "the energy of the nth eigenstate",
+   "unit": "J",
+   "section": "4.4"
+  },
+  {
+   "sym": "A_hat",
+   "concept": "operator",
+   "meaning": "a quantum mechanical operator",
+   "section": "4.5"
+  },
+  {
+   "sym": "psi",
+   "concept": "wavefunction",
+   "meaning": "an eigenfunction of the operator Â",
+   "section": "4.5",
+   "redefines": true
+  },
+  {
+   "sym": "phi_f",
+   "concept": "wavefunction",
+   "meaning": "a second eigenfunction of Â",
+   "section": "4.5"
+  },
+  {
+   "sym": "a",
+   "meaning": "the eigenvalue of Â",
+   "section": "4.5"
+  },
+  {
+   "sym": "psi_a",
+   "concept": "eigenstate",
+   "meaning": "the eigenstate of Â with eigenvalue a",
+   "section": "4.5"
+  },
+  {
+   "sym": "psi_ap",
+   "concept": "eigenstate",
+   "meaning": "a second eigenstate of Â, with eigenvalue a′, or, where degenerate, with the same eigenvalue a",
+   "section": "4.5"
+  },
+  {
+   "sym": "psi_app",
+   "concept": "eigenstate",
+   "meaning": "the combination of ψₐ and ψₐ′ made orthogonal to ψₐ",
+   "section": "4.5"
+  },
+  {
+   "sym": "S_ov",
+   "concept": "overlap-integral",
+   "meaning": "the overlap integral of ψₐ and ψₐ′",
+   "section": "4.5"
+  },
+  {
+   "sym": "N",
+   "meaning": "the normalization constant",
+   "section": "4.5"
+  },
+  {
+   "sym": "L",
+   "type": "length",
+   "meaning": "the length of the box",
+   "unit": "m",
+   "section": "4.5"
+  },
+  {
+   "sym": "x",
+   "type": "length",
+   "meaning": "the position in the box",
+   "unit": "m",
+   "section": "4.5"
+  },
+  {
+   "sym": "A_hat",
+   "concept": "operator",
+   "meaning": "an operator",
+   "section": "4.6"
+  },
+  {
+   "sym": "B_hat",
+   "concept": "operator",
+   "meaning": "a second operator",
+   "section": "4.6"
+  },
+  {
+   "sym": "E_hat",
+   "concept": "operator",
+   "meaning": "a second operator, which may or may not commute with Â",
+   "section": "4.6",
+   "redefines": true
+  },
+  {
+   "sym": "psi",
+   "concept": "wavefunction",
+   "meaning": "an eigenfunction of the operator Â that is also one of B̂",
+   "section": "4.6",
+   "redefines": true
+  },
+  {
+   "sym": "a",
+   "meaning": "the eigenvalue of Â",
+   "section": "4.6"
+  },
+  {
+   "sym": "b",
+   "meaning": "the eigenvalue of B̂",
+   "section": "4.6"
+  },
+  {
+   "sym": "sigma_A",
+   "concept": "quantum-uncertainty",
+   "meaning": "the standard deviation of the quantity of Â",
+   "section": "4.6"
+  },
+  {
+   "sym": "sigma_B",
+   "concept": "quantum-uncertainty",
+   "meaning": "the standard deviation of the quantity of B̂",
+   "section": "4.6"
+  },
+  {
+   "sym": "H_op",
+   "concept": "hamiltonian-operator",
+   "meaning": "the Hamiltonian operator",
+   "section": "4.6"
+  },
+  {
+   "sym": "E",
+   "type": "energy",
+   "meaning": "the energy",
+   "unit": "J",
+   "section": "4.6"
+  },
+  {
+   "sym": "L2_hat",
+   "concept": "angular-momentum-operator",
+   "meaning": "the operator for the square of the angular momentum",
+   "section": "4.6"
+  },
+  {
+   "sym": "Lx_hat",
+   "concept": "angular-momentum-operator",
+   "meaning": "the operator for the x component of the angular momentum",
+   "section": "4.6"
+  },
+  {
+   "sym": "Ly_hat",
+   "concept": "angular-momentum-operator",
+   "meaning": "the operator for the y component of the angular momentum",
+   "section": "4.6"
+  },
+  {
+   "sym": "Lz_hat",
+   "concept": "angular-momentum-operator",
+   "meaning": "the operator for the z component of the angular momentum",
+   "section": "4.6"
+  }
+ ]
+}
