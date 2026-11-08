@@ -53,3 +53,14 @@ Proposed by the agent after the chapter exploration (2026-11-08). Status:
 
 None yet; the open questions are at the end of the agent's report and in
 `exploration.md` (marked *orchestrator*).
+
+## Decisions taken by the orchestrator (2026-11-08)
+
+- **18.9's lab exercises 1–4** (CRC specific-heat data): the AI solutions work the method on approximate CRC values, named in each solution as approximate and from memory, and flagged in `LOG.md` as unchecked.
+- **Figure 18.4.1** folds the unnumbered Cl₂ population chart, with eyebrow "Figure 18.4.1" and both images in `originals`.
+- **Forms belonging on Chapter 17 concepts** (V/Λ³ on `translational-partition-function`, (18.9.4) on `einstein-heat-capacity`, (18.9.7) on `dulong-petit-law`): Chapter 18's pass moves them into `ch17/book-rows.json`. Chapter 17 is built, so that's safe once its pass is done.
+- **Memory-based corrections**: footnoted when they are standard textbook facts (¹⁶O₂ only odd J; NO's ²Π splitting near 121 cm⁻¹) or checked by computation, and flagged in `LOG.md`. The others (NO₂'s bend, the improved polyatomic q_rot terms, the CO₂/NO₂ heat capacities) are footnoted only if the builder can show them from the book's own numbers.
+- **Symmetric-top derivation**: the builder checks the integral numerically before building, and corrects the π^{3/2} only if the check confirms it.
+- **Staircase figure**: sums H₂'s rotation over all J; nuclear-spin weights stay in 18.10.
+- **Extra simulations**: `sim-thermal-wavelength` (18.1) only.
+- **Captions** have no fixed length.
