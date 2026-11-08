@@ -5124,13 +5124,7 @@
         "radial distribution functions"
       ],
       "type": "probability-density",
-      "statement": "The radial probability density times the area 4πr² of the sphere at r: the probability density of finding the electron anywhere on that sphere. It is zero at r = 0, rises with the r² term and falls once the exponential decay wins.",
-      "forms": [
-        {
-          "id": "radial-distribution-function",
-          "latex": "4 \\pi r^2 R(r) ^* R(r)"
-        }
-      ]
+      "statement": "The probability density of finding the electron anywhere on the sphere of radius r: the density on that sphere times its area 4πr², which for a normalized radial function is r²R(r)² (the book writes 4πr²R*R, which counts the 4π twice). It is zero at r = 0, rises with the r² term and falls once the exponential decay wins."
     },
     {
       "id": "orbital-angular-momentum",

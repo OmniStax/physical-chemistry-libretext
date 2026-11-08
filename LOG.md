@@ -224,3 +224,23 @@ Known gaps: the parity figure colours each ψₙ by its index, so ψ₃ is a dar
 green near the probability density's and ψ₄ a magenta near length's; the
 eyebrow rule changed during the pass (another agent's checker change),
 so other books' unnumbered sims may now need "Figure" too.
+
+## Chapter 6 prep · 2026-11-08
+
+Prep only, no section built. Fetched Chapter 6's images (23, into
+`media/ch06/`), converted the landing page (one paragraph: an `intro/` page),
+6.1–6.7, the summary page 6.S (to `ch06/summary/`) and the empty 6.E; wrote
+`ch06/exploration.md`, `ch06/config.md` (agreed on Chapter 1's terms),
+`ch06/chapter.json` (7 sections, the intro and summary records, 138
+variables) and merged `ch06/book-rows.json`: no new type, 29 symbols, 51
+concepts, 88 edges. Drafts made for the intro, 6.1–6.7 and the summary.
+
+6.2 repeats 6.4 and 6.5: its concepts, the seven exercise boxes the later
+pages print again and the radial-function figure are built once in 6.2.
+Exercises: 25 printed questions, 18 cards, 9 keyed, 9 for AI solutions, 8 AI
+exercises proposed. 6 derivations to build.
+
+Tool fixes: `lt2md.py` sets a bare `\begin{align*}` outside `\[ … \]` as a
+display (6.6); `md2html.py` drops an empty exercise box and writes U+2011 in
+maths as "-". Chapters 1–5 reconvert to the same bytes. `check:content`: no
+errors; one warning, the stored colours stale (not from this chapter).
