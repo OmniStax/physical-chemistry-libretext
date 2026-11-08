@@ -63,7 +63,7 @@ function rng(seed) { let a = seed >>> 0; return () => { a = (a + 0x6D2B79F5) >>>
     line(ctx, X(a), scr.t - 10, X(a), box.b, alpha(cl, 0.7), 2, [4, 8]);
     line(ctx, X(b), scr.t - 10, X(b), box.b, alpha(cl, 0.7), 2, [4, 8]);
     /* the dots: old ones small and faint, the newest one large */
-    ctx.save(); ctx.fillStyle = alpha(cp, 0.55);
+    ctx.save(); ctx.fillStyle = alpha(cp, 0.7);
     for (let i = 0; i < pts.length - 1; i++) { const [x, j] = pts[i]; ctx.beginPath(); ctx.arc(X(x), scr.t + (scr.b - scr.t) * j, 3, 0, 2 * Math.PI); ctx.fill(); }
     ctx.restore();
     const last = pts[pts.length - 1];

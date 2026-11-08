@@ -133,7 +133,7 @@ const UP = '#c2413a', DOWN = '#2f6ab3';
         S.set('box', [
           { k: 'segs', segs, color: 'ink', w: 3, name: 'the walls of the box, where ψ = 0' },
           { k: 'label', s: '$\\kLx$', p: [0, -h[1] - g, -h[2] - g], color: C('length'), cls: 'bare' },
-          { k: 'label', s: '$\\kLy$', p: [h[0] + g, 0, -h[2] - g], color: C('length'), cls: 'bare' },
+          { k: 'label', s: '$\\kLy$', p: [h[0] + g, 0, h[2] + g], color: C('length'), cls: 'bare' },
           { k: 'label', s: '$\\kLz$', p: [h[0] + g, -h[1] - g, 0], color: C('length'), cls: 'bare' },
         ]);
       }

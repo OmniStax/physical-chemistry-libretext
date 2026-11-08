@@ -78,6 +78,17 @@ KNOWN_BOXES = {"box-example", "box-exercise", "box-objectives", "box-note", "box
                "box-theorem", "box-procedure", "box-warning", "box-query", "box-notation"}
 
 
+def filename(quoted):
+    """A file's name from its URL path, decoded until it no longer changes:
+    the site double-encodes some names (Hermite_poly_phys_n%253D1.svg), and a
+    name left with a % in it would not be found once served."""
+    while True:
+        plain = urllib.parse.unquote(quoted)
+        if plain == quoted:
+            return plain
+        quoted = plain
+
+
 def warn(msg):
     sys.stderr.write(f"warning: {msg}\n")
 
@@ -248,7 +259,7 @@ class Converter:
         url = img.get("src", "")
         m = re.search(r"/@api/deki/files/(\d+)/([^?]+)", url)
         if m:
-            return f"media/{m.group(1)}-{urllib.parse.unquote(m.group(2))}"
+            return f"media/{m.group(1)}-{filename(m.group(2))}"
         return url
 
     def image(self, img, inline=False):

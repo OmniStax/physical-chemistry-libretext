@@ -38,6 +38,17 @@ ROOT_ID = "9054"
 ROOT_PATH = "Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Physical_Chemistry_(LibreTexts)"
 
 
+def filename(quoted):
+    """A file's name from its URL path, decoded until it no longer changes:
+    the site double-encodes some names (Hermite_poly_phys_n%253D1.svg), and a
+    name left with a % in it would not be found once served."""
+    while True:
+        plain = urllib.parse.unquote(quoted)
+        if plain == quoted:
+            return plain
+        quoted = plain
+
+
 def curl(url, out):
     for _ in range(3):
         r = subprocess.run(["curl", "-sS", "-f", "-L", "-o", out, url], capture_output=True, text=True)
@@ -151,7 +162,7 @@ def media(ch_dir, modules):
             m = re.search(r"/@api/deki/files/(\d+)/([^?]+)", url)
             if not m:
                 continue
-            name = f"{m.group(1)}-{urllib.parse.unquote(m.group(2))}"
+            name = f"{m.group(1)}-{filename(m.group(2))}"
             dst = os.path.join(SRC, "media", name)
             if not os.path.exists(dst):
                 jobs.append((f"{SITE}/@api/deki/files/{m.group(1)}/{m.group(2)}", dst))

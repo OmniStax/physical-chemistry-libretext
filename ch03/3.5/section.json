@@ -559,7 +559,7 @@
        "uses": []
       },
       {
-       "tex": "\\mk{p}{0} = \\mk{b}{B}",
+       "tex": "\\mk{b}{B} = \\mk{p}{0}",
        "uses": [
         2
        ]
@@ -599,7 +599,7 @@
        "uses": []
       },
       {
-       "tex": "\\mk{p}{0} = \\mk{a}{A\\sin\\kk\\kL}",
+       "tex": "\\mk{a}{A\\sin\\kk\\kL} = \\mk{p}{0}",
        "uses": [
         2
        ]
@@ -621,11 +621,11 @@
       }
      ],
      "then": {
-      "tex": "\\mk{p}{0} = \\mk{a}{A\\sin\\kk\\kL}"
+      "tex": "\\mk{a}{A\\sin\\kk\\kL} = \\mk{p}{0}"
      },
      "steps": [
       {
-       "tex": "\\mk{p}{0} = \\mk{a}{\\sin\\kk\\kL}",
+       "tex": "\\mk{a}{\\sin\\kk\\kL} = \\mk{p}{0}",
        "uses": [
         1
        ]
