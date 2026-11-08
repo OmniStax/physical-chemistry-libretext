@@ -1,0 +1,791 @@
+{
+ "id": "2.4",
+ "module": "13378",
+ "chapter": "2",
+ "title": "The General Solution is a Superposition of Normal Modes",
+ "short": "Normal modes",
+ "lead": "The spatial and temporal equations of a string held at both ends are solved one at a time, and the solutions they give are multiplied together and then added up.",
+ "objectives": [
+  "Separate the wave equation into individual spatial and temporal problems and solve them.",
+  "Demonstrate that the general solution can be a superposition of solutions (normal modes)"
+ ],
+ "summary_html": "",
+ "notes": "Adapted from Michael Fowler (University of Virginia) under CC BY-NC-SA 4.0; Exercise 2.3.1, printed in Section 2.3, is set here because it adds two waves together.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "Exercises 2.3.1 and 2.4.1 and their keys are the book's; 2.3.1 is printed in Section 2.3 and set here because it tests superposition. The last two exercises, on the frequencies of normal modes and a sum of two modes, were written by AI with AI solutions. Bloom levels and concept tags were chosen by AI. Numeric answers accept a 2% tolerance.",
+ "figures": [
+  {
+   "id": "sim-modes",
+   "kind": "sim",
+   "number": "2.4.1",
+   "originals": [
+    "/media/ch02/344335-2.4.1.svg"
+   ],
+   "original_caption": "The first seven $X(x)$ solutions of a vibrating string of length $L$ at the two times of maximum displacement (red and blue). (CC BY-NC; Ümit Kaya via LibreTexts).",
+   "widths": [
+    488
+   ],
+   "draws": [
+    "displacement",
+    "length",
+    "velocity",
+    "frequency"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "sim-pulses",
+   "kind": "sim",
+   "number": "2.4.2",
+   "originals": [
+    "/media/ch02/347962-pulses.gif"
+   ],
+   "original_caption": "Interference of Multiple Pulses. (\"for non-profit educational purposes.\"; Tom Walsh via [ophysics.com](https://www.ophysics.com/waves3b.html))",
+   "draws": [
+    "displacement",
+    "length"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "sim-mode-sum",
+   "kind": "sim",
+   "draws": [
+    "displacement",
+    "length"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [
+  {
+   "id": "pulse-1",
+   "label": "pulse 1",
+   "figures": [
+    "sim-pulses"
+   ]
+  },
+  {
+   "id": "pulse-2",
+   "label": "pulse 2",
+   "figures": [
+    "sim-pulses"
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "span": "product-solution",
+   "concept": "separation-of-variables",
+   "verb": "uses"
+  },
+  {
+   "span": "product-solution",
+   "concept": "ordinary-differential-equation",
+   "verb": "reinforces"
+  },
+  {
+   "span": "spatial-dependence",
+   "concept": "string-spatial-solutions",
+   "verb": "introduces"
+  },
+  {
+   "span": "spatial-dependence",
+   "concept": "quantum-number",
+   "verb": "introduces"
+  },
+  {
+   "span": "spatial-dependence",
+   "concept": "boundary-conditions",
+   "verb": "uses"
+  },
+  {
+   "span": "spatial-dependence",
+   "concept": "oscillatory-solutions",
+   "verb": "reinforces"
+  },
+  {
+   "span": "spatial-dependence",
+   "concept": "quantization-by-boundary-conditions",
+   "verb": "reinforces"
+  },
+  {
+   "span": "spatial-dependence",
+   "concept": "eulers-formula",
+   "verb": "uses"
+  },
+  {
+   "span": "time-dependence",
+   "concept": "string-temporal-solutions",
+   "verb": "introduces"
+  },
+  {
+   "span": "superposition",
+   "concept": "linear-differential-equation",
+   "verb": "introduces"
+  },
+  {
+   "span": "superposition",
+   "concept": "principle-of-superposition",
+   "verb": "introduces"
+  },
+  {
+   "span": "superposition",
+   "concept": "normal-mode",
+   "verb": "introduces"
+  },
+  {
+   "span": "superposition",
+   "concept": "normal-mode-expansion",
+   "verb": "introduces"
+  },
+  {
+   "span": "superposition",
+   "concept": "fundamental-and-overtones",
+   "verb": "introduces"
+  },
+  {
+   "span": "superposition",
+   "concept": "normal-mode-frequency",
+   "verb": "introduces"
+  },
+  {
+   "span": "superposition",
+   "concept": "standing-wave",
+   "verb": "reinforces"
+  },
+  {
+   "span": "superposition",
+   "concept": "traveling-wave",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "e1",
+   "source_id": "exr:2.3.1",
+   "source_section": "2.3",
+   "source_number": "Exercise 2.3.1",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "superposition",
+   "prompt": "<p>Given two traveling waves:</p>\n$$ \\psi_1 = \\sin{(c_1 x+c_2 t)} \\; \\textrm{ and } \\; \\psi_2 = \\sin{(c_1 x-c_2 t)} $$\n<ol type=\"a\"><li>Find the wavelength and the wave velocity of $\\psi_1$ and $\\psi_2$</li><li><p>Find the following and identify nodes:</p>\n$$ \\psi_+ = \\psi_1 + \\psi_2 \\; \\textrm{ and } \\; \\psi_- = \\psi_1 - \\psi_2 $$</li></ol>",
+   "answer": {
+    "type": "open",
+    "generated_by": "source",
+    "solution": "<h4>Solution a</h4>\n<p>$\\psi_1$ is a sin function. At every integer $n \\pi$ where $n=0,\\pm 1, \\pm 2, ...$, a sin function will be zero. Thus, $\\psi_1 = 0$ when $c_1 x + c_2 t = \\pi n$. Solving for the x, while ignoring trivial solutions:</p>\n$$ x = \\frac{n \\pi - c_2 t}{c_1} $$\n<p>The velocity of this wave is:</p>\n$$ \\frac{dx}{dt} = -\\frac{c_2}{c_1} $$\n<p>Similarly for $\\psi_2$. At every integer $n \\pi$ where $n=0,\\pm 1, \\pm 2, ...$, a sin function will be zero. Thus, $\\psi_2 = 0$ when $c_1 x - c_2 t = \\pi n$. Solving for x, for $\\psi_2$:</p>\n$$ x = \\frac{n \\pi + c_2 t}{c_1} $$\n<p>The velocity of this wave is:</p>\n$$ \\frac{dx}{dt} = \\frac{c_2}{c_1} $$\n<p>The wavelength for each wave is twice the distance between two successive nodes. In other words,</p>\n$$ \\lambda = 2(x_{n} - x_{n-1}) = \\frac{2 \\pi}{c_1} $$\n<h4>Solution b</h4>\n<p>Find $\\psi_+ = \\psi_1 + \\psi_2 \\; \\textrm{ and } \\; \\psi_- = \\psi_1 - \\psi_2$.</p>\n$$ \\begin{aligned} \\psi_+ &= \\sin (c_1 x + c_2 t) + \\sin (c_1 x - c_2 t) \\\\[4pt] &= \\sin (c_1 x ) \\cos (c_2 t) + \\cancel{\\cos(c_1 x) \\sin(c_1 t)} + \\sin (c_1 x ) \\cos (c_2 t) - \\cancel{\\cos(c_1 x) \\sin(c_1 t)} \\\\[4pt] &= 2\\sin (c_1 x ) \\cos (c_2 t) \\end{aligned} $$\n<p>This should have a node at every $x= n \\pi / c_1$ and</p>\n$$ \\begin{aligned} \\psi_- &= \\sin (c_1 x + c_2 t) - \\sin (c_1 x - c_2 t) \\\\[4pt] &= \\cancel{\\sin (c_1 x ) \\cos (c_2 t)} + \\cos(c_1 x) \\sin(c_1 t) - \\cancel{\\sin (c_1 x ) \\cos (c_2 t)} + \\cos(c_1 x) \\sin(c_1 t) \\\\[4pt] &= 2\\cos (c_1 x ) \\sin (c_2 t) \\end{aligned} $$<sup class=\"fn\" data-note=\"ex231-key\"></sup>"
+   }
+  },
+  {
+   "id": "e2",
+   "source_id": "exr:2.4.1",
+   "source_number": "Exercise 2.4.1",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "spatial-dependence",
+   "prompt": "<p>Verify that Equation 2.4.3 is the general form for differential equations of the form of Equation 2.4.2.</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "source",
+    "solution": "<p>In order to show that</p>\n$$ X(x)=A e^{\\sqrt{x} x}+B e^{-\\sqrt{x} x} \\tag{2.4.6} $$\n<p>is a general solution to the differential equation<sup class=\"fn\" data-note=\"ex241-sqrt\"></sup></p>\n$$ \\frac{d^{2} X(x)}{d x^{2}}+p^{2} X(x)=0. $$\n<p>We then have to take the second derivative of Equation 2.4.6 and substitute it and the original function into the appropriate locations in Equation 2.4.3<sup class=\"fn\" data-note=\"ex241-refs\"></sup> and verify that it does in fact equal $0$.</p>\n<p>First we have to take the first and then second derivative of Equation 2.4.6</p>\n$$ \\begin{aligned} \\dfrac{d}{d x}\\left(A e^{\\sqrt{k x}}+B e^{-\\sqrt{k} x}\\right) &=\\sqrt{k} A e^{\\sqrt{k x}}-\\sqrt{k} B e^{-\\sqrt{k x}} \\\\[4pt] \\dfrac{d^{2}}{d x^{2}}\\left(A e^{\\sqrt{k x}}+B e^{-\\sqrt{k} x}\\right) &=k A e^{\\sqrt{k x}}+k B e^{-\\sqrt{k x}} \\end{aligned} $$\n<p>Now that we have the second derivative of Equation 2.4.6 we plug the relevant values into Equation 2.4.2</p>\n$$ \\begin{aligned} \\dfrac{d^{2} X(x)}{d x^{2}}+p^{2} X(x)=0 \\\\ k A e^{\\sqrt{k} x}+k B e^{-\\sqrt{k} x}+p^{2}\\left(A e^{\\sqrt{k} x}+B e^{-\\sqrt{k} x}\\right) \\overset{?}{=} 0 \\end{aligned} $$\n<p>We are given in Equation 2.4.2 that</p>\n$$ k=-p^{2} $$\n<p>So</p>\n$$ p^{2}=-k $$\n<p>Now we can plug that into our differential equation to simplify</p>\n$$ \\begin{aligned} k A e^{\\sqrt{k} x}+k B e^{-\\sqrt{k} x} - k\\left(A e^{\\sqrt{k} x}+B e^{-\\sqrt{k} x} \\right) &\\overset{?}{=} 0 \\\\[4pt] \\bcancel{ k A e^{\\sqrt{k x}}} + \\cancel{k B e^{-\\sqrt{k x}}} - \\bcancel{k A e^{\\sqrt{k x}}} - \\cancel{k B e^{-\\sqrt{k x}}} & \\overset{\\checkmark}{=} 0 \\end{aligned} $$\n<p>As all of these terms cancel to equal 0, we prove that the solution given is a general solution to the differential equation. It is important to remember though that it is not the only solution to the differential equation.</p>"
+   }
+  },
+  {
+   "id": "ai1",
+   "source_id": "can be expanded to natural frequencies",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "superposition",
+   "prompt": "<p>A guitar string 0.65 m long is held fixed at both ends, and waves travel along it at 410 m/s. What are the natural frequencies of its first three normal modes?</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "n = 1",
+      "value": 315.4,
+      "unit": "Hz",
+      "hint": "Use $\\nu_n = nv/2L$ with $n = 1$."
+     },
+     {
+      "part": "n = 2",
+      "value": 630.8,
+      "unit": "Hz"
+     },
+     {
+      "part": "n = 3",
+      "value": 946.2,
+      "unit": "Hz"
+     }
+    ],
+    "solution": "<p>Equation 2.4.16 gives $\\nu_n = nv/2L$. Here $2L = 1.30$ m, so $\\nu_1 = (410\\ \\text{m/s})/(1.30\\ \\text{m}) = 315.4$ Hz. The overtones are whole multiples of it: $\\nu_2 = 2\\nu_1 = 630.8$ Hz and $\\nu_3 = 3\\nu_1 = 946.2$ Hz.</p>"
+   }
+  },
+  {
+   "id": "ai2",
+   "source_id": "the total solution can be expressed as a sum of all possible solutions",
+   "kind": "exercise",
+   "bloom": "Analyze",
+   "place": {
+    "at": "end"
+   },
+   "cite": "superposition",
+   "prompt": "<p>A string 0.60 m long, held fixed at both ends, carries waves at 240 m/s. It is released from rest and moves as</p>$$ u(x,t) = G_1 \\cos (\\omega_1 t) \\sin \\left(\\dfrac{\\pi x}{L}\\right) + G_3 \\cos (\\omega_3 t) \\sin \\left(\\dfrac{3\\pi x}{L}\\right) $$<p>with $G_1$ and $G_3$ both nonzero.</p><ol type=\"a\"><li>Where between the ends does the $n = 3$ mode have its nodes? Give the nearer one to $x = 0$ first.</li><li>How long after its release is the string first back in its starting shape?</li></ol>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a, first node",
+      "value": 0.2,
+      "unit": "m",
+      "hint": "$\\sin(3\\pi x/L)$ is zero where $3x/L$ is a whole number."
+     },
+     {
+      "part": "a, second node",
+      "value": 0.4,
+      "unit": "m"
+     },
+     {
+      "part": "b",
+      "value": 5.0,
+      "unit": "ms",
+      "hint": "Each mode must have finished a whole number of periods."
+     }
+    ],
+    "solution": "<p>a. The $n = 3$ mode is zero where $\\sin(3\\pi x/L) = 0$, that is at $x = L/3$ and $x = 2L/3$ between the ends: 0.20 m and 0.40 m.</p><p>b. The string is back in its starting shape when both $\\cos(\\omega_1 t)$ and $\\cos(\\omega_3 t)$ are back at 1. Since $\\omega_3 = 3\\omega_1$, the third mode returns three times for each return of the first, so the first time both are back is one period of the fundamental, $1/\\nu_1 = 2L/v = (1.20\\ \\text{m})/(240\\ \\text{m/s}) = 5.0 \\times 10^{-3}$ s, or 5.0 ms.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "e1",
+   "concept": "principle-of-superposition"
+  },
+  {
+   "exercise": "e1",
+   "concept": "standing-wave"
+  },
+  {
+   "exercise": "e2",
+   "concept": "exponential-solutions"
+  },
+  {
+   "exercise": "e2",
+   "concept": "string-spatial-solutions"
+  },
+  {
+   "exercise": "ai1",
+   "concept": "normal-mode-frequency"
+  },
+  {
+   "exercise": "ai1",
+   "concept": "fundamental-and-overtones"
+  },
+  {
+   "exercise": "ai2",
+   "concept": "normal-mode"
+  },
+  {
+   "exercise": "ai2",
+   "concept": "normal-mode-expansion"
+  },
+  {
+   "exercise": "ai2",
+   "concept": "normal-mode-frequency"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "sqrt-k-ref",
+   "kind": "correction",
+   "html": "The $\\sqrt{K}$ terms meant are those of the general solution $X(x) = Ae^{\\sqrt{K}x} + Be^{-\\sqrt{K}x}$, Equation 2.4.3 on this page (Equation 2.2.9 in Section 2.2); Equation 2.4.5 is the solution in cosines and sines."
+  },
+  {
+   "id": "separated-refs",
+   "kind": "correction",
+   "html": "Equations 2.4.4a and 2.4.4b are the book's labels for the two separated equations of Section 2.2: the temporal one is Equation 2.2.7 and the spatial one Equation 2.2.8."
+  },
+  {
+   "id": "ansatz-ref",
+   "kind": "correction",
+   "html": "The ansatz is $u(x,t) = X(x)T(t)$, Equation 2.2.3; Equation 2.4.1 is $K = -p^2$."
+  },
+  {
+   "id": "mode-frequencies",
+   "kind": "correction",
+   "html": "$n\\pi/L$ is the spatial constant $p$ of mode $n$. The mode's angular frequency is $\\omega_n = n\\pi v/L$."
+  },
+  {
+   "id": "ex231-key",
+   "kind": "correction",
+   "html": "In the second line of each sum the key prints $\\sin(c_1 t)$ where $\\sin(c_2 t)$ is meant. It also leaves out the nodes of $\\psi_-$: $2\\cos(c_1 x)\\sin(c_2 t)$ is zero at every $x = (n + \\tfrac{1}{2})\\pi/c_1$."
+  },
+  {
+   "id": "ex241-sqrt",
+   "kind": "correction",
+   "html": "The key prints $e^{\\sqrt{x}x}$, and below both $e^{\\sqrt{kx}}$ and $e^{\\sqrt{k}x}$. The function meant throughout is $X(x) = Ae^{\\sqrt{K}x} + Be^{-\\sqrt{K}x}$, with $k$ standing for $K$."
+  },
+  {
+   "id": "ex241-refs",
+   "kind": "correction",
+   "html": "The equation the function is substituted into is Equation 2.4.2, and $K = -p^2$, which the key later cites as Equation 2.4.2, is Equation 2.4.1."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "string-spatial",
+   "what": "the spatial solutions of a string fixed at both ends",
+   "source": "Physical Chemistry (LibreTexts), 2.4 The General Solution is a Superposition of Normal Modes",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "K = -\\kpn^2",
+       "src": "(2.4.1)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{d}{\\dfrac{d^2X(\\kx)}{d\\kx^2}} \\mk{k}{- K X(\\kx)} = 0",
+      "src": "2.2, Equation 2.2.8"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{d}{\\dfrac{d^2X(\\kx)}{d\\kx^2}} \\mk{k}{+\\kpn^2 X(\\kx)} = 0",
+       "uses": [
+        0
+       ]
+      }
+     ],
+     "num": "(2.4.2)",
+     "src": "2.4"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "y(x) = c_1 e^{k x} + c_2 e^{-k x}",
+       "src": "2.2, Equation 2.2.19"
+      },
+      {
+       "tex": "K = -\\kpn^2",
+       "src": "(2.4.1)"
+      },
+      {
+       "tex": "e^{i \\theta} = \\cos \\theta + i\\sin \\theta",
+       "src": "2.3, Euler's formula"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{X}{X(\\kx)} = \\mk{a}{A e^{\\sqrt{K}\\kx}} + \\mk{b}{B e^{-\\sqrt{K}\\kx}}",
+      "uses": [
+       0,
+       1
+      ],
+      "why": "Equation 2.2.19 solves $d^2y/dx^2 - k^2 y = 0$; the separated equation has that form with $k^2 = K$."
+     },
+     "steps": [
+      {
+       "tex": "\\mk{X}{X(\\kx)} = \\mk{a}{A e^{i\\kpn\\kx}} + \\mk{b}{B e^{-i\\kpn\\kx}}",
+       "uses": [
+        2
+       ],
+       "cap": "With $K = -p^2$, the square root is $\\sqrt{K} = ip$."
+      },
+      {
+       "tex": "\\mk{X}{X(\\kx)} = \\mk{a}{A \\left[\\cos (\\kpn\\kx) + i \\sin (\\kpn\\kx) \\right]} + \\mk{b}{B \\left[ \\cos (\\kpn\\kx) - i \\sin (\\kpn\\kx) \\right]}",
+       "uses": [
+        3
+       ],
+       "cap": "For the second exponential take $\\theta = -px$: cosine is even and sine is odd."
+      },
+      {
+       "tex": "\\mk{X}{X(\\kx)} = \\mk{c}{(A + B ) \\cos (\\kpn\\kx)} + \\mk{s}{i (A - B) \\sin (\\kpn\\kx)}",
+       "uses": [],
+       "map": {
+        "a": [
+         "c",
+         "s"
+        ],
+        "b": [
+         "c",
+         "s"
+        ]
+       }
+      }
+     ],
+     "num": "(2.4.4)",
+     "src": "2.4"
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "text": "New complex constants $C = A + B$ and $D = i(A - B)$.",
+       "src": "2.4"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{X}{X(\\kx)} = \\mk{c}{(A + B ) \\cos (\\kpn\\kx)} + \\mk{s}{i (A - B) \\sin (\\kpn\\kx)}",
+      "uses": [
+       0
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{X}{X(\\kx)} = \\mk{c}{C \\cos (\\kpn\\kx)} + \\mk{s}{D \\sin (\\kpn\\kx)}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "num": "(2.4.5)",
+     "src": "2.4"
+    },
+    {
+     "assumes": [
+      {
+       "step": 2
+      },
+      {
+       "text": "The string is held at zero at its left end: $X(0) = 0$.",
+       "src": "2.1, Equation 2.1.3"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{X}{X(0)} = \\mk{c}{C \\cos (0)} + \\mk{s}{D \\sin (0)}",
+      "uses": [
+       0
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{X}{0} = \\mk{c}{C \\cos (0)} + \\mk{s}{D \\sin (0)}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{X}{0} = \\mk{c}{C} + \\mk{s}{0}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{c}{C} = \\mk{X}{0}",
+       "uses": []
+      }
+     ],
+     "num": "(2.4.7)",
+     "src": "2.4"
+    },
+    {
+     "assumes": [
+      {
+       "step": 2
+      },
+      {
+       "step": 3
+      },
+      {
+       "text": "The string is held at zero at its right end: $X(L) = 0$.",
+       "src": "2.1, Equation 2.1.4"
+      },
+      {
+       "text": "If $D = 0$ as well, $X(x) = 0$ everywhere: the trivial solution, which we ignore.",
+       "src": "2.2"
+      },
+      {
+       "text": "A sine is zero only at a whole multiple of $\\pi$, and $n = 0$ is again the trivial solution, so $n = 1, 2, 3, \\ldots$",
+       "src": "2.4"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{X}{X(\\kL)} = \\mk{c}{C \\cos (\\kpn\\kL)} + \\mk{s}{D \\sin (\\kpn\\kL)}",
+      "uses": [
+       0
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{X}{0} = \\mk{c}{C \\cos (\\kpn\\kL)} + \\mk{s}{D \\sin (\\kpn\\kL)}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{X}{0} = \\mk{s}{D \\sin (\\kpn\\kL)}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{X}{0} = \\mk{s}{\\sin (\\kpn\\kL)}",
+       "uses": [
+        3
+       ]
+      },
+      {
+       "tex": "\\mk{s}{\\kpn\\kL} = \\mk{X}{n\\pi}",
+       "uses": [
+        4
+       ]
+      },
+      {
+       "tex": "\\mk{s}{\\kpn} = \\mk{X}{\\dfrac{n\\pi}{\\kL}}",
+       "uses": []
+      }
+     ],
+     "num": "(2.4.9)",
+     "src": "2.4"
+    },
+    {
+     "assumes": [
+      {
+       "step": 2
+      },
+      {
+       "step": 3
+      },
+      {
+       "step": 4
+      }
+     ],
+     "then": {
+      "tex": "\\mk{X}{X(\\kx)} = \\mk{c}{C \\cos (\\kpn\\kx)} + \\mk{s}{D \\sin (\\kpn\\kx)}",
+      "uses": [
+       0
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{X}{X(\\kx)} = \\mk{s}{D \\sin (\\kpn\\kx)}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{X}{X(\\kx)} = \\mk{s}{D \\sin \\left(\\dfrac{n\\pi \\kx}{\\kL} \\right)}",
+       "uses": [
+        2
+       ]
+      }
+     ],
+     "num": "(2.4.10)",
+     "src": "2.4"
+    }
+   ]
+  },
+  {
+   "id": "string-temporal",
+   "what": "the temporal solutions of a string fixed at both ends",
+   "source": "Physical Chemistry (LibreTexts), 2.4 The General Solution is a Superposition of Normal Modes",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "K = -\\kpn^2",
+       "src": "(2.4.1)"
+      },
+      {
+       "tex": "\\kpn = \\dfrac{n\\pi}{\\kL}",
+       "src": "(2.4.9)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{d}{\\dfrac{d^2T(\\kt)}{d\\kt^2}} \\mk{k}{- K\\kv^2 T(\\kt)} = 0",
+      "src": "2.2, Equation 2.2.7"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{d}{\\dfrac{d^2T(\\kt)}{d\\kt^2}} \\mk{k}{+ \\kpn^2\\kv^2 T(\\kt)} = 0",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{d}{\\dfrac{d^2T(\\kt)}{d\\kt^2}} \\mk{k}{+ \\left(\\dfrac{n \\kv \\pi}{\\kL}\\right)^2 T(\\kt)} = 0",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "num": "(2.4.11)",
+     "src": "2.4"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "\\komegan = \\dfrac{n \\kv \\pi}{\\kL}",
+       "src": "2.4"
+      },
+      {
+       "tex": "X(\\kx) = C \\cos (\\kpn\\kx) + D \\sin (\\kpn\\kx)",
+       "src": "(2.4.5)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{d}{\\dfrac{d^2T(\\kt)}{d\\kt^2}} \\mk{k}{+ \\left(\\dfrac{n \\kv \\pi}{\\kL}\\right)^2 T(\\kt)} = 0",
+      "uses": [
+       0
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{d}{\\dfrac{d^2T(\\kt)}{d\\kt^2}} \\mk{k}{+ \\komegan^2 T(\\kt)} = 0",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{T}{T(\\kt)} = \\mk{c}{E \\cos (\\komegan \\kt)} + \\mk{s}{F \\sin (\\komegan \\kt)}",
+       "uses": [
+        2
+       ],
+       "cap": "This is Equation 2.4.2 with $t$ in place of $x$ and $\\omega_n$ in place of $p$, so it has the same solutions."
+      }
+     ],
+     "num": "(2.4.12)",
+     "src": "2.4"
+    }
+   ]
+  },
+  {
+   "id": "normal-mode",
+   "what": "the normal modes of a string fixed at both ends",
+   "source": "Physical Chemistry (LibreTexts), 2.4 The General Solution is a Superposition of Normal Modes",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "X(\\kx) = D \\sin \\left(\\dfrac{n\\pi \\kx}{\\kL} \\right)",
+       "src": "(2.4.10)"
+      },
+      {
+       "tex": "T(\\kt) = E \\cos (\\komegan \\kt) + F \\sin (\\komegan \\kt)",
+       "src": "(2.4.12)"
+      },
+      {
+       "text": "Collect the constants as $G = DE$ and $H = DF$; since $E$ and $F$ may depend on $n$, so may $G_n$ and $H_n$.",
+       "src": "2.4"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{u}{\\ku(\\kx,\\kt)} = \\mk{X}{X(\\kx)}\\mk{T}{T(\\kt)}",
+      "src": "2.2, Equation 2.2.3"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{u}{\\ku(\\kx,\\kt)} = \\mk{X}{\\left[D \\sin \\left(\\dfrac{n\\pi \\kx}{\\kL} \\right)\\right]}\\mk{T}{\\left( E \\cos (\\komegan \\kt) + F \\sin (\\komegan \\kt) \\right)}",
+       "uses": [
+        0,
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{u}{\\kun(\\kx,\\kt)} = \\mk{T}{\\left[ G_n \\cos (\\komegan \\kt) + H_n \\sin (\\komegan \\kt) \\right]}\\mk{X}{\\sin \\left(\\dfrac{n\\pi \\kx}{\\kL} \\right)}",
+       "uses": [
+        2
+       ]
+      }
+     ],
+     "num": "(2.4.13)",
+     "src": "2.4"
+    }
+   ]
+  },
+  {
+   "id": "sum-of-solutions",
+   "what": "the sum of two solutions",
+   "source": "Physical Chemistry (LibreTexts), 2.4, Linearity of the Wave Equation",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\dfrac{\\partial^2 f}{\\partial \\kx^2} = \\dfrac{1}{\\kv^2}\\dfrac{\\partial^2 f}{\\partial \\kt^2}",
+       "src": "2.1, the wave equation"
+      },
+      {
+       "tex": "\\dfrac{\\partial^2 g}{\\partial \\kx^2} = \\dfrac{1}{\\kv^2}\\dfrac{\\partial^2 g}{\\partial \\kt^2}",
+       "src": "2.1, the wave equation"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\dfrac{\\partial^2 (f+g)}{\\partial \\kx^2}} = \\mk{f}{\\dfrac{\\partial^2 f}{\\partial \\kx^2}} + \\mk{g}{\\dfrac{\\partial^2 g}{\\partial \\kx^2}}",
+      "why": "The derivative of a sum is the sum of the derivatives."
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\dfrac{\\partial^2 (f+g)}{\\partial \\kx^2}} = \\mk{f}{\\dfrac{1}{\\kv^2}\\dfrac{\\partial^2 f}{\\partial \\kt^2}} + \\mk{g}{\\dfrac{\\partial^2 g}{\\partial \\kx^2}}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\dfrac{\\partial^2 (f+g)}{\\partial \\kx^2}} = \\mk{f}{\\dfrac{1}{\\kv^2}\\dfrac{\\partial^2 f}{\\partial \\kt^2}} + \\mk{g}{\\dfrac{1}{\\kv^2}\\dfrac{\\partial^2 g}{\\partial \\kt^2}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\dfrac{\\partial^2 (f+g)}{\\partial \\kx^2}} = \\mk{f}{\\dfrac{1}{\\kv^2}\\dfrac{\\partial^2 (f+g)}{\\partial \\kt^2}}",
+       "uses": [],
+       "map": {
+        "g": "f"
+       },
+       "cap": "The same rule for the time derivative, read the other way."
+      }
+     ],
+     "src": "2.4, Linearity of the Wave Equation"
+    }
+   ]
+  }
+ ]
+}

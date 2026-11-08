@@ -41,7 +41,7 @@ function modeStrip(ctx, X, L, n, y0, a, s, color, w) {
 (function () {
   const d = sim('sim-modes', 700);
   const SLOW = 400;
-  const N = F.choice(d.controls, { label: 'n', options: [1, 2, 3, 4, 5, 6, 7].map((k) => ({ value: String(k), label: String(k) })), value: '3', aria: 'the mode to pick out' });
+  const N = F.select(d.controls, { label: 'n', options: [1, 2, 3, 4, 5, 6, 7].map((k) => ({ value: String(k), label: String(k) })), value: '3', aria: 'the mode to pick out' });
   const V = ctl(d.controls, { label: '\\kv', cls: 'velocity', min: 100, max: 300, step: 1, value: 200, unit: 'm/s', dec: 0, aria: 'the velocity of the wave on the string', onInput: () => cy.reset() });
   const L = ctl(d.controls, { label: '\\kL', cls: 'length', min: 0.4, max: 1.0, step: 0.01, value: 0.5, unit: 'm', dec: 2, aria: 'the length of the string', onInput: () => cy.reset() });
   const nu1 = () => V.v / (2 * L.v);                      /* Hz, the fundamental */
@@ -55,7 +55,7 @@ function modeStrip(ctx, X, L, n, y0, a, s, color, w) {
     const n = +N.value, len = L.v, t = cy.now(), f1 = fund();
     const cu = C('displacement'), cl = C('length');
     const box = { l: 180, r: 1300, t: 120, b: 620 };
-    const ax = axes(ctx, box, [0, 1.0], [0.5, 7.5], { nx: 5, ny: 0, xl: 'position x (m)', yl: 'mode n', xc: cl, yc: PAL.ink });
+    const ax = axes(ctx, box, [0, 1.0], [0.5, 7.5], { nx: 5, ny: 0, fx: (v) => fmt(v, 1), xl: 'position x (m)', yl: 'mode n', xc: cl, yc: PAL.ink });
     const X = ax.X, gap = (box.b - box.t) / 7, A = gap * 0.36;
     /* the two fixed ends, shared by every mode */
     line(ctx, X(0), box.t + 6, X(0), box.b - 6, PAL.ink, 4);
@@ -112,9 +112,9 @@ function modeStrip(ctx, X, L, n, y0, a, s, color, w) {
     line(ctx, box.l, ax.Y(0), box.r, ax.Y(0), alpha(PAL.ink, 0.35), 2);
     /* the probe at the meeting point */
     line(ctx, ax.X(XP), box.t, ax.X(XP), box.b, alpha(PAL.ink, 0.4), 2, [4, 8]);
+    plot(ctx, ax, u, cu, { w: 5 });
     dashed(ctx, ax, u1, r1, 3);
     dashed(ctx, ax, u2, r2, 3);
-    plot(ctx, ax, u, cu, { w: 5 });
     dot(ctx, ax.X(XP), ax.Y(u(XP)), cu, true, 9);
     hits.push({ x: ax.X(XP), y: ax.Y(u(XP)), r: 14, name: `the string at x = ${fmt(XP, 1)} m, ${fmt(u(XP), 2)} cm` });
     /* the travel of each pulse, riding above (or below) its peak */
@@ -134,7 +134,7 @@ function modeStrip(ctx, X, L, n, y0, a, s, color, w) {
       ? `Pulses on the same side add: where they overlap, the string rises ${fmt(top, 2)} cm.`
       : top < 0.01 ? `Equal pulses on opposite sides cancel: where they overlap, the string is flat for an instant.`
         : `Pulses on opposite sides partly cancel: where they overlap, the string is displaced only ${fmt(top, 2)} cm.`);
-    const v1 = u1(XP), v2 = u2(XP);
+    const v1 = +u1(XP).toFixed(2), v2 = +u2(XP).toFixed(2);     /* rounded first, so the sum shown is the sum of the terms shown */
     readout(d.readout,
       `\\ku(\\kx,\\kt) = \\ku_1(\\kx,\\kt) + \\ku_2(\\kx,\\kt) \\\\ \\ku(${fmt(XP, 1)}\\ \\text{m},\\ ${fmt(t, 1)}\\ \\text{s}) = ${fmt(v1, 2)} ${signed(v2, 2)} = ${fmt(v1 + v2, 2)}\\ \\text{cm}`,
       '', { values: false });
@@ -167,8 +167,8 @@ function modeStrip(ctx, X, L, n, y0, a, s, color, w) {
     const cu = C('displacement');
     const term = (n, x, kk) => g[n - 1] * Math.cos(TAU * n * kk) * Math.sin(n * Math.PI * x);
     const u = (kk) => (x) => term(1, x, kk) + term(2, x, kk) + term(3, x, kk);
-    const box = { l: 180, r: 1300, t: 120, b: 420 };
-    const ax = axes(ctx, box, [0, 1], [-10, 10], { nx: 4, ny: 4, xl: 'position x / L', yl: 'displacement u (mm)', xc: C('length'), yc: cu });
+    const box = { l: 180, r: 1300, t: 120, b: 400 };
+    const ax = axes(ctx, box, [0, 1], [-10, 10], { nx: 4, ny: 4, fx: (v) => fmt(v, 2), xl: 'position x / L', yl: 'displacement u (mm)', xc: C('length'), yc: cu });
     line(ctx, box.l, ax.Y(0), box.r, ax.Y(0), alpha(PAL.ink, 0.3), 2);
     /* the starting shape, dashed, and the string now */
     const p0 = []; for (let i = 0; i <= 200; i++) { const x = i / 200; p0.push([ax.X(x), ax.Y(u(0)(x))]); }
@@ -178,14 +178,14 @@ function modeStrip(ctx, X, L, n, y0, a, s, color, w) {
     hits.push({ x: ax.X(0.25), y: ax.Y(u(0)(0.25)), r: 14, name: 'the starting shape of the string' });
     dot(ctx, ax.X(0), ax.Y(0), PAL.ink, true, 8); dot(ctx, ax.X(1), ax.Y(0), PAL.ink, true, 8);
     /* the three modes beneath, one strip each */
-    const sx = (x) => ax.X(x), top = 480, gap = 82, A = 30 / 3;     /* 3 mm draws 30 units */
+    const sx = (x) => ax.X(x), top = 500, gap = 80, A = 12;     /* canvas units per mm: 3 mm draws 36 units */
     for (let n = 1; n <= 3; n++) {
       const y0 = top + gap * (n - 1) + 20, c = F.cat(n - 1);
       line(ctx, ax.X(0), y0, ax.X(1), y0, alpha(PAL.ink, 0.2), 2);
       ctx.save(); ctx.strokeStyle = c; ctx.lineWidth = 3.5; ctx.beginPath();
       for (let i = 0; i <= 160; i++) { const x = i / 160, y = y0 - A * term(n, x, k); if (i) ctx.lineTo(sx(x), y); else ctx.moveTo(sx(x), y); }
       ctx.stroke(); ctx.restore();
-      text(ctx, `G_${n} = ${fmt(g[n - 1], 1)} mm`, box.l - 20, y0, c, { size: 17, weight: 600, align: 'right', base: 'middle' });
+      text(ctx, `mode ${n}`, box.l - 20, y0, c, { size: 17, weight: 600, align: 'right', base: 'middle' });
       hits.push({ x: ax.X(0.5 / n), y: y0, r: 16, name: `mode ${n}, swinging ${n} time${n > 1 ? 's' : ''} per period of the fundamental` });
     }
     /* back in its starting shape at multiples of T1 / gcd of the modes present */
