@@ -528,3 +528,30 @@ byte-identical, 1.3's "*kinetic* *energies*" now "*kinetic energies*" (same text
 left unchanged in the repo). `md2html.py` drafts a table inside a list item
 (Example 11.2.2); Chapters 1–10's drafts unchanged. `check:content`: no errors (one
 warning, 9.12's Figure 9.12.11).
+
+## Chapter 12 prep · 2026-11-08
+
+Prep only, no section built. Fetched Chapter 12's images (55 used, into `media/ch12/`),
+converted the landing page (one paragraph: an `intro/` page), 12.1–12.15, the summary
+12.S (to `ch12/summary/`), the empty 12.9 and 12.E, and the two 12.T table pages (to
+`ch12/tables/1/`, `/2/`); wrote `ch12/exploration.md`, `ch12/config.md` (agreed on
+Chapter 1's terms), `ch12/chapter.json` (14 sections, 12.9 left out as empty; the intro
+and summary records; 113 variables) and merged `ch12/book-rows.json`: 3 new types
+(`symmetry-operation`, `representation`, `character`; `colours:default` rerun, no other
+type moved), 38 symbols, 59 concepts, 87 edges. Drafts made for the intro, the 14
+sections and the summary.
+
+Found: 12.9 and 12.E empty; Vallance's own `\tag` numbers and citations throughout;
+12.15 repeats 12.8's steps; 12.14 mixes water's two plane conventions. Exercises: 3
+problems (12.14), all keyed by the page's solutions; 14 AI exercises proposed. 3
+derivations to build. Figures: the operations done to a molecule (moving, physical 3D)
+through the chapter, composing operations, normal modes of water and ammonia (moving),
+light exciting modes, the projection operator, water's MOs; 3 extra Sims offered. The
+12.T pages proposed as two `table` sheets. Notable corrections: 12.8's energies
+(−29.83 and +31.03 eV from its own integrals), 12.12's σᵥ column, seven errors in the
+character tables found by orthogonality.
+
+Tool fix: `md2html.py` reads 12.14's "Solutions to Practice Problems" as the key of its
+Problems (and keeps the image under the last problem with it); Chapters 1–11's 106
+drafts compared against the old script: identical. `check:content`: no errors, no
+warnings.
