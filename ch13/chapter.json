@@ -972,9 +972,9 @@
   {
    "sym": "V",
    "concept": "time-dependent-perturbation-theory",
-   "type": "operator",
-   "meaning": "the perturbation V(t); later V(r), the amplitude of the light's coupling",
-   "section": "13.11"
+   "meaning": "the time-dependent perturbation V(t), later V(r), the amplitude of the light's coupling",
+   "section": "13.11",
+   "redefines": true
   },
   {
    "sym": "psi",

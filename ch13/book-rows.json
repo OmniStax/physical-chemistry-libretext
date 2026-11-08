@@ -908,7 +908,6 @@
    "kind": "result",
    "section": "13.7",
    "name": "Overlaps of displaced oscillators",
-   "symbol": "S_00",
    "statement": "For harmonic wells of the same α = √(mk)/ħ with minima at R_e and Q_e, the v = 0 functions overlap by S₀₀ = e^(−α(R_e−Q_e)²/4), and v = 0 with the upper v′ = 1 by S₀₁ = √(α/2)(R_e − Q_e)e^(−α(R_e−Q_e)²/4).",
    "forms": [
     {
@@ -1029,7 +1028,6 @@
    "section": "13.8",
    "name": "Levels of a spherical top",
    "type": "energy",
-   "symbol": "E_JKM",
    "statement": "A spherical top has E = ħ²J(J + 1)/2I, independent of K and M, each ranging from −J to J, so each level is (2J + 1)²-fold degenerate.",
    "forms": [
     {
@@ -1261,7 +1259,6 @@
    "kind": "result",
    "section": "13.11",
    "name": "First-order amplitude of the upper state",
-   "symbol": "c_n",
    "statement": "Starting in |1⟩ with H₁₁ = H₂₂ = 0, to first order c₂(t) = (−i/ħ)∫₀ᵗ e^(iω₀t′)H₂₁(t′)dt′; for light H₁(t) = V cos ωt near resonance, ω ≈ ω₀, this is c₂(t) = −(i/ħ)H₂₁e^(i(ω₀−ω)t/2) sin[(ω − ω₀)t/2]/(ω − ω₀).",
    "forms": [
     {
@@ -1386,10 +1383,6 @@
  "concept_prereqs": [
   {
    "concept": "electromagnetic-radiation",
-   "prereq": "photon"
-  },
-  {
-   "concept": "electromagnetic-radiation",
    "prereq": "wave-particle-duality"
   },
   {
@@ -1427,10 +1420,6 @@
   {
    "concept": "spectroscopic-energy-exchange",
    "prereq": "electromagnetic-spectrum"
-  },
-  {
-   "concept": "bohr-frequency-condition",
-   "prereq": "plancks-quantum-hypothesis"
   },
   {
    "concept": "bohr-frequency-condition",
@@ -1521,16 +1510,8 @@
    "prereq": "rotor-degeneracy"
   },
   {
-   "concept": "rotational-populations",
-   "prereq": "rotor-energy-levels"
-  },
-  {
    "concept": "rovibrational-line-intensities",
    "prereq": "rotational-populations"
-  },
-  {
-   "concept": "rovibrational-line-intensities",
-   "prereq": "transition-moment-integral"
   },
   {
    "concept": "rovibrational-line-intensities",
@@ -1565,10 +1546,6 @@
    "prereq": "angular-momentum"
   },
   {
-   "concept": "centrifugal-force",
-   "prereq": "reduced-mass"
-  },
-  {
    "concept": "non-rigid-rotor",
    "prereq": "centrifugal-force"
   },
@@ -1586,10 +1563,6 @@
   },
   {
    "concept": "nonrigid-rotor-energy-levels",
-   "prereq": "rotor-energy-levels"
-  },
-  {
-   "concept": "nonrigid-rotor-energy-levels",
    "prereq": "rotational-term"
   },
   {
@@ -1599,14 +1572,6 @@
   {
    "concept": "nonrigid-line-spacing",
    "prereq": "nonrigid-rotor-energy-levels"
-  },
-  {
-   "concept": "nonrigid-line-spacing",
-   "prereq": "rotational-line-spacing"
-  },
-  {
-   "concept": "hot-band",
-   "prereq": "vibrational-quantum-number"
   },
   {
    "concept": "hot-band",
@@ -1619,10 +1584,6 @@
   {
    "concept": "anharmonic-selection-rule",
    "prereq": "ir-selection-rules"
-  },
-  {
-   "concept": "overtone-positions",
-   "prereq": "anharmonic-energy-levels"
   },
   {
    "concept": "overtone-positions",
@@ -1657,10 +1618,6 @@
    "prereq": "nonrigid-rotor-energy-levels"
   },
   {
-   "concept": "vibronic-energy",
-   "prereq": "born-oppenheimer-approximation"
-  },
-  {
    "concept": "vibronic-band-wavenumber",
    "prereq": "vibronic-energy"
   },
@@ -1686,10 +1643,6 @@
   },
   {
    "concept": "franck-condon-principle",
-   "prereq": "born-oppenheimer-approximation"
-  },
-  {
-   "concept": "franck-condon-principle",
    "prereq": "vibronic-transition"
   },
   {
@@ -1701,20 +1654,12 @@
    "prereq": "franck-condon-principle"
   },
   {
-   "concept": "vertical-transition",
-   "prereq": "potential-energy-curve"
-  },
-  {
    "concept": "franck-condon-factor",
    "prereq": "franck-condon-principle"
   },
   {
    "concept": "franck-condon-factor",
    "prereq": "born-oppenheimer-wavefunction"
-  },
-  {
-   "concept": "franck-condon-factor",
-   "prereq": "transition-moment-integral"
   },
   {
    "concept": "franck-condon-factor",
@@ -1763,10 +1708,6 @@
   {
    "concept": "polyatomic-rotational-hamiltonian",
    "prereq": "rotational-kinetic-energy"
-  },
-  {
-   "concept": "polyatomic-rotational-hamiltonian",
-   "prereq": "angular-momentum"
   },
   {
    "concept": "euler-angles",
@@ -1853,32 +1794,16 @@
    "prereq": "normal-coordinates"
   },
   {
-   "concept": "normal-mode-symmetry",
-   "prereq": "irreducible-representation"
-  },
-  {
    "concept": "assigning-mode-symmetry",
    "prereq": "normal-mode-symmetry"
-  },
-  {
-   "concept": "assigning-mode-symmetry",
-   "prereq": "character-table"
   },
   {
    "concept": "time-dependent-perturbation-theory",
    "prereq": "perturbation-theory"
   },
   {
-   "concept": "time-dependent-perturbation-theory",
-   "prereq": "time-dependent-schrodinger-equation"
-  },
-  {
    "concept": "probability-amplitudes",
    "prereq": "time-dependent-perturbation-theory"
-  },
-  {
-   "concept": "probability-amplitudes",
-   "prereq": "stationary-state"
   },
   {
    "concept": "probability-amplitudes",
@@ -1889,20 +1814,12 @@
    "prereq": "probability-amplitudes"
   },
   {
-   "concept": "amplitude-equations",
-   "prereq": "orthonormality"
-  },
-  {
    "concept": "two-level-system",
    "prereq": "amplitude-equations"
   },
   {
    "concept": "first-order-transition-amplitude",
    "prereq": "two-level-system"
-  },
-  {
-   "concept": "first-order-transition-amplitude",
-   "prereq": "eulers-formula"
   },
   {
    "concept": "transition-probability",
