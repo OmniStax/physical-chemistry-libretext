@@ -1,0 +1,292 @@
+{
+ "id": "2.1",
+ "module": "13375",
+ "chapter": "2",
+ "title": "The One-Dimensional Wave Equation",
+ "short": "The wave equation in one dimension",
+ "lead": "A pulse sent down a rope keeps its shape as it travels, and a plucked string vibrates in place between its fixed ends. Both are waves in one dimension, described by the sine wave and the classical wave equation.",
+ "objectives": [
+  "To introduce the wave equation including time and position dependence"
+ ],
+ "summary_html": "<p>Waves which exhibit movement and are propagated through time and space. The two basic types of waves are traveling and stationary. Both exhibit wavelike properties and structure (presence of crests and troughs) which can be mathematically described by a wavefunction or amplitude function. Both wave types display movement (up and down displacement), but in different ways.Traveling waves have crests and troughs which are constantly moving from one point to another as they travel over a length or distance. In this way, energy is transmitted along the length of a traveling wave. In contrast, standing waves have nodes at fixed positions; this means that the wave’s crests and troughs are also located at fixed intervals. Therefore, standing waves only experience vibrational movement (up and down displacement) on these set intervals - no movement or energy travels along the length of a standing wave.</p>",
+ "notes": "Adapted from Michael Fowler (University of Virginia); Figures 2.1.2 and 2.1.3 are folded into one moving figure, as are Figures 2.1.4 and 2.1.5.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercise on this section; both exercises here are new, written and solved by AI for the sine wave and for f(x − vt). Numeric answers accept a 2% tolerance.",
+ "figures": [
+  {
+   "id": "sim-sine-wave",
+   "kind": "sim",
+   "number": "2.1.1",
+   "originals": [
+    "/media/ch02/268566-1D-Wave.gif"
+   ],
+   "original_caption": "A simple translational (transverse) wave. (CC BY-SA 4.0 International; And1mu via Wikimedia Commons)",
+   "draws": [
+    "displacement",
+    "length",
+    "velocity",
+    "wavenumber",
+    "frequency",
+    "time"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "sim-pulse",
+   "kind": "sim",
+   "number": "2.1.2",
+   "folds": [
+    "2.1.3"
+   ],
+   "originals": [
+    "/media/ch02/54783-image007.gif",
+    "/media/ch02/54787-stringpulse.gif"
+   ],
+   "original_caption": "A one-dimensional traveling wave at one instance of time t.",
+   "draws": [
+    "displacement",
+    "length",
+    "velocity",
+    "time"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "sim-standing",
+   "kind": "sim",
+   "number": "2.1.4",
+   "folds": [
+    "2.1.5"
+   ],
+   "originals": [
+    "/media/ch02/141673-Standing_wave.gif",
+    "/media/ch02/54788-Standing_waves_on_a_string.gif"
+   ],
+   "original_caption": "Animation of standing wave in the stationary medium with marked wave nodes (red circles). (public domain; LucasVB).",
+   "draws": [
+    "displacement",
+    "length",
+    "time"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "sine-wave",
+   "concept": "sine-wave",
+   "verb": "introduces"
+  },
+  {
+   "span": "sine-wave",
+   "concept": "amplitude",
+   "verb": "introduces"
+  },
+  {
+   "span": "sine-wave",
+   "concept": "angular-wavenumber",
+   "verb": "introduces"
+  },
+  {
+   "span": "sine-wave",
+   "concept": "angular-frequency",
+   "verb": "introduces"
+  },
+  {
+   "span": "sine-wave",
+   "concept": "phase-constant",
+   "verb": "introduces"
+  },
+  {
+   "span": "traveling-waves",
+   "concept": "traveling-wave",
+   "verb": "introduces"
+  },
+  {
+   "span": "traveling-waves",
+   "concept": "wave-velocity",
+   "verb": "introduces"
+  },
+  {
+   "span": "standing-waves",
+   "concept": "standing-wave",
+   "verb": "introduces"
+  },
+  {
+   "span": "standing-waves",
+   "concept": "node",
+   "verb": "introduces"
+  },
+  {
+   "span": "standing-waves",
+   "concept": "antinode",
+   "verb": "introduces"
+  },
+  {
+   "span": "standing-waves",
+   "concept": "traveling-wave",
+   "verb": "uses"
+  },
+  {
+   "span": "the-wave-equation",
+   "concept": "classical-wave-equation",
+   "verb": "introduces"
+  },
+  {
+   "span": "the-wave-equation",
+   "concept": "initial-conditions",
+   "verb": "introduces"
+  },
+  {
+   "span": "the-wave-equation",
+   "concept": "boundary-conditions",
+   "verb": "introduces"
+  },
+  {
+   "span": "the-wave-equation",
+   "concept": "wave-velocity",
+   "verb": "uses"
+  },
+  {
+   "span": "the-wave-equation",
+   "concept": "standing-wave",
+   "verb": "reinforces"
+  },
+  {
+   "span": "the-wave-equation",
+   "concept": "node",
+   "verb": "reinforces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "The simplest wave is the (spatially) one-dimensional sine wave",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "sine-wave",
+   "prompt": "<p>A wave on a rope is $A(x,t) = (0.020\\ \\text{m})\\sin(4.0\\pi x - 10\\pi t)$, with $x$ in meters and $t$ in seconds. Find (a) its maximum amplitude, (b) its wavelength, (c) its frequency and (d) the speed at which it travels.</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 0.02,
+      "unit": "m"
+     },
+     {
+      "part": "b",
+      "value": 0.5,
+      "unit": "m",
+      "hint": "The phase kx grows by 2π over one wavelength."
+     },
+     {
+      "part": "c",
+      "value": 5.0,
+      "unit": "Hz",
+      "hint": "The phase ωt grows by 2π over one period."
+     },
+     {
+      "part": "d",
+      "value": 2.5,
+      "unit": "m/s"
+     }
+    ],
+    "solution": "<p>Compare with $A(x,t) = A_o\\sin(kx - \\omega t + \\phi)$: $A_o = 0.020$ m, $k = 4.0\\pi$ rad/m and $\\omega = 10\\pi$ rad/s. (a) $A_o = 0.020$ m. (b) The wave repeats when $kx$ grows by $2\\pi$, so $\\lambda = 2\\pi/k = 2\\pi/4.0\\pi = 0.50$ m. (c) At a fixed $x$ it repeats when $\\omega t$ grows by $2\\pi$, so $\\nu = \\omega/2\\pi = 5.0$ Hz. (d) A crest keeps $kx - \\omega t$ fixed, so it moves at $v = \\omega/k = 10\\pi/4.0\\pi = 2.5$ m/s.</p>"
+   }
+  },
+  {
+   "id": "a2",
+   "source_id": "is called the classical wave equation in one dimension",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "the-wave-equation",
+   "prompt": "<p>Show that any traveling wave $y(x,t) = f(x - vt)$ of Equation 2.1.1, whatever the shape $f$, satisfies the classical wave equation, Equation 2.1.2.</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "Write $s = x - vt$ and use the chain rule for each derivative.",
+    "solution": "<p>Let $s = x - vt$, so $\\partial s/\\partial x = 1$ and $\\partial s/\\partial t = -v$. By the chain rule $\\partial y/\\partial x = f'(s)$ and $\\partial^2 y/\\partial x^2 = f''(s)$, while $\\partial y/\\partial t = -v f'(s)$ and $\\partial^2 y/\\partial t^2 = v^2 f''(s)$. Then $\\dfrac{1}{v^2}\\dfrac{\\partial^2 y}{\\partial t^2} = f''(s) = \\dfrac{\\partial^2 y}{\\partial x^2}$, which is Equation 2.1.2 for any twice-differentiable $f$.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "sine-wave"
+  },
+  {
+   "exercise": "a1",
+   "concept": "angular-wavenumber"
+  },
+  {
+   "exercise": "a1",
+   "concept": "angular-frequency"
+  },
+  {
+   "exercise": "a1",
+   "concept": "wave-velocity"
+  },
+  {
+   "exercise": "a2",
+   "concept": "traveling-wave"
+  },
+  {
+   "exercise": "a2",
+   "concept": "classical-wave-equation"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-string-figure",
+   "kind": "correction",
+   "html": "Figure 2.1.3 is the traveling pulse. The string held taut at both ends is Figure 2.1.5, drawn here with Figure 2.1.4."
+  },
+  {
+   "id": "c-planck",
+   "kind": "correction",
+   "html": "The equation is Planck's, after Max Planck (Section 1.2)."
+  }
+ ]
+}

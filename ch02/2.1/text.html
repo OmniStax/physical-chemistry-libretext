@@ -1,0 +1,62 @@
+<section id="sine-wave">
+<h2>The sine wave</h2>
+<p>In the most general sense, waves are particles or other media with wavelike properties and structure (presence of crests and troughs).</p>
+<figure class="sim" id="sim-sine-wave" data-figure="2.1.1" data-original="/media/ch02/268566-1D-Wave.gif" data-original-caption="A simple translational (transverse) wave. (CC BY-SA 4.0 International; And1mu via Wikimedia Commons)">
+  <div class="sim-head"><span class="eyebrow">Figure 2.1.1</span><span>Change <span data-type="wavenumber">the wavenumber</span> or <span data-type="frequency">the angular frequency</span> and watch the crest's speed change. The marked bead of rope only rises and falls as the crests pass it.</span></div>
+</figure>
+<p>The simplest wave is the (spatially) one-dimensional <span data-concept="sine-wave">sine wave</span> (Figure 2.1.1) with an varing amplitude $A$ described by the equation:</p>
+$$ A(\kx,\kt) = \kAo \sin (\kk\kx - \komega \kt + \phi) $$
+<p>where</p>
+<ul><li>$\kAo$ is the <span data-concept="amplitude">maximum amplitude</span> of the wave, maximum distance from the highest point of the disturbance in the medium (the crest) to the equilibrium point during one wave cycle. In Figure 2.1.1, this is the maximum vertical distance between the baseline and the wave.</li><li>$\kx$ is the space coordinate</li><li>$\kt$ is the time coordinate</li><li>$\kk$ is the <span data-concept="angular-wavenumber">wavenumber</span></li><li>$\komega$ is the <span data-concept="angular-frequency">angular frequency</span></li><li>$\phi$ is the <span data-concept="phase-constant">phase constant</span>.</li></ul>
+<p>One can categorize “waves” into two different groups: <em><span data-concept="traveling-wave">traveling waves</span></em> and <em><span data-concept="standing-wave">stationary waves</span></em>.</p>
+</section>
+
+<section id="traveling-waves">
+<h2>Traveling Waves</h2>
+<p><em><span data-concept="traveling-wave">Traveling waves</span></em>, such as ocean waves or electromagnetic radiation, are waves that “move,” meaning that they have a frequency and are propagated through time and space. Another way of describing this property of “wave movement” is in terms of energy transmission – a wave travels, or transmits energy, over a set distance. The most important kinds of <span data-concept="traveling-wave">traveling waves</span> in everyday life are electromagnetic waves, sound waves, and perhaps water waves, depending on where you live. It is difficult to analyze waves spreading out in three dimensions, reflecting off objects, etc., so we begin with the simplest interesting examples of waves, those restricted to move along a line. Let’s start with a rope, like a clothesline, stretched between two hooks. You take one end off the hook, holding the rope, and, keeping it stretched fairly tight, wave your hand up and back once. If you do it fast enough, you’ll see a single bump travel along the rope:</p>
+<figure class="sim" id="sim-pulse" data-figure="2.1.2 + 2.1.3" data-original="/media/ch02/54783-image007.gif,/media/ch02/54787-stringpulse.gif" data-original-caption="A one-dimensional traveling wave at one instance of time t.">
+  <div class="sim-head"><span class="eyebrow">Figure 2.1.2 + 2.1.3</span><span>Pick a shape and set <span data-type="velocity">the speed of the wave</span>. The dashed copy is the rope at t = 0; the moving bump is the same shape, shifted along by vt.</span></div>
+</figure>
+<p>This is the simplest example of a <em><span data-concept="traveling-wave">traveling wave</span></em>. You can make waves of different shapes by moving your hand up and down in different patterns, for example an upward bump followed by a dip, or two bumps. You’ll find that the <span data-concept="traveling-wave">traveling wave</span> <em>keeps the same shape</em> as it moves down the rope. Taking the rope to be stretched tightly enough that we can take it to be horizontal, we’ll use its rest position as our <em>x</em>-axis (Figure 2.1.1). The $\ky$-axis is taken vertically upwards, and we only wave the rope in an up-and-down way, so actually $\ky(\kx,\kt)$ will be how far the rope is from its rest position at $\kx$ at time $\kt$: that is, Figure 2.1.2 shows where the rope is at a single time $\kt$.</p>
+<p>We can now express the observation that the wave “keeps the same shape” more precisely. Taking for convenience time $\kt = 0$ to be the moment when the peak of the wave passes $\kx = 0$, we graph here the rope’s position at t = 0 and some later times $\kt$ as a movie (Figure 2.1.3). Denoting the first function by $\ky(\kx,0) = f(\kx)$, then the second $\ky(\kx,\kt) = f(\kx- \kv \kt)$: it is the same function with the “same shape,” but just moved over by $\kv \kt$, where $\kv$ is the <span data-concept="wave-velocity">velocity of the wave</span>.</p>
+<p><em>To summarize</em>: on sending a <span data-concept="traveling-wave">traveling wave</span> down a rope by jerking the end up and down, from observation the wave travels at constant speed and keeps its shape, so the displacement <em>y</em> of the rope at any horizontal position at $\kx$ at time $\kt$ has the form</p>
+$$ \ky(\kx,\kt)=f(\kx-\kv \kt) \tag{2.1.1} $$
+<p>We are neglecting frictional effects—in a real rope, the bump gradually gets smaller as it moves along.</p>
+</section>
+
+<section id="standing-waves">
+<h2>Standing Waves</h2>
+<p>In contrast to <span data-concept="traveling-wave">traveling waves</span>, <em><span data-concept="standing-wave">standing waves</span>,</em> or stationary waves, remain in a constant position with crests and troughs in fixed intervals. One way of producing a variety of <span data-concept="standing-wave">standing waves</span> is by<a href="https://human.libretexts.org/Textbook_Maps/Music/Understanding_Basic_Music_Theory_(OpenSTAX)/4%3A_The_Physical_Basis/4.2%3A_Standing_Waves_and_Musical_Instruments"> plucking a melody </a>on a set of guitar or violin strings. When placing one’s finger on a part of the string and then plucking it with another, one has created a <span data-concept="standing-wave">standing wave</span>. The solutions to this problem involve the string oscillating in a sine-wave pattern (Figure 2.1.4) with no vibration at the ends. There is also no vibration at a series of equally-spaced points between the ends; these "quiet" places are <em><span data-concept="node">nodes</span></em>. The places of maximum oscillation are <em><span data-concept="antinode">antinodes</span></em>.</p>
+<figure class="sim" id="sim-standing" data-figure="2.1.4 + 2.1.5" data-original="/media/ch02/141673-Standing_wave.gif,/media/ch02/54788-Standing_waves_on_a_string.gif" data-original-caption="Animation of standing wave in the stationary medium with marked wave nodes (red circles). (public domain; LucasVB).">
+  <div class="sim-head"><span class="eyebrow">Figure 2.1.4 + 2.1.5</span><span>Step through the first six solutions for a string held at both ends. The nodes stay put while the antinodes swing, and a solution with more nodes swings faster.</span></div>
+</figure>
+<div class="note">
+<div class="eyebrow">Note</div>
+<h3>Bound vs. Free particles and Traveling vs. Stationary Waves</h3>
+<p><span data-concept="traveling-wave">Traveling waves</span> exhibit movement and propagate through time and space and <span data-concept="standing-wave">stationary wave</span> have crests and troughs at fixed intervals separated by <span data-concept="node">nodes</span>. "Free" particles like the photoelectron discussed in the photoelectron effect, exhibit traveling wave like properties. In contrast, electrons that are "bound" waves will exhibit stationary wave like properties. The latter was invoked for the Bohr atom for quantizing angular moment of an electron bound within a hydrogen atom.</p>
+</div>
+</section>
+
+<section id="the-wave-equation">
+<h2>The Wave Equation</h2>
+<p>The mathematical description of the one-dimensional waves (both traveling and standing) can be expressed as</p>
+$$ \dfrac{\partial^2 \ku(\kx,\kt)}{\partial \kx^2} = \dfrac{1}{\kv^2} \dfrac{\partial^2 \ku(\kx,\kt)}{\partial \kt^2} \tag{2.1.2} $$
+<p>with $\ku$ is the amplitude of the wave at position $\kx$ and time $\kt$, and $\kv$ is the <span data-concept="wave-velocity">velocity of the wave</span> (Figure 2.1.2).</p>
+<p>Equation 2.1.2 is called the <span data-concept="classical-wave-equation">classical wave equation in one dimension</span> and is a <em>linear partial differential equation</em>. It tells us how the displacement $\ku$ can change as a function of position and time and the function. The solutions to the wave equation ($\ku(\kx,\kt)$) are obtained by appropriate<a href="http://mathwiki.ucdavis.edu/Analysis/Partial_differential_equations"> integration techniques</a>. It may not be surprising that not all possible waves will satisfy Equation 2.1.2 and the waves that do must satisfy both <strong><span data-concept="initial-conditions">the initial conditions</span></strong> and the <strong><span data-concept="boundary-conditions">boundary conditions</span></strong>, i.e. on how the wave is produced and what is happening on the ends of the string.</p>
+<p>For example, for a <span data-concept="standing-wave">standing wave</span> of string with length $\kL$ held taut at two ends (Figure 2.1.3)<sup class="fn" data-note="c-string-figure"></sup>, the <span data-concept="boundary-conditions">boundary conditions</span> are</p>
+$$ \ku(0,\kt)=0\ \tag{2.1.3} $$
+<p>and</p>
+$$ \ku(\kL,\kt)=0 \tag{2.1.4} $$
+<p>for all values of $\kt$. As expected, different system will have different <span data-concept="boundary-conditions">boundary conditions</span> and hence different solutions.</p>
+<div class="note">
+<div class="eyebrow">Note</div>
+<h3>Mathematical Origin of Quantization</h3>
+<p>The <span data-concept="initial-conditions">initial conditions</span> and the <span data-concept="boundary-conditions">boundary conditions</span> used to solve the wave equation will result in restrictions of "allowed" waves to exist in a similar fashion that only certain solutions exist for the electrons in the Bohr atom.</p>
+</div>
+<p>The first six wave solutions $\ku(\kx,\kt)$ to Equation 2.1.2 subject to the <span data-concept="boundary-conditions">boundary conditions</span> in Equations 2.1.3 and 2.1.4 (discussed in detail later) results in the wave in Figure 2.1.5. These are <span data-concept="standing-wave">standing waves</span> that exist with frequencies based on the number of <em><span data-concept="node">nodes</span></em> (0, 1, 2, 3,...) they exhibit (more discussed in the following Section).</p>
+<div class="note">
+<div class="eyebrow">Note</div>
+<h3>Curvature of Wave Solutions</h3>
+<p>Since the acceleration of the wave amplitude (right side of Equation 2.1.2) is proportional to $\dfrac{\partial^2}{\partial \kx^2}$, the greater curvature in the material produces a greater acceleration, i.e., greater changing velocity of the wave (Figure 2.1.4) and greater frequency of oscillation. As discussed later, the higher frequency waves (i..e, more <span data-concept="node">nodes</span>) are higher energy solutions; this as expected from the experiments discussed in Chapter 1 including Plank's equation<sup class="fn" data-note="c-planck"></sup> $\kE=h\knu$.</p>
+</div>
+</section>

@@ -1,0 +1,12 @@
+{
+ "id": "intro",
+ "module": "11779",
+ "chapter": "2",
+ "title": "Introduction",
+ "short": "Introduction",
+ "lead": "",
+ "notes": "The chapter page's list of its sections, with their summaries, is left out because the contents view lists them.",
+ "ai": {"text": [{"model": "claude-opus-5-5", "effort": "low"}]},
+ "built": "2026-11-08",
+ "figures": []
+}
