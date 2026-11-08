@@ -1,0 +1,502 @@
+{
+ "id": "5.9",
+ "module": "13423",
+ "chapter": "5",
+ "title": "The Rigid Rotator is a Model for a Rotating Diatomic Molecule",
+ "short": "Rotating diatomic molecules",
+ "lead": "A diatomic molecule turning in space is modelled as a rigid rotor. Its rotational levels show up in microwave spectroscopy, where a polar molecule absorbs radiation as it climbs from one level to the next, and the measured lines carry the molecule's bond length.",
+ "objectives": [
+  "Demonstrate how to use the 3D regid rotor to describe a rotating diatomic molecules",
+  "Demonstate how microwave spectroscopy can get used to characterize rotating diatomic molecules",
+  "Interprete a simple microwave spectrum for a diatomic molecule"
+ ],
+ "summary_html": "",
+ "notes": "Adapted from Hanson, Harvey, Sweeney and Zielinski's Quantum States of Atoms and Molecules under CC BY-NC-SA 4.0, with Figure 5.9.4 by Nrrw via Wikipedia under CC BY-SA 3.0 and Figure 5.9.5's animation by www.cleonis.nl under CC BY-SA 3.0; the book gives no credit for Figures 5.9.1 to 5.9.3.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "medium"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "medium"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The keys of Exercises 5.9.3 and 5.9.5 are the book's; Exercises 5.9.1, 5.9.2 and 5.9.4 have none, and their solutions were written by AI. The box the book prints as Example 5.9.6 stays a worked example. Exercise a1, on the isotope shift of a rotational line, was written by AI. Numeric answers accept the tolerance each card states.",
+ "figures": [
+  {
+   "id": "sim-rotations",
+   "kind": "sim",
+   "number": "5.9.1",
+   "folds": [
+    "5.9.2"
+   ],
+   "originals": [
+    "/media/ch05/250652-libretexts_section_complete_chem_sm_124.png",
+    "/media/ch05/15882-DiatomicRx.gif"
+   ],
+   "original_caption": "5.9.1: Cartesian rotations of a chair. Rotations about the (a) x axis, (b) y axis, and (c) z axis. 5.9.2: Rotation of a diatomic molecule about the x axis.",
+   "draws": [
+    "angle"
+   ],
+   "conventions": [
+    "C",
+    "O"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "medium",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "sim-spectrum",
+   "kind": "sim",
+   "number": "5.9.3",
+   "folds": [
+    "5.9.4"
+   ],
+   "originals": [
+    "/media/ch05/15879-COrotspectrum.gif",
+    "/media/ch05/122130-Rotational_spectrum_example.png"
+   ],
+   "original_caption": "5.9.3: The rotation spectrum of $^{12}C^{16}O$ at 40 K. The peaks are tabulated in Table 5.9.1. 5.9.4: Energy levels and line positions calculated in the rigid rotor approximation. (CC BY-SA 3.0; Nrrw via Wikipedia)",
+   "draws": [
+    "energy",
+    "frequency",
+    "length"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "medium",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "sim-stretch",
+   "kind": "sim",
+   "number": "5.9.5",
+   "originals": [
+    "/media/ch05/267973-ezgif-3-69bd3a4fa05d.gif"
+   ],
+   "original_caption": "Two atoms connected by a vibrating bond. There is a rotation around the common center of mass, and oscillation in bond distance. (CC SA-BY 3.0; www.cleonis.nl).",
+   "draws": [
+    "length",
+    "frequency"
+   ],
+   "conventions": [
+    "C",
+    "O"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "medium",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "opening",
+   "concept": "rigid-rotor",
+   "verb": "reinforces"
+  },
+  {
+   "span": "opening",
+   "concept": "molecular-rotations",
+   "verb": "introduces"
+  },
+  {
+   "span": "introduction-to-microwave-spectroscopy",
+   "concept": "microwave-spectroscopy",
+   "verb": "introduces"
+  },
+  {
+   "span": "introduction-to-microwave-spectroscopy",
+   "concept": "dipole-moment",
+   "verb": "uses"
+  },
+  {
+   "span": "introduction-to-microwave-spectroscopy",
+   "concept": "transition-moment-integral",
+   "verb": "uses"
+  },
+  {
+   "span": "introduction-to-microwave-spectroscopy",
+   "concept": "spherical-harmonics",
+   "verb": "uses"
+  },
+  {
+   "span": "introduction-to-microwave-spectroscopy",
+   "concept": "rotational-selection-rules",
+   "verb": "introduces"
+  },
+  {
+   "span": "introduction-to-microwave-spectroscopy",
+   "concept": "rotor-energy-levels",
+   "verb": "reinforces"
+  },
+  {
+   "span": "microwave-transition-energies",
+   "concept": "rotational-transition-energies",
+   "verb": "introduces"
+  },
+  {
+   "span": "microwave-transition-energies",
+   "concept": "rotational-constant",
+   "verb": "introduces"
+  },
+  {
+   "span": "microwave-transition-energies",
+   "concept": "rotational-line-spacing",
+   "verb": "introduces"
+  },
+  {
+   "span": "microwave-transition-energies",
+   "concept": "centrifugal-stretching",
+   "verb": "introduces"
+  },
+  {
+   "span": "microwave-transition-energies",
+   "concept": "bond-length-from-spectrum",
+   "verb": "introduces"
+  },
+  {
+   "span": "microwave-transition-energies",
+   "concept": "reduced-mass",
+   "verb": "uses"
+  },
+  {
+   "span": "microwave-transition-energies",
+   "concept": "moment-of-inertia",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "e1",
+   "source_id": "exr:5.9.1",
+   "source_number": "Exercise 5.9.1",
+   "kind": "exercise",
+   "bloom": "Understand",
+   "place": {
+    "at": "end"
+   },
+   "cite": "introduction-to-microwave-spectroscopy",
+   "prompt": "<p>Explain why your microwave oven heats water, but not air. Hint: draw and compare Lewis structures for components of air and for water.</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "Which of H₂O, N₂ and O₂ has a permanent dipole moment?",
+    "solution": "<p>Microwaves are absorbed only by molecules with a permanent dipole moment, whose rotational transitions they drive. Water's Lewis structure has two O–H bonds and two lone pairs on oxygen, so the molecule is bent and its bond dipoles add to a net dipole moment: it absorbs microwave radiation, and the energy it takes up passes to its surroundings as heat. Air is mostly N₂ and O₂, each two identical atoms joined by a symmetric bond (N≡N, O=O), with no dipole moment at all, so it absorbs essentially nothing and stays cool.</p>"
+   }
+  },
+  {
+   "id": "e2",
+   "source_id": "exr:5.9.2",
+   "source_number": "Exercise 5.9.2",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "introduction-to-microwave-spectroscopy",
+   "prompt": "<p>Construct a rotational energy level diagram for $J = 0$, $1$, and $2$ and add arrows to show all the allowed transitions between states that cause electromagnetic radiation to be absorbed or emitted.</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "Only $\\Delta J = \\pm 1$ is allowed.",
+    "solution": "<p>The levels are $E_0 = 0$, $E_1 = 2B$ and $E_2 = 6B$ (Equation 5.9.6 with $B = \\hbar^2/2I$), with 1, 3 and 5 states. The selection rule $\\Delta J = \\pm 1$ allows two pairs of levels to be joined: $J = 0 \\leftrightarrow 1$, a gap of $2B$, and $J = 1 \\leftrightarrow 2$, a gap of $4B$. Draw an upward arrow for each absorption ($0 \\to 1$, $1 \\to 2$) and a downward arrow for each emission ($1 \\to 0$, $2 \\to 1$). There is no arrow between $J = 0$ and $J = 2$, since $\\Delta J = 2$ is forbidden.</p>"
+   }
+  },
+  {
+   "id": "e3",
+   "source_id": "exr:5.9.3",
+   "source_number": "Exercise 5.9.3",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "microwave-transition-energies",
+   "prompt": "<p>Complete the steps going from Equation 5.9.8 to Equation 5.9.10 and identify the units of $B$ at the end.</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "source",
+    "solution": "$$ \\begin{aligned} \\Delta E_{photon} &= E_{f} - E{i}\\\\[4pt] E_{r.rotor} &= J(J+1)\\frac{\\hbar^2}{2I}\\\\[4pt] E_{photon} = h_{\\nu} = hc\\widetilde{\\nu} &= J_f(J_f+1)\\frac{\\hbar^2}{2I} - J_i(J_i+1)\\frac{\\hbar^2}{2I}\\\\[4pt] J_f - J_i &= 1\\\\[4pt] J_f &= 1 + J_i\\\\[4pt] E_{photon} = h_{\\nu} = hc\\widetilde{\\nu} &= (1+J_i)(2+J_i)\\frac{\\hbar^2}{2I} - J_i(J_i+1)\\frac{\\hbar^2}{2I} \\\\[4pt] &= \\frac{\\hbar^2}{2I}[2 + 3J_i + J_i^2 -J_i^2 - J_i]\\\\[4pt] &= \\frac{\\hbar^2}{2I}2(J_i+1)\\\\[4pt] &= 2B(J_i + 1) \\end{aligned} $$\n<p>Now we do a standard dimensional analysis</p>\n$$ \\begin{aligned} B &= \\frac{\\hbar^2}{2I} \\equiv \\left[\\frac{kg m^2}{s^2}\\right] = [J]\\\\[4pt] \\frac{B}{h} = B(in freq.) &= \\frac{h}{8 \\pi^2\\mu r_o^2} \\equiv \\left[\\frac{1}{s}\\right]\\\\[4pt] \\frac{B}{hc} = \\widetilde{B} &= \\frac{h}{8 \\pi^2\\mu c r_o^2} \\equiv \\left[\\frac{s}{m}\\right]\\\\[4pt] \\end{aligned} $$\n<p><sup class=\"fn\" data-note=\"c-key3\"></sup></p>"
+   }
+  },
+  {
+   "id": "e4",
+   "source_id": "exr:5.9.4",
+   "source_number": "Exercise 5.9.4",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "microwave-transition-energies",
+   "prompt": "<p>Infrared spectroscopists use units of wavenumbers. Rewrite the steps going from Equation 5.9.8 to Equation 5.9.10 to obtain expressions for $h\\nu$ and $B$ in units of wavenumbers. Note that to convert $B$ in Hz to $B$ in $cm^{-1}$, you simply divide the former by $c$.</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "Divide each energy by $hc$.",
+    "solution": "<p>Dividing Equation 5.9.8 by $hc$ gives the photon's wavenumber, $\\bar{\\nu} = E_{photon}/hc = [J_f(J_f+1) - J_i(J_i+1)]\\hbar^2/2Ihc$. With $J_f = J_i + 1$ the bracket is $2(J_i + 1)$, so</p>$$ \\bar{\\nu} = 2\\tilde{B}(J_i + 1), \\qquad \\tilde{B} = \\dfrac{\\hbar^2}{2Ihc} = \\dfrac{h}{8\\pi^2 c\\,\\mu r_0^2} $$<p>and $h\\nu = hc\\bar{\\nu} = 2hc\\tilde{B}(J_i + 1)$. With $h$ in J s, $\\mu$ in kg, $r_0$ in m and $c$ in m/s, $\\tilde{B}$ comes out in m⁻¹; with $c$ in cm/s it is in cm⁻¹, which is the same as dividing $B/h$ in Hz by $c$.</p>"
+   }
+  },
+  {
+   "id": "e5",
+   "source_id": "exr:5.9.5",
+   "source_number": "Exercise 5.9.5",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "microwave-transition-energies",
+   "prompt": "<p>Use Equation 5.9.12 to prove that the spacing of any two lines in a rotational spectrum is $2B$, i.e. derive:</p>\n$$ \\nu _{J_i + 1} - \\nu _{J_i} = 2B $$",
+   "answer": {
+    "type": "open",
+    "generated_by": "source",
+    "solution": "<p>To prove the relationship, evaluate the LHS. First, define the terms:</p>\n$$ \\nu_{J_{i}}=2B(J_{i}+1),\\nu_{J_{i}+1}=2B((J_{i}+1)+1) $$\n<p>Substitute into the equation and evaluate:</p>\n$$ 2B((J_{i}+1)+1)-2B(J_{i}+1)=2B $$\n$$ 2B(J_{i}+1)+2B-2B(J_{i}+1)=2B $$\n$$ 2B=2B $$\n<p>LHS equals RHS.Therefore, the spacing between any two lines is equal to $2B$.</p>"
+   }
+  },
+  {
+   "id": "a1",
+   "source_id": "The rotational constant depends on the distance",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "microwave-transition-energies",
+   "prompt": "<p>The $J = 0 \\to 1$ line of $^{12}C^{16}O$ is at 115,271.21 MHz (Table 5.9.1). At what frequency, in MHz, does the rigid rotor put the same line of $^{13}C^{16}O$, whose bond length is the same? Use the isotopic masses 12.0000, 13.00335 and 15.99491 amu.</p>",
+   "answer": {
+    "type": "number",
+    "value": 110189,
+    "unit": "MHz",
+    "tol": 0.002,
+    "generated_by": "ai",
+    "hint": "With $r_0$ fixed, $\\nu = 2B/h$ is inversely proportional to the reduced mass.",
+    "solution": "<p>The line is at $\\nu = 2B/h = h/(4\\pi^2\\mu r_0^2)$, so at one bond length $\\nu \\propto 1/\\mu$. The reduced masses are $\\mu(^{12}C^{16}O) = \\dfrac{(12.0000)(15.99491)}{27.99491} = 6.85621$ amu and $\\mu(^{13}C^{16}O) = \\dfrac{(13.00335)(15.99491)}{28.99826} = 7.17241$ amu. Then</p>$$ \\nu = 115{,}271.21\\ \\text{MHz} \\times \\dfrac{6.85621}{7.17241} = 110{,}189\\ \\text{MHz} $$<p>The heavier isotope's line sits about 4.4% lower.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "e1",
+   "concept": "microwave-spectroscopy"
+  },
+  {
+   "exercise": "e1",
+   "concept": "dipole-moment"
+  },
+  {
+   "exercise": "e2",
+   "concept": "rotational-selection-rules"
+  },
+  {
+   "exercise": "e2",
+   "concept": "rotor-energy-levels"
+  },
+  {
+   "exercise": "e3",
+   "concept": "rotational-transition-energies"
+  },
+  {
+   "exercise": "e3",
+   "concept": "rotational-constant"
+  },
+  {
+   "exercise": "e4",
+   "concept": "rotational-transition-energies"
+  },
+  {
+   "exercise": "e4",
+   "concept": "rotational-constant"
+  },
+  {
+   "exercise": "e5",
+   "concept": "rotational-line-spacing"
+  },
+  {
+   "exercise": "a1",
+   "concept": "rotational-constant"
+  },
+  {
+   "exercise": "a1",
+   "concept": "bond-length-from-spectrum"
+  },
+  {
+   "exercise": "a1",
+   "concept": "reduced-mass"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-square",
+   "kind": "correction",
+   "html": "Equation 5.9.3 is the square of the transition moment, $|\\mu_T|^2 = \\mu^2\\dfrac{J+1}{2J+1}$; it is $|\\mu_T|^2$ that goes as the square of the dipole moment."
+  },
+  {
+   "id": "c-R",
+   "kind": "correction",
+   "html": "The distance is the bond length $r_0$ of Equations 5.9.11 and 5.9.12."
+  },
+  {
+   "id": "c-66",
+   "kind": "correction",
+   "html": "This line is $5 \\rightarrow 6$."
+  },
+  {
+   "id": "c-eq12",
+   "kind": "correction",
+   "html": "The line positions are those of Equation 5.9.9, $E_{photon} = 2B(J_i + 1)$; Equation 5.9.12 defines $\\tilde{B}$."
+  },
+  {
+   "id": "c-nah-au",
+   "kind": "correction",
+   "html": "The unit is the atomic mass unit: 1 amu $= 1.66\\times10^{-27}$ kg."
+  },
+  {
+   "id": "c-nah-r",
+   "kind": "correction",
+   "html": "The numbers give $R_e = 1.888\\times10^{-10}$ m, which rounds to the 1.89 Å printed; the line above prints 1.899."
+  },
+  {
+   "id": "c-co-spacing",
+   "kind": "correction",
+   "html": "The $J = 0 \\to 1$ line is at 115,271.21 MHz; the solution uses the spacing to the next line, 115,266.8 MHz, which is close because every spacing is near $2B$. The masses should be the isotopic ones, 12.0000 and 15.9949 amu, as 5.2 warns; here the result is the same to four figures."
+  },
+  {
+   "id": "c-co-kg",
+   "kind": "correction",
+   "html": "The conversion factor is $1.661\\times10^{-27}$ kg per amu; the \"12\" in its denominator is a slip, and the 1.139 × 10⁻²⁶ kg that follows is right."
+  },
+  {
+   "id": "c-key3",
+   "kind": "correction",
+   "html": "$\\tilde{B} = h/8\\pi^2\\mu c r_0^2$ has units of $\\dfrac{\\text{J s}}{\\text{kg}\\cdot\\text{m}^2\\cdot\\text{m/s}} = \\text{m}^{-1}$, a wavenumber, not s/m."
+  },
+  {
+   "id": "c-fig2",
+   "kind": "correction",
+   "figure": "sim-rotations",
+   "html": "The book's animation turns the molecule about an axis across its bond, while the text puts the bond along the x axis, about which turning the molecule is not counted as a rotation."
+  },
+  {
+   "id": "c-fig5",
+   "kind": "correction",
+   "figure": "sim-stretch",
+   "html": "The book's animation shows a vibration and a rotation but no bond that lengthens as the molecule spins faster, which is what the note describes."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "line-positions",
+   "what": "the rotational line positions",
+   "source": "Physical Chemistry (LibreTexts), 5.9 The Rigid Rotator is a Model for a Rotating Diatomic Molecule",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kEph = E_f - E_i",
+       "src": "(5.9.7)"
+      },
+      {
+       "tex": "\\kEJ = J(J + 1)\\dfrac{\\hbar^2}{2\\kI}",
+       "src": "(5.9.6)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{E}{\\kEph} = \\mk{d}{E_f - E_i}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{E}{\\kEph} = \\mk{d}{J_f(J_f + 1)\\dfrac{\\hbar^2}{2\\kI} - J_i(J_i + 1)\\dfrac{\\hbar^2}{2\\kI}}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "num": "(5.9.8)",
+     "src": "5.9"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "text": "The selection rule requires $J_f - J_i = 1$ for the absorption of a photon.",
+       "src": "(5.9.4)"
+      },
+      {
+       "tex": "\\kEph = h\\knu = hc\\bar{\\nu}",
+       "src": "(5.9.7)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{E}{\\kEph} = \\mk{d}{J_f(J_f + 1)\\dfrac{\\hbar^2}{2\\kI} - J_i(J_i + 1)\\dfrac{\\hbar^2}{2\\kI}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{E}{\\kEph} = \\mk{d}{(J_i + 1)(J_i + 2)\\dfrac{\\hbar^2}{2\\kI} - J_i(J_i + 1)\\dfrac{\\hbar^2}{2\\kI}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{E}{\\kEph} = \\mk{d}{2(J_i + 1)\\dfrac{\\hbar^2}{2\\kI}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{E}{\\kEph} = \\mk{n}{h\\knu = hc\\bar{\\nu}} = \\mk{d}{2(J_i + 1)\\dfrac{\\hbar^2}{2\\kI}}",
+       "uses": [
+        2
+       ]
+      }
+     ],
+     "num": "(5.9.9)",
+     "src": "5.9"
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "tex": "B = \\dfrac{\\hbar^2}{2\\kI}",
+       "src": "(5.9.10)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{E}{\\kEph} = \\mk{n}{h\\knu = hc\\bar{\\nu}} = \\mk{d}{2(J_i + 1)\\dfrac{\\hbar^2}{2\\kI}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{E}{\\kEph} = \\mk{n}{h\\knu = hc\\bar{\\nu}} = \\mk{d}{2B(J_i + 1)}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "src": "5.9"
+    }
+   ]
+  }
+ ]
+}

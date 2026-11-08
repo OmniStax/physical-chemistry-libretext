@@ -22,9 +22,9 @@ const sub = (k) => String(k).split('').map((c) => SUB[+c]).join('');
 (function () {
   const d = sim('sim-ladder', 680);
   const K = ctl(d.controls, { label: '\\kk', cls: 'force-constant', min: 100, max: 2000, step: 1, value: 481, unit: 'N/m', dec: 0,
-    detents: [{ v: 481, label: 'HCl' }, { v: 575, label: 'H₂' }], snap: true, aria: 'the force constant' });
+    detents: [481, 575], snap: true, aria: 'the force constant' });
   const M = ctl(d.controls, { label: '\\kmu', cls: 'mass', min: 0.5, max: 20, step: 0.001, value: 0.98, unit: 'amu', dec: 3,
-    detents: [{ v: 0.504, label: 'H₂' }, { v: 0.98, label: 'HCl' }, { v: 1.007, label: 'D₂' }], snap: true, aria: 'the reduced mass' });
+    detents: [0.504, 0.98, 1.007], snap: true, aria: 'the reduced mass' });
   let hits = []; F.hover(d.stage, () => hits);
   const EMAX = 40, QMAX = 60;
   function draw() {
@@ -44,14 +44,14 @@ const sub = (k) => String(k).split('').map((c) => SUB[+c]).join('');
     for (let v = 0; v <= n; v++) {
       const E = (v + 0.5) * hw, q = Math.min(Qv(E), QMAX), y = ax.Y(E);
       line(ctx, ax.X(-q), y, ax.X(q), y, ce, v === 0 ? 5 : gap > 8 ? 3 : 2);
-      if (gap >= 24 && v <= 9) text(ctx, `v = ${v}`, ax.X(q) + 12, y, alpha(PAL.ink, 0.75), { size: 17, base: 'middle' });
+      if (gap >= 24 && v <= 9) text(ctx, `v = ${v}`, box.r + 16, y, alpha(PAL.ink, 0.75), { size: 17, base: 'middle' });
       hits.push({ x: ax.X(0), y, r: Math.max(6, Math.min(16, gap / 2)), name: `level v = ${v}: E${sub(v)} = ${2 * v + 1}ħω/2 = ${fmt(E, 2)} × 10⁻²⁰ J, turning points ±${fmt(Qv(E), 1)} pm` });
     }
     /* the classical limits of the ground state, ±Q₀ */
     const q0 = Qv(hw / 2), y0 = ax.Y(hw / 2);
     for (const s of [-1, 1]) { line(ctx, ax.X(s * q0), y0, ax.X(s * q0), box.b, alpha(cl, 0.8), 2, [4, 8]); dot(ctx, ax.X(s * q0), y0, cl, true, 8); }
-    text(ctx, '−Q₀', ax.X(-q0), box.b - 14, cl, { size: 20, weight: 600, align: 'right', base: 'bottom' });
-    text(ctx, 'Q₀', ax.X(q0) + 6, box.b - 14, cl, { size: 20, weight: 600, align: 'left', base: 'bottom' });
+    text(ctx, '−Q₀', ax.X(-q0) - 12, y0 - 14, cl, { size: 20, weight: 600, align: 'right', base: 'bottom' });
+    text(ctx, 'Q₀', ax.X(q0) + 12, y0 - 14, cl, { size: 20, weight: 600, align: 'left', base: 'bottom' });
     hits.push({ x: ax.X(q0), y: y0, r: 14, name: `Q₀ = ${fmt(q0, 1)} pm, the classical limit of the ground state` });
     /* the two brackets: ħω/2 off the floor, ħω between the first two rungs */
     vbracket(ctx, box.l + 60, ax.Y(0), y0, ce, 'ħω/2', 1, { size: 20 });

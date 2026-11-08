@@ -1,0 +1,239 @@
+{
+ "id": "5.3",
+ "module": "13415",
+ "chapter": "5",
+ "title": "The Harmonic Oscillator Approximates Molecular Vibrations",
+ "short": "Anharmonic vibrations",
+ "lead": "Near the bottom of any well a molecule's potential looks like a parabola, so the harmonic oscillator is a fair first model of a vibration. Further out the real potential bends away from it, and the Morse potential follows a bond all the way to breaking.",
+ "objectives": [
+  "Understand the utility and limits of using the quantum harmonic oscillator as a model for molecular vibrations"
+ ],
+ "summary_html": "",
+ "notes": "Adapted from Peter Kelly under CC BY 4.0 and shared under CC BY-NC-SA 4.0; Figure 5.3.4, which the book credits only to Wikipedia, is folded with Figure 5.3.1 into one moving figure built on literature constants for HCl (Huber and Herzberg, via the NIST Chemistry WebBook).",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercise in this section. Both exercises, on the force constant of a Morse well and the anharmonic lines of HCl, were written by AI with AI solutions; their Bloom levels and concept tags were chosen by AI. Numeric answers accept a 2% tolerance.",
+ "figures": [
+  {
+   "id": "sim-morse",
+   "kind": "sim",
+   "number": "5.3.1",
+   "folds": [
+    "5.3.4"
+   ],
+   "originals": [
+    "/media/ch05/9030-Anharmonic_oscillator.gif",
+    "/media/ch05/55788-imageedit_27_4431511387.png"
+   ],
+   "original_caption": "5.3.1: The vibration of the HCl molecule is really an anharmonic oscillator, but can be approximated as a harmonic oscillator at low energies. In this animation, HCl is vibrating at the $E_3$ energy level. $D_0$ is dissociation energy here, $r_0$ bond length, $V$ potential energy. Energy is expressed in wavenumbers. The hydrogen chloride molecule is attached to the coordinate system to show bond length changes on the curve. (CC BY-SA 3.0; Darekk2 via Wikipedia). 5.3.4: The Morse potential (blue) and harmonic oscillator potential (green). Unlike the energy levels of the harmonic oscillator potential, which are evenly spaced by ħω, the Morse potential level spacing decreases as the energy approaches the dissociation energy. The dissociation energy $D_e$ is larger than the true energy required for dissociation $D_0$ due to the zero point energy of the lowest ($v = 0$) vibrational level. from Wikipedia.",
+   "draws": [
+    "energy",
+    "length",
+    "wavenumber"
+   ],
+   "conventions": [
+    "H",
+    "Cl"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "sim-taylor",
+   "kind": "sim",
+   "number": "5.3.2",
+   "originals": [
+    "/media/ch05/344391-5.3.2-1.svg",
+    "/media/ch05/344392-5.3.2-2.svg"
+   ],
+   "original_caption": "(left) Deviation from simple harmonic potential approximation (red curve) of true/exact potential (blue curve) with cubic term (green). (right) Expansion with positive or negative quartic terms. (CC BY 4.0; Ümit Kaya via LibreTexts)",
+   "draws": [
+    "energy",
+    "length"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "opening",
+   "concept": "potential-taylor-expansion",
+   "verb": "introduces"
+  },
+  {
+   "span": "opening",
+   "concept": "harmonic-potential",
+   "verb": "reinforces"
+  },
+  {
+   "span": "opening",
+   "concept": "force-constant",
+   "verb": "uses"
+  },
+  {
+   "span": "anharmonic-corrections",
+   "concept": "anharmonicity",
+   "verb": "introduces"
+  },
+  {
+   "span": "anharmonic-corrections",
+   "concept": "anharmonic-energy-levels",
+   "verb": "introduces"
+  },
+  {
+   "span": "anharmonic-corrections",
+   "concept": "well-depth",
+   "verb": "introduces"
+  },
+  {
+   "span": "anharmonic-corrections",
+   "concept": "dissociation-energy",
+   "verb": "introduces"
+  },
+  {
+   "span": "anharmonic-corrections",
+   "concept": "harmonic-oscillator-limitations",
+   "verb": "introduces"
+  },
+  {
+   "span": "anharmonic-corrections",
+   "concept": "vibrational-quantum-number",
+   "verb": "uses"
+  },
+  {
+   "span": "morse-potential",
+   "concept": "morse-potential",
+   "verb": "introduces"
+  },
+  {
+   "span": "morse-potential",
+   "concept": "well-depth",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "ai1",
+   "source_id": "The Morse Potential is a good approximation to",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "morse-potential",
+   "prompt": "<p>Expand the Morse potential, Equation 5.3.3, about $x_0$ to second order in $x - x_0$ and show that its harmonic force constant is $k = 2D\\beta^2$. Then find $k$ for a Morse well with $D = 8.41 \\times 10^{-19}$ J and $\\beta = 1.752 \\times 10^{10}\\ \\text{m}^{-1}$, the well that HCl's vibrational constants imply.</p>",
+   "answer": {
+    "type": "number",
+    "value": 516,
+    "unit": "N/m",
+    "generated_by": "ai",
+    "hint": "Near $x_0$, $e^{-\\beta(x-x_0)} \\approx 1 - \\beta(x - x_0)$.",
+    "solution": "<p>Near $x_0$, $e^{-\\beta(x-x_0)} = 1 - \\beta(x-x_0) + \\tfrac{1}{2}\\beta^2(x-x_0)^2 - \\ldots$, so $1 - e^{-\\beta(x-x_0)} = \\beta(x-x_0) - \\tfrac{1}{2}\\beta^2(x-x_0)^2 + \\ldots$ Squaring and keeping the lowest power,</p>$$ V(x) \\approx D\\beta^2(x-x_0)^2 = \\tfrac{1}{2}k(x-x_0)^2 \\quad\\text{with}\\quad k = 2D\\beta^2 $$<p>which matches the harmonic term of Equation 5.3.2. For the given well,</p>$$ k = 2(8.41\\times10^{-19}\\ \\text{J})(1.752\\times10^{10}\\ \\text{m}^{-1})^2 = 516\\ \\text{N/m} $$<p>close to the force constant of HCl.</p>"
+   }
+  },
+  {
+   "id": "ai2",
+   "source_id": "the energy levels become",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "anharmonic-corrections",
+   "prompt": "<p>For $\\mathrm{H^{35}Cl}$, $\\nu_e = 2990.9\\ \\text{cm}^{-1}$ and $\\nu_e x_e = 52.8\\ \\text{cm}^{-1}$. Keeping the first two terms of the anharmonic energy levels, find (a) the wavenumber of the $v = 0 \\to 1$ transition, (b) the wavenumber of the $v = 0 \\to 2$ transition, and (c) how far the $0 \\to 2$ line falls below twice the $0 \\to 1$ line.</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 2885.3,
+      "unit": "cm⁻¹"
+     },
+     {
+      "part": "b",
+      "value": 5665.0,
+      "unit": "cm⁻¹"
+     },
+     {
+      "part": "c",
+      "value": 105.6,
+      "unit": "cm⁻¹",
+      "hint": "Subtract the answer to (b) from twice the answer to (a)."
+     }
+    ],
+    "solution": "<p>With $E_v = (v + \\tfrac{1}{2})\\nu_e - (v + \\tfrac{1}{2})^2\\nu_e x_e$,</p>$$ E_1 - E_0 = \\nu_e - 2\\nu_e x_e = 2990.9 - 105.6 = 2885.3\\ \\text{cm}^{-1} $$$$ E_2 - E_0 = 2\\nu_e - 6\\nu_e x_e = 5981.8 - 316.8 = 5665.0\\ \\text{cm}^{-1} $$<p>Twice the first line is 5770.6 cm⁻¹, so the second falls $2\\nu_e x_e = 105.6$ cm⁻¹ below it. The levels crowd together as $v$ grows, which a harmonic oscillator, with its equal spacing, cannot show.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "ai1",
+   "concept": "morse-potential"
+  },
+  {
+   "exercise": "ai1",
+   "concept": "potential-taylor-expansion"
+  },
+  {
+   "exercise": "ai1",
+   "concept": "force-constant"
+  },
+  {
+   "exercise": "ai2",
+   "concept": "anharmonic-energy-levels"
+  },
+  {
+   "exercise": "ai2",
+   "concept": "anharmonicity"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "model",
+   "kind": "correction",
+   "html": "The levels in Figure 5.3.1 come from the full potential, Equation 5.3.1 with its anharmonic terms, put into the Schrödinger equation; the harmonic oscillator model alone gives evenly spaced levels."
+  },
+  {
+   "id": "ve-latin",
+   "kind": "correction",
+   "html": "The formula prints a Latin $v_e$; it is the Greek $\\nu_e$, the harmonic vibrational wavenumber, as in $\\nu_e x_e$ and $\\nu_e y_e$."
+  },
+  {
+   "id": "morse-zero",
+   "kind": "correction",
+   "html": "This sentence measures the potential from the dissociation limit, so that $V \\to 0$ as $r \\to \\infty$ and $V(r_e) = -D_e$. Equation 5.3.3 measures it from the minimum: $V(x_0) = 0$ and $V(\\infty) = D$. The two differ by the constant $D$, and the limit is infinite $r$, not infinite $r_e$."
+  },
+  {
+   "id": "morse-mass",
+   "kind": "correction",
+   "html": "For a diatomic molecule the mass $m$ in this Hamiltonian is the reduced mass $\\mu$ of Section 5.2."
+  }
+ ]
+}

@@ -14,7 +14,7 @@ function spring(ctx, a0, a1, c, color, { n = 9, w = 18, horiz = false, lw = 3 } 
 }
 
 /* ---------- Figure 5.1.1: two atoms about their center of mass ----------
-   The center of mass is fixed at the middle of the canvas. The bond of length r (300 units at rest,
+   The center of mass is fixed at the middle of the canvas. The bond of length r (210 units at rest,
    vibrating by 12 %) turns once per loop; atom 1 sits m2/(m1 + m2) r from the center, atom 2
    m1/(m1 + m2) r. The faint paths are where each atom goes over the whole loop, so the lighter
    atom's wide path and the heavier one's small one are seen at once. The rates are illustrative:
@@ -31,7 +31,7 @@ function spring(ctx, a0, a1, c, color, { n = 9, w = 18, horiz = false, lw = 3 } 
   F.hover(d.stage, () => hits);
   const pos = (t, ratio, mode) => {
     const vib = mode !== 'rot', rot = mode !== 'vib';
-    const r = 300 * (1 + (vib ? 0.12 * Math.sin(2 * Math.PI * NV * t / LOOP) : 0));
+    const r = 210 * (1 + (vib ? 0.12 * Math.sin(2 * Math.PI * NV * t / LOOP) : 0));
     const th = rot ? 2 * Math.PI * t / LOOP : 0, u = [Math.cos(th), -Math.sin(th)];
     const f1 = ratio / (1 + ratio), f2 = 1 / (1 + ratio);
     return { r, u, a: [-f1 * r * u[0], -f1 * r * u[1]], b: [f2 * r * u[0], f2 * r * u[1]], f1, f2 };
@@ -164,7 +164,7 @@ function spring(ctx, a0, a1, c, color, { n = 9, w = 18, horiz = false, lw = 3 } 
    with the classical density 1/(pi sqrt(A^2 - x^2)) dashed over it, scaled to its own height.
    m = 1 kg; one loop is three periods. */
 (function () {
-  const d = sim('sim-energy', 640);
+  const d = sim('sim-energy', 680);
   const K = ctl(d.controls, { label: '\\kk', cls: 'force-constant', min: 2, max: 10, step: 0.5, value: 5, unit: 'N/m', dec: 1, onInput: () => cy.reset() });
   const A = ctl(d.controls, { label: '\\kA', cls: 'length', min: 0.05, max: 0.25, step: 0.01, value: 0.2, unit: 'm', dec: 2, onInput: () => cy.reset() });
   const per = () => 2 * Math.PI / Math.sqrt(K.v);
@@ -193,7 +193,7 @@ function spring(ctx, a0, a1, c, color, { n = 9, w = 18, horiz = false, lw = 3 } 
     line(ctx, bx[0] - 60, ax.Y(E), bx[1] + 60, ax.Y(E), ce, 3, [10, 10]);
     line(ctx, bx[0] - 60, box.b, bx[1] + 60, box.b, PAL.ink, 2);
     /* where it has been */
-    const hb = { l: 150, r: 960, t: 430, b: 590 };
+    const hb = { l: 150, r: 960, t: 470, b: 610 };
     const hx = axes(ctx, hb, [-0.3, 0.3], [0, 1], { nx: 6, ny: 0, xl: 'displacement x (m)', xc: C('length'), yl: 'time spent', yc: C('probability-density') });
     const dt = per() / 200, n = Math.floor(t / dt), bins = new Array(NB).fill(0), bwid = 2 * a / NB;
     for (let j = 0; j <= n; j++) { const s = a * Math.sin(w * j * dt); bins[Math.min(NB - 1, Math.floor((s + a) / bwid))]++; }

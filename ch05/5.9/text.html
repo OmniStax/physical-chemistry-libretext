@@ -1,0 +1,100 @@
+<section id="opening">
+<h2>Rotation in space</h2>
+<p>To develop a description of the rotational states, we will consider the molecule to be a rigid object, i.e. the bond lengths are fixed and the molecule cannot vibrate. This model for rotation is called the <span data-concept="rigid-rotor">rigid-rotor model</span>. It is a good approximation (even though a molecule vibrates as it rotates, and the bonds are elastic rather than rigid) because the amplitude of the vibration is small compared to the bond length.</p>
+<p>The rotation of a rigid object in space is very simple to visualize. Pick up any object and rotate it. There are <span data-concept="molecular-rotations">orthogonal rotations about each of the three Cartesian coordinate axes</span> just as there are orthogonal translations in each of the directions in three-dimensional space (Figures 5.9.1 and 5.9.2 ). These rotations are said to be <em>orthogonal</em> because one can not describe a rotation about one axis in terms of rotations about the other axes just as one can not describe a translation along the x-axis in terms of translations along the y- and z-axes. For a linear molecule, the motion around the interatomic axis (x-axis) is not considered a rotation.</p>
+<figure class="sim" id="sim-rotations" data-figure="5.9.1 + 5.9.2" data-original="/media/ch05/250652-libretexts_section_complete_chem_sm_124.png,/media/ch05/15882-DiatomicRx.gif" data-original-caption="5.9.1: Cartesian rotations of a chair. Rotations about the (a) x axis, (b) y axis, and (c) z axis. 5.9.2: Rotation of a diatomic molecule about the x axis.">
+  <div class="sim-head"><span class="eyebrow">Figure 5.9.1 + 5.9.2</span><span>Turn the chair about each axis in turn: every rotation leaves it in a new orientation. Then switch to carbon monoxide, whose bond lies along x. Turning it about x changes nothing, so a linear molecule has only two rotations.</span></div>
+</figure>
+<p>In this section we examine the rotational states for a diatomic molecule by comparing the classical interpretation of the angular momentum vector with the probabilistic interpretation of the angular momentum wavefunctions. We want to answer the following types of questions. How do we describe the orientation of a rotating diatomic molecule in space? Is the molecule actually rotating? What properties of the molecule can be physically observed? In what ways does the quantum mechanical description of a rotating molecule differ from the classical image of a rotating molecule?</p>
+</section>
+
+<section id="introduction-to-microwave-spectroscopy">
+<h2>Introduction to Microwave Spectroscopy</h2>
+<p>The permanent electric dipole moments of polar molecules can couple to the electric field of electromagnetic radiation. <span data-concept="microwave-spectroscopy">This coupling induces transitions between the rotational states of the molecules.</span> The energies that are associated with these transitions are detected in the far infrared and microwave regions of the spectrum. For example, the microwave spectrum for carbon monoxide spans a frequency range of 100 to 1200 GHz, which corresponds to 3 - 40 $cm^{-1}$.</p>
+<p>The selection rules for the rotational transitions are derived from the transition moment integral by using the spherical harmonic functions and the appropriate dipole moment operator, $\hat {\mu}$.</p>
+$$ \kmuT = \int Y_{J_f}^{m_f*} \kmuhat Y_{J_i}^{m_i} \sin \theta \,d \theta\, d \varphi \tag{5.9.1} $$
+<p>or in braket notation</p>
+$$ \kmuT = \langle Y_{J_f}^{m_f} | \kmuhat | Y_{J_i}^{m_i} \rangle \tag{5.9.2} $$
+<p>Evaluating the transition moment integral involves a bit of mathematical effort. This evaluation reveals that the transition moment depends on the square of the dipole moment of the molecule,<sup class="fn" data-note="c-square"></sup> $\mu ^2$ and the rotational quantum number, $J$, of the initial state in the transition,</p>
+$$ \kmuT = \kmud ^2 \dfrac {J + 1}{2J + 1} \tag{5.9.3} $$
+<p>and that <span data-concept="rotational-selection-rules">the selection rules for rotational transitions</span> are</p>
+$$ \Delta J = \pm 1 \tag{5.9.4} $$
+<p>and</p>
+$$ \Delta m_J = 0, \pm 1 \tag{5.9.5} $$
+<p>A photon is absorbed for $\Delta J = +1$ and emitted for $\Delta J = -1$.</p>
+<p>The energies of the $J^{th}$ rotational levels are given by</p>
+$$ \kEJ = J(J + 1) \dfrac {\hbar ^2}{2\kI} \tag{5.9.6} $$
+<p>with each $J^{th}$ energy level having a degeneracy of $2J+1$ due to the different possible $m_J$ values.</p>
+</section>
+
+<section id="microwave-transition-energies">
+<h2>Microwave Transition Energies</h2>
+<p><span data-concept="rotational-transition-energies">The transition energies for absorption of radiation</span> are given by</p>
+<figure class="dv" id="drv-line-positions"></figure>
+<p>where $B$ is the <strong><span data-concept="rotational-constant">rotational constant</span></strong> for the molecule and is defined in terms of the <em>energy</em> of the absorbed photon</p>
+$$ B = \dfrac {\hbar ^2}{2\kI} \tag{5.9.10} $$
+<p>Often spectroscopists want to express the rotational constant in terms of <em>frequency</em> of the absorbed photon and do so by dividing Equation 5.9.10 by $h$</p>
+$$ \begin{aligned} B (\text{in freq}) &= \dfrac{B}{h} \\[4pt] &= \dfrac {h}{8\pi^2 \kmu \krzero^2} \end{aligned} \tag{5.9.11} $$
+<p>More often, spectroscopists want to express the rotational constant in terms of <em>wavenumbers</em> ($\bar{\nu}$) of the absorbed photon by dividing Equation 5.9.10 by $hc$,</p>
+$$ \kBt = \dfrac{B}{hc} = \dfrac {h}{8\pi^2 c \kmu \krzero^2} \tag{5.9.12} $$
+<p>The rotational constant depends on the distance ($R$)<sup class="fn" data-note="c-R"></sup> and the masses of the atoms (via the reduced mass) of the nuclei in the diatomic molecule.</p>
+<figure class="sim" id="sim-spectrum" data-figure="5.9.3 + 5.9.4" data-original="/media/ch05/15879-COrotspectrum.gif,/media/ch05/122130-Rotational_spectrum_example.png" data-original-caption="5.9.3: The rotation spectrum of ¹²C¹⁶O at 40 K. The peaks are tabulated in Table 5.9.1. 5.9.4: Energy levels and line positions calculated in the rigid rotor approximation. (CC BY-SA 3.0; Nrrw via Wikipedia)">
+  <div class="sim-head"><span class="eyebrow">Figure 5.9.3 + 5.9.4</span><span>Each $J \to J + 1$ absorption lands on the frequency axis at $2B(J + 1)$, so the predicted lines stand $2B$ apart; the ticks below are the measured lines of Table 5.9.1. Change $\krzero$ and the whole pattern spreads or closes up.</span></div>
+</figure>
+<p>Figure 5.9.3 shows the rotational spectrum as a series of nearly equally spaced lines. The line positions $\nu _J$, line spacings, and the maximum absorption coefficients ( $\gamma _{max}$, the absorption coefficients associated with the specified line position) for each line in this spectrum are given here in Table 5.9.1.</p>
+<div class="book-table">
+  <div class="tcap"><span class="eyebrow">Table 5.9.1</span><span>Rotational Transitions in $^{12}C^{16}O$ at 40 K</span></div>
+  <table>
+    <thead><tr><th><strong>J</strong></th><th>$\nu _J$ (MHz)</th><th><strong>Spacing from previous line (MHz)</strong></th><th>$\gamma _{max}$</th></tr></thead>
+    <tbody>
+      <tr><td>$0 \rightarrow 1$</td><td>115,271.21</td><td>0</td><td>0.0082</td></tr>
+      <tr><td>$1 \rightarrow 2$</td><td>230,538.01</td><td>115,266.80</td><td>0.0533</td></tr>
+      <tr><td>$2 \rightarrow 3$</td><td>345,795.99</td><td>115,257.99</td><td>0.1278</td></tr>
+      <tr><td>$3 \rightarrow 4$</td><td>461,040.76</td><td>115,244.77</td><td>0.1878</td></tr>
+      <tr><td>$4 \rightarrow 5$</td><td>576,267.91</td><td>115,227.15</td><td>0.1983</td></tr>
+      <tr><td>$6 \rightarrow 6$<sup class="fn" data-note="c-66"></sup></td><td>691,473.03</td><td>115,205.12</td><td>0.1618</td></tr>
+      <tr><td>$6 \rightarrow 7$</td><td>806,651.78</td><td>115,178.68</td><td>0.1064</td></tr>
+      <tr><td>$7 \rightarrow 8$</td><td>921,799.55</td><td>115,147.84</td><td>0.0576</td></tr>
+      <tr><td>$8 \rightarrow 9$</td><td>1,036,912.14</td><td>115,112.59</td><td>0.0262</td></tr>
+      <tr><td>$9 \rightarrow 10$</td><td>1,151,985.08</td><td>115,072.94</td><td>0.0103</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>Let’s try to reproduce Figure 5.9.3 from the data in Table 5.9.1 by using the quantum theory that we have developed so far. Equation 5.9.12 predicts a pattern of exactly equally spaced lines.<sup class="fn" data-note="c-eq12"></sup> The lowest energy transition is between $J_i = 0$ and $J_f = 1$ so the first line in the spectrum appears at a frequency of $2B$. The next transition is from $J_i = 1$ to $J_f = 2$ so the second line appears at $4B$. The spacing of these two lines is $2B$. In fact <span data-concept="rotational-line-spacing">the spacing of all the lines is $2B$</span>, which is consistent with the experimental data in Table 5.9.1 showing that the lines are very nearly equally spaced. The difference between the first spacing and the last spacing is less than 0.2%.</p>
+<div class="example" id="ex-5-9-1">
+<h3>Example 5.9.1 · Rotation of Sodium Hydride</h3>
+<p>The molecule $\mathrm{NaH}$ undergoes a rotational transition from $J=0$ to $J=1$ when it absorbs a photon of frequency $2.94 \times 10^{11} \ Hz$. What is the equilibrium bond length of the molecule?</p>
+<h4>Solution</h4>
+<p>We use $J=0$ in the formula for the transition frequency</p>
+$$ \nu =2B=\dfrac{\hbar}{2\pi I}=\dfrac{\hbar}{2\pi \mu R_{e}^{2}} $$
+<p>Solving for $R_e$ gives</p>
+$$ R_e = \sqrt{\dfrac{\hbar}{2\pi \mu \nu}} $$
+<p>The reduced mass is given by</p>
+$$ \begin{aligned}\mu &= \dfrac{m_{Na}m_H}{m_{Na}+m_H} \\[4pt] &=\dfrac{(22.989)(1.0078)}{22.989+1.0078}\\[4pt] &=0.9655\end{aligned} $$
+<p>which is in atomic mass units or relative units. To convert to kilograms, we need the conversion factor $1 \ au = 1.66\times 10^{-27} \ kg$.<sup class="fn" data-note="c-nah-au"></sup> Multiplying this by $0.9655$ gives a reduced mass of $1.603\times 10^{-27} \ kg$. Substituting in for $R_e$ gives</p>
+$$ \begin{aligned} R_e &= \sqrt{\dfrac{(1.055 \times 10^{-34} \ J\cdot s)}{2\pi (1.603\times 10^{-27} \ kg)(2.94\times 10^{11} \ Hz)}}\\[4pt] &= 1.899\times 10^{-10} \ m \\[4pt] &=1.89 \ \stackrel{\circ}{A}\end{aligned} $$
+<p><sup class="fn" data-note="c-nah-r"></sup></p>
+</div>
+<div class="example" id="ex-5-9-6">
+<h3>Example 5.9.6</h3>
+<p>Use the frequency of the $J = 0$ to $J = 1$ transition observed for carbon monoxide to determine a bond length for $^{12}C^{16}O$.</p>
+<h4>Solution</h4>
+<ul><li>J=0: $v_{0}=115271.21\, \text{MHz}$</li><li>J=1: $v_{1}=230538.01\, \text{MHz}$</li></ul>
+$$ \begin{aligned} \Delta v &=230538.01 ~\text{MHz} -115271.21\, \text{MHz} \\[4pt] &=115266.8 \, \text{MHz} \\[4pt] &=1.153 \times 10^{11} ~\text{Hz} \\[4pt] &=\dfrac{\hbar}{2 \pi \mu R_{e}^2} \end{aligned} $$
+<p><sup class="fn" data-note="c-co-spacing"></sup>The reduced mass is</p>
+$$ \begin{aligned} \mu &=\dfrac{m_{C} m_{O}}{m_{C}+m_{O}} \\[4pt] &=\frac{12.01 \times 16.00}{12.01+16.00} \\[4pt] &=6.86\, \text{amu} \end{aligned} $$
+<p>Convert to kg<sup class="fn" data-note="c-co-kg"></sup></p>
+$$ 6.86 amu \, \left( \frac{1.661 \times 10^{-27} ~\text{kg}}{12 ~\text{amu}} \right) =1.139 \times 10^{-26} ~\text{kg} $$
+$$ \begin{aligned} R_{e} &=\sqrt{\frac{\hbar}{2 \pi \mu \Delta v}} \\[4pt] &= \sqrt{\frac{1.055 \times 10^{-34} ~J \cdot s}{2 \pi \cdot 1.139 \times 10^{-26}~\text{kg} \cdot 1.153 \times 10^{11} ~\text{Hz}}} \\[4pt] &=1.131 \times 10^{-10} \mathrm{m} \\[4pt] &=1.131\, \stackrel{\circ}{A} \end{aligned} $$
+</div>
+<div class="note">
+<div class="eyebrow">Note</div>
+<h3>Advanced: Non-Rigid Rotors</h3>
+<p><span data-concept="centrifugal-stretching">Centrifugal stretching of the bond</span> as $J$ increases causes the decrease in the spacing between the lines in an observed spectrum (Table 5.9.1). This decrease shows that the molecule is not really a rigid rotor. As the rotational angular momentum increases with increasing $J$, the bond stretches. This stretching increases the moment of inertia and decreases the rotational constant (Figure 5.9.5).</p>
+<figure class="sim" id="sim-stretch" data-figure="5.9.5" data-original="/media/ch05/267973-ezgif-3-69bd3a4fa05d.gif" data-original-caption="Two atoms connected by a vibrating bond. There is a rotation around the common center of mass, and oscillation in bond distance. (CC SA-BY 3.0; www.cleonis.nl).">
+  <div class="sim-head"><span class="eyebrow">Figure 5.9.5</span><span>Raise $J$ and carbon monoxide spins faster. The bond, drawn a thousand times longer than it really stretches, grows, and the rotational constant read from each line of Table 5.9.1 falls.</span></div>
+</figure>
+<p>The effect of centrifugal stretching is smallest at low $J$ values, so a good estimate for $B$ can be obtained from the $J = 0$ to $J = 1$ transition. <span data-concept="bond-length-from-spectrum">From $B$, a value for the bond length of the molecule can be obtained</span> since the moment of inertia that appears in the definition of $B$ (Equation 5.9.10) is the reduced mass times the bond length squared. When the centrifugal stretching is taken into account quantitatively, the development of which is beyond the scope of the discussion here, a very accurate and precise value for B can be obtained from the observed transition frequencies because of their high precision. Rotational transition frequencies are routinely reported to 8 and 9 significant figures.</p>
+</div>
+<p>As we have just seen, quantum theory successfully predicts the line spacing in a rotational spectrum. An additional feature of the spectrum is the line intensities. The lines in a rotational spectrum do not all have the same intensity, as can be seen in Figure 5.9.3 and Table 5.9.1. This is related to the populations of the initial and final states. This aspect of spectroscopy will be discussed in more detail in the following chapters</p>
+</section>

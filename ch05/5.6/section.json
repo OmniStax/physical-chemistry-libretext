@@ -1,0 +1,833 @@
+{
+ "id": "5.6",
+ "module": "13420",
+ "chapter": "5",
+ "title": "The Harmonic Oscillator Wavefunctions involve Hermite Polynomials",
+ "short": "Oscillator wavefunctions",
+ "lead": "The harmonic oscillator's Schrödinger equation is solved by changing to a dimensionless coordinate and writing each wavefunction as a polynomial times a Gaussian. The polynomials are the Hermite polynomials, and the wavefunctions say where a vibrating bond is likely to be found.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "Adapted from Hanson, Harvey, Sweeney and Zielinski's Quantum States of Atoms and Molecules (Zielinski et al.) under CC BY-NC-SA 4.0. The page's one learning objective, a copy of Section 5.2's title, is left out, and Exercise 5.4.1, printed in Section 5.4, is set here because it compares the wavefunctions drawn here with the classical oscillator.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "Exercise 5.6.8 and its key are the book's, and so are Exercise 5.4.1 and its key, printed in Section 5.4 and set here because it tests the wavefunctions and the correspondence principle. The other ten exercises are unkeyed in the book and have AI solutions; those for 5.6.1 and 5.6.3 follow the derivation on this page. Bloom levels and concept tags were chosen by AI. Numeric answers accept a 2% tolerance.",
+ "figures": [
+  {
+   "id": "sim-hermite",
+   "kind": "sim",
+   "number": "5.6.1",
+   "originals": [
+    "/media/ch05/344453-Hermite_poly_phys.svg"
+   ],
+   "original_caption": "The first six Hermite polynomials $H_n(x)$. (CC BY-SA 3.0 Unported; [Alessio ](https://commons.wikimedia.org/wiki/User:Alejo2083)[Damato](https://commons.wikimedia.org/wiki/User:Alejo2083), Vulpecula and others via Wikipedia)",
+   "widths": [
+    505
+   ],
+   "draws": [
+    "wavefunction"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "sim-states",
+   "kind": "sim",
+   "number": "5.6.2",
+   "folds": [
+    "5.6.3"
+   ],
+   "originals": [
+    "/media/ch05/345385-5.6.2-1_(1).svg",
+    "/media/ch05/345384-5.6.2-2_(1).svg",
+    "/media/ch05/345386-5.6.2-3_(1).svg",
+    "/media/ch05/345387-5.6.2-4_(1).svg",
+    "/media/ch05/345391-5.6.3-1.svg",
+    "/media/ch05/345390-5.6.3-2.svg",
+    "/media/ch05/345389-5.6.3-3.svg",
+    "/media/ch05/345388-5.6.3-4.svg"
+   ],
+   "original_caption": "5.6.2: The harmonic oscillator wavefunctions describing the four lowest energy states. 5.6.3: The probability densities for the four lowest energy states of the harmonic oscillator.",
+   "widths": [
+    274,
+    274,
+    274,
+    274,
+    274,
+    274,
+    274,
+    274
+   ],
+   "draws": [
+    "energy",
+    "wavefunction",
+    "probability-density",
+    "frequency"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "schrodinger-equation",
+   "concept": "hamiltonian-operator",
+   "verb": "reinforces"
+  },
+  {
+   "span": "schrodinger-equation",
+   "concept": "harmonic-oscillator-schrodinger-equation",
+   "verb": "reinforces"
+  },
+  {
+   "span": "schrodinger-equation",
+   "concept": "scaled-oscillator-equation",
+   "verb": "introduces"
+  },
+  {
+   "span": "solving-for-the-quantum-wavefunctions",
+   "concept": "asymptotic-series-method",
+   "verb": "introduces"
+  },
+  {
+   "span": "solving-for-the-quantum-wavefunctions",
+   "concept": "hermite-polynomials",
+   "verb": "introduces"
+  },
+  {
+   "span": "solving-for-the-quantum-wavefunctions",
+   "concept": "oscillator-wavefunctions",
+   "verb": "introduces"
+  },
+  {
+   "span": "solving-for-the-quantum-wavefunctions",
+   "concept": "oscillator-energy-levels",
+   "verb": "reinforces"
+  },
+  {
+   "span": "solving-for-the-quantum-wavefunctions",
+   "concept": "oscillator-wavefunction-parity",
+   "verb": "introduces"
+  },
+  {
+   "span": "solving-for-the-quantum-wavefunctions",
+   "concept": "correspondence-principle",
+   "verb": "reinforces"
+  },
+  {
+   "span": "tunneling",
+   "concept": "classically-forbidden-region",
+   "verb": "uses"
+  },
+  {
+   "span": "tunneling",
+   "concept": "oscillator-tunneling-probability",
+   "verb": "introduces"
+  },
+  {
+   "span": "tunneling",
+   "concept": "error-function",
+   "verb": "introduces"
+  },
+  {
+   "span": "tunneling",
+   "concept": "quantum-tunneling",
+   "verb": "introduces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "e0",
+   "source_id": "exr:5.4.1",
+   "source_section": "5.4",
+   "source_number": "Exercise 5.4.1",
+   "kind": "exercise",
+   "bloom": "Analyze",
+   "place": {
+    "at": "end"
+   },
+   "cite": "tunneling",
+   "prompt": "<p>Compare the quantum mechanical harmonic oscillator to the classical harmonic oscillator at $v=1$ and $v=50$.</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "source",
+    "hint": "Compare where each model puts the oscillator most often: the middle of the well or its edges.",
+    "solution": "<h4>Answer</h4>\n<p>At v=1 the classical harmonic oscillator poorly predicts the results of quantum mechanical harmonic oscillator, and therefore reality. At v=1 the particle will be near the ground state and the classical model will predict the particle to spend most it's time on the outer edges when the KE goes to zero and PE is at a maximum, while the quantum model says the opposite and that the particle will be more likely to be found in the center. At v=50 the quantum model will begin to match the classical much more closely, with the particle most likely to be found at the edges. The quantum model looking more like the classical at higher quantum numbers can be referred to as the correspondence principle.</p>"
+   }
+  },
+  {
+   "id": "e1",
+   "source_id": "exr:5.6.1",
+   "source_number": "Exercise 5.6.1",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "schrodinger-equation",
+   "prompt": "<p>Make the substitutions given in Equations 5.6.6 and 5.6.8 into Equation 5.6.5 to get Equation 5.6.9.</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "Write $d^2/dq^2$ through $x$ first, then $q^2 = \\beta^2x^2$.",
+    "solution": "<p>The derivation of Equation 5.6.9 above makes the substitution. By the chain rule, $x = q/\\beta$ gives $d/dq = (1/\\beta)\\,d/dx$ and so $d^2/dq^2 = (1/\\beta^2)\\,d^2/dx^2$ (Equation 5.6.8). Putting this and $q = \\beta x$ into Equation 5.6.5,</p>$$ \\dfrac{1}{\\beta^2}\\dfrac{d^2\\psi_v}{dx^2} + \\dfrac{2\\mu}{\\hbar^2}\\left(E_v - \\dfrac{k}{2}\\beta^2x^2\\right)\\psi_v = 0 $$<p>Multiplying through by $\\beta^2$,</p>$$ \\dfrac{d^2\\psi_v}{dx^2} + \\left(\\dfrac{2\\mu\\beta^2E_v}{\\hbar^2} - \\dfrac{\\mu k\\beta^4}{\\hbar^2}x^2\\right)\\psi_v = 0 $$<p>and Equation 5.6.6 squared is $\\beta^4 = \\hbar^2/\\mu k$, so the coefficient of $x^2$ is 1. This is Equation 5.6.9.</p>"
+   }
+  },
+  {
+   "id": "e2",
+   "source_id": "exr:5.6.2",
+   "source_number": "Exercise 5.6.2",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "solving-for-the-quantum-wavefunctions",
+   "prompt": "<p>Write the first four polynomials, $v=0$ to $v=1$, $v=12$, $v=13$, $v=14$ for Equation 5.6.12 and use suitable software to prepare plots of these polynomials. Identify the curves in the plots.<sup class=\"fn\" data-note=\"ex-garbled\"></sup></p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "Truncate the series after one, two, three and four terms.",
+    "solution": "<p>Truncating Equation 5.6.12 after $n = v$ gives, for $v = 0$ to $3$,</p>$$ c_0, \\qquad c_0 + c_1x, \\qquad c_0 + c_1x + c_2x^2, \\qquad c_0 + c_1x + c_2x^2 + c_3x^3 $$<p>a constant, a straight line, a parabola and a cubic. With the coefficients that solve Equation 5.6.9, the Hermite polynomials given below, they are $1$, $2x$, $4x^2 - 2$ and $8x^3 - 12x$. On a plot over $-3 \\le x \\le 3$ the constant is the flat line; the line through the origin has no turning point; the parabola is symmetric with its minimum at $x = 0$ and crosses zero twice; the cubic is antisymmetric and crosses zero three times. The curve of degree $v$ crosses zero $v$ times, and every one but the constant grows without bound at large $|x|$.</p>"
+   }
+  },
+  {
+   "id": "e3",
+   "source_id": "exr:5.6.3",
+   "source_number": "Exercise 5.6.3",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "solving-for-the-quantum-wavefunctions",
+   "prompt": "<p>Confirm that the wavefunction given by Equation 5.6.13 is a solution to the harmonic oscillator Schrödinger Equation in Equation 5.6.9 for $v=0$ and $v=1$.</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "For $v = 0$ differentiate $c_0e^{-x^2/2}$ twice; write $\\lambda = 2\\mu\\beta^2E_v/\\hbar^2$ and ask what $\\lambda$ must be.",
+    "solution": "<p>Write Equation 5.6.9 as $\\psi'' + (\\lambda - x^2)\\psi = 0$ with $\\lambda = 2\\mu\\beta^2E_v/\\hbar^2$.</p><p>For $v = 0$, $\\psi_0 = c_0e^{-x^2/2}$. Then $\\psi_0' = -xc_0e^{-x^2/2}$ and $\\psi_0'' = (x^2 - 1)c_0e^{-x^2/2}$, so</p>$$ \\psi_0'' + (\\lambda - x^2)\\psi_0 = (\\lambda - 1)\\,c_0e^{-x^2/2} $$<p>which is zero for every $x$ when $\\lambda = 1$.</p><p>For $v = 1$, $\\psi_1 = (c_0 + c_1x)e^{-x^2/2}$. The $c_0$ part needs $\\lambda = 1$, as above. For the $c_1$ part, $(xe^{-x^2/2})' = (1 - x^2)e^{-x^2/2}$ and $(xe^{-x^2/2})'' = (x^3 - 3x)e^{-x^2/2}$, so</p>$$ \\left(xe^{-x^2/2}\\right)'' + (\\lambda - x^2)\\,xe^{-x^2/2} = (\\lambda - 3)\\,xe^{-x^2/2} $$<p>which is zero when $\\lambda = 3$. One $\\lambda$ cannot be both 1 and 3, so a solution with $v = 1$ needs $c_0 = 0$: $\\psi_1 = c_1xe^{-x^2/2}$ with $\\lambda = 3$. Both truncations solve Equation 5.6.9. With $\\beta^2 = \\hbar/\\sqrt{\\mu k}$, $\\lambda = 1$ and $\\lambda = 3$ give $E_0 = \\tfrac{1}{2}\\hbar\\omega$ and $E_1 = \\tfrac{3}{2}\\hbar\\omega$, the energies of Equation 5.6.16.</p>"
+   }
+  },
+  {
+   "id": "e4",
+   "source_id": "exr:5.6.4",
+   "source_number": "Exercise 5.6.4",
+   "kind": "exercise",
+   "bloom": "Understand",
+   "place": {
+    "at": "end"
+   },
+   "cite": "schrodinger-equation",
+   "prompt": "<p>Determine the units of $β$ and the units of $x$ in the Hermite polynomials.</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "Write the units of $\\hbar$, $\\mu$ and $k$ in kg, m and s.",
+    "solution": "<p>From Equation 5.6.6, $\\beta^2 = \\hbar/\\sqrt{\\mu k}$. The units of $\\hbar$ are J s = kg m² s⁻¹, and those of $\\mu k$ are kg × kg s⁻² (a newton per meter is kg s⁻²), so $\\sqrt{\\mu k}$ is in kg s⁻¹. Then $\\beta^2$ is in (kg m² s⁻¹)/(kg s⁻¹) = m², and $\\beta$ is a length, in m. Since $x = q/\\beta$ is a length over a length, $x$ has no units: the Hermite polynomials are functions of a pure number.</p>"
+   }
+  },
+  {
+   "id": "e5",
+   "source_id": "exr:5.6.5",
+   "source_number": "Exercise 5.6.5",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "solving-for-the-quantum-wavefunctions",
+   "prompt": "<p>Compute the normalization factor for $\\psi_v(x)$ where $v = 0$ and $v = 4$. What is the purpose of $N_v$?</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "v = 0",
+      "value": 0.751,
+      "hint": "Equation 5.6.14 with $v! = 1$ for $v = 0$."
+     },
+     {
+      "part": "v = 4",
+      "value": 0.0383
+     }
+    ],
+    "solution": "<p>By Equation 5.6.14,</p>$$ N_0 = \\dfrac{1}{(2^0\\,0!\\,\\sqrt{\\pi})^{1/2}} = \\pi^{-1/4} = 0.751, \\qquad N_4 = \\dfrac{1}{(2^4\\,4!\\,\\sqrt{\\pi})^{1/2}} = \\dfrac{1}{(16 \\times 24 \\times 1.7725)^{1/2}} = 0.0383 $$<p>$N_v$ scales the wavefunction so that the total probability is one, $\\int_{-\\infty}^{\\infty}|\\psi_v(x)|^2dx = 1$ (Equation 5.4.3). $N_4$ is small because $H_4$ is large: its leading term is $16x^4$.</p>"
+   }
+  },
+  {
+   "id": "e6",
+   "source_id": "exr:5.6.6",
+   "source_number": "Exercise 5.6.6",
+   "kind": "exercise",
+   "bloom": "Analyze",
+   "place": {
+    "at": "end"
+   },
+   "cite": "solving-for-the-quantum-wavefunctions",
+   "prompt": "<p>Determine the energy for the first ten harmonic oscillator energy levels in terms of $\\hbar \\omega$. Sketch an energy level diagram of these energies.</p>\n<ol><li>What insights do you gain from Equation 5.6.16, your calculations, and your diagram?</li><li>Is it possible to have a molecule that is not vibrating?</li><li>In terms of $\\hbar \\omega$, what is the energy of the photon required to cause a transition from one vibrational state to the next higher one?</li><li>If a transition from energy level $v = 9$ to $v = 10$ were observed in a spectrum, where would that spectral line appear relative to the one for the transition from level $v = 0$ to $v = 1$?</li><li>If a vibrational transition is observed at 3000 cm-1 in an infrared spectrum, what is the value of $\\hbar \\omega$ for the normal mode?</li><li>Identify all the possible meanings of $ΔE = hν$ and the definition of the frequency, $ν$, in each case.</li></ol>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "Equation 5.6.16 with $v = 0$ to $9$; for part 5, $\\hbar\\omega = hc\\tilde{\\nu}$.",
+    "solution": "<p>By Equation 5.6.16 the first ten levels are $E_v = \\tfrac{1}{2}, \\tfrac{3}{2}, \\tfrac{5}{2}, \\ldots, \\tfrac{19}{2}\\,\\hbar\\omega$ for $v = 0$ to $9$: a ladder of rungs a distance $\\hbar\\omega$ apart, the lowest $\\hbar\\omega/2$ above the bottom of the well.</p><ol><li>The levels are evenly spaced by $\\hbar\\omega$, and the spacing grows with the stiffness of the bond and shrinks with the reduced mass, since $\\omega = \\sqrt{k/\\mu}$. The lowest energy is not zero.</li><li>No. Even at $v = 0$ the molecule has the zero-point energy $\\hbar\\omega/2$, and the atoms are always moving.</li><li>$\\hbar\\omega$, the spacing of the ladder.</li><li>At the same place. Every adjacent pair is $\\hbar\\omega$ apart, so the $9 \\rightarrow 10$ line falls on the $0 \\rightarrow 1$ line.</li><li>$\\hbar\\omega = hc\\tilde{\\nu} = (6.626\\times10^{-34}\\ \\text{J s})(2.998\\times10^{10}\\ \\text{cm/s})(3000\\ \\text{cm}^{-1}) = 5.96\\times10^{-20}$ J.</li><li>$\\Delta E = h\\nu$ is the energy of a photon of frequency $\\nu$; it is the spacing of the oscillator's levels, with $\\nu$ the oscillator's own frequency $\\omega/2\\pi$; and when a photon is absorbed or emitted the two are the same, so $\\nu$ is both the frequency of the light and of the vibration (Section 5.5).</li></ol>"
+   }
+  },
+  {
+   "id": "e7",
+   "source_id": "exr:5.6.7",
+   "source_number": "Exercise 5.6.7",
+   "kind": "exercise",
+   "bloom": "Understand",
+   "place": {
+    "at": "end"
+   },
+   "cite": "solving-for-the-quantum-wavefunctions",
+   "prompt": "<p>Write a few sentences describing and comparing the plots in Figure 5.6.2. How many nodes are there as a function of $v$? Do the wavefunctions converge at extreme displacement? Where is the most likely displacements for the oscillator to be found?</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "Count the places where each curve crosses zero.",
+    "solution": "<p>The four wavefunctions of Figure 5.6.2 have $v$ nodes: none for $v = 0$, one for $v = 1$, two for $v = 2$ and three for $v = 3$. They alternate in symmetry, even for $v = 0$ and $2$ and odd for $v = 1$ and $3$, and each spreads a little wider than the one below it, as its turning points move out. All of them converge to zero at large displacement, where the Gaussian $e^{-x^2/2}$ wins over the polynomial. The most likely displacement is where $|\\psi_v|^2$ is largest: at the center for $v = 0$, and for higher $v$ at the outermost peaks, close to the classical turning points.</p>"
+   }
+  },
+  {
+   "id": "e8",
+   "source_id": "exr:5.6.8",
+   "source_number": "Exercise 5.6.8",
+   "kind": "exercise",
+   "bloom": "Analyze",
+   "place": {
+    "at": "end"
+   },
+   "cite": "solving-for-the-quantum-wavefunctions",
+   "prompt": "<p>Explain how Figure 5.6.3 is related to Figure 5.6.2. Explain the physical significance of the plots in Figure 5.6.3 in terms of the magnitude of the normal coordinate $Q$. Couch your discussion in terms of the $\\mathrm{HCl}$ molecule. How would you describe the location of the atoms in each of the states? How does the oscillator position correspond to the energy of a particular level?</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "source",
+    "hint": "Each panel of Figure 5.6.3 is the square of a panel of Figure 5.6.2.",
+    "solution": "<h4>Answer</h4>\n<p>Figure 5.6.2 is simply the wavefunction in Figure 5.6.1 squared.<sup class=\"fn\" data-note=\"key-figures\"></sup> The normal coordinate is the linear combination of the atomic cartesian coordinates. As Q is often in relation to the energy (kinetic and potential), they would be displaced by a certain amount dependent on Q (energy) along with an increase in nodes. This displacement is apparent when comparing the ascending energy levels of each of the wavefunctions. In the n=0 (first) energy state, it is most probable to be found between -2, 2. (in a range of -4, 4) In the second energy state, it is likely to be between -2.5, 2.5 (range -5, 5), third level: (-3,3) (range -6,6), fourth level (-4,4) (range -6,6).</p>"
+   }
+  },
+  {
+   "id": "e9",
+   "source_id": "exr:5.6.9",
+   "source_number": "Exercise 5.6.9",
+   "kind": "exercise",
+   "bloom": "Analyze",
+   "place": {
+    "at": "end"
+   },
+   "cite": "solving-for-the-quantum-wavefunctions",
+   "prompt": "<p>Plot the probability density for energy level 10 of the harmonic oscillator. How many nodes are present? Plot the probability density for energy level 20. Compare the plot for level 20 with that of level 10 and level 1. Compare these quantum mechanical probability distributions to those expected for a classical oscillator. What conclusion can you draw about the probability of the location of the oscillator and the length of a chemical bond in a vibrating molecule? Extend your analysis to include a very high level, like level 50.</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "Figure 5.6.2 + 5.6.3 draws every level up to 50, with the classical density dashed.",
+    "solution": "<p>$|\\psi_{10}|^2$ has ten nodes and eleven peaks between the turning points $x = \\pm\\sqrt{21} = \\pm4.58$; $|\\psi_{20}|^2$ has twenty nodes and twenty-one peaks within $\\pm\\sqrt{41} = \\pm6.40$. In both the outermost peaks are the tallest, while $|\\psi_1|^2$ has two equal peaks and a node at the center. The classical density, $1/\\pi\\sqrt{x_v^2 - x^2}$, is smallest at the center and rises steeply at the turning points, where the oscillator moves slowest. Level 1 looks nothing like it; level 10 follows its shape on average; level 20 follows it more closely, and the share of the density beyond the turning points falls from 16% at $v = 0$ to 6% at $v = 10$ and 5% at $v = 20$. At $v = 50$ the peaks are so close together that the quantum density is the classical one with a fine ripple on it, and only about 4% lies outside. A molecule in a highly excited vibrational level is most likely found near its shortest and longest bond lengths; in the low levels it is most likely found near the equilibrium length.</p>"
+   }
+  },
+  {
+   "id": "e10",
+   "source_id": "exr:5.6.10",
+   "source_number": "Exercise 5.6.10",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "tunneling",
+   "prompt": "<p>Plot the probability density for $v = 0$ and $v = 1$ states. Mark the classical limits on each of the plots, since the limits are different because the total energy is different for $v = 0$ and $v = 1$. Shade in the regions of the probability densities that extend beyond the classical limit.</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "For level $v$ the classical limit is where $(v + \\tfrac{1}{2})\\hbar\\omega$ equals the potential, $x = \\pm\\sqrt{2v + 1}$.",
+    "solution": "<p>In terms of $x$ the potential is $\\tfrac{1}{2}\\hbar\\omega\\,x^2$, so the classical limits of level $v$ are $x = \\pm\\sqrt{2v + 1}$: $\\pm1$ for $v = 0$ (that is $\\pm Q_0$) and $\\pm\\sqrt{3} = \\pm1.73$ for $v = 1$. $|\\psi_0|^2 = e^{-x^2}/\\sqrt{\\pi}$ is a single peak at $x = 0$; $|\\psi_1|^2 = 2x^2e^{-x^2}/\\sqrt{\\pi}$ is zero at the center and peaks at $x = \\pm1$. Shading the two tails beyond the limits, the shaded areas are 0.157 of the total for $v = 0$ and 0.112 for $v = 1$. Figure 5.6.2 + 5.6.3 draws both, with the regions beyond the limits shaded.</p>"
+   }
+  },
+  {
+   "id": "e11",
+   "source_id": "exr:5.6.11",
+   "source_number": "Exercise 5.6.11",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "tunneling",
+   "prompt": "<p>Numerically verify that $P[ \\text{allowed}]$ in Equation 5.6.19 equals 0.843. To obtain a value for the integral do not use symbolic integration or symbolic equals.</p>",
+   "answer": {
+    "type": "number",
+    "value": 0.843,
+    "generated_by": "ai",
+    "hint": "Apply Simpson's rule to $e^{-x^2}$ on $[0, 1]$ with ten intervals, then multiply by $2/\\sqrt{\\pi}$.",
+    "solution": "<p>With Simpson's rule on ten intervals of width $h = 0.1$, the integral of $e^{-x^2}$ from 0 to 1 is</p>$$ \\dfrac{h}{3}\\left[f(0) + 4f(0.1) + 2f(0.2) + \\cdots + 4f(0.9) + f(1)\\right] = 0.74682 $$<p>and $\\dfrac{2}{\\sqrt{\\pi}} \\times 0.74682 = 0.8427$, which rounds to 0.843.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "e0",
+   "concept": "correspondence-principle"
+  },
+  {
+   "exercise": "e0",
+   "concept": "oscillator-wavefunctions"
+  },
+  {
+   "exercise": "e0",
+   "concept": "classical-oscillator-density"
+  },
+  {
+   "exercise": "e1",
+   "concept": "scaled-oscillator-equation"
+  },
+  {
+   "exercise": "e2",
+   "concept": "asymptotic-series-method"
+  },
+  {
+   "exercise": "e2",
+   "concept": "hermite-polynomials"
+  },
+  {
+   "exercise": "e3",
+   "concept": "asymptotic-series-method"
+  },
+  {
+   "exercise": "e3",
+   "concept": "scaled-oscillator-equation"
+  },
+  {
+   "exercise": "e4",
+   "concept": "scaled-oscillator-equation"
+  },
+  {
+   "exercise": "e4",
+   "concept": "hermite-polynomials"
+  },
+  {
+   "exercise": "e5",
+   "concept": "oscillator-wavefunctions"
+  },
+  {
+   "exercise": "e5",
+   "concept": "normalization-condition"
+  },
+  {
+   "exercise": "e6",
+   "concept": "oscillator-energy-levels"
+  },
+  {
+   "exercise": "e6",
+   "concept": "oscillator-zero-point-energy"
+  },
+  {
+   "exercise": "e6",
+   "concept": "vibrational-transition-frequency"
+  },
+  {
+   "exercise": "e7",
+   "concept": "oscillator-wavefunction-parity"
+  },
+  {
+   "exercise": "e7",
+   "concept": "oscillator-wavefunctions"
+  },
+  {
+   "exercise": "e8",
+   "concept": "oscillator-wavefunctions"
+  },
+  {
+   "exercise": "e8",
+   "concept": "probability-density"
+  },
+  {
+   "exercise": "e9",
+   "concept": "correspondence-principle"
+  },
+  {
+   "exercise": "e9",
+   "concept": "oscillator-wavefunctions"
+  },
+  {
+   "exercise": "e9",
+   "concept": "classical-oscillator-density"
+  },
+  {
+   "exercise": "e10",
+   "concept": "classically-forbidden-region"
+  },
+  {
+   "exercise": "e10",
+   "concept": "quantum-tunneling"
+  },
+  {
+   "exercise": "e11",
+   "concept": "error-function"
+  },
+  {
+   "exercise": "e11",
+   "concept": "oscillator-tunneling-probability"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "cite-classical",
+   "kind": "correction",
+   "html": "Equation 5.6.1 is the Hamiltonian written as a sum of operators. The classical expression the sentence means is the oscillator's energy, $E = p^2/2\\mu + kq^2/2$ (Section 5.1), which Equation 5.6.2 turns into operators."
+  },
+  {
+   "id": "power-series",
+   "kind": "correction",
+   "html": "The series written out is $c_0 + c_1x + c_2x^2 + c_3x^3 + \\cdots$, each term with its own coefficient and starting from the constant $c_0$; the book prints $c_n(v)$ in every term and starts at $x$."
+  },
+  {
+   "id": "note-q",
+   "kind": "correction",
+   "html": "This section calls the unscaled displacement $q$ (Equation 5.6.7, $x = q/\\beta$); the note writes it $Q$, as Section 5.4 does."
+  },
+  {
+   "id": "note-alpha",
+   "kind": "correction",
+   "html": "With $x = \\sqrt{\\alpha}\\,Q$ and $x = Q/\\beta$, the constant is $\\alpha = 1/\\beta^2$, not $1/\\sqrt{\\beta}$. Its second form, $\\sqrt{k\\mu/\\hbar^2}$, is right."
+  },
+  {
+   "id": "note-psi-q",
+   "kind": "correction",
+   "html": "The left side is a function of $Q$: $\\psi_v(Q) = N_v''H_v(\\sqrt{\\alpha}\\,Q)\\,e^{-\\alpha Q^2/2}$."
+  },
+  {
+   "id": "cite-exercise",
+   "kind": "correction",
+   "html": "The graph with the classical limits marked and the regions beyond them shaded is the one Exercise 5.6.10 asks for. Exercise 5.6.3 asks for no graph."
+  },
+  {
+   "id": "ex-garbled",
+   "kind": "correction",
+   "html": "The list of levels is garbled in the book. The first four polynomials are those for $v = 0$, 1, 2 and 3."
+  },
+  {
+   "id": "key-figures",
+   "kind": "correction",
+   "html": "The key's figure numbers are off by one: Figure 5.6.3 is Figure 5.6.2 squared. Its \"n\" is the quantum number $v$."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "scaled-equation",
+   "what": "the oscillator equation in a scaled coordinate",
+   "source": "Physical Chemistry (LibreTexts), 5.6 The Harmonic Oscillator Wavefunctions involve Hermite Polynomials",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "x = \\dfrac{\\kq}{\\kbeta}",
+       "src": "(5.6.7)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{d}{\\dfrac{d}{d\\kq}} = \\mk{c}{\\dfrac{dx}{d\\kq}\\dfrac{d}{dx}}",
+      "why": "The chain rule: a change of $\\kq$ changes $x$, which changes the function."
+     },
+     "steps": [
+      {
+       "tex": "\\mk{d}{\\dfrac{d}{d\\kq}} = \\mk{c}{\\dfrac{1}{\\kbeta}\\dfrac{d}{dx}}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{d}{\\dfrac{d^2}{d\\kq^2}} = \\mk{c}{\\dfrac{1}{\\kbeta^2}\\dfrac{d^2}{dx^2}}",
+       "uses": [],
+       "cap": "Applying the first derivative twice; $\\kbeta$ is a constant and comes out each time."
+      }
+     ],
+     "num": "(5.6.8)"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\dfrac{d^2\\kpsiv}{d\\kq^2} + \\dfrac{2\\kmu}{\\hbar^2}\\left(\\kEv - \\dfrac{\\kk}{2}\\kq^2\\right)\\kpsiv = 0",
+       "src": "(5.6.5)"
+      },
+      {
+       "step": 0
+      },
+      {
+       "tex": "\\kq = \\kbeta x",
+       "src": "(5.6.7)"
+      },
+      {
+       "tex": "\\kbeta^2 = \\dfrac{\\hbar}{\\sqrt{\\kmu\\kk}}",
+       "src": "(5.6.6)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{d}{\\dfrac{d^2\\kpsiv}{d\\kq^2}} + \\mk{c}{\\dfrac{2\\kmu}{\\hbar^2}}\\left(\\mk{e}{\\kEv} - \\mk{v}{\\dfrac{\\kk}{2}\\kq^2}\\right)\\mk{p}{\\kpsiv} = 0"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{d}{\\dfrac{1}{\\kbeta^2}\\dfrac{d^2\\kpsiv}{dx^2}} + \\mk{c}{\\dfrac{2\\kmu}{\\hbar^2}}\\left(\\mk{e}{\\kEv} - \\mk{v}{\\dfrac{\\kk}{2}\\kbeta^2x^2}\\right)\\mk{p}{\\kpsiv} = 0",
+       "uses": [
+        1,
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{d}{\\dfrac{d^2\\kpsiv}{dx^2}} + \\left(\\mk{e}{\\dfrac{2\\kmu\\kbeta^2\\kEv}{\\hbar^2}} - \\mk{v}{\\dfrac{\\kmu\\kk\\kbeta^4}{\\hbar^2}x^2}\\right)\\mk{p}{\\kpsiv} = 0",
+       "uses": [],
+       "map": {
+        "c": [
+         "e",
+         "v"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{d}{\\dfrac{d^2\\kpsiv}{dx^2}} + \\left(\\mk{e}{\\dfrac{2\\kmu\\kbeta^2\\kEv}{\\hbar^2}} - \\mk{v}{x^2}\\right)\\mk{p}{\\kpsiv} = 0",
+       "uses": [
+        3
+       ],
+       "cap": "Squaring Equation 5.6.6 gives $\\kbeta^4 = \\hbar^2/\\kmu\\kk$, so the coefficient of $x^2$ is exactly 1."
+      }
+     ],
+     "num": "(5.6.9)",
+     "note": "The book says the result comes from substituting Equations 5.6.6 and 5.6.8 into Equation 5.6.5. The change of variable, Equation 5.6.7, is needed as well, to write $q^2$ as $\\beta^2x^2$."
+    }
+   ]
+  },
+  {
+   "id": "gaussian-tail",
+   "what": "the wavefunction's tail at large x",
+   "source": "Physical Chemistry (LibreTexts), 5.6 The Harmonic Oscillator Wavefunctions involve Hermite Polynomials",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\dfrac{d^2\\kpsiv}{dx^2} + \\left(\\dfrac{2\\kmu\\kbeta^2\\kEv}{\\hbar^2} - x^2\\right)\\kpsiv = 0",
+       "src": "(5.6.9)"
+      },
+      {
+       "text": "For large $x$, $x^2$ is much larger than the constant $2\\kmu\\kbeta^2\\kEv/\\hbar^2$."
+      }
+     ],
+     "then": {
+      "tex": "\\mk{d}{\\dfrac{d^2\\kpsiv}{dx^2}} + \\left(\\mk{e}{\\dfrac{2\\kmu\\kbeta^2\\kEv}{\\hbar^2}} - \\mk{v}{x^2}\\right)\\mk{p}{\\kpsiv} = 0"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{d}{\\dfrac{d^2\\kpsiv}{dx^2}} - \\mk{v}{x^2}\\mk{p}{\\kpsiv} \\approx 0",
+       "uses": [
+        1
+       ],
+       "cap": "Far from the center of the well the constant is negligible beside $x^2$ and is dropped."
+      }
+     ]
+    },
+    {
+     "assumes": [],
+     "then": {
+      "tex": "\\mk{l}{\\dfrac{d^2}{dx^2}e^{-x^2/2}} = \\mk{r}{\\dfrac{d}{dx}\\left(-x\\,e^{-x^2/2}\\right)}",
+      "why": "By the chain rule, the derivative of $e^{-x^2/2}$ is $-x\\,e^{-x^2/2}$."
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\dfrac{d^2}{dx^2}e^{-x^2/2}} = \\mk{r}{\\left(x^2 - 1\\right)e^{-x^2/2}}",
+       "uses": [],
+       "cap": "The product rule: $-e^{-x^2/2}$ from differentiating $-x$, and $x^2e^{-x^2/2}$ from differentiating the exponential."
+      }
+     ]
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "step": 0
+      },
+      {
+       "tex": "\\lim_{x \\rightarrow \\infty} \\kpsiv(x) = 0",
+       "src": "(5.6.10)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\dfrac{d^2}{dx^2}e^{-x^2/2}} = \\mk{r}{\\left(x^2 - 1\\right)e^{-x^2/2}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\dfrac{d^2}{dx^2}e^{-x^2/2}} \\approx \\mk{r}{x^2\\,e^{-x^2/2}}",
+       "uses": [
+        1
+       ],
+       "cap": "At large $x$ the 1 is negligible beside $x^2$, so $e^{-x^2/2}$ satisfies the large-$x$ equation of result 1."
+      },
+      {
+       "tex": "\\mk{p}{\\kpsiv(x)} \\propto \\mk{r}{e^{-x^2/2}}",
+       "uses": [
+        2
+       ],
+       "cap": "$e^{+x^2/2}$ satisfies the same equation but grows without bound; only the decaying one converges to zero."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "forbidden-probability",
+   "what": "the ground state beyond its classical limits",
+   "source": "Physical Chemistry (LibreTexts), 5.6 The Harmonic Oscillator Wavefunctions involve Hermite Polynomials",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "text": "The probability of the allowed region is the integral of the probability density from $-\\kQzero$ to $\\kQzero$.",
+       "src": "5.4, (5.4.2)"
+      },
+      {
+       "text": "The integrand $\\kpsi_0^*\\kpsi_0$ is an even function, $f(-x) = f(x)$."
+      }
+     ],
+     "then": {
+      "tex": "\\mk{a}{P[\\text{allowed}]} = \\mk{i}{\\int_{-\\kQzero}^{\\kQzero}\\kpsi_0^*(\\kQ)\\kpsi_0(\\kQ)\\,d\\kQ}",
+      "uses": [
+       0
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{a}{P[\\text{allowed}]} = \\mk{i}{2\\int_0^{\\kQzero}\\kpsi_0^*(\\kQ)\\kpsi_0(\\kQ)\\,d\\kQ}",
+       "uses": [
+        1
+       ],
+       "cap": "An even function has the same area on each side of zero, so the integral over the symmetric interval is twice the integral from 0."
+      }
+     ],
+     "num": "(5.6.18)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "\\kpsiv(x) = N_v H_v(x)\\,e^{-x^2/2}",
+       "src": "(5.6.15)"
+      },
+      {
+       "text": "For $v = 0$, $\\kQ = \\kQzero$ corresponds to $x = 1$.",
+       "src": "5.4, (5.4.5)"
+      },
+      {
+       "tex": "N_0 = \\dfrac{1}{\\pi^{1/4}}, \\quad H_0 = 1",
+       "src": "(5.6.14)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{a}{P[\\text{allowed}]} = \\mk{i}{2\\int_0^{\\kQzero}\\kpsi_0^*(\\kQ)\\kpsi_0(\\kQ)\\,d\\kQ}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{a}{P[\\text{allowed}]} = \\mk{i}{2\\int_0^{1}N_0^2H_0^2\\,e^{-x^2}\\,dx}",
+       "uses": [
+        1,
+        2
+       ],
+       "cap": "Done in terms of $x$, the integral of the density keeps its value, and the limit $\\kQzero$ becomes $x = 1$ since $\\kQzero = \\kbeta$."
+      },
+      {
+       "tex": "\\mk{a}{P[\\text{allowed}]} = \\mk{i}{\\dfrac{2}{\\sqrt{\\pi}}\\int_0^1 \\exp(-x^2)\\,dx}",
+       "uses": [
+        3
+       ]
+      }
+     ],
+     "num": "(5.6.19)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "text": "The error function $\\text{ERF}(z) = \\dfrac{2}{\\sqrt{\\pi}}\\int_0^z e^{-x^2}dx$ can only be evaluated numerically; $\\text{ERF}(1) = 0.843$.",
+       "src": "5.6"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{a}{P[\\text{allowed}]} = \\mk{i}{\\dfrac{2}{\\sqrt{\\pi}}\\int_0^1 \\exp(-x^2)\\,dx}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{a}{P[\\text{allowed}]} = \\mk{i}{\\text{ERF}(1)}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{a}{P[\\text{allowed}]} = \\mk{i}{0.843}",
+       "uses": [
+        1
+       ]
+      }
+     ]
+    },
+    {
+     "assumes": [
+      {
+       "step": 2
+      },
+      {
+       "tex": "P[\\text{forbidden}] = 1 - P[\\text{allowed}]",
+       "src": "(5.6.17)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{f}{P[\\text{forbidden}]} = \\mk{o}{1} - \\mk{a}{P[\\text{allowed}]}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{f}{P[\\text{forbidden}]} = \\mk{o}{1} - \\mk{a}{0.843}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{f}{P[\\text{forbidden}]} = \\mk{o}{0.157}",
+       "uses": [],
+       "map": {
+        "a": "o"
+       }
+      }
+     ],
+     "note": "The book says the integral from $Q_0$ to $\\infty$ cannot be found in tables. It can, as the complementary error function, $1 - \\text{ERF}(1)$, which gives the same 0.157."
+    }
+   ]
+  }
+ ]
+}

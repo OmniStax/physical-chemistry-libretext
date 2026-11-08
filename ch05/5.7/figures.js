@@ -80,8 +80,8 @@ function poly(n, flip) {
     x31: { f: (x) => x ** 3 + 1, s: '(x^3 + 1)', w: 'x³ + 1', p: 'neither' },
   };
   const opts = Object.entries(FN).map(([value, o]) => ({ value, label: `$${o.s.replace(/[()]/g, '')}$` }));
-  const A = F.choice(d.controls, { label: 'f', options: opts, value: 'x3', aria: 'the first function', key: 'f' });
-  const B = F.choice(d.controls, { label: 'g', options: opts, value: 'cos', aria: 'the second function', key: 'g' });
+  const A = F.select(d.controls, { label: 'f', options: opts, value: 'x3', aria: 'the first function', key: 'f' });
+  const B = F.select(d.controls, { label: 'g', options: opts, value: 'cos', aria: 'the second function', key: 'g' });
   const a = F.ctl(d.controls, { label: 'a', cls: '', key: 'a', min: 0.5, max: 2, step: 0.05, value: 1.5, unit: '', dec: 2, aria: 'the half width of the interval' });
   let hits = []; F.hover(d.stage, () => hits);
   const XR = [-2, 2];

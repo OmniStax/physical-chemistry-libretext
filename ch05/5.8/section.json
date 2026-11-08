@@ -1,0 +1,823 @@
+{
+ "id": "5.8",
+ "module": "13422",
+ "chapter": "5",
+ "title": "The Energy Levels of a Rigid Rotor",
+ "short": "The rigid rotor",
+ "lead": "A rigid rotor is two masses held a fixed distance apart and free to turn. Its classical energy is all kinetic. Its Schrödinger equation, written in spherical coordinates and separated into an equation for each angle, leads to two quantum numbers and to the spherical harmonics.",
+ "objectives": [
+  "Compare the classical and quantum rigid rotor in three dimensions",
+  "Demonstrate how to use the Separation of Variable technique to solve the 3D rigid rotor Schrödinger Equation",
+  "Identify and interpret the two quantum numbers for a 3D quantum rigid rotor including the range of allowed values",
+  "Describe the wavefunctions of the 3D quantum rigid rotor in terms of nodes, average displacements and most probable displacements",
+  "Describe the energies of the 3D quantum rigid rotor in terms of values and degeneracies"
+ ],
+ "summary_html": "<p>There are two quantum numbers that describe the quantum behavior of a rigid rotor in three-deminesions: $J$ is the total angular momentum quantum number and $m_J$ is the z-component of the angular momentum. The spherical harmonics called $Y_J^{m_J}$ are functions whose probability $|Y_J^{m_J}|^2$ has the well known shapes of the s, p and d orbitals etc learned in general chemistry.</p>",
+ "notes": "Adapted from Ian Huh; David M. Hanson, Erica Harvey, Robert Sweeney and Theresa Julia Zielinski's Quantum States of Atoms and Molecules; Mark Tuckerman (New York University); and MIT OpenCourseWare (Robert Guy Griffin and Troy Van Voorhis), under CC BY-NC-SA 4.0, with Figure 5.8.1 in the public domain; the book gives no credit for Figures 5.8.2 to 5.8.4.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "medium"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "medium"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The keys of Exercises 5.8.3, 5.8.4, 5.8.6 and 5.8.7 are the book's. The other six have no key in the book, and their solutions were written by AI; those of 5.8.1 and 5.8.2 follow the derivation on the page. Numeric answers accept a 2% tolerance.",
+ "figures": [
+  {
+   "id": "sim-sphere",
+   "kind": "sim",
+   "number": "5.8.1",
+   "folds": [
+    "5.8.4"
+   ],
+   "originals": [
+    "/media/ch05/122126-558px-3D_Spherical.svg.png",
+    "/media/ch05/15883-Space_for_the_rotor.gif"
+   ],
+   "original_caption": "5.8.1: The spherical coordinate system in terms of the Cartesian system. (Public Domain; Andeggs via Wikipedia). 5.8.4: Space for a rigid rotor is restricted to the surface of a sphere of radius $r_0$. The only degrees of freedom are motions along $\\theta$ or $\\varphi$ on the surface of the sphere.",
+   "widths": [
+    350,
+    205
+   ],
+   "draws": [
+    "angle",
+    "length"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "medium",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "sim-rotor-levels",
+   "kind": "sim",
+   "number": "5.8.2",
+   "originals": [
+    "/media/ch05/123778-Energy_levels.png"
+   ],
+   "original_caption": "Energy spacing for a rigid rotor (in 3D). Notice the energy depends only on $J$ and not depend on $m_J$. That is, the energy of the rotor is not affected by its orientation.",
+   "draws": [
+    "energy"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "medium",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "sim-ylm",
+   "kind": "sim",
+   "number": "5.8.3",
+   "originals": [
+    "/media/ch05/15884-AngularWF.gif"
+   ],
+   "original_caption": "Polar plots in which the distance from the center gives the value of the function $Y$ for the indicated angle $\\theta$.",
+   "draws": [
+    "probability-density",
+    "angle"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "medium",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "opening",
+   "concept": "rigid-rotor",
+   "verb": "reinforces"
+  },
+  {
+   "span": "the-classical-rigid-rotor-in-3d",
+   "concept": "rigid-rotor",
+   "verb": "uses"
+  },
+  {
+   "span": "the-classical-rigid-rotor-in-3d",
+   "concept": "angular-velocity",
+   "verb": "introduces"
+  },
+  {
+   "span": "the-classical-rigid-rotor-in-3d",
+   "concept": "angular-momentum",
+   "verb": "introduces"
+  },
+  {
+   "span": "the-classical-rigid-rotor-in-3d",
+   "concept": "moment-of-inertia",
+   "verb": "introduces"
+  },
+  {
+   "span": "the-classical-rigid-rotor-in-3d",
+   "concept": "rotational-kinetic-energy",
+   "verb": "introduces"
+  },
+  {
+   "span": "the-quantum-rigid-rotor-in-3d",
+   "concept": "spherical-coordinates",
+   "verb": "introduces"
+  },
+  {
+   "span": "the-quantum-rigid-rotor-in-3d",
+   "concept": "rigid-rotor-schrodinger-equation",
+   "verb": "introduces"
+  },
+  {
+   "span": "the-quantum-rigid-rotor-in-3d",
+   "concept": "separated-rotor-equations",
+   "verb": "introduces"
+  },
+  {
+   "span": "the-quantum-rigid-rotor-in-3d",
+   "concept": "separation-of-variables",
+   "verb": "uses"
+  },
+  {
+   "span": "the-quantum-rigid-rotor-in-3d",
+   "concept": "cyclic-boundary-condition",
+   "verb": "introduces"
+  },
+  {
+   "span": "the-quantum-rigid-rotor-in-3d",
+   "concept": "eulers-formula",
+   "verb": "uses"
+  },
+  {
+   "span": "the-quantum-rigid-rotor-in-3d",
+   "concept": "normalization-condition",
+   "verb": "uses"
+  },
+  {
+   "span": "the-quantum-rigid-rotor-in-3d",
+   "concept": "rotor-phi-functions",
+   "verb": "introduces"
+  },
+  {
+   "span": "the-quantum-rigid-rotor-in-3d",
+   "concept": "associated-legendre-functions",
+   "verb": "introduces"
+  },
+  {
+   "span": "the-quantum-rigid-rotor-in-3d",
+   "concept": "rotor-quantum-numbers",
+   "verb": "introduces"
+  },
+  {
+   "span": "the-quantum-rigid-rotor-in-3d",
+   "concept": "rotor-energy-levels",
+   "verb": "introduces"
+  },
+  {
+   "span": "the-quantum-rigid-rotor-in-3d",
+   "concept": "rotor-degeneracy",
+   "verb": "introduces"
+  },
+  {
+   "span": "the-quantum-rigid-rotor-in-3d",
+   "concept": "degeneracy",
+   "verb": "reinforces"
+  },
+  {
+   "span": "spherical-harmonics",
+   "concept": "spherical-harmonics",
+   "verb": "introduces"
+  },
+  {
+   "span": "spherical-harmonics",
+   "concept": "rotor-orientation-probability",
+   "verb": "introduces"
+  },
+  {
+   "span": "spherical-harmonics",
+   "concept": "probability-density",
+   "verb": "uses"
+  },
+  {
+   "span": "spherical-harmonics",
+   "concept": "node",
+   "verb": "reinforces"
+  },
+  {
+   "span": "spherical-harmonics",
+   "concept": "quantum-rotor-not-classical",
+   "verb": "introduces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "e1",
+   "source_id": "exr:5.8.1",
+   "source_number": "Exercise 5.8.1",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "the-quantum-rigid-rotor-in-3d",
+   "prompt": "<p>Carry out the steps leading from Equation 5.8.13 to Equation 5.8.15. Keep in mind that, if $y$ is not a function of $x$,</p>\n$$ \\dfrac {dy}{dx} = y \\dfrac {d}{dx} $$<p><sup class=\"fn\" data-note=\"c-hint1\"></sup></p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "Multiply through by $2I/\\hbar^2$ first, then by $-\\sin^2\\theta/\\Theta\\Phi$.",
+    "solution": "<p>These are the moves of the derivation of Equation 5.8.15 in this section. Multiplying Equation 5.8.12 by $2I/\\hbar^2$ and then by $-\\sin^2\\theta/\\Theta(\\theta)\\Phi(\\varphi)$ gives</p>$$ \\dfrac{1}{\\Theta\\Phi}\\left[\\sin\\theta\\dfrac{\\partial}{\\partial\\theta}\\sin\\theta\\dfrac{\\partial}{\\partial\\theta} + \\dfrac{\\partial^2}{\\partial\\varphi^2}\\right]\\Theta\\Phi = -\\dfrac{2IE}{\\hbar^2}\\sin^2\\theta = -\\lambda\\sin^2\\theta $$<p>since $\\sin^2\\theta$ times $1/\\sin\\theta$ is $\\sin\\theta$ and times $1/\\sin^2\\theta$ is 1. Now $\\Phi(\\varphi)$ does not depend on $\\theta$, so it passes through the $\\theta$ derivatives, as the hint says, and cancels against the $\\Phi$ of $1/\\Theta\\Phi$; likewise $\\Theta(\\theta)$ passes through $\\partial^2/\\partial\\varphi^2$:</p>$$ \\dfrac{1}{\\Theta}\\sin\\theta\\dfrac{\\partial}{\\partial\\theta}\\left(\\sin\\theta\\dfrac{\\partial\\Theta}{\\partial\\theta}\\right) + \\dfrac{1}{\\Phi}\\dfrac{\\partial^2\\Phi}{\\partial\\varphi^2} = -\\lambda\\sin^2\\theta $$<p>Moving the $\\varphi$ term to the right and $-\\lambda\\sin^2\\theta$ to the left, where it is $\\lambda\\sin^2\\theta\\,\\Theta/\\Theta$, gives Equation 5.8.15.</p>"
+   }
+  },
+  {
+   "id": "e2",
+   "source_id": "exr:5.8.2",
+   "source_number": "Exercise 5.8.2",
+   "kind": "exercise",
+   "bloom": "Understand",
+   "place": {
+    "at": "end"
+   },
+   "cite": "the-quantum-rigid-rotor-in-3d",
+   "prompt": "<p>Show how Equations 5.8.16 and 5.8.17 are obtained from Equation 5.8.15.</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "Each side of Equation 5.8.15 equals the same constant, $m_J^2$.",
+    "solution": "<p>The left side of Equation 5.8.15 depends only on $\\theta$ and the right only on $\\varphi$, so both equal one constant, $m_J^2$. Setting the left side equal to $m_J^2$ and multiplying by $\\Theta(\\theta)$:</p>$$ \\sin\\theta\\dfrac{d}{d\\theta}\\left(\\sin\\theta\\dfrac{d}{d\\theta}\\right)\\Theta + \\lambda\\sin^2\\theta\\,\\Theta = m_J^2\\Theta $$<p>and subtracting $m_J^2\\Theta$ gives the $\\theta$-equation, Equation 5.8.16. Setting the right side equal to $m_J^2$ and multiplying by $-\\Phi(\\varphi)$ gives $d^2\\Phi/d\\varphi^2 = -m_J^2\\Phi$, which is Equation 5.8.17. Each equation now holds one variable, so its partial derivatives become total derivatives.</p>"
+   }
+  },
+  {
+   "id": "e3",
+   "source_id": "exr:5.8.3",
+   "source_number": "Exercise 5.8.3",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "the-quantum-rigid-rotor-in-3d",
+   "prompt": "<p>Substitute Equation 5.8.18 into Equation 5.8.17 to show that it is a solution to that differential equation.</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "source",
+    "solution": "<p>Substitute</p>\n$$ \\Phi_m(\\varphi)= \\mathrm{N} e^{\\pm \\mathrm{i} m_{J} \\varphi} $$\n<p>into</p>\n$$ \\frac{d^{2}}{d \\varphi^{2}} \\Phi(\\varphi)+m_{J}^{2} \\Phi(\\varphi)=0 $$\n$$ \\begin{aligned} \\frac{d^{2}}{d \\varphi^{2}} \\Phi_{\\mathrm{m}}(\\varphi)+m_{J}^{2} \\Phi_{\\mathrm{m}}(\\varphi)=& \\frac{d}{d \\varphi}\\left(\\mathrm{N}\\left(\\pm \\mathrm{i} m_{J}\\right) e^{\\pm \\mathrm{i} m_{J} \\varphi}\\right)+m_{J}^{2} \\Phi_{\\mathrm{m}}(\\varphi) \\\\ &\\left.=\\mathrm{N}\\left(\\pm \\mathrm{i} m_{J}\\right)^{2} e^{\\pm i m_{J} \\varphi}\\right)+m_{J}^{2}\\left(\\mathrm{N} e^{\\pm \\mathrm{i} m_{J} \\varphi}\\right) \\\\ &=-\\mathrm{N} m_{J}^{2} e^{\\pm i m_{J} \\varphi}+\\mathrm{N} m_{J}^{2} e^{\\pm i m_{J} \\varphi}=0 \\end{aligned} $$\n<p>Thus</p>\n$$ \\Phi_{m}(\\varphi)=N e^{\\pm i m_{J} \\varphi} $$\n<p>is a solution to the differential equations.</p>"
+   }
+  },
+  {
+   "id": "e4",
+   "source_id": "exr:5.8.4",
+   "source_number": "Exercise 5.8.4",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "the-quantum-rigid-rotor-in-3d",
+   "prompt": "<p>Use the normalization condition in Equation 5.8.19 to demonstrate that $N = 1/\\sqrt{2π}$.</p>",
+   "answer": {
+    "type": "number",
+    "value": 0.3989,
+    "generated_by": "source",
+    "hint": "$\\Phi^*\\Phi = N^2$ does not depend on $\\varphi$.",
+    "solution": "<p>We need to evaluate Equation 5.8.19 with $\\psi(\\varphi)=N e^{\\pm i m J \\varphi}$</p>\n$$ \\begin{aligned} \\psi^{*}(\\varphi) \\psi(\\varphi) &= N e^{+i m J \\varphi} N e^{-i m J \\varphi} \\\\[4pt] &=N^{2} \\\\[4pt] 1=\\int_{0}^{2 \\pi} N^* N d \\varphi=1 & \\\\[4pt] N^{2} (2 \\pi) =1 \\\\[4pt] N=\\sqrt{1 / 2 \\pi} \\end{aligned} $$"
+   }
+  },
+  {
+   "id": "e5",
+   "source_id": "exr:5.8.5",
+   "source_number": "Exercise 5.8.5",
+   "kind": "exercise",
+   "bloom": "Understand",
+   "place": {
+    "at": "end"
+   },
+   "cite": "the-quantum-rigid-rotor-in-3d",
+   "prompt": "<p>Use Euler’s Formula to show that $e^{im_J2\\pi}$ equals 1 for $m_J$ equal to zero or any positive or negative integer.</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "Euler's formula: $e^{i\\alpha} = \\cos\\alpha + i\\sin\\alpha$.",
+    "solution": "<p>By Euler's formula, $e^{im_J2\\pi} = \\cos(2\\pi m_J) + i\\sin(2\\pi m_J)$. When $m_J$ is zero or a positive or negative integer, $2\\pi m_J$ is a whole number of turns, so $\\cos(2\\pi m_J) = 1$ and $\\sin(2\\pi m_J) = 0$, and $e^{im_J2\\pi} = 1$. For any other $m_J$ the cosine is less than 1, so these are the only values that satisfy the cyclic boundary condition.</p>"
+   }
+  },
+  {
+   "id": "e6",
+   "source_id": "exr:5.8.6",
+   "source_number": "Exercise 5.8.6",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "the-quantum-rigid-rotor-in-3d",
+   "prompt": "<p>Compute the energy levels for a rotating molecule for $J = 0$ to $J = 5$ using units of $\\dfrac {\\hbar ^2}{2I}$.</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "source",
+    "parts": [
+     {
+      "part": "J = 0",
+      "value": 0,
+      "unit": "ħ²/2I"
+     },
+     {
+      "part": "J = 1",
+      "value": 2,
+      "unit": "ħ²/2I"
+     },
+     {
+      "part": "J = 2",
+      "value": 6,
+      "unit": "ħ²/2I"
+     },
+     {
+      "part": "J = 3",
+      "value": 12,
+      "unit": "ħ²/2I"
+     },
+     {
+      "part": "J = 4",
+      "value": 20,
+      "unit": "ħ²/2I"
+     },
+     {
+      "part": "J = 5",
+      "value": 30,
+      "unit": "ħ²/2I"
+     }
+    ],
+    "solution": "<p>This rotating molecule can be assumed to be a rigid rotor molecule. From solving the Schrödinger equation for a rigid rotor we have the relationship for energies of each rotational eigenstate (Equation 5.8.24):</p>\n$$ E = J(J+1)(ħ^2/2I) $$\n<p>Using this equation, we can plug in the different values of the $J$ quantum number so that</p>\n<p>For J=0, $E = (0)(1)(ħ^2/2I) = 0$ For J=1, $E = (1)(2)(ħ^2/2I) = 2(ħ^2/2I)$</p>\n<p>This shows that as $J$ increases, the energy levels get farther apart (Figure 5.8.2).</p>\n<ul><li>For J=2, $E = (2)(3)(ħ^2/2I) = 6(ħ^2/2I)$</li><li>For J=3, $E = (3)(4)(ħ^2/2I) = 12(ħ^2/2I)$</li><li>For J=4, $E = (4)(5)(ħ^2/2I) = 20(ħ^2/2I)$</li><li>For J=5, $E = (5)(6)(ħ^2/2I) = 30(ħ^2/2I)$</li></ul>"
+   }
+  },
+  {
+   "id": "e7",
+   "source_id": "exr:5.8.7",
+   "source_number": "Exercise 5.8.7",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "the-quantum-rigid-rotor-in-3d",
+   "prompt": "<p>For $J = 0$ to $J = 5$, identify the degeneracy of each energy level and the values of the $m_J$ quantum number that go with each value of the $J$ quantum number. Construct a rotational energy level diagram including $J = 0$ through $J=5$. Label each level with the appropriate values for the quantum numbers $J$ and $m_J$. Describe how the spacing between levels varies with increasing $J$.</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "source",
+    "solution": "<p>This rotating molecule can be assumed to be a rigid rotor molecule. From solving the Schrödinger equation for a rigid rotor, we have:</p>\n$$ λ = 2IE/ħ^2 $$\n<p>Where λ is an arbitrary parameter not related to wavelength. Additionally, λ is assigned a quantum relation so that</p>\n$$ λ = J(J+1) $$\n<p>Thus, combining the two equations and solving for E yields</p>\n$$ E = J(J+1)(ħ^2/2I) $$\n<p>Using this equation, we can plug in the different values of J so that</p>\n<ul><li>For J=0, $E = (0)(1)(ħ^2/2I) = 0$</li><li>For J=1, $E = (1)(2)(ħ^2/2I) = 2(ħ^2/2I)$</li><li>For J=2, $E = (2)(3)(ħ^2/2I) = 6(ħ^2/2I)$</li><li>For J=3, $E = (3)(4)(ħ^2/2I) = 12(ħ^2/2I)$</li><li>For J=4, $E = (4)(5)(ħ^2/2I) = 20(ħ^2/2I)$</li><li>For J=5, $E = (5)(6)(ħ^2/2I) = 30(ħ^2/2I)$</li></ul>\n<p>This shows that as $J$ increases, the energy levels get closer and closer together.<sup class=\"fn\" data-note=\"c-key7\"></sup></p>"
+   }
+  },
+  {
+   "id": "e8",
+   "source_id": "exr:5.8.8",
+   "source_number": "Exercise 5.8.8",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "spherical-harmonics",
+   "prompt": "<p>Use calculus to evaluate the probability of finding the internuclear axis of a molecule described by the $J = 1$, $m_J = 0$ wavefunction somewhere in the region defined by a range in $\\theta$ of 0° to 45°, and a range in of 0° to 90°.<sup class=\"fn\" data-note=\"c-ex8\"></sup> Note that a double integral will be needed. Sketch this region as a shaded area on Figure 5.8.3.</p>",
+   "answer": {
+    "type": "number",
+    "value": 0.0808,
+    "generated_by": "ai",
+    "hint": "Integrate $|Y_1^0|^2\\sin\\theta$ over $\\theta$ from 0 to $\\pi/4$ and $\\varphi$ from 0 to $\\pi/2$.",
+    "solution": "<p>With $Y_1^0 = \\sqrt{3/4\\pi}\\cos\\theta$ (Equation 5.8.28) and $ds = \\sin\\theta\\,d\\theta\\,d\\varphi$ (Equation 5.8.27),</p>$$ P = \\int_0^{\\pi/2}\\!\\!\\int_0^{\\pi/4}\\dfrac{3}{4\\pi}\\cos^2\\theta\\sin\\theta\\,d\\theta\\,d\\varphi = \\dfrac{3}{4\\pi}\\cdot\\dfrac{\\pi}{2}\\left[-\\dfrac{\\cos^3\\theta}{3}\\right]_0^{\\pi/4} = \\dfrac{1}{8}\\left(1 - \\dfrac{1}{2\\sqrt{2}}\\right) = 0.0808 $$<p>The axis lies in this region about 8% of the time. On the polar plot of Figure 5.8.3 the region is the wedge between the z-axis and the line at 45° from it, in the quarter of space between the x and y axes.</p>"
+   }
+  },
+  {
+   "id": "e9",
+   "source_id": "exr:5.8.9",
+   "source_number": "Exercise 5.8.9",
+   "kind": "exercise",
+   "bloom": "Understand",
+   "place": {
+    "at": "end"
+   },
+   "cite": "spherical-harmonics",
+   "prompt": "<p>For each state with $J = 0$ and $J = 1$, use the function form of the $Y$ spherical harmonics and Figure 5.8.1 to determine the most probable orientation of the internuclear axis in a diatomic molecule, i.e., the most probable values for $\\theta$ and $\\theta$.<sup class=\"fn\" data-note=\"c-ex9\"></sup></p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "Look for the angles where $|Y|^2$ is largest; $\\varphi$ enters only through $e^{\\pm im_J\\varphi}$, whose modulus is 1.",
+    "solution": "<p>$J = 0$: $|Y_0^0|^2 = 1/4\\pi$ is the same in every direction, so no orientation is more probable than another. $J = 1$, $m_J = 0$: $|Y_1^0|^2 = (3/4\\pi)\\cos^2\\theta$ is largest at $\\theta = 0°$ and $180°$, so the axis most probably points along the z-axis, at any $\\varphi$. $J = 1$, $m_J = \\pm 1$: $|Y_1^{\\pm1}|^2 = (3/8\\pi)\\sin^2\\theta$ is largest at $\\theta = 90°$, so the axis most probably lies in the xy-plane, again at any $\\varphi$, since $|e^{\\pm i\\varphi}|^2 = 1$.</p>"
+   }
+  },
+  {
+   "id": "e10",
+   "source_id": "exr:5.8.10",
+   "source_number": "Exercise 5.8.10",
+   "kind": "exercise",
+   "bloom": "Analyze",
+   "place": {
+    "at": "end"
+   },
+   "cite": "spherical-harmonics",
+   "prompt": "<p>Write a paragraph describing the information about a rotating molecule that is provided in the polar plot of $Pr [\\theta, \\theta ]$ for the $J = 1$, $m_J = \\pm 1$ state in Figure 5.8.1.<sup class=\"fn\" data-note=\"c-ex10\"></sup> Compare this information to the classical picture of a rotating object.</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "$|Y_1^{\\pm1}|^2$ is proportional to $\\sin^2\\theta$ and does not depend on $\\varphi$.",
+    "solution": "<p>For $J = 1$, $m_J = \\pm 1$ the probability density is $(3/8\\pi)\\sin^2\\theta$. It is zero along the z-axis and largest at $\\theta = 90°$, and it does not depend on $\\varphi$, so the polar plot is a ring about z: the internuclear axis is most likely found in or near the xy-plane, pointing in any direction there with equal probability, and never along z. Classically, a dumbbell rotating in the xy-plane would have its axis always in that plane and pointing in one definite direction at each instant, turning steadily. The quantum state gives neither a definite direction nor a motion of the axis; it gives a spread of orientations about the plane that does not change in time. What it shares with the classical rotor is its angular momentum, whose z component $\\pm\\hbar$ matches rotation about z.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "e1",
+   "concept": "separated-rotor-equations"
+  },
+  {
+   "exercise": "e1",
+   "concept": "rigid-rotor-schrodinger-equation"
+  },
+  {
+   "exercise": "e2",
+   "concept": "separated-rotor-equations"
+  },
+  {
+   "exercise": "e2",
+   "concept": "separation-of-variables"
+  },
+  {
+   "exercise": "e3",
+   "concept": "rotor-phi-functions"
+  },
+  {
+   "exercise": "e4",
+   "concept": "rotor-phi-functions"
+  },
+  {
+   "exercise": "e4",
+   "concept": "normalization-condition"
+  },
+  {
+   "exercise": "e5",
+   "concept": "cyclic-boundary-condition"
+  },
+  {
+   "exercise": "e5",
+   "concept": "eulers-formula"
+  },
+  {
+   "exercise": "e6",
+   "concept": "rotor-energy-levels"
+  },
+  {
+   "exercise": "e7",
+   "concept": "rotor-energy-levels"
+  },
+  {
+   "exercise": "e7",
+   "concept": "rotor-degeneracy"
+  },
+  {
+   "exercise": "e7",
+   "concept": "rotor-quantum-numbers"
+  },
+  {
+   "exercise": "e8",
+   "concept": "rotor-orientation-probability"
+  },
+  {
+   "exercise": "e8",
+   "concept": "spherical-harmonics"
+  },
+  {
+   "exercise": "e9",
+   "concept": "spherical-harmonics"
+  },
+  {
+   "exercise": "e9",
+   "concept": "rotor-orientation-probability"
+  },
+  {
+   "exercise": "e10",
+   "concept": "quantum-rotor-not-classical"
+  },
+  {
+   "exercise": "e10",
+   "concept": "spherical-harmonics"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-2pi",
+   "kind": "correction",
+   "html": "The second angle is $\\varphi + 2\\pi$, as in the rest of the sentence."
+  },
+  {
+   "id": "c-table",
+   "kind": "correction",
+   "html": "For $m_J = -2$ the $\\Phi$ function is $\\dfrac{1}{\\sqrt{2\\pi}}e^{-2i\\varphi}$, as the last column has it."
+  },
+  {
+   "id": "c-absm",
+   "kind": "correction",
+   "html": "$J$ is greater than or equal to $|m_J|$, as Equation 5.8.23 says, so a negative $m_J$ is bounded too."
+  },
+  {
+   "id": "c-amu",
+   "kind": "correction",
+   "html": "The unit is the atomic mass unit, 1 amu $= 1.66\\times10^{-27}$ kg; \"atomic units\" are another system."
+  },
+  {
+   "id": "c-o2",
+   "kind": "correction",
+   "html": "With $\\mu = 7.9997$ amu $= 1.328\\times10^{-26}$ kg and $r = 121$ pm, $I = 1.944\\times10^{-46}$ kg m², and $E = \\hbar^2/I = 5.72\\times10^{-23}$ J. The printed $10^{-27}$ is off by four powers of ten."
+  },
+  {
+   "id": "c-fig4",
+   "kind": "correction",
+   "html": "The sphere is Figure 5.8.4, drawn here in Figure 5.8.1 + 5.8.4."
+  },
+  {
+   "id": "c-hint1",
+   "kind": "correction",
+   "html": "The hint means that a factor $y$ that does not depend on $x$ passes through the derivative: $\\dfrac{d}{dx}(yf) = y\\dfrac{df}{dx}$."
+  },
+  {
+   "id": "c-key7",
+   "kind": "correction",
+   "html": "The gaps are 2, 4, 6, 8 and 10 in units of $\\hbar^2/2I$, so the levels get farther apart as $J$ increases, as the key of Exercise 5.8.6 says."
+  },
+  {
+   "id": "c-ex8",
+   "kind": "correction",
+   "html": "The second range is in $\\varphi$: 0° to 90°."
+  },
+  {
+   "id": "c-ex9",
+   "kind": "correction",
+   "html": "The most probable values asked for are those of $\\theta$ and $\\varphi$, and the polar plots are in Figure 5.8.3."
+  },
+  {
+   "id": "c-ex10",
+   "kind": "correction",
+   "html": "The polar plots are in Figure 5.8.3, and the density is $Pr[\\theta, \\varphi]$."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "rotor-kinetic",
+   "what": "the kinetic energy of a rotor",
+   "source": "Physical Chemistry (LibreTexts), 5.8 The Energy Levels of a Rigid Rotor",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kT = \\dfrac{1}{2}\\sum \\kmi\\kvi^2",
+       "src": "(5.8.2)"
+      },
+      {
+       "tex": "\\vec{\\kvi} = \\vec{\\komega} \\times \\vec{\\kri}",
+       "src": "(5.8.4)"
+      },
+      {
+       "tex": "\\vec{\\kli} = \\vec{\\kri} \\times \\kmi\\vec{\\kvi}",
+       "src": "5.8"
+      },
+      {
+       "tex": "\\vec{\\kL} = \\sum \\vec{\\kli}",
+       "src": "5.8"
+      },
+      {
+       "tex": "\\vec{\\kL} = \\kI\\vec{\\komega}",
+       "src": "(5.8.7)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{T}{\\kT} = \\mk{s}{\\dfrac{1}{2}\\sum \\kmi\\kvi^2}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{T}{\\kT} = \\mk{s}{\\dfrac{1}{2}\\sum \\kmi\\vec{\\kvi}\\cdot(\\vec{\\komega} \\times \\vec{\\kri})}",
+       "uses": [
+        1
+       ],
+       "cap": "Write $v_i^2$ as $\\vec{v}_i\\cdot\\vec{v}_i$ and replace the second factor by $\\vec{\\omega}\\times\\vec{r}_i$."
+      },
+      {
+       "tex": "\\mk{T}{\\kT} = \\mk{s}{\\dfrac{1}{2}\\vec{\\komega}\\cdot\\sum \\vec{\\kri} \\times \\kmi\\vec{\\kvi}}",
+       "uses": [],
+       "cap": "A scalar triple product is unchanged by a cyclic shift, $\\vec{a}\\cdot(\\vec{b}\\times\\vec{c}) = \\vec{b}\\cdot(\\vec{c}\\times\\vec{a})$, and every particle of a rigid body turns with the same $\\vec{\\omega}$, so it comes out of the sum."
+      },
+      {
+       "tex": "\\mk{T}{\\kT} = \\mk{s}{\\dfrac{1}{2}\\vec{\\komega}\\cdot\\sum \\vec{\\kli}}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{T}{\\kT} = \\mk{s}{\\dfrac{1}{2}\\vec{\\komega}\\cdot\\vec{\\kL}}",
+       "uses": [
+        3
+       ]
+      },
+      {
+       "tex": "\\mk{T}{\\kT} = \\mk{s}{\\dfrac{1}{2}\\kI\\komega^2}",
+       "uses": [
+        4
+       ]
+      }
+     ],
+     "num": "(5.8.8)",
+     "src": "5.8",
+     "note": "The book writes $v_i = \\omega X r_i$ and then $T = \\frac{\\omega}{2}\\sum m_i(v_i X r_i)$, treating $\\omega$ as a scalar. The velocity is the cross product $\\vec{\\omega}\\times\\vec{r}_i$, the angular momentum is $\\vec{r}_i\\times m_i\\vec{v}_i$, and $\\vec{\\omega}$ leaves the sum through the triple product, which gives $T = \\frac{1}{2}\\vec{\\omega}\\cdot\\vec{L}$ (the book's Equation 5.8.6)."
+    }
+   ]
+  },
+  {
+   "id": "rotor-separation",
+   "what": "the separated equation of the rigid rotor",
+   "source": "Physical Chemistry (LibreTexts), 5.8 The Energy Levels of a Rigid Rotor",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kH|\\kThetaf(\\theta)\\kPhi(\\kvarphi)\\rangle = \\kE|\\kThetaf(\\theta)\\kPhi(\\kvarphi)\\rangle",
+       "src": "(5.8.10)"
+      },
+      {
+       "tex": "\\kH = -\\dfrac{\\hbar^2}{2\\kmu \\krzero^2}\\left[\\dfrac{\\partial}{\\partial \\krzero}\\krzero^2\\dfrac{\\partial}{\\partial \\krzero} + \\dfrac{1}{\\sin\\theta}\\dfrac{\\partial}{\\partial\\theta}\\sin\\theta\\dfrac{\\partial}{\\partial\\theta} + \\dfrac{1}{\\sin^2\\theta}\\dfrac{\\partial^2}{\\partial\\kvarphi^2}\\right]",
+       "src": "5.8"
+      },
+      {
+       "text": "The bond length $r = r_0$ is constant for the rigid rotor, so the functions do not change with $r$ and the derivatives with respect to $r$ are zero.",
+       "src": "5.8"
+      },
+      {
+       "tex": "\\kI = \\kmu\\krzero^2",
+       "src": "5.8"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{\\kH|\\kThetaf(\\theta)\\kPhi(\\kvarphi)\\rangle} = \\mk{R}{\\kE|\\kThetaf(\\theta)\\kPhi(\\kvarphi)\\rangle}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{-\\dfrac{\\hbar^2}{2\\kmu \\krzero^2}\\left[\\dfrac{\\partial}{\\partial \\krzero}\\krzero^2\\dfrac{\\partial}{\\partial \\krzero} + \\dfrac{1}{\\sin\\theta}\\dfrac{\\partial}{\\partial\\theta}\\sin\\theta\\dfrac{\\partial}{\\partial\\theta} + \\dfrac{1}{\\sin^2\\theta}\\dfrac{\\partial^2}{\\partial\\kvarphi^2}\\right]|\\kThetaf(\\theta)\\kPhi(\\kvarphi)\\rangle} = \\mk{R}{\\kE|\\kThetaf(\\theta)\\kPhi(\\kvarphi)\\rangle}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{L}{-\\dfrac{\\hbar^2}{2\\kmu \\krzero^2}\\left[\\dfrac{1}{\\sin\\theta}\\dfrac{\\partial}{\\partial\\theta}\\sin\\theta\\dfrac{\\partial}{\\partial\\theta} + \\dfrac{1}{\\sin^2\\theta}\\dfrac{\\partial^2}{\\partial\\kvarphi^2}\\right]|\\kThetaf(\\theta)\\kPhi(\\kvarphi)\\rangle} = \\mk{R}{\\kE|\\kThetaf(\\theta)\\kPhi(\\kvarphi)\\rangle}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{L}{-\\dfrac{\\hbar^2}{2\\kI}\\left[\\dfrac{1}{\\sin\\theta}\\dfrac{\\partial}{\\partial\\theta}\\sin\\theta\\dfrac{\\partial}{\\partial\\theta} + \\dfrac{1}{\\sin^2\\theta}\\dfrac{\\partial^2}{\\partial\\kvarphi^2}\\right]|\\kThetaf(\\theta)\\kPhi(\\kvarphi)\\rangle} = \\mk{R}{\\kE|\\kThetaf(\\theta)\\kPhi(\\kvarphi)\\rangle}",
+       "uses": [
+        3
+       ]
+      }
+     ],
+     "num": "(5.8.12)",
+     "src": "5.8"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "\\klambda = \\dfrac{2\\kI\\kE}{\\hbar^2}",
+       "src": "(5.8.14)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{-\\dfrac{\\hbar^2}{2\\kI}\\left[\\dfrac{1}{\\sin\\theta}\\dfrac{\\partial}{\\partial\\theta}\\sin\\theta\\dfrac{\\partial}{\\partial\\theta} + \\dfrac{1}{\\sin^2\\theta}\\dfrac{\\partial^2}{\\partial\\kvarphi^2}\\right]|\\kThetaf(\\theta)\\kPhi(\\kvarphi)\\rangle} = \\mk{R}{\\kE|\\kThetaf(\\theta)\\kPhi(\\kvarphi)\\rangle}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{-\\left[\\dfrac{1}{\\sin\\theta}\\dfrac{\\partial}{\\partial\\theta}\\sin\\theta\\dfrac{\\partial}{\\partial\\theta} + \\dfrac{1}{\\sin^2\\theta}\\dfrac{\\partial^2}{\\partial\\kvarphi^2}\\right]\\kThetaf(\\theta)\\kPhi(\\kvarphi)} = \\mk{R}{\\dfrac{2\\kI\\kE}{\\hbar^2}\\kThetaf(\\theta)\\kPhi(\\kvarphi)}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{L}{\\dfrac{1}{\\kThetaf(\\theta)\\kPhi(\\kvarphi)}\\left[\\sin\\theta\\dfrac{\\partial}{\\partial\\theta}\\sin\\theta\\dfrac{\\partial}{\\partial\\theta} + \\dfrac{\\partial^2}{\\partial\\kvarphi^2}\\right]\\kThetaf(\\theta)\\kPhi(\\kvarphi)} = \\mk{R}{\\dfrac{-2\\kI\\kE\\sin^2\\theta}{\\hbar^2}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{L}{\\dfrac{1}{\\kThetaf(\\theta)\\kPhi(\\kvarphi)}\\left[\\sin\\theta\\dfrac{\\partial}{\\partial\\theta}\\sin\\theta\\dfrac{\\partial}{\\partial\\theta} + \\dfrac{\\partial^2}{\\partial\\kvarphi^2}\\right]\\kThetaf(\\theta)\\kPhi(\\kvarphi)} = \\mk{R}{-\\klambda\\sin^2\\theta}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\dfrac{1}{\\kThetaf(\\theta)}\\sin\\theta\\dfrac{\\partial}{\\partial\\theta}\\left(\\sin\\theta\\dfrac{\\partial}{\\partial\\theta}\\right)\\kThetaf(\\theta)} + \\mk{P}{\\dfrac{1}{\\kPhi(\\kvarphi)}\\dfrac{\\partial^2}{\\partial\\kvarphi^2}\\kPhi(\\kvarphi)} = \\mk{R}{-\\klambda\\sin^2\\theta}",
+       "uses": [],
+       "map": {
+        "L": [
+         "L",
+         "P"
+        ]
+       },
+       "cap": "$\\Phi(\\varphi)$ is a constant to the $\\theta$ derivatives and $\\Theta(\\theta)$ to the $\\varphi$ derivative, so each passes through and cancels against its factor in $1/\\Theta\\Phi$."
+      },
+      {
+       "tex": "\\mk{L}{\\dfrac{1}{\\kThetaf(\\theta)}\\left[\\sin\\theta\\dfrac{\\partial}{\\partial\\theta}\\left(\\sin\\theta\\dfrac{\\partial}{\\partial\\theta}\\right)\\kThetaf(\\theta) + \\left(\\klambda\\sin^2\\theta\\right)\\kThetaf(\\theta)\\right]} = \\mk{P}{-\\dfrac{1}{\\kPhi(\\kvarphi)}\\dfrac{\\partial^2}{\\partial\\kvarphi^2}\\kPhi(\\kvarphi)}",
+       "uses": [],
+       "map": {
+        "R": "L"
+       }
+      }
+     ],
+     "num": "(5.8.15)",
+     "src": "5.8",
+     "note": "The book's Equation 5.8.13 divides by $\\Theta(\\theta)\\psi(\\varphi)$; the product it means is $\\Theta(\\theta)\\Phi(\\varphi)$."
+    }
+   ]
+  },
+  {
+   "id": "cyclic",
+   "what": "the allowed values of m_J",
+   "source": "Physical Chemistry (LibreTexts), 5.8 The Energy Levels of a Rigid Rotor",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kPhi(\\kvarphi) = \\kPhi(\\kvarphi + 2\\pi)",
+       "src": "5.8"
+      },
+      {
+       "tex": "\\kPhi_m(\\kvarphi) = N e^{im_J\\kvarphi}",
+       "src": "(5.8.18)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\kPhi(\\kvarphi)} = \\mk{r}{\\kPhi(\\kvarphi + 2\\pi)}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{e^{im_J\\kvarphi}} = \\mk{r}{e^{im_J(\\kvarphi + 2\\pi)}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{l}{e^{im_J\\kvarphi}} = \\mk{r}{e^{im_J\\kvarphi}e^{im_J2\\pi}}",
+       "uses": []
+      }
+     ],
+     "num": "(5.8.20)",
+     "src": "5.8"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "e^{i\\alpha} = \\cos\\alpha + i\\sin\\alpha",
+       "src": "2.3, Euler's formula"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{e^{im_J\\kvarphi}} = \\mk{r}{e^{im_J\\kvarphi}e^{im_J2\\pi}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{one}{1} = \\mk{r}{e^{im_J2\\pi}}",
+       "uses": [],
+       "map": {
+        "l": "one"
+       }
+      },
+      {
+       "tex": "\\mk{one}{1} = \\mk{r}{\\cos(2\\pi m_J) + i\\sin(2\\pi m_J)}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{m}{m_J} = \\mk{r}{\\cdots, -3, -2, -1, 0, 1, 2, 3, \\cdots}",
+       "uses": [],
+       "map": {
+        "one": "m"
+       },
+       "cap": "The real part must be 1 and the imaginary part 0, and $\\cos 2\\pi m_J = 1$ only where $m_J$ is a whole number, positive, negative or zero."
+      }
+     ],
+     "num": "(5.8.21)",
+     "src": "5.8"
+    }
+   ]
+  }
+ ]
+}

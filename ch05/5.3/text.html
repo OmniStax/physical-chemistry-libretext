@@ -1,0 +1,49 @@
+<section id="opening">
+<h2>The Taylor expansion of a potential</h2>
+<p>The quantum harmonic oscillator is one of the most important model systems in quantum mechanics. This is due in partially to the fact that an arbitrary potential curve $V(x)$ can usually be <em>approximated</em> as a harmonic potential at the vicinity of a stable equilibrium point. Furthermore, it is one of the few quantum-mechanical systems for which an exact, analytical solution exists. Solving other potentials typically require either approximations or numerical approaches to identify the corresponding eigenstates and eigenvalues (i.e., wavefunctions and energies).</p>
+<p>A general potential energy ($V(x)$) curve for a molecular vibration can be <span data-concept="potential-taylor-expansion">expanded as a</span> <a href="https://math.libretexts.org/Bookshelves/Calculus/Book%3A_Calculus_(OpenStax)/10%3A_Power_Series/10.3%3A_Taylor_and_Maclaurin_Series">Taylor series</a></p>
+$$ \kV(\kx) = \kV(\kxo) + \left. \dfrac {d V(x)}{d x} \right|_{x_0}^{x} (x - x_0) + \left. \dfrac {1}{2!} \dfrac {d^2 V(x)}{d x^2} \right|_{x_0}^{x} (x - x_0)^2 + \ldots + \left. \dfrac {1}{n!} \dfrac {d^n V(x)}{d x^n} \right|_{x_0}^{x} (x - x_0)^n \tag{5.3.1} $$
+<p>It is important to note that this approximation is only good for $x$ near $x_0$, and that $x_0$ stands for the equilibrium bond distance. $V(x)$ is often (but not always) shortened to the cubic term and can be rewritten as</p>
+$$ \kV(\kx) = \dfrac {1}{2} \kk\kx^2 + \dfrac {1}{6} \gamma \kx^3 \tag{5.3.2} $$
+<p>where $\kV(\kxo) = 0$, $\kk$ is the harmonic <span data-concept="force-constant">force constant</span> (harmonic term), and $\gamma$ is the first anharmonic term (i.e., cubic)<em>.</em> As Figure 5.3.2 demonstrates, the harmonic oscillator (red curve) is a good approximation for the exact potential energy of a vibration (blue curve).</p>
+<figure class="sim" id="sim-morse" data-figure="5.3.1 + 5.3.4" data-original="/media/ch05/9030-Anharmonic_oscillator.gif,/media/ch05/55788-imageedit_27_4431511387.png" data-original-caption="5.3.1: The vibration of the HCl molecule is really an anharmonic oscillator, but can be approximated as a harmonic oscillator at low energies. In this animation, HCl is vibrating at the $E_3$ energy level. $D_0$ is dissociation energy here, $r_0$ bond length, $V$ potential energy. Energy is expressed in wavenumbers. The hydrogen chloride molecule is attached to the coordinate system to show bond length changes on the curve. (CC BY-SA 3.0; Darekk2 via Wikipedia). 5.3.4: The Morse potential (blue) and harmonic oscillator potential (green). Unlike the energy levels of the harmonic oscillator potential, which are evenly spaced by ħω, the Morse potential level spacing decreases as the energy approaches the dissociation energy. The dissociation energy $D_e$ is larger than the true energy required for dissociation $D_0$ due to the zero point energy of the lowest ($v = 0$) vibrational level. from Wikipedia.">
+  <div class="sim-head"><span class="eyebrow">Figure 5.3.1 + 5.3.4</span><span>HCl vibrates in its Morse well between the turning points of level $v$, with the harmonic parabola and its evenly spaced rungs drawn over it. Climb the levels and watch the real ones crowd together toward dissociation; $\kDzero$ falls short of $\kDe$ by the zero-point energy.</span></div>
+</figure>
+</section>
+
+<section id="anharmonic-corrections">
+<h2>Anharmonic corrections</h2>
+<p>Adding anharmonic perturbations to the harmonic oscillator (Equation 5.3.2) better describes molecular vibrations. <span data-concept="anharmonicity">Anharmonic oscillation is defined as the deviation of a system from harmonic oscillation, or an oscillator not oscillating in simple harmonic motion.</span> Anharmonic oscillation is described as the restoring force is no longer proportional to the displacement. Adding the cubic term (Figure 5.3.2; green curve) improves the harmonic oscillation approximation especially under greater displacement from equilibrium.</p>
+<figure class="sim" id="sim-taylor" data-figure="5.3.2" data-original="/media/ch05/344391-5.3.2-1.svg,/media/ch05/344392-5.3.2-2.svg" data-original-caption="(left) Deviation from simple harmonic potential approximation (red curve) of true/exact potential (blue curve) with cubic term (green). (right) Expansion with positive or negative quartic terms. (CC BY 4.0; Ümit Kaya via LibreTexts)">
+  <div class="sim-head"><span class="eyebrow">Figure 5.3.2</span><span>Add terms to the Taylor series of a Morse <span data-type="energy">potential</span> and see how far from the minimum each version stays close to the true curve. The parabola fits only near $\kxo$; the wrong sign on the quartic term makes the fit worse.</span></div>
+</figure>
+<p>Naturally, adding higher order anharmonic terms, like quartic terms (Figure 5.3.2; right) improve the approximation. Almost all diatomics have experimentally determined potentials for their lowest energy states. $\mathrm{H_{2}}$, $\mathrm{Li_{2}}$, $\mathrm{O_{2}}$, $\mathrm{N_{2}}$, and $\mathrm{F_{2}}$ with terms up to $n < 10$ determined of Equation 5.3.1.</p>
+<p>Figure 5.3.1 shows the the general potential with (numerically) calculated energy levels ($E_0$, $E_1$ etc.). $\kDzero$ is the <span data-concept="dissociation-energy">dissociation energy</span>, which is different from the <span data-concept="well-depth">well depth</span> $\kDe$. These vibrational energy levels of this plot can be calculated using the harmonic oscillator model (i.e., Equation 5.3.1 with the Schrödinger equation)<sup class="fn" data-note="model"></sup> and have the <span data-concept="anharmonic-energy-levels">general form</span><sup class="fn" data-note="ve-latin"></sup></p>
+$$ \kEv = \left(v + \dfrac{1}{2}\right) v_e - \left(v + \dfrac{1}{2}\right)^2 v_e x_e + \left(v + \dfrac{1}{2}\right)^3 v_e y_e + \text{higher terms} $$
+<p>where $v$ is the vibrational quantum number and $x_e$ and $y_e$ are the first and second anharmonicity constants, respectively.</p>
+<p>The $v = 0$ level is the vibrational ground state. Because this potential is less confining than a parabola used in the harmonic oscillator, <span data-concept="anharmonic-energy-levels">the energy levels become <strong>less widely</strong> spaced at high excitation</span> (Figure 5.3.1; top of potential).</p>
+<div class="note">
+<div class="eyebrow">Note</div>
+<h3>Limitations of the Harmonic Oscillator Model for Molecular Vibrations</h3>
+<p>The harmonic oscillation is a great approximation of a molecular vibration, but has <span data-concept="harmonic-oscillator-limitations">key limitations</span>:</p>
+<ul><li>Due to equal spacing of energy, all transitions occur at the <strong>same</strong> frequency (i.e. single line spectrum). However experimentally many lines are often observed (called overtones).</li><li>The harmonic oscillator does not predict bond dissociation; you cannot break it no matter how much energy is introduced.</li></ul>
+</div>
+</section>
+
+<section id="morse-potential">
+<h2>The Morse potential</h2>
+<div class="note">
+<div class="eyebrow">Note</div>
+<h3>Morse Potentials are better Approximations of Vibrational Motion</h3>
+<p>A more powerful approach than just "patching up" the harmonic oscillator solution with anharmonic corrections is to adopt a different potential ($V(x)$). One such approach is the <span data-concept="morse-potential">Morse potential</span>, named after physicist Philip M. Morse, and a better approximation for the vibrational structure of the molecule than the harmonic oscillator because it explicitly includes the effects of <em>bond breaking</em> and accounts for the anharmonicity of real bonds (Figure 5.3.4).</p>
+<p>The Morse Potential is a good approximation to $V(x)$ and is best when looking for a general formula for all $x$ from 0 to $\infty$, not just applicable for the local region around the $x_o$:</p>
+$$ \kV(\kx) = \kDM(1-e^{-\kbeta (\kx - \kxo)})^2 \tag{5.3.3} $$
+<p>with $\kV(\kx = \kxo) = 0$ and $\kV(\kx = \infty) = \kDM$.</p>
+<p>The Morse Potential (Figure 5.3.4) approaches zero at infinite $r_e$ and equals $-\kDe$ at its minimum (i.e. $r=\kre$).<sup class="fn" data-note="morse-zero"></sup> It clearly shows that the Morse potential is the combination of a short-range repulsion term (small $r$ values) and a long-range attractive term (large $r$ values).</p>
+<p>Solving the Schrödinger Equation with the Morse Potential (Equation 5.3.3) is not trivial, but can be done analytically.</p>
+$$ \hat{H}|\psi \rangle = E_n | \psi \rangle $$
+<p>with<sup class="fn" data-note="morse-mass"></sup></p>
+$$ \begin{aligned} \hat{H} &= \hat{T} + \hat{V} \\[4pt] &= \dfrac{- \hbar ^2 d^2}{2m \;dx^2} + D(1-e^{-\beta (x - x_0)})^2 \end{aligned} $$
+<p>The solutions and energies for the Morse potential will not be used in this course and will not be discussed in more detail.</p>
+</div>
+</section>

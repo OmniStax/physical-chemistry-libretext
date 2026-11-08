@@ -1,0 +1,53 @@
+<section id="harmonic-oscillator">
+<h2>Harmonic Oscillator</h2>
+<p>The <span data-concept="harmonic-oscillator">harmonic oscillator</span> is the model of a particle in a quadratic potential or, equivalently, two particles whose relative displacement sits in a quadratic potential. From the standpoint of chemistry, the harmonic oscillator is the simplest model for the vibration of a diatomic molecule (and even vibrations of the normal modes of a polyatomic molecule). If the potential between the two bodies is truly quadratic, then the Schrödinger equation can be solved exactly. However, any potential that has a smooth minimum can be approximated as a <span data-concept="harmonic-potential">harmonic potential</span> near that minimum. For any potential $V(x)$ where $x = l - l_0$ (i.e., the displacement relative to the separation at minimum potential $l_0$), a Taylor expansion gives</p>
+$$ V(x) = V(0) + \left(\frac{dV}{dx}\right)_0x + \frac{1}{2!}\left(\frac{d^2V}{dx^2}\right)_0x^2 + \frac{1}{3!}\left(\frac{d^3V}{dx^3}\right)_0x^3 + \ldots \tag{5.S.1} $$
+<p>The first term can be arbitrarily set to 0, and the second term is 0 because at $x=0$, the derivative of the potential is zero (it’s a minimum). Therefore, as long as $x$ is small, we an truncate the series at the quadratic term and define the <span data-concept="force-constant">force constant</span> $k = \left(\frac{d^2V}{dx^2}\right)_0$:</p>
+$$ V(x) \approx \frac{1}{2}kx^2. $$
+<p>For the quantum harmonic oscillator involving two bodies with <span data-concept="reduced-mass">reduced mass</span> $\mu = m_1^{-1} + m_2^{-1}$<sup class="fn" data-note="c-mu"></sup> and force constant $k$ with displacement $x$, the Hamiltonian is</p>
+$$ \hat{H} = -\frac{\hbar^2}{2\mu}\frac{d^2}{dx^2} + \frac{1}{2}kx^2, $$
+<p>and the Schrödinger equation tells us that the wavefunctions $\psi(x)$ must be the solutions of</p>
+$$ \frac{d^2\psi}{dx^2} + \frac{2\mu}{\hbar^2}\left(E - \frac{1}{2}kx^2\right)\psi = 0. $$
+<p>It turns out that the solutions have the general form</p>
+$$ \psi_v(x) = N_vH_v(\alpha^{1/2}x)e^{-\alpha x^2/2}, \quad v = 0,1,2,\ldots $$
+<p>where</p>
+$$ \alpha = \sqrt{\frac{k\mu}{\hbar^2}}, \quad N_v = (2^vv!)^{-1/2}\left(\frac{\alpha}{\pi}\right)^{1/4} $$
+<p>and $H_v(\alpha^{1/2}x)$ are the <span data-concept="hermite-polynomials">Hermite polynomials</span>, which are a series of polynomials of order $v$. It is conventional to use $v$ as the quantum number for a harmonic oscillator.</p>
+<p>If we define the angular frequency of the oscillator $\omega = \sqrt{k/\mu}$ or, alternatively, its frequency $\nu = \sqrt{k/\mu}/(2\pi)$, <span data-concept="oscillator-energy-levels">the energies</span> are given by</p>
+$$ E_v = \hbar\omega\left(v+\frac{1}{2}\right) = h\nu\left(v+\frac{1}{2}\right), \quad v = 0,1,2\ldots $$
+<p>A unique feature of the harmonic oscillator is that its energy levels are evenly spaced, and that the lowest energy level is greater than the minimum of the potential. This means that even at absolute zero, the harmonic oscillator still has nonzero kinetic and potential energy, which is called <span data-concept="zero-point-energy">zero-point energy</span>.</p>
+<figure class="sim" id="fig-ho">
+  <div class="sim-head"><span class="eyebrow">Figure</span><span>Wavefunctions (a) and probability densities (b) of the harmonic oscillator, along with energies.</span></div>
+</figure>
+</section>
+
+<section id="rigid-rotor">
+<h2>Rigid Rotor</h2>
+<p>The <span data-concept="rigid-rotor">rigid rotor</span> is the model system for both a rotating diatomic molecule and for the angular distribution of the electron in a hydrogen atom. This model starts with two bodies with reduced mass $\mu$ and a fixed separation $r$.</p>
+<figure class="sim" id="fig-rotor">
+  <div class="sim-head"><span class="eyebrow">Figure</span><span>Model of a <span data-concept="rigid-rotor">rigid rotor</span>.</span></div>
+</figure>
+<p>Since there is no preferred orientation of the body in free space, the Hamiltonian only has a kinetic energy term:</p>
+$$ \hat{H} = \hat{T} = -\frac{\hbar^2}{2\mu}\nabla^2. $$
+<p>Because we’re dealing with rotation, it’s more natural to work in spherical coordinates, and after some tedious calculus it can be shown that:</p>
+$$ \nabla^2 = \frac{1}{r^2}\frac{\partial}{\partial r}\left( r^2 \frac{\partial}{\partial r} \right)_{\theta,\phi} + \frac{1}{r^2 \sin \theta}\frac{\partial}{\partial \theta}\left(\sin \theta \frac{\partial}{\partial \theta} \right)_{r,\phi} + \frac{1}{r^2 \sin^2 \theta}\left(\frac{\partial^2}{\partial \phi^2} \right)_{r,\theta} $$
+<p>In the rigid rotor, $r$ is constant, so we can eliminate the first term to get</p>
+$$ \nabla^2 = \frac{1}{r^2 \sin \theta}\frac{\partial}{\partial \theta}\left(\sin \theta \frac{\partial}{\partial \theta} \right)_{r,\phi} + \frac{1}{r^2 \sin^2 \theta}\left(\frac{\partial^2}{\partial \phi^2} \right)_{r,\theta} \tag{5.S.2} $$
+<p>Recall from physics that <span data-concept="angular-momentum">angular momentum</span> $L = I\omega$, where $I$ is the <span data-concept="moment-of-inertia">moment of inertia</span> and $\omega$ is the angular frequency. Relative to the center of mass, $I = m_1r_1^2 + m_2r_2^2$, and consequently in the center-of-mass frame $I = \mu r^2$. The kinetic energy of a rotating body is $T = L^2/(2I)$ (just like the linear quantity $T = p^2/(2m)$). If we now substitute Equation 5.S.2 into the Hamiltonian, we see</p>
+$$ \hat{H} = -\frac{\hbar^2}{2I}\left[\frac{1}{\sin \theta}\frac{\partial}{\partial \theta}\left(\sin \theta \frac{\partial}{\partial \theta} \right)_{r,\phi} + \frac{1}{\sin^2 \theta}\left(\frac{\partial^2}{\partial \phi^2} \right)_{r,\theta}\right], $$
+<p>and thus we find the quantum mechanical form of the square of the angular momentum operator:</p>
+$$ \hat{L}^2 = -\hbar^2\left[\frac{1}{\sin \theta}\frac{\partial}{\partial \theta}\left(\sin \theta \frac{\partial}{\partial \theta} \right)_{r,\phi} + \frac{1}{\sin^2 \theta}\left(\frac{\partial^2}{\partial \phi^2} \right)_{r,\theta}\right]. $$
+<p>The eigenfunctions of the Hamiltonian (and $\hat{L}^2$) are the <span data-concept="spherical-harmonics">spherical harmonics</span> $Y_l^m(\theta,\phi)$, where $l = 0,1,2,\ldots$ and $m = 0, \pm1, \pm2,\ldots,\pm l$. These spherical harmonics have the form:</p>
+$$ Y_l^m(\theta,\phi) = \sqrt{\frac{(2l+1)(l-|m|)!}{4\pi(l+|m|)!}}P_l^{|m|}(\cos \theta)e^{im\phi}, $$
+<p>where $P_l^{|m|}(\cos \theta)$ are the <span data-concept="associated-legendre-functions">associated Legendre functions</span>.</p>
+<p><span data-concept="rotor-energy-levels">The energies of the rigid rotor</span> depend only on the $l$ quantum number</p>
+$$ E_l = \frac{\hbar^2}{2I}l(l+1), \quad l = 0,1,2,\ldots, $$
+<p>and <span data-concept="rotor-degeneracy">each energy level has a degeneracy of $2l+1$</span> arising from the possible values of the $m$ quantum number. While the quantum numbers $l$ and $m$ (often $m_l$) are used when describing the angular portion of the hydrogen atom wavefunction, typically the quantum numbers become $J$ and $m_J$ when discussing molecular rotation. They are equivalent in the case of linear molecules; for nonlinear molecules, additional quantum numbers are needed to specify the projection of the angular momentum onto some molecular axis, and the energy depends on these quantum number as well.</p>
+<figure class="sim" id="fig-rotor-levels" data-original="/media/ch05/495302-rr-energy.png" data-original-width="385" data-original-caption="Energy level diagram of a rigid rotor. The gaps between successive levels are evenly spaced in energy.">
+  <div class="sim-head"><span class="eyebrow">Figure</span><span>Energy level diagram of a <span data-concept="rigid-rotor">rigid rotor</span>. The gaps between successive levels are evenly spaced in energy.</span></div>
+</figure>
+<p>As mentioned before, $\hat{L}^2$ commutes with $\hat{H}$, so the square of the total angular momentum has a definite value ($l$ is a good quantum number). Looking at its components $\hat{L}_x$, $\hat{L}_y$, and $\hat{L}_z$, we find that only $[\hat{L}^2,\hat{L}_z] = 0$, while $[\hat{L}_i,\hat{L}_j] \neq 0$ if $i \neq j$. This means that we can know the total angular momentum $l$ and its projection $m$ onto one of three axes (under the coordinate system we’ve chosen, that axis is $z$, but different coordinate choices are possible).</p>
+<figure class="sim" id="fig-l-vector" data-original="/media/ch05/495303-l-vector1.png,/media/ch05/495304-l-vector2.png" data-original-width="347,342" data-original-caption="Vector representation of total angular momentum l and its projection ml onto the z axis. (a) is a two dimensional illustration, while (b) illustrates the uncertainty in the projection of the angular momentum onto the x and y axes.">
+  <div class="sim-head"><span class="eyebrow">Figure</span><span>Vector representation of total <span data-concept="angular-momentum">angular momentum</span> l and its projection ml onto the z axis. (a) is a two dimensional illustration, while (b) illustrates the uncertainty in the projection of the angular momentum onto the x and y axes.</span></div>
+</figure>
+</section>

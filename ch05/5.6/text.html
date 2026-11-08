@@ -1,0 +1,78 @@
+<section id="schrodinger-equation">
+<h2>The oscillator's Schrödinger equation</h2>
+<p>For a diatomic molecule, there is only one vibrational mode, so there will be only a single set of vibrational wavefunctions with associated energies for this system. For polytatomic molecules, there will be a set of wavefunctions with associated energy associated with each vibrational mode.</p>
+<p>The <span data-concept="hamiltonian-operator">Hamiltonian operator</span>, the general quantum mechanical operator for energy, includes both a kinetic energy term, $\kThat$, and a potential energy term, $\kVhat$.</p>
+$$ \kH = \kThat + \kVhat \tag{5.6.1} $$
+<p>For the free particle and the particle in a box, the potential energy term used in the Hamiltonian was zero. As shown in Equation 5.6.1,<sup class="fn" data-note="cite-classical"></sup> the classical expression for the energy of a harmonic oscillator includes both a kinetic energy term and the harmonic potential energy term. Transforming this equation into the corresponding Hamiltonian operator gives,</p>
+$$ \kH (\kq) = \dfrac {1}{2 \kmu} \kPqhat^2 + \dfrac {\kk}{2} \kqhat^2 \tag{5.6.2} $$
+<p>where $\kqhat$ is the operator for the length of the normal coordinate, and $\kPqhat$ is the momentum operator associated with the normal coordinate. $\kmu$ is an effective (<span data-concept="reduced-mass">reduced</span>) mass, and $\kk$ is an effective <span data-concept="force-constant">force constant</span>, and these quantities will be different for each of the normal modes (vibrations).</p>
+<p>Substituting the definitions for the operators yields</p>
+$$ \kH (\kq) = -\dfrac {\hbar ^2}{2\kmu} \dfrac {d^2}{d\kq^2} + \dfrac {\kk}{2} \kq^2 \tag{5.6.3} $$
+<p>since the operator for position or displacement is just the position or displacement. The <span data-concept="harmonic-oscillator-schrodinger-equation">time-independent Schrödinger Equation</span> then becomes</p>
+$$ - \dfrac {\hbar ^2}{2\kmu} \dfrac {d^2 \kpsiv (\kq)}{d\kq^2} + \dfrac {\kk}{2} \kq^2 \kpsiv (\kq) = \kEv \kpsiv (\kq) \tag{5.6.4} $$
+<p>or upon rearranging</p>
+$$ \dfrac {d^2 \kpsiv (\kq)}{d\kq^2} + \dfrac {2 \kmu}{\hbar ^2} \left ( \kEv - \dfrac {\kk}{2} \kq^2 \right ) \kpsiv (\kq) = 0 \tag{5.6.5} $$
+<p>This differential equation is not straightforward to solve. Rather than fully develop the details of the solution, we will outline the method used because it represents a common strategy for solving differential equations. The steps taken to solve Equation 5.6.5 are to <span data-concept="scaled-oscillator-equation">simplify the equation by collecting constants in the parameter $\kbeta$</span></p>
+$$ \kbeta ^2 = \dfrac {\hbar}{\sqrt { \kmu \kk}} \tag{5.6.6} $$
+<p>and then changing the variable from $\kq$ to $x$ where</p>
+$$ x = \dfrac {\kq}{\kbeta} \tag{5.6.7} $$
+<figure class="dv" id="drv-scaled-equation"></figure>
+</section>
+
+<section id="solving-for-the-quantum-wavefunctions">
+<h2>Solving for the Quantum Wavefunctions</h2>
+<p><span data-concept="asymptotic-series-method">A common strategy for solving differential equations, which is employed here, is to find a solution that is valid for large values of the variable and then develop the complete solution as a product of this asymptotic solution and a power series.</span> Since the potential energy approaches infinity as $x$ and the coordinate $\kq$ approach infinity, the wavefunctions must approach zero (this is, the wavefunctions must <strong>converge to zero</strong>):</p>
+$$ \lim_{x \rightarrow \infty} \kpsiv(x) = 0 \tag{5.6.10} $$
+<p>The function that has this property and satisfies the differential equation for large values of $x$ is the exponential function, i.e.,</p>
+$$ \lim_{x \rightarrow \infty} \phi_v(x) \exp \left ( \dfrac {-x^2}{2} \right ) = 0 \tag{5.6.11} $$
+<p>where the wavefunctions are</p>
+$$ \kpsiv(x) \propto \phi_v(x) \exp \left ( \dfrac {-x^2}{2} \right ) $$
+<figure class="dv" id="drv-gaussian-tail"></figure>
+<p>The general expression for a power series of $\phi_v(x)$ is</p>
+$$ \begin{aligned}\phi_v(x) &= \sum _{n=0}^\infty c_n(v) x^n \\[4pt] &=c_n(v) x + c_n(v) x^2 + c_n(v) x^3 + \cdots \end{aligned} $$
+<p>which<sup class="fn" data-note="power-series"></sup> can be truncated after the first term, after the second term, after the third term, etc. to produce a set of polynomials. There is one polynomial for each value of $v$ where $v$ can be equal to any integer value including zero.</p>
+$$ \sum _{n=0}^v c_n x^n \tag{5.6.12} $$
+<p>Each of the truncations of the power series in Equation 5.6.12 can be multiplied by the exponential function in Equation 5.6.11 to create a family of valid solutions to the differential equation in Equation 5.6.9.</p>
+$$ \kpsiv (x) = \sum _{n=0}^v c_n x^n \exp \left ( \dfrac {-x^2}{2} \right ) \tag{5.6.13} $$
+<h3>Hermite Polynomials</h3>
+<p>While polynomials in general approach $∞$ (or $-∞$) as $x$ approaches $∞$, the decreasing exponential term overpowers the polynomial term so that the overall wavefunction exhibits the desired approach to zero at large values of $x$ or $-x$. The exact forms of polynomials that solve Equation 5.6.9 are the <strong><span data-concept="hermite-polynomials">Hermite polynomials</span></strong>, which are standard mathematical functions known from the work of Charles Hermite. The first eight Hermite polynomials, $H_v(x)$, are given below.</p>
+<ul><li>$H_0 = 1$</li><li>$H_1 = 2x$</li><li>$H_2 = -2 + 4x^2$</li><li>$H_3 = -12x + 8x^3$</li><li>$H_4 = 12 - 48x^2 +16x^4$</li><li>$H_5 = 120x - 160x^3 + 32x^5$</li><li>$H_6 = -120 + 720x^2 - 480 x^4 + 64x^6$</li><li>$H_7 = -1680x + 3360 x^3 - 1344 x^5 + 128 x^7$</li></ul>
+<p>The first six Hermite polynomials are plotted in Figure 5.6.1. Hermite polynomials will be discussed in more detail in the following Section.</p>
+<figure class="sim" id="sim-hermite" data-figure="5.6.1" data-original="/media/ch05/344453-Hermite_poly_phys.svg" data-original-width="505" data-original-caption="The first six Hermite polynomials $H_n(x)$. (CC BY-SA 3.0 Unported; Alessio Damato, Vulpecula and others via Wikipedia)">
+  <div class="sim-head"><span class="eyebrow">Figure 5.6.1</span><span>Pick a degree $v$. Above, the polynomial $H_v$ runs off to infinity at both ends; below, the Gaussian $e^{-x^2/2}$ pulls the same polynomial back to zero.</span></div>
+</figure>
+<p>Because of the association of the wavefunction with a probability density, it is necessary for the wavefunction to include a normalization constant, $N_v$.</p>
+$$ N_v = \dfrac {1}{(2^v v! \sqrt {\pi} )^{1/2}} \tag{5.6.14} $$
+<p>The final form of <span data-concept="oscillator-wavefunctions">the harmonic oscillator wavefunctions</span> is thus</p>
+$$ \kpsiv (x) = N_v H_v (x) e^{-x^2/2} \tag{5.6.15} $$
+<div class="note">
+<div class="eyebrow">Note</div>
+<h3>Alternative and More Common Formulation of Harmonic Oscillator Wavefunctions</h3>
+<p>The harmonic oscillator wavefunctions are often written in terms of $\kQ$, the unscaled displacement coordinate (Equation 5.6.7)<sup class="fn" data-note="note-q"></sup> and a different constant $\alpha$:</p>
+$$ \alpha =1/\sqrt{\kbeta} = \sqrt{\dfrac{\kk \kmu}{\hbar ^2}} $$
+<p>so<sup class="fn" data-note="note-alpha"></sup> Equation 5.6.15 becomes</p>
+$$ \kpsiv (x) = N_v'' H_v (\sqrt{\alpha} \kQ) e^{-\alpha \kQ^2/ 2} $$
+<p>with<sup class="fn" data-note="note-psi-q"></sup> a slightly different normalization constant</p>
+$$ N_v'' = \sqrt {\dfrac {1}{2^v v!}} \left(\dfrac{\alpha}{\pi}\right)^{1/4} $$
+</div>
+<p><span data-concept="oscillator-energy-levels">The energy eigenvalues for a quantum mechanical oscillator</span> also are obtained by solving the Schrödinger equation. The energies are restricted to discrete values</p>
+$$ \kEv = \left ( v + \dfrac {1}{2} \right ) \hbar \komega \tag{5.6.16} $$
+<p>with $v = 0, 1, 2, 3, \cdots$.</p>
+<p>The energies depend both on the quantum number, $v$, and the oscillator frequency</p>
+$$ \komega = \sqrt {\dfrac {\kk}{\kmu}} $$
+<p>which in turn depends on the spring constant $\kk$ and the <span data-concept="reduced-mass">reduced mass</span> of the vibration $\kmu$.</p>
+<p>The normalized wavefunctions for the first four states of the harmonic oscillator are shown in Figure 5.6.2, and the corresponding probability densities are shown in Figure 5.6.3. You should remember the mathematical and graphical forms of the first few harmonic oscillator wavefunctions, and the correlation of $v$ with $\kEv$. <span data-concept="oscillator-wavefunction-parity">The number of nodes in the wavefunction will help you to remember these characteristics. Also note that the functions fall off exponentially and that the symmetry alternates. For $v$ equal to an even number, $\kpsiv$ is gerade; for $v$ equal to an odd number, $\kpsiv$ is ungerade.</span></p>
+<figure class="sim" id="sim-states" data-figure="5.6.2 + 5.6.3" data-original="/media/ch05/345385-5.6.2-1_(1).svg,/media/ch05/345384-5.6.2-2_(1).svg,/media/ch05/345386-5.6.2-3_(1).svg,/media/ch05/345387-5.6.2-4_(1).svg,/media/ch05/345391-5.6.3-1.svg,/media/ch05/345390-5.6.3-2.svg,/media/ch05/345389-5.6.3-3.svg,/media/ch05/345388-5.6.3-4.svg" data-original-width="274,274,274,274,274,274,274,274" data-original-caption="5.6.2: The harmonic oscillator wavefunctions describing the four lowest energy states. 5.6.3: The probability densities for the four lowest energy states of the harmonic oscillator.">
+  <div class="sim-head"><span class="eyebrow">Figure 5.6.2 + 5.6.3</span><span>Step up the quantum number $v$. Each level adds a node to $\kpsiv$, and as $v$ grows the <span data-type="probability-density">probability density</span> piles up at the turning points like the dashed classical density, while a little of it always lies beyond them.</span></div>
+</figure>
+<p>In completing Exercise 5.6.9, you should have noticed that as the quantum number increases and becomes very large, the probability distribution approaches that of a classical oscillator. This observation is very general. It was first noticed by Bohr, and is called the <span data-concept="correspondence-principle">Bohr Correspondence Principle</span>. This principle states that classical behavior is approached in the limit of large values for a quantum number. A classical oscillator is most likely to be found in the region of space where its velocity is the smallest. This situation is similar to walking through one room and running through another. In which room do you spend more time? Where is it more likely that you will be found?</p>
+<p>Examination of the quantum mechanical wavefunction for the lowest-energy state reveals that the wavefunction $\kpsi_0(x)$ extends beyond the classical limit (i.e., outside of the harmonic oscillator well, albeit slightly). Higher energy states have higher total energies, so the classical limits to the amplitude of the displacement will be larger for these states.</p>
+</section>
+
+<section id="tunneling">
+<h2>Tunneling in the Quantum Harmonic Oscillator</h2>
+<p>The observation that the wavefunctions are not zero at the classical limit means that the quantum mechanical oscillator has a finite probability of having a displacement that is larger than what is classically possible. The oscillator can be in a region of space where the potential energy is greater than the total energy. Classically, when the potential energy equals the total energy, the kinetic energy and the velocity are zero, and the oscillator cannot pass this point. A quantum mechanical oscillator, however, has a finite probability of passing this point. For a molecular vibration, this property means that the amplitude of the vibration is larger than what it would be in a classical picture. In some situations, a larger amplitude vibration could enhance the chemical reactivity of a molecule.</p>
+<p>We should be able to calculate <span data-concept="oscillator-tunneling-probability">the probability that the quantum mechanical harmonic oscillator is in the classically forbidden region for the lowest energy state of the harmonic oscillator</span>, the state with $v = 0$. The <span data-concept="classically-forbidden-region">classically forbidden region</span> is shown by the shading of the regions beyond $\kQzero$ in the graph you constructed for Exercise 5.6.3.<sup class="fn" data-note="cite-exercise"></sup> The area of this shaded region gives the probability that the bond oscillation will extend into the forbidden region (Figure 5.6.3). To calculate this probability, we use</p>
+<figure class="dv" id="drv-forbidden-probability"></figure>
+<p>The integral in Equation 5.6.19 is called an <span data-concept="error-function"><a href="https://phys.libretexts.org/Bookshelves/Thermodynamics_and_Statistical_Mechanics/Book%3A_Heat_and_Thermodynamics_(Tatum)/04%3A_Thermal_Conduction/4.01%3A_Error_Function">error function (ERF)</a></span> and can only be evaluated numerically. Values can be found in books of mathematical tables. When the limit of integration is 1, ERF(l) = 0.843 and P[forbidden] = 0.157. This result means that the quantum mechanical oscillator can be found in the forbidden region 16% of the time. This effect is substantial and leads to the phenomenon called <em><span data-concept="quantum-tunneling">quantum mechanical tunneling</span></em>.</p>
+</section>
