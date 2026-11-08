@@ -1,7 +1,8 @@
 # Config: Physical Chemistry (LibreTexts), Chapter 1
 
 Proposed by the agent after the chapter exploration (2026-11-08). Status:
-**proposed, awaiting the user** (root rules 10 and 16). Each line is a
+**agreed** on 2026-11-08: the user accepted every proposal and asked for the
+chapter to be built in one go, so the loop runs without per-section stops. Each line is a
 setting and its proposed value; the exercise lines end on the choice the
 user has to make.
 
@@ -34,12 +35,8 @@ user has to make.
   matter waves (1.7) and Planck's law (1.2), which the book leaves
   without a computational exercise.
 
-**Your choice** (none is assumed), for each line: *key only* (the unkeyed
-are left out and named in `exercise_notes`), *AI solutions* (kept with an
-AI-marked solution), *AI exercises* (the six new ones written and
-AI-marked).
+**The choice**: *AI solutions* for the unkeyed exercise and the five
+Conceptual Questions, and *AI exercises* for the six proposed (two each in
+1.2, 1.4 and 1.7).
 
-Also to choose: whether an inline exercise that follows a worked example
-is a Try It inline after it (no mastery evidence) or an item of the
-Exercises document (evidence per root rule 20). Proposed: the Exercises
-document, since the book has no other exercises.
+Every exercise is an item of the Exercises document (`place: end`).

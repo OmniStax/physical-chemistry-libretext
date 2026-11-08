@@ -1,7 +1,7 @@
 # Physical Chemistry (LibreTexts): the book's rules
 
-Status: **draft** from the full-book exploration of 2026-11-08 (root rule
-18), to be converged with the user before the first section is built. What
+Status: agreed with the user on 2026-11-08 (the exploration's proposals
+accepted as written) and used to build Chapter 1; later chapters refine it. What
 is true of this book and of no other; the rules for every book are the root
 `RULES.md`. A chapter's decisions are in its `config.md`, the colour plan in
 `COLOR.md`.
@@ -87,6 +87,25 @@ copied into `media/chNN/` from `source/media/` under their LibreTexts file
 names. Element colours through `F.el`; spectra and hot bodies in their real
 colours (facts).
 
+## Tools
+
+`tools/fetch.py` (mirror and `modules.json`), `tools/lt2md.py` and
+`tools/convert.py` (source.md), `tools/md2html.py N.M` (a draft
+`text.html` and `section.json` from a section's source.md: blocks, maths with
+`\tag{N.M.K}`, figures as kept images, notes, examples, tables, exercise
+boxes with their book answers; the builder edits the draft and deletes it),
+`tools/spans.py` (a first pass of `<span data-concept>` over a text.html, which
+the builder then reads), `tools/mergebook.py` (copied from Chemistry 2e for
+`ost merge`).
+
+## Exercises and generated content, as chosen for Chapter 1
+
+Unkeyed book exercises are kept with AI solutions; AI exercises are written
+where `config.md` names them; every exercise sits at the end of its section
+(`place: end`), in the Exercises document.
+
 ## Template sections
 
-None yet; the first built chapter names them.
+`ch01/1.1` (a graph sim with a real-colour fact, a still sim with hover
+marks, kept photographs and an unnumbered kept image, a folded figure) and
+`ch01/intro/` for a chapter's introduction page.

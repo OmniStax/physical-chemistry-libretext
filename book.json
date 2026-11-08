@@ -1,0 +1,1135 @@
+{
+  "id": "physical-chemistry-libretext",
+  "title": "Physical Chemistry (LibreTexts)",
+  "publisher": "LibreTexts",
+  "authors": [
+    "Delmar Larsen"
+  ],
+  "source_url": "https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Physical_Chemistry_(LibreTexts)",
+  "copyright": "LibreTexts and the authors named on each page",
+  "license": "CC BY-NC-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+  "openstax": "https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Physical_Chemistry_(LibreTexts)/",
+  "language": "en",
+  "highlights": {
+    "facts": true,
+    "refs": true,
+    "concepts": true,
+    "words": true,
+    "symbols": true,
+    "underlines": true
+  },
+  "chapters": [
+    "ch01"
+  ],
+  "types": [
+    {
+      "id": "energy",
+      "label": "energy",
+      "dimension": "J"
+    },
+    {
+      "id": "temperature",
+      "label": "temperature",
+      "dimension": "K"
+    },
+    {
+      "id": "wavelength",
+      "label": "wavelength",
+      "dimension": "m"
+    },
+    {
+      "id": "frequency",
+      "label": "frequency",
+      "dimension": "Hz"
+    },
+    {
+      "id": "wavenumber",
+      "label": "wavenumber",
+      "dimension": "cm⁻¹"
+    },
+    {
+      "id": "momentum",
+      "label": "momentum",
+      "dimension": "kg·m/s"
+    },
+    {
+      "id": "velocity",
+      "label": "velocity",
+      "dimension": "m/s"
+    },
+    {
+      "id": "length",
+      "label": "length",
+      "dimension": "m"
+    },
+    {
+      "id": "mass",
+      "label": "mass",
+      "dimension": "kg"
+    },
+    {
+      "id": "potential",
+      "label": "electric potential",
+      "dimension": "V"
+    },
+    {
+      "id": "power",
+      "label": "radiated power per area",
+      "dimension": "W/m²"
+    },
+    {
+      "id": "energy-density",
+      "label": "spectral energy density",
+      "dimension": "J/m³"
+    },
+    {
+      "id": "charge",
+      "label": "charge",
+      "dimension": "C"
+    },
+    {
+      "id": "force",
+      "label": "force",
+      "dimension": "N"
+    }
+  ],
+  "symbols": [
+    {
+      "sym": "E",
+      "latex": "E",
+      "macro": "\\kE"
+    },
+    {
+      "sym": "T",
+      "latex": "T",
+      "macro": "\\kT"
+    },
+    {
+      "sym": "lambda",
+      "latex": "\\lambda",
+      "macro": "\\klambda"
+    },
+    {
+      "sym": "lambda_max",
+      "latex": "\\lambda_{max}",
+      "macro": "\\klmax"
+    },
+    {
+      "sym": "nu",
+      "latex": "\\nu",
+      "macro": "\\knu"
+    },
+    {
+      "sym": "nu_max",
+      "latex": "\\nu_{max}",
+      "macro": "\\knumax"
+    },
+    {
+      "sym": "nu_0",
+      "latex": "\\nu_0",
+      "macro": "\\knuo"
+    },
+    {
+      "sym": "nu_tilde",
+      "latex": "\\tilde{\\nu}",
+      "macro": "\\knut"
+    },
+    {
+      "sym": "p",
+      "latex": "p",
+      "macro": "\\kp"
+    },
+    {
+      "sym": "v",
+      "latex": "v",
+      "macro": "\\kv"
+    },
+    {
+      "sym": "m",
+      "latex": "m",
+      "macro": "\\km"
+    },
+    {
+      "sym": "m_e",
+      "latex": "m_e",
+      "macro": "\\kme"
+    },
+    {
+      "sym": "P",
+      "latex": "P",
+      "macro": "\\kP"
+    },
+    {
+      "sym": "rho",
+      "latex": "\\rho",
+      "macro": "\\krho"
+    },
+    {
+      "sym": "KE",
+      "latex": "KE",
+      "macro": "\\kKE"
+    },
+    {
+      "sym": "Phi",
+      "latex": "\\Phi",
+      "macro": "\\kPhi"
+    },
+    {
+      "sym": "V_stop",
+      "latex": "V_{stop}",
+      "macro": "\\kVstop"
+    },
+    {
+      "sym": "r",
+      "latex": "r",
+      "macro": "\\kr"
+    },
+    {
+      "sym": "r_n",
+      "latex": "r_n",
+      "macro": "\\krn"
+    },
+    {
+      "sym": "E_n",
+      "latex": "E_n",
+      "macro": "\\kEn"
+    },
+    {
+      "sym": "a_0",
+      "latex": "a_0",
+      "macro": "\\kao"
+    },
+    {
+      "sym": "V",
+      "latex": "V",
+      "macro": "\\kV"
+    },
+    {
+      "sym": "F",
+      "latex": "F",
+      "macro": "\\kF"
+    },
+    {
+      "sym": "Q_1",
+      "latex": "Q_1",
+      "macro": "\\kQa"
+    },
+    {
+      "sym": "Q_2",
+      "latex": "Q_2",
+      "macro": "\\kQb"
+    },
+    {
+      "sym": "e",
+      "latex": "e",
+      "macro": "\\ke"
+    },
+    {
+      "sym": "dx",
+      "latex": "\\Delta x",
+      "macro": "\\kdx"
+    },
+    {
+      "sym": "dp",
+      "latex": "\\Delta p",
+      "macro": "\\kdp"
+    },
+    {
+      "sym": "dv",
+      "latex": "\\Delta v",
+      "macro": "\\kdv"
+    },
+    {
+      "sym": "h",
+      "latex": "h"
+    },
+    {
+      "sym": "hbar",
+      "latex": "\\hbar"
+    },
+    {
+      "sym": "c",
+      "latex": "c"
+    },
+    {
+      "sym": "k_B",
+      "latex": "k_B"
+    },
+    {
+      "sym": "sigma",
+      "latex": "\\sigma"
+    },
+    {
+      "sym": "b",
+      "latex": "b"
+    },
+    {
+      "sym": "R_H",
+      "latex": "R_H"
+    },
+    {
+      "sym": "n",
+      "latex": "n"
+    },
+    {
+      "sym": "n_1",
+      "latex": "n_1"
+    },
+    {
+      "sym": "n_2",
+      "latex": "n_2"
+    },
+    {
+      "sym": "Z",
+      "latex": "Z"
+    },
+    {
+      "sym": "epsilon_0",
+      "latex": "\\epsilon_0"
+    }
+  ],
+  "exercise_kinds": [
+    {
+      "id": "exercise",
+      "label": "Exercise"
+    },
+    {
+      "id": "question",
+      "label": "Conceptual Question"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "thermal-radiation",
+      "kind": "definition",
+      "section": "1.1",
+      "name": "Thermal radiation",
+      "terms": [
+        "thermal radiation"
+      ],
+      "statement": "All normal matter at temperatures above absolute zero emits electromagnetic radiation, a conversion of the body's internal thermal energy into electromagnetic energy, and this emission is called thermal radiation."
+    },
+    {
+      "id": "blackbody",
+      "kind": "definition",
+      "section": "1.1",
+      "name": "Blackbody",
+      "terms": [
+        "blackbody",
+        "black body",
+        "blackbody radiation",
+        "blackbody radiator"
+      ],
+      "statement": "An object that absorbs all radiation falling on it, at all wavelengths, is a blackbody; at a uniform temperature its emission, blackbody radiation, has a characteristic frequency distribution that depends only on the temperature."
+    },
+    {
+      "id": "kirchhoffs-law-of-thermal-radiation",
+      "kind": "axiom",
+      "section": "1.1",
+      "name": "Kirchhoff's law of thermal radiation",
+      "statement": "A body emits radiation at a given temperature and frequency exactly as well as it absorbs the same radiation; otherwise a body in a room at one temperature would grow hotter while the room grew colder, contradicting the second law of thermodynamics."
+    },
+    {
+      "id": "stefan-boltzmann-law",
+      "kind": "axiom",
+      "section": "1.1",
+      "name": "Stefan-Boltzmann law",
+      "symbol": "P",
+      "terms": [
+        "Stefan-Boltzmann Law",
+        "Stefan-Boltzmann's Law"
+      ],
+      "type": "power",
+      "statement": "The total power radiated from one square meter of black surface, integrated over all emitted frequencies, goes as the fourth power of the absolute temperature.",
+      "forms": [
+        {
+          "id": "stefan-boltzmann",
+          "latex": "P = \\sigma T^4",
+          "ktex": "\\kP = \\sigma \\kT^4"
+        }
+      ]
+    },
+    {
+      "id": "wiens-displacement-law",
+      "kind": "axiom",
+      "section": "1.1",
+      "name": "Wien's displacement law",
+      "symbol": "lambda_max",
+      "terms": [
+        "Wien's Displacement Law"
+      ],
+      "type": "wavelength",
+      "statement": "The frequency at which a blackbody's emission is most intense is directly proportional to its absolute temperature, so the peak wavelength is inversely proportional to it.",
+      "forms": [
+        {
+          "id": "wien-lambda",
+          "latex": "\\lambda_{max} = \\dfrac{b}{T}",
+          "ktex": "\\klmax = \\dfrac{b}{\\kT}"
+        },
+        {
+          "id": "wien-nu",
+          "latex": "\\nu_{max} \\propto T",
+          "ktex": "\\knumax \\propto \\kT"
+        }
+      ]
+    },
+    {
+      "id": "spectral-energy-density",
+      "kind": "definition",
+      "section": "1.1",
+      "name": "Spectral energy density",
+      "symbol": "rho",
+      "terms": [
+        "spectral radiance",
+        "energy density"
+      ],
+      "type": "energy-density",
+      "statement": "The energy density of blackbody radiation per unit frequency, so that ρ(ν,T)dν is the energy per unit volume carried by frequencies between ν and ν + dν."
+    },
+    {
+      "id": "rayleigh-jeans-law",
+      "kind": "result",
+      "section": "1.1",
+      "name": "Rayleigh-Jeans law",
+      "terms": [
+        "Rayleigh-Jeans Law"
+      ],
+      "statement": "Classical physics, treating the radiation in a cavity as oscillators each with energy k_BT, predicts a spectral energy density that grows as the square of the frequency; it agrees with experiment at low frequencies only.",
+      "forms": [
+        {
+          "id": "rayleigh-jeans",
+          "latex": "d\\rho(\\nu,T) = \\dfrac{8\\pi k_B T}{c^3}\\nu^2\\, d\\nu",
+          "ktex": "d\\krho(\\knu,\\kT) = \\dfrac{8\\pi k_B \\kT}{c^3}\\knu^2\\, d\\knu"
+        }
+      ]
+    },
+    {
+      "id": "ultraviolet-catastrophe",
+      "kind": "idea",
+      "section": "1.1",
+      "name": "Ultraviolet catastrophe",
+      "terms": [
+        "ultraviolet catastrophe"
+      ],
+      "statement": "Integrated over all frequencies, the Rayleigh-Jeans law predicts that a blackbody radiates infinite energy, an absurd prediction caused by the classical law failing at high frequencies and short wavelengths."
+    },
+    {
+      "id": "energy-quantization",
+      "kind": "idea",
+      "section": "1.2",
+      "name": "Quantization of energy",
+      "terms": [
+        "quantization",
+        "quantized"
+      ],
+      "statement": "Energy is quantized when a system can hold only certain discrete amounts of it, like a ball on the steps of a ladder, rather than any amount, like a ball on a ramp."
+    },
+    {
+      "id": "plancks-quantum-hypothesis",
+      "kind": "axiom",
+      "section": "1.2",
+      "name": "Planck's quantum hypothesis",
+      "terms": [
+        "quantum",
+        "quanta"
+      ],
+      "type": "energy",
+      "statement": "Planck assumed that the oscillating electrons in the walls of a blackbody can have only energies that are whole-number multiples of a quantum hν, so energy is absorbed and emitted in these discrete amounts.",
+      "forms": [
+        {
+          "id": "planck-quantum",
+          "latex": "E = h\\nu",
+          "ktex": "\\kE = h\\knu"
+        }
+      ]
+    },
+    {
+      "id": "plancks-constant",
+      "kind": "definition",
+      "section": "1.2",
+      "name": "Planck's constant",
+      "symbol": "h",
+      "terms": [
+        "Planck's constant"
+      ],
+      "statement": "The constant of proportionality h between the energy of a quantum and its frequency, 6.626 × 10⁻³⁴ J·s."
+    },
+    {
+      "id": "plancks-distribution-law",
+      "kind": "result",
+      "section": "1.2",
+      "name": "Planck's distribution law",
+      "terms": [
+        "Planck's radiation law",
+        "Planck distribution"
+      ],
+      "statement": "With the quantum hypothesis, the spectral energy density of blackbody radiation is 8πhν³/c³ times 1/(e^{hν/k_BT} − 1), which agrees with experiment at all frequencies and reduces to the Rayleigh-Jeans law at low frequencies.",
+      "forms": [
+        {
+          "id": "planck-nu",
+          "latex": "d\\rho(\\nu,T) = \\dfrac{8\\pi h\\nu^3}{c^3}\\dfrac{1}{e^{h\\nu/k_BT}-1}\\, d\\nu",
+          "ktex": "d\\krho(\\knu,\\kT) = \\dfrac{8\\pi h\\knu^3}{c^3}\\dfrac{1}{e^{h\\knu/k_B\\kT}-1}\\, d\\knu"
+        },
+        {
+          "id": "planck-lambda",
+          "latex": "\\rho(\\lambda,T) = \\dfrac{8\\pi hc}{\\lambda^5}\\dfrac{1}{e^{hc/\\lambda k_BT}-1}",
+          "ktex": "\\krho(\\klambda,\\kT) = \\dfrac{8\\pi hc}{\\klambda^5}\\dfrac{1}{e^{hc/\\klambda k_B\\kT}-1}"
+        }
+      ]
+    },
+    {
+      "id": "photoelectric-effect",
+      "kind": "idea",
+      "section": "1.3",
+      "name": "Photoelectric effect",
+      "terms": [
+        "photoelectric effect",
+        "photoelectrons",
+        "photoelectron"
+      ],
+      "statement": "Light shining on a metal surface can eject electrons from it; the energy of the ejected electrons depends on the frequency of the light and not on its intensity, which classical wave theory cannot explain."
+    },
+    {
+      "id": "photon",
+      "kind": "definition",
+      "section": "1.3",
+      "name": "Photon",
+      "terms": [
+        "photon",
+        "photons"
+      ],
+      "statement": "A quantum of electromagnetic radiation, a packet of light carrying the energy hν."
+    },
+    {
+      "id": "stopping-voltage",
+      "kind": "definition",
+      "section": "1.3",
+      "name": "Stopping voltage",
+      "symbol": "V_stop",
+      "terms": [
+        "stopping voltage"
+      ],
+      "type": "potential",
+      "statement": "The minimum retarding voltage on the collector plate that stops every ejected photoelectron from getting through, a measure of the electrons' greatest kinetic energy."
+    },
+    {
+      "id": "work-function",
+      "kind": "definition",
+      "section": "1.3",
+      "name": "Work function",
+      "symbol": "Phi",
+      "terms": [
+        "workfunction",
+        "work function"
+      ],
+      "type": "energy",
+      "statement": "The minimum energy required to extract an electron from the surface of a metal, characteristic of the metal."
+    },
+    {
+      "id": "threshold-frequency",
+      "kind": "definition",
+      "section": "1.3",
+      "name": "Threshold frequency",
+      "symbol": "nu_0",
+      "terms": [
+        "threshold frequency"
+      ],
+      "type": "frequency",
+      "statement": "The lowest frequency of light that can eject a photoelectron from a given metal, at which the photon energy just equals the work function."
+    },
+    {
+      "id": "einstein-photoelectric-equation",
+      "kind": "result",
+      "section": "1.3",
+      "name": "Einstein's photoelectric equation",
+      "symbol": "KE",
+      "type": "energy",
+      "statement": "A photon gives all its energy hν to one electron, which spends the work function Φ to leave the metal and keeps the rest as kinetic energy.",
+      "forms": [
+        {
+          "id": "einstein-ke",
+          "latex": "KE = h\\nu - \\Phi",
+          "ktex": "\\kKE = h\\knu - \\kPhi"
+        },
+        {
+          "id": "einstein-vstop",
+          "latex": "eV_{stop} = h\\nu - \\Phi",
+          "ktex": "\\ke\\kVstop = h\\knu - \\kPhi"
+        }
+      ]
+    },
+    {
+      "id": "line-spectrum",
+      "kind": "definition",
+      "section": "1.4",
+      "name": "Line spectrum",
+      "terms": [
+        "line spectrum",
+        "emission spectrum",
+        "absorption spectrum",
+        "continuous spectrum"
+      ],
+      "statement": "A spectrum of discrete wavelengths: an excited gas emits light only at the wavelengths characteristic of its atoms, and a cool gas in front of a continuous source absorbs light at the same wavelengths."
+    },
+    {
+      "id": "wavenumber",
+      "kind": "definition",
+      "section": "1.4",
+      "name": "Wavenumber",
+      "symbol": "nu_tilde",
+      "terms": [
+        "wavenumber"
+      ],
+      "type": "wavenumber",
+      "statement": "The reciprocal of the wavelength, the number of waves per unit length, used as a unit of frequency in spectroscopy and usually given in cm⁻¹.",
+      "forms": [
+        {
+          "id": "wavenumber-def",
+          "latex": "\\tilde{\\nu} = \\dfrac{1}{\\lambda}",
+          "ktex": "\\knut = \\dfrac{1}{\\klambda}"
+        }
+      ]
+    },
+    {
+      "id": "balmer-formula",
+      "kind": "result",
+      "section": "1.4",
+      "name": "Balmer formula",
+      "terms": [
+        "Balmer series"
+      ],
+      "statement": "Balmer found that the wavelengths of the visible lines of hydrogen fit λ = b n₂²/(n₂² − 4) for integers n₂ greater than 2.",
+      "forms": [
+        {
+          "id": "balmer",
+          "latex": "\\lambda = b \\left( \\dfrac{n_2^2}{n_2^2 -4} \\right)",
+          "ktex": "\\klambda = b \\left( \\dfrac{n_2^2}{n_2^2 -4} \\right)"
+        }
+      ]
+    },
+    {
+      "id": "rydberg-formula",
+      "kind": "result",
+      "section": "1.5",
+      "name": "Rydberg formula",
+      "terms": [
+        "Rydberg formula",
+        "Rydberg equation"
+      ],
+      "type": "wavenumber",
+      "statement": "The wavenumbers of every line of the hydrogen spectrum are R_H(1/n₁² − 1/n₂²), where n₁ and n₂ are integers with n₂ greater than n₁ and R_H is the Rydberg constant.",
+      "forms": [
+        {
+          "id": "rydberg",
+          "latex": "\\tilde{\\nu} = \\dfrac{1}{\\lambda} = R_H \\left( \\dfrac{1}{n_1^2} - \\dfrac{1}{n_2^2} \\right)",
+          "ktex": "\\knut = \\dfrac{1}{\\klambda} = R_H \\left( \\dfrac{1}{n_1^2} - \\dfrac{1}{n_2^2} \\right)"
+        }
+      ]
+    },
+    {
+      "id": "rydberg-constant",
+      "kind": "definition",
+      "section": "1.5",
+      "name": "Rydberg constant",
+      "symbol": "R_H",
+      "terms": [
+        "Rydberg constant"
+      ],
+      "statement": "The empirical constant R_H of the Rydberg formula, 109,737 cm⁻¹."
+    },
+    {
+      "id": "hydrogen-spectral-series",
+      "kind": "idea",
+      "section": "1.5",
+      "name": "Spectral series of hydrogen",
+      "terms": [
+        "Lyman series",
+        "Balmer series",
+        "Paschen series",
+        "Brackett series",
+        "Pfund series"
+      ],
+      "statement": "The lines of hydrogen fall into series, each sharing one lower value n₁: the Lyman series in the ultraviolet (n₁ = 1), the Balmer series in the visible (n₁ = 2), and the Paschen, Brackett and Pfund series in the infrared."
+    },
+    {
+      "id": "de-broglie-wavelength",
+      "kind": "axiom",
+      "section": "1.6",
+      "name": "de Broglie wavelength",
+      "terms": [
+        "de Broglie wavelength",
+        "matter wave",
+        "matter waves"
+      ],
+      "type": "wavelength",
+      "statement": "De Broglie proposed that any particle of momentum p has a wavelength λ = h/p, as a photon does.",
+      "forms": [
+        {
+          "id": "de-broglie",
+          "latex": "\\lambda = \\dfrac{h}{p}",
+          "ktex": "\\klambda = \\dfrac{h}{\\kp}"
+        }
+      ]
+    },
+    {
+      "id": "wave-particle-duality",
+      "kind": "idea",
+      "section": "1.6",
+      "name": "Wave-particle duality",
+      "terms": [
+        "wave-particle duality"
+      ],
+      "statement": "Light and matter both show the properties of particles and of waves, depending on the experiment."
+    },
+    {
+      "id": "interference-and-diffraction",
+      "kind": "idea",
+      "section": "1.7",
+      "name": "Interference and diffraction",
+      "terms": [
+        "diffraction",
+        "interference",
+        "double slit"
+      ],
+      "statement": "Waves passing through two slits or scattered from a regular array interfere, producing bright and dark bands that particles of classical physics would not produce."
+    },
+    {
+      "id": "matter-wave-diffraction",
+      "kind": "idea",
+      "section": "1.7",
+      "name": "Diffraction of matter waves",
+      "terms": [
+        "electron diffraction",
+        "neutron diffraction"
+      ],
+      "statement": "Electrons and neutrons scattered from crystals produce diffraction patterns with spacings fixed by their de Broglie wavelengths, the experimental proof of matter waves."
+    },
+    {
+      "id": "coulomb-potential",
+      "kind": "result",
+      "section": "1.8",
+      "name": "Coulomb potential",
+      "symbol": "V",
+      "terms": [
+        "Coulomb potential",
+        "repulsive potential",
+        "attractive potential",
+        "potential energy"
+      ],
+      "type": "energy",
+      "statement": "The potential energy of two charges a distance r apart is kQ₁Q₂/r, repulsive when the charges have the same sign and attractive when they have opposite signs, and the force is minus its derivative.",
+      "forms": [
+        {
+          "id": "coulomb-v",
+          "latex": "V(r) = \\dfrac{kQ_1Q_2}{r}",
+          "ktex": "\\kV(\\kr) = \\dfrac{k\\kQa\\kQb}{\\kr}"
+        },
+        {
+          "id": "force-from-potential",
+          "latex": "F(r) = -\\dfrac{dV}{dr}",
+          "ktex": "\\kF(\\kr) = -\\dfrac{d\\kV}{d\\kr}"
+        }
+      ]
+    },
+    {
+      "id": "planetary-atom-instability",
+      "kind": "idea",
+      "section": "1.8",
+      "name": "Instability of the planetary atom",
+      "terms": [
+        "death spiral"
+      ],
+      "statement": "A classical electron orbiting a nucleus is accelerating and must radiate energy, so it would spiral into the nucleus; Rutherford's planetary atom cannot be stable."
+    },
+    {
+      "id": "angular-momentum-quantization",
+      "kind": "axiom",
+      "section": "1.8",
+      "name": "Bohr's quantization of angular momentum",
+      "statement": "Bohr postulated that the electron's angular momentum in its orbit is restricted to whole-number multiples of ħ.",
+      "forms": [
+        {
+          "id": "bohr-angular",
+          "latex": "m_e v r = n\\hbar",
+          "ktex": "\\kme\\kv\\kr = n\\hbar"
+        }
+      ]
+    },
+    {
+      "id": "bohr-model",
+      "kind": "idea",
+      "section": "1.8",
+      "name": "Bohr model",
+      "terms": [
+        "Bohr model",
+        "Bohr atom",
+        "Bohr theory"
+      ],
+      "statement": "The electron in a hydrogen-like atom moves on circular orbits whose angular momentum is quantized, does not radiate while in an orbit, and emits or absorbs a photon only when it jumps between orbits."
+    },
+    {
+      "id": "bohr-radius",
+      "kind": "definition",
+      "section": "1.8",
+      "name": "Bohr radius",
+      "symbol": "a_0",
+      "terms": [
+        "Bohr radius"
+      ],
+      "type": "length",
+      "statement": "The radius a₀ = 4πε₀ħ²/(e²m_e) = 52.9 pm of the smallest orbit of the hydrogen atom in the Bohr model.",
+      "forms": [
+        {
+          "id": "bohr-radii",
+          "latex": "r_n = \\dfrac{a_0}{Z}n^2",
+          "ktex": "\\krn = \\dfrac{\\kao}{Z}n^2"
+        }
+      ]
+    },
+    {
+      "id": "bohr-energy-levels",
+      "kind": "result",
+      "section": "1.8",
+      "name": "Bohr energy levels",
+      "symbol": "E_n",
+      "terms": [
+        "energy levels"
+      ],
+      "type": "energy",
+      "statement": "In the Bohr model the energy of the nth orbit of a hydrogen-like atom is −Z²/n² times 2.18 × 10⁻¹⁸ J, one Rydberg.",
+      "forms": [
+        {
+          "id": "bohr-energy",
+          "latex": "E_n = -\\dfrac{Z^2 e^4 m_e}{8\\epsilon_0^2 h^2}\\dfrac{1}{n^2}",
+          "ktex": "\\kEn = -\\dfrac{Z^2 \\ke^4 \\kme}{8\\epsilon_0^2 h^2}\\dfrac{1}{n^2}"
+        }
+      ]
+    },
+    {
+      "id": "bohr-rydberg-derivation",
+      "kind": "result",
+      "section": "1.8",
+      "name": "Rydberg formula from the Bohr model",
+      "statement": "The frequency of the photon emitted when the electron drops from orbit nᵢ to orbit n_f is the energy difference divided by h, which gives the Rydberg formula with its constant in terms of e, m_e, ε₀ and h.",
+      "forms": [
+        {
+          "id": "bohr-transition",
+          "latex": "\\nu = \\dfrac{E_{n_i}-E_{n_f}}{h} = \\dfrac{Z^2e^4m_e}{8\\epsilon_0^2h^3}\\left(\\dfrac{1}{n_f^2}-\\dfrac{1}{n_i^2}\\right)",
+          "ktex": "\\knu = \\dfrac{E_{n_i}-E_{n_f}}{h} = \\dfrac{Z^2\\ke^4\\kme}{8\\epsilon_0^2h^3}\\left(\\dfrac{1}{n_f^2}-\\dfrac{1}{n_i^2}\\right)"
+        }
+      ]
+    },
+    {
+      "id": "standing-wave-quantization",
+      "kind": "idea",
+      "section": "1.8",
+      "name": "Standing-wave picture of Bohr orbits",
+      "statement": "An orbit is allowed when a whole number of de Broglie wavelengths fits around its circumference, so the electron's wave closes on itself; this reproduces Bohr's quantization of angular momentum."
+    },
+    {
+      "id": "heisenberg-uncertainty-principle",
+      "kind": "axiom",
+      "section": "1.9",
+      "name": "Heisenberg uncertainty principle",
+      "terms": [
+        "uncertainty principle",
+        "Heisenberg uncertainty principle"
+      ],
+      "statement": "The position and the momentum of a particle cannot both be known exactly: the product of their uncertainties is at least ħ/2.",
+      "forms": [
+        {
+          "id": "uncertainty",
+          "latex": "\\Delta p_x \\Delta x \\ge \\dfrac{h}{4\\pi} = \\dfrac{\\hbar}{2}",
+          "ktex": "\\kdp_x \\kdx \\ge \\dfrac{h}{4\\pi} = \\dfrac{\\hbar}{2}"
+        }
+      ]
+    },
+    {
+      "id": "wave-packet",
+      "kind": "idea",
+      "section": "1.9",
+      "name": "Wave packet",
+      "terms": [
+        "wave packet"
+      ],
+      "statement": "A wave localized in space, built by adding waves of many wavelengths; the narrower the packet, the wider the spread of wavelengths and so of momenta it needs."
+    },
+    {
+      "id": "quantum-probability",
+      "kind": "idea",
+      "section": "1.9",
+      "name": "Probability in quantum mechanics",
+      "terms": [
+        "probability"
+      ],
+      "statement": "Where a single quantum particle will be detected cannot be predicted exactly; only the probability of detection at each place, which builds up as a pattern over many particles."
+    }
+  ],
+  "concept_prereqs": [
+    {
+      "concept": "blackbody",
+      "prereq": "thermal-radiation"
+    },
+    {
+      "concept": "kirchhoffs-law-of-thermal-radiation",
+      "prereq": "blackbody"
+    },
+    {
+      "concept": "stefan-boltzmann-law",
+      "prereq": "blackbody"
+    },
+    {
+      "concept": "wiens-displacement-law",
+      "prereq": "blackbody"
+    },
+    {
+      "concept": "spectral-energy-density",
+      "prereq": "blackbody"
+    },
+    {
+      "concept": "rayleigh-jeans-law",
+      "prereq": "spectral-energy-density"
+    },
+    {
+      "concept": "ultraviolet-catastrophe",
+      "prereq": "rayleigh-jeans-law"
+    },
+    {
+      "concept": "plancks-quantum-hypothesis",
+      "prereq": "energy-quantization"
+    },
+    {
+      "concept": "plancks-constant",
+      "prereq": "plancks-quantum-hypothesis"
+    },
+    {
+      "concept": "plancks-distribution-law",
+      "prereq": "plancks-quantum-hypothesis"
+    },
+    {
+      "concept": "plancks-distribution-law",
+      "prereq": "spectral-energy-density"
+    },
+    {
+      "concept": "photon",
+      "prereq": "plancks-quantum-hypothesis"
+    },
+    {
+      "concept": "work-function",
+      "prereq": "photoelectric-effect"
+    },
+    {
+      "concept": "stopping-voltage",
+      "prereq": "photoelectric-effect"
+    },
+    {
+      "concept": "einstein-photoelectric-equation",
+      "prereq": "photon"
+    },
+    {
+      "concept": "einstein-photoelectric-equation",
+      "prereq": "work-function"
+    },
+    {
+      "concept": "threshold-frequency",
+      "prereq": "einstein-photoelectric-equation"
+    },
+    {
+      "concept": "balmer-formula",
+      "prereq": "line-spectrum"
+    },
+    {
+      "concept": "rydberg-formula",
+      "prereq": "balmer-formula"
+    },
+    {
+      "concept": "rydberg-formula",
+      "prereq": "wavenumber"
+    },
+    {
+      "concept": "rydberg-constant",
+      "prereq": "rydberg-formula"
+    },
+    {
+      "concept": "hydrogen-spectral-series",
+      "prereq": "rydberg-formula"
+    },
+    {
+      "concept": "de-broglie-wavelength",
+      "prereq": "photon"
+    },
+    {
+      "concept": "wave-particle-duality",
+      "prereq": "de-broglie-wavelength"
+    },
+    {
+      "concept": "matter-wave-diffraction",
+      "prereq": "interference-and-diffraction"
+    },
+    {
+      "concept": "matter-wave-diffraction",
+      "prereq": "de-broglie-wavelength"
+    },
+    {
+      "concept": "planetary-atom-instability",
+      "prereq": "coulomb-potential"
+    },
+    {
+      "concept": "bohr-model",
+      "prereq": "angular-momentum-quantization"
+    },
+    {
+      "concept": "bohr-model",
+      "prereq": "planetary-atom-instability"
+    },
+    {
+      "concept": "bohr-radius",
+      "prereq": "bohr-model"
+    },
+    {
+      "concept": "bohr-energy-levels",
+      "prereq": "bohr-model"
+    },
+    {
+      "concept": "bohr-energy-levels",
+      "prereq": "coulomb-potential"
+    },
+    {
+      "concept": "bohr-rydberg-derivation",
+      "prereq": "bohr-energy-levels"
+    },
+    {
+      "concept": "bohr-rydberg-derivation",
+      "prereq": "photon"
+    },
+    {
+      "concept": "bohr-rydberg-derivation",
+      "prereq": "rydberg-formula"
+    },
+    {
+      "concept": "standing-wave-quantization",
+      "prereq": "de-broglie-wavelength"
+    },
+    {
+      "concept": "standing-wave-quantization",
+      "prereq": "angular-momentum-quantization"
+    },
+    {
+      "concept": "heisenberg-uncertainty-principle",
+      "prereq": "de-broglie-wavelength"
+    },
+    {
+      "concept": "wave-packet",
+      "prereq": "heisenberg-uncertainty-principle"
+    },
+    {
+      "concept": "quantum-probability",
+      "prereq": "matter-wave-diffraction"
+    },
+    {
+      "concept": "line-spectrum",
+      "prereq": "photon"
+    }
+  ],
+  "colours": {
+    "palette": "families",
+    "vision": "normal",
+    "assign": {
+      "energy": {
+        "light": "#8D035A",
+        "dark": "#FF89C2"
+      },
+      "temperature": {
+        "light": "#CB0283",
+        "dark": "#F12CA0"
+      },
+      "wavelength": {
+        "light": "#774AFF",
+        "dark": "#856FF7"
+      },
+      "frequency": {
+        "light": "#743A04",
+        "dark": "#FD9F5B"
+      },
+      "wavenumber": {
+        "light": "#0A6ED2",
+        "dark": "#3190FE"
+      },
+      "momentum": {
+        "light": "#A43A3C",
+        "dark": "#E97875"
+      },
+      "velocity": {
+        "light": "#017336",
+        "dark": "#0EC360"
+      },
+      "length": {
+        "light": "#5909D7",
+        "dark": "#A9A0FF"
+      },
+      "mass": {
+        "light": "#443303",
+        "dark": "#FFCD4F"
+      },
+      "potential": {
+        "light": "#B806DC",
+        "dark": "#A274AE"
+      },
+      "power": {
+        "light": "#677806",
+        "dark": "#899E01"
+      },
+      "energy-density": {
+        "light": "#84039E",
+        "dark": "#E47CFF"
+      },
+      "charge": {
+        "light": "#003D7B",
+        "dark": "#A6CCFD"
+      },
+      "force": {
+        "light": "#065154",
+        "dark": "#13D9E1"
+      }
+    },
+    "referentOrder": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35
+    ]
+  }
+}

@@ -1,0 +1,202 @@
+{
+ "id": "1.1",
+ "module": "13381",
+ "chapter": "1",
+ "title": "Blackbody Radiation Cannot Be Explained Classically",
+ "short": "Blackbody radiation",
+ "lead": "Every warm body glows, and a perfect absorber glows in a way that depends only on its temperature. The section follows the measurements of that glow, the two laws read off them, and the classical theory that tried to explain them.",
+ "objectives": [
+  "Be familiar with black-body radiators",
+  "Apply Stefan-Boltzmann’s Law to estimate total light output from a radiator",
+  "Apply Wien’s Displacement Law to estimate the peak wavelength (or frequency) of the output from a black body radiator",
+  "Understand the Rayleigh-Jeans Law and how it fails to properly model black-body radiation"
+ ],
+ "summary_html": "",
+ "notes": "The page is adapted from Michael Fowler (University of Virginia), Hanson, Harvey, Sweeney and Zielinski’s Quantum States of Atoms and Molecules, OpenStax Chemistry and ACuriousMind, under CC BY 4.0, and the image of Figure 1.1.5, which repeats as Figure 1.2.1, is folded into the live spectrum.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The one exercise is the book’s, keyed by the book; its Bloom level and concept tag are AI-chosen. Numeric answers accept 2% tolerance.",
+ "figures": [
+  {
+   "id": "fig-1-1-1",
+   "kind": "photo",
+   "number": "1.1.1",
+   "draws": []
+  },
+  {
+   "id": "fig-1-1-2",
+   "kind": "photo",
+   "number": "1.1.2",
+   "draws": []
+  },
+  {
+   "id": "sim-blackbody",
+   "kind": "sim",
+   "number": "1.1.3",
+   "folds": [
+    "1.1.5"
+   ],
+   "originals": [
+    "/media/ch01/344342-7802300dc479885783293a8e8b92afc50b47ab50.jpg",
+    "/media/ch01/27806-9469e9ec92fcdd65227d9055e7ae0639.jpg"
+   ],
+   "original_caption": "Graphic representation of spectral distribution of blackbody radiation at different temperatures. The Stefan-Boltzmann’s Law is observed as the increase in the emission amplitude with increasing temperature and the Wien’s Displacement Law is observed as the shift to smaller wavelength with increasing temperature. (CC-BY 4.0; OpenStax)",
+   "draws": [
+    "energy-density",
+    "wavelength",
+    "temperature"
+   ],
+   "facts": [
+    "spectrum"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "fig-fluorescent",
+   "kind": "figure",
+   "originals": [
+    "/media/ch01/344473-Fluorescent_lighting.svg"
+   ],
+   "draws": [],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "kept as the book prints it"
+    }
+   ]
+  },
+  {
+   "id": "sim-stefan",
+   "kind": "sim",
+   "number": "1.1.4",
+   "originals": [
+    "/media/ch01/344343-Emissive_Power.svg"
+   ],
+   "original_caption": "Graph of a function of total emitted energy of a blackbody proportional to the fourth power of its thermodynamic temperature T according to the Stefan–Boltzmann law. (CC BY-SA 4.0; [Nicoguaro](https://commons.wikimedia.org/wiki/User:Nicoguaro))",
+   "draws": [
+    "power",
+    "temperature"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "blackbody-radiation",
+   "concept": "thermal-radiation",
+   "verb": "introduces"
+  },
+  {
+   "span": "blackbody-radiation",
+   "concept": "blackbody",
+   "verb": "introduces"
+  },
+  {
+   "span": "perfect-absorber",
+   "concept": "kirchhoffs-law-of-thermal-radiation",
+   "verb": "introduces"
+  },
+  {
+   "span": "perfect-absorber",
+   "concept": "blackbody",
+   "verb": "uses"
+  },
+  {
+   "span": "measuring-the-spectrum",
+   "concept": "blackbody",
+   "verb": "reinforces"
+  },
+  {
+   "span": "stefan-boltzmann",
+   "concept": "stefan-boltzmann-law",
+   "verb": "introduces"
+  },
+  {
+   "span": "wien",
+   "concept": "wiens-displacement-law",
+   "verb": "introduces"
+  },
+  {
+   "span": "rayleigh-jeans",
+   "concept": "spectral-energy-density",
+   "verb": "introduces"
+  },
+  {
+   "span": "rayleigh-jeans",
+   "concept": "rayleigh-jeans-law",
+   "verb": "introduces"
+  },
+  {
+   "span": "rayleigh-jeans",
+   "concept": "ultraviolet-catastrophe",
+   "verb": "introduces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "e1",
+   "source_id": "exr:1.1.1",
+   "source_number": "Exercise 1.1.1",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "wien",
+   "prompt": "<ol type=\"a\"><li>At what wavelength does the sun emit most of its radiation if it has a temperature of 5,778 K?</li><li>At what wavelength does the earth emit most of its radiation if it has a temperature of 288 K?</li></ol>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "source",
+    "parts": [
+     {
+      "part": "a",
+      "value": 500,
+      "unit": "nm",
+      "hint": "Wien’s law gives the peak wavelength as b divided by the temperature."
+     },
+     {
+      "part": "b",
+      "value": 10.0,
+      "unit": "μm"
+     }
+    ],
+    "solution": "a. 500 nm; b. 10.0 microns"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "e1",
+   "concept": "wiens-displacement-law"
+  }
+ ],
+ "footnotes": []
+}
