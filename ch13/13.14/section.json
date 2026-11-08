@@ -1,0 +1,209 @@
+{
+ "id": "13.14",
+ "module": "13677",
+ "chapter": "13",
+ "title": "Group Theory Determines Infrared Activity",
+ "short": "IR activity",
+ "lead": "Whether a vibration appears in an infrared or a Raman spectrum depends on how the dipole moment or the polarizability changes as the molecule vibrates. With water as the example, the character table sorts the vibrations into active and inactive ones, and into stretches and bends.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "Shared under the book's CC BY-NC-SA 4.0; the page's seven references (Merlin and Cornard 2006, McGuinn 1982, Harris and Bertolucci 1989, McQuarrie and Simon 1997, Housecroft and Sharpe 2008, Atkins and de Paula 2002, Bishop 1973) are not printed.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The one exercise was written by AI with an AI solution; its Bloom level and concept tags were chosen by AI. Numeric answers accept a 2% tolerance.",
+ "figures": [
+  {
+   "id": "sim-dipole-vibration",
+   "kind": "sim",
+   "draws": [
+    "dipole-moment",
+    "time"
+   ],
+   "conventions": [
+    "N",
+    "H",
+    "Cl",
+    "C",
+    "O"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "fig-water-arrows",
+   "kind": "figure",
+   "originals": [
+    "/media/ch13/9696-water.png"
+   ],
+   "draws": [],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "kept as the book prints it"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "ir-raman-activity",
+   "concept": "ir-activity-dipole-change",
+   "verb": "introduces"
+  },
+  {
+   "span": "ir-raman-activity",
+   "concept": "stretch-bend-analysis",
+   "verb": "introduces"
+  },
+  {
+   "span": "ir-raman-activity",
+   "concept": "transition-moment-integral",
+   "verb": "reinforces"
+  },
+  {
+   "span": "ir-raman-activity",
+   "concept": "symmetry-selection-rule",
+   "verb": "reinforces"
+  },
+  {
+   "span": "ir-raman-activity",
+   "concept": "ir-active-symmetry",
+   "verb": "reinforces"
+  },
+  {
+   "span": "ir-raman-activity",
+   "concept": "raman-active-symmetry",
+   "verb": "reinforces"
+  },
+  {
+   "span": "ir-raman-activity",
+   "concept": "vibrational-representation",
+   "verb": "reinforces"
+  },
+  {
+   "span": "ir-raman-activity",
+   "concept": "hot-band",
+   "verb": "reinforces"
+  },
+  {
+   "span": "ir-raman-activity",
+   "concept": "polarizability",
+   "verb": "uses"
+  },
+  {
+   "span": "ir-raman-activity",
+   "concept": "reducible-representation",
+   "verb": "uses"
+  },
+  {
+   "span": "ir-raman-activity",
+   "concept": "selection-rule",
+   "verb": "uses"
+  },
+  {
+   "span": "ir-raman-activity",
+   "concept": "dipole-moment",
+   "verb": "uses"
+  },
+  {
+   "span": "ir-raman-activity",
+   "concept": "oscillator-orthonormality",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "ai1",
+   "source_id": "a stretching analysis can be performed",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "ir-raman-activity",
+   "prompt": "<p>Formaldehyde, H₂CO, has C₂ᵥ symmetry. With the molecule in the yz plane and the C=O bond along the C₂ axis z, its vibrations are $\\Gamma_{vib} = 3a_1 + b_1 + 2b_2$, and its three bonds give $\\Gamma_{stretch} = 2a_1 + b_2$. In C₂ᵥ, z transforms as $a_1$, x as $b_1$ and y as $b_2$; z², x², y² as $a_1$, xy as $a_2$, xz as $b_1$ and yz as $b_2$. How many of formaldehyde's vibrations are IR active, how many are Raman active, and how many are bends?</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "IR active",
+      "value": 6,
+      "hint": "A mode is IR active when its species is that of x, y or z."
+     },
+     {
+      "part": "Raman active",
+      "value": 6
+     },
+     {
+      "part": "bends",
+      "value": 3
+     }
+    ],
+    "solution": "<p>Every species in $\\Gamma_{vib}$, $a_1$, $b_1$ and $b_2$, is that of z, x or y, so all six vibrations are IR active. The same three species are those of z² (and x², y²), xz and yz, so all six are Raman active too; only an $a_2$ mode would be IR inactive, and formaldehyde has none. For the bends, $\\Gamma_{bend} = \\Gamma_{vib} - \\Gamma_{stretch} = (3a_1 + b_1 + 2b_2) - (2a_1 + b_2) = a_1 + b_1 + b_2$: three bends (the CH₂ scissor, the out-of-plane wag and the in-plane rock) beside the three stretches.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "ai1",
+   "concept": "stretch-bend-analysis"
+  },
+  {
+   "exercise": "ai1",
+   "concept": "ir-active-symmetry"
+  },
+  {
+   "exercise": "ai1",
+   "concept": "raman-active-symmetry"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-equation",
+   "kind": "correction",
+   "html": "The integral that is zero is the overlap in Equation 13.14.2, $\\langle \\phi(v' \\neq 0) | \\phi(v=0) \\rangle$."
+  },
+  {
+   "id": "c-alpha",
+   "kind": "correction",
+   "html": "As the paragraph below says, $\\alpha$ must change during the vibration, not merely be nonzero: every molecule has a nonzero polarizability."
+  },
+  {
+   "id": "c-plane",
+   "kind": "correction",
+   "html": "This page puts water in the yz plane, so its asymmetric stretch is $b_2$. The figure in Section 12.10 puts it in the xz plane, where the same mode is $B_1$: the labels $b_1$ and $b_2$ trade places with the choice of plane."
+  },
+  {
+   "id": "c-stretches",
+   "kind": "correction",
+   "html": "Only one of the two stretches is symmetric: the symmetric stretch ν₁ is at 3657 cm⁻¹ and the asymmetric stretch ν₃ at 3756 cm⁻¹, while the bend, ν₂ in the usual numbering, is at 1595 cm⁻¹."
+  },
+  {
+   "id": "c-ptcl4",
+   "kind": "correction",
+   "html": "The ion is [PtCl₄]²⁻, as in Section 13.10."
+  }
+ ]
+}

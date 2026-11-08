@@ -52,7 +52,7 @@ const BT = 10.4, DT = 0.0004;
       line(ctx, sx.X(n), sp.b, sx.X(n), sp.t + 6, on ? PAL.ink : cw, on ? 5 : 4);
       hits.push({ x: sx.X(n), y: (sp.t + sp.b) / 2, r: 8, name: `the line ${j} → ${j + 1}: ${fmt(2 * BT * (j + 1) - 4 * DT * Math.pow(j + 1, 3), 2)} cm⁻¹ (rigid ${fmt(r, 1)})` });
     }
-    F.legend(ctx, { l: sp.l, t: lv.t - 60, r: sp.r, b: lv.t - 10 }, [{ s: 'rigid rotor', color: alpha(cw, 0.75), w: 2, dash: [10, 10] }, { s: 'non-rigid rotor', color: cw, w: 4 }], { corner: 'top', panel: false });
+    F.legend(ctx, { l: sp.l, t: 482, r: sp.r, b: 530 }, [{ s: 'rigid rotor', color: alpha(cw, 0.75), w: 2, dash: [10, 10] }, { s: 'non-rigid rotor', color: cw, w: 4 }], { corner: 'top', panel: false, row: true });
     const up = J + 1, sag = DT * up * up * (up + 1) * (up + 1), short = 4 * DT * Math.pow(up, 3);
     topline(ctx, `The level $J = ${up}$ sits ${fmt(sag, 2)} cm⁻¹ below the rigid rotor's, and the line ${J} → ${up} falls ${fmt(short, 2)} cm⁻¹ short of $2\\kBt(J+1)$.`);
     const f1 = BT * up * (up + 1), f2 = DT * up * up * (up + 1) * (up + 1);

@@ -49,8 +49,8 @@ const NU0 = 2885.9, B0 = 10.4, KT = 0.69504 * 298;
       const g = P(j, B0); if (g >= 2400) dot(ctx, ax.X(g), ax.Y(0.94 * pop(j) / pm), alpha(PAL.ink, 0.5), false, 6);
       stick(P(j), j, j === J, `P(${j}) at ${fmt(P(j), 1)} cm⁻¹`);
     }
-    text(ctx, `R(${J})`, ax.X(R(J)), ax.Y(0.94 * pop(J) / pm) - 18, PAL.ink, { size: 17, weight: 600, align: 'center' });
-    text(ctx, `P(${J})`, ax.X(P(J)), ax.Y(0.94 * pop(J) / pm) - 18, PAL.ink, { size: 17, weight: 600, align: 'center' });
+    text(ctx, `R(${J})`, ax.X(R(J)), ax.Y(0.94 * pop(J) / pm) - 30, PAL.ink, { size: 17, weight: 600, align: 'center' });
+    text(ctx, `P(${J})`, ax.X(P(J)), ax.Y(0.94 * pop(J) / pm) - 30, PAL.ink, { size: 17, weight: 600, align: 'center' });
     text(ctx, 'R branch', ax.X(3080), sp.t + 10, cw, { size: 20, weight: 600, align: 'center' });
     text(ctx, 'P branch', ax.X(2560), sp.t + 10, cw, { size: 20, weight: 600, align: 'center' });
     /* the gaps between neighbours */
@@ -65,7 +65,7 @@ const NU0 = 2885.9, B0 = 10.4, KT = 0.69504 * 298;
       hits.push({ x: gx.X(j), y: gx.Y(sR(j)), r: 10, name: `R(${j}) to R(${j + 1}): ${fmt(sR(j), 1)} cm⁻¹` });
       if (j >= 1) { dot(ctx, gx.X(j), gx.Y(sP(j)), cw, false, j === J ? 10 : 7); hits.push({ x: gx.X(j), y: gx.Y(sP(j)), r: 10, name: `P(${j}) to P(${j + 1}): ${fmt(sP(j), 1)} cm⁻¹` }); }
     }
-    F.legend(ctx, gx, [{ s: 'R lines', kind: 'dot', color: cw, draw: (c, x, y) => dot(c, x + 22, y, cw, true, 7) }, { s: 'P lines', kind: 'dot', color: cw }, { s: 'even band, 2B̃₀', color: alpha(PAL.ink, 0.45), w: 2, dash: [10, 10] }], { corner: 'tl' });
+    F.legend(ctx, gx, [{ s: 'R lines', color: cw, draw: (c, x, y) => dot(c, x + 22, y, cw, true, 7) }, { s: 'P lines', color: cw, draw: (c, x, y) => dot(c, x + 22, y, cw, false, 7) }, { s: 'even band, 2B̃₀', color: alpha(PAL.ink, 0.45), w: 2, dash: [10, 10] }], { corner: 'above' });
     topline(ctx, A.v < 0.005
       ? `With $\\kBt_1 = \\kBt_0$ every line stands $2\\kBt_0 = ${fmt(2 * B0, 1)}$ cm⁻¹ from its neighbour.`
       : `With $\\kBt_1 = ${fmt(b1, 2)}$ cm⁻¹, the R lines close from ${fmt(sR(0), 1)} to ${fmt(sR(J), 1)} cm⁻¹ apart by $J = ${J}$, while the P lines open from ${fmt(sP(1), 1)} to ${fmt(sP(J), 1)} cm⁻¹.`);

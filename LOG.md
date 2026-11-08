@@ -762,3 +762,47 @@ reconverted to scratch, all 154 source.md byte-identical. `md2html.py` sets a re
 row `\tag` in an `align*` once, and maps the en dash and micro sign in maths; Chapters
 1–13's drafts regenerated: 9 change, only where an en dash stood for a minus.
 `check:content`: no errors, no warnings.
+
+## Chapter 12 pass · 2026-11-08
+
+Built: the intro, 12.1–12.8, 12.10–12.15 and the summary page (12.9 and 12.E empty, not
+built), and the two 12.T sheets. 24 figure rows: 13 interactive (10 moving; 3D scenes in
+12.2, 12.4, 12.8, 12.12 and 12.15), 5 faithful copies, 6 kept photographs. 4 derivations
+(12.1, 12.6, 12.8 ×2). 17 exercises in the Exercises document: 3 book problems (12.14,
+`question`, keyed by the page's solutions) and 14 AI exercises. 70 AI-marked corrections
+in footnotes, besides derivation notes.
+
+Chapter pass: `book.json` gains its `sheets` rows, `character-tables` and
+`correlation-tables` (written under the merge lock, since `ost` refuses that table); both
+pages build and render without errors. The wanted rows: 12.4 `sigma_op`, `g_op`; 12.5
+`chi_char`, `E_op`, `sigma_v`, `sigma_vp`, `sigma_vpp` (planes through H1, H3, H2) and
+`C_3`; 12.6 `g_op`; 12.11 `E_op`, `C_3`, `sigma_v`; 12.2 `C_4`, `C_6`, `S_4`, `S_6`. New
+symbols `C_4`, `C_6`, `S_4`, `S_6` (`\kCfour`, `\kCsix`, `\kSfour`, `\kSsix`), and macros for
+`s_3` (`\ksthree`) and for `s_1`, `s_2` (`\ksone`, `\kstwo`, staged in ch08, which owns them).
+12.2's readouts, displays and T_d line, and 12.5's text, readout and operation choices, now
+write these macros. 12.15's footnotes link 12.8's steps note (`#12.8-steps`, an id added) and
+12.13's level diagram (`class="xref"`/`"figref"`); eight character-table mentions (12.5, 12.6,
+12.8, 12.10, 12.12, 12.13, 12.15 ×2) link the sheet. The intro's "semi-empirical" lost its
+`ab-initio-calculation` span. 12.6's "We can therefore identify … basis functions:" and
+"Also:" pointed back at the derivation: the first is now the reason of the derivation's
+step to (12.6.4) (the AI reason dropped), the lead-in "Also:" removed. 12.8's "Expanding and
+collecting terms in E gives" is followed by its last sentence and the derivation: left.
+Fixed: 12.8's display (12.8.9) wrote `\kEpmS_{12}` (an undefined macro, shown raw); 12.8's
+level ladder drew the degenerate E pair at two energies (now one level, two labels); 12.2's
+operations figure called every benzene operation "not a symmetry operation" (C and H share
+rays, and atoms were matched by direction only; now by place first); four U+200B in 12.1's
+"Hückel". `tools/md2html.py`: only a header "Summary" itself goes to `summary_html`; an
+unnumbered example takes its id and label from its printed label (`ex-2`, "Example 2";
+`ex-rotation`, "Example · Rotation"); an image name with parentheses is kept whole.
+Chapters 1–11's drafts regenerated with the old and new script in scratch: identical (12.13–12.15
+and 13.13 change as intended). No two-argument `\braket`, no bare `\k` script, no U+2011 or
+U+FEFF; every in-book link carries `xref`/`figref`; every section has `ai`, `built` and `notes`
+(the intro has nothing left out), no objectives (the book prints none). `colours:default`
+rerun (every type kept its colour). `check:content`: no errors, no warnings. Every figure
+screenshot in light and dark; no console or KaTeX error on any Chapter 12 page, derivation or
+sheet.
+
+Known gaps: the 12.2 figures' symmetry axis runs through the headline text (library layout);
+12.15's water-basis axis label sits on the z label; 12.13's Raman "initial state" label sits on
+the axis; 12.8 writes s₁–s₃ plain (it has no s₁–s₃ variables rows); the derivation links in
+footnotes are not checked by `check:content` (it reads only `text.html` hrefs).

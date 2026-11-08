@@ -1,0 +1,6 @@
+<!-- LibreTexts page 11810: Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Physical_Chemistry_(LibreTexts)/15:_Lasers_Laser_Spectroscopy_and_Photochemistry -->
+# Lasers, Laser Spectroscopy, and Photochemistry
+
+The word 'laser' is an acronym for "light amplification by stimulated emission of radiation." The use of lasers in science and in society has rapidly expanded since their development in the early 1960s. Lasers provides chemists with a powerful and versatile tool for probing the nature of and dynamics of species and chemical reactions. This chapter will discuss the foundations of lasers and the interaction of their output toward understanding atomic and molecular properties. We will describe the generation of laser light from electronically excited atoms using the rate-equation model developed by Einstein. Modern laser designs and applications will then be discussed.
+
+Thumbnail: Six commercial lasers in operation, showing the range of different colored light beams that can be produced, from red to violet. From the top, the wavelengths of light are: 660 nm, 635 nm, 532 nm, 520 nm, 445 nm, and 405 nm. Manufactured by Q-line. (CC BY-SA 3.0 Unported; Sariling gawa via [Wikipedia](https://tl.m.Wikipedia.org/wiki/Talaksan:LASER.jpg))

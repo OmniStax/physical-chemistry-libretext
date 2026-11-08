@@ -19,7 +19,7 @@ function psi(v, y) { let p0 = Math.pow(Math.PI, -0.25) * Math.exp(-y * y / 2); i
 function bump(ctx, ax, xc, E, hpx, color, lo, hi) {
   ctx.save(); ctx.fillStyle = alpha(color, 0.4); ctx.strokeStyle = color; ctx.lineWidth = 3; ctx.beginPath();
   ctx.moveTo(ax.X(lo), ax.Y(E));
-  for (let x = lo; x <= hi + 1e-9; x += 0.05) ctx.lineTo(ax.X(x), ax.Y(E) - hpx * Math.exp(-(x - xc) ** 2));
+  for (let x = lo; x <= hi + 1e-9; x += 0.05) ctx.lineTo(ax.X(x), ax.Y(E) - hpx * Math.exp(-((x - xc) ** 2)));
   ctx.lineTo(ax.X(hi), ax.Y(E)); ctx.closePath(); ctx.fill(); ctx.stroke(); ctx.restore();
 }
 

@@ -25,7 +25,7 @@ const NU0 = 2885.9, KT_HC = 0.69504;
    Opens on HCl at 298 K.
 ===================================================================== */
 (function () {
-  const d = sim('sim-rovib', 720);
+  const d = sim('sim-rovib', 860);
   const T = ctl(d.controls, { label: '\\kT', cls: 'temperature', min: 100, max: 1000, step: 1, value: 298, unit: 'K', dec: 0, detents: [298], snap: true, aria: 'the temperature', onInput: () => cy.reset() });
   const B = ctl(d.controls, { label: '\\kBt', cls: 'energy', min: 5, max: 15, step: 0.1, value: 10.4, unit: 'cm⁻¹', dec: 1, detents: [{ v: 10.4, label: 'HCl' }], snap: true, aria: 'the rotational constant in wavenumbers', onInput: () => cy.reset() });
   const Q = F.choice(d.controls, { label: '\\text{Q branch}', options: [{ value: 'no', label: 'forbidden (HCl)' }, { value: 'yes', label: 'allowed (NO)' }], value: 'no', aria: 'whether the Q branch is allowed', onInput: () => cy.reset() });
@@ -55,15 +55,15 @@ const NU0 = 2885.9, KT_HC = 0.69504;
     const cur = done < all.length ? all[done] : null;
     const cw = C('wavenumber'), ce = C('energy');
     /* the spectrum */
-    const sp = { l: 140, r: 1300, t: 500, b: 640 };
+    const sp = { l: 140, r: 1300, t: 640, b: 770 };
     const ax = F.axes(ctx, sp, [LO, HI], [0, 1], { nx: 6, ny: 0, xl: 'wavenumber ν̃ (cm⁻¹)', yl: 'intensity', xc: cw, fx: (v) => fmt(v, 0) });
     /* the ladders, in units of B̃, the vibrational gap cut */
-    const LY = (j) => 470 - j * (j + 1) / 56 * 120, UY = (j) => 300 - j * (j + 1) / 56 * 120;
+    const LY = (j) => 570 - j * (j + 1) / 56 * 170, UY = (j) => 330 - j * (j + 1) / 56 * 170;
     for (let j = 0; j <= JTOP; j++) {
       line(ctx, sp.l, LY(j), sp.r, LY(j), alpha(ce, j ? 0.45 : 0.75), 2);
       line(ctx, sp.l, UY(j), sp.r, UY(j), alpha(ce, j ? 0.45 : 0.75), 2);
     }
-    [0, 3, 5, 7].forEach((j) => {
+    [0, 4, 7].forEach((j) => {
       text(ctx, `J = ${j}`, sp.l - 12, LY(j), ce, { size: 17, align: 'right' });
       text(ctx, `J = ${j}`, sp.l - 12, UY(j), ce, { size: 17, align: 'right' });
     });
@@ -94,7 +94,7 @@ const NU0 = 2885.9, KT_HC = 0.69504;
     const xr = ax.X(NU0 + 2 * b * 5), xp = ax.X(NU0 - 2 * b * 5);
     text(ctx, 'R branch', Math.min(xr, sp.r - 70), sp.t - 22, cw, { size: 20, weight: 600, align: 'center' });
     text(ctx, 'P branch', Math.max(xp, sp.l + 70), sp.t - 22, cw, { size: 20, weight: 600, align: 'center' });
-    if (done >= 1) F.hbracket(ctx, ax.X(NU0 - 2 * b), ax.X(NU0 + 2 * b), sp.b + 2, PAL.ink, '');
+    if (done >= 1) F.hbracket(ctx, ax.X(NU0 - 2 * b), ax.X(NU0 + 2 * b), sp.t - 6, PAL.ink, '4B̃');
     hits.push({ x: ax.X(NU0), y: sp.b - 10, r: 14, name: `the zero gap between P(1) and R(0), 4B̃ = ${fmt(4 * b, 1)} cm⁻¹` });
     /* the headline and the readout follow the line just fired, or the strongest R line at rest */
     const L = cur ?? all.find((x) => x.br === 'R' && x.J === jbest) ?? all[0];

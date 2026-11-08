@@ -1,12 +1,12 @@
 /* Figures for section 13.5 Vibrational Overtones. Boots against the section's text article. */
 window.OMNISTAX_FIGURES = window.OMNISTAX_FIGURES || {};
 window.OMNISTAX_FIGURES['13.5'] = function (root, F) {
-const { tex, C, PAL, alpha, ctl, register, begin, line, dot, text, topline, axes, arrow, fmt, legend, hbracket } = F;
+const { tex, C, PAL, alpha, ctl, register, begin, line, dot, text, topline, axes, arrow, fmt, legend } = F;
 const sim = (id, H) => F.sim(root, id, H);
 
 /* ---------- Figure 13.5.3 + 13.5.4: overtones from a closing ladder ----------
    HCl with the constants Table 13.5.1's anharmonic column follows (recovered from the table: they give every entry
-   to 0.5 cm^-1): nu = 2990.9 cm^-1, chi_e nu = 52.8 cm^-1, so chi_e = 0.01765 opens the figure. Levels
+   to 0.5 cm^-1): nu = 2990.9 cm^-1, chi_e nu = 52.8 cm^-1, which opens the figure; the slider is chi_e nu, 0 to 90 cm^-1. Levels
    E_v = nu (v + 1/2) - chi_e nu (v + 1/2)^2; a line 0 -> v sits at v nu - v(v + 1) chi_e nu, which is
    v(v - 1) chi_e nu below v times the fundamental. Top: the harmonic ladder (dashed) beside the anharmonic one
    with its arrows, energy 0 to 18 000 cm^-1 (v = 5 harmonic is 16 450). Bottom: the lines on a wavenumber strip
@@ -15,16 +15,16 @@ const sim = (id, H) => F.sim(root, id, H);
 (function () {
   const d = sim('sim-overtones', 640);
   const NU = 2990.9, OBS = [2885.9, 5668.0, 8347.0, 10923.1, 13396.5];
-  const X = ctl(d.controls, { label: '\\tilde{\\chi}_e', cls: '', key: 'chi', min: 0, max: 0.03, step: 0.0001, value: 0.017653, dec: 4,
-    aria: 'the anharmonicity constant', detents: [{ v: 0.017653, label: 'HCl' }], snap: true });
-  const T = F.choice(d.controls, { label: 'transition', options: [
+  const X = ctl(d.controls, { label: '\\tilde{\\chi}_e\\knut', cls: 'wavenumber', key: 'chi', min: 0, max: 90, step: 0.1, value: 52.8, unit: 'cm⁻¹', dec: 1,
+    aria: 'the anharmonicity constant times the harmonic wavenumber', detents: [{ v: 52.8, label: 'HCl' }], snap: true });
+  const T = F.select(d.controls, { label: 'transition', options: [
     { value: '1', label: '0 → 1' }, { value: '2', label: '0 → 2' }, { value: '3', label: '0 → 3' }, { value: '4', label: '0 → 4' }, { value: '5', label: '0 → 5' }, { value: 'h', label: '1 → 2' }], value: '2' });
   const hits = [];
   F.hover(d.stage, () => hits);
   const NAMES = ['', 'the fundamental', 'the first overtone', 'the second overtone', 'the third overtone', 'the fourth overtone'];
   function draw() {
     const { ctx } = begin(d.c);
-    const chi = X.v, xn = chi * NU, E = (v) => NU * (v + 0.5) - xn * (v + 0.5) ** 2, Eh = (v) => NU * (v + 0.5);
+    const xn = X.v, chi = xn / NU, E = (v) => NU * (v + 0.5) - xn * (v + 0.5) ** 2, Eh = (v) => NU * (v + 0.5);
     const line0 = (v) => E(v) - E(0), fund = line0(1);
     const hot = T.value === 'h', sel = hot ? 2 : +T.value, lo = hot ? 1 : 0, nuSel = E(sel) - E(lo), ghost = (sel - lo) * fund, def = ghost - nuSel;
     const ce = C('energy'), cw = C('wavenumber'), ghostC = alpha(PAL.ink, 0.5);
@@ -77,7 +77,8 @@ const sim = (id, H) => F.sim(root, id, H);
     }
     { const l = E(2) - E(1); line(ctx, sx.X(l), sb.b, sx.X(l), sb.t + 30, alpha(cw, hot ? 1 : 0.5), hot ? 6 : 3, [4, 4]);
       hits.push({ x: sx.X(l), y: sb.b - 20, r: 10, name: `hot band 1 → 2: ${fmt(l, 1)} cm⁻¹` }); }
-    if (def * (sx.X(1) - sx.X(0)) > 8) hbracket(ctx, sx.X(nuSel), sx.X(ghost), sb.t + 40, cw, `${fmt(def, 0)} cm⁻¹`, { size: 17 });
+    /* the shortfall of the chosen line, shaded between it and its whole multiple */
+    if (def > 0) { ctx.save(); ctx.fillStyle = alpha(cw, 0.18); ctx.fillRect(sx.X(nuSel), sb.t + 6, sx.X(ghost) - sx.X(nuSel), sb.b - sb.t - 6); ctx.restore(); }
 
     const lo2 = `E_{${lo}}`, hi2 = `E_{${sel}}`;
     tex(d.readout, `\\kEv = \\knut\\left(v + \\tfrac{1}{2}\\right) - \\tilde{\\chi}_e\\knut\\left(v + \\tfrac{1}{2}\\right)^2 \\\\ ${hi2} - ${lo2} = ${fmt(E(sel), 1)} - ${fmt(E(lo), 1)} = ${fmt(nuSel, 1)}\\ \\text{cm}^{-1}`);

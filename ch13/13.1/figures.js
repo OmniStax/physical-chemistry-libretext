@@ -23,7 +23,7 @@ function sciText(x, sig = 3) {
 /* a wavelength in metres written in the unit the book would use for it */
 function lamText(m) {
   if (m < 1e-9) return `${fmt(m * 1e12, m < 1e-11 ? 3 : 1)} pm`;
-  if (m < 1e-6) return `${fmt(m * 1e9, 1)} nm`;
+  if (m < 1e-6) { const v = m * 1e9; return `${fmt(v, 1)} nm`; }
   if (m < 1e-3) return `${fmt(m * 1e6, 2)} μm`;
   if (m < 1) return `${fmt(m * 1e3, 2)} mm`;
   return `${fmt(m, m < 100 ? 2 : 0)} m`;
@@ -58,7 +58,7 @@ function spectral(nm) {
 ===================================================================== */
 (function () {
   const d = F.sim(root, 'sim-em-wave');
-  const S = F.space3d(d, { box: [[-3, 3], [0, 20], [-3, 3]], h: 560, turn: -0.55, tilt: 0.3, fit: 2.25,
+  const S = F.space3d(d, { box: [[-3, 3], [0, 20], [-3, 3]], h: 560, turn: -0.35, tilt: 0.28, fit: 3.6,
     yaw: [-1.15, 1.15], pitch: [-1.0, 1.0], spin: 'off', zoom: false });
   const cy = F.cycle(() => Infinity, 0);
   const LAM = ctl(d.controls, { label: '\\klambda', cls: 'wavelength', min: 380, max: 750, step: 1, value: 589, unit: 'nm', dec: 0,
@@ -90,7 +90,7 @@ function spectral(nm) {
     S.set('b', [
       { k: 'segs', segs: stems((y) => [z0 * Math.sin(ph(y)), y, 0]), color: alpha(cb, 0.35), w: 1.5 },
       { k: 'line', pts: bCurve, color: cb, w: 4, name: 'the magnetic field' },
-      { k: 'label', s: 'magnetic field', p: [z0 + 1.2, 0.2, 0], color: cb },
+      { k: 'label', s: 'magnetic field', p: [z0 + 1.4, 9, 0], color: cb },
     ]);
     /* the probe: the field at one point, as the readout writes it */
     const ep = z0 * Math.sin(ph(YP));
@@ -129,9 +129,9 @@ function spectral(nm) {
 ===================================================================== */
 (function () {
   const d = sim('sim-em-spectrum', 520);
-  const LG = ctl(d.controls, { label: '\\klambda', cls: 'wavelength', min: -13.5, max: 3.5, step: 0.001, value: Math.log10(589e-9), unit: '', dec: 3,
+  const LG = ctl(d.controls, { label: '\\klambda', cls: 'wavelength', min: -13.5, max: 3.5, step: 0.0001, value: Math.log10(589e-9), unit: '', dec: 3,
     fmt: (v) => lamText(Math.pow(10, v)),
-    detents: [{ v: Math.log10(589e-9), label: 'Na D' }, { v: Math.log10(656.3e-9), label: 'H 656.3' }], snap: true,
+    detents: [{ v: Math.log10(589e-9), label: 'Na D' }, Math.log10(656.3e-9)], snap: true,
     aria: 'the wavelength of the photon, on a logarithmic scale' });
   const VIS = [Math.log10(380e-9), Math.log10(750e-9)];
   const REG = [
@@ -180,7 +180,7 @@ function spectral(nm) {
       line(ctx, x, sT - 10, x, sT, cf, 2);
       text(ctx, `10${sup(n)}`, x, sT - 28, cf, { size: 17, align: 'center' });
     }
-    text(ctx, 'frequency ν (s⁻¹)', box.r, sT - 60, cf, { size: 20, weight: 600, align: 'right' });
+    text(ctx, 'frequency ν (s⁻¹)', box.r, sT - 66, cf, { size: 20, weight: 600, align: 'right' });
     /* the photon */
     const x = X(lg), pc = visible ? F.fact(spectral(nm)) : cl;
     line(ctx, x, sT - 4, x, sB + 4, PAL.ink, 3);

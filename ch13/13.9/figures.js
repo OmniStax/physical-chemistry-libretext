@@ -77,7 +77,7 @@ const TAU = 2 * Math.PI;
    Moving: the molecule vibrates about its fixed centre of mass. r_o = 112.8 pm, masses 12 and 16,
    so Δr(C) = (16/28) q and Δr(O) = (12/28) q, each measured outward from its equilibrium place.
    Scene at 4 units per pm. Below, q, Δr(C) and Δr(O) traced against time over three periods
-   (CO's period, 1/(c·2143 cm⁻¹) = 15.6 fs). Graph y range ±25 pm, the amplitude slider's maximum.
+   (CO's period, 1/(c·2143 cm⁻¹) = 15.6 fs). Graph y range ±30 pm, round ticks above the amplitude slider's 25 pm maximum.
    The amplitude slider runs 2 to 25 pm; its detent, 4.8 pm, is the classical turning point of
    the ground state.
 ===================================================================== */
@@ -105,7 +105,7 @@ const TAU = 2 * Math.PI;
     if (Math.abs(dO) * k > 6) F.hbracket(ctx, Math.min(xO, xO0), Math.max(xO, xO0), yb, C('length'), 'Δr(O)');
     /* the trace */
     const box = { l: 150, r: W - 80, t: 340, b: 580 };
-    const ax = axes(ctx, box, [0, 3], [-25, 25], { nx: 6, ny: 5, xl: 'time (periods, one period = 15.6 fs)', yl: 'displacement (pm)', xc: C('time'), yc: C('length') });
+    const ax = axes(ctx, box, [0, 3], [-30, 30], { nx: 6, ny: 6, xl: 'time (periods, one period = 15.6 fs)', yl: 'displacement (pm)', xc: C('time'), yc: C('length') });
     const f = (s) => A * Math.sin(TAU * s);
     plot(ctx, ax, f, C('length'), { w: 5, x: [0, t] });
     plot(ctx, ax, (s) => f(s) * MO / MT, alpha(C('length'), 0.75), { w: 3, dash: [10, 10], x: [0, t] });

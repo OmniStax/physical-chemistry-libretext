@@ -1,0 +1,220 @@
+{
+ "id": "13.8",
+ "module": "13671",
+ "chapter": "13",
+ "title": "Rotational Spectra of Polyatomic Molecules",
+ "short": "Polyatomic rotation",
+ "lead": "A diatomic molecule turns with one moment of inertia; a polyatomic molecule has three, one about each principal axis. How many of them are equal sorts molecules into spherical, symmetric and asymmetric tops, and sets how their rotational levels are labelled and found.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "Adapted from Jack Simons' Quantum Mechanics in Chemistry under CC BY-NC-SA 4.0, with Ag2gaeh's spheroid drawing under CC BY-SA 4.0.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercise in this section. The one exercise, classifying four molecules as tops, was written by AI with an AI solution; its Bloom level and concept tags were chosen by AI.",
+ "figures": [
+  {
+   "id": "sim-tops",
+   "kind": "sim",
+   "number": "13.8.1",
+   "originals": [
+    "/media/ch13/79088-459px-Ellipsoid-rot-ax.svg.png"
+   ],
+   "original_caption": "The assignment of semi-axes on a spheroid. It is oblate if $c < a$ (left) and prolate if $c > a$ (right). (CC BY-SA 4.0; Ag2gaeh)",
+   "draws": [
+    "moment-of-inertia",
+    "energy"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "review",
+   "concept": "rigid-rotor",
+   "verb": "uses"
+  },
+  {
+   "span": "review",
+   "concept": "reduced-mass",
+   "verb": "uses"
+  },
+  {
+   "span": "review",
+   "concept": "rotor-energy-levels",
+   "verb": "reinforces"
+  },
+  {
+   "span": "review",
+   "concept": "rotational-constant",
+   "verb": "uses"
+  },
+  {
+   "span": "review",
+   "concept": "moment-of-inertia",
+   "verb": "uses"
+  },
+  {
+   "span": "rotation-of-polyatomic-molecules",
+   "concept": "inertia-tensor",
+   "verb": "introduces"
+  },
+  {
+   "span": "rotation-of-polyatomic-molecules",
+   "concept": "principal-moments-of-inertia",
+   "verb": "introduces"
+  },
+  {
+   "span": "rotation-of-polyatomic-molecules",
+   "concept": "polyatomic-rotational-hamiltonian",
+   "verb": "introduces"
+  },
+  {
+   "span": "rotation-of-polyatomic-molecules",
+   "concept": "angular-momentum-component-operators",
+   "verb": "uses"
+  },
+  {
+   "span": "rotation-of-polyatomic-molecules",
+   "concept": "euler-angles",
+   "verb": "introduces"
+  },
+  {
+   "span": "spherical-tops",
+   "concept": "spherical-top",
+   "verb": "introduces"
+  },
+  {
+   "span": "spherical-tops",
+   "concept": "spherical-top-energy-levels",
+   "verb": "introduces"
+  },
+  {
+   "span": "spherical-tops",
+   "concept": "rotor-degeneracy",
+   "verb": "uses"
+  },
+  {
+   "span": "spherical-tops",
+   "concept": "rotation-matrix-functions",
+   "verb": "introduces"
+  },
+  {
+   "span": "spherical-tops",
+   "concept": "commuting-operators",
+   "verb": "uses"
+  },
+  {
+   "span": "symmetric-tops",
+   "concept": "symmetric-top",
+   "verb": "introduces"
+  },
+  {
+   "span": "symmetric-tops",
+   "concept": "symmetric-top-energy-levels",
+   "verb": "introduces"
+  },
+  {
+   "span": "asymmetric-tops",
+   "concept": "asymmetric-top",
+   "verb": "introduces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "ai1",
+   "source_id": "Symmetrical tops are molecules with two rotational axes",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "symmetric-tops",
+   "prompt": "<p>Classify CH₄ (tetrahedral), CH₃Cl, benzene C₆H₆ (a flat hexagon) and H₂O (bent) by their principal moments of inertia.</p>",
+   "answer": {
+    "type": "choice",
+    "options": [
+     "CH₄ spherical top; CH₃Cl oblate symmetric top; C₆H₆ prolate symmetric top; H₂O asymmetric top",
+     "CH₄ spherical top; CH₃Cl prolate symmetric top; C₆H₆ oblate symmetric top; H₂O asymmetric top",
+     "CH₄ spherical top; CH₃Cl prolate symmetric top; C₆H₆ oblate symmetric top; H₂O prolate symmetric top",
+     "CH₄ prolate symmetric top; CH₃Cl spherical top; C₆H₆ oblate symmetric top; H₂O asymmetric top"
+    ],
+    "correct": 1,
+    "generated_by": "ai",
+    "hint": "Look for a threefold or higher symmetry axis: it makes the two moments about axes perpendicular to it equal.",
+    "solution": "<p>CH₄ has four equivalent threefold axes, so all three moments are equal: a spherical top. CH₃Cl has one threefold axis along the C-Cl bond. The light H atoms lie close to that axis, so the moment about it is the smallest: $I_a < I_b = I_c$, a prolate top. Benzene's sixfold axis stands perpendicular to the ring, and every atom lies far from it, so the moment about it is the largest: $I_a = I_b < I_c$, an oblate top. Bent H₂O has no axis of threefold or higher symmetry and three different moments: an asymmetric top.</p><p>For $J = 2$ a spherical top's level holds $(2J+1)^2 = 25$ states, while a symmetric top's $J = 2$ splits into $K = 0$ with 5 states and $K = \\pm1$ and $K = \\pm2$ with 10 each.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "ai1",
+   "concept": "spherical-top"
+  },
+  {
+   "exercise": "ai1",
+   "concept": "symmetric-top"
+  },
+  {
+   "exercise": "ai1",
+   "concept": "asymmetric-top"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-components",
+   "kind": "correction",
+   "html": "Read $- -i\\hbar$ as $-i\\hbar$ in $J_a$ and $J_b$, and $ih$ as $i\\hbar$, so that $J_c = -i\\hbar\\,\\partial/\\partial\\chi$. The same $h$ for $\\hbar$ comes back in $J_Z$ below."
+  },
+  {
+   "id": "c-jsq",
+   "kind": "correction",
+   "html": "The operator carries $\\hbar^2$ and $1/\\sin^2\\theta$: $J^2 = -\\hbar^2\\left[\\dfrac{\\partial^2}{\\partial\\theta^2} + \\cot\\theta\\,\\dfrac{\\partial}{\\partial\\theta} + \\dfrac{1}{\\sin^2\\theta}\\left(\\dfrac{\\partial^2}{\\partial\\varphi^2} + \\dfrac{\\partial^2}{\\partial\\chi^2} - 2\\cos\\theta\\,\\dfrac{\\partial^2}{\\partial\\varphi\\,\\partial\\chi}\\right)\\right]$."
+  },
+  {
+   "id": "c-j2",
+   "kind": "correction",
+   "html": "$J^2$."
+  },
+  {
+   "id": "c-i2",
+   "kind": "correction",
+   "html": "The denominator is $2I$: $E = \\hbar^2J(J+1)/2I$, and $h$ in $J_Z$ and $J_a$ above is $\\hbar$."
+  },
+  {
+   "id": "c-h",
+   "kind": "correction",
+   "html": "Read $h^2$ as $\\hbar^2$, and the denominators $2I^2$ and $2I\\,2$ as $2I$: a prolate top has $E = \\hbar^2J(J+1)/2I + \\hbar^2K^2(1/2I_a - 1/2I)$, and an oblate top the same with $I_c$ in place of $I_a$."
+  },
+  {
+   "id": "c-degeneracy",
+   "kind": "correction",
+   "html": "The energy depends on $K^2$, so $+K$ and $-K$ share a level: for $K \\ne 0$ it holds $2(2J+1)$ states, and only $K = 0$ holds $2J + 1$."
+  },
+  {
+   "id": "c-elements",
+   "kind": "correction",
+   "html": "The three lines lost their states at the source. With $K$ the quantum number along $c$, they read $\\langle J,M,K|J_a^2|J,M,K\\rangle = \\langle J,M,K|J_b^2|J,M,K\\rangle = \\tfrac12\\hbar^2[J(J+1) - K^2]$, $\\langle J,M,K|J_c^2|J,M,K\\rangle = \\hbar^2K^2$, and $\\langle J,M,K|J_a^2|J,M,K\\pm2\\rangle = -\\langle J,M,K|J_b^2|J,M,K\\pm2\\rangle = \\tfrac14\\hbar^2[J(J+1) - K(K\\pm1)]^{1/2}[J(J+1) - (K\\pm1)(K\\pm2)]^{1/2}$, while $\\langle J,M,K|J_c^2|J,M,K\\pm2\\rangle = 0$."
+  }
+ ]
+}

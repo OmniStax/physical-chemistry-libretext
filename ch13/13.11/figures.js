@@ -18,7 +18,7 @@ const sim = (id, H) => F.sim(root, id, H);
 (function () {
   const d = sim('sim-two-level', 690);
   const D = ctl(d.controls, { label: '\\komega - \\komegazero', cls: 'frequency', min: -3, max: 3, step: 0.01, value: 0.5, unit: 'ps⁻¹', dec: 2, detents: [0, 1], snap: true });
-  const W1 = ctl(d.controls, { label: '|H_{21}|/\\hbar', cls: '', min: 0.05, max: 0.25, step: 0.005, value: 0.2, unit: 'ps⁻¹', dec: 3 });
+  const W1 = ctl(d.controls, { label: '|H_{21}|/\\hbar', cls: '', min: 0.05, max: 0.25, step: 0.005, value: 0.25, unit: 'ps⁻¹', dec: 3 });
   const TT = 8, cy = cycle(() => TT, 1.2);
   const P = (dl, t, w) => (Math.abs(dl) < 1e-6 ? (w * t / 2) ** 2 : (w * Math.sin(dl * t / 2) / dl) ** 2);
   const hits = []; F.hover(d.stage, () => hits);
@@ -44,7 +44,7 @@ const sim = (id, H) => F.sim(root, id, H);
     plot(ctx, at, (s) => P(dl, s, w), alpha(PAL.ink, 0.35), { w: 3, dash: [10, 10] });
     plot(ctx, at, (s) => P(dl, s, w), PAL.ink, { w: 5, x: [0, t] });
     dot(ctx, at.X(t), at.Y(Math.min(1, p)), PAL.ink, true, 9);
-    if (Math.abs(dl) > 0.05) { const tm = Math.PI / Math.abs(dl); if (tm <= TT) { line(ctx, at.X(tm), tb.b, at.X(tm), at.Y(P(dl, tm, w)), alpha(C('time'), 0.7), 2, [4, 8]); text(ctx, 'π/|ω − ω₀|', at.X(tm), tb.b - 10 - (at.X(tm) > tb.r - 80 ? 20 : 0), C('time'), { size: 17, align: at.X(tm) > tb.r - 80 ? 'right' : 'center' }); } }
+    if (Math.abs(dl) > 0.05) { const tm = Math.PI / Math.abs(dl); if (tm <= TT) { line(ctx, at.X(tm), tb.b, at.X(tm), at.Y(P(dl, tm, w)), alpha(C('time'), 0.7), 2, [4, 8]); text(ctx, 'π/|ω − ω₀|', at.X(tm), at.Y(P(dl, tm, w)) - 16, C('time'), { size: 17, align: at.X(tm) > tb.r - 80 ? 'right' : 'center' }); } }
     /* the line shape at this time */
     const lb = { l: 150, r: W - 70, t: 430, b: 610 };
     const al = axes(ctx, lb, [-3, 3], [0, 1], { nx: 6, ny: 4, xl: 'detuning ω − ω₀ (ps⁻¹)', yl: 'P₁₂', xc: C('frequency') });
