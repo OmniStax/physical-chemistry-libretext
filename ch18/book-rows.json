@@ -483,19 +483,6 @@
    ]
   },
   {
-   "id": "translational-q-volume",
-   "kind": "result",
-   "section": "18.1",
-   "name": "Translational partition function from the thermal wavelength",
-   "statement": "Multiplying q_x, q_y and q_z gives the translational partition function of a particle in a volume V = L³: q_trans = V/Λ³ = (2πmkT/h²)^{3/2}V.",
-   "forms": [
-    {
-     "id": "q-trans-thermal-wavelength",
-     "latex": "q_\\text{trans} = \\left( \\dfrac{2 \\pi m kT}{h^2} \\right)^{3/2} V = \\dfrac{V}{\\Lambda^3}"
-    }
-   ]
-  },
-  {
    "id": "many-translational-states",
    "kind": "result",
    "section": "18.1",
@@ -968,13 +955,7 @@
    "kind": "result",
    "section": "18.9",
    "name": "Molar heat capacity from the specific heat",
-   "statement": "The product of the specific heat capacity and the molar mass is the molar heat capacity; for metals Dulong and Petit's law makes it about 25 J K⁻¹ mol⁻¹.",
-   "forms": [
-    {
-     "id": "cs-m-dulong-petit",
-     "latex": "C_s M = C_{V,m} \\approx 25\\ \\text{J K}^{-1}\\,\\text{mol}^{-1}"
-    }
-   ]
+   "statement": "The product of the specific heat capacity and the molar mass is the molar heat capacity; for metals Dulong and Petit's law makes it about 25 J K⁻¹ mol⁻¹."
   },
   {
    "id": "dulong-petit-atomic-weights",
@@ -1195,12 +1176,12 @@
    "prereq": "translational-q-1d"
   },
   {
-   "concept": "translational-q-volume",
-   "prereq": "thermal-wavelength"
+   "concept": "many-translational-states",
+   "prereq": "translational-partition-function"
   },
   {
    "concept": "many-translational-states",
-   "prereq": "translational-q-volume"
+   "prereq": "thermal-wavelength"
   },
   {
    "concept": "many-translational-states",
@@ -1576,7 +1557,11 @@
   },
   {
    "concept": "average-translational-energy",
-   "prereq": "translational-q-volume"
+   "prereq": "translational-partition-function"
+  },
+  {
+   "concept": "average-translational-energy",
+   "prereq": "thermal-wavelength"
   },
   {
    "concept": "average-translational-energy",

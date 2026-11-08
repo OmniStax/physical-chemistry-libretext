@@ -79,11 +79,6 @@
   },
   {
    "span": "box-states",
-   "concept": "translational-q-volume",
-   "verb": "introduces"
-  },
-  {
-   "span": "box-states",
    "concept": "translational-partition-function",
    "verb": "reinforces"
   },
@@ -99,7 +94,7 @@
   },
   {
    "span": "many-states",
-   "concept": "translational-q-volume",
+   "concept": "translational-partition-function",
    "verb": "uses"
   }
  ],
@@ -144,7 +139,7 @@
   },
   {
    "exercise": "a1",
-   "concept": "translational-q-volume"
+   "concept": "translational-partition-function"
   },
   {
    "exercise": "a1",

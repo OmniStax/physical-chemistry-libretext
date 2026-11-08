@@ -12,7 +12,7 @@ Proposed by the agent after the chapter exploration (2026-11-08). Status:
 | Start point | 18.1 |
 | Unit of work | one section = one page, never folded |
 | Loop | the chapter in one go, without per-section stops |
-| Prose | verbatim; 18.9's three-item objectives box ("Goal", "Prerequisites", "Resources you will need") to `objectives` as printed; no section has a "## Summary"; 18.11's uncited References go to `notes`; credits: 18.1, 18.2, 18.4, 18.6, 18.8, 18.10 Tembe's IIT Bombay notes (as the page names them); 18.9 Grubbs (tag); 18.11 Sterkewolf, Tembe's notes, Sinha; 18.3, 18.5, 18.7 none printed (the book's); the intro the book's |
+| Prose | verbatim; 18.9's three-item objectives box ("Goal", "Prerequisites", "Resources you will need") to `objectives` as printed; no section has a "## Summary"; 18.11's uncited References go to `notes`; credits: 18.1, 18.2, 18.4, 18.6, 18.8, 18.10 Tembe's IIT Bombay notes (as the page names them); 18.9 the author tag `tgrubbs` only (no name printed); 18.11 Sterkewolf, Tembe's notes, Sinha; 18.3, 18.5, 18.7 none printed (the book's); the intro the book's |
 | Headers | the book's `<h2>` kept; the agent's for the intro, the openings of 18.3, 18.4, 18.7, 18.8, 18.9 and 18.11, and the headerless 18.1, 18.2, 18.5, 18.6 and 18.10 (proposals in `exploration.md`), through the humanizer by the builder |
 | Boxed notes | 18.8's "Symmetry Number" kept as a titled note (its self-link pointed at 18.6); 18.8's "Classical Derivation (Optional)" becomes a derivation with that title as its header |
 | Embeds | none (18.7.1 is an animated GIF, not an embed) |

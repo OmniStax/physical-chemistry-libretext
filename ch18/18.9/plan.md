@@ -4,7 +4,7 @@ Source: `source.md` (`python3 tools/convert.py 18.9`); draft from `python3 tools
 Status: built 2026-11-08 in the Chapter 18 job, without a review stop (config: the chapter in one go).
 
 Three-item objectives box (Goal, Prerequisites, Resources) to `objectives` as printed. Seven numbered displays
-(18.9.1)–(18.9.7). No figures, no examples. Credit: Tandy Grubbs (tag `authorname:tgrubbs`). Licence CC BY-NC-SA 4.0.
+(18.9.1)–(18.9.7). No figures, no examples. Credit: the page prints no Contributors list; its only author record is the tag `authorname:tgrubbs`, given as the page gives it (the fuller name and affiliation were inferred and are dropped). Licence CC BY-NC-SA 4.0.
 
 ## Sub-concepts (page headers)
 

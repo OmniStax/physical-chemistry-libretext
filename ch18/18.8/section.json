@@ -236,7 +236,8 @@
        "tex": "\\kqrot = \\mk{o}{\\frac{1}{\\sigma}}\\mk{s}{\\int_{0}^{\\infty}}\\mk{g}{(2J+1)^2}\\mk{e}{e^{-\\kThetarot J(J+1)/\\kT}}\\mk{d}{dJ}",
        "uses": [
         5
-       ]
+       ],
+       "cap": "Here we have now included the symmetry term, $\\sigma$."
       },
       {
        "tex": "\\kqrot = \\mk{o}{\\frac{4}{\\sigma}}\\mk{s}{\\int_{0}^{\\infty}}\\mk{g}{J^2}\\mk{e}{e^{-\\kThetarot J^2/\\kT}}\\mk{d}{dJ}",
@@ -470,7 +471,8 @@
         ],
         "i": "pt",
         "e": "pt"
-       }
+       },
+       "cap": "Integration over $p_\\psi$ gives the factor $\\sqrt{2\\pi kTI_C}$."
       },
       {
        "tex": "\\kqrot = \\mk{a}{\\dfrac{8\\pi^2}{h^3}}\\mk{pt}{(2\\pi k\\kT)^{3/2}\\sqrt{\\kIA\\kIB\\kIC}}",
@@ -480,7 +482,8 @@
        "map": {
         "s": "a",
         "d": "a"
-       }
+       },
+       "cap": "Integration over $\\theta$, $\\phi$ and $\\psi$ gives a factor of $8\\pi^2$."
       },
       {
        "tex": "\\kqrot = \\mk{a}{\\dfrac{8\\pi^2}{\\sigma h^3}}\\mk{pt}{(2\\pi k\\kT)^{3/2}\\sqrt{\\kIA\\kIB\\kIC}}",
@@ -491,10 +494,9 @@
       {
        "tex": "\\kqrot = \\mk{a}{\\dfrac{\\pi^2}{\\sigma}}\\mk{pt}{\\sqrt{\\dfrac{8 \\pi \\kIA k\\kT}{h^2}} \\sqrt{\\dfrac{8 \\pi \\kIB k\\kT}{h^2}} \\sqrt{\\dfrac{8 \\pi \\kIC k\\kT}{h^2}}}",
        "uses": [],
-       "cap": "$8\\pi^2(2\\pi)^{3/2} = \\pi^2(8\\pi)^{3/2}$, so the factors regroup into one square root per axis."
+       "cap": "$8\\pi^2(2\\pi)^{3/2} = \\pi^2(8\\pi)^{3/2}$, so the factors regroup into one square root per axis. Combining all the integrals, we finally get Equation 18.8.1 after reintroduced the symmetry number $\\sigma$ as before with diatomic molecular rotation."
       }
      ],
-     "num": "(18.8.1)",
      "src": "18.8"
     }
    ]
@@ -508,11 +510,13 @@
      "assumes": [
       {
        "tex": "\\kqrot = \\dfrac{\\sqrt{\\pi}}{\\sigma}\\sqrt{\\dfrac{\\kT^3}{ \\kThetaA \\kThetaB \\kThetaC }}",
-       "src": "(18.8.3)"
+       "src": "(18.8.3)",
+       "drv": "asymmetric-classical"
       },
       {
        "tex": "\\kErot = Nk\\kT^2\\left(\\dfrac{\\partial \\ln \\kqrot}{\\partial \\kT}\\right)_{\\kV}",
-       "src": "17.8"
+       "src": "17.8",
+       "drv": "17.3/average-energy"
       },
       {
        "text": "For one mole $N = N_A$, and $N_Ak = \\kR$.",

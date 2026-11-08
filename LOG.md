@@ -1125,3 +1125,58 @@ Known gaps: 17.5's "In a few steps we can show that the temperature can be expre
 on "equation (17.9)" writes q_iq_jq_k plain; 17.4's Einstein axis label reads Θ_E against
 θ_E in the text; 17.5's kT label sits on a level line at some temperatures (it has a panel
 background).
+
+## Chapter 18 pass and colours · 2026-11-08
+
+Chapter 18 as built: the intro and 18.1–18.11 (no summary page; 18.E empty, not built). 6 figure
+rows: 5 interactive (1 moving, 18.7.1's water modes; 4 still: 18.1's thermal-wavelength Sim,
+18.4.1 with the folded Cl₂ chart, 18.10.1, 18.11.1; no 3D) and 1 kept image (18.5's HCl chart).
+14 derivations. 18 exercises in the Exercises document: 18.5.1 keyed, 18.9's 5 lab exercises
+with AI solutions, 12 AI exercises. 43 AI-marked corrections in footnotes.
+
+Chapter pass: the wanted 18.11 `C_V_bar` variables row (`molar-heat-capacity`), so 18.11.1's
+`\kCVbar` no longer reads 18.8's rotational meaning. The three forms staged on Chapter 17
+concepts: V/Λ³ on `translational-partition-function` (18.1), (18.9.4) on
+`einstein-heat-capacity` and (18.9.7) on `dulong-petit-law` (18.9); the stand-ins are gone
+(`translational-q-volume` withdrawn, its edges, coverage and a1's concept moved to
+`translational-partition-function` and `thermal-wavelength`; `molar-from-specific-heat` keeps
+its span but no form); both chapters merged, Chapter 18's edges Hasse-clean (the 12 redundant
+edges the check finds are Chapter 11's). `drv` links: 18.11's three ⟨E⟩ facts to
+`17.3/average-energy` and their q's to `18.1/translational-q`, `18.6/rotational-q`,
+`18.4/vibrational-q`; 18.4's ε_vib, 18.7's and 18.8's E = NkT²∂ln q/∂T to
+`17.3/average-energy`; 18.8's (18.8.3) to `asymmetric-classical`. No fact restates 17.4's
+`heat-capacity` or `einstein-heat-capacity` result. (18.8.1): the printed line stays (the text
+cites it twice); the note's derivation drops its `num` and ends on the book's "Combining all the
+integrals, we finally get Equation 18.8.1 …", so the number shows once. Book sentences back as
+reasons: 18.8's "Integration over θ, φ and ψ gives a factor of 8π²", "… over p_ψ gives the
+factor", "where we have now included the symmetry term"; 18.11's "This can be simplified by
+dividing …" and "Equation 18.11.5 is applicable at all temperatures, but if …". 18.9's credit:
+the page prints no Contributors list and no name; its one author record is the tag
+`authorname:tgrubbs`, now credited as that (the inferred "Tandy Grubbs (Stetson University)" is
+dropped). Flags checked: NO's ²Π doublet near 121 cm⁻¹ (each level doubly degenerate, 174 K)
+and ¹⁶O₂'s odd-only J confirmed against published sources; 18.9's specific heats for Li, Be and
+B match the CRC values, the other eleven stay labelled approximate in the solutions, whose
+products, percentages and fits (slope 24.90, R = 8.30) recompute; Exercise 3's "slightly above
+3R" now gives Na and Ba at about 12%. `node --check` clean on the five `figures.js`; no
+`\braket`, bare `\k` script, U+2011/U+FEFF/U+200B; in-book links carry `xref`/`figref`; every
+`\k` macro has a row in force; every page has `ai`, `built`, `notes`. Figures screenshot light
+and dark after rebuilding (18.10's legends and 18.11's slider as fixed): no console or KaTeX
+error.
+
+Colours (`colours:default --pin`): pressure `#40039F/#C6C3FD` (indigo, was temperature's pink
+family), molar-volume `#AA01CB/#D831FE`, amount `#7F151E/#FEA6A1`, all free palette colours, so
+no other type moved. Fixed: pressure~temperature (now 0.25/0.23, 64° apart in hue), pressure~amount,
+volume~molar-volume, amount~force-constant, amount~moment-of-inertia, mass~molar-volume.
+Category pairs under 0.12 on a shared page: 38 → 34. Worst pages (dry run): 0.042 0.043 0.046
+0.046 0.049 → 0.043 0.046 0.046 0.049 0.054, median 0.095, p10 0.068 unchanged. New near pair:
+amount~force 0.111/0.115 (3 pages, the best amount can get on its pages); amount sits 0.087
+from silver/aluminium's CPK colour in dark on one page.
+
+Known gaps: temperature~length (0.071/0.070, 12 pages) and wavelength~length (0.148/0.170,
+one hue family) are Chapter 1 pairs. Every placement of length, temperature or wavelength
+searched (palette and a free OKLCH grid) either moves the collision onto another type (e.g.
+partition-function taking temperature's pink lands 0.07 from length on 6 pages) or makes other
+pages worse; the best full fix moves temperature to green and wavelength to indigo at the cost
+of new close pairs (charge~wavelength 0.061 dark, partition-function~wavefunction 0.039). The
+book's 36 types fill its 36-colour palette, so this needs `--reshuffle` or fewer types on a
+page: the owner's call. 33 other pairs stay under 0.12 (worst dipole-moment~wavenumber 0.054).

@@ -16262,6 +16262,11 @@
         {
           "id": "dulong-petit",
           "latex": "C_V=\\dfrac{6R}{2}=3R"
+        },
+        {
+          "id": "cs-m-dulong-petit",
+          "latex": "C_s M = C_{V,m} \\approx 25\\ \\text{J K}^{-1}\\,\\text{mol}^{-1}",
+          "section": "18.9"
         }
       ]
     },
@@ -16308,6 +16313,11 @@
         {
           "id": "einstein-cv",
           "latex": "C_V = 3Nk\\left(\\dfrac{\\theta_E}{T}\\right)^2 \\dfrac{e^{\\theta_E/T}}{\\left(e^{\\theta_E/T} -1\\right)^2}"
+        },
+        {
+          "id": "cv-einstein-3d-molar",
+          "latex": "C_{V,m}^{3-D} = 3R \\left( \\dfrac{\\Theta_v }{T} \\right)^2 \\left( \\dfrac{e^{-\\Theta_v/2T} }{1- e^{-\\Theta_v/T}} \\right) ^2",
+          "section": "18.9"
         }
       ]
     },
@@ -16394,6 +16404,11 @@
         {
           "id": "translational-q",
           "latex": "q(V,\\beta) = \\left(\\dfrac{2\\pi m}{h^2\\beta}\\right)^{3/2}V"
+        },
+        {
+          "id": "q-trans-thermal-wavelength",
+          "latex": "q_\\text{trans} = \\left( \\dfrac{2 \\pi m kT}{h^2} \\right)^{3/2} V = \\dfrac{V}{\\Lambda^3}",
+          "section": "18.1"
         }
       ]
     },
@@ -16647,19 +16662,6 @@
         {
           "id": "thermal-wavelength",
           "latex": "\\Lambda = \\dfrac{h}{\\sqrt{2 \\pi m kT}}"
-        }
-      ]
-    },
-    {
-      "id": "translational-q-volume",
-      "kind": "result",
-      "section": "18.1",
-      "name": "Translational partition function from the thermal wavelength",
-      "statement": "Multiplying q_x, q_y and q_z gives the translational partition function of a particle in a volume V = L³: q_trans = V/Λ³ = (2πmkT/h²)^{3/2}V.",
-      "forms": [
-        {
-          "id": "q-trans-thermal-wavelength",
-          "latex": "q_\\text{trans} = \\left( \\dfrac{2 \\pi m kT}{h^2} \\right)^{3/2} V = \\dfrac{V}{\\Lambda^3}"
         }
       ]
     },
@@ -17136,13 +17138,7 @@
       "kind": "result",
       "section": "18.9",
       "name": "Molar heat capacity from the specific heat",
-      "statement": "The product of the specific heat capacity and the molar mass is the molar heat capacity; for metals Dulong and Petit's law makes it about 25 J K⁻¹ mol⁻¹.",
-      "forms": [
-        {
-          "id": "cs-m-dulong-petit",
-          "latex": "C_s M = C_{V,m} \\approx 25\\ \\text{J K}^{-1}\\,\\text{mol}^{-1}"
-        }
-      ]
+      "statement": "The product of the specific heat capacity and the molar mass is the molar heat capacity; for metals Dulong and Petit's law makes it about 25 J K⁻¹ mol⁻¹."
     },
     {
       "id": "dulong-petit-atomic-weights",
@@ -23151,14 +23147,6 @@
       "prereq": "translational-q-1d"
     },
     {
-      "concept": "translational-q-volume",
-      "prereq": "thermal-wavelength"
-    },
-    {
-      "concept": "many-translational-states",
-      "prereq": "translational-q-volume"
-    },
-    {
       "concept": "many-translational-states",
       "prereq": "partition-function-counts-states"
     },
@@ -23532,10 +23520,6 @@
     },
     {
       "concept": "average-translational-energy",
-      "prereq": "translational-q-volume"
-    },
-    {
-      "concept": "average-translational-energy",
       "prereq": "average-molecular-energy"
     },
     {
@@ -23601,6 +23585,22 @@
     {
       "concept": "diatomic-heat-capacity-steps",
       "prereq": "rotational-temperature"
+    },
+    {
+      "concept": "many-translational-states",
+      "prereq": "translational-partition-function"
+    },
+    {
+      "concept": "many-translational-states",
+      "prereq": "thermal-wavelength"
+    },
+    {
+      "concept": "average-translational-energy",
+      "prereq": "translational-partition-function"
+    },
+    {
+      "concept": "average-translational-energy",
+      "prereq": "thermal-wavelength"
     }
   ],
   "sheets": [
@@ -23742,20 +23742,20 @@
         "dark": "#BBB6FD"
       },
       "pressure": {
-        "light": "#740549",
-        "dark": "#FEAAD0"
+        "light": "#40039F",
+        "dark": "#C6C3FD"
       },
       "volume": {
         "light": "#8D6C09",
         "dark": "#B1890E"
       },
       "molar-volume": {
-        "light": "#654D09",
-        "dark": "#DDAB0A"
+        "light": "#AA01CB",
+        "dark": "#D831FE"
       },
       "amount": {
-        "light": "#700486",
-        "dark": "#E99AFF"
+        "light": "#7F151E",
+        "dark": "#FEA6A1"
       },
       "heat-capacity": {
         "light": "#0859AC",
@@ -23778,6 +23778,18 @@
       "heat-capacity": {
         "light": "#0859AC",
         "dark": "#68AAFE"
+      },
+      "pressure": {
+        "light": "#40039F",
+        "dark": "#C6C3FD"
+      },
+      "molar-volume": {
+        "light": "#AA01CB",
+        "dark": "#D831FE"
+      },
+      "amount": {
+        "light": "#7F151E",
+        "dark": "#FEA6A1"
       }
     },
     "referentOrder": [

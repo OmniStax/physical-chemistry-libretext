@@ -730,6 +730,11 @@
     {
      "id": "dulong-petit",
      "latex": "C_V=\\dfrac{6R}{2}=3R"
+    },
+    {
+     "id": "cs-m-dulong-petit",
+     "latex": "C_s M = C_{V,m} \\approx 25\\ \\text{J K}^{-1}\\,\\text{mol}^{-1}",
+     "section": "18.9"
     }
    ]
   },
@@ -776,6 +781,11 @@
     {
      "id": "einstein-cv",
      "latex": "C_V = 3Nk\\left(\\dfrac{\\theta_E}{T}\\right)^2 \\dfrac{e^{\\theta_E/T}}{\\left(e^{\\theta_E/T} -1\\right)^2}"
+    },
+    {
+     "id": "cv-einstein-3d-molar",
+     "latex": "C_{V,m}^{3-D} = 3R \\left( \\dfrac{\\Theta_v }{T} \\right)^2 \\left( \\dfrac{e^{-\\Theta_v/2T} }{1- e^{-\\Theta_v/T}} \\right) ^2",
+     "section": "18.9"
     }
    ]
   },
@@ -862,6 +872,11 @@
     {
      "id": "translational-q",
      "latex": "q(V,\\beta) = \\left(\\dfrac{2\\pi m}{h^2\\beta}\\right)^{3/2}V"
+    },
+    {
+     "id": "q-trans-thermal-wavelength",
+     "latex": "q_\\text{trans} = \\left( \\dfrac{2 \\pi m kT}{h^2} \\right)^{3/2} V = \\dfrac{V}{\\Lambda^3}",
+     "section": "18.1"
     }
    ]
   },

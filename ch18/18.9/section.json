@@ -11,7 +11,7 @@
   "<strong>Resources you will need</strong>: This exercise should be carried out within a data analysis software environment which is capable of graphing and generating a best-fit line for an x-y data set."
  ],
  "summary_html": "",
- "notes": "Adapted from Tandy Grubbs (Stetson University).",
+ "notes": "The page prints no Contributors and Attributions list; its only author record is the LibreTexts tag \"authorname:tgrubbs\", so the credit is that tag as the page gives it. Shared under the book's CC BY-NC-SA 4.0.",
  "ai": {
   "text": [
    {
@@ -85,7 +85,7 @@
     "type": "open",
     "generated_by": "ai",
     "hint": "Ask what makes $\\kThetav = h\\knu/\\kk$ large, and compare it with 298 K.",
-    "solution": "<p>The large deviations are beryllium, boron, carbon (diamond) and silicon, and they all fall below $3\\kR$, from about 20% to 75% low. They are light elements whose atoms are held by strong, directional covalent bonds (or, for beryllium, unusually stiff metallic ones). The deviation grows as the bonding becomes more covalent and the atom lighter: diamond is the extreme case, and the soft, heavy metals such as gold and lead sit at or slightly above $3\\kR$.</p><p>Both trends act through the vibrational frequency. A stiff bond and a light atom give a high $\\knu$, so $\\kThetav = h\\knu/\\kk$ is high. The limits of Equations 18.9.5 and 18.9.6 need $\\kThetav \\ll \\kT$; when $\\kThetav$ is comparable to or above 298 K, the factor in Equation 18.9.5 is well below 1 at room temperature, many oscillators stay in their ground level, and Equation 18.9.4 gives less than $3\\kR$. The few values slightly above $3\\kR$ (Na, Ba, Pb) are the small difference between $C_p$ and $C_v$ and the extra motion of soft lattices, which the harmonic model leaves out.</p>"
+    "solution": "<p>The large deviations are beryllium, boron, carbon (diamond) and silicon, and they all fall below $3\\kR$, from about 20% to 75% low. They are light elements whose atoms are held by strong, directional covalent bonds (or, for beryllium, unusually stiff metallic ones). The deviation grows as the bonding becomes more covalent and the atom lighter: diamond is the extreme case, and the soft, heavy metals such as gold and lead sit at or slightly above $3\\kR$.</p><p>Both trends act through the vibrational frequency. A stiff bond and a light atom give a high $\\knu$, so $\\kThetav = h\\knu/\\kk$ is high. The limits of Equations 18.9.5 and 18.9.6 need $\\kThetav \\ll \\kT$; when $\\kThetav$ is comparable to or above 298 K, the factor in Equation 18.9.5 is well below 1 at room temperature, many oscillators stay in their ground level, and Equation 18.9.4 gives less than $3\\kR$. The values above $3\\kR$ (Na and Ba by about 12%, Pb by 7%) come from the difference between $C_p$ and $C_v$ and the anharmonic motion of soft lattices, which the harmonic model leaves out.</p>"
    }
   },
   {

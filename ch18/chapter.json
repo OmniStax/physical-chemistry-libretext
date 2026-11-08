@@ -1748,6 +1748,13 @@
    "meaning": "the gas constant",
    "unit": "J K⁻¹ mol⁻¹",
    "section": "18.11"
+  },
+  {
+   "sym": "C_V_bar",
+   "concept": "molar-heat-capacity",
+   "meaning": "the molar heat capacity at constant volume of a diatomic gas",
+   "unit": "J K⁻¹ mol⁻¹",
+   "section": "18.11"
   }
  ]
 }

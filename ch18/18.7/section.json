@@ -83,7 +83,7 @@
     {
      "assumes": [
       {"tex": "\\kqvib = \\prod_{i=1}^f \\dfrac{ e^{-\\kThetavibi/2\\kT} }{1- e^{-\\kThetavibi/\\kT}}", "src": "(18.7.2)"},
-      {"tex": "\\kEvibavg = Nk\\kT^2\\left(\\dfrac{\\partial \\ln \\kqvib}{\\partial \\kT}\\right)_{\\kV}", "src": "17.8"}
+      {"tex": "\\kEvibavg = Nk\\kT^2\\left(\\dfrac{\\partial \\ln \\kqvib}{\\partial \\kT}\\right)_{\\kV}", "src": "17.8", "drv": "17.3/average-energy"}
      ],
      "then": {"tex": "\\kEvibavg = \\mk{c}{Nk\\kT^2}\\mk{d}{\\left(\\dfrac{\\partial \\ln \\kqvib}{\\partial \\kT}\\right)_{\\kV}}"},
      "steps": [

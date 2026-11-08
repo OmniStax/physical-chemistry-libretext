@@ -10,14 +10,14 @@ No objectives, no headers, three numbered equations (18.1.1)–(18.1.3), one unn
 
 The page has no `<h2>`; two blocks of ours:
 
-1. `box-states` **The sum over the states of a box**: the levels of a particle in a cube, q_trans as a sum and as the product (18.1.1), the sum replaced by an integral, then the derivation (18.1.2)–(18.1.3). Introduces `translational-levels-cubic-box`, `translational-q-product`, `sum-to-integral`, `translational-q-1d`, `thermal-wavelength`, `translational-q-volume`; reinforces 17.5's `translational-partition-function`.
+1. `box-states` **The sum over the states of a box**: the levels of a particle in a cube, q_trans as a sum and as the product (18.1.1), the sum replaced by an integral, then the derivation (18.1.2)–(18.1.3). Introduces `translational-levels-cubic-box`, `translational-q-product`, `sum-to-integral`, `translational-q-1d`, `thermal-wavelength`; reinforces 17.5's `translational-partition-function`, which carries q_trans = V/Λ³ as a form of 18.1.
 2. `many-states` **Many accessible states**: "This is usually a very large number", U = (3/2)nRT, the postulate, the Sim, the I₂ example. Introduces `many-translational-states`.
 
 (The exploration proposed "The Thermal Wavelength" for the second block; the derivation now holds Λ, so the block is named for what it keeps.)
 
 ## Figures
 
-- `sim-thermal-wavelength` · Sim (extra simulation, config: picked) · thermal-wavelength, translational-q-volume, many-translational-states · variation by slider and choice: the reader sees Λ shrink to a speck beside the spacing d = (kT/p)^{1/3} at 1 bar, and the two lengths cross only at a few kelvin for He and H₂, which the numbers 10²⁰–10³⁰ alone do not show · arrows: none · still: a temperature has no clock · choice gas (He, H₂, N₂, Ar, I₂), slider T (log, 1–3000 K, detent 300 K), opening on the book's example (I₂, 300 K: Λ = 6.32 pm, q_trans = 3.95 × 10³⁰ in 1 L) · headline: Λ, d and their ratio · scene (nine molecules on the lattice of spacing d, each with a blur of diameter Λ, atoms not to scale, said in the hover name) beside a log-log graph of Λ and d against T · 2D. Pressure is fixed at 1 bar (a pressure slider was judged to add a knob without a new idea). Conventions: F.el He, H, N, Ar, I.
+- `sim-thermal-wavelength` · Sim (extra simulation, config: picked) · thermal-wavelength, translational-partition-function, many-translational-states · variation by slider and choice: the reader sees Λ shrink to a speck beside the spacing d = (kT/p)^{1/3} at 1 bar, and the two lengths cross only at a few kelvin for He and H₂, which the numbers 10²⁰–10³⁰ alone do not show · arrows: none · still: a temperature has no clock · choice gas (He, H₂, N₂, Ar, I₂), slider T (log, 1–3000 K, detent 300 K), opening on the book's example (I₂, 300 K: Λ = 6.32 pm, q_trans = 3.95 × 10³⁰ in 1 L) · headline: Λ, d and their ratio · scene (nine molecules on the lattice of spacing d, each with a blur of diameter Λ, atoms not to scale, said in the hover name) beside a log-log graph of Λ and d against T · 2D. Pressure is fixed at 1 bar (a pressure slider was judged to add a knob without a new idea). Conventions: F.el He, H, N, Ar, I.
 
 ## Exercises
 
