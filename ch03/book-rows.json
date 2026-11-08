@@ -214,6 +214,10 @@
    "sym": "E_nnn",
    "latex": "E_{n_x,n_y,n_z}",
    "macro": "\\kEnnn"
+  },
+  {
+   "sym": "V_box",
+   "latex": "V"
   }
  ],
  "concepts": [
@@ -510,7 +514,6 @@
    "section": "3.3",
    "name": "Observables are eigenvalues",
    "terms": [
-    "observable",
     "measurable"
    ],
    "statement": "Every experimental measurable a is an eigenvalue of a specific operator Â, Âψ = aψ; the eigenvalues are the possible measured values, often only a subset of what classical mechanics allows.",
@@ -1084,7 +1087,8 @@
    "name": "Uncertainty of an observable",
    "symbol": "dA",
    "terms": [
-    "uncertainty"
+    "uncertainty",
+    "standard deviation"
    ],
    "statement": "The uncertainty in a quantity A for a wavefunction is ΔA = √(⟨A²⟩ − ⟨A⟩²), from the expectation values of Â² and Â.",
    "forms": [

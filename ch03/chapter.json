@@ -1051,6 +1051,19 @@
    "meaning": "the energy of the state (nₓ, n_y, n_z) of a particle in a 3D box",
    "unit": "J",
    "section": "3.9"
+  },
+  {
+   "sym": "p",
+   "type": "momentum",
+   "meaning": "the momentum of a momentum eigenfunction, +ħk or −ħk",
+   "unit": "kg·m/s",
+   "section": "3.7"
+  },
+  {
+   "section": "3.9",
+   "sym": "V_box",
+   "meaning": "the volume of the box, LₓL_yL_z",
+   "redefines": true
   }
  ]
 }

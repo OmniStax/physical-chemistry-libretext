@@ -123,3 +123,35 @@ bytes; 3.S's built page still has the two-argument `\braket`.
 Exercises: 5 questions (Example 4.6.2A among them), 3 keyed, 2 for AI
 solutions, 7 AI exercises proposed. `check:content`: no errors; one warning,
 the stored colours stale against the pages built since.
+
+## Pass 6 · 2026-11-08 · Chapter 3 built and its chapter pass
+
+Chapter 3 was built by parallel builders from the Pass 4 prep: the intro,
+3.1–3.9 and the summary page. 15 figures: 12 interactive (4 moving: the free
+wave, the detections, the turning phase, the two momentum waves; 1 3D: the
+point cloud of the 3D box) and the summary's 3 faithful copies; 13
+derivations; 14 book exercises (8 keyed, 6 with AI solutions) and 6 AI
+exercises, all `exercise` kind in the Exercises document; 43 AI-marked
+corrections.
+
+Chapter pass: the wanted rows (3.7's `p` for the readout of the standing
+waves; the symbol `V_box`, latex V, with a 3.9 row marked `redefines`, no
+macro, since an untyped macro sets plain ink and carries no hover data);
+"standard deviation" added to the terms of 3.8's `quantum-uncertainty`;
+"observable" taken off 3.3's `observables-as-eigenvalues`; 3.S's
+`\braket{\kpsi}{\kpsi}` written `\braket{\kpsi|\kpsi}` (the only `\braket`
+in the chapter); no bare `\k` script found; `colours:default` rerun.
+`check:content`: no errors, no warnings. Every figure screenshot in light,
+3.5, 3.9 and the summary in dark; no console or KaTeX error on any page,
+derivations included.
+
+Known gaps: the `observable` concept stays in 4.2, though the book first
+defines it in 3.3 ("A physical observable is anything that can be
+measured"); moving it means changing `ch04/book-rows.json` (the concept and
+its edge to 4.1's `classical-state`), left to the orchestrator. Summary
+pages cannot hold variables rows (the checker accepts only a chapter's
+sections), so 3.S takes 3.9's meanings. The fact schema has no field that
+links a fact to an earlier derivation (rule 29.5), so `box3d`'s facts from
+(3.5.10) and (3.5.16) cite the numbers only. The probability density's
+light hue (#013E1A) stands 0.122 from ink in OKLab, just over the 0.12
+target, and reads near black on the light ground.

@@ -53,8 +53,9 @@ def slug(s):
 
 
 class Drafter:
-    def __init__(self, sec, chdir):
+    def __init__(self, sec, chdir, num=None):
         self.sec = sec
+        self.num = num or sec  # the number the page prints its equations under: 5.S for 5.summary
         self.chdir = chdir
         self.eqnum = {}
         self.ids = set()
@@ -137,7 +138,7 @@ class Drafter:
         tex, marks = m.group(1), self.MARK.findall(m.group(2))
         tex = self.refs(tex)
         tex = self.katex(tex)  # the app's KaTeX has no mhchem, \\op or \\cancelto
-        nums = list(dict.fromkeys(f"{self.sec}.{n}" for lab, n in marks))  # one display, one number
+        nums = list(dict.fromkeys(f"{self.num}.{n}" for lab, n in marks))  # one display, one number
         if len(nums) > 1 and re.search(r"\\begin\{align\}", tex):
             # several numbered rows: KaTeX's align takes a \tag per row and keeps \nonumber
             body = re.search(r"\\begin\{align\}(.*)\\end\{align\}", tex, re.S)
@@ -353,7 +354,7 @@ class Drafter:
             if l.startswith("$$"):
                 for lab, n in self.MARK.findall(l.rsplit("$$", 1)[-1]):
                     if lab and lab not in self.eqnum:
-                        self.eqnum[lab] = f"{self.sec}.{n}"
+                        self.eqnum[lab] = f"{self.num}.{n}"
         self.figures, self.exercises = [], []
         title = lines[0][2:] if lines and lines[0].startswith("# ") else ""
         chunks, cur = [], ("", [])
@@ -411,7 +412,8 @@ def main(argv):
     front = sec.split(".", 1)[1] if sec.split(".", 1)[1] in ("intro", "summary") else None
     folder = os.path.join(BOOK, ch["dir"], front or sec)
     md = open(os.path.join(folder, "source.md")).read()
-    d = Drafter(sec, ch["dir"])
+    # a summary page numbers its equations under its own printed number (5.S.1), not "5.summary"
+    d = Drafter(sec, ch["dir"], ch["summary"]["number"] if front == "summary" else None)
     text, rec = d.run(md)
     if "--stdout" in argv:
         print(text)
