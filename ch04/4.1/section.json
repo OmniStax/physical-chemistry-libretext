@@ -12,8 +12,8 @@
  "summary_html": "",
  "notes": "Adapted from Allan Adams, Matthew Evans and Barton Zwiebach (MIT OpenCourseWare, used with permission), under CC BY-NC-SA 4.0.",
  "ai": {
-  "text": [{"model": "claude-opus-5-5", "effort": "low"}],
-  "figures": [{"model": "claude-opus-5-5", "effort": "low"}]
+  "text": [{"model": "claude-opus-5-5", "effort": "medium"}],
+  "figures": [{"model": "claude-opus-5-5", "effort": "medium"}]
  },
  "built": "2026-11-08",
  "exercises_lead": "",
@@ -26,7 +26,7 @@
    "withheld": "The book's Figure 4.1.1 is an MIT OpenCourseWare image that the book uses with permission, and that permission does not extend to this page.",
    "original_caption": "Examples of good wavefunctions, $\\psi(x)$, (red, top) and corresponding probability densities, $P(x)$, (blue, bottom).",
    "draws": ["wavefunction", "probability-density", "length", "wavenumber"],
-   "ai": [{"model": "claude-opus-5-5", "effort": "low", "part": "built"}]
+   "ai": [{"model": "claude-opus-5-5", "effort": "medium", "part": "built"}]
   },
   {
    "id": "sim-invalid",
@@ -41,7 +41,7 @@
    ],
    "original_caption": "(4.1.2) This function is an invalid wavefunction since the amplitude is going to infinity over a region (the middle in this case). (4.1.3) This function is an invalid wavefunction since it is not a proper function (i. e., not one-to-one). (4.1.4) These functions are invalid wavefunctions. (left) The first derivative of a function gives its gradient at a given point, and it thus exists as long as the function is continuous - only if there is a break in the function is there a point at which its first derivative does not exist. (right) The second derivative of this wavefunction is discontinuous at the point indicated, where the gradient of the line changes by more than 180º. In practice, this requirement may be somewhat flexible, particularly if the potential energy of the system shows rapid changes with distance. (CC BY-NC; Ümit Kaya via LibreTexts)",
    "draws": ["wavefunction", "length"],
-   "ai": [{"model": "claude-opus-5-5", "effort": "low", "part": "built"}]
+   "ai": [{"model": "claude-opus-5-5", "effort": "medium", "part": "built"}]
   }
  ],
  "referents": [],

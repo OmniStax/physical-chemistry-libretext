@@ -12,13 +12,13 @@
   "text": [
    {
     "model": "claude-opus-5-5",
-    "effort": "low"
+    "effort": "medium"
    }
   ],
   "figures": [
    {
     "model": "claude-opus-5-5",
-    "effort": "low"
+    "effort": "medium"
    }
   ]
  },
@@ -40,7 +40,7 @@
    "ai": [
     {
      "model": "claude-opus-5-5",
-     "effort": "low",
+     "effort": "medium",
      "part": "built"
     }
    ]
@@ -68,7 +68,7 @@
    "ai": [
     {
      "model": "claude-opus-5-5",
-     "effort": "low",
+     "effort": "medium",
      "part": "built"
     }
    ]
@@ -91,7 +91,7 @@
    "ai": [
     {
      "model": "claude-opus-5-5",
-     "effort": "low",
+     "effort": "medium",
      "part": "built"
     }
    ]
@@ -106,7 +106,7 @@
    "ai": [
     {
      "model": "claude-opus-5-5",
-     "effort": "low",
+     "effort": "medium",
      "part": "kept as the book prints it"
     }
    ]
@@ -130,7 +130,7 @@
    "ai": [
     {
      "model": "claude-opus-5-5",
-     "effort": "low",
+     "effort": "medium",
      "part": "built"
     }
    ]

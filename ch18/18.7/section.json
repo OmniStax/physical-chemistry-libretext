@@ -9,8 +9,8 @@
  "summary_html": "",
  "notes": "The page names no authors; it is shared under the book's CC BY-NC-SA 4.0, and the lone \"and\" between its two closing equations is left out where the derivation takes their place.",
  "ai": {
-  "text": [{"model": "claude-opus-5-5", "effort": "low"}],
-  "figures": [{"model": "claude-opus-5-5", "effort": "low"}]
+  "text": [{"model": "claude-opus-5-5", "effort": "medium"}],
+  "figures": [{"model": "claude-opus-5-5", "effort": "medium"}]
  },
  "built": "2026-11-08",
  "exercises_lead": "",
@@ -24,7 +24,7 @@
    "original_caption": "The three vibrational modes of water, the symmetric stretch (3656.7 cm-1, 5160 K ), the asymmetric stretch (3755.8 cm-1 , 5360 K ) and the bending mode (1594.8 cm-1 ,2290 K) are shown. The vibrational frequencies and the characteristic temperature for each mode are shown in parenthesis. Although not shown in the animation, the oxygen atom also moves with each of these normal modes.",
    "draws": ["temperature", "partition-function", "energy", "wavenumber"],
    "conventions": ["O", "H"],
-   "ai": [{"model": "claude-opus-5-5", "effort": "low", "part": "built, the mode shapes taken from 12.10's sim-water-modes"}]
+   "ai": [{"model": "claude-opus-5-5", "effort": "medium", "part": "built, the mode shapes taken from 12.10's sim-water-modes"}]
   }
  ],
  "referents": [],

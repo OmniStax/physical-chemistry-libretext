@@ -12,13 +12,13 @@
   "text": [
    {
     "model": "claude-opus-5-5",
-    "effort": "low"
+    "effort": "medium"
    }
   ],
   "figures": [
    {
     "model": "claude-opus-5-5",
-    "effort": "low"
+    "effort": "medium"
    }
   ]
  },
@@ -45,7 +45,7 @@
    "ai": [
     {
      "model": "claude-opus-5-5",
-     "effort": "low",
+     "effort": "medium",
      "part": "built, its curves computed from Table 18.4.1's rotational temperature of H₂"
     }
    ]
