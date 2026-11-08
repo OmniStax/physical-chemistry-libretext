@@ -83,7 +83,7 @@ function wavy(ctx, x1, y1, x2, y2, color, upto = 1) {
       if (on) arrow(ctx, a[0], a[1], b[0], b[1], vis ? pc : PAL.ink, 4);
       else line(ctx, a[0], a[1], b[0], b[1], alpha(PAL.ink, 0.3), 2, [10, 10]);
       const mx = (a[0] + b[0]) / 2, my = (a[1] + b[1]) / 2;
-      text(ctx, `${L.nm}`, mx + 6, my - 16, on ? (vis ? pc : PAL.ink) : PAL.muted, { size: 17, weight: on ? 600 : 400, align: 'center' });
+      text(ctx, `${L.nm}`, mx + 26, my - 16, on ? (vis ? pc : PAL.ink) : PAL.muted, { size: 17, weight: on ? 600 : 400, align: 'center' });
     });
     /* the story */
     const hxU = Y(E[Ln.he]), hxm = (hx0 + hx1) / 2, nxm = (nx0 + nx1) / 2, lxm = (lx0 + lx1) / 2;

@@ -40,7 +40,7 @@ const frac = (x) => x - Math.floor(x);
   run();
   const BEAM = '#e8302a';
   /* the book's viewpoint: the axis running from upper left to lower right, seen a little from above */
-  const S = 100, V = F.view({ yaw: -0.42, pitch: 0.3, dist: 2400, cx: 600, cy: 215 });
+  const S = 80, V = F.view({ yaw: -0.36, pitch: 0.2, dist: 2400, cx: 640, cy: 240 });
   function draw() {
     const { ctx, W } = begin(d.c);
     const tau = Math.min(cy.now(), K), k = Math.floor(tau), r = R.v / 100, g = G0.v;
@@ -55,7 +55,7 @@ const frac = (x) => x - Math.floor(x);
     const disc = (x, rad, n = 40) => Array.from({ length: n }, (_, i) => { const a = 2 * Math.PI * i / n; return u(x, rad * Math.sin(a), rad * Math.cos(a)); });
     const fill = (pts, c, a) => { ctx.save(); ctx.beginPath(); pts.forEach((p, i) => (i ? ctx.lineTo(p[0], p[1]) : ctx.moveTo(p[0], p[1]))); ctx.closePath(); ctx.fillStyle = alpha(c, a); ctx.fill(); ctx.strokeStyle = PAL.ink; ctx.lineWidth = 2; ctx.stroke(); ctx.restore(); };
     /* the pump: arrows rising into the medium from below (symbolic) */
-    for (let i = 0; i < 5; i++) { const x = -2.4 + 1.2 * i, a = u(x, -2.4, 1.2), b = u(x, -1.1, 1.2); arrow(ctx, a[0], a[1], b[0], b[1], alpha(PAL.ink, 0.6), 4); }
+    for (let i = 0; i < 5; i++) { const x = -2.4 + 1.2 * i, a = u(x, -2.0, 1.0), b = u(x, -1.05, 1.0); arrow(ctx, a[0], a[1], b[0], b[1], alpha(PAL.ink, 0.6), 4); }
     /* the high reflector, behind the medium */
     fill(disc(-5, 1.25), PAL.soft, 1); fill(disc(-5.15, 1.25), PAL.muted, 0.25);
     /* the axis inside, and the light running along it */
@@ -80,13 +80,13 @@ const frac = (x) => x - Math.floor(x);
     /* names */
     const lab = (s, p, dy, al = 'center') => text(ctx, s, p[0], p[1] + dy, PAL.ink, { size: 20, align: al });
     lab('high reflector', u(-5, 1.25, 0), -30); lab('gain medium', u(0, 0.85, -0.85), -26); lab(`output coupler, R = ${fmt(R.v, 1)}%`, u(5, 1.25, 0), -30);
-    lab('pump', u(-3.6, -2.4, 1.2), 0, 'right'); lab('beam', D, -24);
+    lab('pump', u(-3.0, -1.6, 1.0), 0, 'right'); lab('beam', D, -24);
     hits.length = 0;
     hits.push({ x: ctr(0)[0], y: ctr(0)[1], r: 70, name: `gain medium: gain per round trip G = ${fmt(G, 3)}` });
     hits.push({ x: ctr(5)[0], y: ctr(5)[1], r: 50, name: `output coupler: keeps ${fmt(R.v, 1)}% of the light, lets ${fmt(100 - R.v, 1)}% out` });
     hits.push({ x: ctr(-5)[0], y: ctr(-5)[1], r: 50, name: 'high reflector: keeps all of the light' });
     /* the light in the cavity against round trips */
-    const gb = { l: 150, r: W - 70, t: 400, b: 580 };
+    const gb = { l: 150, r: W - 70, t: 440, b: 590 };
     const ax = axes(ctx, gb, [0, K], [0, 0.5], { nx: 6, ny: 2, xl: 'round trips', yl: 'light inside (Iₛ)' });
     const f = (x) => { const i = Math.floor(x), q = x - i; return i >= K ? I[K] : I[i] * (1 - q) + I[i + 1] * q; };
     if (!below) line(ctx, gb.l, ax.Y(r * g - 1), gb.r, ax.Y(r * g - 1), alpha(PAL.ink, 0.4), 2, [10, 10]);

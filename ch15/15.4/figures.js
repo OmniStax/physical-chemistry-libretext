@@ -65,7 +65,7 @@ const sim = (id, H) => F.sim(root, id, H);
     const lx0 = 130, lx1 = 380, bar = 240;
     for (let j = 1; j <= n; j++) {
       const y = yOf[j], v = at(j, t);
-      ctx.save(); ctx.fillStyle = alpha(col(j), 0.35); ctx.fillRect(lx0, y - 22, bar * v, 20); ctx.restore();
+      ctx.save(); ctx.fillStyle = alpha(col(j), 0.55); ctx.fillRect(lx0, y - 28, bar * v, 26); ctx.restore();
       line(ctx, lx0, y, lx1, y, PAL.ink, 4);
       text(ctx, `${j}`, lx0 - 28, y, col(j), { size: 24, weight: 600, align: 'center' });
       hits.length = j === 1 ? 0 : hits.length;
@@ -80,7 +80,8 @@ const sim = (id, H) => F.sim(root, id, H);
       const nd = Math.min(7, Math.round(fl * 14));
       for (let q = 0; q < nd; q++) { const s = frac(t * 1.6 + q / nd); dot(ctx, x, y0 + (y1 - y0) * s, col(a), true, 6); }
       const nm = isPump ? 'pump' : isLase ? 'lasing' : kind === 'fast' ? 'fast' : kind === 'slow' ? 'slow' : '';
-      if (nm) text(ctx, nm, x + (isPump ? -14 : 18), (y0 + y1) / 2, isLase ? cL : PAL.muted, { size: 20, align: isPump ? 'right' : 'left' });
+      const ly = isPump ? y1 + (y0 - y1) * 0.22 : (y0 + y1) / 2;
+      if (nm) text(ctx, nm, x + (isPump ? -14 : 18), ly, isLase ? cL : PAL.muted, { size: 20, align: isPump ? 'right' : 'left' });
       hits.push({ x, y: (y0 + y1) / 2, r: 16, name: `${isPump ? 'pump' : 'decay'} ${a} → ${b}: ${fmt(fl, 3)} N per unit time` });
     });
     /* the populations against time */

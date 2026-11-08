@@ -92,13 +92,13 @@ function packet(ctx, x, y, a, color, len = 44) {
     const box = { l: 150, r: CW - 70, t: 300, b: 590 };
     const ax = axes(ctx, box, [0, T], [0, 1], { nx: 4, ny: 4, xl: 'time t (units of 1/A₂₁)', yl: 'share of the atoms', xc: C('time') });
     line(ctx, box.l, ax.Y(0.5), box.r, ax.Y(0.5), alpha(PAL.ink, 0.45), 3, [10, 10]);
-    text(ctx, 'N₂ = N₁', box.r - 8, ax.Y(0.5) - 18, PAL.muted, { size: 20, align: 'right' });
+    text(ctx, 'N₂ = N₁', box.l + 12, ax.Y(0.5) - 18, PAL.muted, { size: 20 });
     if (ninf < 0.46) line(ctx, box.l, ax.Y(ninf), box.r, ax.Y(ninf), alpha(c2, 0.6), 2, [4, 8]);
     plot(ctx, ax, n1, c1, { w: 5, x: [0, Math.max(1e-6, t)] });
     plot(ctx, ax, n2, c2, { w: 5, x: [0, Math.max(1e-6, t)] });
     dot(ctx, ax.X(t), ax.Y(n2(t)), c2, true, 9);
     dot(ctx, ax.X(t), ax.Y(above / NA), c2, false, 9);
-    F.legend(ctx, ax, [{ s: 'N₁/N, ground', color: c1, w: 5 }, { s: 'N₂/N, upper', color: c2, w: 5 }, { s: 'atoms of the strip above', color: c2, kind: 'dot', hollow: true }], { corner: 'tr' });
+    F.legend(ctx, ax, [{ s: 'N₁/N, ground', color: c1, w: 5 }, { s: 'N₂/N, upper', color: c2, w: 5 }, { s: 'atoms of the strip above', color: c2, kind: 'dot', hollow: true }], { corner: 'above' });
     hits.push({ x: ax.X(t), y: ax.Y(n2(t)), r: 14, name: `N₂/N = ${fmt(n2(t), 3)}` });
     hits.push({ x: box.l + 60, y: ax.Y(0.5), r: 14, name: 'half the atoms in each level, N₂ = N₁' });
     const a = n1(t), b = n2(t);

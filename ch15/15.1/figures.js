@@ -220,7 +220,7 @@ const supPow = (t) => { const k = Math.round(Math.log10(t)); return k === 0 ? '1
 
 /* ---------- Figures 15.1.4, 15.1.5, 15.1.8, 15.1.10, 15.1.11: the potential curves, one route at a time ----------
    x: nuclear coordinate, dimensionless (the oscillator length), -4.5 to 7.5; y: energy 0 to 4.4 eV. Harmonic wells of
-   one vibrational quantum, 0.20 eV: S0 = 0.1 x^2, S1 = 2.6 + 0.1 (x - d)^2, T1 = 2.4 + 0.1 (x - d - 0.5)^2, levels at
+   one vibrational quantum, 0.20 eV: S0 = 0.1 x^2, S1 = 2.6 + 0.1 (x - d)^2, T1 = 2.4 + 0.1 (x - d - 0.8)^2, levels at
    (v + 1/2) 0.20 eV above each bottom between their turning points. S1's v = 0 (2.7 eV) lies level with S0's v = 13 and
    T1's v = 1, so internal conversion and intersystem crossing are sideways slides. The vertical excitation from S0 v = 0
    lands on the S1 level nearest the curve above x = 0, v' = round(d^2/2 - 1/2); emission from the bottom of a well
@@ -235,7 +235,7 @@ const supPow = (t) => { const k = Math.round(Math.log10(t)); return k === 0 ? '1
   const V0 = (x) => 0.5 * W * x * x;
   const nearest = (h) => Math.max(0, Math.round(h / W - 0.5));
   function plan() {
-    const dd = D.v, dT = dd + 0.5, r = ROUTE.value, st = [];
+    const dd = D.v, dT = dd + 0.8, r = ROUTE.value, st = [];
     const vp = nearest(0.5 * W * dd * dd), Eup = G1 + (vp + 0.5) * W;
     st.push({ k: 'abs', dur: 1.0, a: [0, W / 2], b: [0, Eup], E: Eup - W / 2 });
     let x = 0;
@@ -286,14 +286,16 @@ const supPow = (t) => { const k = Math.round(Math.log10(t)); return k === 0 ? '1
     };
     topline(ctx, heads[cur.k]);
     const box = { l: 150, r: 1300, t: 120, b: 560 };
-    const ax = axes(ctx, box, [-6, 8], [0, 4], { nx: 0, ny: 4, xl: 'nuclear separation', xc: C('length'), yl: 'energy (eV)', yc: ce });
+    const ax0 = axes(ctx, box, [0, 14], [0, 4], { nx: 0, ny: 4, xl: 'nuclear separation', xc: C('length'), yl: 'energy (eV)', yc: ce });
+    /* the axes run 0 to 14; the wells are drawn in x from -6 to 8, shifted by 6 so no gridline marks x = 0 */
+    const ax = { ...ax0, X: (x) => ax0.X(x + 6) }, sh = (f) => (x) => f(x - 6);
     const V1 = (x) => G1 + 0.5 * W * (x - dd) ** 2, VT = (x) => GT + 0.5 * W * (x - dT) ** 2;
     const ladder = (E0, xc, n, a) => { ctx.save(); ctx.beginPath(); ctx.rect(box.l, box.t, box.r - box.l, box.b - box.t); ctx.clip(); for (let v = 0; v < n; v++) { const h = (v + 0.5) * W, e = E0 + h; if (e > 4) break; const s = Math.sqrt(2 * h / W); line(ctx, ax.X(xc - s), ax.Y(e), ax.X(xc + s), ax.Y(e), alpha(ce, a), 2); } ctx.restore(); };
     ladder(0, 0, 16, 0.2); ladder(G1, dd, 9, 0.4);
     if (r === 'isc') ladder(GT, dT, 10, 0.4);
-    F.plot(ctx, ax, V0, ce, { w: 4 });
-    F.plot(ctx, ax, V1, ce, { w: 4 });
-    if (r === 'isc') F.plot(ctx, ax, VT, alpha(ce, 0.75), { w: 4, dash: [10, 10] });
+    F.plot(ctx, ax0, sh(V0), ce, { w: 4 });
+    F.plot(ctx, ax0, sh(V1), ce, { w: 4 });
+    if (r === 'isc') F.plot(ctx, ax0, sh(VT), alpha(ce, 0.75), { w: 4, dash: [10, 10] });
     text(ctx, 'singlet ground state S₀', ax.X(-3.2) - 14, ax.Y(V0(-3.2)), ce, { size: 20, weight: 600, align: 'right', bg: PAL.panel });
     text(ctx, 'singlet excited state S₁', ax.X(dd - 3.4) - 14, ax.Y(V1(dd - 3.4)), ce, { size: 20, weight: 600, align: 'right', bg: PAL.panel });
     if (r === 'isc') text(ctx, 'triplet T₁', ax.X(dT + 2.2) + 14, ax.Y(VT(dT + 2.2)) + 10, ce, { size: 20, weight: 600, align: 'left', bg: PAL.panel });
