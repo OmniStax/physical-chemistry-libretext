@@ -1,0 +1,146 @@
+{
+ "id": "9.6",
+ "module": "13458",
+ "chapter": "9",
+ "title": "A Simple Molecular-Orbital Treatment of H₂ Places Both Electrons in a Bonding Orbital",
+ "short": "Molecular orbitals of H₂",
+ "lead": "Molecular orbitals are built from basis functions, filled with electrons two at a time, and gathered into Slater determinants. Their symbols record the electrons each holds and how each orbital behaves under reflection and inversion.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "Adapted from Hanson, Harvey, Sweeney and Zielinski's Quantum States of Atoms and Molecules, with a note by Mark Tuckerman (New York University), under CC BY-NC-SA 4.0; the book gives no credit for Figure 9.6.1.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "high"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "high"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercise in this section. The one here, on the g and u labels of Li₂'s and N₂'s configurations, was written by AI with its solution, Bloom level and concept tags.",
+ "figures": [
+  {
+   "id": "sim-configurations",
+   "kind": "sim",
+   "number": "9.6.1",
+   "originals": [
+    "/media/ch09/51428-general_orbital_E_levels.gif"
+   ],
+   "original_caption": "a) The lowest energy configuration of a closed-shell system. b) The lowest energy configuration of an open-shell radical. c) An excited singlet configuration. d) An excited triplet configuration.",
+   "draws": [
+    "energy"
+   ],
+   "conventions": [
+    "e-"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "high",
+     "part": "redrawn as the book draws it"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "orbitals-and-configurations",
+   "concept": "molecular-electron-configuration",
+   "verb": "introduces"
+  },
+  {
+   "span": "orbitals-and-configurations",
+   "concept": "basis-functions",
+   "verb": "uses"
+  },
+  {
+   "span": "orbitals-and-configurations",
+   "concept": "slater-determinant",
+   "verb": "uses"
+  },
+  {
+   "span": "orbitals-and-configurations",
+   "concept": "aufbau-principle",
+   "verb": "uses"
+  },
+  {
+   "span": "orbitals-and-configurations",
+   "concept": "pauli-exclusion-principle",
+   "verb": "uses"
+  },
+  {
+   "span": "symmetry",
+   "concept": "mo-symmetry-labels",
+   "verb": "introduces"
+  },
+  {
+   "span": "symmetry",
+   "concept": "gerade-ungerade",
+   "verb": "introduces"
+  },
+  {
+   "span": "symmetry",
+   "concept": "quantum-chemistry-methods",
+   "verb": "introduces"
+  },
+  {
+   "span": "symmetry",
+   "concept": "hartree-fock-method",
+   "verb": "reinforces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "ai1",
+   "source_id": "the lowest energy configuration of N",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "symmetry",
+   "prompt": "<p>Li<sub>2</sub> has six electrons, and its lowest energy configuration fills the three lowest orbitals of the N<sub>2</sub> configuration, Equation 9.6.3. (a) How many of Li<sub>2</sub>'s electrons are in <em>gerade</em> orbitals? (b) How many of N<sub>2</sub>'s fourteen electrons are in <em>gerade</em> orbitals?</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 4,
+      "tol": 0.001,
+      "hint": "Write Li₂'s configuration in the symbols of Equation 9.6.3 and read the subscripts."
+     },
+     {
+      "part": "b",
+      "value": 6,
+      "tol": 0.001
+     }
+    ],
+    "solution": "<p>(a) Li<sub>2</sub> takes the first three orbitals of Equation 9.6.3, two electrons each: $1\\sigma_g^2\\,1\\sigma_u^2\\,2\\sigma_g^2$. The <em>g</em> orbitals are $1\\sigma_g$ and $2\\sigma_g$, which hold 4 electrons; the other 2 are in the <em>u</em> orbital $1\\sigma_u$.</p><p>(b) In $1\\sigma_g^2\\,1\\sigma_u^2\\,2\\sigma_g^2\\,2\\sigma_u^2\\,1\\pi_u^4\\,3\\sigma_g^2$ the <em>g</em> orbitals are $1\\sigma_g$, $2\\sigma_g$ and $3\\sigma_g$, with 2 + 2 + 2 = 6 electrons. The other 8 are in $1\\sigma_u$, $2\\sigma_u$ and the pair $1\\pi_u$, which change sign under inversion through the middle of the bond.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "ai1",
+   "concept": "gerade-ungerade"
+  },
+  {
+   "exercise": "ai1",
+   "concept": "molecular-electron-configuration"
+  },
+  {
+   "exercise": "ai1",
+   "concept": "mo-symmetry-labels"
+  }
+ ],
+ "footnotes": []
+}

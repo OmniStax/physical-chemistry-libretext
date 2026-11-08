@@ -1,0 +1,70 @@
+<section id="axial-quantum-numbers">
+<h2>Quantum numbers along the axis</h2>
+<p>The quantum numbers for diatomic molecules are similar from the atomic quantum numbers. Be cautious, because the rules for finding the possible combinations are different. The total orbital angular momentum quantum number For the molecular case, <span data-concept="axial-orbital-angular-momentum">this number is called $Λ$ instead of $L$</span>. It follows the same naming convention as $L$, except that instead of using capital English letters, it uses capital Greek letters:</p>
+<ul><li>$Λ = 0 \rightarrow Σ$</li><li>$Λ = 1 \rightarrow Π$</li><li>$Λ = 2 \rightarrow Δ$</li><li>$Λ = 3 \rightarrow Φ$</li></ul>
+<p>Unlike $L$, there is not a general formula for finding the possible combinations of $Λ$. You have to examine the individual <span data-concept="microstate">microstates</span>. This is easier than it sounds.</p>
+<ul><li><strong>The total magnetic quantum number</strong> $M_L$: $M_L$ works like $M_l$ with atoms, except that there is no formula for finding the combinations.</li><li><strong><span data-concept="total-spin-magnetic-quantum-number">The total spin magnetic quantum number</span></strong> $M_S$: $M_S$ works exactly like $M_s$. Electrons can either point with or against the z ‐ axis, and being in a molecular orbital versus an atomic orbital doesn’t change this. $M_S$ can range from $m_{s1} + m_{s2}$ to $m_{s1} - m_{s2}$.<sup class="fn" data-note="c-ms"></sup></li></ul>
+</section>
+
+<section id="parity-and-reflection">
+<h2>Two New Symmetries: Parity and Reflection</h2>
+<p>Molecular orbitals are more complex than atomic ones and require more modifiers to completely define. <strong>Parity</strong> (sometimes called “inversion”) tells you if the orbital is <em>symmetric</em> or <em>anti‐symmetric</em> when an inversion operation is performed. The symmetry notation <strong>u</strong> and <strong>g</strong> are sometimes used when describing molecular orbitals. This refers to the operation of inversion, which requires starting at an arbitrary point in the orbital, traveling straight through the center, and then continuing outwards an equal distance from the center. The orbital is designated <strong><span data-concept="gerade-ungerade">g</span></strong> (for gerade, even) if the phase is the same, and <strong>u</strong> (for ungerade, uneven) if the phase changes sign.</p>
+<figure class="sim" id="sim-parity" data-original="/media/ch09/57503-M22.jpg,/media/ch09/182590-9.15.1.png" data-original-caption="">
+  <div class="sim-head"><span class="eyebrow">Figure</span><span>Choose an orbital and an operation. Under inversion, compare the sign at P with the sign at its image through the center; under reflection, look down the axis and see which lobes the mirror plane swaps.</span></div>
+</figure>
+<p>To determine whether or not a given state is $g$ or $u$, <span data-concept="molecular-state-parity">find the parity of each individual open‐shell electron</span> and uses these simple (Laporte rules):<sup class="fn" data-note="c-laporte"></sup></p>
+<ul><li>$g + g \rightarrow g$</li><li>$g + u \rightarrow u$</li><li>$u + u \rightarrow g$</li></ul>
+<div class="example" id="ex-9-15-1">
+<h3>Example 9.15.1 · Closed Shell Configuration<sup class="fn" data-note="c-closed"></sup></h3>
+<p>What is the parity of the state $1σ_g^21σ_u^22σ_g^22σ_u^22π_u^12π_u^1$ ?</p>
+<h4>Solution</h4>
+<p>Since both open shell electrons are ungerade, the overall parity is g. Helpful hint: bonding sigma orbitals and anti ‐ bonding pi orbitals are always gerade. Anti ‐ bonding sigmas and bonding pis are always ungerade. Draw them and see for yourself.</p>
+</div>
+<p><span data-concept="sigma-reflection-symmetry">Reflection determines if a given orbital is symmetric or anti‐symmetric upon reflection through a plane that contains both nuclei</span>. The choice of symmetry planes is arbitrary. As long as you pick a plane and stick with it, you will always get the right answer. When an orbital is symmetric, it is labeled +. When an orbital is anti ‐ symmetric, it is labeled ‐ . To find the overall reflection of a state, use these rules:</p>
+<ul><li>$(+)(+) \rightarrow +$</li><li>$(+)(-) \rightarrow -$</li><li>$(-)(-) \rightarrow +$</li></ul>
+<p><strong>Reflection only applies to Σ states!</strong> For Λ > 0, there are no reflection labels! If you experiment with the rules, you will quickly realize why this is the case.</p>
+<div class="example" id="ex-9-15-2">
+<h3>Example 9.15.2</h3>
+<p>What is the reflection of the state $1σ_g^21σ_u^22σ_g^22σ_u^22π_u^12π_u^1$ ?</p>
+<h4>Solution</h4>
+<p>You need to know what the orbitals look like. Draw a picture and then pick a plane. For this example, the plane of the page is selcted, but the orthogonal plane would have worked just as well.</p>
+<p>The “vertical” orbital is + The “horizontal” orbital is ‐ Since one is + and one is ‐ , the overall reflection is ‐ . Try using the orthogonal plane and convince yourself that you still get the same answer.</p>
+</div>
+<div class="example" id="ex-9-15-3">
+<h3>Example 9.15.3 · Oxygen</h3>
+<p>What are the term symbols for $O_2$ ?</p>
+<h4>Solution</h4>
+<p>The molecular orbital diagram for $O_2$ is</p>
+<figure class="photo" id="fig-o2-sticks">
+  <img src="/media/ch09/182591-9.15.2.png" alt="O2's orbital levels from σg at the bottom to the two π*g orbitals at the top, each with one electron, all lower levels holding two.">
+  <figcaption><span class="eyebrow">Figure</span></figcaption>
+</figure>
+<p>Where I chose arbitrary configurations for the last two electrons.</p>
+<p>There are two open ‐ shell electrons occupying the anti‐bonding $π_g$ orbitals. These are the only electrons that matter. It is easiest to simply draw all of the permutations and figure out the bounds on $Λ$ and $M_L$ by inspection. If we do this, it is easy to see that $Λ = 2,0$ and that $M_L = 2,0, - 2$</p>
+<figure class="sim" id="sim-o2-terms" data-original="/media/ch09/182592-9.15.3.png" data-original-caption="">
+  <div class="sim-head"><span class="eyebrow">Figure</span><span>Watch the six microstates of two π electrons fill the chart, then the terms peel off one at a time. A Δ term takes only the cells with $M_L = \pm 2$, and the two Σ terms differ in reflection.</span></div>
+</figure>
+<div class="book-table">
+  <div class="tcap"><span class="eyebrow">Table</span><span></span></div>
+  <table>
+    <thead><tr><th>$M_s= -1$</th><th>$M_s= 0$</th><th>$M_s= 2$<sup class="fn" data-note="c-chart"></sup></th></tr></thead>
+    <tbody>
+      <tr><td>0</td><td><strong>1</strong></td><td>0</td></tr>
+      <tr><td>1</td><td>2</td><td>1</td></tr>
+      <tr><td>0</td><td>1</td><td>0</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>The top row is a $Λ=2$ $M_S =0$ state, so it is $^1Δ$. Both electrons are in the rightmost orbital. This orbital is gerade, and (g)(g) = g, so the parity label is g. We do not assign reflection labels to non Σ states, so the <span data-concept="molecular-term-symbol">term symbol</span> is $^1Δ_g$. After removing the used up microstates, the chart becomes</p>
+<div class="book-table">
+  <div class="tcap"><span class="eyebrow">Table</span><span></span></div>
+  <table>
+    <thead><tr><th>$M_s= -1$</th><th>$M_s= 0$</th><th>$M_s= 2$</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td><strong>1</strong></td><td>0</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>This is a Λ =0 state with three possible spin configurations, so it is $^3Σ$. We know that the electrons are in different sub‐orbitals (if you cannot see this, try drawing all of the possible combinations that give $Λ =0$). Both of the orbitals are gerade, so the overall parity is gerade. One of the orbitals will be +, the other will be ‐ . The final answer is $^1Δ_g \; ^3Σ^+_g$<sup class="fn" data-note="c-answer"></sup></p>
+</div>
+</section>

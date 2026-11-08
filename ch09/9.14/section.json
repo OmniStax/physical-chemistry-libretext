@@ -1,0 +1,161 @@
+{
+ "id": "9.14",
+ "module": "13466",
+ "chapter": "9",
+ "title": "Molecular Term Symbols Describe Electronic States of Molecules",
+ "short": "Molecular term symbols",
+ "lead": "Each electronic state of a diatomic molecule carries a term symbol built, as an atom's is, from its spin and angular momentum, with extra labels for the molecule's symmetry. The symbols also tell which transitions between states are allowed.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "Shared under CC BY 4.0 at the source and here under the book's CC BY-NC-SA 4.0; the book gives no credit for its two orbital diagrams.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": []
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercise here; the one card is an AI exercise with an AI solution. Its Bloom level and concept tags were chosen by AI.",
+ "figures": [
+  {
+   "id": "fig-co-excited",
+   "kind": "figure",
+   "originals": [
+    "/media/ch09/9174-mo4.PNG"
+   ],
+   "draws": [],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "kept as the book prints it"
+    }
+   ]
+  },
+  {
+   "id": "fig-o2-diagram",
+   "kind": "figure",
+   "originals": [
+    "/media/ch09/9176-mo6.PNG"
+   ],
+   "draws": [],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "kept as the book prints it"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "molecular-term-symbols",
+   "concept": "molecular-term-symbol",
+   "verb": "uses"
+  },
+  {
+   "span": "molecular-term-symbols",
+   "concept": "spin-multiplicity",
+   "verb": "uses"
+  },
+  {
+   "span": "introduction",
+   "concept": "molecular-term-symbol",
+   "verb": "introduces"
+  },
+  {
+   "span": "introduction",
+   "concept": "axial-orbital-angular-momentum",
+   "verb": "introduces"
+  },
+  {
+   "span": "introduction",
+   "concept": "axial-total-angular-momentum",
+   "verb": "introduces"
+  },
+  {
+   "span": "introduction",
+   "concept": "term-symbol",
+   "verb": "uses"
+  },
+  {
+   "span": "introduction",
+   "concept": "gerade-ungerade",
+   "verb": "uses"
+  },
+  {
+   "span": "determining-term-symbols",
+   "concept": "finding-molecular-terms",
+   "verb": "introduces"
+  },
+  {
+   "span": "transitions",
+   "concept": "diatomic-selection-rules",
+   "verb": "introduces"
+  },
+  {
+   "span": "transitions",
+   "concept": "russell-saunders-selection-rules",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "If one of the HOMO electrons on the",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "transitions",
+   "prompt": "<p>In an excited state of CO one electron is moved from the 5σ orbital to the 2π orbital, so the open shells are 5σ<sup>1</sup>2π<sup>1</sup>. Which of the terms of this configuration can return to the ground state <sup>1</sup>Σ<sup>+</sup> by an electric dipole transition that obeys this section's selection rules?</p>",
+   "answer": {
+    "type": "choice",
+    "generated_by": "ai",
+    "options": [
+     "<sup>1</sup>Π only",
+     "<sup>3</sup>Π only",
+     "Both <sup>1</sup>Π and <sup>3</sup>Π",
+     "Neither"
+    ],
+    "correct": 0,
+    "hint": "Find the terms from Π × Σ<sup>+</sup> and the two possible total spins, then check ΔΛ and ΔS for each.",
+    "solution": "<p>The open-shell labels multiply as $\\Pi \\times \\Sigma^+ = \\Pi$, so $\\Lambda = 1$. The two electrons are in different orbitals, so their spins may pair ($S = 0$) or not ($S = 1$): the terms are $^1\\Pi$ and $^3\\Pi$. A transition to $^1\\Sigma^+$ has $\\Delta\\Lambda = -1$, which is allowed for both. $\\Delta S = 0$ holds only for $^1\\Pi$; from $^3\\Pi$ the spin would change by 1. Only $^1\\Pi$ can make the transition.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "finding-molecular-terms"
+  },
+  {
+   "exercise": "a1",
+   "concept": "diatomic-selection-rules"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-multiplicity",
+   "kind": "correction",
+   "html": "The spin multiplicity $2S + 1$ reaches 3, with $S = 1$. With the spins paired, $S = 0$ and the multiplicity is 1, which gives the singlet and triplet named next."
+  },
+  {
+   "id": "c-o2-terms",
+   "kind": "correction",
+   "html": "Both of O<sub>2</sub>'s open-shell electrons are in $\\pi_g$ orbitals, so the product is $\\Pi_g \\times \\Pi_g = \\Sigma_g^+ + \\Sigma_g^- + \\Delta_g$. With the two electrons in one degenerate pair, the Pauli principle leaves the terms $^3\\Sigma_g^-$, $^1\\Delta_g$ and $^1\\Sigma_g^+$, and the ground state is $^3\\Sigma_g^-$. Section 9.15 works these out from the microstates."
+  },
+  {
+   "id": "c-rules",
+   "kind": "correction",
+   "html": "The ‡ is a broken symbol for a forbidden transition. The electric dipole rules for a diatomic molecule are $\\Delta\\Lambda = 0, \\pm1$, $\\Delta S = 0$ and $\\Delta\\Omega = 0, \\pm1$, with $\\Sigma^+ \\leftrightarrow \\Sigma^-$ forbidden and, in a homonuclear molecule, only $g \\leftrightarrow u$ allowed."
+  }
+ ]
+}

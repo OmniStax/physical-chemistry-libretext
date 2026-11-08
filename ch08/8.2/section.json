@@ -9,7 +9,7 @@
   "Demonstrate that both perturbation theory and variational methods can be used to solve the electron structure of the helium atom."
  ],
  "summary_html": "<p>The purpose of this section is to examine five trial wavefunctions for the helium atom used within the Perturbation Theory and Variational method approximation. For the Variational method approximation, the calculations begin with an uncorrelated wavefunction in which both electrons are placed in a hydrogenic orbital with scale factor $\\alpha$. The next four trial functions use several methods to increase the amount of electron-electron interactions in the wavefunction. As the summary of results that is appended shows this gives increasingly more favorable agreement with the experimentally determined value for the ground-state energy of the species under study. The detailed calculations show that the reason for this improved agreement with experiment is due to a reduction in electron-electron repulsion.</p><p>Five variational method calculations that have been outlined above for the helium atom ($Z=2$) can be repeated for two-electron atoms (e.g., $\\mathrm{H^-}$, $\\mathrm{Li^+}$, $\\mathrm{Be^{2+}}$, etc). The hydride anion is a particularly interesting case because the first two trial wavefunctions do not predict a stable ion (i.e., they are poor approximations). This indicates that electron-electron interactions is an especially important issue for atoms and ions with small nuclear charge.</p>",
- "notes": "Credited to frioux; the page is CC BY 4.0 at the source and is shared here under the book's CC BY-NC-SA 4.0.",
+ "notes": "Written by frioux, CC BY 4.0 at the source and shared here under the book's CC BY-NC-SA 4.0.",
  "ai": {
   "text": [
    {

@@ -1,0 +1,315 @@
+{
+ "id": "9.1",
+ "module": "13451",
+ "chapter": "9",
+ "title": "The Born-Oppenheimer Approximation Simplifies the Schrödinger Equation for Molecules",
+ "short": "The Born-Oppenheimer approximation",
+ "lead": "A molecule's electrons and nuclei move together, but the nuclei are so much heavier that the electrons can be treated as if the nuclei stood still. That idea splits the molecule's Schrödinger equation into one for the electrons and one for the nuclei, and gives the potential energy curves and surfaces of chemistry.",
+ "objectives": [
+  "Understand the need to introduce an approximation like the Born-Oppenheimer approximation to solve multi-electron systems",
+  "Understand the basis of parameterization involved in using the Born-Oppenheimer approximation"
+ ],
+ "summary_html": "<p>In this section we started with the Schrödinger equation for a diatomic molecule and separated it into two equations, an electronic Schrödinger equation and a nuclear Schrödinger equation. In order to make the separation, we had to make an approximation. We had to neglect the effect of the nuclear kinetic energy on the electrons. The fact that this assumption works can be traced to the fact that the nuclear masses are much larger than the electron mass. We then used the solution of the electronic Schrödinger equation to provide the potential energy function for the nuclear motion. The solution to the nuclear Schrödinger equation provides the vibrational wavefunctions and energies.</p>",
+ "notes": "Adapted from David M. Hanson, Erica Harvey, Robert Sweeney and Theresa Julia Zielinski's Quantum States of Atoms and Molecules; Example 9.1.1's drawing is by Jim.belk via Wikipedia (CC BY-SA 3.0), and the H₂ curve of Figure 9.1.1 is a Morse fit to Huber and Herzberg's constants (NIST), the water surface of Figure 9.1.2 a model built from water's bond energy, stretch and bend constants.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "Exercises 9.1.1 and 9.1.2 and their keys are the book's, with a correction under 9.1.1's key; the solutions to Exercises 9.1.3 and 9.1.4, which the book leaves unkeyed, and every Bloom level and concept tag were written by AI.",
+ "figures": [
+  {
+   "id": "sim-coupled",
+   "kind": "sim",
+   "originals": [
+    "/media/ch09/199783-597px-Coupled_Harmonic_Oscillator.svg.png"
+   ],
+   "original_caption": "(CC BY-SA 3.0 Unported; Jim.belk via [Wikipedia](https://en.Wikipedia.org/wiki/File:Coupled_Harmonic_Oscillator.svg)).",
+   "draws": [
+    "mass",
+    "force-constant",
+    "time",
+    "length"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "sim-h2-potential",
+   "kind": "sim",
+   "number": "9.1.1",
+   "originals": [
+    "/media/ch09/141706-imageedit_9_2284491475.gif"
+   ],
+   "original_caption": "The potential energy function for a diatomic molecule.",
+   "draws": [
+    "energy",
+    "length"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "sim-water-pes",
+   "kind": "sim",
+   "number": "9.1.2",
+   "originals": [
+    "/media/ch09/57780-600px-Potential_Energy_Surface_for_Water.png"
+   ],
+   "original_caption": "The potential energy surface for a water molecule: Shows the energy minimum corresponding to optimized molecular structure for water- O-H bond length of 0.0958 nm and H-O-H bond angle of 104.5°. from Wikipeda (AimNature)",
+   "widths": [
+    447
+   ],
+   "draws": [
+    "energy",
+    "length",
+    "angle"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "opening",
+   "concept": "quantum-chemistry",
+   "verb": "introduces"
+  },
+  {
+   "span": "the-born-oppenheimer-approximation",
+   "concept": "born-oppenheimer-approximation",
+   "verb": "introduces"
+  },
+  {
+   "span": "the-born-oppenheimer-approximation",
+   "concept": "molecular-hamiltonian",
+   "verb": "introduces"
+  },
+  {
+   "span": "the-born-oppenheimer-approximation",
+   "concept": "electronic-hamiltonian",
+   "verb": "introduces"
+  },
+  {
+   "span": "the-born-oppenheimer-approximation",
+   "concept": "electronic-schrodinger-equation",
+   "verb": "introduces"
+  },
+  {
+   "span": "the-born-oppenheimer-approximation",
+   "concept": "internuclear-distance",
+   "verb": "introduces"
+  },
+  {
+   "span": "the-born-oppenheimer-approximation",
+   "concept": "born-oppenheimer-wavefunction",
+   "verb": "introduces"
+  },
+  {
+   "span": "the-born-oppenheimer-approximation",
+   "concept": "crude-born-oppenheimer-approximation",
+   "verb": "introduces"
+  },
+  {
+   "span": "the-born-oppenheimer-approximation",
+   "concept": "equilibrium-bond-length",
+   "verb": "introduces"
+  },
+  {
+   "span": "the-born-oppenheimer-approximation",
+   "concept": "potential-energy-curve",
+   "verb": "introduces"
+  },
+  {
+   "span": "the-born-oppenheimer-approximation",
+   "concept": "nuclear-schrodinger-equation",
+   "verb": "introduces"
+  },
+  {
+   "span": "the-born-oppenheimer-approximation",
+   "concept": "multi-electron-hamiltonian",
+   "verb": "reinforces"
+  },
+  {
+   "span": "the-born-oppenheimer-approximation",
+   "concept": "kinetic-energy-operator",
+   "verb": "uses"
+  },
+  {
+   "span": "potential-energy-curves-and-surfaces",
+   "concept": "potential-energy-surface",
+   "verb": "introduces"
+  },
+  {
+   "span": "potential-energy-curves-and-surfaces",
+   "concept": "reaction-coordinate-diagram",
+   "verb": "introduces"
+  },
+  {
+   "span": "potential-energy-curves-and-surfaces",
+   "concept": "potential-energy-curve",
+   "verb": "reinforces"
+  },
+  {
+   "span": "potential-energy-curves-and-surfaces",
+   "concept": "equilibrium-bond-length",
+   "verb": "reinforces"
+  },
+  {
+   "span": "potential-energy-curves-and-surfaces",
+   "concept": "crude-born-oppenheimer-approximation",
+   "verb": "reinforces"
+  },
+  {
+   "span": "potential-energy-curves-and-surfaces",
+   "concept": "harmonic-oscillator",
+   "verb": "reinforces"
+  },
+  {
+   "span": "potential-energy-curves-and-surfaces",
+   "concept": "morse-potential",
+   "verb": "reinforces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "e1",
+   "source_id": "exr:9.1.1",
+   "source_number": "Exercise 9.1.1",
+   "kind": "exercise",
+   "bloom": "Remember",
+   "place": {
+    "at": "end"
+   },
+   "cite": "the-born-oppenheimer-approximation",
+   "prompt": "<p>Define all the symbols in Equations 9.1.1 through 9.1.3.</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "source",
+    "solution": "$$ \\begin{aligned} \\hat{H}(r,R) &= \\underbrace{\\hat{T}_{nuc}(R)}_\\text{Kinetic Energy Term for nuclei} + \\underbrace{\\frac{e^2}{4\\pi\\epsilon_o}\\frac{Z_AZ_B}{R}}_\\text{Repulsion Term for nuclei} + \\underbrace{\\hat{H}_{elec}(r,R)}_\\text{Hamiltonian for electrons}\\\\ \\hat{T}_{nuc}(R) &= \\underbrace{\\frac{\\hslash^2}{2m_A}\\nabla^2_A}_\\text{Kinetic Energy Term for nuclei A} - \\underbrace{\\frac{\\hslash^2}{2m_b}\\nabla^2_B}_\\text{Kinetic Energy Term for nuclei B}\\\\ \\hat{H}_{elec}(\\vec{r},\\vec{R}) &= \\underbrace{\\frac{-\\hslash^2}{2m}\\sum_{i}\\nabla_i^2}_\\text{Kinetic Energy Term for electrons} + \\frac{e^2}{4\\pi\\epsilon_o}\\left(-\\underbrace{\\sum_{i}\\frac{Z_A}{r_{Ai}}}_\\text{Attraction Term between nuclei A and electron i} - \\underbrace{\\sum_{i}\\frac{Z_B}{R_{Bi}}}_\\text{Attraction Term between nuclei B and electron i} + \\underbrace{\\frac{1}{2}\\sum_{i}\\sum_{j \\neq i}\\frac{1}{r_{ij}}}_\\text{Repulsion Term between electrons}\\right) \\end{aligned} $$<sup class=\"fn\" data-note=\"c-key-911\"></sup>\n<p>where, $Z_x$is the charge of particle x, $m_x$ is the mass of particle x and $r_{xz}$ is the distance between particle x and z.</p>"
+   }
+  },
+  {
+   "id": "e2",
+   "source_id": "exr:9.1.2",
+   "source_number": "Exercise 9.1.2",
+   "kind": "exercise",
+   "bloom": "Understand",
+   "place": {
+    "at": "end"
+   },
+   "cite": "the-born-oppenheimer-approximation",
+   "prompt": "<p>Explain why the factor of 1/2 appears in the last term in Equation 9.1.3.</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "source",
+    "solution": "<p>The 1/2 term is there to make sure we do not double count the potential energies via the two summations. Otherwise, we would independently add the potential energy of electron 1 with electron 2 and the potential energy of electron 2 with electron 1. These are the same and hence one has to be removed.</p>"
+   }
+  },
+  {
+   "id": "e3",
+   "source_id": "exr:9.1.3",
+   "source_number": "Exercise 9.1.3",
+   "kind": "exercise",
+   "bloom": "Understand",
+   "place": {
+    "at": "end"
+   },
+   "cite": "potential-energy-curves-and-surfaces",
+   "prompt": "<p>Relate Equation 9.1.7 to the one previously used in our description of molecular vibrations in terms of the harmonic oscillator model.</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "Expand $V(R)$ about its minimum $R_0$ and keep the first term that varies.",
+    "solution": "<p>Near its minimum the potential energy curve is close to a parabola. Expanding $V(R)$ about $R_0$, the first derivative vanishes there, so $V(R) \\approx V(R_0) + \\tfrac{1}{2}k(R - R_0)^2$ with $k = d^2V/dR^2$ at $R_0$. For a diatomic molecule the nuclear kinetic energy of Equation 9.1.2, once the motion of the centre of mass and the rotation are set aside, is that of one particle of reduced mass $\\mu = m_Am_B/(m_A + m_B)$ moving along $R$, $-\\dfrac{\\hbar^2}{2\\mu}\\dfrac{d^2}{dR^2}$. With $x = R - R_0$, Equation 9.1.7 becomes</p>$$ \\left(-\\dfrac{\\hbar^2}{2\\mu}\\dfrac{d^2}{dx^2} + \\tfrac{1}{2}kx^2\\right)X(x) = \\left(E_{ne} - V(R_0)\\right)X(x), $$<p>the Schrödinger equation of the harmonic oscillator. Its energies are $E_{ne} = V(R_0) + \\hbar\\omega(v + \\tfrac{1}{2})$ with $\\omega = \\sqrt{k/\\mu}$. The harmonic model is the first approximation to Equation 9.1.7: the force constant is the curvature of the electronic potential at its minimum, and the energies are measured from the bottom of the well. Away from $R_0$ the true curve is not a parabola, which is why the Morse potential does better.</p>"
+   }
+  },
+  {
+   "id": "e4",
+   "source_id": "exr:9.1.4",
+   "source_number": "Exercise 9.1.4",
+   "kind": "exercise",
+   "bloom": "Understand",
+   "place": {
+    "at": "end"
+   },
+   "cite": "potential-energy-curves-and-surfaces",
+   "prompt": "<p>Explain the difference between the Born-Oppenheimer approximation and the Crude Born-Oppenheimer approximation.</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "Ask at which values of $R$ the electronic wavefunction is found in each approximation.",
+    "solution": "<p>Both approximations drop the nuclear kinetic energy when the electrons are solved for. In the Born-Oppenheimer approximation the electronic Schrödinger equation, Equation 9.1.4, is solved again at every internuclear distance $R$, so the electronic wavefunction $\\varphi_e(r, R)$ and the energy $E_e(R)$ change as the nuclei move, and $E_e(R)$ builds the potential energy curve $V_e(R)$ of Equation 9.1.6. In the crude Born-Oppenheimer approximation the electronic wavefunction is found once, at the equilibrium separation $R_0$, and that same $\\varphi_e(r, R_0)$ is used for every value of $R$, as if the electrons never adjusted to the nuclei moving. The crude form is simpler but loses the way the electron distribution follows the nuclei during a vibration.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "e1",
+   "concept": "molecular-hamiltonian"
+  },
+  {
+   "exercise": "e1",
+   "concept": "electronic-hamiltonian"
+  },
+  {
+   "exercise": "e2",
+   "concept": "electronic-hamiltonian"
+  },
+  {
+   "exercise": "e3",
+   "concept": "nuclear-schrodinger-equation"
+  },
+  {
+   "exercise": "e3",
+   "concept": "harmonic-oscillator-schrodinger-equation"
+  },
+  {
+   "exercise": "e4",
+   "concept": "born-oppenheimer-approximation"
+  },
+  {
+   "exercise": "e4",
+   "concept": "crude-born-oppenheimer-approximation"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-lecture",
+   "kind": "correction",
+   "html": "The book has not discussed density functional theory before this point; the phrase comes from the lecture notes the page was adapted from."
+  },
+  {
+   "id": "c-key-911",
+   "kind": "correction",
+   "html": "The key's second line drops the minus sign of the first term and writes $m_b$; Equation 9.1.2 reads $\\hat{T}_{nuc}(R) = -\\dfrac{\\hbar^2}{2m_A}\\nabla^2_A - \\dfrac{\\hbar^2}{2m_B}\\nabla^2_B$. In the third line $R_{Bi}$ should be $r_{Bi}$, the distance of electron $i$ from nucleus B."
+  }
+ ]
+}

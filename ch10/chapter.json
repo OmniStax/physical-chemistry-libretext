@@ -1,0 +1,571 @@
+{
+ "id": "10",
+ "dir": "ch10",
+ "title": "Bonding in Polyatomic Molecules",
+ "intro": {
+  "module": "11787",
+  "slug": "10:_Bonding_in_Polyatomic_Molecules"
+ },
+ "summary": {
+  "module": "550566",
+  "slug": "10:_Bonding_in_Polyatomic_Molecules/10.S:_Bonding_in_Polyatomic_Molecules_(Summary)"
+ },
+ "sections": [
+  {
+   "id": "10.1",
+   "module": "13470",
+   "title": "Hybrid Orbitals Account for Molecular Shape",
+   "slug": "10:_Bonding_in_Polyatomic_Molecules/10.01:_Hybrid_Orbitals_Account_for_Molecular_Shape"
+  },
+  {
+   "id": "10.2",
+   "module": "13471",
+   "title": "Hybrid Orbitals in Water",
+   "slug": "10:_Bonding_in_Polyatomic_Molecules/10.02:_Hybrid_Orbitals_in_Water"
+  },
+  {
+   "id": "10.3",
+   "module": "13472",
+   "title": "BeH₂ is Linear and H₂O is Bent",
+   "slug": "10:_Bonding_in_Polyatomic_Molecules/10.03:_BeH_is_Linear_and_HO_is_Bent"
+  },
+  {
+   "id": "10.4",
+   "module": "13473",
+   "title": "Photoelectron Spectroscopy",
+   "slug": "10:_Bonding_in_Polyatomic_Molecules/10.04:_Photoelectron_Spectroscopy"
+  },
+  {
+   "id": "10.5",
+   "module": "13474",
+   "title": "The pi-Electron Approximation of Conjugation (Hückel Theory)",
+   "slug": "10:_Bonding_in_Polyatomic_Molecules/10.05:_The_pi-Electron_Approximation_of_Conjugation_(Huckel_Theory)"
+  },
+  {
+   "id": "10.6",
+   "module": "13475",
+   "title": "Butadiene is Stabilized by a Delocalization Energy",
+   "slug": "10:_Bonding_in_Polyatomic_Molecules/10.06:_Butadiene_is_Stabilized_by_a_Delocalization_Energy"
+  },
+  {
+   "id": "10.7",
+   "module": "53694",
+   "title": "Benzene and Aromaticity",
+   "slug": "10:_Bonding_in_Polyatomic_Molecules/10.07:_Benzene_and_Aromaticity"
+  }
+ ],
+ "variables": [
+  {
+   "sym": "V",
+   "type": "energy",
+   "meaning": "the potential energy of H₂'s two electrons and two protons",
+   "section": "10.1"
+  },
+  {
+   "sym": "V_eeb",
+   "type": "energy",
+   "meaning": "the repulsion energy of the two electrons",
+   "section": "10.1"
+  },
+  {
+   "sym": "V_enb",
+   "type": "energy",
+   "meaning": "the attraction energy of the electrons to the nuclei",
+   "section": "10.1"
+  },
+  {
+   "sym": "V_nnb",
+   "type": "energy",
+   "meaning": "the repulsion energy of the two nuclei",
+   "section": "10.1"
+  },
+  {
+   "sym": "r_12",
+   "type": "length",
+   "meaning": "the distance between electrons 1 and 2",
+   "unit": "pm",
+   "section": "10.1"
+  },
+  {
+   "sym": "r_1A",
+   "type": "length",
+   "meaning": "the distance of electron 1 from proton A",
+   "unit": "pm",
+   "section": "10.1"
+  },
+  {
+   "sym": "r_1B",
+   "type": "length",
+   "meaning": "the distance of electron 1 from proton B",
+   "unit": "pm",
+   "section": "10.1"
+  },
+  {
+   "sym": "r_2A",
+   "type": "length",
+   "meaning": "the distance of electron 2 from proton A",
+   "unit": "pm",
+   "section": "10.1"
+  },
+  {
+   "sym": "r_2B",
+   "type": "length",
+   "meaning": "the distance of electron 2 from proton B",
+   "unit": "pm",
+   "section": "10.1"
+  },
+  {
+   "sym": "R_AB",
+   "concept": "internuclear-distance",
+   "meaning": "the distance between protons A and B",
+   "unit": "pm",
+   "section": "10.1"
+  },
+  {
+   "sym": "R_e",
+   "concept": "equilibrium-bond-length",
+   "meaning": "the equilibrium bond length",
+   "unit": "pm",
+   "section": "10.1"
+  },
+  {
+   "sym": "psi_g",
+   "concept": "vb-wavefunctions-h2",
+   "meaning": "the valence-bond wavefunction of H₂ even in the electrons' coordinates, bonding",
+   "section": "10.1"
+  },
+  {
+   "sym": "psi_u",
+   "concept": "vb-wavefunctions-h2",
+   "meaning": "the valence-bond wavefunction of H₂ odd in the electrons' coordinates, antibonding",
+   "section": "10.1"
+  },
+  {
+   "sym": "C_g",
+   "meaning": "the normalization constant of ψ_g",
+   "section": "10.1"
+  },
+  {
+   "sym": "C_u",
+   "meaning": "the normalization constant of ψ_u",
+   "section": "10.1"
+  },
+  {
+   "sym": "s_1",
+   "meaning": "the z-component of spin of electron 1",
+   "section": "10.1"
+  },
+  {
+   "sym": "s_2",
+   "meaning": "the z-component of spin of electron 2",
+   "section": "10.1"
+  },
+  {
+   "sym": "chi",
+   "concept": "hybrid-orbital",
+   "meaning": "a hybrid orbital, a combination of an atom's s and p orbitals",
+   "section": "10.1"
+  },
+  {
+   "sym": "chi_i",
+   "concept": "hybrid-orbital",
+   "meaning": "the ith hybrid orbital",
+   "section": "10.1"
+  },
+  {
+   "sym": "chi_j",
+   "concept": "hybrid-orbital",
+   "meaning": "the jth hybrid orbital",
+   "section": "10.1"
+  },
+  {
+   "sym": "a_1",
+   "meaning": "the coefficient of |2s⟩ in the first sp hybrid",
+   "section": "10.1"
+  },
+  {
+   "sym": "b_1",
+   "meaning": "the coefficient of |2p_z⟩ in the first sp hybrid",
+   "section": "10.1"
+  },
+  {
+   "sym": "a_2",
+   "meaning": "the coefficient of |2s⟩ in the second sp hybrid",
+   "section": "10.1"
+  },
+  {
+   "sym": "b_2",
+   "meaning": "the coefficient of |2p_z⟩ in the second sp hybrid",
+   "section": "10.1"
+  },
+  {
+   "sym": "phi_f",
+   "type": "angle",
+   "meaning": "the azimuthal angle about the z axis",
+   "section": "10.1"
+  },
+  {
+   "sym": "chi_i",
+   "concept": "hybrid-orbital",
+   "meaning": "the ith hybrid orbital",
+   "section": "10.2"
+  },
+  {
+   "sym": "x_sp",
+   "meaning": "the exponent of spˣ: the ratio of p to s character in the hybrid",
+   "section": "10.2"
+  },
+  {
+   "sym": "N",
+   "meaning": "the normalization constant of the hybrid",
+   "section": "10.2"
+  },
+  {
+   "sym": "gamma",
+   "concept": "hybrid-character",
+   "meaning": "the relative contribution of s character to a hybrid orbital",
+   "section": "10.2"
+  },
+  {
+   "sym": "theta",
+   "concept": "bond-angle-hybrid-relation",
+   "meaning": "the angle between two equivalent hybrids, the bond angle",
+   "section": "10.2"
+  },
+  {
+   "sym": "x_lp",
+   "meaning": "the p character of each lone-pair hybrid of water",
+   "section": "10.2"
+  },
+  {
+   "sym": "chi",
+   "type": "wavefunction",
+   "meaning": "a molecular orbital of an AH₂ molecule, a combination of the six atomic orbitals",
+   "section": "10.3",
+   "redefines": true
+  },
+  {
+   "sym": "chi_i",
+   "type": "wavefunction",
+   "meaning": "the ith molecular orbital of AH₂",
+   "section": "10.3",
+   "redefines": true
+  },
+  {
+   "sym": "a_i",
+   "meaning": "the coefficient of the ith atomic orbital in an AH₂ molecular orbital",
+   "section": "10.3"
+  },
+  {
+   "sym": "S_ov",
+   "meaning": "the overlap of the two hydrogen 1s orbitals, taken as zero",
+   "section": "10.3"
+  },
+  {
+   "sym": "Z",
+   "meaning": "the nuclear charge of atom A",
+   "section": "10.3"
+  },
+  {
+   "sym": "r",
+   "type": "length",
+   "meaning": "the distance from the nucleus",
+   "section": "10.3"
+  },
+  {
+   "sym": "a_0",
+   "type": "length",
+   "meaning": "the Bohr radius",
+   "section": "10.3"
+  },
+  {
+   "sym": "E",
+   "type": "energy",
+   "meaning": "the energy of a photon",
+   "section": "10.4"
+  },
+  {
+   "sym": "h",
+   "meaning": "Planck's constant",
+   "section": "10.4"
+  },
+  {
+   "sym": "nu",
+   "type": "frequency",
+   "meaning": "the frequency of the radiation",
+   "unit": "Hz",
+   "section": "10.4"
+  },
+  {
+   "sym": "KE",
+   "concept": "photoelectron-energy-balance",
+   "meaning": "the kinetic energy of the photoelectron",
+   "section": "10.4"
+  },
+  {
+   "sym": "IE",
+   "concept": "vertical-ionization-energy",
+   "meaning": "the vertical ionization energy of the ejected electron",
+   "section": "10.4"
+  },
+  {
+   "sym": "Phi",
+   "concept": "work-function",
+   "meaning": "the work function",
+   "section": "10.4"
+  },
+  {
+   "sym": "I_j",
+   "type": "energy",
+   "meaning": "the ionization energy for removing an electron from orbital j",
+   "section": "10.4"
+  },
+  {
+   "sym": "eps_j",
+   "concept": "hartree-fock-orbital-energy",
+   "meaning": "the Hartree–Fock energy of occupied orbital j",
+   "section": "10.4"
+  },
+  {
+   "sym": "psi_i",
+   "type": "wavefunction",
+   "meaning": "the ith π molecular orbital",
+   "section": "10.5"
+  },
+  {
+   "sym": "phi_1",
+   "type": "wavefunction",
+   "meaning": "the 2p_z orbital of carbon 1",
+   "section": "10.5"
+  },
+  {
+   "sym": "phi_2",
+   "type": "wavefunction",
+   "meaning": "the 2p_z orbital of carbon 2",
+   "section": "10.5"
+  },
+  {
+   "sym": "c_1",
+   "meaning": "the coefficient of φ₁ in a π orbital",
+   "section": "10.5"
+  },
+  {
+   "sym": "c_2",
+   "meaning": "the coefficient of φ₂ in a π orbital",
+   "section": "10.5"
+  },
+  {
+   "sym": "H_op",
+   "type": "operator",
+   "meaning": "the Hamiltonian",
+   "section": "10.5"
+  },
+  {
+   "sym": "E_i",
+   "type": "energy",
+   "meaning": "the energy of the ith π molecular orbital",
+   "section": "10.5"
+  },
+  {
+   "sym": "H_ij",
+   "concept": "hamiltonian-matrix-element",
+   "meaning": "the Hamiltonian matrix element between 2p_z orbitals i and j",
+   "section": "10.5"
+  },
+  {
+   "sym": "S_ij",
+   "concept": "overlap-integral",
+   "meaning": "the overlap integral of 2p_z orbitals i and j",
+   "section": "10.5"
+  },
+  {
+   "sym": "alpha_H",
+   "concept": "huckel-coulomb-integral",
+   "meaning": "the Coulomb integral",
+   "section": "10.5"
+  },
+  {
+   "sym": "beta_H",
+   "concept": "resonance-integral",
+   "meaning": "the resonance integral between neighbouring carbons",
+   "section": "10.5"
+  },
+  {
+   "sym": "x_H",
+   "concept": "huckel-x",
+   "meaning": "the energy variable (α − E)/β",
+   "section": "10.5"
+  },
+  {
+   "sym": "E_1",
+   "type": "energy",
+   "meaning": "the energy of ethylene's bonding π orbital, α + β",
+   "section": "10.5"
+  },
+  {
+   "sym": "E_2",
+   "type": "energy",
+   "meaning": "the energy of ethylene's antibonding π orbital, α − β",
+   "section": "10.5"
+  },
+  {
+   "sym": "N_1",
+   "meaning": "the normalization constant of the bonding π orbital",
+   "section": "10.5"
+  },
+  {
+   "sym": "N_2",
+   "meaning": "the normalization constant of the antibonding π orbital",
+   "section": "10.5"
+  },
+  {
+   "sym": "psi_i",
+   "type": "wavefunction",
+   "meaning": "the ith π molecular orbital",
+   "section": "10.6"
+  },
+  {
+   "sym": "c_ij",
+   "meaning": "the coefficient of carbon j's p orbital in π orbital i",
+   "section": "10.6"
+  },
+  {
+   "sym": "alpha_H",
+   "concept": "huckel-coulomb-integral",
+   "meaning": "the Coulomb integral",
+   "section": "10.6"
+  },
+  {
+   "sym": "beta_H",
+   "concept": "resonance-integral",
+   "meaning": "the resonance integral between neighbouring carbons",
+   "section": "10.6"
+  },
+  {
+   "sym": "x_H",
+   "concept": "huckel-x",
+   "meaning": "the energy variable (α − E)/β",
+   "section": "10.6"
+  },
+  {
+   "sym": "E_1",
+   "type": "energy",
+   "meaning": "the energy of butadiene's lowest π orbital, α + 1.618β",
+   "section": "10.6",
+   "redefines": true
+  },
+  {
+   "sym": "E_2",
+   "type": "energy",
+   "meaning": "the energy of butadiene's second π orbital, α + 0.618β",
+   "section": "10.6",
+   "redefines": true
+  },
+  {
+   "sym": "E_3",
+   "type": "energy",
+   "meaning": "the energy of butadiene's third π orbital, α − 0.618β",
+   "section": "10.6"
+  },
+  {
+   "sym": "E_4",
+   "type": "energy",
+   "meaning": "the energy of butadiene's highest π orbital, α − 1.618β",
+   "section": "10.6"
+  },
+  {
+   "sym": "E_pi",
+   "concept": "total-pi-energy",
+   "meaning": "the total π-electron energy",
+   "section": "10.6"
+  },
+  {
+   "sym": "n",
+   "meaning": "the number of carbon atoms in the ring CₙHₙ; in 4n + 2, a whole number 0, 1, 2 …",
+   "section": "10.7"
+  },
+  {
+   "sym": "x_H",
+   "concept": "huckel-x",
+   "meaning": "the energy variable (α − E)/β",
+   "section": "10.7"
+  },
+  {
+   "sym": "alpha_H",
+   "concept": "huckel-coulomb-integral",
+   "meaning": "the Coulomb integral",
+   "section": "10.7"
+  },
+  {
+   "sym": "beta_H",
+   "concept": "resonance-integral",
+   "meaning": "the resonance integral between neighbouring carbons",
+   "section": "10.7"
+  },
+  {
+   "sym": "E_1",
+   "type": "energy",
+   "meaning": "the energy of benzene's lowest π orbital, α + 2β",
+   "section": "10.7",
+   "redefines": true
+  },
+  {
+   "sym": "E_2",
+   "type": "energy",
+   "meaning": "the energy of one of benzene's degenerate bonding pair, α + β",
+   "section": "10.7",
+   "redefines": true
+  },
+  {
+   "sym": "E_3",
+   "type": "energy",
+   "meaning": "the energy of the other orbital of benzene's degenerate bonding pair, α + β",
+   "section": "10.7",
+   "redefines": true
+  },
+  {
+   "sym": "E_4",
+   "type": "energy",
+   "meaning": "the energy of one of benzene's degenerate antibonding pair, α − β",
+   "section": "10.7",
+   "redefines": true
+  },
+  {
+   "sym": "E_5",
+   "type": "energy",
+   "meaning": "the energy of the other orbital of benzene's degenerate antibonding pair, α − β",
+   "section": "10.7"
+  },
+  {
+   "sym": "E_6",
+   "type": "energy",
+   "meaning": "the energy of benzene's highest π orbital, α − 2β",
+   "section": "10.7"
+  },
+  {
+   "sym": "psi_i",
+   "type": "wavefunction",
+   "meaning": "the ith π molecular orbital",
+   "section": "10.7"
+  },
+  {
+   "sym": "E_tot",
+   "concept": "total-pi-energy",
+   "meaning": "the total π-bonding energy",
+   "section": "10.7"
+  },
+  {
+   "sym": "dE",
+   "concept": "delocalization-energy",
+   "meaning": "the delocalization energy of benzene",
+   "section": "10.7"
+  },
+  {
+   "sym": "dH_hyd",
+   "type": "energy",
+   "meaning": "the heat of hydrogenation",
+   "unit": "kJ/mol",
+   "section": "10.7"
+  }
+ ]
+}

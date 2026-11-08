@@ -11,7 +11,7 @@
   "Understand how to break degeneracy via externally applied magnetic fields in electrons and atoms."
  ],
  "summary_html": "",
- "notes": "Credited to Theodore Zielinski. Figure 8.4.4, which draws the absorption of Figure 8.4.1's experiment, is folded into the live spectrometer.",
+ "notes": "Written by Theodore Zielinski and shared under CC BY-NC-SA 4.0; Figure 8.4.4, which draws the absorption of Figure 8.4.1's experiment, is folded into the live spectrometer.",
  "ai": {
   "text": [
    {
@@ -342,14 +342,14 @@
     {
      "assumes": [
       {
-       "text": "In the hypothetical experiment one absorption transition is observed, which means there are two spin states."
+       "text": "In our hypothetical experiment, we observed one absorption transition, which means there are two spin states."
       },
       {
-       "text": "Since $m_l$ ranges in integer steps from $-l$ to $+l$, by analogy $m_s$ ranges in integer steps from $-s$ to $+s$.",
+       "text": "Since $m_l$ ranges in integer steps from $-l$ to $+l$, also by analogy $m_s$ ranges in integer steps from $-s$ to $+s$.",
        "src": "6.2"
       },
       {
-       "text": "The two states, labeled f and i, differ in $m_s$ by the smallest integer step, 1."
+       "text": "Consequently, the two values of $m_s$ must be $+s$ and $-s$, and the difference in $m_s$ for the two states, labeled f and i, must be the smallest integer step, i.e., 1."
       }
      ],
      "then": {
@@ -412,7 +412,8 @@
        "uses": [
         1,
         2
-       ]
+       ],
+       "cap": "The energies of these two states consist of the sum of the energy of an electron in a 1s orbital, $E_{1s}$, and the energy due to the interaction of the spin magnetic dipole moment of the electron, $\\mu_s$, with the magnetic field, $B$."
       },
       {
        "tex": "\\mk{h}{h\\knu} = \\mk{m}{(\\kmusb - \\kmusa) \\cdot \\kBvec}",
@@ -435,7 +436,7 @@
        "src": "8.4"
       },
       {
-       "text": "With the magnetic field along $z$, the scalar product becomes a product of the $z$-components of the spin angular momenta with the field."
+       "text": "With the magnetic field direction defined as $z$, the scalar product becomes a product of the z-components of the spin angular momenta, $S_{z,\\alpha}$ and $S_{z,\\beta}$, with the external magnetic field."
       }
      ],
      "then": {
@@ -446,7 +447,8 @@
        "tex": "\\mk{h}{h\\knu} = \\mk{m}{\\gamma_s(\\kSvec_{\\beta} - \\kSvec_{\\alpha}) \\cdot \\kBvec}",
        "uses": [
         1
-       ]
+       ],
+       "cap": "Again by analogy with the orbital angular momentum and magnetic moment discussed above, we take the spin magnetic dipole of each spin state, $\\mu_{s,\\alpha}$ and $\\mu_{s,\\beta}$, to be related to the total spin angular momentum of each state, $S_\\alpha$ and $S_\\beta$, by a constant spin gyromagnetic ratio, $\\gamma_s$."
       },
       {
        "tex": "\\mk{h}{h\\knu} = \\mk{m}{\\gamma_s(\\kSzb - \\kSza)\\kBz}",
@@ -544,7 +546,8 @@
        "tex": "\\mk{m}{\\dfrac{\\gamma_s}{\\gamma_e}} = \\mk{h}{\\dfrac{18.55\\times10^{-21}\\ \\text{erg/G}}{9.2732\\times10^{-21}\\ \\text{erg/G}}}",
        "uses": [
         1
-       ]
+       ],
+       "cap": "This value is about twice the Bohr magneton, $-\\gamma_e\\hbar$."
       },
       {
        "tex": "\\mk{m}{\\gamma_s} = \\mk{h}{2.0007\\,\\gamma_e}",

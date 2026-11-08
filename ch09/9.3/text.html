@@ -1,0 +1,51 @@
+<section id="opening">
+<h2>Two orbitals for one electron</h2>
+<p>For $\mathrm{H_{2}^{+}}$, the simplest molecule, we must determine the values for the coefficients, $C_A$ and $C_B$ for the <span data-concept="lcao-approximation">LCAO approximation</span> for the <span data-concept="molecular-orbital">molecular orbital</span> as a linear combination of the two atomic orbitals</p>
+$$ |\kpsi (r) \rangle = C_A \konesA (r) + C_B\konesB (r) $$
+<p>We could use the linear variational method to find a value for these coefficients, but for the case of $\mathrm{H_{2}^{+}}$ evaluating these coefficients is easy. Since the two protons are identical, the probability that the electron is near $A$ must equal the probability that the electron is near $B$. These probabilities are given by $|C_A|^2$ and $|C_B|^2$, respectively. Consider two possibilities that satisfy the condition</p>
+$$ |C_A|^2 = |C_B|^2 $$
+<p>so $C_A = C_B = C_{+}$ and $C_A = -C_B = C_{-}$. These two cases produce <span data-concept="h2plus-lcao-orbitals">two molecular orbitals</span>:</p>
+$$ \underbrace{| \kpsip \rangle = C_+(\konesA + \konesB)}_{\text{bonding molecular orbital}} \tag{9.3.1} $$
+<p>and</p>
+$$ \underbrace{| \kpsim \rangle = C_{-}(\konesA - \konesB)}_{\text{antibonding molecular orbital}} \tag{9.3.2} $$
+<p>The probability density for finding the electron at any point in space is given by $|{\kpsi}^2|$ and the electronic charge density is just $|\ke{\kpsi}^2|$. The important difference between $\kpsip$ and $\kpsim$ is that the charge density for $| \kpsip \rangle$ is enhanced between the two protons, whereas it is diminished for $|\kpsim \rangle$ as shown in Figures 9.3.1.<sup class="fn" data-note="c-fig-densities"></sup> $\kpsim$ has a node in the middle while $| \kpsip \rangle$ corresponds to our intuitive sense of what a chemical bond must be like. The electronic charge density is enhanced in the region between the two protons. So $|\kpsip \rangle$ is called a <em><span data-concept="bonding-molecular-orbital">bonding molecular orbital</span></em>. If the electron were described by $|\kpsim \rangle$, the low charge density between the two protons would not balance the Coulomb repulsion of the protons, so $|\kpsim \rangle$ is called an <em><span data-concept="antibonding-molecular-orbital">antibonding molecular orbital</span></em>.</p>
+<p>Now we want to evaluate $C_+$ and $C_-$ and then calculate the energy. The bonding and antibonding character of $\kpsip$ and $\kpsim$ also should be reflected in the energy. If $|\kpsip \rangle$ indeed describes a bonding orbital, then the energy of this state should be less than that of a proton and hydrogen atom that are separated. The calculation of the energy will tell us whether this simple theory predicts H<sub>2</sub><sup>+</sup> to be stable or not and also how much energy is required to dissociate this molecule.</p>
+</section>
+
+<section id="normalization">
+<h2>Normalization and the overlap integral</h2>
+<p>The constants $C_+$ and $C_-$ are evaluated from the standard <span data-concept="normalization-condition">normalization condition</span>:</p>
+$$ \begin{aligned} \int \kpsipm^* \kpsipm d\tau = \left \langle \kpsipm | \kpsipm \right \rangle &= 1  \\[4pt] \left \langle C_{\pm} ( \konesA \pm \konesB ) | C_{\pm} ( \konesA \pm \konesB ) \right \rangle &= 1  \\[4pt] |C_\pm|^2 [ \underbrace{\langle\konesA | \konesA \rangle }_{1} + \underbrace{\langle \konesB | \konesB \rangle}_{1} \pm \underbrace{ \langle\konesB | \konesA\rangle}_{S} \pm \underbrace{ \langle\konesA | \konesB \rangle}_{S^*}] &= 1  \end{aligned} \tag{9.3.3} $$
+<p>Since the atomic orbitals are normalized, the first two integrals are just 1. The last two integrals are called <em><span data-concept="overlap-integral">overlap integrals</span></em> and are symbolized by $S$ and $S^*$, respectively, since one is the complex conjugate of the other.</p>
+<p>The overlap integrals are telling us to take the value of 1s<sub>B</sub> at a point multiply by the value of 1s<sub>A</sub> at that point and sum (integrate) such a product over all of space (Figure 9.3.1). If the functions do not overlap, i.e. if one is zero when the other one is not and vice versa, these integrals then will be zero. It also is possible in general for such integrals to be zero even if the functions overlap because of the cancelation of positive and negative contributions.</p>
+<p>If the overlap integral is zero, for whatever reason, the functions are said to be <em><span data-concept="orthogonality">orthogonal</span></em>. Notice that <span data-concept="overlap-integral-1s">the overlap integral ranges from 0 to 1 as the separation between the protons varies from $R = ∞$ to $R = 0$. Clearly when the protons are infinite distance apart, there is no overlap, and when $R = 0$ both functions are centered on one nucleus and $\left \langle 1s_A | 1s_B \right \rangle$ becomes identical to $\left \langle 1s_B | 1s_A \right \rangle$, which is normalized to 1, because $1s_A = 1s_B$.</span></p>
+<p>With these considerations and using the fact that $1s$ wavefunctions are real so</p>
+$$ \left \langle \konesA | \konesB \right \rangle = \left \langle \konesB | \konesA \right \rangle = S \tag{9.3.4} $$
+<figure class="dv" id="drv-normalized"></figure>
+<p>The energies associated with these wavefunctions requires a bit more effort to calculate though as demonstrated in the following section.</p>
+<p>For <span data-concept="overlap-integral-1s">the overlap integral of two 1s orbitals</span> from the hydrogen dimer discussed above is difficult to evaluate analytically and is explained here.<sup class="fn" data-note="c-here"></sup> The final answer is:</p>
+$$ \begin{aligned} S(\kR) &= \left \langle \konesA | \konesB \right \rangle \\[4pt] &= e^{-\kR/a_o} \left( 1 +\dfrac{\kR}{a_o} + \dfrac{\kR^2}{3a_o^2} \right)  \end{aligned} \tag{9.3.9} $$
+<p>The overlap integral for two 1s atomic orbitals of hydrogen is graphically displayed below</p>
+<figure class="sim" id="sim-overlap" data-figure="9.3.1 + 9.3.2" data-original="/media/ch09/51101-300px-Orbital_overlap.png,/media/ch09/91362-ch3_3-11.jpg" data-original-caption="The wavefunctions of atomic orbitals decrease exponentially with distance. Orbital overlap is non-zero when two atoms are close together, as illustrated for 1s orbitals in the upper figure. The lower figure shows orbitals that are too far away to interact. In this case both $S$ is close to zero. The overlap integral at different proton separations.">
+  <div class="sim-head"><span class="eyebrow">Figure 9.3.1 + 9.3.2</span><span>Move the protons apart. The product of the two <span data-type="wavefunction">1s orbitals</span>, shaded, is large only where both are large, and the overlap <em>S</em> it adds up to falls from 1 toward 0. The top graph is one line through the molecule; <em>S</em> sums the product over all space.</span></div>
+</figure>
+<div class="example" id="ex-9-3-1">
+<h3>Example 9.3.1</h3>
+<p>Calculate the difference in the electronic charge density (C/pm<sup>3</sup>) at a point halfway between the two nuclei for $\mathrm{H_{2}^{+}}$ for an electron in the bonding molecular orbital compared to one in the antibonding molecular orbital.</p>
+<h4>Solution</h4>
+<p>The electronic charge density is calculated with the formula $|e{\psi}^2|$ where $e = 1.602 \times 10^{-19} C$</p>
+<p><em>a: Bonding Molecular Orbital</em></p>
+<p>First, squaring the bonding molecular orbital (Equation 9.3.7) gives us:<sup class="fn" data-note="c-ex-line"></sup></p>
+$$ \begin{aligned} \psi_+^2 &=\dfrac{1}{2(1 + S )} (1s_A+1s_B)^2 \\[4pt] &= \dfrac{1}{2(1 + S )} \dfrac{1}{\pi a_0^3}\Big(e^{-r_A/a_0}+e^{-r_B/a_0}\Big)^2 \\[4pt] &= \dfrac{1}{2(1 + S )} \dfrac{1}{\pi a_0^3} \\[4pt] &= (0.561)^2\times\left(\dfrac{1}{\pi\times(52.9\;\text{pm})^3}\right)=6.7672\times10^{-7}\;\text{pm}^{-3} \end{aligned} $$
+<p>(Note: The value of $C^2$ is obtained from equation 9.3.12<sup class="fn" data-note="c-ex-eq"></sup> and the value of S is from Equation 9.3.9)</p>
+<p>To find the density at halfway between A and B for the bonding orbital evalulate at 1/2 R,</p>
+<p>$r_A=\dfrac{1}{2}R$ and $r_B=\dfrac{1}{2}R$</p>
+$$ \psi_+^2=3.7\times10^{-7}\;\text{pm}^{-3} $$
+<p>Now multiply this answer by e to generate the electronic charge density,</p>
+$$ P = \Big(3.7\times10^{-7}\;\text{pm}^{-3}\Big)\times\Big(1.602\times10^{-19}\Big)\;\text{C} = 5.93\times10^{-26} C/pm^{3} $$
+<p><em>b: Antibonding Molecular Orbital</em></p>
+<p>To find the halfway between A and B for the anti-bonding orbital at $r_A=\dfrac{1}{2}R$ and $r_B=\dfrac{1}{2}R$. However, simple inspection of Equation 9.3.8 or Figure 9.3.1 shows this will be zero.</p>
+$$ \text{e}\psi_-^2=0 $$
+<p>Obviously, when multiplied by e, the answer is still zero. This makes logical sense as there would be no charge density between the two atoms as there lies a node with no probability of finding an electron.</p>
+</div>
+</section>

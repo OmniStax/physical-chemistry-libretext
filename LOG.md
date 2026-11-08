@@ -438,3 +438,45 @@ caption's and an exercise title's maths through the same KaTeX fixes as the text
 `_caption` fields. `check:content`: no errors, no warnings. Open for the
 orchestrator: the empty 9.13 and 9.16, the stray 9.11 and its exercise in 1.9,
 where a PES Sim could live, 9.8.2's unshipped original.
+
+## Chapter 8 pass · 2026-11-08
+
+Built: the intro, 8.1–8.11 and the summary page. 19 figure rows: 14
+interactive (12 Figures folding the book's, 2 Sims: the 8.5 exchange map and
+the two extra Sims picked, the 8.6 determinant and 8.10's carbon levels), 3
+kept images (8.3.2, 8.4.3, 8.10.1) and 2 unnumbered rows; 4 moving (the SCF
+loop, the spin-resonance spectrometer, Stern–Gerlach, the microstate chart),
+2 3D (the spin pair of 8.8, L–S coupling of 8.9); 6 derivations (8.4: 2, 8.5:
+1, 8.6: 1, 8.7: 2); 25 exercises, all `exercise` kind in the Exercises
+document: 16 from the book (5 keyed, 11 with AI solutions) and 9 AI
+exercises; 73 AI-marked corrections in footnotes, besides derivation notes.
+
+Chapter pass: Example 8.8.12's prose that pointed at the thirteen charts the
+microstate figure replaced ("like this:", "I get this:", "Leaving us with",
+"reduces the chart down to", …) now links the figure with hand links
+(`class="figref"`, nine), the book's words unchanged. The summary's six links
+were plain anchors, which pass the check but go nowhere from another page;
+now `class="xref"`, and a click opens the section; the shielding bullet
+links `#8.3-scf` (the shielding note and Figure 8.3.2) instead of
+`#8.3-hartree-approximation`, which never mentions shielding. Book prose
+restored around derivations without repeating a fact card: 8.4's
+spin-half facts now carry the book's three sentences word for word; 8.4's
+g-factor carries "The energies of these two states consist of …", the
+spin gyromagnetic ratio's "Again by analogy …" and "This value is about
+twice the Bohr magneton" as reasons, and the z-direction fact in the book's
+words; 8.5's double-permutation sentences are the node's reason; Example
+8.6.1 gets its Solution head, the book's reminder of permutation symmetries
+and its closing "The wavefunction is antisymemtric." 8.2, 8.3 and 8.4's
+`notes` now name the licence as the other sections do. `colours:default`
+rerun (every type kept its colour). `check:content`: no errors, no warnings
+from Chapter 8 (one from 9.12, being built). Every figure screenshot in
+light and dark; every derivation rendered; no console or KaTeX error on any
+Chapter 8 page.
+
+Known gaps: Example 8.7.2's lead-ins "The energy of the N-electron
+determinant … is" and "Likewise, the energy of the N+1-electron determinant
+wavefunction is" stay folded into its fact cards (a fact card shows one
+equation and no words); Stern–Gerlach's readout writes μ_z plain, not in the
+magnetic-moment colour; the figref into Example 8.8.12 opens the figure at
+its current state, not the chart the sentence names; Chapter 7's summary has
+the same plain cross-page anchor (`#5.summary-harmonic-oscillator`).

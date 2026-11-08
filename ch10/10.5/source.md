@@ -213,7 +213,7 @@ These molecular orbitals form the $\pi$-bonding framework and since each carbon 
 
 > *HOMO and LUMO are acronyms for highest occupied molecular orbital and lowest unoccupied molecular orbital, respectively and are often referred to as frontier orbitals. The energy difference between the HOMO and LUMO is termed the HOMO–LUMO gap.*
 
-Ψ = 1 2 ( ϕ 1 + ϕ 2 ) \psi ={\dfrac {1}{\sqrt {2}}}(\phi _{1}+\phi _{2})\,} The 3-D calculated $\pi$ molecular orbitals are shown in Figure 10.5.6.
+The 3-D calculated $\pi$ molecular orbitals are shown in Figure 10.5.6.
 
 > FIGURE {fig:10.5.6} src=media/78098-150px-Ethylene-HOMO-Spartan-3D-balls.png width=150px
 > alt: 3D molecular structure showing two colored lobes (blue and red) with two white spheres representing atoms in between.

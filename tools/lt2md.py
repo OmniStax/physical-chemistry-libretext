@@ -486,6 +486,11 @@ def convert(page_json, title, page_ids, prefix=""):
         s.decompose()
     for s in soup.select(".mt-guide-content, .mt-edit-section, .rangySelectionBoundary"):
         s.decompose()
+    # what the page hides is not printed: a MathML copy pasted from Wikipedia
+    # (10.5's "Ψ = 1 2 ( ϕ 1 + ϕ 2 )" and its broken annotation) sits in a
+    # span styled display:none, invisible on the live page
+    for s in soup.find_all(style=re.compile(r"display\s*:\s*none")):
+        s.decompose()
     conv = Converter(page_ids, prefix)
     root = soup.body or soup
     text = conv.children(root)

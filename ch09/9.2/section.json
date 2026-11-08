@@ -1,0 +1,223 @@
+{
+ "id": "9.2",
+ "module": "13452",
+ "chapter": "9",
+ "title": "The H₂⁺ Prototypical Species",
+ "short": "The H₂⁺ ion",
+ "lead": "H₂⁺, two protons and one electron, is the simplest molecule there is. Its molecular orbitals are built as sums and differences of the two hydrogen 1s orbitals, and the two combinations put the electron's charge in very different places.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "Adapted from David M. Hanson, Erica Harvey, Robert Sweeney and Theresa Julia Zielinski's Quantum States of Atoms and Molecules and from Rudolf Winter (Aberystwyth University). The note's animation of two 2p orbitals is folded into Figure 9.2.2, and the turning phase of the book's animation is left out because a stationary state's density does not change in time.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercise here. The one exercise, on the two combinations of Equations 9.2.3 and 9.2.4, was written by AI, with its solution, Bloom level and concept tags.",
+ "figures": [
+  {
+   "id": "sim-h2plus-electron",
+   "kind": "sim",
+   "number": "9.2.1",
+   "originals": [
+    "/media/ch09/395884-9.3.1-1.svg"
+   ],
+   "original_caption": "Hydrogen molecular ion $\\mathrm{H_2^+}$ with fixed nuclei $A$ and $B$, internuclear distance $R$. (CC BY-NC; Ümit Kaya via LibreTexts)",
+   "draws": [
+    "length",
+    "energy"
+   ],
+   "conventions": [
+    "p+",
+    "e-"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "sim-orbitals",
+   "kind": "sim",
+   "number": "9.2.2",
+   "originals": [
+    "/media/ch09/57781-H2OrbitalsAnimation.gif",
+    "/media/ch09/124614-lcao.gif"
+   ],
+   "original_caption": "Electron wavefunctions for the 1s orbital of a lone hydrogen atom (left and right) and the corresponding bonding (bottom) and antibonding (top) molecular orbitals of the $H_2^+$ ion. The real part of the wavefunction is the blue curve, and the imaginary part is the red curve. The red dots mark the locations of the nuclei. The electron wavefunction oscillates according to the Schrödinger wave equation, and orbitals are its standing waves. The standing wave frequency is proportional to the orbital's kinetic energy. (This plot is a one-dimensional slice through the three-dimensional .)",
+   "draws": [
+    "wavefunction",
+    "probability-density",
+    "length"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "opening",
+   "concept": "hydrogen-molecular-ion",
+   "verb": "introduces"
+  },
+  {
+   "span": "opening",
+   "concept": "atomic-orbital",
+   "verb": "uses"
+  },
+  {
+   "span": "the-hydrogen-molecular-ion",
+   "concept": "h2plus-hamiltonian",
+   "verb": "introduces"
+  },
+  {
+   "span": "the-hydrogen-molecular-ion",
+   "concept": "molecular-orbital",
+   "verb": "introduces"
+  },
+  {
+   "span": "the-hydrogen-molecular-ion",
+   "concept": "hydrogen-molecular-ion",
+   "verb": "reinforces"
+  },
+  {
+   "span": "the-hydrogen-molecular-ion",
+   "concept": "born-oppenheimer-approximation",
+   "verb": "uses"
+  },
+  {
+   "span": "the-hydrogen-molecular-ion",
+   "concept": "internuclear-distance",
+   "verb": "uses"
+  },
+  {
+   "span": "the-hydrogen-molecular-ion",
+   "concept": "electronic-hamiltonian",
+   "verb": "uses"
+  },
+  {
+   "span": "linear-combination-of-atomic-orbitals",
+   "concept": "lcao-mo-method",
+   "verb": "introduces"
+  },
+  {
+   "span": "linear-combination-of-atomic-orbitals",
+   "concept": "molecular-orbital-count",
+   "verb": "introduces"
+  },
+  {
+   "span": "linear-combination-of-atomic-orbitals",
+   "concept": "orbital-interference",
+   "verb": "introduces"
+  },
+  {
+   "span": "linear-combination-of-atomic-orbitals",
+   "concept": "h2plus-lcao-orbitals",
+   "verb": "introduces"
+  },
+  {
+   "span": "linear-combination-of-atomic-orbitals",
+   "concept": "bonding-molecular-orbital",
+   "verb": "introduces"
+  },
+  {
+   "span": "linear-combination-of-atomic-orbitals",
+   "concept": "antibonding-molecular-orbital",
+   "verb": "introduces"
+  },
+  {
+   "span": "linear-combination-of-atomic-orbitals",
+   "concept": "lcao-approximation",
+   "verb": "reinforces"
+  },
+  {
+   "span": "linear-combination-of-atomic-orbitals",
+   "concept": "secular-equations",
+   "verb": "uses"
+  },
+  {
+   "span": "linear-combination-of-atomic-orbitals",
+   "concept": "probability-density",
+   "verb": "uses"
+  },
+  {
+   "span": "linear-combination-of-atomic-orbitals",
+   "concept": "molecular-orbital",
+   "verb": "reinforces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "Consider two possibilities that satisfy the condition",
+   "kind": "exercise",
+   "bloom": "Understand",
+   "place": {
+    "at": "end"
+   },
+   "cite": "linear-combination-of-atomic-orbitals",
+   "prompt": "<p>The two protons of $\\mathrm{H_2^+}$ are identical. Which statement is true of the coefficients in Equation 9.2.2 and of the two molecular orbitals in Equations 9.2.3 and 9.2.4?</p>",
+   "answer": {
+    "type": "choice",
+    "generated_by": "ai",
+    "options": [
+     "$|C_A|^2 = |C_B|^2$, and $\\psi_+$ builds up electron density at the midpoint between the protons",
+     "$|C_A|^2 = |C_B|^2$, and $\\psi_-$ builds up electron density at the midpoint between the protons",
+     "$C_A = C_B$ is the only possibility, so $\\psi_-$ is not allowed",
+     "$|C_A|^2 > |C_B|^2$, since the electron is nearer proton A"
+    ],
+    "correct": 0,
+    "hint": "Ask what $1s_A$ and $1s_B$ are at the point halfway between the protons.",
+    "solution": "<p>The probabilities of finding the electron near A and near B are $|C_A|^2$ and $|C_B|^2$, and for two identical protons they must be equal, which allows both $C_A = C_B = C_+$ and $C_A = -C_B = C_-$. At the midpoint $1s_A = 1s_B$, so $\\psi_+ = 2C_+1s_A$ there while $\\psi_- = C_-(1s_A - 1s_B) = 0$: the sum builds up charge between the protons and the difference has a node there. So $\\psi_+$ is the bonding orbital.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "h2plus-lcao-orbitals"
+  },
+  {
+   "exercise": "a1",
+   "concept": "bonding-molecular-orbital"
+  },
+  {
+   "exercise": "a1",
+   "concept": "antibonding-molecular-orbital"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-922-energy",
+   "kind": "correction",
+   "figure": "sim-orbitals",
+   "html": "The caption says the standing wave's frequency is proportional to the orbital's kinetic energy. A stationary state's phase turns at $E/\\hbar$, where $E$ is its total energy, kinetic and potential together."
+  },
+  {
+   "id": "c-922-slice",
+   "kind": "correction",
+   "figure": "sim-orbitals",
+   "html": "The caption's last sentence is missing a word: the plot is a one-dimensional slice through the three-dimensional wavefunction."
+  }
+ ]
+}

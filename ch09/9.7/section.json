@@ -1,0 +1,282 @@
+{
+ "id": "9.7",
+ "module": "13459",
+ "chapter": "9",
+ "title": "Molecular Orbitals Can Be Ordered According to Their Energies",
+ "short": "Ordering molecular orbitals",
+ "lead": "The LCAO picture of H₂⁺ carries over to molecules of two identical atoms, built from their valence orbitals alone. The section combines ns and np orbitals into σ and π orbitals, sets out the rules for ordering them, and fills the diagrams of the second-period molecules.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "The book names no author for this page, which is shared under CC BY-NC-SA 4.0; its figures are Averill and Eldredge's, printed as CC BY-SA-NC with no author, and the image in Example 9.7.1 and the diagram in Example 9.7.2 are folded into Figures 9.7.1 and 9.7.4.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "high"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "high"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "Both exercises and their keys are the book's; their Bloom levels and concept tags were chosen by AI.",
+ "figures": [
+  {
+   "id": "sim-ns-diagram",
+   "kind": "sim",
+   "number": "9.7.1",
+   "originals": [
+    "/media/ch09/57935-e06c13077b48cf41233f226429b05d2f.jpg",
+    "/media/ch09/57936-9574af1b1f89157767597c4ee5e98af8.jpg"
+   ],
+   "original_caption": "Molecular Orbital Energy-Level Diagrams for Alkali Metal and Alkaline Earth Metal Diatomic ($M_2$) Molecules. (a) For alkali metal diatomic molecules, the two valence electrons are enough to fill the σns (bonding) level, giving a bond order of 1. (b) For alkaline earth metal diatomic molecules, the four valence electrons fill both the $σ_{ns}$ (bonding) and the $σ_{ns}^*$ (nonbonding) levels, leading to a predicted bond order of 0. (CC BY-SA-NC; anonymous).",
+   "draws": [
+    "energy"
+   ],
+   "conventions": [
+    "e-"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "high",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "sim-p-clouds",
+   "kind": "sim",
+   "number": "9.7.2",
+   "folds": [
+    "9.7.3",
+    "9.7.7"
+   ],
+   "originals": [
+    "/media/ch09/57937-9.7.2.jpg",
+    "/media/ch09/91731-9.7.3A.jpg",
+    "/media/ch09/38984-571fd349d2367d12d1d975713d16c808.jpg"
+   ],
+   "original_caption": "(9.7.2) Formation of Molecular Orbitals from npz Atomic Orbitals on Adjacent Atoms.(a) By convention, in a linear molecule or ion, the z-axis always corresponds to the internuclear axis, with +z to the right. As a result, the signs of the lobes of the npz atomic orbitals on the two atoms alternate − + − +, from left to right. In this case, the σ (bonding) molecular orbital corresponds to the mathematical difference, in which the overlap of lobes with the same sign results in increased probability density between the nuclei. (b) In contrast, the σ* (antibonding) molecular orbital corresponds to the mathematical sum, in which the overlap of lobes with opposite signs results in a nodal plane of zero probability density perpendicular to the internuclear axis. (CC BY-SA-NC; anonymous). (9.7.3) Formation of π Molecular Orbitals from npx and npy Atomic Orbitals on Adjacent Atoms.(a) Because the signs of the lobes of both the npx and the npy atomic orbitals on adjacent atoms are the same, in both cases the mathematical sum corresponds to a π (bonding) molecular orbital. (b) In contrast, in both cases, the mathematical difference corresponds to a π* (antibonding) molecular orbital, with a nodal plane of zero probability density perpendicular to the internuclear axis. (CC BY-SA-NC; anonymous). (9.7.7) Formation of Molecular Orbitals from an ns Atomic Orbital on One Atom and an npz Atomic Orbital on an Adjacent Atom.(a) The mathematical sum results in a σ (bonding) molecular orbital, with increased probability density between the nuclei. (b) The mathematical difference results in a σ* (antibonding) molecular orbital, with a nodal plane of zero probability density perpendicular to the internuclear axis. (CC BY-SA-NC; anonymous).",
+   "draws": [
+    "wavefunction"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "high",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "sim-period2",
+   "kind": "sim",
+   "number": "9.7.4",
+   "folds": [
+    "9.7.5",
+    "9.7.6"
+   ],
+   "originals": [
+    "/media/ch09/57939-79625f9e351fccbc4c8e4ce4c801154d.jpg",
+    "/media/ch09/57944-10.3.9.jpg",
+    "/media/ch09/57941-a571325e96604a46e1de72a8d29b5595.jpg",
+    "/media/ch09/182589-9.7.1.png"
+   ],
+   "original_caption": "(9.7.4) The Relative Energies of the σ and π Molecular Orbitals Derived from npx, npy, and npz Orbitals on Identical Adjacent Atoms. Because the two npz orbitals point directly at each other, their orbital overlap is greater, so the difference in energy between the σ and σ* molecular orbitals is greater than the energy difference between the π and π* orbitals. (CC BY-SA-NC; anonymous). (9.7.5) Molecular Orbital Energy-Level Diagrams for Homonuclear Diatomic Molecules.(a) For C2, with 8 valence electrons (4 from each F atom). This diagram shows 6 electrons in bonding orbitals and 2 in antibonding orbitals, resulting in a bond order of 2. (b) For O2, with 12 valence electrons (6 from each O atom), there are only 2 electrons to place in the $\\left ( \\pi ^{\\star }_{np_{x}},\\; \\pi ^{\\star }_{np_{y}} \\right )$ pair of orbitals. Hund’s rule dictates that one electron occupies each orbital, and their spins are parallel, giving the O2 molecule two unpaired electrons. This diagram shows 8 electrons in bonding orbitals and 4 in antibonding orbitals, resulting in a predicted bond order of 2. (CC BY-SA-NC; anonymous). (9.7.6) Molecular Orbital Energy-Level Diagrams for the Diatomic Molecules of the Period 2 Elements. Unlike earlier diagrams, only the molecular orbital energy levels for the molecules are shown here. For simplicity, the atomic orbital energy levels for the component atoms have been omitted. For Li2 through N2, the $\\sigma _{2p_{z}}$ orbital is higher in energy than the $\\pi _{2p_{x,y}}$ orbitals. In contrast, the $\\sigma _{2p_{z}}$ orbital is lower in energy than the $\\pi _{2p_{x,y}}$ orbitals for O2 and F2 due to the increase in the energy difference between the 2s and 2p atomic orbitals as the nuclear charge increases across the row. (CC BY-SA-NC; anonymous).",
+   "draws": [
+    "energy"
+   ],
+   "conventions": [
+    "e-"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "high",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "valence-orbitals",
+   "concept": "valence-molecular-orbitals",
+   "verb": "introduces"
+  },
+  {
+   "span": "valence-orbitals",
+   "concept": "lcao-mo-method",
+   "verb": "uses"
+  },
+  {
+   "span": "ns-orbitals",
+   "concept": "homonuclear-diatomic-molecule",
+   "verb": "introduces"
+  },
+  {
+   "span": "ns-orbitals",
+   "concept": "filling-mo-diagram",
+   "verb": "introduces"
+  },
+  {
+   "span": "ns-orbitals",
+   "concept": "mo-energy-level-diagram",
+   "verb": "uses"
+  },
+  {
+   "span": "ns-orbitals",
+   "concept": "bond-order",
+   "verb": "uses"
+  },
+  {
+   "span": "np-orbitals",
+   "concept": "p-sigma-orbitals",
+   "verb": "introduces"
+  },
+  {
+   "span": "np-orbitals",
+   "concept": "pi-orbital",
+   "verb": "introduces"
+  },
+  {
+   "span": "np-orbitals",
+   "concept": "sigma-orbital",
+   "verb": "reinforces"
+  },
+  {
+   "span": "np-orbitals",
+   "concept": "antibonding-node",
+   "verb": "reinforces"
+  },
+  {
+   "span": "energies",
+   "concept": "mo-diagram-rules",
+   "verb": "introduces"
+  },
+  {
+   "span": "energies",
+   "concept": "period-2-mo-order",
+   "verb": "introduces"
+  },
+  {
+   "span": "energies",
+   "concept": "filling-mo-diagram",
+   "verb": "reinforces"
+  },
+  {
+   "span": "energies",
+   "concept": "hunds-rules",
+   "verb": "uses"
+  },
+  {
+   "span": "energies",
+   "concept": "pauli-exclusion-principle",
+   "verb": "uses"
+  },
+  {
+   "span": "ns-with-np",
+   "concept": "p-sigma-orbitals",
+   "verb": "reinforces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "e1",
+   "source_id": "exr:9.7.1",
+   "source_number": "Exercise 9.7.1",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "ns-orbitals",
+   "prompt": "<p><strong>Calcium Dimer Cation</strong></p><p>Use a qualitative molecular orbital energy-level diagram to predict the valence electron configuration, bond order, and likely existence of the Ca<sub>2</sub><sup>+</sup> ion.</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "source",
+    "solution": "<p>Ca<sub>2</sub><sup>+</sup> has a $\\left ( \\sigma _{4s} \\right )^{2}\\left ( \\sigma _{4s}^{\\star } \\right )^{1}$ electron configurations and a bond order of 1/2 and should exist.</p>"
+   }
+  },
+  {
+   "id": "e2",
+   "source_id": "exr:9.7.2",
+   "source_number": "Exercise 9.7.2",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "energies",
+   "prompt": "<p>Use a qualitative molecular orbital energy-level diagram to predict the electron configuration, the bond order, and the number of unpaired electrons in the peroxide ion (O<sub>2</sub><sup>2−</sup>).</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "source",
+    "solution": "<p>$\\left ( \\sigma _{2s} \\right )^{2}\\left ( \\sigma ^{\\star }_{2s} \\right )^{2}\\left ( \\sigma _{2p_{z}} \\right )^{2}\\left ( \\pi _{2p_{x,y}} \\right )^{4}\\left ( \\pi _{2p ^{\\star }_{x,y}} \\right )^{4}$ bond order of 1; no unpaired electrons</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "e1",
+   "concept": "filling-mo-diagram"
+  },
+  {
+   "exercise": "e1",
+   "concept": "bond-order"
+  },
+  {
+   "exercise": "e2",
+   "concept": "filling-mo-diagram"
+  },
+  {
+   "exercise": "e2",
+   "concept": "period-2-mo-order"
+  },
+  {
+   "exercise": "e2",
+   "concept": "bond-order"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-sigma-star",
+   "kind": "correction",
+   "html": "The sum of the two $np_z$ orbitals is the antibonding $\\sigma^{*}_{np_z} = np_z(A) + np_z(B)$; Equation 9.7.3 drops the star as well."
+  },
+  {
+   "id": "c-pi-star",
+   "kind": "correction",
+   "html": "For Li<sub>2</sub> to N<sub>2</sub>, $\\sigma_{2p_z}$ lies just above the bonding pair $\\pi_{2p_x}$ and $\\pi_{2p_y}$, as Figure 9.7.6 shows; the $\\pi^{*}$ pair stays above it."
+  },
+  {
+   "id": "c-s3pz",
+   "kind": "correction",
+   "html": "The comparison is with the $\\pi_{2p_{x,y}}$ pair: there are no $3p$ orbitals in these molecules' valence diagrams."
+  },
+  {
+   "id": "c-figs",
+   "kind": "correction",
+   "html": "The diagrams meant are Figures 9.7.5 and 9.7.6, the filled diagrams of F<sub>2</sub> and O<sub>2</sub> and the period 2 series; Figure 9.7.7 shows an $ns$ and an $np_z$ orbital combining."
+  },
+  {
+   "id": "c-fig-971",
+   "kind": "correction",
+   "figure": "sim-ns-diagram",
+   "html": "$\\sigma^{*}_{ns}$ is the antibonding level, not a nonbonding one."
+  },
+  {
+   "id": "c-fig-975",
+   "kind": "correction",
+   "figure": "sim-period2",
+   "html": "Part (a) is F<sub>2</sub>, with 14 valence electrons (7 from each F atom): 8 in bonding orbitals and 6 in antibonding orbitals, a bond order of 1."
+  }
+ ]
+}

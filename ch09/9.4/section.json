@@ -1,0 +1,372 @@
+{
+ "id": "9.4",
+ "module": "13455",
+ "chapter": "9",
+ "title": "Chemical Bond Stability",
+ "short": "Chemical bond stability",
+ "lead": "With the two molecular orbitals of H₂⁺ normalized, their energies follow from the Hamiltonian. The energy comes out in terms of three integrals, the overlap, Coulomb and exchange integrals, and whether H₂⁺ holds together depends on how they change as the protons approach.",
+ "objectives": [
+  "Identify the nature of the energy of molecular orbitals of a diatomic as a function of intermolecular distance",
+  "Identify the three integrals involved in calculation the total Molecular Orbital Energy: coulomb Integral, exchange integral, and overlap integral"
+ ],
+ "summary_html": "",
+ "notes": "Adapted from David M. Hanson, Erica Harvey, Robert Sweeney and Theresa Julia Zielinski's Quantum States of Atoms and Molecules. The curves of J and K in Figure 9.4.2 + 9.4.3 use the closed forms for two 1s orbitals (Pauling, 1928; McQuarrie and Simon, §9.4), which the page plots but does not print.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "Exercise 9.4.1 and its key are the book's, with a correction under the key; the solutions to Exercises 9.4.2 and 9.4.3, which the book leaves unkeyed, were written by AI, and so was the last exercise, on ΔE± at R = 2a₀, with its solution. Bloom levels and concept tags were chosen by AI. Numeric answers accept a 2% tolerance.",
+ "figures": [
+  {
+   "id": "sim-energy",
+   "kind": "sim",
+   "number": "9.4.2",
+   "folds": [
+    "9.4.3"
+   ],
+   "originals": [
+    "/media/ch09/51430-proton_electrostatics.gif",
+    "/media/ch09/51431-H2Potential.gif"
+   ],
+   "original_caption": "(a) The electrostatic energy (in hartrees, 27.2 eV) of two protons separated by a distance $R$ in units of the Bohr radius (52.92 pm). (b) The overlap ($S$), Coulomb ($J$), and exchange (K) integrals at different proton separations. The units for $J$ and $K$ are hartrees; $S$ has no units. (CC BY-SA-NC; David M. Hanson, Erica Harvey, Robert Sweeney, Theresa Julia Zielinski via ChemEdDL) Energy of the $H_2^+$ bonding molecular orbital $\\Delta E_+$ and the molecular orbital $\\Delta E_-$, relative to the energy of a separated hydrogen atom and proton.",
+   "draws": [
+    "energy",
+    "length",
+    "probability-density"
+   ],
+   "conventions": [
+    "p+"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "opening",
+   "concept": "h2plus-lcao-energy",
+   "verb": "introduces"
+  },
+  {
+   "span": "opening",
+   "concept": "h2plus-coulomb-integral",
+   "verb": "introduces"
+  },
+  {
+   "span": "opening",
+   "concept": "h2plus-exchange-integral",
+   "verb": "introduces"
+  },
+  {
+   "span": "opening",
+   "concept": "h2plus-energy-curve",
+   "verb": "introduces"
+  },
+  {
+   "span": "opening",
+   "concept": "h2plus-bond-stability",
+   "verb": "introduces"
+  },
+  {
+   "span": "opening",
+   "concept": "h2plus-normalization",
+   "verb": "uses"
+  },
+  {
+   "span": "opening",
+   "concept": "expectation-value",
+   "verb": "uses"
+  },
+  {
+   "span": "opening",
+   "concept": "hamiltonian-matrix-element",
+   "verb": "reinforces"
+  },
+  {
+   "span": "opening",
+   "concept": "hydrogen-energy-levels",
+   "verb": "uses"
+  },
+  {
+   "span": "opening",
+   "concept": "overlap-integral-1s",
+   "verb": "uses"
+  },
+  {
+   "span": "opening",
+   "concept": "h2plus-hamiltonian",
+   "verb": "uses"
+  },
+  {
+   "span": "the-coulomb-and-exchange-integrals",
+   "concept": "overlap-charge-density",
+   "verb": "introduces"
+  },
+  {
+   "span": "the-coulomb-and-exchange-integrals",
+   "concept": "h2plus-coulomb-integral",
+   "verb": "reinforces"
+  },
+  {
+   "span": "the-coulomb-and-exchange-integrals",
+   "concept": "h2plus-exchange-integral",
+   "verb": "reinforces"
+  },
+  {
+   "span": "the-coulomb-and-exchange-integrals",
+   "concept": "h2plus-energy-curve",
+   "verb": "reinforces"
+  },
+  {
+   "span": "the-coulomb-and-exchange-integrals",
+   "concept": "h2plus-bond-stability",
+   "verb": "reinforces"
+  },
+  {
+   "span": "the-coulomb-and-exchange-integrals",
+   "concept": "internuclear-distance",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "e1",
+   "source_id": "exr:9.4.1",
+   "source_number": "Exercise 9.4.1",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "opening",
+   "prompt": "<p>Show that Equation 9.4.2 expands to give Equation 9.4.3 within the LCAO approximation that uses a basis set of only two 1s atomic orbitals.</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "source",
+    "solution": "<p>Here we have the wavefunction within the LCAO approximation that uses a basis set of only two 1s atomic orbitals (Equation 9.4.1).</p>\n$$ | \\psi_{\\pm} \\rangle =\\frac{1}{\\sqrt{2(1 \\pm S)}}\\left(1_{S a} \\pm 1_{S b}\\right) $$\n<p>And our LCAO approximation is equivalent to this if we plug in the wavefunction directly.</p>\n$$ E_{\\pm}= \\langle \\psi_{\\pm}|\\hat{H}| \\psi_{\\pm} \\rangle =N^{2} \\langle \\left(1_{S a} \\pm 1_{S b}\\right)|\\hat{H}|\\left(1_{S a}-1_{S b}\\right) \\rangle $$\n<p><sup class=\"fn\" data-note=\"c-key-941\"></sup></p>\n<p>We can see form above that the normalization constant squared results in:</p>\n$$ N^{2}=\\frac{1}{2(1 \\pm S)} $$\n<p>We now FOIL the mulitple (i.e., expaned term by term):</p>\n$$ \\langle 1_{S a}|\\hat{H}| 1_{S a} \\rangle + \\langle1_{S b}|\\hat{H}| 1_{S b} \\rangle \\pm \\langle 1_{S a}|\\hat{H}| 1_{S b} \\rangle \\pm \\langle 1_{S b}|\\hat{H}| 1_{S a} \\rangle $$\n<p>Now we can see this is now equivalent to Equation 9.4.3 if the equation above is inserted (and adding a subscript to emphasize this only applies to the electronic wavefunction):</p>\n$$ E_{\\pm} = \\dfrac {1}{2(1 \\pm S)} \\left[ \\underbrace{\\left \\langle 1s_A |\\hat {H} _{elec} | 1s_A \\right \\rangle}_{H_{AA}} + \\underbrace{\\left \\langle 1s_B |\\hat {H} _{elec} | 1s_B \\right \\rangle }_{H_{BB}}\\pm \\underbrace{\\left \\langle 1s_A |\\hat {H} _{elec} | 1s_B \\right \\rangle}_{H_{AB}} \\pm \\underbrace{\\left \\langle 1s_B |\\hat {H} _{elec} | 1s_A \\right \\rangle}_{H_{BA}} \\right] $$"
+   }
+  },
+  {
+   "id": "e2",
+   "source_id": "exr:9.4.2",
+   "source_number": "Exercise 9.4.2",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "opening",
+   "prompt": "<p>Show that Equation 9.2.1<sup class=\"fn\" data-note=\"c-ex-942\"></sup> follows from Equation 9.4.7</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "Substitute Equations 9.4.8 and 9.4.9 into Equation 9.4.7 and collect the terms that carry $1 \\pm S$.",
+    "solution": "<p>Start from Equation 9.4.7, $E_\\pm = \\dfrac{1}{1 \\pm S}(H_{AA} \\pm H_{AB})$. Equation 9.4.8 gives $H_{AA} = E_H + \\dfrac{e^2}{4\\pi\\epsilon_0R} + J$, and Equation 9.4.9 gives $H_{AB} = E_HS + \\dfrac{e^2}{4\\pi\\epsilon_0R}S + K$, since $1s_B$ is an eigenfunction of the hydrogen-atom part of the operator and $\\langle 1s_A|1s_B\\rangle = S$. Then</p>$$ H_{AA} \\pm H_{AB} = \\left(E_H + \\dfrac{e^2}{4\\pi\\epsilon_0R}\\right)(1 \\pm S) + J \\pm K, $$<p>and dividing by $1 \\pm S$,</p>$$ E_\\pm = E_H + \\dfrac{e^2}{4\\pi\\epsilon_0R} + \\dfrac{J \\pm K}{1 \\pm S}, $$<p>which is Equation 9.4.10. These are the steps of the derivation of the energy of H₂⁺ in this section.</p>"
+   }
+  },
+  {
+   "id": "e3",
+   "source_id": "exr:9.4.3",
+   "source_number": "Exercise 9.4.3",
+   "kind": "exercise",
+   "bloom": "Understand",
+   "place": {
+    "at": "end"
+   },
+   "cite": "the-coulomb-and-exchange-integrals",
+   "prompt": "<p>Write a paragraph describing in your own words the physical significance of the Coulomb and exchange integrals for $\\mathrm{H_2^{+}}$.</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "Ask which charge distribution each integral weighs, and which proton it is attracted to.",
+    "solution": "<p>The Coulomb integral $J$ is the average potential energy of the electron's charge cloud around proton A, the density of a hydrogen 1s orbital, in the field of the other proton, B. It is negative because the attraction is the only interaction in it, and it fades as the protons separate, since the cloud is then far from B. It would be there even if the two atoms' orbitals never overlapped. The exchange integral $K$ weighs the overlap charge density $e\\varphi_{1s_A}\\varphi_{1s_B}$, which exists only where the two orbitals share space, chiefly between the nuclei, in the field of one proton. It is negative too, and it is what is new about the molecule: in $\\psi_+$ the overlap density adds charge between the protons and $+K$ lowers the energy enough to form a bond, while in $\\psi_-$ that charge is removed and $-K$ cancels most of $J$, so the protons' repulsion wins.</p>"
+   }
+  },
+  {
+   "id": "a1",
+   "source_id": "To get a chemical bond and a stable",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "opening",
+   "prompt": "<p>At $R = 2a_0$ the integrals for $\\mathrm{H_2^+}$ are $S = 0.586$, $J = -0.473$ hartree and $K = -0.406$ hartree, and the protons' repulsion $e^2/4\\pi\\epsilon_0R$ is 0.500 hartree. Use Equation 9.4.11 to find $\\Delta E_+$ and $\\Delta E_-$ in hartrees.</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "ΔE₊",
+      "value": -0.054,
+      "unit": "hartree",
+      "tol": 0.05,
+      "hint": "For the bonding orbital take the upper signs: $(J + K)/(1 + S)$."
+     },
+     {
+      "part": "ΔE₋",
+      "value": 0.338,
+      "unit": "hartree"
+     }
+    ],
+    "solution": "<p>$\\Delta E_+ = 0.500 + \\dfrac{-0.473 + (-0.406)}{1 + 0.586} = 0.500 - \\dfrac{0.879}{1.586} = 0.500 - 0.554 = -0.054$ hartree, so at this separation the bonding orbital holds the molecule 1.5 eV below a hydrogen atom and a proton. $\\Delta E_- = 0.500 + \\dfrac{-0.473 - (-0.406)}{1 - 0.586} = 0.500 - \\dfrac{0.067}{0.414} = 0.500 - 0.162 = +0.338$ hartree, above the separated pair.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "e1",
+   "concept": "h2plus-lcao-energy"
+  },
+  {
+   "exercise": "e1",
+   "concept": "hamiltonian-matrix-element"
+  },
+  {
+   "exercise": "e2",
+   "concept": "h2plus-energy-curve"
+  },
+  {
+   "exercise": "e2",
+   "concept": "h2plus-lcao-energy"
+  },
+  {
+   "exercise": "e3",
+   "concept": "h2plus-coulomb-integral"
+  },
+  {
+   "exercise": "e3",
+   "concept": "h2plus-exchange-integral"
+  },
+  {
+   "exercise": "e3",
+   "concept": "overlap-charge-density"
+  },
+  {
+   "exercise": "a1",
+   "concept": "h2plus-energy-curve"
+  },
+  {
+   "exercise": "a1",
+   "concept": "h2plus-bond-stability"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-j-box",
+   "kind": "correction",
+   "html": "The Coulomb integral of H₂⁺ involves one electron, so it holds no repulsion between electrons: it is the potential energy of attraction between the electron density in $1s_A$ and proton B, as Equation 9.4.12 and the paragraph above the box say."
+  },
+  {
+   "id": "c-1a",
+   "kind": "correction",
+   "html": "Here and twice below the book writes the subscripts $1a_A$ and $1a_B$ for the orbitals $1s_A$ and $1s_B$."
+  },
+  {
+   "id": "c-134",
+   "kind": "correction",
+   "html": "With the integrals of Figure 9.4.2, $\\Delta E_+$ of Equation 9.4.11 is negative down to $R = 1.52a_0$ = 81 pm and has its minimum at $R = 2.49a_0$ = 132 pm, $-0.0648$ hartree = $-1.76$ eV, as Figure 9.4.3 shows. The 100 pm and 134 pm printed here do not follow from these curves."
+  },
+  {
+   "id": "c-key-941",
+   "kind": "correction",
+   "html": "The key's ket should read $(1_{Sa} \\pm 1_{Sb})$, with the same $\\pm$ as the bra; it prints a minus sign."
+  },
+  {
+   "id": "c-ex-942",
+   "kind": "correction",
+   "html": "The equation that follows from Equation 9.4.7 is Equation 9.4.10, $E_\\pm = E_H + \\dfrac{e^2}{4\\pi\\epsilon_0R} + \\dfrac{J \\pm K}{1 \\pm S}$; Equation 9.2.1 is the Hamiltonian of H₂⁺."
+  },
+  {
+   "id": "c-943",
+   "kind": "correction",
+   "figure": "sim-energy",
+   "html": "Figure 9.4.3's caption calls $\\Delta E_-$ the energy of the molecular orbital; it is the energy of the antibonding molecular orbital."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "energy",
+   "what": "the energy of H₂⁺",
+   "source": "Physical Chemistry (LibreTexts), 9.4 Chemical Bond Stability",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kEpm = \\dfrac {1}{1 \\pm S} (\\kHAA \\pm \\kHAB)",
+       "src": "(9.4.7)"
+      },
+      {
+       "tex": "\\kHAA = \\kEHatom + \\dfrac{\\ke^2}{4\\pi\\epsilon_0\\kR} + \\kJint",
+       "src": "(9.4.8)"
+      },
+      {
+       "tex": "\\kHAB = \\kEHatom S + \\dfrac{\\ke^2}{4\\pi\\epsilon_0\\kR}S + \\kKint",
+       "src": "(9.4.9)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{E}{\\kEpm} = \\mk{f}{\\dfrac {1}{1 \\pm S}} (\\mk{a}{\\kHAA} \\pm \\mk{b}{\\kHAB})"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{E}{\\kEpm} = \\mk{f}{\\dfrac {1}{1 \\pm S}} \\left[\\mk{a}{\\kEHatom + \\dfrac{\\ke^2}{4\\pi\\epsilon_0\\kR} + \\kJint} \\pm \\mk{b}{\\kHAB}\\right]",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{E}{\\kEpm} = \\mk{f}{\\dfrac {1}{1 \\pm S}} \\left[\\mk{a}{\\kEHatom + \\dfrac{\\ke^2}{4\\pi\\epsilon_0\\kR} + \\kJint} \\pm \\mk{b}{\\left(\\kEHatom S + \\dfrac{\\ke^2}{4\\pi\\epsilon_0\\kR}S + \\kKint\\right)}\\right]",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{E}{\\kEpm} = \\mk{f}{\\dfrac {1}{1 \\pm S}} \\left[ \\mk{g}{\\left(\\kEHatom + \\dfrac{\\ke^2}{4\\pi\\epsilon_0\\kR}\\right) (1 \\pm S )} + \\mk{j}{\\kJint} \\pm \\mk{k}{\\kKint} \\right]",
+       "map": {
+        "a": [
+         "g",
+         "j"
+        ],
+        "b": [
+         "g",
+         "k"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{E}{\\kEpm} = \\mk{g}{\\kEHatom + \\dfrac{\\ke^2}{4\\pi\\epsilon_0\\kR}} + \\mk{q}{\\dfrac {\\kJint \\pm \\kKint}{1 \\pm S}}",
+       "map": {
+        "f": [
+         "g",
+         "q"
+        ],
+        "j": "q",
+        "k": "q"
+       }
+      }
+     ],
+     "num": "(9.4.10)"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,183 @@
+{
+ "id": "9.10",
+ "module": "13462",
+ "chapter": "9",
+ "title": "Molecular Orbital Theory Predicts that Molecular Oxygen is Paramagnetic",
+ "short": "Paramagnetic oxygen",
+ "lead": "Bond order ties together the bond lengths and bond energies of the period-2 diatomic molecules and their ions. Molecular orbital theory also accounts for a magnetic property of O₂ that other bonding models cannot.",
+ "objectives": [
+  "To describe the connection between bond order, bond length and bond energy in diatomic molecules",
+  "To explain the observed paramagnetic properties of molecular oxygen with Molecular Orbital theory"
+ ],
+ "summary_html": "",
+ "notes": "The book's own page, shared under CC BY-NC-SA 4.0; Video 9.10.1 of liquid oxygen held between the poles of a magnet is left out with its caption, and the bond lengths and energies of Figure 9.10.1 + 9.10.2 are Huber and Herzberg's (NIST), Example 9.10.1's and calcium carbide's.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercise here; the one card is an AI exercise with an AI solution. Its Bloom level and concept tags were chosen by AI.",
+ "figures": [
+  {
+   "id": "sim-bond-trends",
+   "kind": "sim",
+   "number": "9.10.1",
+   "folds": [
+    "9.10.2"
+   ],
+   "originals": [
+    "/media/ch09/346417-9.10.1-left.svg",
+    "/media/ch09/346418-9.10.1-right.svg",
+    "/media/ch09/346483-attachment.svg"
+   ],
+   "original_caption": "Plot of bond length (left) and bond energy (right) for first row diatomics. (CC BY-NC; Ümit Kaya via LibreTexts)",
+   "draws": [
+    "length",
+    "energy"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "sim-o2-ions",
+   "kind": "sim",
+   "number": "9.10.3",
+   "originals": [
+    "/media/ch09/141969-imageedit_2_3565053295.png"
+   ],
+   "original_caption": "Molecular Orbital Energy-Level Diagrams for $\\mathrm{O_{2}}$. With 12 valence electrons (6 from each O atom), there are only 2 electrons to place in the $\\left ( \\pi ^{\\star }_{np_{x}},\\; \\pi ^{\\star }_{np_{y}} \\right )$ pair of orbitals. Hund’s first rule dictates that one electron occupies each orbital, and their spins are parallel, giving the $\\mathrm{ O_{2}}$ molecule two unpaired electrons. This diagram shows 8 electrons in bonding orbitals and 4 in antibonding orbitals, resulting in a predicted bond order of 2. (CC BY-SA-NC; Anonymous by request).",
+   "draws": [
+    "energy",
+    "length"
+   ],
+   "conventions": [
+    "O"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "bond-order-length-energy",
+   "concept": "bond-order",
+   "verb": "reinforces"
+  },
+  {
+   "span": "bond-order-length-energy",
+   "concept": "bond-order-and-stability",
+   "verb": "reinforces"
+  },
+  {
+   "span": "bond-order-length-energy",
+   "concept": "filling-mo-diagram",
+   "verb": "uses"
+  },
+  {
+   "span": "bond-order-length-energy",
+   "concept": "molecular-electron-configuration",
+   "verb": "uses"
+  },
+  {
+   "span": "molecular-oxygen-is-paramagnetic",
+   "concept": "paramagnetism",
+   "verb": "introduces"
+  },
+  {
+   "span": "molecular-oxygen-is-paramagnetic",
+   "concept": "oxygen-paramagnetism",
+   "verb": "introduces"
+  },
+  {
+   "span": "molecular-oxygen-is-paramagnetic",
+   "concept": "spin-barrier",
+   "verb": "introduces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "The bond order can be determined directly form",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "molecular-oxygen-is-paramagnetic",
+   "prompt": "<p>In the period-2 diatomic molecules the $\\sigma_{2p}$ orbital lies above the $\\pi_{2p}$ pair from Li<sub>2</sub> to N<sub>2</sub> and below it in O<sub>2</sub> and F<sub>2</sub>. Which of B<sub>2</sub>, C<sub>2</sub>, N<sub>2</sub>, O<sub>2</sub> and F<sub>2</sub> are paramagnetic?</p>",
+   "answer": {
+    "type": "choice",
+    "generated_by": "ai",
+    "options": [
+     "O<sub>2</sub> only",
+     "B<sub>2</sub> and O<sub>2</sub>",
+     "B<sub>2</sub>, O<sub>2</sub> and F<sub>2</sub>",
+     "C<sub>2</sub> and O<sub>2</sub>"
+    ],
+    "correct": 1,
+    "hint": "Fill the valence orbitals in order of energy and put one electron in each orbital of a degenerate pair before pairing any.",
+    "solution": "<p>B<sub>2</sub> has 6 valence electrons: four fill $\\sigma_{2s}$ and $\\sigma^*_{2s}$, and the last two go one into each orbital of the $\\pi_{2p}$ pair (Hund's rule), so two are unpaired. C<sub>2</sub>'s 8 fill the $\\pi_{2p}$ pair and N<sub>2</sub>'s 10 fill $\\sigma_{2p}$ as well, with every electron paired. O<sub>2</sub>'s last two electrons go one into each $\\pi^*_{2p}$ orbital with parallel spins, and F<sub>2</sub>'s 14 fill the $\\pi^*_{2p}$ pair. B<sub>2</sub> and O<sub>2</sub> are paramagnetic.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "paramagnetism"
+  },
+  {
+   "exercise": "a1",
+   "concept": "filling-mo-diagram"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-figure",
+   "kind": "correction",
+   "html": "The diagram meant is Figure 9.10.3, O<sub>2</sub>'s energy-level diagram below. Figure 9.10.1 plots bond lengths and bond energies."
+  },
+  {
+   "id": "c-fill",
+   "kind": "correction",
+   "html": "These four electrons go to the bonding $\\pi_{2p_x}$ and $\\pi_{2p_y}$ orbitals. The last two go to $\\pi^*$, as the next sentence says, which gives the 8 bonding and 4 antibonding electrons counted below."
+  },
+  {
+   "id": "c-configs",
+   "kind": "correction",
+   "html": "The π labels in these configurations are garbled. O<sub>2</sub> is $\\sigma_{1s}^2\\,{\\sigma^*_{1s}}^2\\,\\sigma_{2s}^2\\,{\\sigma^*_{2s}}^2\\,\\sigma_{2p}^2\\,\\pi_{2p_x}^2\\,\\pi_{2p_y}^2\\,{\\pi^*_{2p_x}}^1\\,{\\pi^*_{2p_y}}^1$, and the ions differ only in $\\pi^*$: one electron there in O<sub>2</sub><sup>+</sup>, three in O<sub>2</sub><sup>−</sup> and four in O<sub>2</sub><sup>2−</sup>."
+  },
+  {
+   "id": "c-bo",
+   "kind": "correction",
+   "html": "Equation BO is the bond-order formula of Section 9.8, Equation 9.8.1: the number of bonding electrons minus the number of antibonding electrons, divided by two."
+  },
+  {
+   "id": "c-caption",
+   "kind": "correction",
+   "figure": "sim-bond-trends",
+   "html": "Figure 9.10.2's caption repeats Figure 9.10.1's. Figure 9.10.2 plots bond distance against the number of valence electrons for the neutral molecules and their ions, each point labeled with its configuration and bond order."
+  }
+ ]
+}

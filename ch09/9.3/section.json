@@ -1,0 +1,323 @@
+{
+ "id": "9.3",
+ "module": "13454",
+ "chapter": "9",
+ "title": "The Overlap Integral",
+ "short": "The overlap integral",
+ "lead": "The two molecular orbitals of H₂⁺ still need their constants. Normalizing them brings in the overlap integral, a measure of how much two atomic orbitals share the same space, which depends on how far apart the protons are.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "Adapted from David M. Hanson, Erica Harvey, Robert Sweeney and Theresa Julia Zielinski's Quantum States of Atoms and Molecules; the book's link for the evaluation of S(R) leads nowhere and is left out.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "Exercise 9.3.1 is the book's, unkeyed; its solution was written by AI. The second exercise, on S and C± at R = 2a₀, was written by AI with its solution. Bloom levels and concept tags were chosen by AI. Numeric answers accept a 2% tolerance.",
+ "figures": [
+  {
+   "id": "sim-overlap",
+   "kind": "sim",
+   "number": "9.3.1",
+   "folds": [
+    "9.3.2"
+   ],
+   "originals": [
+    "/media/ch09/51101-300px-Orbital_overlap.png",
+    "/media/ch09/91362-ch3_3-11.jpg"
+   ],
+   "original_caption": "The wavefunctions of atomic orbitals decrease exponentially with distance. Orbital overlap is non-zero when two atoms are close together, as illustrated for 1s orbitals in the upper figure. The lower figure shows orbitals that are too far away to interact. In this case both $S$ is close to zero. The overlap integral at different proton separations.",
+   "draws": [
+    "wavefunction",
+    "length"
+   ],
+   "conventions": [
+    "p+"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "opening",
+   "concept": "h2plus-lcao-orbitals",
+   "verb": "reinforces"
+  },
+  {
+   "span": "opening",
+   "concept": "bonding-molecular-orbital",
+   "verb": "reinforces"
+  },
+  {
+   "span": "opening",
+   "concept": "antibonding-molecular-orbital",
+   "verb": "reinforces"
+  },
+  {
+   "span": "opening",
+   "concept": "lcao-approximation",
+   "verb": "uses"
+  },
+  {
+   "span": "opening",
+   "concept": "molecular-orbital",
+   "verb": "uses"
+  },
+  {
+   "span": "normalization",
+   "concept": "h2plus-normalization",
+   "verb": "introduces"
+  },
+  {
+   "span": "normalization",
+   "concept": "overlap-integral-1s",
+   "verb": "introduces"
+  },
+  {
+   "span": "normalization",
+   "concept": "overlap-integral",
+   "verb": "reinforces"
+  },
+  {
+   "span": "normalization",
+   "concept": "normalization-condition",
+   "verb": "reinforces"
+  },
+  {
+   "span": "normalization",
+   "concept": "orthogonality",
+   "verb": "reinforces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "e1",
+   "source_id": "exr:9.3.1",
+   "source_number": "Exercise 9.3.1",
+   "kind": "exercise",
+   "bloom": "Understand",
+   "place": {
+    "at": "end"
+   },
+   "cite": "normalization",
+   "prompt": "<p>Show that for two arbitrary functions $\\left \\langle \\varphi _B | \\varphi _A \\right \\rangle$ is the complex conjugate of $\\left \\langle \\varphi _A | \\varphi _B \\right \\rangle$ and that these two integrals are equal if the functions are real.</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "Write both integrals out and take the complex conjugate of one of them.",
+    "solution": "<p>By definition $\\langle \\varphi_A|\\varphi_B\\rangle = \\int \\varphi_A^*\\varphi_B\\,d\\tau$. Its complex conjugate is $\\left(\\int \\varphi_A^*\\varphi_B\\,d\\tau\\right)^* = \\int (\\varphi_A^*)^*\\varphi_B^*\\,d\\tau = \\int \\varphi_B^*\\varphi_A\\,d\\tau = \\langle \\varphi_B|\\varphi_A\\rangle$, since conjugating an integral conjugates its integrand, $(\\varphi_A^*)^* = \\varphi_A$, and the order of two factors in a product does not matter. So $\\langle \\varphi_B|\\varphi_A\\rangle = \\langle \\varphi_A|\\varphi_B\\rangle^*$. If both functions are real, then $\\varphi_A^* = \\varphi_A$ and $\\varphi_B^* = \\varphi_B$, both integrals are $\\int \\varphi_A\\varphi_B\\,d\\tau$, a real number, and the two are equal. This is why the two overlap integrals of the real 1s orbitals are the same $S$ in Equation 9.3.4.</p>"
+   }
+  },
+  {
+   "id": "a1",
+   "source_id": "The constants $C_+$ and $C_-$ are evaluated from the standard normalization condition",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "normalization",
+   "prompt": "<p>For $\\mathrm{H_2^+}$ with the protons $R = 2a_0$ (106 pm) apart, use Equation 9.3.9 to find the overlap integral $S$, then use Equation 9.3.6 to find $C_+$ and $C_-$.</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "S",
+      "value": 0.586,
+      "hint": "With $R/a_0 = 2$, Equation 9.3.9 is $e^{-2}(1 + 2 + 4/3)$."
+     },
+     {
+      "part": "C₊",
+      "value": 0.561
+     },
+     {
+      "part": "C₋",
+      "value": 1.1
+     }
+    ],
+    "solution": "<p>$S = e^{-2}\\left(1 + 2 + \\tfrac{4}{3}\\right) = (0.1353)(4.333) = 0.586$. Then $C_+ = \\dfrac{1}{\\sqrt{2(1 + 0.586)}} = \\dfrac{1}{\\sqrt{3.173}} = 0.561$ and $C_- = \\dfrac{1}{\\sqrt{2(1 - 0.586)}} = \\dfrac{1}{\\sqrt{0.827}} = 1.10$. The bonding orbital's constant is the one Example 9.3.1 uses.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "e1",
+   "concept": "overlap-integral"
+  },
+  {
+   "exercise": "e1",
+   "concept": "h2plus-normalization"
+  },
+  {
+   "exercise": "a1",
+   "concept": "overlap-integral-1s"
+  },
+  {
+   "exercise": "a1",
+   "concept": "h2plus-normalization"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-fig-densities",
+   "kind": "correction",
+   "html": "Figure 9.3.1 shows the overlap of two 1s orbitals, not the charge densities of $\\psi_+$ and $\\psi_-$; those are in Figure 9.2.2."
+  },
+  {
+   "id": "c-here",
+   "kind": "correction",
+   "html": "The book's link for this evaluation leads to no page."
+  },
+  {
+   "id": "c-ex-line",
+   "kind": "correction",
+   "html": "The third line of the work drops the factor $\\Big(e^{-r_A/a_0}+e^{-r_B/a_0}\\Big)^2$, and the fourth sets in $C_+^2 = (0.561)^2$, which is the value at $R = 2a_0 = 106$ pm, a separation the example never states. Kept, the fourth line is $C_+^2/\\pi a_0^3$; the factor, $(2e^{-1})^2 = 0.541$ at the midpoint, is what gives the next result, $3.7\\times10^{-7}\\ \\text{pm}^{-3}$."
+  },
+  {
+   "id": "c-ex-eq",
+   "kind": "correction",
+   "html": "The constant $C_+$ comes from Equation 9.3.6; the page has no Equation 9.3.12."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "normalized",
+   "what": "the normalized orbitals of H₂⁺",
+   "source": "Physical Chemistry (LibreTexts), 9.3 The Overlap Integral",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "|C_\\pm|^2 [ \\langle\\konesA | \\konesA \\rangle + \\langle \\konesB | \\konesB \\rangle \\pm \\langle\\konesB | \\konesA\\rangle \\pm \\langle\\konesA | \\konesB \\rangle] = 1",
+       "src": "(9.3.3)"
+      },
+      {
+       "tex": "\\langle\\konesA | \\konesA \\rangle = \\langle\\konesB | \\konesB \\rangle = 1",
+       "src": "3.5"
+      },
+      {
+       "tex": "\\left \\langle \\konesA | \\konesB \\right \\rangle = \\left \\langle \\konesB | \\konesA \\right \\rangle = S",
+       "src": "(9.3.4)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{c}{|C_\\pm|^2} [ \\mk{aa}{\\langle\\konesA | \\konesA \\rangle} + \\mk{bb}{\\langle \\konesB | \\konesB \\rangle} \\pm \\mk{ba}{\\langle\\konesB | \\konesA\\rangle} \\pm \\mk{ab}{\\langle\\konesA | \\konesB \\rangle}] = \\mk{r}{1}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{c}{|C_\\pm|^2} [ \\mk{aa}{1} + \\mk{bb}{1} \\pm \\mk{ba}{\\langle\\konesB | \\konesA\\rangle} \\pm \\mk{ab}{\\langle\\konesA | \\konesB \\rangle}] = \\mk{r}{1}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{c}{|C_\\pm|^2} [ \\mk{aa}{1} + \\mk{bb}{1} \\pm \\mk{ba}{S} \\pm \\mk{ab}{S}] = \\mk{r}{1}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{c}{|C_\\pm|^2}\\mk{p}{(2 \\pm 2S )} = \\mk{r}{1}",
+       "map": {
+        "aa": "p",
+        "bb": "p",
+        "ba": "p",
+        "ab": "p"
+       }
+      }
+     ],
+     "num": "(9.3.5)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      }
+     ],
+     "then": {
+      "tex": "\\mk{c}{|C_\\pm|^2}\\mk{p}{(2 \\pm 2S )} = \\mk{r}{1}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{c}{|C_\\pm|^2} = \\mk{r}{\\dfrac{1}{2(1 \\pm S)}}",
+       "map": {
+        "p": "r"
+       }
+      },
+      {
+       "tex": "\\mk{c}{C_{\\pm}} = \\mk{r}{\\dfrac{1}{\\sqrt{2(1 \\pm S )}}}",
+       "cap": "Take the positive real root: the overall sign of a wavefunction can be chosen freely."
+      }
+     ],
+     "num": "(9.3.6)"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "| \\kpsip \\rangle = C_+(\\konesA + \\konesB)",
+       "src": "(9.3.1)"
+      },
+      {
+       "step": 1
+      }
+     ],
+     "then": {
+      "tex": "\\mk{p}{| \\kpsip \\rangle} = \\mk{c}{C_+}\\mk{o}{(\\konesA + \\konesB)}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{p}{| \\kpsip \\rangle} = \\mk{c}{\\dfrac{1}{\\sqrt{2(1 + S )}}} \\mk{o}{(\\konesA + \\konesB)}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "num": "(9.3.7)",
+     "note": "The book calls these the normalized forms of Equations 9.3.1 and 9.3.1; the second is Equation 9.3.2."
+    },
+    {
+     "assumes": [
+      {
+       "tex": "| \\kpsim \\rangle = C_{-}(\\konesA - \\konesB)",
+       "src": "(9.3.2)"
+      },
+      {
+       "step": 1
+      }
+     ],
+     "then": {
+      "tex": "\\mk{p}{| \\kpsim \\rangle} = \\mk{c}{C_{-}}\\mk{o}{(\\konesA - \\konesB)}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{p}{| \\kpsim \\rangle} = \\mk{c}{\\dfrac{1}{\\sqrt{2(1 - S )}}} \\mk{o}{(\\konesA - \\konesB)}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "num": "(9.3.8)"
+    }
+   ]
+  }
+ ]
+}

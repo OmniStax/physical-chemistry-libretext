@@ -442,7 +442,7 @@
        0,
        1
       ],
-      "why": "Permuting $\\psi(\\mathbf{r}_2, \\mathbf{r}_1)$ once more multiplies it by the same factor and gives back the original function."
+      "why": "If each permutation changes the wavefunction by $e^{i\\varphi}$, the double permutation must change the wavefunction by $e^{i\\varphi} e^{i\\varphi}$. Since we then are back to the original state, the effect of the double permutation must equal 1."
      },
      "steps": [
       {

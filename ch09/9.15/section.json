@@ -1,0 +1,177 @@
+{
+ "id": "9.15",
+ "module": "13467",
+ "chapter": "9",
+ "title": "Molecular Term Symbols Designate Symmetry",
+ "short": "Term symbols and symmetry",
+ "lead": "A molecular term symbol carries two symmetry labels that an atomic one lacks: its parity under inversion through the center of the molecule and, for Σ states, its sign under reflection in a plane through both nuclei. O₂'s terms are found from its microstates.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "Written by Mattanjah de Vries and shared under the book's CC BY-NC-SA 4.0, with orbital pictures the book does not credit; the microstate drawings of Example 9.15.3 are states of the microstate figure.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "Exercise 9.15.1 and its solution are the book's. Its Bloom level and concept tags were chosen by AI.",
+ "figures": [
+  {
+   "id": "sim-parity",
+   "kind": "sim",
+   "originals": [
+    "/media/ch09/57503-M22.jpg",
+    "/media/ch09/182590-9.15.1.png"
+   ],
+   "draws": [
+    "wavefunction"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "fig-o2-sticks",
+   "kind": "figure",
+   "originals": [
+    "/media/ch09/182591-9.15.2.png"
+   ],
+   "draws": [],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "kept as the book prints it"
+    }
+   ]
+  },
+  {
+   "id": "sim-o2-terms",
+   "kind": "sim",
+   "originals": [
+    "/media/ch09/182592-9.15.3.png"
+   ],
+   "draws": [],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "axial-quantum-numbers",
+   "concept": "axial-orbital-angular-momentum",
+   "verb": "reinforces"
+  },
+  {
+   "span": "axial-quantum-numbers",
+   "concept": "microstate",
+   "verb": "uses"
+  },
+  {
+   "span": "axial-quantum-numbers",
+   "concept": "total-spin-magnetic-quantum-number",
+   "verb": "uses"
+  },
+  {
+   "span": "parity-and-reflection",
+   "concept": "molecular-state-parity",
+   "verb": "introduces"
+  },
+  {
+   "span": "parity-and-reflection",
+   "concept": "sigma-reflection-symmetry",
+   "verb": "introduces"
+  },
+  {
+   "span": "parity-and-reflection",
+   "concept": "gerade-ungerade",
+   "verb": "reinforces"
+  },
+  {
+   "span": "parity-and-reflection",
+   "concept": "finding-molecular-terms",
+   "verb": "reinforces"
+  },
+  {
+   "span": "parity-and-reflection",
+   "concept": "molecular-term-symbol",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "e1",
+   "source_id": "exr:9.15.1",
+   "source_number": "Exercise 9.15.1",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "parity-and-reflection",
+   "prompt": "<p>Write the term symbols for $O_2^-$</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "source",
+    "solution": "<p>First draw the electron configuration diagram.</p><p><img src=\"/media/ch09/182593-9.15.4.png\" alt=\"The orbital levels of O2-: three electrons in the two π*g orbitals, all lower levels holding two.\"></p><p>There are only two possible configurations. It should be easy to see that the term symbol is $^2\\Pi_g$.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "e1",
+   "concept": "finding-molecular-terms"
+  },
+  {
+   "exercise": "e1",
+   "concept": "molecular-state-parity"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-ms",
+   "kind": "correction",
+   "html": "$M_S$ runs from $m_{s1} + m_{s2}$ down to $-m_{s1} - m_{s2}$: for two electrons, from 1 to −1."
+  },
+  {
+   "id": "c-laporte",
+   "kind": "correction",
+   "html": "These are product rules for parity, like those for even and odd functions. Laporte's rule is a selection rule: it allows electric dipole transitions only between g and u states."
+  },
+  {
+   "id": "c-closed",
+   "kind": "correction",
+   "html": "The state of Example 9.15.1 is an open-shell one: its two $2\\pi_u$ electrons are unpaired."
+  },
+  {
+   "id": "c-chart",
+   "kind": "correction",
+   "html": "The columns are $M_S = -1, 0, 1$ and the rows $M_L = 2, 0, -2$. The $^1\\Delta$ term takes the one microstate of each of the rows $M_L = \\pm 2$, so after it the row $M_L = 0$ still holds 1, 2, 1. The $^3\\Sigma$ term takes 1, 1, 1 from that row and leaves one microstate at $M_S = 0$, a $^1\\Sigma$ term."
+  },
+  {
+   "id": "c-answer",
+   "kind": "correction",
+   "html": "O<sub>2</sub>'s two $\\pi_g^*$ electrons give three terms, $^3\\Sigma_g^-$, $^1\\Delta_g$ and $^1\\Sigma_g^+$. With one orbital + and the other −, the triplet's reflection label is −, and the microstate left over is $^1\\Sigma_g^+$. The ground state is $^3\\Sigma_g^-$."
+  }
+ ]
+}

@@ -1,0 +1,1092 @@
+{
+ "types": [],
+ "symbols": [
+  {
+   "sym": "chi",
+   "latex": "\\chi",
+   "macro": "\\kchi"
+  },
+  {
+   "sym": "chi_i",
+   "latex": "\\chi_i",
+   "macro": "\\kchii"
+  },
+  {
+   "sym": "chi_j",
+   "latex": "\\chi_j",
+   "macro": "\\kchij"
+  },
+  {
+   "sym": "psi_g",
+   "latex": "\\psi_g",
+   "macro": "\\kpsig"
+  },
+  {
+   "sym": "psi_u",
+   "latex": "\\psi_u",
+   "macro": "\\kpsiu"
+  },
+  {
+   "sym": "C_g",
+   "latex": "C_g"
+  },
+  {
+   "sym": "C_u",
+   "latex": "C_u"
+  },
+  {
+   "sym": "R_AB",
+   "latex": "R_{AB}",
+   "macro": "\\kRAB"
+  },
+  {
+   "sym": "r_1A",
+   "latex": "r_{1A}",
+   "macro": "\\kroneA"
+  },
+  {
+   "sym": "r_1B",
+   "latex": "r_{1B}",
+   "macro": "\\kroneB"
+  },
+  {
+   "sym": "r_2A",
+   "latex": "r_{2A}",
+   "macro": "\\krtwoA"
+  },
+  {
+   "sym": "r_2B",
+   "latex": "r_{2B}",
+   "macro": "\\krtwoB"
+  },
+  {
+   "sym": "V_eeb",
+   "latex": "V_{ee}",
+   "macro": "\\kVeeb"
+  },
+  {
+   "sym": "V_enb",
+   "latex": "V_{en}",
+   "macro": "\\kVenb"
+  },
+  {
+   "sym": "V_nnb",
+   "latex": "V_{nn}",
+   "macro": "\\kVnnb"
+  },
+  {
+   "sym": "a_1",
+   "latex": "a_1"
+  },
+  {
+   "sym": "a_2",
+   "latex": "a_2"
+  },
+  {
+   "sym": "b_1",
+   "latex": "b_1"
+  },
+  {
+   "sym": "b_2",
+   "latex": "b_2"
+  },
+  {
+   "sym": "x_sp",
+   "latex": "x"
+  },
+  {
+   "sym": "x_lp",
+   "latex": "x"
+  },
+  {
+   "sym": "IE",
+   "latex": "IE",
+   "macro": "\\kIE"
+  },
+  {
+   "sym": "I_j",
+   "latex": "I_j",
+   "macro": "\\kIj"
+  },
+  {
+   "sym": "eps_j",
+   "latex": "\\epsilon_j",
+   "macro": "\\kepsj"
+  },
+  {
+   "sym": "phi_1",
+   "latex": "\\phi_1",
+   "macro": "\\kphione"
+  },
+  {
+   "sym": "phi_2",
+   "latex": "\\phi_2",
+   "macro": "\\kphitwo"
+  },
+  {
+   "sym": "c_1",
+   "latex": "c_1"
+  },
+  {
+   "sym": "c_2",
+   "latex": "c_2"
+  },
+  {
+   "sym": "N_1",
+   "latex": "N_1"
+  },
+  {
+   "sym": "N_2",
+   "latex": "N_2"
+  },
+  {
+   "sym": "E_i",
+   "latex": "E_i",
+   "macro": "\\kEi"
+  },
+  {
+   "sym": "E_2",
+   "latex": "E_2",
+   "macro": "\\kEtwo"
+  },
+  {
+   "sym": "E_3",
+   "latex": "E_3",
+   "macro": "\\kEthree"
+  },
+  {
+   "sym": "E_4",
+   "latex": "E_4",
+   "macro": "\\kEfour"
+  },
+  {
+   "sym": "E_5",
+   "latex": "E_5",
+   "macro": "\\kEfive"
+  },
+  {
+   "sym": "E_6",
+   "latex": "E_6",
+   "macro": "\\kEsix"
+  },
+  {
+   "sym": "alpha_H",
+   "latex": "\\alpha",
+   "macro": "\\kalphaH"
+  },
+  {
+   "sym": "beta_H",
+   "latex": "\\beta",
+   "macro": "\\kbetaH"
+  },
+  {
+   "sym": "x_H",
+   "latex": "x"
+  },
+  {
+   "sym": "E_pi",
+   "latex": "E_{\\pi}",
+   "macro": "\\kEpi"
+  },
+  {
+   "sym": "dH_hyd",
+   "latex": "\\Delta H_{hyd}",
+   "macro": "\\kdHhyd"
+  }
+ ],
+ "concepts": [
+  {
+   "id": "valence-bond-theory",
+   "kind": "idea",
+   "section": "10.1",
+   "name": "Valence bond theory",
+   "terms": [
+    "Valence bond",
+    "valence bond theory",
+    "VB"
+   ],
+   "statement": "One of the two basic quantum theories of the chemical bond, beside molecular orbital theory. It describes each bond as the pairing of an electron in an atomic orbital of one atom with an electron in an atomic orbital of the other, as a quantum version of the Lewis structure; lone pairs stay in the orbitals the bonds do not use. Molecular orbital theory instead spreads each orbital over the whole molecule."
+  },
+  {
+   "id": "vb-wavefunctions-h2",
+   "kind": "result",
+   "section": "10.1",
+   "name": "Valence-bond wavefunctions of H₂",
+   "terms": [
+    "2-electron wavefunction"
+   ],
+   "type": "wavefunction",
+   "symbol": "psi_g",
+   "statement": "Built from one 1s orbital on each proton, the two-electron function symmetric in the electrons' coordinates, ψ_g, is bonding and must carry the antisymmetric spin function; the antisymmetric one, ψ_u, carries the symmetric spin function and vanishes on the plane bisecting the bond, so it is antibonding. A single bond in F₂ (from 2p_z on each F) or in HF (H 1s with F 2p_z) takes the same gerade form.",
+   "forms": [
+    {
+     "id": "vb-h2-gerade",
+     "latex": "\\psi_g (r_1 ,r_2 ,s_1 ,s_2) = C_g[\\psi_{1s}^{A}(r_1)\\psi_{1s}^{B}(r_2)+\\psi_{1s}^{A}(r_2)\\psi_{1s}^{B}(r_1)][\\psi_{\\uparrow}(s_1)\\psi_{\\downarrow}(s_2)-\\psi_{\\uparrow}(s_2)\\psi_{\\downarrow}(s_1)]"
+    },
+    {
+     "id": "vb-h2-ungerade",
+     "latex": "\\psi_u (r_1 ,r_2 ,s_1 ,s_2) = C_u [\\psi_{1s}^{A}(r_1)\\psi_{1s}^{B}(r_2)-\\psi_{1s}^{A}(r_2)\\psi_{1s}^{B}(r_1)][\\psi_{\\uparrow}(s_1)\\psi_{\\downarrow}(s_2)+\\psi_{\\uparrow}(s_2)\\psi_{\\downarrow}(s_1)]"
+    }
+   ]
+  },
+  {
+   "id": "electron-promotion",
+   "kind": "idea",
+   "section": "10.1",
+   "name": "Promotion of an electron",
+   "statement": "To bond more often than its ground configuration allows, an atom is pictured as promoting an electron to a higher orbital (Be 1s²2s² to 1s²2s2p_z, C 1s²2s²2p² to 1s²2s2p³), making more unpaired electrons; the energy spent is repaid by the bonds formed."
+  },
+  {
+   "id": "hybrid-orbital",
+   "kind": "definition",
+   "section": "10.1",
+   "name": "Hybrid orbital",
+   "terms": [
+    "orbital hybridization",
+    "hybridization",
+    "hybrid orbitals",
+    "hybrid orbital"
+   ],
+   "type": "wavefunction",
+   "symbol": "chi",
+   "statement": "A combination of the s and p orbitals of one atom, χ = C₁ψ_2s + C₂ψ_2px + C₃ψ_2py + C₄ψ_2pz, proposed by Pauling to give equivalent bonds where the atom's s and p orbitals are not. It solves the Schrödinger equation exactly only for hydrogen, where 2s and 2p have one energy; in a molecule the neighbours make 2s and 2p nearly degenerate.",
+   "forms": [
+    {
+     "id": "hybrid-general",
+     "latex": "\\chi (r)=C_1 \\psi_{2s}(r)+C_2 \\psi_{2p_x}(r)+C_3 \\psi_{2p_y}(r)+C_4 \\psi_{2p_z}(r)"
+    }
+   ]
+  },
+  {
+   "id": "hybrid-orthonormality",
+   "kind": "result",
+   "section": "10.1",
+   "name": "Orthonormality of hybrid orbitals",
+   "terms": [
+    "normality requirement",
+    "orthogonality requirement"
+   ],
+   "statement": "Hybrids of one atom are normalized and mutually orthogonal. For χ_i = a₁|2s⟩ + b₁|2p_z⟩ and χ_j = a₂|2s⟩ + b₂|2p_z⟩ the orthonormal atomic orbitals reduce this to a₁² + b₁² = 1, a₂² + b₂² = 1 and a₁a₂ + b₁b₂ = 0.",
+   "forms": [
+    {
+     "id": "hybrid-normality",
+     "latex": "a_1^2 + b_1^2 = 1"
+    },
+    {
+     "id": "hybrid-orthogonality",
+     "latex": "a_1a_2 + b_1b_2 = 0"
+    }
+   ]
+  },
+  {
+   "id": "sp-hybrids",
+   "kind": "result",
+   "section": "10.1",
+   "name": "sp hybrid orbitals",
+   "terms": [
+    "sp orbitals",
+    "sp hybrid orbitals"
+   ],
+   "statement": "With equal s contributions the conditions give two sp hybrids, (ψ_2s ± ψ_2pz)/√2, pointing 180° apart: two equivalent orbitals for two equal bonds, as in linear BeH₂.",
+   "forms": [
+    {
+     "id": "sp-hybrids",
+     "latex": "\\chi_{1,2} (r) = \\dfrac{1}{\\sqrt{2}}[\\psi_{2s}(r)\\pm\\psi_{2p_z}(r)]"
+    }
+   ]
+  },
+  {
+   "id": "sp2-hybrids",
+   "kind": "result",
+   "section": "10.1",
+   "name": "sp² hybrid orbitals",
+   "terms": [
+    "sp2 hybrid orbitals",
+    "sp² hybrids"
+   ],
+   "statement": "One 2s and two 2p orbitals combine into three equivalent sp² hybrids in a plane, 120° apart, as in trigonal planar BH₃; the third p orbital is left over.",
+   "forms": [
+    {
+     "id": "sp2-hybrids",
+     "latex": "\\chi_1 (r) = \\dfrac{1}{\\sqrt{3}}[\\psi_{2s}(r)-\\sqrt{2}\\psi_{2p_x}(r)]"
+    }
+   ]
+  },
+  {
+   "id": "sp3-hybrids",
+   "kind": "result",
+   "section": "10.1",
+   "name": "sp³ hybrid orbitals",
+   "terms": [
+    "sp3 hybrid orbitals",
+    "sp³ hybrids"
+   ],
+   "statement": "One 2s and three 2p orbitals combine into four equivalent sp³ hybrids, (1/2)(ψ_2s ± ψ_2px ± ψ_2py ± ψ_2pz) with an even number of minus signs among the p's, whose large lobes point to the corners of a tetrahedron, 109.5° apart, as in CH₄.",
+   "forms": [
+    {
+     "id": "sp3-hybrid",
+     "latex": "\\chi_1 (r) = \\dfrac{1}{2} \\left[\\psi_{2s}(r)+\\psi_{2p_x}(r)+\\psi_{2p_y}(r)+\\psi_{2p_z}(r)\\right]"
+    }
+   ]
+  },
+  {
+   "id": "hybridization-as-interpretation",
+   "kind": "idea",
+   "section": "10.1",
+   "name": "Hybridization is an interpretation",
+   "statement": "A molecule does not take its shape because it is hybridized; the hybrids are a convenient reading of the wavefunction for the geometry the molecule has. Only the electron density is observable."
+  },
+  {
+   "id": "spx-notation",
+   "kind": "definition",
+   "section": "10.2",
+   "name": "spˣ notation",
+   "statement": "spˣ abbreviates a hybrid with s character 1/(x + 1) and p character x/(x + 1). x need not be an integer, and an atom's four orbitals may divide into hybrids of several kinds.",
+   "forms": [
+    {
+     "id": "spx",
+     "latex": "\\mathrm{sp}^{x} = \\mathrm{s}^{\\frac{1}{x+1}}\\mathrm{p}^{\\frac{x}{x+1}}"
+    }
+   ]
+  },
+  {
+   "id": "hybrid-character",
+   "kind": "result",
+   "section": "10.2",
+   "name": "s and p character of a hybrid",
+   "symbol": "gamma",
+   "statement": "A hybrid |χ⟩ = N(p + γs), with γ the relative contribution of s, is normalized by N = 1/√(1 + γ²); its p character is 1/(1 + γ²) and its s character γ²/(1 + γ²).",
+   "forms": [
+    {
+     "id": "hybrid-gamma",
+     "latex": "|\\chi_i \\rangle = \\dfrac{1}{\\sqrt{1+\\gamma^2}} ( p + \\gamma s)"
+    },
+    {
+     "id": "p-character",
+     "latex": "\\text{p character} = \\dfrac{1}{1+\\gamma^2}"
+    },
+    {
+     "id": "s-character",
+     "latex": "\\text{s character} = \\dfrac{\\gamma^2}{1+\\gamma^2}"
+    }
+   ]
+  },
+  {
+   "id": "bond-angle-hybrid-relation",
+   "kind": "result",
+   "section": "10.2",
+   "name": "Bond angle and hybrid composition",
+   "symbol": "theta",
+   "statement": "Two equivalent hybrids N(p + γs) that are orthogonal point at an angle θ with cos θ = −γ²: an experimental bond angle fixes the hybrids' s character. 180° gives sp, 109.5° gives sp³.",
+   "forms": [
+    {
+     "id": "cos-theta-gamma",
+     "latex": "\\cos \\theta = - \\gamma^2"
+    }
+   ]
+  },
+  {
+   "id": "hybrid-character-sum",
+   "kind": "result",
+   "section": "10.2",
+   "name": "Hybrids share out the s and p orbitals",
+   "statement": "An atom's hybrids together hold all of its s and p orbitals: their p characters add up to 3 and their s characters to 1."
+  },
+  {
+   "id": "water-hybrids",
+   "kind": "result",
+   "section": "10.2",
+   "name": "Hybrids of water",
+   "statement": "Water's 104.5° angle gives γ = 0.5: each O–H bonding hybrid is 20% s and 80% p (nearer sp⁴ than sp³). The two lone-pair hybrids, assumed identical, then hold 30% s and 70% p and point about 115° apart, less directional and held closer to the O atom."
+  },
+  {
+   "id": "canonical-orbitals",
+   "kind": "definition",
+   "section": "10.3",
+   "name": "Canonical molecular orbitals",
+   "terms": [
+    "canonical orbitals",
+    "delocalized"
+   ],
+   "statement": "Molecular orbitals that combine all the available atomic orbitals of a polyatomic molecule and spread over the whole molecule (delocalized), unlike the two-centre orbitals of valence bond theory."
+  },
+  {
+   "id": "linear-ah2-orbitals",
+   "kind": "result",
+   "section": "10.3",
+   "name": "Molecular orbitals of a linear AH₂ molecule",
+   "statement": "The two H 1s orbitals and A's 2s, 2p_x, 2p_y, 2p_z make six molecular orbitals. In a linear molecule only 2s and 2p_z overlap the H orbitals: 2s with the in-phase H pair gives the bonding 2σ_g and an antibonding σ_g, 2p_z with the out-of-phase pair the bonding 1σ_u and an antibonding σ_u, and 2p_x, 2p_y stay nonbonding as the 1π_u pair."
+  },
+  {
+   "id": "beh2-bonding",
+   "kind": "result",
+   "section": "10.3",
+   "name": "Bonding in BeH₂",
+   "statement": "The sum and difference of the two H 1s orbitals mix with Be's 2s and 2p_z; BeH₂'s four valence electrons fill the two bonding orbitals, so the molecule has two bonds and is linear, which atomic orbitals alone (two unpaired electrons at 90°) cannot explain."
+  },
+  {
+   "id": "walsh-diagram",
+   "kind": "definition",
+   "section": "10.3",
+   "name": "Walsh diagram",
+   "terms": [
+    "Walsh diagrams",
+    "angular coordinate diagrams",
+    "correlation diagrams",
+    "Walsh correlation diagram"
+   ],
+   "statement": "A plot of a molecule's calculated orbital energies against a change in its geometry, such as the H–A–H angle of an AH₂ molecule from 90° to 180°. It shows why related molecules with the same number of valence electrons share a shape."
+  },
+  {
+   "id": "frontier-orbitals",
+   "kind": "definition",
+   "section": "10.3",
+   "name": "HOMO and LUMO",
+   "terms": [
+    "HOMO",
+    "LUMO",
+    "Highest Occupied Molecular Orbital",
+    "Lowest Unoccupied Molecular Orbital",
+    "frontier orbitals"
+   ],
+   "statement": "The highest occupied molecular orbital (HOMO) and the lowest unoccupied molecular orbital (LUMO), together called the frontier orbitals."
+  },
+  {
+   "id": "walsh-rule",
+   "kind": "axiom",
+   "section": "10.3",
+   "name": "Walsh's rule",
+   "statement": "A molecule adopts the structure that best stabilizes its HOMO; if a change of shape leaves the HOMO alone, the next occupied orbital decides. Read off a Walsh diagram it tells bent from linear, though not the exact angle."
+  },
+  {
+   "id": "water-molecular-orbitals",
+   "kind": "result",
+   "section": "10.3",
+   "name": "Molecular orbitals of water",
+   "statement": "In bent water, orbitals of the same symmetry (a₁, b₁, b₂) and comparable energy mix: 2a₁ from O 2s and the H σ combination, 1b₂ from O 2p_y and the H σ* combination, 3a₁ from O 2p_z and the H σ combination, and the HOMO 1b₁, the nonbonding O 2p_x. The two lone pairs therefore sit in different orbitals, not in two identical ones as valence bond theory has them."
+  },
+  {
+   "id": "photoelectron-spectroscopy",
+   "kind": "definition",
+   "section": "10.4",
+   "name": "Photoelectron spectroscopy",
+   "terms": [
+    "Photoelectron spectroscopy",
+    "PES",
+    "X-ray Photoelectron Spectroscopy",
+    "XPS",
+    "Ultraviolet Photoelectron Spectroscopy",
+    "UPS"
+   ],
+   "statement": "Ionizing a sample with photons of one energy and measuring the kinetic energies of the emitted electrons. XPS uses soft X-rays (200–2000 eV) to reach core levels; UPS uses vacuum ultraviolet (10–45 eV) to reach valence levels, the molecular orbitals."
+  },
+  {
+   "id": "vertical-ionization-energy",
+   "kind": "definition",
+   "section": "10.4",
+   "name": "Vertical ionization energy",
+   "terms": [
+    "vertical ionization energy",
+    "binding energy"
+   ],
+   "type": "energy",
+   "symbol": "IE",
+   "statement": "The energy difference E(A⁺) − E(A) between the ion and the neutral with the ion formed at the neutral's geometry; the most probable transition, to the ion's vibrational level that best overlaps the neutral's v″ = 0. It is never smaller than the adiabatic ionization energy."
+  },
+  {
+   "id": "adiabatic-ionization-energy",
+   "kind": "definition",
+   "section": "10.4",
+   "name": "Adiabatic ionization energy",
+   "terms": [
+    "Adiabatic ionization energy",
+    "adiabatic ionization energy"
+   ],
+   "type": "energy",
+   "statement": "The least energy that ionizes a molecule: from its ground vibrational state to the lowest vibrational level of the ion, in the ion's relaxed geometry."
+  },
+  {
+   "id": "photoelectron-energy-balance",
+   "kind": "result",
+   "section": "10.4",
+   "name": "Kinetic energy of a photoelectron",
+   "type": "energy",
+   "symbol": "KE",
+   "statement": "Energy is conserved in A + photon → A⁺ + e⁻, and a free electron has only kinetic energy, so KE = hν − IE: Einstein's photoelectric equation with the ionization energy in place of the work function.",
+   "forms": [
+    {
+     "id": "pes-ke",
+     "latex": "KE = h\\nu - IE"
+    },
+    {
+     "id": "pes-ie",
+     "latex": "IE= h\\nu - KE"
+    },
+    {
+     "id": "pes-energy-balance",
+     "latex": "E(A) + h\\nu = E(A^+ ) + E(e^-)"
+    }
+   ]
+  },
+  {
+   "id": "pes-bands-orbitals",
+   "kind": "result",
+   "section": "10.4",
+   "name": "Photoelectron bands as orbital energies",
+   "statement": "By Koopmans' theorem each band of a photoelectron spectrum stands for the removal of an electron from one occupied orbital, at an ionization energy close to minus that orbital's energy; orbitals bound more tightly than the photon energy do not appear."
+  },
+  {
+   "id": "pes-vibrational-structure",
+   "kind": "result",
+   "section": "10.4",
+   "name": "Vibrational structure of a photoelectron band",
+   "statement": "A band is split into peaks for the ion's vibrational levels. A long progression means the electron came from a bonding orbital whose loss changes the bond (H₂'s 1σ_g, N₂'s 1π_u, HCl's 3σ); a band with little structure comes from a nonbonding orbital (HCl's 1π)."
+  },
+  {
+   "id": "water-photoelectron-spectrum",
+   "kind": "result",
+   "section": "10.4",
+   "name": "Photoelectron spectrum of water",
+   "statement": "Water's valence spectrum shows separate bands at 12.6 (1b₁), 14.7 (3a₁) and 18.5 eV (1b₂), with 2a₁ deeper at 32.2 eV, close to the Hartree–Fock orbital energies. Valence bond theory, with two identical bonds and two identical lone pairs, would give two bands; the spectrum supports the delocalized molecular orbitals."
+  },
+  {
+   "id": "conjugated-system",
+   "kind": "definition",
+   "section": "10.5",
+   "name": "Conjugated system",
+   "terms": [
+    "conjugated systems",
+    "conjugated system"
+   ],
+   "statement": "A chain or ring of atoms whose aligned p orbitals overlap across the intervening single bonds, so that its π electrons are delocalized over the whole group rather than held in one bond."
+  },
+  {
+   "id": "sigma-pi-separability",
+   "kind": "idea",
+   "section": "10.5",
+   "name": "Sigma–pi separability",
+   "terms": [
+    "sigma-pi separability"
+   ],
+   "statement": "In a planar molecule the σ and π orbitals are orthogonal, so the σ-bonded framework (from sp² hybrids and H 1s) and the π framework (from the unhybridized 2p_z) can be treated independently: the π electrons move in the field of a σ framework already formed. Ethylene's two frameworks give separate σ and π orbitals."
+  },
+  {
+   "id": "huckel-coulomb-integral",
+   "kind": "definition",
+   "section": "10.5",
+   "name": "Coulomb integral α",
+   "terms": [
+    "Coulomb integrals"
+   ],
+   "type": "energy",
+   "symbol": "alpha_H",
+   "statement": "In Hückel theory, the diagonal Hamiltonian matrix element H_ii = ⟨φ_i|Ĥ|φ_i⟩ of a carbon 2p_z orbital, set to the same α for every atom; negative."
+  },
+  {
+   "id": "resonance-integral",
+   "kind": "definition",
+   "section": "10.5",
+   "name": "Resonance integral β",
+   "terms": [
+    "resonance integrals"
+   ],
+   "type": "energy",
+   "symbol": "beta_H",
+   "statement": "In Hückel theory, the off-diagonal matrix element H_ij between the 2p_z orbitals of two bonded atoms, set to the same β for every bonded pair and to zero otherwise. It is negative and sets the strength of the π bonding; a typical estimate is −75 kJ/mol."
+  },
+  {
+   "id": "huckel-approximation",
+   "kind": "axiom",
+   "section": "10.5",
+   "name": "Hückel approximation",
+   "terms": [
+    "Hückel approximation",
+    "Hückel method",
+    "Hückel theory",
+    "Hückel Theory"
+   ],
+   "statement": "Only the π electrons of a planar conjugated molecule are treated, in orbitals built from one 2p_z per carbon, and the secular determinant is simplified by four assumptions: every overlap S_ij (i ≠ j) is zero, every Coulomb integral is α, the resonance integral is β between neighbours and zero between atoms not bonded. It is qualitative: electron repulsion is left out and energies are not accurate.",
+   "forms": [
+    {
+     "id": "huckel-assumptions",
+     "latex": "H_{ii}=\\alpha ,\\; H_{ij}=\\beta \\text{ (neighbours)},\\; S_{ij}=\\delta_{ij}"
+    }
+   ]
+  },
+  {
+   "id": "huckel-x",
+   "kind": "definition",
+   "section": "10.5",
+   "name": "Hückel variable x",
+   "symbol": "x_H",
+   "statement": "The energy written as x = (α − E)/β, which turns the Hückel secular determinant into one with x on the diagonal; each root x gives an orbital energy E = α − xβ.",
+   "forms": [
+    {
+     "id": "huckel-x",
+     "latex": "x = \\dfrac {\\alpha -E}{\\beta}"
+    }
+   ]
+  },
+  {
+   "id": "ethylene-pi-orbitals",
+   "kind": "result",
+   "section": "10.5",
+   "name": "π orbitals of ethylene",
+   "statement": "Ethylene's 2 × 2 Hückel determinant gives x² − 1 = 0, so E = α ± β: the bonding π₁ = (φ₁ + φ₂)/√2 at α + β and the antibonding π₂ = (φ₁ − φ₂)/√2, with one more node, at α − β. The two π electrons fill π₁.",
+   "forms": [
+    {
+     "id": "ethylene-energies",
+     "latex": "E=\\alpha \\mp \\beta"
+    },
+    {
+     "id": "ethylene-bonding-pi",
+     "latex": "|\\psi_1 \\rangle = \\dfrac{1}{\\sqrt{2}} (|\\phi_1 \\rangle + | \\phi_2 \\rangle )"
+    }
+   ]
+  },
+  {
+   "id": "homo-lumo-gap",
+   "kind": "definition",
+   "section": "10.5",
+   "name": "HOMO–LUMO gap",
+   "terms": [
+    "HOMO–LUMO gap"
+   ],
+   "statement": "The energy difference between the highest occupied and the lowest unoccupied molecular orbitals."
+  },
+  {
+   "id": "huckel-determinant",
+   "kind": "skill",
+   "section": "10.6",
+   "name": "Writing a Hückel determinant",
+   "terms": [
+    "connection matrix"
+   ],
+   "statement": "Dividing the Hückel secular determinant by β and writing x = (α − E)/β leaves the molecule's connection matrix: x on the diagonal, 1 for each pair of bonded atoms and 0 for each pair not bonded. Its roots in x give the orbital energies."
+  },
+  {
+   "id": "butadiene-pi-orbitals",
+   "kind": "result",
+   "section": "10.6",
+   "name": "π orbitals of butadiene",
+   "statement": "Butadiene's determinant expands to x⁴ − 3x² + 1 = 0, a quadratic in x², so x = ±0.618, ±1.618 and the energies are α ± 1.618β and α ± 0.618β. The orbitals' energies rise with their number of nodes, 0 to 3, as in a particle in a box; four π electrons give π₁²π₂².",
+   "forms": [
+    {
+     "id": "butadiene-x",
+     "latex": "x^{4}-3x^{2}+1=0"
+    },
+    {
+     "id": "butadiene-E1",
+     "latex": "E_1=\\alpha+1.618\\beta"
+    },
+    {
+     "id": "butadiene-E2",
+     "latex": "E_2=\\alpha+0.618\\beta"
+    },
+    {
+     "id": "butadiene-E3",
+     "latex": "E_3=\\alpha-0.618\\beta"
+    },
+    {
+     "id": "butadiene-E4",
+     "latex": "E_4=\\alpha-1.618\\beta"
+    }
+   ]
+  },
+  {
+   "id": "total-pi-energy",
+   "kind": "definition",
+   "section": "10.6",
+   "name": "Total π-electron energy",
+   "terms": [
+    "total π-electron energy"
+   ],
+   "type": "energy",
+   "symbol": "E_pi",
+   "statement": "The sum of the energies of the occupied π orbitals, each counted once for each electron in it.",
+   "forms": [
+    {
+     "id": "total-pi-energy",
+     "latex": "E_{\\pi} = \\sum_i n_i E_i"
+    }
+   ]
+  },
+  {
+   "id": "delocalization-energy",
+   "kind": "definition",
+   "section": "10.6",
+   "name": "Delocalization energy",
+   "terms": [
+    "delocalization energy",
+    "delocalization"
+   ],
+   "type": "energy",
+   "statement": "The extra stabilization of π electrons spread over the whole molecule: the total π energy minus that of the same number of isolated double bonds, each 2(α + β) as in ethylene. It is negative, since β is."
+  },
+  {
+   "id": "butadiene-delocalization-energy",
+   "kind": "result",
+   "section": "10.6",
+   "name": "Delocalization energy of butadiene",
+   "statement": "Butadiene's π energy 4α + 4.472β lies 0.472β below the 4α + 4β of two ethylene double bonds; with β ≈ −75 kJ/mol that is about −35 kJ/mol.",
+   "forms": [
+    {
+     "id": "butadiene-pi-energy",
+     "latex": "E_{\\pi} (\\text{butadiene}) = 4\\alpha + 4.472\\beta"
+    }
+   ]
+  },
+  {
+   "id": "resonance-stabilization",
+   "kind": "idea",
+   "section": "10.6",
+   "name": "Resonance in valence bond theory",
+   "terms": [
+    "resonance",
+    "resonance structures"
+   ],
+   "statement": "Valence bond theory keeps two-centre bonds and describes a conjugated molecule as a superposition of resonance structures, weighted variationally; the minor structures' contribution gives a stabilization akin to the delocalization energy of molecular orbital theory."
+  },
+  {
+   "id": "benzene-structure",
+   "kind": "idea",
+   "section": "10.7",
+   "name": "Kekulé structures of benzene",
+   "terms": [
+    "cyclic conjugated hydrocarbons"
+   ],
+   "statement": "Kekulé's benzene is a ring of six carbons with alternating single and double bonds, written as two resonance structures. X-ray diffraction finds all six C–C bonds equal, 140 pm, between a double (135 pm) and a single bond (147 pm), so neither structure alone is right."
+  },
+  {
+   "id": "benzene-pi-orbitals",
+   "kind": "result",
+   "section": "10.7",
+   "name": "π orbitals of benzene",
+   "statement": "Benzene's ring gives the cyclic Hückel determinant (1 also in the corners for the bond closing the ring), whose roots x = ±2, ±1, ±1 put the π levels at α + 2β, α + β (twice), α − β (twice) and α − 2β. The six π electrons fill the three bonding orbitals, π₁²π₂²π₃², for a total of 6α + 8β.",
+   "forms": [
+    {
+     "id": "benzene-pi-energy",
+     "latex": "E_{tot} (\\text{benzene}) = 6\\alpha + 8\\beta"
+    }
+   ]
+  },
+  {
+   "id": "benzene-delocalization-energy",
+   "kind": "result",
+   "section": "10.7",
+   "name": "Delocalization energy of benzene",
+   "terms": [
+    "aromatic stabilization energy"
+   ],
+   "statement": "Benzene's π energy lies 2β below that of three isolated double bonds, 6α + 6β; the thermochemical value is −152 kJ/mol. Heats of hydrogenation show it: benzene is about 150 kJ/mol more stable than a cyclohexatriene with three independent double bonds.",
+   "forms": [
+    {
+     "id": "benzene-delocalization",
+     "latex": "\\Delta E = E_{tot} (\\text{benzene}) - 3 E_{tot} (\\text{ethylene}) = 2\\beta"
+    }
+   ]
+  },
+  {
+   "id": "huckel-rule",
+   "kind": "result",
+   "section": "10.7",
+   "name": "Hückel's rule",
+   "terms": [
+    "aromatic",
+    "aromaticity",
+    "Hückel's Rule"
+   ],
+   "statement": "A cyclic conjugated polyene is closed shell and especially stable, aromatic, when it has 4n + 2 π electrons (n = 0, 1, 2 …: 2, 6, 10 …). These molecules have the largest delocalization energies."
+  }
+ ],
+ "concept_prereqs": [
+  {
+   "concept": "valence-bond-theory",
+   "prereq": "molecular-orbital"
+  },
+  {
+   "concept": "vb-wavefunctions-h2",
+   "prereq": "valence-bond-theory"
+  },
+  {
+   "concept": "vb-wavefunctions-h2",
+   "prereq": "two-electron-spin-functions"
+  },
+  {
+   "concept": "vb-wavefunctions-h2",
+   "prereq": "gerade-ungerade"
+  },
+  {
+   "concept": "electron-promotion",
+   "prereq": "valence-bond-theory"
+  },
+  {
+   "concept": "electron-promotion",
+   "prereq": "electron-configuration"
+  },
+  {
+   "concept": "hybrid-orbital",
+   "prereq": "electron-promotion"
+  },
+  {
+   "concept": "hybrid-orbital",
+   "prereq": "hydrogen-degeneracy"
+  },
+  {
+   "concept": "hybrid-orthonormality",
+   "prereq": "hybrid-orbital"
+  },
+  {
+   "concept": "sp-hybrids",
+   "prereq": "hybrid-orthonormality"
+  },
+  {
+   "concept": "sp2-hybrids",
+   "prereq": "hybrid-orthonormality"
+  },
+  {
+   "concept": "sp2-hybrids",
+   "prereq": "p-orbital-shape"
+  },
+  {
+   "concept": "sp3-hybrids",
+   "prereq": "hybrid-orthonormality"
+  },
+  {
+   "concept": "hybridization-as-interpretation",
+   "prereq": "hybrid-orbital"
+  },
+  {
+   "concept": "spx-notation",
+   "prereq": "sp3-hybrids"
+  },
+  {
+   "concept": "hybrid-character",
+   "prereq": "spx-notation"
+  },
+  {
+   "concept": "bond-angle-hybrid-relation",
+   "prereq": "hybrid-character"
+  },
+  {
+   "concept": "hybrid-character-sum",
+   "prereq": "hybrid-character"
+  },
+  {
+   "concept": "water-hybrids",
+   "prereq": "bond-angle-hybrid-relation"
+  },
+  {
+   "concept": "water-hybrids",
+   "prereq": "hybrid-character-sum"
+  },
+  {
+   "concept": "canonical-orbitals",
+   "prereq": "lcao-mo-method"
+  },
+  {
+   "concept": "canonical-orbitals",
+   "prereq": "valence-bond-theory"
+  },
+  {
+   "concept": "linear-ah2-orbitals",
+   "prereq": "canonical-orbitals"
+  },
+  {
+   "concept": "linear-ah2-orbitals",
+   "prereq": "nonbonding-molecular-orbital"
+  },
+  {
+   "concept": "beh2-bonding",
+   "prereq": "linear-ah2-orbitals"
+  },
+  {
+   "concept": "walsh-diagram",
+   "prereq": "linear-ah2-orbitals"
+  },
+  {
+   "concept": "frontier-orbitals",
+   "prereq": "molecular-electron-configuration"
+  },
+  {
+   "concept": "walsh-rule",
+   "prereq": "walsh-diagram"
+  },
+  {
+   "concept": "walsh-rule",
+   "prereq": "frontier-orbitals"
+  },
+  {
+   "concept": "water-molecular-orbitals",
+   "prereq": "walsh-rule"
+  },
+  {
+   "concept": "water-molecular-orbitals",
+   "prereq": "water-hybrids"
+  },
+  {
+   "concept": "photoelectron-spectroscopy",
+   "prereq": "photoelectric-effect"
+  },
+  {
+   "concept": "photoelectron-spectroscopy",
+   "prereq": "ionization-energy"
+  },
+  {
+   "concept": "vertical-ionization-energy",
+   "prereq": "photoelectron-spectroscopy"
+  },
+  {
+   "concept": "vertical-ionization-energy",
+   "prereq": "potential-energy-curve"
+  },
+  {
+   "concept": "adiabatic-ionization-energy",
+   "prereq": "vertical-ionization-energy"
+  },
+  {
+   "concept": "adiabatic-ionization-energy",
+   "prereq": "vibrational-quantum-number"
+  },
+  {
+   "concept": "photoelectron-energy-balance",
+   "prereq": "vertical-ionization-energy"
+  },
+  {
+   "concept": "photoelectron-energy-balance",
+   "prereq": "einstein-photoelectric-equation"
+  },
+  {
+   "concept": "pes-bands-orbitals",
+   "prereq": "photoelectron-energy-balance"
+  },
+  {
+   "concept": "pes-bands-orbitals",
+   "prereq": "koopmans-theorem"
+  },
+  {
+   "concept": "pes-vibrational-structure",
+   "prereq": "pes-bands-orbitals"
+  },
+  {
+   "concept": "pes-vibrational-structure",
+   "prereq": "adiabatic-ionization-energy"
+  },
+  {
+   "concept": "pes-vibrational-structure",
+   "prereq": "bond-order-and-stability"
+  },
+  {
+   "concept": "water-photoelectron-spectrum",
+   "prereq": "pes-bands-orbitals"
+  },
+  {
+   "concept": "water-photoelectron-spectrum",
+   "prereq": "water-molecular-orbitals"
+  },
+  {
+   "concept": "conjugated-system",
+   "prereq": "pi-orbital"
+  },
+  {
+   "concept": "sigma-pi-separability",
+   "prereq": "sp2-hybrids"
+  },
+  {
+   "concept": "sigma-pi-separability",
+   "prereq": "conjugated-system"
+  },
+  {
+   "concept": "huckel-coulomb-integral",
+   "prereq": "hamiltonian-matrix-element"
+  },
+  {
+   "concept": "resonance-integral",
+   "prereq": "hamiltonian-matrix-element"
+  },
+  {
+   "concept": "huckel-approximation",
+   "prereq": "sigma-pi-separability"
+  },
+  {
+   "concept": "huckel-approximation",
+   "prereq": "huckel-coulomb-integral"
+  },
+  {
+   "concept": "huckel-approximation",
+   "prereq": "resonance-integral"
+  },
+  {
+   "concept": "huckel-x",
+   "prereq": "huckel-approximation"
+  },
+  {
+   "concept": "ethylene-pi-orbitals",
+   "prereq": "huckel-x"
+  },
+  {
+   "concept": "homo-lumo-gap",
+   "prereq": "frontier-orbitals"
+  },
+  {
+   "concept": "huckel-determinant",
+   "prereq": "huckel-x"
+  },
+  {
+   "concept": "butadiene-pi-orbitals",
+   "prereq": "huckel-determinant"
+  },
+  {
+   "concept": "butadiene-pi-orbitals",
+   "prereq": "nodes-and-energy"
+  },
+  {
+   "concept": "total-pi-energy",
+   "prereq": "huckel-x"
+  },
+  {
+   "concept": "delocalization-energy",
+   "prereq": "total-pi-energy"
+  },
+  {
+   "concept": "delocalization-energy",
+   "prereq": "ethylene-pi-orbitals"
+  },
+  {
+   "concept": "butadiene-delocalization-energy",
+   "prereq": "delocalization-energy"
+  },
+  {
+   "concept": "butadiene-delocalization-energy",
+   "prereq": "butadiene-pi-orbitals"
+  },
+  {
+   "concept": "resonance-stabilization",
+   "prereq": "delocalization-energy"
+  },
+  {
+   "concept": "benzene-structure",
+   "prereq": "resonance-stabilization"
+  },
+  {
+   "concept": "benzene-pi-orbitals",
+   "prereq": "huckel-determinant"
+  },
+  {
+   "concept": "benzene-delocalization-energy",
+   "prereq": "benzene-pi-orbitals"
+  },
+  {
+   "concept": "benzene-delocalization-energy",
+   "prereq": "delocalization-energy"
+  },
+  {
+   "concept": "huckel-rule",
+   "prereq": "benzene-pi-orbitals"
+  },
+  {
+   "concept": "huckel-rule",
+   "prereq": "closed-shell"
+  }
+ ]
+}

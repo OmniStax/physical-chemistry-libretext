@@ -1,0 +1,164 @@
+{
+ "id": "9.12",
+ "module": "13464",
+ "chapter": "9",
+ "title": "Molecular-Orbital Theory Also Applies to Heteronuclear Diatomic Molecules",
+ "short": "Heteronuclear diatomics",
+ "lead": "When a diatomic molecule joins two different elements, their atomic orbitals start at different energies. Molecular orbital theory handles these heteronuclear molecules too, including orbitals that take no part in the bond.",
+ "objectives": [],
+ "summary_html": "<p>Molecular orbital energy-level diagrams for diatomic molecules can be created if the electron configuration of the parent atoms is known, following a few simple rules. Most important, the number of molecular orbitals in a molecule is the same as the number of atomic orbitals that interact. The difference between bonding and antibonding molecular orbital combinations is proportional to the overlap of the parent orbitals and decreases as the energy difference between the parent atomic orbitals increases. With such an approach, the electronic structures of virtually all commonly encountered <strong>homonuclear diatomic molecules</strong>, molecules with two identical atoms, can be understood. The molecular orbital approach correctly predicts that the O<sub>2</sub> molecule has two unpaired electrons and hence is attracted into a magnetic field. In contrast, most substances have only paired electrons. A similar procedure can be applied to molecules with two dissimilar atoms, called <strong>heteronuclear diatomic molecules</strong>, using a molecular orbital energy-level diagram that is skewed or tilted toward the more electronegative element. Molecular orbital theory is able to describe the bonding in a molecule with an odd number of electrons such as NO and even to predict something about its chemistry.</p>",
+ "notes": "Shared anonymously under CC BY-NC-SA 4.0, with diagrams the book does not credit; the video at the end of the page is left out.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "Exercise 9.12.4 and its answer are the book's. Its Bloom level and concept tags were chosen by AI.",
+ "figures": [
+  {
+   "id": "sim-skewed",
+   "kind": "sim",
+   "number": "9.12.4",
+   "originals": [
+    "/media/ch09/38994-18209c13fdd79ac223605b418c16897c.jpg"
+   ],
+   "original_caption": "Molecular Orbital Energy-Level Diagram for a Heteronuclear Diatomic Molecule AB, Where $\\chi_B > \\chi_A$. The bonding molecular orbitals are closer in energy to the atomic orbitals of the more electronegative B atom. Consequently, the electrons in the bonding orbitals are not shared equally between the two atoms. On average, they are closer to the B atom, resulting in a polar covalent bond.",
+   "widths": [
+    509
+   ],
+   "draws": [
+    "energy"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "fig-9-12-13",
+   "kind": "photo",
+   "number": "9.12.13",
+   "draws": []
+  },
+  {
+   "id": "fig-9-12-6",
+   "kind": "photo",
+   "number": "9.12.6",
+   "widths": [
+    534
+   ],
+   "draws": []
+  },
+  {
+   "id": "fig-cn-diagram",
+   "kind": "figure",
+   "originals": [
+    "/media/ch09/119882-THE_CYANIDE_ION.png"
+   ],
+   "widths": [
+    238
+   ],
+   "draws": [],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "kept as the book prints it"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "heteronuclear-diatomics",
+   "concept": "heteronuclear-diatomic-molecule",
+   "verb": "introduces"
+  },
+  {
+   "span": "heteronuclear-diatomics",
+   "concept": "skewed-mo-diagram",
+   "verb": "introduces"
+  },
+  {
+   "span": "heteronuclear-diatomics",
+   "concept": "bond-order",
+   "verb": "uses"
+  },
+  {
+   "span": "heteronuclear-diatomics",
+   "concept": "mo-energy-level-diagram",
+   "verb": "uses"
+  },
+  {
+   "span": "nonbonding-molecular-orbitals",
+   "concept": "nonbonding-molecular-orbital",
+   "verb": "introduces"
+  },
+  {
+   "span": "nonbonding-molecular-orbitals",
+   "concept": "skewed-mo-diagram",
+   "verb": "uses"
+  },
+  {
+   "span": "nonbonding-molecular-orbitals",
+   "concept": "bond-order",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "e4",
+   "source_id": "exr:9.12.4",
+   "source_number": "Exercise 9.12.4",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "nonbonding-molecular-orbitals",
+   "prompt": "<p><strong>The Hypochlorite Ion.</strong> Use a qualitative molecular orbital energy-level diagram to describe the bonding in the hypochlorite ion (OCl<sup>−</sup>). What is the bond order?</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "source",
+    "solution": "<p>All molecular orbitals except the highest-energy σ* are filled, giving a bond order of 1.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "e4",
+   "concept": "skewed-mo-diagram"
+  },
+  {
+   "exercise": "e4",
+   "concept": "bond-order"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-no-figure",
+   "kind": "correction",
+   "html": "Figure 9.12.13 draws $\\sigma_{2p}$ below the $\\pi_{2p}$ pair, the order of O<sub>2</sub>. The next paragraph gives NO's measured order, with $\\pi_{2p}$ below $\\sigma_{2p}$."
+  },
+  {
+   "id": "c-figure-11",
+   "kind": "correction",
+   "html": "The page has no Figure 9.12.11. O<sub>2</sub>'s diagram is Figure 9.7.5 in Section 9.7, and the second citation of Figure 9.12.11 below means it too."
+  }
+ ]
+}

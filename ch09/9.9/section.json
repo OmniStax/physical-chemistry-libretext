@@ -1,0 +1,187 @@
+{
+ "id": "9.9",
+ "module": "13461",
+ "chapter": "9",
+ "title": "Electrons Populate Molecular Orbitals According to the Pauli Exclusion Principle",
+ "short": "Pauli principle in molecules",
+ "lead": "Electrons fill molecular orbitals under the Pauli exclusion principle, which in its exact form is a condition on the wavefunction. H₂'s two electrons show how to write a wavefunction that meets it, and a Slater determinant does the same for any molecule from its orbital diagram.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "Written by Kyle Crabtree and shared under the book's CC BY-NC-SA 4.0.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": []
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercise here; the one card is an AI exercise with an AI solution. Its Bloom level and concept tags were chosen by AI.",
+ "figures": [],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "antisymmetric-wavefunctions",
+   "concept": "h2-ground-state-wavefunction",
+   "verb": "introduces"
+  },
+  {
+   "span": "antisymmetric-wavefunctions",
+   "concept": "pauli-exclusion-principle",
+   "verb": "reinforces"
+  },
+  {
+   "span": "antisymmetric-wavefunctions",
+   "concept": "fermion",
+   "verb": "uses"
+  },
+  {
+   "span": "antisymmetric-wavefunctions",
+   "concept": "boson",
+   "verb": "uses"
+  },
+  {
+   "span": "antisymmetric-wavefunctions",
+   "concept": "exchange-operator",
+   "verb": "uses"
+  },
+  {
+   "span": "antisymmetric-wavefunctions",
+   "concept": "spin-orbital",
+   "verb": "uses"
+  },
+  {
+   "span": "slater-determinants-from-diagrams",
+   "concept": "slater-determinant-properties",
+   "verb": "introduces"
+  },
+  {
+   "span": "slater-determinants-from-diagrams",
+   "concept": "mo-slater-determinant",
+   "verb": "introduces"
+  },
+  {
+   "span": "slater-determinants-from-diagrams",
+   "concept": "slater-determinant",
+   "verb": "reinforces"
+  },
+  {
+   "span": "slater-determinants-from-diagrams",
+   "concept": "aufbau-principle",
+   "verb": "uses"
+  },
+  {
+   "span": "slater-determinants-from-diagrams",
+   "concept": "mo-energy-level-diagram",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "For our system above (two electrons in",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "slater-determinants-from-diagrams",
+   "prompt": "<p>Expand the 2 × 2 Slater determinant of Equation 9.9.4 and show that it is the wavefunction of Equation 9.9.3.</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "A 2 × 2 determinant with rows $(a, b)$ and $(c, d)$ is $ad - bc$.",
+    "solution": "<p>With rows $(a, b)$ and $(c, d)$ a 2 × 2 determinant is $ad - bc$. Here $a = |1\\sigma^1\\alpha^1\\rangle$, $b = |1\\sigma^1\\beta^1\\rangle$, $c = |1\\sigma^2\\alpha^2\\rangle$ and $d = |1\\sigma^2\\beta^2\\rangle$, so</p><p>$|\\psi\\rangle = \\dfrac{1}{\\sqrt{2!}}\\left(|1\\sigma^1\\alpha^1\\rangle|1\\sigma^2\\beta^2\\rangle - |1\\sigma^1\\beta^1\\rangle|1\\sigma^2\\alpha^2\\rangle\\right)$.</p><p>Since $2! = 2$, the prefactor is $1/\\sqrt{2}$. The spatial and spin parts of different electrons can be grouped into kets in any order, so the first product is $|1\\sigma^1\\alpha^1 1\\sigma^2\\beta^2\\rangle$ and the second is $|1\\sigma^2\\alpha^2 1\\sigma^1\\beta^1\\rangle$. The result is Equation 9.9.3.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "mo-slater-determinant"
+  },
+  {
+   "exercise": "a1",
+   "concept": "h2-ground-state-wavefunction"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-names",
+   "kind": "correction",
+   "html": "The page lost two words here: a fermion is a particle with half-integer spin, and a boson is a particle with integer spin."
+  },
+  {
+   "id": "c-marks",
+   "kind": "correction",
+   "html": "The page prints footnote marks 2 and 3 in this passage but gives no notes for them."
+  },
+  {
+   "id": "c-spin-orbitals",
+   "kind": "correction",
+   "html": "The missing word is spin-orbitals: a product of spin-orbitals, each of the form $|\\psi\\sigma\\rangle$."
+  },
+  {
+   "id": "c-h2",
+   "kind": "correction",
+   "html": "The missing word is H₂: in the ground electronic state of H₂, both electrons occupy $|1\\sigma\\rangle$."
+  },
+  {
+   "id": "c-asymmetry",
+   "kind": "correction",
+   "html": "Antisymmetry is meant: the test is whether the wavefunction changes sign when the two labels are swapped."
+  },
+  {
+   "id": "c-rows",
+   "kind": "correction",
+   "html": "In Equations 9.9.4 and 9.9.5 each row belongs to one electron, so exchanging two electrons swaps two rows, and that change of sign is what the exclusion principle asks for. Swapping two columns, which are two spin-orbitals, changes the sign as well, as it does in any determinant."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "h2-antisymmetry",
+   "what": "the antisymmetry of H₂'s ground state",
+   "source": "Physical Chemistry (LibreTexts), 9.9 Electrons Populate Molecular Orbitals According to the Pauli Exclusion Principle",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "|\\kpsi\\rangle = \\tfrac{1}{\\sqrt{2}}\\left(|1\\sigma^1\\kalphas^1 1\\sigma^2\\kbetas^2\\rangle - |1\\sigma^2\\kalphas^2 1\\sigma^1\\kbetas^1\\rangle\\right)",
+       "src": "(9.9.3)"
+      },
+      {
+       "text": "$\\hat{p}_{12}$ swaps the labels of electrons 1 and 2."
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{|\\kpsi\\rangle} = \\tfrac{1}{\\sqrt{2}}\\left(\\mk{a}{|1\\sigma^1\\kalphas^1 1\\sigma^2\\kbetas^2\\rangle} \\mk{b}{- |1\\sigma^2\\kalphas^2 1\\sigma^1\\kbetas^1\\rangle}\\right)"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\kponetwohat|\\kpsi\\rangle} = \\tfrac{1}{\\sqrt{2}}\\left(\\mk{a}{|1\\sigma^2\\kalphas^2 1\\sigma^1\\kbetas^1\\rangle} \\mk{b}{- |1\\sigma^1\\kalphas^1 1\\sigma^2\\kbetas^2\\rangle}\\right)",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{L}{\\kponetwohat|\\kpsi\\rangle} = \\mk{m}{-}\\tfrac{1}{\\sqrt{2}}\\left(\\mk{b}{|1\\sigma^1\\kalphas^1 1\\sigma^2\\kbetas^2\\rangle} \\mk{a}{- |1\\sigma^2\\kalphas^2 1\\sigma^1\\kbetas^1\\rangle}\\right)"
+      },
+      {
+       "tex": "\\mk{L}{\\kponetwohat|\\kpsi\\rangle} = \\mk{m}{-}\\mk{p}{|\\kpsi\\rangle}",
+       "uses": [
+        0
+       ],
+       "map": {
+        "a": "p",
+        "b": "p"
+       }
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,216 @@
+{
+ "id": "9.5",
+ "module": "13456",
+ "chapter": "9",
+ "title": "Bonding and Antibonding Orbitals",
+ "short": "Bonding and antibonding orbitals",
+ "lead": "Adding two 1s orbitals and subtracting them give two molecular orbitals of different shape and energy. The section names them, draws their energy-level diagram, and turns to larger sets of atomic orbitals solved with the secular equations.",
+ "objectives": [
+  "Characterize the bonding and anti-bonding molecular orbitals in $\\mathrm{H^{+}}$"
+ ],
+ "summary_html": "",
+ "notes": "Adapted from Hanson, Harvey, Sweeney and Zielinski's Quantum States of Atoms and Molecules under CC BY-NC-SA 4.0; Figure 9.5.1 is printed as CC BY-SA-NC with no author, and Figure 9.5.2 with no credit.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "high"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "high"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercise in this section. The one here, on the orbitals of the six-orbital basis, was written by AI with its solution, Bloom level and concept tags.",
+ "figures": [
+  {
+   "id": "sim-sigma-clouds",
+   "kind": "sim",
+   "number": "9.5.1",
+   "originals": [
+    "/media/ch09/38974-4aeb3f23f811474fd3aeddaa8db5a56c.jpg"
+   ],
+   "original_caption": "Molecular Orbitals for the $H_2$ Molecule. (a) This diagram shows the formation of a bonding $σ_{1s}$ molecular orbital for $H_2$ as the sum of the wavefunctions ($Ψ$) of two H 1s atomic orbitals. (b) This plot of the square of the wavefunction ($Ψ^2$) for the bonding σ1s molecular orbital illustrates the increased electron probability density between the two hydrogen nuclei. (Recall that the probability density is proportional to the square of the wavefunction.) (c) This diagram shows the formation of an antibonding $\\sigma _{1s}^{*}$ molecular orbital for $H_2$ as the difference of the atomic orbital wavefunctions ($Ψ$) of two H 1s atomic orbitals. (d) This plot of the square of the wavefunction (Ψ2) for the $\\sigma _{1s}^{*}$ antibonding molecular orbital illustrates the node corresponding to zero electron probability density between the two hydrogen nuclei. (CC BY-SA-NC; anonymous).",
+   "draws": [
+    "wavefunction",
+    "probability-density",
+    "length"
+   ],
+   "conventions": [
+    "p+"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "high",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "sim-h2-diagram",
+   "kind": "sim",
+   "number": "9.5.2",
+   "originals": [
+    "/media/ch09/38975-d905694ccf35a83f011afd98a63c2a6c.jpg"
+   ],
+   "original_caption": "Molecular Orbital Energy-Level Diagram for H2. The two available electrons (one from each H atom) in this diagram fill the bonding σ1s molecular orbital. Because the energy of the σ1s molecular orbital is lower than that of the two H 1s atomic orbitals, the H2 molecule is more stable (at a lower energy) than the two isolated H atoms.",
+   "draws": [
+    "energy",
+    "wavefunction"
+   ],
+   "conventions": [
+    "e-"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "high",
+     "part": "redrawn as the book draws it"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "sum-and-difference",
+   "concept": "sigma-orbital",
+   "verb": "introduces"
+  },
+  {
+   "span": "sum-and-difference",
+   "concept": "antibonding-node",
+   "verb": "introduces"
+  },
+  {
+   "span": "sum-and-difference",
+   "concept": "lcao-mo-method",
+   "verb": "uses"
+  },
+  {
+   "span": "sum-and-difference",
+   "concept": "orbital-interference",
+   "verb": "reinforces"
+  },
+  {
+   "span": "sum-and-difference",
+   "concept": "bonding-molecular-orbital",
+   "verb": "reinforces"
+  },
+  {
+   "span": "sum-and-difference",
+   "concept": "antibonding-molecular-orbital",
+   "verb": "reinforces"
+  },
+  {
+   "span": "energy-level-diagram",
+   "concept": "bonding-stabilization",
+   "verb": "introduces"
+  },
+  {
+   "span": "energy-level-diagram",
+   "concept": "mo-energy-level-diagram",
+   "verb": "introduces"
+  },
+  {
+   "span": "beyond-1s",
+   "concept": "extended-lcao-basis",
+   "verb": "introduces"
+  },
+  {
+   "span": "beyond-1s",
+   "concept": "secular-equations",
+   "verb": "uses"
+  },
+  {
+   "span": "beyond-1s",
+   "concept": "linear-variational-method",
+   "verb": "uses"
+  },
+  {
+   "span": "beyond-1s",
+   "concept": "hamiltonian-matrix-element",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "ai1",
+   "source_id": "higher energy hydrogenic wavefunctions",
+   "kind": "exercise",
+   "bloom": "Analyze",
+   "place": {
+    "at": "end"
+   },
+   "cite": "beyond-1s",
+   "prompt": "<p>The six atomic orbitals of Equation 9.5.11 (1<em>s</em>, 2<em>s</em> and 2<em>p<sub>z</sub></em> on each nucleus, with <em>z</em> along the internuclear axis) are combined into molecular orbitals of $\\mathrm{H_2^+}$. (a) How many molecular orbitals result? (b) How many of them are σ orbitals? (c) How many have a nodal plane halfway between the nuclei, perpendicular to the axis?</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 6,
+      "tol": 0.001,
+      "hint": "A molecule has as many molecular orbitals as atomic orbitals in the basis set."
+     },
+     {
+      "part": "b",
+      "value": 6,
+      "tol": 0.001,
+      "hint": "Turn each atomic orbital about the z axis. Does it change?"
+     },
+     {
+      "part": "c",
+      "value": 3,
+      "tol": 0.001,
+      "hint": "Swapping the two nuclei either keeps each molecular orbital as it is or changes its sign."
+     }
+    ],
+    "solution": "<p>(a) Six atomic orbitals give six molecular orbitals, as Equation 9.5.1 says.</p><p>(b) 1<em>s</em>, 2<em>s</em> and 2<em>p<sub>z</sub></em> are all unchanged by a turn about the internuclear axis, so every combination of them is too: all six molecular orbitals have cylindrical symmetry and are σ orbitals.</p><p>(c) The two nuclei are identical, so each molecular orbital either keeps its value or changes its sign when the molecule is reflected through the plane halfway between them. The three that keep it are the sums, like σ<sub>1<em>s</em></sub>; the three that change sign, like σ*<sub>1<em>s</em></sub>, must be zero everywhere on that plane. So three orbitals have the nodal plane, and these are the three antibonding ones.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "ai1",
+   "concept": "extended-lcao-basis"
+  },
+  {
+   "exercise": "ai1",
+   "concept": "sigma-orbital"
+  },
+  {
+   "exercise": "ai1",
+   "concept": "antibonding-node"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-h2plus",
+   "kind": "correction",
+   "html": "The ion is $\\mathrm{H_2^{+}}$, the hydrogen molecular ion of Section 9.2; the objective above prints the same slip."
+  },
+  {
+   "id": "c-134",
+   "kind": "correction",
+   "html": "With the 1<em>s</em> orbitals' $J$, $K$ and $S$ of Section 9.4, the minimum of $\\Delta E_+$ lies at $R = 2.49\\,a_0$, 132 pm, as Figure 9.4.3 shows."
+  },
+  {
+   "id": "c-955",
+   "kind": "correction",
+   "html": "In the first line of Equation 9.5.5 the ket's sum should read $\\sum_j c_{J,j}\\phi_j$ and the bra of the denominator $\\sum_i c_{J,i}^*\\phi_i$; the second and third lines are right."
+  },
+  {
+   "id": "c-steps",
+   "kind": "correction",
+   "html": "Since $H_{ij} = H_{ji}$ and $S_{ij} = S_{ji}$, each matrix has $N(N+1)/2$ distinct elements, the $N$ diagonal ones included."
+  }
+ ]
+}
