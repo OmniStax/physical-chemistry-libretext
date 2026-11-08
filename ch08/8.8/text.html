@@ -1,0 +1,201 @@
+<section id="atomic-quantum-numbers">
+<h2>Quantum numbers of a whole atom</h2>
+<p>Atoms have quantum numbers that are directly analogous to the electronic quantum numbers.</p>
+</section>
+
+<section id="total-l">
+<h2>The Total Orbital Angular Momentum Quantum Number: L</h2>
+<p>One might naively think that you could get the total angular momentum of an atom ($L$) by simply adding up the $l$ values of the individual electrons. The problem with this idea is that the angular momenta of the various electrons are not necessarily pointing in the same direction. Let's consider the case of adding two 2p-orbitals together (i.e., with $l=1$ quantum numbers).</p>
+<p>As discussed in <span data-concept="vector-model">Section 6.3</span>, each of these electrons has $\sqrt{2} \hbar$ of angular momentum, but oriented in three different directions given by three different $m_l$ values of 1, 0, and -1 (<a class="figref" href="#6.3-sim-vector-model">Figure 8.8.1</a>).</p>
+$$ L = \sum_i^n l_i \tag{8.8.1} $$
+<p>However, we must recognize that while the magnitude of angular momentum is a scalar (represented by $l$), angular momenta are really vector quantities and to add them together will require vector addition (vs. scalar addition) to do properly and must address all possible orientations of $l$ for each electron.</p>
+<p>For example, if two electrons are revolving in the same direction as each other (i.e., same $m_l$ values), one would add just their $l$ values together</p>
+$$ L(\text{same direction}) = \sqrt{2} \hbar + \sqrt{2} \hbar = 2 \hbar $$<sup class="fn" data-note="c-sums"></sup>
+<p>If the two elections were revolving in opposites direction (e.., opposite $m_l$ values, you subtract their values.</p>
+$$ L(\text{same direction}) = \sqrt{2} \hbar - \sqrt{2} \hbar = 0 $$
+<p>If they are revolving at some off‐angle relative to each other (one revolving in a plane and one off plane), you would partially subtract them.</p>
+$$ L(\text{same direction}) = \sqrt{2} \hbar + 0 = \sqrt{2} \hbar $$
+<p>To figure out all of the possible combinations of $l$ for a pair of electrons, simply add them together to get the co‐aligned case, subtract them to get the opposing case, and then fill in all the numbers in between to get the off‐angle cases. For the two p-orbital case, there are no other possibilities (remember that $l$ and hence $L$ must be non-negative since they represent the magnitude of angular momenta (addressing the $m_l$ values is a different story as we discuss below).</p>
+<p>If you prefer to have a formula for the possibilities of $L$, you can use this:</p>
+$$ L = |l_1 + l_2 | , |l_1 + l_2 - 1| , \ldots, |l_1 - l_2 | \tag{8.8.2} $$
+<p>Technically, Equation 8.8.2 should include all electrons in a system, not just two, to account for all possible combinations of orbital angular momenta, however, there are some tricks that aid in applying this equations to address larger multi-electron atoms. First, electrons in s-orbitals have no <span data-concept="orbital-angular-momentum">orbital angular momentum</span>, so they can be ignored. Second, if block of orbitals are completely filled (e.g., all six p-block spin-orbitals or all 10 d-block spin-orbitals), then the <span data-concept="orbital-angular-momentum">orbital angular momentum</span> vector of each electron will be countered by another electron in the system; these are called <strong><span data-concept="closed-shell">closed-shell</span></strong> systems. Systems with partially unfilled blocks are called <strong><span data-concept="closed-shell">open-shell</span></strong> systems.</p>
+<p>Hence, conveniently for chemists, an atom’s electronic state depends entirely on its unfilled sub shells. Because electrons distribute themselves in a symmetric manner, the inner shell electrons end up canceling out each other’s momenta. For an atom in the configuration $1s^2 2s^2 p^2$<sup class="fn" data-note="c-2p2"></sup>, only the two p‐electrons matter. For an atom in the configuration $1s^22s^12p^1$, we have to examine only the 2s and 2p electrons (and can ignore the s electrons too).<sup class="fn" data-note="c-2s"></sup></p>
+<div class="example" id="ex-8-8-1">
+<h3>Example 8.8.1 · Total Orbital Angular Momentum of Carbon</h3>
+<p>What are the possible $L$ values for the electrons in the $1s^2 2s^2 2p^2$ configuration of carbon?</p>
+<h4>Solution</h4>
+<p>Both open‐shell electrons (i.e., the 2p electrons) are $l = 1$. The possible combinations are 2, 1, 0.</p>
+</div>
+<div class="example" id="ex-8-8-2">
+<h3>Example 8.8.2 · Total Orbital Angular Momentum of Unknown Species</h3>
+<p>What are the possible $L$ values for the electrons in the $[Xe]6s^2 4f^1 5d^1$ ?</p>
+<h4>Solution</h4>
+<p>We can ignore the electrons in the $[Xe]$ core and the electrons in the $6s$ block. So all we have to consider is the f electron $l=3$ and d electron $l=2$.</p>
+<p>The two extremes possible (Equation 8.8.2) are</p>
+$$ 3+2 = 5 $$
+<p>and</p>
+$$ 3 - 2 = 1 $$
+<p>The possible combinations are thus 5, 4, 3, 2, and 1.</p>
+</div>
+</section>
+
+<section id="total-ml">
+<h2>The Total Magnetic Quantum Number: $M_l$</h2>
+<p>The <span data-concept="total-magnetic-quantum-number">Total Magnetic Quantum Number</span> $M_l$ is the total z‐component of all of the relevant electrons’ orbital momentum. Where $L$ told you how much total angular momentum there is in the system, $M_l$ tells you which direction it is pointing. Like $L$, a given configuration can have several possible values of $M_l$, depending on the electrons’ relative orientation. Unlike $L$, $M_l$ is allowed to have negative values. To list the possible $M_l$ values for a two electron system, take the case where both $m_l$ are positive, then take the case where they are both negative, and then fill in the numbers in between (<a class="figref" href="#6.3-sim-vector-model">Figure 8.8.1</a>).</p>
+$$ M_l = m_{l1} + m_{l2}, m_{l1} + m_{l2} - 1, ... , -m_{l1} - m_{l2} \tag{8.8.3} $$
+<p>Note that there is no absolute value function in Equation 8.8.3 like in Equation 8.8.2.</p>
+<div class="example" id="ex-8-8-3">
+<h3>Example 8.8.3 · Total Magnetic Quantum Number of the Zirconium Ground State</h3>
+<p>What are the possible values $M_l$ of a zirconium atom with the $[Kr] 5s^2 4d^2$ electron configuration?</p>
+<h4>Solution</h4>
+<p>Both open‐shell electrons (i.e., the 4d electrons) are $l=2$, so the values are 4, 3, 2, 1, 0, ‐1, ‐2, ‐3, ‐4.</p>
+</div>
+<h3>The Total Spin Magnetic Quantum Number: $M_s$</h3>
+<p>$M_s$ is the sum total of the z‐components of the electrons’ inherent spin. Do not confuse it with $M_l$, which is the sum total of the z‐component of the <strong><span data-concept="orbital-angular-momentum">orbital angular momentum</span></strong>. It is easily computed by finding all of the possible combinations of $m_s$. Since $m_s$ for each individual electron can only be +1/2 or ‐ 1/2, this isn’t too complicated.</p>
+$$ M_s = m_{s1} + m_{s2}, m_{s1} +m_{s2} - 1 , ... , m_{s1} - m_{s2} \tag{8.8.4} $$<sup class="fn" data-note="c-ms-range"></sup>
+<div class="example" id="ex-8-8-4">
+<h3>Example 8.8.4 · Total Spin Magnetic Quantum Number of the Carbon Ground State</h3>
+<p>What are the M s values for $1s^2 2s^2 2p^2$ ?</p>
+<h4>Solution</h4>
+<p>$M_s = 1, 0, -1$</p>
+</div>
+</section>
+
+<section id="total-s">
+<h2>The Total Intrinsic Spin Quantum Number: $S$</h2>
+<p>The sum total of the spin vectors of all of the electrons is called $S$. The difference between $S$ and $M_s$ is subtle, but vital for understanding <span data-concept="spin-multiplicity">multiplicity</span>. $M_s$ measures the total z‐component of the electrons’ spins, while $S$ measures the entire resultant vector. The values of $S$ are computing in a manner very similar to $M_s$. Because $S$ measures the magnitude of a vector, it cannot ever be negative.</p>
+$$ S = |s_1 + s_2 |, |s_1 +s_2 - 1| , ... ,| s_1 - s_2 | \tag{8.8.5} $$
+<div class="example" id="ex-8-8-5">
+<h3>Example 8.8.5 · The Hydrogen Ground State</h3>
+<p>Find $S$ for $1s^1$.</p>
+<h4>Solution</h4>
+<p>$S$ clearly has to be ½ since that’s the spin of a single electron and there’s only one electron to worry about.</p>
+</div>
+<div class="example" id="ex-8-8-6">
+<h3>Example 8.8.6 · The Beryllium Excited State</h3>
+<p>Find S for $1s^2 2s^1 2p^1$.</p>
+<h4>Solution</h4>
+<p>$S = 1, 0$</p>
+</div>
+<div class="example" id="ex-8-8-7">
+<h3>Example 8.8.7 · The Carbon Ground State</h3>
+<p>Find $S$ for carbon atoms with the $1s^2 2s^2 2p^2$ electron configuration.</p>
+<h4>Solution</h4>
+<p>$S=1,0$ This is the same as the previous problem. Notice that $S$ is not affected by which orbitals the electrons are in. $S$ only cares about how many <strong>open‐shell electrons</strong> (i.e., unpaired electrons) there are, not about where they are. This is because $S$ measures an inherent property of the electrons themselves</p>
+</div>
+<div class="example" id="ex-8-8-8">
+<h3>Example 8.8.8</h3>
+<p>Find $S$ for nitrogen atoms with the $1s^2 2s^2 2p^3$ electron configuration.</p>
+<h4>Solution</h4>
+<p>We have not done a three electron case yet, but they are not hard. Find all the combinations for a single pair first, and then factor in the third electron. For two electrons, we already know that the two possible S values are S=1,0. A third electron can either add or subtract ½ from these values, so the final $S$ can be $S=3/2, 1, 1/2$.<sup class="fn" data-note="c-nitrogen"></sup></p>
+</div>
+</section>
+
+<section id="total-j">
+<h2>The Total Angular Momentum Quantum Number J</h2>
+<p>The total <span data-concept="orbital-angular-momentum">orbital angular momentum</span> of an atom (measured in terms of $l$)<sup class="fn" data-note="c-l-for-L"></sup>, and the total spin angular momentum of an atom (measure in $S$) combine to form total angular momentum, a number that is quantized by the number $J$. $L$ and $S$ do not necessarily have to be pointing in the same direction (<a class="figref" href="#8.9-sim-ls-coupling">Figure 8.8.1</a>), so $J$ can range from $L + S$ to $|L – S|$.</p>
+<div class="book-table">
+  <div class="tcap"><span class="eyebrow">Table 8.8.1</span><span>Quantum Numbers and associated ranges<sup class="fn" data-note="c-table"></sup></span></div>
+  <table>
+    <thead><tr><th>Symbol</th><th>Name</th><th>Allowed Range</th></tr></thead>
+    <tbody>
+      <tr><td>$l$</td><td>Total <span data-concept="orbital-angular-momentum">orbital angular momentum</span></td><td>$|l_1 + l_2 |, ..., |l_1 - l_2 |$</td></tr>
+      <tr><td>$M_l$</td><td>Magnet Quantum number</td><td>$[m_{l1} + m_{l2}, ..., - m_{l1} - m_{l2} ]$</td></tr>
+      <tr><td>$M_s$</td><td>Spin Magnetic Quantum Number</td><td>$| m_{s1} + m_{s2} |,..., |m_{s1} - m_{s2} |$</td></tr>
+      <tr><td>$S$</td><td>Inherent Spin Number</td><td>$|s_1 + s_2 |,..., |s_1 - s_2 |$</td></tr>
+      <tr><td>$M$</td><td><span data-concept="spin-multiplicity">Multiplicity</span></td><td>2S+1</td></tr>
+      <tr><td>$J$</td><td>Total Angular Momentum</td><td>$L+S,..., | L-S |$</td></tr>
+    </tbody>
+  </table>
+</div>
+</section>
+
+<section id="multiplicity">
+<h2>Multiplicity</h2>
+<p><span data-concept="spin-multiplicity">Multiplicity</span> is a simple ‐ sounding concept that defies simple explanations. You know from your first ‐ year education that a <span data-concept="spin-multiplicity">singlet</span> is when the net spin (S) is equal to zero (e.g. all the electrons are spin paired), and a <span data-concept="spin-multiplicity">triplet</span> happens when the net spin is equal to 1 (e.g. two electrons are pointing in the same direction). They are called “<span data-concept="spin-multiplicity">singlet</span>” and “<span data-concept="spin-multiplicity">triplet</span>” because there are 3 ways to combine a pair of electron spins to get S=1, but only one way to get $S=0$. If you draw a picture of the possible ways that two electrons can arrange their spins, you get something like this:<sup class="fn" data-note="c-three-881"></sup></p>
+<figure class="sim" id="sim-spin-pair" data-figure="8.8.1" data-original="/media/ch08/57511-M1b.jpg" data-original-width="268" data-original-caption="When we call an electron spin “up,” what we really mean is that it has a positive z‐component (e.g. $m_s = +½$).">
+  <div class="sim-head"><span class="eyebrow">Figure 8.8.1</span><span>The <span data-ref="spin-1 spin-2">two electrons' spins</span>, each of length $\tfrac{\sqrt3}{2}\hbar$, on their cones about z, and their resultant $\kSvec$. Three arrangements give $S = 1$, with $S_z = +\hbar$, 0 or $-\hbar$, and only the <span data-concept="spin-multiplicity">singlet</span> gives $S = 0$. Turn φ: the pair swings round z and the x and y parts change, while $S_z$ and $|\kSvec|$ stay fixed. The two states with $S_z = 0$ differ only in whether the spins' x and y parts line up or cancel.</span></div>
+</figure>
+<p>While this picture is an improvement over the simple up‐down model, it is still misleading. The three spin axes of an electron share a <span data-concept="uncertainty-principle">Heisenberg Uncertainty Principle</span>. The more you know about $S_x$, the less you can know about either $S_y$ or $S_z$. The same is true for all other combinations of x, y and z. Since we have defined $S_z$ as a known and fixed value, the values of $S_x$ and $S_y$ must be <strong>completely unknown</strong>. This causes the x and y orientations of the electrons to become smeared out across all possible values:</p>
+</section>
+
+<section id="constructing-term-symbols">
+<h2>Constructing Term Symbols</h2>
+<p><span data-concept="term-symbol">Atomic term symbols</span> contain two pieces of information.<sup class="fn" data-note="c-two-pieces"></sup> They tell you the total <span data-concept="orbital-angular-momentum">orbital angular momentum</span> of the atom ($l$), and they tell you the <span data-concept="spin-multiplicity">multiplicity</span> ($M$). $l$ is denoted by a simple code, similar to the code used to delineate the types of atomic orbitals:</p>
+<ul><li>$L=0 \rightarrow S$</li><li>$L=1 \rightarrow P$</li><li>$L=2 \rightarrow D$</li><li>$L=3 \rightarrow F$</li></ul>
+<p>Note that while the notation is similar, L does NOT say anything about what types of orbitals the electrons are in. A state that has the <span data-concept="term-symbol">term symbol</span> P does NOT necessarily have an open p‐shell. The <span data-concept="spin-multiplicity">multiplicity</span> is indicated by appending a number to the upper left of the symbol. A $L=2$, $M=3$ state would be represented by $^3D$. The secret to writing the <span data-concept="term-symbol">term symbols</span> for an atom is to discover what combinations of $l$ and $M$ are possible for that atom with that specific electronic configuration. An atom that only has closed shells will always be $1S$.<sup class="fn" data-note="c-1s0"></sup></p>
+<p>Each <span data-concept="term-symbol">term symbol</span> represents a discrete energy level. We can place these levels in the correct order by using these simple rules:</p>
+<ul><li>1: High <span data-concept="spin-multiplicity">multiplicity</span> values mean low energy</li><li>2: If there is a tie, high $l$ values mean low energy</li><li>3a: If there is still a tie and the shell is less than half full, then low J means low energy</li><li>3b: If the shell is more than half full, then high J means low energy</li></ul>
+<p>These rules reliably predict the ground state. They have only erratic agreement with experiment when ordering the other levels.</p>
+<div class="example" id="ex-8-8-9">
+<h3>Example 8.8.9 · Hydrogen Ground State</h3>
+<p>What are the <span data-concept="term-symbol">term symbols</span> for the <span data-concept="microstate">microstates</span><sup class="fn" data-note="c-microstate-level"></sup> possible for $1s^1$ electronic configuration of hydrogen?</p>
+<h4>Solution</h4>
+<p>Since there is only one electron, this is a simple problem. $L=0$ and $M=1$<sup class="fn" data-note="c-m1"></sup>, so the only possible <span data-concept="term-symbol">term symbol</span> is $^2S$. With only one electron, $S = \tfrac{1}{2}$, so $J = 0 + \tfrac{1}{2} = \tfrac{1}{2}$. Only one <span data-concept="microstate">microstate</span> exists for this configuration and it has a <span data-concept="term-symbol">term symbol</span> of $^2S_{\tfrac{1}{2}}$.</p>
+</div>
+<div class="example" id="ex-8-8-10">
+<h3>Example 8.8.10 · Boron</h3>
+<p>What are the <span data-concept="term-symbol">term symbols</span> for the <span data-concept="microstate">microstates</span> possible for $1s^2 2s^2 2p^1$ electronic configuration of boron?</p>
+<h4>Solution</h4>
+<p>There still only one open shell electron, so $L=1$, $M=1$ and $S = \tfrac{1}{2}$. We get a <span data-concept="term-symbol">term symbol</span> of the type $^2P$, which gets split into separate symbols because $J = 3/2$ and $1/2$. Two possible <span data-concept="microstate">microstates</span> exist for this system with <span data-concept="term-symbol">term symbols</span> of $^2P_{3/2}$ and $^2P_{1/2}$.</p>
+</div>
+<div class="example" id="ex-8-8-11">
+<h3>Example 8.8.11 · Beryllium Excited State</h3>
+<p>What are the <span data-concept="term-symbol">term symbols</span> for the <span data-concept="microstate">microstates</span> possible for the $1s^2 2s^1 2p^1$ excited-state electronic configuration of Beryllium?</p>
+<h4>Solution</h4>
+<p>Now we have two electrons to worry about. Since $l_1 = 0$ and $l_2 = 1$, the only possible combination is $L=1$. The possible combinations of S are: $S=1,0$. This means that $M=3$ or $M=1$. The <span data-concept="term-symbol">term symbols</span> will be of the form $^1P$ and $^3P$. For the $^1 P$ state, $L=1$ and $S=0$, so $J=1$. For the second state, $L=1$ and $S=1$, so $J=2,1,0$. There are four <span data-concept="microstate">microstates</span> for this configuration with <span data-concept="term-symbol">term symbols</span> of $^1 P_1$ and $^3 P_2$, $^3P_1$, and $^3P_0$.</p>
+</div>
+<div class="example" id="ex-8-8-12">
+<h3>Example 8.8.12 · Zirconium</h3>
+<p>What are the <span data-concept="term-symbol">term symbols</span> for the <span data-concept="microstate">microstates</span> possible for the $[Kr] 5s^2 4d^2$ ground-state electronic configuration of zirconium?</p>
+<h4>Solution</h4>
+<p>This is a much harder problem. We will need to use a special technique to disentangle all of the possible combinations of $l$ and $M$. Let’s start be listing the relevant quantum numbers for the two <span data-concept="closed-shell">open-shell</span> electrons:</p>
+<div class="book-table">
+  <div class="tcap"><span class="eyebrow">Table</span><span></span></div>
+  <table>
+    <thead><tr><th>$l_1 = 2$</th><th>$l_2 = 2$</th></tr></thead>
+    <tbody>
+      <tr><td>$m_{l1} = 2, 1, 0, - 1, - 2$</td><td>$m_{l2} = 2, 1, 0, - 1, - 2$</td></tr>
+      <tr><td>$m_{s1} = \tfrac{1}{2}, -\tfrac{1}{2}$</td><td>$m_{s1} = \tfrac{1}{2}, -\tfrac{1}{2}$</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>Let’s combine these numbers to generate the atomic quantum numbers:</p>
+$$ L = 4,3,2,1,0 $$
+$$ M_l = 4,3,2,1,0, - 1, - 2, - 3, - 4 $$
+$$ M_s = 1,0 $$
+<p>We know that there will at least one each of S, P, D, F and G. It isn’t immediately clear which of these will be <span data-concept="spin-multiplicity">singlets</span> and which will be <span data-concept="spin-multiplicity">triplets</span>. To figure this out, we need to systematically examine the possible <span data-concept="microstate">microstates</span>. It turns out that there are <strong>45</strong> possible ways to put distribute two electrons between 5 d orbitals. That’s a lot! The easiest way to list the states is to organize them into a chart:</p>
+<figure class="sim" id="sim-microstates" data-original="/media/ch08/182586-8.8.1.png,/media/ch08/182587-8.8.2.png,/media/ch08/182588-8.8.3.png" data-original-caption="">
+  <div class="sim-head"><span class="eyebrow">Figure</span><span>The <span data-concept="microstate">microstates</span> of a configuration counted into a chart by $M_l$ and $M_s$, one row at a time, and then the terms taken off it one by one. Each term claims one <span data-concept="microstate">microstate</span> from every cell of a rectangle centred on the chart, and the top row of what is left names the next term. Hover over a cell for its <span data-concept="microstate">microstates</span>.</span></div>
+</figure>
+<p>Attacking the chart one row at a time. Ask yourself, how many ways can I arrange the two electrons to give me $M_l = 4$? It turns out there is only one possible combination that does this:</p>
+<p>This state is has $M_s = 0$. This means that there is only 1 <span data-concept="microstate">microstate</span> that corresponds to $M_l =4$ and $M_s = 0$, and none that correspond to $M_l =4$ and $M_s = \pm -1$. We add this <span data-concept="microstate">microstate</span> to the chart like this:</p>
+<p>Now, how many ways are there to get $M_l = 3$?</p>
+<p>For $M_l =2$, we find the following states:</p>
+<p>You should be able to draw the <span data-concept="microstate">microstates</span> on your own by now. You should find 8 states, four of which are <span data-concept="spin-multiplicity">singlet</span> and four of which are <span data-concept="spin-multiplicity">triplets</span>.<sup class="fn" data-note="c-ml1"></sup></p>
+<p>There are only nine possible ways to arrange the electrons to get $M_l =0$</p>
+<p>The rest of the chart will be symmetric to the first half, so we do not need to do any more work:</p>
+<p>Now that we have a listing of all of the <span data-concept="microstate">microstates</span>, we need to figure out how to divide them up between the <span data-concept="term-symbol">term symbols</span>. It turns out that each <span data-concept="term-symbol">term symbol</span> can have, at most, one <span data-concept="microstate">microstate</span> from each box on the chart. The <span data-concept="term-symbol">term symbols</span> always end up claiming a “box” of <span data-concept="microstate">microstates</span>, centered on the middle of the chart. This is easier shown than said.</p>
+<p>Attacking the chart from the top, we can see that the $M_l = 4$ $M_s = 0$ state clearly belongs to a $^1G$ symbol. The $M_l = -4$ $M_s =0$ box also clearly belongs to this symbol. If I connect these states with a “box,” I get this:</p>
+<p>The strickthough configurations all belong to the $^1 G$ state. Let's subtract them from the chart to indicate that they are not available for other <span data-concept="term-symbol">term symbols</span>.</p>
+<p>The next row indicates a $L=3$ state. Because there are three $M_s$ values available, this is a <strong><span data-concept="spin-multiplicity">triplet</span></strong>. The <span data-concept="term-symbol">term symbol</span> will be $^3F$, which reduces the chart down to<sup class="fn" data-note="c-chart-3f"></sup></p>
+<p>The next state will be $^1D$. Leaving us with</p>
+<p>Next is a $^3P$ state. The chart is getting pretty small now wtih<sup class="fn" data-note="c-chart-1s"></sup></p>
+<p>The last remaining <span data-concept="microstate">microstate</span> comprises the $^1S$ <span data-concept="term-symbol">term symbol</span>.</p>
+<p>The total listing is</p>
+<p>$^1G$, $^3F$, $^1D$, $^3P$, $^1S$.</p>
+<p>Assigning $J$ values, we get</p>
+<p>$^1G_4$, $^3F_4$, $^3F_3$, $^3F_2$, $^1D_2$, $^3P_2$, $^3P_1$, $^3P_0$, $^1S_0$</p>
+<p>If you can do this problem, you can do almost any atomic <span data-concept="term-symbol">term symbol</span>.</p>
+</div>
+<div class="note">
+<div class="eyebrow">Note</div>
+<h3>Note</h3>
+<p>The secret to writing the <span data-concept="term-symbol">term symbols</span> for an atom is to discover what combinations of $l$ and $M$ are possible for that atom with that specific electronic configuration.</p>
+</div>
+</section>
+
+<section id="shortcuts">
+<h2>Shortcuts</h2>
+<p>There is a deep symmetry that connects different electronic configurations. It turns out that a $p^1$ configuration has the same <span data-concept="term-symbol">term symbols</span> as a $p^5$. Similarly, $p^2 = p^4$. A similar relationship can be used to figure out high electron number <span data-concept="term-symbol">term symbols</span> for the $d$ and $f$ orbitals.</p>
+</section>
