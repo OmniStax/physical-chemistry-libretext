@@ -72,13 +72,14 @@ const signed = (v, dec = 2) => `${v < 0 ? '-' : '+'} ${fmt(Math.abs(v), dec)}`;
     hits.push({ x: X0, y: Y0, r: 14, name: `the ${g.name} nucleus` });
     if (Math.abs(c2) >= 0.005) {
       line(ctx, XC, Y0 - 26, XC, Y0 + 26, cl, 4); line(ctx, XC - 12, Y0, XC + 12, Y0, cl, 4);
-      F.hbracket(ctx, Math.min(X0, XC), Math.max(X0, XC), Y0 + 56, cl, `⟨x⟩ = ${fmt(sx, 2)} a₀`);
+      F.hbracket(ctx, Math.min(X0, XC), Math.max(X0, XC), Y0 + 40, cl);
+      text(ctx, `⟨x⟩ = ${fmt(sx, 2)} a₀`, (X0 + XC) / 2, Y0 + 78, cl, { size: 22, weight: 600, align: 'center', bg: PAL.panel });
       hits.push({ x: XC, y: Y0, r: 16, name: `the centre of the density, ⟨x⟩ = ${fmt(sx, 2)} a₀` });
     }
     /* the two parts at their weights, on the same scale */
     const parts = [
-      { b: { l: 960, r: 1280, t: 150, b: 390 }, f: (x, y) => c1 * g.f1(x, y), s: `c₁ ${g.l1}, c₁ = ${fmt(c1, 2)}`, n: `the valence function ${g.l1.replace('_', '')} at weight ${fmt(c1, 2)}` },
-      { b: { l: 960, r: 1280, t: 440, b: 680 }, f: (x, y) => c2 * g.f2(x, y), s: `c₂ ${g.l2}, c₂ = ${fmt(c2, 2)}`, n: `the polarization function ${g.l2t} at weight ${fmt(c2, 2)}` },
+      { b: { l: 960, r: 1280, t: 150, b: 390 }, f: (x, y) => c1 * g.f1(x, y), s: `valence ${g.l1} × ${fmt(c1, 2)}`, n: `the valence function ${g.l1.replace('_', '')} at weight ${fmt(c1, 2)}` },
+      { b: { l: 960, r: 1280, t: 440, b: 680 }, f: (x, y) => c2 * g.f2(x, y), s: `polarization ${g.l2} × ${fmt(c2, 2)}`, n: `the polarization function ${g.l2t} at weight ${fmt(c2, 2)}` },
     ];
     for (const p of parts) {
       paint(ctx, p.b, p.f, M, cw, cn);
@@ -98,11 +99,11 @@ const signed = (v, dec = 2) => `${v < 0 ? '-' : '+'} ${fmt(Math.abs(v), dec)}`;
    quadrature each frame. Graph: the radial density 4 pi r^2 psi^2 on r 0 to 15 a0, 0 to 0.8 per a0
    (phi_1s alone peaks at 4 zeta e^-2 = 0.67). The 1s alone is dashed; the share of the electron beyond
    5 a0 is shaded under the bold curve. alpha 0.01 to 0.30, opening on 0.036, hydrogen's diffuse exponent
-   in 6-311++G (Clark et al., 1983); c 0 to 1.5, opening on 0.5. */
+   in 6-311++G (Clark et al., 1983); c 0 to 1.5, opening on 1. */
 (function () {
   const d = sim('sim-diffuse', 560);
   const A = ctl(d.controls, { label: '\\alpha', cls: '', key: 'alpha', min: 0.01, max: 0.3, step: 0.001, value: 0.036, unit: '', dec: 3, detents: [{ v: 0.036, label: '6-311++G' }], snap: true });
-  const Cw = ctl(d.controls, { label: 'c', cls: '', key: 'c', min: 0, max: 1.5, step: 0.01, value: 0.5, unit: '', dec: 2, specials: [{ at: 0, label: 'no diffuse function' }] });
+  const Cw = ctl(d.controls, { label: 'c', cls: '', key: 'c', min: 0, max: 1.5, step: 0.01, value: 1, unit: '', dec: 2, specials: [{ at: 0, label: 'no diffuse function' }] });
   const hits = [];
   F.hover(d.stage, () => hits);
   const z = 1.24, N1 = Math.sqrt(z * z * z / Math.PI);
@@ -115,11 +116,11 @@ const signed = (v, dec = 2) => `${v < 0 ? '-' : '+'} ${fmt(Math.abs(v), dec)}`;
     const N = 1 / Math.sqrt(1 + c * c + 2 * c * S);
     const P = (r) => { const v = N * (N1 * Math.exp(-z * r) + c * N2 * Math.exp(-a * r * r)); return 4 * Math.PI * r * r * v * v; };
     const far = quad(P, RC, 80, 3000), far1 = quad(p1, RC, 80, 400);
-    const pct = (f) => (100 * f >= 10 ? fmt(100 * f, 0) : 100 * f >= 0.1 ? fmt(100 * f, 1) : '0.0');
+    const pct = (f) => (100 * f >= 10 ? fmt(100 * f, 0) : 100 * f >= 0.1 ? fmt(100 * f, 1) : 'under 0.1');
     const cp = C('probability-density'), cl = C('length');
     topline(ctx, c < 0.005 ? `The 1s function alone leaves ${pct(far1)}% of the electron beyond $5\\,\\kao$.`
-      : `With $\\alpha = ${fmt(a, 3)}$ the diffuse function puts ${pct(far)}% of the electron beyond $5\\,\\kao$, against ${pct(far1)}% for the 1s function alone.`);
-    const box = { l: 150, r: 1340, t: 110, b: 450 };
+      : `With $\\alpha = ${fmt(a, 3)}$, ${pct(far)}% of the electron lies beyond $5\\,\\kao$; the 1s function alone leaves ${pct(far1)}%.`);
+    const box = { l: 150, r: 1340, t: 150, b: 470 };
     const ax = axes(ctx, box, [0, 15], [0, 0.8], { nx: 5, ny: 4, xl: 'distance from the nucleus r (a₀)', yl: 'radial density 4πr²ψ² (1/a₀)', xc: cl, yc: cp });
     shade(ctx, ax, P, 0, RC, 15, cp, { alpha: 0.3 });
     plot(ctx, ax, p1, alpha(PAL.ink, 0.55), { w: 3, dash: [10, 10] });

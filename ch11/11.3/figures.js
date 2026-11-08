@@ -70,7 +70,7 @@ const sim = (id, H) => F.sim(root, id, H);
     }
     if (n > 1) {
       ctx.save(); ctx.beginPath(); ctx.setLineDash([4, 8]); ctx.arc(cx, cy, R0 * k, 0, 2 * Math.PI); ctx.strokeStyle = alpha(PAL.ink, 0.55); ctx.lineWidth = 2; ctx.stroke(); ctx.restore();
-      text(ctx, 'dashed: single ζ = 1.24', cx, cy - 168, alpha(PAL.ink, 0.7), { size: 17, align: 'center' });
+      text(ctx, 'dashed: single ζ = 1.24', cx, cy - Math.max(R0, mr) * k - 24, alpha(PAL.ink, 0.7), { size: 17, align: 'center' });
       hits.push({ x: cx + R0 * k, y: cy, r: 12, name: `one function with ζ = 1.24: ⟨r⟩ = ${fmt(R0, 2)} a₀` });
     }
     dot(ctx, cx, cy, PAL.ink, true, 5);
