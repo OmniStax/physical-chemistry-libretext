@@ -36,8 +36,8 @@ const sim = (id, H) => F.sim(root, id, H);
     topline(ctx, eqm ? `At ${fmt(t, 0)} K and in equilibrium, ${fmt(100 * fo, 0)}% of the molecules are ortho.` : `Cooled without a catalyst, the gas stays 75% ortho at ${fmt(t, 0)} K.`);
     hov.length = 0;
     /* the ladder: levels to scale in J(J+1), J = 0 to 5 */
-    const xl = 130, xr = 440, y0 = 600, k = 13.5;
-    text(ctx, 'rotational levels of H₂', (xl + xr) / 2, 112, PAL.ink, { size: 20, align: 'center' });
+    const xl = 130, xr = 440, y0 = 600, k = 11.5;
+    text(ctx, 'rotational levels of H₂', (xl + xr) / 2, 140, PAL.ink, { size: 20, align: 'center' });
     for (let J = 0; J <= 5; J++) {
       const y = y0 - J * (J + 1) * k, odd = J % 2 === 1, col = odd ? ORTHO : PARA;
       const pop = odd ? fo * (2 * J + 1) * Math.exp(-J * (J + 1) * TH / t) / o.q : (1 - fo) * (2 * J + 1) * Math.exp(-J * (J + 1) * TH / t) / e.q;
@@ -46,7 +46,7 @@ const sim = (id, H) => F.sim(root, id, H);
       if (pop > 0.002) { ctx.save(); ctx.fillStyle = alpha(col, 0.55); ctx.fillRect(xl, y - 12, (xr - xl) * pop, 10); ctx.restore(); }
       hov.push({ x: (xl + xr) / 2, y: y - 4, r: 14, name: `J = ${J}, ${odd ? 'ortho (nuclear spin triplet, weight 3)' : 'para (nuclear spin singlet, weight 1)'}: ${fmt(100 * pop, 1)}% of the molecules` });
     }
-    legend(ctx, { l: xl, r: xr, t: 130, b: 330 }, [{ s: 'ortho, odd J', color: ORTHO, w: 3 }, { s: 'para, even J', color: PARA, w: 3 }], { corner: 'tl' });
+    legend(ctx, { l: xl, r: xr, t: 152, b: 240 }, [{ s: 'ortho, odd J', color: ORTHO, w: 3 }, { s: 'para, even J', color: PARA, w: 3 }], { corner: 'tl' });
     /* heat capacity against T */
     const box = { l: 620, r: W - 50, t: 120, b: 380 };
     const ax = axes(ctx, box, [0, 330], [0, 2.2], { nx: 0, ny: 0, yl: 'C_{V}/R', yc: C('heat-capacity') });

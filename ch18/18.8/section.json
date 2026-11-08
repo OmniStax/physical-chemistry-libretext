@@ -1,0 +1,70 @@
+{
+ "id": "18.8",
+ "module": "13698",
+ "chapter": "18",
+ "title": "Rotational Partition Functions of Polyatomic Molecules Depend on the Sphar of the Molecule",
+ "short": "Polyatomic rotation",
+ "lead": "A polyatomic molecule rotates about three principal axes, and how its three moments of inertia compare sorts it into a spherical, symmetric or asymmetric top. Each kind of top has its own rotational partition function.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "Adapted from B. L. Tembe's lecture notes (IIT Bombay, www.chem.iitb.ac.in/~bltembe/pdfs/ch_3.pdf), shared under the book's CC BY-NC-SA 4.0; the lone \"and:\" between the closing energy and heat capacity is left out where the derivation takes their place.",
+ "ai": {
+  "text": [{"model": "claude-opus-5-5", "effort": "low"}],
+  "figures": []
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book prints no exercises for this section; the one here is new and AI-written, its answer checked by computation, with its Bloom level and concept tags chosen by AI.",
+ "figures": [],
+ "referents": [],
+ "coverage": [
+  {"span": "principal-axes", "concept": "center-of-mass", "verb": "introduces"},
+  {"span": "principal-axes", "concept": "degrees-of-freedom", "verb": "reinforces"},
+  {"span": "principal-axes", "concept": "principal-moments-of-inertia", "verb": "reinforces"},
+  {"span": "principal-axes", "concept": "inertia-tensor", "verb": "reinforces"},
+  {"span": "principal-axes", "concept": "rotational-temperature", "verb": "reinforces"},
+  {"span": "spherical-tops", "concept": "spherical-top-partition-function", "verb": "introduces"},
+  {"span": "spherical-tops", "concept": "spherical-top", "verb": "uses"},
+  {"span": "spherical-tops", "concept": "spherical-top-energy-levels", "verb": "reinforces"},
+  {"span": "symmetric-tops", "concept": "symmetric-top-partition-function", "verb": "introduces"},
+  {"span": "symmetric-tops", "concept": "symmetric-top", "verb": "uses"},
+  {"span": "symmetric-tops", "concept": "symmetric-top-energy-levels", "verb": "reinforces"},
+  {"span": "asymmetric-tops", "concept": "asymmetric-top-partition-function", "verb": "introduces"},
+  {"span": "asymmetric-tops", "concept": "asymmetric-top", "verb": "uses"},
+  {"span": "asymmetric-tops", "concept": "symmetry-number", "verb": "reinforces"},
+  {"span": "asymmetric-tops", "concept": "euler-angles", "verb": "uses"},
+  {"span": "thermodynamics-properties", "concept": "nonlinear-rotational-energy", "verb": "introduces"}
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "Calculate the rotational partition function at 300 K.",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {"at": "end"},
+   "cite": "asymmetric-tops",
+   "prompt": "<p>The rotational partition function of $\\mathrm{NO_2}$ is 2238 at 300 K. Without the rotational temperatures, find it at 600 K.</p>",
+   "answer": {
+    "type": "number",
+    "value": 6330,
+    "generated_by": "ai",
+    "hint": "In Equation 18.8.3 only $\\kT^3$ changes with temperature.",
+    "solution": "<p>By Equation 18.8.3, $\\kqrot = (\\sqrt{\\pi}/\\sigma)\\sqrt{\\kT^3/\\kThetaA\\kThetaB\\kThetaC}$, so $\\kqrot$ grows as $\\kT^{3/2}$ and everything else cancels in the ratio: $\\kqrot(600\\ \\text{K}) = 2238 \\times (600/300)^{3/2} = 2238 \\times 2.828 = 6330$. A linear molecule's $\\kqrot$ grows only as $\\kT$, since it has two rotational degrees of freedom to the nonlinear molecule's three.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {"exercise": "a1", "concept": "asymmetric-top-partition-function"}
+ ],
+ "footnotes": [
+  {"id": "c-com", "kind": "correction", "html": "Each of the sums is zero: $\\sum_i m_ix_i = \\sum_i m_iy_i = \\sum_i m_iz_i = 0$."},
+  {"id": "c-beta", "kind": "correction", "html": "The direction cosines are $\\alpha_i, \\beta_i, \\gamma_i$."},
+  {"id": "c-eig", "kind": "correction", "html": "With the inertia products defined as these sums, the second equation is $-\\alpha I_{xy} + \\beta(I_{yy} - \\eta) - \\gamma I_{yz} = 0$."},
+  {"id": "c-hbar", "kind": "correction", "html": "The numerator is $\\hbar^2$: $\\Theta_{\\text{rot},i} = \\hbar^2/2I_ik$."},
+  {"id": "c-gj", "kind": "correction", "html": "The degeneracy is $g_J = (2J+1)^2$."},
+  {"id": "c-eh", "kind": "correction", "html": "The exponent is $-H(p,q)/kT$."},
+  {"id": "c-ln", "kind": "correction", "html": "The argument holds $T^3$: $\\ln q_\\text{rot} = \\tfrac{1}{2}\\ln(\\pi T^3/\\Theta_A\\Theta_B\\Theta_C\\sigma^2)$."},
+  {"id": "c-115", "kind": "correction", "html": "The first rotational temperature is 11.5 K, the value the solution uses."},
+  {"id": "c-sub", "kind": "correction", "html": "The substitution is $\\dfrac{1.772}{2}\\sqrt{\\dfrac{(300\\ \\text{K})^3}{(11.5\\ \\text{K})(0.624\\ \\text{K})(0.590\\ \\text{K})}}$, which gives $q_\\text{rot} = 2238$."}
+ ]
+}

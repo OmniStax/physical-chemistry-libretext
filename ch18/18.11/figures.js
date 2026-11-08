@@ -19,7 +19,7 @@ const sim = (id, H) => F.sim(root, id, H);
     CO: ['CO', 3103, 2.8], NO: ['NO', 2719, 2.45], HCl: ['HCl', 4227, 15.02], HI: ['HI', 3266, 9.06], Na2: ['Na₂', 229, 0.221],
     K2: ['K₂', 133, 0.081], I2: ['I₂', 308, null],
   };
-  const T = ctl(d.controls, { label: '\\kT', cls: 'temperature', min: 0, max: 4, step: 0.005, value: Math.log10(300),
+  const T = ctl(d.controls, { label: '\\kT', cls: 'temperature', min: 0, max: 4, step: 0.001, value: Math.log10(300),
     fmt: (lg) => { const t = 10 ** lg; return `${t < 10 ? fmt(t, 1) : fmt(t, 0)} K`; }, detents: [{ v: Math.log10(300), label: '300 K' }], snap: true });
   const pick = F.select(d.controls, { label: '\\text{molecule}', aria: 'the diatomic gas', value: 'CO',
     options: Object.keys(MOL).map((k) => ({ value: k, label: MOL[k][0] })) });
