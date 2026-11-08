@@ -18,7 +18,8 @@ const signed = (v, dec = 2) => `${v < 0 ? '-' : '+'} ${fmt(Math.abs(v), dec)}`;
    the two functions are orthogonal by symmetry. Valence functions are Slater orbitals with Table 11.3.1's
    exponents (carbon 2p_z, zeta = 1.72; hydrogen 1s, zeta = 1.24); polarization functions are single
    normalized Gaussian primitives, as the text says, with the exponents of 6-31G* on carbon (d, 0.8) and
-   6-31G** on hydrogen (p, 1.1). The density's centre is <x> = 2 c1 c2 <phi1|x|phi2>, the radial integral
+   6-31G** on hydrogen (p, 1.1), from Hariharan and Pople (1973), who added them to the 6-31G of Hehre,
+   Ditchfield and Pople (1972); recalled, not checked against the paper. The density's centre is <x> = 2 c1 c2 <phi1|x|phi2>, the radial integral
    computed once. Signs in the house's diverging pair; the main map and the two parts share one scale.
    Opens on the book's p + d, c2 = 0.30. */
 (function () {
@@ -99,7 +100,8 @@ const signed = (v, dec = 2) => `${v < 0 ? '-' : '+'} ${fmt(Math.abs(v), dec)}`;
    quadrature each frame. Graph: the radial density 4 pi r^2 psi^2 on r 0 to 15 a0, 0 to 0.8 per a0
    (phi_1s alone peaks at 4 zeta e^-2 = 0.67). The 1s alone is dashed; the share of the electron beyond
    5 a0 is shaded under the bold curve. alpha 0.01 to 0.30, opening on 0.036, hydrogen's diffuse exponent
-   in 6-311++G (Clark et al., 1983); c 0 to 1.5, opening on 1. */
+   in 6-311++G (the 6-311G of Krishnan et al., 1980, with the diffuse functions of Clark et al., 1983, and
+   Frisch, Pople and Binkley, 1984; recalled, not checked against the papers); c 0 to 1.5, opening on 1. */
 (function () {
   const d = sim('sim-diffuse', 560);
   const A = ctl(d.controls, { label: '\\alpha', cls: '', key: 'alpha', min: 0.01, max: 0.3, step: 0.001, value: 0.036, unit: '', dec: 3, detents: [{ v: 0.036, label: '6-311++G' }], snap: true });

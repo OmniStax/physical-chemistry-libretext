@@ -350,7 +350,7 @@
        "step": 2
       },
       {
-       "tex": "\\kEtot (\\text{ethylene}) = 2(\\kalphaH+\\kbetaH)",
+       "text": "The energy of a localized double bond is $2(\\alpha+\\beta)$, as determined from the analysis of ethylene.",
        "src": "10.5",
        "drv": "10.5/ethylene-pi"
       },

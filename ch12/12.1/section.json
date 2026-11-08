@@ -1,0 +1,187 @@
+{
+ "id": "12.1",
+ "module": "13484",
+ "chapter": "12",
+ "title": "The Exploitation of Symmetry Can Help Simplify Numerical Calculations",
+ "short": "Symmetry and calculation",
+ "lead": "A molecule's symmetry decides which operations leave it unchanged, as the build of a Rubik's cube decides its moves. Benzene's Hückel determinant, rewritten in a basis of symmetric combinations of its 2p orbitals, shows how much work that symmetry can save.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "Written by Delmar Larsen and Kristin LaRue and shared under the book's CC BY-NC-SA 4.0; the Rubik's cube photograph, used with Wikipedia's permission, and the link to a video of the cube being solved are left out.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The exercise is new and AI-written, its roots checked by computation; its Bloom level and concept tags were chosen by AI. Numeric answers accept a 2% tolerance.",
+ "figures": [],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "symmetry-and-calculation",
+   "concept": "symmetry-simplifies-calculations",
+   "verb": "introduces"
+  },
+  {
+   "span": "benzene-basis",
+   "concept": "basis-change-invariance",
+   "verb": "introduces"
+  },
+  {
+   "span": "benzene-basis",
+   "concept": "block-diagonal-determinant",
+   "verb": "introduces"
+  },
+  {
+   "span": "benzene-basis",
+   "concept": "secular-determinant",
+   "verb": "uses"
+  },
+  {
+   "span": "benzene-basis",
+   "concept": "huckel-approximation",
+   "verb": "uses"
+  },
+  {
+   "span": "benzene-basis",
+   "concept": "basis-functions",
+   "verb": "uses"
+  },
+  {
+   "span": "benzene-basis",
+   "concept": "hamiltonian-matrix-element",
+   "verb": "uses"
+  },
+  {
+   "span": "benzene-basis",
+   "concept": "overlap-integral",
+   "verb": "uses"
+  },
+  {
+   "span": "benzene-basis",
+   "concept": "symmetry-simplifies-calculations",
+   "verb": "reinforces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "However, any basis set can be used to represent the determinant",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "benzene-basis",
+   "prompt": "<p>Butadiene's Hückel determinant in the basis of its four carbon $2p_z$ orbitals is</p>$$ \\left|\\begin{array}{cccc}x&1&0&0\\\\1&x&1&0\\\\0&1&x&1\\\\0&0&1&x\\end{array}\\right|=0 $$<p>Rewrite it in the basis $\\phi_1 = \\frac{1}{\\sqrt2}(p_1+p_4)$, $\\phi_2 = \\frac{1}{\\sqrt2}(p_2+p_3)$, $\\phi_3 = \\frac{1}{\\sqrt2}(p_1-p_4)$, $\\phi_4 = \\frac{1}{\\sqrt2}(p_2-p_3)$, using the Hückel values ($x$ on the diagonal, 1 between bonded neighbours, 0 otherwise, orbitals orthonormal). The determinant falls into two $2 \\times 2$ blocks.</p><ol type=\"a\"><li>What is the positive root of the block made of $\\phi_1$ and $\\phi_2$?</li><li>What is the positive root of the block made of $\\phi_3$ and $\\phi_4$?</li></ol>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 0.618,
+      "hint": "Every matrix element between a combination with a + sign and one with a − sign is zero."
+     },
+     {
+      "part": "b",
+      "value": 1.618
+     }
+    ],
+    "solution": "<p>Each entry is $\\langle\\phi_i|\\cdots|\\phi_j\\rangle$ expanded over the $p$ orbitals. For $\\phi_1$ with itself, $\\tfrac12(x + x) = x$, since $p_1$ and $p_4$ are not neighbours; for $\\phi_1$ with $\\phi_2$, $\\tfrac12(1 + 0 + 0 + 1) = 1$; for $\\phi_2$ with itself, $\\tfrac12(x + x + 1 + 1) = x + 1$. In the same way $\\phi_3$ with itself gives $x$, $\\phi_3$ with $\\phi_4$ gives $\\tfrac12(1 - 0 - 0 + 1) = 1$ and $\\phi_4$ with itself $\\tfrac12(x + x - 1 - 1) = x - 1$. Every entry between $\\phi_1$ or $\\phi_2$ and $\\phi_3$ or $\\phi_4$ cancels to zero, so the determinant is block diagonal:</p>$$ \\left|\\begin{array}{cc}x&1\\\\1&x+1\\end{array}\\right| \\left|\\begin{array}{cc}x&1\\\\1&x-1\\end{array}\\right| = (x^2+x-1)(x^2-x-1) = 0 $$<p>a. $x^2 + x - 1 = 0$ gives $x = (-1 \\pm \\sqrt5)/2$, that is $0.618$ and $-1.618$. b. $x^2 - x - 1 = 0$ gives $x = (1 \\pm \\sqrt5)/2$, that is $1.618$ and $-0.618$. Together these are $\\pm1.618$ and $\\pm0.618$, the same four roots the original $4 \\times 4$ determinant gives (Section 10.6).</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "block-diagonal-determinant"
+  },
+  {
+   "exercise": "a1",
+   "concept": "basis-change-invariance"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-2pz",
+   "kind": "correction",
+   "html": "The orbitals are the carbons' $2p_z$ orbitals, perpendicular to the ring, as the basis $\\{|2p_z\\rangle\\}$ below writes them; $2p_x$ is meant as $2p_z$."
+  },
+  {
+   "id": "c-es66",
+   "kind": "correction",
+   "html": "The last entry is $H_{66} - ES_{66}$; the determinant prints $ES_{6}$."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "benzene-block-roots",
+   "what": "benzene's roots from the block-diagonal determinant",
+   "source": "Physical Chemistry (LibreTexts), 12.1 The Exploitation of Symmetry Can Help Simplify Numerical Calculations",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\left|\\begin{array}{cccccc} x+2&0&0&0&0&0 \\\\0&x-2&0&0&0&0 \\\\0&0&x+1& \\dfrac{x+1}{2}&0&0 \\\\0&0& \\dfrac{x+1}{2} &x+1&0&0 \\\\0&0&0&0&x-1& \\dfrac{x-1}{2} \\\\0&0&0&0& \\dfrac{x-1}{2} &x-1\\end{array}\\right|=0",
+       "src": "(12.1.3)"
+      },
+      {
+       "text": "A determinant in block-diagonal form is the product of the determinants of its blocks.",
+       "src": "12.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{D}{\\left|\\begin{array}{cccccc} x+2&0&0&0&0&0 \\\\0&x-2&0&0&0&0 \\\\0&0&x+1& \\dfrac{x+1}{2}&0&0 \\\\0&0& \\dfrac{x+1}{2} &x+1&0&0 \\\\0&0&0&0&x-1& \\dfrac{x-1}{2} \\\\0&0&0&0& \\dfrac{x-1}{2} &x-1\\end{array}\\right|}=0"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{a}{(x+2)}\\,\\mk{b}{(x-2)}\\,\\mk{c}{\\left|\\begin{array}{cc} x+1& \\dfrac{x+1}{2} \\\\ \\dfrac{x+1}{2} &x+1\\end{array}\\right|}\\,\\mk{d}{\\left|\\begin{array}{cc} x-1& \\dfrac{x-1}{2} \\\\ \\dfrac{x-1}{2} &x-1\\end{array}\\right|} = 0",
+       "uses": [
+        1
+       ],
+       "map": {
+        "D": [
+         "a",
+         "b",
+         "c",
+         "d"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{a}{(x+2)}\\,\\mk{b}{(x-2)}\\,\\mk{c}{\\left[(x+1)^2-\\dfrac{(x+1)^2}{4}\\right]}\\,\\mk{d}{\\left[(x-1)^2-\\dfrac{(x-1)^2}{4}\\right]} = 0",
+       "cap": "A $2 \\times 2$ determinant is the product of its diagonal entries less the product of the other two."
+      },
+      {
+       "tex": "\\mk{a}{(x+2)}\\,\\mk{b}{(x-2)}\\,\\mk{c}{\\dfrac{3}{4}(x+1)^2}\\,\\mk{d}{\\dfrac{3}{4}(x-1)^2} = 0"
+      },
+      {
+       "tex": "\\mk{p}{\\dfrac{9}{16} ( x +2)(x-2)(x+1)^2(x-1)^2}=0",
+       "map": {
+        "a": "p",
+        "b": "p",
+        "c": "p",
+        "d": "p"
+       }
+      },
+      {
+       "tex": "\\mk{x}{x} = \\mk{r}{\\pm2,\\ \\pm1,\\ \\pm1}",
+       "map": {
+        "p": [
+         "x",
+         "r"
+        ]
+       }
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

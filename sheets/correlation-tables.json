@@ -1,0 +1,448 @@
+{
+ "id": "correlation-tables",
+ "title": "Correlation Tables",
+ "kind": "table",
+ "source": {
+  "module": "433854",
+  "section": "12.T"
+ },
+ "generated_by": "tool",
+ "tables": [
+  {
+   "id": "c2v",
+   "title": "C<sub>2v</sub>",
+   "columns": [
+    {
+     "id": "species",
+     "label": "$C_{2v}$",
+     "kind": "text"
+    },
+    {
+     "id": "c2",
+     "label": "$C_{2}$",
+     "kind": "text"
+    },
+    {
+     "id": "cssigma-xz",
+     "label": "$C_{s}\\sigma(xz)$",
+     "kind": "text"
+    },
+    {
+     "id": "cssigma-yz",
+     "label": "$C_{s}\\sigma(yz)$",
+     "kind": "text"
+    }
+   ],
+   "rows": [
+    [
+     "$A_1$",
+     "$A$",
+     "$A'$",
+     "$A'$"
+    ],
+    [
+     "$A_2$",
+     "$A$",
+     "$A''$",
+     "$A''$"
+    ],
+    [
+     "$B_1$",
+     "$B$",
+     "$A'$",
+     "$A''$"
+    ],
+    [
+     "$B_2$",
+     "$B$",
+     "$A''$",
+     "$A'$"
+    ]
+   ],
+   "notes": []
+  },
+  {
+   "id": "c3v",
+   "title": "C<sub>3v</sub>",
+   "columns": [
+    {
+     "id": "species",
+     "label": "$C_{3v}$",
+     "kind": "text"
+    },
+    {
+     "id": "c3",
+     "label": "$C_{3}$",
+     "kind": "text"
+    },
+    {
+     "id": "cs",
+     "label": "$C_{s}$",
+     "kind": "text"
+    }
+   ],
+   "rows": [
+    [
+     "$A_1$",
+     "$A$",
+     "$A'$"
+    ],
+    [
+     "$A_2$",
+     "$A$",
+     "$A''$"
+    ],
+    [
+     "$E$",
+     "$E$",
+     "$A'+A''$"
+    ]
+   ],
+   "notes": []
+  },
+  {
+   "id": "c4v",
+   "title": "C<sub>4v</sub>",
+   "columns": [
+    {
+     "id": "species",
+     "label": "$C_{4v}$",
+     "kind": "text"
+    },
+    {
+     "id": "c4",
+     "label": "$C_{4}$",
+     "kind": "text"
+    },
+    {
+     "id": "c2v-sigmav",
+     "label": "$C_{2v}\\;\\sigma_v$",
+     "kind": "text"
+    },
+    {
+     "id": "c2v-sigmad",
+     "label": "$C_{2v}\\;\\sigma_d$",
+     "kind": "text"
+    },
+    {
+     "id": "c2",
+     "label": "$C_{2}$",
+     "kind": "text"
+    },
+    {
+     "id": "cs-sigmav",
+     "label": "$C_{s}\\;\\sigma_v$",
+     "kind": "text"
+    },
+    {
+     "id": "cs-sigmad",
+     "label": "$C_{s}\\;\\sigma_d$",
+     "kind": "text"
+    }
+   ],
+   "rows": [
+    [
+     "$A_1$",
+     "$A$",
+     "$A_1$",
+     "$A_1$",
+     "$A$",
+     "$A'$",
+     "$A'$"
+    ],
+    [
+     "$A_2$",
+     "$A$",
+     "$A_2$",
+     "$A_2$",
+     "$A$",
+     "$A''$",
+     "$A''$"
+    ],
+    [
+     "$B_1$",
+     "$B$",
+     "$A_1$",
+     "$A_2$",
+     "$A$",
+     "$A'$",
+     "$A''$"
+    ],
+    [
+     "$B_2$",
+     "$B$",
+     "$A_2$",
+     "$A_1'$",
+     "$A$",
+     "$A''$",
+     "$A'$"
+    ],
+    [
+     "$E$",
+     "$E$",
+     "$B_1+B_2$",
+     "$B_1+B_2$",
+     "$2B$",
+     "$A'+A''$",
+     "$A'+A''$"
+    ]
+   ],
+   "notes": [
+    "Correction: B<sub>2</sub> correlates with A<sub>1</sub> in C<sub>2v</sub>(σ<sub>d</sub>); the table prints A<sub>1</sub>′."
+   ]
+  },
+  {
+   "id": "c5v",
+   "title": "C<sub>5v</sub>",
+   "columns": [
+    {
+     "id": "species",
+     "label": "$C_{5v}$",
+     "kind": "text"
+    },
+    {
+     "id": "c5",
+     "label": "$C_{5}$",
+     "kind": "text"
+    },
+    {
+     "id": "cs",
+     "label": "$C_{s}$",
+     "kind": "text"
+    }
+   ],
+   "rows": [
+    [
+     "$A_1$",
+     "$A$",
+     "$A'$"
+    ],
+    [
+     "$A_2$",
+     "$A$",
+     "$A''$"
+    ],
+    [
+     "$E_1$",
+     "$\\{E_1\\}$",
+     "$A'+A''$"
+    ],
+    [
+     "$E_2$",
+     "$\\{E_2\\}$",
+     "$A'+A''$"
+    ]
+   ],
+   "notes": []
+  },
+  {
+   "id": "c6v",
+   "title": "C<sub>6v</sub>",
+   "columns": [
+    {
+     "id": "species",
+     "label": "$C_{6v}$",
+     "kind": "text"
+    },
+    {
+     "id": "c6",
+     "label": "$C_{6}$",
+     "kind": "text"
+    },
+    {
+     "id": "c3v-sigmav",
+     "label": "$C_{3v}\\;\\sigma_v$",
+     "kind": "text"
+    },
+    {
+     "id": "c3v-sigmad",
+     "label": "$C_{3v}\\;\\sigma_d$",
+     "kind": "text"
+    },
+    {
+     "id": "c2v-sigmav-rightarrow-sigma-xz",
+     "label": "$C_{2v}\\;\\sigma_v\\rightarrow \\sigma(xz)$",
+     "kind": "text"
+    },
+    {
+     "id": "c3",
+     "label": "$C_{3}$",
+     "kind": "text"
+    },
+    {
+     "id": "c2",
+     "label": "$C_{2}$",
+     "kind": "text"
+    },
+    {
+     "id": "cs-sigmav",
+     "label": "$C_{s}\\;\\sigma_v$",
+     "kind": "text"
+    },
+    {
+     "id": "cs-sigmad",
+     "label": "$C_{s}\\;\\sigma_d$",
+     "kind": "text"
+    }
+   ],
+   "rows": [
+    [
+     "$A_1$",
+     "$A$",
+     "$A_1$",
+     "$A_1$",
+     "$A_1$",
+     "$A$",
+     "$A$",
+     "$A'$",
+     "$A'$"
+    ],
+    [
+     "$A_2$",
+     "$A$",
+     "$A_2$",
+     "$A_2$",
+     "$A_2$",
+     "$A$",
+     "$A$",
+     "$A''$",
+     "$A''$"
+    ],
+    [
+     "$B_1$",
+     "$B$",
+     "$A_1$",
+     "$A_2$",
+     "$B_1$",
+     "$A$",
+     "$B$",
+     "$A'$",
+     "$A''$"
+    ],
+    [
+     "$B_2$",
+     "$B$",
+     "$A_2$",
+     "$A_1'$",
+     "$B_2$",
+     "$A'$",
+     "$B$",
+     "$A''$",
+     "$A'$"
+    ],
+    [
+     "$E_1$",
+     "$\\{E_1\\}$",
+     "$E$",
+     "$E$",
+     "$B_1+B_2$",
+     "$\\{E\\}$",
+     "$2B$",
+     "$A'+A''$",
+     "$A'+A''$"
+    ],
+    [
+     "$E_2$",
+     "$\\{E_2\\}$",
+     "$E$",
+     "$E$",
+     "$A_1+A_2$",
+     "$\\{E\\}$",
+     "$2A$",
+     "$A'+A''$",
+     "$A'+A''$"
+    ]
+   ],
+   "notes": [
+    "Correction: B<sub>2</sub> correlates with A<sub>1</sub> in C<sub>3v</sub>(σ<sub>d</sub>); the table prints A<sub>1</sub>′.",
+    "Correction: B<sub>2</sub> correlates with A in C<sub>3</sub>; the table prints A′."
+   ]
+  },
+  {
+   "id": "cinfv",
+   "title": "C<sub>∞v</sub>",
+   "columns": [
+    {
+     "id": "species",
+     "label": "$C_{\\infty v}$",
+     "kind": "text"
+    },
+    {
+     "id": "c2v",
+     "label": "$C_{2v}$",
+     "kind": "text"
+    }
+   ],
+   "rows": [
+    [
+     "$\\Sigma^+$",
+     "$A_1$"
+    ],
+    [
+     "$\\Sigma^-$",
+     "$A_2$"
+    ],
+    [
+     "$\\Pi$",
+     "$B_1 + B_2$"
+    ],
+    [
+     "$\\Delta$",
+     "$A_1 + A_2$"
+    ]
+   ],
+   "notes": []
+  },
+  {
+   "id": "dinfh",
+   "title": "D<sub>∞h</sub>",
+   "columns": [
+    {
+     "id": "species",
+     "label": "$D_{\\infty h}$",
+     "kind": "text"
+    },
+    {
+     "id": "d2h",
+     "label": "$D_{2h}$",
+     "kind": "text"
+    }
+   ],
+   "rows": [
+    [
+     "$\\Sigma^+_g$",
+     "$A_g$"
+    ],
+    [
+     "$\\Sigma^-_g$",
+     "$B_{1g}$"
+    ],
+    [
+     "$\\Pi_g$",
+     "$B_{2g} + B_{3g}$"
+    ],
+    [
+     "$\\Delta_g$",
+     "$A_g + B_{1g}$"
+    ],
+    [
+     "$\\Sigma^+_u$",
+     "$B_{1u}$"
+    ],
+    [
+     "$\\Sigma^-_u$",
+     "$A_{u}$"
+    ],
+    [
+     "$\\Pi_u$",
+     "$B_{2u} + B_{3u}$"
+    ],
+    [
+     "$\\Delta_u$",
+     "$A_u + B_{1u}$"
+    ]
+   ],
+   "notes": []
+  }
+ ]
+}

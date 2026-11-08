@@ -1,0 +1,5688 @@
+{
+ "id": "character-tables",
+ "title": "Character Tables",
+ "kind": "table",
+ "source": {
+  "module": "433853",
+  "section": "12.T"
+ },
+ "generated_by": "tool",
+ "tables": [
+  {
+   "id": "c1",
+   "title": "C<sub>1</sub>",
+   "columns": [
+    {
+     "id": "species",
+     "label": "$C_1$",
+     "kind": "text"
+    },
+    {
+     "id": "e",
+     "label": "E",
+     "kind": "text"
+    }
+   ],
+   "rows": [
+    [
+     "A",
+     "1"
+    ]
+   ],
+   "notes": [
+    "Nonaxial Groups. These groups are characterized by a lack of a proper rotation axis."
+   ]
+  },
+  {
+   "id": "cs",
+   "title": "C<sub>s</sub>",
+   "columns": [
+    {
+     "id": "species",
+     "label": "$C_s$",
+     "kind": "text"
+    },
+    {
+     "id": "e",
+     "label": "E",
+     "kind": "text"
+    },
+    {
+     "id": "sigmah",
+     "label": "σ<sub>h</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "linear",
+     "label": "",
+     "kind": "text"
+    },
+    {
+     "id": "quadratic",
+     "label": "",
+     "kind": "text"
+    }
+   ],
+   "rows": [
+    [
+     "A'",
+     "1",
+     "1",
+     "x, y, R<sub>z</sub>",
+     "x<sup>2</sup>, y<sup>2</sup>, z<sup>2</sup>, xy"
+    ],
+    [
+     "A\"",
+     "1",
+     "-1",
+     "z, R<sub>x</sub>, R<sub>y</sub>",
+     "yz, xz"
+    ]
+   ],
+   "notes": [
+    "Nonaxial Groups. These groups are characterized by a lack of a proper rotation axis."
+   ]
+  },
+  {
+   "id": "ci",
+   "title": "C<sub>i</sub>",
+   "columns": [
+    {
+     "id": "species",
+     "label": "$C_i$",
+     "kind": "text"
+    },
+    {
+     "id": "e",
+     "label": "E",
+     "kind": "text"
+    },
+    {
+     "id": "i",
+     "label": "i",
+     "kind": "text"
+    },
+    {
+     "id": "linear",
+     "label": "",
+     "kind": "text"
+    },
+    {
+     "id": "quadratic",
+     "label": "",
+     "kind": "text"
+    }
+   ],
+   "rows": [
+    [
+     "Ag",
+     "1",
+     "1",
+     "R<sub>x</sub>, R<sub>y</sub>, R<sub>z</sub>",
+     "x<sup>2</sup>, y<sup>2</sup>, z<sup>2</sup>, xy, yz, zx"
+    ],
+    [
+     "A<sub>u</sub>",
+     "1",
+     "-1",
+     "x,y,z",
+     ""
+    ]
+   ],
+   "notes": [
+    "Nonaxial Groups. These groups are characterized by a lack of a proper rotation axis.",
+    "Correction: the first species is A<sub>g</sub>; the table prints “Ag” without its subscript."
+   ]
+  },
+  {
+   "id": "c2",
+   "title": "C<sub>2</sub>",
+   "columns": [
+    {
+     "id": "species",
+     "label": "C<sub>2</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "e",
+     "label": "E",
+     "kind": "text"
+    },
+    {
+     "id": "c2",
+     "label": "C<sub>2</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "linear",
+     "label": "",
+     "kind": "text"
+    },
+    {
+     "id": "quadratic",
+     "label": "",
+     "kind": "text"
+    }
+   ],
+   "rows": [
+    [
+     "A",
+     "1",
+     "1",
+     "z, R<sub>z</sub>",
+     "x<sup>2</sup>, y<sup>2</sup>, z<sup>2</sup>, xy"
+    ],
+    [
+     "B",
+     "1",
+     "-1",
+     "x, y, R<sub>x</sub>, Ry",
+     "yz,xz"
+    ]
+   ],
+   "notes": [
+    "Cyclic C<sub>n</sub> Groups. These groups are characterized by an <em>n</em>-fold proper rotation axis C<sub>n</sub>.",
+    "Correction: the B row’s rotation is R<sub>y</sub>; the table prints “Ry” without its subscript."
+   ]
+  },
+  {
+   "id": "c3",
+   "title": "C<sub>3</sub>",
+   "columns": [
+    {
+     "id": "species",
+     "label": "C<sub>3</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "e",
+     "label": "E",
+     "kind": "text"
+    },
+    {
+     "id": "c3",
+     "label": "C<sub>3</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "c32",
+     "label": "C<sub>3</sub><sup>2</sup>",
+     "kind": "text"
+    },
+    {
+     "id": "linear",
+     "label": "",
+     "kind": "text"
+    },
+    {
+     "id": "exp-2-3",
+     "label": "ε=exp(2π/3)",
+     "kind": "text"
+    }
+   ],
+   "rows": [
+    [
+     "A",
+     "1",
+     "1",
+     "1",
+     "z, R<sub>z</sub>",
+     "x<sup>2</sup>+y<sup>2</sup>, z<sup>2</sup>"
+    ],
+    [
+     "E",
+     "1<br>1",
+     "$\\epsilon$<br>$\\epsilon^*$",
+     "$\\epsilon^*$<br>$\\epsilon$",
+     "(x,y),(R<sub>x</sub>,R<sub>y</sub>)",
+     "(x<sup>2</sup>-y<sup>2</sup>, xy), (xz, yz)"
+    ]
+   ],
+   "notes": [
+    "Cyclic C<sub>n</sub> Groups. These groups are characterized by an <em>n</em>-fold proper rotation axis C<sub>n</sub>.",
+    "Correction: ε = exp(2π<em>i</em>/3); the table prints exp(2π/3), without the <em>i</em>."
+   ]
+  },
+  {
+   "id": "c4",
+   "title": "C<sub>4</sub>",
+   "columns": [
+    {
+     "id": "species",
+     "label": "C<sub>4</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "e",
+     "label": "E",
+     "kind": "text"
+    },
+    {
+     "id": "c4",
+     "label": "C<sub>4</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "c2",
+     "label": "C<sub>2</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "c43",
+     "label": "C<sub>4</sub><sup>3</sup>",
+     "kind": "text"
+    },
+    {
+     "id": "linear",
+     "label": "",
+     "kind": "text"
+    },
+    {
+     "id": "quadratic",
+     "label": "",
+     "kind": "text"
+    }
+   ],
+   "rows": [
+    [
+     "A",
+     "1",
+     "1",
+     "1",
+     "1",
+     "z, R<sub>z</sub>",
+     "x<sup>2</sup>+y<sup>2</sup>, z<sup>2</sup>"
+    ],
+    [
+     "B",
+     "1",
+     "-1",
+     "1",
+     "-1",
+     "",
+     "x<sup>2</sup>-y<sup>2</sup>, xy"
+    ],
+    [
+     "E",
+     "1<br>1",
+     "$i$<br>$-i$",
+     "-1<br>-1",
+     "$-i$<br>$i$",
+     "(x,y), (R<sub>x</sub>,R<sub>y</sub>)",
+     "(xz, yz)"
+    ]
+   ],
+   "notes": [
+    "Cyclic C<sub>n</sub> Groups. These groups are characterized by an <em>n</em>-fold proper rotation axis C<sub>n</sub>."
+   ]
+  },
+  {
+   "id": "c5",
+   "title": "C<sub>5</sub>",
+   "columns": [
+    {
+     "id": "species",
+     "label": "C<sub>5</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "e",
+     "label": "E",
+     "kind": "text"
+    },
+    {
+     "id": "c5",
+     "label": "C<sub>5</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "c52",
+     "label": "C<sub>5</sub><sup>2</sup>",
+     "kind": "text"
+    },
+    {
+     "id": "c53",
+     "label": "C<sub>5</sub><sup>3</sup>",
+     "kind": "text"
+    },
+    {
+     "id": "c54",
+     "label": "C<sub>5</sub><sup>4</sup>",
+     "kind": "text"
+    },
+    {
+     "id": "linear",
+     "label": "",
+     "kind": "text"
+    },
+    {
+     "id": "exp-i2-5",
+     "label": "ε=exp(i2π/5)",
+     "kind": "text"
+    }
+   ],
+   "rows": [
+    [
+     "A",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "Z, R<sub>z</sub>",
+     "x<sup>2</sup>+y<sup>2</sup>, z<sup>2</sup>"
+    ],
+    [
+     "E<sub>1</sub>",
+     "1<br>1",
+     "$\\epsilon$<br>$\\epsilon^*$",
+     "$\\epsilon^2$<br>$\\epsilon^{*2}$",
+     "$\\epsilon^{*2}$<br>$\\epsilon^2$",
+     "$\\epsilon^*$<br>$\\epsilon$",
+     "(x, y), (R<sub>x</sub>,R<sub>y</sub>)",
+     "(xz, yz)"
+    ],
+    [
+     "E<sub>2</sub>",
+     "1<br>1",
+     "$\\epsilon^2$<br>$\\epsilon^{*2}$",
+     "$\\epsilon^*$<br>$\\epsilon$",
+     "$\\epsilon$<br>$\\epsilon^*$",
+     "$\\epsilon^{*2}$<br>$\\epsilon^2$",
+     "",
+     "(x<sup>2</sup>-y<sup>2</sup>, xy)"
+    ]
+   ],
+   "notes": [
+    "Cyclic C<sub>n</sub> Groups. These groups are characterized by an <em>n</em>-fold proper rotation axis C<sub>n</sub>.",
+    "Correction: the A row transforms as <em>z</em>; the table prints a capital Z."
+   ]
+  },
+  {
+   "id": "c6",
+   "title": "C<sub>6</sub>",
+   "columns": [
+    {
+     "id": "species",
+     "label": "C<sub>6</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "e",
+     "label": "E",
+     "kind": "text"
+    },
+    {
+     "id": "c6",
+     "label": "C<sub>6</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "c3",
+     "label": "C<sub>3</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "c2",
+     "label": "C<sub>2</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "c32",
+     "label": "C<sub>3</sub><sup>2</sup>",
+     "kind": "text"
+    },
+    {
+     "id": "c65",
+     "label": "C<sub>6</sub><sup>5</sup>",
+     "kind": "text"
+    },
+    {
+     "id": "linear",
+     "label": "",
+     "kind": "text"
+    },
+    {
+     "id": "exp-i2-6",
+     "label": "ε=exp(i2π/6)",
+     "kind": "text"
+    }
+   ],
+   "rows": [
+    [
+     "A",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "z, R<sub>z</sub>",
+     "x<sup>2</sup>+y<sup>2</sup>, z<sup>2</sup>"
+    ],
+    [
+     "B",
+     "1",
+     "-1",
+     "1",
+     "-1",
+     "1",
+     "-1",
+     "",
+     ""
+    ],
+    [
+     "E<sub>1</sub>",
+     "1<br>1",
+     "$\\epsilon$<br>$\\epsilon^*$",
+     "$-\\epsilon^*$<br>$-\\epsilon$",
+     "-1<br>-1",
+     "$-\\epsilon$<br>$-\\epsilon^*$",
+     "$\\epsilon^*$<br>$\\epsilon$",
+     "(R<sub>x</sub>,R<sub>y</sub>), (x,y)",
+     "(xz, yz)"
+    ],
+    [
+     "E<sub>2</sub>",
+     "1<br>1",
+     "$-\\epsilon^*$<br>$-\\epsilon$",
+     "$-\\epsilon$<br>$-\\epsilon^*$",
+     "1<br>1",
+     "$-\\epsilon^*$<br>$-\\epsilon$",
+     "$-\\epsilon$<br>$-\\epsilon^*$",
+     "",
+     "(x<sup>2</sup>-y<sup>2</sup>, xy)"
+    ]
+   ],
+   "notes": [
+    "Cyclic C<sub>n</sub> Groups. These groups are characterized by an <em>n</em>-fold proper rotation axis C<sub>n</sub>."
+   ]
+  },
+  {
+   "id": "c7",
+   "title": "C<sub>7</sub>",
+   "columns": [
+    {
+     "id": "species",
+     "label": "C<sub>7</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "e",
+     "label": "E",
+     "kind": "text"
+    },
+    {
+     "id": "c7",
+     "label": "C<sub>7</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "c72",
+     "label": "C<sub>7</sub><sup>2</sup>",
+     "kind": "text"
+    },
+    {
+     "id": "c73",
+     "label": "C<sub>7</sub><sup>3</sup>",
+     "kind": "text"
+    },
+    {
+     "id": "c74",
+     "label": "C<sub>7</sub><sup>4</sup>",
+     "kind": "text"
+    },
+    {
+     "id": "c75",
+     "label": "C<sub>7</sub><sup>5</sup>",
+     "kind": "text"
+    },
+    {
+     "id": "c76",
+     "label": "C<sub>7</sub><sup>6</sup>",
+     "kind": "text"
+    },
+    {
+     "id": "linear",
+     "label": "",
+     "kind": "text"
+    },
+    {
+     "id": "exp-i2-7",
+     "label": "ε=exp(i2π/7)",
+     "kind": "text"
+    }
+   ],
+   "rows": [
+    [
+     "A",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "z, R<sub>z</sub>",
+     "x<sup>2</sup>+y<sup>2</sup>, z<sup>2</sup>"
+    ],
+    [
+     "E<sub>1</sub>",
+     "1<br>1",
+     "$\\epsilon$<br>$\\epsilon^*$",
+     "$\\epsilon^2$<br>$\\epsilon^{*2}$",
+     "$\\epsilon^3$<br>$\\epsilon^{*3}$",
+     "$\\epsilon^{*3}$<br>$\\epsilon^3$",
+     "$\\epsilon^{*2}$<br>$\\epsilon^2$",
+     "$\\epsilon^{*}$<br>$\\epsilon$",
+     "(R<sub>x</sub>,R<sub>y</sub>), (x,y)",
+     "(xz, yz)"
+    ],
+    [
+     "E<sub>2</sub>",
+     "1<br>1",
+     "$\\epsilon^2$<br>$\\epsilon^{*2}$",
+     "$\\epsilon^{*3}$<br>$\\epsilon^3$",
+     "$\\epsilon^{*}$<br>$\\epsilon$",
+     "$\\epsilon$<br>$\\epsilon^*$",
+     "$\\epsilon^3$<br>$\\epsilon^{*3}$",
+     "$\\epsilon^{*2}$<br>$\\epsilon^2$",
+     "",
+     "(x<sup>2</sup>-y<sup>2</sup>, xy)"
+    ],
+    [
+     "E<sub>3</sub>",
+     "1<br>1",
+     "$\\epsilon^3$<br>$\\epsilon^{*3}$",
+     "$\\epsilon^{*}$<br>$\\epsilon$",
+     "$\\epsilon^2$<br>$\\epsilon^{*2}$",
+     "$\\epsilon^{*2}$<br>$\\epsilon^2$",
+     "$\\epsilon$<br>$\\epsilon^*$",
+     "$\\epsilon^{*3}$<br>$\\epsilon^3$",
+     "",
+     ""
+    ]
+   ],
+   "notes": [
+    "Cyclic C<sub>n</sub> Groups. These groups are characterized by an <em>n</em>-fold proper rotation axis C<sub>n</sub>."
+   ]
+  },
+  {
+   "id": "c8",
+   "title": "C<sub>8</sub>",
+   "columns": [
+    {
+     "id": "species",
+     "label": "C<sub>8</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "e",
+     "label": "E",
+     "kind": "text"
+    },
+    {
+     "id": "c8",
+     "label": "C<sub>8</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "c4",
+     "label": "C<sub>4</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "c83",
+     "label": "C<sub>8</sub><sup>3</sup>",
+     "kind": "text"
+    },
+    {
+     "id": "c2",
+     "label": "C<sub>2</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "c85",
+     "label": "C<sub>8</sub><sup>5</sup>",
+     "kind": "text"
+    },
+    {
+     "id": "c43",
+     "label": "C<sub>4</sub><sup>3</sup>",
+     "kind": "text"
+    },
+    {
+     "id": "c87",
+     "label": "C<sub>8</sub><sup>7</sup>",
+     "kind": "text"
+    },
+    {
+     "id": "linear",
+     "label": "",
+     "kind": "text"
+    },
+    {
+     "id": "exp-i2-8",
+     "label": "ε=exp(i2π/8)",
+     "kind": "text"
+    }
+   ],
+   "rows": [
+    [
+     "A",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "z, R<sub>z</sub>",
+     "x<sup>2</sup>+y<sup>2</sup>, z<sup>2</sup>"
+    ],
+    [
+     "B",
+     "1",
+     "-1",
+     "1",
+     "-1",
+     "1",
+     "-1",
+     "1",
+     "-1",
+     "",
+     ""
+    ],
+    [
+     "E<sub>1</sub>",
+     "1<br>1",
+     "$\\epsilon$<br>$\\epsilon^*$",
+     "$i$<br>$-i$",
+     "$-\\epsilon^*$<br>$-\\epsilon$",
+     "-1<br>-1",
+     "$-\\epsilon$<br>$-\\epsilon^*$",
+     "$-i$<br>$i$",
+     "$\\epsilon^{*}$<br>$\\epsilon$",
+     "(R<sub>x</sub>,R<sub>y</sub>), (x,y)",
+     "(xz, yz)"
+    ],
+    [
+     "E<sub>2</sub>",
+     "1<br>1",
+     "$i$<br>$-i$",
+     "-1<br>-1",
+     "$-i$<br>$i$",
+     "1<br>1",
+     "$i$<br>$-i$",
+     "-1<br>-1",
+     "$-i$<br>$i$",
+     "",
+     "(x<sup>2</sup>-y<sup>2</sup>, xy)"
+    ],
+    [
+     "E<sub>3</sub>",
+     "1<br>1",
+     "$-\\epsilon$<br>$-\\epsilon^*$",
+     "$i$<br>$-i$",
+     "$\\epsilon^*$<br>$\\epsilon$",
+     "-1<br>-1",
+     "$\\epsilon$<br>$\\epsilon^*$",
+     "$-i$<br>$i$",
+     "$-\\epsilon^*$<br>$-\\epsilon$",
+     "",
+     ""
+    ]
+   ],
+   "notes": [
+    "Cyclic C<sub>n</sub> Groups. These groups are characterized by an <em>n</em>-fold proper rotation axis C<sub>n</sub>."
+   ]
+  },
+  {
+   "id": "c2v",
+   "title": "C<sub>2v</sub>",
+   "columns": [
+    {
+     "id": "species",
+     "label": "$C_{2v}$",
+     "kind": "text"
+    },
+    {
+     "id": "e",
+     "label": "E",
+     "kind": "text"
+    },
+    {
+     "id": "c2",
+     "label": "C<sub>2</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "sigma-xz",
+     "label": "σ<sub>(xz)</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "sigma-yz",
+     "label": "σ<sub>(yz)</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "linear",
+     "label": "",
+     "kind": "text"
+    },
+    {
+     "id": "quadratic",
+     "label": "",
+     "kind": "text"
+    }
+   ],
+   "rows": [
+    [
+     "A<sub>1</sub>",
+     "1",
+     "1",
+     "1",
+     "1",
+     "z",
+     "x<sup>2</sup>, y<sup>2</sup>, z<sup>2</sup>"
+    ],
+    [
+     "A<sub>2</sub>",
+     "1",
+     "1",
+     "-1",
+     "-1",
+     "R<sub>z</sub>",
+     "xy"
+    ],
+    [
+     "B<sub>1</sub>",
+     "1",
+     "-1",
+     "1",
+     "-1",
+     "x, R<sub>y</sub>",
+     "xz"
+    ],
+    [
+     "B<sub>2</sub>",
+     "1",
+     "-1",
+     "-1",
+     "1",
+     "y, R<sub>x</sub>",
+     "yz"
+    ]
+   ],
+   "notes": [
+    "Pyramidal C<sub>nv</sub> Groups. These groups are characterized by an <em>n</em>-fold proper rotation axis C<sub>n</sub> and n mirror planes σ<sub>v</sub> which contain C<sub>n</sub>"
+   ]
+  },
+  {
+   "id": "c3v",
+   "title": "C<sub>3v</sub>",
+   "columns": [
+    {
+     "id": "species",
+     "label": "$C_{3v}$",
+     "kind": "text"
+    },
+    {
+     "id": "e",
+     "label": "E",
+     "kind": "text"
+    },
+    {
+     "id": "2c3",
+     "label": "2C<sub>3</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "3sigmav",
+     "label": "3σ<sub>v</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "linear",
+     "label": "",
+     "kind": "text"
+    },
+    {
+     "id": "quadratic",
+     "label": "",
+     "kind": "text"
+    }
+   ],
+   "rows": [
+    [
+     "A<sub>1</sub>",
+     "1",
+     "1",
+     "1",
+     "z",
+     "x<sup>2</sup>+y<sup>2</sup>, z<sup>2</sup>"
+    ],
+    [
+     "A<sub>2</sub>",
+     "1",
+     "1",
+     "-1",
+     "R<sub>z</sub>",
+     ""
+    ],
+    [
+     "E",
+     "2",
+     "-1",
+     "0",
+     "(R<sub>x</sub>, R<sub>y</sub>), (x,y)",
+     "(xz, yz) (x<sup>2</sup>-y<sup>2</sup>, xy)"
+    ]
+   ],
+   "notes": [
+    "Pyramidal C<sub>nv</sub> Groups. These groups are characterized by an <em>n</em>-fold proper rotation axis C<sub>n</sub> and n mirror planes σ<sub>v</sub> which contain C<sub>n</sub>"
+   ]
+  },
+  {
+   "id": "c4v",
+   "title": "C<sub>4v</sub>",
+   "columns": [
+    {
+     "id": "species",
+     "label": "$C_{4v}$",
+     "kind": "text"
+    },
+    {
+     "id": "e",
+     "label": "E",
+     "kind": "text"
+    },
+    {
+     "id": "2c4",
+     "label": "2C<sub>4</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "c2",
+     "label": "C<sub>2</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "2sigmav",
+     "label": "2σ<sub>v</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "2sigmad",
+     "label": "2σ<sub>d</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "linear",
+     "label": "",
+     "kind": "text"
+    },
+    {
+     "id": "quadratic",
+     "label": "",
+     "kind": "text"
+    }
+   ],
+   "rows": [
+    [
+     "A<sub>1</sub>",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "z",
+     "x<sup>2</sup>+y<sup>2</sup>, z<sup>2</sup>"
+    ],
+    [
+     "A<sub>2</sub>",
+     "1",
+     "1",
+     "1",
+     "-1",
+     "-1",
+     "R<sub>z</sub>",
+     ""
+    ],
+    [
+     "B<sub>1</sub>",
+     "1",
+     "-1",
+     "1",
+     "1",
+     "-1",
+     "",
+     "x<sup>2</sup>-y<sup>2</sup>"
+    ],
+    [
+     "B<sub>2</sub>",
+     "1",
+     "-1",
+     "1",
+     "-1",
+     "1",
+     "",
+     "xy"
+    ],
+    [
+     "E",
+     "2",
+     "0",
+     "-2",
+     "0",
+     "0",
+     "(R<sub>x</sub>, R<sub>y</sub>), (x,y)",
+     "(xz, yz)"
+    ]
+   ],
+   "notes": [
+    "Pyramidal C<sub>nv</sub> Groups. These groups are characterized by an <em>n</em>-fold proper rotation axis C<sub>n</sub> and n mirror planes σ<sub>v</sub> which contain C<sub>n</sub>"
+   ]
+  },
+  {
+   "id": "c5v",
+   "title": "C<sub>5v</sub>",
+   "columns": [
+    {
+     "id": "species",
+     "label": "$C_{5v}$",
+     "kind": "text"
+    },
+    {
+     "id": "e",
+     "label": "E",
+     "kind": "text"
+    },
+    {
+     "id": "2c5",
+     "label": "2C<sub>5</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "2c52",
+     "label": "2C<sub>5</sub><sup>2</sup>",
+     "kind": "text"
+    },
+    {
+     "id": "5sigmav",
+     "label": "5σ<sub>v</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "linear",
+     "label": "",
+     "kind": "text"
+    },
+    {
+     "id": "quadratic",
+     "label": "",
+     "kind": "text"
+    }
+   ],
+   "rows": [
+    [
+     "A<sub>1</sub>",
+     "1",
+     "1",
+     "1",
+     "1",
+     "z",
+     "x<sup>2</sup>+y<sup>2</sup>, z<sup>2</sup>"
+    ],
+    [
+     "A<sub>2</sub>",
+     "1",
+     "1",
+     "1",
+     "-1",
+     "R<sub>z</sub>",
+     ""
+    ],
+    [
+     "E<sub>1</sub>",
+     "2",
+     "$2\\cos 72^\\circ$",
+     "$2\\cos 144^\\circ$",
+     "0",
+     "(R<sub>x</sub>, R<sub>y</sub>), (x,y)",
+     "(xz, yz)"
+    ],
+    [
+     "E<sub>2</sub>",
+     "2",
+     "$2\\cos{144^\\circ}$",
+     "$2\\cos 72^\\circ$",
+     "0",
+     "",
+     "(x<sup>2</sup>-y<sup>2</sup>, xy)"
+    ]
+   ],
+   "notes": [
+    "Pyramidal C<sub>nv</sub> Groups. These groups are characterized by an <em>n</em>-fold proper rotation axis C<sub>n</sub> and n mirror planes σ<sub>v</sub> which contain C<sub>n</sub>"
+   ]
+  },
+  {
+   "id": "c6v",
+   "title": "C<sub>6v</sub>",
+   "columns": [
+    {
+     "id": "species",
+     "label": "$C_{6v}$",
+     "kind": "text"
+    },
+    {
+     "id": "e",
+     "label": "E",
+     "kind": "text"
+    },
+    {
+     "id": "2c6",
+     "label": "2C<sub>6</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "2c3",
+     "label": "2C<sub>3</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "c2",
+     "label": "C<sub>2</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "3sigmav",
+     "label": "3σ<sub>v</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "3sigmad",
+     "label": "3σ<sub>d</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "linear",
+     "label": "",
+     "kind": "text"
+    },
+    {
+     "id": "quadratic",
+     "label": "",
+     "kind": "text"
+    }
+   ],
+   "rows": [
+    [
+     "A<sub>1</sub>",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "z",
+     "x<sup>2</sup>+y<sup>2</sup>, z<sup>2</sup>"
+    ],
+    [
+     "A<sub>2</sub>",
+     "1",
+     "1",
+     "1",
+     "1",
+     "-1",
+     "-1",
+     "R<sub>z</sub>",
+     ""
+    ],
+    [
+     "B<sub>1</sub>",
+     "1",
+     "-1",
+     "1",
+     "-1",
+     "1",
+     "-1",
+     "",
+     ""
+    ],
+    [
+     "B<sub>2</sub>",
+     "1",
+     "-1",
+     "1",
+     "-1",
+     "-1",
+     "1",
+     "",
+     ""
+    ],
+    [
+     "E<sub>1</sub>",
+     "2",
+     "1",
+     "-1",
+     "-2",
+     "0",
+     "0",
+     "(R<sub>x</sub>, R<sub>y</sub>), (x,y)",
+     "(xz, yz)"
+    ],
+    [
+     "E<sub>2</sub>",
+     "2",
+     "-1",
+     "-1",
+     "2",
+     "0",
+     "0",
+     "",
+     "(x<sup>2</sup>-y<sup>2</sup>, xy)"
+    ]
+   ],
+   "notes": [
+    "Pyramidal C<sub>nv</sub> Groups. These groups are characterized by an <em>n</em>-fold proper rotation axis C<sub>n</sub> and n mirror planes σ<sub>v</sub> which contain C<sub>n</sub>"
+   ]
+  },
+  {
+   "id": "cinfv",
+   "title": "C<sub>∞v</sub>",
+   "columns": [
+    {
+     "id": "species",
+     "label": "C<sub>∞v</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "e",
+     "label": "E",
+     "kind": "text"
+    },
+    {
+     "id": "2cinf",
+     "label": "2C<sub>∞</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "col-4",
+     "label": "...",
+     "kind": "text"
+    },
+    {
+     "id": "infsigmav",
+     "label": "∞σ<sub>v</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "linear",
+     "label": "",
+     "kind": "text"
+    },
+    {
+     "id": "quadratic",
+     "label": "",
+     "kind": "text"
+    }
+   ],
+   "rows": [
+    [
+     "A<sub>1</sub>",
+     "1",
+     "1",
+     "...",
+     "1",
+     "z",
+     "x<sup>2</sup>+y<sup>2</sup>, z<sup>2</sup>"
+    ],
+    [
+     "A<sub>2</sub>",
+     "1",
+     "1",
+     "...",
+     "-1",
+     "R<sub>z</sub>",
+     ""
+    ],
+    [
+     "E<sub>1</sub>",
+     "2",
+     "$2\\cos{\\phi}$",
+     "...",
+     "0",
+     "(x,y), (R<sub>x</sub>, R<sub>y</sub>)",
+     "(xz, yz)"
+    ],
+    [
+     "E<sub>2</sub>",
+     "2",
+     "$2\\cos{2\\phi}$",
+     "...",
+     "0",
+     "",
+     "(x<sup>2</sup>-y<sup>2</sup>, xy)"
+    ],
+    [
+     "E<sub>3</sub>",
+     "2",
+     "$2\\cos{3\\phi}$",
+     "...",
+     "0",
+     "",
+     ""
+    ],
+    [
+     "...",
+     "...",
+     "...",
+     "...",
+     "...",
+     "",
+     ""
+    ]
+   ],
+   "notes": [
+    "Pyramidal C<sub>nv</sub> Groups. These groups are characterized by an <em>n</em>-fold proper rotation axis C<sub>n</sub> and n mirror planes σ<sub>v</sub> which contain C<sub>n</sub>"
+   ]
+  },
+  {
+   "id": "c2h",
+   "title": "C<sub>2h</sub>",
+   "columns": [
+    {
+     "id": "species",
+     "label": "$C_{2h}$",
+     "kind": "text"
+    },
+    {
+     "id": "e",
+     "label": "E",
+     "kind": "text"
+    },
+    {
+     "id": "c2",
+     "label": "C<sub>2</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "i",
+     "label": "i",
+     "kind": "text"
+    },
+    {
+     "id": "sigmah",
+     "label": "σ<sub>h</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "linear",
+     "label": "",
+     "kind": "text"
+    },
+    {
+     "id": "quadratic",
+     "label": "",
+     "kind": "text"
+    }
+   ],
+   "rows": [
+    [
+     "A<sub>g</sub>",
+     "1",
+     "1",
+     "1",
+     "1",
+     "R<sub>z</sub>",
+     "x<sup>2</sup>, y<sup>2</sup>, z<sup>2</sup>"
+    ],
+    [
+     "B<sub>g</sub>",
+     "1",
+     "-1",
+     "1",
+     "-1",
+     "R<sub>x</sub>, R<sub>y</sub>",
+     "xz, yz"
+    ],
+    [
+     "A<sub>u</sub>",
+     "1",
+     "1",
+     "-1",
+     "-1",
+     "z",
+     ""
+    ],
+    [
+     "B<sub>u</sub>",
+     "1",
+     "-1",
+     "-1",
+     "1",
+     "x,y",
+     ""
+    ]
+   ],
+   "notes": [
+    "Reflection C<sub>nh</sub> Groups. These groups are characterized by an <em>n</em>-fold proper rotation axis C<sub>n</sub> and a mirror plane σ<sub>h</sub> <em>normal</em> to C<sub>n</sub>."
+   ]
+  },
+  {
+   "id": "c3h",
+   "title": "C<sub>3h</sub>",
+   "columns": [
+    {
+     "id": "species",
+     "label": "$C_{3h}$",
+     "kind": "text"
+    },
+    {
+     "id": "e",
+     "label": "E",
+     "kind": "text"
+    },
+    {
+     "id": "c3",
+     "label": "C<sub>3</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "c32",
+     "label": "C<sub>3</sub><sup>2</sup>",
+     "kind": "text"
+    },
+    {
+     "id": "sigmah",
+     "label": "σ<sub>h</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "s3",
+     "label": "S<sub>3</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "s35",
+     "label": "S<sub>3</sub><sup>5</sup>",
+     "kind": "text"
+    },
+    {
+     "id": "linear",
+     "label": "",
+     "kind": "text"
+    },
+    {
+     "id": "exp-i2-3",
+     "label": "ε=exp(i2π/3)",
+     "kind": "text"
+    }
+   ],
+   "rows": [
+    [
+     "A'",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "R<sub>z</sub>",
+     "x<sup>2</sup>+y<sup>2</sup>, z<sup>2</sup>"
+    ],
+    [
+     "E'",
+     "1<br>1",
+     "$\\epsilon$<br>$\\epsilon^*$",
+     "$\\epsilon^*$<br>$\\epsilon$",
+     "1<br>1",
+     "$\\epsilon$<br>$\\epsilon^*$",
+     "$\\epsilon^*$<br>$\\epsilon$",
+     "(x,y)",
+     "(x<sup>2</sup>-y<sup>2</sup>, xy)"
+    ],
+    [
+     "A\"",
+     "1",
+     "1",
+     "1",
+     "-1",
+     "-1",
+     "-1",
+     "z",
+     ""
+    ],
+    [
+     "E\"",
+     "1<br>1",
+     "$\\epsilon$<br>$\\epsilon^*$",
+     "$\\epsilon^*$<br>$\\epsilon$",
+     "-1<br>-1",
+     "$-\\epsilon$<br>$-\\epsilon^*$",
+     "$-\\epsilon^{*}$<br>$-\\epsilon$",
+     "(R<sub>x</sub>, R<sub>y</sub>)",
+     "(xz, yz)"
+    ]
+   ],
+   "notes": [
+    "Reflection C<sub>nh</sub> Groups. These groups are characterized by an <em>n</em>-fold proper rotation axis C<sub>n</sub> and a mirror plane σ<sub>h</sub> <em>normal</em> to C<sub>n</sub>."
+   ]
+  },
+  {
+   "id": "c4h",
+   "title": "C<sub>4h</sub>",
+   "columns": [
+    {
+     "id": "species",
+     "label": "$C_{4h}$",
+     "kind": "text"
+    },
+    {
+     "id": "e",
+     "label": "E",
+     "kind": "text"
+    },
+    {
+     "id": "c4",
+     "label": "C<sub>4</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "c2",
+     "label": "C<sub>2</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "c43",
+     "label": "C<sub>4</sub><sup>3</sup>",
+     "kind": "text"
+    },
+    {
+     "id": "i",
+     "label": "i",
+     "kind": "text"
+    },
+    {
+     "id": "s43",
+     "label": "S<sub>4</sub><sup>3</sup>",
+     "kind": "text"
+    },
+    {
+     "id": "sigmah",
+     "label": "σ<sub>h</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "s4",
+     "label": "S<sub>4</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "linear",
+     "label": "",
+     "kind": "text"
+    },
+    {
+     "id": "quadratic",
+     "label": "",
+     "kind": "text"
+    }
+   ],
+   "rows": [
+    [
+     "A<sub>g</sub>",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "R<sub>z</sub>",
+     "x<sup>2</sup>+y<sup>2</sup>, z<sup>2</sup>"
+    ],
+    [
+     "B<sub>g</sub>",
+     "1",
+     "-1",
+     "1",
+     "-1",
+     "1",
+     "-1",
+     "1",
+     "-1",
+     "",
+     "x<sup>2</sup>-y<sup>2</sup>, xy"
+    ],
+    [
+     "E<sub>g</sub>",
+     "1<br>1",
+     "$i$<br>$-i$",
+     "-1<br>-1",
+     "$-i$<br>$i$",
+     "1<br>1",
+     "$i$<br>$-i$",
+     "-1<br>-1",
+     "$-i$<br>$i$",
+     "(R<sub>x</sub>, R<sub>y</sub>)",
+     "(xz, yz)"
+    ],
+    [
+     "A<sub>u</sub>",
+     "1",
+     "1",
+     "1",
+     "1",
+     "-1",
+     "-1",
+     "-1",
+     "-1",
+     "z",
+     ""
+    ],
+    [
+     "B<sub>u</sub>",
+     "1",
+     "-1",
+     "1",
+     "-1",
+     "-1",
+     "1",
+     "-1",
+     "1",
+     "",
+     ""
+    ],
+    [
+     "E<sub>u</sub>",
+     "1<br>1",
+     "$i$<br>$-i$",
+     "-1<br>-1",
+     "$-i$<br>$i$",
+     "-1<br>-1",
+     "$-i$<br>$i$",
+     "1<br>1",
+     "$i$<br>$-i$",
+     "(x,y)",
+     ""
+    ]
+   ],
+   "notes": [
+    "Reflection C<sub>nh</sub> Groups. These groups are characterized by an <em>n</em>-fold proper rotation axis C<sub>n</sub> and a mirror plane σ<sub>h</sub> <em>normal</em> to C<sub>n</sub>."
+   ]
+  },
+  {
+   "id": "c5h",
+   "title": "C<sub>5h</sub>",
+   "columns": [
+    {
+     "id": "species",
+     "label": "$C_{5h}$",
+     "kind": "text"
+    },
+    {
+     "id": "e",
+     "label": "E",
+     "kind": "text"
+    },
+    {
+     "id": "c5",
+     "label": "C<sub>5</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "c52",
+     "label": "C<sub>5</sub><sup>2</sup>",
+     "kind": "text"
+    },
+    {
+     "id": "c53",
+     "label": "C<sub>5</sub><sup>3</sup>",
+     "kind": "text"
+    },
+    {
+     "id": "c54",
+     "label": "C<sub>5</sub><sup>4</sup>",
+     "kind": "text"
+    },
+    {
+     "id": "sigmah",
+     "label": "σ<sub>h</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "s5",
+     "label": "S<sub>5</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "s57",
+     "label": "S<sub>5</sub><sup>7</sup>",
+     "kind": "text"
+    },
+    {
+     "id": "s53",
+     "label": "S<sub>5</sub><sup>3</sup>",
+     "kind": "text"
+    },
+    {
+     "id": "s59",
+     "label": "S<sub>5</sub><sup>9</sup>",
+     "kind": "text"
+    },
+    {
+     "id": "linear",
+     "label": "",
+     "kind": "text"
+    },
+    {
+     "id": "exp-i2-5",
+     "label": "ε=exp(i2π/5)",
+     "kind": "text"
+    }
+   ],
+   "rows": [
+    [
+     "A'",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "R<sub>z</sub>",
+     "x<sup>2</sup>+y<sup>2</sup>, z<sup>2</sup>"
+    ],
+    [
+     "E<sub>1</sub>'",
+     "1<br>1",
+     "$\\epsilon$<br>$\\epsilon^*$",
+     "$\\epsilon^{2}$<br>$\\epsilon^{*2}$",
+     "$\\epsilon^{*2}$<br>$\\epsilon^2$",
+     "$\\epsilon^*$<br>$\\epsilon$",
+     "1<br>1",
+     "$\\epsilon$<br>$\\epsilon^*$",
+     "$\\epsilon^{2}$<br>$\\epsilon^{*2}$",
+     "$\\epsilon^{*2}$<br>$\\epsilon^2$",
+     "$\\epsilon^*$<br>$\\epsilon$",
+     "(x, y)",
+     ""
+    ],
+    [
+     "E<sub>2</sub>'",
+     "1<br>1",
+     "$\\epsilon^{2}$<br>$\\epsilon^{*2}$",
+     "$\\epsilon^*$<br>$\\epsilon$",
+     "$\\epsilon$<br>$\\epsilon^*$",
+     "$\\epsilon^{*2}$<br>$\\epsilon^2$",
+     "1<br>1",
+     "$\\epsilon^{2}$<br>$\\epsilon^{*2}$",
+     "$\\epsilon^*$<br>$\\epsilon$",
+     "$\\epsilon$<br>$\\epsilon^*$",
+     "$\\epsilon^{*2}$<br>$\\epsilon^2$",
+     "",
+     "(x<sup>2</sup>-y<sup>2</sup>, xy)"
+    ],
+    [
+     "A\"",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "-1",
+     "-1",
+     "-1",
+     "-1",
+     "-1",
+     "z",
+     ""
+    ],
+    [
+     "E<sub>1</sub>\"",
+     "1<br>1",
+     "$\\epsilon$<br>$\\epsilon^*$",
+     "$\\epsilon^{2}$<br>$\\epsilon^{*2}$",
+     "$\\epsilon^{*2}$<br>$\\epsilon^2$",
+     "$\\epsilon^*$<br>$\\epsilon$",
+     "-1<br>-1",
+     "$-\\epsilon$<br>$-\\epsilon^*$",
+     "$-\\epsilon^{2}$<br>$-\\epsilon^{*2}$",
+     "$-\\epsilon^{*2}$<br>$-\\epsilon^{2}$",
+     "$-\\epsilon^{*}$<br>$-\\epsilon$",
+     "(R<sub>x</sub>, R<sub>y</sub>)",
+     "(xz, yz)"
+    ],
+    [
+     "E<sub>2</sub>\"",
+     "1<br>1",
+     "$\\epsilon^{2}$<br>$\\epsilon^{*2}$",
+     "$\\epsilon^*$<br>$\\epsilon$",
+     "$\\epsilon$<br>$\\epsilon^*$",
+     "$\\epsilon^{*2}$<br>$\\epsilon^2$",
+     "-1<br>-1",
+     "$-\\epsilon^{2}$<br>$-\\epsilon^{*2}$",
+     "$-\\epsilon^{*}$<br>$-\\epsilon$",
+     "$-\\epsilon$<br>$-\\epsilon^*$",
+     "$-\\epsilon^{*2}$<br>$-\\epsilon^{2}$",
+     "",
+     ""
+    ]
+   ],
+   "notes": [
+    "Reflection C<sub>nh</sub> Groups. These groups are characterized by an <em>n</em>-fold proper rotation axis C<sub>n</sub> and a mirror plane σ<sub>h</sub> <em>normal</em> to C<sub>n</sub>."
+   ]
+  },
+  {
+   "id": "c6h",
+   "title": "C<sub>6h</sub>",
+   "columns": [
+    {
+     "id": "species",
+     "label": "$C_{6h}$",
+     "kind": "text"
+    },
+    {
+     "id": "e",
+     "label": "E",
+     "kind": "text"
+    },
+    {
+     "id": "c6",
+     "label": "C<sub>6</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "c3",
+     "label": "C<sub>3</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "c2",
+     "label": "C<sub>2</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "c32",
+     "label": "C<sub>3</sub><sup>2</sup>",
+     "kind": "text"
+    },
+    {
+     "id": "c65",
+     "label": "C<sub>6</sub><sup>5</sup>",
+     "kind": "text"
+    },
+    {
+     "id": "i",
+     "label": "i",
+     "kind": "text"
+    },
+    {
+     "id": "s35",
+     "label": "S<sub>3</sub><sup>5</sup>",
+     "kind": "text"
+    },
+    {
+     "id": "s65",
+     "label": "S<sub>6</sub><sup>5</sup>",
+     "kind": "text"
+    },
+    {
+     "id": "sigmah",
+     "label": "σ<sub>h</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "s6",
+     "label": "S<sub>6</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "s3",
+     "label": "S<sub>3</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "linear",
+     "label": "",
+     "kind": "text"
+    },
+    {
+     "id": "exp-i2-6",
+     "label": "ε=exp(i2π/6)",
+     "kind": "text"
+    }
+   ],
+   "rows": [
+    [
+     "A<sub>g</sub>",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "R<sub>z</sub>",
+     "x<sup>2</sup>+y<sup>2</sup>, z<sup>2</sup>"
+    ],
+    [
+     "B<sub>g</sub>",
+     "1",
+     "-1",
+     "1",
+     "-1",
+     "1",
+     "-1",
+     "1",
+     "-1",
+     "1",
+     "-1",
+     "1",
+     "-1",
+     "",
+     ""
+    ],
+    [
+     "E<sub>1g</sub>",
+     "1<br>1",
+     "$\\epsilon$<br>$\\epsilon^*$",
+     "$-\\epsilon^{*}$<br>$-\\epsilon$",
+     "-1<br>-1",
+     "$-\\epsilon$<br>$-\\epsilon^*$",
+     "$\\epsilon^*$<br>$\\epsilon$",
+     "1<br>1",
+     "$\\epsilon$<br>$\\epsilon^*$",
+     "$-\\epsilon^{*}$<br>$-\\epsilon$",
+     "-1<br>-1",
+     "$-\\epsilon$<br>$-\\epsilon^*$",
+     "$\\epsilon^*$<br>$\\epsilon$",
+     "(R<sub>x</sub>, R<sub>y</sub>)",
+     "(xz, yz)"
+    ],
+    [
+     "E<sub>2g</sub>",
+     "1<br>1",
+     "$-\\epsilon^{*}$<br>$-\\epsilon$",
+     "$-\\epsilon$<br>$-\\epsilon^*$",
+     "1<br>1",
+     "$-\\epsilon^{*}$<br>$-\\epsilon$",
+     "$-\\epsilon$<br>$-\\epsilon^*$",
+     "1<br>1",
+     "$-\\epsilon^{*}$<br>$-\\epsilon$",
+     "$-\\epsilon$<br>$-\\epsilon^*$",
+     "1<br>1",
+     "$-\\epsilon^*$<br>$-\\epsilon$",
+     "$-\\epsilon$<br>$-\\epsilon^*$",
+     "",
+     "(x<sup>2</sup>-y<sup>2</sup>, xy)"
+    ],
+    [
+     "A<sub>u</sub>",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "-1",
+     "-1",
+     "-1",
+     "-1",
+     "-1",
+     "-1",
+     "z",
+     ""
+    ],
+    [
+     "B<sub>u</sub>",
+     "1",
+     "-1",
+     "1",
+     "-1",
+     "1",
+     "-1",
+     "-1",
+     "1",
+     "-1",
+     "1",
+     "-1",
+     "1",
+     "",
+     ""
+    ],
+    [
+     "E<sub>1u</sub>",
+     "1<br>1",
+     "$\\epsilon$<br>$\\epsilon^*$",
+     "$-\\epsilon^{*}$<br>$-\\epsilon$",
+     "-1<br>-1",
+     "$-\\epsilon$<br>$-\\epsilon^*$",
+     "$\\epsilon^*$<br>$\\epsilon$",
+     "-1<br>-1",
+     "$-\\epsilon$<br>$-\\epsilon^*$",
+     "$\\epsilon^*$<br>$\\epsilon$",
+     "1<br>1",
+     "$\\epsilon$<br>$\\epsilon^*$",
+     "$-\\epsilon^{*}$<br>$-\\epsilon$",
+     "(x, y)",
+     ""
+    ],
+    [
+     "E<sub>2u</sub>",
+     "1<br>1",
+     "$-\\epsilon^{*}$<br>$-\\epsilon$",
+     "$-\\epsilon$<br>$-\\epsilon^*$",
+     "1<br>1",
+     "$-\\epsilon^{*}$<br>$-\\epsilon$",
+     "$-\\epsilon$<br>$-\\epsilon^*$",
+     "-1<br>-1",
+     "$\\epsilon^*$<br>$\\epsilon$",
+     "$\\epsilon$<br>$\\epsilon^*$",
+     "-1<br>-1",
+     "$\\epsilon^*$<br>$\\epsilon$",
+     "$\\epsilon$<br>$\\epsilon^*$",
+     "",
+     ""
+    ]
+   ],
+   "notes": [
+    "Reflection C<sub>nh</sub> Groups. These groups are characterized by an <em>n</em>-fold proper rotation axis C<sub>n</sub> and a mirror plane σ<sub>h</sub> <em>normal</em> to C<sub>n</sub>."
+   ]
+  },
+  {
+   "id": "d2",
+   "title": "D<sub>2</sub>",
+   "columns": [
+    {
+     "id": "species",
+     "label": "$D_2$",
+     "kind": "text"
+    },
+    {
+     "id": "e",
+     "label": "E",
+     "kind": "text"
+    },
+    {
+     "id": "c2-z",
+     "label": "C<sub>2</sub>(z)",
+     "kind": "text"
+    },
+    {
+     "id": "c2-y",
+     "label": "C<sub>2</sub>(y)",
+     "kind": "text"
+    },
+    {
+     "id": "c2-x",
+     "label": "C<sub>2</sub>(x)",
+     "kind": "text"
+    },
+    {
+     "id": "linear",
+     "label": "",
+     "kind": "text"
+    },
+    {
+     "id": "quadratic",
+     "label": "",
+     "kind": "text"
+    }
+   ],
+   "rows": [
+    [
+     "A",
+     "1",
+     "1",
+     "1",
+     "1",
+     "",
+     "x<sup>2</sup>, y<sup>2</sup>, z<sup>2</sup>"
+    ],
+    [
+     "B<sub>1</sub>",
+     "1",
+     "1",
+     "-1",
+     "-1",
+     "z, R<sub>z</sub>",
+     "xy"
+    ],
+    [
+     "B<sub>2</sub>",
+     "1",
+     "-1",
+     "1",
+     "-1",
+     "y, R<sub>y</sub>",
+     "zx"
+    ],
+    [
+     "B<sub>3</sub>",
+     "1",
+     "-1",
+     "-1",
+     "1",
+     "x, R<sub>x</sub>",
+     "yz"
+    ]
+   ],
+   "notes": [
+    "Dihedral D<sub>n</sub> Groups."
+   ]
+  },
+  {
+   "id": "d3",
+   "title": "D<sub>3</sub>",
+   "columns": [
+    {
+     "id": "species",
+     "label": "$D_3$",
+     "kind": "text"
+    },
+    {
+     "id": "e",
+     "label": "E",
+     "kind": "text"
+    },
+    {
+     "id": "2c3",
+     "label": "2C<sub>3</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "3c2",
+     "label": "3C<sub>2</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "linear",
+     "label": "",
+     "kind": "text"
+    },
+    {
+     "id": "quadratic",
+     "label": "",
+     "kind": "text"
+    }
+   ],
+   "rows": [
+    [
+     "A<sub>1</sub>",
+     "1",
+     "1",
+     "1",
+     "",
+     "x<sup>2</sup>+y<sup>2</sup>, z<sup>2</sup>"
+    ],
+    [
+     "A<sub>2</sub>",
+     "1",
+     "1",
+     "-1",
+     "z, R<sub>z</sub>",
+     ""
+    ],
+    [
+     "E",
+     "2",
+     "-1",
+     "0",
+     "(R<sub>x</sub>, R<sub>y</sub>), (x,y)",
+     "(x<sup>2</sup>-y<sup>2</sup>, xy) (xz, yz)"
+    ]
+   ],
+   "notes": [
+    "Dihedral D<sub>n</sub> Groups."
+   ]
+  },
+  {
+   "id": "d4",
+   "title": "D<sub>4</sub>",
+   "columns": [
+    {
+     "id": "species",
+     "label": "$D_4$",
+     "kind": "text"
+    },
+    {
+     "id": "e",
+     "label": "E",
+     "kind": "text"
+    },
+    {
+     "id": "2c4",
+     "label": "2C<sub>4</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "c2-c42",
+     "label": "C<sub>2</sub>(C<sub>4</sub><sup>2</sup>)",
+     "kind": "text"
+    },
+    {
+     "id": "2c2p",
+     "label": "2C<sub>2</sub>'",
+     "kind": "text"
+    },
+    {
+     "id": "2c2pp",
+     "label": "2C<sub>2</sub>\"",
+     "kind": "text"
+    },
+    {
+     "id": "linear",
+     "label": "",
+     "kind": "text"
+    },
+    {
+     "id": "quadratic",
+     "label": "",
+     "kind": "text"
+    }
+   ],
+   "rows": [
+    [
+     "A<sub>1</sub>",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "",
+     "x<sup>2</sup>+y<sup>2</sup>, z<sup>2</sup>"
+    ],
+    [
+     "A<sub>2</sub>",
+     "1",
+     "1",
+     "1",
+     "-1",
+     "-1",
+     "z, R<sub>z</sub>",
+     ""
+    ],
+    [
+     "B<sub>1</sub>",
+     "1",
+     "-1",
+     "1",
+     "1",
+     "-1",
+     "",
+     "x<sup>2</sup>-y<sup>2</sup>"
+    ],
+    [
+     "B<sub>2</sub>",
+     "1",
+     "-1",
+     "1",
+     "-1",
+     "1",
+     "",
+     "xy"
+    ],
+    [
+     "E",
+     "2",
+     "0",
+     "-2",
+     "0",
+     "0",
+     "(R<sub>x</sub>, R<sub>y</sub>), (x,y)",
+     "(xz, yz)"
+    ]
+   ],
+   "notes": [
+    "Dihedral D<sub>n</sub> Groups."
+   ]
+  },
+  {
+   "id": "d5",
+   "title": "D<sub>5</sub>",
+   "columns": [
+    {
+     "id": "species",
+     "label": "$D_5$",
+     "kind": "text"
+    },
+    {
+     "id": "e",
+     "label": "E",
+     "kind": "text"
+    },
+    {
+     "id": "2c5",
+     "label": "2C<sub>5</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "2c52",
+     "label": "2C<sub>5</sub><sup>2</sup>",
+     "kind": "text"
+    },
+    {
+     "id": "5c2",
+     "label": "5C<sub>2</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "linear",
+     "label": "",
+     "kind": "text"
+    },
+    {
+     "id": "quadratic",
+     "label": "",
+     "kind": "text"
+    }
+   ],
+   "rows": [
+    [
+     "A<sub>1</sub>",
+     "1",
+     "1",
+     "1",
+     "1",
+     "",
+     "x<sup>2</sup>+y<sup>2</sup>, z<sup>2</sup>"
+    ],
+    [
+     "A<sub>2</sub>",
+     "1",
+     "1",
+     "1",
+     "-1",
+     "z, R<sub>z</sub>",
+     ""
+    ],
+    [
+     "E<sub>1</sub>",
+     "2",
+     "$2\\cos{72^\\circ}$",
+     "$2\\cos{144^\\circ}$",
+     "",
+     "(R<sub>x</sub>, R<sub>y</sub>), (x,y)",
+     "(xz, yz)"
+    ],
+    [
+     "E<sub>2</sub>",
+     "2",
+     "$2\\cos{144^\\circ}$",
+     "$2\\cos{72^\\circ}$",
+     "",
+     "",
+     "(x<sup>2</sup>-y<sup>2</sup>, xy)"
+    ]
+   ],
+   "notes": [
+    "Dihedral D<sub>n</sub> Groups."
+   ]
+  },
+  {
+   "id": "d6",
+   "title": "D<sub>6</sub>",
+   "columns": [
+    {
+     "id": "species",
+     "label": "$D_6$",
+     "kind": "text"
+    },
+    {
+     "id": "e",
+     "label": "E",
+     "kind": "text"
+    },
+    {
+     "id": "2c6",
+     "label": "2C<sub>6</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "2c3",
+     "label": "2C<sub>3</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "c2",
+     "label": "C<sub>2</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "2c2p",
+     "label": "2C<sub>2</sub><sup>'</sup>",
+     "kind": "text"
+    },
+    {
+     "id": "3c2pp",
+     "label": "3C<sub>2</sub><sup>\"</sup>",
+     "kind": "text"
+    },
+    {
+     "id": "linear",
+     "label": "",
+     "kind": "text"
+    },
+    {
+     "id": "quadratic",
+     "label": "",
+     "kind": "text"
+    }
+   ],
+   "rows": [
+    [
+     "A<sub>1</sub>",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "",
+     "x<sup>2</sup>+y<sup>2</sup>, z<sup>2</sup>"
+    ],
+    [
+     "A<sub>2</sub>",
+     "1",
+     "1",
+     "1",
+     "1",
+     "-1",
+     "-1",
+     "z, R<sub>z</sub>",
+     ""
+    ],
+    [
+     "B<sub>1</sub>",
+     "1",
+     "-1",
+     "1",
+     "-1",
+     "1",
+     "-1",
+     "",
+     ""
+    ],
+    [
+     "B<sub>2</sub>",
+     "1",
+     "-1",
+     "1",
+     "-1",
+     "-1",
+     "1",
+     "",
+     ""
+    ],
+    [
+     "E<sub>1</sub>",
+     "2",
+     "1",
+     "-1",
+     "-2",
+     "0",
+     "0",
+     "(R<sub>x</sub>, R<sub>y</sub>), (x,y)",
+     "(xz, yz)"
+    ],
+    [
+     "E<sub>2</sub>",
+     "2",
+     "-1",
+     "-1",
+     "2",
+     "0",
+     "0",
+     "",
+     "(x<sup>2</sup>-y<sup>2</sup>, xy)"
+    ]
+   ],
+   "notes": [
+    "Dihedral D<sub>n</sub> Groups.",
+    "Correction: the fifth class is 3C<sub>2</sub>′, three twofold axes like the 3C<sub>2</sub>″ beside it, so the order is 12; the table prints 2C<sub>2</sub>′."
+   ]
+  },
+  {
+   "id": "d2h",
+   "title": "D<sub>2h</sub>",
+   "columns": [
+    {
+     "id": "species",
+     "label": "$D_{2h}$",
+     "kind": "text"
+    },
+    {
+     "id": "e",
+     "label": "E",
+     "kind": "text"
+    },
+    {
+     "id": "c2-z",
+     "label": "C<sub>2</sub>(z)",
+     "kind": "text"
+    },
+    {
+     "id": "c2-y",
+     "label": "C<sub>2</sub>(y)",
+     "kind": "text"
+    },
+    {
+     "id": "c2-x",
+     "label": "C<sub>2</sub>(x)",
+     "kind": "text"
+    },
+    {
+     "id": "i",
+     "label": "i",
+     "kind": "text"
+    },
+    {
+     "id": "sigma-xy",
+     "label": "σ(xy)",
+     "kind": "text"
+    },
+    {
+     "id": "sigma-xz",
+     "label": "σ(xz)",
+     "kind": "text"
+    },
+    {
+     "id": "sigma-yz",
+     "label": "σ(yz)",
+     "kind": "text"
+    },
+    {
+     "id": "linear",
+     "label": "",
+     "kind": "text"
+    },
+    {
+     "id": "quadratic",
+     "label": "",
+     "kind": "text"
+    }
+   ],
+   "rows": [
+    [
+     "A<sub>g</sub>",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "",
+     "x<sup>2</sup>, y<sup>2</sup>, z<sup>2</sup>"
+    ],
+    [
+     "B<sub>1g</sub>",
+     "1",
+     "1",
+     "-1",
+     "-1",
+     "1",
+     "1",
+     "-1",
+     "-1",
+     "R<sub>z</sub>",
+     "xy"
+    ],
+    [
+     "B<sub>2g</sub>",
+     "1",
+     "-1",
+     "1",
+     "-1",
+     "1",
+     "-1",
+     "1",
+     "-1",
+     "R<sub>y</sub>",
+     "xz"
+    ],
+    [
+     "B<sub>3g</sub>",
+     "1",
+     "-1",
+     "-1",
+     "1",
+     "1",
+     "-1",
+     "-1",
+     "1",
+     "R<sub>x</sub>",
+     "yz"
+    ],
+    [
+     "A<sub>u</sub>",
+     "1",
+     "1",
+     "1",
+     "1",
+     "-1",
+     "-1",
+     "-1",
+     "-1",
+     "",
+     ""
+    ],
+    [
+     "B<sub>1u</sub>",
+     "1",
+     "1",
+     "-1",
+     "-1",
+     "-1",
+     "-1",
+     "1",
+     "1",
+     "z",
+     ""
+    ],
+    [
+     "B<sub>2u</sub>",
+     "1",
+     "-1",
+     "1",
+     "-1",
+     "-1",
+     "1",
+     "-1",
+     "1",
+     "y",
+     ""
+    ],
+    [
+     "B<sub>3u</sub>",
+     "1",
+     "-1",
+     "-1",
+     "1",
+     "-1",
+     "1",
+     "1",
+     "-1",
+     "x",
+     ""
+    ]
+   ],
+   "notes": [
+    "Prismatic D<sub>nh</sub> Groups. These groups are characterized by an <em>n</em>-fold proper rotation axis C<sub>n</sub>; <em>n</em> 2-fold proper rotation axes C<sub>2</sub> normal to C<sub>n</sub>; a mirror plane σ<sub>h</sub> normal to C<sub>n</sub> and containing the C<sub>2</sub> axes."
+   ]
+  },
+  {
+   "id": "d3h",
+   "title": "D<sub>3h</sub>",
+   "columns": [
+    {
+     "id": "species",
+     "label": "$D_{3h}$",
+     "kind": "text"
+    },
+    {
+     "id": "e",
+     "label": "E",
+     "kind": "text"
+    },
+    {
+     "id": "2c3",
+     "label": "2C<sub>3</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "3c2",
+     "label": "3C<sub>2</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "sigmah",
+     "label": "σ<sub>h</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "2s3",
+     "label": "2S<sub>3</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "3sigmav",
+     "label": "3σ<sub>v</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "linear",
+     "label": "",
+     "kind": "text"
+    },
+    {
+     "id": "quadratic",
+     "label": "",
+     "kind": "text"
+    }
+   ],
+   "rows": [
+    [
+     "A<sub>1</sub>'",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "",
+     "x<sup>2</sup>+y<sup>2</sup>, z<sup>2</sup>"
+    ],
+    [
+     "A<sub>2</sub>'",
+     "1",
+     "1",
+     "-1",
+     "1",
+     "1",
+     "-1",
+     "R<sub>z</sub>",
+     ""
+    ],
+    [
+     "E'",
+     "2",
+     "-1",
+     "0",
+     "2",
+     "-1",
+     "0",
+     "(x,y)",
+     "(x<sup>2</sup>-y<sup>2</sup>, xy)"
+    ],
+    [
+     "A<sub>1</sub>\"",
+     "1",
+     "1",
+     "1",
+     "-1",
+     "-1",
+     "-1",
+     "",
+     ""
+    ],
+    [
+     "A<sub>2</sub>\"",
+     "1",
+     "1",
+     "-1",
+     "-1",
+     "-1",
+     "1",
+     "z",
+     ""
+    ],
+    [
+     "E\"",
+     "2",
+     "-1",
+     "0",
+     "-2",
+     "1",
+     "0",
+     "(R<sub>x</sub>, R<sub>y</sub>)",
+     "(xz, yz)"
+    ]
+   ],
+   "notes": [
+    "Prismatic D<sub>nh</sub> Groups. These groups are characterized by an <em>n</em>-fold proper rotation axis C<sub>n</sub>; <em>n</em> 2-fold proper rotation axes C<sub>2</sub> normal to C<sub>n</sub>; a mirror plane σ<sub>h</sub> normal to C<sub>n</sub> and containing the C<sub>2</sub> axes."
+   ]
+  },
+  {
+   "id": "d4h",
+   "title": "D<sub>4h</sub>",
+   "columns": [
+    {
+     "id": "species",
+     "label": "$D_{4h}$",
+     "kind": "text"
+    },
+    {
+     "id": "e",
+     "label": "E",
+     "kind": "text"
+    },
+    {
+     "id": "2c4",
+     "label": "2C<sub>4</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "c2",
+     "label": "C<sub>2</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "2c2p",
+     "label": "2C<sub>2</sub>'",
+     "kind": "text"
+    },
+    {
+     "id": "2c2pp",
+     "label": "2C<sub>2</sub>\"",
+     "kind": "text"
+    },
+    {
+     "id": "i",
+     "label": "i",
+     "kind": "text"
+    },
+    {
+     "id": "2s4",
+     "label": "2S<sub>4</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "sigmah",
+     "label": "σ<sub>h</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "2sigmav",
+     "label": "2σ<sub>v</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "2sigmad",
+     "label": "2σ<sub>d</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "linear",
+     "label": "",
+     "kind": "text"
+    },
+    {
+     "id": "quadratic",
+     "label": "",
+     "kind": "text"
+    }
+   ],
+   "rows": [
+    [
+     "A<sub>1g</sub>",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "",
+     "x<sup>2</sup>+y<sup>2</sup>, z<sup>2</sup>"
+    ],
+    [
+     "A<sub>2g</sub>",
+     "1",
+     "1",
+     "1",
+     "-1",
+     "-1",
+     "1",
+     "1",
+     "1",
+     "-1",
+     "-1",
+     "R<sub>z</sub>",
+     ""
+    ],
+    [
+     "B<sub>1g</sub>",
+     "1",
+     "-1",
+     "1",
+     "1",
+     "-1",
+     "1",
+     "-1",
+     "1",
+     "1",
+     "-1",
+     "",
+     "x<sup>2</sup>-y<sup>2</sup>"
+    ],
+    [
+     "B<sub>2</sub><sub>g</sub>",
+     "1",
+     "-1",
+     "1",
+     "-1",
+     "1",
+     "1",
+     "-1",
+     "1",
+     "-1",
+     "1",
+     "",
+     "xy"
+    ],
+    [
+     "E<sub>g</sub>",
+     "2",
+     "0",
+     "-2",
+     "0",
+     "0",
+     "2",
+     "0",
+     "-2",
+     "0",
+     "0",
+     "(R<sub>x</sub>, R<sub>y</sub>)",
+     "(xz, yz)"
+    ],
+    [
+     "A<sub>1u</sub>",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "-1",
+     "-1",
+     "-1",
+     "-1",
+     "-1",
+     "",
+     ""
+    ],
+    [
+     "A<sub>2u</sub>",
+     "1",
+     "1",
+     "1",
+     "-1",
+     "-1",
+     "-1",
+     "-1",
+     "-1",
+     "1",
+     "1",
+     "z",
+     ""
+    ],
+    [
+     "B<sub>1u</sub>",
+     "1",
+     "-1",
+     "1",
+     "1",
+     "-1",
+     "-1",
+     "1",
+     "-1",
+     "-1",
+     "1",
+     "",
+     ""
+    ],
+    [
+     "B<sub>2u</sub>",
+     "1",
+     "-1",
+     "1",
+     "-1",
+     "1",
+     "-1",
+     "1",
+     "-1",
+     "1",
+     "-1",
+     "",
+     ""
+    ],
+    [
+     "E<sub>u</sub>",
+     "2",
+     "0",
+     "-2",
+     "0",
+     "0",
+     "-2",
+     "0",
+     "2",
+     "0",
+     "0",
+     "(x,y)",
+     ""
+    ]
+   ],
+   "notes": [
+    "Prismatic D<sub>nh</sub> Groups. These groups are characterized by an <em>n</em>-fold proper rotation axis C<sub>n</sub>; <em>n</em> 2-fold proper rotation axes C<sub>2</sub> normal to C<sub>n</sub>; a mirror plane σ<sub>h</sub> normal to C<sub>n</sub> and containing the C<sub>2</sub> axes."
+   ]
+  },
+  {
+   "id": "d5h",
+   "title": "D<sub>5h</sub>",
+   "columns": [
+    {
+     "id": "species",
+     "label": "$D_{5h}$",
+     "kind": "text"
+    },
+    {
+     "id": "e",
+     "label": "E",
+     "kind": "text"
+    },
+    {
+     "id": "2c5",
+     "label": "2C<sub>5</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "2c52",
+     "label": "2C<sub>5</sub><sup>2</sup>",
+     "kind": "text"
+    },
+    {
+     "id": "5c2",
+     "label": "5C<sub>2</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "sigmah",
+     "label": "σ<sub>h</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "2s5",
+     "label": "2S<sub>5</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "2s53",
+     "label": "2S<sub>5</sub><sup>3</sup>",
+     "kind": "text"
+    },
+    {
+     "id": "5sigmav",
+     "label": "5σ<sub>v</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "linear",
+     "label": "",
+     "kind": "text"
+    },
+    {
+     "id": "quadratic",
+     "label": "",
+     "kind": "text"
+    }
+   ],
+   "rows": [
+    [
+     "A<sub>1</sub>'",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "",
+     "x<sup>2</sup>+y<sup>2</sup>, z<sup>2</sup>"
+    ],
+    [
+     "A<sub>2</sub>'",
+     "1",
+     "1",
+     "1",
+     "-1",
+     "1",
+     "1",
+     "1",
+     "-1",
+     "R<sub>z</sub>",
+     ""
+    ],
+    [
+     "E<sub>1</sub>'",
+     "2",
+     "$2\\cos{72^\\circ}$",
+     "$2\\cos{144^\\circ}$",
+     "0",
+     "2",
+     "$2\\cos{72^\\circ}$",
+     "$2\\cos{144^\\circ}$",
+     "",
+     "(x,y)",
+     ""
+    ],
+    [
+     "E<sub>2</sub>'",
+     "2",
+     "$2\\cos{144^\\circ}$",
+     "$2\\cos{72^\\circ}$",
+     "0",
+     "2",
+     "$2\\cos{144^\\circ}$",
+     "$2\\cos{72^\\circ}$",
+     "",
+     "",
+     "(x<sup>2</sup>-y<sup>2</sup>, xy)"
+    ],
+    [
+     "A<sub>1</sub>\"",
+     "1",
+     "1",
+     "1",
+     "1",
+     "-1",
+     "-1",
+     "-1",
+     "-1",
+     "",
+     ""
+    ],
+    [
+     "A<sub>2</sub>\"",
+     "1",
+     "1",
+     "1",
+     "-1",
+     "-1",
+     "-1",
+     "-1",
+     "1",
+     "z",
+     ""
+    ],
+    [
+     "E<sub>1</sub>\"",
+     "2",
+     "$2\\cos{72^\\circ}$",
+     "$2\\cos{144^\\circ}$",
+     "0",
+     "-2",
+     "$-2\\cos{72^\\circ}$",
+     "$-2\\cos{144^\\circ}$",
+     "0",
+     "(R<sub>x</sub>, R<sub>y</sub>)",
+     "(xz, yz)"
+    ],
+    [
+     "E<sub>2</sub>\"",
+     "2",
+     "$2\\cos{144^\\circ}$",
+     "$2\\cos{72^\\circ}$",
+     "0",
+     "-2",
+     "$-2\\cos{144^\\circ}$",
+     "$-2\\cos{72^\\circ}$",
+     "0",
+     "",
+     ""
+    ]
+   ],
+   "notes": [
+    "Prismatic D<sub>nh</sub> Groups. These groups are characterized by an <em>n</em>-fold proper rotation axis C<sub>n</sub>; <em>n</em> 2-fold proper rotation axes C<sub>2</sub> normal to C<sub>n</sub>; a mirror plane σ<sub>h</sub> normal to C<sub>n</sub> and containing the C<sub>2</sub> axes."
+   ]
+  },
+  {
+   "id": "d6h",
+   "title": "D<sub>6</sub><sub>h</sub>",
+   "columns": [
+    {
+     "id": "species",
+     "label": "D<sub>6</sub><sub>h</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "e",
+     "label": "E",
+     "kind": "text"
+    },
+    {
+     "id": "2c6",
+     "label": "2C<sub>6</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "2c3",
+     "label": "2C<sub>3</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "c2",
+     "label": "C<sub>2</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "3c2p",
+     "label": "3C<sub>2</sub>'",
+     "kind": "text"
+    },
+    {
+     "id": "3c2pp",
+     "label": "3C<sub>2</sub>\"",
+     "kind": "text"
+    },
+    {
+     "id": "i",
+     "label": "i",
+     "kind": "text"
+    },
+    {
+     "id": "2s3",
+     "label": "2S<sub>3</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "2s6",
+     "label": "2S<sub>6</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "sigmah",
+     "label": "σ<sub>h</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "3sigmad",
+     "label": "3σ<sub>d</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "3sigmav",
+     "label": "3σ<sub>v</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "linear",
+     "label": "",
+     "kind": "text"
+    },
+    {
+     "id": "quadratic",
+     "label": "",
+     "kind": "text"
+    }
+   ],
+   "rows": [
+    [
+     "A<sub>1g</sub>",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "",
+     "x<sup>2</sup>+y<sup>2</sup>, z<sup>2</sup>"
+    ],
+    [
+     "A<sub>2g</sub>",
+     "1",
+     "1",
+     "1",
+     "1",
+     "-1",
+     "-1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "-1",
+     "-1",
+     "R<sub>z</sub>",
+     ""
+    ],
+    [
+     "B<sub>1g</sub>",
+     "1",
+     "-1",
+     "1",
+     "-1",
+     "1",
+     "-1",
+     "1",
+     "-1",
+     "1",
+     "-1",
+     "1",
+     "-1",
+     "",
+     ""
+    ],
+    [
+     "B<sub>2g</sub>",
+     "1",
+     "-1",
+     "1",
+     "-1",
+     "-1",
+     "1",
+     "1",
+     "-1",
+     "1",
+     "-1",
+     "-1",
+     "1",
+     "",
+     ""
+    ],
+    [
+     "E<sub>1g</sub>",
+     "2",
+     "1",
+     "-1",
+     "-2",
+     "0",
+     "0",
+     "2",
+     "1",
+     "-1",
+     "-2",
+     "0",
+     "0",
+     "(R<sub>x</sub>, R<sub>y</sub>)",
+     "(xz, yz)"
+    ],
+    [
+     "E<sub>2g</sub>",
+     "2",
+     "-1",
+     "-1",
+     "2",
+     "0",
+     "0",
+     "2",
+     "-1",
+     "-1",
+     "2",
+     "0",
+     "0",
+     "",
+     "(x<sup>2</sup>-y<sup>2</sup>, xy)"
+    ],
+    [
+     "A<sub>1u</sub>",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "-1",
+     "-1",
+     "-1",
+     "-1",
+     "-1",
+     "-1",
+     "",
+     ""
+    ],
+    [
+     "A<sub>2u</sub>",
+     "1",
+     "1",
+     "1",
+     "1",
+     "-1",
+     "-1",
+     "-1",
+     "-1",
+     "-1",
+     "-1",
+     "1",
+     "1",
+     "z",
+     ""
+    ],
+    [
+     "B<sub>1u</sub>",
+     "1",
+     "-1",
+     "1",
+     "-1",
+     "1",
+     "-1",
+     "-1",
+     "1",
+     "-1",
+     "1",
+     "-1",
+     "1",
+     "",
+     ""
+    ],
+    [
+     "B<sub>2u</sub>",
+     "1",
+     "-1",
+     "1",
+     "-1",
+     "-1",
+     "1",
+     "-1",
+     "1",
+     "-1",
+     "1",
+     "1",
+     "-1",
+     "",
+     ""
+    ],
+    [
+     "E<sub>1u</sub>",
+     "2",
+     "1",
+     "-1",
+     "-2",
+     "0",
+     "0",
+     "-2",
+     "-1",
+     "1",
+     "2",
+     "0",
+     "0",
+     "(x,y)",
+     ""
+    ],
+    [
+     "E<sub>2u</sub>",
+     "2",
+     "-1",
+     "-1",
+     "2",
+     "0",
+     "0",
+     "-2",
+     "1",
+     "1",
+     "-2",
+     "0",
+     "0",
+     "",
+     ""
+    ]
+   ],
+   "notes": [
+    "Prismatic D<sub>nh</sub> Groups. These groups are characterized by an <em>n</em>-fold proper rotation axis C<sub>n</sub>; <em>n</em> 2-fold proper rotation axes C<sub>2</sub> normal to C<sub>n</sub>; a mirror plane σ<sub>h</sub> normal to C<sub>n</sub> and containing the C<sub>2</sub> axes."
+   ]
+  },
+  {
+   "id": "d8h",
+   "title": "D<sub>8</sub><sub>h</sub>",
+   "columns": [
+    {
+     "id": "species",
+     "label": "D<sub>8</sub><sub>h</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "e",
+     "label": "E",
+     "kind": "text"
+    },
+    {
+     "id": "2c8",
+     "label": "2C<sub>8</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "2c38",
+     "label": "2C<sup>3</sup><sub>8</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "2c4",
+     "label": "2C<sub>4</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "c2",
+     "label": "C<sub>2</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "4c2p",
+     "label": "4C<sub>2</sub>'",
+     "kind": "text"
+    },
+    {
+     "id": "4c2pp",
+     "label": "4C<sub>2</sub>\"",
+     "kind": "text"
+    },
+    {
+     "id": "i",
+     "label": "i",
+     "kind": "text"
+    },
+    {
+     "id": "2s8",
+     "label": "2S<sub>8</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "2s38",
+     "label": "2S<sup>3</sup><sub>8</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "2s4",
+     "label": "2S<sub>4</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "sigmah",
+     "label": "σ<sub>h</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "4sigmad",
+     "label": "4σ<sub>d</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "4sigmav",
+     "label": "4σ<sub>v</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "linear",
+     "label": "",
+     "kind": "text"
+    },
+    {
+     "id": "quadratic",
+     "label": "",
+     "kind": "text"
+    }
+   ],
+   "rows": [
+    [
+     "A<sub>1g</sub>",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "",
+     "x<sup>2</sup>+y<sup>2</sup>, z<sup>2</sup>"
+    ],
+    [
+     "A<sub>2g</sub>",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "-1",
+     "-1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "-1",
+     "-1",
+     "R<sub>z</sub>",
+     ""
+    ],
+    [
+     "B<sub>1g</sub>",
+     "1",
+     "-1",
+     "-1",
+     "1",
+     "1",
+     "1",
+     "-1",
+     "1",
+     "-1",
+     "-1",
+     "1",
+     "1",
+     "1",
+     "-1",
+     "",
+     ""
+    ],
+    [
+     "B<sub>2g</sub>",
+     "1",
+     "-1",
+     "-1",
+     "1",
+     "1",
+     "-1",
+     "1",
+     "1",
+     "-1",
+     "-1",
+     "1",
+     "1",
+     "-1",
+     "1",
+     "",
+     ""
+    ],
+    [
+     "E<sub>1g</sub>",
+     "2",
+     "-$\\sqrt{2}$",
+     "$\\sqrt{2}$",
+     "0",
+     "-2",
+     "0",
+     "0",
+     "2",
+     "-$\\sqrt{2}$",
+     "$\\sqrt{2}$",
+     "0",
+     "-2",
+     "0",
+     "0",
+     "(R<sub>x</sub>, R<sub>y</sub>)",
+     "(xz, yz)"
+    ],
+    [
+     "E<sub>2g</sub>",
+     "2",
+     "0",
+     "0",
+     "-2",
+     "2",
+     "0",
+     "0",
+     "2",
+     "0",
+     "0",
+     "-2",
+     "2",
+     "0",
+     "0",
+     "",
+     "(x<sup>2</sup>-y<sup>2</sup>, xy)"
+    ],
+    [
+     "E<sub>3g</sub>",
+     "2",
+     "$\\sqrt{2}$",
+     "-$\\sqrt{2}$",
+     "0",
+     "-2",
+     "0",
+     "0",
+     "2",
+     "$\\sqrt{2}$",
+     "-$\\sqrt{2}$",
+     "0",
+     "-2",
+     "0",
+     "0",
+     "",
+     ""
+    ],
+    [
+     "A<sub>1u</sub>",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "-1",
+     "-1",
+     "-1",
+     "-1",
+     "-1",
+     "-1",
+     "-1",
+     "",
+     ""
+    ],
+    [
+     "A<sub>2u</sub>",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "-1",
+     "-1",
+     "-1",
+     "-1",
+     "-1",
+     "-1",
+     "-1",
+     "1",
+     "1",
+     "z",
+     ""
+    ],
+    [
+     "B<sub>1u</sub>",
+     "1",
+     "-1",
+     "-1",
+     "1",
+     "1",
+     "1",
+     "-1",
+     "-1",
+     "1",
+     "1",
+     "-1",
+     "-1",
+     "-1",
+     "-1",
+     "1",
+     ""
+    ],
+    [
+     "B<sub>2u</sub>",
+     "1",
+     "-1",
+     "-1",
+     "1",
+     "1",
+     "-1",
+     "1",
+     "-1",
+     "1",
+     "1",
+     "-1",
+     "-1",
+     "1",
+     "-1",
+     "",
+     ""
+    ],
+    [
+     "E<sub>1u</sub>",
+     "2",
+     "-$\\sqrt{2}$",
+     "$\\sqrt{2}$",
+     "0",
+     "-2",
+     "0",
+     "0",
+     "-2",
+     "$\\sqrt{2}$",
+     "-$\\sqrt{2}$",
+     "0",
+     "2",
+     "0",
+     "0",
+     "(x,y)",
+     ""
+    ],
+    [
+     "E<sub>2u</sub>",
+     "2",
+     "0",
+     "0",
+     "-2",
+     "2",
+     "0",
+     "0",
+     "-2",
+     "0",
+     "0",
+     "2",
+     "-2",
+     "0",
+     "0",
+     "",
+     ""
+    ],
+    [
+     "E<sub>1u</sub>",
+     "2",
+     "$\\sqrt{2}$",
+     "-$\\sqrt{2}$",
+     "0",
+     "-2",
+     "0",
+     "0",
+     "-2",
+     "-$\\sqrt{2}$",
+     "$\\sqrt{2}$",
+     "0",
+     "2",
+     "0",
+     "0",
+     "",
+     ""
+    ]
+   ],
+   "notes": [
+    "Prismatic D<sub>nh</sub> Groups. These groups are characterized by an <em>n</em>-fold proper rotation axis C<sub>n</sub>; <em>n</em> 2-fold proper rotation axes C<sub>2</sub> normal to C<sub>n</sub>; a mirror plane σ<sub>h</sub> normal to C<sub>n</sub> and containing the C<sub>2</sub> axes.",
+    "Correction: the B<sub>1u</sub> row reads 1, −1, −1, 1, 1, 1, −1, −1, 1, 1, −1, −1, −1, 1 under the fourteen classes; the table prints fifteen characters, an extra −1 among the last ones, which pushes the final 1 into the function column.",
+    "Correction: the last row is E<sub>3u</sub>; the table prints E<sub>1u</sub> a second time."
+   ]
+  },
+  {
+   "id": "dinfh",
+   "title": "D<sub>∞h</sub>",
+   "columns": [
+    {
+     "id": "species",
+     "label": "D<sub>∞h</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "e",
+     "label": "E",
+     "kind": "text"
+    },
+    {
+     "id": "2cinf",
+     "label": "2C<sub>∞</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "col-4",
+     "label": "...",
+     "kind": "text"
+    },
+    {
+     "id": "infsigmav",
+     "label": "∞σ<sub>v</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "i",
+     "label": "i",
+     "kind": "text"
+    },
+    {
+     "id": "2sinf",
+     "label": "2S<sub>∞</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "col-8",
+     "label": "...",
+     "kind": "text"
+    },
+    {
+     "id": "inf-c2",
+     "label": "∞ C<sub>2</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "linear",
+     "label": "",
+     "kind": "text"
+    },
+    {
+     "id": "quadratic",
+     "label": "",
+     "kind": "text"
+    }
+   ],
+   "rows": [
+    [
+     "S<sub>g</sub><sup>+</sup>",
+     "1",
+     "1",
+     "...",
+     "1",
+     "1",
+     "1",
+     "...",
+     "1",
+     "",
+     "x<sup>2</sup>+y<sup>2</sup>, z<sup>2</sup>"
+    ],
+    [
+     "S<sub>g</sub><sup>-</sup>",
+     "1",
+     "1",
+     "...",
+     "-1",
+     "1",
+     "1",
+     "...",
+     "-1",
+     "R<sub>z</sub>",
+     ""
+    ],
+    [
+     "π<sub>g</sub>",
+     "2",
+     "$2\\cos{\\phi}$",
+     "...",
+     "0",
+     "2",
+     "$-2\\cos{\\phi}$",
+     "...",
+     "0",
+     "(R<sub>x</sub>, R<sub>y</sub>)",
+     "(xz, yz)"
+    ],
+    [
+     "D<sub>g</sub>",
+     "2",
+     "$2\\cos{2\\phi}$",
+     "...",
+     "0",
+     "2",
+     "$2\\cos{2\\phi}$",
+     "...",
+     "0",
+     "",
+     "(x<sup>2</sup>-y<sup>2</sup>, xy)"
+    ],
+    [
+     "...",
+     "...",
+     "...",
+     "...",
+     "......",
+     "...",
+     "...",
+     "...",
+     "...",
+     "",
+     ""
+    ],
+    [
+     "S<sub>u</sub><sup>+</sup>",
+     "1",
+     "1",
+     "...",
+     "1",
+     "-1",
+     "-1",
+     "...",
+     "-1",
+     "z",
+     ""
+    ],
+    [
+     "S<sub>u</sub><sup>-</sup>",
+     "1",
+     "1",
+     "...",
+     "-1",
+     "-1",
+     "-1",
+     "...",
+     "1",
+     "",
+     ""
+    ],
+    [
+     "π<sub>u</sub>",
+     "2",
+     "$2\\cos{\\phi}$",
+     "...",
+     "0",
+     "-2",
+     "$2\\cos{\\phi}$",
+     "...",
+     "0",
+     "(x, y)",
+     ""
+    ],
+    [
+     "D<sub>u</sub>",
+     "2",
+     "$2\\cos{2\\phi}$",
+     "...",
+     "0",
+     "-2",
+     "$-2\\cos{2\\phi}$",
+     "...",
+     "0",
+     "",
+     ""
+    ],
+    [
+     "...",
+     "...",
+     "...",
+     "...",
+     "...",
+     "...",
+     "...",
+     "...",
+     "...",
+     "",
+     ""
+    ]
+   ],
+   "notes": [
+    "Prismatic D<sub>nh</sub> Groups. These groups are characterized by an <em>n</em>-fold proper rotation axis C<sub>n</sub>; <em>n</em> 2-fold proper rotation axes C<sub>2</sub> normal to C<sub>n</sub>; a mirror plane σ<sub>h</sub> normal to C<sub>n</sub> and containing the C<sub>2</sub> axes.",
+    "Correction: the species are Σ<sub>g</sub><sup>+</sup>, Σ<sub>g</sub><sup>−</sup>, Π<sub>g</sub>, Δ<sub>g</sub> and their u partners; the table prints S for Σ, D for Δ and a lower-case π."
+   ]
+  },
+  {
+   "id": "d2d",
+   "title": "D<sub>2d</sub>",
+   "columns": [
+    {
+     "id": "species",
+     "label": "D<sub>2d</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "e",
+     "label": "E",
+     "kind": "text"
+    },
+    {
+     "id": "2s4",
+     "label": "2S<sub>4</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "c2",
+     "label": "C<sub>2</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "2c2p",
+     "label": "2C<sub>2</sub>'",
+     "kind": "text"
+    },
+    {
+     "id": "2sigmad",
+     "label": "2σ<sub>d</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "linear",
+     "label": "",
+     "kind": "text"
+    },
+    {
+     "id": "quadratic",
+     "label": "",
+     "kind": "text"
+    }
+   ],
+   "rows": [
+    [
+     "A<sub>1</sub>",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "",
+     "x<sup>2</sup>+y<sup>2</sup>, z<sup>2</sup>"
+    ],
+    [
+     "A<sub>2</sub>",
+     "1",
+     "1",
+     "1",
+     "-1",
+     "-1",
+     "R<sub>z</sub>",
+     ""
+    ],
+    [
+     "B<sub>1</sub>",
+     "1",
+     "-1",
+     "1",
+     "1",
+     "-1",
+     "",
+     "x<sup>2</sup>-y<sup>2</sup>"
+    ],
+    [
+     "B<sub>2</sub>",
+     "1",
+     "-1",
+     "1",
+     "-1",
+     "1",
+     "z",
+     "xy"
+    ],
+    [
+     "E",
+     "2",
+     "0",
+     "-2",
+     "0",
+     "0",
+     "(x, y), (R<sub>x</sub>, R<sub>y</sub>)",
+     "(xz, yz)"
+    ]
+   ],
+   "notes": [
+    "Antiprismatic D<sub>nd</sub> Groups. These groups are characterized by an <em>n</em>-fold proper rotation axis <em>C</em><sub>n</sub>; <em>n</em> 2-fold proper rotation axes <em>C</em><sub>2</sub> normal to <em>C</em><sub>n</sub>; <em>n</em> mirror planes <em>σ<sub>d</sub></em> which contain <em>C</em><sub>n</sub>."
+   ]
+  },
+  {
+   "id": "d3d",
+   "title": "D<sub>3d</sub>",
+   "columns": [
+    {
+     "id": "species",
+     "label": "D<sub>3d</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "e",
+     "label": "E",
+     "kind": "text"
+    },
+    {
+     "id": "2c3",
+     "label": "2C<sub>3</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "3c2",
+     "label": "3C<sub>2</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "i",
+     "label": "i",
+     "kind": "text"
+    },
+    {
+     "id": "2s6",
+     "label": "2S<sub>6</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "3sigmad",
+     "label": "3σ<sub>d</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "linear",
+     "label": "",
+     "kind": "text"
+    },
+    {
+     "id": "quadratic",
+     "label": "",
+     "kind": "text"
+    }
+   ],
+   "rows": [
+    [
+     "A<sub>1g</sub>",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "",
+     "x<sup>2</sup>+y<sup>2</sup>, z<sup>2</sup>"
+    ],
+    [
+     "A<sub>2g</sub>",
+     "1",
+     "1",
+     "-1",
+     "1",
+     "1",
+     "-1",
+     "R<sub>z</sub>",
+     ""
+    ],
+    [
+     "E<sub>g</sub>",
+     "2",
+     "-1",
+     "0",
+     "2",
+     "-1",
+     "0",
+     "(R<sub>x</sub>, R<sub>y</sub>)",
+     "(x<sup>2</sup>-y<sup>2</sup>, xy),(xz, yz)"
+    ],
+    [
+     "A<sub>1u</sub>",
+     "1",
+     "1",
+     "1",
+     "-1",
+     "-1",
+     "-1",
+     "",
+     ""
+    ],
+    [
+     "A<sub>2u</sub>",
+     "1",
+     "1",
+     "-1",
+     "-1",
+     "-1",
+     "1",
+     "z",
+     ""
+    ],
+    [
+     "E<sub>u</sub>",
+     "2",
+     "-1",
+     "0",
+     "-2",
+     "1",
+     "0",
+     "(x, y)",
+     ""
+    ]
+   ],
+   "notes": [
+    "Antiprismatic D<sub>nd</sub> Groups. These groups are characterized by an <em>n</em>-fold proper rotation axis <em>C</em><sub>n</sub>; <em>n</em> 2-fold proper rotation axes <em>C</em><sub>2</sub> normal to <em>C</em><sub>n</sub>; <em>n</em> mirror planes <em>σ<sub>d</sub></em> which contain <em>C</em><sub>n</sub>."
+   ]
+  },
+  {
+   "id": "d4d",
+   "title": "D<sub>4d</sub>",
+   "columns": [
+    {
+     "id": "species",
+     "label": "D<sub>4d</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "e",
+     "label": "E",
+     "kind": "text"
+    },
+    {
+     "id": "2s8",
+     "label": "2S<sub>8</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "2c4",
+     "label": "2C<sub>4</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "2s83",
+     "label": "2S<sub>8</sub><sup>3</sup>",
+     "kind": "text"
+    },
+    {
+     "id": "c2",
+     "label": "C<sub>2</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "4c2p",
+     "label": "4C<sub>2</sub>'",
+     "kind": "text"
+    },
+    {
+     "id": "4sigmad",
+     "label": "4σ<sub>d</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "linear",
+     "label": "",
+     "kind": "text"
+    },
+    {
+     "id": "quadratic",
+     "label": "",
+     "kind": "text"
+    }
+   ],
+   "rows": [
+    [
+     "A<sub>1</sub>",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "",
+     "x<sup>2</sup>+y<sup>2</sup>, z<sup>2</sup>"
+    ],
+    [
+     "A<sub>2</sub>",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "-1",
+     "-1",
+     "R<sub>z</sub>",
+     ""
+    ],
+    [
+     "B<sub>1</sub>",
+     "1",
+     "-1",
+     "1",
+     "-1",
+     "1",
+     "1",
+     "-1",
+     "",
+     ""
+    ],
+    [
+     "B<sub>2</sub>",
+     "1",
+     "-1",
+     "1",
+     "-1",
+     "1",
+     "-1",
+     "1",
+     "z",
+     ""
+    ],
+    [
+     "E<sub>1</sub>",
+     "2",
+     "$\\sqrt{2}$",
+     "0",
+     "$-\\sqrt{2}$",
+     "-2",
+     "0",
+     "0",
+     "(x, y)",
+     ""
+    ],
+    [
+     "E<sub>2</sub>",
+     "2",
+     "0",
+     "-2",
+     "0",
+     "2",
+     "0",
+     "0",
+     "",
+     "(x<sup>2</sup>-y<sup>2</sup>, xy)"
+    ],
+    [
+     "E<sub>3</sub>",
+     "2",
+     "$-\\sqrt{2}$",
+     "0",
+     "$\\sqrt{2}$",
+     "-2",
+     "0",
+     "0",
+     "(R<sub>x</sub>, R<sub>y</sub>)",
+     "(xz, yz)"
+    ]
+   ],
+   "notes": [
+    "Antiprismatic D<sub>nd</sub> Groups. These groups are characterized by an <em>n</em>-fold proper rotation axis <em>C</em><sub>n</sub>; <em>n</em> 2-fold proper rotation axes <em>C</em><sub>2</sub> normal to <em>C</em><sub>n</sub>; <em>n</em> mirror planes <em>σ<sub>d</sub></em> which contain <em>C</em><sub>n</sub>."
+   ]
+  },
+  {
+   "id": "d5d",
+   "title": "D<sub>5d</sub>",
+   "columns": [
+    {
+     "id": "species",
+     "label": "D<sub>5d</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "e",
+     "label": "E",
+     "kind": "text"
+    },
+    {
+     "id": "2c5",
+     "label": "2C<sub>5</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "2c52",
+     "label": "2C<sub>5</sub><sup>2</sup>",
+     "kind": "text"
+    },
+    {
+     "id": "5c2",
+     "label": "5C<sub>2</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "i",
+     "label": "i",
+     "kind": "text"
+    },
+    {
+     "id": "2s103",
+     "label": "2S<sub>10</sub><sup>3</sup>",
+     "kind": "text"
+    },
+    {
+     "id": "2s10",
+     "label": "2S<sub>10</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "5sigmad",
+     "label": "5σ<sub>d</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "linear",
+     "label": "",
+     "kind": "text"
+    },
+    {
+     "id": "quadratic",
+     "label": "",
+     "kind": "text"
+    }
+   ],
+   "rows": [
+    [
+     "A<sub>1g</sub>",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "",
+     "x<sup>2</sup>+y<sup>2</sup>, z<sup>2</sup>"
+    ],
+    [
+     "A<sub>2g</sub>",
+     "1",
+     "1",
+     "1",
+     "-1",
+     "1",
+     "1",
+     "1",
+     "-1",
+     "R<sub>z</sub>",
+     ""
+    ],
+    [
+     "E<sub>1g</sub>",
+     "2",
+     "$2\\cos 72^\\circ$",
+     "$2\\cos 144^\\circ$",
+     "0",
+     "2",
+     "$2\\cos 72^\\circ$",
+     "$2\\cos 144^\\circ$",
+     "0",
+     "(R<sub>x</sub>, R<sub>y</sub>)",
+     "(xz, yz)"
+    ],
+    [
+     "E<sub>2g</sub>",
+     "2",
+     "$2\\cos 144^\\circ$",
+     "$2\\cos 72^\\circ$",
+     "0",
+     "2",
+     "$2\\cos 144^\\circ$",
+     "$2\\cos 72^\\circ$",
+     "0",
+     "",
+     "(x<sup>2</sup>-y<sup>2</sup>, xy)"
+    ],
+    [
+     "A<sub>1u</sub>",
+     "1",
+     "1",
+     "1",
+     "1",
+     "-1",
+     "-1",
+     "-1",
+     "-1",
+     "",
+     ""
+    ],
+    [
+     "A<sub>2u</sub>",
+     "1",
+     "1",
+     "1",
+     "-1",
+     "-1",
+     "1",
+     "-1",
+     "1",
+     "z",
+     ""
+    ],
+    [
+     "E<sub>1u</sub>",
+     "2",
+     "$2\\cos 72^\\circ$",
+     "$2\\cos 144^\\circ$",
+     "0",
+     "-2",
+     "$-2\\cos 72^\\circ$",
+     "$-2\\cos 144^\\circ$",
+     "0",
+     "(x, y)",
+     ""
+    ],
+    [
+     "E<sub>2u</sub>",
+     "2",
+     "$2\\cos 144^\\circ$",
+     "$2\\cos 72^\\circ$",
+     "0",
+     "-2",
+     "$-2\\cos 144^\\circ$",
+     "$-2\\cos 72^\\circ$",
+     "0",
+     "",
+     ""
+    ]
+   ],
+   "notes": [
+    "Antiprismatic D<sub>nd</sub> Groups. These groups are characterized by an <em>n</em>-fold proper rotation axis <em>C</em><sub>n</sub>; <em>n</em> 2-fold proper rotation axes <em>C</em><sub>2</sub> normal to <em>C</em><sub>n</sub>; <em>n</em> mirror planes <em>σ<sub>d</sub></em> which contain <em>C</em><sub>n</sub>.",
+    "Correction: the A<sub>2u</sub> character under 2S<sub>10</sub><sup>3</sup> is −1, as under 2S<sub>10</sub> beside it; the table prints 1."
+   ]
+  },
+  {
+   "id": "d6d",
+   "title": "D<sub>6d</sub>",
+   "columns": [
+    {
+     "id": "species",
+     "label": "D<sub>6d</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "e",
+     "label": "E",
+     "kind": "text"
+    },
+    {
+     "id": "2s12",
+     "label": "2S<sub>12</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "2c6",
+     "label": "2C<sub>6</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "2s4",
+     "label": "2S<sub>4</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "2c3",
+     "label": "2C<sub>3</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "2s125",
+     "label": "2S<sub>12</sub><sup>5</sup>",
+     "kind": "text"
+    },
+    {
+     "id": "c2",
+     "label": "C<sub>2</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "6c2p",
+     "label": "6C<sub>2</sub><sub><sup>'</sup></sub>",
+     "kind": "text"
+    },
+    {
+     "id": "6sigmad",
+     "label": "6σ<sub>d</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "linear",
+     "label": "",
+     "kind": "text"
+    },
+    {
+     "id": "quadratic",
+     "label": "",
+     "kind": "text"
+    }
+   ],
+   "rows": [
+    [
+     "A<sub>1</sub>",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "",
+     "x<sup>2</sup>+y<sup>2</sup>, z<sup>2</sup>"
+    ],
+    [
+     "A<sub>2</sub>",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "-1",
+     "-1",
+     "R<sub>z</sub>",
+     ""
+    ],
+    [
+     "B<sub>1</sub>",
+     "1",
+     "-1",
+     "1",
+     "-1",
+     "1",
+     "-1",
+     "1",
+     "1",
+     "-1",
+     "",
+     ""
+    ],
+    [
+     "B<sub>2</sub>",
+     "1",
+     "-1",
+     "1",
+     "-1",
+     "1",
+     "-1",
+     "1",
+     "-1",
+     "1",
+     "z",
+     ""
+    ],
+    [
+     "E<sub>1</sub>",
+     "2",
+     "$\\sqrt{3}$",
+     "1",
+     "0",
+     "-1",
+     "$-\\sqrt{3}$",
+     "-2",
+     "0",
+     "0",
+     "(x, y)",
+     ""
+    ],
+    [
+     "E<sub>2</sub>",
+     "2",
+     "1",
+     "-1",
+     "-2",
+     "-1",
+     "1",
+     "2",
+     "0",
+     "0",
+     "",
+     "(x<sup>2</sup>-y<sup>2</sup>, xy)"
+    ],
+    [
+     "E<sub>3</sub>",
+     "2",
+     "0",
+     "-2",
+     "0",
+     "2",
+     "0",
+     "-2",
+     "0",
+     "0",
+     "",
+     ""
+    ],
+    [
+     "E<sub>4</sub>",
+     "2",
+     "-1",
+     "-1",
+     "2",
+     "-1",
+     "-1",
+     "2",
+     "0",
+     "0",
+     "",
+     ""
+    ],
+    [
+     "E<sub>5</sub>",
+     "2",
+     "$-\\sqrt{3}$",
+     "1",
+     "0",
+     "-1",
+     "$\\sqrt{3}$",
+     "-2",
+     "0",
+     "0",
+     "(R<sub>x</sub>, R<sub>y</sub>)",
+     "(xz, yz)"
+    ]
+   ],
+   "notes": [
+    "Antiprismatic D<sub>nd</sub> Groups. These groups are characterized by an <em>n</em>-fold proper rotation axis <em>C</em><sub>n</sub>; <em>n</em> 2-fold proper rotation axes <em>C</em><sub>2</sub> normal to <em>C</em><sub>n</sub>; <em>n</em> mirror planes <em>σ<sub>d</sub></em> which contain <em>C</em><sub>n</sub>."
+   ]
+  },
+  {
+   "id": "s4",
+   "title": "S<sub>4</sub>",
+   "columns": [
+    {
+     "id": "species",
+     "label": "$S_4$",
+     "kind": "text"
+    },
+    {
+     "id": "e",
+     "label": "E",
+     "kind": "text"
+    },
+    {
+     "id": "s4",
+     "label": "S<sub>4</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "c2",
+     "label": "C<sub>2</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "s43",
+     "label": "S<sub>4</sub><sup>3</sup>",
+     "kind": "text"
+    },
+    {
+     "id": "linear",
+     "label": "",
+     "kind": "text"
+    },
+    {
+     "id": "quadratic",
+     "label": "",
+     "kind": "text"
+    }
+   ],
+   "rows": [
+    [
+     "A",
+     "1",
+     "1",
+     "1",
+     "1",
+     "R<sub>z</sub>",
+     "x<sup>2</sup>+y<sup>2</sup>, z<sup>2</sup>"
+    ],
+    [
+     "B",
+     "1",
+     "-1",
+     "1",
+     "-1",
+     "z",
+     "x<sup>2</sup>-y<sup>2</sup>, xy"
+    ],
+    [
+     "E",
+     "1<br>1",
+     "$i$<br>$-i$",
+     "-1<br>-1",
+     "$-i$<br>$i$",
+     "(x, y); (R<sub>x</sub>, R<sub>y</sub>)",
+     "(xz, yz)"
+    ]
+   ],
+   "notes": [
+    "Improper Rotation S<sub>n</sub> Groups. These groups are characterized by an <em>n</em>-fold improper rotation axis S<sub>n</sub>, where n is necessarily even"
+   ]
+  },
+  {
+   "id": "s6",
+   "title": "S<sub>6</sub>",
+   "columns": [
+    {
+     "id": "species",
+     "label": "S<sub>6</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "e",
+     "label": "E",
+     "kind": "text"
+    },
+    {
+     "id": "c3",
+     "label": "C<sub>3</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "c32",
+     "label": "C<sub>3</sub><sup>2</sup>",
+     "kind": "text"
+    },
+    {
+     "id": "i",
+     "label": "i",
+     "kind": "text"
+    },
+    {
+     "id": "s65",
+     "label": "S<sub>6</sub><sup>5</sup>",
+     "kind": "text"
+    },
+    {
+     "id": "s6",
+     "label": "S<sub>6</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "linear",
+     "label": "",
+     "kind": "text"
+    },
+    {
+     "id": "quadratic",
+     "label": "",
+     "kind": "text"
+    }
+   ],
+   "rows": [
+    [
+     "A<sub>g</sub>",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "R<sub>z</sub>",
+     "x<sup>2</sup>+y<sup>2</sup>, z<sup>2</sup>"
+    ],
+    [
+     "E<sub>g</sub>",
+     "1<br>1",
+     "$\\epsilon$<br>$\\epsilon^*$",
+     "$\\epsilon^*$<br>$\\epsilon$",
+     "1<br>1",
+     "$\\epsilon$<br>$\\epsilon^*$",
+     "$\\epsilon^*$<br>$\\epsilon$",
+     "(R<sub>x</sub>, R<sub>y</sub>)",
+     "(x<sup>2</sup>-y<sup>2</sup>, xy), (xz, yz)"
+    ],
+    [
+     "A<sub>u</sub>",
+     "1",
+     "1",
+     "1",
+     "-1",
+     "-1",
+     "-1",
+     "z",
+     ""
+    ],
+    [
+     "E<sub>u</sub>",
+     "1<br>1",
+     "$\\epsilon$<br>$\\epsilon^*$",
+     "$\\epsilon^*$<br>$\\epsilon$",
+     "-1<br>-1",
+     "$-\\epsilon$<br>$-\\epsilon^*$",
+     "$-\\epsilon^{*}$<br>$-\\epsilon$",
+     "(x, y)",
+     ""
+    ]
+   ],
+   "notes": [
+    "Improper Rotation S<sub>n</sub> Groups. These groups are characterized by an <em>n</em>-fold improper rotation axis S<sub>n</sub>, where n is necessarily even"
+   ]
+  },
+  {
+   "id": "s8",
+   "title": "S<sub>8</sub>",
+   "columns": [
+    {
+     "id": "species",
+     "label": "S<sub>8</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "e",
+     "label": "E",
+     "kind": "text"
+    },
+    {
+     "id": "s8",
+     "label": "S<sub>8</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "c4",
+     "label": "C<sub>4</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "s83",
+     "label": "S<sub>8</sub><sup>3</sup>",
+     "kind": "text"
+    },
+    {
+     "id": "c2",
+     "label": "C<sub>2</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "s85",
+     "label": "S<sub>8</sub><sup>5</sup>",
+     "kind": "text"
+    },
+    {
+     "id": "c43",
+     "label": "C<sub>4</sub><sup>3</sup>",
+     "kind": "text"
+    },
+    {
+     "id": "s87",
+     "label": "S<sub>8</sub><sup>7</sup>",
+     "kind": "text"
+    },
+    {
+     "id": "linear",
+     "label": "",
+     "kind": "text"
+    },
+    {
+     "id": "exp-i2-8",
+     "label": "ε=exp(i2π/8)",
+     "kind": "text"
+    }
+   ],
+   "rows": [
+    [
+     "A",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "R<sub>z</sub>",
+     "x<sup>2</sup>+y<sup>2</sup>, z<sup>2</sup>"
+    ],
+    [
+     "B",
+     "1",
+     "-1",
+     "1",
+     "-1",
+     "1",
+     "-1",
+     "1",
+     "-1",
+     "z",
+     ""
+    ],
+    [
+     "E<sub>1</sub>",
+     "1<br>1",
+     "$\\epsilon$<br>$\\epsilon^*$",
+     "$i$<br>$-i$",
+     "$-\\epsilon^{*}$<br>$-\\epsilon$",
+     "-1<br>-1",
+     "$-\\epsilon$<br>$-\\epsilon^*$",
+     "$-i$<br>$i$",
+     "$\\epsilon^*$<br>$\\epsilon$",
+     "(R<sub>x</sub>, R<sub>y</sub>), (x, y)",
+     ""
+    ],
+    [
+     "E<sub>2</sub>",
+     "1<br>1",
+     "$i$<br>$-i$",
+     "-1<br>-1",
+     "$-i$<br>$i$",
+     "1<br>1",
+     "$i$<br>$-i$",
+     "-1<br>-1",
+     "$-i$<br>$i$",
+     "",
+     "(x<sup>2</sup>-y<sup>2</sup>, xy)"
+    ],
+    [
+     "E<sub>3</sub>",
+     "1<br>1",
+     "$-\\epsilon^{*}$<br>$-\\epsilon$",
+     "$-i$<br>$i$",
+     "$\\epsilon$<br>$\\epsilon^*$",
+     "-1<br>-1",
+     "$\\epsilon^*$<br>$\\epsilon$",
+     "$i$<br>$-i$",
+     "$-\\epsilon$<br>$-\\epsilon^*$",
+     "",
+     "(xz, yz)"
+    ]
+   ],
+   "notes": [
+    "Improper Rotation S<sub>n</sub> Groups. These groups are characterized by an <em>n</em>-fold improper rotation axis S<sub>n</sub>, where n is necessarily even"
+   ]
+  },
+  {
+   "id": "t",
+   "title": "T",
+   "columns": [
+    {
+     "id": "species",
+     "label": "$T$",
+     "kind": "text"
+    },
+    {
+     "id": "e",
+     "label": "E",
+     "kind": "text"
+    },
+    {
+     "id": "4c3",
+     "label": "4C<sub>3</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "4c32",
+     "label": "4C<sub>3</sub><sup>2</sup>",
+     "kind": "text"
+    },
+    {
+     "id": "3c2",
+     "label": "3C<sub>2</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "linear",
+     "label": "",
+     "kind": "text"
+    },
+    {
+     "id": "quadratic",
+     "label": "",
+     "kind": "text"
+    }
+   ],
+   "rows": [
+    [
+     "A",
+     "1",
+     "1",
+     "1",
+     "1",
+     "",
+     "x<sup>2</sup>+y<sup>2</sup>+z<sup>2</sup>"
+    ],
+    [
+     "E",
+     "1<br>1",
+     "$\\epsilon$<br>$\\epsilon^*$",
+     "$\\epsilon^*$<br>$\\epsilon$",
+     "1<br>1",
+     "",
+     "(2z<sup>2</sup>-x<sup>2</sup>-y<sup>2</sup>, x<sup>2</sup>-y<sup>2</sup>)"
+    ],
+    [
+     "T",
+     "3",
+     "0",
+     "0",
+     "",
+     "(R<sub>x</sub>, R<sub>y</sub>, R<sub>z</sub>), (x, y, z)",
+     "(xz, yz, xy)"
+    ]
+   ],
+   "notes": [
+    "Cubic Groups. These polyhedral groups are characterized by not having a C<sub>5</sub> proper rotation axis.",
+    "Correction: the T character under 3C<sub>2</sub> is −1; the table leaves the cell empty."
+   ]
+  },
+  {
+   "id": "th",
+   "title": "T<sub>h</sub>",
+   "columns": [
+    {
+     "id": "species",
+     "label": "T<sub>h</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "e",
+     "label": "E",
+     "kind": "text"
+    },
+    {
+     "id": "4c3",
+     "label": "4C<sub>3</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "4c32",
+     "label": "4C<sub>3</sub><sup>2</sup>",
+     "kind": "text"
+    },
+    {
+     "id": "3c2",
+     "label": "3C<sub>2</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "i",
+     "label": "i",
+     "kind": "text"
+    },
+    {
+     "id": "4s6",
+     "label": "4S<sub>6</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "4s65",
+     "label": "4S<sub>6</sub><sup>5</sup>",
+     "kind": "text"
+    },
+    {
+     "id": "3sigmah",
+     "label": "3σ<sub>h</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "linear",
+     "label": "",
+     "kind": "text"
+    },
+    {
+     "id": "exp-i2-3",
+     "label": "ε=exp(i2π/3)",
+     "kind": "text"
+    }
+   ],
+   "rows": [
+    [
+     "A<sub>g</sub>",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "",
+     "x<sup>2</sup>+y<sup>2</sup>+z<sup>2</sup>"
+    ],
+    [
+     "E<sub>g</sub>",
+     "1<br>1",
+     "$\\epsilon$<br>$\\epsilon^*$",
+     "$\\epsilon^*$<br>$\\epsilon$",
+     "1<br>1",
+     "1<br>1",
+     "$\\epsilon$<br>$\\epsilon^*$",
+     "$\\epsilon^*$<br>$\\epsilon$",
+     "1<br>1",
+     "",
+     "(2z<sup>2</sup>-x<sup>2</sup>-y<sup>2</sup>, x<sup>2</sup>-y<sup>2</sup>)"
+    ],
+    [
+     "T<sub>g</sub>",
+     "3",
+     "0",
+     "0",
+     "-1",
+     "1",
+     "0",
+     "0",
+     "-1",
+     "(R<sub>x</sub>, R<sub>y</sub>, R<sub>z</sub>)",
+     "(xz, yz, xy)"
+    ],
+    [
+     "A<sub>u</sub>",
+     "1",
+     "1",
+     "1",
+     "1",
+     "-1",
+     "-1",
+     "-1",
+     "-1",
+     "",
+     ""
+    ],
+    [
+     "E<sub>u</sub>",
+     "1<br>1",
+     "$\\epsilon$<br>$\\epsilon^*$",
+     "$\\epsilon^*$<br>$\\epsilon$",
+     "1<br>1",
+     "-1<br>-1",
+     "$-\\epsilon$<br>$-\\epsilon^*$",
+     "$-\\epsilon^{*}$<br>$-\\epsilon$",
+     "-1<br>-1",
+     "",
+     ""
+    ],
+    [
+     "T<sub>u</sub>",
+     "3",
+     "0",
+     "0",
+     "-1",
+     "-1",
+     "0",
+     "0",
+     "1",
+     "(x, y, z)",
+     ""
+    ]
+   ],
+   "notes": [
+    "Cubic Groups. These polyhedral groups are characterized by not having a C<sub>5</sub> proper rotation axis.",
+    "Correction: the T<sub>g</sub> character under i is 3; the table prints 1."
+   ]
+  },
+  {
+   "id": "td",
+   "title": "T<sub>d</sub>",
+   "columns": [
+    {
+     "id": "species",
+     "label": "T<sub>d</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "e",
+     "label": "E",
+     "kind": "text"
+    },
+    {
+     "id": "8c3",
+     "label": "8C<sub>3</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "3c2",
+     "label": "3C<sub>2</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "6s4",
+     "label": "6S<sub>4</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "6sigmad",
+     "label": "6σ<sub>d</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "linear",
+     "label": "",
+     "kind": "text"
+    },
+    {
+     "id": "quadratic",
+     "label": "",
+     "kind": "text"
+    }
+   ],
+   "rows": [
+    [
+     "A<sub>1</sub>",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "",
+     "x<sup>2</sup>+y<sup>2</sup>+z<sup>2</sup>"
+    ],
+    [
+     "A<sub>2</sub>",
+     "1",
+     "1",
+     "1",
+     "-1",
+     "-1",
+     "",
+     ""
+    ],
+    [
+     "E",
+     "2",
+     "-1",
+     "2",
+     "0",
+     "0",
+     "",
+     "(2z<sup>2</sup>-x<sup>2</sup>-y<sup>2</sup>, x<sup>2</sup>-y<sup>2</sup>)"
+    ],
+    [
+     "T<sub>1</sub>",
+     "3",
+     "0",
+     "-1",
+     "1",
+     "-1",
+     "(R<sub>x</sub>, R<sub>y</sub>, R<sub>z</sub>)",
+     ""
+    ],
+    [
+     "T<sub>2</sub>",
+     "3",
+     "0",
+     "-1",
+     "-1",
+     "1",
+     "(x, y, z)",
+     "(xz, yz, xy)"
+    ]
+   ],
+   "notes": [
+    "Cubic Groups. These polyhedral groups are characterized by not having a C<sub>5</sub> proper rotation axis."
+   ]
+  },
+  {
+   "id": "o",
+   "title": "O",
+   "columns": [
+    {
+     "id": "species",
+     "label": "O",
+     "kind": "text"
+    },
+    {
+     "id": "e",
+     "label": "E",
+     "kind": "text"
+    },
+    {
+     "id": "8c3",
+     "label": "8C<sub>3</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "3c2",
+     "label": "3C<sub>2</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "6c4",
+     "label": "6C<sub>4</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "6c2",
+     "label": "6C<sub>2</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "linear",
+     "label": "",
+     "kind": "text"
+    },
+    {
+     "id": "quadratic",
+     "label": "",
+     "kind": "text"
+    }
+   ],
+   "rows": [
+    [
+     "A<sub>1</sub>",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "",
+     "x<sup>2</sup>+y<sup>2</sup>+z<sup>2</sup>"
+    ],
+    [
+     "A<sub>2</sub>",
+     "1",
+     "1",
+     "1",
+     "-1",
+     "-1",
+     "",
+     ""
+    ],
+    [
+     "E",
+     "2",
+     "-1",
+     "2",
+     "0",
+     "0",
+     "",
+     "(2z<sup>2</sup>-x<sup>2</sup>-y<sup>2</sup>, x<sup>2</sup>-y<sup>2</sup>)"
+    ],
+    [
+     "T<sub>1</sub>",
+     "3",
+     "0",
+     "-1",
+     "1",
+     "-1",
+     "(R<sub>x</sub>, R<sub>y</sub>, R<sub>z</sub>), (x, y, z)",
+     ""
+    ],
+    [
+     "T<sub>2</sub>",
+     "3",
+     "0",
+     "-1",
+     "-1",
+     "1",
+     "",
+     "(xz, yz, xy)"
+    ]
+   ],
+   "notes": [
+    "Cubic Groups. These polyhedral groups are characterized by not having a C<sub>5</sub> proper rotation axis."
+   ]
+  },
+  {
+   "id": "oh",
+   "title": "O<sub>h</sub>",
+   "columns": [
+    {
+     "id": "species",
+     "label": "O<sub>h</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "e",
+     "label": "E",
+     "kind": "text"
+    },
+    {
+     "id": "8c2",
+     "label": "8C<sub>2</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "6c2",
+     "label": "6C<sub>2</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "6c4",
+     "label": "6C<sub>4</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "3c2-c42",
+     "label": "3C<sub>2</sub>(C<sub>4</sub><sup>2</sup>)",
+     "kind": "text"
+    },
+    {
+     "id": "i",
+     "label": "i",
+     "kind": "text"
+    },
+    {
+     "id": "6s4",
+     "label": "6S<sub>4</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "8s6",
+     "label": "8S<sub>6</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "3sigmah",
+     "label": "3σ<sub>h</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "6sigmad",
+     "label": "6σ<sub>d</sub>",
+     "kind": "text"
+    },
+    {
+     "id": "linear",
+     "label": "",
+     "kind": "text"
+    },
+    {
+     "id": "quadratic",
+     "label": "",
+     "kind": "text"
+    }
+   ],
+   "rows": [
+    [
+     "A<sub>1g</sub>",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "",
+     "x<sup>2</sup>+y<sup>2</sup>+z<sup>2</sup>"
+    ],
+    [
+     "A<sub>2g</sub>",
+     "1",
+     "1",
+     "-1",
+     "-1",
+     "1",
+     "1",
+     "-1",
+     "1",
+     "1",
+     "-1",
+     "",
+     ""
+    ],
+    [
+     "E<sub>g</sub>",
+     "2",
+     "-1",
+     "0",
+     "0",
+     "2",
+     "2",
+     "0",
+     "-1",
+     "2",
+     "0",
+     "",
+     "(2z<sup>2</sup>-x<sup>2</sup>-y<sup>2</sup>, x<sup>2</sup>-y<sup>2</sup>)"
+    ],
+    [
+     "T<sub>1g</sub>",
+     "3",
+     "0",
+     "-1",
+     "1",
+     "-1",
+     "3",
+     "1",
+     "0",
+     "-1",
+     "-1",
+     "(R<sub>x</sub>, R<sub>y</sub>, R<sub>z</sub>)",
+     ""
+    ],
+    [
+     "T<sub>2g</sub>",
+     "3",
+     "0",
+     "1",
+     "-1",
+     "-1",
+     "3",
+     "-1",
+     "0",
+     "-1",
+     "1",
+     "",
+     "(xz, yz, xy)"
+    ],
+    [
+     "A<sub>1u</sub>",
+     "1",
+     "1",
+     "1",
+     "1",
+     "1",
+     "-1",
+     "-1",
+     "-1",
+     "-1",
+     "-1",
+     "",
+     ""
+    ],
+    [
+     "A<sub>2u</sub>",
+     "1",
+     "1",
+     "-1",
+     "-1",
+     "1",
+     "-1",
+     "1",
+     "-1",
+     "-1",
+     "1",
+     "",
+     ""
+    ],
+    [
+     "E<sub>u</sub>",
+     "2",
+     "-1",
+     "0",
+     "0",
+     "2",
+     "-2",
+     "0",
+     "1",
+     "-2",
+     "0",
+     "",
+     ""
+    ],
+    [
+     "T<sub>1u</sub>",
+     "3",
+     "0",
+     "-1",
+     "1",
+     "-1",
+     "-3",
+     "-1",
+     "0",
+     "1",
+     "1",
+     "(x, y, z)",
+     ""
+    ],
+    [
+     "T<sub>2u</sub>",
+     "3",
+     "0",
+     "1",
+     "-1",
+     "-1",
+     "-3",
+     "1",
+     "0",
+     "1",
+     "-1",
+     "",
+     ""
+    ]
+   ],
+   "notes": [
+    "Cubic Groups. These polyhedral groups are characterized by not having a C<sub>5</sub> proper rotation axis.",
+    "Correction: the second class is 8C<sub>3</sub>; the table prints 8C<sub>2</sub>."
+   ]
+  }
+ ]
+}

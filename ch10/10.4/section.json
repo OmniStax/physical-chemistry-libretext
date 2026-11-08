@@ -365,7 +365,7 @@
        "uses": [
         1
        ],
-       "cap": "A free electron has no internal energy, so its energy is all kinetic."
+       "cap": "The free electron's energy is present solely as kinetic energy (i.e., there is no internal energy in a free electron)."
       },
       {
        "tex": "\\mk{e}{\\kKE} = \\mk{p}{h\\knu} - \\left[\\mk{i}{E(A^+)} - \\mk{a}{E(A)}\\right]"
@@ -379,8 +379,7 @@
        "step": 1
       },
       {
-       "tex": "\\kIE = E(A^+) - E(A)",
-       "src": "10.4"
+       "text": "The final term in brackets represents the difference in energy between the ionized and neutral species and is generally called the vertical ionization energy ($\\kIE$) of the ejected electron."
       }
      ],
      "then": {
@@ -395,8 +394,7 @@
        "map": {
         "i": "ie",
         "a": "ie"
-       },
-       "cap": "The difference in energy between the ion and the neutral is the vertical ionization energy of the ejected electron."
+       }
       }
      ],
      "num": "(10.4.5)"

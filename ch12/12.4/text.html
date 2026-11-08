@@ -1,0 +1,81 @@
+<section id="transformation-matrices">
+<h2>Transformation matrices</h2>
+<p>Matrices can be used to map one set of coordinates or functions onto another set. Matrices used for this purpose are called <em><span data-concept="matrix-representation">transformation matrices</span></em>. The <span data-concept="symmetry-operation">symmetry operations</span> in a <span data-concept="group">group</span> may be represented by a set of transformation matrices $\kGamma$$(\kgop)$, one for each <span data-concept="symmetry-element">symmetry element</span> $\kgop$. Each individual matrix is called a <em><span data-concept="matrix-representation">representative</span></em> of the corresponding <span data-concept="symmetry-operation">symmetry operation</span>, and the complete set of matrices is called a <em><span data-concept="matrix-representation">matrix representation</span></em> of the <span data-concept="group">group</span>. The matrix representatives act on some chosen <em>basis set</em> of functions, and the actual matrices making up a given representation will depend on the basis that has been chosen. The representation is then said to <em>span</em> the chosen basis.<sup class="fn" data-note="c-span"></sup> The basis we will use are unit vectors pointing in the $x$, $y$, and $z$ directions.</p>
+<p>The transformation matrix for any operation in a <span data-concept="group">group</span> has a form that is unique from the matrices of the other members of the same <span data-concept="group">group</span>; however, the <span data-concept="character">character</span> of the transformation matrix for a given operation is the same as that for any other operation in the same <span data-concept="symmetry-class">class</span>. Each <span data-concept="symmetry-operation">symmetry operation</span> below will operate on an arbitrary vector, $\bf{u}$:</p>
+$$ \bf{u} = \begin{pmatrix} x \\ y \\ z \end{pmatrix} $$
+</section>
+
+<section id="the-identity-operation">
+<h2>The Identity Operation, $\kEop$</h2>
+<p>The first rule is that the <span data-concept="group">group</span> must include the <span data-concept="identity-operation">identity operation</span> $\kEop$ (the ‘do nothing’ operation). The matrix representative of the <span data-concept="identity-operation">identity operation</span> is simply the identity matrix and leaves the vector unchanged:</p>
+$$ \kEop\bf{u} = \begin{pmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{pmatrix} \begin{pmatrix} x \\ y \\ z \end{pmatrix} = \begin{pmatrix} x \\ y \\ z \end{pmatrix} \tag{12.4.1} $$
+<p>Every <span data-concept="matrix-representation">matrix representation</span> includes the appropriate identity matrix.</p>
+</section>
+
+<section id="the-reflection-operation">
+<h2>The Reflection Operation, $\sigma$</h2>
+<p>The <span data-concept="reflection-operation">reflection operation</span> reflects the vector $\bf{u}$ over a plane. This can be the $xy$, $xz$, or $yz$ plane. The matrix is similar to the identity matrix, with the exception that there is a sign change for the appropriate element. The reflect matrix in the $xy$ plane is:</p>
+$$ \sigma (xy) \bf{u} = \begin{pmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & -1 \end{pmatrix} \begin{pmatrix} x \\ y \\ z \end{pmatrix} = \begin{pmatrix} x \\ y \\ -z \end{pmatrix} \tag{12.4.2} $$
+<figure class="sim" id="sim-vector-ops" data-figure="12.4.1" data-original="/media/ch12/446476-Reflection.png" data-original-width="295" data-original-caption="Reflection in the $xy$ plane.">
+  <div class="sim-head"><span class="eyebrow">Figure 12.4.1</span><span>Choose a <span data-type="symmetry-operation">symmetry operation</span> and watch where it carries the vector u. A reflection changes the sign of the one coordinate normal to its plane, so its matrix is the identity with a single −1. A rotation about z mixes x and y through the cosine and sine of its angle and leaves z alone.</span></div>
+</figure>
+<p>Notice that the element for the dimension being reflected is the on that is negative. In the above case, since $z$ is being reflected over the $xy$ plane, the $z$ element in the matrix is negative. If we were to reflect over the $xz$ plane instead, the $y$ element would be the one that is negative:</p>
+$$ \sigma (xz) \bf{u} = \begin{pmatrix} 1 & 0 & 0 \\ 0 & -1 & 0 \\ 0 & 0 & 1 \end{pmatrix} \begin{pmatrix} x \\ y \\ z \end{pmatrix} = \begin{pmatrix} x \\ -y \\ z \end{pmatrix} $$
+</section>
+
+<section id="the-n-fold-rotation-operation">
+<h2>The $n$-fold Rotation Operation, $\kCn$</h2>
+<p>The $\kCn$ operator rotates the molecule about an axis. The counterclockwise rotation of vector $\bf{u}$ about the $z$ axis is:</p>
+$$ \kCn\bf{u} = \begin{pmatrix} \cos{\frac{2\pi}{n}} & -\sin{\frac{2\pi}{n}} & 0 \\ \sin{\frac{2\pi}{n}} & \cos{\frac{2\pi}{n}} & 0 \\ 0 & 0 & 1 \end{pmatrix} \begin{pmatrix} x \\ y \\ z \end{pmatrix} = \begin{pmatrix} x' \\ y' \\ z \end{pmatrix} $$
+<p>For clockwise rotation, the sign on the $\sin{\ktheta}$ terms are reversed. This matrix simplifies dramatically for the $\kCtwo$ rotation:</p>
+$$ \kCtwo\bf{u} = \begin{pmatrix} -1 & 0 & 0 \\ 0 & -1 & 0 \\ 0 & 0 & 1 \end{pmatrix} \begin{pmatrix} x \\ y \\ z \end{pmatrix} = \begin{pmatrix} -x \\ -y \\ z \end{pmatrix} $$
+<p>Rotation matrices operating about the $x$, $y$ and $z$ axes are given by:<sup class="fn" data-note="c-ry"></sup></p>
+$$ R_{x}(\ktheta) = \begin{pmatrix} 1 & 0 & 0 \\ 0 & \cos\ktheta & -\sin\ktheta \\ 0 & \sin\ktheta & \cos\ktheta \end{pmatrix} \tag{12.4.3} $$
+$$ R_{y}(\ktheta) = \begin{pmatrix} \cos\ktheta & 0 & -\sin\ktheta \\ 0 & 1 & 0 \\ \sin\ktheta & 0 & \cos\ktheta \end{pmatrix} \tag{12.4.4} $$
+$$ R_{z}(\ktheta) = \begin{pmatrix} \cos\ktheta & -\sin\ktheta & 0 \\ \sin\ktheta & \cos\ktheta & 0 \\ 0 & 0 & 1 \end{pmatrix} \tag{12.4.5} $$
+</section>
+
+<section id="the-inversion-operation">
+<h2>The Inversion operation, $I$</h2>
+<p>The <span data-concept="inversion-operation">inversion operation</span> inverts every point:</p>
+$$ I\bf{u} = \begin{pmatrix} -1 & 0 & 0 \\ 0 & -1 & 0 \\ 0 & 0 & -1 \end{pmatrix} \begin{pmatrix} x \\ y \\ z \end{pmatrix} = \begin{pmatrix} -x \\ -y \\ -z \end{pmatrix} $$
+</section>
+
+<section id="c2v-point-group">
+<h2>$C_{2v}$ Point Group</h2>
+<p>Now that we have seen the matrix form of our operators, we can see how the multiplication of each operator leads to another operations in the <span data-concept="group">group</span>. The $C_{2v}$ <span data-concept="group-multiplication-table">multiplication table</span> is:</p>
+<div class="book-table">
+  <div class="tcap"><span class="eyebrow">Table</span><span></span></div>
+  <table>
+    <thead><tr><th>$C_{2v}$</th><th>$\kEop$</th><th>$\kCtwo$</th><th>$\ksigmav$</th><th>$\ksigmavp$</th></tr></thead>
+    <tbody>
+      <tr><td>$\kEop$</td><td>$\kEop$</td><td>$\kCtwo$</td><td>$\ksigmav$</td><td>$\ksigmavp$</td></tr>
+      <tr><td>$\kCtwo$</td><td>$\kCtwo$</td><td>$\kEop$</td><td>$\ksigmavp$</td><td>$\ksigmav$</td></tr>
+      <tr><td>$\ksigmav$</td><td>$\ksigmav$</td><td>$\ksigmavp$</td><td>$\kEop$</td><td>$\kCtwo$</td></tr>
+      <tr><td>$\ksigmavp$</td><td>$\ksigmavp$</td><td>$\ksigmav$</td><td>$\kCtwo$</td><td>$\kEop$</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>For <span data-concept="group-multiplication-table">multiplication tables</span>, the standard order of operation is the row elements (top) first, following by the column element (side). Every row or column includes every operation once and is different from any other row or column.</p>
+<p>Let's look at $\kCtwo \ksigmav$ multiplication, where $\ksigmav$ is a reflection across the $xz$ plane:</p>
+$$ \kCtwo \ksigmav = \begin{pmatrix} -1 & 0 & 0 \\ 0 & -1 & 0 \\ 0 & 0 & 1 \end{pmatrix} \begin{pmatrix} 1 & 0 & 0 \\ 0 & -1 & 0 \\ 0 & 0 & 1 \end{pmatrix} = \begin{pmatrix} -1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{pmatrix} = \ksigmavp $$
+<p>where $\ksigmavp$ is the reflection across the $yz$ plane.</p>
+</section>
+
+<section id="matrix-representations-and-groups">
+<h2>Matrix Representations and Groups</h2>
+<p>Before proceeding any further, we must check that a <span data-concept="matrix-representation">matrix representation</span> of a <span data-concept="group">group</span> obeys all of the rules set out in the formal mathematical definition of a <span data-concept="group">group</span>.</p>
+<ol><li><strong>Identity</strong>.The first rule is that the <span data-concept="group">group</span> must include the <span data-concept="identity-operation">identity operation</span> $\kEop$ (the ‘do nothing’ operation). We showed above that the matrix representative of the <span data-concept="identity-operation">identity operation</span> is simply the identity matrix. As a consequence, every <span data-concept="matrix-representation">matrix representation</span> includes the appropriate identity matrix.</li><li><strong>Closure</strong>. The second rule is that the combination of any pair of elements must also be an element of the <span data-concept="group">group</span> (the <em>group property</em>). If we multiply together any two matrix representatives, we should get a new matrix which is a representative of another <span data-concept="symmetry-operation">symmetry operation</span> of the <span data-concept="group">group</span>. In fact, matrix representatives multiply together to give new representatives in exactly the same way as <span data-concept="symmetry-operation">symmetry operations</span> combine according to the <span data-concept="group-multiplication-table">group multiplication table</span>. For example, in the $C_{2v}$ <span data-concept="point-group">point group</span>, we showed that the combined <span data-concept="symmetry-operation">symmetry operation</span> $\kCtwo$$\ksigmav$ is equivalent to $\ksigmavp$. In a <span data-concept="matrix-representation">matrix representation</span> of the <span data-concept="group">group</span>, if the matrix representatives of $\kCtwo$ and $\ksigmav$ are multiplied together, the result will be the representative of $\ksigmavp$.</li><li><strong>Associativity</strong>. The third rule states that the rule of combination of <span data-concept="symmetry-element">symmetry elements</span> in a <span data-concept="group">group</span> must be associative. This is automatically satisfied by the rules of matrix multiplication.</li><li><strong>Reciprocality</strong>. The final rule states that every operation must have an inverse, which is also a member of the <span data-concept="group">group</span>. The combined effect of carrying out an operation and its inverse is the same as the <span data-concept="identity-operation">identity operation</span>. It is fairly easy to show that matrix representatives satisfy this criterion. For example, the inverse of a reflection is another reflection, identical to the first. In matrix terms we would therefore expect that a reflection matrix was its own inverse, and that two identical reflection matrices multiplied together would give the identity matrix. This turns out to be true, and can be verified using any of the reflection matrices in the examples above. The inverse of a rotation matrix is another rotation matrix corresponding to a rotation of the opposite sense to the first.</li></ol>
+<div class="example" id="ex-12-4-1">
+<h3>Example 12.4.1 · Matrix Representation of the $C_{2v}$ Point Group (the allyl radical)</h3>
+<p>We often use sets of atomic orbitals as basis functions for <span data-concept="matrix-representation">matrix representations</span>. In this example, we’ll take as our basis a $p$ orbital on each carbon atom $\begin{pmatrix} p_1, p_2, p_3 \end{pmatrix}$.</p>
+<figure class="photo" id="fig-allyl-basis">
+  <img src="/media/ch12/61163-Screenshot_10-2.png" alt="Three spheres connected by lines, representing a molecular structure with labeled components P1, P2, and P3.">
+  <figcaption><span class="eyebrow">Figure</span><span>The allyl radical's three carbon $p$ orbitals, $p_1$, $p_2$ and $p_3$.</span></figcaption>
+</figure>
+<p>Note that the $p$ orbitals are <em>perpendicular</em> to the plane of the carbon atoms (this may seem obvious, but if you’re visualizing the basis incorrectly it will shortly cause you a not inconsiderable amount of confusion). The <span data-concept="symmetry-operation">symmetry operations</span> in the $C_{2v}$ <span data-concept="point-group">point group</span>, and their effect on the three $p$ orbitals, are as follows:<sup class="fn" data-note="c-allyl-sigma"></sup></p>
+$$ \begin{array}{ll} \kEop & \begin{pmatrix} p_1 \\ p_2 \\ p_3 \end{pmatrix} \rightarrow \begin{pmatrix} p_1 \\ p_2 \\ p_3 \end{pmatrix} \\ \kCtwo & \begin{pmatrix} p_1 \\ p_2 \\ p_3 \end{pmatrix} \rightarrow \begin{pmatrix} -p_3 \\ -p_2 \\ -p_1 \end{pmatrix} \\ \ksigmav & \begin{pmatrix} p_1 \\ p_2 \\ p_3 \end{pmatrix} \rightarrow \begin{pmatrix} -p_1 \\ -p_2 \\ -p_3 \end{pmatrix} \\ \ksigmavp & \begin{pmatrix} p_1 \\ p_2 \\ p_3 \end{pmatrix} \rightarrow \begin{pmatrix} p_1 \\ p_2 \\ p_3 \end{pmatrix} \end{array} $$
+<p>The matrices that carry out the transformation are</p>
+$$ \begin{array}{ll} \kGamma(\kEop) & \begin{pmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{pmatrix} \begin{pmatrix} p_1 \\ p_2 \\ p_3 \end{pmatrix} = \begin{pmatrix} p_1 \\ p_2 \\ p_3 \end{pmatrix} \\ \kGamma(\kCtwo) & \begin{pmatrix} 0 & 0 & -1 \\ 0 & -1 & 0 \\ -1 & 0 & 0 \end{pmatrix} \begin{pmatrix} p_1 \\ p_2 \\ p_3 \end{pmatrix} = \begin{pmatrix} -p_3 \\ -p_2 \\ -p_1 \end{pmatrix} \\ \kGamma(\ksigmav) & \begin{pmatrix} -1 & 0 & 0 \\ 0 & -1 & 0 \\ 0 & 0 & -1 \end{pmatrix} \begin{pmatrix} p_1 \\ p_2 \\ p_3 \end{pmatrix} = \begin{pmatrix} -p_1 \\ -p_2 \\ -p_3 \end{pmatrix} \\ \kGamma(\ksigmavp) & \begin{pmatrix} 0 & 0 & 1 \\ 0 & 1 & 0 \\ 1 & 0 & 0 \end{pmatrix} \begin{pmatrix} p_1 \\ p_2 \\ p_3 \end{pmatrix} = \begin{pmatrix} p_1 \\ p_2 \\ p_3 \end{pmatrix} \end{array} $$
+</div>
+</section>

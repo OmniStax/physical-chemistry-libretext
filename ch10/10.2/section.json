@@ -246,7 +246,7 @@
       {
        "tex": "\\mk{l}{\\int N^2 ( p + \\gamma s)^2 d\\tau} = 1",
        "uses": [],
-       "cap": "In integral notation, with $d\\tau$ standing for all space; the orbitals are real."
+       "cap": "In integral notation, where $d\\tau$ represents all space; the orbitals are real."
       },
       {
        "tex": "\\mk{pp}{N^2 \\int p^2\\; d\\tau} + \\mk{sp}{N^2 2 \\gamma \\int sp\\; d\\tau} + \\mk{ss}{N^2 \\gamma^2 \\int s^2 \\; d\\tau} = 1",
@@ -284,7 +284,8 @@
        "uses": [
         1,
         2
-       ]
+       ],
+       "cap": "These terms simplify either due to orthogonality or normality of the constitute atomic orbitals."
       },
       {
        "tex": "\\mk{pp}{N^2 (1+\\gamma^2)} = 1",

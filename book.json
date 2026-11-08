@@ -2488,6 +2488,14 @@
       "sym": "Psi_f",
       "latex": "\\Psi_f",
       "macro": "\\kPsif"
+    },
+    {
+      "sym": "n_SZ",
+      "latex": "n_{\\text{SZ}}"
+    },
+    {
+      "sym": "n_DZ",
+      "latex": "n_{\\text{DZ}}"
     }
   ],
   "exercise_kinds": [

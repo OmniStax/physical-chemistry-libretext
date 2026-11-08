@@ -356,6 +356,28 @@
    "sym": "n",
    "meaning": "the principal quantum number of the valence shell",
    "section": "11.4"
+  },
+  {
+   "sym": "y",
+   "type": "length",
+   "meaning": "the y coordinate of the electron",
+   "section": "11.2"
+  },
+  {
+   "sym": "z",
+   "type": "length",
+   "meaning": "the z coordinate of the electron",
+   "section": "11.2"
+  },
+  {
+   "sym": "n_SZ",
+   "meaning": "the number of distinct Hamiltonian matrix elements in a single-zeta basis",
+   "section": "11.3"
+  },
+  {
+   "sym": "n_DZ",
+   "meaning": "the number of distinct Hamiltonian matrix elements in a double-zeta basis",
+   "section": "11.3"
   }
  ]
 }

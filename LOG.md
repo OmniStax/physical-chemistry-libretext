@@ -555,3 +555,50 @@ Tool fix: `md2html.py` reads 12.14's "Solutions to Practice Problems" as the key
 Problems (and keeps the image under the last problem with it); Chapters 1–11's 106
 drafts compared against the old script: identical. `check:content`: no errors, no
 warnings.
+
+## Chapter 9 pass · 2026-11-08
+
+Built: the intro, 9.1–9.10, 9.12, 9.14, 9.15 and the summary page. 26 figure
+rows: 20 interactive, 4 faithful copies kept as figures, 2 photographs; 5
+moving (the coupled oscillators, two orbitals approaching, the H₂⁺ energy curves,
+filling the period-2 diagrams, O₂'s microstate chart), 3 3D point-cloud or
+surface scenes (water's surface, σ₁s/σ*₁s, the p-orbital combinations). 3
+derivations (9.3, 9.4, 9.9). 21 exercises, all `exercise` kind in the Exercises
+document: 13 from the book (8 keyed, 5 with AI solutions) and 8 AI exercises;
+49 AI-marked corrections in footnotes, besides derivation notes.
+
+The book's empty or wrong pages: 9.13 and 9.16 have no body at the source, and
+9.11 holds Zielinski's uncertainty-principle page (the same as 19.E). The pass
+removed all three from `chapter.json` (with 9.11's three staged variables, dx,
+dp and ħ, which 1.9 already carries) and merged; their `source.md` stay.
+Exercise 9.11.1 = 19.E.1 (the baseball at 91.3 mi/h) is now one card in 1.9
+(`e3`, four numeric parts, AI solution checked by computation: Δx 8.4 × 10⁻³³ m
+and 1.3 mm, λ 1.2 × 10⁻³⁴ m and 18 μm), its notes naming both printed places.
+The checker accepts `source_section` only for a built section whose source.md
+holds the id, and neither 9.11 nor 19.E is built, so the card names its origin
+instead: a new `exercise_sources` row, `zielinski-quantum-states` (Quantum
+States of Atoms and Molecules, Hanson, Harvey, Sweeney, Zielinski, CC BY-NC-SA
+4.0), the book both printed pages transclude.
+
+Chapter pass: the summary's bullets now link with `class="xref"` to 9.2
+(in/out of phase), 9.4 (exchange integral), 9.5 (LCAO–MO, nodal planes), 9.7
+(σ/π), 9.8 (bond order), and its 9.14 and 9.15 links gained the class.
+Examples 9.7.2 ("as follows") and 9.8.1 ("the following molecular orbital
+diagram", "fill the molecular orbital diagram") link their Figures with
+`class="figref"`. 9.5's substitution into (9.5.4) and "discussed previously"
+link 7.2's `drv-linear-energy` and `drv-secular`; 9.8's "derived previously"
+links 9.4's `drv-energy`. Variables rows added for macros that had none: R
+(9.5, 9.6), ψ (9.5, 9.7, 9.15), σ₁s and σ*₁s, ΔE and E (9.8, whose readouts now
+write `\kdE_{+}`, `\kdE_{-}` and `\kE`), E (9.12). 9.1.2's θ axis label and
+ticks moved off the surface to the r = 0.16 edge, and the r label off its 0.12
+tick. Derivations against source.md: no content sentence dropped (only "becomes"
+and "is given by" lead-ins); 9.3's normalized-orbitals fact now cites (9.3.3),
+not 3.5; 9.9's permutation fact writes `\kponetwohat`. `colours:default` rerun
+(every type kept its colour). `check:content`: no errors, no warnings. Every
+figure screenshot in light and dark; no console or KaTeX error on any Chapter 9
+page or derivation, or on 1.9.
+
+Known gaps: 9.4's readout and headline write ΔE₊ plain and round differently
+(the headline converts the unrounded value to eV); the exercise card credits
+Quantum States of Atoms and Molecules rather than a section of this book; 9.2's
+"via the secular equations" is not linked to 7.2.

@@ -388,7 +388,7 @@
          "r"
         ]
        },
-       "cap": "The equation is a quadratic in $x^{2}$, solved by the quadratic formula."
+       "cap": "While solving 4th order equations typically require numerical estimation, Equation 10.6.7 can be further simplified by recognizing that it is a quadratic equation in terms of $x^{2}$."
       },
       {
        "tex": "\\mk{q}{x} = \\mk{r}{\\pm 1.618,\\ \\pm 0.618}"
