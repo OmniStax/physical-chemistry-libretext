@@ -244,3 +244,24 @@ Tool fixes: `lt2md.py` sets a bare `\begin{align*}` outside `\[ … \]` as a
 display (6.6); `md2html.py` drops an empty exercise box and writes U+2011 in
 maths as "-". Chapters 1–5 reconvert to the same bytes. `check:content`: no
 errors; one warning, the stored colours stale (not from this chapter).
+
+## Chapter 7 prep · 2026-11-08
+
+Prep only, no section built. Fetched Chapter 7's images (8, into
+`media/ch07/`), converted the landing page (one paragraph: an `intro/` page),
+7.1–7.4, the summary page 7.S (to `ch07/summary/`) and the empty 7.E; wrote
+`ch07/exploration.md`, `ch07/config.md` (agreed on Chapter 1's terms),
+`ch07/chapter.json` (4 sections, the intro and summary records, 82
+variables) and merged `ch07/book-rows.json`: no new type, 33 symbols, 33
+concepts, 57 edges. Drafts made for the intro, 7.1–7.4 and the summary.
+
+Exercises: 4 printed, 3 keyed, 1 for an AI solution (a sketch), 7 AI
+exercises proposed; nothing moved. 8 derivations to build. Every figure
+proposed still and 2D (variation, not motion); one extra Sim recommended (7.3).
+
+Tool fixes (`md2html.py` only): a figure caption's equation citation is
+resolved in the draft row as in the text; a `\ref` to another page's label is
+printed as that page's number (7.S cites 5.S.1); U+FEFF is dropped from maths.
+Chapters 1–7 reconvert to the same bytes. `check:content`: no errors, no
+warnings. Open for the orchestrator: the two figures printed 7.4.1, the
+tilted box in 7.4.1's figure, the unstated ⟨n⁰|n¹⟩ = 0, Table 7.3.1's F value.
