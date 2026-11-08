@@ -2,3 +2,6 @@
 source/
 __pycache__/
 *.pdf
+# drafts from tools/md2html.py, deleted once a section is built
+draft.text.html
+draft.section.json
