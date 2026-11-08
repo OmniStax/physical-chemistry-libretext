@@ -3243,16 +3243,6 @@
       "statement": "Because the wavefunction must satisfy the Schrödinger equation, a second-order differential equation, its second derivative must exist, so its first derivative must exist too: a wavefunction with a break or a kink is not acceptable."
     },
     {
-      "id": "observable",
-      "kind": "definition",
-      "section": "4.2",
-      "name": "Observable",
-      "terms": [
-        "dynamic variable"
-      ],
-      "statement": "An observable is a dynamic variable of a system that can be experimentally measured, such as position, momentum and kinetic energy; classically it is a real-valued function."
-    },
-    {
       "id": "operator-postulate",
       "kind": "axiom",
       "section": "4.2",
@@ -4687,6 +4677,17 @@
       "section": "5.9",
       "name": "Finding a bond length from a rotational spectrum",
       "statement": "Read the J = 0 → 1 line (or the line spacing) as 2B, compute the reduced mass from the isotopes' masses, and solve B = h/(8π²μr₀²) for the bond length."
+    },
+    {
+      "id": "observable",
+      "kind": "definition",
+      "section": "3.3",
+      "name": "Observable",
+      "terms": [
+        "physical observable",
+        "dynamic variable"
+      ],
+      "statement": "A physical observable is anything about a system that can be measured, such as position, momentum or energy; quantum mechanics has an operator for every observable."
     }
   ],
   "concept_prereqs": [
@@ -5439,14 +5440,6 @@
       "prereq": "time-independent-schrodinger-equation"
     },
     {
-      "concept": "observable",
-      "prereq": "classical-state"
-    },
-    {
-      "concept": "operator-postulate",
-      "prereq": "observable"
-    },
-    {
       "concept": "operator-postulate",
       "prereq": "operator"
     },
@@ -6061,6 +6054,14 @@
     {
       "concept": "bond-length-from-spectrum",
       "prereq": "rotational-line-spacing"
+    },
+    {
+      "concept": "operator-postulate",
+      "prereq": "observable"
+    },
+    {
+      "concept": "classical-state",
+      "prereq": "observable"
     }
   ],
   "colours": {

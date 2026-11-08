@@ -155,3 +155,30 @@ links a fact to an earlier derivation (rule 29.5), so `box3d`'s facts from
 (3.5.10) and (3.5.16) cite the numbers only. The probability density's
 light hue (#013E1A) stands 0.122 from ink in OKLab, just over the 0.12
 target, and reads near black on the light ground.
+
+## Pass 7 · 2026-11-08 · Chapter 5 prepared
+
+Prep only, no section built. Fetched Chapter 5's images (42, into
+`media/ch05/`, the summary page's five included), converted the landing
+page (three bullets: the chapter gets an `intro/` page), 5.1–5.9, the summary
+page 5.S (to `ch05/summary/`) and the empty 5.E; wrote `ch05/exploration.md`,
+`ch05/config.md` (agreed on Chapter 1's terms), `ch05/chapter.json` (9
+sections, the intro and summary records, 148 variables) and merged
+`ch05/book-rows.json`: 5 new types (force constant, moment of inertia,
+angular momentum, dipole moment, angle), 55 symbols, 79 concepts, 118 edges.
+`npm run colours:default` was rerun for the new types. Drafts made for the
+intro, 5.1–5.9 and the summary.
+
+Tool fixes: `fetch.py` and `lt2md.py` decode an image name until it stops
+changing (the site double-encodes `Hermite_poly_phys_n%253D1.svg`);
+`md2html.py` tags a summary page's equations 5.S.K and converts `\ce{…}` with
+matched braces, subscript counts and whole mass numbers. Chapters 1–4
+reconvert to the same bytes; of their drafts only 1.3 and 1.8 change (their
+`\ce` is now converted).
+
+Exercises: 34 questions, 13 keyed, 21 for AI solutions, 8 AI exercises
+proposed; two held for later pages (5.4.1 to 5.6, 5.5.1 to 5.7). 12
+derivations to build. `check:content`: no errors, no warnings. Open for the
+orchestrator: macros for θ (Chapter 2) and B (Chapter 3), the summary's two
+scanned images, the absent Figure 5.7.2, Figure 5.9.5, and derivations that
+work unkeyed exercises on the page.
