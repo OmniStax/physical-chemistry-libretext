@@ -22,10 +22,11 @@ pass applied their wanted rows (variables for V and E in 1.3, ν and E in
 draft tool split at a parenthesis, and taught the draft tool to keep such
 links and to write `\ce{}` as `\mathrm{}` (the app's KaTeX has no mhchem).
 
-Result: 9 sections and the intro; 15 interactive figures (5 moving), 4
+Result: 9 sections and the intro; 17 interactive figures (5 moving), 5 kept photographs and 2 kept images, 4
 derivations (de Broglie in 1.6; force balance, Bohr orbits and the Rydberg
-equation from the Bohr model in 1.8); 21 book exercises (14 keyed, 7 with AI
-solutions) and 6 new AI exercises; 15 AI-marked corrections of the book's
+equation from the Bohr model in 1.8); 17 book exercises (11 keyed, 6 with AI
+solutions: Exercise 1.2.1 and 1.3's five Conceptual Questions) and 6 new AI
+exercises; 15 AI-marked corrections of the book's
 slips. `check:content`: no errors, two warnings for the book's own citations
 of Figures 1.2.3 and 1.7.0, which do not exist and carry corrections.
 
