@@ -1,0 +1,80 @@
+<section id="hartree-method">
+<h2>The Hartree method</h2>
+<p>The Hartree method is used to approximate the wavefunction and the energy of a quantum multi-electron system in a stationary state. This approximation assumes that the exact $N$-body wavefunction of the system can be approximated by a product of single-electron wavefunctions. By invoking the variational method, one can derive a set of $N$-coupled equations for the N spin orbitals. A solution of these equations yields the Hartree wavefunction and energy of the system. It is one step better than the "Ignorance is Bliss" approach, discussed previously, but still far from modern state-off-the-art methods.</p>
+</section>
+
+<section id="unsolvable">
+<h2>Unsolvable Systems</h2>
+<p>The Hamiltonian for a generic multielectron atom includes nucleus-electron attraction terms for the additional electrons with a general charge $Z$; e.g.</p>
+$$ \kVne(r_1) = -\dfrac {Z}{\left\vert\mathbf{r} - \mathbf{R}\right\vert} \tag{8.3.1} $$
+<p>in atomic units with $\left\vert\mathbf{r} - \mathbf{R}\right\vert$ is the distance between the electron and the nucleus, The Hamiltonian must also have terms for <span data-concept="electron-electron-repulsion">electron-electron repulsion</span> (also in atomic units)</p>
+$$ \kVee(r_{12}) = \dfrac {1}{\left\vert \mathbf{r} - \mathbf{r}^{\prime} \right\vert} $$
+<p>with $\left\vert \mathbf{r} - \mathbf{r}^{\prime} \right\vert$ is the distance between electron 1 and electron 2. So the proper <span data-concept="multi-electron-hamiltonian">multi-electron Hamiltonian</span> can be constructed</p>
+$$ \kH (r_1, r_2, ... r_n) = -\dfrac {\hbar ^2}{2\kme} \sum _i \nabla ^2_i + \sum _i \kVne (r_i) + \sum _{i \ne j} \kVee (r_{ij}) \tag{8.3.2} $$
+<p>Given what we have learned from the previous quantum mechanical systems we’ve studied, we predict that exact solutions to the multi-electron Schrödinger equation would consist of a family of multi-electron wavefunctions, each with an associated energy eigenvalue. These wavefunctions and energies would describe the ground and excited states of the multi-electron atom, just as the hydrogen wavefunctions and their associated energies describe the ground and excited states of the hydrogen atom. We would predict quantum numbers to be involved, as well.</p>
+<p>The fact that electrons interact through their electron-electron repulsion (final term in Equation 8.3.2) means that an exact wavefunction for a multi-electron system would be a single function that depends <strong>simultaneously</strong> upon the coordinates of all the electrons; i.e., a multi-electron wavefunction:</p>
+$$ |\psi (r_1, r_2, \cdots r_i) \rangle \tag{8.3.3} $$
+<p>Unfortunately, the electron-electron repulsion terms make it impossible to find an exact solution to the Schrödinger equation for many-electron atoms.</p>
+</section>
+
+<section id="hartree-approximation">
+<h2>The Hartree Approximation</h2>
+<p>The method for finding best possible one-electron wavefunctions that was published by Douglas Hartree in 1948 and improved two years later by Vladimir Fock.<sup class="fn" data-note="c-dates"></sup> For the Schrödinger equation to be analytically solvable, the variables must be separable - the variables are the coordinates of the electrons. To separate the variables in a way that retains information about electron-electron interactions, the electron-electron term (Equation 8.3.1)<sup class="fn" data-note="c-831"></sup> must be approximated so it depends only on the coordinates of one electron. Such an approximate Hamiltonian can account for the interaction of the electrons in <strong>an average way</strong>. The exact one-electron eigenfunctions of this approximate Hamiltonian then can be found by solving the Schrödinger equation. These functions are the best possible <strong>one-electron functions</strong>.</p>
+<p><span data-concept="hartree-approximation">The Hartree approximation starts by invoking an initial <em>ansatz</em> that the multi-electron wavefunction in Equation 8.3.3 can be expanded as a product of single-electron wavefunctions (i.e., orbitals)</span></p>
+$$ | \psi(\mathbf{r}_1,\mathbf{r}_2, \ldots, \mathbf{r}_N) \rangle \approx \psi_{1}(\mathbf{r}_1)\psi_{2}(\mathbf{r}_2) \ldots \psi_{N}(\mathbf{r}_N) $$
+<p>from which it follows that the electrons are <em>independent</em>, and interact only via the mean-field Coulomb potential. This yields <span data-concept="hartree-equations">one-electron Schrödinger equations</span> of the form</p>
+$$ -\dfrac{\hbar^{2}}{2m} \nabla^{2}\kpsii(\mathbf{r}) + \kV(\mathbf{r})\kpsii(\mathbf{r}) = \kepsi\kpsii(\mathbf{r}) $$
+<p>or</p>
+$$ \kHe(r) \kpsii(\mathbf{r}) = \kepsi\kpsii(\mathbf{r}) $$
+<p>where $\kV(r)$ is the potential in which the electron moves; this includes both the nuclear-electron interaction</p>
+$$ \kVnuc(\mathbf{r}) = -Z\ke^{2}\sum_{R} \dfrac{1}{\left\vert\mathbf{r} - \mathbf{R}\right\vert} $$
+<p>and <span data-concept="mean-field-potential">the mean field arising from the $N-1$ other electrons</span>. We smear the other electrons out into a <span data-concept="electron-charge-density">smooth negative charge density</span> $\krhoe(\mathbf{r}')$ leading to a potential of the form</p>
+$$ \kVel(\mathbf{r}) = -\ke\int d\mathbf{r}^{\prime} \krhoe(\mathbf{r}^{\prime}) \dfrac{1}{\left\vert \mathbf{r} - \mathbf{r}^{\prime} \right\vert} $$
+<p>where</p>
+$$ \krhoe(\mathbf{r}) = \sum_{i}^{\text{occupied}}\vert\psi(\mathbf{r})\vert^{2}. $$<sup class="fn" data-note="c-rho"></sup>
+<p>The sum over runs over all occupied states; i.e., only the states of electrons that exist in the atom. The wavefunctions that from this approach with the Hamiltonian $\kHe(r)$ involve possess three kinds of energies discussed below.</p>
+<div class="note">
+<div class="eyebrow">Note</div>
+<h3>Three Energies within the Hartree Approximation</h3>
+<p>The total energy $\epsilon_j$ of the orbital $\kphij$, is the sum of the above three contributions:</p>
+<ol><li><p><strong>Kinetic Energy:</strong> The Kinetic energy of the electron has an average value is computed by taking the <span data-concept="expectation-value">expectation value</span> of the kinetic energy operator</p>
+$$ \dfrac{- \hbar^2}{2m} \nabla^2 $$
+<p>with respect to any particular solution $\kphij(r)$ to the Schrödinger equation:</p>
+$$ \kKE = \langle\kphij| \dfrac{- \hbar^2}{2m} \nabla^2 |\phi_j\rangle $$</li><li><p><strong>Nuclear-Electron Coulombic Attraction Energy:</strong> Coulombic attraction energy with the nucleus of charge $Z$:</p>
+$$ \langle\phi_j| \dfrac{-Z e^2}{\left\vert\mathbf{r} - \mathbf{R}\right\vert} |\phi_j\rangle $$</li><li><p><strong>Electron-Electron Coulombic Repulsion Energy:</strong> Coulomb repulsion energies with all of the $N-1$ other electrons, which are assumed to occupy other atomic orbitals denoted $\phi_K$, with this energy computed as</p>
+$$ \sum_{j\neq k} \langle\kphij(r) \kphik(r') |\dfrac{\ke^2}{|r-r'|} | \kphij(r) \kphik(r')\rangle. \tag{8.3.4} $$<sup class="fn" data-note="c-sum"></sup>
+<p>The Dirac notation $\langle\phi_j(r) \phi_k(r') |\dfrac{e^2}{|r-r'|} | \phi_j(r) \phi_k(r')\rangle$ is used to represent the <span data-concept="coulomb-integral">two-electron (six-dimensional) Coulomb integral</span></p>
+$$ \kJjk = \int |\kphij(r)|^2 |\kphik(r')|^2 \dfrac{\ke^2}{r-r'} dr dr' $$<sup class="fn" data-note="c-jdenom"></sup>
+<p>that describes the Coulomb repulsion between the charge density $|\phi_j(r)|^2$ for the electron in $\phi_j$ and the charge density $|\phi_k(r')|^2$ for the electron in $\phi_k$. Of course, the sum over $k$ must be limited to exclude $k=j$ to avoid counting a “self-interaction” of the electron in orbital $\phi_j$ with itself.</p></li></ol>
+</div>
+<p><span data-concept="hartree-orbital-energy">Adding these all together to get the total energy $\epsilon_j$ of the orbital $\kphij$</span>:</p>
+$$ \epsilon_J = \langle\phi_j| \dfrac{- \hbar^2}{2m} \nabla^2 |\phi_j\rangle + \langle\phi_j| \dfrac{-Z e^2}{\left\vert\mathbf{r} - \mathbf{R}\right\vert} |\phi_j\rangle + \sum_{j\neq k} \langle\phi_j(r) \phi_k(r') |\dfrac{e^2}{|r-r'|} | \phi_j(r) \phi_k(r')\rangle. $$<sup class="fn" data-note="c-epsJ"></sup>
+<p>This treatment of the electrons and their orbitals is referred to as the <strong>Hartree-level of theory</strong>.</p>
+<div class="note">
+<div class="eyebrow">Note</div>
+<p>When screened hydrogenic atomic orbitals are used to approximate the $\phi_j$ and $\phi_K$ orbitals, the resultant $\epsilon_J$ values do <strong>not</strong> produce accurate predictions. For example, the negative of $\epsilon_J$ should approximate the ionization energy for removal of an electron from the orbitals $\phi_j$. Such <span data-concept="ionization-energy">ionization potentials</span> (IP s) can be measured, and the measured values do not agree well with the theoretical values when a crude screening approximation is made for the atomic orbitals.</p>
+</div>
+</section>
+
+<section id="scf">
+<h2>The Self-Consistant Field (SCF) Approach to the Variational Method</h2>
+<p><span data-concept="self-consistent-field-method">The Hartree Equations are nonlinear and must be solved iteratively.</span> This is because if particles interact, that interaction must be in the Hamiltonian. So until we know where the particles are, we cannot write down the Hamiltonian, but until we know the Hamiltonian, we cannot tell where the particles are.</p>
+<p>The idea is to solve the Schrödinger equation for an electron moving in the potential of the nucleus and all the other electrons. We start with a guess for the trial electron charge density, solve N/2 one-particle Schrödinger equations (initially identical) to obtain N electron wavefunctions. Then we construct the potential for each wavefunction from that of the nucleus and that of all the other electrons, symmetrize it, and solve the N/2 Schrödinger equations again. This method is ideal for a computer, because it is easily written as an algorithm (Figure 8.3.1).</p>
+<figure class="sim" id="sim-scf" data-figure="8.3.1" data-original="/media/ch08/90907-mindtouch.png" data-original-width="740" data-original-caption="Algorithm for Self-consistent field theory.">
+  <div class="sim-head"><span class="eyebrow">Figure 8.3.1</span><span>Each pass builds the potential of the other electron from the <span data-type="probability-density">density</span>, solves for a new orbital and compares the new density with the old. Pick another first guess or less mixing: the <span data-type="energy">orbital energy</span> still settles on the same value.</span></div>
+</figure>
+<p>Although we are concerned here with atoms, the same methodology is used for molecules or even solids (with appropriate potential symmetries and boundary conditions). This is a variational method, so wherever we refer to wavefunctions, we assume that they are expanded in some appropriate basis set.</p>
+<blockquote><p>Fock improved on Hartree’s method by using proper "antisymmetrized wavefunctions" (called the Hartree-Fock method) instead of simple one-electron wavefunctions.</p></blockquote>
+<div class="note">
+<div class="eyebrow">Note</div>
+<h3>Shielding and Effective Charges Concepts are Useful</h3>
+<p>The hydrogen-like orbitals provide qualitative descriptions of orbitals of atoms with more than a single electron. By introducing the concept of screening as a way to represent the repulsive interactions among the electrons of an atom, an <span data-concept="effective-nuclear-charge">effective nuclear charge</span> $Z_{\rm eff}$ can be used in place of $Z$ in the hydrogenic $\psi_{n,l,m}$ and $E_{n,l}$ formulas to generate approximate atomic orbitals to be filled by electrons in a many-electron atom. For example, in the crudest approximation of a carbon atom, the two $1s$ electrons experience the full nuclear attraction so $Z_{\rm eff} =6$ for them, whereas the $2s$ and $2p$ electrons are screened by the two $1s$ electrons, so $Z_{\rm eff}= 4$ for them. Within this approximation, one then occupies two $1s$ orbitals with $Z=6$, two $2s$ orbitals with $Z=4$ and two $2p$ orbitals with $Z=4$ in forming the full six-electron product wavefunction of the lowest-energy state of carbon</p>
+$$ | \psi(1, 2, …, 6) \rangle = | \psi_{1s}(1) \psi_{1s}(2) \psi_{2s}(3) \ldots \psi_{1p}(6) \rangle . \tag{8.3.5} $$<sup class="fn" data-note="c-2p"></sup>
+<p>However, such approximate orbitals are not sufficiently accurate to be of use in quantitative simulations of atomic and molecular structure. In particular, their energies do not properly follow the trends in atomic orbital (AO) energies that are taught in introductory chemistry classes (Figure 8.3.2).</p>
+<figure class="photo" id="fig-8-3-2" data-figure="8.3.2">
+  <img src="/media/ch08/391213-imageedit_1_6819518101.png" data-width="462" alt="Graph showing multiple curves in blue, green, and red, illustrating energy trends over varying time periods."><img src="/media/ch08/391214-imageedit_3_4676612373.png" data-width="471" alt="Graph depicting energy levels with labeled curves for 3d (red), 4s (blue), and 4p (green) against distance.">
+  <figcaption><span class="eyebrow">Figure 8.3.2</span><span>Energies of Atomic Orbitals as Functions of the number of electrons in Neutral Atoms. (CC BY 4.0; Delmar Larsen).</span></figcaption>
+</figure>
+</div>
+<p>For example, <span data-concept="screening-model-limits">the relative energies of the $3d$ and $4s$ orbitals are not adequately described in a model that treats electron repulsion effects in terms of a simple screening factor</span>. So, now it is time to examine how we can move beyond the screening model and take the electron repulsion effects, which cause the inter-electronic couplings that render the Schrödinger equation insolvable, into account in a more reliable manner.</p>
+</section>

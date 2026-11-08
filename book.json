@@ -7986,16 +7986,8 @@
       "prereq": "bohr-model"
     },
     {
-      "concept": "bohr-energy-levels",
-      "prereq": "coulomb-potential"
-    },
-    {
       "concept": "bohr-rydberg-derivation",
       "prereq": "bohr-energy-levels"
-    },
-    {
-      "concept": "bohr-rydberg-derivation",
-      "prereq": "photon"
     },
     {
       "concept": "bohr-rydberg-derivation",
@@ -10515,12 +10507,12 @@
         "dark": "#D16E0D"
       },
       "probability-density": {
-        "light": "#455102",
-        "dark": "#AFCA04"
-      },
-      "operator": {
         "light": "#017336",
         "dark": "#0EC360"
+      },
+      "operator": {
+        "light": "#455102",
+        "dark": "#AFCA04"
       },
       "force-constant": {
         "light": "#5C046F",
@@ -10549,6 +10541,12 @@
       "magnetic-moment": {
         "light": "#795C01",
         "dark": "#C89A01"
+      }
+    },
+    "pins": {
+      "probability-density": {
+        "light": "#017336",
+        "dark": "#0EC360"
       }
     },
     "referentOrder": [

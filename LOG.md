@@ -372,3 +372,44 @@ wavefunction and angle types near hues; 6.7's two electrons are close blues in
 the figure; connective sentences under 6.1's and 6.5's derivations ("Substituting
 Equation 6.1.6 into Equation 6.1.5 produces", "Note the wavefunction of hydrogen
 1s orbital which is") stay folded into them.
+
+## Chapter 7 pass · 2026-11-08
+
+Built: the intro, 7.1–7.4 and the summary page. 9 figures: 6 interactive
+sims (7.1.1 shielding, 7.1.3 trial energy, 7.2.1 landscape, the 7.3
+three-exponential Sim, 7.4.1 box levels, 7.4.2 oscillator mixing), 2
+faithful copies drawn (the flowcharts 7.1.2 and 7.2.2) and the unnumbered
+perturbation flowchart kept; none moving, none 3D. 8 derivations (7.1: 1,
+7.2: 3, 7.4: 4); 11 exercises, all `exercise` kind in the Exercises
+document: 4 from the book (3 keyed, 1 with an AI solution) and 7 AI
+exercises; 38 AI-marked corrections in footnotes, besides derivation notes.
+
+Chapter pass: the builders' form anchors (`7.1-true-energy`,
+`7.1-ignorance-is-bliss`, `7.1-variational-method`,
+`7.1-helium-ground-state`, `7.2-opening`, `7.2-minimizing`,
+`7.2-secular-determinant`, 13 forms). Book prose restored after derivations
+(rule 29.2): 7.1's one-electron Hamiltonians, separability and additive
+energies; 7.2's "overlap integrals", "for all k", the orthonormal reduction
+to the eigenvalue form, and Example 7.2.1's Solution sentence. Derivations:
+7.1's last node now starts from result 2 (node 2 ends on
+E_He1s = E_n1 + E_n2); 7.2's numerator and denominator start from (7.2.1)
+and apply (7.2.2) as a step instead of starting from a substituted line;
+Example 7.2.1's second node starts from (7.2.12); 7.4's completeness fact no
+longer repeats the start line's equation. 7.3's fluorine footnote now cites
+Clementi and Raimondi (1963, F 1s 8.6501), whose rounded single-zeta
+exponents the whole 1s column matches. 7.4's readouts write E₁ and E₀ with
+`\kE` (a 7.4 `E` variables row added). No two-argument `\braket`, no bare
+`\k` script, no U+2011 or U+FEFF. `colours:default` rerun. `check:content`:
+no errors or warnings from the book's Chapter 7 (one error in 8.3, being
+built). Every figure screenshot in light, 7.1 and 7.4 in dark, every
+derivation rendered at rest and three played; no console or KaTeX error on
+any Chapter 7 page.
+
+Known gaps: the derivation eyebrow drops a letter from the example number
+(Example 7.4.1B reads "Example 7.4.1"; the regex in `derivation.ts` takes
+digits only); 7.1's restored sentences on h₁, h₂ and separability repeat two
+fact cards of its derivation; 7.4's bold sub-headers ("Last term…", "First
+term…") went with the block the derivation replaced; the Clementi–Raimondi
+values could not be checked online from this session (no network to the
+sources), so the footnote rests on the column's match and the known 1963
+values.

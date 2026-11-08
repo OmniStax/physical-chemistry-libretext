@@ -1,0 +1,235 @@
+{
+ "id": "8.2",
+ "module": "13440",
+ "chapter": "8",
+ "title": "Perturbation Theory and the Variational Method for Helium",
+ "short": "Perturbation and variation for helium",
+ "lead": "Helium's two electrons repel each other, so its Schrödinger equation has no exact solution. Perturbation theory treats the repulsion as a correction to two hydrogen-like atoms, and the variational method tries a series of trial wavefunctions against the measured energy.",
+ "objectives": [
+  "Demonstrate that both perturbation theory and variational methods can be used to solve the electron structure of the helium atom."
+ ],
+ "summary_html": "<p>The purpose of this section is to examine five trial wavefunctions for the helium atom used within the Perturbation Theory and Variational method approximation. For the Variational method approximation, the calculations begin with an uncorrelated wavefunction in which both electrons are placed in a hydrogenic orbital with scale factor $\\alpha$. The next four trial functions use several methods to increase the amount of electron-electron interactions in the wavefunction. As the summary of results that is appended shows this gives increasingly more favorable agreement with the experimentally determined value for the ground-state energy of the species under study. The detailed calculations show that the reason for this improved agreement with experiment is due to a reduction in electron-electron repulsion.</p><p>Five variational method calculations that have been outlined above for the helium atom ($Z=2$) can be repeated for two-electron atoms (e.g., $\\mathrm{H^-}$, $\\mathrm{Li^+}$, $\\mathrm{Be^{2+}}$, etc). The hydride anion is a particularly interesting case because the first two trial wavefunctions do not predict a stable ion (i.e., they are poor approximations). This indicates that electron-electron interactions is an especially important issue for atoms and ions with small nuclear charge.</p>",
+ "notes": "Credited to frioux; the page is CC BY 4.0 at the source and is shared here under the book's CC BY-NC-SA 4.0.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": []
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercise here; both exercises and their solutions were written by AI, which also chose their Bloom levels and concept tags. Numeric answers accept a 2% tolerance.",
+ "figures": [],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "two-methods",
+   "concept": "perturbation-theory",
+   "verb": "reinforces"
+  },
+  {
+   "span": "two-methods",
+   "concept": "variational-method",
+   "verb": "reinforces"
+  },
+  {
+   "span": "perturbation",
+   "concept": "zero-order-hamiltonian",
+   "verb": "introduces"
+  },
+  {
+   "span": "perturbation",
+   "concept": "helium-perturbation-split",
+   "verb": "introduces"
+  },
+  {
+   "span": "perturbation",
+   "concept": "helium-first-order-energy",
+   "verb": "introduces"
+  },
+  {
+   "span": "perturbation",
+   "concept": "first-order-energy-correction",
+   "verb": "uses"
+  },
+  {
+   "span": "perturbation",
+   "concept": "perturbation-theory",
+   "verb": "uses"
+  },
+  {
+   "span": "perturbation",
+   "concept": "hartree",
+   "verb": "reinforces"
+  },
+  {
+   "span": "perturbation",
+   "concept": "helium-ground-state-energy",
+   "verb": "uses"
+  },
+  {
+   "span": "variational",
+   "concept": "variational-method",
+   "verb": "uses"
+  },
+  {
+   "span": "variational",
+   "concept": "trial-wavefunction",
+   "verb": "uses"
+  },
+  {
+   "span": "variational",
+   "concept": "approximation-error",
+   "verb": "introduces"
+  },
+  {
+   "span": "variational",
+   "concept": "helium-trial-wavefunctions",
+   "verb": "introduces"
+  },
+  {
+   "span": "variational",
+   "concept": "electron-correlation",
+   "verb": "introduces"
+  },
+  {
+   "span": "variational",
+   "concept": "hylleraas-wavefunction",
+   "verb": "introduces"
+  },
+  {
+   "span": "variational",
+   "concept": "orbital-approximation",
+   "verb": "reinforces"
+  },
+  {
+   "span": "variational",
+   "concept": "ionization-energy",
+   "verb": "uses"
+  },
+  {
+   "span": "variational",
+   "concept": "helium-ground-state-energy",
+   "verb": "reinforces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "ai1",
+   "source_id": "Perturbation Theory of the Helium Atom",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "perturbation",
+   "prompt": "<p>To first order in perturbation theory, a two-electron atom or ion with nuclear charge $Z$ has $E^0 = -Z^2\\ E_h$ and $E^1 = \\tfrac{5Z}{8}\\ E_h$ (for helium these give $-4\\ E_h$ and $+34.0$ eV).</p><ol type=\"a\"><li>Find $E^0 + E^1$ for $\\mathrm{Li^+}$, in hartrees.</li><li>The measured ground-state energy of $\\mathrm{Li^+}$ is $-7.280\\ E_h$. By what percentage does the first-order energy deviate from it?</li></ol>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": -7.125,
+      "unit": "E_h",
+      "hint": "Put Z = 3 into both terms."
+     },
+     {
+      "part": "b",
+      "value": 2.13,
+      "unit": "%"
+     }
+    ],
+    "solution": "<p>a. With $Z = 3$, $E^0 = -9\\ E_h$ and $E^1 = \\tfrac{15}{8}\\ E_h = 1.875\\ E_h$, so $E^0 + E^1 = -7.125\\ E_h$.</p><p>b. $\\left|\\dfrac{-7.125 + 7.280}{-7.280}\\right| = 2.13\\%$. For helium the same estimate, $-2.750\\ E_h$, is 5.3% above the measured $-2.90372\\ E_h$: the repulsion matters less beside a larger nuclear charge.</p>"
+   }
+  },
+  {
+   "id": "ai2",
+   "source_id": "Trial Wavefunction #4: Approximation with Two Parameters",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "variational",
+   "prompt": "<p>Hylleraas's trial wavefunction (Equation 8.2.14) gives $E_{trial} = -2.89112\\ E_h$ for helium, against $E_{\\exp} = -2.90372\\ E_h$. Compute the relative deviation in percent, to three significant figures.</p>",
+   "answer": {
+    "type": "number",
+    "generated_by": "ai",
+    "value": 0.434,
+    "unit": "%",
+    "tol": 0.01,
+    "hint": "Divide the difference of the two energies by the experimental energy.",
+    "solution": "<p>$\\left|\\dfrac{-2.89112 + 2.90372}{-2.90372}\\right| = \\dfrac{0.01260}{2.90372} = 0.434\\%$, the 0.43% of Equation 8.2.15.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "ai1",
+   "concept": "helium-first-order-energy"
+  },
+  {
+   "exercise": "ai1",
+   "concept": "approximation-error"
+  },
+  {
+   "exercise": "ai2",
+   "concept": "approximation-error"
+  },
+  {
+   "exercise": "ai2",
+   "concept": "hylleraas-wavefunction"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-h0",
+   "kind": "correction",
+   "html": "The second bracket should read $-\\tfrac{1}{2}\\nabla_2^2 - \\tfrac{2}{r_2}$. With the minus sign printed in front of it, electron 2 would be repelled by the nucleus."
+  },
+  {
+   "id": "c-928a",
+   "kind": "correction",
+   "html": "The section prints no Equation 9-28. The expression meant is the display just above, $E^1 = \\langle\\psi^0|\\hat{H}^1|\\psi^0\\rangle$, the first-order term of Equation 7.4.18."
+  },
+  {
+   "id": "c-928b",
+   "kind": "correction",
+   "html": "Equation 9-28 is again the display $E^1 = \\langle\\psi^0|\\hat{H}^1|\\psi^0\\rangle$ above."
+  },
+  {
+   "id": "c-e0",
+   "kind": "correction",
+   "html": "Each electron in a hydrogen-like 1s orbital with $Z = 2$ has the energy $-Z^2/2n^2 = -2\\ E_h$, so $E^0 = -4\\ E_h = -108.8$ eV. The minus signs are missing as printed."
+  },
+  {
+   "id": "c-eexp",
+   "kind": "correction",
+   "html": "Ionization energies are positive, so the ground-state energy is $E_{\\exp} = -(I_1 + I_2) = -2.90372\\ E_h$."
+  },
+  {
+   "id": "c-header",
+   "kind": "correction",
+   "html": "The header means the variational method applied to the helium atom."
+  },
+  {
+   "id": "c-chandra",
+   "kind": "correction",
+   "html": "The name is Chandrasekhar."
+  },
+  {
+   "id": "c-numerator",
+   "kind": "correction",
+   "html": "The first term of the numerator is $-2.90143\\ E_h$; the unit is missing as printed."
+  },
+  {
+   "id": "c-007",
+   "kind": "correction",
+   "html": "Equation 8.2.17 gives 0.0789%, which is within 0.08%, not 0.07%."
+  }
+ ]
+}

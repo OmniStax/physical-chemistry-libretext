@@ -1,0 +1,47 @@
+<section id="atomic-units">
+<h2>Writing quantities in atomic units</h2>
+<p><span data-concept="atomic-units">Atomic units</span> (au or a.u.) form a system of natural units which is especially convenient for atomic physics calculations. <span data-concept="atomic-units">Atomic units</span>, like SI units, have a unit of mass, a unit of length, and so on. However, the use and notation is somewhat different from SI. Suppose a particle with a mass of <em>m</em> has 3.4 times the mass of electron. The value of mass $\km$ can be written in three ways:</p>
+<ul><li>$\km=3.4\; \kme$: This is the clearest notation (but least common), where the atomic unit is included explicitly as a symbol.</li><li>$\km=3.4\; a.u.$: This notation is ambiguous, but is common. Here, it means that the mass $\km$ is 3.4 times the atomic unit of mass. If considering a length $L$ of 3.4 times the atomic unit of length, the equation would look the same, $L= 3.4 \;a.u.$ The dimension needs to be inferred from context, which is sloppy.</li><li>$\km = 3.4$: This notation is similar to the previous one, and has the same dimensional ambiguity. It comes from formally setting the atomic units to 1 (Table 8.1.1).</li></ul>
+<p>This article deals with "Hartree type" of <span data-concept="atomic-units">atomic units</span>, where the numerical values of the following four fundamental physical constants are all unity by definition:</p>
+<div class="book-table">
+  <div class="tcap"><span class="eyebrow">Table 8.1.1</span><span>Fundamental atomic units</span></div>
+  <table>
+    <thead><tr><th>Dimension</th><th>Name</th><th>Symbol/Definition</th><th>Value in SI units</th><th>Value in Atomic Units</th></tr></thead>
+    <tbody>
+      <tr><td>mass</td><td>electron rest mass</td><td>$\kme$</td><td><span data-type="mass">9.109×10<sup>−31</sup> kg</span></td><td>1</td></tr>
+      <tr><td>charge</td><td>elementary charge</td><td>$\ke$</td><td><span data-type="charge">1.602×10<sup>−19</sup> C</span></td><td>1</td></tr>
+      <tr><td>action</td><td><span data-concept="reduced-plancks-constant">reduced Planck's constant</span></td><td>$\hbar = \dfrac{h}{2\pi}$</td><td>1.054×10<sup>−34</sup> J·s</td><td>1</td></tr>
+      <tr><td>electric constant<sup>−1</sup></td><td>Coulomb force constant</td><td>$\displaystyle k_e = \frac{1}{4 \pi \epsilon_o}$</td><td>8.987 x 10<sup>9</sup> kg·m<sup>3</sup>·s<sup>−2</sup>·C<sup>−2</sup></td><td>1</td></tr>
+    </tbody>
+  </table>
+</div>
+<div class="example" id="ex-8-1-1">
+<h3>Example 8.1.1 · Simplifying the Hamiltonian</h3>
+<p>Use the atomic units definitions in Table 8.1.1 to contrast the <span data-concept="hamiltonian-operator">Hamiltonian</span> for a Helium atom in Si units and in atomic units.</p>
+<h4>Solution</h4>
+<p>In SI units, the <span data-concept="multi-electron-hamiltonian">Hamiltonian for a Helium atom</span> is</p>
+$$ \kH = -\dfrac {\hbar ^2}{2\kme} (\nabla ^2_1 + \nabla ^2_2) -\dfrac {2\ke^2}{4 \pi \epsilon _0 \kra} - \dfrac {2\ke^2}{4 \pi \epsilon _0 \krb} + \dfrac {\ke^2}{4 \pi \epsilon _0 \krab} $$
+<p><span data-concept="helium-hamiltonian-atomic-units">In atomic units, the same Hamiltonian</span></p>
+$$ \kH = -\dfrac {1}{2} (\nabla ^2_1 + \nabla ^2_2) - \dfrac {2}{\kra} - \dfrac {2}{\krb} + \dfrac {1}{\krab} $$
+<p>All the units that make the SI version of the Hamiltonian disappear to emphasize the key aspects of the operator.</p>
+</div>
+</section>
+
+<section id="derived-units">
+<h2>Derived units and the Bohr atom</h2>
+<p><span data-concept="atomic-units">Atomic units</span> are derived from certain fundamental properties of the physical world, and are free of anthropocentric considerations. It should be kept in mind that atomic units were designed for atomic-scale calculations in the present-day universe, with units normalize the reduced Planck constant and also mass and charge of the electron are set to 1, and, as a result, the speed of light in atomic units is a large value, <span data-concept="fine-structure-constant">$1/\alpha \approx 137$</span>. For example, the orbital velocity of an electron around a small atom is of the order of 1 in atomic units. Table 8.1.2 give a few derived units. Some of them have proper names and symbols assigned, as indicated in the table.</p>
+<div class="book-table">
+  <div class="tcap"><span class="eyebrow">Table 8.1.2</span><span>Derived atomic units</span></div>
+  <table>
+    <thead><tr><th>Dimension</th><th>Name</th><th>Symbol</th><th>Expression</th><th>Value in SI units</th><th>Value in more common units</th></tr></thead>
+    <tbody>
+      <tr><td><em>length</em></td><td><span data-concept="bohr-radius">bohr</span></td><td>$a_o$</td><td>$4\pi \epsilon_0 \hbar^2 / (\kme \ke^2) = \hbar / (\kme c \alpha)$</td><td><span data-type="length">5.291×10<sup>−11</sup> m</span></td><td><span data-type="length">0.052 nm</span><sup class="fn" data-note="c-bohr"></sup> = <span data-type="length">0.529 Å</span></td></tr>
+      <tr><td><em>energy</em></td><td><span data-concept="hartree">hartree</span></td><td>$\kEh$</td><td>$\kme \ke^4/(4\pi\epsilon_0\hbar)^2 = \alpha^2 \kme c^2$</td><td><span data-type="energy">4.359×10<sup>−18</sup> J</span></td><td><span data-type="energy">27.2 eV</span> = <span data-type="energy">627.5 kcal·mol<sup>−1</sup></span></td></tr>
+      <tr><td><em>time</em></td><td></td><td></td><td>$\hbar / \kEh$</td><td><span data-type="time">2.418×10<sup>−17</sup> s</span></td><td></td></tr>
+      <tr><td><em>velocity</em></td><td></td><td></td><td>$\kao \kEh / \hbar = \alpha c$</td><td><span data-type="velocity">2.187×10<sup>6</sup> m·s<sup>−1</sup></span></td><td></td></tr>
+    </tbody>
+  </table>
+</div>
+<p>Atomic units are chosen to reflect the properties of electrons in atoms. This is particularly clear from the classical <span data-concept="bohr-model">Bohr model</span> of the hydrogen atom in its ground state. The ground state electron orbiting the hydrogen nucleus has (in the classical <span data-concept="bohr-model">Bohr model</span>):</p>
+<ul><li>Orbital velocity = 1</li><li>Orbital radius = 1</li><li>Angular momentum = 1</li><li>Orbital period = 2π</li><li>Ionization energy = <sup>1</sup>⁄<sub>2</sub></li><li>Electric field (due to nucleus) = 1</li><li>Electrical attractive force (due to nucleus) = 1</li></ul>
+</section>

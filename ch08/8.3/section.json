@@ -1,0 +1,218 @@
+{
+ "id": "8.3",
+ "module": "13441",
+ "chapter": "8",
+ "title": "Hartree-Fock Equations are Solved by the Self-Consistent Field Method",
+ "short": "Hartree method and SCF",
+ "lead": "No atom with more than one electron can be solved exactly. The Hartree method lets each electron move in the averaged field of the others' smeared-out charge, which turns one equation in all the electrons into one-electron equations that are solved over and over until the field stops changing.",
+ "objectives": [
+  "Show how the Hartree approximation can be used to solve for the wavefunctions and energies of multi-electron atoms.",
+  "Understand the orbital approach of independent orbitals is an approximation to a mutlti-electron system with the motions of all electrons coupled together.",
+  "Demonstate how the Self-Consistant Field (SCF) calculation is needed to support the Hartree approximation"
+ ],
+ "summary_html": "",
+ "notes": "Credited to Theodore Zielinski. Figure 8.3.1, a flowchart printed without credit, is shipped under the page's licence.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercise here; the one exercise and its solution were written by AI, which also chose its Bloom level and concept tags.",
+ "figures": [
+  {
+   "id": "sim-scf",
+   "kind": "sim",
+   "number": "8.3.1",
+   "widths": [
+    740
+   ],
+   "originals": [
+    "/media/ch08/90907-mindtouch.png"
+   ],
+   "original_caption": "Algorithm for Self-consistent field theory.",
+   "draws": [
+    "energy",
+    "probability-density"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "fig-8-3-2",
+   "kind": "photo",
+   "number": "8.3.2",
+   "widths": [
+    462,
+    471
+   ],
+   "draws": []
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "hartree-method",
+   "concept": "hartree-approximation",
+   "verb": "uses"
+  },
+  {
+   "span": "unsolvable",
+   "concept": "electron-electron-repulsion",
+   "verb": "reinforces"
+  },
+  {
+   "span": "unsolvable",
+   "concept": "multi-electron-hamiltonian",
+   "verb": "reinforces"
+  },
+  {
+   "span": "hartree-approximation",
+   "concept": "hartree-approximation",
+   "verb": "introduces"
+  },
+  {
+   "span": "hartree-approximation",
+   "concept": "hartree-equations",
+   "verb": "introduces"
+  },
+  {
+   "span": "hartree-approximation",
+   "concept": "mean-field-potential",
+   "verb": "introduces"
+  },
+  {
+   "span": "hartree-approximation",
+   "concept": "electron-charge-density",
+   "verb": "introduces"
+  },
+  {
+   "span": "hartree-approximation",
+   "concept": "coulomb-integral",
+   "verb": "introduces"
+  },
+  {
+   "span": "hartree-approximation",
+   "concept": "hartree-orbital-energy",
+   "verb": "introduces"
+  },
+  {
+   "span": "hartree-approximation",
+   "concept": "expectation-value",
+   "verb": "uses"
+  },
+  {
+   "span": "hartree-approximation",
+   "concept": "ionization-energy",
+   "verb": "uses"
+  },
+  {
+   "span": "scf",
+   "concept": "self-consistent-field-method",
+   "verb": "introduces"
+  },
+  {
+   "span": "scf",
+   "concept": "hartree-equations",
+   "verb": "uses"
+  },
+  {
+   "span": "scf",
+   "concept": "effective-nuclear-charge",
+   "verb": "reinforces"
+  },
+  {
+   "span": "scf",
+   "concept": "screening-model-limits",
+   "verb": "introduces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "ai1",
+   "source_id": "The Self-Consistant Field (SCF) Approach to the Variational Method",
+   "kind": "exercise",
+   "bloom": "Understand",
+   "place": {
+    "at": "end"
+   },
+   "cite": "scf",
+   "prompt": "<p>Why must the Hartree equations be solved again and again in the self-consistent field loop of Figure 8.3.1, instead of once?</p>",
+   "answer": {
+    "type": "choice",
+    "generated_by": "ai",
+    "options": [
+     "The potential each electron moves in is built from the other electrons' orbitals, which are the solutions being sought.",
+     "No atom has an exact solution, so each pass adds a perturbation correction of the next order.",
+     "The variational method needs a trial function with one more parameter on every pass.",
+     "The attraction of the nucleus changes each time the electrons rearrange."
+    ],
+    "correct": 0,
+    "hint": "Look at what goes into the potential $V_{electron}(\\mathbf{r})$.",
+    "solution": "<p>$V_{electron}(\\mathbf{r})$ comes from the charge density $\\rho$ of the occupied orbitals, and the orbitals come from solving the equations with that potential. A guessed density gives a potential, the potential gives new orbitals and a new density, and the loop repeats until the density coming out matches the density that went in. That density is the quantity tested at \"same as before?\". For helium the orbital energy settles on $-0.918\\ E_h$ within about six passes from the bare-nucleus guess.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "ai1",
+   "concept": "self-consistent-field-method"
+  },
+  {
+   "exercise": "ai1",
+   "concept": "mean-field-potential"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-dates",
+   "kind": "correction",
+   "html": "Hartree published the method in 1928, and Fock's improvement followed in 1930."
+  },
+  {
+   "id": "c-831",
+   "kind": "correction",
+   "html": "Equation 8.3.1 is the nuclear-electron term. The electron-electron term is the unnumbered display after it."
+  },
+  {
+   "id": "c-rho",
+   "kind": "correction",
+   "html": "The orbital in the sum carries the index of the sum: $\\rho(\\mathbf{r}) = \\sum_i^{\\text{occupied}} |\\psi_i(\\mathbf{r})|^2$."
+  },
+  {
+   "id": "c-sum",
+   "kind": "correction",
+   "html": "The sum runs over the other orbitals, $\\sum_{k \\neq j}$, as the next paragraph says."
+  },
+  {
+   "id": "c-jdenom",
+   "kind": "correction",
+   "html": "The denominator is the distance between the electrons, $|r - r'|$."
+  },
+  {
+   "id": "c-epsJ",
+   "kind": "correction",
+   "html": "The left side is $\\epsilon_j$, the energy of orbital $\\phi_j$, and the sum runs over $k \\neq j$."
+  },
+  {
+   "id": "c-2p",
+   "kind": "correction",
+   "html": "The last factor is $\\psi_{2p}(6)$: carbon's sixth electron is in a 2p orbital."
+  }
+ ]
+}

@@ -1,0 +1,347 @@
+{
+ "id": "8.11",
+ "module": "13449",
+ "chapter": "8",
+ "title": "Using Atomic Term Symbols to Interpret Atomic Spectra",
+ "short": "Term symbols and atomic spectra",
+ "lead": "Under high resolution, lines of atomic spectra that look single turn out to be groups of closely spaced lines. Spin-orbit coupling splits the levels behind them, and term symbols, with selection rules written in their quantum numbers, say which transitions make up each line of hydrogen and sodium.",
+ "objectives": [
+  "Demonstrate how spin-orbit coupling is experimentally observed in atomic spectra",
+  "Use atomic terms symbols to ascribe transitions to specific angular momenta states described by atomic term symbols"
+ ],
+ "summary_html": "",
+ "notes": "Adapted from Theodore Zielinski's page under CC BY-NC-SA 4.0, with the current-loop picture from OpenStax's University Physics under CC BY 4.0; the book gives no credit for Figure 8.11.2 or the sodium image, the photograph of Figure 8.11.1 (a scanned plate from H. E. White's Introduction to Atomic Spectra, 1934) is not reproduced, and the relative strengths of the five Hα lines come from Einstein A coefficients in the NIST Atomic Spectra Database.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "Exercises 8.11.3 to 8.11.5 print no key; their solutions were written by AI, as were the Bloom levels and concept tags.",
+ "figures": [
+  {
+   "id": "sim-h-alpha",
+   "kind": "sim",
+   "number": "8.11.1",
+   "folds": [
+    "8.11.2"
+   ],
+   "originals": [
+    "/media/ch08/51419-H_n=2and3_splittings.gif"
+   ],
+   "withheld": "The book's Figure 8.11.1 is a scan of a photographic plate printed in H. E. White's Introduction to Atomic Spectra (1934) and is not reproduced.",
+   "original_caption": "8.11.1: Photograph of the first line in the Balmer series for atomic hydrogen and deuterium. These lines are identified as $H^1_{\\alpha}$ (hydrogen) and $H^2_{\\alpha}$ (deuterium), respectively. From H.E. White, Introduction to Atomic Spectra (McGraw-Hill, New York, 1934) p. 132 and G.N. Lewis and F.H. Spedding, Phys. Rev. 43, 964 (1933). The doublet splitting for $H^1_{\\alpha}$ at 656.279 nm was measured to be 0.326 $cm^{-1}$. 8.11.2: Energy level diagram for the electronic states of hydrogen corresponding to an electron with the principal quantum number n = 3 and n = 2. While the relative energies of the terms are drawn to scale, the energy of n = 3 relative to n = 2 is not. Transitions to the $2P_{3/2}$ and ($2P_{1/2}$ and $2S_{1/2}$) levels correspond to the two lines in the $H^1_{\\alpha}$ band, which have a measured separation of 0.326 cm⁻¹.",
+   "widths": [
+    321
+   ],
+   "draws": [
+    "wavenumber"
+   ],
+   "facts": [
+    "#ff0000"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "fig-current-loop",
+   "kind": "figure",
+   "originals": [
+    "/media/ch08/124741-CNX_UPhysics_41_02_AtomicLoop.jpg"
+   ],
+   "draws": [],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "kept as the book prints it"
+    }
+   ]
+  },
+  {
+   "id": "sim-sodium-doublets",
+   "kind": "sim",
+   "originals": [
+    "/media/ch08/91226-emission_spec.jpg"
+   ],
+   "original_caption": "Figure above does not show this splitting).",
+   "widths": [
+    567
+   ],
+   "draws": [
+    "wavenumber",
+    "wavelength"
+   ],
+   "facts": [
+    "spectrum",
+    "#111114"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "multiplets",
+   "concept": "fine-structure",
+   "verb": "introduces"
+  },
+  {
+   "span": "multiplets",
+   "concept": "balmer-formula",
+   "verb": "uses"
+  },
+  {
+   "span": "multiplets",
+   "concept": "hydrogen-fine-structure",
+   "verb": "uses"
+  },
+  {
+   "span": "spin-orbit-coupling",
+   "concept": "spin-orbit-interaction",
+   "verb": "reinforces"
+  },
+  {
+   "span": "spin-orbit-coupling",
+   "concept": "magnetic-dipole-moment",
+   "verb": "uses"
+  },
+  {
+   "span": "spin-orbit-coupling",
+   "concept": "gyromagnetic-ratio",
+   "verb": "uses"
+  },
+  {
+   "span": "spin-orbit-coupling",
+   "concept": "fine-structure",
+   "verb": "uses"
+  },
+  {
+   "span": "spin-orbit-coupling",
+   "concept": "total-angular-momentum-quantum-number",
+   "verb": "uses"
+  },
+  {
+   "span": "atomic-spectroscopy",
+   "concept": "one-electron-selection-rules",
+   "verb": "introduces"
+  },
+  {
+   "span": "atomic-spectroscopy",
+   "concept": "russell-saunders-selection-rules",
+   "verb": "introduces"
+  },
+  {
+   "span": "atomic-spectroscopy",
+   "concept": "hydrogen-fine-structure",
+   "verb": "introduces"
+  },
+  {
+   "span": "atomic-spectroscopy",
+   "concept": "sodium-d-lines",
+   "verb": "introduces"
+  },
+  {
+   "span": "atomic-spectroscopy",
+   "concept": "selection-rule",
+   "verb": "uses"
+  },
+  {
+   "span": "atomic-spectroscopy",
+   "concept": "term-symbol",
+   "verb": "reinforces"
+  },
+  {
+   "span": "atomic-spectroscopy",
+   "concept": "term-degeneracy",
+   "verb": "reinforces"
+  },
+  {
+   "span": "atomic-spectroscopy",
+   "concept": "ls-coupling",
+   "verb": "uses"
+  },
+  {
+   "span": "atomic-spectroscopy",
+   "concept": "jj-coupling",
+   "verb": "uses"
+  },
+  {
+   "span": "atomic-spectroscopy",
+   "concept": "fine-structure",
+   "verb": "reinforces"
+  },
+  {
+   "span": "atomic-spectroscopy",
+   "concept": "spin-orbit-interaction",
+   "verb": "uses"
+  },
+  {
+   "span": "atomic-spectroscopy",
+   "concept": "balmer-formula",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "e3",
+   "source_id": "exr:8.11.3",
+   "source_number": "Exercise 8.11.3",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "atomic-spectroscopy",
+   "prompt": "<p>Confirm that the nine term symbols in Table 8.11.1 are correct.</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "With one electron, $L = l$ and $S = \\tfrac{1}{2}$; $J$ runs from $|L - S|$ to $L + S$.",
+    "solution": "<p>Hydrogen has one electron, so $S = s = \\tfrac{1}{2}$ and every term is a doublet, $2S + 1 = 2$, and $L = l$. $J$ runs from $|L - S|$ to $L + S$, so $J = L \\pm \\tfrac{1}{2}$ when $L > 0$ and $J = \\tfrac{1}{2}$ alone when $L = 0$.</p><ul><li>An s electron ($l = 0$): $L = 0$, $J = \\tfrac{1}{2}$, giving $^2S_{1/2}$ for 1s, 2s and 3s.</li><li>A p electron ($l = 1$): $L = 1$, $J = \\tfrac{1}{2}, \\tfrac{3}{2}$, giving $^2P_{1/2}$ and $^2P_{3/2}$ for 2p and 3p.</li><li>A d electron ($l = 2$): $L = 2$, $J = \\tfrac{3}{2}, \\tfrac{5}{2}$, giving $^2D_{3/2}$ and $^2D_{5/2}$ for 3d.</li></ul><p>That is $1 + 1 + 2 + 1 + 2 + 2 = 9$ term symbols, as the table lists.</p>"
+   }
+  },
+  {
+   "id": "e4",
+   "source_id": "exr:8.11.4",
+   "source_number": "Exercise 8.11.4",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "atomic-spectroscopy",
+   "prompt": "<p>Confirm that the values for the degeneracy in Table 8.11.1 are correct and that the total number of states add up to 8 for n = 2 and 18 for n = 3.</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "Total states for n = 2",
+      "value": 8,
+      "tol": 0,
+      "hint": "A level with total angular momentum quantum number $J$ has $2J + 1$ values of $m_J$."
+     },
+     {
+      "part": "Total states for n = 3",
+      "value": 18,
+      "tol": 0
+     }
+    ],
+    "solution": "<p>Each term has one state for each $m_J$ from $+J$ to $-J$, so its degeneracy is $2J + 1$: 2 for $J = \\tfrac{1}{2}$, 4 for $J = \\tfrac{3}{2}$ and 6 for $J = \\tfrac{5}{2}$, as the table gives. For n = 2: $^2S_{1/2}$ (2) + $^2P_{1/2}$ (2) + $^2P_{3/2}$ (4) = 8. For n = 3: $^2S_{1/2}$ (2) + $^2P_{1/2}$ (2) + $^2P_{3/2}$ (4) + $^2D_{3/2}$ (4) + $^2D_{5/2}$ (6) = 18. Both equal $2n^2$, twice the $n^2$ orbitals, so coupling the spin to the orbital motion regroups the states without changing their number.</p>"
+   }
+  },
+  {
+   "id": "e5",
+   "source_id": "exr:8.11.5",
+   "source_number": "Exercise 8.11.5",
+   "kind": "exercise",
+   "bloom": "Analyze",
+   "place": {
+    "at": "end"
+   },
+   "cite": "atomic-spectroscopy",
+   "prompt": "<p>Use the Russell-Saunders selection rules to determine which transitions contribute to the $H_{\\alpha}$ line in the hydrogen spectrum.</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "List the terms of n = 3 and n = 2 from Table 8.11.1. With one electron, $\\Delta L$ must equal $\\Delta l = \\pm 1$; then check $\\Delta J$.",
+    "solution": "<p>$H_\\alpha$ is an electron falling from n = 3 to n = 2. Every term is a doublet, so $\\Delta S = 0$ always holds. With one electron $L = l$, and $\\Delta l = \\pm 1$ rules out $\\Delta L = 0$, so only S ↔ P and P ↔ D transitions occur. Then $\\Delta J = 0, \\pm 1$ leaves seven transitions:</p><ul><li>$3\\,^2S_{1/2} \\rightarrow 2\\,^2P_{1/2}$ and $3\\,^2S_{1/2} \\rightarrow 2\\,^2P_{3/2}$</li><li>$3\\,^2P_{1/2} \\rightarrow 2\\,^2S_{1/2}$ and $3\\,^2P_{3/2} \\rightarrow 2\\,^2S_{1/2}$</li><li>$3\\,^2D_{3/2} \\rightarrow 2\\,^2P_{1/2}$, $3\\,^2D_{3/2} \\rightarrow 2\\,^2P_{3/2}$ and $3\\,^2D_{5/2} \\rightarrow 2\\,^2P_{3/2}$</li></ul><p>$3\\,^2D_{5/2} \\rightarrow 2\\,^2P_{1/2}$ is forbidden ($\\Delta J = 2$), and so are $3P \\rightarrow 2P$ and $3S \\rightarrow 2S$ ($\\Delta l = 0$). Terms with the same $n$ and $J$ have the same energy, so the seven transitions fall at five wavenumbers, the five lines of Figure 8.11.2. The two strongest, $3\\,^2D_{5/2} \\rightarrow 2\\,^2P_{3/2}$ and $3\\,^2D_{3/2} \\rightarrow 2\\,^2P_{1/2}$ (with $3\\,^2P_{3/2} \\rightarrow 2\\,^2S_{1/2}$ at the same place), make the doublet.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "e3",
+   "concept": "hydrogen-fine-structure"
+  },
+  {
+   "exercise": "e3",
+   "concept": "term-symbol"
+  },
+  {
+   "exercise": "e4",
+   "concept": "hydrogen-fine-structure"
+  },
+  {
+   "exercise": "e4",
+   "concept": "term-degeneracy"
+  },
+  {
+   "exercise": "e5",
+   "concept": "russell-saunders-selection-rules"
+  },
+  {
+   "exercise": "e5",
+   "concept": "hydrogen-fine-structure"
+  },
+  {
+   "exercise": "e5",
+   "concept": "one-electron-selection-rules"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-1933",
+   "kind": "correction",
+   "html": "Lewis and Spedding's measurement, cited under Figure 8.11.1, was published in 1933."
+  },
+  {
+   "id": "c-loop",
+   "kind": "correction",
+   "html": "The book prints this picture as a second Figure 8.11.1, the number it also gives the photograph of the $H_\\alpha$ doublet. It is from OpenStax's University Physics, shared under CC BY 4.0."
+  },
+  {
+   "id": "c-singlet",
+   "kind": "correction",
+   "html": "A singlet has $S = 0$. The transitions meant are between singlet ($S = 0$) and triplet ($S = 1$) states, which change $S$."
+  },
+  {
+   "id": "c-nd",
+   "kind": "correction",
+   "html": "This third configuration has the valence electron in a d orbital, $[Ne]nd^1$. Here and in the lines below, “microstates” means levels: $^2D_{5/2}$ and $^2D_{3/2}$ are two levels holding ten microstates."
+  },
+  {
+   "id": "c-5s",
+   "kind": "correction",
+   "html": "5s is a single level, $^2S_{1/2}$. The two lines come from the two levels of 3p that the electron ends in, as for the 4d lines."
+  },
+  {
+   "id": "c-5896",
+   "kind": "correction",
+   "html": "$D_1$ is at 589.6 nm."
+  },
+  {
+   "id": "c-plate",
+   "kind": "correction",
+   "html": "The photograph is Figure 8.11.1."
+  },
+  {
+   "id": "c-na-image",
+   "kind": "correction",
+   "figure": "sim-sodium-doublets",
+   "html": "The image is not sodium's spectrum in this range. It shows a blue-green line and a yellow one, while sodium's six lines here run from yellow-green at 568 nm to orange at 616 nm."
+  }
+ ]
+}

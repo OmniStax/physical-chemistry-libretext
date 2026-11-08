@@ -50,7 +50,9 @@ const HARTREE_EV = 27.211386, HARTREE_J = 4.3597447e-18, A0_PM = 52.917721;
     dot(ctx, O.x, O.y, F.el('He'), true, 15);
     hits.push({ x: O.x, y: O.y, r: 16, name: 'the helium nucleus, charge +2e, at the origin' });
     P1.draw(ctx, ax, c1); P2.draw(ctx, ax, c2);
+    /* the body is the electron's convention colour (root 7.2); a ring in each referent's colour tells the two apart */
     dot(ctx, p1.x, p1.y, F.el('e-'), true, 10); dot(ctx, p2.x, p2.y, F.el('e-'), true, 10);
+    for (const [p, c] of [[p1, c1], [p2, c2]]) { ctx.save(); ctx.strokeStyle = c; ctx.lineWidth = 5; ctx.beginPath(); ctx.arc(p.x, p.y, 17, 0, 2 * Math.PI); ctx.stroke(); ctx.restore(); }
     hits.push({ x: p1.x, y: p1.y, r: 18, name: 'electron 1: drag it' }, { x: p2.x, y: p2.y, r: 18, name: 'electron 2: drag it' });
     F.label(ctx, 'electron 1', p1.x, p1.y, { side: p1.y < p2.y ? 'above' : 'below', size: 20, color: c1, gap: 20 });
     F.label(ctx, 'electron 2', p2.x, p2.y, { side: p1.y < p2.y ? 'below' : 'above', size: 20, color: c2, gap: 20 });

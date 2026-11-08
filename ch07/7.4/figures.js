@@ -103,7 +103,7 @@ function eigenvalues(A) {
       if (ys[2] <= 30) text(ctx, `n = ${k}`, ay.X(cols[2] + hw) + 10, ay.Y(ys[2]), on ? ce : alpha(PAL.ink, 0.6), { size: 17, base: 'middle' });
       ys.forEach((y, i) => { if (y <= 30) hits.push({ x: ay.X(cols[i]), y: ay.Y(y), r: 14, name: `${['unperturbed', 'first-order', 'exact'][i]} energy of level ${k}: ${fmt(y, 2)} h²/8mL²` }); });
     }
-    tex(d.readout, `\\kEn \\approx \\kEnzero + \\langle n^o|\\kHonehat|n^o\\rangle \\\\ E_{${n}} \\approx ${fmt(n * n, 2)} + ${fmt(E1(n), 2)} = ${fmt(first, 2)}\\ \\dfrac{h^2}{8\\km\\kL^2} \\\\ E_{${n}} = ${fmt(ex, 2)}\\ \\dfrac{h^2}{8\\km\\kL^2}\\ \\text{(exact)}`);
+    tex(d.readout, `\\kEn \\approx \\kEnzero + \\langle n^o|\\kHonehat|n^o\\rangle \\\\ \\kE_{${n}} \\approx ${fmt(n * n, 2)} + ${fmt(E1(n), 2)} = ${fmt(first, 2)}\\ \\dfrac{h^2}{8\\km\\kL^2} \\\\ \\kE_{${n}} = ${fmt(ex, 2)}\\ \\dfrac{h^2}{8\\km\\kL^2}\\ \\text{(exact)}`);
   }
   register(d.fig, { update: () => {}, draw });
 })();
@@ -186,8 +186,8 @@ function eigenvalues(A) {
     const a = nz[0], b = nz[1];
     const term = (m) => `${c[m] < 0 ? '-' : '+'} ${fmt(Math.abs(c[m]), 3)}\\,|${m}^o\\rangle`;
     tex(d.readout, `|0\\rangle \\approx |0^o\\rangle + c_{${a},0}|${a}^o\\rangle + c_{${b},0}|${b}^o\\rangle \\\\ |0\\rangle \\approx |0^o\\rangle ${term(a)} ${term(b)} \\\\ ` + (cubic
-      ? `E_0 \\approx \\tfrac{1}{2}h\\knu + 0 = 0.500\\,h\\knu`
-      : `E_0 \\approx \\tfrac{1}{2}h\\knu + \\dfrac{3\\gamma}{4\\alpha^2} = (0.500 + ${fmt(E1, 3)})\\,h\\knu = ${fmt(E0, 3)}\\,h\\knu`));
+      ? `\\kE_{0} \\approx \\tfrac{1}{2}h\\knu + 0 = 0.500\\,h\\knu`
+      : `\\kE_{0} \\approx \\tfrac{1}{2}h\\knu + \\dfrac{3\\gamma}{4\\alpha^2} = (0.500 + ${fmt(E1, 3)})\\,h\\knu = ${fmt(E0, 3)}\\,h\\knu`));
   }
   register(d.fig, { update: () => {}, draw });
 })();

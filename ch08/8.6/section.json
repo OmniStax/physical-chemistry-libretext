@@ -1,0 +1,336 @@
+{
+ "id": "8.6",
+ "module": "13444",
+ "chapter": "8",
+ "title": "Antisymmetric Wavefunctions can be Represented by Slater Determinants",
+ "short": "Slater determinants",
+ "lead": "Helium's two electrons, in the ground state and in the first excited state, show how antisymmetric wavefunctions are built from spin-orbitals. The Slater determinant turns that construction into a recipe for any number of electrons.",
+ "objectives": [
+  "Understand how the Pauli Exclusion principle affects the electronic configuration of mulit-electron atoms",
+  "Understand how determinantal wavefunctions (Slater determinents) ensure the proper symmetry to electron permutation required by Pauli Exclusion Principle.",
+  "Connect the electron permutation symmetry requirement to multi-electron wavefunctions to the Aufbau principle taught in general chemistry courses"
+ ],
+ "summary_html": "",
+ "notes": "Written by Theodore Zielinski and shared under CC BY-NC-SA 4.0; the book gives no credit for Figures 8.6.1 and 8.6.2, which are shown under the page's licence.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "Exercises 8.6.1, 8.6.2 and 8.6.3A and their answers are the book's, with corrections under 8.6.2 and 8.6.3A; Exercise 8.6.3B, an open question the book leaves unanswered, has an AI answer. Bloom levels and concept tags were chosen by AI.",
+ "figures": [
+  {
+   "id": "sim-helium-configurations",
+   "kind": "sim",
+   "number": "8.6.1",
+   "folds": [
+    "8.6.2"
+   ],
+   "widths": [
+    223,
+    1139
+   ],
+   "originals": [
+    "/media/ch08/124755-HeGS1.png",
+    "/media/ch08/124756-HeGS_-_Copy.png"
+   ],
+   "original_caption": "8.6.1: Electron configuration for ground state of the helium atom. 8.6.2: Electron configurations for first-excited state of the helium atom.",
+   "draws": [
+    "wavefunction"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "sim-determinant",
+   "kind": "sim",
+   "draws": [
+    "wavefunction",
+    "length"
+   ],
+   "conventions": [
+    "e-"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "opening",
+   "concept": "electron-configuration",
+   "verb": "introduces"
+  },
+  {
+   "span": "opening",
+   "concept": "two-electron-spin-functions",
+   "verb": "introduces"
+  },
+  {
+   "span": "opening",
+   "concept": "spin-orbital",
+   "verb": "reinforces"
+  },
+  {
+   "span": "opening",
+   "concept": "pauli-exclusion-principle",
+   "verb": "uses"
+  },
+  {
+   "span": "opening",
+   "concept": "antisymmetry-principle",
+   "verb": "uses"
+  },
+  {
+   "span": "opening",
+   "concept": "permutation-symmetry",
+   "verb": "uses"
+  },
+  {
+   "span": "excited-state",
+   "concept": "microstate",
+   "verb": "introduces"
+  },
+  {
+   "span": "excited-state",
+   "concept": "two-electron-spin-functions",
+   "verb": "reinforces"
+  },
+  {
+   "span": "determinantal-wavefunctions",
+   "concept": "slater-determinant",
+   "verb": "introduces"
+  },
+  {
+   "span": "determinantal-wavefunctions",
+   "concept": "determinant-antisymmetry",
+   "verb": "introduces"
+  },
+  {
+   "span": "determinantal-wavefunctions",
+   "concept": "slater-determinant-combinations",
+   "verb": "introduces"
+  },
+  {
+   "span": "determinantal-wavefunctions",
+   "concept": "determinant",
+   "verb": "uses"
+  },
+  {
+   "span": "determinantal-wavefunctions",
+   "concept": "pauli-exclusion-principle",
+   "verb": "reinforces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "e1",
+   "source_id": "exr:8.6.1",
+   "source_number": "Exercise 8.6.1",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "opening",
+   "prompt": "<p>Is this linear combination of spin-orbitals</p>\n$$ | \\psi (\\mathbf{r}_1, \\mathbf{r}_2) \\rangle = \\dfrac {1}{\\sqrt {2}} [ \\varphi _{1s\\alpha}(\\mathbf{r}_1) \\varphi _{1s\\beta}( \\mathbf{r}_2) + \\varphi _{1s\\alpha}( \\mathbf{r}_2) \\varphi _{1s\\beta}(\\mathbf{r}_1)] $$\n<p>symmetric or antisymmetric with respect to permutation of the two electrons?</p>",
+   "answer": {
+    "type": "choice",
+    "options": [
+     "symmetric",
+     "antisymmetric"
+    ],
+    "correct": 0,
+    "generated_by": "source",
+    "solution": "<p>Symmetric</p>"
+   }
+  },
+  {
+   "id": "e2",
+   "source_id": "exr:8.6.2",
+   "source_number": "Exercise 8.6.2",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "determinantal-wavefunctions",
+   "prompt": "<p>Write and expand the Slater determinant for the ground-state $\\mathrm{Li}$ atom.</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "source",
+    "solution": "<p>Slater determinant for $\\mathrm{Li}$ atom:</p>\n$$ \\psi(1,2,3)=\\frac{1}{\\sqrt{6}} \\operatorname{det}\\left(\\begin{array}{ccc} {\\varphi _{1s} \\alpha(1)} & {\\varphi _{1s} \\beta(1)} & {\\varphi _{2s} \\alpha(1)} \\\\ \\varphi _{1s} \\alpha(2) & {\\varphi _{1s} \\beta(2)} & {\\varphi _{2s} \\alpha(2)} \\\\ {\\varphi _{1s} \\alpha(3)} & {\\varphi _{1s} \\beta(3)} & {\\varphi _{2s} \\alpha(3)} \\end{array}\\right) $$\n<p>Expansion of Slater determinant:</p>\n$$ \\psi(1,2,3)=\\frac{1}{\\sqrt{6}}[\\varphi _{1s} \\alpha(1) \\varphi _{1s} \\beta(2) \\varphi _{2s} \\alpha(3)-\\varphi _{1s} \\alpha(1) \\varphi _{1s} \\beta(3) \\varphi _{2s} \\alpha(2)+ \\varphi _{1s} \\alpha(3) \\varphi _{1s} \\beta(1) \\varphi _{2s} \\alpha(2) - \\varphi _{1s} \\alpha(3) \\varphi _{1s} \\beta(2) \\varphi _{1s} \\alpha(1)+ \\varphi _{1s} \\alpha(2) \\varphi _{1s} \\beta(3) \\varphi _{2s} \\alpha(3) ] $$<sup class=\"fn\" data-note=\"c-li-expansion\"></sup>\n<p>Note that this is also a valid ground state wavefunction</p>\n$$ \\psi(1,2,3)=\\frac{1}{\\sqrt{6}} \\operatorname{det}\\left(\\begin{array}{ccc} {\\varphi _{1s} \\alpha(1)} & {\\varphi _{1s} \\beta(1)} & {\\varphi _{2s} \\beta(1)} \\\\ \\varphi _{1s} \\alpha(2) & {\\varphi _{1s} \\beta(2)} & {\\varphi _{2s} \\beta(2)} \\\\ {\\varphi _{1s} \\alpha(3)} & {\\varphi _{1s} \\beta(3)} & {\\varphi _{2s} \\beta(3)} \\end{array}\\right) $$\n<p>What is the difference between these two wavefunctions?<sup class=\"fn\" data-note=\"c-li-question\"></sup></p>"
+   }
+  },
+  {
+   "id": "e3a",
+   "source_id": "exr:8.6.3A",
+   "source_number": "Exercise 8.6.3A",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "determinantal-wavefunctions",
+   "prompt": "<p>Write the Slater determinant for the $1s^12s^1$ excited state orbital configuration of the helium atom.</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "source",
+    "solution": "<p>Since there are 2 electrons in question, the Slater determinant should have 2 rows and 2 columns exactly. Additionally, this means the normalization constant is $1/\\sqrt{2}$.</p>\n<p>Each element of the determinant is a different combination of the spatial component and the spin component of the $1 s^{1} 2 s^{1}$ atomic orbitals</p>\n$$ \\frac{1}{\\sqrt{2}}\\left[\\begin{array}{cc} {\\varphi _{1_s}(1) \\alpha(1)} & {\\varphi {2_s}(1) \\beta(1)} \\\\ {\\varphi {1_s}(2) \\alpha(2)} & {\\varphi {2_s}(2) \\beta(2)} \\end{array}\\right] $$<sup class=\"fn\" data-note=\"c-bracket-notation\"></sup>"
+   }
+  },
+  {
+   "id": "e3b",
+   "source_id": "exr:8.6.3B",
+   "source_number": "Exercise 8.6.3B",
+   "kind": "exercise",
+   "bloom": "Evaluate",
+   "place": {
+    "at": "end"
+   },
+   "cite": "determinantal-wavefunctions",
+   "prompt": "<p>Critique the energy level diagram and shorthand electron configuration notation from the perspective of the indistinguishability criterion. Can you imagine a way to represent the wavefunction expressed as a Slater determinant in a schematic or shorthand notation that more accurately represents the electrons? (This is not a solved problem!)</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "In a Slater determinant, which spin-orbitals does electron 1 appear in?",
+    "solution": "<p>A stick diagram puts one arrow, read as one particular electron with one particular spin, on one particular orbital. The indistinguishability criterion forbids exactly that: in a Slater determinant every electron appears in every column, so no electron belongs to any spin-orbital, and each spin-orbital holds one electron's worth of charge shared among all the electrons. The diagram also suggests that every state is one arrangement of arrows, yet configurations 1 and 4 of Figure 8.6.2 never occur alone, only as the combinations $\\psi_1$ and $\\psi_3$.</p><p>A shorthand closer to the determinant lists the occupied spin-orbitals with no electron labels at all, such as $|1s\\alpha\\, 2s\\beta|$ for the determinant of Equation 8.6.10, and writes a state that needs two determinants as their sum, $\\psi_1 = (|1s\\alpha\\, 2s\\beta| - |1s\\beta\\, 2s\\alpha|)/\\sqrt{2}$. A diagram could do the same by drawing filled spin-orbitals instead of labelled arrows, and joining the diagrams of a combination with their signs. Labels for the whole atom, such as the term symbols of Section 8.8, go further and name a state by its total spin instead of by single electrons.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "e1",
+   "concept": "permutation-symmetry"
+  },
+  {
+   "exercise": "e1",
+   "concept": "two-electron-spin-functions"
+  },
+  {
+   "exercise": "e2",
+   "concept": "slater-determinant"
+  },
+  {
+   "exercise": "e2",
+   "concept": "electron-configuration"
+  },
+  {
+   "exercise": "e3a",
+   "concept": "slater-determinant"
+  },
+  {
+   "exercise": "e3a",
+   "concept": "microstate"
+  },
+  {
+   "exercise": "e3b",
+   "concept": "slater-determinant"
+  },
+  {
+   "exercise": "e3b",
+   "concept": "indistinguishable-particles"
+  },
+  {
+   "exercise": "e3b",
+   "concept": "slater-determinant-combinations"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-normalization",
+   "kind": "correction",
+   "html": "Normalized, $\\psi_3$ carries $\\tfrac{1}{2}$, like $\\psi_1$, and $\\psi_4$ carries $\\tfrac{1}{\\sqrt{2}}$, like $\\psi_2$: each bracket of two terms brings a factor $\\tfrac{1}{\\sqrt{2}}$."
+  },
+  {
+   "id": "c-combined-functions",
+   "kind": "correction",
+   "html": "The functions that had to be combined are $\\psi_1$ and $\\psi_3$ of Equation 8.6.6."
+  },
+  {
+   "id": "c-combination-normalization",
+   "kind": "correction",
+   "html": "The first line lacks the normalization: $|\\psi_1\\rangle = (|\\phi_a\\rangle - |\\phi_c\\rangle)/\\sqrt{2}$, which the second line's $\\tfrac{1}{2}$ already includes. Likewise $|\\psi_3\\rangle = (|\\phi_a\\rangle + |\\phi_c\\rangle)/\\sqrt{2}$."
+  },
+  {
+   "id": "c-li-expansion",
+   "kind": "correction",
+   "html": "A $3 \\times 3$ determinant expands into six terms. Two printed terms are wrong (the fourth ends in $\\varphi_{1s}\\alpha(1)$ and the fifth in $\\varphi_{2s}\\alpha(3)$, where $\\varphi_{2s}\\alpha(1)$ belongs in both), and $-\\varphi_{1s}\\alpha(2)\\varphi_{1s}\\beta(1)\\varphi_{2s}\\alpha(3)$ is missing. In full: $\\psi(1,2,3) = \\frac{1}{\\sqrt{6}}[\\varphi_{1s}\\alpha(1)\\varphi_{1s}\\beta(2)\\varphi_{2s}\\alpha(3) - \\varphi_{1s}\\alpha(1)\\varphi_{1s}\\beta(3)\\varphi_{2s}\\alpha(2) - \\varphi_{1s}\\alpha(2)\\varphi_{1s}\\beta(1)\\varphi_{2s}\\alpha(3) + \\varphi_{1s}\\alpha(2)\\varphi_{1s}\\beta(3)\\varphi_{2s}\\alpha(1) + \\varphi_{1s}\\alpha(3)\\varphi_{1s}\\beta(1)\\varphi_{2s}\\alpha(2) - \\varphi_{1s}\\alpha(3)\\varphi_{1s}\\beta(2)\\varphi_{2s}\\alpha(1)]$."
+  },
+  {
+   "id": "c-li-question",
+   "kind": "correction",
+   "html": "The key leaves the question open. The two determinants differ only in the spin of the 2s electron, $\\alpha$ in the first and $\\beta$ in the second: they are the two spin states, $M_S = +\\tfrac{1}{2}$ and $-\\tfrac{1}{2}$, of the same ground level, with the same energy."
+  },
+  {
+   "id": "c-bracket-notation",
+   "kind": "correction",
+   "html": "A determinant is written between vertical bars, $\\frac{1}{\\sqrt{2}}\\begin{vmatrix} \\varphi_{1s}(1)\\alpha(1) & \\varphi_{2s}(1)\\beta(1) \\\\ \\varphi_{1s}(2)\\alpha(2) & \\varphi_{2s}(2)\\beta(2) \\end{vmatrix}$, as in Equation 8.6.10; square brackets denote the matrix itself. This is configuration 1 of Figure 8.6.2, and the determinants of the other three configurations (Equations 8.6.11 to 8.6.13) answer the question as well."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "example-8-6-1",
+   "what": "symmetry to electron permutation",
+   "source": "Physical Chemistry (LibreTexts), 8.6 Antisymmetric Wavefunctions can be Represented by Slater Determinants, Example 8.6.1",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "|\\kpsi(\\kra, \\krb)\\rangle = \\tfrac{1}{\\sqrt{2}}[\\varphi_{1s\\alpha}(\\kra)\\varphi_{1s\\beta}(\\krb) - \\varphi_{1s\\alpha}(\\krb)\\varphi_{1s\\beta}(\\kra)]",
+       "src": "(8.6.3)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{|\\kpsi(\\kra, \\krb)\\rangle} = \\tfrac{1}{\\sqrt{2}}[\\mk{a}{\\varphi_{1s\\alpha}(\\kra)\\varphi_{1s\\beta}(\\krb)} \\mk{b}{- \\varphi_{1s\\alpha}(\\krb)\\varphi_{1s\\beta}(\\kra)}]"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{|\\kpsi(\\krb, \\kra)\\rangle} = \\tfrac{1}{\\sqrt{2}}[\\mk{a}{\\varphi_{1s\\alpha}(\\krb)\\varphi_{1s\\beta}(\\kra)} \\mk{b}{- \\varphi_{1s\\alpha}(\\kra)\\varphi_{1s\\beta}(\\krb)}]",
+       "cap": "Permuting the electrons means writing $\\mathbf{r}_2$ wherever $\\mathbf{r}_1$ stood, and the reverse."
+      },
+      {
+       "tex": "\\mk{L}{|\\kpsi(\\krb, \\kra)\\rangle} = \\tfrac{1}{\\sqrt{2}}[\\mk{b}{- \\varphi_{1s\\alpha}(\\kra)\\varphi_{1s\\beta}(\\krb)} \\mk{a}{+ \\varphi_{1s\\alpha}(\\krb)\\varphi_{1s\\beta}(\\kra)}]"
+      },
+      {
+       "tex": "\\mk{L}{|\\kpsi(\\krb, \\kra)\\rangle} = \\mk{m}{-}\\tfrac{1}{\\sqrt{2}}[\\mk{b}{\\varphi_{1s\\alpha}(\\kra)\\varphi_{1s\\beta}(\\krb)} \\mk{a}{- \\varphi_{1s\\alpha}(\\krb)\\varphi_{1s\\beta}(\\kra)}]"
+      },
+      {
+       "tex": "\\mk{L}{|\\kpsi(\\krb, \\kra)\\rangle} = \\mk{m}{-}\\mk{p}{|\\kpsi(\\kra, \\krb)\\rangle}",
+       "uses": [
+        0
+       ],
+       "map": {
+        "a": "p",
+        "b": "p"
+       }
+      }
+     ],
+     "num": "(8.6.5)"
+    }
+   ]
+  }
+ ]
+}

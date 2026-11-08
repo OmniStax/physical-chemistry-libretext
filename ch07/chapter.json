@@ -551,6 +551,12 @@
    "meaning": "the frequency of the oscillator",
    "unit": "Hz",
    "section": "7.4"
+  },
+  {
+   "sym": "E",
+   "type": "energy",
+   "meaning": "the energy of one level, such as E₁ of the box or E₀ of the oscillator",
+   "section": "7.4"
   }
  ]
 }

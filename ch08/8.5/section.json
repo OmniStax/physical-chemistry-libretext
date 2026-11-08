@@ -1,0 +1,514 @@
+{
+ "id": "8.5",
+ "module": "13443",
+ "chapter": "8",
+ "title": "Wavefunctions must be Antisymmetric to Interchange of any Two Electrons",
+ "short": "Antisymmetric wavefunctions",
+ "lead": "No experiment can tell two electrons apart, so relabeling them may change their wavefunction only in a way no measurement detects. The section finds what that permits, defines the exchange operator, and ties the sign electrons require to the Pauli exclusion principle.",
+ "objectives": [
+  "Interprete the consequence of exchanging two electrons in a multi-electron atom on the wavelengths",
+  "Connect the Pauli’s Exclusion Principle to the permutation symmetry of multi-electron atoms"
+ ],
+ "summary_html": "",
+ "notes": "Written by Theodore Zielinski and shared under CC BY-NC-SA 4.0; the book gives no credit for Figure 8.5.1, which is shown under the page's licence.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "Exercise 8.5.5 and its answer are the book's; Exercises 8.5.1, 8.5.2 and 8.5.4, printed without answers, have AI solutions. The book's numbering skips 8.5.3. Bloom levels and concept tags were chosen by AI.",
+ "figures": [
+  {
+   "id": "sim-exchange",
+   "kind": "sim",
+   "draws": [
+    "wavefunction",
+    "probability-density"
+   ],
+   "facts": [
+    "#c2413a",
+    "#2f6ab3"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "fig-8-5-1",
+   "kind": "figure",
+   "number": "8.5.1",
+   "widths": [
+    463
+   ],
+   "originals": [
+    "/media/ch08/124738-pauli-exclusion-principle.jpg"
+   ],
+   "original_caption": "The 1s and 2s subshells for beryllium atoms can hold only two electrons and when filled, since each electrons is described by a specific spin-orbital and each orbital (spatial) can hold either an $\\alpha$ or a $\\beta$ electron (i.e., they must have opposite spins). Otherwise they will have the same four quantum numbers, in violation of the Pauli Exclusion Principle.",
+   "draws": [],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "redrawn as the book draws it"
+    }
+   ]
+  }
+ ],
+ "referents": [
+  {
+   "id": "electron-1",
+   "label": "electron 1",
+   "figures": [
+    "sim-exchange"
+   ]
+  },
+  {
+   "id": "electron-2",
+   "label": "electron 2",
+   "figures": [
+    "sim-exchange"
+   ]
+  }
+ ],
+ "coverage": [
+  {
+   "span": "opening",
+   "concept": "indistinguishable-particles",
+   "verb": "introduces"
+  },
+  {
+   "span": "opening",
+   "concept": "spin-orbital",
+   "verb": "introduces"
+  },
+  {
+   "span": "opening",
+   "concept": "orbital-approximation",
+   "verb": "uses"
+  },
+  {
+   "span": "opening",
+   "concept": "multi-electron-wavefunction",
+   "verb": "uses"
+  },
+  {
+   "span": "opening",
+   "concept": "probability-density",
+   "verb": "uses"
+  },
+  {
+   "span": "exchange-operator",
+   "concept": "exchange-phase",
+   "verb": "introduces"
+  },
+  {
+   "span": "exchange-operator",
+   "concept": "exchange-operator",
+   "verb": "introduces"
+  },
+  {
+   "span": "exchange-operator",
+   "concept": "permutation-symmetry",
+   "verb": "introduces"
+  },
+  {
+   "span": "exchange-operator",
+   "concept": "boson",
+   "verb": "introduces"
+  },
+  {
+   "span": "exchange-operator",
+   "concept": "fermion",
+   "verb": "introduces"
+  },
+  {
+   "span": "exchange-operator",
+   "concept": "antisymmetry-principle",
+   "verb": "introduces"
+  },
+  {
+   "span": "exchange-operator",
+   "concept": "eulers-formula",
+   "verb": "uses"
+  },
+  {
+   "span": "exchange-operator",
+   "concept": "indistinguishable-particles",
+   "verb": "reinforces"
+  },
+  {
+   "span": "pauli-exclusion",
+   "concept": "two-electron-antisymmetric-combination",
+   "verb": "introduces"
+  },
+  {
+   "span": "pauli-exclusion",
+   "concept": "pauli-exclusion-principle",
+   "verb": "introduces"
+  },
+  {
+   "span": "pauli-exclusion",
+   "concept": "commuting-operators",
+   "verb": "uses"
+  },
+  {
+   "span": "pauli-exclusion",
+   "concept": "exchange-operator",
+   "verb": "uses"
+  },
+  {
+   "span": "pauli-exclusion",
+   "concept": "antisymmetry-principle",
+   "verb": "reinforces"
+  },
+  {
+   "span": "pauli-exclusion",
+   "concept": "spin-orbital",
+   "verb": "reinforces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "e1",
+   "source_id": "exr:8.5.1",
+   "source_number": "Exercise 8.5.1",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "exchange-operator",
+   "prompt": "<p>Permute the electrons the product function for He wavefunction:</p>\n$$ \\psi (\\mathbf{r}_1,\\mathbf{r}_2) \\rangle = | \\varphi_{1s}(\\mathbf{r}_1) \\rangle | \\varphi_{1s}(\\mathbf{r}_2) \\rangle $$",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "Exchange $\\mathbf{r}_1$ and $\\mathbf{r}_2$, then compare the two factors.",
+    "solution": "<p>Exchanging the labels gives $|\\psi(\\mathbf{r}_2, \\mathbf{r}_1)\\rangle = |\\varphi_{1s}(\\mathbf{r}_2)\\rangle|\\varphi_{1s}(\\mathbf{r}_1)\\rangle$. Both factors are the same function, so their order does not matter and this is $|\\varphi_{1s}(\\mathbf{r}_1)\\rangle|\\varphi_{1s}(\\mathbf{r}_2)\\rangle$ again: $\\hat{P}_{12}\\psi = +\\psi$. The product is symmetric. A wavefunction for two electrons must change sign instead (Equation 8.5.5), so this product cannot describe them; with spin included, helium's two 1s electrons need different spin-orbitals in an antisymmetric combination.</p>"
+   }
+  },
+  {
+   "id": "e2",
+   "source_id": "exr:8.5.2",
+   "source_number": "Exercise 8.5.2",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "exchange-operator",
+   "prompt": "<p>Use Euler’s Equality</p>\n$$ e^{i\\pi} + 1=0 $$\n<p>to show that $e^{i 2\\varphi} = 1$ when $\\varphi = 0$ or $n \\pi$ and consequently $e^{i \\varphi} = \\pm 1$.</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "Write $e^{in\\pi}$ as $(e^{i\\pi})^n$.",
+    "solution": "<p>Euler's equality gives $e^{i\\pi} = -1$, so $e^{in\\pi} = (e^{i\\pi})^n = (-1)^n$ for any integer $n$. For $\\varphi = 0$, $e^{i2\\varphi} = e^0 = 1$. For $\\varphi = n\\pi$, $e^{i2\\varphi} = (e^{in\\pi})^2 = \\left((-1)^n\\right)^2 = 1$. In both cases $e^{i\\varphi}$ itself is $(-1)^n$: $+1$ when $n$ is even (including $\\varphi = 0$) and $-1$ when $n$ is odd, so $e^{i\\varphi} = \\pm 1$. These are the two exchange phases of the derivation in this section, $+1$ for bosons and $-1$ for fermions.</p>"
+   }
+  },
+  {
+   "id": "e4",
+   "source_id": "exr:8.5.4",
+   "source_number": "Exercise 8.5.4",
+   "kind": "exercise",
+   "bloom": "Understand",
+   "place": {
+    "at": "end"
+   },
+   "cite": "exchange-operator",
+   "prompt": "<p>What is meant by the term permutation symmetry?</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "solution": "<p>Permutation symmetry is how a many-particle wavefunction behaves when the labels of two identical particles are interchanged. Because $|\\psi|^2$ cannot change, the function can only stay the same (symmetric, eigenvalue $+1$ of $\\hat{P}_{12}$, the case of bosons) or change sign (antisymmetric, eigenvalue $-1$, the case of fermions such as electrons).</p>"
+   }
+  },
+  {
+   "id": "e5",
+   "source_id": "exr:8.5.5",
+   "source_number": "Exercise 8.5.5",
+   "kind": "exercise",
+   "bloom": "Understand",
+   "place": {
+    "at": "end"
+   },
+   "cite": "exchange-operator",
+   "prompt": "<p>Explain why the product function $\\varphi (\\mathbf{r}_1) \\varphi (\\mathbf{r}_2)$ could describe two bosons (deuterium nuclei), but can not describe two fermions (e.g. electrons).</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "source",
+    "solution": "<p>Because if we switch $\\mathbf{r}_1$ and $\\mathbf{r}_2$, the product function becomes $φ(r_2)φ(r_1)$, which is equal to $φ(r_1)φ(r_2)$, which is consistent with the wavefunctions of bosons, because boson wavefunctions are symmetric. However, fermion wavefunctions are antisymmetric, which means that if switch r<sub>1</sub> and r<sub>2</sub>, the result should be -1×the original wavefunction. Therefore, the product function $φ(r_1)φ(r_2)$ <strong>cannot</strong> describe fermions.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "e1",
+   "concept": "exchange-operator"
+  },
+  {
+   "exercise": "e1",
+   "concept": "permutation-symmetry"
+  },
+  {
+   "exercise": "e1",
+   "concept": "antisymmetry-principle"
+  },
+  {
+   "exercise": "e2",
+   "concept": "exchange-phase"
+  },
+  {
+   "exercise": "e4",
+   "concept": "permutation-symmetry"
+  },
+  {
+   "exercise": "e4",
+   "concept": "exchange-operator"
+  },
+  {
+   "exercise": "e5",
+   "concept": "boson"
+  },
+  {
+   "exercise": "e5",
+   "concept": "fermion"
+  },
+  {
+   "exercise": "e5",
+   "concept": "antisymmetry-principle"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-helium-equation",
+   "kind": "correction",
+   "html": "The second Laplacian is $\\nabla_2^2$, and the potential terms take the sign of the one-electron equations below: $\\left[-\\frac{\\hbar^2}{2m}(\\nabla_1^2 + \\nabla_2^2) + V(\\mathbf{r}_1) + V(\\mathbf{r}_2) + V_{12}(\\mathbf{r}_1, \\mathbf{r}_2)\\right]\\psi = E\\psi$, with $V$ the electron's potential energy in the field of the nucleus."
+  },
+  {
+   "id": "c-atoms",
+   "kind": "correction",
+   "html": "Of electrons 1 and 2: both spin-orbitals belong to the one atom."
+  },
+  {
+   "id": "c-second-orbital",
+   "kind": "correction",
+   "html": "The right side is $E|\\varphi_b(\\mathbf{r}_2)\\rangle$, the same spin-orbital as on the left."
+  },
+  {
+   "id": "c-permuted",
+   "kind": "correction",
+   "html": "The permuted function is $\\psi(\\mathbf{r}_2, \\mathbf{r}_1)$."
+  },
+  {
+   "id": "c-exchange-eigen",
+   "kind": "correction",
+   "html": "Swapping the labels must return the function times $\\pm 1$: $\\hat{P}_{12}|\\psi(\\mathbf{r}_1, \\mathbf{r}_2)\\rangle = |\\psi(\\mathbf{r}_2, \\mathbf{r}_1)\\rangle = \\pm|\\psi(\\mathbf{r}_1, \\mathbf{r}_2)\\rangle$. The two displays in the note below carry the same slip."
+  },
+  {
+   "id": "c-asymmetric",
+   "kind": "correction",
+   "html": "The antisymmetric combination."
+  },
+  {
+   "id": "c-pauli-condition",
+   "kind": "correction",
+   "html": "The condition is $\\varphi_a = \\varphi_b$, both electrons in one spin-orbital, and what vanishes is $|\\psi^-\\rangle$ of Equation 8.5.7. \"Spin-orbit\" just after means spin-orbital."
+  },
+  {
+   "id": "c-same-orbital",
+   "kind": "correction",
+   "html": "Both electrons in one spin-orbital means $\\varphi_b = \\varphi_a$. Then Equation 8.5.7 gives $\\frac{1}{\\sqrt{2}}[\\varphi_a(\\mathbf{r}_1)\\varphi_a(\\mathbf{r}_2) - \\varphi_a(\\mathbf{r}_2)\\varphi_a(\\mathbf{r}_1)] = 0$."
+  },
+  {
+   "id": "c-figure-caption",
+   "kind": "correction",
+   "figure": "fig-8-5-1",
+   "html": "The caption's first sentence is broken. It means that the 1s and the 2s subshell of beryllium each hold two electrons, which must have opposite spins, one $\\alpha$ and one $\\beta$, because each electron is described by its own spin-orbital."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "exchange-phase",
+   "what": "the exchange phase",
+   "source": "Physical Chemistry (LibreTexts), 8.5 Wavefunctions must be Antisymmetric to Interchange of any Two Electrons",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "text": "The probability density of the electrons in the atom does not change upon permutation of the electrons."
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{|\\kpsi(\\krb, \\kra)|^2} = \\mk{r}{|\\kpsi(\\kra, \\krb)|^2}",
+      "uses": [
+       0
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\kpsi(\\krb, \\kra)^*\\kpsi(\\krb, \\kra)} = \\mk{r}{\\kpsi(\\kra, \\krb)^*\\kpsi(\\kra, \\krb)}",
+       "cap": "The square of a modulus is the function times its complex conjugate."
+      }
+     ],
+     "num": "(8.5.1)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\kpsi(\\krb, \\kra)^*\\kpsi(\\krb, \\kra)} = \\mk{r}{\\kpsi(\\kra, \\krb)^*\\kpsi(\\kra, \\krb)}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\kpsi(\\krb, \\kra)} = \\mk{p}{e^{i\\kvarphi}}\\,\\mk{r}{\\kpsi(\\kra, \\krb)}",
+       "cap": "Two complex numbers with the same modulus can differ only by a factor $e^{i\\varphi}$, whose modulus is one."
+      }
+     ],
+     "num": "(8.5.2)",
+     "note": "The book prints the left side as $\\psi(\\mathbf{r}_1, \\mathbf{r}_2)$; the permuted function $\\psi(\\mathbf{r}_2, \\mathbf{r}_1)$ is meant."
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      }
+     ],
+     "then": {
+      "tex": "\\mk{d}{|\\kpsi(\\krb, \\kra)|^2} = \\mk{s}{\\kpsi(\\krb, \\kra)^*\\kpsi(\\krb, \\kra)}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{d}{|\\kpsi(\\krb, \\kra)|^2} = \\mk{a}{\\left(e^{-i\\kvarphi}\\kpsi(\\kra, \\krb)^*\\right)}\\mk{b}{\\left(e^{i\\kvarphi}\\kpsi(\\kra, \\krb)\\right)}",
+       "uses": [
+        0
+       ],
+       "map": {
+        "s": [
+         "a",
+         "b"
+        ]
+       },
+       "cap": "The complex conjugate of $e^{i\\varphi}$ is $e^{-i\\varphi}$."
+      },
+      {
+       "tex": "\\mk{d}{|\\kpsi(\\krb, \\kra)|^2} = \\mk{e}{e^{-i\\kvarphi}e^{i\\kvarphi}}\\,\\mk{p}{\\kpsi(\\kra, \\krb)^*\\kpsi(\\kra, \\krb)}",
+       "map": {
+        "a": [
+         "e",
+         "p"
+        ],
+        "b": [
+         "e",
+         "p"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{d}{|\\kpsi(\\krb, \\kra)|^2} = \\mk{p}{\\kpsi(\\kra, \\krb)^*\\kpsi(\\kra, \\krb)}"
+      }
+     ],
+     "num": "(8.5.3)",
+     "note": "The book's (8.5.3) puts the conjugate on the second factor and writes $\\psi(\\mathbf{r}_1, \\mathbf{r}_2)$ in both brackets; the conjugate belongs with $e^{-i\\varphi}$, on the first."
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "text": "If we exchange or permute two identical particles twice, we are (by definition) back to the original situation."
+      }
+     ],
+     "then": {
+      "tex": "\\mk{o}{\\kpsi(\\kra, \\krb)} = \\mk{p}{e^{i\\kvarphi}}\\,\\mk{s}{\\kpsi(\\krb, \\kra)}",
+      "uses": [
+       0,
+       1
+      ],
+      "why": "Permuting $\\psi(\\mathbf{r}_2, \\mathbf{r}_1)$ once more multiplies it by the same factor and gives back the original function."
+     },
+     "steps": [
+      {
+       "tex": "\\mk{o}{\\kpsi(\\kra, \\krb)} = \\mk{p}{e^{i\\kvarphi}}\\,\\mk{s}{e^{i\\kvarphi}\\kpsi(\\kra, \\krb)}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{o}{\\kpsi(\\kra, \\krb)} = \\mk{p}{e^{i\\kvarphi}e^{i\\kvarphi}}\\,\\mk{s}{\\kpsi(\\kra, \\krb)}",
+       "map": {
+        "s": [
+         "p",
+         "s"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{p}{e^{i\\kvarphi}e^{i\\kvarphi}} = \\mk{o}{1}"
+      },
+      {
+       "tex": "\\mk{p}{e^{i\\kvarphi}e^{i\\kvarphi}} = \\mk{q}{e^{i 2\\kvarphi}} = \\mk{o}{1}"
+      }
+     ],
+     "num": "(8.5.4)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 3
+      },
+      {
+       "tex": "e^{i\\theta} = \\cos\\theta + i\\sin\\theta",
+       "src": "2.3, Euler's formula"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{q}{e^{i 2\\kvarphi}} = \\mk{o}{1}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{q}{\\cos 2\\kvarphi + i\\sin 2\\kvarphi} = \\mk{o}{1}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{q}{2\\kvarphi} = \\mk{o}{2n\\pi}",
+       "cap": "The cosine is 1 and the sine 0 only at whole multiples of $2\\pi$, with $n$ an integer."
+      },
+      {
+       "tex": "\\mk{q}{\\kvarphi} = \\mk{o}{n\\pi}"
+      },
+      {
+       "tex": "\\mk{e}{e^{i\\kvarphi}} = \\mk{o}{\\cos n\\pi + i\\sin n\\pi}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{e}{e^{i\\kvarphi}} = \\mk{o}{\\pm 1}",
+       "cap": "$\\cos n\\pi$ is $+1$ for even $n$ and $-1$ for odd $n$, and $\\sin n\\pi = 0$."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,224 @@
+{
+ "id": "8.9",
+ "module": "13447",
+ "chapter": "8",
+ "title": "The Allowed Values of J - the Total Angular Momentum Quantum Number",
+ "short": "The allowed values of J",
+ "lead": "The orbital and spin angular momenta of an atom's electrons can be coupled in two ways. In L-S coupling, used for the lighter elements, the orbital momenta add to L, the spins add to S, and L and S add as vectors to the total angular momentum J, whose value the term symbol carries as its subscript.",
+ "objectives": [
+  "Compate two spin-orbit coupling schemes that couple the total spin angular momenta and total orbital angular momenta of a multi-electron spectra"
+ ],
+ "summary_html": "",
+ "notes": "Adapted from Theodore Zielinski's page under CC BY-NC-SA 4.0, with Figures 8.9.1 and 8.9.2 by Maschen in the public domain; Section 8.8 prints Figure 8.9.1 again as a second Figure 8.8.1, and its citation there links to the figure here.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "Exercises 8.9.1 and 8.9.2 print no key; their solutions were written by AI, as were the Bloom levels and concept tags.",
+ "figures": [
+  {
+   "id": "sim-ls-coupling",
+   "kind": "sim",
+   "number": "8.9.1",
+   "folds": [
+    "8.9.2"
+   ],
+   "originals": [
+    "/media/ch08/90875-379px-LS_coupling.svg.png",
+    "/media/ch08/90876-Has.png"
+   ],
+   "original_caption": "8.9.1: \"Vector cones\" of total angular momentum $J$ (purple), orbital $L$ (blue), and spin $S$ (green). The cones arise due to quantum uncertainty between measuring angular momentum components (see vector model of the atom). (Public Domain; Maschen). 8.9.2: Vector model of total angular momentum: spin and orbital coupling (spin-1/2 particles). (Public Domain; Maschen).",
+   "widths": [
+    321,
+    716
+   ],
+   "draws": [
+    "angular-momentum",
+    "angle"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "electronic-states",
+   "concept": "jj-coupling",
+   "verb": "introduces"
+  },
+  {
+   "span": "electronic-states",
+   "concept": "ls-coupling",
+   "verb": "introduces"
+  },
+  {
+   "span": "l-s-coupling-of-angular-momenta",
+   "concept": "ls-coupling",
+   "verb": "uses"
+  },
+  {
+   "span": "l-s-coupling-of-angular-momenta",
+   "concept": "spin-orbit-interaction",
+   "verb": "introduces"
+  },
+  {
+   "span": "l-s-coupling-of-angular-momenta",
+   "concept": "angular-momentum-magnitudes",
+   "verb": "introduces"
+  },
+  {
+   "span": "l-s-coupling-of-angular-momenta",
+   "concept": "term-degeneracy",
+   "verb": "introduces"
+  },
+  {
+   "span": "l-s-coupling-of-angular-momenta",
+   "concept": "term-symbol",
+   "verb": "reinforces"
+  },
+  {
+   "span": "l-s-coupling-of-angular-momenta",
+   "concept": "spin-multiplicity",
+   "verb": "reinforces"
+  },
+  {
+   "span": "l-s-coupling-of-angular-momenta",
+   "concept": "total-angular-momentum-quantum-number",
+   "verb": "reinforces"
+  },
+  {
+   "span": "l-s-coupling-of-angular-momenta",
+   "concept": "total-orbital-angular-momentum-quantum-number",
+   "verb": "uses"
+  },
+  {
+   "span": "l-s-coupling-of-angular-momenta",
+   "concept": "total-spin-quantum-number",
+   "verb": "uses"
+  },
+  {
+   "span": "l-s-coupling-of-angular-momenta",
+   "concept": "orbital-angular-momentum",
+   "verb": "uses"
+  },
+  {
+   "span": "l-s-coupling-of-angular-momenta",
+   "concept": "spin-angular-momentum",
+   "verb": "uses"
+  },
+  {
+   "span": "l-s-coupling-of-angular-momenta",
+   "concept": "angular-momentum-quantum-number",
+   "verb": "uses"
+  },
+  {
+   "span": "l-s-coupling-of-angular-momenta",
+   "concept": "spin-quantum-number",
+   "verb": "uses"
+  },
+  {
+   "span": "l-s-coupling-of-angular-momenta",
+   "concept": "vector-model",
+   "verb": "reinforces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "e1",
+   "source_id": "exr:8.9.1",
+   "source_number": "Exercise 8.9.1",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "l-s-coupling-of-angular-momenta",
+   "prompt": "<p>Write the term symbol for a state that has 0 for both the spin and orbital angular momentum quantum numbers.</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "Find the superscript from $S$, the letter from $L$, and the subscript from the values $J$ can take between $|L - S|$ and $L + S$.",
+    "solution": "<p>$^1S_0$, read “singlet S zero”. With $S = 0$ the superscript is $2S + 1 = 1$. The code letter for $L = 0$ is S. $J$ runs from $|L - S| = 0$ to $L + S = 0$, so $J = 0$ is the only value and the subscript is 0. The level has $2J + 1 = 1$ state, with $m_J = 0$.</p>"
+   }
+  },
+  {
+   "id": "e2",
+   "source_id": "exr:8.9.2",
+   "source_number": "Exercise 8.9.2",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "l-s-coupling-of-angular-momenta",
+   "prompt": "<p>Write the term symbol for a state that has 0 for the spin and 1 for the orbital angular momentum quantum numbers</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "With $S = 0$, $J$ can only equal $L$.",
+    "solution": "<p>$^1P_1$, read “singlet P one”. With $S = 0$ the superscript is $2S + 1 = 1$. The code letter for $L = 1$ is P. $J$ runs from $|L - S| = 1$ to $L + S = 1$, so the subscript is 1. The level has $2J + 1 = 3$ states, $m_J = +1, 0, -1$.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "e1",
+   "concept": "term-symbol"
+  },
+  {
+   "exercise": "e1",
+   "concept": "spin-multiplicity"
+  },
+  {
+   "exercise": "e1",
+   "concept": "total-angular-momentum-quantum-number"
+  },
+  {
+   "exercise": "e2",
+   "concept": "term-symbol"
+  },
+  {
+   "exercise": "e2",
+   "concept": "spin-multiplicity"
+  },
+  {
+   "exercise": "e2",
+   "concept": "total-angular-momentum-quantum-number"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-z",
+   "kind": "correction",
+   "html": "The threshold is on the atomic number: j-j coupling is used for the heavy elements, $Z > 40$."
+  },
+  {
+   "id": "c-j-range",
+   "kind": "correction",
+   "html": "$j$ is not $|\\ell + s|$ alone. It runs from $|\\ell - s|$ to $\\ell + s$, as the display for $j$ below says, so one electron has $j = \\ell \\pm \\tfrac{1}{2}$, and $j = \\tfrac{1}{2}$ when $\\ell = 0$."
+  },
+  {
+   "id": "c-2s",
+   "kind": "correction",
+   "html": "The superscript is $2S + 1$, with the total spin quantum number $S$, as the next sentence says: $^{2S+1}L_J$."
+  }
+ ]
+}

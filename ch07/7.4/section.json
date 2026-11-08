@@ -674,7 +674,7 @@
        "step": 3
       },
       {
-       "text": "The unperturbed states form a complete basis set, so $|n^1\\rangle = \\sum_m |m^o\\rangle\\langle m^o|n^1\\rangle$.",
+       "text": "The unperturbed states form a complete basis set.",
        "src": "4.3"
       },
       {

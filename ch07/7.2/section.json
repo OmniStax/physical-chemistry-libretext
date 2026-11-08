@@ -355,13 +355,23 @@
       }
      ],
      "then": {
-      "tex": "\\mk{n}{\\langle\\kpsitrial|\\kH|\\kpsitrial\\rangle} = \\mk{b}{\\Big(\\sum_{i}^{N} a_i^*\\langle\\phi_i|\\Big)}\\,\\mk{h}{\\kH}\\,\\mk{k}{\\Big(\\sum_{j}^{N} a_j|\\kphij\\rangle\\Big)}",
-      "uses": [
-       0,
-       1
-      ]
+      "tex": "\\mk{k}{|\\kpsitrial\\rangle} = \\mk{s}{\\sum_{j=1}^N a_j|\\kphij\\rangle}"
      },
      "steps": [
+      {
+       "tex": "\\mk{n}{\\langle\\kpsitrial|\\kH|\\kpsitrial\\rangle} = \\mk{b}{\\langle\\kpsitrial|}\\,\\mk{h}{\\kH}\\,\\mk{k}{\\Big(\\sum_{j}^{N} a_j|\\kphij\\rangle\\Big)}",
+       "map": {
+        "k": "n",
+        "s": "k"
+       },
+       "cap": "Act on both sides with $\\hat{H}$ and take the inner product with $\\langle\\psi_{trial}|$."
+      },
+      {
+       "tex": "\\mk{n}{\\langle\\kpsitrial|\\kH|\\kpsitrial\\rangle} = \\mk{b}{\\Big(\\sum_{i}^{N} a_i^*\\langle\\phi_i|\\Big)}\\,\\mk{h}{\\kH}\\,\\mk{k}{\\Big(\\sum_{j}^{N} a_j|\\kphij\\rangle\\Big)}",
+       "uses": [
+        1
+       ]
+      },
       {
        "tex": "\\mk{n}{\\langle\\kpsitrial|\\kH|\\kpsitrial\\rangle} = \\mk{s}{\\sum_{i}^{N} \\sum_{j}^{N}a_i^{*} a_j \\langle \\phi_i|\\kH|\\kphij \\rangle}",
        "map": {
@@ -411,13 +421,23 @@
       }
      ],
      "then": {
-      "tex": "\\mk{d}{\\langle\\kpsitrial|\\kpsitrial\\rangle} = \\mk{b}{\\Big(\\sum_{i}^{N} a_i^*\\langle\\phi_i|\\Big)}\\mk{k}{\\Big(\\sum_{j}^{N} a_j|\\kphij\\rangle\\Big)}",
-      "uses": [
-       0,
-       1
-      ]
+      "tex": "\\mk{k}{|\\kpsitrial\\rangle} = \\mk{s}{\\sum_{j=1}^N a_j|\\kphij\\rangle}"
      },
      "steps": [
+      {
+       "tex": "\\mk{d}{\\langle\\kpsitrial|\\kpsitrial\\rangle} = \\mk{b}{\\langle\\kpsitrial|}\\mk{k}{\\Big(\\sum_{j}^{N} a_j|\\kphij\\rangle\\Big)}",
+       "map": {
+        "k": "d",
+        "s": "k"
+       },
+       "cap": "Take the inner product of both sides with $\\langle\\psi_{trial}|$."
+      },
+      {
+       "tex": "\\mk{d}{\\langle\\kpsitrial|\\kpsitrial\\rangle} = \\mk{b}{\\Big(\\sum_{i}^{N} a_i^*\\langle\\phi_i|\\Big)}\\mk{k}{\\Big(\\sum_{j}^{N} a_j|\\kphij\\rangle\\Big)}",
+       "uses": [
+        1
+       ]
+      },
       {
        "tex": "\\mk{d}{\\langle\\kpsitrial|\\kpsitrial\\rangle} = \\mk{s}{\\sum_{i,\\,j}^{N,\\,N}a_i^{*} a_j \\langle \\phi_i|\\kphij \\rangle}",
        "map": {
@@ -717,12 +737,13 @@
       }
      ],
      "then": {
-      "tex": "\\mk{s}{\\sum_{i=1}^{2} a_i (H_{i2} - \\kEtrial S_{i2})} = 0",
-      "uses": [
-       0
-      ]
+      "tex": "\\mk{s}{\\sum_i^N a_i (H_{ik} - \\kEtrial S_{ik})} = 0"
      },
      "steps": [
+      {
+       "tex": "\\mk{s}{\\sum_{i=1}^{2} a_i (H_{i2} - \\kEtrial S_{i2})} = 0",
+       "cap": "Two basis functions, $N = 2$, and the equation for $k = 2$."
+      },
       {
        "tex": "\\mk{a}{a_1(H_{12} - \\kEtrial S_{12})} + \\mk{b}{a_2(H_{22} - \\kEtrial S_{22})} = 0",
        "map": {

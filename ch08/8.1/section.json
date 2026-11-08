@@ -1,0 +1,127 @@
+{
+ "id": "8.1",
+ "module": "13439",
+ "chapter": "8",
+ "title": "Atomic and Molecular Calculations are Expressed in Atomic Units",
+ "short": "Atomic units",
+ "lead": "Atomic units set the electron's mass and charge, the reduced Planck constant and the Coulomb force constant equal to 1. Helium's Hamiltonian is written in them, and the bohr and the hartree are the derived units of length and energy.",
+ "objectives": [
+  "Demonstrate how solving electron structure problems are less cluttered by switching to atomic units instead of SI units."
+ ],
+ "summary_html": "",
+ "notes": "Adapted from Wikipedia's article Atomic units and shared under CC BY-SA 4.0.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": []
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercise here; the one exercise and its solution were written by AI, which also chose its Bloom level and concept tags. Numeric answers accept a 2% tolerance.",
+ "figures": [],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "atomic-units",
+   "concept": "atomic-units",
+   "verb": "introduces"
+  },
+  {
+   "span": "atomic-units",
+   "concept": "reduced-plancks-constant",
+   "verb": "uses"
+  },
+  {
+   "span": "atomic-units",
+   "concept": "helium-hamiltonian-atomic-units",
+   "verb": "introduces"
+  },
+  {
+   "span": "atomic-units",
+   "concept": "multi-electron-hamiltonian",
+   "verb": "reinforces"
+  },
+  {
+   "span": "derived-units",
+   "concept": "fine-structure-constant",
+   "verb": "introduces"
+  },
+  {
+   "span": "derived-units",
+   "concept": "hartree",
+   "verb": "introduces"
+  },
+  {
+   "span": "derived-units",
+   "concept": "bohr-radius",
+   "verb": "reinforces"
+  },
+  {
+   "span": "derived-units",
+   "concept": "bohr-model",
+   "verb": "reinforces"
+  },
+  {
+   "span": "derived-units",
+   "concept": "atomic-units",
+   "verb": "reinforces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "ai1",
+   "source_id": "Atomic units",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "derived-units",
+   "prompt": "<p>The ground-state energy of helium is $-2.90372\\ E_h$.</p><ol type=\"a\"><li>Write it in electronvolts.</li><li>Write it in joules.</li><li>The electron of the Bohr hydrogen atom moves at a speed of 1 in atomic units. Write that speed in meters per second, and as a fraction of the speed of light.</li></ol>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": -79.01,
+      "unit": "eV",
+      "hint": "One hartree is 27.2114 eV."
+     },
+     {
+      "part": "b",
+      "value": -1.266e-17,
+      "unit": "J"
+     },
+     {
+      "part": "c",
+      "value": 2187000.0,
+      "unit": "m/s"
+     }
+    ],
+    "solution": "<p>a. $(-2.90372)(27.2114\\ \\text{eV}) = -79.01\\ \\text{eV}$, the experimental value quoted in Section 8.2.</p><p>b. $(-2.90372)(4.3597\\times10^{-18}\\ \\text{J}) = -1.266\\times10^{-17}\\ \\text{J}$.</p><p>c. The atomic unit of velocity is $a_0E_h/\\hbar = \\alpha c = 2.187\\times10^{6}$ m/s (Table 8.1.2), which is $\\alpha \\approx 1/137$ of the speed of light.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "ai1",
+   "concept": "hartree"
+  },
+  {
+   "exercise": "ai1",
+   "concept": "atomic-units"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-bohr",
+   "kind": "correction",
+   "html": "One bohr is 0.0529 nm; the book prints 0.052 nm."
+  }
+ ]
+}

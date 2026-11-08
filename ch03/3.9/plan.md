@@ -34,9 +34,8 @@ Two objectives, one numbered figure (replaced), one table (kept), twelve numbere
   20° above, on (1,1,1) in a cube, the book's E₁₁₁ = 3h²/8mL². Without WebGL: three slices through the
   first lobe as heatmaps on one diverging scale. The box keeps its volume L³ as it stretches (both
   figures), so energies read in the book's units h²/8mL². Facts: the sign of ψ as one diverging scale,
-  #c2413a above zero and #2f6ab3 below (2.5's drum colours). Points are drawn as small octahedra in one
-  `faces` mark per sign, since the library has no point-cloud mark; the layer is rebuilt only when the
-  state, shape or colours change.
+  #c2413a above zero and #2f6ab3 below (2.5's drum colours). Points are drawn with `F.space.points`, one
+  instanced cloud per sign; the layer is rebuilt only when the state, shape or colours change.
 - `sim-split` · Sim · degeneracy, cube-degeneracy, accidental-degeneracy · variation by slider: the
   degenerate rungs of Table 3.9.1 come apart as the box stops being a cube and meet again at the cube or
   by accident at L_y = 2Lₓ (Example 3.9.1), which the table, printed for the cube only, cannot show ·
@@ -74,5 +73,3 @@ The impossible range Lₓ < x < 0 (and y, z); r⃗ = Lₓx̂ + … for the posit
   because the section's `V` row is the potential energy:
   `{"section": "3.9", "sym": "V_box", "meaning": "the volume of the box, LₓL_yL_z", "concept": null, "redefines": true}`
   with symbol `V_box` (latex `V`, no macro, untyped).
-- The figure library has no point-cloud mark; a `{k: 'points', pts, color, r}` mark in `F.space3d` (one
-  `THREE.Points` or instanced mesh) would replace the octahedra of `sim-box3d`.

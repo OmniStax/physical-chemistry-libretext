@@ -959,16 +959,8 @@
    "prereq": "bohr-model"
   },
   {
-   "concept": "bohr-energy-levels",
-   "prereq": "coulomb-potential"
-  },
-  {
    "concept": "bohr-rydberg-derivation",
    "prereq": "bohr-energy-levels"
-  },
-  {
-   "concept": "bohr-rydberg-derivation",
-   "prereq": "photon"
   },
   {
    "concept": "bohr-rydberg-derivation",

@@ -1,0 +1,197 @@
+{
+ "id": "8.10",
+ "module": "13448",
+ "chapter": "8",
+ "title": "Hund's Rules Determine the Term Symbols of the Ground Electronic States",
+ "short": "Hund's rules",
+ "lead": "Filling orbitals in order of energy leaves open which of several orbitals of equal energy the electrons take, and how their spins line up. Hund's three rules answer it by ranking the terms of a configuration by spin, orbital angular momentum and J, and they pick out the ground-state term symbol.",
+ "objectives": [
+  "Define Hund three rules",
+  "Use Hunds three rules to predict the lowest energy configuration and term symbols for multi-electron systems"
+ ],
+ "summary_html": "",
+ "notes": "Adapted from Delmar Larsen's page under CC BY-NC-SA 4.0; the book gives no credit for Figure 8.10.1, and the carbon levels in the Sim are those of the NIST Atomic Spectra Database.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "Example 8.10.1 prints no solution and is set as an exercise, with a solution written by AI. Exercise 8.10.3 and its key are the book's. Bloom levels and concept tags were chosen by AI.",
+ "figures": [
+  {
+   "id": "sim-carbon-levels",
+   "kind": "sim",
+   "draws": [
+    "wavenumber"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "fig-8-10-1",
+   "kind": "photo",
+   "number": "8.10.1",
+   "draws": []
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "filling-orbitals",
+   "concept": "aufbau-principle",
+   "verb": "introduces"
+  },
+  {
+   "span": "filling-orbitals",
+   "concept": "hunds-rules",
+   "verb": "uses"
+  },
+  {
+   "span": "filling-orbitals",
+   "concept": "term-symbol",
+   "verb": "uses"
+  },
+  {
+   "span": "filling-orbitals",
+   "concept": "microstate",
+   "verb": "uses"
+  },
+  {
+   "span": "hunds-rules",
+   "concept": "hunds-rules",
+   "verb": "reinforces"
+  },
+  {
+   "span": "hunds-rules",
+   "concept": "hunds-first-rule-origin",
+   "verb": "introduces"
+  },
+  {
+   "span": "hunds-rules",
+   "concept": "ground-term-from-hunds-rules",
+   "verb": "introduces"
+  },
+  {
+   "span": "hunds-rules",
+   "concept": "exchange-interaction",
+   "verb": "reinforces"
+  },
+  {
+   "span": "hunds-rules",
+   "concept": "electron-hole-equivalence",
+   "verb": "reinforces"
+  },
+  {
+   "span": "hunds-rules",
+   "concept": "total-spin-quantum-number",
+   "verb": "uses"
+  },
+  {
+   "span": "hunds-rules",
+   "concept": "total-orbital-angular-momentum-quantum-number",
+   "verb": "uses"
+  },
+  {
+   "span": "hunds-rules",
+   "concept": "total-angular-momentum-quantum-number",
+   "verb": "uses"
+  },
+  {
+   "span": "hunds-rules",
+   "concept": "spin-multiplicity",
+   "verb": "uses"
+  },
+  {
+   "span": "hunds-rules",
+   "concept": "term-symbol",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "e1",
+   "source_id": "ex:8.10.1",
+   "source_number": "Example 8.10.1",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "hunds-rules",
+   "prompt": "<p>Rank these terms associated with an electronic configuration of an atom based on energy (via Hund's rules):</p><p>$^3D$, $^3P$, $^3S$, $^1D$, $^1P$, $^1S$</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "Sort by multiplicity first; only then break ties by $L$.",
+    "solution": "<p>From lowest to highest energy: $^3D < {}^3P < {}^3S < {}^1D < {}^1P < {}^1S$. The first rule puts the three triplets ($S = 1$) below the three singlets ($S = 0$). Within each multiplicity the second rule puts the larger $L$ lower, so D ($L = 2$) comes before P ($L = 1$) and P before S ($L = 0$). The third rule is not needed, since no $J$ values are given.</p>"
+   }
+  },
+  {
+   "id": "e3",
+   "source_id": "exr:8.10.3",
+   "source_number": "Exercise 8.10.3",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "hunds-rules",
+   "prompt": "<p>What is the term of lowest energy state for the following atoms and ions.</p>\n<ul><li>$\\mathrm{C}$: $[He]2s^2 2p^2$</li><li>$\\mathrm{N}$: $[He]2s^2 2p^3$</li><li>$\\mathrm{O}$: $[He]2s^2 2p^4$</li><li>$\\mathrm{Cr^{3+}}$: $[Ar]3d^3$</li><li>$\\mathrm{Mn^{3+}}$: $[Ar]3d^4$</li><li>$\\mathrm{Fe^{3+}}$: $[Ar]3d^5$</li></ul>",
+   "answer": {
+    "type": "open",
+    "generated_by": "source",
+    "solution": "<p>$^3P_0$, $^4S_{3/2}$, $^3P_2$, $^4F_{3/2}$, $^5D_0$, and $^6S_{5/2}$, respectively.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "e1",
+   "concept": "hunds-rules"
+  },
+  {
+   "exercise": "e1",
+   "concept": "term-symbol"
+  },
+  {
+   "exercise": "e3",
+   "concept": "ground-term-from-hunds-rules"
+  },
+  {
+   "exercise": "e3",
+   "concept": "hunds-rules"
+  },
+  {
+   "exercise": "e3",
+   "concept": "electron-hole-equivalence"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-excited",
+   "kind": "correction",
+   "html": "This configuration has 22 electrons, titanium's number, and titanium's ground configuration is $[Ar]3d^2 4s^2$; $4s^2 4p^1 3d^1$ is an excited configuration."
+  },
+  {
+   "id": "c-two-shells",
+   "kind": "correction",
+   "html": "The third rule is stated for one open subshell. Here two are open, $4p^1$ and $3d^1$, both less than half full, so lowest $J$ is the rule's natural reading rather than a firm prediction."
+  }
+ ]
+}

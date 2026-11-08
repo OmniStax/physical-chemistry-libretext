@@ -97,7 +97,8 @@ class Drafter:
         """\\ce{…} (mhchem) as upright text with mhchem's two habits a formula needs:
         a count after an element is a subscript (O2, Li2) and a mass number after
         ^ a superscript of all its digits (^35Cl, ^1H). The braces are matched, so
-        a formula with its own groups survives (H^{35}Cl, ^{12}C^{16}O, Li^{2+})."""
+        a formula with its own groups survives (H^{35}Cl, ^{12}C^{16}O, Li^{2+}),
+        and # is mhchem's triple bond, written \\equiv."""
         out, i = [], 0
         while True:
             k = tex.find("\\ce", i)
@@ -119,6 +120,7 @@ class Drafter:
             body = tex[a + 1:j - 1]
             body = re.sub(r"\^(\d+)", r"^{\1}", body)
             body = re.sub(r"(?<=[A-Za-z)])(\d+)(?![^{]*\})", r"_{\1}", body)
+            body = body.replace("#", "{\\equiv}")  # mhchem's triple bond (9.10's C#C, N#N), a parameter sign to KaTeX
             out.append(tex[i:k] + "\\mathrm{" + body + "}")
             i = j
 
@@ -169,6 +171,10 @@ class Drafter:
             out.append(tex[i:k] + f"\\overset{{\\to\\,{args[0]}}}{{\\cancel{{{args[1]}}}}}")
             i = j
         return "".join(out)
+
+    def mathfix(self, s):
+        """The inline maths of a plain string (a figure's caption, an exercise's title) through katex()."""
+        return re.sub(r"\$[^$]+\$", lambda m: self.katex(m.group(0)), s)
 
     def refs(self, s):
         return re.sub(r"\[ref:eq:([^\]]+)\]", lambda m: self.eqnum.get(m.group(1)) or self.foreign(m.group(1)), s)
@@ -300,6 +306,8 @@ class Drafter:
         alt = next((x[7:] for x in ls if x.startswith("> alt: ")), "")
         # a caption citing an equation keeps its number in the row as in the text (7.1.3, 7.4.2)
         cap = self.refs(next((x[11:] for x in ls if x.startswith("> caption: ")), ""))
+        # the row's caption is set under the page's macros, which have no mhchem (9.2.1's $\ce{H2^{+}}$)
+        cap = self.mathfix(cap)
         parts = [re.search(r"src=media/(\S+)", x).group(1) for x in ls[1:] if x.startswith("> part ")]
         panels = [x[9:] for x in ls if x.startswith("> panel: ")]
         num = re.search(r"\{fig:([^}]+)\}", head)
@@ -408,7 +416,7 @@ class Drafter:
             return ""
         eid = self.uid("e" + num.split(".")[-1].lower())  # two boxes may print one number (3.6); 4.6.2C: e2c
         self.exercises.append({"id": eid, "source_id": f"exr:{num}", "source_number": printed or f"Exercise {num}",
-                               "kind": "exercise", "title": title, "prompt": prompt, "book_answer": sol, "keyed": k < len(body)})
+                               "kind": "exercise", "title": self.mathfix(title), "prompt": prompt, "book_answer": sol, "keyed": k < len(body)})
         return ""
 
     def run(self, md):
