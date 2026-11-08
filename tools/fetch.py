@@ -142,7 +142,10 @@ def media(ch_dir, modules):
     ch = next(c for c in modules["chapters"] if c["dir"] == ch_dir)
     os.makedirs(os.path.join(SRC, "media"), exist_ok=True)
     jobs = []
-    for page in [ch] + ch["sections"]:
+    # the landing page, the sections, and the N.S, N.E and N.T pages, whose
+    # images the chapter's summary/ and sheets show too
+    extra = [ch[k] for k in ("summary", "exercises") if ch.get(k)] + ch.get("tables", [])
+    for page in [ch] + ch["sections"] + extra:
         for url in re.findall(r'<img[^>]+src="([^"]+)"', body(page["id"])):
             url = url.replace("&amp;", "&")
             m = re.search(r"/@api/deki/files/(\d+)/([^?]+)", url)

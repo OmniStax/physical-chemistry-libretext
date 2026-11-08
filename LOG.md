@@ -78,3 +78,28 @@ per-row numbering of `align` and may be off by one on 1.1, 1.2, 1.4, 1.5
 and 1.8. Library gaps the builders hit: no per-vertex colour in
 `F.space3d`, no legend helper, no value formatter on `ctl`, no dash in
 `plot`, and a fact repeated in a derivation when `then` restates it.
+
+## Pass 4 · 2026-11-08 · Chapter 3 prepared
+
+Prep only, no section built. Fetched Chapter 3's images (15, into
+`media/ch03/`, the summary page's three included), converted the landing
+page, 3.1–3.9, the summary page 3.S (to `ch03/summary/`) and the empty 3.E;
+wrote `ch03/exploration.md`, `ch03/config.md` (agreed on Chapter 1's terms),
+`ch03/chapter.json` (9 sections, the intro and summary records, 147
+variables) and merged `ch03/book-rows.json`: 3 new types (wavefunction,
+probability density, operator), 42 symbols, 61 concepts, 92 edges.
+`npm run colours:default` was rerun for the new types; it moved the hues of
+ten existing types, energy among them. Drafts made for the intro, 3.1–3.9
+and the summary.
+
+Tool fixes: `fetch.py --media` also takes the N.S, N.E and N.T pages'
+images; `lt2md.py` drops a `\label` in inline maths and keeps a box's
+printed label where it names the other kind (3.6's "Example 3.6.1" in an
+exercise box, 3.7's "Exercise 3.7.2" in an example box); `md2html.py`
+drafts `N.intro` and `N.summary`, rewrites `\cancelto`, `\op`, `\mbox` and ∆
+for KaTeX, sets an irregular table's spans, and keeps exercise ids unique.
+Chapters 1 and 2 reconvert to the same bytes.
+
+Exercises: 14 distinct questions, 8 keyed, 6 for AI solutions, 6 AI
+exercises proposed; three held for 3.5 and one merged into 3.4.
+`check:content`: no errors, no warnings.

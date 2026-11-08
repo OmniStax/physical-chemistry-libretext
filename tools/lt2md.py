@@ -15,7 +15,9 @@ dropped. Needs BeautifulSoup 4. Markers, in the order a page prints them:
                                   the header survives.
   ##### / ######                  an h5 or h6 that is not the title of a box
                                   (rare; the book uses h5 and h6 inside boxes).
-  $…$                             inline maths, from \\( … \\).
+  $…$                             inline maths, from \\( … \\). A \\label inside
+                                  it is dropped with a warning (MathJax numbers
+                                  no inline maths).
   $$ … $$ {eq:label}              a display equation, from \\[ … \\]; the label
                                   is the book's \\label{…}, unique within the
                                   page (LibreTexts numbers equations N.M.K by
@@ -47,6 +49,10 @@ dropped. Needs BeautifulSoup 4. Markers, in the order a page prints them:
   …  **Solution** … :::           through in bold on a line of their own.
   :::exercise {exr:N.M.K} Title   a section.box-exercise; an Answer or Solution
   … **Answer** … :::              part, where the box has one, is in bold.
+                                  Where the printed title names the other kind
+                                  (an exercise box titled "Example 3.6.1"), the
+                                  marker follows the class and adds the printed
+                                  label: `:::exercise {exr:3.6.1} {printed:Example 3.6.1} Title`.
   :::note [kind] Title … :::      any other box (box-note, box-emphasis,
                                   box-definition, box-notewithlegend …), with
                                   kind the class without "box-".
@@ -150,9 +156,17 @@ class Converter:
     def math_inline(self, s):
         s = self.page_index(s)
         # \( … \) is inline; \[ … \] in a running paragraph is left to block()
-        s = re.sub(r"\\\((.+?)\\\)", lambda m: "$" + self.refs(m.group(1).strip()) + "$", s, flags=re.S)
+        s = re.sub(r"\\\((.+?)\\\)", lambda m: "$" + self.refs(self.inline_label(m.group(1).strip())) + "$", s, flags=re.S)
         s = self.refs(s) if "\\ref" in s else s
         return re.sub(r"\$\s*(\[ref:eq:[^\]]+\])\s*\$", r"\1", s)
+
+    @staticmethod
+    def inline_label(tex):
+        """A \\label inside inline maths (3.9's three separated equations): MathJax
+        numbers no inline maths, so the label names nothing and KaTeX would refuse it."""
+        for lab in re.findall(r"\\label\s*\{\s*([^}]+?)\s*\}", tex):
+            warn(f"label {lab} in inline maths dropped (inline maths takes no number)")
+        return re.sub(r"\s*\\label\s*\{[^}]*\}", "", tex)
 
     def refs(self, s):
         return re.sub(r"\\ref\s*\{\s*([^}]+?)\s*\}", lambda m: f"[ref:eq:{m.group(1)}]", s)
@@ -346,7 +360,15 @@ class Converter:
             num, rest = (m.group(1), m.group(2)) if m else ("?", title)
             if not m:
                 warn(f"{kind} without a number: {title!r}")
-            return f":::{kind} {{{pref}:{num}}} {rest}".rstrip() + "\n\n" + self.children(sec) + "\n:::"
+            printed = ""
+            word = re.match(r"(Example|Exercise)", title)
+            if word and word.group(1).lower() != kind:
+                # the box's class and its printed title disagree (3.6: an exercise
+                # box titled "Example 3.6.1"; 3.7: an example box titled "Exercise
+                # 3.7.2"): the kind follows the class, the label the reader sees is kept
+                printed = f" {{printed:{word.group(1)} {num}}}"
+                warn(f"{cls} titled {word.group(1)} {num}")
+            return f":::{kind} {{{pref}:{num}}}{printed} {rest}".rstrip() + "\n\n" + self.children(sec) + "\n:::"
         kind = cls[4:]
         return f":::note [{kind}] {title}".rstrip() + "\n\n" + self.children(sec) + "\n:::"
 

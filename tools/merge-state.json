@@ -103,5 +103,56 @@
       "displacement",
       "time"
     ]
+  },
+  "ch03": {
+    "symbols": [
+      "Psi",
+      "psi",
+      "psi_n",
+      "r_vec",
+      "nabla2",
+      "H_op",
+      "A_hat",
+      "B_hat",
+      "O_hat",
+      "p_hat",
+      "x_hat",
+      "KE_hat",
+      "L_hat",
+      "P_dens",
+      "P_prob",
+      "c_i",
+      "phi_i",
+      "B",
+      "E_1",
+      "delta_mn",
+      "sigma_w",
+      "x_0",
+      "psi_0",
+      "s",
+      "P_s",
+      "x_avg",
+      "x2_avg",
+      "p_avg",
+      "p2_avg",
+      "H_avg",
+      "KE_avg",
+      "V_avg",
+      "dA",
+      "L_x",
+      "L_y",
+      "L_z",
+      "n_z",
+      "Z_f",
+      "eps_x",
+      "eps_y",
+      "eps_z",
+      "E_nnn"
+    ],
+    "types": [
+      "wavefunction",
+      "probability-density",
+      "operator"
+    ]
   }
 }

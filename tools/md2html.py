@@ -3,6 +3,7 @@
 
     python3 tools/md2html.py 1.1            writes ch01/1.1/draft.text.html and ch01/1.1/draft.section.json
     python3 tools/md2html.py 1.1 --stdout   prints the HTML
+    python3 tools/md2html.py 3.summary      the chapter's N.S page, in ch03/summary/ (3.intro: its landing page)
 
 Run from the book's folder. The draft is a starting point for the builder,
 never the page itself: it keeps the book's words, maths, notes, examples
@@ -72,7 +73,7 @@ class Drafter:
         out = []
         for k, p in enumerate(parts):
             if k % 2:
-                out.append(re.sub(r"\\ce\{([^{}]*)\}", r"\\mathrm{\1}", self.refs(p)))
+                out.append(self.katex(self.refs(p)))
                 continue
             p = self.refs(p)
             p = re.sub(r"!\[([^\]]*)\]\(media/([^)]+)\)", lambda m: f'<img src="/media/{self.chdir}/{m.group(2)}" alt="{html.escape(m.group(1))}">', p)
@@ -84,6 +85,44 @@ class Drafter:
             out.append(p)
         return "".join(out)
 
+    @staticmethod
+    def katex(tex):
+        """What the site's MathJax has and the app's KaTeX lacks: \\ce (mhchem),
+        \\op (the site's operator hat), \\cancelto (the cancel package), \\mbox,
+        and the increment sign U+2206, which KaTeX has no metrics for."""
+        tex = re.sub(r"\\ce\{([^{}]*)\}", r"\\mathrm{\1}", tex)
+        tex = re.sub(r"\\mbox\s*\{", r"\\text{", tex)  # KaTeX has \\text, not \\mbox
+        tex = tex.replace("\u2206", "\\Delta ")  # the increment sign, which KaTeX has no metrics for
+        tex = re.sub(r"\\op\s*\{([^{}]*)\}", r"\\hat{\1}", tex)
+        tex = re.sub(r"\\op\s+(\\?\w)", r"\\hat{\1}", tex)
+        out, i = [], 0
+        while True:
+            k = tex.find("\\cancelto", i)
+            if k < 0:
+                out.append(tex[i:])
+                break
+            args, j = [], k + len("\\cancelto")
+            for _ in range(2):
+                while j < len(tex) and tex[j] == " ":
+                    j += 1
+                if j >= len(tex) or tex[j] != "{":
+                    break
+                depth, a = 0, j
+                while j < len(tex):
+                    depth += {"{": 1, "}": -1}.get(tex[j], 0)
+                    j += 1
+                    if depth == 0:
+                        break
+                args.append(tex[a + 1:j - 1])
+            if len(args) < 2:
+                out.append(tex[i:k + 1])
+                i = k + 1
+                continue
+            # \cancelto{v}{X}: X struck through, with the value it goes to above
+            out.append(tex[i:k] + f"\\overset{{\\to\\,{args[0]}}}{{\\cancel{{{args[1]}}}}}")
+            i = j
+        return "".join(out)
+
     def refs(self, s):
         return re.sub(r"\[ref:eq:([^\]]+)\]", lambda m: self.eqnum.get(m.group(1), m.group(1)), s)
 
@@ -93,7 +132,7 @@ class Drafter:
         m = re.match(r"\$\$ (.*) \$\$((?: (?:\{eq:[^}]+\} )?n=\d+)*)\s*$", line)
         tex, marks = m.group(1), self.MARK.findall(m.group(2))
         tex = self.refs(tex)
-        tex = re.sub(r"\\ce\{([^{}]*)\}", r"\\mathrm{\1}", tex)  # the app's KaTeX has no mhchem
+        tex = self.katex(tex)  # the app's KaTeX has no mhchem, \\op or \\cancelto
         nums = list(dict.fromkeys(f"{self.sec}.{n}" for lab, n in marks))  # one display, one number
         if len(nums) > 1 and re.search(r"\\begin\{align\}", tex):
             # several numbered rows: KaTeX's align takes a \tag per row and keeps \nonumber
@@ -225,7 +264,17 @@ class Drafter:
                 continue
             cells = [c.strip() for c in re.split(r"(?<!\\)\|", r.strip())[1:-1]]
             tag = "th" if k == 0 else "td"
-            body.append("<tr>" + "".join(f"<{tag}>{self.inline(c.replace(chr(92) + '|', '|'))}</{tag}>" for c in cells) + "</tr>")
+            row = []
+            for c in cells:
+                attrs = ""
+                while True:  # an irregular table's {span=N} and {rows=N}
+                    m = re.match(r"\{(span|rows)=(\d+)\}", c)
+                    if not m:
+                        break
+                    attrs += f' {"colspan" if m.group(1) == "span" else "rowspan"}="{m.group(2)}"'
+                    c = c[m.end():]
+                row.append(f"<{tag}{attrs}>{self.inline(c.replace(chr(92) + '|', '|'))}</{tag}>")
+            body.append("<tr>" + "".join(row) + "</tr>")
         head, rest = body[:1], body[1:]
         return ('<div class="book-table">\n  <div class="tcap">' + f'<span class="eyebrow">{eyebrow}</span><span>{self.inline(title)}</span></div>\n'
                 '  <table>\n    <thead>' + "".join(head) + "</thead>\n    <tbody>\n      " + "\n      ".join(rest) + "\n    </tbody>\n  </table>\n</div>")
@@ -264,18 +313,20 @@ class Drafter:
             inner = "\n".join(self.boxes(body))
             h3 = f"<h3>{self.inline(title)}</h3>\n" if title else ""
             return f'<div class="note">\n<div class="eyebrow">Note</div>\n{h3}{inner}\n</div>'
-        m = re.match(r"\{(?:ex|exr):([^}]+)\}\s*(.*)", head)
-        num, title = (m.group(1), m.group(2)) if m else ("?", head)
+        m = re.match(r"\{(?:ex|exr):([^}]+)\}\s*(?:\{printed:([^}]+)\}\s*)?(.*)", head)
+        num, printed, title = (m.group(1), m.group(2), m.group(3)) if m else ("?", None, head)
         if kind == "example":
             eid = self.uid("ex-" + num.replace(".", "-"))
             inner = "\n".join(self.boxes(body))
-            t = f"Example {num}" + (f" · {self.inline(title)}" if title else "")
+            # the label the book prints, where it names the other kind (3.7's "Exercise 3.7.2")
+            t = (printed or f"Example {num}") + (f" · {self.inline(title)}" if title else "")
             return f'<div class="example" id="{eid}">\n<h3>{t}</h3>\n{inner}\n</div>'
         # exercise: prompt is everything before the first **Answer…**/**Solution…**
         k = next((i for i, l in enumerate(body) if re.match(r"^\*\*(Answer|Solution)", l)), len(body))
         prompt = "\n".join(self.boxes(body[:k]))
         sol = "\n".join(self.boxes(body[k:]))
-        self.exercises.append({"id": "e" + num.split(".")[-1], "source_id": f"exr:{num}", "source_number": f"Exercise {num}",
+        eid = self.uid("e" + num.split(".")[-1])  # two boxes may print one number (3.6)
+        self.exercises.append({"id": eid, "source_id": f"exr:{num}", "source_number": printed or f"Exercise {num}",
                                "kind": "exercise", "title": title, "prompt": prompt, "book_answer": sol, "keyed": k < len(body)})
         return ""
 
@@ -343,7 +394,9 @@ def main(argv):
         return
     sec = argv[0]
     ch = next(c for c in MODULES["chapters"] if str(c["number"]) == sec.split(".")[0])
-    folder = os.path.join(BOOK, ch["dir"], sec)
+    # 3.intro and 3.summary: the chapter's landing page and its N.S page, in intro/ and summary/
+    front = sec.split(".", 1)[1] if sec.split(".", 1)[1] in ("intro", "summary") else None
+    folder = os.path.join(BOOK, ch["dir"], front or sec)
     md = open(os.path.join(folder, "source.md")).read()
     d = Drafter(sec, ch["dir"])
     text, rec = d.run(md)
@@ -351,8 +404,8 @@ def main(argv):
         print(text)
         return
     open(os.path.join(folder, "draft.text.html"), "w").write(text)
-    page = next(s for s in ch["sections"] if s["number"] == sec)
-    draft = {"id": sec, "module": page["id"], "chapter": str(ch["number"]), "title": page["title"],
+    page = ch if front == "intro" else ch.get("summary") if front else next(s for s in ch["sections"] if s["number"] == sec)
+    draft = {"id": front or sec, "module": page["id"], "chapter": str(ch["number"]), "title": page["title"],
              "licence": page["licence"], **rec, "equations": d.eqnum, "figures": d.figures, "exercises": d.exercises}
     json.dump(draft, open(os.path.join(folder, "draft.section.json"), "w"), indent=1, ensure_ascii=False)
     print(f"{folder}/draft.text.html, draft.section.json: {len(d.figures)} figures, {len(d.exercises)} exercises, {len(d.eqnum)} numbered equations")

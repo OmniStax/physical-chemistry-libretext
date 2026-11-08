@@ -1,0 +1,1551 @@
+{
+ "types": [
+  {
+   "id": "wavefunction",
+   "label": "wavefunction"
+  },
+  {
+   "id": "probability-density",
+   "label": "probability density",
+   "dimension": "m⁻¹"
+  },
+  {
+   "id": "operator",
+   "label": "operator"
+  }
+ ],
+ "symbols": [
+  {
+   "sym": "Psi",
+   "latex": "\\Psi",
+   "macro": "\\kPsi"
+  },
+  {
+   "sym": "psi",
+   "latex": "\\psi",
+   "macro": "\\kpsi"
+  },
+  {
+   "sym": "psi_n",
+   "latex": "\\psi_n",
+   "macro": "\\kpsin"
+  },
+  {
+   "sym": "r_vec",
+   "latex": "\\vec{r}",
+   "macro": "\\krvec"
+  },
+  {
+   "sym": "nabla2",
+   "latex": "\\nabla^2",
+   "macro": "\\knabla"
+  },
+  {
+   "sym": "H_op",
+   "latex": "\\hat{H}",
+   "macro": "\\kH"
+  },
+  {
+   "sym": "A_hat",
+   "latex": "\\hat{A}",
+   "macro": "\\kAhat"
+  },
+  {
+   "sym": "B_hat",
+   "latex": "\\hat{B}",
+   "macro": "\\kBhat"
+  },
+  {
+   "sym": "O_hat",
+   "latex": "\\hat{O}",
+   "macro": "\\kOhat"
+  },
+  {
+   "sym": "p_hat",
+   "latex": "\\hat{p}_x",
+   "macro": "\\kphat"
+  },
+  {
+   "sym": "x_hat",
+   "latex": "\\hat{x}",
+   "macro": "\\kxhat"
+  },
+  {
+   "sym": "KE_hat",
+   "latex": "\\hat{KE}",
+   "macro": "\\kKEhat"
+  },
+  {
+   "sym": "L_hat",
+   "latex": "\\hat{\\vec{L}}",
+   "macro": "\\kLhat"
+  },
+  {
+   "sym": "P_dens",
+   "latex": "P",
+   "macro": "\\kPd"
+  },
+  {
+   "sym": "P_prob",
+   "latex": "P"
+  },
+  {
+   "sym": "c_i",
+   "latex": "c_i"
+  },
+  {
+   "sym": "phi_i",
+   "latex": "\\phi_i",
+   "macro": "\\kphii"
+  },
+  {
+   "sym": "B",
+   "latex": "B"
+  },
+  {
+   "sym": "E_1",
+   "latex": "E_1",
+   "macro": "\\kEone"
+  },
+  {
+   "sym": "delta_mn",
+   "latex": "\\delta_{mn}"
+  },
+  {
+   "sym": "sigma_w",
+   "latex": "\\sigma",
+   "macro": "\\ksigw"
+  },
+  {
+   "sym": "x_0",
+   "latex": "x_0",
+   "macro": "\\kxo"
+  },
+  {
+   "sym": "psi_0",
+   "latex": "\\psi_0"
+  },
+  {
+   "sym": "s",
+   "latex": "s"
+  },
+  {
+   "sym": "P_s",
+   "latex": "P_s"
+  },
+  {
+   "sym": "x_avg",
+   "latex": "\\langle x \\rangle",
+   "macro": "\\kxavg"
+  },
+  {
+   "sym": "x2_avg",
+   "latex": "\\langle x^2 \\rangle",
+   "macro": "\\kxsqavg"
+  },
+  {
+   "sym": "p_avg",
+   "latex": "\\langle p \\rangle",
+   "macro": "\\kpavg"
+  },
+  {
+   "sym": "p2_avg",
+   "latex": "\\langle p^2 \\rangle",
+   "macro": "\\kpsqavg"
+  },
+  {
+   "sym": "H_avg",
+   "latex": "\\langle H \\rangle",
+   "macro": "\\kHavg"
+  },
+  {
+   "sym": "KE_avg",
+   "latex": "\\langle KE \\rangle",
+   "macro": "\\kKEavg"
+  },
+  {
+   "sym": "V_avg",
+   "latex": "\\langle V \\rangle",
+   "macro": "\\kVavg"
+  },
+  {
+   "sym": "dA",
+   "latex": "\\Delta A"
+  },
+  {
+   "sym": "L_x",
+   "latex": "L_x",
+   "macro": "\\kLx"
+  },
+  {
+   "sym": "L_y",
+   "latex": "L_y",
+   "macro": "\\kLy"
+  },
+  {
+   "sym": "L_z",
+   "latex": "L_z",
+   "macro": "\\kLz"
+  },
+  {
+   "sym": "n_z",
+   "latex": "n_z"
+  },
+  {
+   "sym": "Z_f",
+   "latex": "Z"
+  },
+  {
+   "sym": "eps_x",
+   "latex": "\\varepsilon_x",
+   "macro": "\\kepsx"
+  },
+  {
+   "sym": "eps_y",
+   "latex": "\\varepsilon_y",
+   "macro": "\\kepsy"
+  },
+  {
+   "sym": "eps_z",
+   "latex": "\\varepsilon_z",
+   "macro": "\\kepsz"
+  },
+  {
+   "sym": "E_nnn",
+   "latex": "E_{n_x,n_y,n_z}",
+   "macro": "\\kEnnn"
+  }
+ ],
+ "concepts": [
+  {
+   "id": "wavefunction",
+   "kind": "definition",
+   "section": "3.1",
+   "name": "Wavefunction",
+   "symbol": "Psi",
+   "terms": [
+    "wavefunction",
+    "wavefunctions"
+   ],
+   "type": "wavefunction",
+   "statement": "The solution of a wave equation, a function of the space coordinates x, y, z and the time t, is called the wavefunction; for a particle it is the amplitude of its matter wave."
+  },
+  {
+   "id": "reduced-plancks-constant",
+   "kind": "definition",
+   "section": "3.1",
+   "name": "Reduced Planck's constant",
+   "symbol": "hbar",
+   "terms": [
+    "ħ"
+   ],
+   "statement": "Planck's constant divided by 2π, ħ ≡ h/2π, introduced by Dirac because h occurs in most formulas with the denominator 2π.",
+   "forms": [
+    {
+     "id": "hbar",
+     "latex": "\\hbar \\equiv \\dfrac{h}{2\\pi}"
+    }
+   ]
+  },
+  {
+   "id": "matter-plane-wave",
+   "kind": "result",
+   "section": "3.1",
+   "name": "Free-particle matter wave",
+   "type": "wavefunction",
+   "statement": "Replacing ν and λ in a traveling wave by E/h and h/p gives the wave of a particle of energy E and momentum p moving in the x direction.",
+   "forms": [
+    {
+     "id": "matter-plane-wave",
+     "latex": "\\Psi(x,t)=\\exp \\left[\\dfrac{i(px-Et)}{\\hbar} \\right]",
+     "ktex": "\\kPsi(\\kx,\\kt)=\\exp \\left[\\dfrac{i(\\kp\\kx-\\kE\\kt)}{\\hbar} \\right]"
+    }
+   ]
+  },
+  {
+   "id": "free-particle-schrodinger-equation",
+   "kind": "result",
+   "section": "3.1",
+   "name": "Schrödinger equation for a free particle",
+   "statement": "The wavefunction of a free particle, on which no force acts, satisfies iħ ∂Ψ/∂t = −(ħ²/2m) ∂²Ψ/∂x², which follows from E = p²/2m.",
+   "forms": [
+    {
+     "id": "free-tdse",
+     "latex": "i\\hbar\\dfrac{\\partial\\Psi}{\\partial t}=-\\dfrac{\\hbar^2}{2m}\\dfrac{\\partial^2\\Psi}{\\partial x^2}",
+     "ktex": "i\\hbar\\dfrac{\\partial\\kPsi}{\\partial \\kt}=-\\dfrac{\\hbar^2}{2\\km}\\dfrac{\\partial^2\\kPsi}{\\partial \\kx^2}"
+    }
+   ]
+  },
+  {
+   "id": "time-dependent-schrodinger-equation",
+   "kind": "axiom",
+   "section": "3.1",
+   "name": "Time-dependent Schrödinger equation",
+   "terms": [
+    "time-dependent Schrödinger equation"
+   ],
+   "statement": "The wavefunction of a particle of mass m in a potential energy V that depends on position only obeys iħ ∂Ψ/∂t = [−(ħ²/2m)∇² + V]Ψ; the equation is postulated, not derived.",
+   "forms": [
+    {
+     "id": "tdse-3d",
+     "latex": "i\\hbar\\dfrac{\\partial}{\\partial t}\\Psi(\\vec{r},t)=\\left[-\\dfrac{\\hbar^2}{2m}\\nabla^2+V(\\vec{r})\\right]\\Psi(\\vec{r},t)",
+     "ktex": "i\\hbar\\dfrac{\\partial}{\\partial \\kt}\\kPsi(\\krvec,\\kt)=\\left[-\\dfrac{\\hbar^2}{2\\km}\\knabla+\\kV(\\krvec)\\right]\\kPsi(\\krvec,\\kt)"
+    },
+    {
+     "id": "tdse-1d",
+     "latex": "i\\hbar\\dfrac{\\partial\\Psi(x,t)}{\\partial t}=\\left[-\\dfrac{\\hbar^2}{2m}\\dfrac{\\partial^2}{\\partial x^2}+V(x)\\right]\\Psi(x,t)",
+     "ktex": "i\\hbar\\dfrac{\\partial\\kPsi(\\kx,\\kt)}{\\partial \\kt}=\\left[-\\dfrac{\\hbar^2}{2\\km}\\dfrac{\\partial^2}{\\partial \\kx^2}+\\kV(\\kx)\\right]\\kPsi(\\kx,\\kt)",
+     "condition": "one dimension"
+    }
+   ]
+  },
+  {
+   "id": "stationary-state",
+   "kind": "result",
+   "section": "3.1",
+   "name": "Stationary state",
+   "type": "wavefunction",
+   "statement": "For a conservative system, whose energy is constant, the wavefunction separates into a space-only factor ψ(r) and a phase factor e^{−iEt/ħ} of constant magnitude.",
+   "forms": [
+    {
+     "id": "stationary-state",
+     "latex": "\\Psi(\\vec{r},t)=\\psi(\\vec{r})e^{-iEt / \\hbar}",
+     "ktex": "\\kPsi(\\krvec,\\kt)=\\kpsi(\\krvec)e^{-i\\kE\\kt / \\hbar}",
+     "condition": "V independent of time"
+    }
+   ]
+  },
+  {
+   "id": "time-independent-schrodinger-equation",
+   "kind": "result",
+   "section": "3.1",
+   "name": "Time-independent Schrödinger equation",
+   "terms": [
+    "time-independent Schrödinger equation"
+   ],
+   "statement": "The space-only wavefunction ψ of a state of energy E satisfies [−(ħ²/2m)∇² + V]ψ = Eψ: the total energy is the kinetic energy plus the potential energy.",
+   "forms": [
+    {
+     "id": "tise",
+     "latex": "\\left[-\\dfrac{\\hbar^2}{2m}\\nabla^2+V(\\vec{r})\\right]\\psi(\\vec{r})=E\\psi(\\vec{r})",
+     "ktex": "\\left[-\\dfrac{\\hbar^2}{2\\km}\\knabla+\\kV(\\krvec)\\right]\\kpsi(\\krvec)=\\kE\\kpsi(\\krvec)"
+    }
+   ]
+  },
+  {
+   "id": "operator",
+   "kind": "definition",
+   "section": "3.2",
+   "name": "Operator",
+   "symbol": "A_hat",
+   "terms": [
+    "operator",
+    "operators"
+   ],
+   "type": "operator",
+   "statement": "An operator is a rule for turning one function into another, as a function is a rule for turning one number into another; it is often marked by a hat."
+  },
+  {
+   "id": "hamiltonian-operator",
+   "kind": "definition",
+   "section": "3.2",
+   "name": "Hamiltonian operator",
+   "symbol": "H_op",
+   "terms": [
+    "Hamiltonian",
+    "Hamiltonian operator"
+   ],
+   "type": "operator",
+   "statement": "The operator of the time-independent Schrödinger equation, Ĥ = −(ħ²/2m)∇² + V, which corresponds to the total energy of the system.",
+   "forms": [
+    {
+     "id": "hamiltonian",
+     "latex": "\\hat{H} = -\\dfrac{\\hbar^2}{2m}\\nabla^2+V(\\vec{r})",
+     "ktex": "\\kH = -\\dfrac{\\hbar^2}{2\\km}\\knabla+\\kV(\\krvec)"
+    },
+    {
+     "id": "hamiltonian-1d",
+     "latex": "\\hat {H} = - \\dfrac{\\hbar^2}{2m} \\dfrac{\\partial^2}{\\partial x^2} + V(x)",
+     "ktex": "\\kH = - \\dfrac{\\hbar^2}{2\\km} \\dfrac{\\partial^2}{\\partial \\kx^2} + \\kV(\\kx)",
+     "condition": "one dimension",
+     "section": "3.3"
+    }
+   ]
+  },
+  {
+   "id": "eigenvalue-equation",
+   "kind": "definition",
+   "section": "3.2",
+   "name": "Eigenvalue equation",
+   "terms": [
+    "eigenvalue equation",
+    "eigenvalue problem"
+   ],
+   "statement": "An equation in which an operator acting on a function gives a constant times the same function.",
+   "forms": [
+    {
+     "id": "eigenvalue-equation",
+     "latex": "\\hat{A}\\psi = k \\psi",
+     "ktex": "\\kAhat\\kpsi = k \\kpsi",
+     "section": "3.3"
+    }
+   ]
+  },
+  {
+   "id": "eigenfunction",
+   "kind": "definition",
+   "section": "3.2",
+   "name": "Eigenfunction",
+   "terms": [
+    "eigenfunction",
+    "eigenfunctions",
+    "characteristic function"
+   ],
+   "type": "wavefunction",
+   "statement": "A function that solves an eigenvalue equation of an operator; eigen is the German word for self or own."
+  },
+  {
+   "id": "eigenvalue",
+   "kind": "definition",
+   "section": "3.2",
+   "name": "Eigenvalue",
+   "terms": [
+    "eigenvalue",
+    "eigenvalues",
+    "characteristic value"
+   ],
+   "statement": "The constant that multiplies the eigenfunction in an eigenvalue equation."
+  },
+  {
+   "id": "operator-algebra",
+   "kind": "definition",
+   "section": "3.2",
+   "name": "Operator algebra",
+   "statement": "Operators add and multiply by acting on a function in turn: (Â ± B̂)f = Âf ± B̂f, ÂB̂f = Â[B̂f]; the associative law holds, but the commutative law does not in general.",
+   "forms": [
+    {
+     "id": "operator-product",
+     "latex": "\\hat{A} \\hat{B} f \\equiv \\hat{A} [ \\hat{B} f ]",
+     "ktex": "\\kAhat \\kBhat f \\equiv \\kAhat [ \\kBhat f ]"
+    }
+   ]
+  },
+  {
+   "id": "commutator",
+   "kind": "definition",
+   "section": "3.2",
+   "name": "Commutator",
+   "terms": [
+    "commutator",
+    "commute"
+   ],
+   "statement": "The commutator of Â and B̂ is ÂB̂ − B̂Â; the operators commute when it is zero, and then the order of operating does not matter.",
+   "forms": [
+    {
+     "id": "commutator",
+     "latex": "[\\hat{A}, \\hat{B}] \\equiv \\hat{A} \\hat{B} - \\hat{B} \\hat{A}",
+     "ktex": "[\\kAhat, \\kBhat] \\equiv \\kAhat \\kBhat - \\kBhat \\kAhat"
+    }
+   ]
+  },
+  {
+   "id": "linear-operator",
+   "kind": "definition",
+   "section": "3.2",
+   "name": "Linear operator",
+   "terms": [
+    "linear operator",
+    "linear operators"
+   ],
+   "statement": "An operator Ô is linear when Ô(f + g) = Ôf + Ôg and Ô(cf) = cÔf for any constant c, real or complex; most operators of quantum mechanics are linear.",
+   "forms": [
+    {
+     "id": "linear-a",
+     "latex": "\\hat{O}(f(x)+g(x)) = \\hat{O}f(x)+\\hat{O}g(x)",
+     "ktex": "\\kOhat(f(\\kx)+g(\\kx)) = \\kOhat f(\\kx)+\\kOhat g(\\kx)"
+    },
+    {
+     "id": "linear-b",
+     "latex": "\\hat{O}cf(x) = c \\hat{O}f(x)",
+     "ktex": "\\kOhat c f(\\kx) = c \\kOhat f(\\kx)"
+    }
+   ]
+  },
+  {
+   "id": "hermitian-operator",
+   "kind": "definition",
+   "section": "3.2",
+   "name": "Hermitian operator",
+   "terms": [
+    "Hermitian",
+    "Hermitian operator",
+    "self-adjoint"
+   ],
+   "statement": "An operator Â is Hermitian, or self-adjoint, when ∫f*Âg dτ = (∫g*Âf dτ)* for all functions f and g that obey the specified boundary conditions.",
+   "forms": [
+    {
+     "id": "hermitian",
+     "latex": "\\int \\! f^* \\, \\hat{A} \\, g \\, \\mathrm{d}\\tau=\\left(\\int \\! g^* \\, \\hat{A} \\, f \\, \\mathrm{d}\\tau\\right)^*",
+     "ktex": "\\int \\! f^* \\, \\kAhat \\, g \\, \\mathrm{d}\\tau=\\left(\\int \\! g^* \\, \\kAhat \\, f \\, \\mathrm{d}\\tau\\right)^*"
+    }
+   ]
+  },
+  {
+   "id": "hamiltonian-is-hermitian",
+   "kind": "result",
+   "section": "3.2",
+   "name": "The Hamiltonian is Hermitian",
+   "statement": "Integrating by parts twice, with the boundary terms vanishing, shows that the particle-in-a-box Hamiltonian satisfies the Hermitian condition."
+  },
+  {
+   "id": "hermitian-observables",
+   "kind": "axiom",
+   "section": "3.2",
+   "name": "Operators of observables are Hermitian",
+   "statement": "It is postulated that all quantum-mechanical operators that represent dynamical variables are Hermitian."
+  },
+  {
+   "id": "observables-as-eigenvalues",
+   "kind": "axiom",
+   "section": "3.3",
+   "name": "Observables are eigenvalues",
+   "terms": [
+    "observable",
+    "measurable"
+   ],
+   "statement": "Every experimental measurable a is an eigenvalue of a specific operator Â, Âψ = aψ; the eigenvalues are the possible measured values, often only a subset of what classical mechanics allows.",
+   "forms": [
+    {
+     "id": "observable-eigenvalue",
+     "latex": "\\hat{A} \\psi=a \\psi",
+     "ktex": "\\kAhat \\kpsi=a \\kpsi"
+    }
+   ]
+  },
+  {
+   "id": "schrodinger-eigenvalue-problem",
+   "kind": "result",
+   "section": "3.3",
+   "name": "The Schrödinger equation as an eigenvalue problem",
+   "statement": "The time-independent Schrödinger equation Ĥψ = Eψ is an eigenvalue equation of the Hamiltonian whose eigenvalues are the allowed total energies.",
+   "forms": [
+    {
+     "id": "h-psi-e-psi",
+     "latex": "\\hat{H}\\psi (x)=E \\psi (x)",
+     "ktex": "\\kH\\kpsi (\\kx)=\\kE \\kpsi (\\kx)"
+    },
+    {
+     "id": "tdse-operator",
+     "latex": "\\hat{H} \\psi (x,t) = i \\hbar \\dfrac{\\partial}{\\partial t} \\psi(x,t)",
+     "ktex": "\\kH \\kpsi (\\kx,\\kt) = i \\hbar \\dfrac{\\partial}{\\partial \\kt} \\kpsi(\\kx,\\kt)",
+     "condition": "time-dependent"
+    }
+   ]
+  },
+  {
+   "id": "correspondence-principle",
+   "kind": "axiom",
+   "section": "3.3",
+   "name": "Correspondence principle",
+   "terms": [
+    "Correspondence Principle",
+    "correspondence principle"
+   ],
+   "statement": "Bohr's principle that the behavior of systems described by quantum theory reproduces classical physics in the limit of large quantum numbers; the Hamiltonian follows from p²/2m + V by replacing p with −iħ d/dx."
+  },
+  {
+   "id": "momentum-operator",
+   "kind": "definition",
+   "section": "3.3",
+   "name": "Linear momentum operator",
+   "symbol": "p_hat",
+   "terms": [
+    "linear momentum operator",
+    "momentum operator"
+   ],
+   "type": "operator",
+   "statement": "The operator of the linear momentum of a particle moving along x, p̂ₓ = −iħ ∂/∂x, and −iħ∇ in three dimensions.",
+   "forms": [
+    {
+     "id": "momentum-operator",
+     "latex": "\\hat p_x = -i \\hbar \\dfrac{\\partial}{\\partial x}",
+     "ktex": "\\kphat = -i \\hbar \\dfrac{\\partial}{\\partial \\kx}"
+    },
+    {
+     "id": "momentum-operator-3d",
+     "latex": "\\hat {\\vec{p}} = -i \\hbar \\nabla",
+     "condition": "three dimensions"
+    }
+   ]
+  },
+  {
+   "id": "position-operator",
+   "kind": "definition",
+   "section": "3.3",
+   "name": "Position operator",
+   "symbol": "x_hat",
+   "terms": [
+    "position operator"
+   ],
+   "type": "operator",
+   "statement": "The operator of the position of a particle is multiplication by the coordinate: x̂ = x, and r̂ = r in three dimensions.",
+   "forms": [
+    {
+     "id": "position-operator",
+     "latex": "\\hat x = x",
+     "ktex": "\\kxhat = \\kx"
+    }
+   ]
+  },
+  {
+   "id": "kinetic-energy-operator",
+   "kind": "definition",
+   "section": "3.3",
+   "name": "Kinetic energy operator",
+   "symbol": "KE_hat",
+   "terms": [
+    "kinetic energy operator"
+   ],
+   "type": "operator",
+   "statement": "The quantum counterpart of p²/2m: KÊ = −(ħ²/2m) ∂²/∂x², and −(ħ²/2m)∇² in three dimensions.",
+   "forms": [
+    {
+     "id": "kinetic-energy-operator",
+     "latex": "\\hat {KE}= -\\dfrac{\\hbar^2}{2m} \\dfrac{\\partial^2}{\\partial x^2}",
+     "ktex": "\\kKEhat= -\\dfrac{\\hbar^2}{2\\km} \\dfrac{\\partial^2}{\\partial \\kx^2}"
+    },
+    {
+     "id": "kinetic-energy-operator-3d",
+     "latex": "\\hat {KE}= -\\dfrac{\\hbar^2}{2m} \\nabla^2",
+     "ktex": "\\kKEhat= -\\dfrac{\\hbar^2}{2\\km} \\knabla",
+     "condition": "three dimensions"
+    }
+   ]
+  },
+  {
+   "id": "angular-momentum-operator",
+   "kind": "definition",
+   "section": "3.3",
+   "name": "Angular momentum operator",
+   "symbol": "L_hat",
+   "terms": [
+    "angular momentum operator"
+   ],
+   "type": "operator",
+   "statement": "The cross product of the position and momentum operators, L̂ = −iħ(r × ∇).",
+   "forms": [
+    {
+     "id": "angular-momentum-operator",
+     "latex": "\\hat {\\vec{L}} = -i \\hbar ( \\vec{r} \\times \\nabla)",
+     "ktex": "\\kLhat = -i \\hbar ( \\krvec \\times \\nabla)"
+    }
+   ]
+  },
+  {
+   "id": "eigenstate",
+   "kind": "definition",
+   "section": "3.3",
+   "name": "Eigenstate",
+   "terms": [
+    "eigenstate",
+    "eigenstates"
+   ],
+   "type": "wavefunction",
+   "statement": "A system whose wavefunction is an eigenfunction of an operator is in an eigenstate of that observable, and a measurement gives the eigenvalue; eigenstate and wavefunction are often used interchangeably."
+  },
+  {
+   "id": "eigenstate-superposition",
+   "kind": "idea",
+   "section": "3.3",
+   "name": "A wavefunction as a superposition of eigenstates",
+   "statement": "A wavefunction that is not an eigenstate of an operator can usually be written as a sum of its eigenstates, ψ = Σ cᵢφᵢ.",
+   "forms": [
+    {
+     "id": "eigenstate-superposition",
+     "latex": "\\psi = \\sum_i c_i \\phi_i",
+     "ktex": "\\kpsi = \\sum_i c_i \\kphii"
+    }
+   ]
+  },
+  {
+   "id": "wavefunction-collapse",
+   "kind": "idea",
+   "section": "3.3",
+   "name": "Collapse of the wavefunction",
+   "terms": [
+    "collapses"
+   ],
+   "statement": "A measurement leaves the wavefunction in an eigenstate of the measured observable, and only eigenvalues are observed: the wavefunction collapses into an eigenstate."
+  },
+  {
+   "id": "square-of-the-modulus",
+   "kind": "definition",
+   "section": "3.4",
+   "name": "Square of the modulus",
+   "terms": [
+    "square of the modulus",
+    "absolute square"
+   ],
+   "statement": "The product of a wavefunction and its complex conjugate, Ψ*Ψ = |Ψ|², which is real."
+  },
+  {
+   "id": "probability-density",
+   "kind": "definition",
+   "section": "3.4",
+   "name": "Probability density",
+   "symbol": "P_dens",
+   "terms": [
+    "probability density"
+   ],
+   "type": "probability-density",
+   "statement": "The probability per unit volume of finding the particle at a point; in one dimension, per unit length.",
+   "forms": [
+    {
+     "id": "born-density",
+     "latex": "P(\\vec{r},t) = \\Psi^*(\\vec{r},t) \\Psi(\\vec{r},t) = {|\\Psi(\\vec{r},t)|}^2",
+     "ktex": "\\kPd(\\krvec,\\kt) = \\kPsi^*(\\krvec,\\kt) \\kPsi(\\krvec,\\kt) = {|\\kPsi(\\krvec,\\kt)|}^2"
+    }
+   ]
+  },
+  {
+   "id": "born-interpretation",
+   "kind": "axiom",
+   "section": "3.4",
+   "name": "Born interpretation",
+   "terms": [
+    "Born interpretation",
+    "probability amplitude"
+   ],
+   "statement": "Born proposed in 1926 that the square of the modulus of the wavefunction is the probability density of the particle: the wavefunction is a probability amplitude, and |ψ|² dτ the probability of finding the particle in the volume element dτ."
+  },
+  {
+   "id": "volume-element",
+   "kind": "definition",
+   "section": "3.4",
+   "name": "Volume element",
+   "terms": [
+    "volume element"
+   ],
+   "statement": "The element dτ a probability density is integrated over, written in the coordinates adopted: dx dy dz in Cartesian, r² sin φ dr dθ dφ in spherical, r dr dφ dz in cylindrical coordinates.",
+   "forms": [
+    {
+     "id": "dtau-cartesian",
+     "latex": "d\\tau = dx\\,dy\\,dz",
+     "condition": "Cartesian coordinates"
+    }
+   ]
+  },
+  {
+   "id": "position-probability",
+   "kind": "result",
+   "section": "3.4",
+   "name": "Probability of finding a particle in a region",
+   "symbol": "P_prob",
+   "statement": "The probability that a measurement finds a particle between a and b is the integral of |ψ|² from a to b, the area under the probability density; in three dimensions the integral runs over the volume.",
+   "forms": [
+    {
+     "id": "probability-1d",
+     "latex": "P(x\\in[a,b])=\\int_{a}^{b}|\\psi (x)|^2 dx",
+     "ktex": "P(\\kx\\in[a,b])=\\int_{a}^{b}|\\kpsi (\\kx)|^2 d\\kx"
+    },
+    {
+     "id": "probability-3d",
+     "latex": "P=\\int_{V}|\\psi|^2 d\\tau",
+     "ktex": "P=\\int_{V}|\\kpsi|^2 d\\tau",
+     "condition": "three dimensions"
+    }
+   ]
+  },
+  {
+   "id": "well-behaved-wavefunction",
+   "kind": "definition",
+   "section": "3.4",
+   "name": "Well-behaved wavefunction",
+   "terms": [
+    "well behaved"
+   ],
+   "statement": "A valid wavefunction is single-valued, finite and continuous everywhere; these conditions restrict the solutions of the Schrödinger equation so that only certain energies are allowed."
+  },
+  {
+   "id": "particle-in-a-box",
+   "kind": "idea",
+   "section": "3.5",
+   "name": "Particle in a box",
+   "terms": [
+    "particle in a box",
+    "particle-in-a-box",
+    "infinite potential well",
+    "infinite square well"
+   ],
+   "statement": "A particle free to move between two impenetrable walls, the simplest non-trivial application of the Schrödinger equation and one that can be solved exactly."
+  },
+  {
+   "id": "box-potential",
+   "kind": "definition",
+   "section": "3.5",
+   "name": "Potential of a one-dimensional box",
+   "terms": [
+    "potential well"
+   ],
+   "statement": "The potential energy is zero between x = 0 and x = L and infinite outside, so the particle cannot be found outside the box.",
+   "forms": [
+    {
+     "id": "box-potential",
+     "latex": "V(x)=\\begin{cases} 0 & 0\\leq x\\leq L \\\\ \\infty & x< 0 \\; \\text{and}\\; x> L \\end{cases}",
+     "ktex": "\\kV(\\kx)=\\begin{cases} 0 & 0\\leq \\kx\\leq \\kL \\\\ \\infty & \\kx< 0 \\; \\text{and}\\; \\kx> \\kL \\end{cases}"
+    }
+   ]
+  },
+  {
+   "id": "pib-energy-levels",
+   "kind": "result",
+   "section": "3.5",
+   "name": "Energy levels of a particle in a box",
+   "symbol": "E_n",
+   "terms": [
+    "energy levels",
+    "quantized"
+   ],
+   "type": "energy",
+   "statement": "The boundary conditions ψ(0) = ψ(L) = 0 allow only kL = nπ, so the energy of a particle in a box is quantized, Eₙ = h²n²/8mL² with n = 1, 2, 3, …",
+   "forms": [
+    {
+     "id": "pib-energy",
+     "latex": "E_{n}=\\dfrac{\\hbar^2\\pi^2}{2mL^2}\\, n^2=\\dfrac{h^2}{8mL^2}n^2",
+     "ktex": "\\kEn=\\dfrac{\\hbar^2\\pi^2}{2\\km\\kL^2}\\, n^2=\\dfrac{h^2}{8\\km\\kL^2}n^2"
+    }
+   ]
+  },
+  {
+   "id": "ground-state",
+   "kind": "definition",
+   "section": "3.5",
+   "name": "Ground state",
+   "terms": [
+    "ground state"
+   ],
+   "statement": "The state of lowest energy of a quantum system."
+  },
+  {
+   "id": "zero-point-energy",
+   "kind": "definition",
+   "section": "3.5",
+   "name": "Zero-point energy",
+   "terms": [
+    "zero point energy",
+    "zero-point energy",
+    "zero-point motion"
+   ],
+   "type": "energy",
+   "statement": "The energy of the ground state in excess of the classical minimum; a particle in a box keeps E₁ = h²/8mL² > 0, and the motion with this energy is the zero-point motion.",
+   "forms": [
+    {
+     "id": "pib-ground",
+     "latex": "E_{1}=\\dfrac{h^2}{8mL^2}",
+     "ktex": "\\kEone=\\dfrac{h^2}{8\\km\\kL^2}"
+    }
+   ]
+  },
+  {
+   "id": "pib-wavefunctions",
+   "kind": "result",
+   "section": "3.5",
+   "name": "Wavefunctions of a particle in a box",
+   "symbol": "psi_n",
+   "type": "wavefunction",
+   "statement": "The normalized eigenfunctions of a particle in a box are ψₙ(x) = √(2/L) sin(nπx/L), the same in form as the standing waves on a string.",
+   "forms": [
+    {
+     "id": "pib-psi",
+     "latex": "\\psi _{n}(x)=\\sqrt{\\dfrac{2}{L}} \\sin \\dfrac{n\\pi x}{L}",
+     "ktex": "\\kpsin(\\kx)=\\sqrt{\\dfrac{2}{\\kL}} \\sin \\dfrac{n\\pi \\kx}{\\kL}"
+    },
+    {
+     "id": "pib-psi-time",
+     "latex": "\\Psi_{n}(x,t)=\\sqrt{\\dfrac{2}{L}} \\sin \\dfrac{n\\pi x}{L} e^{-iE_nt / \\hbar}",
+     "ktex": "\\kPsi_{n}(\\kx,\\kt)=\\sqrt{\\dfrac{2}{\\kL}} \\sin \\dfrac{n\\pi \\kx}{\\kL} e^{-i\\kEn\\kt / \\hbar}",
+     "condition": "with the time factor"
+    }
+   ]
+  },
+  {
+   "id": "normalization-condition",
+   "kind": "definition",
+   "section": "3.5",
+   "name": "Normalization condition",
+   "terms": [
+    "normalization condition",
+    "normalized",
+    "normalization"
+   ],
+   "statement": "A wavefunction is normalized when the integral of |ψ|² over all space is 1, since a measurement of the position must find the particle somewhere.",
+   "forms": [
+    {
+     "id": "normalization",
+     "latex": "\\int_{-\\infty}^{\\infty}\\vert\\psi(x,t)\\vert^{ 2} dx = 1",
+     "ktex": "\\int_{-\\infty}^{\\infty}\\vert\\kpsi(\\kx,\\kt)\\vert^{ 2} d\\kx = 1",
+     "section": "3.6"
+    }
+   ]
+  },
+  {
+   "id": "nodes-and-energy",
+   "kind": "idea",
+   "section": "3.5",
+   "name": "More nodes, higher energy",
+   "terms": [
+    "nodes"
+   ],
+   "statement": "The nth state of a particle in a box has n − 1 nodes; more nodes mean sharper curvature and a larger second derivative, so it is generally true that the energy of a quantum state rises with its number of nodes."
+  },
+  {
+   "id": "orthogonality",
+   "kind": "definition",
+   "section": "3.5",
+   "name": "Orthogonality",
+   "terms": [
+    "orthogonality",
+    "orthogonal"
+   ],
+   "statement": "Two functions are orthogonal when the integral of the product of one's complex conjugate with the other over all space is zero.",
+   "forms": [
+    {
+     "id": "orthogonality",
+     "latex": "\\int \\limits _{\\text{all space}} \\psi _A^* \\psi _B \\, d\\tau = 0",
+     "section": "3.7"
+    }
+   ]
+  },
+  {
+   "id": "kronecker-delta",
+   "kind": "definition",
+   "section": "3.5",
+   "name": "Kronecker delta",
+   "symbol": "delta_mn",
+   "terms": [
+    "Kronecker delta"
+   ],
+   "statement": "δₘₙ is 1 when m = n and 0 when m ≠ n.",
+   "forms": [
+    {
+     "id": "kronecker-delta",
+     "latex": "\\delta _{mn}=\\begin{cases} 1 & \\text{if} \\,\\, m=n \\\\ 0 & \\text{if} \\,\\, m\\neq n \\end{cases}"
+    }
+   ]
+  },
+  {
+   "id": "orthonormality",
+   "kind": "definition",
+   "section": "3.5",
+   "name": "Orthonormality",
+   "terms": [
+    "orthonormal"
+   ],
+   "statement": "A set of functions that are each normalized and orthogonal to one another, ∫ψₘψₙ dx = δₘₙ, is orthonormal.",
+   "forms": [
+    {
+     "id": "orthonormality",
+     "latex": "\\int \\psi _{m}^*\\psi _{n}\\, dx=\\delta _{mn}",
+     "ktex": "\\int \\kpsi _{m}^*\\kpsi _{n}\\, d\\kx=\\delta _{mn}"
+    }
+   ]
+  },
+  {
+   "id": "pib-orthonormality",
+   "kind": "result",
+   "section": "3.5",
+   "name": "The particle-in-a-box eigenfunctions are orthonormal",
+   "statement": "The eigenfunctions of a particle in a box satisfy ∫₀ᴸ ψₘψₙ dx = δₘₙ; orthogonality follows from sin α sin β = ½[cos(α − β) − cos(α + β)].",
+   "forms": [
+    {
+     "id": "pib-orthonormal",
+     "latex": "\\int_{0}^{L}\\psi _{m}(x)\\psi _{n}(x)dx=\\delta _{mn}",
+     "ktex": "\\int_{0}^{\\kL}\\kpsi _{m}(\\kx)\\kpsi _{n}(\\kx)d\\kx=\\delta _{mn}"
+    }
+   ]
+  },
+  {
+   "id": "normalizing-a-wavefunction",
+   "kind": "skill",
+   "section": "3.6",
+   "name": "Normalizing a wavefunction",
+   "statement": "Multiplying a wavefunction by the constant that makes the integral of its square modulus over all space equal to 1."
+  },
+  {
+   "id": "square-integrable",
+   "kind": "definition",
+   "section": "3.6",
+   "name": "Square-integrable wavefunction",
+   "terms": [
+    "square-integrable"
+   ],
+   "statement": "A wavefunction whose integral of |ψ|² over all space converges, so that it can be normalized; a plane wave is not square-integrable."
+  },
+  {
+   "id": "normalization-preserved",
+   "kind": "result",
+   "section": "3.6",
+   "name": "Normalization is kept in time",
+   "statement": "A square-integrable wavefunction that is normalized at one instant stays normalized as it evolves by the time-dependent Schrödinger equation, since the boundary term vanishes as |x| → ∞.",
+   "forms": [
+    {
+     "id": "normalization-in-time",
+     "latex": "\\dfrac{d}{dt} \\int_{-\\infty}^{\\infty}\\vert \\psi(x,t)\\vert^{ 2} dx = 0",
+     "ktex": "\\dfrac{d}{d\\kt} \\int_{-\\infty}^{\\infty}\\vert \\kpsi(\\kx,\\kt)\\vert^{ 2} d\\kx = 0"
+    }
+   ]
+  },
+  {
+   "id": "expectation-value",
+   "kind": "definition",
+   "section": "3.7",
+   "name": "Expectation value",
+   "terms": [
+    "expectation value",
+    "expected value",
+    "mean"
+   ],
+   "statement": "The probabilistic expected value of a measurement, the weighted average of all possible values, ⟨s⟩ = Σ s(i)Pₛ(i); it need not be a possible value itself.",
+   "forms": [
+    {
+     "id": "classical-expectation",
+     "latex": "\\langle s \\rangle = \\sum_i^N s(i) P_s(i)"
+    }
+   ]
+  },
+  {
+   "id": "quantum-expectation-value",
+   "kind": "definition",
+   "section": "3.7",
+   "name": "Quantum expectation value",
+   "statement": "The average of an observable o over many measurements on a state ψ is ⟨o⟩ = ∫ψ*Ôψ dx: the probability weights become |ψ|² and the scalar becomes the operator.",
+   "forms": [
+    {
+     "id": "expectation",
+     "latex": "\\langle o \\rangle = \\int _{-\\infty}^{+\\infty} \\psi^* \\hat{O} \\psi \\, dx",
+     "ktex": "\\langle o \\rangle = \\int _{-\\infty}^{+\\infty} \\kpsi^* \\kOhat \\kpsi \\, d\\kx"
+    }
+   ]
+  },
+  {
+   "id": "average-energy",
+   "kind": "result",
+   "section": "3.7",
+   "name": "Average energy",
+   "statement": "The average total energy ⟨H⟩ = ∫ψ*Ĥψ dx is the average kinetic energy plus the average potential energy.",
+   "forms": [
+    {
+     "id": "average-energy",
+     "latex": "\\langle H \\rangle = \\langle KE \\rangle + \\langle V \\rangle",
+     "ktex": "\\kHavg = \\kKEavg + \\kVavg"
+    }
+   ]
+  },
+  {
+   "id": "pib-average-position",
+   "kind": "result",
+   "section": "3.7",
+   "name": "Average position of a particle in a box",
+   "statement": "The probability density of a particle in a box is symmetric about the center, so ⟨x⟩ = L/2.",
+   "forms": [
+    {
+     "id": "pib-x-avg",
+     "latex": "\\langle x \\rangle = \\dfrac{L}{2}",
+     "ktex": "\\kxavg = \\dfrac{\\kL}{2}"
+    }
+   ]
+  },
+  {
+   "id": "pib-average-momentum",
+   "kind": "result",
+   "section": "3.7",
+   "name": "Average momentum of a particle in a box",
+   "statement": "The average momentum of a particle in a box is zero in every state, though its kinetic energy is not: it is equally likely to move in the +x and −x directions.",
+   "forms": [
+    {
+     "id": "pib-p-avg",
+     "latex": "\\langle p \\rangle = 0",
+     "ktex": "\\kpavg = 0"
+    }
+   ]
+  },
+  {
+   "id": "momentum-eigenfunctions",
+   "kind": "result",
+   "section": "3.7",
+   "name": "Momentum eigenfunctions",
+   "type": "wavefunction",
+   "statement": "e^{ikx} and e^{−ikx} are eigenfunctions of the momentum operator with eigenvalues +ħk and −ħk, waves moving right and left; the sine of a particle in a box is a combination of the two."
+  },
+  {
+   "id": "quantum-uncertainty",
+   "kind": "definition",
+   "section": "3.8",
+   "name": "Uncertainty of an observable",
+   "symbol": "dA",
+   "terms": [
+    "uncertainty"
+   ],
+   "statement": "The uncertainty in a quantity A for a wavefunction is ΔA = √(⟨A²⟩ − ⟨A⟩²), from the expectation values of Â² and Â.",
+   "forms": [
+    {
+     "id": "uncertainty-general",
+     "latex": "\\Delta A = \\sqrt{\\langle A^2 \\rangle - \\langle A \\rangle ^2}"
+    },
+    {
+     "id": "uncertainty-x",
+     "latex": "\\Delta x = \\sqrt{\\langle x^2 \\rangle - \\langle x \\rangle ^2}",
+     "ktex": "\\kdx = \\sqrt{\\kxsqavg - \\kxavg ^2}"
+    },
+    {
+     "id": "uncertainty-p",
+     "latex": "\\Delta p = \\sqrt{\\langle p^2 \\rangle - \\langle p \\rangle ^2}",
+     "ktex": "\\kdp = \\sqrt{\\kpsqavg - \\kpavg ^2}"
+    }
+   ]
+  },
+  {
+   "id": "particle-in-a-3d-box",
+   "kind": "result",
+   "section": "3.9",
+   "name": "Particle in a three-dimensional box",
+   "terms": [
+    "particle in a 3D box"
+   ],
+   "statement": "Separating ψ = X(x)Y(y)Z(z) turns the 3D box into three 1D boxes: ψ is a product of three sines and E = (h²/8m)(nₓ²/Lₓ² + n_y²/L_y² + n_z²/L_z²).",
+   "forms": [
+    {
+     "id": "pib3d-energy",
+     "latex": "E_{n_x,n_y,n_z} = \\dfrac{h^{2}}{8m}\\left(\\dfrac{n_{x}^{2}}{L_x^{2}} + \\dfrac{n_{y}^{2}}{L_y^{2}} + \\dfrac{n_{z}^{2}}{L_z^{2}}\\right)",
+     "ktex": "\\kEnnn = \\dfrac{h^{2}}{8\\km}\\left(\\dfrac{n_{x}^{2}}{\\kLx^{2}} + \\dfrac{n_{y}^{2}}{\\kLy^{2}} + \\dfrac{n_{z}^{2}}{\\kLz^{2}}\\right)"
+    },
+    {
+     "id": "pib3d-psi",
+     "latex": "\\psi(r) = \\sqrt{\\dfrac{8}{V}}\\sin \\left( \\dfrac{n_{x} \\pi x}{L_x} \\right) \\sin \\left(\\dfrac{n_{y} \\pi y}{L_y}\\right) \\sin \\left(\\dfrac{ n_{z} \\pi z}{L_z} \\right)",
+     "ktex": "\\kpsi(\\krvec) = \\sqrt{\\dfrac{8}{V}}\\sin \\left( \\dfrac{n_{x} \\pi \\kx}{\\kLx} \\right) \\sin \\left(\\dfrac{n_{y} \\pi \\ky}{\\kLy}\\right) \\sin \\left(\\dfrac{ n_{z} \\pi \\kz}{\\kLz} \\right)"
+    }
+   ]
+  },
+  {
+   "id": "degeneracy",
+   "kind": "definition",
+   "section": "3.9",
+   "name": "Degeneracy",
+   "terms": [
+    "degenerate",
+    "non-degenerate",
+    "degeneracy"
+   ],
+   "statement": "An energy level is degenerate when several different stationary states or wavefunctions have its energy, and non-degenerate when only one does."
+  },
+  {
+   "id": "degree-of-degeneracy",
+   "kind": "definition",
+   "section": "3.9",
+   "name": "Degree of degeneracy",
+   "terms": [
+    "degree of degeneracy",
+    "three-fold",
+    "triply degenerate"
+   ],
+   "statement": "The number of independent wavefunctions for the stationary states of an energy level."
+  },
+  {
+   "id": "cube-degeneracy",
+   "kind": "result",
+   "section": "3.9",
+   "name": "Degeneracy in a cube",
+   "statement": "In a cube the energy depends only on nₓ² + n_y² + n_z², so states whose quantum numbers are permutations of one another share an energy: the first excited level is triply degenerate.",
+   "forms": [
+    {
+     "id": "cube-energy",
+     "latex": "E_{n_x,n_y,n_z} = \\dfrac{h^2}{8mL^2}\\left(n_x^2 + n_y^2 + n_z^2\\right)",
+     "ktex": "\\kEnnn = \\dfrac{h^2}{8\\km\\kL^2}\\left(n_x^2 + n_y^2 + n_z^2\\right)",
+     "condition": "L_x = L_y = L_z = L",
+     "section": "3.9"
+    }
+   ]
+  },
+  {
+   "id": "accidental-degeneracy",
+   "kind": "definition",
+   "section": "3.9",
+   "name": "Accidental degeneracy",
+   "terms": [
+    "accidental degeneracies",
+    "accidental degeneracy"
+   ],
+   "statement": "A degeneracy that arises not from a symmetry such as Lₓ = L_y but from different combinations of nₓ²/Lₓ², n_y²/L_y² and n_z²/L_z² giving the same sum."
+  }
+ ],
+ "concept_prereqs": [
+  {
+   "concept": "wavefunction",
+   "prereq": "multidimensional-wave-equation"
+  },
+  {
+   "concept": "reduced-plancks-constant",
+   "prereq": "plancks-constant"
+  },
+  {
+   "concept": "matter-plane-wave",
+   "prereq": "wavefunction"
+  },
+  {
+   "concept": "matter-plane-wave",
+   "prereq": "traveling-wave"
+  },
+  {
+   "concept": "matter-plane-wave",
+   "prereq": "de-broglie-wavelength"
+  },
+  {
+   "concept": "matter-plane-wave",
+   "prereq": "eulers-formula"
+  },
+  {
+   "concept": "matter-plane-wave",
+   "prereq": "reduced-plancks-constant"
+  },
+  {
+   "concept": "free-particle-schrodinger-equation",
+   "prereq": "matter-plane-wave"
+  },
+  {
+   "concept": "time-dependent-schrodinger-equation",
+   "prereq": "free-particle-schrodinger-equation"
+  },
+  {
+   "concept": "stationary-state",
+   "prereq": "time-dependent-schrodinger-equation"
+  },
+  {
+   "concept": "stationary-state",
+   "prereq": "separation-of-variables"
+  },
+  {
+   "concept": "time-independent-schrodinger-equation",
+   "prereq": "stationary-state"
+  },
+  {
+   "concept": "hamiltonian-operator",
+   "prereq": "operator"
+  },
+  {
+   "concept": "hamiltonian-operator",
+   "prereq": "time-independent-schrodinger-equation"
+  },
+  {
+   "concept": "eigenvalue-equation",
+   "prereq": "operator"
+  },
+  {
+   "concept": "eigenfunction",
+   "prereq": "eigenvalue-equation"
+  },
+  {
+   "concept": "eigenvalue",
+   "prereq": "eigenvalue-equation"
+  },
+  {
+   "concept": "operator-algebra",
+   "prereq": "operator"
+  },
+  {
+   "concept": "commutator",
+   "prereq": "operator-algebra"
+  },
+  {
+   "concept": "linear-operator",
+   "prereq": "operator"
+  },
+  {
+   "concept": "hermitian-operator",
+   "prereq": "operator"
+  },
+  {
+   "concept": "hamiltonian-is-hermitian",
+   "prereq": "hermitian-operator"
+  },
+  {
+   "concept": "hamiltonian-is-hermitian",
+   "prereq": "hamiltonian-operator"
+  },
+  {
+   "concept": "hermitian-observables",
+   "prereq": "hermitian-operator"
+  },
+  {
+   "concept": "observables-as-eigenvalues",
+   "prereq": "eigenvalue"
+  },
+  {
+   "concept": "schrodinger-eigenvalue-problem",
+   "prereq": "hamiltonian-operator"
+  },
+  {
+   "concept": "schrodinger-eigenvalue-problem",
+   "prereq": "observables-as-eigenvalues"
+  },
+  {
+   "concept": "momentum-operator",
+   "prereq": "linear-operator"
+  },
+  {
+   "concept": "momentum-operator",
+   "prereq": "correspondence-principle"
+  },
+  {
+   "concept": "position-operator",
+   "prereq": "operator"
+  },
+  {
+   "concept": "kinetic-energy-operator",
+   "prereq": "momentum-operator"
+  },
+  {
+   "concept": "angular-momentum-operator",
+   "prereq": "momentum-operator"
+  },
+  {
+   "concept": "angular-momentum-operator",
+   "prereq": "position-operator"
+  },
+  {
+   "concept": "eigenstate",
+   "prereq": "eigenfunction"
+  },
+  {
+   "concept": "eigenstate",
+   "prereq": "observables-as-eigenvalues"
+  },
+  {
+   "concept": "eigenstate-superposition",
+   "prereq": "eigenstate"
+  },
+  {
+   "concept": "eigenstate-superposition",
+   "prereq": "principle-of-superposition"
+  },
+  {
+   "concept": "wavefunction-collapse",
+   "prereq": "eigenstate-superposition"
+  },
+  {
+   "concept": "square-of-the-modulus",
+   "prereq": "wavefunction"
+  },
+  {
+   "concept": "probability-density",
+   "prereq": "quantum-probability"
+  },
+  {
+   "concept": "born-interpretation",
+   "prereq": "square-of-the-modulus"
+  },
+  {
+   "concept": "born-interpretation",
+   "prereq": "probability-density"
+  },
+  {
+   "concept": "position-probability",
+   "prereq": "born-interpretation"
+  },
+  {
+   "concept": "position-probability",
+   "prereq": "volume-element"
+  },
+  {
+   "concept": "well-behaved-wavefunction",
+   "prereq": "born-interpretation"
+  },
+  {
+   "concept": "particle-in-a-box",
+   "prereq": "time-independent-schrodinger-equation"
+  },
+  {
+   "concept": "box-potential",
+   "prereq": "particle-in-a-box"
+  },
+  {
+   "concept": "pib-energy-levels",
+   "prereq": "box-potential"
+  },
+  {
+   "concept": "pib-energy-levels",
+   "prereq": "well-behaved-wavefunction"
+  },
+  {
+   "concept": "pib-energy-levels",
+   "prereq": "quantum-number"
+  },
+  {
+   "concept": "ground-state",
+   "prereq": "eigenstate"
+  },
+  {
+   "concept": "zero-point-energy",
+   "prereq": "ground-state"
+  },
+  {
+   "concept": "zero-point-energy",
+   "prereq": "pib-energy-levels"
+  },
+  {
+   "concept": "normalization-condition",
+   "prereq": "born-interpretation"
+  },
+  {
+   "concept": "pib-wavefunctions",
+   "prereq": "pib-energy-levels"
+  },
+  {
+   "concept": "pib-wavefunctions",
+   "prereq": "normalization-condition"
+  },
+  {
+   "concept": "nodes-and-energy",
+   "prereq": "node"
+  },
+  {
+   "concept": "nodes-and-energy",
+   "prereq": "pib-wavefunctions"
+  },
+  {
+   "concept": "nodes-and-energy",
+   "prereq": "kinetic-energy-operator"
+  },
+  {
+   "concept": "orthogonality",
+   "prereq": "wavefunction"
+  },
+  {
+   "concept": "orthonormality",
+   "prereq": "orthogonality"
+  },
+  {
+   "concept": "orthonormality",
+   "prereq": "normalization-condition"
+  },
+  {
+   "concept": "orthonormality",
+   "prereq": "kronecker-delta"
+  },
+  {
+   "concept": "pib-orthonormality",
+   "prereq": "orthonormality"
+  },
+  {
+   "concept": "pib-orthonormality",
+   "prereq": "pib-wavefunctions"
+  },
+  {
+   "concept": "normalizing-a-wavefunction",
+   "prereq": "normalization-condition"
+  },
+  {
+   "concept": "square-integrable",
+   "prereq": "normalization-condition"
+  },
+  {
+   "concept": "normalization-preserved",
+   "prereq": "square-integrable"
+  },
+  {
+   "concept": "normalization-preserved",
+   "prereq": "time-dependent-schrodinger-equation"
+  },
+  {
+   "concept": "quantum-expectation-value",
+   "prereq": "expectation-value"
+  },
+  {
+   "concept": "quantum-expectation-value",
+   "prereq": "born-interpretation"
+  },
+  {
+   "concept": "quantum-expectation-value",
+   "prereq": "observables-as-eigenvalues"
+  },
+  {
+   "concept": "average-energy",
+   "prereq": "quantum-expectation-value"
+  },
+  {
+   "concept": "average-energy",
+   "prereq": "hamiltonian-operator"
+  },
+  {
+   "concept": "average-energy",
+   "prereq": "kinetic-energy-operator"
+  },
+  {
+   "concept": "pib-average-position",
+   "prereq": "quantum-expectation-value"
+  },
+  {
+   "concept": "pib-average-position",
+   "prereq": "pib-wavefunctions"
+  },
+  {
+   "concept": "pib-average-position",
+   "prereq": "position-operator"
+  },
+  {
+   "concept": "pib-average-momentum",
+   "prereq": "quantum-expectation-value"
+  },
+  {
+   "concept": "pib-average-momentum",
+   "prereq": "pib-wavefunctions"
+  },
+  {
+   "concept": "pib-average-momentum",
+   "prereq": "momentum-operator"
+  },
+  {
+   "concept": "momentum-eigenfunctions",
+   "prereq": "momentum-operator"
+  },
+  {
+   "concept": "momentum-eigenfunctions",
+   "prereq": "eigenfunction"
+  },
+  {
+   "concept": "momentum-eigenfunctions",
+   "prereq": "eulers-formula"
+  },
+  {
+   "concept": "quantum-uncertainty",
+   "prereq": "quantum-expectation-value"
+  },
+  {
+   "concept": "particle-in-a-3d-box",
+   "prereq": "pib-wavefunctions"
+  },
+  {
+   "concept": "degeneracy",
+   "prereq": "eigenstate"
+  },
+  {
+   "concept": "degree-of-degeneracy",
+   "prereq": "degeneracy"
+  },
+  {
+   "concept": "cube-degeneracy",
+   "prereq": "particle-in-a-3d-box"
+  },
+  {
+   "concept": "cube-degeneracy",
+   "prereq": "degree-of-degeneracy"
+  },
+  {
+   "concept": "accidental-degeneracy",
+   "prereq": "degeneracy"
+  },
+  {
+   "concept": "accidental-degeneracy",
+   "prereq": "particle-in-a-3d-box"
+  }
+ ]
+}

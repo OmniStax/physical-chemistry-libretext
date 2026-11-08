@@ -1,0 +1,1056 @@
+{
+ "id": "3",
+ "dir": "ch03",
+ "title": "The Schrödinger Equation and a Particle in a Box",
+ "intro": {
+  "module": "11780",
+  "slug": "03:_The_Schrodinger_Equation_and_a_Particle_in_a_Box"
+ },
+ "summary": {
+  "module": "550563",
+  "slug": "03:_The_Schrodinger_Equation_and_a_Particle_in_a_Box/3.S:_The_Schrodinger_Equation_and_a_Particle_in_a_Box_(Summary)"
+ },
+ "sections": [
+  {
+   "id": "3.1",
+   "module": "13391",
+   "title": "The Schrödinger Equation",
+   "slug": "03:_The_Schrodinger_Equation_and_a_Particle_in_a_Box/3.01:_The_Schrodinger_Equation"
+  },
+  {
+   "id": "3.2",
+   "module": "13392",
+   "title": "Linear Operators in Quantum Mechanics",
+   "slug": "03:_The_Schrodinger_Equation_and_a_Particle_in_a_Box/3.02:_Linear_Operators_in_Quantum_Mechanics"
+  },
+  {
+   "id": "3.3",
+   "module": "13393",
+   "title": "The Schrödinger Equation is an Eigenvalue Problem",
+   "slug": "03:_The_Schrodinger_Equation_and_a_Particle_in_a_Box/3.03:_The_Schrodinger_Equation_is_an_Eigenvalue_Problem"
+  },
+  {
+   "id": "3.4",
+   "module": "13394",
+   "title": "Wavefunctions Have a Probabilistic Interpretation",
+   "slug": "03:_The_Schrodinger_Equation_and_a_Particle_in_a_Box/3.04:_Wavefunctions_Have_a_Probabilistic_Interpretation"
+  },
+  {
+   "id": "3.5",
+   "module": "13395",
+   "title": "The Energy of a Particle in a Box is Quantized",
+   "slug": "03:_The_Schrodinger_Equation_and_a_Particle_in_a_Box/3.05:_The_Energy_of_a_Particle_in_a_Box_is_Quantized"
+  },
+  {
+   "id": "3.6",
+   "module": "13396",
+   "title": "Wavefunctions Must Be Normalized",
+   "slug": "03:_The_Schrodinger_Equation_and_a_Particle_in_a_Box/3.06:_Wavefunctions_Must_Be_Normalized"
+  },
+  {
+   "id": "3.7",
+   "module": "13397",
+   "title": "The Average Momentum of a Particle in a Box is Zero",
+   "slug": "03:_The_Schrodinger_Equation_and_a_Particle_in_a_Box/3.07:_The_Average_Momentum_of_a_Particle_in_a_Box_is_Zero"
+  },
+  {
+   "id": "3.8",
+   "module": "13399",
+   "title": "The Uncertainty Principle - Estimating Uncertainties from Wavefunctions",
+   "slug": "03:_The_Schrodinger_Equation_and_a_Particle_in_a_Box/3.08:_The_Uncertainty_Principle_-_Estimating_Uncertainties_from_Wavefunctions"
+  },
+  {
+   "id": "3.9",
+   "module": "13401",
+   "title": "A Particle in a Three-Dimensional Box",
+   "slug": "03:_The_Schrodinger_Equation_and_a_Particle_in_a_Box/3.09:_A_Particle_in_a_Three-Dimensional_Box"
+  }
+ ],
+ "variables": [
+  {
+   "sym": "Psi",
+   "concept": "wavefunction",
+   "meaning": "the wavefunction, a function of the position and the time",
+   "section": "3.1"
+  },
+  {
+   "sym": "x",
+   "type": "length",
+   "meaning": "the position along the x axis",
+   "unit": "m",
+   "section": "3.1"
+  },
+  {
+   "sym": "t",
+   "type": "time",
+   "meaning": "the time",
+   "unit": "s",
+   "section": "3.1"
+  },
+  {
+   "sym": "lambda",
+   "type": "wavelength",
+   "meaning": "the wavelength of the matter wave",
+   "unit": "m",
+   "section": "3.1"
+  },
+  {
+   "sym": "nu",
+   "type": "frequency",
+   "meaning": "the number of cycles of the wave per unit time, its frequency",
+   "unit": "Hz",
+   "section": "3.1"
+  },
+  {
+   "sym": "E",
+   "type": "energy",
+   "meaning": "the energy of the particle",
+   "unit": "J",
+   "section": "3.1"
+  },
+  {
+   "sym": "p",
+   "type": "momentum",
+   "meaning": "the momentum of the particle",
+   "unit": "kg·m/s",
+   "section": "3.1"
+  },
+  {
+   "sym": "m",
+   "type": "mass",
+   "meaning": "the mass of the particle",
+   "unit": "kg",
+   "section": "3.1"
+  },
+  {
+   "sym": "v",
+   "type": "velocity",
+   "meaning": "the velocity of the particle",
+   "unit": "m/s",
+   "section": "3.1"
+  },
+  {
+   "sym": "hbar",
+   "concept": "reduced-plancks-constant",
+   "meaning": "Planck's constant divided by 2π",
+   "unit": "J·s",
+   "section": "3.1"
+  },
+  {
+   "sym": "h",
+   "concept": "plancks-constant",
+   "meaning": "Planck's constant",
+   "unit": "J·s",
+   "section": "3.1"
+  },
+  {
+   "sym": "c",
+   "meaning": "the speed of light",
+   "unit": "m/s",
+   "section": "3.1"
+  },
+  {
+   "sym": "V",
+   "type": "energy",
+   "meaning": "the potential energy of the particle, a function of position only",
+   "unit": "J",
+   "section": "3.1"
+  },
+  {
+   "sym": "r_vec",
+   "type": "length",
+   "meaning": "the position (x, y, z) of the particle",
+   "unit": "m",
+   "section": "3.1"
+  },
+  {
+   "sym": "nabla2",
+   "concept": "laplacian",
+   "type": "operator",
+   "meaning": "the Laplacian, the sum of the second derivatives in x, y and z",
+   "unit": "m⁻²",
+   "section": "3.1"
+  },
+  {
+   "sym": "psi",
+   "concept": "wavefunction",
+   "meaning": "the time-independent wavefunction, which depends on the space coordinates only",
+   "section": "3.1"
+  },
+  {
+   "sym": "T_t",
+   "meaning": "the time dependence of the wave at a fixed point in space",
+   "section": "3.1"
+  },
+  {
+   "sym": "H_op",
+   "concept": "hamiltonian-operator",
+   "meaning": "the Hamiltonian operator",
+   "section": "3.2"
+  },
+  {
+   "sym": "psi",
+   "concept": "wavefunction",
+   "meaning": "the wavefunction, an eigenfunction of the Hamiltonian",
+   "section": "3.2"
+  },
+  {
+   "sym": "E",
+   "type": "energy",
+   "meaning": "the energy, the eigenvalue of the Hamiltonian",
+   "unit": "J",
+   "section": "3.2"
+  },
+  {
+   "sym": "m",
+   "type": "mass",
+   "meaning": "the mass of the particle",
+   "unit": "kg",
+   "section": "3.2"
+  },
+  {
+   "sym": "V",
+   "type": "energy",
+   "meaning": "the potential energy of the particle",
+   "unit": "J",
+   "section": "3.2"
+  },
+  {
+   "sym": "r_vec",
+   "type": "length",
+   "meaning": "the position (x, y, z) of the particle",
+   "unit": "m",
+   "section": "3.2"
+  },
+  {
+   "sym": "nabla2",
+   "concept": "laplacian",
+   "type": "operator",
+   "meaning": "the Laplacian",
+   "unit": "m⁻²",
+   "section": "3.2"
+  },
+  {
+   "sym": "A_hat",
+   "concept": "operator",
+   "meaning": "an operator",
+   "section": "3.2"
+  },
+  {
+   "sym": "B_hat",
+   "concept": "operator",
+   "meaning": "a second operator",
+   "section": "3.2"
+  },
+  {
+   "sym": "O_hat",
+   "concept": "linear-operator",
+   "type": "operator",
+   "meaning": "a linear operator",
+   "section": "3.2"
+  },
+  {
+   "sym": "c",
+   "meaning": "a constant, which can be a complex number c = a + ib",
+   "section": "3.2",
+   "redefines": true
+  },
+  {
+   "sym": "x",
+   "type": "length",
+   "meaning": "the position along the box",
+   "unit": "m",
+   "section": "3.2"
+  },
+  {
+   "sym": "a",
+   "type": "length",
+   "meaning": "the length of the box in which the functions vanish at x = 0 and x = a",
+   "unit": "m",
+   "section": "3.2"
+  },
+  {
+   "sym": "A_hat",
+   "concept": "operator",
+   "meaning": "the operator of an observable",
+   "section": "3.3"
+  },
+  {
+   "sym": "psi",
+   "concept": "wavefunction",
+   "meaning": "the wavefunction of the system",
+   "section": "3.3"
+  },
+  {
+   "sym": "H_op",
+   "concept": "hamiltonian-operator",
+   "meaning": "the Hamiltonian operator",
+   "section": "3.3"
+  },
+  {
+   "sym": "p_hat",
+   "concept": "momentum-operator",
+   "meaning": "the linear momentum operator of a particle moving along x",
+   "section": "3.3"
+  },
+  {
+   "sym": "x_hat",
+   "concept": "position-operator",
+   "meaning": "the position operator of a particle moving along x",
+   "section": "3.3"
+  },
+  {
+   "sym": "KE_hat",
+   "concept": "kinetic-energy-operator",
+   "meaning": "the kinetic energy operator",
+   "section": "3.3"
+  },
+  {
+   "sym": "L_hat",
+   "concept": "angular-momentum-operator",
+   "meaning": "the angular momentum operator",
+   "section": "3.3"
+  },
+  {
+   "sym": "KE",
+   "type": "energy",
+   "meaning": "the classical kinetic energy, p²/2m",
+   "unit": "J",
+   "section": "3.3"
+  },
+  {
+   "sym": "p",
+   "type": "momentum",
+   "meaning": "the momentum of the particle along x, an eigenvalue of the momentum operator",
+   "unit": "kg·m/s",
+   "section": "3.3"
+  },
+  {
+   "sym": "E",
+   "type": "energy",
+   "meaning": "the total energy, an eigenvalue of the Hamiltonian",
+   "unit": "J",
+   "section": "3.3"
+  },
+  {
+   "sym": "m",
+   "type": "mass",
+   "meaning": "the mass of the particle",
+   "unit": "kg",
+   "section": "3.3"
+  },
+  {
+   "sym": "V",
+   "type": "energy",
+   "meaning": "the potential energy of the particle",
+   "unit": "J",
+   "section": "3.3"
+  },
+  {
+   "sym": "x",
+   "type": "length",
+   "meaning": "the position along x",
+   "unit": "m",
+   "section": "3.3"
+  },
+  {
+   "sym": "t",
+   "type": "time",
+   "meaning": "the time",
+   "unit": "s",
+   "section": "3.3"
+  },
+  {
+   "sym": "Psi",
+   "concept": "wavefunction",
+   "meaning": "the time-dependent wavefunction",
+   "section": "3.3"
+  },
+  {
+   "sym": "r_vec",
+   "type": "length",
+   "meaning": "the position (x, y, z) of the particle",
+   "unit": "m",
+   "section": "3.3"
+  },
+  {
+   "sym": "nabla2",
+   "concept": "laplacian",
+   "type": "operator",
+   "meaning": "the Laplacian",
+   "unit": "m⁻²",
+   "section": "3.3"
+  },
+  {
+   "sym": "phi_i",
+   "concept": "eigenstate",
+   "meaning": "an eigenstate of an operator",
+   "section": "3.3"
+  },
+  {
+   "sym": "c_i",
+   "meaning": "the coefficient of the eigenstate φᵢ in the superposition",
+   "section": "3.3"
+  },
+  {
+   "sym": "a",
+   "meaning": "the constant in the wavefunction A sin(ax)",
+   "unit": "m⁻¹",
+   "section": "3.3",
+   "redefines": true
+  },
+  {
+   "sym": "Psi",
+   "concept": "wavefunction",
+   "meaning": "the wavefunction of a single particle",
+   "section": "3.4"
+  },
+  {
+   "sym": "psi",
+   "concept": "wavefunction",
+   "meaning": "the time-independent wavefunction",
+   "section": "3.4"
+  },
+  {
+   "sym": "P_dens",
+   "concept": "probability-density",
+   "meaning": "the probability density, the square of the modulus of the wavefunction",
+   "unit": "m⁻³",
+   "section": "3.4"
+  },
+  {
+   "sym": "P_prob",
+   "concept": "position-probability",
+   "meaning": "the probability of finding the particle in a region",
+   "section": "3.4"
+  },
+  {
+   "sym": "r_vec",
+   "type": "length",
+   "meaning": "the position (x, y, z) of the particle",
+   "unit": "m",
+   "section": "3.4"
+  },
+  {
+   "sym": "x",
+   "type": "length",
+   "meaning": "the position along x",
+   "unit": "m",
+   "section": "3.4"
+  },
+  {
+   "sym": "t",
+   "type": "time",
+   "meaning": "the time",
+   "unit": "s",
+   "section": "3.4"
+  },
+  {
+   "sym": "omega",
+   "type": "frequency",
+   "meaning": "the angular frequency of the time factor of a stationary state",
+   "unit": "s⁻¹",
+   "section": "3.4"
+  },
+  {
+   "sym": "psi",
+   "concept": "wavefunction",
+   "meaning": "the wavefunction of the particle in the box",
+   "section": "3.5"
+  },
+  {
+   "sym": "x",
+   "type": "length",
+   "meaning": "the position along the box",
+   "unit": "m",
+   "section": "3.5"
+  },
+  {
+   "sym": "V",
+   "concept": "box-potential",
+   "type": "energy",
+   "meaning": "the potential energy, zero inside the box and infinite outside",
+   "unit": "J",
+   "section": "3.5"
+  },
+  {
+   "sym": "L",
+   "type": "length",
+   "meaning": "the length of the box",
+   "unit": "m",
+   "section": "3.5"
+  },
+  {
+   "sym": "m",
+   "type": "mass",
+   "meaning": "the mass of the particle",
+   "unit": "kg",
+   "section": "3.5"
+  },
+  {
+   "sym": "E",
+   "type": "energy",
+   "meaning": "the energy of the particle",
+   "unit": "J",
+   "section": "3.5"
+  },
+  {
+   "sym": "k",
+   "type": "wavenumber",
+   "meaning": "the constant of the oscillatory solution, k² = 2mE/ħ²",
+   "unit": "m⁻¹",
+   "section": "3.5"
+  },
+  {
+   "sym": "A",
+   "meaning": "the constant of the sine solution, fixed by normalization",
+   "unit": "m⁻¹ᐟ²",
+   "section": "3.5"
+  },
+  {
+   "sym": "B",
+   "meaning": "the constant of the cosine solution, zero by the boundary condition at x = 0",
+   "section": "3.5"
+  },
+  {
+   "sym": "n",
+   "concept": "quantum-number",
+   "meaning": "the quantum number of the particle in a box, 1, 2, 3, …",
+   "section": "3.5"
+  },
+  {
+   "sym": "E_n",
+   "concept": "pib-energy-levels",
+   "meaning": "the energy of the nth level of a particle in a box",
+   "section": "3.5"
+  },
+  {
+   "sym": "E_1",
+   "concept": "pib-energy-levels",
+   "meaning": "the energy of the ground state of a particle in a box",
+   "section": "3.5"
+  },
+  {
+   "sym": "psi_n",
+   "concept": "pib-wavefunctions",
+   "meaning": "the nth eigenfunction of a particle in a box",
+   "section": "3.5"
+  },
+  {
+   "sym": "Psi",
+   "concept": "wavefunction",
+   "meaning": "the time-dependent wavefunction of the particle in the box",
+   "section": "3.5"
+  },
+  {
+   "sym": "t",
+   "type": "time",
+   "meaning": "the time",
+   "unit": "s",
+   "section": "3.5"
+  },
+  {
+   "sym": "dx",
+   "concept": "heisenberg-uncertainty-principle",
+   "type": "length",
+   "meaning": "the uncertainty in the position, about the size of the box",
+   "unit": "m",
+   "section": "3.5"
+  },
+  {
+   "sym": "dp",
+   "concept": "heisenberg-uncertainty-principle",
+   "type": "momentum",
+   "meaning": "the uncertainty in the momentum, about h/L",
+   "unit": "kg·m/s",
+   "section": "3.5"
+  },
+  {
+   "sym": "p",
+   "type": "momentum",
+   "meaning": "the momentum of the particle",
+   "unit": "kg·m/s",
+   "section": "3.5"
+  },
+  {
+   "sym": "delta_mn",
+   "concept": "kronecker-delta",
+   "meaning": "the Kronecker delta",
+   "section": "3.5"
+  },
+  {
+   "sym": "Psi",
+   "concept": "wavefunction",
+   "meaning": "the wavefunction",
+   "section": "3.6"
+  },
+  {
+   "sym": "psi",
+   "concept": "wavefunction",
+   "meaning": "the wavefunction",
+   "section": "3.6"
+  },
+  {
+   "sym": "P_prob",
+   "concept": "position-probability",
+   "meaning": "the probability of finding the particle between two points",
+   "section": "3.6"
+  },
+  {
+   "sym": "x",
+   "type": "length",
+   "meaning": "the position along x",
+   "unit": "m",
+   "section": "3.6"
+  },
+  {
+   "sym": "t",
+   "type": "time",
+   "meaning": "the time",
+   "unit": "s",
+   "section": "3.6"
+  },
+  {
+   "sym": "L",
+   "type": "length",
+   "meaning": "the length of the box",
+   "unit": "m",
+   "section": "3.6"
+  },
+  {
+   "sym": "sigma_w",
+   "type": "length",
+   "meaning": "the characteristic width of the Gaussian wave packet",
+   "unit": "m",
+   "section": "3.6"
+  },
+  {
+   "sym": "x_0",
+   "type": "length",
+   "meaning": "the center of the Gaussian wave packet",
+   "unit": "m",
+   "section": "3.6"
+  },
+  {
+   "sym": "psi_0",
+   "meaning": "the normalization constant of the Gaussian wave packet",
+   "section": "3.6"
+  },
+  {
+   "sym": "m",
+   "type": "mass",
+   "meaning": "the mass of the particle",
+   "unit": "kg",
+   "section": "3.6"
+  },
+  {
+   "sym": "V",
+   "type": "energy",
+   "meaning": "the potential energy of the particle",
+   "unit": "J",
+   "section": "3.6"
+  },
+  {
+   "sym": "omega",
+   "type": "frequency",
+   "meaning": "the angular frequency of the time factor",
+   "unit": "s⁻¹",
+   "section": "3.6"
+  },
+  {
+   "sym": "k",
+   "type": "wavenumber",
+   "meaning": "the wavenumber of the plane wave of a free particle, Ψ = ψ₀e^{i(kx − ωt)}",
+   "unit": "m⁻¹",
+   "section": "3.6",
+   "redefines": true
+  },
+  {
+   "sym": "s",
+   "meaning": "an exam score",
+   "section": "3.7"
+  },
+  {
+   "sym": "P_s",
+   "meaning": "the probability of observing a score, the number of times it occurs divided by the number of scores",
+   "section": "3.7"
+  },
+  {
+   "sym": "psi",
+   "concept": "wavefunction",
+   "meaning": "the wavefunction of the state",
+   "section": "3.7"
+  },
+  {
+   "sym": "O_hat",
+   "concept": "operator",
+   "meaning": "the operator of the observable being averaged",
+   "section": "3.7"
+  },
+  {
+   "sym": "H_avg",
+   "concept": "average-energy",
+   "type": "energy",
+   "meaning": "the average value of the total energy",
+   "unit": "J",
+   "section": "3.7"
+  },
+  {
+   "sym": "KE_avg",
+   "concept": "average-energy",
+   "type": "energy",
+   "meaning": "the average kinetic energy",
+   "unit": "J",
+   "section": "3.7"
+  },
+  {
+   "sym": "V_avg",
+   "concept": "average-energy",
+   "type": "energy",
+   "meaning": "the average potential energy",
+   "unit": "J",
+   "section": "3.7"
+  },
+  {
+   "sym": "x_avg",
+   "concept": "quantum-expectation-value",
+   "type": "length",
+   "meaning": "the expectation value of the position",
+   "unit": "m",
+   "section": "3.7"
+  },
+  {
+   "sym": "p_avg",
+   "concept": "quantum-expectation-value",
+   "type": "momentum",
+   "meaning": "the expectation value of the momentum",
+   "unit": "kg·m/s",
+   "section": "3.7"
+  },
+  {
+   "sym": "p2_avg",
+   "concept": "quantum-expectation-value",
+   "meaning": "the expectation value of the square of the momentum",
+   "unit": "kg²·m²/s²",
+   "section": "3.7"
+  },
+  {
+   "sym": "H_op",
+   "concept": "hamiltonian-operator",
+   "meaning": "the Hamiltonian operator",
+   "section": "3.7"
+  },
+  {
+   "sym": "KE_hat",
+   "concept": "kinetic-energy-operator",
+   "meaning": "the kinetic energy operator",
+   "section": "3.7"
+  },
+  {
+   "sym": "p_hat",
+   "concept": "momentum-operator",
+   "meaning": "the momentum operator",
+   "section": "3.7"
+  },
+  {
+   "sym": "x",
+   "type": "length",
+   "meaning": "the position in the box",
+   "unit": "m",
+   "section": "3.7"
+  },
+  {
+   "sym": "L",
+   "type": "length",
+   "meaning": "the length of the box",
+   "unit": "m",
+   "section": "3.7"
+  },
+  {
+   "sym": "m",
+   "type": "mass",
+   "meaning": "the mass of the particle",
+   "unit": "kg",
+   "section": "3.7"
+  },
+  {
+   "sym": "k",
+   "type": "wavenumber",
+   "meaning": "the wavenumber of the particle-in-a-box wavefunction sin kx, and of the momentum eigenfunctions e^{±ikx}",
+   "unit": "m⁻¹",
+   "section": "3.7",
+   "redefines": true
+  },
+  {
+   "sym": "V",
+   "type": "energy",
+   "meaning": "the potential energy of the particle",
+   "unit": "J",
+   "section": "3.7"
+  },
+  {
+   "sym": "n",
+   "concept": "quantum-number",
+   "meaning": "the quantum number of the particle in a box",
+   "section": "3.7"
+  },
+  {
+   "sym": "E_1",
+   "concept": "pib-energy-levels",
+   "meaning": "the lowest energy of a particle in a box, its zero-point energy",
+   "section": "3.7"
+  },
+  {
+   "sym": "psi_n",
+   "concept": "pib-wavefunctions",
+   "meaning": "the nth eigenfunction of a particle in a box",
+   "section": "3.7"
+  },
+  {
+   "sym": "dA",
+   "concept": "quantum-uncertainty",
+   "meaning": "the uncertainty in a general quantity A",
+   "section": "3.8"
+  },
+  {
+   "sym": "dx",
+   "concept": "quantum-uncertainty",
+   "type": "length",
+   "meaning": "the uncertainty in the position",
+   "unit": "m",
+   "section": "3.8"
+  },
+  {
+   "sym": "dp",
+   "concept": "quantum-uncertainty",
+   "type": "momentum",
+   "meaning": "the uncertainty in the momentum",
+   "unit": "kg·m/s",
+   "section": "3.8"
+  },
+  {
+   "sym": "x_avg",
+   "concept": "quantum-expectation-value",
+   "type": "length",
+   "meaning": "the expectation value of the position",
+   "unit": "m",
+   "section": "3.8"
+  },
+  {
+   "sym": "x2_avg",
+   "concept": "quantum-expectation-value",
+   "meaning": "the expectation value of the square of the position",
+   "unit": "m²",
+   "section": "3.8"
+  },
+  {
+   "sym": "p_avg",
+   "concept": "quantum-expectation-value",
+   "type": "momentum",
+   "meaning": "the expectation value of the momentum",
+   "unit": "kg·m/s",
+   "section": "3.8"
+  },
+  {
+   "sym": "p2_avg",
+   "concept": "quantum-expectation-value",
+   "meaning": "the expectation value of the square of the momentum",
+   "unit": "kg²·m²/s²",
+   "section": "3.8"
+  },
+  {
+   "sym": "Psi",
+   "concept": "wavefunction",
+   "meaning": "the time-dependent wavefunction",
+   "section": "3.8"
+  },
+  {
+   "sym": "psi",
+   "concept": "wavefunction",
+   "meaning": "the wavefunction",
+   "section": "3.8"
+  },
+  {
+   "sym": "p_hat",
+   "concept": "momentum-operator",
+   "meaning": "the linear momentum operator",
+   "section": "3.8"
+  },
+  {
+   "sym": "x",
+   "type": "length",
+   "meaning": "the position along x",
+   "unit": "m",
+   "section": "3.8"
+  },
+  {
+   "sym": "t",
+   "type": "time",
+   "meaning": "the time",
+   "unit": "s",
+   "section": "3.8"
+  },
+  {
+   "sym": "a",
+   "meaning": "the constant of the Gaussian wavefunction",
+   "unit": "m⁻²",
+   "section": "3.8",
+   "redefines": true
+  },
+  {
+   "sym": "L",
+   "type": "length",
+   "meaning": "the length of the box",
+   "unit": "m",
+   "section": "3.8"
+  },
+  {
+   "sym": "L_x",
+   "type": "length",
+   "meaning": "the length of the box along x",
+   "unit": "m",
+   "section": "3.9"
+  },
+  {
+   "sym": "L_y",
+   "type": "length",
+   "meaning": "the length of the box along y",
+   "unit": "m",
+   "section": "3.9"
+  },
+  {
+   "sym": "L_z",
+   "type": "length",
+   "meaning": "the length of the box along z",
+   "unit": "m",
+   "section": "3.9"
+  },
+  {
+   "sym": "L",
+   "type": "length",
+   "meaning": "the length of the box",
+   "unit": "m",
+   "section": "3.9"
+  },
+  {
+   "sym": "psi",
+   "concept": "wavefunction",
+   "meaning": "the wavefunction of the particle in the 3D box",
+   "section": "3.9"
+  },
+  {
+   "sym": "x",
+   "type": "length",
+   "meaning": "the position along x",
+   "unit": "m",
+   "section": "3.9"
+  },
+  {
+   "sym": "y",
+   "type": "length",
+   "meaning": "the position along y",
+   "unit": "m",
+   "section": "3.9"
+  },
+  {
+   "sym": "z",
+   "type": "length",
+   "meaning": "the position along z",
+   "unit": "m",
+   "section": "3.9"
+  },
+  {
+   "sym": "r_vec",
+   "type": "length",
+   "meaning": "the position (x, y, z) of the particle",
+   "unit": "m",
+   "section": "3.9"
+  },
+  {
+   "sym": "V",
+   "type": "energy",
+   "meaning": "the potential energy, zero inside the box",
+   "unit": "J",
+   "section": "3.9"
+  },
+  {
+   "sym": "E",
+   "type": "energy",
+   "meaning": "the total energy of the particle",
+   "unit": "J",
+   "section": "3.9"
+  },
+  {
+   "sym": "m",
+   "type": "mass",
+   "meaning": "the mass of the particle",
+   "unit": "kg",
+   "section": "3.9"
+  },
+  {
+   "sym": "X",
+   "meaning": "the factor of the wavefunction that depends on x only",
+   "section": "3.9"
+  },
+  {
+   "sym": "Y_f",
+   "meaning": "the factor of the wavefunction that depends on y only",
+   "section": "3.9"
+  },
+  {
+   "sym": "Z_f",
+   "meaning": "the factor of the wavefunction that depends on z only",
+   "section": "3.9"
+  },
+  {
+   "sym": "eps_x",
+   "concept": "particle-in-a-3d-box",
+   "type": "energy",
+   "meaning": "the energy of the motion along x",
+   "unit": "J",
+   "section": "3.9"
+  },
+  {
+   "sym": "eps_y",
+   "concept": "particle-in-a-3d-box",
+   "type": "energy",
+   "meaning": "the energy of the motion along y",
+   "unit": "J",
+   "section": "3.9"
+  },
+  {
+   "sym": "eps_z",
+   "concept": "particle-in-a-3d-box",
+   "type": "energy",
+   "meaning": "the energy of the motion along z",
+   "unit": "J",
+   "section": "3.9"
+  },
+  {
+   "sym": "n_x",
+   "concept": "quantum-number",
+   "meaning": "the quantum number along x, 1, 2, 3, …",
+   "section": "3.9"
+  },
+  {
+   "sym": "n_y",
+   "concept": "quantum-number",
+   "meaning": "the quantum number along y, 1, 2, 3, …",
+   "section": "3.9"
+  },
+  {
+   "sym": "n_z",
+   "concept": "quantum-number",
+   "meaning": "the quantum number along z, 1, 2, 3, …",
+   "section": "3.9"
+  },
+  {
+   "sym": "E_nnn",
+   "concept": "particle-in-a-3d-box",
+   "type": "energy",
+   "meaning": "the energy of the state (nₓ, n_y, n_z) of a particle in a 3D box",
+   "unit": "J",
+   "section": "3.9"
+  }
+ ]
+}
