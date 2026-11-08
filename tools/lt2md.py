@@ -422,6 +422,10 @@ class Converter:
             return self.box(node)
         if name in ("h1", "h2", "h3", "h4"):
             t = re.sub(r"\s+", " ", self.math_inline(node.get_text(" ", strip=True)))
+            if node.find(["sub", "sup"]):
+                # a header with subscripts keeps them ("A<sub>21</sub>", 15.2), where the
+                # flat text would print "A 21"
+                t = re.sub(r"\s+", " ", self.inline(node)).strip()
             if t == "Contributors and Attributions":
                 return "## Contributors and Attributions {section:attributions}"
             return "#" * int(name[1]) + " " + t

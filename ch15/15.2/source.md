@@ -49,7 +49,7 @@ $\dfrac {dN_1(t)}{dt}= A_{21}N_{2}(t)$
 
 $\dfrac {dN_1(t)}{dt}= B_{21}\rho_{\nu} (\nu_{21}) N_{2}(t)$
 
-## The Relationship between A 21 , B 12 , and B 21
+## The Relationship between A<sub>21</sub>, B<sub>12</sub>, and B<sub>21</sub>
 
 In 1900, Max Planck derived a formula for the energy density per unit bandwidth of a blackbody radiator by making the assumption that only discrete energies are allowed. His work agreed with known experimental data, and it is one of the fundamental ideas of quantum mechanics. More specifically, the spectral energy density per unit bandwidth, $\rho_{\nu}(\nu_{12})$ in units $\dfrac{J⋅s}{m^3}$, is given by
 

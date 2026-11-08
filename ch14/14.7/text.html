@@ -1,0 +1,93 @@
+<section id="why-no-splitting">
+<h2>Why equivalent protons don't split</h2>
+<p>When doing NMR spectroscopy, it is an observed fact that <span data-concept="equivalent-nuclei-do-not-split">equivalent hydrogens do not split one another</span>. Why don't equivalent hydrogens split each other's signals? For example, why is the NMR spectrum for ethane a <span data-concept="multiplet-patterns">singlet</span> instead of a <span data-concept="multiplet-patterns">quartet</span> or even a dodecuplet (due to the hydrogens on the same carbon)? What is so special about hydrogens being equivalent to one another that causes no splitting to be observed?</p>
+</section>
+
+<section id="finding-the-states">
+<h2>Finding the states between which transitions occur</h2>
+<p>The <span data-concept="nuclear-spin-hamiltonian">Hamiltonian for two coupled spins</span> is</p>
+$$ \kH = \komegaone\kIonez + \komegatwo\kItwoz + \dfrac{2\pi \kJot}{\hbar}(\kIonevec\cdot\kItwovec) \tag{14.7.1} $$
+<p>where $\komegaone$ and $\komegatwo$ are the <span data-concept="larmor-frequency">Larmor frequencies</span><sup>[2]</sup> of the two nuclei and $\kJot$ is the <span data-concept="coupling-constant">coupling constant</span> (in Hz) between the two nuclei. (The factor of $2\pi/\hbar$ is simply there to bring it into energy units.) $\kIivec$ is the <span data-concept="nuclear-spin-operators">operator for the spin angular momentum of nucleus $i$</span> and $\kIiz$ is the <span data-concept="nuclear-spin-operators">operator for its projection along the $z$-axis</span>.</p>
+<p>However, in NMR, it is customary to work in frequency units instead of energy units. Since $E = h\nu$, we simply need to divide through by $h$. Bearing in mind that $\omega = 2\pi\nu$ and $h = 2\pi\hbar$, we get:</p>
+$$ \kHfreq = \dfrac{\knuone}{\hbar}\kIonez + \dfrac{\knutwo}{\hbar}\kItwoz + \dfrac{\kJot}{\hbar^2}(\kIonevec\cdot\kItwovec) \tag{14.7.2} $$
+<p>On top of that, to make the math easier, it is also quite common to set $\hbar = 1$. Therefore, we have</p>
+$$ \kHfreq = \knuone\kIonez + \knutwo\kItwoz + \kJot(\kIonevec\cdot\kItwovec) \tag{14.7.3} $$
+<p>We will deal with two spin-$1/2$ nuclei here, where $|\alpha\rangle$ and $|\beta\rangle$ represent the "up" and "down" <span data-concept="spin-states">spins</span> (recall we set $\hbar = 1$ so it doesn't appear in the eigenvalues):</p>
+$$ \begin{aligned} \kIiz|\alpha_i\rangle &= \dfrac{1}{2}|\alpha_i\rangle & \kIiz|\beta_i\rangle &= -\dfrac{1}{2}|\beta_i\rangle & (i = 1,2)  \end{aligned} $$
+<p>Furthermore since we are dealing with equivalent nuclei we can simply set $\knuone = \knutwo = \knu$ and drop the subscript in $\kJot$ just to make it a bit cleaner:</p>
+$$ \kH = \knu(\kIonez + \kItwoz) + \kJcc(\kIonevec\cdot\kItwovec) \tag{14.7.4} $$
+<p>Now, we need to find the eigenstates and eigenvalues of $\kH$. To do so, we will adopt the basis set of product functions $(|\alpha_1\alpha_2\rangle, |\alpha_1\beta_2\rangle, |\beta_1\alpha_2\rangle, |\beta_1\beta_2\rangle)$. From equation $(4)$<sup class="fn" data-note="c-eq-4"></sup> we have</p>
+$$ \begin{aligned} \kIonez|\alpha_1\alpha_2\rangle &= \dfrac{1}{2}|\alpha_1\alpha_2\rangle & \kItwoz|\alpha_1\alpha_2\rangle &= \dfrac{1}{2}|\alpha_1\alpha_2\rangle  \\ \kIonez|\alpha_1\beta_2\rangle &= \dfrac{1}{2}|\alpha_1\beta_2\rangle & \kItwoz|\alpha_1\beta_2\rangle &= -\dfrac{1}{2}|\alpha_1\beta_2\rangle  \\ \kIonez|\beta_1\alpha_2\rangle &= -\dfrac{1}{2}|\beta_1\alpha_2\rangle & \kItwoz|\beta_1\alpha_2\rangle &= \dfrac{1}{2}|\beta_1\alpha_2\rangle  \\ \kIonez|\beta_1\beta_2\rangle &= -\dfrac{1}{2}|\beta_1\beta_2\rangle & \kItwoz|\beta_1\beta_2\rangle &= -\dfrac{1}{2}|\beta_1\beta_2\rangle  \end{aligned} $$
+<p>The action of the <span data-concept="spin-scalar-product">scalar product $\kIonevec\cdot\kItwovec$</span> is more complicated. We need to introduce the <em><span data-concept="shift-operators">shift operators</span></em> (or <em><span data-concept="shift-operators">ladder operators</span></em>).</p>
+$$ \begin{aligned} \kIplus &= \kIix + \mathrm{i}\kIiy & \kIminus &= \kIix - \mathrm{i}\kIiy  \end{aligned} $$
+<p>from which we can obtain</p>
+$$ \begin{aligned} \kIix &= \dfrac{\kIplus + \kIminus}{2} & \kIiy &= \dfrac{\kIplus - \kIminus}{2\mathrm{i}}  \end{aligned} $$
+<p>So, finally, we can write</p>
+$$ \begin{aligned} \kIonevec\cdot\kItwovec &= \hat{I}_{1x}\hat{I}_{2x} + \hat{I}_{1y}\hat{I}_{2y} + \kIonez\kItwoz  \\ &= \dfrac{\hat{I}_{1+}\hat{I}_{2-} + \hat{I}_{1-}\hat{I}_{2+}}{2} + \kIonez\kItwoz  \end{aligned} $$
+<p>where in going from $(12)$ to $(13)$ one simply substitutes in $(11)$<sup class="fn" data-note="c-eq-11-13"></sup> and does a fair bit of algebraic manipulation. The action of the <span data-concept="shift-operators">shift operators</span> are</p>
+$$ \begin{aligned} \kIplus|\alpha_i\rangle &= 0 & \kIplus|\beta_i\rangle &= |\alpha_i\rangle \\ \kIminus|\alpha_i\rangle &= |\beta_i\rangle & \kIminus|\beta_i\rangle &= 0 \\ \end{aligned} \tag{14} $$
+<p>This allows you to work out the effect of $\kIonevec\cdot\kItwovec$ on our basis states. The actual math is left to the reader and I will simply quote the results:</p>
+<figure class="dv" id="drv-equivalent-levels"></figure>
+<p>The form of the eigenstates should be familiar: they are simply the <span data-concept="two-spin-eigenstates">triplet and singlet states</span> of two spin-$1/2$ particles. These states arise from the coupling of two sources of angular momenta, $I_1$ and $I_2$, to form one overall angular momentum denoted $I$.</p>
+$$ \kIvec = \kIonev + \kItwov \tag{14.7.6} $$
+<p>The allowed values of $I$ are determined by the <strong><span data-concept="clebsch-gordan-series">Clebsch-Gordan series</span></strong>:</p>
+$$ I = I_1 + I_2, I_1 + I_2 - 1, \cdots, |I_1 - I_2| \tag{14.7.7} $$
+<p>Since $I_1 = I_2 = 1/2$, $I$ can take the values $1$ and $0$. The values of $M_I$, the projection of the total angular momentum along the $z$-axis, are as usual</p>
+$$ M_I = I, I-1, \cdots, -I \tag{14.7.8} $$
+<p>so the states with $I = 1$ ("<span data-concept="two-spin-eigenstates">triplet</span>") have $M_I = 1, 0, -1$ and the state with $I = 0$ ("<span data-concept="two-spin-eigenstates">singlet</span>") has $M_I = 0$. One can use more quantum mechanics to work out which state is associated with which quantum numbers, but I will not do it here. They are:</p>
+$$ \begin{array}{ccc} \hline \text{State} & I & M_I \\ \hline |1\rangle & 1 & 1 \\ |2\rangle & 1 & 0 \\ |3\rangle & 0 & 0 \\ |4\rangle & 1 & -1 \\ \hline \end{array} $$
+</section>
+
+<section id="selection-rules">
+<h2>Selection rules</h2>
+<p>We have four different states, which leads to ${4\choose 2} = 6$ different possible transitions. However, not all of these transitions are allowed.</p>
+<p>The intensity of the transition is proportional to the square of the matrix element $\langle \psi_\mathrm{f} | \kHprime | \psi_\mathrm{i} \rangle$ (the so-called "<span data-concept="transition-moment-integral">transition dipole moment</span>"), where $\kHprime$ is the <span data-concept="nmr-transition-hamiltonian">Hamiltonian for the process that induces the transition</span>. In the case of NMR transitions, the transition arises due to a magnetic field aligned along the $x$-axis.<sup>[3]</sup> The corresponding Hamiltonian is therefore</p>
+$$ \kHprime = \komegap(\hat{I}_{1x} + \hat{I}_{2x}) = \komegap\kIx \tag{14.7.9} $$
+<p>Exactly what $\komegap$ represents is not important here because we are only really concerned about whether the <span data-concept="transition-moment-integral">transition dipole moment</span> is zero or not.<sup>[4]</sup> Making use of the relations established in equations 10 and 11,<sup class="fn" data-note="c-eq-10-11"></sup><sup>[5]</sup> one can find that the <span data-concept="nmr-selection-rules">selection rules</span> are</p>
+<figure class="dv" id="drv-nmr-selection"></figure>
+<p>which means that the allowed transitions are $|4\rangle \leftrightarrow |2\rangle$ and $|2\rangle \leftrightarrow |1\rangle$. Transitions to and from the <span data-concept="two-spin-eigenstates">singlet state</span> $|3\rangle$ are <span data-concept="forbidden-transition">forbidden</span>. The energies of the transitions are</p>
+$$ \begin{aligned} E_{4\leftrightarrow2} &= \dfrac{\kJcc}{4} - \left(-\knu + \dfrac{\kJcc}{4}\right) = \knu  \\ E_{2\leftrightarrow1} &= \left(\knu + \dfrac{\kJcc}{4}\right) - \dfrac{\kJcc}{4} = \knu  \\ \end{aligned} $$
+<p>i.e. <span data-concept="equivalent-spins-one-line">the two transitions are degenerate and only one line in the spectrum at frequency $\knu$ is observed</span>. This is exactly what is depicted in the diagrams posted in the other answers.<sup class="fn" data-note="c-other-answers"></sup></p>
+<div class="note">
+<div class="eyebrow">Note</div>
+<p>the two transitions are degenerate and only one line in the spectrum at frequency $\knu$ is observed.</p>
+</div>
+</section>
+
+<section id="notes-and-references">
+<h2>Notes and references</h2>
+<p><sup>[1]</sup> I am assuming the reader has some knowledge of the quantum mechanical treatment of angular momentum, which is a topic that is treated thoroughly in most quantum mechanics textbooks. See, for example, chapter 4 of Atkins's <em>Molecular Quantum Mechanics</em> (5th ed.).</p>
+<p><sup>[2]</sup> The <span data-concept="larmor-frequency">Larmor frequency</span> is given by $\omega = -\gamma \kBzero$, where $\gamma$ is the <span data-concept="gyromagnetic-ratio">magnetogyric ratio</span> of the nucleus in question and $\kBzero$ is the strength of the external magnetic field. It represents the frequency with which a magnetic moment precesses about a magnetic field. See any textbook on magnetism for further details.</p>
+<p><sup>[3]</sup> I am glossing over some details here. The so-called magnetic field in the $x$-axis is a component of the radiofrequency pulse applied in the $xy$-plane. If you are interested please consult a textbook on the vector model of NMR. In particular I recommend Keeler's <em>Understanding NMR Spectroscopy</em> (2nd ed.).</p>
+<p><sup>[4]</sup> It is related to the strength of the magnetic field in the $x$-axis, $B_1$, by $w' = |\gamma|B_1$.<sup class="fn" data-note="c-omega-prime"></sup> The usual symbol is $\omega_1$, but I chose not to use this here to avoid potential confusion. Again, please consult a textbook on the vector model of NMR if you wish to find out more.</p>
+<p><sup>[5]</sup> A full proof can be found in <em>J. Chem. Educ.</em> 1982, <em>59</em> (10), 819. There is also some discussion of the selection rules in Gunther's <em>NMR Spectroscopy</em> (3rd ed.), p 156 onwards.</p>
+</section>
+
+<section id="ax-and-a2">
+<h2>The AX and A₂ cases</h2>
+<div class="note">
+<div class="eyebrow">Note</div>
+<h3>Note</h3>
+<p>The first important point to note is that <span data-concept="magnetic-equivalence"><em>magnetically</em> equivalent nuclei do in fact couple to each other, however no splitting is <em>observed</em> in the spectrum</span>. The second point is that <em>chemically equivalent, but magnetically non-equivalent</em>, nuclei couple to each other, and this coupling <em>is</em> observable in the NMR spectrum.</p>
+<p><span data-concept="spin-spin-coupling">Spin coupling</span> comes from a magnetic interaction between nuclear spins transmitted through the bonding electrons. Signals observed in the NMR spectrum are a transition between energy levels of allowed spin states. When two nuclei 'couple', the energy levels are stabilised or destabilsed slightly based on the relative orientations of the nuclear moments, so that (for a <span data-concept="multiplet-patterns">doublet</span>) one transition is now δ+J/2, and the other transition is δ-J/2. These two transitions constitute the two lines of the <span data-concept="multiplet-patterns">doublet</span> signal. When two equivalent nuclei couple, transitions between energy levels do not change because the interactions between the nuclear moments are the same, as are all other contributing factors such as the Fermi contact. As long as the transitions remain the same, all possible transitions will be equivalent.</p>
+<p>The diagram below hopefully explains it a little clearer. The middle energy levels are for two non-coupled spins. Spin A (shown in red) has two possible transitions, both of which are equivalent. When the two spins are coupled, the energy levels are stabilised/destabilised as shown on the right. The transitions for spin A are now no longer equivalent, and they will appear as two lines (<span data-concept="multiplet-patterns">doublet</span>). On the left, the equivalent nuclei have an overall change in energy level, but the transition between the levels remains the same, hence the observed line is still a <span data-concept="multiplet-patterns">singlet</span>.</p>
+</div>
+<p>When there are two distinct nuclei (<span data-concept="ax-spin-system">The AX case</span>) and there is <span data-concept="spin-spin-coupling">spin-spin interaction</span> ($J$ coupling) between them (in addition to <span data-concept="chemical-shift">chemical shift</span>) then fine structure can be observed in the nmr spectrum. The first diagram shows the energy levels and how they interact. Note how the $J$ coupling moves the levels up and down in addition to <span data-concept="chemical-shift">chemical shift</span>.</p>
+<p>Now there are <span data-concept="nmr-selection-rules">selection rules</span> that allow the radio frequency radiation to couple different levels together and so produce a spectrum. The rule is that the $m_z$ quantum number (variously called magnetic, or azimuthal or projection quantum number) has to change by $+1$ or $-1$. This means that in the first diagram only levels in which one alpha changes to beta or vice versa, as shown by the vertical arrows, are allowed transitions. (The selection rule occurs because the photon (even if at radio frequency) has one unit of angular momentum and total angular momentum is conserved.)</p>
+<p>In the equivalent nuclei case (called <span data-concept="a2-spin-system">A2</span>) the interaction between spins is still present but because of the magnetically identical nuclei the spin states are not either symmetrical or anti symmetrical to exchange of nuclei<sup class="fn" data-note="c-a2-symmetry"></sup> and a linear combination has to be made. This is shown on the left of the figure below. The reason that the splitting in energy levels is not observed is that selection rules make the transitions unobservable</p>
+<figure class="sim" id="sim-ab" data-figure="" data-original="/media/ch14/344398-LCkBM.png,/media/ch14/344400-xeaC4.png,/media/ch14/344399-htKbC.png" data-original-caption="">
+  <div class="sim-head"><span class="eyebrow">Figure</span><span>CAPTION</span></div>
+</figure>
+<div class="note">
+<div class="eyebrow">Note</div>
+<h3>Advanced: Liouville–von Neumann Equation</h3>
+<p>An alternative answer using the product operator formalism:</p>
+<p>The fundamental equation describing NMR quantum mechanically (neglecting relaxation) is the <strong><span data-concept="liouville-von-neumann-equation">Liouville–von Neumann Equation</span></strong> (in frequency units, i.e. setting $\hbar = 1$):</p>
+$$ \dfrac{\mathrm d}{\mathrm dt}\krhohat=-\mathrm i[\kH,\krhohat] $$
+<p>For a 2-spin system with identical chemical shifts and a coupling</p>
+$$ \kH=\kOmegacs\kIonez+\kOmegacs\kItwoz+\kJcc(\kIonevec\cdot\kItwovec) $$
+<p>After a 90 degree pulse on both nuclei the density matrix $\krhohat$ is of the form $\hat{I}_{1\chi} + \hat{I}_{2\chi}$, where $\chi = x$ or $y$. Now it is a bit lengthy but easy to show that</p>
+<figure class="dv" id="drv-coupling-commutes"></figure>
+<p>meaning that <span data-concept="coupling-commutes-with-pulse">the coupling Hamiltonian does not influence the signal after a 90 degree pulse</span>, as $[\kH_\text{coupling},\krhohat] = 0$.</p>
+</div>
+</section>

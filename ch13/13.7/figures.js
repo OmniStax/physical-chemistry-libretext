@@ -24,7 +24,7 @@ function bump(ctx, ax, xc, E, hpx, color, lo, hi) {
 }
 
 /* ---------- Figure 13.7.1: the vertical transition ----------
-   x: -3.5 to 8.5 (d reaches 2.5, the swing reaches 2d); y: energy 0 to 14 000 cm^-1. The packet is the v = 0
+   x: -4 to 8 (d reaches 2.5, the swing reaches 2d); y: energy 0 to 14 000 cm^-1. The packet is the v = 0
    density of the starting well. Play: it rests (0.8 s), rides the photon straight up at fixed x (0.8 s), then swings
    as a displaced Gaussian, exact in a harmonic well of the same width: x_c = d(1 - cos wt) after absorption,
    x_c = d cos wt after emission, a period of 1.6 s drawn. It sits at its mean energy, 500 + 500 d^2 above the new
@@ -48,11 +48,11 @@ function bump(ctx, ax, xc, E, hpx, color, lo, hi) {
       ? `The photon lifts the nuclei straight up at $\\kR = \\kRe$, ${fmt(nuV, 0)} cm⁻¹; there they find themselves ${dd > 0.01 ? 'off the new minimum and start to swing' : 'at the new minimum and stay put'}.`
       : `Emission from $v' = 0$ drops straight down at $\\kR = \\kQe$, ${fmt(nuV, 0)} cm⁻¹, ${dd > 0.01 ? 'a shorter arrow than the absorption' : 'the same arrow as the absorption'}.`);
     const box = { l: 150, r: 1300, t: 110, b: 540 };
-    const ax = axes(ctx, box, [-3.5, 8.5], [0, 14000], { nx: 12, ny: 7, xl: 'nuclear coordinate √α(R − Rₑ)', xc: C('length'), yl: 'energy (cm⁻¹)', yc: ce });
+    const ax = axes(ctx, box, [-4, 8], [0, 14000], { nx: 12, ny: 7, xl: 'nuclear coordinate √α(R − Rₑ)', xc: C('length'), yl: 'energy (cm⁻¹)', yc: ce });
     F.plot(ctx, ax, V0, ce, { w: 5 });
     F.plot(ctx, ax, up, ce, { w: 5 });
     text(ctx, 'ground state', ax.X(-2.9), ax.Y(V0(-2.9)) + 30, ce, { size: 20, weight: 600, align: 'left', bg: PAL.panel });
-    text(ctx, 'excited state', ax.X(dd + 3.0), ax.Y(up(dd + 3.0)) + 4, ce, { size: 20, weight: 600, align: 'left', bg: PAL.panel });
+    text(ctx, 'excited state', ax.X(dd - 3.2) - 10, ax.Y(up(dd - 3.2)), ce, { size: 20, weight: 600, align: 'right', bg: PAL.panel });
     /* the levels each well holds, faint */
     for (let v = 0; v < 6; v++) {
       const E = GAP + HW * (v + 0.5), a = Math.sqrt(2 * v + 1); if (E < 14000) line(ctx, ax.X(dd - a), ax.Y(E), ax.X(dd + a), ax.Y(E), alpha(ce, 0.3), 2);
