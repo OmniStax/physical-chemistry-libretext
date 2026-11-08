@@ -1,0 +1,87 @@
+<section id="two-corrections">
+<h2>Two corrections</h2>
+<p>The <span data-concept="ideal-gas-law">ideal gas law</span> is valid for low pressures, where the finite volume of particles and intermolecular attractions do not have a large impact. At higher pressures, we must account for these factors. The van der Waals and Redlich-Kwong equations of states are <span data-concept="equation-of-state">equations of state</span> that attempt to account for real gas behavior by modifying the <span data-concept="ideal-gas-law">ideal gas law</span> with two additional parameters.</p>
+</section>
+
+<section id="van-der-waals-equation">
+<h2>The Van der Waals Equation of State</h2>
+<p>The <span data-concept="van-der-waals-equation">van der Waals Equation of State</span> is an equation relating the density of gases and liquids to the pressure, volume, and temperature conditions (i.e., it is a thermodynamic <span data-concept="equation-of-state">equation of state</span>). It can be viewed as an adjustment to the <span data-concept="ideal-gas-law">ideal gas law</span> that takes into account the non-zero volume of gas molecules and inter-particle attraction using correction terms $\ka$ and $\kbvdw$. It was derived in 1873 by Johannes Diderik van der Waals, who received the Nobel Prize in 1910 for this work. The <span data-concept="van-der-waals-equation">van der Waals equation of state</span> is:</p>
+$$ \kP = \dfrac{\knmol\kR\kT}{\kV - \knmol\kbvdw} - \dfrac{\ka\knmol^2}{\kV^2} \tag{16.2.1} $$
+<p>Equation 16.2.1 can also be rewritten as</p>
+$$ \left(\kP+{\dfrac {\knmol^{2}\ka}{\kV^{2}}}\right)\left(\kV-\knmol\kbvdw\right)=\knmol\kR\kT $$
+<p>If the correction terms $\ka$ and $\kbvdw$ go to zero, the equation reduces to the <span data-concept="ideal-gas-law">ideal gas equation of state</span>:</p>
+$$ \kP\kV=\knmol\kR\kT $$
+<p>Let's first look first at the correction term $\kbvdw$, which represents the volumes of the particles and assumes a <span data-concept="hard-sphere-potential">hard-wall potential</span>, $\kuo(r)$. This potential energy term describes a system of hard sphere “billiard balls” of <span data-concept="hard-sphere-diameter">diameter $\ksigmahs$</span>. Figure 16.2.1 shows two of these billiard ball type particles at the point of contact (i.e, the distance of closest approach). At this point, they undergo a collision and separate, so they cannot be closer than that distance.</p>
+<figure class="sim" id="sim-excluded-volume" data-figure="16.2.1" data-original="/media/ch16/63561-Tuckerman_Screenshot_5-1.png" data-original-width="221" data-original-caption="Two hard spheres of diameter $\sigma$ at closest contact. The distance between their centers is also $\sigma$. A sphere of radius $\sigma$ just containing the two particles is shown in cross-section.">
+  <div class="sim-head"><span class="eyebrow">Figure 16.2.1</span><span>Push sphere 2 toward sphere 1. Its centre stops on the shaded circle, a <span data-type="length">distance $\ksigmahs$</span> from sphere 1's centre, whatever the direction. Pick a gas to see its <span data-type="length">diameter</span> from Table 16.2.1's $\kbvdw$.</span></div>
+</figure>
+<p>The distance between their centers is also $\ksigmahs$. Because of this distance of closest approach, the total volume available to the particles is not the volume of the container, $\kV$, but some volume less than $\kV$. This reduction in volume can be calculated. Figure 16.2.1 shows a shaded sphere that just contains the pair of billiard ball particles. The volume of this sphere is the volume excluded from any two particles. The radius of the sphere is $\ksigmahs$ and the <span data-concept="excluded-volume">excluded volume</span> for the two particles is $4 \pi \ksigmahs^3/3$, which is the volume of the shaded sphere. From this, we see that the <span data-concept="excluded-volume">excluded volume</span> for any <em>one</em> particle is just half of this or $\frac{2}{3} \pi \ksigmahs^3$. The <span data-concept="excluded-volume">excluded volume</span> for a mole of such particles is the parameter $\kbvdw$:</p>
+$$ \kbvdw = \dfrac{2}{3} \pi \ksigmahs^3 N_0 $$
+<p>Given $\knmol$ moles of gas, the total <span data-concept="excluded-volume">excluded volume</span> is then $\knmol\kbvdw$, so that the total <em>available</em> volume is $\kV - \knmol\kbvdw$.</p>
+<p>Let's turn our attention the $\ka$, which represents the intermolecular attractions of the particles. <span data-concept="attraction-lowers-pressure">Molecular attractions tend to make the $\kP$ exerted by the gas less than that predicted by the ideal gas law</span> at low pressures. $\kP$ is force over area:</p>
+$$ \kP=\frac{\kF}{A} $$
+<p>Pressure is proportion to the net force on the wall of the container:</p>
+<figure class="sim" id="sim-wall-attraction" data-original="/media/ch16/416021-Container_Wall_Forces.png" data-original-caption="">
+  <div class="sim-head"><span class="eyebrow">Figure</span><span>A molecule closing on the wall is pulled back by the molecules behind it, drawn as faint lines, and strikes more softly. Raise the density and the pulls multiply: the <span data-type="pressure">pressure</span> falls below the repulsive term by $\ka\knmol^2/\kV^2$, which grows as the square of the density.</span></div>
+</figure>
+<p>The net force is the force of the molecules impacting the container wall minus the intermolecular attraction of the molecules:</p>
+$$ \kFnet=\kFimpact-\kFattract $$
+<p>Therefore, the pressure will be less for the real gas than the ideal gas. We can add a correction term to pressure to account for intermolecular attractions:</p>
+$$ \kPvdw=\kPreal+\ka\left(?\right) $$
+<p>$\kV$ does influence the amount of intermolecular attraction because $\kP$ is reduced as $\kV$ is increased:</p>
+$$ \kP\propto\frac{1}{\kV} $$
+<p>And pressure is proportional to the number of attractive interactions:</p>
+<p># of molecular interactions $\propto \kP^2$<sup class="fn" data-note="c-p-squared"></sup></p>
+<p># of molecular interactions $\propto \frac{1}{\kV^2}$</p>
+<p>We now have an expression for the van der Waals $\kP$:</p>
+$$ \kP=\kPreal+\frac{\ka\knmol^2}{\kV^2} $$
+<p>The constants $\ka$ and $\kbvdw$ depend on the substance. Some typical values are:<sup>1</sup></p>
+<div class="book-table">
+  <div class="tcap"><span class="eyebrow">Table</span><span></span></div>
+  <table>
+    <thead><tr><th>Molecule</th><th>$\ka\;\sf\left(\frac{L^2\cdot bar}{{mol}^2}\right)$</th><th>$\kbvdw\;\sf\left(\frac{L}{mole}\right)$</th></tr></thead>
+    <tbody>
+      <tr><td>$\sf H_2O$</td><td>5.536</td><td>0.03049</td></tr>
+      <tr><td>$\sf N_2$</td><td>1.43</td><td>0.03913</td></tr>
+      <tr><td>$\sf CH_4$</td><td>2.283</td><td>0.04278</td></tr>
+      <tr><td>$\sf C_2H_6$</td><td>5.562</td><td>0.0638</td></tr>
+    </tbody>
+  </table>
+</div>
+<ol><li>R. C. Weast (1972). <a href="https://books.google.com/books?id=vyvdSAAACAAJ"><em>Handbook of Chemistry and Physics 53rd Edition</em></a>. Chemical Rubber Pub.</li></ol>
+</section>
+
+<section id="redlich-kwong-equation">
+<h2>Redlich-Kwong Equation of State</h2>
+<p>The <span data-concept="van-der-waals-equation">van der Waals Equation of State</span> had to wait almost 100 years before a real, successful improvement was introduced to it. This progress occurred once researchers committed themselves to finding the empirical temperature dependency of the attraction parameter $\ka$ proposed by van der Waals. In contrast, very little attention has been paid to modifying the parameter $\kbvdw$ for co-volume. It makes a lot of sense that $\kbvdw$ would not be modified by temperature, because it represents the <em>volume</em> of the molecules, which should not be affected by their kinetic energy (measured in terms of temperature). The very first noteworthy successful modification to the attraction parameter came with the publication of the equation of state of Redlich-Kwong in 1949.</p>
+<p>The <span data-concept="redlich-kwong-equation">Redlich–Kwong equation of state</span> is an empirical, algebraic equation that relates temperature, pressure, and volume of gases. It is generally more accurate than the van der Waals and the ideal gas equations of state at temperatures above the critical temperature. It was formulated by Otto Redlich and Joseph Neng Shun Kwong in 1949, who showed that a simple two-parameter <span data-concept="equation-of-state">equation of state</span> could well reflect reality in many situations. Redlich and Kwong revised the <span data-concept="van-der-waals-equation">van der Waals Equation of State</span> (Equation 16.2.1) and proposed the following expressions:</p>
+$$ \left( \kP + \dfrac{\ka}{\sqrt{\kT} \kVbar (\kVbar + \kbvdw)} \right) ( \kVbar-\kbvdw) = \kR\kT \tag{16.2.2} $$
+<p>The fundamental change they introduced was to the functional form of $\partial P_\text{attraction}$. Additionally, they introduced the co-volume $\kbvdw$ into the denominator of this functional form. The important concept here is that the attraction parameter $\ka$ of van der Waals needed to be made a function of temperature to do a better job of quantitatively matching experimental data. This was a realization that van der Waals had suggested, but no actual functional dependency had been introduced until the <span data-concept="redlich-kwong-equation">Redlich-Kwong equation</span>.</p>
+<p>We know what follows at this point. To come up with an expression for $\ka$ and $\kbvdw$ of Equation 16.2.2, we apply the criticality conditions to this equation of state. As we recall, imposing the criticality conditions allows us to relate the coefficients $\ka$ and $\kbvdw$ to the critical properties ($\kPc$, $\kTc$) of the substance. Once we have done that, we obtain the definition of $\ka$ and $\kbvdw$ for the <span data-concept="rk-constants">Redlich-Kwong equation of state</span>:<sup class="fn" data-note="c-042780"></sup></p>
+$$ \ka =0.42780 \dfrac{\kR^2\kTc^{2.5}}{\kPc} \tag{16.2.3} $$
+$$ \kbvdw =0.086640 \dfrac{\kR\kTc}{\kPc} \tag{16.2.4} $$
+<figure class="dv" id="drv-rk-constants"></figure>
+<p>The Redlich-Kwong equation of state radically improved, in a quantitative sense, the predictions of the van der Waals equation of state. We now recall that van der Waals-type equations are <span data-concept="cubic-equation-of-state">cubic because they are cubic polynomials in molar volume and compressibility factor</span>. It comes as no surprise then, that we can transform Equation 16.2.2 into:<sup class="fn" data-note="c-a-missing"></sup></p>
+$$ \kvbar ^3 - \left( \dfrac{\kR\kT}{\kP} \right)\kvbar^2 + \dfrac{1}{\kP} \left( \dfrac{1}{\kT^{0.5}} - \kbvdw\kR\kT - \kP\kbvdw^2 \right) \kvbar - \dfrac{\ka\kbvdw}{\kP\kT^{0.5}} = 0 \tag{16.2.5} $$
+<p>and, by defining the following parameters:</p>
+$$ \kA = \dfrac{\ka\kP}{\kR^2\kT^{2.5}} \tag{16.2.6} $$
+$$ \kB =\dfrac{\kbvdw\kP}{\kR\kT} \tag{16.2.7} $$
+<p>and introducing the <span data-concept="compressibility-factor">compressibility factor</span> definition:</p>
+$$ Z = \dfrac{\kP\kvbar}{\kR\kT} $$
+<p>we get:</p>
+$$ Z^3 -Z^2 + (\kA -\kB -\kB^2) Z -\kA\kB =0 \tag{16.2.8} $$
+<p>We may also verify the two-parameter corresponding state theory by introducing Equations 16.2.3, 16.2.4, and 16.2.5 into Equation 16.2.8:<sup class="fn" data-note="c-eq-refs"></sup></p>
+$$ Z^3−Z^2+\dfrac{\kPr}{\kTr} \left( \dfrac{0.42748}{\kTr^{1.5}} −0.08664−0.007506 \dfrac{\kPr}{\kTr} \right)Z−0.03704 \dfrac{\kPr^2}{\kTr^{3.5}}=0 \tag{16.2.9} $$
+<p>Where:</p>
+$$ \kPr=\frac{\kP}{\kPc} $$
+$$ \kTr=\frac{\kT}{\kTc} $$
+<p>$\kPr$ and $\kTr$ are the pressure and temperature at the reduced state. See <a class="xref" href="/physical-chemistry-libretext/ch16/16.4/">Section 16.4</a> for more information on reduced states. In Equation 16.2.9, we can observe the same thing that we saw with the van der Waals equation of state: gases at corresponding states have the same properties. Equation 16.2.9 is particularly clear about it: <span data-concept="rk-corresponding-states">any two different gases at the same $\kPr$, $\kTr$ condition have the same compressibility factor</span>.</p>
+<figure class="dv" id="drv-rk-cubic"></figure>
+<p>Just as any other <span data-concept="cubic-equation-of-state">cubic equation of state</span>, Equations 16.2.2 through 16.2.9, as they stand, are to be applied to pure substances. For mixtures, however, we apply <em>the same equation,</em> but we impose certain <span data-concept="mixing-rules">mixing rules</span> to obtain $\ka$ and $\kbvdw$, which are functions of the properties of the pure components. Strictly speaking, we create a new “pseudo” pure substance that has the average properties of the mixture. Redlich-Kwong preserved the same <span data-concept="mixing-rules">mixing rules</span> that van der Waals proposed for his eqution of state:</p>
+$$ a_m = \sum_i \sum_j y_iy_j a_{ij} $$
+<p>with</p>
+$$ a_{ij} = \sqrt{a_ia_j} $$
+<p>and</p>
+$$ \kbm=\sum_i y_ib_i $$
+<p>Naturally, Redlich and Kwong did not have the last word on possible improvements to the van der Waals equation of state. The Redlich-Kwong equation of state, as shown here, is no longer used in practical applications. Research continued and brought with it new attempts to improve the Redlich-Kwong equation of state. After more than two decades, a modified Redlich-Kwong equation of state with very good potential was developed.</p>
+</section>

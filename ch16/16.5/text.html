@@ -1,0 +1,76 @@
+<section id="virial-coefficients">
+<h2>Virial coefficients</h2>
+<p>The <span data-concept="second-virial-coefficient">second virial coefficient</span> describes the contribution of the pair-wise potential to the pressure of the gas. The <span data-concept="virial-equation-of-state">third virial coefficient</span> depends on interactions between three molecules, and so on and so forth.</p>
+</section>
+
+<section id="introduction">
+<h2>Introduction</h2>
+<p>As the density is increased the interactions between gas molecules become non-negligible. Deviations from the <span data-concept="ideal-gas-law">ideal gas law</span> have been described in a large number of <span data-concept="equation-of-state">equations of state</span>. The <em><span data-concept="virial-equation-of-state">virial equation of state</span></em> expresses the deviation from ideality in terms of a power series in the density:</p>
+$$ \dfrac{\kP}{k\kT} = \rho + \kBtwo(\kT)\rho^2 + B_3(\kT)\rho^3 + ... $$
+<ul><li>$\kBtwo(\kT)$ is the <span data-concept="second-virial-coefficient">second virial coefficient</span>,</li><li>$B_3(\kT)$ is called the <span data-concept="virial-equation-of-state">third virial coefficient</span>, etc.</li></ul>
+<p>The j<sup>th</sup> <span data-concept="virial-equation-of-state">virial coefficient</span> can be calculated in terms of the interaction of j molecules in a volume $\kV$. The second and third virial coefficients give most of the deviation from ideal ($\kP/rk\kT$)<sup class="fn" data-note="c-rho"></sup> up to <span data-type="pressure">100 atm</span>.</p>
+<p>The <strong><span data-concept="second-virial-coefficient">second virial coefficient</span></strong> is usually written as $B$ or as $\kBtwo$. The <span data-concept="second-virial-coefficient">second virial coefficient</span> represents the initial departure from ideal-gas behavior. The <span data-concept="second-virial-coefficient">second virial coefficient</span>, in three dimensions, is given by:</p>
+$$ \kBtwo(\kT)= - \dfrac{1}{2} \int \left( \exp\left(-\dfrac{\kPhionetwo({\mathbf r})}{k_B\kT}\right) -1 \right) 4 \pi \kr^2 d\kr $$
+<p>where $\kPhionetwo({\mathbf r})$ is the <span data-concept="intermolecular-pair-potential">intermolecular pair potential</span>, $\kT$ is the temperature, and $k_B$ is the Boltzmann constant. Notice that the expression within the parenthesis of the integral is the <em><span data-concept="mayer-f-function">Mayer f-function</span></em>. In practice, the integral is often <em>very hard</em> to integrate analytically for anything other than, say, the <span data-concept="hard-sphere-potential">hard sphere</span> model, thus one numerically evaluates:</p>
+$$ \kBtwo(\kT)= - \dfrac{1}{2} \int \left( \left\langle \exp\left(-\dfrac{\kPhionetwo({\mathbf r})}{k_B\kT}\right)\right\rangle -1 \right) 4 \pi \kr^2 d\kr $$
+<p>calculating:</p>
+$$ \left\langle \exp\left(-\dfrac{\kPhionetwo({\mathbf r})}{k_B\kT}\right)\right\rangle $$
+<p>for each $\kr$ using the numerical integration scheme proposed by Harold Conroy <sup>[1]</sup><sup>[2]</sup>.</p>
+</section>
+
+<section id="calculation-of-virial-coefficients">
+<h2>Calculation of virial coefficients</h2>
+<p>The <span data-concept="configuration-integral">configuration integrals</span> for $Z_1$, $Z_2$, and $Z_3$ are:</p>
+<ul><li>$Z_1 = \int dr_1 = \kV$</li><li>$Z_2 = \int e^{-\kUtwo/k\kT}dr_1\;dr_2$</li><li>$Z_3 = \int e^{-\kUthree/k\kT}dr_1\;dr_2\;dr_3$</li></ul>
+<p>The series method allows the calculation of a number of virial coefficients. Recall that the second and third virial coefficient can account for the properties of gases up to hundreds of atmospheres. We will discuss the calculation of the <span data-concept="second-virial-coefficient">second virial coefficient</span> for a monatomic gas to illustrate the procedure. To calculate $\kBtwo(\kT)$ we need $\kUtwo$. For monatomic particles it is reasonable to assume that the potential depends only on the separation of the two particles so $\kUtwo = \ku(\krab)$, where $\krab = |r_2 - r_1|$. Using a change of variables we can write this integral $\krab = r_2 - r_1$ and after integration over $r_1$ we can transform variables from $d\krab$ to $4\pi \kr^2d\kr$. The result is:</p>
+$$ \kBtwo(\kT) = -2 \pi \int [ e^{-\beta \ku(\kr)} - 1 ] \kr^2 \; d\kr $$
+<p>This expression can be used to obtain parameters from experiment. The <span data-concept="second-virial-coefficient">second virial coefficient</span> is tabulated for a number of gases. For a <span data-concept="hard-sphere-potential">hard-sphere potential</span> there is an infinite repulsive wall at a particle radius $\ksigmahs$.<sup class="fn" data-note="c-diameter"></sup> There is no attractive part.</p>
+$$ \begin{aligned} \kBtwo(\kT) &= -2 \pi \int_0^{\ksigmahs} [ - 1 ] \kr^2 \; d\kr \\[4pt] &= \dfrac{2 \pi \ksigmahs^3}{3} \end{aligned} $$
+<p>The <span data-concept="lennard-jones-potential">Lennard-Jones potential</span> cannot be calculated analytically, but the integral can be computed numerically. The <span data-concept="second-virial-coefficient">second virial coefficient</span> was a useful starting point for obtaining Lennard-Jones parameters that were used in simulations.</p>
+</section>
+
+<section id="isihara-hadwiger-formula">
+<h2>Isihara-Hadwiger Formula</h2>
+<p>The <span data-concept="isihara-hadwiger-formula">Isihara-Hadwiger formula</span> was discovered simultaneously and independently by Isihara and the Swiss mathematician Hadwiger in 1950. The <span data-concept="second-virial-coefficient">second virial coefficient</span> for any hard convex body is given by the exact relation:</p>
+$$ \kBtwo=\kRcurv S+\kV $$
+<p>or:</p>
+$$ \dfrac{\kBtwo}{\kV}=1+3 \alpha $$
+<p>where:</p>
+$$ \alpha = \dfrac{\kRcurv S}{3\kV} $$
+<p>where $\kV$ is the volume, $S$, the surface area, and $\kRcurv$ the mean radius of curvature.</p>
+</section>
+
+<section id="hard-spheres">
+<h2>Hard spheres</h2>
+<p>For the <span data-concept="hard-sphere-potential">hard sphere</span> model one has:<sup>[9]</sup></p>
+$$ \kBtwo(\kT)= - \dfrac{1}{2} \int_0^{\ksigmahs} \left(\langle 0\rangle -1 \right) 4 \pi \kr^2 d\kr $$
+<p>leading to</p>
+$$ \kBtwo= \dfrac{2\pi\ksigmahs^3}{3} $$
+<p><span data-concept="hard-sphere-b2">Note that $\kBtwo$ for the hard sphere is independent of temperature.</span></p>
+</section>
+
+<section id="van-der-waals-equation-of-state">
+<h2>Van der Waals equation of state</h2>
+<p><span data-concept="vdw-second-virial">For the Van der Waals equation of state one has:</span></p>
+$$ \kBtwo(\kT)= \kbvdw -\dfrac{a}{R\kT} $$
+<figure class="sim" id="sim-second-virial">
+  <div class="sim-head"><span class="eyebrow">Sim</span><span>Lower <span data-type="temperature">the temperature</span> and the attraction drags $\kBtwo$ below the hard-sphere value $\kbvdw$, through zero and on to negative values.</span></div>
+</figure>
+</section>
+
+<section id="excluded-volume">
+<h2>Excluded volume</h2>
+<p>The <span data-concept="second-virial-coefficient">second virial coefficient</span> can be computed from the expression:</p>
+$$ \kBtwo= \dfrac{1}{2} \iint v_{\mathrm {excluded}} (\Omega,\Omega') f(\Omega) f(\Omega')~ {\mathrm d}\Omega {\mathrm d}\Omega' $$
+<p>where $v_{\mathrm {excluded}}$ is the <span data-concept="excluded-volume">excluded volume</span>.</p>
+</section>
+
+<section id="references">
+<h2>References</h2>
+<ol><li>Reid, B. P. J. Chem. Educ. 1996, 73, 612-615.</li><li>Harold Conroy "Molecular Schrödinger Equation. VIII. A New Method for the Evaluation of Multidimensional Integrals", Journal of Chemical Physics <strong>47</strong> pp. 5307 (1967)</li><li>I. Nezbeda, J. Kolafa and S. Labík "The spherical harmonic expansion coefficients and multidimensional integrals in theories of liquids", Czechoslovak Journal of Physics <strong>39</strong> pp. 65-79 (1989)</li><li>Akira Isihara "Determination of Molecular Shape by Osmotic Measurement", Journal of Chemical Physics <strong>18</strong> pp. 1446-1449 (1950)</li><li>Akira Isihara and Tsuyoshi Hayashida "Theory of High Polymer Solutions. I. Second Virial Coefficient for Rigid Ovaloids Model", Journal of the Physical Society of Japan <strong>6</strong> pp. 40-45 (1951)</li><li>Akira Isihara and Tsuyoshi Hayashida "Theory of High Polymer Solutions. II. Special Forms of Second Osmotic Coefficient", Journal of the Physical Society of Japan <strong>6</strong> pp. 46-50 (1951)</li><li>H. Hadwiger "Einige Anwendungen eines Funkticnalsatzes fur konvexe Körper in der räumichen Integralgeometrie" Mh. Math. <strong>54</strong> pp. 345- (1950)</li><li>H. Hadwiger "Der kinetische Radius nichtkugelförmiger Moleküle" Experientia <strong>7</strong> pp. 395-398 (1951)</li><li>H. Hadwiger "Altes und Neues über Konvexe Körper" Birkäuser Verlag (1955)</li><li>Donald A. McQuarrie "Statistical Mechanics", University Science Books (2000) ISBN 978-1-891389-15-3 Eq. 12-40</li><li>I. Amdur and E. A. Mason "Properties of Gases at Very High Temperatures", Physics of Fluids <strong>1</strong> pp. 370-383 (1958)</li></ol>
+</section>
+
+<section id="related-reading">
+<h2>Related reading</h2>
+<ul><li>W. H. Stockmayer "Second Virial Coefficients of Polar Gases", Journal of Chemical Physics <strong>9</strong> pp. 398- (1941)</li><li>G. A. Vliegenthart and H. N. W. Lekkerkerker "Predicting the gas–liquid critical point from the second virial coefficient", Journal of Chemical Physics <strong>112</strong> pp. 5364-5369 (2000)</li></ul>
+</section>

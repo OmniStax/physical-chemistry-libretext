@@ -1,0 +1,174 @@
+{
+ "id": "16.5",
+ "module": "13660",
+ "chapter": "16",
+ "title": "The Second Virial Coefficient",
+ "short": "Second virial coefficient",
+ "lead": "The virial equation of state writes a real gas's pressure as a power series in its density. Its second coefficient comes from the potential between a pair of molecules, worked out here for hard spheres, hard convex bodies and the van der Waals gas.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "Adapted from SklogWiki and Stefan Franzen, shared under CC BY 4.0 at the source and here under the book's CC BY-NC-SA 4.0.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The section prints no exercises; both here are new and AI-written, their answers checked by computation, with Bloom levels and concept tags chosen by AI. Numeric answers accept a 2% tolerance.",
+ "figures": [
+  {
+   "id": "sim-second-virial",
+   "kind": "sim",
+   "draws": [
+    "volume",
+    "temperature"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "introduction",
+   "concept": "virial-equation-of-state",
+   "verb": "introduces"
+  },
+  {
+   "span": "introduction",
+   "concept": "second-virial-coefficient",
+   "verb": "introduces"
+  },
+  {
+   "span": "introduction",
+   "concept": "intermolecular-pair-potential",
+   "verb": "introduces"
+  },
+  {
+   "span": "introduction",
+   "concept": "mayer-f-function",
+   "verb": "introduces"
+  },
+  {
+   "span": "calculation-of-virial-coefficients",
+   "concept": "configuration-integral",
+   "verb": "introduces"
+  },
+  {
+   "span": "calculation-of-virial-coefficients",
+   "concept": "hard-sphere-potential",
+   "verb": "uses"
+  },
+  {
+   "span": "isihara-hadwiger-formula",
+   "concept": "isihara-hadwiger-formula",
+   "verb": "introduces"
+  },
+  {
+   "span": "hard-spheres",
+   "concept": "hard-sphere-b2",
+   "verb": "introduces"
+  },
+  {
+   "span": "van-der-waals-equation-of-state",
+   "concept": "vdw-second-virial",
+   "verb": "introduces"
+  },
+  {
+   "span": "van-der-waals-equation-of-state",
+   "concept": "van-der-waals-equation",
+   "verb": "uses"
+  },
+  {
+   "span": "excluded-volume",
+   "concept": "excluded-volume",
+   "verb": "uses"
+  },
+  {
+   "span": "excluded-volume",
+   "concept": "second-virial-coefficient",
+   "verb": "reinforces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "For the hard sphere model one has:",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "hard-spheres",
+   "prompt": "<p>Hard spheres of diameter $\\sigma = 3.40$ Å have $B_2 = 2\\pi\\sigma^3/3$ per molecule. What is $B_2$ per mole, in cm³/mol? ($N_0 = 6.022 \\times 10^{23}$ mol⁻¹)</p>",
+   "answer": {
+    "type": "number",
+    "value": 49.6,
+    "unit": "cm³/mol",
+    "generated_by": "ai",
+    "hint": "Work in centimeters, 1 Å = 10⁻⁸ cm, and multiply by Avogadro's number.",
+    "solution": "<p>Per molecule, $B_2 = 2\\pi(3.40 \\times 10^{-8}\\ \\text{cm})^3/3 = 8.23 \\times 10^{-23}\\ \\text{cm}^3$. Per mole it is $N_0$ times that, $(6.022 \\times 10^{23}\\ \\text{mol}^{-1})(8.23 \\times 10^{-23}\\ \\text{cm}^3) = 49.6\\ \\text{cm}^3/\\text{mol}$, at every temperature.</p>"
+   }
+  },
+  {
+   "id": "a2",
+   "source_id": "For the Van der Waals equation of state one has:",
+   "kind": "exercise",
+   "bloom": "Analyze",
+   "place": {
+    "at": "end"
+   },
+   "cite": "van-der-waals-equation-of-state",
+   "prompt": "<p>For N₂, $a = 1.43$ L² bar mol⁻² and $b = 0.03913$ L/mol (Table 16.2.1). Find $B_2 = b - a/RT$ at 300 K in cm³/mol, with $R = 0.08314$ L bar K⁻¹ mol⁻¹. Which wins at this temperature, the excluded volume or the attraction?</p>",
+   "answer": {
+    "type": "number",
+    "value": -18.2,
+    "unit": "cm³/mol",
+    "generated_by": "ai",
+    "hint": "Work out a/RT in L/mol first, then convert to cm³/mol.",
+    "solution": "<p>$a/RT = 1.43 / (0.08314 \\times 300) = 0.0573$ L/mol $= 57.3$ cm³/mol, and $b = 39.1$ cm³/mol, so $B_2 = 39.1 - 57.3 = -18.2$ cm³/mol. The negative sign means the attraction outweighs the excluded volume at 300 K; $B_2$ turns positive only above $T = a/Rb = 440$ K.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "hard-sphere-b2"
+  },
+  {
+   "exercise": "a2",
+   "concept": "vdw-second-virial"
+  },
+  {
+   "exercise": "a2",
+   "concept": "second-virial-coefficient"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-rho",
+   "kind": "correction",
+   "html": "The ideal term is $P/\\rho kT$, with $\\rho$ the number density; the virial coefficients give most of its departure from 1."
+  },
+  {
+   "id": "c-diameter",
+   "kind": "correction",
+   "html": "Here $\\sigma$ is the diameter of the hard sphere, the distance between the centers of two spheres in contact. The integral up to $\\sigma$ and the result $2\\pi\\sigma^3/3$ both need that distance."
+  }
+ ]
+}

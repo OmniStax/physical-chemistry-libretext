@@ -82,8 +82,9 @@ function wavy(ctx, x1, y1, x2, y2, color, upto = 1) {
       const on = k === K.value, a = [xs[L.up], Y(E[L.up])], b = [xe, Y(E[L.lo])];
       if (on) arrow(ctx, a[0], a[1], b[0], b[1], vis ? pc : PAL.ink, 4);
       else line(ctx, a[0], a[1], b[0], b[1], alpha(PAL.ink, 0.3), 2, [10, 10]);
-      const mx = (a[0] + b[0]) / 2, my = (a[1] + b[1]) / 2;
-      text(ctx, `${L.nm}`, mx + 26, my - 16, on ? (vis ? pc : PAL.ink) : PAL.muted, { size: 17, weight: on ? 600 : 400, align: 'center' });
+      /* 1152.3 runs just under 632.8 to the same 3p level, so its number sits below its own line */
+      const below = k === '1152.3', mx = (a[0] + b[0]) / 2 + (below ? -30 : 26), my = (a[1] + b[1]) / 2 + (below ? 24 : -16);
+      text(ctx, `${L.nm}`, mx, my, on ? (vis ? pc : PAL.ink) : PAL.muted, { size: 17, weight: on ? 600 : 400, align: 'center' });
     });
     /* the story */
     const hxU = Y(E[Ln.he]), hxm = (hx0 + hx1) / 2, nxm = (nx0 + nx1) / 2, lxm = (lx0 + lx1) / 2;

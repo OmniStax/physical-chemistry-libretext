@@ -1,0 +1,493 @@
+{
+ "id": "16.1",
+ "module": "13656",
+ "chapter": "16",
+ "title": "All Dilute Gases Behave Ideally",
+ "short": "Dilute gases",
+ "lead": "Particles of an ideal gas exert no forces on each other, only on the walls they strike. Their collisions with the walls lead to the ideal gas law, an equation of state, and the compressibility factor measures how far a real gas strays from it.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "Adapted from Mark Tuckerman (New York University) and Jerry LaRue (Chapman University); Figure 16.1.2 is from OpenStax Chemistry under CC BY. Figure 16.3.1, the ideal isotherms of one mole, is folded into Figure 16.1.1, and a broken duplicate of the page's thumbnail is left out.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book prints no exercises for this section; both questions and their solutions were written by AI, the numbers computed with k_B = 1.381 × 10⁻²³ J/K, R = 8.314 J K⁻¹ mol⁻¹ and an N₂ molecule of 4.652 × 10⁻²⁶ kg. Numeric answers accept a 2% tolerance.",
+ "figures": [
+  {
+   "id": "sim-wall-pressure",
+   "kind": "sim",
+   "originals": [
+    "/media/ch16/417799-Gas-Container-Collisions.png"
+   ],
+   "widths": [
+    235
+   ],
+   "draws": [
+    "force",
+    "length",
+    "temperature",
+    "pressure",
+    "volume",
+    "mass",
+    "velocity"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "sim-ideal-isotherms",
+   "kind": "sim",
+   "number": "16.1.1",
+   "folds": [
+    "16.3.1"
+   ],
+   "originals": [
+    "/media/ch16/61237-Tuckerman_Screenshot_2-.png",
+    "/media/ch16/79137-305px-Ideal_gas_isotherms.svg.png"
+   ],
+   "widths": [
+    417,
+    305
+   ],
+   "original_caption": "(Left) Pressure vs. volume for different temperatures (isotherms of the ideal-gas equation of state. (Right) Pressure vs. temperature for different densities $\\rho = N/V$. Ideal gas isotherms for one mole of the gas and at select temperatures. (public domain).",
+   "draws": [
+    "pressure",
+    "volume",
+    "temperature",
+    "energy",
+    "amount"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "fig-16-1-2",
+   "kind": "figure",
+   "number": "16.1.2",
+   "originals": [
+    "/media/ch16/58236-CNX_Chem_09_06_ZvsPgraph.jpg"
+   ],
+   "widths": [
+    560
+   ],
+   "original_caption": "A graph of the compressibility factor (Z) vs. pressure shows that gases can exhibit significant deviations from the behavior predicted by the ideal gas law. from Openstax (CC-BY)",
+   "draws": [
+    "pressure",
+    "volume",
+    "amount",
+    "temperature"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "redrawn as a faithful copy, the curves read off the book's image"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "pressure-from-collisions",
+   "concept": "ideal-gas",
+   "verb": "introduces"
+  },
+  {
+   "span": "pressure-from-collisions",
+   "concept": "pressure",
+   "verb": "introduces"
+  },
+  {
+   "span": "pressure-from-collisions",
+   "concept": "pressure-from-collisions",
+   "verb": "introduces"
+  },
+  {
+   "span": "pressure-from-collisions",
+   "concept": "mean-square-velocity-component",
+   "verb": "introduces"
+  },
+  {
+   "span": "pressure-from-collisions",
+   "concept": "ideal-gas-law",
+   "verb": "introduces"
+  },
+  {
+   "span": "pressure-from-collisions",
+   "concept": "equation-of-state",
+   "verb": "introduces"
+  },
+  {
+   "span": "pressure-from-collisions",
+   "concept": "isotherm",
+   "verb": "introduces"
+  },
+  {
+   "span": "pressure-from-collisions",
+   "concept": "isochore",
+   "verb": "introduces"
+  },
+  {
+   "span": "pressure-from-collisions",
+   "concept": "ideal-gas-never-condenses",
+   "verb": "introduces"
+  },
+  {
+   "span": "compressibility-factor",
+   "concept": "compressibility-factor",
+   "verb": "introduces"
+  },
+  {
+   "span": "compressibility-factor",
+   "concept": "dilute-gases-ideal",
+   "verb": "introduces"
+  },
+  {
+   "span": "compressibility-factor",
+   "concept": "ideal-gas-law",
+   "verb": "uses"
+  },
+  {
+   "span": "extensive-and-intensive",
+   "concept": "thermodynamic-system",
+   "verb": "introduces"
+  },
+  {
+   "span": "extensive-and-intensive",
+   "concept": "extensive-and-intensive",
+   "verb": "introduces"
+  },
+  {
+   "span": "extensive-and-intensive",
+   "concept": "molar-volume",
+   "verb": "introduces"
+  },
+  {
+   "span": "extensive-and-intensive",
+   "concept": "number-density",
+   "verb": "introduces"
+  },
+  {
+   "span": "extensive-and-intensive",
+   "concept": "ideal-gas-law",
+   "verb": "reinforces"
+  },
+  {
+   "span": "extensive-and-intensive",
+   "concept": "compressibility-factor",
+   "verb": "reinforces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "eq:2.9",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "pressure-from-collisions",
+   "prompt": "<p>A 1.00 L box holds 0.0100 mol of N₂ at 300 K; one molecule has a mass of $4.652\\times10^{-26}$ kg. Find (a) $\\langle\\kvx^2\\rangle$, (b) the pressure from $\\kP = N\\km\\langle\\kvx^2\\rangle/\\kV$, and (c) the pressure from $\\kP = \\knmol\\kR\\kT/\\kV$. ($k_B = 1.381\\times10^{-23}$ J/K, $N_0 = 6.022\\times10^{23}$ mol⁻¹, $\\kR = 8.314$ J K⁻¹ mol⁻¹.)</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 89060,
+      "unit": "m²/s²",
+      "hint": "Use $\\langle\\kvx^2\\rangle = k_B\\kT/\\km$."
+     },
+     {
+      "part": "b",
+      "value": 24940,
+      "unit": "Pa"
+     },
+     {
+      "part": "c",
+      "value": 24940,
+      "unit": "Pa"
+     }
+    ],
+    "solution": "<p>(a) $\\langle\\kvx^2\\rangle = k_B\\kT/\\km = (1.381\\times10^{-23}\\ \\text{J/K})(300\\ \\text{K})/(4.652\\times10^{-26}\\ \\text{kg}) = 8.906\\times10^{4}$ m²/s². (b) There are $N = (0.0100)(6.022\\times10^{23}) = 6.022\\times10^{21}$ molecules, so $\\kP = (6.022\\times10^{21})(4.652\\times10^{-26}\\ \\text{kg})(8.906\\times10^{4}\\ \\text{m}^2/\\text{s}^2)/(1.00\\times10^{-3}\\ \\text{m}^3) = 2.49\\times10^{4}$ Pa. (c) $\\kP = (0.0100\\ \\text{mol})(8.314\\ \\text{J K}^{-1}\\text{mol}^{-1})(300\\ \\text{K})/(1.00\\times10^{-3}\\ \\text{m}^3) = 2.49\\times10^{4}$ Pa. The two agree because $N\\km\\langle\\kvx^2\\rangle = Nk_B\\kT = \\knmol\\kR\\kT$.</p>"
+   }
+  },
+  {
+   "id": "a2",
+   "source_id": "eq:2.10",
+   "kind": "exercise",
+   "bloom": "Understand",
+   "place": {
+    "at": "end"
+   },
+   "cite": "extensive-and-intensive",
+   "prompt": "<p>A sample of gas is doubled in size with $N/\\kV$ held constant. Which list holds only quantities that stay the same?</p>",
+   "answer": {
+    "type": "choice",
+    "generated_by": "ai",
+    "options": [
+     "$\\kP$, $\\kT$, $\\krho$, $\\kVbar$",
+     "$N$, $\\knmol$, $\\kV$, $\\km$",
+     "$\\kP$, $\\kV$, $\\kT$, $\\knmol$",
+     "$\\krho$, $\\kVbar$, $\\kV$, $\\kT$"
+    ],
+    "correct": 0,
+    "hint": "An intensive property is unchanged when the system grows at constant $N/\\kV$.",
+    "solution": "<p>$\\kP$, $\\kT$, $\\krho$ and $\\kVbar$ are intensive. $\\krho = N/\\kV$ is the ratio held fixed, and $\\kVbar = \\kV/\\knmol$ is a ratio of two quantities that both double, so neither changes. $N$, $\\knmol$, $\\kV$ and $\\km$ double with the sample, so they are extensive.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "pressure-from-collisions"
+  },
+  {
+   "exercise": "a1",
+   "concept": "mean-square-velocity-component"
+  },
+  {
+   "exercise": "a1",
+   "concept": "ideal-gas-law"
+  },
+  {
+   "exercise": "a2",
+   "concept": "extensive-and-intensive"
+  },
+  {
+   "exercise": "a2",
+   "concept": "molar-volume"
+  },
+  {
+   "exercise": "a2",
+   "concept": "number-density"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-compressibility",
+   "kind": "correction",
+   "html": "$Z$ is the compressibility factor, the name Figure 16.1.2 and Sections 16.3 and 16.4 use. The compressibility of a gas is a different quantity."
+  },
+  {
+   "id": "c-rho",
+   "kind": "correction",
+   "html": "With $\\rho = N/V$ a number of particles per volume, the last line of Equation 16.1.11 reads $P = \\rho k_BT$, and the last form of $Z$ reads $P/\\rho k_BT$; $P = \\rho RT$ holds for $\\rho = n/V$ in moles per volume. Only the first line, $PV = nRT$, is in extensive quantities; the other two are intensive."
+  },
+  {
+   "id": "c-z-axis",
+   "kind": "correction",
+   "figure": "fig-16-1-2",
+   "html": "The book's image labels the vertical axis Z (kPa); $Z = PV/nRT$ has no unit."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "ideal-gas-law",
+   "what": "the ideal gas law from wall collisions",
+   "source": "Physical Chemistry (LibreTexts), 16.1 All Dilute Gases Behave Ideally",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kdvx = -\\kvx - \\kvx = -2\\kvx",
+       "src": "16.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{-\\kFx} = \\mk{R}{\\km\\dfrac{\\kdvx}{\\kdt}}",
+      "src": "(16.1.1)",
+      "why": "Newton's second law, $F = ma$, for the force of the wall on the particle, with the acceleration written as the change in velocity over the time between collisions."
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{-\\kFx} = \\mk{R}{-2\\km\\dfrac{\\kvx}{\\kdt}}",
+       "uses": [
+        0
+       ]
+      }
+     ],
+     "num": "(16.1.2)",
+     "src": "16.1"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "\\kdt = \\dfrac{2\\ka}{\\kvx}",
+       "src": "16.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{-\\kFx} = \\mk{R}{-2\\km\\dfrac{\\kvx}{\\kdt}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{-\\kFx} = \\mk{R}{-\\dfrac{\\km\\kvx^2}{\\ka}}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "num": "(16.1.3)",
+     "src": "16.1"
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "text": "The particle pushes on the wall with $\\kFx$ and the wall pushes back with $-\\kFx$.",
+       "src": "16.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{L}{-\\kFx} = \\mk{R}{-\\dfrac{\\km\\kvx^2}{\\ka}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{L}{\\kFx} = \\mk{R}{\\dfrac{\\km\\kvx^2}{\\ka}}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "num": "(16.1.4)",
+     "src": "16.1"
+    },
+    {
+     "assumes": [
+      {
+       "text": "All $N$ particles strike the wall, so the average force on it is $N\\langle\\kFx\\rangle$.",
+       "src": "16.1"
+      },
+      {
+       "tex": "\\kA = \\ka^2",
+       "src": "16.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{P}{\\kP} = \\mk{R}{\\dfrac{\\langle \\kF \\rangle}{\\kA}}",
+      "src": "(16.1.5)",
+      "why": "The mechanical definition of pressure."
+     },
+     "steps": [
+      {
+       "tex": "\\mk{P}{\\kP} = \\mk{R}{\\dfrac{N \\langle \\kFx \\rangle}{\\ka^2}}",
+       "uses": [
+        0,
+        1
+       ]
+      }
+     ],
+     "num": "(16.1.6)",
+     "src": "16.1"
+    },
+    {
+     "assumes": [
+      {
+       "step": 2
+      },
+      {
+       "step": 3
+      }
+     ],
+     "then": {
+      "tex": "\\mk{P}{\\kP} = \\mk{R}{\\dfrac{N \\langle \\kFx \\rangle}{\\ka^2}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{P}{\\kP} = \\mk{R}{\\dfrac{N \\km \\langle \\kvx^2 \\rangle}{\\ka^3}}",
+       "uses": [
+        0
+       ],
+       "cap": "Averaging $\\kFx = \\km\\kvx^2/\\ka$ over the particles averages only $\\kvx^2$, since $\\km$ and $\\ka$ are the same for every one."
+      }
+     ],
+     "num": "(16.1.7)",
+     "src": "16.1"
+    },
+    {
+     "assumes": [
+      {
+       "step": 4
+      },
+      {
+       "tex": "\\langle \\kvx^2 \\rangle = \\dfrac{k_B \\kT}{\\km}",
+       "src": "(16.1.8)"
+      },
+      {
+       "tex": "\\ka^3 = \\kV",
+       "src": "16.1"
+      },
+      {
+       "tex": "N = \\knmol N_0"
+      },
+      {
+       "tex": "\\kR = N_0 k_B"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{P}{\\kP} = \\mk{R}{\\dfrac{N \\km \\langle \\kvx^2 \\rangle}{\\ka^3}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{P}{\\kP} = \\mk{R}{\\dfrac{N k_B \\kT}{\\ka^3}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{P}{\\kP} = \\mk{R}{\\dfrac{N k_B \\kT}{\\kV}}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{P}{\\kP} = \\mk{R}{\\dfrac{\\knmol N_0 k_B \\kT}{\\kV}}",
+       "uses": [
+        3
+       ]
+      },
+      {
+       "tex": "\\mk{P}{\\kP} = \\mk{R}{\\dfrac{\\knmol \\kR \\kT}{\\kV}}",
+       "uses": [
+        4
+       ]
+      }
+     ],
+     "num": "(16.1.9)",
+     "src": "16.1"
+    }
+   ]
+  }
+ ]
+}

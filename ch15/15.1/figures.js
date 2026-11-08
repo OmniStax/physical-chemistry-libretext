@@ -423,8 +423,8 @@ const supPow = (t) => { const k = Math.round(Math.log10(t)); return k === 0 ? '1
     /* phase of the current collision: in (0 to 0.45), contact (0.45 to 0.6), out (0.6 to 1) */
     const inPlay = done < V0, hit = inPlay && k >= 0.5;
     const vA = V0 - done - (hit ? 1 : 0), vB = hit ? 1 : 0;
-    topline(ctx, !inPlay ? 'After four collisions the excited molecule sits at v = 0, the bottom of its well; its vibration has gone into its partners.'
-      : `Collision ${done + 1} of ${V0}: ${hit ? `the excited molecule drops from v = ${vA + 1} to v = ${vA} and the partner takes the quantum away` : `a fresh partner at v = 0 comes in to meet the excited molecule at v = ${vA}`}.`);
+    topline(ctx, !inPlay ? 'After four collisions the excited molecule sits at $v = 0$, the bottom of its well; its vibration has gone into its partners.'
+      : `Collision ${done + 1} of ${V0}: ${hit ? `the excited molecule drops from $v = ${vA + 1}$ to $v = ${vA}$ and the partner takes the quantum away` : `a fresh partner at $v = 0$ comes in to meet the excited molecule at $v = ${vA}$`}.`);
     hits.length = 0;
     well(ctx, 380, 330, cA, Math.max(0, vA), 'the excited molecule\'s vibrational levels');
     if (inPlay) well(ctx, 1000, 330, cB, vB, 'the partner\'s vibrational levels');

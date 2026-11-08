@@ -1,0 +1,19 @@
+{
+ "id": "intro",
+ "module": "11811",
+ "chapter": "16",
+ "title": "The Properties of Gases",
+ "short": "Introduction",
+ "lead": "",
+ "notes": "The chapter page's thumbnail and its credit (an animation of gas molecules by Greg L, CC BY-SA 3.0, via Wikipedia) are left out.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "figures": []
+}

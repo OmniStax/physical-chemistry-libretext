@@ -423,7 +423,50 @@
    "sym": "lambda",
    "meaning": "the wavelength of a lasing transition of neon",
    "unit": "nm",
-   "section": "15.6"
+   "section": "15.6",
+   "type": "wavelength"
+  },
+  {
+   "sym": "E",
+   "type": "energy",
+   "meaning": "the energy of a photon absorbed or emitted, or of a vibrational level",
+   "unit": "eV",
+   "section": "15.1"
+  },
+  {
+   "sym": "lambda",
+   "type": "wavelength",
+   "meaning": "the wavelength of a photon absorbed or emitted",
+   "unit": "nm",
+   "section": "15.1"
+  },
+  {
+   "sym": "nu",
+   "type": "frequency",
+   "meaning": "the frequency of a molecular vibration",
+   "unit": "Hz",
+   "section": "15.1"
+  },
+  {
+   "sym": "nu",
+   "type": "frequency",
+   "meaning": "the frequency of the light",
+   "unit": "Hz",
+   "section": "15.2"
+  },
+  {
+   "sym": "lambda",
+   "type": "wavelength",
+   "meaning": "the wavelength of the dye laser's beam",
+   "unit": "nm",
+   "section": "15.5"
+  },
+  {
+   "sym": "E",
+   "type": "energy",
+   "meaning": "the energy of one photon of the beam",
+   "unit": "J",
+   "section": "15.5"
   }
  ]
 }

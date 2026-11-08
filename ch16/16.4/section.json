@@ -1,0 +1,323 @@
+{
+ "id": "16.4",
+ "module": "13659",
+ "chapter": "16",
+ "title": "The Law of Corresponding States",
+ "short": "Corresponding states",
+ "lead": "Pressure, volume and temperature divided by their values at the critical point put different gases on a common scale, where the van der Waals equation and measured compressibility charts can compare them.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "Adapted from Delmar Larsen, Mark LaRue and Stefan Franzen under CC BY-NC-SA 4.0; Figure 16.3.4, the same chart as Figure 16.4.1, is folded into the live chart here.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The section prints no exercises; both here are new and AI-written, their answers checked by computation, with Bloom levels and concept tags chosen by AI. Numeric answers accept a 2% tolerance.",
+ "figures": [
+  {
+   "id": "sim-corresponding-states",
+   "kind": "sim",
+   "number": "16.3.4",
+   "folds": [
+    "16.4.1"
+   ],
+   "originals": [
+    "/media/ch16/79138-Generalized_Z_factor.png",
+    "/media/ch16/79141-Generalized_Z_factor-removebg-preview.png"
+   ],
+   "original_caption": "16.3.4: Compressibility Factor versus Pressure. 16.4.1: Example of a generalized compressibility factor graph (Public domain; [Milton Beychok](http://en.citizendium.org/wiki/User:Milton_Beychok))",
+   "draws": [
+    "pressure",
+    "temperature"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "reduced-variables",
+   "concept": "reduced-variables",
+   "verb": "introduces"
+  },
+  {
+   "span": "reduced-variables",
+   "concept": "reduced-vdw-equation",
+   "verb": "introduces"
+  },
+  {
+   "span": "reduced-variables",
+   "concept": "law-of-corresponding-states",
+   "verb": "introduces"
+  },
+  {
+   "span": "reduced-variables",
+   "concept": "vdw-critical-compressibility",
+   "verb": "introduces"
+  },
+  {
+   "span": "reduced-variables",
+   "concept": "van-der-waals-equation",
+   "verb": "uses"
+  },
+  {
+   "span": "reduced-variables",
+   "concept": "vdw-critical-constants",
+   "verb": "uses"
+  },
+  {
+   "span": "reduced-variables",
+   "concept": "critical-point",
+   "verb": "uses"
+  },
+  {
+   "span": "compressibility",
+   "concept": "reduced-compressibility",
+   "verb": "introduces"
+  },
+  {
+   "span": "compressibility",
+   "concept": "generalized-compressibility-chart",
+   "verb": "introduces"
+  },
+  {
+   "span": "compressibility",
+   "concept": "compressibility-factor",
+   "verb": "uses"
+  },
+  {
+   "span": "compressibility",
+   "concept": "law-of-corresponding-states",
+   "verb": "reinforces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "argon behaves much the same at 300 K as ethane does at 600 K",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "reduced-variables",
+   "prompt": "<p>Argon and ethane have critical temperatures of 150.72 K and 305.4 K. At what temperature is ethane in a state corresponding to argon at 225 K, the reduced pressures being equal?</p>",
+   "answer": {
+    "type": "number",
+    "value": 456,
+    "unit": "K",
+    "generated_by": "ai",
+    "hint": "Corresponding states share the same reduced temperature.",
+    "solution": "<p>Argon at 225 K has $T_r = 225\\ \\text{K} / 150.72\\ \\text{K} = 1.493$. Ethane is in the corresponding state at the same $T_r$, so $T = 1.493 \\times 305.4\\ \\text{K} = 456\\ \\text{K}$.</p>"
+   }
+  },
+  {
+   "id": "a2",
+   "source_id": "The compressibility value ($Z$) of 3/8 at the critical point for the van der Waals equation is actually not in such good agreement with measurement.",
+   "kind": "exercise",
+   "bloom": "Analyze",
+   "place": {
+    "at": "end"
+   },
+   "cite": "reduced-variables",
+   "prompt": "<p>Use the van der Waals critical constants $V_c = 3b$, $P_c = a/27b^2$ and $T_c = 8a/27bR$ to find the compressibility factor $Z = P_cV_c/RT_c$ at the critical point. How does it compare with the lowest point of the $T_r = 1.0$ curve in Figure 16.4.1?</p>",
+   "answer": {
+    "type": "number",
+    "value": 0.375,
+    "generated_by": "ai",
+    "hint": "Substitute the three constants; a and b cancel.",
+    "solution": "<p>$Z_c = \\dfrac{(a/27b^2)(3b)}{R\\,(8a/27bR)} = \\dfrac{a/9b}{8a/27b} = \\dfrac{3}{8} = 0.375$, the same for every van der Waals gas. The measured $T_r = 1.0$ curve falls to about 0.2 at $P_r = 1$, so the van der Waals equation puts $Z$ at the critical point well above what real gases show.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "law-of-corresponding-states"
+  },
+  {
+   "exercise": "a1",
+   "concept": "reduced-variables"
+  },
+  {
+   "exercise": "a2",
+   "concept": "vdw-critical-compressibility"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-direction",
+   "kind": "correction",
+   "html": "The reduced form rests on these constants and does not give them: Section 16.3 works out $V_c = 3b$, $P_c = a/27b^2$ and $T_c = 8a/27bR$ from the van der Waals equation, and substituting them into Equation 16.4.1 gives Equation 16.4.2."
+  },
+  {
+   "id": "c-peng-robinson",
+   "kind": "correction",
+   "html": "The equation meant is the Peng-Robinson equation of state."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "reduced-vdw",
+   "what": "the van der Waals equation in reduced variables",
+   "source": "Physical Chemistry (LibreTexts), 16.4 The Law of Corresponding States",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\left(\\kP+\\frac{a}{\\kVm^2}\\right)\\left(\\kVm-\\kbvdw\\right)=R\\kT",
+       "src": "(16.4.1)"
+      },
+      {
+       "tex": "\\kP = \\kPr\\kPc,\\quad \\kVm = \\kVbarr\\kVc,\\quad \\kT = \\kTr\\kTc",
+       "src": "16.4"
+      },
+      {
+       "tex": "\\kVc = 3\\kbvdw,\\quad \\kPc = \\dfrac{a}{27\\kbvdw^2},\\quad \\kTc = \\dfrac{8a}{27\\kbvdw R}",
+       "src": "16.3",
+       "drv": "16.3/vdw-critical-constants"
+      }
+     ],
+     "then": {
+      "tex": "\\left(\\mk{p}{\\kP}+\\mk{q}{\\frac{a}{\\kVm^2}}\\right)\\left(\\mk{v}{\\kVm}-\\kbvdw\\right)=\\mk{t}{R\\kT}"
+     },
+     "steps": [
+      {
+       "tex": "\\left(\\mk{p}{\\kPr\\kPc}+\\mk{q}{\\frac{a}{\\kVbarr^2\\kVc^2}}\\right)\\left(\\mk{v}{\\kVbarr\\kVc}-\\kbvdw\\right)=\\mk{t}{R\\kTr\\kTc}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\left(\\mk{p}{\\frac{a\\kPr}{27\\kbvdw^2}}+\\mk{q}{\\frac{a}{9\\kbvdw^2\\kVbarr^2}}\\right)\\left(\\mk{v}{3\\kbvdw\\kVbarr}-\\kbvdw\\right)=\\mk{t}{\\frac{8a\\kTr}{27\\kbvdw}}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{f}{\\frac{a}{27\\kbvdw}}\\left(\\mk{p}{\\kPr}+\\mk{q}{\\frac{3}{\\kVbarr^2}}\\right)\\left(\\mk{v}{3\\kVbarr-1}\\right)=\\mk{t}{\\frac{8a\\kTr}{27\\kbvdw}}",
+       "uses": []
+      },
+      {
+       "tex": "\\left(\\mk{p}{\\kPr}+\\mk{q}{\\frac{3}{\\kVbarr^2}}\\right)\\left(\\mk{v}{3\\kVbarr-1}\\right)=\\mk{t}{8\\kTr}",
+       "uses": []
+      },
+      {
+       "tex": "\\left(\\mk{p}{\\kPr}+\\mk{q}{\\frac{3}{\\kVbarr^2}}\\right)\\left(\\mk{v}{\\kVbarr-\\frac{1}{3}}\\right)=\\mk{t}{\\frac{8}{3}\\kTr}",
+       "uses": []
+      }
+     ],
+     "num": "(16.4.2)",
+     "src": "16.4"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "Z = \\dfrac{\\kP\\kVm}{R\\kT}",
+       "src": "(16.1.10)"
+      },
+      {
+       "tex": "\\kVc = 3\\kbvdw,\\quad \\kPc = \\dfrac{a}{27\\kbvdw^2},\\quad \\kTc = \\dfrac{8a}{27\\kbvdw R}",
+       "src": "16.3",
+       "drv": "16.3/vdw-critical-constants"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{z}{Z} = \\dfrac{\\mk{p}{\\kP}\\mk{v}{\\kVm}}{R\\mk{t}{\\kT}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{z}{Z_c} = \\dfrac{\\mk{p}{\\kPc}\\mk{v}{\\kVc}}{R\\mk{t}{\\kTc}}",
+       "uses": [],
+       "cap": "At the critical point the pressure, molar volume and temperature take their critical values."
+      },
+      {
+       "tex": "\\mk{z}{Z_c} = \\dfrac{\\mk{p}{\\frac{a}{27\\kbvdw^2}}\\mk{v}{3\\kbvdw}}{R\\mk{t}{\\frac{8a}{27\\kbvdw R}}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{z}{Z_c} = \\mk{r}{\\dfrac{3}{8}}",
+       "uses": []
+      }
+     ],
+     "src": "16.4"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "Z = \\dfrac{\\kP\\kVm}{R\\kT}",
+       "src": "(16.1.10)"
+      },
+      {
+       "tex": "\\kP = \\kPr\\kPc,\\quad \\kVm = \\kVbarr\\kVc,\\quad \\kT = \\kTr\\kTc",
+       "src": "16.4"
+      },
+      {
+       "step": 1
+      },
+      {
+       "step": 0
+      }
+     ],
+     "then": {
+      "tex": "\\mk{z}{Z} = \\dfrac{\\mk{p}{\\kP}\\mk{v}{\\kVm}}{R\\mk{t}{\\kT}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{z}{Z} = \\dfrac{\\mk{p}{\\kPr\\kPc}\\mk{v}{\\kVbarr\\kVc}}{R\\mk{t}{\\kTr\\kTc}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{z}{Z} = \\mk{c}{\\dfrac{\\kPc\\kVc}{R\\kTc}}\\,\\dfrac{\\mk{p}{\\kPr}\\mk{v}{\\kVbarr}}{\\mk{t}{\\kTr}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{z}{Z} = \\mk{c}{\\dfrac{3}{8}}\\,\\dfrac{\\mk{p}{\\kPr}\\mk{v}{\\kVbarr}}{\\mk{t}{\\kTr}}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{z}{Z} = \\mk{c}{\\dfrac{3}{8}}\\,\\dfrac{\\mk{v}{\\kVbarr}}{\\mk{t}{\\kTr}}\\mk{p}{\\left(\\dfrac{8\\kTr}{3\\kVbarr-1}-\\dfrac{3}{\\kVbarr^2}\\right)}",
+       "uses": [
+        3
+       ],
+       "cap": "Equation 16.4.2 solved for the reduced pressure."
+      },
+      {
+       "tex": "\\mk{z}{Z} = \\mk{a}{\\dfrac{3\\kVbarr}{3\\kVbarr-1}} - \\mk{b}{\\dfrac{9}{8\\kVbarr\\kTr}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{z}{Z} = \\mk{a}{\\dfrac{\\kVbarr}{\\kVbarr-\\frac{1}{3}}} - \\mk{b}{\\dfrac{9}{8\\kVbarr\\kTr}}",
+       "uses": []
+      }
+     ],
+     "src": "16.4"
+    }
+   ]
+  }
+ ]
+}

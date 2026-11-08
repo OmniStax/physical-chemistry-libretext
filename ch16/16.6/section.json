@@ -1,0 +1,244 @@
+{
+ "id": "16.6",
+ "module": "13661",
+ "chapter": "16",
+ "title": "The Repulsive Term in the Lennard-Jones Potential",
+ "short": "Lennard-Jones potential",
+ "lead": "The Lennard-Jones potential gives the energy of two nonbonding atoms or molecules as a function of their separation, from a steep repulsive term and a gentler attractive one, scaled by a well depth and a distance.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "Adapted from the LibreTexts module Lennard-Jones Potential, shared under CC BY 4.0 at the source and here under the book's CC BY-NC-SA 4.0; its uncited list of three references is left out, and its unnumbered Figures A and C are folded into Figure 16.6.1.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "Exercises 16.6.1 and 16.6.2 and their keys are the book's. The two others, on the bottom of the well and on xenon's curve, were written by AI with AI solutions, their answers checked by computation. Bloom levels and concept tags were chosen by AI; numeric answers accept a 2% tolerance.",
+ "figures": [
+  {
+   "id": "sim-lennard-jones",
+   "kind": "sim",
+   "number": "16.6.1",
+   "originals": [
+    "/media/ch16/167668-imageedit_10_4696039110.png",
+    "/media/ch16/167669-imageedit_6_9194242771.png",
+    "/media/ch16/167670-imageedit_2_4909246113.png"
+   ],
+   "original_caption": "The Lennard-Jones potential describes both the attraction and repulsion between nonionic particles. The first part of the equation, the short-ranged σ/r)¹² term describes the repulsive forces between particles while the latter part of the equation and the longer-ranged σ/r⁶ term denotes the attraction.",
+   "draws": [
+    "energy",
+    "length",
+    "force"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "two-nonbonding-atoms",
+   "concept": "lennard-jones-potential",
+   "verb": "introduces"
+  },
+  {
+   "span": "two-nonbonding-atoms",
+   "concept": "intermolecular-attractions",
+   "verb": "introduces"
+  },
+  {
+   "span": "introduction",
+   "concept": "lj-repulsion-and-attraction",
+   "verb": "introduces"
+  },
+  {
+   "span": "introduction",
+   "concept": "lennard-jones-potential",
+   "verb": "reinforces"
+  },
+  {
+   "span": "the-lennard-jones-potential",
+   "concept": "lj-sigma",
+   "verb": "introduces"
+  },
+  {
+   "span": "the-lennard-jones-potential",
+   "concept": "van-der-waals-radius",
+   "verb": "introduces"
+  },
+  {
+   "span": "the-lennard-jones-potential",
+   "concept": "evaluating-lj-potential",
+   "verb": "introduces"
+  },
+  {
+   "span": "the-lennard-jones-potential",
+   "concept": "lj-forces",
+   "verb": "introduces"
+  },
+  {
+   "span": "the-lennard-jones-potential",
+   "concept": "well-depth",
+   "verb": "uses"
+  },
+  {
+   "span": "the-lennard-jones-potential",
+   "concept": "lj-repulsion-and-attraction",
+   "verb": "reinforces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "e1",
+   "source_id": "exr:16.6.1",
+   "source_number": "Exercise 16.6.1",
+   "kind": "exercise",
+   "bloom": "Remember",
+   "place": {
+    "at": "end"
+   },
+   "cite": "two-nonbonding-atoms",
+   "prompt": "<p>The second part of the Lennard-Jones equation is ($\\sigma$/r)<sup>6</sup> and denotes attraction. Name at least three types of intermolecular interactions that represent attraction.</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "source",
+    "solution": "<p>From section 2.1,<sup class=\"fn\" data-note=\"c-section-2-1\"></sup> dipole-dipole, dipole-induced dipole, and London interactions are all attractive forces.</p>"
+   }
+  },
+  {
+   "id": "e2",
+   "source_id": "exr:16.6.2",
+   "source_number": "Exercise 16.6.2",
+   "kind": "exercise",
+   "bloom": "Understand",
+   "place": {
+    "at": "end"
+   },
+   "cite": "the-lennard-jones-potential",
+   "prompt": "<p>At what separation distance in the Lennard-Jones potential does a species have a repulsive force acting on it? An attractive force? No force?</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "source",
+    "solution": "<p>See <a class=\"figref\" href=\"#16.6-sim-lennard-jones\">Figure C</a>. A species will have a repulsive force acting on it when r is less than the equilibrium distance between the particles. A species will have an attractive force acting on it when r is greater than the equilibrium distance between the particles. Lastly, when $r$ is equal to the equilibrium distance between both particles, the species will have no force acting upon it.</p>"
+   }
+  },
+  {
+   "id": "a1",
+   "source_id": "Minimum value of $\\Phi_{12}(r)$ at $r = r_{min}$.",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "the-lennard-jones-potential",
+   "prompt": "<p>Set $dV/dr = 0$ for Equation 16.6.1 to find where the Lennard-Jones potential has its minimum, $r_{min}$, in terms of $\\sigma$, and the value of $V$ there. Then find $r_{min}$ for argon, with $\\sigma = 3.40$ Å.</p>",
+   "answer": {
+    "type": "number",
+    "value": 3.82,
+    "unit": "Å",
+    "generated_by": "ai",
+    "hint": "Differentiate each term; the condition reduces to an equation for $(\\sigma/r)^6$.",
+    "solution": "<p>$dV/dr = 4\\epsilon\\left[-12\\sigma^{12}/r^{13} + 6\\sigma^6/r^7\\right] = 0$ gives $(\\sigma/r)^6 = 1/2$, so $r_{min} = 2^{1/6}\\sigma = 1.122\\,\\sigma$. There $V = 4\\epsilon\\left[(1/2)^2 - 1/2\\right] = -\\epsilon$: the minimum is the well depth. For argon, $r_{min} = 1.122 \\times 3.40\\ \\text{Å} = 3.82$ Å.</p>"
+   }
+  },
+  {
+   "id": "a2",
+   "source_id": "The $\\epsilon$ and $\\sigma$ values for Xenon",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "the-lennard-jones-potential",
+   "prompt": "<p>Using xenon's values from Example 16.6.1, $\\epsilon = 1.77$ kJ/mol and $\\sigma = 4.10$ Å, and $r_{min} = 2^{1/6}\\sigma$:</p><ol type=\"a\"><li>At what separation do two xenon atoms feel no force?</li><li>What is $V$ at that separation?</li></ol>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 4.6,
+      "unit": "Å",
+      "hint": "No force means the bottom of the well."
+     },
+     {
+      "part": "b",
+      "value": -1.77,
+      "unit": "kJ/mol"
+     }
+    ],
+    "solution": "<p>a. The force is zero at the bottom of the well, $r_{min} = 2^{1/6}(4.10\\ \\text{Å}) = 4.60$ Å. b. There $(\\sigma/r)^6 = 1/2$, so $V = 4(1.77\\ \\text{kJ/mol})(0.25 - 0.50) = -1.77$ kJ/mol, which is $-\\epsilon$.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "e1",
+   "concept": "intermolecular-attractions"
+  },
+  {
+   "exercise": "e2",
+   "concept": "lj-forces"
+  },
+  {
+   "exercise": "a1",
+   "concept": "lennard-jones-potential"
+  },
+  {
+   "exercise": "a1",
+   "concept": "lj-forces"
+  },
+  {
+   "exercise": "a2",
+   "concept": "evaluating-lj-potential"
+  },
+  {
+   "exercise": "a2",
+   "concept": "lj-forces"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-vdw-radius",
+   "kind": "correction",
+   "html": "$\\sigma$ is the closest distance between the centers of the two particles. The van der Waals radius is half of it, $\\sigma/2$, as Example 16.6.1 computes."
+  },
+  {
+   "id": "c-caption",
+   "kind": "correction",
+   "figure": "sim-lennard-jones",
+   "html": "The two terms are $(\\sigma/r)^{12}$ and $(\\sigma/r)^6$."
+  },
+  {
+   "id": "c-rounding",
+   "kind": "correction",
+   "html": "The $-0.96$ kJ/mol comes from rounding $0.85^{12}$ and $0.85^6$ to 0.14 and 0.38. Unrounded they are 0.1422 and 0.3771, and $V = 3.988(-0.2349) = -0.94$ kJ/mol."
+  },
+  {
+   "id": "c-410",
+   "kind": "correction",
+   "html": "The example gives $\\sigma = 4.10$ angstroms. The argument holds either way, since 3.0 angstroms is less than both."
+  },
+  {
+   "id": "c-section-2-1",
+   "kind": "correction",
+   "html": "The three kinds of attraction are named in the opening paragraph of this section."
+  }
+ ]
+}

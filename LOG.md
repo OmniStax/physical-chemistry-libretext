@@ -955,3 +955,40 @@ Tool fixes: none needed. `lt2md.py` and `md2html.py` handle every page (16.1's `
 is a broken tag at the source, dropped); every maths span of the drafts sets under KaTeX in
 strict mode. `check:content`: no errors; the one warning is Chapter 15's (a derivation link to
 an unbuilt 15.2).
+
+## Chapter 15 pass · 2026-11-08
+
+Built: the intro, 15.1–15.7 and the summary page (15.E empty, not built). 15 figure rows: 10
+interactive (8 moving: the Jablonski ladder, the potential-curve routes, the collision,
+Einstein's three processes, two-level pumping, the three-level ladder with its four-level
+choice, the cavity in a locked view, helium feeding neon; 2 still: the mirror spectra, the
+dye tuning; no 3D), 2 faithful copies (15.1.1, 15.1.9) and 3 kept photographs or drawings
+(15.4.1, 15.5.2, 15.5.3). 4 derivations (15.2 the Einstein relations, 15.3 why two levels
+never invert, 15.4 the ruby's inversion, stopping at what the book states, and inversion
+between levels 3 and 2). 14 exercises, all `exercise` kind in the Exercises document: the
+book's 2 keyed boxes of 15.1 and 12 AI exercises. 31 AI-marked corrections in footnotes,
+besides one derivation note ((15.4.1)'s missing d).
+
+Chapter pass: the builders' wanted variables rows added (15.1 `E`, `lambda`, `nu`; 15.2 `nu`;
+15.5 `lambda`, `E`) and 15.6's `lambda` given `"type": "wavelength"`; the unused
+`media/ch15/399463-abs,_spon_emiss,_stim_emiss.svg` deleted (15.2 serves the comma-free
+copy). 15.4's display 0 = dN₁/dt = dN₂/dt = dN₃/dt printed twice (text and the
+three-two derivation's fact): the text keeps the sentence, the derivation the line.
+Figures: 15.1's collision headline broke "v = | 3" over two lines (now TeX runs); 15.6's
+1152.3 label sat on the 632.8 arrow and its own dashed line (now below its line); 15.5's
+cavity set "round trips" over the 150 tick (stage 640 → 668). `node --check` clean on the
+six `figures.js`. Derivations read against source.md: no content sentence dropped; the
+book's "Thus," "Rearranging Equation 15.4.1 gives" and "which rearranges to" (method) are
+not carried. No two-argument `\braket`, no bare `\k` script, no U+2011, U+FEFF or U+200B;
+every in-book link carries `xref`/`figref`; every page has `ai`, `built` and `notes` (no
+section prints objectives); 15.2's notes name Wikipedia's text and CC BY-SA 4.0.
+`colours:default` rerun (every type kept its colour). `check:content`: no errors, no
+warnings from Chapter 15 (the two left are 16.4's links to an unbuilt 16.3). Every figure
+screenshot in light and dark (contact sheets in the pass's scratch folder); no console or
+KaTeX error on any Chapter 15 page, derivations included.
+
+Known gaps: the literature values of the prep (YAG, YLF, Kr⁺, copper-vapour pumping, cw
+ruby, diode lasers) stay unchecked; 15.4's figure caption says the ruby needs a pump faster
+than A₂₁, which its derivation (by the orchestrator's decision) does not show; derivation
+facts in 15.2–15.4 restate the rate terms the text lists just before them (the prose-first
+reading); 15.5's pump arrows reach the top of the light graph.

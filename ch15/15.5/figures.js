@@ -27,7 +27,7 @@ const frac = (x) => x - Math.floor(x);
    threshold). Scene: the book's cavity in its perspective, locked (rule 28.2). Graph: I against round trips,
    0 to 150, y 0 to 0.5 (R G0 - 1 at most 0.4985). Beam red, as the book draws it. */
 (function () {
-  const d = sim('sim-cavity', 640);
+  const d = sim('sim-cavity', 668);
   const K = 150;
   const cy = F.cycle(() => K, 1.2);
   const R = ctl(d.controls, { label: 'R', cls: '', key: 'R', min: 90, max: 99.9, step: 0.1, value: 95, unit: '%', dec: 1, onInput: () => { G0.mark(sp()); run(); cy.reset(); } });
