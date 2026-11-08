@@ -59,7 +59,7 @@ giving up its terms. What varies: the combination's sign and the orbital pair
 | 9.12 MO Theory Also Applies to Heteronuclear Diatomics | 13464 | BY-NC-SA 4.0 | anonymous (tag) | Nonbonding Molecular Orbitals; Summary | 1 | 1 | 3 (printed 9.12.4, 9.12.13, 9.12.6) | 1 (in Example 9.12.4) | 0 | 1 (An Odd Number of Valence Electrons: NO, holding Figure 9.12.13); two pulled quotes; a YouTube video | 0 / 0 |
 | 9.13 SCF-LCAO-MO Wavefunctions … | 13465 | BY-NC-SA 4.0 | | **empty** | | | | | | | |
 | 9.14 Molecular Term Symbols Describe Electronic States | 13466 | **BY 4.0** | none | Introduction; Determining term symbols of diatomics; Transition between electronic states of diatomics; References | 0 | 0 | 0 | 2 (mo4, mo6) | 0 | 0 | 1 / 1 |
-| 9.15 Molecular Term Symbols Designate Symmetry | 13467 | BY-NC-SA 4.0 | Mattanjah de Vries (tag) | Two New Symmetries: Parity and Reflection | 3 | 1 | 0 | 6 | 2 (the M_L × M_S charts in Example 9.15.3) | 0 | 0 / 0 |
+| 9.15 Molecular Term Symbols Designate Symmetry | 13467 | BY-NC-SA 4.0 | Mattanjah de Vries (tag) | Two New Symmetries: Parity and Reflection | 3 | 1 | 0 | 5 | 2 (the M_L × M_S charts in Example 9.15.3) | 0 | 0 / 0 |
 | 9.16 Most Molecules Have Excited Electronic States | 13468 | BY-NC-SA 4.0 | | **empty** | | | | | | | |
 | summary (9.S) | 550560 | untagged (the book's) | Kyle Crabtree | none: ten bullets | | | | | | | 0 / 0 |
 | 9.E | 13450 | | | empty | | | | | | | |
@@ -286,7 +286,7 @@ Counted from the converted pages.
   9.14): **proposed new: 8**: 9.2 one (why |C_A|² = |C_B|² and which combination
   piles charge between the protons); 9.3 one (S and C± at R = 2a₀: S = 0.586,
   C₊ = 0.561, C₋ = 1.10); 9.4 one (ΔE₊ and ΔE₋ at R = 2.0a₀ from given S, J and K,
-  0.586, −0.473 and −0.406 E_h: −0.054 and +0.665 E_h); 9.5 one (how many σ and σ*
+  0.586, −0.473 and −0.406 E_h: −0.054 and +0.338 E_h); 9.5 one (how many σ and σ*
   orbitals the six-orbital basis (9.5.11) gives, and which have a node between the
   nuclei); 9.6 one (Li₂'s and N₂'s configurations in σ_g/σ_u notation, and which
   orbitals are g); 9.9 one (expand the 2 × 2 determinant (9.9.4) and show it is
