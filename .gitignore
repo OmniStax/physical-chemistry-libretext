@@ -1,0 +1,4 @@
+# the LibreTexts mirror is large and the publisher keeps it; tools/fetch.py rebuilds it
+source/
+__pycache__/
+*.pdf

@@ -1,0 +1,6 @@
+<!-- LibreTexts page 11778: Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Physical_Chemistry_(LibreTexts)/01:_The_Dawn_of_the_Quantum_Theory -->
+# The Dawn of the Quantum Theory
+
+"A profound change has taken place during the present century in the opinions physicists have held on the mathematical foundations of their subject. Previously they supposed that the principles of Newtonian mechanics would provide the basis for the description of the whole of physical phenomenon and that all the theoretical physicists had to do was suitably to develop and apply these principles. With the recognition that there is no logical reason why Newtonian and classical principles should be valid outside the domains in which they have been experimentally verified has come the realization that departures from these principles are indeed necessary. Such departures find their expression through the introduction of new mathematical formalisms, new schemes of axioms and rules of manipulation, into the methods of theoretical physics." {term:P. A. M. Dirac, "Quantum Mechanics" (1930).}
+
+Thumbnail: The Photoelectric effect require quantum mechanics to describe accurately (CC BY-SA-NC 3.0; anonymous via LibreTexts).
