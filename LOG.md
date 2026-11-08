@@ -54,3 +54,27 @@ reconverted; under the row rule its two-row aligns would take two numbers.
 
 Exercises: 4 inline, all keyed; 6 AI exercises proposed. `check:content`:
 no errors.
+
+## Pass 3 · 2026-11-08 · Chapter 1 figures reworked; Chapter 2 built
+
+After the user found Chapter 1's figures generic and too close to the book,
+root rule 14 was rewritten (with rule 25 and the figure guide's §1) and all
+17 figures were reworked by four builders: one point visible at once,
+captions of two sentences, clutter cut, motion added where the idea moves
+(the ramp and stairs, the Coulomb charges, the orbit wave). Before and after
+screenshots were sent to the user.
+
+Chapter 2 was built from the Pass 2 prep by four builders: the intro and
+2.1–2.5; 12 interactive figures (10 moving, two of them 3D membranes), 13
+derivations, 4 book exercises and 6 AI exercises, about 26 corrections.
+Chapter pass: the builders' wanted rows (G_n; k_x, k_y, k_z, A, X, Y, T, p, q
+in 2.5), `colours:default` rerun after the two new types (it moved some of
+Chapter 1's colours), the © Dan Russell GIFs of Figure 2.5.1 removed from
+`media/` (credited in 2.5's notes), the membranes' colour bands refined.
+`check:content`: no errors, no warnings.
+
+Known gaps: Chapter 1's equation numbers predate the converter's
+per-row numbering of `align` and may be off by one on 1.1, 1.2, 1.4, 1.5
+and 1.8. Library gaps the builders hit: no per-vertex colour in
+`F.space3d`, no legend helper, no value formatter on `ctl`, no dash in
+`plot`, and a fact repeated in a derivation when `then` restates it.

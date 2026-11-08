@@ -4,10 +4,12 @@ window.OMNISTAX_FIGURES['2.5'] = function (root, F) {
 const { tex, C, PAL, alpha, register, begin, text, fmt } = F;
 
 /* ---------- the displacement scale (a fact: one false-colour scale of u with its legend, root 7.1) ----------
-   The book's convention for the drum: red above the rest plane, blue below, white where the sheet is at rest. */
-const UP = '#c2413a', DOWN = '#2f6ab3', REST = '#ebe8e2';
-const STEPS = 6;   /* 13 bands from -1 to 1 */
-const band = (q) => (q === 0 ? F.fact(REST) : q > 0 ? F.mixColor(F.fact(REST), F.fact(UP), q / STEPS) : F.mixColor(F.fact(REST), F.fact(DOWN), -q / STEPS));
+   The book's convention for the drum: red above the rest plane, blue below; the sheet at rest takes a neutral of the
+   page's own ground, so the nodal lines in ink read on it in either theme. */
+const UP = '#c2413a', DOWN = '#2f6ab3';
+const rest = () => F.mixColor(PAL.panel, PAL.ink, 0.1);
+const STEPS = 16;   /* 33 bands from -1 to 1 */
+const band = (q) => (q === 0 ? rest() : q > 0 ? F.mixColor(rest(), F.fact(UP), q / STEPS) : F.mixColor(rest(), F.fact(DOWN), -q / STEPS));
 const level = (w) => Math.max(-STEPS, Math.min(STEPS, Math.round(w * STEPS)));
 /* the sheet as faces grouped by band: rows[j][i] are points, w[j][i] the displacement over its maximum */
 function sheet(rows, w) {
@@ -53,8 +55,8 @@ const swings = (ratio) => Math.max(1, Math.round(3 * ratio));
    while the lobes between them swing. A mode swings at omega_nm, in proportion to sqrt((n_x/a)^2 + (n_y/b)^2). */
 (function () {
   const d = F.sim(root, 'sim-rect-membrane');
-  const A = 1.4, B = 1, Z = 0.36, NI = 42, NJ = 30;
-  const S = F.space3d(d, { box: [[0, A], [0, B], [-0.45, 0.45]], h: 560, turn: -0.55, tilt: 0.62, fit: 2.9, ...ORBIT });
+  const A = 1.4, B = 1, Z = 0.36, NI = 70, NJ = 50;
+  const S = F.space3d(d, { box: [[0, A], [0, B], [-0.45, 0.45]], h: 560, turn: -0.55, tilt: 0.62, fit: 2.7, ...ORBIT });
   const cy = F.cycle(() => LOOP, 1.2);
   const opts = [1, 2, 3].map((k) => ({ value: String(k), label: String(k) }));
   const NX = F.choice(d.controls, { label: 'n_x', options: opts, value: '1', aria: 'the quantum number along x', key: 'nx', onInput: () => cy.reset() });
@@ -106,7 +108,7 @@ const swings = (ratio) => Math.max(1, Math.round(3 * ratio));
    at the earlier zeros of J_m, all still while the lobes swing. A mode swings at c lambda_mn. */
 (function () {
   const d = F.sim(root, 'sim-circ-membrane');
-  const Z = 0.42, NR = 24, NT = 96;
+  const Z = 0.42, NR = 40, NT = 128;
   /* the first three zeros of J_0 to J_4 */
   const ZEROS = [[2.4048, 5.5201, 8.6537], [3.8317, 7.0156, 10.1735], [5.1356, 8.4172, 11.6198], [6.3802, 9.761, 13.0152], [7.5883, 11.0647, 14.3725]];
   /* J_m(x) = (1/pi) integral_0^pi cos(m tau - x sin tau) d tau, by the trapezoid rule, exact to 1e-10 here */

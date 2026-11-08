@@ -42,8 +42,7 @@
    ],
    "facts": [
     "#c2413a",
-    "#2f6ab3",
-    "#ebe8e2"
+    "#2f6ab3"
    ],
    "ai": [
     {
@@ -70,8 +69,7 @@
    ],
    "facts": [
     "#c2413a",
-    "#2f6ab3",
-    "#ebe8e2"
+    "#2f6ab3"
    ],
    "ai": [
     {
@@ -270,10 +268,6 @@
     {
      "assumes": [
       {
-       "tex": "\\nabla^2 \\ku = \\dfrac{1}{\\kv^2}\\dfrac{\\partial^2 \\ku}{\\partial \\kt^2}",
-       "src": "2.5"
-      },
-      {
        "tex": "\\nabla^2 = \\dfrac{\\partial^2}{\\partial \\kx^2} + \\dfrac{\\partial^2}{\\partial \\ky^2} + \\dfrac{\\partial^2}{\\partial \\kz^2}",
        "src": "2.5"
       },
@@ -288,29 +282,26 @@
      ],
      "then": {
       "tex": "\\mk{L}{\\nabla^2 \\ku} = \\mk{R}{\\dfrac{1}{\\kv^2}\\dfrac{\\partial^2 \\ku}{\\partial \\kt^2}}",
-      "src": "2.5",
-      "uses": [
-       0
-      ]
+      "src": "2.5"
      },
      "steps": [
       {
        "tex": "\\mk{L}{\\dfrac{\\partial^2 \\ku}{\\partial \\kx^2} + \\dfrac{\\partial^2 \\ku}{\\partial \\ky^2} + \\dfrac{\\partial^2 \\ku}{\\partial \\kz^2}} = \\mk{R}{\\dfrac{1}{\\kv^2}\\dfrac{\\partial^2 \\ku}{\\partial \\kt^2}}",
        "uses": [
-        1
+        0
        ]
       },
       {
        "tex": "\\mk{L}{-(k_x^2 + k_y^2 + k_z^2)\\,\\ku} = \\mk{R}{\\dfrac{1}{\\kv^2}\\dfrac{\\partial^2 \\ku}{\\partial \\kt^2}}",
        "uses": [
-        2
+        1
        ],
        "cap": "Each second derivative of the sine brings out the square of the factor on its variable, with a minus sign: $\\partial^2 \\ku/\\partial \\kx^2 = -k_x^2 \\ku$, and the same for $\\ky$ and $\\kz$."
       },
       {
        "tex": "\\mk{L}{-(k_x^2 + k_y^2 + k_z^2)\\,\\ku} = \\mk{R}{-\\dfrac{\\komega^2}{\\kv^2}\\,\\ku}",
        "uses": [
-        2
+        1
        ],
        "cap": "In time the factor is $\\komega$, so $\\partial^2 \\ku/\\partial \\kt^2 = -\\komega^2 \\ku$."
       },
@@ -322,7 +313,7 @@
       {
        "tex": "\\mk{L}{|\\kkvec|^2} = \\mk{R}{\\dfrac{\\komega^2}{\\kv^2}}",
        "uses": [
-        3
+        2
        ]
       },
       {
@@ -344,26 +335,19 @@
     {
      "assumes": [
       {
-       "tex": "\\dfrac{ \\partial^2 \\ku}{\\partial \\kx^2} + \\dfrac{ \\partial^2 \\ku}{\\partial \\ky^2} = \\dfrac{1}{\\kv^2} \\dfrac{ \\partial^2 \\ku}{\\partial \\kt^2}",
-       "src": "(2.5.1)"
-      },
-      {
        "text": "Separate the variables: $\\ku(\\kx,\\ky,\\kt) = X(\\kx)\\,Y(\\ky)\\,T(\\kt)$.",
        "src": "2.5"
       }
      ],
      "then": {
       "tex": "\\mk{x}{\\dfrac{\\partial^2 \\ku}{\\partial \\kx^2}} + \\mk{y}{\\dfrac{\\partial^2 \\ku}{\\partial \\ky^2}} = \\mk{t}{\\dfrac{1}{\\kv^2}\\dfrac{\\partial^2 \\ku}{\\partial \\kt^2}}",
-      "src": "(2.5.1)",
-      "uses": [
-       0
-      ]
+      "src": "(2.5.1)"
      },
      "steps": [
       {
        "tex": "\\mk{x}{X''YT} + \\mk{y}{XY''T} = \\mk{t}{\\dfrac{1}{\\kv^2}XYT''}",
        "uses": [
-        1
+        0
        ],
        "cap": "Each partial derivative acts only on the factor that holds its variable; a prime is a derivative of a factor in its own variable."
       },

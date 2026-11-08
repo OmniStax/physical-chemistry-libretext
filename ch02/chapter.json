@@ -1,444 +1,505 @@
 {
- "id": "2",
- "dir": "ch02",
- "title": "The Classical Wave Equation",
- "intro": {
-  "module": "11779",
-  "slug": "02:_The_Classical_Wave_Equation"
- },
- "sections": [
-  {
-   "id": "2.1",
-   "module": "13375",
-   "title": "The One-Dimensional Wave Equation",
-   "slug": "02:_The_Classical_Wave_Equation/2.01:_The_One-Dimensional_Wave_Equation"
-  },
-  {
-   "id": "2.2",
-   "module": "13376",
-   "title": "The Method of Separation of Variables",
-   "slug": "02:_The_Classical_Wave_Equation/2.02:_The_Method_of_Separation_of_Variables"
-  },
-  {
-   "id": "2.3",
-   "module": "13377",
-   "title": "Oscillatory Solutions to Differential Equations",
-   "slug": "02:_The_Classical_Wave_Equation/2.03:_Oscillatory_Solutions_to_Differential_Equations"
-  },
-  {
-   "id": "2.4",
-   "module": "13378",
-   "title": "The General Solution is a Superposition of Normal Modes",
-   "slug": "02:_The_Classical_Wave_Equation/2.04:_The_General_Solution_is_a_Superposition_of_Normal_Modes"
-  },
-  {
-   "id": "2.5",
-   "module": "13379",
-   "title": "A Vibrating Membrane",
-   "slug": "02:_The_Classical_Wave_Equation/2.05:_A_Vibrating_Membrane"
-  }
- ],
- "variables": [
-  {
-   "sym": "A_o",
-   "concept": "amplitude",
-   "meaning": "the maximum amplitude of the wave, the largest displacement of the medium from its equilibrium position",
-   "unit": "m",
-   "section": "2.1"
-  },
-  {
-   "sym": "x",
-   "type": "length",
-   "meaning": "the space coordinate, the position along the medium",
-   "unit": "m",
-   "section": "2.1"
-  },
-  {
-   "sym": "t",
-   "type": "time",
-   "meaning": "the time coordinate",
-   "unit": "s",
-   "section": "2.1"
-  },
-  {
-   "sym": "k",
-   "concept": "angular-wavenumber",
-   "meaning": "the wavenumber of the sine wave",
-   "unit": "rad/m",
-   "section": "2.1"
-  },
-  {
-   "sym": "omega",
-   "concept": "angular-frequency",
-   "meaning": "the angular frequency of the wave",
-   "unit": "rad/s",
-   "section": "2.1"
-  },
-  {
-   "sym": "phi",
-   "concept": "phase-constant",
-   "meaning": "the phase constant of the wave",
-   "unit": "rad",
-   "section": "2.1"
-  },
-  {
-   "sym": "y",
-   "type": "displacement",
-   "meaning": "how far the rope is from its rest position at x at time t",
-   "unit": "m",
-   "section": "2.1"
-  },
-  {
-   "sym": "v",
-   "concept": "wave-velocity",
-   "meaning": "the velocity of the wave",
-   "unit": "m/s",
-   "section": "2.1"
-  },
-  {
-   "sym": "u",
-   "type": "displacement",
-   "meaning": "the amplitude (displacement) of the wave at position x and time t",
-   "unit": "m",
-   "section": "2.1"
-  },
-  {
-   "sym": "L",
-   "type": "length",
-   "meaning": "the length of the string held taut at its two ends",
-   "unit": "m",
-   "section": "2.1"
-  },
-  {
-   "sym": "E",
-   "type": "energy",
-   "meaning": "the energy of a quantum of frequency ν, in Planck's equation",
-   "unit": "J",
-   "section": "2.1"
-  },
-  {
-   "sym": "nu",
-   "type": "frequency",
-   "meaning": "the frequency of the radiation, in Planck's equation",
-   "unit": "Hz",
-   "section": "2.1"
-  },
-  {
-   "sym": "u",
-   "type": "displacement",
-   "meaning": "the amplitude of the wave at position x and time t",
-   "unit": "m",
-   "section": "2.2"
-  },
-  {
-   "sym": "x",
-   "type": "length",
-   "meaning": "the position along the string",
-   "unit": "m",
-   "section": "2.2"
-  },
-  {
-   "sym": "t",
-   "type": "time",
-   "meaning": "the time",
-   "unit": "s",
-   "section": "2.2"
-  },
-  {
-   "sym": "v",
-   "concept": "wave-velocity",
-   "meaning": "the velocity of the wave",
-   "unit": "m/s",
-   "section": "2.2"
-  },
-  {
-   "sym": "L",
-   "type": "length",
-   "meaning": "the length of the string",
-   "unit": "m",
-   "section": "2.2"
-  },
-  {
-   "sym": "X",
-   "meaning": "the factor of u(x,t) that depends on x only",
-   "section": "2.2"
-  },
-  {
-   "sym": "T_t",
-   "meaning": "the factor of u(x,t) that depends on t only",
-   "section": "2.2"
-  },
-  {
-   "sym": "K",
-   "meaning": "the constant both sides of the separated wave equation are set equal to",
-   "section": "2.2"
-  },
-  {
-   "sym": "k",
-   "meaning": "a real constant in the homogeneous equation d²y/dx² − k²y = 0",
-   "section": "2.2",
-   "redefines": true
-  },
-  {
-   "sym": "alpha",
-   "meaning": "the constant in the trial solution y = e^{αx}, fixed by the equation",
-   "section": "2.2"
-  },
-  {
-   "sym": "K",
-   "meaning": "the separation constant of the wave equation, here negative",
-   "section": "2.3"
-  },
-  {
-   "sym": "p_n",
-   "type": "wavenumber",
-   "meaning": "the real constant defined by K = −p², which the boundary conditions fix at nπ/L",
-   "unit": "rad/m",
-   "section": "2.3"
-  },
-  {
-   "sym": "X",
-   "meaning": "the spatial factor of the wave on the string",
-   "section": "2.3"
-  },
-  {
-   "sym": "x",
-   "type": "length",
-   "meaning": "the position along the string",
-   "unit": "m",
-   "section": "2.3"
-  },
-  {
-   "sym": "L",
-   "type": "length",
-   "meaning": "the length of the string",
-   "unit": "m",
-   "section": "2.3"
-  },
-  {
-   "sym": "X",
-   "meaning": "the spatial factor of the solution, X(x)",
-   "section": "2.4"
-  },
-  {
-   "sym": "T_t",
-   "meaning": "the temporal factor of the solution, T(t)",
-   "section": "2.4"
-  },
-  {
-   "sym": "K",
-   "meaning": "the separation constant, K = −p²",
-   "section": "2.4"
-  },
-  {
-   "sym": "p_n",
-   "type": "wavenumber",
-   "meaning": "the constant defined by K = −p², equal to nπ/L",
-   "unit": "rad/m",
-   "section": "2.4"
-  },
-  {
-   "sym": "n",
-   "concept": "quantum-number",
-   "meaning": "the integer 1, 2, 3, … that labels the solutions allowed by the boundary conditions",
-   "section": "2.4"
-  },
-  {
-   "sym": "x",
-   "type": "length",
-   "meaning": "the position along the string",
-   "unit": "m",
-   "section": "2.4"
-  },
-  {
-   "sym": "t",
-   "type": "time",
-   "meaning": "the time",
-   "unit": "s",
-   "section": "2.4"
-  },
-  {
-   "sym": "L",
-   "type": "length",
-   "meaning": "the length of the string",
-   "unit": "m",
-   "section": "2.4"
-  },
-  {
-   "sym": "v",
-   "concept": "wave-velocity",
-   "meaning": "the velocity of the wave on the string",
-   "unit": "m/s",
-   "section": "2.4"
-  },
-  {
-   "sym": "omega_n",
-   "type": "frequency",
-   "meaning": "the angular frequency of the nth normal mode, nvπ/L",
-   "unit": "rad/s",
-   "section": "2.4"
-  },
-  {
-   "sym": "u_n",
-   "concept": "normal-mode",
-   "meaning": "the nth normal mode of the string",
-   "unit": "m",
-   "section": "2.4"
-  },
-  {
-   "sym": "nu_n",
-   "concept": "normal-mode-frequency",
-   "meaning": "the natural frequency of the nth normal mode",
-   "unit": "Hz",
-   "section": "2.4"
-  },
-  {
-   "sym": "E",
-   "meaning": "a constant of the temporal solution T(t), multiplying cos ω_n t",
-   "section": "2.4",
-   "redefines": true
-  },
-  {
-   "sym": "u",
-   "type": "displacement",
-   "meaning": "the displacement of the string at position x and time t",
-   "unit": "m",
-   "section": "2.4"
-  },
-  {
-   "sym": "u",
-   "type": "displacement",
-   "meaning": "the displacement of the membrane (or medium) from its rest position",
-   "unit": "m",
-   "section": "2.5"
-  },
-  {
-   "sym": "x",
-   "type": "length",
-   "meaning": "the position coordinate along the x-axis",
-   "unit": "m",
-   "section": "2.5"
-  },
-  {
-   "sym": "y",
-   "type": "length",
-   "meaning": "the position coordinate along the y-axis of the membrane's rest plane",
-   "unit": "m",
-   "section": "2.5",
-   "redefines": true
-  },
-  {
-   "sym": "z",
-   "type": "length",
-   "meaning": "the position coordinate along the z-axis",
-   "unit": "m",
-   "section": "2.5"
-  },
-  {
-   "sym": "t",
-   "type": "time",
-   "meaning": "the time",
-   "unit": "s",
-   "section": "2.5"
-  },
-  {
-   "sym": "v",
-   "concept": "wave-velocity",
-   "meaning": "the velocity of the wave",
-   "unit": "m/s",
-   "section": "2.5"
-  },
-  {
-   "sym": "k_vec",
-   "concept": "wave-vector",
-   "meaning": "the wave vector, pointing in the direction the wave is moving",
-   "unit": "rad/m",
-   "section": "2.5"
-  },
-  {
-   "sym": "k",
-   "concept": "angular-wavenumber",
-   "meaning": "the wavenumber of a one-dimensional traveling harmonic wave u = A sin(kx − ωt)",
-   "unit": "rad/m",
-   "section": "2.5",
-   "redefines": true
-  },
-  {
-   "sym": "omega",
-   "concept": "angular-frequency",
-   "meaning": "the angular frequency of the harmonic wave",
-   "unit": "rad/s",
-   "section": "2.5"
-  },
-  {
-   "sym": "A_nm",
-   "concept": "amplitude",
-   "meaning": "the amplitude of the (n_x, n_y) mode of the rectangular membrane",
-   "unit": "m",
-   "section": "2.5"
-  },
-  {
-   "sym": "omega_nm",
-   "type": "frequency",
-   "meaning": "the angular frequency of the (n_x, n_y) mode of the rectangular membrane",
-   "unit": "rad/s",
-   "section": "2.5"
-  },
-  {
-   "sym": "a",
-   "type": "length",
-   "meaning": "the length of the rectangular membrane",
-   "unit": "m",
-   "section": "2.5"
-  },
-  {
-   "sym": "b_m",
-   "type": "length",
-   "meaning": "the width of the rectangular membrane",
-   "unit": "m",
-   "section": "2.5"
-  },
-  {
-   "sym": "n_x",
-   "concept": "quantum-number",
-   "meaning": "the quantum number of a rectangular membrane's mode along x",
-   "section": "2.5"
-  },
-  {
-   "sym": "n_y",
-   "concept": "quantum-number",
-   "meaning": "the quantum number of a rectangular membrane's mode along y",
-   "section": "2.5"
-  },
-  {
-   "sym": "r",
-   "type": "length",
-   "meaning": "the distance from the centre of the circular membrane",
-   "unit": "m",
-   "section": "2.5"
-  },
-  {
-   "sym": "theta",
-   "meaning": "the polar angle on the circular membrane",
-   "unit": "rad",
-   "section": "2.5"
-  },
-  {
-   "sym": "J_m",
-   "concept": "bessel-function",
-   "meaning": "the Bessel function of order m",
-   "section": "2.5"
-  },
-  {
-   "sym": "lambda_mn",
-   "meaning": "the constant of the (m, n) mode of the circular membrane",
-   "section": "2.5"
-  },
-  {
-   "sym": "m_q",
-   "concept": "quantum-number",
-   "meaning": "the quantum number of a circular membrane's mode that counts its nodal diameters",
-   "section": "2.5"
-  }
- ]
+  "id": "2",
+  "dir": "ch02",
+  "title": "The Classical Wave Equation",
+  "intro": {
+    "module": "11779",
+    "slug": "02:_The_Classical_Wave_Equation"
+  },
+  "sections": [
+    {
+      "id": "2.1",
+      "module": "13375",
+      "title": "The One-Dimensional Wave Equation",
+      "slug": "02:_The_Classical_Wave_Equation/2.01:_The_One-Dimensional_Wave_Equation"
+    },
+    {
+      "id": "2.2",
+      "module": "13376",
+      "title": "The Method of Separation of Variables",
+      "slug": "02:_The_Classical_Wave_Equation/2.02:_The_Method_of_Separation_of_Variables"
+    },
+    {
+      "id": "2.3",
+      "module": "13377",
+      "title": "Oscillatory Solutions to Differential Equations",
+      "slug": "02:_The_Classical_Wave_Equation/2.03:_Oscillatory_Solutions_to_Differential_Equations"
+    },
+    {
+      "id": "2.4",
+      "module": "13378",
+      "title": "The General Solution is a Superposition of Normal Modes",
+      "slug": "02:_The_Classical_Wave_Equation/2.04:_The_General_Solution_is_a_Superposition_of_Normal_Modes"
+    },
+    {
+      "id": "2.5",
+      "module": "13379",
+      "title": "A Vibrating Membrane",
+      "slug": "02:_The_Classical_Wave_Equation/2.05:_A_Vibrating_Membrane"
+    }
+  ],
+  "variables": [
+    {
+      "sym": "A_o",
+      "concept": "amplitude",
+      "meaning": "the maximum amplitude of the wave, the largest displacement of the medium from its equilibrium position",
+      "unit": "m",
+      "section": "2.1"
+    },
+    {
+      "sym": "x",
+      "type": "length",
+      "meaning": "the space coordinate, the position along the medium",
+      "unit": "m",
+      "section": "2.1"
+    },
+    {
+      "sym": "t",
+      "type": "time",
+      "meaning": "the time coordinate",
+      "unit": "s",
+      "section": "2.1"
+    },
+    {
+      "sym": "k",
+      "concept": "angular-wavenumber",
+      "meaning": "the wavenumber of the sine wave",
+      "unit": "rad/m",
+      "section": "2.1"
+    },
+    {
+      "sym": "omega",
+      "concept": "angular-frequency",
+      "meaning": "the angular frequency of the wave",
+      "unit": "rad/s",
+      "section": "2.1"
+    },
+    {
+      "sym": "phi",
+      "concept": "phase-constant",
+      "meaning": "the phase constant of the wave",
+      "unit": "rad",
+      "section": "2.1"
+    },
+    {
+      "sym": "y",
+      "type": "displacement",
+      "meaning": "how far the rope is from its rest position at x at time t",
+      "unit": "m",
+      "section": "2.1"
+    },
+    {
+      "sym": "v",
+      "concept": "wave-velocity",
+      "meaning": "the velocity of the wave",
+      "unit": "m/s",
+      "section": "2.1"
+    },
+    {
+      "sym": "u",
+      "type": "displacement",
+      "meaning": "the amplitude (displacement) of the wave at position x and time t",
+      "unit": "m",
+      "section": "2.1"
+    },
+    {
+      "sym": "L",
+      "type": "length",
+      "meaning": "the length of the string held taut at its two ends",
+      "unit": "m",
+      "section": "2.1"
+    },
+    {
+      "sym": "E",
+      "type": "energy",
+      "meaning": "the energy of a quantum of frequency ν, in Planck's equation",
+      "unit": "J",
+      "section": "2.1"
+    },
+    {
+      "sym": "nu",
+      "type": "frequency",
+      "meaning": "the frequency of the radiation, in Planck's equation",
+      "unit": "Hz",
+      "section": "2.1"
+    },
+    {
+      "sym": "u",
+      "type": "displacement",
+      "meaning": "the amplitude of the wave at position x and time t",
+      "unit": "m",
+      "section": "2.2"
+    },
+    {
+      "sym": "x",
+      "type": "length",
+      "meaning": "the position along the string",
+      "unit": "m",
+      "section": "2.2"
+    },
+    {
+      "sym": "t",
+      "type": "time",
+      "meaning": "the time",
+      "unit": "s",
+      "section": "2.2"
+    },
+    {
+      "sym": "v",
+      "concept": "wave-velocity",
+      "meaning": "the velocity of the wave",
+      "unit": "m/s",
+      "section": "2.2"
+    },
+    {
+      "sym": "L",
+      "type": "length",
+      "meaning": "the length of the string",
+      "unit": "m",
+      "section": "2.2"
+    },
+    {
+      "sym": "X",
+      "meaning": "the factor of u(x,t) that depends on x only",
+      "section": "2.2"
+    },
+    {
+      "sym": "T_t",
+      "meaning": "the factor of u(x,t) that depends on t only",
+      "section": "2.2"
+    },
+    {
+      "sym": "K",
+      "meaning": "the constant both sides of the separated wave equation are set equal to",
+      "section": "2.2"
+    },
+    {
+      "sym": "k",
+      "meaning": "a real constant in the homogeneous equation d²y/dx² − k²y = 0",
+      "section": "2.2",
+      "redefines": true
+    },
+    {
+      "sym": "alpha",
+      "meaning": "the constant in the trial solution y = e^{αx}, fixed by the equation",
+      "section": "2.2"
+    },
+    {
+      "sym": "K",
+      "meaning": "the separation constant of the wave equation, here negative",
+      "section": "2.3"
+    },
+    {
+      "sym": "p_n",
+      "type": "wavenumber",
+      "meaning": "the real constant defined by K = −p², which the boundary conditions fix at nπ/L",
+      "unit": "rad/m",
+      "section": "2.3"
+    },
+    {
+      "sym": "X",
+      "meaning": "the spatial factor of the wave on the string",
+      "section": "2.3"
+    },
+    {
+      "sym": "x",
+      "type": "length",
+      "meaning": "the position along the string",
+      "unit": "m",
+      "section": "2.3"
+    },
+    {
+      "sym": "L",
+      "type": "length",
+      "meaning": "the length of the string",
+      "unit": "m",
+      "section": "2.3"
+    },
+    {
+      "sym": "X",
+      "meaning": "the spatial factor of the solution, X(x)",
+      "section": "2.4"
+    },
+    {
+      "sym": "T_t",
+      "meaning": "the temporal factor of the solution, T(t)",
+      "section": "2.4"
+    },
+    {
+      "sym": "K",
+      "meaning": "the separation constant, K = −p²",
+      "section": "2.4"
+    },
+    {
+      "sym": "p_n",
+      "type": "wavenumber",
+      "meaning": "the constant defined by K = −p², equal to nπ/L",
+      "unit": "rad/m",
+      "section": "2.4"
+    },
+    {
+      "sym": "n",
+      "concept": "quantum-number",
+      "meaning": "the integer 1, 2, 3, … that labels the solutions allowed by the boundary conditions",
+      "section": "2.4"
+    },
+    {
+      "sym": "x",
+      "type": "length",
+      "meaning": "the position along the string",
+      "unit": "m",
+      "section": "2.4"
+    },
+    {
+      "sym": "t",
+      "type": "time",
+      "meaning": "the time",
+      "unit": "s",
+      "section": "2.4"
+    },
+    {
+      "sym": "L",
+      "type": "length",
+      "meaning": "the length of the string",
+      "unit": "m",
+      "section": "2.4"
+    },
+    {
+      "sym": "v",
+      "concept": "wave-velocity",
+      "meaning": "the velocity of the wave on the string",
+      "unit": "m/s",
+      "section": "2.4"
+    },
+    {
+      "sym": "omega_n",
+      "type": "frequency",
+      "meaning": "the angular frequency of the nth normal mode, nvπ/L",
+      "unit": "rad/s",
+      "section": "2.4"
+    },
+    {
+      "sym": "u_n",
+      "concept": "normal-mode",
+      "meaning": "the nth normal mode of the string",
+      "unit": "m",
+      "section": "2.4"
+    },
+    {
+      "sym": "nu_n",
+      "concept": "normal-mode-frequency",
+      "meaning": "the natural frequency of the nth normal mode",
+      "unit": "Hz",
+      "section": "2.4"
+    },
+    {
+      "sym": "E",
+      "meaning": "a constant of the temporal solution T(t), multiplying cos ω_n t",
+      "section": "2.4",
+      "redefines": true
+    },
+    {
+      "sym": "u",
+      "type": "displacement",
+      "meaning": "the displacement of the string at position x and time t",
+      "unit": "m",
+      "section": "2.4"
+    },
+    {
+      "sym": "u",
+      "type": "displacement",
+      "meaning": "the displacement of the membrane (or medium) from its rest position",
+      "unit": "m",
+      "section": "2.5"
+    },
+    {
+      "sym": "x",
+      "type": "length",
+      "meaning": "the position coordinate along the x-axis",
+      "unit": "m",
+      "section": "2.5"
+    },
+    {
+      "sym": "y",
+      "type": "length",
+      "meaning": "the position coordinate along the y-axis of the membrane's rest plane",
+      "unit": "m",
+      "section": "2.5",
+      "redefines": true
+    },
+    {
+      "sym": "z",
+      "type": "length",
+      "meaning": "the position coordinate along the z-axis",
+      "unit": "m",
+      "section": "2.5"
+    },
+    {
+      "sym": "t",
+      "type": "time",
+      "meaning": "the time",
+      "unit": "s",
+      "section": "2.5"
+    },
+    {
+      "sym": "v",
+      "concept": "wave-velocity",
+      "meaning": "the velocity of the wave",
+      "unit": "m/s",
+      "section": "2.5"
+    },
+    {
+      "sym": "k_vec",
+      "concept": "wave-vector",
+      "meaning": "the wave vector, pointing in the direction the wave is moving",
+      "unit": "rad/m",
+      "section": "2.5"
+    },
+    {
+      "sym": "k",
+      "concept": "angular-wavenumber",
+      "meaning": "the wavenumber of a one-dimensional traveling harmonic wave u = A sin(kx − ωt)",
+      "unit": "rad/m",
+      "section": "2.5",
+      "redefines": true
+    },
+    {
+      "sym": "omega",
+      "concept": "angular-frequency",
+      "meaning": "the angular frequency of the harmonic wave",
+      "unit": "rad/s",
+      "section": "2.5"
+    },
+    {
+      "sym": "A_nm",
+      "concept": "amplitude",
+      "meaning": "the amplitude of the (n_x, n_y) mode of the rectangular membrane",
+      "unit": "m",
+      "section": "2.5"
+    },
+    {
+      "sym": "omega_nm",
+      "type": "frequency",
+      "meaning": "the angular frequency of the (n_x, n_y) mode of the rectangular membrane",
+      "unit": "rad/s",
+      "section": "2.5"
+    },
+    {
+      "sym": "a",
+      "type": "length",
+      "meaning": "the length of the rectangular membrane",
+      "unit": "m",
+      "section": "2.5"
+    },
+    {
+      "sym": "b_m",
+      "type": "length",
+      "meaning": "the width of the rectangular membrane",
+      "unit": "m",
+      "section": "2.5"
+    },
+    {
+      "sym": "n_x",
+      "concept": "quantum-number",
+      "meaning": "the quantum number of a rectangular membrane's mode along x",
+      "section": "2.5"
+    },
+    {
+      "sym": "n_y",
+      "concept": "quantum-number",
+      "meaning": "the quantum number of a rectangular membrane's mode along y",
+      "section": "2.5"
+    },
+    {
+      "sym": "r",
+      "type": "length",
+      "meaning": "the distance from the centre of the circular membrane",
+      "unit": "m",
+      "section": "2.5"
+    },
+    {
+      "sym": "theta",
+      "meaning": "the polar angle on the circular membrane",
+      "unit": "rad",
+      "section": "2.5"
+    },
+    {
+      "sym": "J_m",
+      "concept": "bessel-function",
+      "meaning": "the Bessel function of order m",
+      "section": "2.5"
+    },
+    {
+      "sym": "lambda_mn",
+      "meaning": "the constant of the (m, n) mode of the circular membrane",
+      "section": "2.5"
+    },
+    {
+      "sym": "m_q",
+      "concept": "quantum-number",
+      "meaning": "the quantum number of a circular membrane's mode that counts its nodal diameters",
+      "section": "2.5"
+    },
+    {
+      "sym": "G_n",
+      "type": "displacement",
+      "meaning": "the amplitude of the cosine part of the nth normal mode",
+      "unit": "m",
+      "section": "2.4"
+    },
+    {
+      "section": "2.5",
+      "sym": "k_x",
+      "type": "wavenumber",
+      "meaning": "the x component of the wave vector",
+      "unit": "rad/m"
+    },
+    {
+      "section": "2.5",
+      "sym": "k_y",
+      "type": "wavenumber",
+      "meaning": "the y component of the wave vector",
+      "unit": "rad/m"
+    },
+    {
+      "section": "2.5",
+      "sym": "k_z",
+      "type": "wavenumber",
+      "meaning": "the z component of the wave vector",
+      "unit": "rad/m"
+    },
+    {
+      "section": "2.5",
+      "sym": "A",
+      "meaning": "the amplitude of the harmonic plane wave",
+      "concept": "amplitude",
+      "unit": "m"
+    },
+    {
+      "section": "2.5",
+      "sym": "X",
+      "meaning": "the factor of u(x, y, t) that depends on x only"
+    },
+    {
+      "section": "2.5",
+      "sym": "Y_f",
+      "meaning": "the factor of u(x, y, t) that depends on y only"
+    },
+    {
+      "section": "2.5",
+      "sym": "T_t",
+      "meaning": "the factor of u(x, y, t) that depends on t only"
+    },
+    {
+      "section": "2.5",
+      "sym": "p_n",
+      "meaning": "the constant of the membrane's x factor, X''/X = −p², equal to n_xπ/a",
+      "redefines": true
+    },
+    {
+      "section": "2.5",
+      "sym": "q",
+      "meaning": "the constant of the y factor, Y''/Y = −q²"
+    }
+  ]
 }
