@@ -62,8 +62,8 @@ const formOf = (l, m) => FORMS[`${l},${m}`] ?? `P_{${l}}^{${Math.abs(m)}}(\\cos\
   const d = sim('sim-harmonics');
   const top = document.createElement('div'), big = document.createElement('div');
   d.stage.appendChild(top); d.stage.appendChild(big);
-  const PB = [[-5.8, 5.8], [-0.6, 0.6], [-5.6, 0.6]];
-  const P = F.space3d({ stage: top, fig: d.fig }, { box: PB, h: 380, turn: -PI / 2, tilt: 0.28, fit: 2.25, locked: true });
+  const PB = [[-0.6, 0.6], [-5.8, 5.8], [-5.6, 0.6]];
+  const P = F.space3d({ stage: top, fig: d.fig }, { box: PB, h: 380, turn: -PI / 2, tilt: 0.18, fit: 2.25, locked: true });
   const BB = [[-1.15, 1.15], [-1.15, 1.15], [-1.15, 1.15]];
   const S = F.space3d({ stage: big, fig: d.fig }, { box: BB, h: 520, turn: -2.2, tilt: 0.35, fit: 2.2, spin: 'off', zoom: false });
   const Lc = F.choice(d.controls, { label: 'l', key: 'l', options: [0, 1, 2, 3, 4, 5].map((k) => ({ value: String(k), label: String(k) })), value: '2', aria: 'the angular momentum quantum number l', onInput: () => fixM() });
@@ -86,7 +86,7 @@ const formOf = (l, m) => FORMS[`${l},${m}`] ?? `P_{${l}}^{${Math.abs(m)}}(\\cos\
     if (l > 0) out.push({ k: 'sheet', rows: rowsOf(-1), color: neg, alpha: 0.95, name: `${name}: where it is negative` });
     return out;
   }
-  const at = (l, m) => [m * 1.0, 0, -l * 1.08];
+  const at = (l, m) => [0, m * 1.0, -l * 1.08];   /* the pyramid stands in the yz-plane, square to the locked view */
   let lastP = '';
   function draw() {
     const l = +Lc.value, m = Math.max(-l, Math.min(l, +Mc.value)), cw = C('wavefunction');
@@ -98,9 +98,9 @@ const formOf = (l, m) => FORMS[`${l},${m}`] ?? `P_{${l}}^{${Math.abs(m)}}(\\cos\
       const marks = [];
       for (let L = 0; L <= 5; L++) {
         for (let M = -L; M <= L; M++) marks.push(...surface(L, M, at(L, M), 0.42, 14, 22, pos, neg, `the spherical harmonic l = ${L}, m_l = ${signed(M)}`));
-        marks.push({ k: 'label', s: `l = ${L}`, p: [-5.6, 0, -L * 1.08], color: PAL.muted, cls: 'tick' });
+        marks.push({ k: 'label', s: `l = ${L}`, p: [0, -5.6, -L * 1.08], color: PAL.muted, cls: 'tick' });
       }
-      const c = at(l, m), ring = Array.from({ length: 49 }, (_, i) => { const a = 2 * PI * i / 48; return [c[0] + 0.52 * Math.cos(a), 0, c[2] + 0.52 * Math.sin(a)]; });
+      const c = at(l, m), ring = Array.from({ length: 49 }, (_, i) => { const a = 2 * PI * i / 48; return [0.5, c[1] + 0.52 * Math.cos(a), c[2] + 0.52 * Math.sin(a)]; });
       marks.push({ k: 'line', pts: ring, color: PAL.ink, w: 3, name: `the one enlarged below, l = ${l}, m_l = ${signed(m)}` });
       P.set('pyramid', marks);
     }
@@ -119,9 +119,11 @@ const formOf = (l, m) => FORMS[`${l},${m}`] ?? `P_{${l}}^{${Math.abs(m)}}(\\cos\
     });
     S.set('nodes', nodal);
     S.set('axes', F.space.axes(BB, { ticks: 0 }));
-    const nc = cones.length, np = planes.length;
-    const words = (k, one, many) => `${k === 0 ? 'no' : k} ${k === 1 ? one : many}`;
-    S.headline(`$l = ${l}$, $m_l = ${signed(m)}$: ${words(nc, 'nodal cone', 'nodal cones')} and ${words(np, 'nodal plane', 'nodal planes')} through z`);
+    const eq = cones.some((t) => Math.abs(t - PI / 2) < 1e-3), nc = cones.length - (eq ? 1 : 0), np = planes.length;
+    const NUM = ['no', 'one', 'two', 'three', 'four', 'five'];
+    const parts = [...(nc ? [`${NUM[nc]} nodal cone${nc > 1 ? 's' : ''} about z`] : []), ...(eq ? ['the xy-plane'] : []), ...(np ? [`${NUM[np]} nodal plane${np > 1 ? 's' : ''} through z`] : [])];
+    const said = parts.length ? parts.length === 1 ? parts[0] : `${parts.slice(0, -1).join(', ')} and ${parts[parts.length - 1]}` : 'no angular node: the same value in every direction';
+    S.headline(`$l = ${l}$, $m_l = ${signed(m)}$: ${said}`);
     tex(d.readout, `\\kYlm(\\theta, \\phi) \\propto ${formOf(l, m)} \\\\ \\text{angular nodes} = l = ${l} = (l - |m_l|) + |m_l| = ${l - Math.abs(m)} + ${Math.abs(m)}`);
   }
   register(d.fig, { update: () => {}, draw });
