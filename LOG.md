@@ -645,3 +645,59 @@ Known gaps: the exponent attributions above are unverified; `ab-initio-calculati
 still lists "semi-empirical" among its terms, and 12's intro spans it so; 11.2's
 other external links (Inorganic Chemistry's 5.1, bse.pnl.gov) and 11.4's DOI stay
 external, since no page of this book holds them.
+
+## Chapter 10 pass · 2026-11-08
+
+Built: the intro, 10.1–10.7 and the summary page. 24 figure rows: 12
+interactive sims (2 moving: the PES analyzer and π electrons filling a ring;
+4 still 3D point-cloud scenes: the hybrid sets, water's hybrids, water's
+orbitals, ethylene's σ and π frameworks), 5 faithful copies or drawn figures
+and 7 kept photographs. 11 derivations (10.1: 2, 10.2: 2, 10.4: 1, 10.5: 2,
+10.6: 3, 10.7: 1). 8 exercises, all `exercise` kind in the Exercises
+document: 1 from the book (10.6.1, AI solution) and 7 AI exercises. 57
+footnotes, the AI-marked corrections of the book among them, besides
+derivation notes.
+
+Chapter pass: the builders' wanted rows (10.3 `E`, the energy of an AH₂ or
+water orbital; 10.4 `R`, the bond length of H₂ or H₂⁺, linked to
+`internuclear-distance`); the summary's "hybridization" now links
+`#10.1-hybridization` (`class="xref"`). Book prose restored into
+derivations (rule 29.2) without showing a fact twice: 10.4's "The final
+term in brackets … vertical ionization energy (IE) of the ejected
+electron" is now the fact the step uses (the paraphrased reason dropped),
+and the free-electron reason is the book's sentence; 10.1's "These are four
+unknowns and three equations. The fourth "constraint" …" is the a₁ = a₂
+fact; 10.2's "where dτ represents all space" and "These terms simplify
+either due to orthogonality or normality …" are the reasons of their
+steps; 10.5's "The trivial solution gives both wavefunction coefficients
+equal to zero …" is the determinant fact; 10.6's "While solving 4th order
+equations typically require numerical estimation …" is the quadratic's
+reason; 10.7's "the energy of a localized double bond is 2(α+β), as
+determined from the analysis of ethylene" is the fact ΔE uses. 10.5's
+derivation is split where the book splits it: `ethylene-pi` (the energies)
+stands before "Since β is negative, the two energies are ordered" and
+Figure 10.5.4 + 10.5.5; the book's "To extract the coefficients … (Equation
+10.5.9)" is back in the text before the new `ethylene-pi-orbitals` (the
+coefficients and N₁ = N₂ = 1/√2), whose reasons carry the book's "N₁ is the
+normalization constant …; this is the bonding molecular orbital" and its
+antibonding twin. 10.4's `sim-pes` caption now names Siegbahn's ESCA
+measurements for N₂'s 2σg band (37.3 eV) and HCl's Cl 3s band (25.8 eV);
+both values came from the builder's memory and were not checked against
+the source in this session. Figures: the Walsh diagram's legend moved off
+the 1σu and 2σg curves; the Franck–Condon "photoelectron band" title no
+longer sits on its axis. No two-argument `\braket`, no bare `\k` script, no
+U+2011, U+FEFF or U+200B; every cross-page link carries `class="xref"`;
+every section has `ai`, `built` and `notes`, and objectives where the book
+prints them (all but 10.2 and 10.3). `colours:default` rerun (every type
+kept its colour). `check:content`: no errors or warnings from the book's
+Chapter 10 (one error in 12.1, being built). Every figure screenshot in
+light and dark, every derivation rendered at rest and four played; no
+console or KaTeX error on any Chapter 10 page.
+
+Known gaps: the derivation facts in 10.6 and 10.7 that give the π
+configuration (π₁²π₂², π₁²π₂²π₃²) repeat the sentence printed just before
+them; 10.7's roots and energy list are printed and then derived again (the
+plan's prose-first reading); the bond-angle result cos θ = −γ² carries
+(10.2.8) both in the text and on the derivation; the 3D scenes of water's
+hybrids and ethylene's frameworks read as one crowded cloud at rest until
+turned.

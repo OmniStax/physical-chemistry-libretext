@@ -1,0 +1,405 @@
+{
+ "id": "12.8",
+ "module": "13491",
+ "chapter": "12",
+ "title": "Using Symmetry to Solve Secular Determinants",
+ "short": "Symmetry and secular determinants",
+ "lead": "Symmetry tells in advance which integrals must vanish. For ammonia's valence s orbitals this splits the secular equations into small blocks, solved here for the energies and coefficients of the molecular orbitals, and the steps of building molecular orbitals with symmetry are listed.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "From Claire Vallance's lecture notes, shared under CC BY 4.0, with nothing left out; the orbitals in the figure use energies and coefficients recomputed from the book's integrals.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "medium"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "medium"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The section prints no exercises; the one on whether ⟨s_N|Ĥ|φ₃⟩ vanishes is new and AI-written. Its Bloom level and concept tags were chosen by AI.",
+ "figures": [
+  {
+   "id": "sim-nh3-orbitals",
+   "kind": "sim",
+   "originals": [
+    "/media/ch12/61169-Screenshot_21-1.png",
+    "/media/ch12/61170-Screenshot_21-2.png"
+   ],
+   "draws": [
+    "wavefunction",
+    "energy"
+   ],
+   "conventions": [
+    "N",
+    "H"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "medium",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "integrals-that-must-vanish",
+   "concept": "vanishing-integral-rule",
+   "verb": "introduces"
+  },
+  {
+   "span": "integrals-that-must-vanish",
+   "concept": "overlap-integral",
+   "verb": "uses"
+  },
+  {
+   "span": "integrals-that-must-vanish",
+   "concept": "irreducible-representation",
+   "verb": "uses"
+  },
+  {
+   "span": "secular-equations",
+   "concept": "homogeneous-equations-solvable",
+   "verb": "introduces"
+  },
+  {
+   "span": "secular-equations",
+   "concept": "determinant",
+   "verb": "uses"
+  },
+  {
+   "span": "secular-equations",
+   "concept": "secular-equations",
+   "verb": "uses"
+  },
+  {
+   "span": "orbital-energies-and-coefficients",
+   "concept": "two-by-two-secular-roots",
+   "verb": "introduces"
+  },
+  {
+   "span": "orbital-energies-and-coefficients",
+   "concept": "ammonia-s-orbitals",
+   "verb": "introduces"
+  },
+  {
+   "span": "orbital-energies-and-coefficients",
+   "concept": "reduction-formula",
+   "verb": "introduces"
+  },
+  {
+   "span": "orbital-energies-and-coefficients",
+   "concept": "mo-construction-steps",
+   "verb": "introduces"
+  },
+  {
+   "span": "orbital-energies-and-coefficients",
+   "concept": "secular-determinant",
+   "verb": "uses"
+  },
+  {
+   "span": "orbital-energies-and-coefficients",
+   "concept": "hamiltonian-matrix-element",
+   "verb": "uses"
+  },
+  {
+   "span": "orbital-energies-and-coefficients",
+   "concept": "salc",
+   "verb": "uses"
+  },
+  {
+   "span": "orbital-energies-and-coefficients",
+   "concept": "projection-operator",
+   "verb": "uses"
+  },
+  {
+   "span": "orbital-energies-and-coefficients",
+   "concept": "character-table",
+   "verb": "uses"
+  },
+  {
+   "span": "orbital-energies-and-coefficients",
+   "concept": "homogeneous-equations-solvable",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "there are many times when we would like to know whether a particular integral is necessarily zero",
+   "kind": "exercise",
+   "bloom": "Analyze",
+   "place": {
+    "at": "end"
+   },
+   "cite": "integrals-that-must-vanish",
+   "prompt": "<p>In ammonia, $s_N$ transforms as $A_1$ of $C_{3v}$ and the SALC $\\phi_3 = \\dfrac{1}{\\sqrt{6}}(2s_1 - s_2 - s_3)$ belongs to the $E$ pair. The Hamiltonian is unchanged by every operation of the group. Is the matrix element $\\langle s_N|\\hat{H}|\\phi_3\\rangle$ necessarily zero?</p>",
+   "answer": {
+    "type": "choice",
+    "generated_by": "ai",
+    "options": [
+     "Yes: the integrand transforms as $A_1 \\otimes A_1 \\otimes E = E$, which does not contain $A_1$.",
+     "No: $s_N$ and $\\phi_3$ overlap on the nitrogen atom, so the integral is non-zero.",
+     "Only if $S_{13} = 0$ as well; symmetry alone cannot tell."
+    ],
+    "correct": 0,
+    "hint": "Find the representation of the integrand from those of its three factors.",
+    "solution": "<p>Yes. $\\hat{H}$ is totally symmetric ($A_1$), so the integrand $s_N\\hat{H}\\phi_3$ transforms as $A_1 \\otimes A_1 \\otimes E = E$, by rule 3 of the direct product in Section 12.7. $E$ does not contain the totally symmetric representation, so the integral must vanish. The same argument gives $S_{13} = 0$, and it is why the two $A_1$ SALCs and the two $E$ SALCs give separate secular determinants in this section.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "vanishing-integral-rule"
+  },
+  {
+   "exercise": "a1",
+   "concept": "ammonia-s-orbitals"
+  },
+  {
+   "exercise": "a1",
+   "concept": "direct-product"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-even",
+   "kind": "correction",
+   "html": "It is an odd function, such as $\\sin(x)$, that integrates to zero over limits symmetric about the origin. $\\cos(x)$ is even, and its integral from $-\\infty$ to $\\infty$ does not converge."
+  },
+  {
+   "id": "c-even-general",
+   "kind": "correction",
+   "html": "Likewise, it is any odd function whose integral between symmetric limits is zero."
+  },
+  {
+   "id": "c-previous-section",
+   "kind": "correction",
+   "html": "These secular equations are derived in Vallance's notes, not in this book; Section 12.15 builds ammonia's and water's orbitals the same way."
+  },
+  {
+   "id": "c-21-3",
+   "kind": "correction",
+   "html": "Equation (21.3) is Vallance's number for Equation 12.8.3."
+  },
+  {
+   "id": "c-s12-unit",
+   "kind": "correction",
+   "html": "$S_{12}$ is an overlap integral and has no unit: it is the pure number 0.8167."
+  },
+  {
+   "id": "c-energies",
+   "kind": "correction",
+   "html": "With these integrals Equation 12.8.6 gives $E_+ = +31.0342$ eV and $E_- = -29.8336$ eV. The printed values do not satisfy Equation 12.8.5, and the coefficients that follow are worked from them."
+  },
+  {
+   "id": "c-psi1",
+   "kind": "correction",
+   "html": "With $E_- = -29.8336$ eV the equation is $3.8336c_1 - 5.4019c_2 = 0$, so $c_2 = 0.7097c_1$ and, normalized with $S_{12} = 0.8167$, $\\Psi_1 = 0.6128\\phi_1 + 0.4349\\phi_2 = 0.6128s_N + 0.2511(s_1 + s_2 + s_3)$."
+  },
+  {
+   "id": "c-psi2",
+   "kind": "correction",
+   "html": "With $E_+ = +31.0342$ eV the equation is $-57.0342c_1 - 55.1126c_2 = 0$, so $c_2 = -1.0349c_1$ and, normalized, $\\Psi_2 = 1.6209\\phi_1 - 1.6775\\phi_2 = 1.6209s_N - 0.9685(s_1 + s_2 + s_3)$."
+  },
+  {
+   "id": "c-15-20",
+   "kind": "correction",
+   "html": "Equation (15.20) is Vallance's number for the reduction formula, Equation 12.8.19 just below."
+  },
+  {
+   "id": "c-16-1",
+   "kind": "correction",
+   "html": "Equation 16.1 is Vallance's number for the projection operator, Equation 12.8.20 just below."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "a1-energies",
+   "what": "the energies of NH₃'s A₁ orbitals",
+   "source": "Physical Chemistry (LibreTexts), 12.8 Using Symmetry to Solve Secular Determinants",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\begin{array}{rcl} c_1(H_{11} - \\kE S_{11}) + c_2(H_{12} - \\kE S_{12}) & = & 0 \\\\ c_1(H_{12} - \\kE S_{12}) + c_2(H_{22} - \\kE S_{22}) & = & 0 \\end{array}",
+       "src": "(12.8.2)"
+      }
+     ],
+     "then": {
+      "tex": "\\begin{array}{rcl} \\mk{a}{c_1(H_{11} - \\kE S_{11}) + c_2(H_{12} - \\kE S_{12})} & = & 0 \\\\ \\mk{b}{c_1(H_{12} - \\kE S_{12}) + c_2(H_{22} - \\kE S_{22})} & = & 0 \\end{array}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{m}{\\begin{pmatrix} H_{11} - \\kE S_{11} & H_{12} - \\kE S_{12} \\\\ H_{12} - \\kE S_{12} & H_{22} - \\kE S_{22} \\end{pmatrix}\\begin{pmatrix} c_1 \\\\ c_2 \\end{pmatrix}} = \\mk{z}{\\begin{pmatrix} 0 \\\\ 0 \\end{pmatrix}}",
+       "uses": [],
+       "map": {
+        "a": "m",
+        "b": "m"
+       },
+       "cap": "Each equation is one row of the matrix acting on the column of coefficients."
+      }
+     ],
+     "num": "(12.8.3)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "text": "A set of homogeneous linear equations has a solution only if the determinant of its matrix is zero.",
+       "src": "12.8"
+      },
+      {
+       "tex": "S_{11} = S_{22} = 1",
+       "src": "12.8"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{m}{\\begin{pmatrix} H_{11} - \\kE S_{11} & H_{12} - \\kE S_{12} \\\\ H_{12} - \\kE S_{12} & H_{22} - \\kE S_{22} \\end{pmatrix}\\begin{pmatrix} c_1 \\\\ c_2 \\end{pmatrix}} = \\mk{z}{\\begin{pmatrix} 0 \\\\ 0 \\end{pmatrix}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{m}{\\begin{vmatrix} H_{11} - \\kE S_{11} & H_{12} - \\kE S_{12} \\\\ H_{12} - \\kE S_{12} & H_{22} - \\kE S_{22} \\end{vmatrix}} = \\mk{z}{0}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{p}{(H_{11} - \\kE S_{11})(H_{22} - \\kE S_{22})} - \\mk{q}{(H_{12} - \\kE S_{12})^2} = \\mk{z}{0}",
+       "uses": [],
+       "map": {
+        "m": [
+         "p",
+         "q"
+        ]
+       },
+       "cap": "A 2 × 2 determinant is the product of its diagonal entries less the product of the other two."
+      },
+      {
+       "tex": "\\mk{p}{(H_{11} - \\kE)(H_{22} - \\kE)} - \\mk{q}{(H_{12} - \\kE S_{12})^2} = \\mk{z}{0}",
+       "uses": [
+        2
+       ],
+       "cap": "The SALCs are normalized, so their overlap with themselves is 1."
+      }
+     ],
+     "num": "(12.8.4)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      }
+     ],
+     "then": {
+      "tex": "\\mk{p}{(H_{11} - \\kE)(H_{22} - \\kE)} - \\mk{q}{(H_{12} - \\kE S_{12})^2} = \\mk{z}{0}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{p}{\\kE^2 - \\kE(H_{11} + H_{22}) + H_{11}H_{22}} - \\mk{q}{(H_{12}^2 - 2\\kE H_{12}S_{12} + \\kE^2S_{12}^2)} = \\mk{z}{0}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{a}{\\kE^2(1-S_{12}^2)} + \\mk{b}{\\kE(2H_{12}S_{12} - H_{11} - H_{22})} + \\mk{c}{(H_{11}H_{22} - H_{12}^2)} = \\mk{z}{0}",
+       "uses": [],
+       "map": {
+        "p": [
+         "a",
+         "b",
+         "c"
+        ],
+        "q": [
+         "a",
+         "b",
+         "c"
+        ]
+       }
+      }
+     ],
+     "num": "(12.8.5)"
+    },
+    {
+     "assumes": [
+      {
+       "step": 2
+      },
+      {
+       "tex": "aE^2 + bE + c = 0 \\;\\Rightarrow\\; E = \\dfrac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{a}{\\kE^2(1-S_{12}^2)} + \\mk{b}{\\kE(2H_{12}S_{12} - H_{11} - H_{22})} + \\mk{c}{(H_{11}H_{22} - H_{12}^2)} = \\mk{z}{0}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{z}{\\kEpm} = \\mk{a}{\\dfrac{-(2H_{12}S_{12} - H_{11} - H_{22}) \\pm \\sqrt{(2H_{12}S_{12} - H_{11} - H_{22})^2 - 4(1-S_{12}^2)(H_{11}H_{22} - H_{12}^2)}}{2(1-S_{12}^2)}}",
+       "uses": [
+        1
+       ],
+       "map": {
+        "a": "a",
+        "b": "a",
+        "c": "a"
+       },
+       "cap": "The quadratic formula, with $a = 1 - S_{12}^2$, $b = 2H_{12}S_{12} - H_{11} - H_{22}$ and $c = H_{11}H_{22} - H_{12}^2$."
+      }
+     ],
+     "num": "(12.8.6)"
+    }
+   ]
+  },
+  {
+   "id": "e-energies",
+   "what": "the energies of NH₃'s E orbitals",
+   "source": "Physical Chemistry (LibreTexts), 12.8 Using Symmetry to Solve Secular Determinants",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "{\\kEpm} = {\\dfrac{-(2H_{34}S_{34} - H_{33} - H_{44}) \\pm \\sqrt{(2H_{34}S_{34} - H_{33} - H_{44})^2 - 4(1-S_{34}^2)(H_{33}H_{44} - H_{34}^2)}}{2(1-S_{34}^2)}}",
+       "src": "(12.8.16)"
+      },
+      {
+       "tex": "H_{34} = S_{34} = 0",
+       "src": "(12.8.17)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{e}{\\kEpm} = \\mk{r}{\\dfrac{-(2H_{34}S_{34} - H_{33} - H_{44}) \\pm \\sqrt{(2H_{34}S_{34} - H_{33} - H_{44})^2 - 4(1-S_{34}^2)(H_{33}H_{44} - H_{34}^2)}}{2(1-S_{34}^2)}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{e}{\\kEpm} = \\mk{r}{\\dfrac{(H_{33} + H_{44}) \\pm \\sqrt{(H_{33} + H_{44})^2 - 4H_{33}H_{44}}}{2}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{e}{\\kEpm} = \\mk{r}{\\dfrac{(H_{33} + H_{44}) \\pm \\sqrt{(H_{33} - H_{44})^2}}{2}}",
+       "uses": [],
+       "cap": "$(a + b)^2 - 4ab = (a - b)^2$."
+      },
+      {
+       "tex": "\\mk{e}{\\kEpm} = \\mk{r}{\\dfrac{(H_{33} + H_{44}) \\pm (H_{33} - H_{44})}{2}}",
+       "uses": []
+      }
+     ],
+     "num": "(12.8.18)"
+    }
+   ]
+  }
+ ]
+}

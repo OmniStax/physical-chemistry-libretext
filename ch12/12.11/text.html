@@ -1,0 +1,115 @@
+<section id="reducing-ammonias-motions">
+<h2>Reducing ammonia's motions</h2>
+<p>As we saw in the previous section,<sup class="fn" data-note="c-previous"></sup> the complete motion (translations, rotations, and vibrations) of ammonia (NH<sub>3</sub>) can be represented by the following <span data-concept="reducible-representation">reducible representation</span>:</p>
+<div class="book-table">
+  <div class="tcap"><span class="eyebrow">Table</span><span></span></div>
+  <table>
+    <thead><tr><th>$C_{3v}$</th><th>$\kEop$</th><th>$2\kCthree$</th><th>$3\ksigmav$</th></tr></thead>
+    <tbody>
+      <tr><td>$\kGamma$</td><td>$12$</td><td>$0$</td><td>$2$</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>We want to relate the <span data-concept="reducible-representation">reducible form representation</span> to the <span data-concept="irreducible-representation">irreducible representation</span>. To do this, we use <span data-concept="tabular-reduction">the tabular method</span>. First, create a new table:</p>
+<div class="book-table">
+  <div class="tcap"><span class="eyebrow">Table</span><span></span></div>
+  <table>
+    <thead><tr><th>$C_{3v}$</th><th>$\kEop$</th><th>$2\kCthree$</th><th>$3\ksigmav$</th></tr></thead>
+    <tbody>
+      <tr><td>$\kGamma$</td><td>$12$</td><td>$0$</td><td>$2$</td></tr>
+      <tr><td>$A_1$</td><td></td><td></td><td></td></tr>
+      <tr><td>$A_2$</td><td></td><td></td><td></td></tr>
+      <tr><td>$E$</td><td></td><td></td><td></td></tr>
+    </tbody>
+  </table>
+</div>
+<p>We will need the $C_{3v}$ <span data-concept="character-table">character table</span> for ammonia:<sup class="fn" data-note="c-table"></sup></p>
+<div class="book-table">
+  <div class="tcap"><span class="eyebrow">Table</span><span></span></div>
+  <table>
+    <thead><tr><th>$C_{3v}$</th><th>$C_{3}$</th><th>$C_{s}$</th></tr></thead>
+    <tbody>
+      <tr><td>$A_1$</td><td>$A$</td><td>$A'$</td></tr>
+      <tr><td>$A_2$</td><td>$A$</td><td>$A"$</td></tr>
+      <tr><td>$E$</td><td>$E$</td><td>$A'+A"$</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>Fill in each number in our table by using the following equation:<sup class="fn" data-note="c-gc"></sup></p>
+$$ g_c \kchar_i X_r $$
+<div class="book-table">
+  <div class="tcap"><span class="eyebrow">Table</span><span></span></div>
+  <table>
+    <thead><tr><th>$g_e$</th><th>Number of operations (order) in the <span data-concept="symmetry-class">class</span></th></tr></thead>
+    <tbody>
+      <tr><td>$\kchar_i$</td><td><span data-concept="character">Character</span> of the <span data-concept="irreducible-representation">irreducible representation</span> from the <span data-concept="character-table">character table</span></td></tr>
+      <tr><td>$\kchar_r$</td><td><span data-concept="character">Character</span> of the <span data-concept="reducible-representation">reducible representation</span> from $\kGamma$</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>For example, the top-left value would be:</p>
+$$ 1\times 1\times 12=12 $$
+<p>Where:</p>
+<ul><li>$1$ is the number of operations in the $E$ class</li><li>$1$ is the <span data-concept="character">character</span> of the <span data-concept="irreducible-representation">irreducible representation</span></li><li>9<sup class="fn" data-note="c-9"></sup> is the <span data-concept="character">character</span> of the <span data-concept="reducible-representation">reducible representation</span></li></ul>
+<p>The table becomes:</p>
+<div class="book-table">
+  <div class="tcap"><span class="eyebrow">Table</span><span></span></div>
+  <table>
+    <thead><tr><th>$C_{3v}$</th><th>$\kEop$</th><th>$2\kCthree$</th><th>$3\ksigmav$</th></tr></thead>
+    <tbody>
+      <tr><td>$\kGamma$</td><td>$12$</td><td>$0$</td><td>$2$</td></tr>
+      <tr><td>$A_1$</td><td>$12$</td><td>$0$</td><td>$6$</td></tr>
+      <tr><td>$A_2$</td><td>$12$</td><td>$0$</td><td>$-6$</td></tr>
+      <tr><td>$E$</td><td>$24$</td><td>$0$</td><td>$0$</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>Sum up each row:</p>
+<div class="book-table">
+  <div class="tcap"><span class="eyebrow">Table</span><span></span></div>
+  <table>
+    <thead><tr><th>$C_{3v}$</th><th>$\kEop$</th><th>$2\kCthree$</th><th>$3\ksigmav$</th><th>$\sum$</th></tr></thead>
+    <tbody>
+      <tr><td>$\kGamma$</td><td>$12$</td><td>$0$</td><td>$2$</td><td></td></tr>
+      <tr><td>$A_1$</td><td>$12$</td><td>$0$</td><td>$6$</td><td>$18$</td></tr>
+      <tr><td>$A_2$</td><td>$12$</td><td>$0$</td><td>$-6$</td><td>$6$</td></tr>
+      <tr><td>$E$</td><td>$24$</td><td>$0$</td><td>$0$</td><td>$24$</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>Now divide the summed values by the <span data-concept="group-order">order of the group</span> to obtain the number of times the <span data-concept="irreducible-representation">irreducible representation</span> appears ($n_i$). Ammonia has order $h=6$:</p>
+<div class="book-table">
+  <div class="tcap"><span class="eyebrow">Table</span><span></span></div>
+  <table>
+    <thead><tr><th>$C_{3v}$</th><th>$\kEop$</th><th>$2\kCthree$</th><th>$3\ksigmav$</th><th>$\sum$</th><th>$n_i=\frac{\sum}{h}$</th></tr></thead>
+    <tbody>
+      <tr><td>$\kGamma$</td><td>$12$</td><td>$0$</td><td>$2$</td><td></td><td></td></tr>
+      <tr><td>$A_1$</td><td>$12$</td><td>$0$</td><td>$6$</td><td>$18$</td><td>$3$</td></tr>
+      <tr><td>$A_2$</td><td>$12$</td><td>$0$</td><td>$-6$</td><td>$6$</td><td>$1$</td></tr>
+      <tr><td>$E$</td><td>$24$</td><td>$0$</td><td>$0$</td><td>$24$</td><td>$4$</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>The <span data-concept="reducible-representation">reducible representation</span> can be broken down to its irreducible forms:</p>
+$$ \kGamma=3 A_1+A_2+4 E $$
+<p>Now that we have the <span data-concept="irreducible-representation">irreducible representations</span> for the motion of ammonia, we can determine which are associated with rotations, vibrations, and translations. To start, we turn to the $C_{3v}$ <span data-concept="character-table">character table</span>:</p>
+<div class="book-table">
+  <div class="tcap"><span class="eyebrow">Table</span><span></span></div>
+  <table>
+    <thead><tr><th>$C_{3v}$</th><th>E</th><th>2C<sub>3</sub></th><th>3σ<sub>v</sub></th><th></th><th></th></tr></thead>
+    <tbody>
+      <tr><td>A<sub>1</sub></td><td>1</td><td>1</td><td>1</td><td>z</td><td>x<sup>2</sup>+y<sup>2</sup>, z<sup>2</sup></td></tr>
+      <tr><td>A<sub>2</sub></td><td>1</td><td>1</td><td>-1</td><td>R<sub>z</sub></td><td></td></tr>
+      <tr><td>E</td><td>2</td><td>-1</td><td>0</td><td>(R<sub>x</sub>, R<sub>y</sub>), (x,y)</td><td>(xz, yz) (x<sup>2</sup>-y<sup>2</sup>, xy)</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>The first column to the right of the characters includes to the terms $x$, $y$, $z$, $R_x$, $R_y$, and $R_z$. The rows with $x$, $y$, and $z$ represent the <span data-concept="irreducible-representation">irreducible representations</span> for the translational modes in those directions:</p>
+$$ \kGamma_\text{trans} = A_1 + E $$
+<p>The rows with $R_x$, $R_y$, and $R_z$ represent the <span data-concept="irreducible-representation">irreducible representations</span> for the rotational modes about those axes:</p>
+$$ \kGamma_\text{rot} = A_2 + E $$
+<p>We can subtract the translational and rotational <span data-concept="irreducible-representation">irreducible representations</span> from our $\kGamma$ to get <span data-concept="vibrational-representation">the irreducible representations for the normal vibrational modes</span>:</p>
+$$ \kGammavib = \kGamma - \kGamma_\text{trans} -\kGamma_\text{rot} $$
+<p>Doing this, we obtains:</p>
+$$ \kGammavib = 2 A_1 + 2 E $$
+</section>

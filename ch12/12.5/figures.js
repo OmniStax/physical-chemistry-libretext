@@ -13,7 +13,7 @@ const { tex, C, PAL, alpha, register, line, text, fmt } = F;
    on each atom travels with it, the faint rings keep the home places, and the matrix beside
    fills in as the move lands, its diagonal boxed and summed into the character. */
 (function () {
-  const d = F.sim(root, 'sim-nh3-permutation', 560);
+  const d = F.sim(root, 'sim-nh3-permutation', 620);
   /* g s_j = s_{perm[j]} for j = 1, 2, 3 (12.5.1) */
   const OPS = {
     E: { label: '$E$', tex: '\\kEop', perm: [1, 2, 3], rot: 0 },
@@ -29,7 +29,7 @@ const { tex, C, PAL, alpha, register, line, text, fmt } = F;
   const T = 2.2, cy = F.cycle(() => T, 1.8);
   const hits = [];
   F.hover(d.stage, () => hits);
-  const X0 = 330, Y0 = 300, R = 150, HOME = [90, 210, 330];
+  const X0 = 360, Y0 = 340, R = 170, HOME = [90, 210, 330];
   const at = (deg, r = R) => [X0 + r * Math.cos(deg * Math.PI / 180), Y0 - r * Math.sin(deg * Math.PI / 180)];
   /* a shaded sphere: the element's colour, darker toward the rim away from a lamp at the upper left */
   function ball(ctx, x, y, r, sym) {
@@ -47,8 +47,8 @@ const { tex, C, PAL, alpha, register, line, text, fmt } = F;
     for (const a of [90, 330, 210]) {
       const on = op.plane === a, [x1, y1] = at(a, 235), [x2, y2] = at(a + 180, 235);
       line(ctx, x1, y1, x2, y2, on ? cs : alpha(PAL.ink, 0.3), on ? 4 : 2, on ? null : [6, 8]);
-      const [lx, ly] = at(a, 262);
-      text(ctx, `$${names[a]}$`, lx, ly + 8, on ? cs : PAL.muted, { size: 24, align: 'center', tex: true });
+      const [lx, ly] = at(a === 330 ? 150 : a, 270);
+      text(ctx, `$${names[a]}$`, lx, ly + 10, on ? cs : PAL.muted, { size: 30, align: 'center', tex: true });
       hits.push({ x: (x1 + X0) / 2, y: (y1 + Y0) / 2, r: 20, name: `the mirror plane ${names[a].replace('\\sigma', 'σ').replace(/''/, '″').replace(/'/, '′')}, seen edge on` });
     }
     /* the C3 axis, end on, with the sense of the turn */
@@ -60,7 +60,7 @@ const { tex, C, PAL, alpha, register, line, text, fmt } = F;
       F.arrow(ctx, ex - tx * 14, ey - ty * 14, ex + tx * 4, ey + ty * 4, cs, 4);
     }
     /* home places */
-    HOME.forEach((a, i) => { const [x, y] = at(a); ctx.save(); ctx.setLineDash([5, 7]); ctx.strokeStyle = alpha(PAL.ink, 0.35); ctx.lineWidth = 2; ctx.beginPath(); ctx.arc(x, y, 44, 0, 2 * Math.PI); ctx.stroke(); ctx.restore(); });
+    HOME.forEach((a, i) => { const [x, y] = at(a); ctx.save(); ctx.setLineDash([5, 7]); ctx.strokeStyle = alpha(PAL.ink, 0.35); ctx.lineWidth = 2; ctx.beginPath(); ctx.arc(x, y, 50, 0, 2 * Math.PI); ctx.stroke(); ctx.restore(); });
     /* where hydrogen j is at time k */
     const pos = [1, 2, 3].map((j) => {
       const a0 = HOME[j - 1];
@@ -69,21 +69,21 @@ const { tex, C, PAL, alpha, register, line, text, fmt } = F;
       return at(a0);
     });
     pos.forEach(([x, y]) => line(ctx, X0, Y0, x, y, alpha(PAL.ink, 0.45), 5));
-    ball(ctx, X0, Y0, 46, 'N');
-    text(ctx, 's_N', X0, Y0 + 8, PAL.ink, { size: 24, weight: 600, align: 'center' });
-    hits.push({ x: X0, y: Y0, r: 46, name: 'nitrogen and its s orbital, s_N, on the C₃ axis: every operation leaves it in place' });
+    ball(ctx, X0, Y0, 54, 'N');
+    text(ctx, 's_N', X0, Y0 + 10, PAL.ink, { size: 32, weight: 600, align: 'center' });
+    hits.push({ x: X0, y: Y0, r: 54, name: 'nitrogen and its s orbital, s_N, on the C₃ axis: every operation leaves it in place' });
     pos.forEach(([x, y], i) => {
-      ball(ctx, x, y, 34, 'H');
-      text(ctx, `s_${i + 1}`, x, y + 8, PAL.ink, { size: 24, weight: 600, align: 'center' });
-      hits.push({ x, y, r: 34, name: `hydrogen ${i + 1} and its s orbital, s${'₁₂₃'[i]}` });
+      ball(ctx, x, y, 40, 'H');
+      text(ctx, `s_${i + 1}`, x, y + 10, PAL.ink, { size: 32, weight: 600, align: 'center' });
+      hits.push({ x, y, r: 40, name: `hydrogen ${i + 1} and its s orbital, s${'₁₂₃'[i]}` });
     });
     /* the matrix of the row-vector form (12.5.2): column j holds a 1 in the row of g s_j */
     const full = [[1, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]];
     op.perm.forEach((p, j) => { full[p][j + 1] = 1; });
-    const MX = 830, MY = 170, cell = 82, heads = ['s_N', 's_1', 's_2', 's_3'], show = Math.max(0, Math.min(1, (k - 0.75) / 0.25));
+    const MX = 860, MY = 150, cell = 96, heads = ['s_N', 's_1', 's_2', 's_3'], show = Math.max(0, Math.min(1, (k - 0.75) / 0.25));
     heads.forEach((h, i) => {
-      text(ctx, h, MX + cell * i + cell / 2, MY - 20, PAL.muted, { size: 20, align: 'center' });
-      text(ctx, h, MX - 34, MY + cell * i + cell / 2 + 7, PAL.muted, { size: 20, align: 'center' });
+      text(ctx, h, MX + cell * i + cell / 2, MY - 22, PAL.muted, { size: 28, align: 'center' });
+      text(ctx, h, MX - 44, MY + cell * i + cell / 2 + 9, PAL.muted, { size: 28, align: 'center' });
     });
     ctx.save(); ctx.strokeStyle = PAL.ink; ctx.lineWidth = 3;
     for (const [x, s] of [[MX - 8, 1], [MX + 4 * cell + 8, -1]]) { ctx.beginPath(); ctx.moveTo(x + 14 * s, MY - 4); ctx.lineTo(x, MY - 4); ctx.lineTo(x, MY + 4 * cell + 4); ctx.lineTo(x + 14 * s, MY + 4 * cell + 4); ctx.stroke(); }
@@ -96,11 +96,11 @@ const { tex, C, PAL, alpha, register, line, text, fmt } = F;
         chi += v;
       }
       const shown = v ? (j === 0 ? 1 : show) : 1;
-      text(ctx, String(v), x, y + 9, alpha(v ? PAL.ink : PAL.muted, shown), { size: 28, weight: v ? 600 : 400, align: 'center' });
+      text(ctx, String(v), x, y + 12, alpha(v ? PAL.ink : PAL.muted, shown), { size: 36, weight: v ? 600 : 400, align: 'center' });
     }
     hits.push({ x: MX + 2 * cell, y: MY + 2 * cell, r: 2 * cell, name: 'the representative Γ(g): a 1 in column j sits in the row of the orbital that s_j is carried onto' });
     const tr = full.reduce((s, r, i) => s + r[i], 0);
-    text(ctx, `trace = ${show > 0.5 || op.rot === 0 && !op.plane ? tr : '…'}`, MX + 2 * cell, MY + 4 * cell + 62, ch, { size: 26, weight: 600, align: 'center' });
+    text(ctx, `trace = ${show > 0.5 || op.rot === 0 && !op.plane ? tr : '…'}`, MX + 2 * cell, MY + 4 * cell + 64, ch, { size: 32, weight: 600, align: 'center' });
     const stay = ['s_N'].concat([1, 2, 3].filter((j) => op.perm[j - 1] === j).map((j) => `s_${j}`));
     F.topline(ctx, `${op.label.replace(/\$/g, '') === 'E' ? '$E$ leaves every orbital in place' : `${op.label} leaves ${stay.length === 1 ? 'only $s_N$' : stay.map((s) => `$${s}$`).join(' and ')} in place`}, so $\\kchar = ${chi}$.`);
     const after = ['\\ksN'].concat(op.perm.map((p) => `s_${p}`)).join(', ');

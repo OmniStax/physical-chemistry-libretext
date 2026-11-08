@@ -1,0 +1,231 @@
+{
+ "id": "12.13",
+ "module": "433991",
+ "chapter": "12",
+ "title": "Symmetry of Vibrations Describes their Spectroscopic Behavior",
+ "short": "Symmetry and vibrational spectra",
+ "lead": "Whether light can excite a vibration depends on the symmetry of the transition moment integral. Water is the example, for infrared absorption with polarized light and for Raman scattering, a two-photon process.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "Written by Claire Vallance, Delmar Larsen and Kathryn LaRue and shared under the book's CC BY-NC-SA 4.0, with the Morse potential image from Wikipedia (Morse-potential.png, CC BY-SA 3.0); the Raman figure leaves out anti-Stokes scattering, which the text does not discuss.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercise in this section. The one here, on which of ammonia's vibrations are IR and Raman active, was written by AI with its solution, Bloom level and concept tags.",
+ "figures": [
+  {
+   "id": "fig-morse",
+   "kind": "figure",
+   "originals": [
+    "/media/ch12/27861-400px-Morse-potential.png"
+   ],
+   "draws": [],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "kept as the book prints it"
+    }
+   ]
+  },
+  {
+   "id": "fig-levels",
+   "kind": "figure",
+   "originals": [
+    "/media/ch12/9873-Energy_level_Diagram_(1).jpg"
+   ],
+   "draws": [
+    "energy"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "redrawn as the book draws it"
+    }
+   ]
+  },
+  {
+   "id": "sim-polarized",
+   "kind": "sim",
+   "originals": [
+    "/media/ch12/61177-Screenshot_27-3.png"
+   ],
+   "draws": [
+    "representation"
+   ],
+   "conventions": [
+    "O",
+    "H"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "sim-raman",
+   "kind": "sim",
+   "originals": [
+    "/media/ch12/436254-clipboard_e9115122e15b7ad7ceb7cf2bb54f084ec.png"
+   ],
+   "draws": [
+    "wavelength",
+    "wavenumber",
+    "energy"
+   ],
+   "facts": [
+    "spectrum"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "vibrational-transitions-in-molecules",
+   "concept": "symmetry-selection-rule",
+   "verb": "introduces"
+  },
+  {
+   "span": "vibrational-transitions-in-molecules",
+   "concept": "morse-potential",
+   "verb": "uses"
+  },
+  {
+   "span": "vibrational-transitions-in-molecules",
+   "concept": "transition-moment-integral",
+   "verb": "uses"
+  },
+  {
+   "span": "vibrational-transitions-in-molecules",
+   "concept": "selection-rule",
+   "verb": "uses"
+  },
+  {
+   "span": "infrared-spectroscopy",
+   "concept": "polarizability",
+   "verb": "introduces"
+  },
+  {
+   "span": "infrared-spectroscopy",
+   "concept": "ir-active-symmetry",
+   "verb": "introduces"
+  },
+  {
+   "span": "infrared-spectroscopy",
+   "concept": "infrared-spectroscopy",
+   "verb": "uses"
+  },
+  {
+   "span": "infrared-spectroscopy",
+   "concept": "dipole-moment",
+   "verb": "uses"
+  },
+  {
+   "span": "infrared-spectroscopy",
+   "concept": "symmetry-selection-rule",
+   "verb": "uses"
+  },
+  {
+   "span": "raman-scattering",
+   "concept": "raman-scattering",
+   "verb": "introduces"
+  },
+  {
+   "span": "raman-scattering",
+   "concept": "raman-active-symmetry",
+   "verb": "introduces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "ai1",
+   "source_id": "Light polarized along the $x$, $y$, and $z$ axes of the molecule may be used",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "infrared-spectroscopy",
+   "prompt": "<p>Ammonia ($C_{3v}$) vibrates as $\\Gamma_\\text{vib} = 2A_1 + 2E$. In the $C_{3v}$ character table, $z$ transforms as $A_1$ and $(x, y)$ as $E$, and $x^2 + y^2$, $z^2$ as $A_1$ and $(x^2 - y^2, xy)$, $(xz, yz)$ as $E$. Which statement about ammonia's two $E$ vibrations is right?</p>",
+   "answer": {
+    "type": "choice",
+    "generated_by": "ai",
+    "options": [
+     "They are excited by $z$-polarized light and are not Raman active.",
+     "They are excited by $x$- or $y$-polarized light and are Raman active.",
+     "They are excited by $x$- or $y$-polarized light and are not Raman active.",
+     "No polarization excites them; they are seen only in the Raman spectrum."
+    ],
+    "correct": 1,
+    "hint": "A vibration absorbs light polarized along an axis whose function shares its symmetry, and it is Raman active when a Cartesian product shares it.",
+    "solution": "<p>The $E$ vibrations have the symmetry of $(x, y)$, so light polarized along $x$ or $y$ excites them. They also share the symmetry of $(x^2 - y^2, xy)$ and $(xz, yz)$, so they are Raman active. The two $A_1$ vibrations are excited by $z$-polarized light and are Raman active too, through $x^2 + y^2$ and $z^2$, so all four of ammonia's fundamentals appear in both spectra.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "ai1",
+   "concept": "ir-active-symmetry"
+  },
+  {
+   "exercise": "ai1",
+   "concept": "raman-active-symmetry"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-electron",
+   "kind": "correction",
+   "html": "In a vibrational transition the electrons stay in the same electronic state, as the next paragraph says; what changes is the vibrational state of the nuclei. An electron excited to another electronic state makes an electronic transition."
+  },
+  {
+   "id": "c-tise",
+   "kind": "correction",
+   "html": "The transition moment comes from the time-dependent Schrödinger equation."
+  },
+  {
+   "id": "c-induced",
+   "kind": "correction",
+   "html": "$\\vec{\\mu} = \\alpha\\vec{E}$ is the dipole a field induces, which is what Raman scattering depends on. Infrared absorption depends on how the molecule's own dipole moment changes along the vibration, as the second equation below says."
+  },
+  {
+   "id": "c-field",
+   "kind": "correction",
+   "html": "$E$ is the electric field of the light, not the electronegativity."
+  },
+  {
+   "id": "c-note3",
+   "kind": "correction",
+   "html": "The book prints no note 3."
+  },
+  {
+   "id": "c-sy",
+   "kind": "correction",
+   "html": "The $A_2$ entry printed $sy$ is $xy$."
+  }
+ ]
+}

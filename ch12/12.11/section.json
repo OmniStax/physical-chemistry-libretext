@@ -1,0 +1,123 @@
+{
+ "id": "12.11",
+ "module": "433848",
+ "chapter": "12",
+ "title": "Reducible Representations are Comprised of Irreducible Representations",
+ "short": "Reducing a representation",
+ "lead": "Ammonia's twelve motions form one reducible representation of C₃ᵥ. A table of products, summed and divided by the order of the group, splits it into irreducible representations, and the translations and rotations are then taken away.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "Written by Kathryn LaRue and shared under the book's CC BY-NC-SA 4.0.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": []
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercise in this section. The one here, reducing the 3N representation of CH₃Cl by the tabular method, was written by AI with its solution, Bloom level and concept tags. Counts accept a 2% tolerance.",
+ "figures": [],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "reducing-ammonias-motions",
+   "concept": "tabular-reduction",
+   "verb": "introduces"
+  },
+  {
+   "span": "reducing-ammonias-motions",
+   "concept": "reducible-representation",
+   "verb": "uses"
+  },
+  {
+   "span": "reducing-ammonias-motions",
+   "concept": "irreducible-representation",
+   "verb": "uses"
+  },
+  {
+   "span": "reducing-ammonias-motions",
+   "concept": "character-table",
+   "verb": "uses"
+  },
+  {
+   "span": "reducing-ammonias-motions",
+   "concept": "group-order",
+   "verb": "uses"
+  },
+  {
+   "span": "reducing-ammonias-motions",
+   "concept": "reduction-formula",
+   "verb": "uses"
+  },
+  {
+   "span": "reducing-ammonias-motions",
+   "concept": "vibrational-representation",
+   "verb": "reinforces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "ai1",
+   "source_id": "To do this, we use the tabular method",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "reducing-ammonias-motions",
+   "prompt": "<p>Chloromethane, CH₃Cl, has $C_{3v}$ symmetry, with the C–Cl bond along the $C_3$ axis and one hydrogen in each $\\sigma_v$ plane. Its $3N$ Cartesian representation has characters 15, 0 and 3 under $E$, $2C_3$ and $3\\sigma_v$. Reduce it by the tabular method: how many times does it contain (a) $A_1$, (b) $A_2$ and (c) $E$?</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 4,
+      "hint": "Multiply class size, the irreducible character and the reducible character in each column, add the row and divide by $h = 6$."
+     },
+     {
+      "part": "b",
+      "value": 1
+     },
+     {
+      "part": "c",
+      "value": 5
+     }
+    ],
+    "solution": "<p>With the class sizes 1, 2, 3 and $\\Gamma = 15, 0, 3$:</p><p>$A_1$: $1\\times1\\times15 + 2\\times1\\times0 + 3\\times1\\times3 = 24$, and $24/6 = 4$.</p><p>$A_2$: $15 + 0 - 9 = 6$, and $6/6 = 1$.</p><p>$E$: $1\\times2\\times15 + 2\\times(-1)\\times0 + 3\\times0\\times3 = 30$, and $30/6 = 5$.</p><p>So $\\Gamma = 4A_1 + A_2 + 5E$, which has dimension $4 + 1 + 10 = 15 = 3N$. Taking away the translations ($A_1 + E$) and the rotations ($A_2 + E$) leaves $\\Gamma_\\text{vib} = 3A_1 + 3E$, nine vibrations, $3N - 6$.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "ai1",
+   "concept": "tabular-reduction"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-previous",
+   "kind": "correction",
+   "html": "Ammonia's motions are worked out in Section 12.12, which comes after this one. That section prints this representation's $\\sigma_v$ character as 1; the 2 here is right."
+  },
+  {
+   "id": "c-table",
+   "kind": "correction",
+   "html": "The next table is the correlation table of $C_{3v}$, which shows what its species become in the subgroups $C_3$ and $C_s$. The character table needed here is the one printed further down."
+  },
+  {
+   "id": "c-gc",
+   "kind": "correction",
+   "html": "The three factors are those the next table names $g_e$, $\\chi_i$ and $\\chi_r$: the number of operations in the class, the irreducible character and the reducible character. The equation writes the first as $g_c$ and the last as $X_r$."
+  },
+  {
+   "id": "c-9",
+   "kind": "correction",
+   "html": "The character of the reducible representation under $E$ is 12, as the product above shows."
+  }
+ ]
+}

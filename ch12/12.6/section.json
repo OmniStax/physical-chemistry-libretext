@@ -82,8 +82,7 @@
  "exercises": [
   {
    "id": "a1",
-   "source_id": "we could place a $x$, $y$, and $z$ unit vectors on each atom",
-   "source_section": "12.5",
+   "source_id": "A simple way to determine the characters of a representation",
    "kind": "exercise",
    "bloom": "Apply",
    "place": {
@@ -132,7 +131,7 @@
   {
    "id": "c-appendix-b",
    "kind": "correction",
-   "html": "Appendix B is Vallance's; in this book the character tables of the common point groups are in the sheet of character tables at the end of Chapter 12."
+   "html": "Appendix B is Vallance's; in this book the character tables of the common point groups are in the book's sheet of character tables."
   },
   {
    "id": "c-section-9",
@@ -158,22 +157,17 @@
        "src": "(12.6.2)"
       },
       {
-       "text": "$\\Gamma'(g)$ represents $g$ in the new basis: $g\\mathbf{x'} = \\mathbf{x'}\\Gamma'(g)$.",
-       "src": "12.4"
+       "tex": "\\kgop\\mathbf{x'} = \\mathbf{x'}\\kGamma'(\\kgop)"
       },
       {
-       "text": "$\\Gamma(g)$ represents $g$ in the original basis: $g\\mathbf{x} = \\mathbf{x}\\Gamma(g)$.",
-       "src": "12.4"
+       "tex": "\\kgop\\mathbf{x} = \\mathbf{x}\\kGamma(\\kgop)"
       },
       {
        "tex": "CC^{-1} = I"
       }
      ],
      "then": {
-      "tex": "\\mk{l}{\\kgop\\mathbf{x'}} = \\mk{r}{\\mathbf{x'}\\kGamma'(\\kgop)}",
-      "uses": [
-       1
-      ]
+      "tex": "\\mk{l}{\\kgop\\mathbf{x'}} = \\mk{r}{\\mathbf{x'}\\kGamma'(\\kgop)}"
      },
      "steps": [
       {

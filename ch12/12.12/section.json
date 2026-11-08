@@ -1,0 +1,193 @@
+{
+ "id": "12.12",
+ "module": "433954",
+ "chapter": "12",
+ "title": "Normal Modes of Vibrations Describe how Molecules Vibrate",
+ "short": "Normal modes of vibration",
+ "lead": "A polyatomic molecule vibrates in normal modes, each a concerted motion of several bonds. Counting degrees of freedom gives how many modes there are, and ammonia's character table sorts them by symmetry.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "The text is Claire Vallance's (Molecular Symmetry, Group Theory and Applications), with a worked ammonia example, shared under the book's CC BY-NC-SA 4.0. The book's ball-and-stick ammonia becomes a 3D figure of its vibrations, with shapes from a valence force field and the measured frequencies from the NIST Chemistry WebBook.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercise in this section. The one here, counting the vibrations of three molecules, was written by AI with its solution, Bloom level and concept tags. Counts accept a 2% tolerance.",
+ "figures": [
+  {
+   "id": "fig-linear-modes",
+   "kind": "figure",
+   "originals": [
+    "/media/ch12/61172-Screenshot_24-1.png"
+   ],
+   "draws": [],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "kept as the book prints it"
+    }
+   ]
+  },
+  {
+   "id": "sim-ammonia-modes",
+   "kind": "sim",
+   "originals": [
+    "/media/ch12/9864-Ammonia.JPG"
+   ],
+   "draws": [
+    "symmetry-operation",
+    "representation",
+    "wavenumber",
+    "angle"
+   ],
+   "conventions": [
+    "N",
+    "H"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "normal-modes-of-vibration",
+   "concept": "molecular-normal-modes",
+   "verb": "introduces"
+  },
+  {
+   "span": "normal-modes-of-vibration",
+   "concept": "harmonic-oscillator",
+   "verb": "uses"
+  },
+  {
+   "span": "normal-modes-of-vibration",
+   "concept": "normal-mode",
+   "verb": "uses"
+  },
+  {
+   "span": "normal-modes-of-vibration",
+   "concept": "irreducible-representation",
+   "verb": "uses"
+  },
+  {
+   "span": "molecular-degrees-of-freedom-determining",
+   "concept": "vibrational-mode-count",
+   "verb": "introduces"
+  },
+  {
+   "span": "molecular-degrees-of-freedom-determining",
+   "concept": "degrees-of-freedom",
+   "verb": "uses"
+  },
+  {
+   "span": "symmetry",
+   "concept": "molecular-normal-modes",
+   "verb": "reinforces"
+  },
+  {
+   "span": "symmetry",
+   "concept": "principal-axis",
+   "verb": "uses"
+  },
+  {
+   "span": "symmetry",
+   "concept": "character-table",
+   "verb": "uses"
+  },
+  {
+   "span": "symmetry",
+   "concept": "vibrational-representation",
+   "verb": "reinforces"
+  },
+  {
+   "span": "symmetry",
+   "concept": "vibrational-mode-count",
+   "verb": "reinforces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "ai1",
+   "source_id": "A non-linear molecule has $3N - 6$ vibrational modes",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "molecular-degrees-of-freedom-determining",
+   "prompt": "<p>How many vibrational modes does each molecule have? (a) Benzene, C₆H₆. (b) Carbon dioxide, CO₂, which is linear. (c) Hydrogen cyanide, HCN, which is linear.</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 30,
+      "hint": "Decide first whether the molecule is linear, then take $3N - 5$ or $3N - 6$."
+     },
+     {
+      "part": "b",
+      "value": 4
+     },
+     {
+      "part": "c",
+      "value": 4
+     }
+    ],
+    "solution": "<p>(a) Benzene has $N = 12$ atoms and is not linear: $3(12) - 6 = 30$ modes.</p><p>(b) CO₂ has $N = 3$ and is linear, so it loses only two rotations: $3(3) - 5 = 4$ modes (the symmetric and asymmetric stretches and a doubly degenerate bend).</p><p>(c) HCN also has $N = 3$ and is linear: $3(3) - 5 = 4$ modes.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "ai1",
+   "concept": "vibrational-mode-count"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-next",
+   "kind": "correction",
+   "html": "Molecular motions described by each atom's translations are worked out in Section 12.10, which comes before this one."
+  },
+  {
+   "id": "c-qs",
+   "kind": "correction",
+   "html": "A symbol is lost here: the book means the σ's."
+  },
+  {
+   "id": "c-transitions",
+   "kind": "correction",
+   "html": "$3N - 6$ counts the vibrational modes of a nonlinear molecule, not its transitions."
+  },
+  {
+   "id": "c-unmoved",
+   "kind": "correction",
+   "html": "Each $\\sigma_v$ plane holds the nitrogen and one hydrogen, so 2 atoms are unmoved, not 1, and $\\Gamma_\\text{total}$ under $3\\sigma_v$ is $2 \\times 1 = 2$, as Section 12.11 prints."
+  },
+  {
+   "id": "c-vib",
+   "kind": "correction",
+   "html": "With $\\Gamma_\\text{total} = 2$ under $3\\sigma_v$, the vibrations' character there is $2 - 1 - (-1) = 2$, not 1. Only $(6, 0, 2)$ reduces to the $2A_1 + 2E$ printed below."
+  }
+ ]
+}

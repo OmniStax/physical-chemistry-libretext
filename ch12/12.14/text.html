@@ -1,0 +1,276 @@
+<section id="salcs">
+<h2>Symmetry adapted linear combinations</h2>
+<p>The construction of linear combinations of the basis of atomic movements allows the vibrations belonging to <span data-concept="irreducible-representation">irreducible representations</span> to be investigated. The wavefunction of these symmetry equivalent orbitals is referred to as <strong><span data-concept="salc">Symmetry Adapted Linear Combinations</span></strong>, or <span data-concept="salc">SALCs</span>. <span data-concept="salc">SALCs</span> (Symmetry Adapted Linear Combinations) are the linear combinations of basis sets composed of the stretching vectors of the molecule. The <span data-concept="salc">SALCs</span> of a molecule can help determine binding schemes and symmetries. The procedure used to determine the <span data-concept="salc">SALCs</span> of a molecule is also used to determine the LCAO of a molecule. The <span data-concept="lcao-approximation">LCAO, Linear Combination of Atomic Orbitals</span>, uses the basis set of atomic orbitals instead of stretching vectors. The LCAO of a molecule provides a detailed description of the <span data-concept="molecular-orbital">molecular orbitals</span>, including the number of nodes and relative energy levels.</p>
+<p>Symmetry adapted linear combinations are the sum over all the basis functions:</p>
+$$ \kphii =\displaystyle\sum_{j} c_{ij} b_{j} \tag{12.14.1} $$
+<p>$\kphii$ is the i<sup>th</sup> <span data-concept="salc">SALC</span> function, bj is the j<sup>th</sup> basis function, and $c_{ij}$ is a coefficient which controls how much of $b_j$ appears in $\kphii$. In method two, the <span data-concept="projection-operator">projection operator</span> is used to obtain the coefficients consistent with each <span data-concept="irreducible-representation">irreducible representation</span>.<sup>1</sup></p>
+<p>The <span data-concept="salc">SALCs</span> of a molecule may be constructed in <strong>two</strong> ways. The first method uses a basis set composed of the <span data-concept="irreducible-representation">irreducible representation</span> of the stretching modes of the molecule. On the other hand, the second method uses a <span data-concept="projection-operator">projection operator</span> on each stretching vector. When determining the <span data-concept="irreducible-representation">irreducible representations</span> of the stretching modes, the <span data-concept="reducible-representation">reducible representations</span> for all the vibrational modes must first be determined. Basis vectors are assigned <span data-concept="character">characters</span> and are treated as individual objects. A<sup class="fn" data-note="c-cut-off"></sup></p>
+</section>
+
+<section id="background">
+<h2>Background</h2>
+<p>In order to understand and construct <span data-concept="salc">SALCs</span>, a background in <a href="https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Group_Theory/Group_Theory%3A_Theory">group theory</a> is required. The identification of the <span data-concept="point-group">point group</span> of the molecule is essential for understanding how the application of operations affects the molecule. This allows for the determination of the nature of the stretching modes. As a review, let’s first determine the stretching modes of water together. Water has the <span data-concept="point-group">point group</span> C<sub>2v</sub>. Table 1 is the <span data-concept="character-table">character table</span> for the C<sub>2v</sub> <span data-concept="point-group">point group</span>.</p>
+<div class="book-table">
+  <div class="tcap"><span class="eyebrow">Table 12.14.1</span><span>C<sub>2v</sub> Character Table</span></div>
+  <table>
+    <thead><tr><th>C<sub>2v</sub></th><th>E</th><th>C<sub>2</sub></th><th>σ<sub>v</sub>(xz)</th><th>σ<sub>v</sub>'(yz)</th><th></th><th></th></tr></thead>
+    <tbody>
+      <tr><td>A<sub>1</sub></td><td>1</td><td>1</td><td>1</td><td>1</td><td><em>z</em></td><td>x<sup>2</sup>, y<sup>2</sup>, <em>z</em><sup>2</sup></td></tr>
+      <tr><td>A<sub>2</sub></td><td>1</td><td>1</td><td>−1</td><td>−1</td><td>R<sub>z</sub></td><td>xy</td></tr>
+      <tr><td>B<sub>1</sub></td><td>1</td><td>−1</td><td>1</td><td>−1</td><td>x, R<sub>y</sub></td><td>x<em>z</em></td></tr>
+      <tr><td>B<sub>2</sub></td><td>1</td><td>−1</td><td>−1</td><td>1</td><td>y, R<sub>x</sub></td><td>y<em>z</em></td></tr>
+    </tbody>
+  </table>
+</div>
+<p>The first step in determining stretching modes of a molecule is to add the <span data-concept="character">characters</span> contained in the x, y, and z rows to obtain the total <span data-concept="reducible-representation">reducible representation</span> of the xyz coordinates, Γ<sub>XYZ</sub>. Γ<sub>XYZ</sub> can also be found by applying the <span data-concept="symmetry-operation">symmetry operations</span> to the three vectors (x, y, and z) of the coordinate system of the molecule. The next step involves the investigation of the atoms that remain unchanged when an operation is applied, Γ<sub>UMA</sub>. This step refers to the unmoved atoms (UMA). Multiplying Γ<sub>XYZ</sub> and Γ<sub>UMA</sub> gives the <span data-concept="reducible-representation">reducible representation</span> for the molecule referred to as Γ<sub>TOTAL</sub>. The Γ<sub>TOTAL</sub> is the <span data-concept="reducible-representation">reducible representation</span> for all the modes of the molecule (vibrational, rotational, and translational) and can also be determined by applying the <span data-concept="symmetry-operation">symmetry operations</span> to each coordinate vector (x, y, and z) on each atom.</p>
+<div class="book-table">
+  <div class="tcap"><span class="eyebrow">Table 12.14.2</span><span>C<sub>2v</sub> Reducible Representation for H2O</span></div>
+  <table>
+    <thead><tr><th>C<sub>2v</sub></th><th>E</th><th>C<sub>2</sub></th><th>σ<sub>v</sub>(xz)</th><th>σ<sub>v</sub>'(yz)</th></tr></thead>
+    <tbody>
+      <tr><td>Γ<sub>XYZ</sub></td><td>3</td><td>-1</td><td>1</td><td>1</td></tr>
+      <tr><td>Γ<sub>UMA</sub></td><td>3</td><td>1</td><td>1</td><td>3</td></tr>
+      <tr><td>Γ<sub>TOTAL</sub></td><td>9</td><td>-1</td><td>1</td><td>3</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>Γ<sub>TOTAL</sub> is then reduced to later give the stretching modes that are unique to the molecule. First, the <span data-concept="reduction-formula">reduction formula</span> is applied to decompose the <span data-concept="reducible-representation">reducible representation</span>:</p>
+$$ a_{i}=\dfrac{1}{h}\displaystyle\sum_{R}(X^{R}X_{i}^{R}C^{R}) \tag{12.14.2} $$
+<p>Here, <em>a<sub>i</sub></em> is the number of times the <span data-concept="irreducible-representation">irreducible representation</span> will appear in the initial <span data-concept="reducible-representation">reducible representation</span>. The <span data-concept="group-order">order of the point group</span> is represented by <em>h; R</em> is an operation of the group; <em>X<sup>R</sup></em> is a <span data-concept="character">character</span> of the operation <em>R</em> in the <span data-concept="reducible-representation">reducible representation</span>; <em>X<sub>i</sub><sup>R</sup></em> is a <span data-concept="character">character</span> of the operation <em>R</em> in the <span data-concept="irreducible-representation">irreducible representation</span>, and <em>C<sup>R</sup></em> is the number of members in the <span data-concept="symmetry-class">class</span> to which <em>R</em> belongs.<sup class="fn" data-note="c-x-chi"></sup> Applying this formula and subtracting the representations obtained from the basis functions x, y, z, R<sub>x</sub>, R<sub>y</sub>, and R<sub>z</sub> (for the translations and rotations of the molecule) gives the <span data-concept="irreducible-representation">irreducible representation</span> that corresponds to the vibrational states of the molecule:</p>
+<p>Γ<sub>Vibration</sub> = 2a<sub>1</sub> + b<sub>2</sub></p>
+<p>A simple check can be performed to determine that the right number of modes was obtained. For linear molecules (3N-5) gives the correct number of <a href="https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Spectroscopy/Vibrational_Spectroscopy/Vibrational_Modes/Normal_Modes">normal modes</a>. For molecules with any other shape otherwise known as non-linear molecules, the formula is (3N-6). <em>N</em> represents the number of atoms in a molecule. Let’s double check the above water example:</p>
+$$ (3N-6) N=3 \tag{12.14.3} $$
+$$ [3(3)-6] = 3 $$
+<p>Water should have three vibrational modes. When the <span data-concept="irreducible-representation">irreducible representation</span> was obtained, it was seen that water has two a<sub>1</sub> modes and a b<sub>2</sub>mode for a total of three.</p>
+<p>When double checking that you have the correct number of <span data-concept="molecular-normal-modes">normal modes</span> for other molecules, remember that the <span data-concept="irreducible-representation">irreducible representation</span> E is doubly degenerate and counts as two <span data-concept="molecular-normal-modes">normal modes</span>. T is triply degenerate and counts for three <span data-concept="molecular-normal-modes">normal modes</span>, etc.</p>
+</section>
+
+<section id="constructing-salcs">
+<h2>Constructing SALCs</h2>
+<h3>Method 1</h3>
+<p>There are multiple ways of constructing the <span data-concept="salc">SALCs</span> of a molecule. The first method uses the known symmetries of the stretching modes of the molecule. To investigate this method, the construction of the <span data-concept="salc">SALCs</span> of water is examined. Water has three vibrational states, 2a<sub>1</sub>+b<sub>2</sub>. Two of these vibrations are stretching modes. One is symmetric with the symmetry A<sub>1</sub>, and the other is antisymmetric with the symmetry B<sub>2</sub>. While looking for the <span data-concept="salc">SALC</span> of a molecule, one uses vectors represented by <em>b<sub>j</sub></em> as the basis set. The vectors demonstrate the <span data-concept="irreducible-representation">irreducible representations</span> of molecular vibrations.</p>
+<p>The <span data-concept="stretching-salcs">SALCs of water</span> can be composed by creating a linear combination of the stretching vectors.</p>
+$$ \phi(A_{1})=b_{1}+b_{2} $$
+<p>and</p>
+$$ \phi(B_{1})=b_{1}-b_{2} \tag{12.14.4} $$
+<p><sup class="fn" data-note="c-b1-b2"></sup></p>
+<h4>Normalization</h4>
+<p>The final step in constructing the <span data-concept="salc">SALCs</span> of water is to normalize expressions. To <span data-concept="salc-normalization">normalize the SALC</span>, multiply the entire expression by the normalization constant that is the inverse of the square root of the sum of the squares of the coefficients within the expression.</p>
+$$ \kphii=N\displaystyle\sum_{j}c_{ij}b_{j} \tag{12.14.5} $$
+$$ N=\dfrac{1}{\sqrt{\displaystyle\sum_{j=1}^{n}c_{ij}^{2}}} \tag{12.14.6} $$
+$$ \phi(A_{1})=\dfrac{1}{\sqrt{2}}(b_{1}+b_{2}) $$
+<p>and</p>
+$$ \phi(B_{1})=\dfrac{1}{\sqrt{2}}(b_{1}-b_{2}) $$
+<p>Normalizing the <span data-concept="salc">SALCs</span> ensures that the magnitude of the <span data-concept="salc">SALC</span> is unity, and therefore the dot product of any <span data-concept="salc">SALC</span> with itself will equal one.</p>
+<h3>Method 2</h3>
+<p>The other method for constructing <span data-concept="salc">SALCs</span> is the <span data-concept="projection-operator">projection operator method</span>. The <span data-concept="salc">SALC</span> of a molecule can be constructed in the same manner as the LCAO, Linear Combination of Atomic Orbitals, however the basis set differs. While looking for the <span data-concept="salc">SALCs</span> of a molecule, one uses vectors represented by <em>b<sub>j</sub></em>, on the other hand, while looking for the LCAO of a molecule, one uses atomic orbitals as the basis set. The vectors demonstrate the possible vibration of the molecule. While constructing <span data-concept="salc">SALCs</span>, the basis vectors can be treated as individual vectors.</p>
+<div class="example" id="ex-12-14-1">
+<h3>Example 12.14.1 · Water</h3>
+<p>Let’s take a look at how to construct the <span data-concept="salc">SALC</span> for water. The first step in constructing the <span data-concept="salc">SALC</span> is to label all vectors in the basis set. Below are the bond vectors of water that will be used as the basis set for the <span data-concept="salc">SALCs</span> of the molecule.</p>
+<figure class="sim" id="sim-projection" data-figure="12.14.1 + 12.14.2 + 12.14.3 + 12.14.4" data-original="/media/ch12/9720-8.JPG,/media/ch12/9719-7.JPG,/media/ch12/9716-4.JPG" data-original-width="388,221,720" data-original-caption="The stretching modes of H2O. Labeled vectors of H2O. The transformations of the basis vectors of H2O. The stretching modes of H2O resulting from Method 2.">
+  <div class="sim-head"><span class="eyebrow">Figure 12.14.1 + 12.14.2 + 12.14.3 + 12.14.4</span><span>Pick a <span data-concept="irreducible-representation">symmetry species</span> and play. Each operation of C<sub>2v</sub> sends b<sub>1</sub> to b<sub>1</sub> or b<sub>2</sub>, its <span data-concept="character">character</span> sets the sign, and the terms add up. A<sub>1</sub> and B<sub>2</sub> build 2(b<sub>1</sub> ± b<sub>2</sub>); A<sub>2</sub> and B<sub>1</sub> cancel to zero.</span></div>
+</figure>
+<p>Next, the basis vector, <em>v</em>, is transformed by <em>T<sub>j</sub></em>, the <em>j</em>th <span data-concept="symmetry-operation">symmetry operation</span> of the molecule’s <span data-concept="point-group">point group</span>. As the vector of the basis set is transformed, record the vector that takes its place. Water is a member of the <span data-concept="point-group">point group</span> C<sub>2V</sub>. The Symmetry elements of the C<sub>2V</sub> <span data-concept="point-group">point group</span> are E, C<sub>2</sub>, σ<sub>v</sub>, σ<sub>v’</sub>.</p>
+<p>The i<sup>th</sup> <span data-concept="salc">SALC</span> function, ϕ<sub>i</sub>is shown below using the vector <em>v=b<sub>1</sub></em>.</p>
+<p>Once the transformations have been determined, the <span data-concept="salc">SALC</span> can be constructed by taking the sum of the products of each <span data-concept="character">character</span> of a representation within the <span data-concept="point-group">point group</span> and the corresponding transformation. The <span data-concept="salc">SALCs</span> functions are the collective transformations of the basis sets represented by ϕ<sub>i</sub>where <em>X<sub>i</sub>(j)</em> is the <span data-concept="character">character</span> of the <em>i</em>th <span data-concept="irreducible-representation">irreducible representation</span> and the <em>j</em>th <span data-concept="symmetry-operation">symmetry operation</span>.</p>
+$$ \kphii=\displaystyle\sum_{j}X_{i}(j)T_{j}\nu \tag{12.14.7} $$
+<div class="book-table">
+  <div class="tcap"><span class="eyebrow">Table 12.14.3</span><span>Projection Operator method for C<sub>2v</sub></span></div>
+  <table>
+    <thead><tr><th></th><th>E</th><th>C<sub>2</sub></th><th>σ<sub>V</sub></th><th>σ<sub>V’</sub></th><th>SUM</th></tr></thead>
+    <tbody>
+      <tr><td>$T_jb_1$</td><td>$b_1$</td><td>$b_2$</td><td>$b_2$</td><td>$b_1$</td><td></td></tr>
+      <tr><td>$A_1T_jb_1$</td><td>$b_1(1)$</td><td>$b_2(1)$</td><td>$b_2(1)$</td><td>$b_1(1)$</td><td>$=2b_1+2b_2$</td></tr>
+      <tr><td>$A_2T_jb_1$</td><td>$b_1(1)$</td><td>$b_2(1)$</td><td>$b_2(-1)$</td><td>$b_1(-1)$</td><td>$=0$</td></tr>
+      <tr><td>$B_1T_jb_1$</td><td>$b_1(1)$</td><td>$b_2(-1)$</td><td>$b_2(1)$</td><td>$b_1(-1)$</td><td>$=0$</td></tr>
+      <tr><td>$B_2T_jb_1$</td><td>$b_1(1)$</td><td>$b_2(-1)$</td><td>$b_2(-1)$</td><td>$b_1(1)$</td><td>$=2b_1-2b_2$</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>The final step in constructing the <span data-concept="salc">SALCs</span> of water is to normalize expressions.</p>
+<div class="book-table">
+  <div class="tcap"><span class="eyebrow">Table 12.14.4</span><span>Normalized SALCs of H<sub>2</sub>O</span></div>
+  <table>
+    <tbody>
+      <tr><td>$A_1T_jb_1$</td><td>$=2b_1+2b_2$</td><td>$=\frac{1}{\sqrt{2}}(b_1+b_2)$</td></tr>
+      <tr><td>$A_2T_jb_1$</td><td>$=0$</td><td>$=0$</td></tr>
+      <tr><td>$B_1T_jb_1$</td><td>$=0$</td><td>$=0$</td></tr>
+      <tr><td>$B_2T_jb_1$</td><td>$=2b_1-2b_2$</td><td>$=\frac{1}{\sqrt{2}}(b_1-b_2)$</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>There are two <span data-concept="salc">SALCs</span> for the water molecule, ϕ<sub>1</sub>(A<sub>1</sub>) and ϕ<sub>1</sub>(B<sub>2</sub>). This demonstrates that water has two stretching modes, one is a totally symmetric stretch with the symmetry, A<sub>1</sub>, and the other is an antisymmetric stretch with the symmetry B<sub>2</sub>.</p>
+</div>
+</section>
+
+<section id="interpreting-salcs">
+<h2>Interpreting SALCs</h2>
+<p>Both methods of construction result in the same <span data-concept="salc">SALCs</span>. <span data-concept="stretching-salcs">Only irreducible representations corresponding to the symmetries of the stretching modes of the molecule will produce a SALC that is non-zero</span>. Method 1 only utilized the known symmetries of the vibrational modes. All <span data-concept="irreducible-representation">irreducible representations</span> of the <span data-concept="point-group">point group</span> were used, but the representations that were not vibrational modes resulted in <span data-concept="salc">SALCs</span> equal to zero.</p>
+<p>Therefore, with the <span data-concept="salc">SALCs</span> of a molecule given, all the symmetries of the stretching modes are identified. This allows for a clearer understanding of the spectroscopy of the molecule. Even though vibrational modes can be observed in both infrared and Raman spectroscopy, the <span data-concept="salc">SALCs</span> of a molecule cannot identify the magnitude or frequency of the peak in the spectra. The normalized <span data-concept="salc">SALCs</span> can, however, help to determine the relative magnitude of the stretching vectors. The magnitude can be determined by the equation below.</p>
+$$ a \cdot b= |a||b|cos \theta \tag{12.14.8} $$
+<p>The resulting A<sub>1</sub> and B<sub>1</sub><sup class="fn" data-note="c-resulting-b1"></sup> symmetries for the above water example are each active in both Raman and IR spectroscopies, according to the C<sub>2v</sub> <span data-concept="character-table">character table</span>. If the vibrational mode allows for a change in the <span data-concept="dipole-moment">dipole moment</span>, the mode can be observed through <span data-concept="infrared-spectroscopy">infrared spectroscopy</span>. If the vibrational mode allows for a change in the polarization of the molecule, the mode can be observed through <span data-concept="raman-scattering">Raman spectroscopy</span>. Both stretching and bending modes are seen in the spectra, however only stretching modes are expressed in the <span data-concept="salc">SALCs</span>.</p>
+<div class="example" id="ex-12-14-2">
+<h3>Example 12.14.2 · Difluorobenzene</h3>
+<p>The <span data-concept="salc">SALCs</span> of a molecule can also provide insight to the geometry of a molecule. For example, <span data-concept="salc">SALCs</span> can aid in determining the differences between para-difluorobenzene and ortho-difluorobenzene. The <span data-concept="salc">SALCs</span> for these two molecules are given below.</p>
+<figure class="photo" id="fig-12-14-5" data-figure="12.14.5">
+  <img src="/media/ch12/9710-16.JPG" alt="A benzene ring with fluorine atoms on opposite carbons; each of the four C–H bonds is labelled b₁.">
+  <figcaption><span class="eyebrow">Figure 12.14.5</span><span>para-difluorobenzene<sup class="fn" data-note="c-para-labels"></sup></span></figcaption>
+</figure>
+$$ \phi (A_{g})= \dfrac{1}{2} (b_{1} + b_{2} + b_{3} +b_{4}) $$
+$$ \phi (B_{1g})= \dfrac{1}{2} (b_{1} - b_{2} + b_{3} -b_{4}) $$
+$$ \phi (B_{2u})= \dfrac{1}{2} (b_{1} - b_{2} - b_{3} +b_{4}) $$
+$$ \phi (B_{3u})= \dfrac{1}{2} (b_{1} + b_{2} - b_{3} -b_{4}) $$
+<figure class="photo" id="fig-12-14-6" data-figure="12.14.6">
+  <img src="/media/ch12/9711-17.JPG" alt="A benzene ring with fluorine atoms on neighbouring carbons; the C–H bonds are labelled b₁, b₁, b₂, b₂.">
+  <figcaption><span class="eyebrow">Figure 12.14.6</span><span>ortho-difluorobenzene</span></figcaption>
+</figure>
+$$ \phi _{1} (A_{1})= \dfrac{1}{\sqrt{2}} (b_{1} + b_{2} + b_{3} +b_{4}) $$
+$$ \phi _{2} (A_{1})= \dfrac{1}{\sqrt{2}} (b_{1} - b_{2} + b_{3} -b_{4}) $$
+$$ \phi _{1} (B_{1})= \dfrac{1}{\sqrt{2}} (b_{1} - b_{2} - b_{3} +b_{4}) $$
+$$ \phi _{2} (B_{1})= \dfrac{1}{\sqrt{2}} (b_{1} + b_{2} - b_{3} -b_{4}) $$
+<p><sup class="fn" data-note="c-ortho-norm"></sup>From the <span data-concept="salc">SALCs</span>, it is seen that para-difluorobenzene has four stretching modes and ortho-difluorobenzene has only two.<sup class="fn" data-note="c-ortho-two"></sup> Therefore, it is no surprise that the vibrational spectroscopy of the para-difluorobenzene shows more peaks than the ortho-difluorobenzene.</p>
+</div>
+</section>
+
+<section id="applications">
+<h2>Applications</h2>
+<p>The <span data-concept="salc">SALCs</span> of a molecule can be used to understand the stretching modes and binding schemes of a molecule. More information can also be interpreted when applying the <span data-concept="projection-operator">projection operator</span> used in <span data-concept="salc">SALCs</span> on the atomic orbitals of the molecule. This results in the determination of the <span data-concept="lcao-approximation">linear combination of atomic orbitals (LCAO)</span>, which gives information on the <span data-concept="molecular-orbital">molecular orbitals</span> of the molecule. The <a href="https://chem.libretexts.org/Under_Construction/Purgatory/Core_Construction/Earley/Molecular_Orbitals">molecular orbitals</a> (MO) of a molecule are often constructed as LCAOs. Each MO is a solution to the Schrödinger equation and is an eigenfunction of the <span data-concept="hamiltonian-operator">Hamiltonian operator</span>. The LCAOs can be determined in the same manner as the <span data-concept="salc">SALCs</span> of a molecule, with the use of a <span data-concept="projection-operator">projection operator</span>. The difference is that the basis set is no longer stretching vectors, but instead the atomic orbitals of the molecule. Hydrogen only has s orbitals, but oxygen has s and p orbitals, where the p<sub>x</sub>, p<sub>y</sub>, and p<sub>z</sub> all transform differently and therefore must be treated differently.</p>
+<p>Once the LCAOs of the molecule have been determined, the expressions can be interpreted into images of the orbitals bonding. If two orbitals are of the same sign in the expression, the electrons in the orbitals are in phase with each other and are <span data-concept="bonding-molecular-orbital">bonding</span>. If two orbitals are of the opposite sign in the expression, the electrons in the orbitals are out of phase with each other and are <span data-concept="antibonding-molecular-orbital">antibonding</span>. The image below shows the atomic orbitals' phases (or signs) as red or blue lobes.</p>
+<p>Any separation between two antibonding atomic orbitals is a planar <span data-concept="node">node</span>. As the number of <span data-concept="node">nodes</span> increases, so does the level of antibonding. This allows for the LCAO to place the <span data-concept="molecular-orbital">molecular orbitals</span> in order of increasing energy, which can be used in constructing the molecular orbital (MO) diagram of the molecule. The <span data-concept="irreducible-representation">irreducible representation</span> used to construct the LCAO is used to describe the MOs. The LCAOs for water are shown below with red dotted lines showing the <span data-concept="node">nodes</span>. Notice the <span data-concept="node">nodes</span> for the p<sub>x</sub> orbitals are in a different plane than the s orbitals of the hydrogens, so these are degenerate and nonbonding.<sup class="fn" data-note="c-px-degenerate"></sup></p>
+<figure class="photo" id="fig-12-14-10" data-figure="12.14.10">
+  <img src="/media/ch12/9704-10.JPG" alt="Seven panels of water's orbitals from the top down: p_y with one opposite-signed hydrogen, p_z with in-phase hydrogens and a node, two p_x panels, p_z, p_y, and s, red and blue lobes with dashed nodal lines.">
+  <figcaption><span class="eyebrow">Figure 12.14.10</span><span>Molecular Orbital diagram for H<sub>2</sub>O in order of increasing energy.</span></figcaption>
+</figure>
+<p>Information from the LCAO of water can also be used to analyze and anticipate the adsorption of water onto various surfaces. Evarestov and Bandura used this technique to identify the water adsorption on Y-doped BaZrO<sub>3</sub> and TiO<sub>2 </sub>(Rutile) respectively.<sup>2,3</sup></p>
+<div class="example" id="ex-cbr2h2">
+<h3>Example 2</h3>
+<p>Applying a combination of Methods 1 and 2, the <span data-concept="salc">SALCs</span> for CBr<sub>2</sub>H<sub>2</sub> can be determined. The <span data-concept="point-group">point group</span> of this molecule is C<sub>2v</sub>, making it similar to the determination of <span data-concept="salc">SALCs</span> for water.</p>
+<figure class="photo" id="fig-12-14-11" data-figure="12.14.11">
+  <img src="/media/ch12/9723-cbr2h2.png" alt="CBr₂H₂ around a central carbon: the C–Br bonds labelled b1 and b2 point up, the C–H bonds labelled a1 and a2 point down, one wedged and one dashed." data-width="156">
+  <figcaption><span class="eyebrow">Figure 12.14.11</span><span>CBr<sub>2</sub>H<sub>2</sub>, point group C<sub>2v.</sub></span></figcaption>
+</figure>
+<p>However, the central carbon contains more than one type of attached atom; therefore, the stretching analysis must be performed in pieces. First, the C-H stretches are examined, followed by the C-Br stretches:</p>
+<div class="book-table">
+  <div class="tcap"><span class="eyebrow">Table 5</span><span>Irreducible Representations for C-H and C-Br stretches in CBr2H2.</span></div>
+  <table>
+    <thead><tr><th>C<sub>2V</sub></th><th>E</th><th>C<sub>2</sub></th><th>σ<sub>V</sub></th><th>σ<sub>V’</sub></th><th>Irreducible Representation</th></tr></thead>
+    <tbody>
+      <tr><td>Γ<sub>C-H</sub></td><td>2</td><td>0</td><td>0</td><td>2</td><td>Γ<sub>C-H </sub>= A<sub>1 </sub>+ B<sub>2</sub></td></tr>
+      <tr><td>Γ<sub>C-Br</sub></td><td>2</td><td>0</td><td>2</td><td>0</td><td>Γ<sub>C-Br </sub>= A<sub>1 </sub>+ B<sub>1</sub></td></tr>
+    </tbody>
+  </table>
+</div>
+<p>Applying the <span data-concept="projection-operator">projection operator method</span> to C-Br and C-H stretches individually, the <span data-concept="salc">SALCs</span> are obtained in the same fashion as before.</p>
+<div class="book-table">
+  <div class="tcap"><span class="eyebrow">Table 6</span><span>SALCs for CBr2H2.</span></div>
+  <table>
+    <thead><tr><th>Γ<sub>C-Br</sub></th><th>E</th><th>C<sub>2</sub></th><th>σ<sub>V</sub></th><th>σ<sub>V’</sub></th><th>SUM</th></tr></thead>
+    <tbody>
+      <tr><td>A<sub>1</sub>T<sub>j</sub>(b<sub>1</sub>)</td><td>b<sub>1</sub></td><td>b<sub>2</sub></td><td>b<sub>1</sub></td><td>b<sub>2</sub></td><td>2(b<sub>1</sub> + b<sub>2</sub>)</td></tr>
+      <tr><td>B<sub>1</sub>T<sub>j</sub>(b<sub>1</sub>)</td><td>b<sub>1</sub></td><td>-b<sub>2</sub></td><td>b<sub>1</sub></td><td>-b<sub>2</sub></td><td>2(b<sub>1</sub> - b<sub>2</sub>)</td></tr>
+    </tbody>
+  </table>
+</div>
+<div class="book-table">
+  <div class="tcap"><span class="eyebrow">Table 7</span><span>SALCs for CBr2H2.</span></div>
+  <table>
+    <thead><tr><th>Γ<sub>C-H</sub></th><th>E</th><th>C<sub>2</sub></th><th>σ<sub>V</sub></th><th>σ<sub>V’</sub></th><th>SUM</th></tr></thead>
+    <tbody>
+      <tr><td>A<sub>1</sub>T<sub>j</sub>(a<sub>1</sub>)</td><td>a<sub>1</sub></td><td>a<sub>2</sub></td><td>a<sub>2</sub></td><td>a<sub>1</sub></td><td>2(a<sub>1</sub> + a<sub>2</sub>)</td></tr>
+      <tr><td>B<sub>2</sub>T<sub>j</sub>(a<sub>1</sub>)</td><td>a<sub>1</sub></td><td>-a<sub>2</sub></td><td>-a<sub>2</sub></td><td>a<sub>1</sub></td><td>2(a<sub>1</sub> - a<sub>2</sub>)</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>The results are normalized and the following <span data-concept="salc">SALCs</span> are obtained for the C<sub>2v</sub> molecule CBr<sub>2</sub>H<sub>2</sub>:</p>
+$$ \phi CBr(A_{1})=\frac{1}{\sqrt{2}}(b_{1}+b_{2}) $$
+$$ \phi CBr(B_{1}) =\frac{1}{\sqrt{2}} (b_{1}-b_{2}) $$
+$$ \phi CH(A_{1}) =\frac{1}{\sqrt{2}} (a_{1}+a_{2}) $$
+$$ \phi CH(B_{2}) =\frac{1}{\sqrt{2}} (a_{1}-a_{2}) $$
+</div>
+<div class="example" id="ex-ptcl4">
+<h3>Example 4</h3>
+<p>To obtain the <span data-concept="salc">SALCs</span> for PtCl<sub>4</sub>, the same general method is applied.</p>
+<figure class="photo" id="fig-12-14-12" data-figure="12.14.12">
+  <img src="/media/ch12/9730-ptcl4.png" alt="Square-planar PtCl₄ with an arrow from platinum to each chlorine, labelled b1 right, b2 down, b3 left and b4 up.">
+  <figcaption><span class="eyebrow">Figure 12.14.12</span><span>PtCl<sub>4</sub>, point group D<sub>4h.</sub></span></figcaption>
+</figure>
+<p>However, even though the <span data-concept="point-group">point group</span> of the molecule is D<sub>4h</sub>, the cyclic subgroup C<sub>4 </sub>may be used (this is a more simplified <span data-concept="character-table">character table</span> used for spherically symmetrical molecules).<sup class="fn" data-note="c-c4-spherical"></sup> Some manipulation is required in order to use this cyclic subgroup and will be discussed. Below is the C<sub>4</sub> cyclic <span data-concept="character-table">character table</span>.</p>
+<div class="book-table">
+  <div class="tcap"><span class="eyebrow">Table 12.14.8</span><span>C4 cyclic character table.</span></div>
+  <table>
+    <thead><tr><th>C<sub>4</sub></th><th>E</th><th>C<sub>4</sub><sup>1</sup></th><th>C<sub>4</sub><sup>2</sup></th><th>C<sub>4</sub><sup>3</sup></th></tr></thead>
+    <tbody>
+      <tr><td>A</td><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+      <tr><td>B</td><td>1</td><td>-1</td><td>1</td><td>-1</td></tr>
+      <tr><td>E<sup>1</sup> E<sup>2</sup></td><td>1 1</td><td>i -i</td><td>-1 -1</td><td>-i i</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>Notice, there are two rows for E, each singly degenerate. To solve for the <span data-concept="character">characters</span> of E, one must take the sum and difference of the two rows. Then, a reduction can be applied to obtain the easiest possible <span data-concept="character">characters</span> by dividing each row by a common factor (removing the common factor is not necessary, but it does simplify the problem as well as remove any imaginary terms):</p>
+<p>Sum = [ (1+1) (i-i) (-1-1) (-i+i) ] = (2 0 -2 0) ÷ 2 = E<sup>1 </sup>(1 0 -1 0)</p>
+<p>Difference = [ (1-1) (i+i) (-1+1) (-i-i) ] = (0 2i 0 -2i) ÷ 2i = E<sup>2</sup> (0 1 0 -1)</p>
+<p>Using the above cyclic group, and the newly obtained <span data-concept="character">characters</span> for <em>E</em>, the <span data-concept="projection-operator">projection operator</span> can be applied using Method 2 for the construction of <span data-concept="salc">SALCs</span>.</p>
+<div class="book-table">
+  <div class="tcap"><span class="eyebrow">Table 12.14.9</span><span>SALCs for PtCl4 using Method 2.</span></div>
+  <table>
+    <thead><tr><th>C<sub>4</sub></th><th>E</th><th>C<sub>4</sub><sup>1</sup></th><th>C<sub>4</sub><sup>2</sup></th><th>C<sub>4</sub><sup>3</sup></th><th>SUM</th></tr></thead>
+    <tbody>
+      <tr><td>AT<sub>j</sub>(b<sub>1</sub>)</td><td>b<sub>1</sub></td><td>b<sub>2</sub></td><td>b<sub>3</sub></td><td>b<sub>4</sub></td><td>b<sub>1</sub> + b<sub>2</sub> + b<sub>3</sub> + b<sub>4</sub></td></tr>
+      <tr><td>BT<sub>j</sub>(b<sub>1</sub>)</td><td>b<sub>1</sub></td><td>-b<sub>2</sub></td><td>b<sub>3</sub></td><td>-b<sub>4</sub></td><td>b<sub>1</sub> - b<sub>2</sub> + b<sub>3</sub> - b<sub>4</sub></td></tr>
+      <tr><td>E<sup>1</sup>T<sub>j</sub>(b<sub>1</sub>)</td><td>b<sub>1</sub></td><td>0</td><td>-b<sub>3</sub></td><td>0</td><td>b<sub>1</sub> - b<sub>3</sub></td></tr>
+      <tr><td>E<sup>2</sup>T<sub>j</sub>(b<sub>1</sub>)</td><td>0</td><td>b<sub>2</sub></td><td>0</td><td>-b<sub>4</sub></td><td>b<sub>2 </sub>- b<sub>4</sub></td></tr>
+    </tbody>
+  </table>
+</div>
+<p>Normalizing the sum as mentioned in Method 1, the following <span data-concept="salc">SALCs</span> are obtained for the D<sub>4h</sub> molecule PtCl<sub>4</sub>:</p>
+$$ \phi (A) =\frac{1}{2} (b_{1}+b_{2}+b_{3}+b_{4}) $$
+$$ \phi (B)=\frac{1}{2} (b_{1}-b_{2}+b_{3}-b_{4}) $$
+$$ \phi (E^{1})=\frac{1}{\sqrt{2}} (b_{1}-b_{3}) $$
+$$ \phi (E^{2})=\frac{1}{\sqrt{2}} (b_{2}-b_{4}) $$
+</div>
+<div class="example" id="ex-pf2h3">
+<h3>Example 3</h3>
+<p>Applying a combination of Methods 1 and 2, the <span data-concept="salc">SALCs</span> for the C-H stretches of PF<sub>2</sub>H<sub>3</sub> can be determined. The <span data-concept="point-group">point group</span> of this molecule is C<sub>s</sub>. The central carbon<sup class="fn" data-note="c-central-p"></sup> contains more than one type of attached hydrogen; therefore, the stretching analysis must be performed in pieces. First, the C-H<sub>A</sub> stretches are examined, followed by the C-H<sub>B</sub> stretches:</p>
+<figure class="photo" id="fig-12-14-13" data-figure="12.14.13">
+  <img src="/media/ch12/9728-pf2h3.png" alt="PF₂H₃ around a central phosphorus: two fluorines and three hydrogens, the P–H bonds labelled b1 (dashed), b2 and a1.">
+  <figcaption><span class="eyebrow">Figure 12.14.13</span><span>PF<sub>2</sub>H<sub>3</sub>, point group C<sub>s.</sub></span></figcaption>
+</figure>
+<div class="book-table">
+  <div class="tcap"><span class="eyebrow">Table 12.14.10</span><span>Irreducible Representations for C-Ha and C-Hb stretches in PF2H3.</span></div>
+  <table>
+    <thead><tr><th>C<sub>s</sub></th><th>E</th><th>σ<sub>h</sub></th><th>Irreducible Representation</th></tr></thead>
+    <tbody>
+      <tr><td>Γ<sub>C-Ha</sub></td><td>2</td><td>0</td><td>Γ<sub>C-Ha </sub>= A’ + A”</td></tr>
+      <tr><td>Γ<sub>C-Hb</sub></td><td>1</td><td>1</td><td>Γ<sub>C-Hb </sub>= A’</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>Applying the <span data-concept="projection-operator">projection operator method</span> to C-H<sub>A</sub> and C-H<sub>B</sub> stretches individually, the <span data-concept="salc">SALCs</span> are obtained in the same fashion as before.</p>
+<div class="book-table">
+  <div class="tcap"><span class="eyebrow">Table 12.14.11</span><span>SALCs for PF2H3 using Method 2.</span></div>
+  <table>
+    <thead><tr><th>Γ<sub>C-HB</sub></th><th>E</th><th>σ<sub>h</sub></th><th>SUM</th></tr></thead>
+    <tbody>
+      <tr><td>A’ Tj(b<sub>1</sub>)</td><td>b<sub>1</sub></td><td>b<sub>2</sub></td><td>b<sub>1 </sub>+ b<sub>2</sub></td></tr>
+      <tr><td>A” Tj(b<sub>1</sub>)</td><td>b<sub>1</sub></td><td>-b<sub>2</sub></td><td>b<sub>1</sub> - b<sub>2</sub></td></tr>
+      <tr><td>A’ T<sub>j</sub>(a<sub>1</sub>)</td><td>a<sub>1</sub></td><td>a<sub>1</sub></td><td>a<sub>1 + </sub>a<sub>1</sub></td></tr>
+    </tbody>
+  </table>
+</div>
+<div class="book-table">
+  <div class="tcap"><span class="eyebrow">Table 12.14.12</span><span>SALCs for PF2H3 using Method 2.<sup class="fn" data-note="c-cs-columns"></sup></span></div>
+  <table>
+    <thead><tr><th>Γ<sub>C-HA</sub></th><th>E</th><th>C<sub>2</sub></th><th>σ<sub>V</sub></th><th>σ<sub>V’</sub></th><th>SUM</th></tr></thead>
+    <tbody>
+      <tr><td>A<sub>1</sub>T<sub>j</sub>(a<sub>1</sub>)</td><td>a<sub>1</sub></td><td>a<sub>2</sub></td><td>a<sub>2</sub></td><td>a<sub>1</sub></td><td>2(a<sub>1</sub>+ a<sub>2</sub>)</td></tr>
+      <tr><td>B<sub>2</sub>T<sub>j</sub>(a<sub>1</sub>)</td><td>a<sub>1</sub></td><td>-a<sub>2</sub></td><td>-a<sub>2</sub></td><td>a<sub>1</sub></td><td>2(a<sub>1</sub>- a<sub>2</sub>)</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>The results are normalized and the following <span data-concept="salc">SALCs</span> are obtained for the C<sub>s</sub> molecule PF<sub>2</sub>H<sub>3</sub>:</p>
+$$ \phi_{1} A'=\frac{1}{\sqrt{2}} (b_{1} +b_{2} )+a_{1} = \frac{1}{\sqrt{3}} (b_{1} +b_{2} +a_{1}) $$
+$$ \phi_{2} A'=\frac{1}{\sqrt{2}} (b_{1} +b_{2} )-a_{1} = \frac{1}{\sqrt{3}} (b_{1} +b_{2} -a_{1}) $$
+$$ \phi A''=\frac{1}{\sqrt{2}} (b_{1} -b_{2} ) $$
+<p><sup class="fn" data-note="c-pf2h3-norm"></sup></p>
+</div>
+</section>

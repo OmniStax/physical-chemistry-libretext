@@ -1,0 +1,349 @@
+{
+ "id": "12.14",
+ "module": "433984",
+ "chapter": "12",
+ "title": "Symmetry Adapted Linear Combinations are the Sum over all Basis functions",
+ "short": "SALCs",
+ "lead": "Symmetry adapted linear combinations (SALCs) are sums of basis functions that each transform as one irreducible representation. Water's two O–H stretches are combined two ways, from the known symmetries of the modes and with the projection operator, and the same method is applied to difluorobenzene, CBr₂H₂, PtCl₄, PF₂H₃ and water's atomic orbitals.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "Written by Delmar Larsen and Andrew LaRue from a ChemWiki student module and shared under CC BY 4.0, with the module's references to Willock's Molecular Symmetry (Wiley, 2009), Evarestov and Bandura (Solid State Ionics, 2010), Bandura and coworkers (J. Phys. Chem. B 108, 7844, 2004) and Sigma-Aldrich's catalogue spectra of 1,4- and 1,2-difluorobenzene (2011); the two spectra (Figures 12.14.7 and 12.14.8), which carry no licence, and the empty axes of Figure 12.14.9 are left out, and the images of Tables 12.14.3 and 12.14.4 are set as tables.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The three problems and their keys are the book's; the keys' maths, which lost its opening delimiters at the source, is set as maths, and the Bloom levels and concept tags were chosen by AI.",
+ "figures": [
+  {
+   "id": "sim-projection",
+   "kind": "sim",
+   "number": "12.14.1",
+   "folds": [
+    "12.14.2",
+    "12.14.3",
+    "12.14.4"
+   ],
+   "originals": [
+    "/media/ch12/9720-8.JPG",
+    "/media/ch12/9719-7.JPG",
+    "/media/ch12/9716-4.JPG"
+   ],
+   "original_caption": "The stretching modes of H2O. Labeled vectors of H2O. The transformations of the basis vectors of H2O. The stretching modes of H2O resulting from Method 2.",
+   "widths": [
+    388,
+    221,
+    720
+   ],
+   "draws": [
+    "symmetry-operation",
+    "character",
+    "wavefunction"
+   ],
+   "conventions": [
+    "O",
+    "H"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "fig-12-14-5",
+   "kind": "photo",
+   "number": "12.14.5",
+   "draws": []
+  },
+  {
+   "id": "fig-12-14-6",
+   "kind": "photo",
+   "number": "12.14.6",
+   "draws": []
+  },
+  {
+   "id": "fig-12-14-10",
+   "kind": "photo",
+   "number": "12.14.10",
+   "draws": []
+  },
+  {
+   "id": "fig-12-14-11",
+   "kind": "photo",
+   "number": "12.14.11",
+   "widths": [
+    156
+   ],
+   "draws": []
+  },
+  {
+   "id": "fig-12-14-12",
+   "kind": "photo",
+   "number": "12.14.12",
+   "draws": []
+  },
+  {
+   "id": "fig-12-14-13",
+   "kind": "photo",
+   "number": "12.14.13",
+   "draws": []
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "salcs",
+   "concept": "salc",
+   "verb": "introduces"
+  },
+  {
+   "span": "salcs",
+   "concept": "irreducible-representation",
+   "verb": "uses"
+  },
+  {
+   "span": "salcs",
+   "concept": "lcao-approximation",
+   "verb": "uses"
+  },
+  {
+   "span": "background",
+   "concept": "character-table",
+   "verb": "uses"
+  },
+  {
+   "span": "background",
+   "concept": "reducible-representation",
+   "verb": "uses"
+  },
+  {
+   "span": "background",
+   "concept": "reduction-formula",
+   "verb": "uses"
+  },
+  {
+   "span": "background",
+   "concept": "vibrational-mode-count",
+   "verb": "uses"
+  },
+  {
+   "span": "constructing-salcs",
+   "concept": "salc-normalization",
+   "verb": "introduces"
+  },
+  {
+   "span": "constructing-salcs",
+   "concept": "projection-operator",
+   "verb": "introduces"
+  },
+  {
+   "span": "constructing-salcs",
+   "concept": "salc",
+   "verb": "reinforces"
+  },
+  {
+   "span": "interpreting-salcs",
+   "concept": "stretching-salcs",
+   "verb": "introduces"
+  },
+  {
+   "span": "interpreting-salcs",
+   "concept": "infrared-spectroscopy",
+   "verb": "uses"
+  },
+  {
+   "span": "interpreting-salcs",
+   "concept": "raman-scattering",
+   "verb": "uses"
+  },
+  {
+   "span": "applications",
+   "concept": "lcao-approximation",
+   "verb": "uses"
+  },
+  {
+   "span": "applications",
+   "concept": "molecular-orbital",
+   "verb": "uses"
+  },
+  {
+   "span": "applications",
+   "concept": "projection-operator",
+   "verb": "reinforces"
+  },
+  {
+   "span": "applications",
+   "concept": "stretching-salcs",
+   "verb": "reinforces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "cq1",
+   "source_id": "Construct the SALCs for C-H stretches of ortho-difluorobenzene.",
+   "source_number": "Problems 1",
+   "kind": "question",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "interpreting-salcs",
+   "prompt": "Construct the SALCs for C-H stretches of ortho-difluorobenzene.",
+   "answer": {
+    "type": "open",
+    "generated_by": "source",
+    "solution": "<p>$A_1T_j(b_1)= \\frac{1}{\\sqrt{2}} (b_{1} +b_{2})$</p><p>$B_2T_j(b_1)= \\frac{1}{\\sqrt{2}} (b_{1} -b_{2})$</p><p>$A_1T_j(b_3)= \\frac{1}{\\sqrt{2}} (b_{3} +b_{4})$</p><p>$B_2T_j(b_3)= \\frac{1}{\\sqrt{2}} (b_{3} -b_{4})$</p><p>Then add and subtract (for in phase and out of phase) the individual linear combinations found by the projection operator to give the SALCs.</p><p>$\\phi_1(A_1) = \\frac{1}{2} (b_{1} +b_{2} +b_{3} +b_{4} )$</p><p>$\\phi_2(A_1) = \\frac{1}{2} (b_{1} +b_{2} -b_{3} -b_{4} )$</p><p>$\\phi_1(B_2) = \\frac{1}{2} (b_{1} -b_{2} +b_{3} -b_{4} )$</p><p>$\\phi_2(B_2) = \\frac{1}{2} (b_{1} -b_{2} -b_{3} +b_{4} )$.</p>"
+   }
+  },
+  {
+   "id": "cq2",
+   "source_id": "Construct the SALCs for ammonia.",
+   "source_number": "Problems 2",
+   "kind": "question",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "constructing-salcs",
+   "prompt": "Construct the SALCs for ammonia.",
+   "answer": {
+    "type": "open",
+    "generated_by": "source",
+    "solution": "<p>$AT_j(b_1)= \\frac{1}{\\sqrt{3}} (b_{1} +b_{2} +b_{3} )$</p><p>$E_1T_j(b_1)= \\frac{1}{\\sqrt{6}} (2b_{1} -b_{2} -b_{3} )$</p><p>$E_2T_j(b_1)= \\frac{1}{\\sqrt{2}} (b_{2} -b_{3} )$</p>"
+   }
+  },
+  {
+   "id": "cq3",
+   "source_id": "Draw the nodes for the MOs of BeH",
+   "source_number": "Problems 3",
+   "kind": "question",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "applications",
+   "prompt": "Draw the nodes for the MOs of BeH<sub>2</sub> (determined by used of LCAOs) and rank the MOs in order of increasing energy.",
+   "figure": {
+    "src": "/media/ch12/9705-11.JPG",
+    "alt": "Four linear H–Be–H orbital sketches, open lobes one sign and filled lobes the other: all open; filled hydrogens round an open beryllium s; and two with a p lobe pair between the hydrogens, signs alternating differently."
+   },
+   "answer": {
+    "type": "open",
+    "generated_by": "source",
+    "solution": "<p><img src=\"/media/ch12/9707-13.JPG\" alt=\"The four BeH₂ orbitals ranked up an energy arrow, dashed red nodes marked: all in phase with no node at the bottom, then one node, then two, and three at the top.\"></p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "cq1",
+   "concept": "stretching-salcs"
+  },
+  {
+   "exercise": "cq1",
+   "concept": "projection-operator"
+  },
+  {
+   "exercise": "cq1",
+   "concept": "salc-normalization"
+  },
+  {
+   "exercise": "cq2",
+   "concept": "projection-operator"
+  },
+  {
+   "exercise": "cq2",
+   "concept": "salc-normalization"
+  },
+  {
+   "exercise": "cq3",
+   "concept": "salc"
+  },
+  {
+   "exercise": "cq3",
+   "concept": "mo-from-salcs"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-cut-off",
+   "kind": "correction",
+   "html": "The book's sentence breaks off after “A”."
+  },
+  {
+   "id": "c-x-chi",
+   "kind": "correction",
+   "html": "The book writes the characters as $X$: $X^R$ and $X_i^R$ are the characters $\\chi(R)$ of the reducible and $\\chi_i(R)$ of the irreducible representation, and $C^R$ is the class size $n_C$."
+  },
+  {
+   "id": "c-b1-b2",
+   "kind": "correction",
+   "html": "With water in the yz plane, as Table 12.14.2 and Table 12.14.3 place it, $b_1 - b_2$ changes sign under $C_2$ and $\\sigma_v(xz)$ and keeps it under $\\sigma_v'(yz)$, so it is $\\phi(B_2)$; the book's $\\phi(B_1)$ here and in the normalized form below is $\\phi(B_2)$."
+  },
+  {
+   "id": "c-resulting-b1",
+   "kind": "correction",
+   "html": "The second symmetry is $B_2$, as Table 12.14.4 gives it. $B_2$ transforms as $y$ and $yz$, so it is also active in both spectroscopies."
+  },
+  {
+   "id": "c-para-labels",
+   "kind": "correction",
+   "html": "The image labels all four C–H bonds $b_1$; the SALCs below number them $b_1$ to $b_4$."
+  },
+  {
+   "id": "c-ortho-norm",
+   "kind": "correction",
+   "html": "Each of these four SALCs has four coefficients of ±1, so its normalization constant is $\\frac{1}{2}$, not $\\frac{1}{\\sqrt{2}}$."
+  },
+  {
+   "id": "c-ortho-two",
+   "kind": "correction",
+   "html": "Each molecule has four C–H stretching SALCs. Ortho-difluorobenzene's fall into two symmetry species, $A_1$ and $B_1$, with two of each; para-difluorobenzene's fall into four."
+  },
+  {
+   "id": "c-px-degenerate",
+   "kind": "correction",
+   "html": "$C_{2v}$ has only one-dimensional irreducible representations, so no orbital of water is degenerate by symmetry. The out-of-plane $p$ orbital is nonbonding because no combination of the hydrogen $s$ orbitals has its symmetry."
+  },
+  {
+   "id": "c-c4-spherical",
+   "kind": "correction",
+   "html": "PtCl₄ is square planar, not spherical. $C_4$ is a subgroup of $D_{4h}$, and its four rotations are enough to carry $b_1$ onto each Pt–Cl bond."
+  },
+  {
+   "id": "c-central-p",
+   "kind": "correction",
+   "html": "The central atom of PF₂H₃ is phosphorus, so the stretches are P–H stretches."
+  },
+  {
+   "id": "c-cs-columns",
+   "kind": "correction",
+   "html": "PF₂H₃ belongs to $C_s$, whose only operations are $E$ and $\\sigma$. The $C_2$, $\\sigma_v$, $\\sigma_v'$ columns and the $A_1$ and $B_2$ rows of this table do not apply to it."
+  },
+  {
+   "id": "c-pf2h3-norm",
+   "kind": "correction",
+   "html": "$\\frac{1}{\\sqrt{2}}(b_1+b_2) \\pm a_1$ is not equal to $\\frac{1}{\\sqrt{3}}(b_1+b_2 \\pm a_1)$: normalized, it is $\\frac{1}{2}(b_1+b_2 \\pm \\sqrt{2}\\,a_1)$. Symmetry alone does not fix the two $A'$ combinations, since any two orthogonal mixtures of $\\frac{1}{\\sqrt{2}}(b_1+b_2)$ and $a_1$ are $A'$."
+  },
+  {
+   "id": "c-fig-b1",
+   "kind": "correction",
+   "html": "The image labels the antisymmetric stretch B₁. With water in the yz plane, as this example places it, the stretch is $B_2$.",
+   "figure": "sim-projection"
+  }
+ ]
+}

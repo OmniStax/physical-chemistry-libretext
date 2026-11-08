@@ -1,0 +1,161 @@
+{
+ "id": "12.7",
+ "module": "13490",
+ "chapter": "12",
+ "title": "Characters of Irreducible Representations",
+ "short": "Irreducible representations",
+ "lead": "The irreducible representations of a point group are its symmetry species, named by Mulliken's letters A, B, E and T and their marks. Groups and subgroups correlate species with one another, and representations can be multiplied in a direct product.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "Written by Claire Vallance and Jerry LaRue and shared under CC BY-NC-SA 4.0, with nothing left out.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "medium"
+   }
+  ],
+  "figures": []
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The section prints no exercises; the one on E × E in C₃ᵥ is new and AI-written, with its characters multiplied and checked against the C₃ᵥ table. Its Bloom level and concept tags were chosen by AI.",
+ "figures": [],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "symbols-of-irreducible-representations",
+   "concept": "irreducible-representation",
+   "verb": "introduces"
+  },
+  {
+   "span": "symbols-of-irreducible-representations",
+   "concept": "character",
+   "verb": "uses"
+  },
+  {
+   "span": "symbols-of-irreducible-representations",
+   "concept": "principal-axis",
+   "verb": "uses"
+  },
+  {
+   "span": "complex-characters",
+   "concept": "complex-irreps",
+   "verb": "introduces"
+  },
+  {
+   "span": "complex-characters",
+   "concept": "character-table",
+   "verb": "uses"
+  },
+  {
+   "span": "groups-and-subgroups",
+   "concept": "correlation-diagram",
+   "verb": "introduces"
+  },
+  {
+   "span": "groups-and-subgroups",
+   "concept": "group-order",
+   "verb": "uses"
+  },
+  {
+   "span": "infinite-groups",
+   "concept": "correlation-diagram",
+   "verb": "reinforces"
+  },
+  {
+   "span": "infinite-groups",
+   "concept": "tabular-reduction",
+   "verb": "uses"
+  },
+  {
+   "span": "direct-product",
+   "concept": "direct-product",
+   "verb": "introduces"
+  },
+  {
+   "span": "direct-product",
+   "concept": "character",
+   "verb": "uses"
+  },
+  {
+   "span": "direct-product",
+   "concept": "irreducible-representation",
+   "verb": "reinforces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "The direct product of two irreducible representations give either a reducible or irreducible representation of the same group",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "direct-product",
+   "prompt": "<p>In $C_{3v}$ the $E$ representation has characters $2$, $-1$ and $0$ under $E$, $C_3$ and $\\sigma_v$ (Equation 12.6.6). Find the characters of the direct product $E \\otimes E$ under (a) $E$, (b) $C_3$ and (c) $\\sigma_v$, and (d) the number of times $A_1$ appears in it.</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 4,
+      "hint": "Multiply the characters operation by operation."
+     },
+     {
+      "part": "b",
+      "value": 1
+     },
+     {
+      "part": "c",
+      "value": 0
+     },
+     {
+      "part": "d",
+      "value": 1
+     }
+    ],
+    "solution": "<p>The characters of a direct product are the products of the characters at each operation: $2 \\times 2 = 4$, $(-1)(-1) = 1$ and $0 \\times 0 = 0$. The rows of the $C_{3v}$ table add up to this: $A_1 + A_2 + E$ gives $1 + 1 + 2 = 4$, $1 + 1 - 1 = 1$ and $1 - 1 + 0 = 0$. So $E \\otimes E = A_1 + A_2 + E$, a reducible representation (rule 4) that contains the totally symmetric $A_1$ once (rule 5).</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "direct-product"
+  },
+  {
+   "exercise": "a1",
+   "concept": "irreducible-representation"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-missing-argument",
+   "kind": "correction",
+   "html": "This opens on an argument from Vallance's notes that the book does not print, in which the $s$ basis of NH₃ is changed into combinations such as $s_1'$ that split its representation into a 1D and a 2D block. The 1D and 2D irreducible representations named below are those blocks."
+  },
+  {
+   "id": "c-cut-off",
+   "kind": "correction",
+   "html": "The third statement is cut off at the source; like the two above it, it says that $f$ has the same symmetry as $A_2$."
+  },
+  {
+   "id": "c-appendix-b",
+   "kind": "correction",
+   "html": "Appendix B is Vallance's; in this book the character tables are in the book's sheet of character tables."
+  },
+  {
+   "id": "c-c3-e",
+   "kind": "correction",
+   "html": "Adding the two rows of $E$ gives $\\epsilon + \\epsilon^* = 2\\cos 120^\\circ = -1$ under both $C_3$ and $C_3^2$, so the combined $E$ has characters $2$, $-1$, $-1$; the last entry of Equation 12.7.2 is $-1$, not $1$."
+  },
+  {
+   "id": "c-rule-6",
+   "kind": "correction",
+   "html": "Rules 5 and 6 hold for irreducible representations: a reducible representation can contain the totally symmetric representation without being multiplied by itself."
+  }
+ ]
+}

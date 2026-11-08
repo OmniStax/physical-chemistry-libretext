@@ -127,7 +127,7 @@ function eig(A) {
       }
       hits.push({ x, y, r: 12, name: `${UNI[name(l.id)]}: ${minus(fmt(l.e, 2))} eV, ${occ[i] === 2 ? 'two electrons' : occ[i] === 1 ? 'one electron' : 'empty'}` });
     });
-    F.legend(ctx, box, [{ s: 'occupied', color: ce, w: 5 }, { s: 'empty', color: alpha(ce, 0.5), w: 3, dash: [10, 10] }], { corner: 'br' });
+    F.legend(ctx, { l: box.l, r: box.r, t: ax.Y(-19.8), b: ax.Y(-24.9) }, [{ s: 'occupied', color: ce, w: 5 }, { s: 'empty', color: alpha(ce, 0.5), w: 3, dash: [10, 10] }], { corner: 'br', row: true });
     /* the sum of occupied levels against the angle */
     const b2x = { l: 170, r: 820, t: 545, b: 705 };
     const ref = sumOcc(mol.n, Math.PI);

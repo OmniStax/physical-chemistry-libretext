@@ -15,28 +15,28 @@ const { tex, C, PAL, alpha, register, fmt } = F;
    Opens on sigma(xy), the book's Figure 12.4.1. */
 (function () {
   const d = F.sim(root, 'sim-vector-ops');
-  const B = 1.4, U = [1.0, 0.5, 0.8];
+  const B = 1.2, U = [1.0, 0.5, 0.8];
   const OPS = {
-    E: { label: '$E$', tex: '\\kEop', M: [[1, 0, 0], [0, 1, 0], [0, 0, 1]], el: null, say: 'The identity leaves u where it is.' },
-    sxy: { label: '$\\sigma(xy)$', tex: '\\ksigmaop(xy)', M: [[1, 0, 0], [0, 1, 0], [0, 0, -1]], el: { plane: [0, 0, 1] }, say: 'Reflection in the xy plane changes the sign of z alone.' },
-    sxz: { label: '$\\sigma(xz)$', tex: '\\ksigmaop(xz)', M: [[1, 0, 0], [0, -1, 0], [0, 0, 1]], el: { plane: [0, 1, 0] }, say: 'Reflection in the xz plane changes the sign of y alone.' },
-    syz: { label: '$\\sigma(yz)$', tex: '\\ksigmaop(yz)', M: [[-1, 0, 0], [0, 1, 0], [0, 0, 1]], el: { plane: [1, 0, 0] }, say: 'Reflection in the yz plane changes the sign of x alone.' },
+    E: { label: 'E', tex: '\\kEop', M: [[1, 0, 0], [0, 1, 0], [0, 0, 1]], el: null, say: 'The identity leaves u where it is.' },
+    sxy: { label: 'σ(xy)', tex: '\\ksigmaop(xy)', M: [[1, 0, 0], [0, 1, 0], [0, 0, -1]], el: { plane: [0, 0, 1] }, say: 'Reflection in the xy plane changes the sign of z alone.' },
+    sxz: { label: 'σ(xz)', tex: '\\ksigmaop(xz)', M: [[1, 0, 0], [0, -1, 0], [0, 0, 1]], el: { plane: [0, 1, 0] }, say: 'Reflection in the xz plane changes the sign of y alone.' },
+    syz: { label: 'σ(yz)', tex: '\\ksigmaop(yz)', M: [[-1, 0, 0], [0, 1, 0], [0, 0, 1]], el: { plane: [1, 0, 0] }, say: 'Reflection in the yz plane changes the sign of x alone.' },
     C2: { n: 2 }, C3: { n: 3 }, C4: { n: 4 }, C6: { n: 6 },
-    i: { label: '$i$', tex: '\\kiop', M: [[-1, 0, 0], [0, -1, 0], [0, 0, -1]], el: { point: true }, say: 'Inversion changes the sign of all three coordinates.' },
+    i: { label: 'i', tex: '\\kiop', M: [[-1, 0, 0], [0, -1, 0], [0, 0, -1]], el: { point: true }, say: 'Inversion changes the sign of all three coordinates.' },
   };
   for (const k of ['C2', 'C3', 'C4', 'C6']) {
     const o = OPS[k], a = 2 * Math.PI / o.n, c = Math.cos(a), s = Math.sin(a);
-    Object.assign(o, { label: `$C_${o.n}$`, tex: o.n === 2 ? '\\kCtwo' : '\\kCn', M: [[c, -s, 0], [s, c, 0], [0, 0, 1]], el: { axis: true },
+    Object.assign(o, { label: `C${'₂₃₄₅₆'[o.n - 2]}`, tex: o.n === 2 ? '\\kCtwo' : '\\kCn', M: [[c, -s, 0], [s, c, 0], [0, 0, 1]], el: { axis: true },
       say: `$C_${o.n}$ turns u by ${fmt(360 / o.n, 0)}° about z: x and y mix, z stays.` });
   }
   const order = ['E', 'sxy', 'sxz', 'syz', 'C2', 'C3', 'C4', 'C6', 'i'];
   const K = F.select(d.controls, { label: '\\text{operation}', aria: 'the symmetry operation', key: 'op', value: 'sxy',
     options: order.map((v) => ({ value: v, label: OPS[v].label })), onInput: () => cy.reset() });
   const cy = F.cycle(() => 2.4, 1.6);
-  const S = F.space3d(d, { box: [[-B, B], [-B, B], [-B, B]], h: 560, turn: -0.65, tilt: 0.38, fit: 2.5,
+  const S = F.space3d(d, { box: [[-B, B], [-B, B], [-B, B]], h: 560, turn: -0.65, tilt: 0.38, fit: 3.0,
     pitch: [-85 * Math.PI / 180, 85 * Math.PI / 180], spin: 'off', zoom: false });
   const apply = (M, v) => M.map((r) => r[0] * v[0] + r[1] * v[1] + r[2] * v[2]);
-  const num = (v) => { const r = Math.round(v * 1000) / 1000; return fmt(Math.abs(r) < 5e-4 ? 0 : r, Math.abs(r - Math.round(r)) < 5e-4 ? 0 : 3); };
+  const num = (v) => { const r = Math.round(v * 1000) / 1000; return String(Math.abs(r) < 5e-4 ? 0 : r); };
   const mat = (M) => `\\begin{pmatrix} ${M.map((r) => r.map(num).join(' & ')).join(' \\\\ ')} \\end{pmatrix}`;
   const col = (v) => `\\begin{pmatrix} ${v.map(num).join(' \\\\ ')} \\end{pmatrix}`;
   let lastOp = '';
@@ -51,7 +51,7 @@ const { tex, C, PAL, alpha, register, fmt } = F;
       lastOp = K.value;
       S.set('axes', F.space.axes([[-B, B], [-B, B], [-B, B]], { ticks: 0 }));
       const el = op.el, marks = [];
-      if (el && el.plane) marks.push(...F.space.plane([0, 0, 0], el.plane, cs, { size: 1.15, alpha: 0.18 }).map((m) => ({ ...m, name: `the mirror plane of ${op.label.replace(/\$/g, '').replace('\\sigma', 'σ')}` })));
+      if (el && el.plane) marks.push(...F.space.plane([0, 0, 0], el.plane, cs, { size: 1.15, alpha: 0.18 }).map((m) => ({ ...m, name: `the mirror plane of ${op.label}` })));
       if (el && el.axis) marks.push(...F.space.line([0, 0, 0], [0, 0, 1], cs, { t: [-1.3, 1.3], w: 4 }).map((m) => ({ ...m, name: `the ${op.n}-fold axis, z` })));
       if (el && el.point) marks.push({ k: 'dot', p: [0, 0, 0], color: cs, r: 9, name: 'the centre of inversion, the origin' });
       S.set('element', marks);

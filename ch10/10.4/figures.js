@@ -219,7 +219,7 @@ const vertical = (b) => peaks(b).reduce((a, q) => (q.p > a.p ? q : a)).E;
     /* the band, sideways */
     const sb = { l: 880, r: 1320, t: top.t, b: top.b };
     line(ctx, sb.l, sb.t, sb.l, sb.b, PAL.ink, 2);
-    text(ctx, 'photoelectron band', sb.l + 18, sb.t + 4, PAL.ink, { size: 18, align: 'center' });
+    text(ctx, 'photoelectron band', sb.l + 12, sb.t + 4, PAL.ink, { size: 18 });
     text(ctx, 'intensity →', sb.r, sb.b + 24, PAL.muted, { size: 17, align: 'right' });
     for (let v = 0; v < 13; v++) {
       const E = IEAD + v * HW1; if (E > 18.9) break;
