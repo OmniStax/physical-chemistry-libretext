@@ -292,12 +292,12 @@
   {
    "id": "c-eq-10-11",
    "kind": "correction",
-   "html": "Equations 10 and 11 are the answer's own numbers for the two displays that define the shift operators and write $\\hat{I}_{ix}$ and $\\hat{I}_{iy}$ in them, in the section on finding the states."
+   "html": "Equations 10 and 11 are the answer's own numbers for the two displays that define the shift operators and write $\\hat{I}_{ix}$ and $\\hat{I}_{iy}$ in them, in the <a class=\"xref\" href=\"#14.7-finding-the-states\">section on finding the states</a>."
   },
   {
    "id": "c-other-answers",
    "kind": "correction",
-   "html": "The diagrams of the other answers are the level diagrams of the AX and A₂ cases further down this page."
+   "html": "The diagrams of the other answers are the level diagrams of the AX and A₂ cases <a class=\"figref\" href=\"#14.7-sim-ab\">further down this page</a>."
   },
   {
    "id": "c-omega-prime",
@@ -525,10 +525,12 @@
        "cap": "Put in $E_2 = J/4$ and then $E_3 = -3J/4$."
       },
       {
-       "tex": "\\begin{array}{l} \\mk{p}{|2\\rangle = \\dfrac{1}{\\sqrt{2}}(|\\alpha_1\\beta_2\\rangle + |\\beta_1\\alpha_2\\rangle)} \\\\ \\mk{q}{|3\\rangle = \\dfrac{1}{\\sqrt{2}}(|\\alpha_1\\beta_2\\rangle - |\\beta_1\\alpha_2\\rangle)} \\end{array}",
+       "tex": "\\begin{array}{l} \\mk{a}{|1\\rangle = |\\alpha_1\\alpha_2\\rangle} \\\\ \\mk{p}{|2\\rangle = \\dfrac{1}{\\sqrt{2}}(|\\alpha_1\\beta_2\\rangle + |\\beta_1\\alpha_2\\rangle)} \\\\ \\mk{q}{|3\\rangle = \\dfrac{1}{\\sqrt{2}}(|\\alpha_1\\beta_2\\rangle - |\\beta_1\\alpha_2\\rangle)} \\\\ \\mk{e}{|4\\rangle = |\\beta_1\\beta_2\\rangle} \\end{array}",
        "uses": [
+        0,
         3
-       ]
+       ],
+       "cap": "$|\\alpha_1\\alpha_2\\rangle$ and $|\\beta_1\\beta_2\\rangle$ stand alone in their rows of $\\mathbf{H}$, so each is already an eigenfunction."
       }
      ]
     }

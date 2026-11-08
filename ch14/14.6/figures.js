@@ -91,7 +91,7 @@ const lor = (x, x0, w) => (w * w) / ((x - x0) * (x - x0) + w * w);
     void top;
     const s0 = m.sig[m.sig.length - 1];
     tex(d.readout, `\\knu - \\knuo = \\delta \\times \\knuo = ${fmt(s0.d, 2)}\\ \\text{ppm} \\times ${fmt(nu0, 0)}\\ \\text{MHz} = ${fmt(s0.d * nu0, 0)}\\ \\text{Hz}`
-      + ` \\\\ \\kJcc = ${fmt(J0, 1)}\\ \\text{Hz} = \\dfrac{${fmt(J0, 1)}\\ \\text{Hz}}{${fmt(nu0, 0)}\\ \\text{MHz}} = ${fmt(J0 / nu0, 3)}\\ \\text{ppm}`);
+      + ` \\\\ \\dfrac{\\kJcc}{\\knuo} = \\dfrac{${fmt(J0, 1)}\\ \\text{Hz}}{${fmt(nu0, 0)}\\ \\text{MHz}} = ${fmt(J0 / nu0, 3)}\\ \\text{ppm}`);
   }
   register(d.fig, { update: () => {}, draw });
 })();
@@ -159,7 +159,7 @@ const lor = (x, x0, w) => (w * w) / ((x - x0) * (x - x0) + w * w);
     const n = +N.value, from = +N.from, k = N.k;
     const row = Array.from({ length: n + 1 }, (_, j) => binom(n, j));
     topline(ctx, n === 0 ? 'No neighbours: the signal stays a singlet.'
-      : `${n} neighbour${n > 1 ? 's' : ''}: ${2 ** n} arrangements of their spins fall into ${n + 1} groups, a ${NAMES[n]} in the ratio ${row.join(':')}.`);
+      : `${n} neighbour${n > 1 ? 's' : ''}: ${2 ** n} arrangements of ${n > 1 ? 'their spins' : 'its spin'} fall into ${n + 1} groups, a ${NAMES[n]} in the ratio ${row.join(':')}.`);
     /* the field the spins line up with */
     const cB = C('magnetic-field');
     arrow(ctx, 50, 430, 190, 430, cB, 5);
@@ -215,7 +215,7 @@ const lor = (x, x0, w) => (w * w) / ((x - x0) * (x - x0) + w * w);
     const full = (p.n1 + 1) * (p.n2 + 1), seen = ls.length;
     const eq = Math.abs(j1 - j2) < 0.05;
     topline(ctx, eq ? `With $\\kJcc_{1} = \\kJcc_{2}$ the ${full} lines of ${p.lab} fall on ${seen} subpeaks: it looks like a ${NAMES[seen - 1] || seen + '-line multiplet'}.`
-      : `${p.lab}: split ${p.n1 === 1 ? 'into a doublet' : 'into a triplet'} by ${fmt(j1, 1)} Hz, then each line into a doublet by ${fmt(j2, 1)} Hz: ${seen} lines.`);
+      : `${p.lab}: split ${p.n1 === 1 ? 'into a doublet' : 'into a triplet'} by ${fmt(j1, 1)}\u00a0Hz, then each line into a doublet by ${fmt(j2, 1)}\u00a0Hz: ${seen} lines.`);
     /* the tree */
     const X = (hz) => CX + hz * PX, t0 = 150, lh = 64;
     line(ctx, CX, t0 - 20, CX, t0, PAL.ink, 3);

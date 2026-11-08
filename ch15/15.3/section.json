@@ -1,0 +1,239 @@
+{
+ "id": "15.3",
+ "module": "13649",
+ "chapter": "15",
+ "title": "A Two-Level System Cannot Achieve a Population Inversion",
+ "short": "Two-level systems",
+ "lead": "What a laser's light must be, and what that asks of the atoms that make it: stimulated emission has to outrun absorption. The medium here is an idealized atom with only two energy levels, driven by a pump.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "Adapted from Newman, Maleki and Neils, shared under CC BY-NC-SA 4.0.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The section prints no exercises; the one here is new and AI-written, its answer checked by computation, and its Bloom level and concept tags were chosen by AI.",
+ "figures": [
+  {
+   "id": "sim-two-level",
+   "kind": "sim",
+   "number": "15.3.1",
+   "originals": [
+    "/media/ch15/400442-Two_level_laser.svg"
+   ],
+   "original_caption": "A two-level lasing system. (CC BY-NC; Ümit Kaya via LibreTexts)",
+   "draws": [
+    "energy-density",
+    "frequency",
+    "time"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "lasing-in-two-level-systems",
+   "concept": "laser-light-properties",
+   "verb": "introduces"
+  },
+  {
+   "span": "lasing-in-two-level-systems",
+   "concept": "laser-efficiency",
+   "verb": "introduces"
+  },
+  {
+   "span": "lasing-in-two-level-systems",
+   "concept": "metastable-state",
+   "verb": "introduces"
+  },
+  {
+   "span": "lasing-in-two-level-systems",
+   "concept": "lasing-condition",
+   "verb": "introduces"
+  },
+  {
+   "span": "lasing-in-two-level-systems",
+   "concept": "pumping",
+   "verb": "introduces"
+  },
+  {
+   "span": "lasing-in-two-level-systems",
+   "concept": "two-level-no-inversion",
+   "verb": "introduces"
+  },
+  {
+   "span": "lasing-in-two-level-systems",
+   "concept": "stimulated-emission",
+   "verb": "uses"
+  },
+  {
+   "span": "lasing-in-two-level-systems",
+   "concept": "spontaneous-emission",
+   "verb": "uses"
+  },
+  {
+   "span": "lasing-in-two-level-systems",
+   "concept": "einstein-relations",
+   "verb": "uses"
+  },
+  {
+   "span": "lasing-in-two-level-systems",
+   "concept": "two-level-rate-equation",
+   "verb": "uses"
+  },
+  {
+   "span": "lasing-in-two-level-systems",
+   "concept": "population-inversion",
+   "verb": "reinforces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "Achieving population inversion in a two-level atom is not very practical.",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "lasing-in-two-level-systems",
+   "prompt": "<p>A pump drives the two levels of an atom with $g_1 = g_2$. Its light gives $B_{12}\\rho_{\\nu}(\\nu_{12}) = 4.0 \\times 10^{6}\\ \\text{s}^{-1}$, and the upper level decays spontaneously with $A_{21} = 1.0 \\times 10^{6}\\ \\text{s}^{-1}$. Find the steady-state ratio $N_2/N_1$ (a) for this pump and (b) for a pump ten times as strong.</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 0.8,
+      "hint": "Set dN₂/dt in (15.2.2) to zero with B₂₁ = B₁₂ and solve for N₂/N₁."
+     },
+     {
+      "part": "b",
+      "value": 0.976,
+      "tol": 0.005
+     }
+    ],
+    "solution": "<p>At steady state (15.2.2) gives $0 = B_{12}\\rho_{\\nu}N_1 - A_{21}N_2 - B_{21}\\rho_{\\nu}N_2$, and with $B_{21} = B_{12}$ this is $N_2/N_1 = B_{12}\\rho_{\\nu}/(A_{21} + B_{12}\\rho_{\\nu})$. (a) $4.0/(1.0 + 4.0) = 0.80$. (b) $40/(1.0 + 40) = 0.976$. Ten times the pump moves the ratio closer to 1, but $A_{21}$ in the denominator keeps it below 1 for any pump, so the two levels never invert.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "two-level-no-inversion"
+  },
+  {
+   "exercise": "a1",
+   "concept": "two-level-rate-equation"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-equal-b",
+   "kind": "correction",
+   "html": "(15.2.11) gives $g_1B_{12} = g_2B_{21}$, so $B_{21} = B_{12}$ holds when the two levels have the same degeneracy, $g_1 = g_2$, as the two-level atom here is taken to have."
+  },
+  {
+   "id": "c-costly",
+   "kind": "correction",
+   "html": "Steady pumping cannot do it at any cost. At steady state the rate equation (15.2.2) gives $N_2/N_1 = B_{12}\\rho_{\\nu}/(A_{21} + B_{12}\\rho_{\\nu})$, which stays below 1 however strong the pump, as the opening of 15.4 says: optical pumping at most equalizes the two populations."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "two-level-ratio",
+   "what": "why two levels never invert",
+   "source": "Physical Chemistry (LibreTexts), 15.3 A Two-Level System Cannot Achieve a Population Inversion",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\dfrac{dN_2(t)}{dt} = B_{12}\\krhonu(\\knuonetwo)N_1(t) - A_{21}N_2(t) - B_{21}\\krhonu(\\knutwoone)N_2(t)",
+       "src": "(15.2.2)"
+      },
+      {
+       "text": "Under a steady pump the populations stop changing, $dN_2(t)/dt = 0$.",
+       "src": "(15.2.3)"
+      },
+      {
+       "tex": "B_{21} = B_{12}",
+       "src": "15.3",
+       "drv": "15.2/einstein-relations"
+      },
+      {
+       "tex": "\\krhonu(\\knuonetwo) = \\krhonu(\\knutwoone)",
+       "src": "15.3"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{d}{\\dfrac{dN_2(t)}{dt}} = \\mk{a}{B_{12}\\krhonu(\\knuonetwo)N_1(t)} - \\mk{s}{A_{21}N_2(t)} - \\mk{e}{B_{21}\\krhonu(\\knutwoone)N_2(t)}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{d}{0} = \\mk{a}{B_{12}\\krhonu(\\knuonetwo)N_1} - \\mk{s}{A_{21}N_2} - \\mk{e}{B_{21}\\krhonu(\\knutwoone)N_2}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{d}{0} = \\mk{a}{B_{12}\\krhonu(\\knuonetwo)N_1} - \\mk{s}{A_{21}N_2} - \\mk{e}{B_{12}\\krhonu(\\knuonetwo)N_2}",
+       "uses": [
+        2,
+        3
+       ]
+      },
+      {
+       "tex": "\\mk{n}{N_2\\left(A_{21} + B_{12}\\krhonu(\\knuonetwo)\\right)} = \\mk{a}{B_{12}\\krhonu(\\knuonetwo)N_1}",
+       "uses": [],
+       "map": {
+        "s": "n",
+        "e": "n"
+       }
+      },
+      {
+       "tex": "\\mk{r}{\\dfrac{N_2}{N_1}} = \\mk{q}{\\dfrac{B_{12}\\krhonu(\\knuonetwo)}{A_{21} + B_{12}\\krhonu(\\knuonetwo)}}",
+       "uses": [],
+       "map": {
+        "n": [
+         "r",
+         "q"
+        ],
+        "a": [
+         "r",
+         "q"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{r}{\\dfrac{N_2}{N_1}} < \\mk{o}{1}",
+       "uses": [],
+       "map": {
+        "q": "o"
+       },
+       "cap": "The denominator exceeds the numerator by $A_{21}$, which is positive, so the ratio stays below 1 and reaches it only as $\\krhonu$ grows without limit."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

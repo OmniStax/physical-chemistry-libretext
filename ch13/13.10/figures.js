@@ -36,7 +36,7 @@ function readout(host, main, small) { tex(host, main, false, {}); if (small) { c
     eubx: { sp: 'e_u', kind: 'bend', act: 'IR active with $x$- or $y$-polarized light', d: [[-k, 0, 0], z, [1, 0, 0], z, [1, 0, 0]] },
     euby: { sp: 'e_u', kind: 'bend', act: 'IR active with $x$- or $y$-polarized light', d: [[0, -k, 0], [0, 1, 0], z, [0, 1, 0], z] },
   };
-  const LABEL = { a1g: 'a₁g stretch', b1g: 'b₁g stretch', b2g: 'b₂g bend', a2u: 'a₂u bend', b2u: 'b₂u bend', eusx: 'e_u stretch (x)', eusy: 'e_u stretch (y)', eubx: 'e_u bend (x)', euby: 'e_u bend (y)' };
+  const LABEL = { a1g: 'a₁g stretch', b1g: 'b₁g stretch', b2g: 'b₂g bend', a2u: 'a₂u bend', b2u: 'b₂u bend', eusx: 'eᵤ stretch (x)', eusy: 'eᵤ stretch (y)', eubx: 'eᵤ bend (x)', euby: 'eᵤ bend (y)' };
   const M = F.select(d.controls, { label: '\\text{mode}', options: Object.keys(MODES).map((value) => ({ value, label: LABEL[value] })), value: 'a1g', aria: 'the vibration of the ion to show', onInput: () => cy.reset() });
   const cy = cycle(() => Infinity, 0);
   const v = F.view3d(d.stage, { h: 480, dist: 13, tilt: 0.55, pitch: [-1.22, 1.45], yaw: 'free', spin: 'off', zoom: false });

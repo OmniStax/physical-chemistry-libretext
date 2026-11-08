@@ -113,8 +113,8 @@ const DEG = Math.PI / 180, TAU = 2 * Math.PI;
     S.headline(`At ${fmt(m.b, 2)} T the proton precesses ${fmt(m.dHz, 0)} Hz faster than the standard: δ = ${fmt(m.delta, 2)} ppm.`);
     drawStrip(m);
     const sl = SG.v;
-    tex(d.readout, `\\kBloc = (1 - \\sigma)\\kB = (1 - ${fmt(sl, 2)}\\times10^{-6})(${fmt(m.b, 2)}\\ \\text{T}) = ${fmt(m.bloc, 6)}\\ \\text{T}`
-      + ` \\\\ \\knuL = \\dfrac{\\gamma \\kBloc}{2\\pi} = (41.67\\ \\text{MHz/T})(${fmt(m.bloc, 6)}\\ \\text{T}) = ${fmt(m.nu, 6)}\\ \\text{MHz}`
+    tex(d.readout, `\\kBloc = (1 - \\sigma)\\kB = (1 - ${fmt(sl, 2)}\\times10^{-6})(${fmt(m.b, 2)}\\ \\text{T}) = ${fmt(m.bloc, 8)}\\ \\text{T}`
+      + ` \\\\ \\knuL = \\dfrac{\\gamma \\kBloc}{2\\pi} = (${fmt(G, 4)}\\ \\text{MHz/T})(${fmt(m.bloc, 8)}\\ \\text{T}) = ${fmt(m.nu, 6)}\\ \\text{MHz}`
       + ` \\\\ \\delta = \\dfrac{\\knu - \\knuo}{\\knuo}\\times10^6 = \\dfrac{${fmt(m.dHz, 1)}\\ \\text{Hz}}{${fmt(m.nu0, 6)}\\ \\text{MHz}}\\times10^6 = ${fmt(m.delta, 2)}\\ \\text{ppm}`
       + ` \\\\ \\small\\text{drawn }${fmt(m.nu0 * 1e6 / (BASE * m.b / 2.4) / 1e8, 1)}\\times10^{8}\\text{ times slower; the proton's lead drawn }10^{5}\\text{ times larger}`);
   }

@@ -473,6 +473,13 @@
    "sym": "n",
    "meaning": "the number of equivalent nuclei a given nucleus is coupled to",
    "section": "14.8"
+  },
+  {
+   "sym": "nu_0",
+   "type": "frequency",
+   "meaning": "the resonance frequency of the standard, TMS, which is the spectrometer frequency",
+   "unit": "MHz",
+   "section": "14.6"
   }
  ]
 }

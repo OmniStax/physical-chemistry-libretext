@@ -32,12 +32,12 @@ const TAU = 2 * Math.PI;
   };
   const M = F.select(d.controls, { label: '\\text{motion}', options: Object.entries(MODES).map(([value, m]) => ({ value, label: m.name })), value: 'sym', aria: 'the motion of the CH₂ group to show', onInput: () => cy.reset() });
   const cy = cycle(() => Infinity, 0);
-  const v = F.view3d(d.stage, { h: 480, dist: 11, tilt: 0.35, pitch: [-0.3, 1.3], yaw: [-1.31, 1.31], spin: 'off', zoom: false });
+  const v = F.view3d(d.stage, { h: 480, dist: 13, tilt: 0.3, pitch: [-0.3, 1.3], yaw: [-1.31, 1.31], spin: 'off', zoom: false });
   const g = v.part(0);
-  if (v.setView) v.setView(0.55, 0.35);
+  if (v.setView) v.setView(-0.6, 0.3);
   const flat = d.stage.querySelector('.three-none') ? F.makeCanvas(d.stage, 480) : null;
   function paintFlat(P) {
-    const { ctx } = begin(flat), yaw = 0.55, p = 0.35, k = 130, cx = 700, cy0 = 260;
+    const { ctx } = begin(flat), yaw = -0.6, p = 0.3, k = 130, cx = 700, cy0 = 260;
     const pr = (q) => { const x = q[0] * Math.cos(yaw) + q[2] * Math.sin(yaw), z = -q[0] * Math.sin(yaw) + q[2] * Math.cos(yaw);
       return { x: cx + x * k / S, y: cy0 - (q[1] * Math.cos(p) - z * Math.sin(p)) * k / S, z: q[1] * Math.sin(p) + z * Math.cos(p) }; };
     const Q = P.map(pr);

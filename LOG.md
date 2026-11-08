@@ -838,3 +838,54 @@ Chapters 1–14 reconverted to scratch, all 166 source.md byte-identical. `md2ht
 longer crashes on a figure panel served from outside LibreTexts and lists such URLs in the
 row's `_external`; Chapters 1–14's 150 drafts regenerated in scratch: identical.
 `check:content`: no errors.
+
+## Chapter 13 pass · 2026-11-08
+
+Built: the intro, 13.1–13.14 and the summary page (13.E empty, not built). 21 figure rows:
+15 interactive (8 moving: the EM wave, the spectrum built line by line, the vertical
+transition, the CH₂ motions, CO's normal coordinate, PtCl₄²⁻'s modes, the driven two-level
+system, the dipole during a vibration; 4 in 3D: the EM wave and the spheroid mathematical,
+CH₂ and PtCl₄²⁻ physical), 2 faithful copies and 4 kept photographs. 10 derivations (13.2,
+13.3, 13.4, 13.6, 13.7 ×2, 13.9, 13.11 ×2, 13.12). 17 exercises, all `exercise` kind in the
+Exercises document: 3 from the book (13.1.1, 13.5.1, 13.5.2, AI solutions) and 14 AI
+exercises. 56 footnotes, the AI-marked corrections of the book among them, besides
+derivation notes.
+
+Literature values from memory, **still unchecked** against the NIST WebBook or Huber–Herzberg:
+HCl's α = B̃₀ − B̃₁ ≈ 0.31 cm⁻¹ (13.3's `sim-branches` detent) and I₂'s X and B constants
+(ν̃″_e 214.5, χ̃″_eν̃″_e 0.614, R″_e 2.666 Å; T_el 15 769, ν̃′_e 125.7, χ̃′_eν̃′_e 0.764 cm⁻¹,
+R′_e 3.024 Å, B′_e 0.029 cm⁻¹; 13.6's `sim-vibronic`). Both figures' code notes name Huber
+and Herzberg and say "from memory, unchecked"; both captions now name Huber and Herzberg
+as the source of the numbers.
+
+Chapter pass: `node --check` clean on all 12 `figures.js`. The app links no "Equation N.M.K"
+by itself, so 13.4's three citations of (13.4.3) and (13.4.10), numbers that live only in
+the derivation, now link `#13.4-drv-nonrigid-levels` (`class="xref"`); 13.9, 13.11 and
+13.12 cite no derivation-only number, and 13.7's notes cite the replaced displays as
+corrections. Book sentences restored into derivations without showing a fact twice: 13.12's
+"where N_JM is a normalization constant", "the standard substitution", "so ΔM = 0 is part
+of the rigid rotator selection rule", "Integration over φ for M = M′ gives 2π" and
+"Substituting into the integral one obtains an integral which will vanish unless J′ = J + 1
+or J′ = J − 1" (replacing AI reasons); 13.11's "V(r) is an amplitude of polarization vector,
+which we can ignore for now" and the fact "ω is comparable to the natural frequency ω₀" in
+the book's words; 13.7's "complete the square" and "The integral is a Gaussian integral";
+13.9's last reason no longer repeats "the energy is the sum of independent energies", which
+its fact states. Figures: 13.10.3's caption, mode menu and original caption wrote "e_u" raw
+(now e<sub>u</sub>, eᵤ and $e_u$, the book's subscripts kept); 13.9.1's CH₂ opened with a
+backbone carbon close to the camera and cut by the frame (now yaw −0.6, pitch 0.3, distance
+13: the CH₂ V above, the backbone below). 13.13's "Example: Evaluating vibrational
+transitions …" prints once. 13.8.1's spheroid and 13.10.3's ion read at once. No two-argument
+`\braket`, no bare `\k` script, no undefined `\k` macro, no U+2011, U+FEFF or U+200B; every
+in-book link carries `xref`/`figref`; every section has `ai`, `built` and `notes`, and 13.7
+its two objectives (the only section that prints them). `colours:default` rerun (every type
+kept its colour). `check:content`: no errors, no warnings. Every figure screenshot in light
+and dark (contact sheets in the pass's scratch folder); no console or KaTeX error on any
+Chapter 13 page, derivations included.
+
+Known gaps: the I₂ and HCl literature values above; 13.3's P(4) and R(4) labels sit on hollow
+marks; 13.6's "2.1 cm⁻¹" bracket label touches its bracket and the lower well writes v″ with a
+typographic ”; 13.11's 4π/t label sits on the line; derivation facts in 13.4, 13.7 and 13.11
+restate wavefunctions and conditions the text prints just before them (the prose-first
+reading); 13.7's intermediate displays (13.7.2)–(13.7.4) carry no number on the derivation,
+since they are steps, not node results; 13.9.1's flat fallback (no WebGL) projection was not
+checked against the new view.
