@@ -369,7 +369,8 @@
       },
       {
        "text": "The equation $X'' = -p^2 X$ with $X(0) = X(L) = 0$ has the solutions $X(x) = D\\sin(n\\pi x/L)$, $n = 1, 2, 3, \\ldots$",
-       "src": "(2.4.10)"
+       "src": "(2.4.10)",
+       "drv": "2.4/string-spatial"
       }
      ],
      "then": {
@@ -407,7 +408,8 @@
       },
       {
        "text": "The equation $X'' = -p^2 X$ with $X(0) = X(L) = 0$ has the solutions $X(x) = D\\sin(n\\pi x/L)$, $n = 1, 2, 3, \\ldots$",
-       "src": "(2.4.10)"
+       "src": "(2.4.10)",
+       "drv": "2.4/string-spatial"
       }
      ],
      "then": {
@@ -447,7 +449,8 @@
       },
       {
        "text": "The equation $T'' = -\\omega_n^2 T$ has the solutions $T(t) = E\\cos(\\omega_n t) + F\\sin(\\omega_n t)$.",
-       "src": "(2.4.12)"
+       "src": "(2.4.12)",
+       "drv": "2.4/string-temporal"
       }
      ],
      "then": {

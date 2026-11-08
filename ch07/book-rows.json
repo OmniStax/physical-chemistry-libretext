@@ -186,11 +186,13 @@
    "forms": [
     {
      "id": "helium-true-energy",
-     "latex": "E_{true} = -(I_1 + I_2)"
+     "latex": "E_{true} = -(I_1 + I_2)",
+     "anchor": "7.1-true-energy"
     },
     {
      "id": "helium-true-energy-rydberg",
-     "latex": "E_{true} = -5.8066\\,R_H"
+     "latex": "E_{true} = -5.8066\\,R_H",
+     "anchor": "7.1-true-energy"
     }
    ]
   },
@@ -227,7 +229,8 @@
     },
     {
      "id": "helium-independent-energy",
-     "latex": "E_{He_{1s}} = -8R_H"
+     "latex": "E_{He_{1s}} = -8R_H",
+     "anchor": "7.1-ignorance-is-bliss"
     }
    ]
   },
@@ -281,7 +284,8 @@
    "forms": [
     {
      "id": "variational-energy",
-     "latex": "E_{trial} = \\dfrac{\\langle \\psi_{trial}|\\hat{H}|\\psi_{trial}\\rangle}{\\langle \\psi_{trial}|\\psi_{trial}\\rangle}"
+     "latex": "E_{trial} = \\dfrac{\\langle \\psi_{trial}|\\hat{H}|\\psi_{trial}\\rangle}{\\langle \\psi_{trial}|\\psi_{trial}\\rangle}",
+     "anchor": "7.1-variational-method"
     },
     {
      "id": "variational-energy-integrals",
@@ -303,7 +307,8 @@
    "forms": [
     {
      "id": "variational-principle",
-     "latex": "E_{trial} \\ge E_{true}"
+     "latex": "E_{trial} \\ge E_{true}",
+     "anchor": "7.1-variational-method"
     }
    ]
   },
@@ -333,7 +338,8 @@
    "forms": [
     {
      "id": "helium-variational-energy",
-     "latex": "E_{trial}(\\zeta) = \\dfrac{m_e e^4}{4\\epsilon_0^2 h^2}\\left(\\zeta^2 - \\dfrac{27}{8}\\zeta\\right)"
+     "latex": "E_{trial}(\\zeta) = \\dfrac{m_e e^4}{4\\epsilon_0^2 h^2}\\left(\\zeta^2 - \\dfrac{27}{8}\\zeta\\right)",
+     "anchor": "7.1-helium-ground-state"
     },
     {
      "id": "helium-optimal-zeta",
@@ -369,11 +375,13 @@
    "forms": [
     {
      "id": "linear-trial-ket",
-     "latex": "|\\psi_{trial}\\rangle = \\sum_{j=1}^N a_j|\\phi_j\\rangle"
+     "latex": "|\\psi_{trial}\\rangle = \\sum_{j=1}^N a_j|\\phi_j\\rangle",
+     "anchor": "7.2-opening"
     },
     {
      "id": "linear-trial-bra",
-     "latex": "\\langle\\psi_{trial}| = \\sum_{j=1}^N a_j^*\\langle\\phi_j|"
+     "latex": "\\langle\\psi_{trial}| = \\sum_{j=1}^N a_j^*\\langle\\phi_j|",
+     "anchor": "7.2-opening"
     }
    ]
   },
@@ -429,11 +437,13 @@
    "forms": [
     {
      "id": "secular-equations",
-     "latex": "\\sum_i^N a_i(H_{ik} - E_{trial}S_{ik}) = 0"
+     "latex": "\\sum_i^N a_i(H_{ik} - E_{trial}S_{ik}) = 0",
+     "anchor": "7.2-minimizing"
     },
     {
      "id": "secular-eigenvalue-form",
-     "latex": "\\sum_j^N H_{ij}a_j = E_{trial}\\,a_i"
+     "latex": "\\sum_j^N H_{ij}a_j = E_{trial}\\,a_i",
+     "anchor": "7.2-minimizing"
     }
    ]
   },
@@ -451,11 +461,13 @@
    "forms": [
     {
      "id": "determinant-2x2",
-     "latex": "\\begin{vmatrix}a&b\\\\c&d\\end{vmatrix} = ad - bc"
+     "latex": "\\begin{vmatrix}a&b\\\\c&d\\end{vmatrix} = ad - bc",
+     "anchor": "7.2-secular-determinant"
     },
     {
      "id": "determinant-3x3",
-     "latex": "\\begin{vmatrix}a&b&c\\\\d&e&f\\\\g&h&i\\end{vmatrix} = aei + bfg + cdh - ceg - bdi - afh"
+     "latex": "\\begin{vmatrix}a&b&c\\\\d&e&f\\\\g&h&i\\end{vmatrix} = aei + bfg + cdh - ceg - bdi - afh",
+     "anchor": "7.2-secular-determinant"
     }
    ]
   },
@@ -471,7 +483,8 @@
    "forms": [
     {
      "id": "secular-determinant",
-     "latex": "|H_{ik} - ES_{ik}| = 0"
+     "latex": "|H_{ik} - ES_{ik}| = 0",
+     "anchor": "7.2-secular-determinant"
     },
     {
      "id": "secular-determinant-2x2",

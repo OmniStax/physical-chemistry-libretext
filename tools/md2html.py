@@ -21,12 +21,13 @@ answers and Bloom levels). What it does:
   converter's K (one per display without \\nonumber, an align included), and `[ref:eq:label]` becomes that number;
   `align`/`align*` become `aligned` so KaTeX can tag the display once.
 - a figure of panels keeps each panel's caption in the row's `_panels`.
-- `{term:…}` becomes `<strong>`, `*…*` `<em>`, `~~…~~` `<s>`.
+- `{term:…}` and `**…**` become `<strong>`, `*…*` `<em>` (inside a word too, 1*s*), `~~…~~` `<s>`.
 - a FIGURE becomes a `photo` figure with its number, image and caption; an
   IMAGE a `figure` row with no number; the builder replaces those it turns
   into simulations.
 - an example becomes `<div class="example" id="ex-N-M-K">` with its parts as
-  `<h4>`; an exercise box goes to the exercises table (place end) with its
+  `<h4>`, and so does an exercise box the book prints as "Example N.M.K";
+  every other exercise box goes to the exercises table (place end) with its
   Answer as the solution.
 - a note becomes `<div class="note">` with an eyebrow and the book's title.
 - a table becomes a `div.book-table`.
@@ -70,23 +71,26 @@ class Drafter:
 
     # ---- inline ----
     def inline(self, s):
-        parts = re.split(r"(\$[^$]+\$)", s)
-        out = []
-        for k, p in enumerate(parts):
-            if k % 2:
-                # inline maths takes no number, so a \\nonumber there names nothing (4.6's Example 4.6.1)
-                out.append(self.katex(self.refs(re.sub(r"\s*\\(?:nonumber|notag)\b", "", p))))
-                continue
-            p = self.refs(p)
-            p = re.sub(r"!\[([^\]]*)\]\(media/([^)]+)\)", lambda m: f'<img src="/media/{self.chdir}/{m.group(2)}" alt="{html.escape(m.group(1))}">', p)
-            p = re.sub(r"\[([^\]]+)\]\(page:(\d+)\)", lambda m: f'<a href="{PAGE_URL.get(m.group(2), "#")}">{m.group(1)}</a>', p)
-            p = re.sub(r"\[([^\]]+)\]\((https?://(?:[^()\s]|\([^()\s]*\))+)\)", r'<a href="\2">\1</a>', p)
-            p = re.sub(r"\{term:([^{}]+)\}", r"<strong>\1</strong>", p)
-            p = re.sub(r"(?<![\w*])\*([^*\n]+?)\*(?![\w*])", r"<em>\1</em>", p)
-            p = re.sub(r"~~([^~\n]+?)~~", r"<s>\1</s>", p)
-            p = p.replace("$", "&#36;")
-            out.append(p)
-        return "".join(out)
+        # the maths is set aside behind placeholders first, so emphasis that wraps a formula (3.1's *$p$*)
+        # or sits inside a word (1*s*, *n*th) is read across the whole run of text
+        maths = []
+
+        def hold(m):
+            # inline maths takes no number, so a \\nonumber there names nothing (4.6's Example 4.6.1)
+            maths.append(self.katex(self.refs(re.sub(r"\s*\\(?:nonumber|notag)\b", "", m.group(0)))))
+            return f"\x00{len(maths) - 1}\x00"
+        p = re.sub(r"\$[^$]+\$", hold, s)
+        p = self.refs(p)
+        p = re.sub(r"!\[([^\]]*)\]\(media/([^)]+)\)", lambda m: f'<img src="/media/{self.chdir}/{m.group(2)}" alt="{html.escape(m.group(1))}">', p)
+        p = re.sub(r"\[([^\]]+)\]\(page:(\d+)\)", lambda m: f'<a href="{PAGE_URL.get(m.group(2), "#")}">{m.group(1)}</a>', p)
+        p = re.sub(r"\[([^\]]+)\]\((https?://(?:[^()\s]|\([^()\s]*\))+)\)", r'<a href="\2">\1</a>', p)
+        p = re.sub(r"\{term:([^{}]+)\}", r"<strong>\1</strong>", p)
+        p = re.sub(r"\*\*(?=\S)([^*\n]+?)(?<=\S)\*\*", r"<strong>\1</strong>", p)
+        # an emphasis opens on a non-space and closes after one; a word may run on either side (1*s*, *n*th)
+        p = re.sub(r"(?<!\*)\*(?=[^\s*])([^*\n]+?)(?<=[^\s*])\*(?!\*)", r"<em>\1</em>", p)
+        p = re.sub(r"~~([^~\n]+?)~~", r"<s>\1</s>", p)
+        p = p.replace("$", "&#36;")
+        return re.sub(r"\x00(\d+)\x00", lambda m: maths[int(m.group(1))], p)
 
     @staticmethod
     def ce(tex):
@@ -385,6 +389,9 @@ class Drafter:
             return f'<div class="note">\n<div class="eyebrow">Note</div>\n{h3}{inner}\n</div>'
         m = re.match(r"\{(?:ex|exr):([^}]+)\}\s*(?:\{printed:([^}]+)\}\s*)?(.*)", head)
         num, printed, title = (m.group(1), m.group(2), m.group(3)) if m else ("?", None, head)
+        # an exercise box the book prints as "Example N.M.K" is a worked example and stays in the text (3.6, 5.5, 5.9)
+        if kind == "exercise" and printed and printed.startswith("Example"):
+            kind = "example"
         if kind == "example":
             eid = self.uid("ex-" + num.replace(".", "-").lower())  # 4.6's "Example 4.6.2A": ex-4-6-2a
             inner = "\n".join(self.boxes(body))

@@ -4,6 +4,10 @@ window.OMNISTAX_FIGURES['6.2'] = function (root, F) {
 const { tex, C, PAL, alpha, ctl, register, begin, line, dot, text, topline, axes, plot, fmt, mixColor } = F;
 const sim = (id, H) => F.sim(root, id, H);
 const PI = Math.PI;
+/* the other sign of psi: the hue a clear step toward whichever of ink and ground lies farther from it in lightness,
+   so the two tones part on either theme whatever hue the wavefunction wears */
+const lightOf = (c) => { const m = /^#([0-9a-f]{6})$/i.exec(c) ? [1, 3, 5].map((i) => parseInt(c.slice(i, i + 2), 16)) : (c.match(/[\d.]+/g) || [0, 0, 0]).slice(0, 3).map(Number); return (0.2126 * m[0] + 0.7152 * m[1] + 0.0722 * m[2]) / 255; };
+const otherSign = (cw, PAL, mix) => { const l = lightOf(cw), far = Math.abs(lightOf(PAL.ink) - l) > Math.abs(lightOf(PAL.panel) - l) ? PAL.ink : PAL.panel; return mix(cw, far, 0.55); };
 const signed = (m) => (m > 0 ? `+${m}` : m < 0 ? `−${-m}` : '0');
 
 /* ---------- the real spherical harmonics ----------
@@ -90,7 +94,7 @@ const formOf = (l, m) => FORMS[`${l},${m}`] ?? `P_{${l}}^{${Math.abs(m)}}(\\cos\
   let lastP = '';
   function draw() {
     const l = +Lc.value, m = Math.max(-l, Math.min(l, +Mc.value)), cw = C('wavefunction');
-    const pos = cw, neg = mixColor(cw, PAL.ink, 0.42);   /* the other sign a clear step toward ink: darker on the light ground, paler on the dark, as in 6.6 */
+    const pos = cw, neg = otherSign(cw, PAL, mixColor);
     /* the pyramid, rebuilt only when a colour or the choice changes */
     const sig = `${pos}|${neg}|${l},${m}|${PAL.ink}`;
     if (sig !== lastP) {

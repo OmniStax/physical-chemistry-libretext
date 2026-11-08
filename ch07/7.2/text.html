@@ -14,6 +14,7 @@ $$ \langle \kpsitrial | = \sum_{j=1}^N a_j^* \langle \kphij | \tag{7.2.2} $$
 </div>
 <p>As discussed in Section 7.1, the <span data-concept="variational-energy">variational energy</span> for a generalized trial wavefunction is</p>
 <figure class="dv" id="drv-linear-energy"></figure>
+<p>where $S_{ij}$ are <strong>overlap integrals</strong> between the different {$\kphij$} basis functions.</p>
 <div class="note">
 <div class="eyebrow">Note</div>
 <h3>Orthonormality of Basis Functions</h3>
@@ -32,7 +33,8 @@ $$ \langle \kpsitrial | = \sum_{j=1}^N a_j^* \langle \kphij | \tag{7.2.2} $$
 $$ \dfrac{\partial \kEtrial}{\partial a_i}= 0 $$
 <p>for all $i$.</p>
 <figure class="dv" id="drv-secular"></figure>
-<p>The equations in 7.2.12 are called the <strong><span data-concept="secular-equations">Secular Equations</span></strong>.</p>
+<p>for all $k$. The equations in 7.2.12 are called the <strong><span data-concept="secular-equations">Secular Equations</span></strong>.</p>
+<p>If the functions $\{|\kphij\rangle \}$ are orthonormal, then the overlap matrix $S$ reduces to the unit matrix (one on the diagonal and zero every where else) and the <span data-concept="secular-equations">Secular Equations</span> in Equation 7.2.12 reduces to the more familiar Eigenvalue form, Equation 7.2.14.</p>
 <div class="note">
 <div class="eyebrow">Note</div>
 <h3>Hermitian Operators</h3>
@@ -79,6 +81,7 @@ $$ |\kpsitrial \rangle= \sum_{n=1}^{N=2} a_n |f_n\rangle = a_1 |\phi_1 \rangle +
 <p>then the <span data-concept="secular-determinant">secular determinant</span> (Equation 7.2.15), in matrix formulation would look like this</p>
 $$ \begin{vmatrix} H_{11}-\kEtrial S_{11}&H_{12}-\kEtrial S_{12} \\ H_{12}-\kEtrial S_{12}&H_{22}-\kEtrial S_{22}\end{vmatrix}=0 $$
 <h4>Solution</h4>
+<p>Solving the secular equations is done by finding $\kEtrial$ and putting the value into the expansion of the <span data-concept="secular-determinant">secular determinant</span>.</p>
 <figure class="dv" id="drv-example-7-2-1"></figure>
 </div>
 <p>Equation 7.2.15 can be solved to obtain the energies $\kE$. When arranged in order of increasing energy, these provide approximations to the energies of the first $k$ states (each having an energy higher than the true energy of the state by virtue of the variation theorem). To find the energies of a larger number of states we simply use a <strong>greater number</strong> of <span data-concept="basis-functions">basis functions</span> $\{\phi_i\}$ in the trial wavefunction (Example 7.2.1).<sup class="fn" data-note="c-example-ref-2"></sup> To obtain the approximate wavefunction for a particular state, we substitute the appropriate energy into the secular equations and solve for the coefficients $a_i$.</p>

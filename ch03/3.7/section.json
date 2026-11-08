@@ -441,7 +441,8 @@
       },
       {
        "tex": "\\kpsin(\\kx) = \\left(\\dfrac{2}{\\kL}\\right)^{1/2}\\sin\\left(\\dfrac{n\\pi\\kx}{\\kL}\\right)",
-       "src": "3.5"
+       "src": "3.5",
+       "drv": "3.5/pib-normalization"
       },
       {
        "tex": "\\sin\\theta\\cos\\theta = \\tfrac{1}{2}\\sin 2\\theta"

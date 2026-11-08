@@ -304,3 +304,30 @@ connective sentences under derivations stay folded into them (5.6's
 correction; 5.9's "with J_i and J_f representing …"; 5.1's "Equation 5.1.4a
 is a linear second-order differential equation …", carried by a reason);
 Chapter 6's text still writes θ plain.
+
+## Chapter 8 prep · 2026-11-08
+
+Prep only, no section built. Fetched Chapter 8's images (27, into
+`media/ch08/`), converted the landing page (one paragraph: an `intro/` page),
+8.1–8.11, the summary page 8.S (to `ch08/summary/`) and the empty 8.E; wrote
+`ch08/exploration.md`, `ch08/config.md` (agreed on Chapter 1's terms),
+`ch08/chapter.json` (11 sections, the intro and summary records, 212
+variables) and merged `ch08/book-rows.json`: two new types (`magnetic-field`,
+`magnetic-moment`, `colours:default` rerun), 79 symbols, 88 concepts, 157
+edges. Drafts made for the intro, 8.1–8.11 and the summary.
+
+Exercises: 15 printed boxes and one example printed without a solution, 16
+cards: 5 keyed, 11 for AI solutions; 9 AI exercises proposed; nothing moved.
+6 derivations to build. Figures: 3 moving (the SCF loop, the spin-resonance
+spectrometer, Stern–Gerlach) plus the moving microstate chart, two still 3D
+scenes, the rest still or faithful copies; two extra Sims recommended (8.6,
+8.10).
+
+Tool fixes: `lt2md.py` keeps a strike-through as `~~…~~` (8.8's Table 10)
+and drops an `<img>` with no file; `md2html.py` renders `~~…~~` as `<s>` and,
+in maths, writes U+2010 and U+2019 as - and ', ½ as \tfrac12, ħ as \hbar and
+drops a bare `\label`. Chapters 1–7 reconvert to the same bytes; of their
+drafts only five built sections' change (ħ, ½ in maths). `check:content`: no
+errors, no warnings. Open for the orchestrator: three figures printed 8.8.1,
+whether the microstate Sim replaces Example 8.8.12's 13 charts, the Hα line
+intensities' source, the exchange-hole curve's source.

@@ -6052,11 +6052,13 @@
       "forms": [
         {
           "id": "helium-true-energy",
-          "latex": "E_{true} = -(I_1 + I_2)"
+          "latex": "E_{true} = -(I_1 + I_2)",
+          "anchor": "7.1-true-energy"
         },
         {
           "id": "helium-true-energy-rydberg",
-          "latex": "E_{true} = -5.8066\\,R_H"
+          "latex": "E_{true} = -5.8066\\,R_H",
+          "anchor": "7.1-true-energy"
         }
       ]
     },
@@ -6093,7 +6095,8 @@
         },
         {
           "id": "helium-independent-energy",
-          "latex": "E_{He_{1s}} = -8R_H"
+          "latex": "E_{He_{1s}} = -8R_H",
+          "anchor": "7.1-ignorance-is-bliss"
         }
       ]
     },
@@ -6147,7 +6150,8 @@
       "forms": [
         {
           "id": "variational-energy",
-          "latex": "E_{trial} = \\dfrac{\\langle \\psi_{trial}|\\hat{H}|\\psi_{trial}\\rangle}{\\langle \\psi_{trial}|\\psi_{trial}\\rangle}"
+          "latex": "E_{trial} = \\dfrac{\\langle \\psi_{trial}|\\hat{H}|\\psi_{trial}\\rangle}{\\langle \\psi_{trial}|\\psi_{trial}\\rangle}",
+          "anchor": "7.1-variational-method"
         },
         {
           "id": "variational-energy-integrals",
@@ -6169,7 +6173,8 @@
       "forms": [
         {
           "id": "variational-principle",
-          "latex": "E_{trial} \\ge E_{true}"
+          "latex": "E_{trial} \\ge E_{true}",
+          "anchor": "7.1-variational-method"
         }
       ]
     },
@@ -6199,7 +6204,8 @@
       "forms": [
         {
           "id": "helium-variational-energy",
-          "latex": "E_{trial}(\\zeta) = \\dfrac{m_e e^4}{4\\epsilon_0^2 h^2}\\left(\\zeta^2 - \\dfrac{27}{8}\\zeta\\right)"
+          "latex": "E_{trial}(\\zeta) = \\dfrac{m_e e^4}{4\\epsilon_0^2 h^2}\\left(\\zeta^2 - \\dfrac{27}{8}\\zeta\\right)",
+          "anchor": "7.1-helium-ground-state"
         },
         {
           "id": "helium-optimal-zeta",
@@ -6235,11 +6241,13 @@
       "forms": [
         {
           "id": "linear-trial-ket",
-          "latex": "|\\psi_{trial}\\rangle = \\sum_{j=1}^N a_j|\\phi_j\\rangle"
+          "latex": "|\\psi_{trial}\\rangle = \\sum_{j=1}^N a_j|\\phi_j\\rangle",
+          "anchor": "7.2-opening"
         },
         {
           "id": "linear-trial-bra",
-          "latex": "\\langle\\psi_{trial}| = \\sum_{j=1}^N a_j^*\\langle\\phi_j|"
+          "latex": "\\langle\\psi_{trial}| = \\sum_{j=1}^N a_j^*\\langle\\phi_j|",
+          "anchor": "7.2-opening"
         }
       ]
     },
@@ -6295,11 +6303,13 @@
       "forms": [
         {
           "id": "secular-equations",
-          "latex": "\\sum_i^N a_i(H_{ik} - E_{trial}S_{ik}) = 0"
+          "latex": "\\sum_i^N a_i(H_{ik} - E_{trial}S_{ik}) = 0",
+          "anchor": "7.2-minimizing"
         },
         {
           "id": "secular-eigenvalue-form",
-          "latex": "\\sum_j^N H_{ij}a_j = E_{trial}\\,a_i"
+          "latex": "\\sum_j^N H_{ij}a_j = E_{trial}\\,a_i",
+          "anchor": "7.2-minimizing"
         }
       ]
     },
@@ -6317,11 +6327,13 @@
       "forms": [
         {
           "id": "determinant-2x2",
-          "latex": "\\begin{vmatrix}a&b\\\\c&d\\end{vmatrix} = ad - bc"
+          "latex": "\\begin{vmatrix}a&b\\\\c&d\\end{vmatrix} = ad - bc",
+          "anchor": "7.2-secular-determinant"
         },
         {
           "id": "determinant-3x3",
-          "latex": "\\begin{vmatrix}a&b&c\\\\d&e&f\\\\g&h&i\\end{vmatrix} = aei + bfg + cdh - ceg - bdi - afh"
+          "latex": "\\begin{vmatrix}a&b&c\\\\d&e&f\\\\g&h&i\\end{vmatrix} = aei + bfg + cdh - ceg - bdi - afh",
+          "anchor": "7.2-secular-determinant"
         }
       ]
     },
@@ -6337,7 +6349,8 @@
       "forms": [
         {
           "id": "secular-determinant",
-          "latex": "|H_{ik} - ES_{ik}| = 0"
+          "latex": "|H_{ik} - ES_{ik}| = 0",
+          "anchor": "7.2-secular-determinant"
         },
         {
           "id": "secular-determinant-2x2",
@@ -10434,88 +10447,88 @@
     "vision": "normal",
     "assign": {
       "energy": {
-        "light": "#AB5D1D",
-        "dark": "#D16E0D"
+        "light": "#774AFF",
+        "dark": "#856FF7"
       },
       "temperature": {
-        "light": "#6A03FC",
-        "dark": "#9889FD"
+        "light": "#AB086E",
+        "dark": "#FE5AB2"
       },
       "wavelength": {
-        "light": "#CB0283",
-        "dark": "#F12CA0"
+        "light": "#B806DC",
+        "dark": "#A274AE"
       },
       "frequency": {
-        "light": "#017336",
-        "dark": "#0EC360"
+        "light": "#677806",
+        "dark": "#899E01"
       },
       "wavenumber": {
-        "light": "#A43A3C",
-        "dark": "#E97875"
+        "light": "#740414",
+        "dark": "#FCB8B4"
       },
       "momentum": {
         "light": "#065154",
         "dark": "#13D9E1"
       },
       "velocity": {
-        "light": "#5909D7",
-        "dark": "#A9A0FF"
+        "light": "#013E1A",
+        "dark": "#3CFE87"
       },
       "length": {
-        "light": "#9D02BB",
-        "dark": "#DC51FE"
+        "light": "#CB0283",
+        "dark": "#F12CA0"
       },
       "mass": {
         "light": "#443303",
         "dark": "#FFCD4F"
       },
       "potential": {
-        "light": "#84039E",
-        "dark": "#E47CFF"
+        "light": "#8D035A",
+        "dark": "#FF89C2"
       },
       "power": {
-        "light": "#BA4E4E",
-        "dark": "#D26462"
+        "light": "#6A03FC",
+        "dark": "#9889FD"
       },
       "energy-density": {
-        "light": "#5C046F",
-        "dark": "#EEB6FE"
+        "light": "#743A04",
+        "dark": "#FD9F5B"
       },
       "charge": {
         "light": "#003D7B",
         "dark": "#A6CCFD"
       },
       "force": {
-        "light": "#740414",
-        "dark": "#FCB8B4"
+        "light": "#A43A3C",
+        "dark": "#E97875"
       },
       "displacement": {
-        "light": "#743A04",
-        "dark": "#FD9F5B"
+        "light": "#84039E",
+        "dark": "#E47CFF"
       },
       "time": {
         "light": "#0A6ED2",
         "dark": "#3190FE"
       },
       "wavefunction": {
-        "light": "#677806",
-        "dark": "#899E01"
+        "light": "#AB5D1D",
+        "dark": "#D16E0D"
       },
       "probability-density": {
-        "light": "#013E1A",
-        "dark": "#3CFE87"
-      },
-      "operator": {
-        "light": "#774AFF",
-        "dark": "#856FF7"
-      },
-      "force-constant": {
-        "light": "#8D035A",
-        "dark": "#FF89C2"
-      },
-      "moment-of-inertia": {
         "light": "#455102",
         "dark": "#AFCA04"
+      },
+      "operator": {
+        "light": "#017336",
+        "dark": "#0EC360"
+      },
+      "force-constant": {
+        "light": "#5C046F",
+        "dark": "#EEB6FE"
+      },
+      "moment-of-inertia": {
+        "light": "#5909D7",
+        "dark": "#A9A0FF"
       },
       "angular-momentum": {
         "light": "#8B2227",
@@ -10526,12 +10539,12 @@
         "dark": "#68AAFE"
       },
       "angle": {
-        "light": "#AB086E",
-        "dark": "#FE5AB2"
+        "light": "#9D02BB",
+        "dark": "#DC51FE"
       },
       "magnetic-field": {
-        "light": "#B806DC",
-        "dark": "#A274AE"
+        "light": "#BA4E4E",
+        "dark": "#D26462"
       },
       "magnetic-moment": {
         "light": "#795C01",
@@ -10539,42 +10552,42 @@
       }
     },
     "referentOrder": [
-      4,
-      12,
-      21,
-      30,
+      10,
       14,
       22,
-      33,
-      5,
+      30,
+      1,
       8,
-      15,
+      12,
+      23,
+      32,
+      33,
+      34,
+      5,
+      28,
+      2,
+      6,
+      11,
+      13,
       18,
       19,
-      24,
-      29,
-      32,
-      34,
-      0,
-      7,
-      11,
-      16,
       20,
-      26,
-      28,
-      35,
-      6,
-      2,
+      25,
+      7,
+      0,
       3,
       9,
-      13,
-      25,
+      15,
+      16,
+      24,
+      26,
       27,
-      31,
-      1,
-      10,
+      29,
+      35,
       17,
-      23
+      31,
+      4,
+      21
     ]
   }
 }

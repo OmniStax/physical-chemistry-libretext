@@ -409,7 +409,8 @@
       },
       {
        "tex": "y(x) = c_1 e^{k x} + c_2 e^{-k x}",
-       "src": "2.2, Equation 2.2.19"
+       "src": "2.2, Equation 2.2.19",
+       "drv": "2.2/exponential"
       },
       {
        "tex": "K = -\\kpn^2",

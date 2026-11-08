@@ -496,6 +496,10 @@
          "P"
         ]
        }
+      },
+      {
+       "tex": "\\mk{L}{E_{He_{1s}}} = \\mk{E}{\\kEna + \\kEnb}",
+       "cap": "The energy of the atom is the eigenvalue $\\hat{H}$ returns on $\\Psi_{total}$."
       }
      ],
      "note": "The book's bra-ket form of the product, Equation 7.1.5, reads $|\\Psi_{total}\\rangle = \\hat{H}|\\psi_{el_1}\\psi_{el_2}\\rangle$; there is no $\\hat{H}$ in it: $|\\Psi_{total}\\rangle = |\\psi_{el_1}\\psi_{el_2}\\rangle$."
@@ -517,10 +521,7 @@
       }
      ],
      "then": {
-      "tex": "\\mk{E}{E_{He_{1s}}} = \\mk{a}{\\kEna} + \\mk{b}{\\kEnb}",
-      "uses": [
-       0
-      ]
+      "tex": "\\mk{E}{E_{He_{1s}}} = \\mk{a}{\\kEna} + \\mk{b}{\\kEnb}"
      },
      "steps": [
       {

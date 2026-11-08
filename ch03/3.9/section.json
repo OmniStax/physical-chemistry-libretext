@@ -360,7 +360,8 @@
       },
       {
        "text": "In a one-dimensional box of length $\\kL$, $\\dfrac{d^2\\kpsi}{d\\kx^2} = -\\dfrac{2\\km\\kE}{\\hbar^2}\\kpsi$ with $\\kpsi(0) = \\kpsi(\\kL) = 0$ has the normalized solutions $\\psi_n(\\kx) = \\sqrt{\\dfrac{2}{\\kL}}\\sin\\dfrac{n\\pi \\kx}{\\kL}$, $n = 1, 2, 3, \\ldots$",
-       "src": "(3.5.16)"
+       "src": "(3.5.16)",
+       "drv": "3.5/pib-normalization"
       }
      ],
      "then": {
@@ -398,7 +399,8 @@
       },
       {
        "text": "In a one-dimensional box of length $\\kL$, $\\dfrac{d^2\\kpsi}{d\\kx^2} = -\\dfrac{2\\km\\kE}{\\hbar^2}\\kpsi$ with $\\kpsi(0) = \\kpsi(\\kL) = 0$ has the normalized solutions $\\psi_n(\\kx) = \\sqrt{\\dfrac{2}{\\kL}}\\sin\\dfrac{n\\pi \\kx}{\\kL}$, $n = 1, 2, 3, \\ldots$",
-       "src": "(3.5.16)"
+       "src": "(3.5.16)",
+       "drv": "3.5/pib-normalization"
       }
      ],
      "then": {
@@ -435,7 +437,8 @@
       },
       {
        "text": "In a one-dimensional box of length $\\kL$, $\\dfrac{d^2\\kpsi}{d\\kx^2} = -\\dfrac{2\\km\\kE}{\\hbar^2}\\kpsi$ with $\\kpsi(0) = \\kpsi(\\kL) = 0$ has the normalized solutions $\\psi_n(\\kx) = \\sqrt{\\dfrac{2}{\\kL}}\\sin\\dfrac{n\\pi \\kx}{\\kL}$, $n = 1, 2, 3, \\ldots$",
-       "src": "(3.5.16)"
+       "src": "(3.5.16)",
+       "drv": "3.5/pib-normalization"
       }
      ],
      "then": {
@@ -468,7 +471,8 @@
       },
       {
        "text": "The energies of a particle in a one-dimensional box of length $\\kL$ are $E_n = \\dfrac{n^2h^2}{8\\km\\kL^2}$, $n = 1, 2, 3, \\ldots$",
-       "src": "(3.5.10)"
+       "src": "(3.5.10)",
+       "drv": "3.5/pib-energy"
       }
      ],
      "then": {
@@ -569,7 +573,8 @@
       },
       {
        "text": "The energies of a particle in a one-dimensional box of length $\\kL$ are $E_n = \\dfrac{n^2h^2}{8\\km\\kL^2}$, $n = 1, 2, 3, \\ldots$",
-       "src": "(3.5.10)"
+       "src": "(3.5.10)",
+       "drv": "3.5/pib-energy"
       }
      ],
      "then": {

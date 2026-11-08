@@ -4,6 +4,10 @@ window.OMNISTAX_FIGURES['6.6'] = function (root, F) {
 const { tex, C, PAL, alpha, ctl, register, begin, line, text, topline, axes, dot, fmt } = F;
 
 const HBAR = 1.054571817e-34, ME = 9.1093837e-31;
+/* the other sign of psi: the hue a clear step toward whichever of ink and ground lies farther from it in lightness,
+   so the two tones part on either theme whatever hue the wavefunction wears */
+const lightOf = (c) => { const m = /^#([0-9a-f]{6})$/i.exec(c) ? [1, 3, 5].map((i) => parseInt(c.slice(i, i + 2), 16)) : (c.match(/[\d.]+/g) || [0, 0, 0]).slice(0, 3).map(Number); return (0.2126 * m[0] + 0.7152 * m[1] + 0.0722 * m[2]) / 255; };
+const otherSign = (cw, PAL, mix) => { const l = lightOf(cw), far = Math.abs(lightOf(PAL.ink) - l) > Math.abs(lightOf(PAL.panel) - l) ? PAL.ink : PAL.panel; return mix(cw, far, 0.55); };
 /* a number as TeX in scientific notation, a × 10^b */
 const sci = (x, d = 2) => {
   if (!x) return '0';
@@ -178,7 +182,7 @@ const rng = (s) => () => { s |= 0; s = (s + 0x6d2b79f5) | 0; let t = Math.imul(s
   let last = '';
   function draw() {
     const id = K.value, o = ORB[id];
-    const cw = C('wavefunction'), up = cw, down = F.mixColor(cw, PAL.ink, 0.5);
+    const cw = C('wavefunction'), up = cw, down = otherSign(cw, PAL, F.mixColor);
     const key = [id, up, down, PAL.ink].join('|');
     if (key !== last) {
       last = key;
