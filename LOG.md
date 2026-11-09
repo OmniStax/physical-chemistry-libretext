@@ -1474,3 +1474,37 @@ derivatives of U and H, the Euler relation, the U, A and G Maxwell relations and
 (∂H/∂P)_T). AI exercises in 22.4, 22.7 and 22.8
 write V̄, H̄, ΔG, T₁ and T₂ plain (no rows of those meanings in their sections). Lewis's date
 (1905 printed, 1901 from memory) stays unfootnoted, as decided.
+
+## Chapter 23 pass · 2026-11-08
+
+Built: the intro and 23.1–23.5 (no summary page; 23.E empty, not built). 9 figure rows: 4
+interactive (1 moving, 23.1.1's G landscape with its fluctuating state point; 3 still: 23.1's water
+phase diagram with a dragged point, Figure 13.5 folding the unnumbered Ḡ(T) sketch, 23.4.1's vapor
+pressure beside ln P against 1/T; no 3D) and 5 kept images (23.1.2, the Landau sketch, 13.4, 13.6,
+13.7). 6 derivations (23.2 one, 23.3 two, 23.4 two, 23.5 one). 6 exercises, all `exercise` kind in
+the Exercises document: 2 unkeyed book items with AI solutions (Exercise 22.5.5, routed to 23.3, and
+Exercise 23.4.2) and 4 AI exercises. 11 AI-marked corrections in footnotes and 6 derivation notes.
+
+Chapter pass: flags checked. Water's critical point is IAPWS's 647.096 K and 22.064 MPa; the
+phase-diagram Sim's vaporization fit (ΔH_vap falling 28.26 J/mol per K from the book's 45 051 J/mol)
+now ends at 220.6 bar at 647 K (was 28 J/mol per K and 222.6 bar). The one-parameter fit still boils
+at 371.3 K at 1 bar against water's 372.8 K; its hover says "in this model". Ice 0.9167 and water
+0.9998 g/cm³ at 0 °C confirmed (23.1's Sim, 23.3's AI exercise). Benzene (23.2): liquid's molar volume
+now 87.4 cm³/mol from 0.894 g/cm³ at the melting point (was 88.9, a room-temperature density); the
+solid's 77.3 (about 1.01 g/cm³) is a handbook value, approximate. The five liquids of Figure 23.4.1
+other than water and ethanol are fitted to the book's own figure, as its code and 23.4's notes say.
+`helmholtz-from-partition-function` and `chemical-potential-from-partition-function` keep the book's R
+and now add k_B for Q of the whole system (A = −k_BT ln Q; μ = −k_BT(∂ln Q/∂n) for n in moles, or
+−RT(∂ln Q/∂N)), as 23.5's derivation note has it. Every `\k` macro of ch23 has a variables row in its
+section. Book sentence back as a reason: 23.3's "This is true for both water and ice, or any two
+phases in equilibrium." `colours:default` run: every type keeps its stored colour. `node --check`
+clean on the three `figures.js`; no `\braket`, bare `\k`, U+2011/U+FEFF/U+200B; in-book links
+carry `xref`/`figref`; every page has `ai`, `built`, `notes`. `check:content`: no errors, no
+warnings. Every figure screenshot in light, the three figure pages in dark; no console or KaTeX
+error on any Chapter 23 page, derivations included.
+
+Known gaps: two derivation facts restate the prose just before or after them (23.3's "Equilibrium
+between two phases … is at constant T and P", 23.4's "ΔH̄_vap is independent of T"), the prose-first
+reading of 16.1 and 19.1. 23.4's integrated derivation leaves the book's fragments "which actually has
+the wrong curvature …", "assuming that …" and "so that we can determine …" after it in the text. In
+dark mode the ice and liquid regions of the phase diagram are two close greens.
