@@ -1,0 +1,63 @@
+{
+ "id": "22.6",
+ "module": "14493",
+ "chapter": "22",
+ "title": "The Standard State for a Gas is an Ideal Gas at 1 Bar",
+ "short": "Standard state of a gas",
+ "lead": "Tables of thermodynamic data for gases all refer to one standard state. Its definition fixes a pressure and an ideal gas, and leaves the temperature open.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "The page prints no credit, and nothing was left out.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": []
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The exercise and its solution are AI-written; Bloom level and concept tag were chosen by AI.",
+ "figures": [],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "standard-state",
+   "concept": "standard-state-gas",
+   "verb": "introduces"
+  },
+  {
+   "span": "standard-state",
+   "concept": "standard-state",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "known as standard state conditions (SSC)",
+   "kind": "exercise",
+   "bloom": "Understand",
+   "place": {
+    "at": "end"
+   },
+   "cite": "standard-state",
+   "prompt": "<p>No real gas is ideal, yet the standard state of every gas is a pure ideal gas at 1 bar. Why define it that way, and why does the definition name no temperature?</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "Think about how far each real gas departs from ideal behavior at 1 bar.",
+    "solution": "<p>A real gas at 1 bar is slightly non-ideal, and each gas departs from ideality by a different amount. Referring every gas to the same hypothetical ideal gas at 1 bar gives all of them one baseline, so the corrections for non-ideality are made the same way for every gas. The temperature is left out because data are needed at many temperatures: each value is tabulated at a stated temperature, such as 298.15 K, and the standard state at any other temperature is the ideal gas at 1 bar and that temperature.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "standard-state-gas"
+  }
+ ],
+ "footnotes": []
+}

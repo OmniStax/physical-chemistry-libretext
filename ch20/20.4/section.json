@@ -1,0 +1,300 @@
+{
+ "id": "20.4",
+ "module": "13718",
+ "chapter": "20",
+ "title": "The Second Law of Thermodynamics",
+ "short": "The second law",
+ "lead": "Two blocks at different temperatures, sealed off from the rest of the universe, exchange heat until they agree. Following their entropy on the way gives a criterion for spontaneity, which is then extended to systems that exchange heat with their surroundings.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "The page prints no credits; its sketch of the two blocks and its graph of entropy against time are folded into one moving simulation.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercise here; the one exercise is new and AI-written, its answers computed. Numeric answers accept a 2% tolerance.",
+ "figures": [
+  {
+   "id": "sim-two-blocks",
+   "kind": "sim",
+   "originals": [
+    "/media/ch20/401986-Isolated_System.png",
+    "/media/ch20/401987-Entropy.png"
+   ],
+   "draws": [
+    "temperature",
+    "heat",
+    "entropy",
+    "time",
+    "energy"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "spontaneity-of-an-isolated-system",
+   "concept": "isolated-system",
+   "verb": "introduces"
+  },
+  {
+   "span": "spontaneity-of-an-isolated-system",
+   "concept": "heat-flow-entropy-production",
+   "verb": "introduces"
+  },
+  {
+   "span": "spontaneity-of-an-isolated-system",
+   "concept": "two-block-entropy-change",
+   "verb": "introduces"
+  },
+  {
+   "span": "spontaneity-of-an-isolated-system",
+   "concept": "second-law",
+   "verb": "introduces"
+  },
+  {
+   "span": "spontaneity-of-an-isolated-system",
+   "concept": "entropy",
+   "verb": "uses"
+  },
+  {
+   "span": "entropy-exchange-of-an-open-system",
+   "concept": "entropy-production-exchange",
+   "verb": "introduces"
+  },
+  {
+   "span": "entropy-exchange-of-an-open-system",
+   "concept": "clausius-inequality",
+   "verb": "introduces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "two identical blocks of metal, say aluminum",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "spontaneity-of-an-isolated-system",
+   "prompt": "<p>Two identical aluminium blocks, each with $\\kCV = 10.0$ J/K, start at 400 K and 300 K. They are put in contact and isolated from everything else.</p><ol type=\"a\"><li>What temperature do they reach?</li><li>What is the entropy change of the hotter block?</li><li>What is the entropy change of the pair?</li></ol>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 350,
+      "unit": "K"
+     },
+     {
+      "part": "b",
+      "value": -1.335,
+      "unit": "J/K",
+      "hint": "The block cools at constant heat capacity from 400 K to the final temperature."
+     },
+     {
+      "part": "c",
+      "value": 0.206,
+      "unit": "J/K"
+     }
+    ],
+    "solution": "<p>a. The blocks are identical, so the energy one loses the other gains and they meet at the average, $(400 + 300)/2 = 350$ K.</p><p>b. $\\Delta S_A = \\kCV\\ln\\dfrac{350}{400} = (10.0)(-0.1335) = -1.335$ J/K.</p><p>c. The colder block gains $\\kCV\\ln\\dfrac{350}{300} = +1.542$ J/K, so the pair gains $-1.335 + 1.542 = 0.206$ J/K, which is $\\kCV\\ln\\dfrac{(400 + 300)^2}{4(400)(300)} = 10.0\\ln\\dfrac{490000}{480000}$. It is positive, as the second law requires.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "two-block-entropy-change"
+  },
+  {
+   "exercise": "a1",
+   "concept": "second-law"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "square",
+   "kind": "correction",
+   "html": "The book prints $\\kTA^2 + \\kTB^2$ in the numerator; it is $(\\kTA + \\kTB)^2$. The printed form can fall below $4\\kTA\\kTB$: at 400 K and 300 K it gives $\\Delta S = \\kCV\\ln(250000/480000) = -0.652\\,\\kCV$, a decrease, where $(\\kTA + \\kTB)^2$ gives $+0.0206\\,\\kCV$."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "heat-flow",
+   "what": "the entropy produced as heat flows between the blocks",
+   "source": "Physical Chemistry (LibreTexts), 20.4",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "d\\kSent = \\dfrac{\\delta\\kqrev}{\\kT}",
+       "src": "20.2"
+      },
+      {
+       "tex": "d\\kUA = \\delta\\kqA + 0",
+       "src": "20.4, no work"
+      },
+      {
+       "text": "There is only one path (along $\\kq$), so we do not need to worry about reversible and irreversible paths: the heat that flows is the reversible heat."
+      }
+     ],
+     "then": {
+      "tex": "\\mk{s}{d\\kSent} = \\mk{q}{\\dfrac{\\delta\\kqrev}{\\kT}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{s}{\\kT\\, d\\kSent} = \\mk{q}{\\delta\\kqrev}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{s}{\\kT\\, d\\kSent} = \\mk{q}{\\delta\\kqA}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{s}{\\kT\\, d\\kSent} = \\mk{q}{d\\kUA}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "note": "The book says that because $U$ is a state function this makes $q$ a state function as well. Heat stays a path function; with no work, $\\delta q_A$ equals $dU_A$ along the one path open here, which is all the argument needs."
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "d\\kUA = -d\\kUB",
+       "src": "20.4, first law"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{s}{d\\kSent} = \\mk{a}{\\dfrac{d\\kUA}{\\kTA}} + \\mk{b}{\\dfrac{d\\kUB}{\\kTB}}",
+      "uses": [
+       0
+      ],
+      "why": "Each block takes in its energy at its own temperature, and the entropy changes of the two blocks add."
+     },
+     "steps": [
+      {
+       "tex": "\\mk{s}{d\\kSent} = \\mk{a}{\\dfrac{d\\kUA}{\\kTA}} - \\mk{b}{\\dfrac{d\\kUA}{\\kTB}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{s}{d\\kSent} = \\mk{c}{d\\kUA\\left( \\dfrac{1}{\\kTA} - \\dfrac{1}{\\kTB} \\right)}",
+       "uses": [],
+       "map": {
+        "a": "c",
+        "b": "c"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "two-blocks",
+   "what": "the entropy change of two identical blocks",
+   "source": "Physical Chemistry (LibreTexts), 20.4",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\Delta\\kUA = -\\Delta\\kUB",
+       "src": "20.4, first law"
+      },
+      {
+       "text": "Each block has the same heat capacity $\\kCV$, so its energy changes by $\\kCV$ times its change in temperature.",
+       "src": "20.4"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{a}{\\Delta\\kUA} = \\mk{b}{-\\Delta\\kUB}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{a}{\\kCV(T_f - \\kTA)} = \\mk{b}{-\\kCV(T_f - \\kTB)}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{a}{T_f - \\kTA} = \\mk{b}{\\kTB - T_f}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{f}{T_f} = \\mk{m}{\\dfrac{\\kTA + \\kTB}{2}}",
+       "uses": []
+      }
+     ]
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "text": "Heating or cooling a block of constant heat capacity $\\kCV$ from $T_i$ to $T_f$ changes its entropy by $\\kCV\\ln(T_f/T_i)$.",
+       "src": "20.3"
+      },
+      {
+       "text": "The entropy changes of the two blocks add."
+      }
+     ],
+     "then": {
+      "tex": "\\mk{s}{\\Delta\\kSent} = \\mk{a}{\\kCV\\ln\\dfrac{T_f}{\\kTA}} + \\mk{b}{\\kCV\\ln\\dfrac{T_f}{\\kTB}}",
+      "uses": [
+       1,
+       2
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{s}{\\Delta\\kSent} = \\mk{c}{\\kCV\\ln\\dfrac{T_f^2}{\\kTA\\kTB}}",
+       "uses": [],
+       "cap": "A sum of logarithms is the logarithm of the product: $\\ln x + \\ln y = \\ln xy$.",
+       "map": {
+        "a": "c",
+        "b": "c"
+       }
+      },
+      {
+       "tex": "\\mk{s}{\\Delta\\kSent} = \\mk{c}{\\kCV\\ln\\left[\\dfrac{(\\kTA + \\kTB)^2}{4\\kTA\\kTB}\\right]}",
+       "uses": [
+        0
+       ]
+      }
+     ],
+     "note": "The book prints $\\kTA^2 + \\kTB^2$ in the numerator; it is $(\\kTA + \\kTB)^2$. The printed form can fall below $4\\kTA\\kTB$: at 400 K and 300 K it gives $\\Delta S = \\kCV\\ln(250000/480000) = -0.652\\,\\kCV$, a decrease, where $(\\kTA + \\kTB)^2$ gives $+0.0206\\,\\kCV$."
+    }
+   ]
+  }
+ ]
+}

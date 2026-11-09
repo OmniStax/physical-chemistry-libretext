@@ -1,0 +1,41 @@
+<section id="heating-ice">
+<h2>Heating ice through its melting point</h2>
+<p>It should be stressed that there <strong><span data-concept="no-absolute-enthalpies">are no absolute enthalpies</span></strong>. All that is properly defined are differences in <span data-concept="enthalpy">enthalpy</span> $\kDeltaH$ and these are only defined for <em><strong>processes</strong></em></p>
+<div class="note">
+<div class="eyebrow">Note</div>
+<h3>When dealing with enthalpies</h3>
+<p><strong><span data-concept="enthalpy-of-a-process">Define the Process</span></strong></p>
+</div>
+<p>For example for the process of:</p>
+<p>Process 1: <em><strong>heating ice from -20<sup>o</sup>C to -0<sup>o</sup>C</strong></em></p>
+<p>We could write ΔH<sub>1</sub> = ∫ C<sub>P,ice</sub>. dT from T=253K to T=273K = H(273) -H(253). But before moving beyond the melting point first a different process needs to take place, that of</p>
+<p>Process 2: <em><strong>melting</strong></em></p>
+<p>This gives us <span data-concept="enthalpy-of-fusion">Δ<sub>fus</sub>H</span> = H<sub>liquid</sub> - H<sub>solid</sub> (both at 273K!). When we heat the liquid water further to say +20<sup>o</sup>C we would have to integrate over the <span data-concept="constant-pressure-heat-capacity">heat capacity</span> of the liquid.</p>
+<p>Process 3: <em><strong>heating water from 0<sup>o</sup>C to +20<sup>o</sup>C</strong></em></p>
+<p>We could write</p>
+$$ \kDeltaH_3 = \int C_{P,water}\, d\kT $$
+<p>from T=273K to T=293K = H(293)-H(273).</p>
+<p>The total change in enthalpy between -20 and +20 would be the sum of the three enthalpy changes.</p>
+$$ \kDeltaH_{total process} = \kDeltaH_1 + \kDeltafusH + \kDeltaH_3 $$
+<p>Of course we could consider doing the same calculation for any temperature between -20 and +20 and summarize all our results in a graph. The three processes can thus schematically be shown in <a class="figref" href="#19.10-sim-enthalpy-melting">Figure 19.10.1</a>.</p>
+<figure class="sim" id="sim-enthalpy-melting" data-figure="19.10.1" data-original="/media/ch19/87321-CH431_Image100.gif,/media/ch19/87323-DSC.gif" data-original-width="574,464" data-original-caption="Schematic enthalpy function showing the jump at the melting point. The ideal heat capacity signal and its broadened DSC signal">
+  <div class="sim-head"><span class="eyebrow">Figure 19.10.1</span><span>Move <span data-type="temperature">the temperature</span> from −20 °C to +20 °C and watch <span data-concept="enthalpy">the enthalpy</span> climb, then jump at the melting point. Below, the jump is a spike in <span data-concept="constant-pressure-heat-capacity">the heat capacity</span>; widen the DSC peak and its area stays the heat of fusion. Ice's heat capacity (38 J mol⁻¹ K⁻¹) and heat of fusion (6.01 kJ/mol) are handbook values (CRC Handbook of Chemistry and Physics); water's 75.29 J mol⁻¹ K⁻¹ is from Table 19.13.1.</span></div>
+</figure>
+<p>Notice that the slopes (i.e. the <span data-concept="constant-pressure-heat-capacity">heat capacities</span>!) before and after the melting point differ. The slope for the liquid is a little steeper because the liquid has more degrees of freedom and therefore the heat capacity of the liquid tends to be higher than of the solid. In the figure the enthlapy curves are shown as straight lines. This would be the case if the heat capacities are <em>constant</em> over the temperature interval. Although C<sub>p</sub> is typically a 'slow' or 'weak' function of temperature it usually does change a bit, which means that the straight lines for H become curves.</p>
+<blockquote><p>Although C<sub>p</sub> is typically a 'slow' or 'weak' function of temperature and is well approximated as a constant.</p></blockquote>
+</section>
+
+<section id="singular-heat-capacity">
+<h2>A singular heat capacity</h2>
+<p>Notice that for process two, the temperature is constant, that means that $\Delta \kT$ or $d\kT$ is zero, but ΔH is finite, consequently ΔH/ΔT is infinitly large. Taking the limit for ΔT going to zero, we get a derivative:</p>
+$$ \left( \dfrac{\partial \kHenth}{ \partial \kT} \right)_p = \kCpheat $$
+<p><span data-concept="heat-capacity-at-transition">This derivative, the heat capacity must undergo a singularity: the slope is infinitely large (i.e, the $\kHenth$ curve goes straight up).</span> When there are more phase transitions, more discontinuities in $\kHenth$ and singularities in $\kCpheat$ result (<a class="figref" href="#19.10-sim-enthalpy-melting">Figure 19.10.1</a>)<sup class="fn" data-note="c-more-transitions"></sup>. Note that $\kHenth(\kT)-\kHenth(0)$, not $\kHenth(\kT)$ is plotted to avoid the question what the absolute enthalpy is.</p>
+<div class="note">
+<div class="eyebrow">Note</div>
+<h3>Scanning calorimetry</h3>
+<p>There is technique that allows us to measure the heat capacity as a function of temperature fairly directly. It is called <span data-concept="differential-scanning-calorimetry">Differential Scanning Calorimetry (DSC)</span>. You put a sample in a little pan and put the pan plus an empty reference pan in the calorimeter. The instrument heats up both pans with a constant heating rate. Both pans get hotter by <em><strong>conduction</strong></em>, but the heat capacity of the filled pan is obviously bigger. This means that the heat flow into the sample pan must be a bit bigger than into the empty one. This differential heat flow induces a tiny temperature difference ΔT between the two pans that can be measured. This temperature difference is proportional to the heat flow difference which is proportional to the heat capacity difference.</p>
+$$ \Delta \kT \sim \Delta\Phi \sim \Delta_{between pans}\kCpheat = \kCpheat^{sample} \,\text{(if the pans cancel)} $$
+<p>However, there are number of serious broadening issues with the technique. If you melt something you will never get to see the infinite singularity of the heat capacity. Instead it <a class="figref" href="#19.10-sim-enthalpy-melting">broadens out into a peak</a>. If you integrate the peak you get the Δ<sub>fusion</sub>H and the onset is calibrated to give you the melting point.</p>
+<p>It is even possible to heat the sample with a rate that fluctuates with a little sine wave. This "Modulated DSC" version can even give you the (small) difference in $\kCpheat$ before and after the melting event.</p>
+</div>
+</section>

@@ -1,0 +1,140 @@
+{
+ "id": "22.8",
+ "module": "14495",
+ "chapter": "22",
+ "title": "Fugacity Measures Nonideality of a Gas",
+ "short": "Fugacity",
+ "lead": "The ideal-gas expression for the molar Gibbs energy fails for a real gas. Lewis's fugacity takes the place of the pressure so that the same form holds for every gas, and it carries over to the components of a mixture and to chemical potentials.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "By Jerry LaRue and Michael Adewumi; nothing was left out.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The exercise and its solution are AI-written; numeric answers accept a 2% tolerance, and Bloom level and concept tags were chosen by AI.",
+ "figures": [
+  {
+   "id": "sim-fugacity-coefficient",
+   "kind": "sim",
+   "draws": [
+    "pressure",
+    "temperature"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "defining-fugacity",
+   "concept": "gibbs-fundamental-equation",
+   "verb": "uses"
+  },
+  {
+   "span": "defining-fugacity",
+   "concept": "ideal-gas",
+   "verb": "uses"
+  },
+  {
+   "span": "defining-fugacity",
+   "concept": "fugacity",
+   "verb": "introduces"
+  },
+  {
+   "span": "defining-fugacity",
+   "concept": "fugacity-coefficient",
+   "verb": "introduces"
+  },
+  {
+   "span": "defining-fugacity",
+   "concept": "fugacity-zero-pressure-limit",
+   "verb": "introduces"
+  },
+  {
+   "span": "mixtures",
+   "concept": "component-fugacity",
+   "verb": "introduces"
+  },
+  {
+   "span": "mixtures",
+   "concept": "chemical-potential",
+   "verb": "uses"
+  },
+  {
+   "span": "mixtures",
+   "concept": "chemical-potential-fugacity",
+   "verb": "introduces"
+  },
+  {
+   "span": "mixtures",
+   "concept": "standard-state-gas",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "The ratio between fugacity and pressure is:",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "defining-fugacity",
+   "prompt": "<p>At moderate pressures a gas follows $Z = 1 + B_2\\kP/\\kR\\kT$, with $B_2 = b - a/\\kR\\kT$ for a van der Waals gas (16.5).</p><ol type=\"a\"><li>Using $d\\kGbar = \\kR\\kT\\;d\\ln \\kf$ and $\\bar{V} = \\kR\\kT/\\kP + B_2$, show that $\\ln\\phi = B_2\\kP/\\kR\\kT$ at constant temperature, and find $\\phi$ for N₂ at 298.15 K and 100 bar, with a = 1.43 L² bar mol⁻² and b = 0.03913 L mol⁻¹ (Table 16.2.1).</li><li>What is its fugacity?</li></ol>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 0.928,
+      "hint": "Write dḠ = V̄ dP with the given V̄, set it equal to RT d ln f, and integrate from P = 0, where f/P = 1."
+     },
+     {
+      "part": "b",
+      "value": 92.8,
+      "unit": "bar"
+     }
+    ],
+    "solution": "<p>(a) At constant temperature $d\\kGbar = \\bar{V}d\\kP = \\kR\\kT\\,d\\ln\\kP + B_2\\,d\\kP$. Setting this equal to $\\kR\\kT\\,d\\ln\\kf$ gives $\\kR\\kT\\,d\\ln(\\kf/\\kP) = B_2\\,d\\kP$, and since $\\kf/\\kP \\to 1$ as $\\kP \\to 0$, integrating from zero pressure gives $\\ln\\phi = B_2\\kP/\\kR\\kT$. For N₂, $\\kR\\kT = (0.08314\\ \\text{L bar K}^{-1}\\text{mol}^{-1})(298.15\\ \\text{K}) = 24.79$ L bar mol⁻¹ and $B_2 = 0.03913 - 1.43/24.79 = -0.0186$ L mol⁻¹, so $\\ln\\phi = (-0.0186)(100)/24.79 = -0.0749$ and $\\phi = 0.928$.</p><p>(b) $\\kf = \\phi\\kP = 92.8$ bar. At this temperature the attractions win, so the fugacity is below the pressure; the full van der Waals equation gives $\\phi = 0.940$.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "fugacity-coefficient"
+  },
+  {
+   "exercise": "a1",
+   "concept": "fugacity-zero-pressure-limit"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-equilibrium-zero",
+   "kind": "correction",
+   "html": "A chemical potential is not zero at equilibrium. Equilibrium makes the chemical potential of a species the same in every phase it occupies (23.3), so this line and the next hold only where $\\kmubar$ is taken as zero."
+  }
+ ]
+}

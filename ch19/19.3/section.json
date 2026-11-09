@@ -1,0 +1,274 @@
+{
+ "id": "19.3",
+ "module": "13701",
+ "chapter": "19",
+ "title": "Work and Heat are not State Functions",
+ "short": "Path functions",
+ "lead": "A gas can be squeezed to half its volume in one sudden step or through a string of balanced states. The two paths join the same two states, and comparing the work along each separates reversible processes from irreversible ones.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "The six piston and PV images of the compression and the expansion are shown together as one cylinder taken through its steps.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "medium"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "medium"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercises for this section; both exercises, on the work of a reversible and a one-step compression and on which path needs less, were written by AI with AI solutions, and their Bloom levels and concept tags were chosen by AI. Numeric answers accept a 2% tolerance.",
+ "figures": [
+  {
+   "id": "sim-reversible-path",
+   "kind": "sim",
+   "originals": [
+    "/media/ch19/402588-Piston_Compression.png",
+    "/media/ch19/402589-Thermodynamic_Irreversible_Compression.png",
+    "/media/ch19/402590-Thermodynamic_Reversible_Compression.png",
+    "/media/ch19/402591-Piston_Expansion.png",
+    "/media/ch19/402592-Thermodynamic_Irreversible_Expansion.png",
+    "/media/ch19/402593-Thermodynamic_Reversible_Expansion.png"
+   ],
+   "original_caption": "",
+   "draws": [
+    "pressure",
+    "volume",
+    "work"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "medium",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "path-functions",
+   "concept": "path-function",
+   "verb": "introduces"
+  },
+  {
+   "span": "path-functions",
+   "concept": "heat",
+   "verb": "uses"
+  },
+  {
+   "span": "path-functions",
+   "concept": "thermodynamic-work",
+   "verb": "uses"
+  },
+  {
+   "span": "path-functions",
+   "concept": "state-function",
+   "verb": "uses"
+  },
+  {
+   "span": "reversible-versus-irreversible",
+   "concept": "reversible-process",
+   "verb": "introduces"
+  },
+  {
+   "span": "reversible-versus-irreversible",
+   "concept": "reversible-isothermal-work",
+   "verb": "introduces"
+  },
+  {
+   "span": "reversible-versus-irreversible",
+   "concept": "reversible-work-extremes",
+   "verb": "introduces"
+  },
+  {
+   "span": "reversible-versus-irreversible",
+   "concept": "irreversible-process",
+   "verb": "reinforces"
+  },
+  {
+   "span": "reversible-versus-irreversible",
+   "concept": "constant-pressure-work",
+   "verb": "uses"
+  },
+  {
+   "span": "reversible-versus-irreversible",
+   "concept": "external-pressure",
+   "verb": "uses"
+  },
+  {
+   "span": "reversible-versus-irreversible",
+   "concept": "ideal-gas-law",
+   "verb": "uses"
+  },
+  {
+   "span": "reversible-versus-irreversible",
+   "concept": "path-function",
+   "verb": "reinforces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "ai1",
+   "source_id": "img:3",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "reversible-versus-irreversible",
+   "prompt": "<p>1.00 mol of an ideal gas at 300 K is compressed isothermally from 10.0 L to 5.0 L. How much work is done on the gas (a) along the reversible path and (b) in one step against a constant external pressure equal to the final pressure of the gas?</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 1.73,
+      "unit": "kJ",
+      "hint": "Along the reversible path $w = -nRT\\ln(V_2/V_1)$."
+     },
+     {
+      "part": "b",
+      "value": 2.49,
+      "unit": "kJ",
+      "hint": "Find the final pressure from $P = nRT/V$, then use $w = -P_{ext}\\Delta V$."
+     }
+    ],
+    "solution": "<p>(a) $nRT = (1.00\\ \\text{mol})(8.314\\ \\text{J K}^{-1}\\text{mol}^{-1})(300\\ \\text{K}) = 2494$ J, so $w = -nRT\\ln(V_2/V_1) = -(2494\\ \\text{J})\\ln(5.0/10.0) = +1729$ J, or +1.73 kJ. (b) The final pressure is $P = nRT/V_2 = 2494\\ \\text{J}/(5.0\\times10^{-3}\\ \\text{m}^3) = 4.99\\times10^{5}$ Pa. In one step against that pressure, $w = -P_{ext}\\Delta V = -(4.99\\times10^{5}\\ \\text{Pa})(-5.0\\times10^{-3}\\ \\text{m}^3) = +2494$ J, or +2.49 kJ.</p>"
+   }
+  },
+  {
+   "id": "ai2",
+   "source_id": "img:2",
+   "kind": "exercise",
+   "bloom": "Understand",
+   "place": {
+    "at": "end"
+   },
+   "cite": "reversible-versus-irreversible",
+   "prompt": "<p>Both compressions above start and end in the same two states. Why does the one-step path need more work than the reversible one?</p>",
+   "answer": {
+    "type": "choice",
+    "generated_by": "ai",
+    "options": [
+     "In one step the external pressure is held at the final pressure the whole way, above the gas's own pressure, so the rectangle under it is larger than the area under the isotherm.",
+     "The one-step compression heats the gas, so its final state has a higher internal energy than the reversible one.",
+     "Along the reversible path the external pressure is below the gas's pressure, so the gas helps push the piston in.",
+     "Work is a state function, so the two values differ only by the rounding in the calculation."
+    ],
+    "correct": 0,
+    "hint": "Compare the external pressure with the gas's own pressure along each path.",
+    "solution": "<p>Work is the area under the external pressure on a $PV$ diagram. In one step $P_{ext}$ is the final pressure throughout, higher than the gas's own pressure at every volume but the last, so the rectangle it sweeps is larger than the area under the isotherm. Along the reversible path $P_{ext} = P$ at every moment, which is the smallest pressure that still pushes the piston in, so the reversible compression needs the least work. The two end states are the same, and work differs because it is a path function.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "ai1",
+   "concept": "reversible-isothermal-work"
+  },
+  {
+   "exercise": "ai1",
+   "concept": "constant-pressure-work"
+  },
+  {
+   "exercise": "ai2",
+   "concept": "reversible-work-extremes"
+  },
+  {
+   "exercise": "ai2",
+   "concept": "path-function"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-expansion-sign",
+   "kind": "correction",
+   "html": "In the expansion the gas does work on the surroundings, so the work is done <em>by</em> the system and $w$ is negative."
+  },
+  {
+   "id": "c-expand",
+   "kind": "correction",
+   "html": "This second run expands the gas reversibly, through states where $P_{ext} = P$; \"compress\" is carried over from the compression above."
+  },
+  {
+   "id": "c-equal-work",
+   "kind": "correction",
+   "html": "With the book's numbers the two reversible paths do not do the same amount of work. The compression from 1 L at 1 bar takes $w = -nRT\\ln(V_2/V_1) = -(1\\ \\text{L bar})\\ln\\tfrac{1}{2} = +69.3$ J, and the expansion from 1 L at 2 bar gives $w = -(2\\ \\text{L bar})\\ln 2 = -138.6$ J. Reversible work out and back is equal and opposite only between the same two states."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "reversible-isothermal-work",
+   "what": "the work of a reversible isothermal compression",
+   "source": "Physical Chemistry (LibreTexts), 19.3 Work and Heat are not State Functions",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kw = -\\int_{\\kVa}^{\\kVb}\\kPext\\,d\\kV",
+       "src": "19.2"
+      },
+      {
+       "text": "Along a reversible path the forces balance at all times, so $P_{ext} = P$.",
+       "src": "19.3, Reversible vs. Irreversible Processes"
+      },
+      {
+       "tex": "\\kP = \\dfrac{\\knmol\\kR\\kT}{\\kV}",
+       "src": "16.1"
+      },
+      {
+       "text": "The compression is isothermal: $T$ stays constant."
+      }
+     ],
+     "then": {
+      "tex": "\\mk{w}{\\kw} = \\mk{r}{-\\int_{\\kVa}^{\\kVb}\\kPext\\,d\\kV}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{w}{\\kw} = \\mk{r}{-\\int_{\\kVa}^{\\kVb}\\kP\\,d\\kV}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{w}{\\kw} = \\mk{r}{-\\int_{\\kVa}^{\\kVb}\\dfrac{\\knmol\\kR\\kT}{\\kV}\\,d\\kV}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{w}{\\kw} = \\mk{c}{-\\knmol\\kR\\kT}\\mk{i}{\\int_{\\kVa}^{\\kVb}\\dfrac{d\\kV}{\\kV}}",
+       "uses": [
+        3
+       ],
+       "map": {
+        "r": [
+         "c",
+         "i"
+        ]
+       },
+       "cap": "With $T$ constant, $nRT$ is a constant and comes out of the integral."
+      },
+      {
+       "tex": "\\mk{w}{\\kw} = \\mk{c}{-\\knmol\\kR\\kT}\\mk{i}{\\ln\\left(\\dfrac{\\kVb}{\\kVa}\\right)}",
+       "uses": [],
+       "cap": "The integral of $dV/V$ is $\\ln V$, and the difference of two logarithms is the logarithm of the ratio."
+      }
+     ],
+     "src": "19.3",
+     "note": "The book's middle line leaves out the $dV$; the integrand is $dV/V$."
+    }
+   ]
+  }
+ ]
+}

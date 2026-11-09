@@ -78,7 +78,7 @@ const sim = (id, H) => F.sim(root, id, H);
     }
     hits.push({ x: bx.X(TSUB), y: bx.Y(S0 + JUMP / 2), r: 16, name: `the sublimation jump at 194.7 K, from ${fmt(S0, 1)} to ${fmt(S0 + JUMP, 1)} J/(mol K)` });
     tex(d.readout, past
-      ? `\\kSent(\\kT)=\\int_{0}^{\\kTsub}\\frac{\\kCP}{\\kT}d\\kT+\\frac{\\Delta H_{sub}}{\\kTsub}+\\int_{\\kTsub}^{\\kT}\\frac{\\kCPg}{\\kT}d\\kT \\\\ \\kSent(${fmt(t, 1)}\\ \\text{K}) = ${fmt(a, 1)} + \\frac{${fmt(DH * 1000, 0).replace(/(\\d\\d)(\\d\\d\\d)$/, '$1\\\\,$2')}\\ \\text{J/mol}}{194.7\\ \\text{K}} + ${fmt(g, 1)} = ${fmt(tot, 1)}\\ \\text{J/(mol K)}`
+      ? `\\kSent(\\kT)=\\int_{0}^{\\kTsub}\\frac{\\kCP}{\\kT}d\\kT+\\frac{\\Delta H_{sub}}{\\kTsub}+\\int_{\\kTsub}^{\\kT}\\frac{\\kCPg}{\\kT}d\\kT \\\\ \\kSent(${fmt(t, 1)}\\ \\text{K}) = ${fmt(a, 1)} + \\frac{${fmt(DH * 1000, 0).replace(/(\d\d)(\d\d\d)$/, '$1\\,$2')}\\ \\text{J/mol}}{194.7\\ \\text{K}} + ${fmt(g, 1)} = ${fmt(tot, 1)}\\ \\text{J/(mol K)}`
       : `\\kSent(\\kT)=\\int_{0}^{\\kT}\\frac{\\kCP}{\\kT}d\\kT \\\\ \\kSent(${fmt(t, 1)}\\ \\text{K}) = ${fmt(a, 1)}\\ \\text{J/(mol K)}`);
   }
   register(d.fig, { update: () => {}, draw });

@@ -1265,3 +1265,21 @@ C̄_P(l) ≈ 136 and C̄_P(g) ≈ 82 J/(K mol) (only if `sim-gibbs-temperature` 
 
 No tool changes. `colours:default` not run (no type added; the merge reports the colours stale
 for Chapter 20's `entropy`). `check:content`: no errors, no warnings.
+
+## Chapter 23 prep · 2026-11-08
+
+Prep only, no section built. Fetched Chapter 23's 10 images into `media/ch23/`. Converted the
+landing page (one paragraph: `intro/` page and record), 23.1–23.5 and 23.E (empty; nothing to route);
+wrote `ch23/exploration.md`, `ch23/config.md` (agreed on Chapter 1's terms), `ch23/chapter.json`
+(5 sections, intro, 144 variables) and merged `ch23/book-rows.json`: no new type, 68 symbols (all
+with macros), 33 concepts, 50 edges (Hasse-checked, 6 redundant removed), 27 forms. Five figures
+proposed (one moving: the G landscape's fluctuations; four still: the P–T diagram with a dragged
+point, μ(T) of three phases under a P slider, Ḡ(P) folding 13.6 + 13.7, vapor pressure beside
+ln P against 1/T), one 3D extra offered; six printed derivations; 1 unkeyed exercise, 4 AI exercises
+proposed. Tool: `lt2md.py` reads an image in a `<p>` whose caption div follows (23.1.2); Chapters
+1–22 reconverted to scratch, byte-identical except 1.3 (stale committed file, same without the change)
+and 22's unwritten intro. Drafts for 23.1–23.5 and the intro, 267 maths spans, KaTeX strict, no
+error. Flags, from memory and unchecked: water's critical point (647 K, 220.6 bar), the densities of
+ice and water (0.9167, 0.9998 g/cm³), Mars's surface pressure (≈ 6 mbar), CO₂'s triple point
+(216.6 K, 5.2 bar) and critical point (304.1 K, 73.8 bar), and the boiling points and Δ_vap H of
+diethyl ether, bromine, n-octane, ethylene glycol and mercury for Figure 23.4.1.

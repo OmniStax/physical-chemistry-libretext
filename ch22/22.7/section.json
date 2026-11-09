@@ -1,0 +1,222 @@
+{
+ "id": "22.7",
+ "module": "14494",
+ "chapter": "22",
+ "title": "The Gibbs-Helmholtz Equation",
+ "short": "Gibbs–Helmholtz equation",
+ "lead": "The Gibbs energy of an ideal gas and of a solid change with pressure in different ways. Its dependence on temperature follows from the derivative of G/T and from the enthalpy and entropy built up through melting and boiling.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "The page prints no credit; the benzene curve it cites from McQuarrie and Simon's book (their Figure 22.7) is not printed on the page and is not redrawn here.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": []
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "Both exercises and their solutions are AI-written; numeric answers accept a 2% tolerance, and Bloom levels and concept tags were chosen by AI.",
+ "figures": [],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "pressure",
+   "concept": "gibbs-ideal-gas-pressure",
+   "verb": "introduces"
+  },
+  {
+   "span": "pressure",
+   "concept": "gibbs-solid-pressure",
+   "verb": "introduces"
+  },
+  {
+   "span": "pressure",
+   "concept": "standard-state-gas",
+   "verb": "uses"
+  },
+  {
+   "span": "pressure",
+   "concept": "isothermal-compressibility",
+   "verb": "uses"
+  },
+  {
+   "span": "gibbs-helmholtz",
+   "concept": "gibbs-helmholtz-equation",
+   "verb": "introduces"
+  },
+  {
+   "span": "gibbs-helmholtz",
+   "concept": "constant-pressure-heat-capacity",
+   "verb": "uses"
+  },
+  {
+   "span": "gibbs-temperature",
+   "concept": "gibbs-temperature-curve",
+   "verb": "introduces"
+  },
+  {
+   "span": "gibbs-temperature",
+   "concept": "third-law",
+   "verb": "reinforces"
+  },
+  {
+   "span": "gibbs-temperature",
+   "concept": "entropy-of-transition",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "For a mole of ideal gas we can use the gas law",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "pressure",
+   "prompt": "<p>One mole of an ideal gas is compressed at 298.15 K from 1 bar to 10 bar.</p><ol type=\"a\"><li>What is $\\Delta \\kGmolar$ of the gas?</li><li>What is the change in the molar Gibbs energy of liquid water over the same pressure change, taking its molar volume as constant at 18.07 cm³ mol⁻¹?</li></ol>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 5.71,
+      "unit": "kJ/mol",
+      "hint": "Use the ideal-gas result with the two pressures."
+     },
+     {
+      "part": "b",
+      "value": 16.3,
+      "unit": "J/mol",
+      "hint": "A liquid's volume hardly changes, so the integral of V dP is V times the change in pressure."
+     }
+    ],
+    "solution": "<p>(a) $\\Delta \\kGmolar = \\kR\\kT \\ln(\\kPtwo/\\kPone) = (8.314\\ \\text{J K}^{-1}\\text{mol}^{-1})(298.15\\ \\text{K})\\ln 10 = 5.71\\ \\text{kJ mol}^{-1}$.</p><p>(b) For a condensed phase $\\Delta G \\approx \\bar{V}\\Delta \\kP = (18.07\\times10^{-6}\\ \\text{m}^3\\,\\text{mol}^{-1})(9\\times10^{5}\\ \\text{Pa}) = 16.3\\ \\text{J mol}^{-1}$, about 350 times less than for the gas.</p>"
+   }
+  },
+  {
+   "id": "a2",
+   "source_id": "In this differential form the Gibbs-Helmholtz equation can be applied to any process.",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "gibbs-helmholtz",
+   "prompt": "<p>For NH₃(g) + HCl(g) → NH₄Cl(s), Section 22.2 gives ΔH = −176.2 kJ and ΔG = −91.21 kJ at 298 K. Taking ΔH as constant, use the Gibbs–Helmholtz equation to find ΔG at 500 K.</p>",
+   "answer": {
+    "type": "number",
+    "value": -33.6,
+    "unit": "kJ",
+    "generated_by": "ai",
+    "hint": "Integrate the Δ form of the Gibbs–Helmholtz equation from 298 K to 500 K.",
+    "solution": "<p>Integrating $\\left(\\partial (\\Delta \\kG/\\kT)/\\partial \\kT\\right)_{\\kP} = -\\kDeltaH/\\kT^2$ with $\\kDeltaH$ constant from $T_1$ to $T_2$ gives</p>$$ \\dfrac{\\Delta G_2}{T_2} = \\dfrac{\\Delta G_1}{T_1} + \\kDeltaH\\left(\\dfrac{1}{T_2} - \\dfrac{1}{T_1}\\right) $$<p>With the numbers, $\\Delta G_2/(500\\ \\text{K}) = (-91.21\\ \\text{kJ})/(298\\ \\text{K}) + (-176.2\\ \\text{kJ})(1/500 - 1/298)\\ \\text{K}^{-1} = -0.3061 + 0.2389 = -0.0672\\ \\text{kJ K}^{-1}$, so $\\Delta G(500\\ \\text{K}) = -33.6$ kJ. The reaction is still spontaneous at 500 K, by less.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "gibbs-ideal-gas-pressure"
+  },
+  {
+   "exercise": "a1",
+   "concept": "gibbs-solid-pressure"
+  },
+  {
+   "exercise": "a2",
+   "concept": "gibbs-helmholtz-equation"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-fig-22-7",
+   "kind": "correction",
+   "html": "The figure is Figure 22.7 of McQuarrie and Simon's <em>Physical Chemistry</em>, which this page does not print: $\\kG(\\kT) - \\kHenth(0)$ of benzene from 0 K through its melting and boiling points."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "gibbs-helmholtz",
+   "what": "the Gibbs–Helmholtz equation",
+   "source": "Physical Chemistry (LibreTexts), 22.7 The Gibbs-Helmholtz Equation",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kG = \\kHenth - \\kT\\kSent",
+       "src": "(22.5.3)"
+      },
+      {
+       "tex": "\\left(\\dfrac{\\partial \\kHenth}{\\partial \\kT}\\right)_{\\kP} = \\kCP",
+       "src": "19.9"
+      },
+      {
+       "tex": "\\left(\\dfrac{\\partial \\kSent}{\\partial \\kT}\\right)_{\\kP} = \\dfrac{\\kCP}{\\kT}",
+       "src": "21.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{g}{\\kG} = \\mk{h}{\\kHenth} - \\mk{s}{\\kT\\kSent}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{g}{\\kG/\\kT} = \\mk{h}{\\dfrac{\\kHenth}{\\kT}} - \\mk{s}{\\kSent}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{g}{\\left( \\dfrac{\\partial \\kG / \\kT}{\\partial \\kT} \\right)_{\\kP}} = \\mk{h}{- \\dfrac{\\kHenth}{\\kT^{2}} + \\dfrac{1}{\\kT} \\left( \\dfrac{\\partial \\kHenth}{\\partial \\kT} \\right)_{\\kP}} - \\mk{s}{\\left( \\dfrac{\\partial \\kSent}{\\partial \\kT} \\right)_{\\kP}}",
+       "uses": [],
+       "cap": "Take the derivative under constant pressure of each side; $H/T$ is a product of $H$ and $1/T$, so it gives two terms."
+      },
+      {
+       "tex": "\\mk{g}{\\left( \\dfrac{\\partial \\kG / \\kT}{\\partial \\kT} \\right)_{\\kP}} = \\mk{h}{- \\dfrac{\\kHenth}{\\kT^{2}} + \\dfrac{\\kCP}{\\kT}} - \\mk{s}{\\left( \\dfrac{\\partial \\kSent}{\\partial \\kT} \\right)_{\\kP}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{g}{\\left( \\dfrac{\\partial \\kG / \\kT}{\\partial \\kT} \\right)_{\\kP}} = \\mk{h}{- \\dfrac{\\kHenth}{\\kT^{2}} + \\dfrac{\\kCP}{\\kT}} - \\mk{s}{\\dfrac{\\kCP}{\\kT}}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{g}{\\left( \\dfrac{\\partial \\kG / \\kT}{\\partial \\kT} \\right)_{\\kP}} = \\mk{h}{- \\dfrac{\\kHenth}{\\kT^{2}}}",
+       "uses": []
+      }
+     ],
+     "num": "(22.7.1)",
+     "src": "22.7"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      }
+     ],
+     "then": {
+      "tex": "\\mk{a}{\\left( \\dfrac{\\partial \\kG_2 / \\kT}{\\partial \\kT} \\right)_{\\kP} - \\left( \\dfrac{\\partial \\kG_1 / \\kT}{\\partial \\kT} \\right)_{\\kP}} = \\mk{b}{- \\dfrac{\\kHenth_2}{\\kT^{2}} + \\dfrac{\\kHenth_1}{\\kT^{2}}}",
+      "uses": [
+       0
+      ],
+      "why": "The result written for the end and the beginning of a process, and the two equations subtracted."
+     },
+     "steps": [
+      {
+       "tex": "\\mk{a}{\\left( \\dfrac{\\partial \\Delta \\kG / \\kT}{\\partial \\kT} \\right)_{\\kP}} = \\mk{b}{- \\dfrac{\\kDeltaH}{\\kT^{2}}}",
+       "uses": []
+      }
+     ],
+     "src": "22.7"
+    }
+   ]
+  }
+ ]
+}

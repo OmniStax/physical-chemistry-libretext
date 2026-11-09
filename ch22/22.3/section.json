@@ -1,0 +1,531 @@
+{
+ "id": "22.3",
+ "module": "14490",
+ "chapter": "22",
+ "title": "The Maxwell Relations",
+ "short": "Maxwell relations",
+ "lead": "Writing the first and second laws as one equation for dU gives the internal energy its natural variables. Because dU, dH, dA and dG are exact differentials, their mixed second derivatives are equal, and each equality ties together two partial derivatives of T, S, p and V.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "The page prints no Contributors and Attributions list; its only author record is the LibreTexts tag \"authorname:flemingp\", so the credit is that tag as the page gives it.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": []
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "Exercise 22.5.3 and its key are the book's, moved here from Section 22.5 to the section that derives the Maxwell relations. The second exercise, its solution, and every Bloom level and concept tag are written by AI. The numeric answer accepts a 2% tolerance.",
+ "figures": [],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "first-and-second-laws",
+   "concept": "fundamental-equation-u",
+   "verb": "reinforces"
+  },
+  {
+   "span": "first-and-second-laws",
+   "concept": "exact-and-inexact-differentials",
+   "verb": "uses"
+  },
+  {
+   "span": "maxwell-relations",
+   "concept": "internal-energy-first-derivatives",
+   "verb": "introduces"
+  },
+  {
+   "span": "maxwell-relations",
+   "concept": "euler-reciprocity",
+   "verb": "introduces"
+  },
+  {
+   "span": "maxwell-relations",
+   "concept": "maxwell-relations",
+   "verb": "introduces"
+  },
+  {
+   "span": "maxwell-relations",
+   "concept": "maxwell-relation-u",
+   "verb": "introduces"
+  },
+  {
+   "span": "maxwell-relations",
+   "concept": "enthalpy-first-derivatives",
+   "verb": "introduces"
+  },
+  {
+   "span": "maxwell-relations",
+   "concept": "maxwell-relation-h",
+   "verb": "introduces"
+  },
+  {
+   "span": "maxwell-relations",
+   "concept": "maxwell-relation-a",
+   "verb": "introduces"
+  },
+  {
+   "span": "maxwell-relations",
+   "concept": "maxwell-relation-g",
+   "verb": "introduces"
+  },
+  {
+   "span": "maxwell-relations",
+   "concept": "thermal-expansion-coefficient",
+   "verb": "introduces"
+  },
+  {
+   "span": "maxwell-relations",
+   "concept": "isothermal-compressibility",
+   "verb": "introduces"
+  },
+  {
+   "span": "maxwell-relations",
+   "concept": "pressure-coefficient-alpha-kappa",
+   "verb": "introduces"
+  },
+  {
+   "span": "maxwell-relations",
+   "concept": "thermodynamic-equation-of-state",
+   "verb": "introduces"
+  },
+  {
+   "span": "maxwell-relations",
+   "concept": "natural-variables-u",
+   "verb": "uses"
+  },
+  {
+   "span": "maxwell-relations",
+   "concept": "fundamental-equation-h",
+   "verb": "reinforces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "e1",
+   "source_id": "exr:22.5.3",
+   "source_section": "22.5",
+   "source_number": "Exercise 22.5.3",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "maxwell-relations",
+   "prompt": "<p>Derive the Maxwell Relations.</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "source",
+    "solution": "<p>See the Maxwell Relations section.</p>"
+   }
+  },
+  {
+   "id": "a1",
+   "source_id": "The Maxwell relations are extraordinarily useful in deriving the dependence",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "maxwell-relations",
+   "prompt": "<p>A van der Waals gas obeys $\\kp = \\dfrac{nR\\kT}{\\kV - n b} - \\dfrac{an^2}{\\kV^2}$. Use the Maxwell relation from $\\kA$ to find $\\left(\\dfrac{\\partial \\kSent}{\\partial \\kV}\\right)_{\\kT}$ for 1.00 mol of $\\mathrm{N_2}$ ($b = 0.03913$ L/mol) in a volume of 1.00 L.</p>",
+   "answer": {
+    "type": "number",
+    "value": 8.65,
+    "unit": "J/(K·L)",
+    "generated_by": "ai",
+    "hint": "By Table 22.3.1, $(\\partial \\kSent/\\partial \\kV)_{\\kT} = (\\partial \\kp/\\partial \\kT)_{\\kV}$, and only the first term of $\\kp$ depends on $\\kT$.",
+    "solution": "<p>The Maxwell relation from $\\kA$ is $(\\partial \\kSent/\\partial \\kV)_{\\kT} = (\\partial \\kp/\\partial \\kT)_{\\kV}$. At constant $\\kV$ the attraction term $an^2/\\kV^2$ does not change with $\\kT$, so $(\\partial \\kp/\\partial \\kT)_{\\kV} = nR/(\\kV - n b)$. With the numbers, $(1.00)(8.314\\ \\text{J K}^{-1})/(1.00\\ \\text{L} - 0.0391\\ \\text{L}) = 8.65$ J/(K·L), a little more than the ideal gas's $nR/\\kV = 8.31$ J/(K·L), because the molecules' own volume leaves less room to expand into.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "e1",
+   "concept": "maxwell-relations"
+  },
+  {
+   "exercise": "e1",
+   "concept": "euler-reciprocity"
+  },
+  {
+   "exercise": "a1",
+   "concept": "maxwell-relation-a"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-dw",
+   "kind": "correction",
+   "html": "For a reversible expansion with only $\\kp$-$\\kV$ work the work is $dw = -\\kp d\\kV$; with $dq = \\kT d\\kSent$ that gives Equation 22.3.1."
+  },
+  {
+   "id": "c-ex-target",
+   "kind": "correction",
+   "html": "The left side should be $\\left(\\dfrac{\\partial \\kU}{\\partial \\kV}\\right)_{\\kT}$, which is what the solution derives."
+  },
+  {
+   "id": "c-chapter-4",
+   "kind": "correction",
+   "html": "Chapter 4 is a chapter of the textbook this page was first written for. In this book the result first appears in this example."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "maxwell-u",
+   "what": "the Maxwell relation from U",
+   "source": "Physical Chemistry (LibreTexts), 22.3 The Maxwell Relations",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "d\\kU = \\left( \\dfrac{\\partial \\kU}{\\partial \\kSent} \\right)_{\\kV} d\\kSent + \\left( \\dfrac{\\partial \\kU}{\\partial \\kV} \\right)_{\\kSent} d\\kV",
+       "src": "(22.3.2)"
+      },
+      {
+       "tex": "d\\kU = \\kT d\\kSent - \\kp d\\kV",
+       "src": "(22.3.1)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{dU}{d\\kU} = \\mk{a}{\\left( \\dfrac{\\partial \\kU}{\\partial \\kSent} \\right)_{\\kV}} d\\kSent + \\mk{b}{\\left( \\dfrac{\\partial \\kU}{\\partial \\kV} \\right)_{\\kSent}} d\\kV",
+      "src": "(22.3.2)"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{dU}{\\kT d\\kSent - \\kp d\\kV} = \\mk{a}{\\left( \\dfrac{\\partial \\kU}{\\partial \\kSent} \\right)_{\\kV}} d\\kSent + \\mk{b}{\\left( \\dfrac{\\partial \\kU}{\\partial \\kV} \\right)_{\\kSent}} d\\kV",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{a}{\\left( \\dfrac{\\partial \\kU}{\\partial \\kSent} \\right)_{\\kV}} = \\mk{dU}{\\kT}",
+       "uses": [],
+       "cap": "Both sides are the same differential for every $d\\kSent$ and $d\\kV$, so the coefficients of $d\\kSent$ on the two sides are equal."
+      }
+     ],
+     "num": "(22.3.3)",
+     "src": "22.3"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "d\\kU = \\left( \\dfrac{\\partial \\kU}{\\partial \\kSent} \\right)_{\\kV} d\\kSent + \\left( \\dfrac{\\partial \\kU}{\\partial \\kV} \\right)_{\\kSent} d\\kV",
+       "src": "(22.3.2)"
+      },
+      {
+       "tex": "d\\kU = \\kT d\\kSent - \\kp d\\kV",
+       "src": "(22.3.1)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{dU}{d\\kU} = \\mk{a}{\\left( \\dfrac{\\partial \\kU}{\\partial \\kSent} \\right)_{\\kV}} d\\kSent + \\mk{b}{\\left( \\dfrac{\\partial \\kU}{\\partial \\kV} \\right)_{\\kSent}} d\\kV",
+      "src": "(22.3.2)"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{dU}{\\kT d\\kSent - \\kp d\\kV} = \\mk{a}{\\left( \\dfrac{\\partial \\kU}{\\partial \\kSent} \\right)_{\\kV}} d\\kSent + \\mk{b}{\\left( \\dfrac{\\partial \\kU}{\\partial \\kV} \\right)_{\\kSent}} d\\kV",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{b}{\\left( \\dfrac{\\partial \\kU}{\\partial \\kV} \\right)_{\\kSent}} = \\mk{dU}{-\\kp}",
+       "uses": [],
+       "cap": "Both sides are the same differential for every $d\\kSent$ and $d\\kV$, so the coefficients of $d\\kV$ on the two sides are equal."
+      }
+     ],
+     "num": "(22.3.4)",
+     "src": "22.3"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\left[ \\dfrac{\\partial}{\\partial \\kV} \\left( \\dfrac{\\partial \\kU}{\\partial \\kSent} \\right)_{\\kV} \\right]_{\\kSent}= \\left[ \\dfrac{\\partial}{\\partial \\kSent} \\left( \\dfrac{\\partial \\kU}{\\partial \\kV} \\right)_{\\kSent} \\right]_{\\kV}"
+      },
+      {
+       "text": "Since $d\\kU$ is an exact differential, the Euler relation must hold: the mixed second derivatives of $\\kU$ are equal."
+      },
+      {
+       "step": 0
+      },
+      {
+       "step": 1
+      }
+     ],
+     "then": {
+      "tex": "\\left[ \\dfrac{\\partial}{\\partial \\kV} \\mk{a}{\\left( \\dfrac{\\partial \\kU}{\\partial \\kSent} \\right)_{\\kV}} \\right]_{\\kSent}= \\left[ \\dfrac{\\partial}{\\partial \\kSent} \\mk{b}{\\left( \\dfrac{\\partial \\kU}{\\partial \\kV} \\right)_{\\kSent}} \\right]_{\\kV}",
+      "uses": [
+       1
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\left[ \\dfrac{\\partial}{\\partial \\kV} \\mk{a}{\\left( \\kT \\right)_{\\kV}} \\right]_{\\kSent}= \\left[ \\dfrac{\\partial}{\\partial \\kSent} \\mk{b}{\\left( -\\kp \\right)_{\\kSent}} \\right]_{\\kV}",
+       "uses": [
+        2,
+        3
+       ]
+      },
+      {
+       "tex": "\\mk{a}{\\left( \\dfrac{\\partial \\kT}{\\partial \\kV} \\right)_{\\kSent}} = \\mk{b}{- \\left( \\dfrac{\\partial \\kp}{\\partial \\kSent} \\right)_{\\kV}}",
+       "uses": []
+      }
+     ],
+     "src": "22.3"
+    }
+   ]
+  },
+  {
+   "id": "maxwell-h",
+   "what": "the first derivatives of H and its Maxwell relation",
+   "source": "Physical Chemistry (LibreTexts), 22.3 The Maxwell Relations",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kHenth \\equiv \\kU +\\kp\\kV",
+       "src": "19.8"
+      },
+      {
+       "tex": "d\\kU = \\kT d\\kSent - \\kp d\\kV",
+       "src": "(22.3.1)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{H}{\\kHenth} \\equiv \\mk{U}{\\kU} +\\mk{pV}{\\kp\\kV}",
+      "src": "19.8"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{H}{d\\kHenth} = \\mk{U}{d\\kU} + \\mk{a}{\\kp d\\kV} + \\mk{b}{\\kV d\\kp}",
+       "uses": [],
+       "cap": "Differentiating, with the chain rule on $d(\\kp\\kV) = \\kp d\\kV + \\kV d\\kp$.",
+       "map": {
+        "pV": [
+         "a",
+         "b"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{H}{d\\kHenth} = \\mk{c}{\\kT d\\kSent} \\mk{d}{- \\kp d\\kV} + \\mk{a}{\\kp d\\kV} + \\mk{b}{\\kV d\\kp}",
+       "uses": [
+        1
+       ],
+       "map": {
+        "U": [
+         "c",
+         "d"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{H}{d\\kHenth} = \\mk{c}{\\kT d\\kSent} + \\mk{b}{\\kV d\\kp}",
+       "uses": []
+      }
+     ],
+     "num": "(22.3.5)",
+     "src": "22.3"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "d\\kHenth = \\left( \\dfrac{\\partial \\kHenth}{\\partial \\kSent} \\right)_{\\kp} d\\kSent + \\left( \\dfrac{\\partial \\kHenth}{\\partial \\kp} \\right)_{\\kSent} d\\kp",
+       "src": "(22.3.6)"
+      },
+      {
+       "step": 0
+      }
+     ],
+     "then": {
+      "tex": "\\mk{dH}{d\\kHenth} = \\mk{a}{\\left( \\dfrac{\\partial \\kHenth}{\\partial \\kSent} \\right)_{\\kp}} d\\kSent + \\mk{b}{\\left( \\dfrac{\\partial \\kHenth}{\\partial \\kp} \\right)_{\\kSent}} d\\kp",
+      "src": "(22.3.6)"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{dH}{\\kT d\\kSent + \\kV d\\kp} = \\mk{a}{\\left( \\dfrac{\\partial \\kHenth}{\\partial \\kSent} \\right)_{\\kp}} d\\kSent + \\mk{b}{\\left( \\dfrac{\\partial \\kHenth}{\\partial \\kp} \\right)_{\\kSent}} d\\kp",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{a}{\\left( \\dfrac{\\partial \\kHenth}{\\partial \\kSent} \\right)_{\\kp}} = \\mk{dH}{\\kT}",
+       "uses": [],
+       "cap": "Both sides are the same differential for every $d\\kSent$ and $d\\kp$, so the coefficients of $d\\kSent$ on the two sides are equal."
+      }
+     ],
+     "num": "(22.3.7)",
+     "src": "22.3",
+     "note": "The book prints Equation 22.3.6 with $d\\kV$ in its last term; the total differential of $\\kHenth(\\kSent,\\kp)$ has $d\\kp$ there."
+    },
+    {
+     "assumes": [
+      {
+       "tex": "d\\kHenth = \\left( \\dfrac{\\partial \\kHenth}{\\partial \\kSent} \\right)_{\\kp} d\\kSent + \\left( \\dfrac{\\partial \\kHenth}{\\partial \\kp} \\right)_{\\kSent} d\\kp",
+       "src": "(22.3.6)"
+      },
+      {
+       "step": 0
+      }
+     ],
+     "then": {
+      "tex": "\\mk{dH}{d\\kHenth} = \\mk{a}{\\left( \\dfrac{\\partial \\kHenth}{\\partial \\kSent} \\right)_{\\kp}} d\\kSent + \\mk{b}{\\left( \\dfrac{\\partial \\kHenth}{\\partial \\kp} \\right)_{\\kSent}} d\\kp",
+      "src": "(22.3.6)"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{dH}{\\kT d\\kSent + \\kV d\\kp} = \\mk{a}{\\left( \\dfrac{\\partial \\kHenth}{\\partial \\kSent} \\right)_{\\kp}} d\\kSent + \\mk{b}{\\left( \\dfrac{\\partial \\kHenth}{\\partial \\kp} \\right)_{\\kSent}} d\\kp",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{b}{\\left( \\dfrac{\\partial \\kHenth}{\\partial \\kp} \\right)_{\\kSent}} = \\mk{dH}{\\kV}",
+       "uses": [],
+       "cap": "Both sides are the same differential for every $d\\kSent$ and $d\\kp$, so the coefficients of $d\\kp$ on the two sides are equal."
+      }
+     ],
+     "num": "(22.3.8)",
+     "src": "22.3",
+     "note": "The book prints Equation 22.3.6 with $d\\kV$ in its last term; the total differential of $\\kHenth(\\kSent,\\kp)$ has $d\\kp$ there."
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\left( \\dfrac{\\partial \\kU}{\\partial \\kSent} \\right)_{\\kV} = \\kT",
+       "src": "(22.3.3)",
+       "drv": "maxwell-u"
+      },
+      {
+       "step": 1
+      }
+     ],
+     "then": {
+      "tex": "\\mk{U}{\\left( \\dfrac{\\partial \\kU}{\\partial \\kSent} \\right)_{\\kV}} = \\mk{T}{\\kT}",
+      "src": "(22.3.3)"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{U}{\\left( \\dfrac{\\partial \\kU}{\\partial \\kSent} \\right)_{\\kV}} = \\mk{T}{\\left( \\dfrac{\\partial \\kHenth}{\\partial \\kSent} \\right)_{\\kp}}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "src": "22.3"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\left[ \\dfrac{\\partial}{\\partial \\kp} \\left( \\dfrac{\\partial \\kHenth}{\\partial \\kSent} \\right)_{\\kp} \\right]_{\\kSent}= \\left[ \\dfrac{\\partial}{\\partial \\kSent} \\left( \\dfrac{\\partial \\kHenth}{\\partial \\kp} \\right)_{\\kSent} \\right]_{\\kp}"
+      },
+      {
+       "text": "$d\\kHenth$ is an exact differential as well, so the Euler relation must also hold."
+      },
+      {
+       "step": 1
+      },
+      {
+       "step": 2
+      }
+     ],
+     "then": {
+      "tex": "\\left[ \\dfrac{\\partial}{\\partial \\kp} \\mk{a}{\\left( \\dfrac{\\partial \\kHenth}{\\partial \\kSent} \\right)_{\\kp}} \\right]_{\\kSent}= \\left[ \\dfrac{\\partial}{\\partial \\kSent} \\mk{b}{\\left( \\dfrac{\\partial \\kHenth}{\\partial \\kp} \\right)_{\\kSent}} \\right]_{\\kp}",
+      "uses": [
+       1
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\left[ \\dfrac{\\partial}{\\partial \\kp} \\mk{a}{\\left( \\kT \\right)_{\\kp}} \\right]_{\\kSent}= \\left[ \\dfrac{\\partial}{\\partial \\kSent} \\mk{b}{\\left( \\kV \\right)_{\\kSent}} \\right]_{\\kp}",
+       "uses": [
+        2,
+        3
+       ]
+      },
+      {
+       "tex": "\\mk{a}{\\left( \\dfrac{\\partial \\kT}{\\partial \\kp} \\right)_{\\kSent}} = \\mk{b}{\\left( \\dfrac{\\partial \\kV}{\\partial \\kSent} \\right)_{\\kp}}",
+       "uses": []
+      }
+     ],
+     "src": "22.3"
+    }
+   ]
+  },
+  {
+   "id": "example-22-3-1",
+   "what": "the thermodynamic equation of state",
+   "source": "Physical Chemistry (LibreTexts), 22.3 The Maxwell Relations, Example 22.3.1",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "d\\kU = \\kT d\\kSent - \\kp d\\kV",
+       "src": "(22.3.1)"
+      },
+      {
+       "text": "Divide both sides by $d\\kV$ and constrain to constant $\\kT$."
+      }
+     ],
+     "then": {
+      "tex": "\\mk{U}{d\\kU} = \\mk{S}{\\kT d\\kSent} - \\mk{V}{\\kp d\\kV}",
+      "src": "(22.3.1)"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{U}{\\left.\\dfrac{d\\kU}{d\\kV}\\right|_{\\kT}} = \\mk{S}{\\left.\\dfrac{\\kT d\\kSent}{d\\kV}\\right|_{\\kT}} - \\mk{V}{\\kp \\left.\\dfrac{d\\kV}{d\\kV} \\right|_{\\kT}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{U}{\\left( \\dfrac{\\partial \\kU}{\\partial \\kV} \\right)_{\\kT}} = \\mk{S}{\\kT \\left( \\dfrac{\\partial \\kSent}{\\partial \\kV} \\right)_{\\kT}} - \\mk{V}{\\kp}",
+       "uses": [],
+       "cap": "At constant $\\kT$ each ratio of differentials is a partial derivative, $\\left.d\\kV/d\\kV\\right|_{\\kT} = 1$, and the constant $\\kT$ stays in front of $(\\partial \\kSent/\\partial \\kV)_{\\kT}$."
+      }
+     ],
+     "src": "Example 22.3.1",
+     "note": "The book writes $\\left.\\kT d\\kSent/d\\kV\\right|_{\\kT} = (\\partial \\kSent/\\partial \\kV)_{\\kT}$ and drops the $\\kT$; the line after it has $\\kT(\\partial \\kSent/\\partial \\kV)_{\\kT}$, as here."
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "\\left( \\dfrac{\\partial \\kp}{\\partial \\kT} \\right)_{\\kV} = \\left( \\dfrac{\\partial \\kSent}{\\partial \\kV} \\right)_{\\kT}",
+       "src": "22.3, Table 22.3.1"
+      },
+      {
+       "tex": "\\left( \\dfrac{\\partial \\kp}{\\partial \\kT} \\right)_{\\kV} = \\dfrac{\\alpha}{\\kappa_T}"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{U}{\\left( \\dfrac{\\partial \\kU}{\\partial \\kV} \\right)_{\\kT}} = \\mk{S}{\\kT \\left( \\dfrac{\\partial \\kSent}{\\partial \\kV} \\right)_{\\kT}} - \\mk{V}{\\kp}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{U}{\\left( \\dfrac{\\partial \\kU}{\\partial \\kV} \\right)_{\\kT}} = \\mk{S}{\\kT \\left( \\dfrac{\\partial \\kp}{\\partial \\kT} \\right)_{\\kV}} - \\mk{V}{\\kp}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{U}{\\left( \\dfrac{\\partial \\kU}{\\partial \\kV} \\right)_{\\kT}} = \\mk{S}{\\kT\\dfrac{\\alpha}{\\kappa_T}} - \\mk{V}{\\kp}",
+       "uses": [
+        2
+       ]
+      }
+     ],
+     "src": "Example 22.3.1",
+     "note": "The book states the example and ends it with $(\\partial \\kV/\\partial \\kT)_{\\kp}$ on the left; its own lines reach $(\\partial \\kU/\\partial \\kV)_{\\kT}$."
+    }
+   ]
+  }
+ ]
+}

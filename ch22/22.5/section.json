@@ -1,0 +1,298 @@
+{
+ "id": "22.5",
+ "module": "14492",
+ "chapter": "22",
+ "title": "Thermodynamic Functions have Natural Variables",
+ "short": "Natural variables",
+ "lead": "Each of U, H, G and A has a differential written in its natural variables. Those four equations, with terms added for changing amounts of substance, lead to the first derivatives of each function and to the Maxwell relations.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "Adapted from Andreana Rosnik's page, whose four references, cited by superscript in the text, are DOI 10.1063/1.1749582, DOI 10.1063/1.1749549, DOI 10.1103/PhysRev.3.273 and Taylor and Glasstone's A Treatise on Physical Chemistry (3rd ed., D. Van Nostrand, 1942, vol. 1, pp. 454 to 485); Exercises 22.5.3, 22.5.4 and 22.5.5 are set in 22.3, 22.4 and 23.3, beside what they test.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": []
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "Exercises 22.5.1 and 22.5.2 and their keys are the book's. The unnumbered exercise on the heat capacity prints only the word \"answer\" as its key, so its solution is AI-written. Exercise 22.5.3 is set in 22.3, Exercise 22.5.4 in 22.4 and Exercise 22.5.5 in 23.3, with the sections that introduce what they test. Bloom levels and concept tags were chosen by AI.",
+ "figures": [],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "opening",
+   "concept": "fundamental-equations",
+   "verb": "introduces"
+  },
+  {
+   "span": "opening",
+   "concept": "natural-variables",
+   "verb": "uses"
+  },
+  {
+   "span": "first-law-of-thermodynamics",
+   "concept": "first-law-of-thermodynamics",
+   "verb": "uses"
+  },
+  {
+   "span": "first-law-of-thermodynamics",
+   "concept": "exact-and-inexact-differentials",
+   "verb": "reinforces"
+  },
+  {
+   "span": "first-law-of-thermodynamics",
+   "concept": "fundamental-equation-u",
+   "verb": "reinforces"
+  },
+  {
+   "span": "first-law-of-thermodynamics",
+   "concept": "entropy",
+   "verb": "reinforces"
+  },
+  {
+   "span": "enthalpy",
+   "concept": "fundamental-equation-h",
+   "verb": "reinforces"
+  },
+  {
+   "span": "gibbs-energy",
+   "concept": "gibbs-fundamental-equation",
+   "verb": "reinforces"
+  },
+  {
+   "span": "helmholtz-energy",
+   "concept": "helmholtz-fundamental-equation",
+   "verb": "reinforces"
+  },
+  {
+   "span": "chemical-potential",
+   "concept": "fundamental-equations-composition",
+   "verb": "introduces"
+  },
+  {
+   "span": "chemical-potential",
+   "concept": "chemical-potential",
+   "verb": "introduces"
+  },
+  {
+   "span": "importance",
+   "concept": "natural-variables",
+   "verb": "reinforces"
+  },
+  {
+   "span": "maxwell-relations",
+   "concept": "helmholtz-first-derivatives",
+   "verb": "introduces"
+  },
+  {
+   "span": "maxwell-relations",
+   "concept": "gibbs-first-derivatives",
+   "verb": "reinforces"
+  },
+  {
+   "span": "maxwell-relations",
+   "concept": "maxwell-relations",
+   "verb": "reinforces"
+  },
+  {
+   "span": "maxwell-relations",
+   "concept": "maxwell-relation-a",
+   "verb": "reinforces"
+  },
+  {
+   "span": "maxwell-relations",
+   "concept": "maxwell-relation-g",
+   "verb": "reinforces"
+  },
+  {
+   "span": "maxwell-relations",
+   "concept": "euler-reciprocity",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "e1",
+   "source_id": "exr:22.5.1",
+   "source_number": "Exercise 22.5.1",
+   "kind": "exercise",
+   "bloom": "Evaluate",
+   "place": {
+    "at": "end"
+   },
+   "cite": "helmholtz-energy",
+   "prompt": "<p>If the assumptions made in the derivations above were not made, what would effect would that have? Try to think of examples were these assumptions would be violated. Could the definitions, principles, and laws used to derive the fundamental equations still be used? Why or why not?</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "source",
+    "solution": "<p>If it was not assumed that PV-work was the only work done, then the work term in the second law of thermodynamics<sup class=\"fn\" data-note=\"c-first-law\"></sup> equation would include other terms (e.g. for electrical work, mechanical work). If reversible processes were not assumed, the Principle of Clausius could not be used. One example of such situations could the movement of charged particles towards a region of like charge (electrical work) or an irreversible process like combustion of hydrocarbons or friction.</p>"
+   }
+  },
+  {
+   "id": "e2",
+   "source_id": "exr:22.5.2",
+   "source_number": "Exercise 22.5.2",
+   "kind": "exercise",
+   "bloom": "Understand",
+   "place": {
+    "at": "end"
+   },
+   "cite": "chemical-potential",
+   "prompt": "<p>For what kind of system does the number of moles not change? This said, do the fundamental equations without n-dependence apply to a wide range of processes and systems?</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "source",
+    "solution": "<p>In general, a closed system of non-reacting components would fit this description. For example, the number of moles would not change for a closed system in which a gas is sealed (to prevent leaks) in a container and allowed to expand/is contracted.</p>"
+   }
+  },
+  {
+   "id": "e3",
+   "source_id": "exr:?",
+   "source_number": "Exercise",
+   "kind": "exercise",
+   "bloom": "Analyze",
+   "place": {
+    "at": "end"
+   },
+   "cite": "maxwell-relations",
+   "prompt": "<p>What does Equation three<sup class=\"fn\" data-note=\"c-equation-three\"></sup> mean for the heat capacity?</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "Differentiate $(\\partial \\kA/\\partial \\kT)_{\\kV} = -\\kSent$ once more with respect to $\\kT$ at constant volume.",
+    "solution": "<p>Equation three is $(\\partial \\kA/\\partial \\kT)_{\\kV} = -\\kSent$. Differentiating it again at constant volume gives $(\\partial^2 \\kA/\\partial \\kT^2)_{\\kV} = -(\\partial \\kSent/\\partial \\kT)_{\\kV}$. At constant volume $d\\kU = \\kT d\\kSent$, and $\\kCV = (\\partial \\kU/\\partial \\kT)_{\\kV}$, so $(\\partial \\kSent/\\partial \\kT)_{\\kV} = \\kCV/\\kT$. Hence</p>$$ \\kCV = \\kT\\left(\\dfrac{\\partial \\kSent}{\\partial \\kT}\\right)_{\\kV} = -\\kT\\left(\\dfrac{\\partial^2 \\kA}{\\partial \\kT^2}\\right)_{\\kV} $$<p>The heat capacity at constant volume measures how sharply $\\kA$ curves with temperature. Since $\\kCV$ is positive, $\\kA$ bends downward as $\\kT$ rises.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "e1",
+   "concept": "fundamental-equations"
+  },
+  {
+   "exercise": "e2",
+   "concept": "fundamental-equations-composition"
+  },
+  {
+   "exercise": "e3",
+   "concept": "helmholtz-first-derivatives"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-first-law",
+   "kind": "correction",
+   "html": "The work term belongs to the first law, $d\\kU = đ\\kq + đ\\kw$, and not to the second."
+  },
+  {
+   "id": "c-equation-three",
+   "kind": "correction",
+   "html": "Equation three is the third display of the Maxwell relations block, $\\left(\\dfrac{\\partial \\kA}{\\partial \\kT}\\right)_{\\kV} = -\\kSent$. The book's key prints only the word \"answer\"."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "maxwell-a",
+   "what": "the Maxwell relation from A",
+   "source": "Physical Chemistry (LibreTexts), 22.5 Thermodynamic Functions have Natural Variables",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\left( \\dfrac{\\partial \\kA}{\\partial \\kV} \\right)_{\\kT} = -\\kP",
+       "src": "22.5"
+      },
+      {
+       "tex": "\\left( \\dfrac{\\partial \\kA}{\\partial \\kT} \\right)_{\\kV} = -\\kSent",
+       "src": "22.5"
+      },
+      {
+       "text": "The mixed second derivatives of an exact differential are equal, whichever order they are taken in.",
+       "src": "22.3"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\left(\\dfrac{\\partial}{\\partial \\kT}\\left(\\dfrac{\\partial \\kA}{\\partial \\kV}\\right)_{\\kT}\\right)_{\\kV}} = \\mk{r}{\\left(\\dfrac{\\partial}{\\partial \\kV}\\left(\\dfrac{\\partial \\kA}{\\partial \\kT}\\right)_{\\kV}\\right)_{\\kT}}",
+      "uses": [
+       2
+      ],
+      "why": "$dA$ is exact, so its cross derivative is the same taken either way."
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\left(\\dfrac{\\partial (-\\kP)}{\\partial \\kT}\\right)_{\\kV}} = \\mk{r}{\\left(\\dfrac{\\partial}{\\partial \\kV}\\left(\\dfrac{\\partial \\kA}{\\partial \\kT}\\right)_{\\kV}\\right)_{\\kT}}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{l}{\\left(\\dfrac{\\partial (-\\kP)}{\\partial \\kT}\\right)_{\\kV}} = \\mk{r}{\\left(\\dfrac{\\partial (-\\kSent)}{\\partial \\kV}\\right)_{\\kT}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{l}{\\left(\\dfrac{\\partial \\kP}{\\partial \\kT}\\right)_{\\kV}} = \\mk{r}{\\left(\\dfrac{\\partial \\kSent}{\\partial \\kV}\\right)_{\\kT}}",
+       "uses": []
+      }
+     ],
+     "src": "22.5",
+     "note": "The book writes the cross derivative as a sum, $\\left(\\dfrac{\\partial^2 A}{\\partial V \\partial T}\\right) = \\left(\\dfrac{\\partial (-S)}{\\partial V}\\right)_T + \\left(\\dfrac{\\partial (-P)}{\\partial T}\\right)_V$. The two derivatives are equal, and that equality is the Maxwell relation."
+    }
+   ]
+  },
+  {
+   "id": "maxwell-g",
+   "what": "the Maxwell relation from G",
+   "source": "Physical Chemistry (LibreTexts), 22.5 Thermodynamic Functions have Natural Variables",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\left( \\dfrac{\\partial \\kG}{\\partial \\kT} \\right)_{\\kP} = -\\kSent",
+       "src": "22.5"
+      },
+      {
+       "tex": "\\left( \\dfrac{\\partial \\kG}{\\partial \\kP} \\right)_{\\kT} = \\kV",
+       "src": "22.5"
+      },
+      {
+       "text": "The mixed second derivatives of an exact differential are equal, whichever order they are taken in.",
+       "src": "22.3"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\left(\\dfrac{\\partial}{\\partial \\kP}\\left(\\dfrac{\\partial \\kG}{\\partial \\kT}\\right)_{\\kP}\\right)_{\\kT}} = \\mk{r}{\\left(\\dfrac{\\partial}{\\partial \\kT}\\left(\\dfrac{\\partial \\kG}{\\partial \\kP}\\right)_{\\kT}\\right)_{\\kP}}",
+      "uses": [
+       2
+      ],
+      "why": "$dG$ is exact as well, so the same cross derivative applies."
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\left(\\dfrac{\\partial (-\\kSent)}{\\partial \\kP}\\right)_{\\kT}} = \\mk{r}{\\left(\\dfrac{\\partial}{\\partial \\kT}\\left(\\dfrac{\\partial \\kG}{\\partial \\kP}\\right)_{\\kT}\\right)_{\\kP}}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{l}{\\left(\\dfrac{\\partial (-\\kSent)}{\\partial \\kP}\\right)_{\\kT}} = \\mk{r}{\\left(\\dfrac{\\partial \\kV}{\\partial \\kT}\\right)_{\\kP}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{l}{-\\left(\\dfrac{\\partial \\kSent}{\\partial \\kP}\\right)_{\\kT}} = \\mk{r}{\\left(\\dfrac{\\partial \\kV}{\\partial \\kT}\\right)_{\\kP}}",
+       "uses": []
+      }
+     ],
+     "src": "22.5"
+    }
+   ]
+  }
+ ]
+}
