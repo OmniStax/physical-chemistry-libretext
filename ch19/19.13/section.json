@@ -1,0 +1,92 @@
+{
+ "id": "19.13",
+ "module": "13711",
+ "chapter": "19",
+ "title": "The Temperature Dependence of ΔH",
+ "short": "Temperature dependence of ΔH",
+ "lead": "Tables give enthalpies at one temperature, usually 25 °C. Carrying an enthalpy change or a reaction enthalpy to another temperature takes the heat capacity, as a constant over a small range or as an empirical fit over a broad one.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "",
+ "ai": {
+  "text": [{"model": "claude-opus-5-5", "effort": "low"}],
+  "figures": []
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book prints no exercises here; the question and its solution were written by AI. The numeric answer accepts a 2% tolerance.",
+ "figures": [],
+ "referents": [],
+ "coverage": [
+  {"span": "kirchhoffs-law", "concept": "kirchhoffs-law", "verb": "introduces"},
+  {"span": "kirchhoffs-law", "concept": "heat-capacity-empirical-fit", "verb": "introduces"},
+  {"span": "kirchhoffs-law", "concept": "enthalpy-change-from-fit", "verb": "introduces"},
+  {"span": "kirchhoffs-law", "concept": "constant-pressure-heat-capacity", "verb": "uses"},
+  {"span": "kirchhoffs-law", "concept": "enthalpy-from-heat-capacity", "verb": "reinforces"},
+  {"span": "reaction-enthalpies", "concept": "kirchhoffs-law", "verb": "reinforces"},
+  {"span": "reaction-enthalpies", "concept": "reaction-enthalpy", "verb": "uses"},
+  {"span": "reaction-enthalpies", "concept": "standard-enthalpy-of-formation", "verb": "uses"}
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "tab:1",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {"at": "end"},
+   "cite": "kirchhoffs-law",
+   "prompt": "<p>Find the enthalpy change of 1 mol of N<sub>2</sub>(g) heated at constant pressure from 298 K to 400 K, using the parameters for N<sub>2</sub>(g) in Table 19.13.1.</p>",
+   "answer": {
+    "type": "number",
+    "value": 3.01,
+    "unit": "kJ",
+    "generated_by": "ai",
+    "hint": "Put $a = 28.58$, $b = 3.77\\times10^{-3}$ and $c = -5.0\\times10^{4}$ into Equation 19.13.5 term by term.",
+    "solution": "<p>With $\\kTone = 298$ K and $\\kTtwo = 400$ K, the three terms of Equation 19.13.5 are $a(\\kTtwo - \\kTone) = 28.58 \\times 102 = 2915.2$ J, $\\tfrac{b}{2}(\\kTtwo^2 - \\kTone^2) = 1.885\\times10^{-3} \\times 71196 = 134.2$ J and $-c\\left(\\tfrac{1}{\\kTtwo} - \\tfrac{1}{\\kTone}\\right) = 5.0\\times10^{4} \\times (-8.557\\times10^{-4}) = -42.8$ J. Their sum is $\\kDeltaH = 3006.6$ J $\\approx 3.01$ kJ. The constant term carries almost all of it: over this range $\\kCpheat$ of N<sub>2</sub> stays close to $a$.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {"exercise": "a1", "concept": "enthalpy-change-from-fit"},
+  {"exercise": "a1", "concept": "heat-capacity-empirical-fit"}
+ ],
+ "footnotes": [
+  {"id": "limits", "kind": "correction", "html": "Equation 19.13.1 prints the lower limit as $T_2$; the integral runs from $T_1$ to $T_2$."},
+  {"id": "cite-fit", "kind": "correction", "html": "The temperature dependence of $C_p$ is Equation 19.13.3."},
+  {"id": "lead-numbers", "kind": "correction", "html": "The table gives $a = 22.13$ J mol<sup>−1</sup> K<sup>−1</sup> for Pb(s), which is the value behind the first term, 1770.4 J/mol. The other two terms are 293.5 J/mol and 79.7 J/mol, not 295.5 and 470.5, so $\\Delta H = 2143.6$ J/mol rather than 2534.4 J/mol."},
+  {"id": "dT", "kind": "correction", "html": "The integrand should read $\\Delta C_p\\, dT$."},
+  {"id": "per-mole", "kind": "correction", "html": "The −46.11 kJ/mol is per mole of NH<sub>3</sub>, but the reaction as written forms two moles and $\\Delta C_p$ below is taken for the whole reaction. For the reaction as written, $\\Delta H(298\\,K) = -92.22$ kJ and $\\Delta H(373\\,K) = -95.63$ kJ; per mole of NH<sub>3</sub>, the enthalpy of formation at 100 °C is −47.81 kJ/mol, not −49.5 kJ/mol."}
+ ],
+ "derivations": [
+  {
+   "id": "enthalpy-from-fit",
+   "what": "enthalpy change from the empirical heat capacity",
+   "source": "Physical Chemistry (LibreTexts), 19.13 The Temperature Dependence of ΔH",
+   "nodes": [
+    {
+     "assumes": [
+      {"tex": "\\kDeltaH = \\int_{\\kTone}^{\\kTtwo} \\kCpheat\\, d\\kT", "src": "(19.13.1)"},
+      {"tex": "\\kCpheat(\\kT) = a + b\\kT + \\dfrac{c}{\\kT^2}", "src": "(19.13.3)"}
+     ],
+     "then": {"tex": "\\mk{L}{\\kDeltaH} = \\int_{\\kTone}^{\\kTtwo} \\mk{C}{\\kCpheat}\\, d\\kT", "src": "(19.13.1)"},
+     "steps": [
+      {"tex": "\\mk{L}{\\kDeltaH} = \\int_{\\kTone}^{\\kTtwo} \\mk{C}{\\left(a + b\\kT + \\dfrac{c}{\\kT^2}\\right)} d\\kT", "uses": [1]}
+     ],
+     "num": "(19.13.4)",
+     "src": "19.13",
+     "note": "The book prints the lower limit of Equation 19.13.1 as $T_2$; the integral runs from $T_1$ to $T_2$."
+    },
+    {
+     "assumes": [{"step": 0}],
+     "then": {"tex": "\\mk{L}{\\kDeltaH} = \\mk{R}{\\int_{\\kTone}^{\\kTtwo} \\left(a + b\\kT + \\dfrac{c}{\\kT^2}\\right) d\\kT}"},
+     "steps": [
+      {"tex": "\\mk{L}{\\kDeltaH} = \\mk{R}{\\left[ a\\kT + \\dfrac{b}{2} \\kT^2 - \\dfrac{c}{\\kT} \\right]_{\\kTone}^{\\kTtwo}}", "uses": [], "cap": "Each term integrates by the power rule, $\\int \\kT^n\\, d\\kT = \\kT^{n+1}/(n+1)$, which turns $c/\\kT^2$ into $-c/\\kT$."},
+      {"tex": "\\mk{L}{\\kDeltaH} = \\mk{a}{a(\\kTtwo-\\kTone)} + \\mk{b}{\\dfrac{b}{2}(\\kTtwo^2-\\kTone^2)} \\mk{c}{- c \\left( \\dfrac{1}{\\kTtwo} - \\dfrac{1}{\\kTone} \\right)}", "uses": [], "map": {"R": ["a", "b", "c"]}}
+     ],
+     "num": "(19.13.5)",
+     "src": "19.13"
+    }
+   ]
+  }
+ ]
+}

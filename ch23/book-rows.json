@@ -1,0 +1,981 @@
+{
+ "types": [],
+ "symbols": [
+  {
+   "sym": "P_eq",
+   "latex": "P_{eq}",
+   "macro": "\\kPeq"
+  },
+  {
+   "sym": "T_m",
+   "latex": "T_m",
+   "macro": "\\kTm"
+  },
+  {
+   "sym": "n_ice",
+   "latex": "n_{ice}",
+   "macro": "\\knice"
+  },
+  {
+   "sym": "n_water",
+   "latex": "n_{water}",
+   "macro": "\\knwater"
+  },
+  {
+   "sym": "n_total",
+   "latex": "n_{total}",
+   "macro": "\\kntotal"
+  },
+  {
+   "sym": "V_molar",
+   "latex": "V_{molar}",
+   "macro": "\\kVmolar"
+  },
+  {
+   "sym": "G_ice",
+   "latex": "G^{ice}",
+   "macro": "\\kGice"
+  },
+  {
+   "sym": "V_ice",
+   "latex": "V^{ice}",
+   "macro": "\\kVice"
+  },
+  {
+   "sym": "G_water",
+   "latex": "G^{water}",
+   "macro": "\\kGwater"
+  },
+  {
+   "sym": "V_water",
+   "latex": "V^{water}",
+   "macro": "\\kVwater"
+  },
+  {
+   "sym": "G_molar_ice",
+   "latex": "G_{molar}^{ice}",
+   "macro": "\\kGmolarice"
+  },
+  {
+   "sym": "V_molar_ice",
+   "latex": "V_{molar}^{ice}",
+   "macro": "\\kVmolarice"
+  },
+  {
+   "sym": "G_molar_water",
+   "latex": "G_{molar}^{water}",
+   "macro": "\\kGmolarwater"
+  },
+  {
+   "sym": "V_molar_water",
+   "latex": "V_{molar}^{water}",
+   "macro": "\\kVmolarwater"
+  },
+  {
+   "sym": "V_pm_1",
+   "latex": "V_{partial molar,1}",
+   "macro": "\\kVpmone"
+  },
+  {
+   "sym": "V_pm_2",
+   "latex": "V_{partial molar,2}",
+   "macro": "\\kVpmtwo"
+  },
+  {
+   "sym": "G_i",
+   "latex": "G_i",
+   "macro": "\\kGi"
+  },
+  {
+   "sym": "mu_ice",
+   "latex": "\\mu_{ice}",
+   "macro": "\\kmuice"
+  },
+  {
+   "sym": "mu_water",
+   "latex": "\\mu_{water}",
+   "macro": "\\kmuwater"
+  },
+  {
+   "sym": "Delta_mu",
+   "latex": "\\Delta\\mu",
+   "macro": "\\kDeltamu"
+  },
+  {
+   "sym": "mu_alpha",
+   "latex": "\\mu_\\alpha",
+   "macro": "\\kmualpha"
+  },
+  {
+   "sym": "mu_beta",
+   "latex": "\\mu_\\beta",
+   "macro": "\\kmubeta"
+  },
+  {
+   "sym": "S_bar_ice",
+   "latex": "\\bar{S}_{ice}",
+   "macro": "\\kSbarice"
+  },
+  {
+   "sym": "S_bar_water",
+   "latex": "\\bar{S}_{water}",
+   "macro": "\\kSbarwater"
+  },
+  {
+   "sym": "V_bar_ice",
+   "latex": "\\bar{V}_{ice}",
+   "macro": "\\kVbarice"
+  },
+  {
+   "sym": "V_bar_water",
+   "latex": "\\bar{V}_{water}",
+   "macro": "\\kVbarwater"
+  },
+  {
+   "sym": "S_bar_alpha",
+   "latex": "\\bar{S}_\\alpha",
+   "macro": "\\kSbaralpha"
+  },
+  {
+   "sym": "S_bar_beta",
+   "latex": "\\bar{S}_\\beta",
+   "macro": "\\kSbarbeta"
+  },
+  {
+   "sym": "V_bar_alpha",
+   "latex": "\\bar{V}_\\alpha",
+   "macro": "\\kVbaralpha"
+  },
+  {
+   "sym": "V_bar_beta",
+   "latex": "\\bar{V}_\\beta",
+   "macro": "\\kVbarbeta"
+  },
+  {
+   "sym": "H_bar_alpha",
+   "latex": "\\bar{H}_\\alpha",
+   "macro": "\\kHbaralpha"
+  },
+  {
+   "sym": "H_bar_beta",
+   "latex": "\\bar{H}_\\beta",
+   "macro": "\\kHbarbeta"
+  },
+  {
+   "sym": "G_bar_alpha",
+   "latex": "\\bar{G}_\\alpha",
+   "macro": "\\kGbaralpha"
+  },
+  {
+   "sym": "G_bar_beta",
+   "latex": "\\bar{G}_\\beta",
+   "macro": "\\kGbarbeta"
+  },
+  {
+   "sym": "S_solid",
+   "latex": "S^\\text{(solid)}",
+   "macro": "\\kSsolid"
+  },
+  {
+   "sym": "S_liquid",
+   "latex": "S^\\text{(liquid)}",
+   "macro": "\\kSliquid"
+  },
+  {
+   "sym": "G_solid",
+   "latex": "G^\\text{(solid)}",
+   "macro": "\\kGsolid"
+  },
+  {
+   "sym": "G_liquid",
+   "latex": "G^\\text{(liquid)}",
+   "macro": "\\kGliquid"
+  },
+  {
+   "sym": "V_bar_gas",
+   "latex": "\\bar{V}^\\text{(gas)}",
+   "macro": "\\kVbargas"
+  },
+  {
+   "sym": "V_bar_liquid",
+   "latex": "\\bar{V}^\\text{(liquid)}",
+   "macro": "\\kVbarliquid"
+  },
+  {
+   "sym": "V_bar_solid",
+   "latex": "\\bar{V}^\\text{(solid)}",
+   "macro": "\\kVbarsolid"
+  },
+  {
+   "sym": "V_bar_g",
+   "latex": "\\bar{V}_g",
+   "macro": "\\kVbarg"
+  },
+  {
+   "sym": "V_bar_l",
+   "latex": "\\bar{V}_l",
+   "macro": "\\kVbarl"
+  },
+  {
+   "sym": "Delta_S_bar",
+   "latex": "\\Delta\\bar{S}",
+   "macro": "\\kDeltaSbar"
+  },
+  {
+   "sym": "Delta_V_bar",
+   "latex": "\\Delta\\bar{V}",
+   "macro": "\\kDeltaVbar"
+  },
+  {
+   "sym": "Delta_H_bar",
+   "latex": "\\Delta\\bar{H}",
+   "macro": "\\kDeltaHbar"
+  },
+  {
+   "sym": "Delta_G_bar",
+   "latex": "\\Delta\\bar{G}",
+   "macro": "\\kDeltaGbar"
+  },
+  {
+   "sym": "Delta_ab_H_bar",
+   "latex": "\\Delta_{\\alpha\\beta}\\bar{H}",
+   "macro": "\\kDeltaabHbar"
+  },
+  {
+   "sym": "Delta_ab_V_bar",
+   "latex": "\\Delta_{\\alpha\\beta}\\bar{V}",
+   "macro": "\\kDeltaabVbar"
+  },
+  {
+   "sym": "Delta_H_bar_vap",
+   "latex": "\\Delta\\bar{H}_\\text{vap}",
+   "macro": "\\kDeltaHbarvap"
+  },
+  {
+   "sym": "Delta_V_bar_vap",
+   "latex": "\\Delta\\bar{V}_\\text{vap}",
+   "macro": "\\kDeltaVbarvap"
+  },
+  {
+   "sym": "Delta_H_bar_fus",
+   "latex": "\\Delta\\bar{H}_\\text{fus}",
+   "macro": "\\kDeltaHbarfus"
+  },
+  {
+   "sym": "Delta_V_bar_fus",
+   "latex": "\\Delta\\bar{V}_\\text{fus}",
+   "macro": "\\kDeltaVbarfus"
+  },
+  {
+   "sym": "Delta_H_molar",
+   "latex": "\\Delta H_{molar}",
+   "macro": "\\kDeltaHmolar"
+  },
+  {
+   "sym": "Delta_V_molar",
+   "latex": "\\Delta V_{molar}",
+   "macro": "\\kDeltaVmolar"
+  },
+  {
+   "sym": "Delta_H_molar_vap",
+   "latex": "\\Delta H_{molar}^{vap}",
+   "macro": "\\kDeltaHmolarvap"
+  },
+  {
+   "sym": "V_molar_gas",
+   "latex": "V_{molar}^{gas}",
+   "macro": "\\kVmolargas"
+  },
+  {
+   "sym": "V_molar_liquid",
+   "latex": "V_{molar}^{liquid}",
+   "macro": "\\kVmolarliquid"
+  },
+  {
+   "sym": "Delta_H_vap",
+   "latex": "\\Delta H_{vap}",
+   "macro": "\\kDeltaHvap"
+  },
+  {
+   "sym": "T_3",
+   "latex": "T_3",
+   "macro": "\\kTthree"
+  },
+  {
+   "sym": "emf",
+   "latex": "\\mathcal{E}",
+   "macro": "\\kemf"
+  },
+  {
+   "sym": "e_q",
+   "latex": "e",
+   "macro": "\\keq"
+  },
+  {
+   "sym": "M_mag",
+   "latex": "M",
+   "macro": "\\kMmag"
+  },
+  {
+   "sym": "H_mag",
+   "latex": "H",
+   "macro": "\\kHmag"
+  },
+  {
+   "sym": "F_el",
+   "latex": "F",
+   "macro": "\\kFel"
+  },
+  {
+   "sym": "L_el",
+   "latex": "L",
+   "macro": "\\kLel"
+  },
+  {
+   "sym": "gamma_st",
+   "latex": "\\gamma",
+   "macro": "\\kgammast"
+  },
+  {
+   "sym": "A_s",
+   "latex": "A",
+   "macro": "\\kAs"
+  }
+ ],
+ "concepts": [
+  {
+   "id": "equilibrium-stability-kinds",
+   "kind": "definition",
+   "section": "23.1",
+   "name": "Kinds of equilibrium",
+   "terms": [
+    "stable",
+    "metastable",
+    "indifferent",
+    "labile",
+    "instability"
+   ],
+   "statement": "On a curve of G against one variable, a stable equilibrium is the absolute minimum, a metastable one a higher local minimum and an indifferent one a flat stretch where the second derivative is zero too; a labile equilibrium is a maximum that any small deviation leaves; every other point is unstable, since dG is not zero there and a spontaneous process can take place."
+  },
+  {
+   "id": "gibbs-fluctuations",
+   "kind": "idea",
+   "section": "23.1",
+   "name": "Fluctuations of the Gibbs energy",
+   "statement": "The Boltzmann distribution is only the most likely one, so slightly less likely distributions with a little less entropy and a slightly higher G occur from time to time: G and its variables fluctuate about an equilibrium, little in a large system and relatively more in a small one, and the slope of G drives them back to a stable or metastable minimum."
+  },
+  {
+   "id": "critical-opalescence",
+   "kind": "idea",
+   "section": "23.1",
+   "name": "Critical opalescence",
+   "statement": "Where G is indifferent in the density, as near a critical point, the density fluctuates strongly; the refractive index follows it and the fluid scatters light strongly and turns milky."
+  },
+  {
+   "id": "phase-diagram",
+   "kind": "definition",
+   "section": "23.1",
+   "name": "Phase diagram",
+   "terms": [
+    "unary phase diagram",
+    "phase diagram"
+   ],
+   "statement": "A unary phase diagram maps the equilibrium states of a single pure substance in the P–T plane: regions where one phase is stable, separated by the curves where two coexist; usually only stable equilibria are drawn, metastable ones sometimes dashed."
+  },
+  {
+   "id": "equilibrium-vapor-pressure",
+   "kind": "definition",
+   "section": "23.1",
+   "name": "Equilibrium vapor pressure",
+   "symbol": "P_eq",
+   "terms": [
+    "equilibrium vapor pressure"
+   ],
+   "type": "pressure",
+   "statement": "The pressure at which the G(P) curve of the vapor crosses that of the liquid (or solid): below it the vapor is stable, above it the condensed phase, and only at it do both coexist. Plotted against T it gives the vaporization (or sublimation) curve."
+  },
+  {
+   "id": "coexistence-curves",
+   "kind": "definition",
+   "section": "23.1",
+   "name": "Coexistence curves",
+   "terms": [
+    "melting",
+    "freezing"
+   ],
+   "statement": "The three curves of a unary phase diagram: the liquid–vapor curve of equilibrium vapor pressures, the gas–solid (sublimation) curve, and the nearly vertical liquid–solid (melting) curve, which leans forward for most substances and backward for water, which expands on freezing."
+  },
+  {
+   "id": "boiling",
+   "kind": "definition",
+   "section": "23.1",
+   "name": "Boiling",
+   "statement": "A liquid boils when its equilibrium vapor pressure equals the total pressure over it, so that evaporation is no longer limited to the surface; in a sealed container the pressure rises with temperature and boiling may never be reached."
+  },
+  {
+   "id": "triple-point",
+   "kind": "definition",
+   "section": "23.1",
+   "name": "Triple point",
+   "terms": [
+    "triple point"
+   ],
+   "statement": "The one point where the three coexistence curves meet and solid, liquid and vapor are all at equilibrium; for water 273.16 K and 4.58 Torr. If it lies above atmospheric pressure no liquid is seen and the solid sublimes, as CO₂ does on Earth."
+  },
+  {
+   "id": "normal-and-standard-transition-points",
+   "kind": "definition",
+   "section": "23.1",
+   "name": "Standard and normal transition points",
+   "terms": [
+    "standard melting point",
+    "normal melting point",
+    "sublimation point"
+   ],
+   "statement": "The melting, boiling and sublimation points are where a line of constant pressure crosses the coexistence curves: at 1 bar the standard points, at 1 atm the normal ones."
+  },
+  {
+   "id": "phase-diagram-dimensionality",
+   "kind": "result",
+   "section": "23.1",
+   "name": "Phases and dimensions in a phase diagram",
+   "statement": "In a unary phase diagram a plane holds one phase, a curve two and a point three: the dimension and the number of phases always add up to three."
+  },
+  {
+   "id": "phase-transfer-mole-balance",
+   "kind": "result",
+   "section": "23.1",
+   "name": "Moles exchanged between two phases",
+   "statement": "When a pure substance only changes phase, its total amount is fixed: n_ice + n_water = n_total, so dn_ice = −dn_water.",
+   "forms": [
+    {
+     "id": "n-ice-water-total",
+     "latex": "n_{ice} + n_{water} = n_{total}"
+    },
+    {
+     "id": "dn-ice-water",
+     "latex": "dn_{ice} =- dn_{water}"
+    }
+   ]
+  },
+  {
+   "id": "molar-quantity",
+   "kind": "definition",
+   "section": "23.1",
+   "name": "Molar quantity",
+   "statement": "An extensive function divided by the amount, G_molar = G/n and V_molar = V/n, written with a bar; the scaling assumes the function is a straight line through the origin in n.",
+   "forms": [
+    {
+     "id": "g-molar",
+     "latex": "\\kGmolar = \\dfrac{\\kG}{ n}"
+    },
+    {
+     "id": "v-molar",
+     "latex": "\\kVmolar = \\dfrac{\\kV}{n}"
+    }
+   ]
+  },
+  {
+   "id": "partial-molar-quantity",
+   "kind": "definition",
+   "section": "23.1",
+   "name": "Partial molar quantity",
+   "terms": [
+    "partial molar"
+   ],
+   "statement": "In a mixture an extensive function need not be linear in each amount, so its partial molar value is its derivative with respect to one amount with the others fixed, V_partial molar,1 = ∂V/∂n₁ at constant n₂; it depends on composition, temperature and, less, pressure.",
+   "forms": [
+    {
+     "id": "v-partial-molar",
+     "latex": "\\kVpmone = \\dfrac{\\partial \\kV}{\\partial n_1}"
+    }
+   ]
+  },
+  {
+   "id": "chemical-potential-pure-substance",
+   "kind": "result",
+   "section": "23.1",
+   "name": "Chemical potential of a pure substance",
+   "statement": "For a pure substance, in whatever phase, μ = (∂G/∂n)_{P,T} = G/n, the molar Gibbs energy Ḡ.",
+   "forms": [
+    {
+     "id": "mu-pure-g-over-n",
+     "latex": "\\kmu_i = \\left( \\dfrac{\\partial \\kG}{\\partial n_i} \\right)_{\\kP,\\kT,n_{j\\neq i}} = \\dfrac{\\kGi}{n_i}"
+    },
+    {
+     "id": "mu-g-bar",
+     "latex": "\\kGbar (\\kP, \\kT) = \\dfrac{\\kG(n, \\kP, \\kT)}{n} = \\kmu (\\kP, \\kT)",
+     "section": "23.4"
+    }
+   ]
+  },
+  {
+   "id": "ehrenfest-classification",
+   "kind": "definition",
+   "section": "23.2",
+   "name": "Ehrenfest classification of phase transitions",
+   "terms": [
+    "Transition Order"
+   ],
+   "statement": "A transition's order is the order of the first derivative of G to go discontinuous: in a first-order transition G has a kink, H, S and V jump and C_P, α and κ are singular; in a second-order one G is smooth, H and S have a kink and C_P jumps."
+  },
+  {
+   "id": "second-order-transition",
+   "kind": "definition",
+   "section": "23.2",
+   "name": "Second-order transition",
+   "terms": [
+    "second order transitions",
+    "second order"
+   ],
+   "statement": "A transition in which G and its first derivatives H and S are continuous (with a kink) and only the second derivatives such as C_P are discontinuous, as in the order–disorder transition of paramagnetic materials."
+  },
+  {
+   "id": "liquid-entropy-exceeds-solid",
+   "kind": "result",
+   "section": "23.2",
+   "name": "The liquid has more entropy than the solid",
+   "statement": "Since S = −∂G/∂T and the G(T) line of the liquid is steeper than the solid's, S(liquid) > S(solid); the same argument puts the gas above the liquid.",
+   "forms": [
+    {
+     "id": "s-liquid-gt-solid",
+     "latex": "\\dfrac{\\partial \\kGliquid}{\\partial \\kT} < \\dfrac{\\partial \\kGsolid}{\\partial \\kT}"
+    }
+   ]
+  },
+  {
+   "id": "phase-molar-volume-ordering",
+   "kind": "result",
+   "section": "23.2",
+   "name": "Molar volumes from the slopes of G against P",
+   "statement": "Since V̄ = ∂Ḡ/∂P, the slopes of the Ḡ(P) segments give V̄(gas) ≫ V̄(liquid) > V̄(solid) for a normal substance such as benzene, and V̄(gas) ≫ V̄(solid) > V̄(liquid) for water, whose solid is less dense than its liquid.",
+   "forms": [
+    {
+     "id": "v-order-normal",
+     "latex": "\\kVbargas \\gg \\kVbarliquid > \\kVbarsolid"
+    },
+    {
+     "id": "v-order-water",
+     "latex": "\\kVbargas \\gg \\kVbarsolid > \\kVbarliquid"
+    }
+   ]
+  },
+  {
+   "id": "gibbs-pressure-curves",
+   "kind": "idea",
+   "section": "23.2",
+   "name": "Gibbs energy against pressure across the phases",
+   "statement": "How Ḡ(P) changes with T: below the triple point the liquid curve is disconnected and the solid goes straight to gas; at the triple point all three meet; near the critical temperature only the liquid–gas break is left; above it a single supercritical fluid curve."
+  },
+  {
+   "id": "conjugate-variables",
+   "kind": "definition",
+   "section": "23.2",
+   "name": "Conjugate variables",
+   "terms": [
+    "conjugate variables"
+   ],
+   "statement": "Each form of work enters G as a pair of an intensive and an extensive variable, PV, ℰe, MH, FL, γA and μn, the product appearing in the state function and one times the change of the other in its differential."
+  },
+  {
+   "id": "generalized-gibbs-differential",
+   "kind": "result",
+   "section": "23.2",
+   "name": "Gibbs energy with other forms of work",
+   "statement": "With electrical, magnetic, elastic and surface work, dG = −SdT + VdP + ℰde + MdH + FdL + γdA, and G = U + PV − TS + ℰe + MH + FL + γA + ….",
+   "forms": [
+    {
+     "id": "dg-generalized",
+     "latex": "d\\kG = -\\kSent d\\kT + \\kV d\\kP + \\kemf d\\keq + \\kMmag d\\kHmag + \\kFel d\\kLel + \\kgammast d\\kAs"
+    },
+    {
+     "id": "g-generalized",
+     "latex": "\\kG = \\kU + \\kP\\kV -\\kT\\kSent + \\kemf \\keq + \\kMmag \\kHmag + \\kFel \\kLel + \\kgammast \\kAs + ..."
+    }
+   ]
+  },
+  {
+   "id": "phase-equilibrium-chemical-potential",
+   "kind": "result",
+   "section": "23.3",
+   "name": "Equal chemical potentials at phase equilibrium",
+   "statement": "At constant T and P, dG = μ_ice dn_ice + μ_water dn_water with dn_ice = −dn_water, so 0 = Δμ dn_water and Δμ = 0: any two phases in equilibrium have the same chemical potential.",
+   "forms": [
+    {
+     "id": "delta-mu-zero",
+     "latex": "0 = [\\kmuice-\\kmuwater]dn_{water} = \\kDeltamu\\; dn_{water}"
+    },
+    {
+     "id": "mu-alpha-beta",
+     "latex": "\\kmualpha (\\kP, \\kT) = \\kmubeta (\\kP, \\kT)",
+     "section": "23.4"
+    }
+   ]
+  },
+  {
+   "id": "chemical-potential-differential",
+   "kind": "result",
+   "section": "23.3",
+   "name": "Change of the chemical potential with T and P",
+   "statement": "As μ = Ḡ, (∂μ/∂P)_T = V̄ and (∂μ/∂T)_P = −S̄, so dμ = V̄dP − S̄dT for each phase.",
+   "forms": [
+    {
+     "id": "dmu-v-s",
+     "latex": "\\left(\\dfrac{∂\\kmu}{∂\\kP}\\right) = \\left(\\dfrac{∂\\kGbar}{∂\\kP}\\right) = \\kVbar"
+    }
+   ]
+  },
+  {
+   "id": "clapeyron-equation",
+   "kind": "result",
+   "section": "23.3",
+   "name": "Clapeyron equation",
+   "terms": [
+    "Clapeyron equation",
+    "Clapeyron."
+   ],
+   "statement": "Along a coexistence curve dμ is the same in both phases, so dP/dT = ΔS̄/ΔV̄ = ΔH̄/(TΔV̄): the slope of every phase boundary is set by the molar enthalpy and volume changes of the transition. For ice, ΔV̄ of melting is negative, so the melting line leans back.",
+   "forms": [
+    {
+     "id": "clapeyron-h",
+     "latex": "\\dfrac{d\\kP}{d\\kT} = \\dfrac{\\kDeltaHbar}{\\kT\\kDeltaVbar}"
+    },
+    {
+     "id": "clapeyron-s",
+     "latex": "\\dfrac{d\\kP}{d\\kT} = \\dfrac{\\kDeltaSbar}{\\kDeltaVbar}"
+    },
+    {
+     "id": "clapeyron-ab",
+     "latex": "\\dfrac{d\\kP}{d\\kT} = \\dfrac{\\kHbaralpha - \\kHbarbeta}{\\kT (\\kVbaralpha - \\kVbarbeta)} = \\dfrac{\\kDeltaabHbar}{\\kT \\kDeltaabVbar}",
+     "section": "23.4"
+    }
+   ]
+  },
+  {
+   "id": "clausius-clapeyron-equation",
+   "kind": "result",
+   "section": "23.4",
+   "name": "Clausius–Clapeyron equation",
+   "terms": [
+    "Clausius-Clapeyron",
+    "Clausius-Clapeyron equation"
+   ],
+   "statement": "For a vapor equilibrium V̄_gas ≫ V̄_liquid and, if the vapor is ideal, V̄_gas = RT/P, so the Clapeyron equation becomes d ln P/dT = ΔH_vap/RT².",
+   "forms": [
+    {
+     "id": "clausius-clapeyron",
+     "latex": "\\dfrac{1}{\\kP} .\\dfrac{d\\kP}{d\\kT} = \\dfrac{d \\ln \\kP}{d\\kT} = \\dfrac{\\kDeltaHmolarvap}{\\kR\\kT^2}"
+    }
+   ]
+  },
+  {
+   "id": "integrated-clausius-clapeyron",
+   "kind": "result",
+   "section": "23.4",
+   "name": "Integrated Clausius–Clapeyron equation",
+   "terms": [
+    "Clausius-Clapeyron Equation"
+   ],
+   "statement": "With ΔH_vap independent of T, ln P = −ΔH_vap/RT + C, so ln(P₂/P₁) = −(ΔH_vap/R)(1/T₂ − 1/T₁): a vapor pressure at one temperature and ΔH_vap give it at any other, and ln P against 1/T is a straight line of slope −ΔH_vap/R.",
+   "forms": [
+    {
+     "id": "cc-integrated",
+     "latex": "\\ln \\left( \\dfrac{\\kPone}{\\kPtwo} \\right) = \\dfrac{\\kDeltaHvap}{\\kR} \\left( \\dfrac{1}{\\kTtwo}- \\dfrac{1}{\\kTone} \\right)"
+    },
+    {
+     "id": "cc-indefinite",
+     "latex": "\\text{ln} \\: \\kP = -\\dfrac{\\kDeltaHbarvap}{\\kR\\kT} + C"
+    },
+    {
+     "id": "cc-exponential",
+     "latex": "\\kP(\\kT) = C' e^{-\\kDeltaHbarvap/\\kR\\kT}"
+    },
+    {
+     "id": "cc-proportional",
+     "latex": "\\kP \\propto \\exp \\left(- \\dfrac{\\kDeltaHvap}{\\kR\\kT}\\right)"
+    },
+    {
+     "id": "cc-alternative",
+     "latex": "\\ln \\left( \\dfrac{\\kPone}{\\kPtwo} \\right) = - \\dfrac{\\kDeltaHvap}{\\kR} \\left( \\dfrac{1}{\\kTone}- \\dfrac{1}{\\kTtwo} \\right)"
+    }
+   ]
+  },
+  {
+   "id": "enthalpy-of-vaporization",
+   "kind": "definition",
+   "section": "23.4",
+   "name": "Enthalpy of vaporization",
+   "symbol": "Delta_H_vap",
+   "terms": [
+    "Enthalpy (heat) of Vaporization"
+   ],
+   "type": "energy",
+   "statement": "The molar enthalpy (heat) of vaporization, ΔH_vap, the enthalpy taken up when a mole of liquid becomes vapor; it varies slightly with temperature."
+  },
+  {
+   "id": "vapor-pressure-curve",
+   "kind": "result",
+   "section": "23.4",
+   "name": "Vapor pressure rises with temperature",
+   "terms": [
+    "vaporization curve"
+   ],
+   "statement": "The vaporization curves of most liquids have similar shapes, the vapor pressure rising steadily and faster than linearly with temperature; where a curve crosses 1 atm is the liquid's normal boiling point."
+  },
+  {
+   "id": "sublimation-enthalpy-sum",
+   "kind": "result",
+   "section": "23.4",
+   "name": "Enthalpy of sublimation",
+   "statement": "The Clausius–Clapeyron equation applies to sublimation too, and the heat of sublimation is the sum of the heats of melting and vaporization."
+  },
+  {
+   "id": "clausius-clapeyron-estimates",
+   "kind": "skill",
+   "section": "23.4",
+   "name": "Using the Clausius–Clapeyron equation",
+   "statement": "Estimating a vapor pressure at another temperature from one vapor pressure and ΔH_vap, or the heat of a transition from the vapor pressures at two temperatures, keeping the order of the temperatures consistent; the Clapeyron equation, not this one, serves for melting."
+  },
+  {
+   "id": "helmholtz-from-partition-function",
+   "kind": "result",
+   "section": "23.5",
+   "name": "Helmholtz energy from the partition function",
+   "statement": "With U and S written through ln Q, A = U − TS gives A = −RT ln Q.",
+   "forms": [
+    {
+     "id": "a-ln-q",
+     "latex": "\\kA=-\\kR\\kT\\ln \\kQsys"
+    }
+   ]
+  },
+  {
+   "id": "chemical-potential-from-a",
+   "kind": "result",
+   "section": "23.5",
+   "name": "Chemical potential from the Helmholtz energy",
+   "statement": "Comparing dG = dA + d(PV) with the fundamental equation for G shows μ = (∂G/∂n)_{P,T} = (∂A/∂n)_{V,T}: each potential gives μ with its own natural variables held constant.",
+   "forms": [
+    {
+     "id": "mu-g-a",
+     "latex": "\\kmu = \\left(\\frac{\\partial \\kG}{\\partial n}\\right)_{\\kP,\\kT} = \\left(\\frac{\\partial \\kA}{\\partial n}\\right)_{\\kV,\\kT}"
+    }
+   ]
+  },
+  {
+   "id": "chemical-potential-from-partition-function",
+   "kind": "result",
+   "section": "23.5",
+   "name": "Chemical potential from the partition function",
+   "statement": "Putting A = −RT ln Q into μ = (∂A/∂n)_{V,T} gives μ = −RT(∂ln Q/∂n)_{V,T}.",
+   "forms": [
+    {
+     "id": "mu-ln-q",
+     "latex": "\\kmu = -\\kR\\kT\\left(\\frac{\\partial \\ln \\kQsys}{\\partial n}\\right)_{\\kV,\\kT}"
+    }
+   ]
+  }
+ ],
+ "concept_prereqs": [
+  {
+   "concept": "equilibrium-stability-kinds",
+   "prereq": "gibbs-criterion"
+  },
+  {
+   "concept": "gibbs-fluctuations",
+   "prereq": "equilibrium-stability-kinds"
+  },
+  {
+   "concept": "critical-opalescence",
+   "prereq": "gibbs-fluctuations"
+  },
+  {
+   "concept": "critical-opalescence",
+   "prereq": "critical-point"
+  },
+  {
+   "concept": "phase-diagram",
+   "prereq": "equilibrium-stability-kinds"
+  },
+  {
+   "concept": "equilibrium-vapor-pressure",
+   "prereq": "gibbs-ideal-gas-pressure"
+  },
+  {
+   "concept": "equilibrium-vapor-pressure",
+   "prereq": "gibbs-solid-pressure"
+  },
+  {
+   "concept": "coexistence-curves",
+   "prereq": "phase-diagram"
+  },
+  {
+   "concept": "coexistence-curves",
+   "prereq": "equilibrium-vapor-pressure"
+  },
+  {
+   "concept": "boiling",
+   "prereq": "equilibrium-vapor-pressure"
+  },
+  {
+   "concept": "triple-point",
+   "prereq": "coexistence-curves"
+  },
+  {
+   "concept": "normal-and-standard-transition-points",
+   "prereq": "coexistence-curves"
+  },
+  {
+   "concept": "phase-diagram-dimensionality",
+   "prereq": "triple-point"
+  },
+  {
+   "concept": "phase-transfer-mole-balance",
+   "prereq": "coexistence-curves"
+  },
+  {
+   "concept": "molar-quantity",
+   "prereq": "gibbs-energy"
+  },
+  {
+   "concept": "partial-molar-quantity",
+   "prereq": "molar-quantity"
+  },
+  {
+   "concept": "chemical-potential-pure-substance",
+   "prereq": "chemical-potential"
+  },
+  {
+   "concept": "chemical-potential-pure-substance",
+   "prereq": "molar-quantity"
+  },
+  {
+   "concept": "ehrenfest-classification",
+   "prereq": "first-order-transition"
+  },
+  {
+   "concept": "ehrenfest-classification",
+   "prereq": "gibbs-first-derivatives"
+  },
+  {
+   "concept": "second-order-transition",
+   "prereq": "ehrenfest-classification"
+  },
+  {
+   "concept": "liquid-entropy-exceeds-solid",
+   "prereq": "gibbs-temperature-curve"
+  },
+  {
+   "concept": "phase-molar-volume-ordering",
+   "prereq": "gibbs-first-derivatives"
+  },
+  {
+   "concept": "phase-molar-volume-ordering",
+   "prereq": "molar-volume"
+  },
+  {
+   "concept": "gibbs-pressure-curves",
+   "prereq": "phase-molar-volume-ordering"
+  },
+  {
+   "concept": "gibbs-pressure-curves",
+   "prereq": "triple-point"
+  },
+  {
+   "concept": "gibbs-pressure-curves",
+   "prereq": "supercritical-fluid"
+  },
+  {
+   "concept": "conjugate-variables",
+   "prereq": "gibbs-fundamental-equation"
+  },
+  {
+   "concept": "generalized-gibbs-differential",
+   "prereq": "conjugate-variables"
+  },
+  {
+   "concept": "phase-equilibrium-chemical-potential",
+   "prereq": "fundamental-equations-composition"
+  },
+  {
+   "concept": "phase-equilibrium-chemical-potential",
+   "prereq": "phase-transfer-mole-balance"
+  },
+  {
+   "concept": "chemical-potential-differential",
+   "prereq": "chemical-potential-pure-substance"
+  },
+  {
+   "concept": "chemical-potential-differential",
+   "prereq": "gibbs-first-derivatives"
+  },
+  {
+   "concept": "clapeyron-equation",
+   "prereq": "phase-equilibrium-chemical-potential"
+  },
+  {
+   "concept": "clapeyron-equation",
+   "prereq": "chemical-potential-differential"
+  },
+  {
+   "concept": "clapeyron-equation",
+   "prereq": "entropy-of-transition"
+  },
+  {
+   "concept": "enthalpy-of-vaporization",
+   "prereq": "enthalpy"
+  },
+  {
+   "concept": "clausius-clapeyron-equation",
+   "prereq": "clapeyron-equation"
+  },
+  {
+   "concept": "clausius-clapeyron-equation",
+   "prereq": "enthalpy-of-vaporization"
+  },
+  {
+   "concept": "integrated-clausius-clapeyron",
+   "prereq": "clausius-clapeyron-equation"
+  },
+  {
+   "concept": "vapor-pressure-curve",
+   "prereq": "normal-and-standard-transition-points"
+  },
+  {
+   "concept": "sublimation-enthalpy-sum",
+   "prereq": "enthalpy-of-vaporization"
+  },
+  {
+   "concept": "sublimation-enthalpy-sum",
+   "prereq": "enthalpy-of-fusion"
+  },
+  {
+   "concept": "clausius-clapeyron-estimates",
+   "prereq": "integrated-clausius-clapeyron"
+  },
+  {
+   "concept": "helmholtz-from-partition-function",
+   "prereq": "helmholtz-energy"
+  },
+  {
+   "concept": "helmholtz-from-partition-function",
+   "prereq": "average-energy-from-q"
+  },
+  {
+   "concept": "helmholtz-from-partition-function",
+   "prereq": "entropy-from-partition-function"
+  },
+  {
+   "concept": "chemical-potential-from-a",
+   "prereq": "fundamental-equations-composition"
+  },
+  {
+   "concept": "chemical-potential-from-partition-function",
+   "prereq": "helmholtz-from-partition-function"
+  },
+  {
+   "concept": "chemical-potential-from-partition-function",
+   "prereq": "chemical-potential-from-a"
+  }
+ ]
+}

@@ -1,0 +1,13 @@
+<section id="debye-t3">
+<h2>Phonons and the T³ law</h2>
+<p>The Debye function is a mathematical expression used in solid-state physics to calculate the heat capacity of solids at low temperatures. Unlike the classical <span data-concept="dulong-petit-law">Dulong–Petit law</span>, which assumes that each atom contributes a constant amount of heat capacity, <span data-concept="debye-model">the Debye model incorporates quantum mechanics by considering the vibrational modes of a crystal lattice as quantized phonons</span>. At low temperatures, only the low-frequency vibrational modes are thermally accessible, causing the heat capacity to decrease sharply rather than remain constant. The Debye function provides a way to describe this temperature dependence, predicting the characteristic behavior at very low temperatures and approaching the classical limit at higher temperatures:</p>
+$$ \kCP=\ka\kT^3 \tag{21.4.1} $$
+<p>Using quantum mechanics, Debye showed that the vibrational energy of a crystal lattice could be modeled as a collection of quantized <span data-concept="molecular-normal-modes">normal modes</span>, or phonons, leading to <span data-concept="debye-t3-law">a temperature-dependent heat capacity that accurately describes low-temperature behavior in Equation 21.4.1</span>.</p>
+<figure class="sim" id="sim-debye-einstein">
+  <div class="sim-head"><span class="eyebrow">Sim</span><span>Lower <span data-type="temperature">the temperature</span>. The Debye solid's heat capacity runs down the dashed T³ line, while the <span data-concept="einstein-solid">Einstein solid</span>'s, with every atom vibrating at one frequency, falls off far faster. Near $\kT = \Theta$ both approach the Dulong–Petit value.</span></div>
+</figure>
+<p>However, for metallic crystals, the situation is slightly more complex. In addition to lattice vibrations, the conduction electrons contribute to the heat capacity, resulting in a modified equation at low temperatures. The total heat capacity $C(\kT)$ for metals is often expressed as:</p>
+$$ \kCP=a\kT+b\kT^3 \tag{21.4.2} $$
+<p>where $a$ and $b$ are constants.</p>
+<p><span data-concept="metal-low-temperature-heat-capacity">The $a\kT$ term in Equation 21.4.2 represents the linear contribution from conduction electrons, while the $b\kT^3$ term arises from the lattice vibrations</span> described by the Debye model (form Equation 21.4.1. This combination allows for an accurate prediction of the low-temperature heat capacity of metals.</p>
+</section>

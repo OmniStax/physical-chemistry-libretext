@@ -1,0 +1,254 @@
+{
+ "id": "20.2",
+ "module": "13715",
+ "chapter": "20",
+ "title": "Nonequilibrium Isolated Systems Evolve in a Direction That Increases Their Energy Dispersal",
+ "short": "Energy dispersal and entropy",
+ "lead": "A spontaneous change in an isolated system spreads its energy out, and measuring that spread needs a state function. The reversible heat of an ideal gas is the starting point, tested for exactness before and after it is divided by the temperature.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "The page prints no credits.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": []
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercise here; the one exercise is new and AI-written, its answers computed. Numeric answers accept a 2% tolerance.",
+ "figures": [],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "heat-not-state-function",
+   "concept": "energy-dispersal",
+   "verb": "introduces"
+  },
+  {
+   "span": "heat-not-state-function",
+   "concept": "reversible-heat-inexact",
+   "verb": "introduces"
+  },
+  {
+   "span": "heat-not-state-function",
+   "concept": "exact-and-inexact-differentials",
+   "verb": "uses"
+  },
+  {
+   "span": "dividing-by-t",
+   "concept": "integrating-factor-1-over-t",
+   "verb": "introduces"
+  },
+  {
+   "span": "dividing-by-t",
+   "concept": "entropy",
+   "verb": "introduces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "Suppose we have a small reversible change",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "dividing-by-t",
+   "prompt": "<p>One mole of a monatomic ideal gas, with $\\kCv = \\tfrac{3}{2}R$, goes reversibly from 300 K and 10.0 L to 600 K and 20.0 L. Path 1 heats it at constant volume to 600 K and then expands it isothermally to 20.0 L. Path 2 expands it isothermally at 300 K to 20.0 L and then heats it at constant volume to 600 K.</p><ol type=\"a\"><li>What is $\\kqrev$ along path 1?</li><li>What is $\\kqrev$ along path 2?</li><li>What is $\\Delta \\kSent$ along either path?</li></ol>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 7199,
+      "unit": "J",
+      "hint": "Heating at constant volume takes $\\kCv\\Delta\\kT$; an isothermal expansion takes $nR\\kT\\ln(V_2/V_1)$."
+     },
+     {
+      "part": "b",
+      "value": 5470,
+      "unit": "J"
+     },
+     {
+      "part": "c",
+      "value": 14.41,
+      "unit": "J/K"
+     }
+    ],
+    "solution": "<p>a. $\\kqrev = \\tfrac{3}{2}(8.314)(300) + (8.314)(600)\\ln 2 = 3741 + 3458 = 7199$ J.</p><p>b. $\\kqrev = (8.314)(300)\\ln 2 + \\tfrac{3}{2}(8.314)(300) = 1729 + 3741 = 5470$ J. The heats differ, so $\\delta\\kqrev$ is not exact.</p><p>c. Along path 1, $\\Delta\\kSent = \\kCv\\ln\\dfrac{600}{300} + \\dfrac{3458\\ \\text{J}}{600\\ \\text{K}} = 8.64 + 5.76 = 14.41$ J/K. Along path 2, $\\Delta\\kSent = \\dfrac{1729\\ \\text{J}}{300\\ \\text{K}} + \\kCv\\ln 2 = 5.76 + 8.64 = 14.41$ J/K. Both equal $\\tfrac{5}{2}R\\ln 2$: dividing each piece of heat by the temperature at which it is taken gives the same total.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "reversible-heat-inexact"
+  },
+  {
+   "exercise": "a1",
+   "concept": "entropy"
+  }
+ ],
+ "footnotes": [],
+ "derivations": [
+  {
+   "id": "heat-inexact",
+   "what": "reversible heat is not an exact differential",
+   "source": "Physical Chemistry (LibreTexts), 20.2",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "d\\kU = \\delta\\kqrev + \\delta\\kwrev",
+       "src": "Chapter 19, the first law"
+      },
+      {
+       "tex": "d\\kU = \\kCv\\, d\\kT",
+       "src": "Chapter 19"
+      },
+      {
+       "tex": "\\delta\\kwrev = -\\kP\\, d\\kV",
+       "src": "Chapter 19"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{u}{d\\kU} = \\mk{q}{\\delta\\kqrev} + \\mk{w}{\\delta\\kwrev}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{q}{\\delta\\kqrev} = \\mk{u}{d\\kU} - \\mk{w}{\\delta\\kwrev}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{q}{\\delta\\kqrev} = \\mk{u}{\\kCv\\, d\\kT} - \\mk{w}{\\delta\\kwrev}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{q}{\\delta\\kqrev} = \\mk{u}{\\kCv\\, d\\kT} + \\mk{w}{\\kP\\, d\\kV}",
+       "uses": [
+        2
+       ]
+      }
+     ]
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "text": "If $\\delta \\kq$ were an exact differential, we could write the total differential $\\delta \\kq = \\left(\\dfrac{\\partial \\kq}{\\partial \\kT}\\right)_{\\kV} d\\kT + \\left(\\dfrac{\\partial \\kq}{\\partial \\kV}\\right)_{\\kT} d\\kV$, and its mixed second derivatives would be equal.",
+       "src": "19.4"
+      },
+      {
+       "text": "$\\kCv$ does not depend on volume (only $\\kT$, just like $\\kU$: it is its derivative)."
+      },
+      {
+       "tex": "\\kP = \\dfrac{\\knmol R\\kT}{\\kV}",
+       "src": "16.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{p}{\\left(\\dfrac{\\partial \\kP}{\\partial \\kT}\\right)_{\\kV}} = \\mk{d}{\\left(\\dfrac{\\partial (\\knmol R\\kT/\\kV)}{\\partial \\kT}\\right)_{\\kV}}",
+      "uses": [
+       3
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{p}{\\left(\\dfrac{\\partial \\kP}{\\partial \\kT}\\right)_{\\kV}} = \\mk{d}{\\dfrac{\\knmol R}{\\kV}}",
+       "uses": [],
+       "cap": "Only $\\kT$ varies here; $n$, $R$ and $\\kV$ are held fixed."
+      },
+      {
+       "tex": "\\mk{c}{\\left(\\dfrac{\\partial \\kCv}{\\partial \\kV}\\right)_{\\kT}} = \\mk{z}{0} \\neq \\mk{d}{\\dfrac{\\knmol R}{\\kV}} = \\mk{p}{\\left(\\dfrac{\\partial \\kP}{\\partial \\kT}\\right)_{\\kV}}",
+       "uses": [
+        0,
+        1,
+        2
+       ],
+       "cap": "$\\kCv$ and $\\kP$ are the coefficients of $d\\kT$ and $d\\kV$ in $\\delta\\kqrev$, so an exact $\\delta\\kqrev$ would make these two derivatives equal. They differ, so $\\delta\\kqrev$ is not exact."
+      }
+     ],
+     "note": "The book writes the partial derivatives as $(\\partial q/dT)_V$ and $(\\partial q/dV)_T$, meaning $\\partial T$ and $\\partial V$, and writes $\\partial P/\\partial T = \\partial nRT/\\partial T$, where the middle term is $\\partial(nRT/V)/\\partial T$."
+    }
+   ]
+  },
+  {
+   "id": "entropy-exact",
+   "what": "the entropy as an exact differential",
+   "source": "Physical Chemistry (LibreTexts), 20.2",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\delta\\kqrev = \\kCv\\, d\\kT + \\kP\\, d\\kV",
+       "drv": "heat-inexact"
+      },
+      {
+       "tex": "\\kP = \\dfrac{\\knmol R\\kT}{\\kV}",
+       "src": "16.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{q}{\\delta\\kqrev} = \\mk{c}{\\kCv\\, d\\kT} + \\mk{p}{\\kP\\, d\\kV}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{q}{\\dfrac{\\delta\\kqrev}{\\kT}} = \\mk{c}{\\dfrac{\\kCv}{\\kT}\\,d\\kT} + \\mk{p}{\\dfrac{\\kP}{\\kT}\\,d\\kV}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{q}{\\dfrac{\\delta\\kqrev}{\\kT}} = \\mk{c}{\\dfrac{\\kCv}{\\kT}\\,d\\kT} + \\mk{p}{\\dfrac{\\knmol R}{\\kV}\\,d\\kV}",
+       "uses": [
+        1
+       ]
+      }
+     ]
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "text": "$\\dfrac{\\kCv}{\\kT}$ does not depend on volume."
+      },
+      {
+       "text": "$\\dfrac{\\knmol R}{\\kV}$ does not depend on temperature."
+      },
+      {
+       "text": "If $\\delta \\kq$ were an exact differential, we could write the total differential $\\delta \\kq = \\left(\\dfrac{\\partial \\kq}{\\partial \\kT}\\right)_{\\kV} d\\kT + \\left(\\dfrac{\\partial \\kq}{\\partial \\kV}\\right)_{\\kT} d\\kV$, and its mixed second derivatives would be equal.",
+       "src": "19.4"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{a}{\\left(\\dfrac{\\partial (\\kCv/\\kT)}{\\partial \\kV}\\right)_{\\kT}} = \\mk{z}{0}",
+      "uses": [
+       1
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{a}{\\left(\\dfrac{\\partial (\\kCv/\\kT)}{\\partial \\kV}\\right)_{\\kT}} = \\mk{z}{0} = \\mk{b}{\\left(\\dfrac{\\partial (\\knmol R/\\kV)}{\\partial \\kT}\\right)_{\\kV}}",
+       "uses": [
+        0,
+        2,
+        3
+       ],
+       "cap": "These are the cross derivatives of the coefficients of $d\\kT$ and $d\\kV$ in $\\delta\\kqrev/\\kT$. They are equal, so $\\delta\\kqrev/\\kT$ is an exact differential."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

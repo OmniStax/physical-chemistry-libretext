@@ -1,0 +1,300 @@
+{
+ "id": "19.6",
+ "module": "13704",
+ "chapter": "19",
+ "title": "The Temperature of a Gas Decreases in a Reversible Adiabatic Expansion",
+ "short": "Cooling in an adiabatic expansion",
+ "lead": "Path B + C of the previous section, taken in tiny steps, ties the work along an adiabat to the heat along an isochore. Worked out for an ideal gas, the same bookkeeping links the temperature of a gas to its volume along a reversible adiabat.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "The book prints no credits for this page; its two equation images are missing at the source and are given here as reconstructed lines.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": []
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercises for this section; the one here is new and AI-written, its answers checked by computation. Its Bloom level and concept tags were chosen by AI. Numeric answers accept a 2% tolerance.",
+ "figures": [],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "path-b-c-small-steps",
+   "concept": "isotherm-and-adiabat-paths",
+   "verb": "uses"
+  },
+  {
+   "span": "path-b-c-small-steps",
+   "concept": "ideal-gas-energy-heat-capacity",
+   "verb": "uses"
+  },
+  {
+   "span": "path-b-c-small-steps",
+   "concept": "adiabatic-process",
+   "verb": "uses"
+  },
+  {
+   "span": "cooling-reversible-adiabat",
+   "concept": "ideal-gas-cp-cv",
+   "verb": "introduces"
+  },
+  {
+   "span": "cooling-reversible-adiabat",
+   "concept": "heat-capacity-ratio",
+   "verb": "introduces"
+  },
+  {
+   "span": "cooling-reversible-adiabat",
+   "concept": "reversible-adiabatic-cooling",
+   "verb": "introduces"
+  },
+  {
+   "span": "cooling-reversible-adiabat",
+   "concept": "molar-heat-capacity",
+   "verb": "uses"
+  },
+  {
+   "span": "cooling-reversible-adiabat",
+   "concept": "ideal-gas-law",
+   "verb": "uses"
+  },
+  {
+   "span": "cooling-reversible-adiabat",
+   "concept": "first-law-of-thermodynamics",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "This expression shows that volume and temperature are inversely related",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "cooling-reversible-adiabat",
+   "prompt": "<p>A mole of ideal gas at 298 K expands reversibly and adiabatically to twice its volume. Find the final temperature (a) for argon, with $\\kgammahc = 5/3$, and (b) for nitrogen, with $\\kgammahc = 7/5$.</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 187.7,
+      "unit": "K",
+      "hint": "Use $T_2/T_1 = (\\bar{V}_1/\\bar{V}_2)^{\\gamma-1}$ with $\\bar{V}_1/\\bar{V}_2 = 1/2$."
+     },
+     {
+      "part": "b",
+      "value": 225.8,
+      "unit": "K"
+     }
+    ],
+    "solution": "<p>Along a reversible adiabat $\\kTtwo = \\kTone(\\bar{V}_1/\\bar{V}_2)^{\\kgammahc-1}$ with $\\bar{V}_1/\\bar{V}_2 = 1/2$. (a) For argon $\\kgammahc - 1 = 2/3$, so $\\kTtwo = (298\\ \\text{K})(0.5)^{2/3} = (298\\ \\text{K})(0.630) = 187.7$ K. (b) For nitrogen $\\kgammahc - 1 = 0.4$, so $\\kTtwo = (298\\ \\text{K})(0.5)^{0.4} = (298\\ \\text{K})(0.758) = 225.8$ K. Argon cools more because its $\\kCVbar$ is smaller: each joule of work taken from the gas lowers its temperature further.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "reversible-adiabatic-cooling"
+  },
+  {
+   "exercise": "a1",
+   "concept": "heat-capacity-ratio"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-image65",
+   "kind": "correction",
+   "html": "The book's equation image here (CH431_Image65) is missing at the source; the line shown is reconstructed. In a tiny step the work along B equals the energy change $C_v\\,dT$, where $dT$ is the small drop in temperature along B that the heat along C then puts back."
+  },
+  {
+   "id": "c-image66",
+   "kind": "correction",
+   "html": "The book's equation image here (CH431_Image66) is missing at the source; the line shown is reconstructed with $C_v = \\tfrac{3}{2}nR$, the monatomic value the next sentence refers to."
+  },
+  {
+   "id": "c-eq-19-23",
+   "kind": "correction",
+   "html": "This book has no Equation 19.23. With $PV = nRT$, the result $T_2/T_1 = (V_1/V_2)^{2/3}$ becomes $P_1V_1^{5/3} = P_2V_2^{5/3}$."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "adiabat-temperature-volume",
+   "what": "temperature and volume along a reversible adiabat",
+   "source": "Physical Chemistry (LibreTexts), 19.6 The Temperature of a Gas Decreases in a Reversible Adiabatic Expansion",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "d\\kUbar = \\delta \\kq + \\delta \\kw",
+       "src": "19.1"
+      },
+      {
+       "text": "Along an adiabatic path no heat enters or leaves, $\\delta q = 0$.",
+       "src": "19.5"
+      },
+      {
+       "tex": "\\delta \\kw = -\\kP\\,d\\kVbar",
+       "src": "19.2"
+      }
+     ],
+     "then": {
+      "tex": "d\\kUbar = \\mk{q}{\\delta \\kq} + \\mk{w}{\\delta \\kw}"
+     },
+     "steps": [
+      {
+       "tex": "d\\kUbar = \\mk{q}{0} + \\mk{w}{\\delta \\kw}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "d\\kUbar = \\mk{q}{0} \\mk{w}{- \\kP\\,d\\kVbar}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "d\\kUbar = \\mk{w}{-\\kP\\,d\\kVbar}",
+       "uses": []
+      }
+     ]
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\kCVbar = \\left(\\dfrac{\\partial\\kUbar}{\\partial \\kT}\\right)_V",
+       "src": "18.4"
+      },
+      {
+       "text": "The energy of an ideal gas depends on its temperature alone.",
+       "src": "19.5"
+      },
+      {
+       "step": 0
+      },
+      {
+       "tex": "\\kP = \\dfrac{\\kR\\kT}{\\kVbar}",
+       "src": "16.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{c}{\\kCVbar} = \\mk{u}{\\left(\\dfrac{\\partial\\kUbar}{\\partial \\kT}\\right)_V}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{u}{d\\kUbar} = \\mk{c}{\\kCVbar}\\,\\mk{t}{d\\kT}",
+       "uses": [
+        1
+       ],
+       "cap": "Since $\\bar{U}$ changes only with $T$, the partial derivative is the ratio of the two differentials."
+      },
+      {
+       "tex": "\\mk{c}{\\kCVbar}\\,\\mk{t}{d\\kT} = \\mk{u}{-\\kP\\,d\\kVbar}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{c}{\\kCVbar}\\,\\mk{t}{d\\kT} = \\mk{u}{-\\dfrac{\\kR\\kT}{\\kVbar}\\,d\\kVbar}",
+       "uses": [
+        3
+       ]
+      },
+      {
+       "tex": "\\mk{c}{\\dfrac{\\kCVbar}{\\kT}}\\,\\mk{t}{d\\kT} = \\mk{u}{-\\dfrac{\\kR}{\\kVbar}\\,d\\kVbar}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{c}{\\int_{\\kTone}^{\\kTtwo}\\dfrac{\\kCVbar}{\\kT}\\,d\\kT} = \\mk{u}{-\\int_{{\\kVbar}_1}^{{\\kVbar}_2}\\dfrac{\\kR}{\\kVbar}\\,d\\kVbar}",
+       "uses": [],
+       "map": {
+        "t": "c"
+       },
+       "cap": "Each side now holds one variable, so each can be integrated along the path from $(T_1,\\bar{V}_1)$ to $(T_2,\\bar{V}_2)$."
+      },
+      {
+       "tex": "\\mk{c}{\\kCVbar\\ln\\left(\\dfrac{\\kTtwo}{\\kTone}\\right)} = \\mk{u}{-\\kR\\ln\\left(\\dfrac{{\\kVbar}_2}{{\\kVbar}_1}\\right)}",
+       "uses": [],
+       "cap": "With $\\bar{C}_V$ constant along the path, $\\int dT/T = \\ln(T_2/T_1)$, and the same holds for the volume."
+      },
+      {
+       "tex": "\\mk{c}{\\kCVbar\\ln\\left(\\dfrac{\\kTtwo}{\\kTone}\\right)} = \\mk{u}{\\kR\\ln\\left(\\dfrac{{\\kVbar}_1}{{\\kVbar}_2}\\right)}",
+       "uses": [],
+       "cap": "$-\\ln x = \\ln(1/x)$."
+      },
+      {
+       "tex": "\\mk{c}{\\ln\\left(\\dfrac{\\kTtwo}{\\kTone}\\right)} = \\mk{u}{\\dfrac{\\kR}{\\kCVbar}\\ln\\left(\\dfrac{{\\kVbar}_1}{{\\kVbar}_2}\\right)}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{c}{\\left(\\dfrac{\\kTtwo}{\\kTone}\\right)} = \\mk{u}{\\left(\\dfrac{{\\kVbar}_1}{{\\kVbar}_2}\\right)^{\\frac{\\kR}{\\kCVbar}}}",
+       "uses": [],
+       "cap": "$a\\ln x = \\ln x^a$, and taking the exponential of both sides removes the logarithms."
+      }
+     ]
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\kR = \\kCPbar - \\kCVbar"
+      },
+      {
+       "tex": "\\kgammahc = \\dfrac{\\kCPbar}{\\kCVbar}"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{r}{\\kR} = \\mk{p}{\\kCPbar - \\kCVbar}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{r}{\\dfrac{\\kR}{\\kCVbar}} = \\mk{p}{\\dfrac{\\kCPbar - \\kCVbar}{\\kCVbar}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{r}{\\dfrac{\\kR}{\\kCVbar}} = \\mk{p}{\\dfrac{\\kCPbar}{\\kCVbar} - 1}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{r}{\\dfrac{\\kR}{\\kCVbar}} = \\mk{p}{\\kgammahc - 1}",
+       "uses": [
+        1
+       ]
+      }
+     ]
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "step": 2
+      }
+     ],
+     "then": {
+      "tex": "\\mk{c}{\\left(\\dfrac{\\kTtwo}{\\kTone}\\right)} = \\mk{v}{\\left(\\dfrac{{\\kVbar}_1}{{\\kVbar}_2}\\right)}^{\\mk{e}{\\frac{\\kR}{\\kCVbar}}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{c}{\\left(\\dfrac{\\kTtwo}{\\kTone}\\right)} = \\mk{v}{\\left(\\dfrac{{\\kVbar}_1}{{\\kVbar}_2}\\right)}^{\\mk{e}{\\kgammahc-1}}",
+       "uses": [
+        1
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,222 @@
+{
+ "id": "20.9",
+ "module": "13723",
+ "chapter": "20",
+ "title": "The Statistical Definition of Entropy is Analogous to the Thermodynamic Definition",
+ "short": "Statistical and thermodynamic entropy",
+ "lead": "Entropy has two definitions: Boltzmann's count of microstates and the reversible heat divided by the temperature. Differentiating the statistical entropy and reading the change in the populations as heat takes one into the other.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": []
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercises for this section; the one exercise, on why the sums of the derivation vanish or become heat, was written by AI with an AI solution. Its Bloom level and concept tags were chosen by AI.",
+ "figures": [],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "two-views",
+   "concept": "entropy",
+   "verb": "reinforces"
+  },
+  {
+   "span": "statistical-to-heat",
+   "concept": "entropy-from-probabilities",
+   "verb": "reinforces"
+  },
+  {
+   "span": "statistical-to-heat",
+   "concept": "boltzmann-entropy",
+   "verb": "reinforces"
+  },
+  {
+   "span": "statistical-to-heat",
+   "concept": "stirlings-approximation",
+   "verb": "uses"
+  },
+  {
+   "span": "statistical-to-heat",
+   "concept": "molecular-heat-and-work",
+   "verb": "uses"
+  },
+  {
+   "span": "why-they-agree",
+   "concept": "statistical-thermodynamic-entropy",
+   "verb": "introduces"
+  },
+  {
+   "span": "why-they-agree",
+   "concept": "energy-dispersal",
+   "verb": "reinforces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "ai1",
+   "source_id": "eq:10",
+   "kind": "exercise",
+   "bloom": "Understand",
+   "place": {
+    "at": "end"
+   },
+   "cite": "statistical-to-heat",
+   "prompt": "<p>Differentiating $\\kSent = -k_B\\sum_j p_j\\ln p_j$ gives two sums, $\\sum_j dp_j$ and $\\sum_j \\ln p_j\\,dp_j$. Explain why the first is zero, and why $\\sum_j E_j\\,dp_j$ is the reversible heat while $\\sum_j p_j\\,dE_j$ is the work.</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "Write the energy as $U = \\sum_j p_jE_j$ and take its differential.",
+    "solution": "<p>The probabilities always add up to 1, so whatever changes them must leave the total at 1: $\\sum_j dp_j = d\\left(\\sum_j p_j\\right) = 0$. For the second part, $U = \\sum_j p_jE_j$, so $dU = \\sum_j E_j\\,dp_j + \\sum_j p_j\\,dE_j$. The levels $E_j$ depend on the volume, so they move only when work is done, for instance when a piston changes the size of the box: $\\sum_j p_j\\,dE_j$ is the work. Heating at fixed volume leaves the levels where they are and shifts the systems among them: $\\sum_j E_j\\,dp_j$ is the heat. With the first law, $dU = \\delta q_{rev} + \\delta w_{rev}$, the two sums match the two terms.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "ai1",
+   "concept": "statistical-thermodynamic-entropy"
+  },
+  {
+   "exercise": "ai1",
+   "concept": "molecular-heat-and-work"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-systems",
+   "kind": "correction",
+   "html": "Here $a_j$ counts systems, not microstates: the number of systems of the ensemble in state $j$ is the total number of systems $A$ multiplied by $p_j$."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "thermodynamic-entropy",
+   "what": "the thermodynamic entropy from the statistical one",
+   "source": "Physical Chemistry (LibreTexts), 20.9 The Statistical Definition of Entropy is Analogous to the Thermodynamic Definition",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kSent = -k_B\\sum_j p_j\\ln p_j",
+       "src": "(20.8.2)",
+       "drv": "20.8/entropy-probabilities"
+      },
+      {
+       "tex": "\\sum_j dp_j = 0",
+       "src": "20.9"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{s}{\\kSent} = \\mk{r}{-k_B\\sum_j p_j\\ln p_j}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{s}{d\\kSent} = \\mk{r}{-k_B\\sum_j\\left(dp_j + \\ln p_j\\,dp_j\\right)}",
+       "uses": [],
+       "cap": "By the product rule, $d(p_j\\ln p_j) = \\ln p_j\\,dp_j + p_j\\,(dp_j/p_j)$."
+      },
+      {
+       "tex": "\\mk{s}{d\\kSent} = \\mk{r}{-k_B\\sum_j \\ln p_j\\,dp_j}",
+       "uses": [
+        1
+       ],
+       "cap": "The probabilities always add up to 1, so their changes add up to zero."
+      }
+     ],
+     "src": "20.9"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "p_j=\\dfrac{e^{-\\beta E_j}}{Q}",
+       "src": "(20.8.3)"
+      },
+      {
+       "tex": "\\sum_j dp_j = 0",
+       "src": "20.9"
+      },
+      {
+       "text": "Heat changes how the systems are spread over fixed energy levels, so $\\delta q_{rev} = \\sum_j E_j\\,dp_j$, while work shifts the levels themselves.",
+       "src": "19.7"
+      },
+      {
+       "tex": "\\beta = \\dfrac{1}{k_B\\kT}",
+       "src": "17.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\ln p_j} = \\mk{r}{\\ln\\dfrac{e^{-\\beta E_j}}{Q}}",
+      "uses": [
+       0
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\ln p_j} = \\mk{r}{-\\beta E_j - \\ln Q}",
+       "uses": [],
+       "cap": "$\\ln e^{-\\beta E_j} = -\\beta E_j$, and the logarithm of a quotient is the difference of the logarithms."
+      },
+      {
+       "tex": "\\mk{l}{\\sum_j \\ln p_j\\,dp_j} = \\mk{r}{-\\beta\\sum_j E_j\\,dp_j - \\ln Q\\sum_j dp_j}",
+       "uses": [],
+       "cap": "Multiply by $dp_j$ and sum over the states; $\\ln Q$ is the same for every state and comes out of its sum."
+      },
+      {
+       "tex": "\\mk{l}{\\sum_j \\ln p_j\\,dp_j} = \\mk{r}{-\\beta\\sum_j E_j\\,dp_j}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{l}{\\sum_j \\ln p_j\\,dp_j} = \\mk{r}{-\\beta\\,\\delta \\kqrev}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{l}{\\sum_j \\ln p_j\\,dp_j} = \\mk{r}{-\\dfrac{\\delta \\kqrev}{k_B\\kT}}",
+       "uses": [
+        3
+       ]
+      }
+     ],
+     "src": "20.9"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "step": 1
+      }
+     ],
+     "then": {
+      "tex": "\\mk{s}{d\\kSent} = \\mk{r}{-k_B\\sum_j \\ln p_j\\,dp_j}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{s}{d\\kSent} = \\mk{r}{-k_B\\left(-\\dfrac{\\delta \\kqrev}{k_B\\kT}\\right)}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{s}{d\\kSent} = \\mk{r}{\\dfrac{\\delta \\kqrev}{\\kT}}",
+       "uses": []
+      }
+     ],
+     "num": "(20.9.3)",
+     "src": "20.9"
+    }
+   ]
+  }
+ ]
+}

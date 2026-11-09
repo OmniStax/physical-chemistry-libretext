@@ -1,0 +1,40 @@
+<section id="path-functions">
+<h2>Heat and work are path functions</h2>
+<p><span data-concept="heat">Heat</span> ($\kq$) and <span data-concept="thermodynamic-work">work</span> ($\kw$) are <span data-concept="path-function">path functions</span>, not <span data-concept="state-function">state functions</span>:</p>
+<ol><li>They are path dependent.</li><li>They are energy transfer → they are not intrinsic to the system.</li></ol>
+<div class="note">
+<div class="eyebrow">Note</div>
+<h3>Path Functons</h3>
+<p>Functions that depend on the path taken, such as work ($\kw$) and heat ($\kq$), are referred to as <strong><span data-concept="path-function">path functions</span></strong>.</p>
+</div>
+</section>
+
+<section id="reversible-versus-irreversible">
+<h2>Reversible versus irreversible</h2>
+<p>Let's consider a piston that is being compressed at constant temperature (isothermal) to half of its initial volume:</p>
+<ol><li>Start with cylinder 1 liter, both external and internal pressure 1 bar.</li><li><em><strong>Peg</strong></em> the piston in a fixed position.</li><li>Put cylinder in a pressure chamber with $\kPext=2$ bar.</li><li>Suddenly pull the peg.</li></ol>
+<figure class="sim" id="sim-reversible-path" data-original="/media/ch19/402588-Piston_Compression.png,/media/ch19/402589-Thermodynamic_Irreversible_Compression.png,/media/ch19/402590-Thermodynamic_Reversible_Compression.png,/media/ch19/402591-Piston_Expansion.png,/media/ch19/402592-Thermodynamic_Irreversible_Expansion.png,/media/ch19/402593-Thermodynamic_Reversible_Expansion.png" data-original-caption="">
+  <div class="sim-head"><span class="eyebrow">Sim</span><span>Play the peg pulls, then raise the number of steps. As the steps get smaller the shaded <span data-type="work">work</span> closes in on the area under the isotherm, the least work that compresses the gas and the most an expansion can give back.</span></div>
+</figure>
+<p>The piston will shoot down till the internal and external pressures balance out again and the volume is 1/2 L. Notice that the external pressure was <em><strong>maintained</strong></em> constant at 2 bar during the peg-pulling and that the internal and external pressures were <em><strong>not</strong></em> balanced at all time. In a $P-V$ diagram of an ideal gas, $P$ is a hyperbolic function of $V$ under constant temperature (isothermal), but this refers to the <em>internal</em> pressure of the gas. It is the <span data-concept="external-pressure">external one</span> that counts when computing work and they are not necessarily the same. As long as $P_{external}$ is constant, work is represented by a rectangle.</p>
+<p>The amount of work being done is equal to the shaded region and in equation:</p>
+$$ \kw=-\int^{\kVb}_{\kVa}{\kP d\kV}=-\kPext(\kVb-\kVa)=-\kP\Delta \kV $$
+<p>This represents the maximum amount of work that can be done for an isothermal compression. Work is being done on the system, so the overall work being done is positive. Let's repeat the experiment, but this time the piston will compress reversibly over infinitesimally small steps where the $\kPext=P_{system}$:</p>
+<p>For an ideal gas, <span data-concept="reversible-isothermal-work">the amount of work being done along the reversible compression</span> is:</p>
+<figure class="dv" id="drv-reversible-isothermal-work"></figure>
+<p>The amount of work being done to the two systems are not the same in the two diagrams (see the gray areas). Work is not a state, but a <span data-concept="path-function">path function</span>, as it depends on the path taken. You may say, what's the big difference. In both cases, the system is compressed from state 1 to state 2. The key is the word <em><strong>suddenly</strong></em>. By pegging the position in place for the first compression, we have created a situation where the external pressure is higher than the internal pressure ($\kPext>\kP$). Because work is done suddenly by pulling the peg out, the internal pressure is struggling to catch up with the external one. During the second compression, we have $\kPext=\kP$ at all times. It's a bit like falling off a cliff versus gently sliding down a hill. Path one is called an <span data-concept="irreversible-process">irreversible path</span>, the second a <span data-concept="reversible-process">reversible path</span>.</p>
+<div class="note">
+<div class="eyebrow">Note</div>
+<h3>Reversible vs. Irreversible Processes</h3>
+<p>A <span data-concept="reversible-process">reversible path</span> is a path that follows a series of states at rest (i.e., the forces are allowed to balance at all times). In an irreversible one the forces only balance at the very end of the process.</p>
+</div>
+<p>Notice that less work is being done on the reversible isothermal compression than the one-step irreversible isothermal compression. In fact, <span data-concept="reversible-work-extremes">the minimum amount of work that can be done during a compression always occurs along the reversible path</span>.</p>
+<h3>Isothermal Expansion</h3>
+<p>Let's consider a piston that is being expanded at constant temperature (isothermal) to twice of its initial volume:</p>
+<ol><li>Start with cylinder 1 liter in a pressure chamber with both an external and internal pressure of 2 bar.</li><li><em><strong>Peg</strong></em> the piston in a fixed position.</li><li>Take the cylinder out of the pressure chamber with P<sub>ext</sub>= 1 bar.</li><li>Suddenly pull the peg.</li></ol>
+<p>The piston will shoot up till the internal and external pressures balance out again and the volume is 2 L. Notice that the external pressure was <em><strong>maintained</strong></em> constant at 1 bar during the peg-pulling and that the internal and external pressures were <em><strong>not</strong></em> balanced at all time.</p>
+<p>The amount of irreversible work being done is again equal to the shaded region and the equation:</p>
+$$ \kw=-\kP\Delta \kV=-\kPext(\kVb-\kVa)=-\kP\Delta \kV $$
+<p>This represents the minimum amount of work that can be done for an isothermal expansion. Work is being done on the system, so the overall work being done is negative.<sup class="fn" data-note="c-expansion-sign"></sup> Let's repeat the experiment, but this time the piston will compress reversibly<sup class="fn" data-note="c-expand"></sup> over infinitesimally small steps where the $\kPext=P_{system}$:</p>
+<p>Notice that not only is more work is being done than the one-step irreversible isothermal expansion, but it is the same amount of work being done as the reversible isothermal compression.<sup class="fn" data-note="c-equal-work"></sup> <span data-concept="reversible-work-extremes">This is the maximum amount of work that can be done during an expansion</span>.</p>
+</section>

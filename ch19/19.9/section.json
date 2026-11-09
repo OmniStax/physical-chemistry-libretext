@@ -1,0 +1,87 @@
+{
+ "id": "19.9",
+ "module": "13707",
+ "chapter": "19",
+ "title": "Heat Capacity is a Path Function",
+ "short": "Enthalpy from heat capacity",
+ "lead": "The heat capacity at constant pressure is the temperature derivative of the enthalpy, which suggests finding the enthalpy at any temperature by measuring the heat capacity and integrating it. Three problems stand in the way.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "The book prints no credits for this page.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": []
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercises for this section; the one here is new and AI-written. Its Bloom level and concept tags were chosen by AI.",
+ "figures": [],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "enthalpies-from-heat-capacities",
+   "concept": "constant-pressure-heat-capacity",
+   "verb": "introduces"
+  },
+  {
+   "span": "enthalpies-from-heat-capacities",
+   "concept": "enthalpy-from-heat-capacity",
+   "verb": "introduces"
+  },
+  {
+   "span": "enthalpies-from-heat-capacities",
+   "concept": "heat-capacity-at-transition",
+   "verb": "introduces"
+  },
+  {
+   "span": "enthalpies-from-heat-capacities",
+   "concept": "no-absolute-enthalpies",
+   "verb": "introduces"
+  },
+  {
+   "span": "enthalpies-from-heat-capacities",
+   "concept": "enthalpy",
+   "verb": "uses"
+  },
+  {
+   "span": "enthalpies-from-heat-capacities",
+   "concept": "enthalpy-of-fusion",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "At the jumps in H, the C<sub>p</sub> is infinite.",
+   "kind": "exercise",
+   "bloom": "Understand",
+   "place": {
+    "at": "end"
+   },
+   "cite": "enthalpies-from-heat-capacities",
+   "prompt": "<p>Why can $\\kHenth(\\kT)$ of water not be found by integrating $\\kCpheat$ in one sweep from $-20$ °C to $+20$ °C? What has to be done at 0 °C instead?</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "Think about what the temperature does while the ice melts.",
+    "solution": "<p>At 0 °C the ice melts at a fixed temperature while it takes in the heat of fusion, so $\\kHenth$ jumps by $\\kDeltafusH$ with $\\Delta \\kT = 0$. The slope $(\\partial \\kHenth/\\partial \\kT)_P = \\kCpheat$ is infinite there, and no finite $\\kCpheat$ curve can be integrated across the jump. The integral has to stop at 273 K, the heat of fusion is added as a separate term, and the integral starts again with the heat capacity of the liquid: $\\Delta \\kHenth = \\int_{253}^{273} C_{P,\\text{ice}}\\,dT + \\kDeltafusH + \\int_{273}^{293} C_{P,\\text{water}}\\,dT$.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "heat-capacity-at-transition"
+  },
+  {
+   "exercise": "a1",
+   "concept": "enthalpy-from-heat-capacity"
+  }
+ ],
+ "footnotes": []
+}

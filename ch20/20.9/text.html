@@ -1,0 +1,44 @@
+<section id="two-views">
+<h2>Two views of one law</h2>
+<p>The laws of thermodynamics can be understood in two ways: by looking at large-scale properties like temperature and pressure, or by examining how countless tiny atoms move and interact. Both perspectives lead to the same laws, even though the reasoning behind them is quite different.</p>
+</section>
+
+<section id="statistical-to-heat">
+<h2>From the statistical entropy to heat</h2>
+<p>We learned earlier that <span data-concept="entropy">entropy</span>, $\kSent$, is related to the number of microstates, $W$, in an ensemble with $A$ systems:</p>
+$$ \kSens=k_B \ln{W} \tag{20.9.1} $$
+<p>and</p>
+$$ W=\frac{A!}{\prod_j{a_j}!} \tag{20.9.2} $$
+<p><a class="xref" href="#20.8-drv-entropy-probabilities">Combining Equations 20.9.1 and 20.9.2 to get:</a></p>
+$$ \begin{split} \kSens &= k_B \ln{\frac{A!}{\prod_j{a_j}!}} \\[4pt] &= k_B \ln{A!}-k_B\sum_j{\ln{a_j}!} \end{split} $$
+<p>Using <a href="https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Fundamentals/Stirlings_Approximation">Sterling's approximation:</a></p>
+$$ \ln{A!} \approx A\ln{A}-A $$
+<p>We obtain:</p>
+$$ \kSens = k_B A \ln{A}-k_BA-k_B\sum_j{a_j\ln{a_j}}+k_B\sum{a_j} $$
+<p>Since:</p>
+$$ A=\sum{a_j} $$
+<p>The expression simplifies to:</p>
+$$ \kSens = k_B A \ln{A}-k_B\sum_j{a_j\ln{a_j}} $$
+<p>We can make use of the fact that the number of microstates in state $j$ is equal to the total number of microstates multiplied by the probability of finding the system in state $j$, $p_j$:<sup class="fn" data-note="c-systems"></sup></p>
+$$ a_j=p_jA $$
+<p>Plugging in, we obtain</p>
+$$ \begin{split}\kSens &= k_B A \ln{A}-k_B\sum_j{p_jA\ln{p_jA}} \\[4pt] &= k_B A \ln{A}-k_B\sum_j{p_jA\ln{p_j}}-k_B\sum_j{p_jA\ln{A}} \end{split} $$
+<p>Since $A$ is a constant and the sum of the probabilities of finding the system in state $j$ is always 1:</p>
+$$ \sum{p_j}=1 $$
+<p>The first and last term cancel out:</p>
+$$ \kSens = -k_BA\sum_j{p_j\ln{p_j}} $$
+<p>We can use that the entropy of the system is the entropy of the ensemble divided by the number of systems:</p>
+$$ \kSsystem=\kSens/A $$
+<p>Dividing by $A$, we obtain:</p>
+$$ \kSsystem = -k_B\sum_j{p_j\ln{p_j}} $$
+<figure class="dv" id="drv-thermodynamic-entropy"></figure>
+</section>
+
+<section id="why-they-agree">
+<h2>Why they agree</h2>
+<p>The thermodynamic definition of entropy comes from macroscopic observations. In classical thermodynamics, entropy is defined as the measure of energy dispersal in a system (Equation 20.9.3). ​It tells us how much heat is spread out or distributed in a system at temperature. This definition is practical and works well at the bulk level but does not say why entropy behaves this way.</p>
+<p>The <span data-concept="boltzmann-entropy">statistical definition of entropy</span> in Equation 20.9.1, developed by Boltzmann, defines entropy in terms of the number of possible microstates that correspond to the same overall macroscopic state (macrostate). This shows that entropy measures the degree of microscopic disorder or multiplicity of arrangements consistent with what we see at the macroscopic level.</p>
+<p><span data-concept="statistical-thermodynamic-entropy">Both definitions describe the same underlying concept</span>:</p>
+<ul><li>The thermodynamic view says entropy measures the spread of energy in terms of heat and temperature.</li><li>The statistical view says entropy measures the spread of possible microstates that energy can occupy.</li></ul>
+<p>They are equivalent because a system with more accessible microstates (higher disorder) will also tend to have greater energy dispersal, and thus higher entropy. In fact, the statistical definition explains why the thermodynamic definition works: macroscopic energy dispersal arises from the overwhelming number of microscopic ways energy can be arranged.</p>
+</section>

@@ -1,0 +1,48 @@
+<section id="gibbs-energy">
+<h2>Gibbs energy at constant pressure</h2>
+<p>The <span data-concept="helmholtz-energy">Helmholtz energy</span> $\kA$ is developed for isochoric changes and as we have often said before it is much easier to deal with isobaric ones where $\kP=$ constant. We can therefore repeat the above treatment for the <span data-concept="enthalpy">enthalpy</span> and introduce another state function the <span data-concept="gibbs-energy">Gibbs energy</span></p>
+$$ \begin{aligned} \kG &≡ \kHenth -\kT\kSent \\[4pt] &= \kU + \kP\kV - \kT\kSent \\[4pt] &= \kA + \kP\kV \end{aligned} $$
+<p>If we take both $\kT$ and $\kP$ constant we get</p>
+$$ \begin{aligned} d\kU-\kT d\kSent + \kP d\kV &\le 0 \\[4pt]  d\kG &\le 0 \end{aligned} $$
+<p><span data-concept="gibbs-criterion">$\kG$ either decreases (spontaneously) or is constant (at equilibrium).</span> Calculating the state function between two end points we get:</p>
+$$ Δ\kG = \kDeltaH - \kT Δ\kSent ≤ 0 (\kT,\kP\text{ constant}) $$
+<figure class="dv" id="drv-gibbs-criterion"></figure>
+<p>This quantity is key to the question of spontaneity under the conditions we usually work under. If for a process $\Delta \kG$ is positive it does not occur spontaneous and <span data-concept="coupled-processes">can only be made to occur if it is 'pumped', i.e. coupled with a process that has a negative $\Delta \kG$</span>. The latter is spontaneous.</p>
+<div class="note">
+<div class="eyebrow">Note</div>
+<p>If $\Delta \kG=0$ then the system is as <em><strong><span data-concept="gibbs-criterion">equilibrium</span></strong></em>.</p>
+</div>
+</section>
+
+<section id="direction-of-the-spontaneous-change">
+<h2>Direction of the spontaneous change</h2>
+<p><span data-concept="spontaneity-temperature">Because the $\Delta \kSent$ term contains the temperature $\kT$ as coefficient the spontaneous direction of a process, e.g. a chemical reaction can <strong>change</strong> with temperature</span> depending on the values of the <span data-concept="enthalpy">enthalpy</span> and the <span data-concept="entropy">entropy</span> change $\kDeltaH$ and $\Delta \kSent$. This is true for the melting process, e.g. for water below 0<sup>o</sup>C we get water=>ice, above this temperature ice melts to water, but it also goes for chemical reactions.</p>
+<div class="example" id="ex-nh4cl">
+<h3>Example</h3>
+<p>Consider</p>
+$$ \mathrm{NH_{3}(g) + HCl(g) <=> NH_{4}Cl(s)} $$
+<p>$\Delta_r H$ at <span data-type="temperature">298K</span> / <span data-type="pressure">1 bar</span> is <span data-type="energy">-176.2 kJ</span>. The change in <span data-concept="entropy">entropy</span> is <span data-type="entropy">-0.285 kJ/K</span> so that at <span data-type="temperature">298K</span> $\Delta \kG$ is <span data-type="energy">-91.21 kJ</span>. Clearly this is a reaction that will proceed to the depletion of whatever is the limiting reagent on the left.</p>
+<p>However at <span data-type="temperature">618 K</span> this is a different story. Above this temperature $\Delta \kG$ is positive! (assuming enthalpy and entropy have remained the same, which is almost but not completely true) The reaction will not proceed. Instead the <em>reverse</em> reaction would proceed spontaneously. The salt on the right would decompose in the two gases -base and acid- on the left.</p>
+</div>
+<figure class="sim" id="sim-gibbs-sign">
+  <div class="sim-head"><span class="eyebrow">Sim</span><span>Slide <span data-type="temperature">the temperature</span> past <span data-type="temperature">618 K</span> and the sign of $\Delta \kG$ flips. Change the signs of $\kDeltaH$ and $\Delta \kSent$ to see a reaction that is spontaneous at every temperature, at none, or only when hot.</span></div>
+</figure>
+</section>
+
+<section id="meaning-of-the-term">
+<h2>Meaning of the $\Delta \kG$ term</h2>
+<p>As we have seen, $\Delta \kA$ can be related to the maximal amount of work that a system can perform at constant $\kV$ and $\kT$. We can hold an analogous argument for $\Delta \kG$ except that $\kV$ is not constant so that we have to consider volume work (zero at constant volume) .</p>
+<figure class="dv" id="drv-gibbs-non-pv-work"></figure>
+<div class="note">
+<div class="eyebrow">Note</div>
+<h3>Note</h3>
+<p><span data-concept="gibbs-maximum-non-pv-work">$\Delta \kG$ stands for the (maximal) reversible, isobaric isothermal non-$PV$ work that a certain spontaneous change can perform.</span> The volume work may not be zero, but is corrected for.</p>
+</div>
+</section>
+
+<section id="natural-variables-of-g">
+<h2>Natural variables of G</h2>
+<p>Because $\kG ≡ \kHenth-\kT\kSent$, we can write</p>
+$$ \begin{aligned} d\kG &= d\kHenth -\kT d\kSent -\kSent d\kT \\[4pt] &= \kT d\kSent +\kV d\kP -\kT d\kSent -\kSent d\kT \\[4pt] &= \kV d\kP - \kSent d\kT \end{aligned} $$
+<p>The <span data-concept="gibbs-fundamental-equation">natural variables of $\kG$ are pressure $\kP$ and temperature $\kT$</span>. This is what makes this function the most useful of the four $\kU$, $\kHenth$, $\kA$, and $\kG$: these are the natural variables of most of your laboratory experiments!</p>
+</section>

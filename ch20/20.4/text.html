@@ -1,0 +1,36 @@
+<section id="spontaneity-of-an-isolated-system">
+<h2>Spontaneity of an isolated system</h2>
+<div class="note">
+<div class="eyebrow">Note</div>
+<p>An <strong><span data-concept="isolated-system">isolated system</span></strong> is a little more than just adiabatic. In the latter heat cannot get in or out. In an <span data-concept="isolated-system">isolated system</span> <em>nothing</em> gets in or out, neither heat nor mass nor even any radiation, such as light. The <span data-concept="isolated-system">isolated system</span> is like a little universe all to itself.</p>
+</div>
+<p>Let us consider a zero law process. We have two identical blocks of metal, say aluminum. They are each at thermal equilibrium, but at different temperatures. They are brought into contact with each other but isolated from the rest of the universe.</p>
+<figure class="sim" id="sim-two-blocks" data-original="/media/ch20/401986-Isolated_System.png,/media/ch20/401987-Entropy.png" data-original-caption="">
+  <div class="sim-head"><span class="eyebrow">Sim</span><span>Set the two starting <span data-type="temperature">temperatures</span> and play. <span data-type="heat">Heat</span> flows from the hotter block to the colder one until they meet. The hot block loses less <span data-type="entropy">entropy</span> than the cold one gains, so the total climbs and then levels off.</span></div>
+</figure>
+<ul><li><em><strong>Zeroth law</strong></em>: <em>Heat will flow from hot to cold</em></li><li><em><strong>First law</strong></em>: <em>There is no change in total energy</em></li></ul>
+<figure class="dv" id="drv-heat-flow"></figure>
+<p>Clearly as long as the two temperatures are not the same <span data-concept="heat-flow-entropy-production">$d\kSent$ is not zero and entropy is not conserved. Instead it is <strong>increasing</strong>.</span> Over time, the temperatures will become the same (if the blocks are identical, the final temperature is the average of $\kTA$ and $\kTB$) and the entropy will reach a maximum.</p>
+<p>For our two identical blocks of metal (with same heat capacity, $\kCV$), we can, in fact, derive that <span data-concept="two-block-entropy-change">the entropy change</span>:<sup class="fn" data-note="square"></sup></p>
+$$ \Delta \kSent = \kCV \ln \left[\dfrac{\kTA^2 + \kTB^2}{4\kTA\kTB}\right]. $$
+<figure class="dv" id="drv-two-blocks"></figure>
+<p>This is indeed a positive quantity. In general, we can say for an <span data-concept="isolated-system">isolated system</span>:</p>
+$$ d\kSent \ge 0 $$
+<p>Thus if we are dealing with a spontaneous (and isolated) process $d\kSent >0$ and <em><strong><span data-concept="second-law">entropy is being produced</span></strong></em>. This gives us a <em><strong><span data-concept="second-law">criterion for spontaneity</span></strong></em>.</p>
+</section>
+
+<section id="entropy-exchange-of-an-open-system">
+<h2>Entropy exchange of an open system</h2>
+<p>In an <span data-concept="isolated-system">isolated system</span> $d\kSent$ represents <span data-concept="entropy-production-exchange">the produced entropy $d\kSprod$</span> and this is a good criterion for spontaneity. Of course the requirement that the system is isolated is very restrictive and makes the criterion as good as useless... What happens in a system that can exchange heat with the rest of the universe? We do have entropy changes in that case, but part of them may have nothing to do with production, because we also have to consider the heat that is exchanged.</p>
+$$ d\kSent = d\kSprod + d\kSexch $$
+<p>If the process is reversible (that is completely non-spontaneous) we are dealing with $\delta \kqrev$ so that $d\kSexch = \delta \kqrev /\kT$, but that is also what $dS_{tot}$ is equal to (by definition). This leaves no room for entropy production.</p>
+<p>So we have:</p>
+<p>Isolated: $d\kSent = d\kSprod + 0$</p>
+<p>Reversible $d\kSent = 0 + \delta \kqrev/\kT$</p>
+<p>Notice that this demonstrates that for non-isolated systems entropy change is <em>not</em> a good criterion for spontaneity at all... In the case the heat exchange is <em><strong>irreversible</strong></em> <em>part</em> of the entropy is entropy production by the system:</p>
+<p>Irreversible: $d\kSent = d\kSprod + \delta \kqirrev/\kT$</p>
+<p>$d\kSent > \delta \kqirrev/\kT$ in this case.</p>
+<p>Generalizing the isolated, irreversible and reversible cases we may say:</p>
+$$ d\kSent \ge \dfrac{δ\kq}{\kT} $$
+<p>This is the <em><strong><span data-concept="clausius-inequality">Clausius inequality</span></strong></em>.</p>
+</section>

@@ -1,0 +1,39 @@
+<section id="pressure">
+<h2>Gibbs energy and pressure</h2>
+<h3>Ideal gas</h3>
+<p><span data-concept="gibbs-ideal-gas-pressure">For a mole of ideal gas we can use the gas law to integrate volume over pressure</span> and we get</p>
+$$ Δ\kGmolar = \kR\kT \ln \left(\dfrac{\kPtwo}{\kPone}\right) $$
+<p>It is customary to identify one of the pressures (P<sub>1</sub>} with the <em><span data-concept="standard-state-gas">standard state</span></em> of <strong>1 bar</strong> and use the plimsoll to indicate the fact that we are referring to a standard state by writing:</p>
+$$ \kGmolar(\kP) = \kGstdmolar + \kR\kT \ln \left(\dfrac{\kP}{1}\right)=\kGstdmolar + \kR\kT \ln[\kP] $$
+<p>The fact that we are making the function intensive (per mole) is usually indicated by putting a bar over the $\kG$ symbol, although this is often omitted for G<sup><s>o</s></sup><sub>molar</sub></p>
+<h3>Solids</h3>
+<p><span data-concept="gibbs-solid-pressure">For solids the volume does not change very much with pressure</span> (the <em><span data-concept="isothermal-compressibility">isothermal compressibility</span></em> $\kkappa$ is small), so can assume it more or less constant:</p>
+$$ \kG(\kPfinal)=\kG(\kPinitial)+ \int \kV d\kP \text{(from init to final)} ≈ \kG(\kPinitial)+ \kV \int d\kP \text{(from init to final)}=\kG(\kPinitial)+ \kV Δ\kP $$
+</section>
+
+<section id="gibbs-helmholtz">
+<h2>The Gibbs-Helmholtz Expression</h2>
+<figure class="dv" id="drv-gibbs-helmholtz"></figure>
+<p>We said before that $\kSent$ is a first order derivative of $\kG$. As you can see from this derivation the enthalpy $\kHenth$ is also a first order derivative, albeit not of $\kG$ itself, but of $\kG/\kT$.</p>
+<p>The last step in the derivation simply takes the step before twice -say for the $\kG$ and $\kHenth$ at the begin and end of a <em>process</em>- and subtracts the two identical equations leading to a $Δ$ symbol. <span data-concept="gibbs-helmholtz-equation">In this differential form the Gibbs-Helmholtz equation can be applied to any process.</span></p>
+</section>
+
+<section id="gibbs-temperature">
+<h2>Gibbs Energy as a Function of Temperature</h2>
+<p>If <span data-concept="constant-pressure-heat-capacity">heat capacities</span> are know from 0 K we could determine both enthalpy and entropy by integration:</p>
+$$ \kSent(\kT) = \kSent(0) + \int_0^{\kT} \dfrac{\kCP}{\kT} d\kT $$
+$$ \kHenth(\kT) = \kHenth(0) + \int_0^{\kT} \kCP\; d\kT $$
+<p>As we have seen we must be careful at phase transitions such as melting or vaporization. At these points the curves are <em>discontinuous</em> and the derivative $\kCP$ is undefined.</p>
+$$ \kHenth ( \kT ) = \kHenth ( 0 ) + \int_0^{\kTfus} \kCP(\kT)_{solid} d\kT + \Delta \kHenth_{fus} + \int_{\kTfus}^{\kTboil} \kCP(\kT)_{liquid} d\kT + \Delta \kHenth_{vap} + etc. \tag{22.7.2} $$
+$$ \begin{aligned} \kSent ( \kT ) &= \kSent ( 0 ) + \int_0^{\kTfus} \dfrac{\kCP(\kT)_{solid}}{\kT} d\kT + \Delta \kSent_{fus} + \int_{\kTfus}^{\kTboil} \dfrac{\kCP(\kT)_{liquid}}{\kT} d\kT + \Delta \kSent_{vap} + etc. \\[4pt] &= \kSent(0) + \int_0^{\kTfus} \dfrac{\kCP(\kT)_{solid}}{\kT} d\kT + \dfrac{\Delta \kHenth_{fus}}{\kTfus} + \int_{\kTfus}^{\kTboil} \dfrac{\kCP(\kT)_{liquid}}{\kT} d\kT + \dfrac{\Delta \kHenth_{vap}}{\kTboil} + etc.   \end{aligned} \tag{22.7.3} $$
+<p>with $\kHenth(\kT=0)= \text{undefined}$ and $\kSent(\kT=0)=0$ from the <span data-concept="third-law">third law of thermodynamics</span>.</p>
+<div class="note">
+<div class="eyebrow">Note</div>
+<p>We also discussed the fact that the <span data-concept="third-law">third law</span> allows us to define $\kSent(0)$ as zero in most cases. For the enthalpy we cannot do that so that our curve is with respect to an undefined zero point. We really should plot $\kHenth(\kT) - \kHenth(0)$ and leave $\kHenth(0)$ undefined.</p>
+</div>
+<p>Because the Gibbs free energy $\kG= \kHenth-\kT\kSent$ we can also construct a curve for $\kG$ as a function of temperature, simply by combining the $\kHenth$ and the $\kSent$ curves (Equations 22.7.2 and 22.7.3):</p>
+$$ \kG(\kT) = \kHenth(\kT) - \kT\kSent(\kT) $$
+<p>Interestingly, if we do so, the <strong>discontinuties</strong> at the phase transition points will <strong>drop out</strong> for $\kG$ because at these points $Δ_{trs}\kHenth = \kTtrs Δ_{trs}\kSent$. <span data-concept="gibbs-temperature-curve">Therefore, $\kG$ is <strong>always</strong> continuous.</span></p>
+<p>The $\kHenth(0)$ problem does not disappear so that once again our curve is subject to an arbitrary offset in the y-direction. The best thing we can do is plot the quantity $\kG(\kT) - \kHenth(0)$ and leave the offset $\kHenth(0)$ undefined.</p>
+<p>We have seen above that the derivative of $\kG$ with temperature is $-\kSent$. As entropy is always positive, this means that the <span data-concept="gibbs-temperature-curve">G-curve is always <em>descending</em> with temperature</span>. It also means that although the curve is <em>continuous</em> even at the phase transitions, the slope of the G curve is not, because the derivative $-\kSent$ makes a jump there. Fig. 22.7 in the book<sup class="fn" data-note="c-fig-22-7"></sup> shows an example of such a curve for benzene. Note the kinks in the curve at the mp and the boiling point.</p>
+</section>

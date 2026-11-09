@@ -1,0 +1,27 @@
+<section id="calorimetric-entropy">
+<h2>Absolute entropy from heat capacities</h2>
+<p>Practical absolute entropies can also be determined experimentally using calorimetry, based on the <span data-concept="third-law">Third Law of Thermodynamics</span>. The Third Law states that a perfect crystalline substance has zero entropy at absolute zero (0 K). From this reference point, the entropy at any higher temperature can be obtained by measuring the heat capacity of the substance as it is warmed from 0 K up to the temperature of interest (often 298 K for <span data-concept="standard-molar-entropy">standard entropies</span>).</p>
+<p>From section <a class="xref" href="#21.1-entropy-versus-temperature">21.1</a>, we learned that <span data-concept="entropy-change-constant-pressure">the entropy at constant pressure changes with temperature</span> by:</p>
+$$ \Delta \kSent=\int_{\kTone}^{\kTtwo}{\frac{\kCP(\kT)}{\kT}d\kT} \tag{21.5.1} $$
+<p>where $\kCP$ is the molar heat capacity at constant pressure.</p>
+<p>Equation 21.5.1 accounts for the continuous increase in entropy as the substance absorbs heat with rising temperature but does not address the increase in entropy if the substances undergoes a phase transition. From section <a class="xref" href="#21.3-equilibrium-at-transition">21.3</a>, we learned that <span data-concept="entropy-of-transition">the entropy of a phase transition</span> (e.g., melting or vaporization) is:</p>
+$$ \Delta S_{trs}=\frac{\Delta H_{trs}}{\kTtrs} \tag{21.5.2} $$
+<p>Note that third law of thermodynamics can be used to set the entropy at absolute zero ($\kTone=0 K$) to zero in the integral in Equation 21.5.1 and the expression in Equation 21.5.2 applies to all possible phase transitions. These aspects combined with Equations 21.5.1 and 21.5.2 results in <span data-concept="calorimetric-absolute-entropy">an expression for the absolute entropy of a substance at temperature $\kT$</span>:</p>
+$$ \kSent(\kT)=\int_0^{\kT} \frac{\kCP(\kT)}{\kT} d \kT+\sum \frac{\Delta H_{\text {trs}}}{\kTtrs} \tag{21.5.3} $$
+<p>The summation term adds contributions from multiple possible phase transitions, where entropy changes abruptly due to latent heats ($Δ\kHenth$) at specific transition temperatures.</p>
+<p>The values of $\kCP$, $\Delta H_{\text {trs}}$, and $\kT$ can be experimentally determined using calorimetry. We can calculate the practical absolute entropy of a substance for any temperature.</p>
+</section>
+<section id="carbon-dioxide">
+<h2>Carbon dioxide at 300 K</h2>
+<div class="example" id="ex-21-5-1">
+<h3>Example 21.5.1</h3>
+<p>What is the absolute entropy of $\mathrm{CO_{2}}$ gas at <span data-type="temperature">300 K</span>?</p>
+<h4>Solution</h4>
+<p><span data-concept="absolute-entropy-heating-path">The entropy of $\mathrm{CO_{2}}$ gas at 300 K can be calculated by</span>:</p>
+$$ \kSent(\kT)=\int_{0 K}^{\kTsub}{\frac{\kCP(\kT)}{\kT}d\kT}+\frac{\Delta H_{sub}}{\kTsub}+\int_{\kTsub}^{300\text{ K}}{\frac{\kCPg(\kT)}{\kT}d\kT} $$
+<p>where the temperature of sublimation ($\kTsub$) is <span data-type="temperature">194.7 K</span>.</p>
+<figure class="sim" id="sim-calorimetric-entropy" data-figure="21.5.1" data-original="/media/ch21/399491-Absolute_entropy_of_CO2-removebg-preview.png" data-original-caption="The molar entropy of $\mathrm{CO_2}$ from 0 K to 300 K.">
+  <div class="sim-head"><span class="eyebrow">Figure 21.5.1</span><span>Move <span data-type="temperature">the temperature</span>. The shaded area under $\kCP/\kT$ is the entropy the warming adds, and the column on the right stacks it with the jump at sublimation. At 300 K the jump, $\Delta H_{sub}/\kTsub$, is most of the total.</span></div>
+</figure>
+</div>
+</section>

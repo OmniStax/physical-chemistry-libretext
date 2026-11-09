@@ -1,0 +1,296 @@
+{
+ "id": "20.8",
+ "module": "13722",
+ "chapter": "20",
+ "title": "Entropy Can Be Expressed in Terms of a Partition Function",
+ "short": "Entropy and the partition function",
+ "lead": "Boltzmann's count of microstates, taken over a large ensemble, can be rewritten with the probabilities of the states. Putting in the Boltzmann probabilities then gives the entropy from the partition function, alongside the energy and pressure it already gives.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "Adapted from Jerry LaRue (Chapman University).",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": []
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercises for this section; the one exercise, on the entropy of a two-level system, was written by AI with an AI solution. Its Bloom level and concept tags were chosen by AI. Numeric answers accept a 2% tolerance.",
+ "figures": [],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "counting-to-probabilities",
+   "concept": "entropy-from-probabilities",
+   "verb": "introduces"
+  },
+  {
+   "span": "counting-to-probabilities",
+   "concept": "entropy-from-partition-function",
+   "verb": "introduces"
+  },
+  {
+   "span": "counting-to-probabilities",
+   "concept": "boltzmann-entropy",
+   "verb": "uses"
+  },
+  {
+   "span": "counting-to-probabilities",
+   "concept": "stirlings-approximation",
+   "verb": "uses"
+  },
+  {
+   "span": "counting-to-probabilities",
+   "concept": "distribution-weight",
+   "verb": "uses"
+  },
+  {
+   "span": "probabilities-to-q",
+   "concept": "boltzmann-probability",
+   "verb": "uses"
+  },
+  {
+   "span": "probabilities-to-q",
+   "concept": "average-ensemble-energy",
+   "verb": "uses"
+  },
+  {
+   "span": "probabilities-to-q",
+   "concept": "entropy-from-probabilities",
+   "verb": "reinforces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "ai1",
+   "source_id": "eq:20.42",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "probabilities-to-q",
+   "prompt": "<p>A system has two states, of energy 0 and $\\varepsilon$, at a temperature where $k\\kT = \\varepsilon$. Find $\\kSent/k$ from $\\kSent = -k\\sum_j p_j\\ln p_j$, and check it against $\\kSent = \\kU/\\kT + k\\ln \\kQsys$.</p>",
+   "answer": {
+    "type": "number",
+    "value": 0.582,
+    "generated_by": "ai",
+    "hint": "With $\\beta\\varepsilon = 1$, $Q = 1 + e^{-1}$.",
+    "solution": "<p>$\\kQsys = 1 + e^{-1} = 1.368$, so $p_0 = 1/1.368 = 0.731$ and $p_1 = e^{-1}/1.368 = 0.269$. Then $\\kSent/k = -(0.731\\ln 0.731 + 0.269\\ln 0.269) = 0.229 + 0.353 = 0.582$. Check: $\\kU = p_1\\varepsilon = 0.269\\,\\varepsilon$, so $\\kU/k\\kT = 0.269$, and $\\ln \\kQsys = 0.313$; their sum is 0.582, the same.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "ai1",
+   "concept": "entropy-from-probabilities"
+  },
+  {
+   "exercise": "ai1",
+   "concept": "entropy-from-partition-function"
+  }
+ ],
+ "footnotes": [],
+ "derivations": [
+  {
+   "id": "entropy-probabilities",
+   "what": "the entropy from the probabilities of the states",
+   "source": "Physical Chemistry (LibreTexts), 20.8 Entropy Can Be Expressed in Terms of a Partition Function",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kSent = k\\ln W",
+       "src": "(20.8.1)"
+      },
+      {
+       "tex": "W=\\dfrac{A!}{\\prod_j a_j!}",
+       "src": "17.2"
+      },
+      {
+       "tex": "\\ln x! \\approx x\\ln x - x",
+       "src": "17.2, Stirling's approximation"
+      },
+      {
+       "tex": "\\sum_j a_j = A",
+       "src": "17.2"
+      },
+      {
+       "tex": "p_j=\\dfrac{a_j}{A}",
+       "src": "20.8"
+      },
+      {
+       "tex": "\\sum_j p_j = 1",
+       "src": "20.8"
+      },
+      {
+       "text": "The entropy of one system is the entropy of the ensemble divided by the number of systems $A$.",
+       "src": "20.8"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{s}{\\kSens} = \\mk{k}{k\\ln W}",
+      "uses": [
+       0
+      ],
+      "why": "Boltzmann's formula applied to the whole ensemble of $A$ systems."
+     },
+     "steps": [
+      {
+       "tex": "\\mk{s}{\\kSens} = \\mk{k}{k\\ln\\dfrac{A!}{\\prod_j a_j!}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{s}{\\kSens} = \\mk{a}{k\\ln A!} \\mk{b}{- k\\sum_j \\ln a_j!}",
+       "uses": [],
+       "map": {
+        "k": [
+         "a",
+         "b"
+        ]
+       },
+       "cap": "The logarithm of a quotient is the difference of the logarithms, and the logarithm of a product is the sum."
+      },
+      {
+       "tex": "\\mk{s}{\\kSens} = \\mk{a}{kA\\ln A - kA} \\mk{b}{- k\\sum_j a_j\\ln a_j + k\\sum_j a_j}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{s}{\\kSens} = \\mk{a}{kA\\ln A} \\mk{b}{- k\\sum_j a_j\\ln a_j}",
+       "uses": [
+        3
+       ]
+      },
+      {
+       "tex": "\\mk{s}{\\kSens} = \\mk{a}{kA\\ln A} \\mk{b}{- k\\sum_j p_jA\\ln (p_jA)}",
+       "uses": [
+        4
+       ]
+      },
+      {
+       "tex": "\\mk{s}{\\kSens} = \\mk{a}{kA\\ln A} \\mk{b}{- k\\sum_j p_jA\\ln p_j} \\mk{c}{- k\\sum_j p_jA\\ln A}",
+       "uses": [],
+       "map": {
+        "b": [
+         "b",
+         "c"
+        ]
+       },
+       "cap": "$\\ln(p_jA) = \\ln p_j + \\ln A$."
+      },
+      {
+       "tex": "\\mk{s}{\\kSens} = \\mk{a}{kA\\ln A} \\mk{b}{- k\\sum_j p_jA\\ln p_j} \\mk{c}{- kA\\ln A\\sum_j p_j}",
+       "uses": [],
+       "cap": "$A$ is constant, so $kA\\ln A$ comes out of the sum."
+      },
+      {
+       "tex": "\\mk{s}{\\kSens} = \\mk{a}{kA\\ln A} \\mk{b}{- k\\sum_j p_jA\\ln p_j} \\mk{c}{- kA\\ln A}",
+       "uses": [
+        5
+       ]
+      },
+      {
+       "tex": "\\mk{s}{\\kSens} = \\mk{b}{- k\\sum_j p_jA\\ln p_j}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{s}{\\kSsystem} = \\mk{b}{- k\\sum_j p_j\\ln p_j}",
+       "uses": [
+        6
+       ]
+      }
+     ],
+     "num": "(20.8.2)",
+     "src": "20.8"
+    }
+   ]
+  },
+  {
+   "id": "entropy-partition",
+   "what": "the entropy from the partition function",
+   "source": "Physical Chemistry (LibreTexts), 20.8 Entropy Can Be Expressed in Terms of a Partition Function",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kSent = - k\\sum_j p_j\\ln p_j",
+       "src": "(20.8.2)",
+       "drv": "entropy-probabilities"
+      },
+      {
+       "tex": "p_j=\\dfrac{e^{-\\beta \\kEj}}{\\kQsys}",
+       "src": "(20.8.3)"
+      },
+      {
+       "tex": "\\beta k = \\dfrac{1}{\\kT}",
+       "src": "20.8"
+      },
+      {
+       "tex": "\\sum_j \\dfrac{\\kEj e^{-\\beta \\kEj}}{\\kQsys} = \\kU",
+       "src": "17.3"
+      },
+      {
+       "tex": "\\sum_j \\dfrac{e^{-\\beta \\kEj}}{\\kQsys}=\\sum_j p_j=1",
+       "src": "20.8"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{s}{\\kSent} = \\mk{r}{- k\\sum_j p_j\\ln p_j}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{s}{\\kSent} = \\mk{r}{- k\\sum_j \\dfrac{e^{-\\beta \\kEj}}{\\kQsys}\\ln\\dfrac{e^{-\\beta \\kEj}}{\\kQsys}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{s}{\\kSent} = \\mk{r}{- k\\sum_j \\dfrac{e^{-\\beta \\kEj}}{\\kQsys}\\left(-\\beta \\kEj - \\ln \\kQsys\\right)}",
+       "uses": [],
+       "cap": "$\\ln e^{-\\beta E_j} = -\\beta E_j$, and the logarithm of a quotient is the difference of the logarithms."
+      },
+      {
+       "tex": "\\mk{s}{\\kSent} = \\mk{a}{\\beta k\\sum_j \\dfrac{\\kEj e^{-\\beta \\kEj}}{\\kQsys}} + \\mk{b}{\\dfrac{k\\ln \\kQsys}{\\kQsys}\\sum_j e^{-\\beta \\kEj}}",
+       "uses": [],
+       "map": {
+        "r": [
+         "a",
+         "b"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{s}{\\kSent} = \\mk{a}{\\dfrac{1}{\\kT}\\sum_j \\dfrac{\\kEj e^{-\\beta \\kEj}}{\\kQsys}} + \\mk{b}{\\dfrac{k\\ln \\kQsys}{\\kQsys}\\sum_j e^{-\\beta \\kEj}}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{s}{\\kSent} = \\mk{a}{\\dfrac{\\kU}{\\kT}} + \\mk{b}{\\dfrac{k\\ln \\kQsys}{\\kQsys}\\sum_j e^{-\\beta \\kEj}}",
+       "uses": [
+        3
+       ]
+      },
+      {
+       "tex": "\\mk{s}{\\kSent} = \\mk{a}{\\dfrac{\\kU}{\\kT}} + \\mk{b}{k\\ln \\kQsys}",
+       "uses": [
+        4
+       ]
+      }
+     ],
+     "num": "(20.8.4)",
+     "src": "20.8",
+     "note": "The book prints the first term of the third line as $-\\beta k\\sum_j E_je^{-\\beta E_j}/Q$. The two minus signs multiply to a plus, which is what gives $+U/T$ in Equation 20.8.4."
+    }
+   ]
+  }
+ ]
+}

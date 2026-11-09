@@ -1,0 +1,223 @@
+{
+ "id": "22.1",
+ "module": "14488",
+ "chapter": "22",
+ "title": "Helmholtz Energy",
+ "short": "Helmholtz energy",
+ "lead": "The entropy test for spontaneity works only for an isolated system. Holding the volume and the temperature constant instead leads to a new state function, the Helmholtz energy, and to what it measures.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": []
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercise on this section, so the exercise, its solution, Bloom level and concept tags are written by AI. The numeric answer accepts a 2% tolerance.",
+ "figures": [],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "constant-volume-and-temperature",
+   "concept": "helmholtz-energy",
+   "verb": "introduces"
+  },
+  {
+   "span": "constant-volume-and-temperature",
+   "concept": "helmholtz-criterion",
+   "verb": "introduces"
+  },
+  {
+   "span": "constant-volume-and-temperature",
+   "concept": "helmholtz-energy-of-mixing",
+   "verb": "introduces"
+  },
+  {
+   "span": "constant-volume-and-temperature",
+   "concept": "helmholtz-maximum-work",
+   "verb": "introduces"
+  },
+  {
+   "span": "constant-volume-and-temperature",
+   "concept": "clausius-inequality",
+   "verb": "uses"
+  },
+  {
+   "span": "constant-volume-and-temperature",
+   "concept": "fundamental-equation-u",
+   "verb": "reinforces"
+  },
+  {
+   "span": "constant-volume-and-temperature",
+   "concept": "entropy-of-mixing",
+   "verb": "uses"
+  },
+  {
+   "span": "natural-variables-of-a",
+   "concept": "natural-variables",
+   "verb": "introduces"
+  },
+  {
+   "span": "natural-variables-of-a",
+   "concept": "helmholtz-fundamental-equation",
+   "verb": "introduces"
+  },
+  {
+   "span": "natural-variables-of-a",
+   "concept": "fundamental-equation-u",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "A good example is the case of the mixing of two gases",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "constant-volume-and-temperature",
+   "prompt": "<p>Two ideal gases are mixed in equal amounts, $y_1 = y_2 = 0.5$, at 298.15 K with the total volume held constant. What is $\\Delta \\kAmolar$?</p>",
+   "answer": {
+    "type": "number",
+    "value": -1718,
+    "unit": "J/mol",
+    "generated_by": "ai",
+    "hint": "Use $\\Delta \\kAmolar = \\kR\\kT(y_1\\ln y_1 + y_2\\ln y_2)$ from Example 22.1.1.",
+    "solution": "<p>With $y_1 = y_2 = 0.5$ the sum is $0.5\\ln 0.5 + 0.5\\ln 0.5 = \\ln 0.5 = -0.6931$. Then $\\Delta \\kAmolar = (8.314\\ \\text{J K}^{-1}\\text{mol}^{-1})(298.15\\ \\text{K})(-0.6931) = -1718$ J/mol. It is negative, as it must be for a spontaneous change at constant $\\kT$ and $\\kV$, and since $\\Delta \\kU = 0$ all of it is $-\\kT\\Delta \\kSent$.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "helmholtz-energy-of-mixing"
+  },
+  {
+   "exercise": "a1",
+   "concept": "helmholtz-criterion"
+  }
+ ],
+ "footnotes": [],
+ "derivations": [
+  {
+   "id": "helmholtz-criterion",
+   "what": "the Helmholtz energy as the test of spontaneity at constant T and V",
+   "source": "Physical Chemistry (LibreTexts), 22.1 Helmholtz Energy",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "d\\kSent \\ge \\dfrac{\\delta q}{\\kT}",
+       "src": "20.4"
+      },
+      {
+       "tex": "d\\kU = \\delta q + \\delta w",
+       "src": "19.1"
+      },
+      {
+       "text": "At constant volume the $-\\kP d\\kV$ work term drops out: $\\delta w = 0$."
+      }
+     ],
+     "then": {
+      "tex": "\\mk{dS}{d\\kSent} \\ge \\mk{q}{\\dfrac{\\delta q}{\\kT}}",
+      "src": "20.4"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{dS}{\\kT d\\kSent} \\ge \\mk{q}{\\delta q}",
+       "uses": [],
+       "cap": "The temperature is positive, so multiplying both sides by $\\kT$ keeps the direction of the inequality."
+      },
+      {
+       "tex": "\\mk{dS}{\\kT d\\kSent} \\ge \\mk{q}{d\\kU - \\delta w}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{dS}{\\kT d\\kSent} \\ge \\mk{q}{d\\kU}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{q}{d\\kU} - \\mk{dS}{\\kT d\\kSent} \\le 0",
+       "uses": []
+      }
+     ],
+     "src": "22.1"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\kA \\equiv \\kU - \\kT\\kSent"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{A}{\\kA} \\equiv \\mk{U}{\\kU} - \\mk{TS}{\\kT\\kSent}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{A}{d\\kA} = \\mk{U}{d\\kU} - \\mk{TS}{d(\\kT\\kSent)}",
+       "uses": [],
+       "cap": "Take the differential of both sides."
+      },
+      {
+       "tex": "\\mk{A}{d\\kA} = \\mk{U}{d\\kU} - \\mk{a}{\\kT d\\kSent} - \\mk{b}{\\kSent d\\kT}",
+       "uses": [],
+       "cap": "The product rule: $d(\\kT\\kSent) = \\kT d\\kSent + \\kSent d\\kT$.",
+       "map": {
+        "TS": [
+         "a",
+         "b"
+        ]
+       }
+      }
+     ],
+     "num": "(22.1.1)",
+     "src": "22.1"
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "text": "The temperature is held constant as well: $d\\kT = 0$."
+      },
+      {
+       "step": 0
+      }
+     ],
+     "then": {
+      "tex": "\\mk{A}{d\\kA} = \\mk{U}{d\\kU} - \\mk{a}{\\kT d\\kSent} - \\mk{b}{\\kSent d\\kT}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{A}{d\\kA} = \\mk{U}{d\\kU} - \\mk{a}{\\kT d\\kSent}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{A}{d\\kA} = \\mk{U}{d\\kU} - \\mk{a}{\\kT d\\kSent} \\mk{z}{\\le 0}",
+       "uses": [
+        2
+       ],
+       "cap": "At constant $\\kV$, $d\\kU - \\kT d\\kSent \\le 0$, so the right-hand side is at most zero."
+      }
+     ],
+     "src": "22.1"
+    }
+   ]
+  }
+ ]
+}

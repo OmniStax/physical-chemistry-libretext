@@ -1,0 +1,239 @@
+{
+ "id": "19.8",
+ "module": "13706",
+ "chapter": "19",
+ "title": "Pressure-Volume Work",
+ "short": "Enthalpy",
+ "lead": "Measuring an energy change through heat alone needs a process with no work, which for a gas means holding the volume fixed. Enthalpy is the state function defined for the easier case, a process at constant pressure.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "The book prints no credits for this page; its equation image for the heat of fusion is missing at the source and is given here as a reconstructed line.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": []
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercises for this section; the one here is new and AI-written, its answers checked by computation with R = 8.314 J K⁻¹ mol⁻¹. Its Bloom level and concept tags were chosen by AI. Numeric answers accept a 2% tolerance.",
+ "figures": [],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "enthalpy",
+   "concept": "enthalpy",
+   "verb": "introduces"
+  },
+  {
+   "span": "enthalpy",
+   "concept": "enthalpy-differential",
+   "verb": "introduces"
+  },
+  {
+   "span": "enthalpy",
+   "concept": "heat-at-constant-pressure",
+   "verb": "introduces"
+  },
+  {
+   "span": "enthalpy",
+   "concept": "enthalpy-of-fusion",
+   "verb": "introduces"
+  },
+  {
+   "span": "enthalpy",
+   "concept": "enthalpy-and-energy-of-condensed-matter",
+   "verb": "introduces"
+  },
+  {
+   "span": "enthalpy",
+   "concept": "heat-capacity-path-function",
+   "verb": "introduces"
+  },
+  {
+   "span": "enthalpy",
+   "concept": "ideal-gas-cp-cv",
+   "verb": "reinforces"
+  },
+  {
+   "span": "enthalpy",
+   "concept": "first-law-of-thermodynamics",
+   "verb": "uses"
+  },
+  {
+   "span": "enthalpy",
+   "concept": "pressure-volume-work",
+   "verb": "uses"
+  },
+  {
+   "span": "enthalpy",
+   "concept": "state-function",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "That means that as long as there is no other work and we keep the pressure constant",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "enthalpy",
+   "prompt": "<p>1.00 mol of a monatomic ideal gas is warmed by 10.0 K at constant pressure. Find (a) $\\kDeltaU$ and (b) $\\kDeltaH = \\kqP$, in joules.</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 124.7,
+      "unit": "J",
+      "hint": "For a monatomic ideal gas $C_V = \\tfrac{3}{2}nR$, and $C_p = C_V + nR$."
+     },
+     {
+      "part": "b",
+      "value": 207.9,
+      "unit": "J"
+     }
+    ],
+    "solution": "<p>(a) The energy of an ideal gas depends on its temperature alone, so $\\kDeltaU = \\tfrac{3}{2}\\knmol R\\,\\Delta \\kT = 1.5(1.00\\ \\text{mol})(8.314\\ \\text{J K}^{-1}\\text{mol}^{-1})(10.0\\ \\text{K}) = 124.7$ J. (b) At constant pressure $\\kDeltaH = \\kqP = \\kCpheat\\,\\Delta \\kT$ with $\\kCpheat = C_V + \\knmol R = \\tfrac{5}{2}\\knmol R$, so $\\kDeltaH = 2.5(1.00)(8.314)(10.0) = 207.9$ J. The extra 83.1 J is the work the gas does pushing back its surroundings as it expands.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "heat-at-constant-pressure"
+  },
+  {
+   "exercise": "a1",
+   "concept": "ideal-gas-cp-cv"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-image71",
+   "kind": "correction",
+   "html": "The book's equation image here (CH431_Image71) is missing at the source; the line shown is reconstructed."
+  },
+  {
+   "id": "c-cv",
+   "kind": "correction",
+   "html": "The display prints $C-V$ for $C_V$: $C_p = C_V + nR$."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "enthalpy-heat-constant-pressure",
+   "what": "the heat at constant pressure is the enthalpy change",
+   "source": "Physical Chemistry (LibreTexts), 19.8 Pressure-Volume Work",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kHenth \\equiv \\kU + \\kP\\kV"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{h}{\\kHenth} \\equiv \\mk{u}{\\kU} + \\mk{pv}{\\kP\\kV}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{h}{d\\kHenth} = \\mk{u}{d\\kU} + \\mk{pv}{d(\\kP\\kV)}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{h}{d\\kHenth} = \\mk{u}{d\\kU} + \\mk{pv}{\\kP\\,d\\kV} + \\mk{vp}{\\kV\\,d\\kP}",
+       "uses": [],
+       "map": {
+        "pv": [
+         "pv",
+         "vp"
+        ]
+       },
+       "cap": "The product rule: $d(PV) = P\\,dV + V\\,dP$."
+      }
+     ]
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "d\\kU = \\delta \\kw + \\delta \\kq",
+       "src": "19.1"
+      },
+      {
+       "tex": "\\delta \\kw = -\\kP\\,d\\kV",
+       "src": "19.2"
+      },
+      {
+       "text": "The change is reversible and no work other than pressure-volume work is done."
+      }
+     ],
+     "then": {
+      "tex": "\\mk{h}{d\\kHenth} = \\mk{u}{d\\kU} + \\mk{pv}{\\kP\\,d\\kV} + \\mk{vp}{\\kV\\,d\\kP}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{h}{d\\kHenth} = \\mk{w}{\\delta \\kw} + \\mk{q}{\\delta \\kq} + \\mk{pv}{\\kP\\,d\\kV} + \\mk{vp}{\\kV\\,d\\kP}",
+       "uses": [
+        1
+       ],
+       "map": {
+        "u": [
+         "w",
+         "q"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{h}{d\\kHenth} = \\mk{w}{-\\kP\\,d\\kV} + \\mk{q}{\\delta \\kq} + \\mk{pv}{\\kP\\,d\\kV} + \\mk{vp}{\\kV\\,d\\kP}",
+       "uses": [
+        2,
+        3
+       ],
+       "cap": "With no other work, the only work is the reversible volume work."
+      },
+      {
+       "tex": "\\mk{h}{d\\kHenth} = \\mk{q}{\\delta \\kq} + \\mk{vp}{\\kV\\,d\\kP}",
+       "uses": []
+      }
+     ]
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "text": "The pressure is kept constant, $dP = 0$."
+      }
+     ],
+     "then": {
+      "tex": "\\mk{h}{d\\kHenth} = \\mk{q}{\\delta \\kq} + \\mk{vp}{\\kV\\,d\\kP}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{h}{d\\kHenth} = \\mk{q}{\\delta \\kq}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{h}{\\kDeltaH} = \\mk{q}{\\kqP}",
+       "uses": [],
+       "cap": "Summed over the whole process at constant pressure, the small heats add up to $q_P$."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

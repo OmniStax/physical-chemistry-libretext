@@ -1,0 +1,308 @@
+{
+ "id": "19.1",
+ "module": "47709",
+ "chapter": "19",
+ "title": "Overview of Classical Thermodynamics",
+ "short": "Classical thermodynamics",
+ "lead": "Joule found that work done on water warms it just as heat does. The first law keeps account of both through the internal energy, and with it come heat, heat capacity, the partial derivatives of a state variable and the kinds of work a system can do.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "Adapted from Patrick Fleming (California State University, East Bay).",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "medium"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "medium"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercises for this section; the one exercise, on the heat to warm 250 g of water, was written by AI with an AI solution, and its Bloom level and concept tags were chosen by AI. Numeric answers accept a 2% tolerance.",
+ "figures": [
+  {
+   "id": "fig-19-1-1",
+   "kind": "photo",
+   "number": "19.1.1",
+   "draws": []
+  },
+  {
+   "id": "sim-pressure-surface",
+   "kind": "sim",
+   "originals": [
+    "/media/ch19/113012-imageedit_1_9031701417.png"
+   ],
+   "original_caption": "",
+   "draws": [
+    "pressure",
+    "molar-volume",
+    "temperature"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "medium",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "first-law",
+   "concept": "first-law-of-thermodynamics",
+   "verb": "introduces"
+  },
+  {
+   "span": "first-law",
+   "concept": "internal-energy-change",
+   "verb": "introduces"
+  },
+  {
+   "span": "first-law",
+   "concept": "state-function",
+   "verb": "introduces"
+  },
+  {
+   "span": "first-law",
+   "concept": "heat",
+   "verb": "introduces"
+  },
+  {
+   "span": "first-law",
+   "concept": "thermodynamic-work",
+   "verb": "introduces"
+  },
+  {
+   "span": "first-law",
+   "concept": "internal-energy",
+   "verb": "uses"
+  },
+  {
+   "span": "heat",
+   "concept": "endothermic-and-exothermic",
+   "verb": "introduces"
+  },
+  {
+   "span": "heat",
+   "concept": "heat-capacity",
+   "verb": "introduces"
+  },
+  {
+   "span": "heat",
+   "concept": "partial-derivative",
+   "verb": "introduces"
+  },
+  {
+   "span": "heat",
+   "concept": "total-differential",
+   "verb": "introduces"
+  },
+  {
+   "span": "heat",
+   "concept": "pressure-is-a-state-function",
+   "verb": "introduces"
+  },
+  {
+   "span": "heat",
+   "concept": "specific-heat-capacity",
+   "verb": "reinforces"
+  },
+  {
+   "span": "heat",
+   "concept": "ideal-gas-law",
+   "verb": "uses"
+  },
+  {
+   "span": "heat",
+   "concept": "isotherm",
+   "verb": "uses"
+  },
+  {
+   "span": "heat",
+   "concept": "isochore",
+   "verb": "uses"
+  },
+  {
+   "span": "work",
+   "concept": "kinds-of-work",
+   "verb": "introduces"
+  },
+  {
+   "span": "work",
+   "concept": "thermodynamic-work",
+   "verb": "reinforces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "ai1",
+   "source_id": "ex:19.1.1",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "heat",
+   "prompt": "<p>How much heat is needed to warm 250 g of water from 20.0 °C to 80.0 °C? Take the specific heat of water as 4.184 J g<sup>-1</sup> K<sup>-1</sup>.</p>",
+   "answer": {
+    "type": "number",
+    "value": 62.8,
+    "unit": "kJ",
+    "generated_by": "ai",
+    "hint": "Multiply the mass, the specific heat and the rise in temperature, as in Example 19.1.1.",
+    "solution": "<p>A rise of 60.0 °C is a rise of 60.0 K, so $q = m C \\Delta T = (250\\ \\text{g})(4.184\\ \\text{J g}^{-1}\\text{K}^{-1})(60.0\\ \\text{K}) = 6.28\\times10^{4}$ J, or 62.8 kJ. The heat flows into the water, so $q$ is positive and the process is endothermic for the water.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "ai1",
+   "concept": "heat-capacity"
+  },
+  {
+   "exercise": "ai1",
+   "concept": "heat"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-w-sign",
+   "kind": "correction",
+   "html": "With $\\Delta U = q + w$, $w$ is the work done <em>on</em> the system, energy that flows in, as the sign convention of 19.2 sets out. Work the system does on the surroundings makes $w$ negative."
+  },
+  {
+   "id": "c-heat-capacity",
+   "kind": "correction",
+   "html": "The heat capacity is $C = dq/dT$, an ordinary ratio of the two small amounts; the book prints a partial $\\partial T$ in the denominator."
+  },
+  {
+   "id": "c-df",
+   "kind": "correction",
+   "html": "Each term of the sum multiplies the change in its own variable: $df = \\sum_i (\\partial f/\\partial x_i)_{x_{j \\neq i}}\\, dx_i$. The book leaves out the $dx_i$, which Equation 19.1.4 puts back for the pressure. The limit in the definition above it is $\\Delta x_i \\rightarrow 0$, where the book prints $\\Delta_i$."
+  },
+  {
+   "id": "c-route-one",
+   "kind": "correction",
+   "html": "The isothermal leg runs at $T_1 = 200$ K and the isochoric leg at $V_2 = 3.0$ L/mol, as the second line uses; the first line prints $R(400\\,K)$ and $R/(1.0\\,L/mol)$ in their place. With 200 K and 3.0 L/mol the result is $0.08206 \\times (-66.7) = -5.47$ atm, as printed."
+  },
+  {
+   "id": "c-example-work",
+   "kind": "correction",
+   "html": "$-(0.500\\ \\text{atm})(22.4\\ \\text{L})(8.314\\ \\text{J}/0.08206\\ \\text{atm L}) = -1135$ J, which is $-1.13$ kJ. The book's $p_{exp}$ is the external pressure $p_{ext}$, and \"am\" is atm."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "pressure-differential",
+   "what": "the total differential of the pressure",
+   "source": "Physical Chemistry (LibreTexts), 19.1 Overview of Classical Thermodynamics, What is a partial derivative?",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kppress = \\dfrac{\\kR\\kT}{\\kV}",
+       "src": "16.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\kppress} = \\mk{r}{\\dfrac{\\kR\\kT}{\\kV}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\left(\\dfrac{\\partial \\kppress}{\\partial \\kV}\\right)_{\\kT}} = \\mk{r}{- \\dfrac{\\kR\\kT}{\\kV^2}}",
+       "uses": [],
+       "cap": "Differentiate with $T$ held fixed: $RT$ is then a constant, and the derivative of $1/V$ is $-1/V^2$."
+      }
+     ],
+     "num": "(19.1.2)",
+     "src": "19.1"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\kppress = \\dfrac{\\kR\\kT}{\\kV}",
+       "src": "16.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\kppress} = \\mk{r}{\\dfrac{\\kR\\kT}{\\kV}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\left(\\dfrac{\\partial \\kppress}{\\partial \\kT}\\right)_{\\kV}} = \\mk{r}{\\dfrac{\\kR}{\\kV}}",
+       "uses": [],
+       "cap": "Differentiate with $V$ held fixed: $R/V$ is then a constant factor of $T$."
+      }
+     ],
+     "num": "(19.1.3)",
+     "src": "19.1"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "df = \\sum_i \\left(\\dfrac{\\partial f}{\\partial x_i}\\right)_{x_{j \\neq i}} dx_i",
+       "src": "19.1, What is a partial derivative?"
+      },
+      {
+       "text": "The pressure of an ideal gas is a function of its molar volume $V$ and its temperature $T$ alone.",
+       "src": "19.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{df} = \\mk{r}{\\sum_i \\left(\\dfrac{\\partial f}{\\partial x_i}\\right)_{x_{j \\neq i}} dx_i}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{d\\kppress} = \\mk{r}{\\left(\\dfrac{\\partial \\kppress}{\\partial \\kV}\\right)_{\\kT} d\\kV + \\left(\\dfrac{\\partial \\kppress}{\\partial \\kT}\\right)_{\\kV} d\\kT}",
+       "uses": [
+        1
+       ],
+       "cap": "With $f = p$ and the two variables $V$ and $T$, the sum has one term for each."
+      }
+     ],
+     "num": "(19.1.4)",
+     "src": "19.1"
+    },
+    {
+     "assumes": [
+      {
+       "step": 2
+      },
+      {
+       "step": 0
+      },
+      {
+       "step": 1
+      }
+     ],
+     "then": {
+      "tex": "\\mk{p}{d\\kppress} = \\mk{a}{\\left(\\dfrac{\\partial \\kppress}{\\partial \\kV}\\right)_{\\kT}} \\mk{dv}{d\\kV} + \\mk{b}{\\left(\\dfrac{\\partial \\kppress}{\\partial \\kT}\\right)_{\\kV}} \\mk{dt}{d\\kT}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{p}{d\\kppress} = \\mk{a}{\\left(- \\dfrac{\\kR\\kT}{\\kV^2}\\right)} \\mk{dv}{d\\kV} + \\mk{b}{\\left(\\dfrac{\\partial \\kppress}{\\partial \\kT}\\right)_{\\kV}} \\mk{dt}{d\\kT}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{p}{d\\kppress} = \\mk{a}{\\left(- \\dfrac{\\kR\\kT}{\\kV^2}\\right)} \\mk{dv}{d\\kV} + \\mk{b}{\\left(\\dfrac{\\kR}{\\kV}\\right)} \\mk{dt}{d\\kT}",
+       "uses": [
+        2
+       ]
+      }
+     ],
+     "src": "19.1"
+    }
+   ]
+  }
+ ]
+}

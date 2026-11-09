@@ -1,0 +1,131 @@
+{
+ "id": "21.4",
+ "module": "14481",
+ "chapter": "21",
+ "title": "The Debye Function is Used to Calculate the Heat Capacity at Low Temperatures",
+ "short": "The Debye T³ law",
+ "lead": "Near absolute zero the heat capacity of a solid falls far below the Dulong–Petit value. Debye's model of the lattice vibrations as phonons gives its form at low temperature, and in a metal the conduction electrons add a term of their own.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "The page names no authors.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercise for this section; the one exercise, on extending the T³ law and the entropy below the lowest measured temperature, was written by AI with an AI solution. Its Bloom level and concept tags were chosen by AI. Numeric answers accept a 2% tolerance.",
+ "figures": [
+  {
+   "id": "sim-debye-einstein",
+   "kind": "sim",
+   "draws": [
+    "heat-capacity",
+    "temperature"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "debye-t3",
+   "concept": "debye-model",
+   "verb": "introduces"
+  },
+  {
+   "span": "debye-t3",
+   "concept": "debye-t3-law",
+   "verb": "introduces"
+  },
+  {
+   "span": "debye-t3",
+   "concept": "metal-low-temperature-heat-capacity",
+   "verb": "introduces"
+  },
+  {
+   "span": "debye-t3",
+   "concept": "dulong-petit-law",
+   "verb": "reinforces"
+  },
+  {
+   "span": "debye-t3",
+   "concept": "molecular-normal-modes",
+   "verb": "uses"
+  },
+  {
+   "span": "debye-t3",
+   "concept": "einstein-model-limits",
+   "verb": "reinforces"
+  },
+  {
+   "span": "debye-t3",
+   "concept": "einstein-heat-capacity",
+   "verb": "uses"
+  },
+  {
+   "span": "debye-t3",
+   "concept": "heat-capacity-vanishes",
+   "verb": "reinforces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "ai1",
+   "source_id": "C_P=aT^3",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "debye-t3",
+   "prompt": "<p>At low temperature the heat capacity of a nonmetallic crystal follows Equation 21.4.1, $\\kCP = \\ka\\kT^3$, and at 5.0 K it is 0.10 J/(mol K). (a) What is $\\kCP$ at 10.0 K? (b) Taking $\\kSent = 0$ at 0 K, what is the molar entropy of the crystal at 10.0 K?</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 0.8,
+      "unit": "J/(mol K)",
+      "hint": "Doubling $T$ multiplies $T^3$ by eight."
+     },
+     {
+      "part": "b",
+      "value": 0.267,
+      "unit": "J/(mol K)",
+      "hint": "Integrate $C_P/T = aT^2$ from 0 to $T$."
+     }
+    ],
+    "solution": "<p>(a) $\\ka = 0.10/(5.0)^3 = 8.0\\times10^{-4}$ J mol⁻¹ K⁻⁴, so at 10.0 K $\\kCP = (8.0\\times10^{-4})(10.0)^3 = 0.80$ J/(mol K), eight times the value at 5.0 K. (b) $\\kSent(\\kT) = \\displaystyle\\int_0^{\\kT}\\dfrac{\\ka\\kT^3}{\\kT}\\,d\\kT = \\dfrac{\\ka\\kT^3}{3} = \\dfrac{\\kCP(\\kT)}{3}$, so $\\kSent(10.0\\ \\text{K}) = 0.80/3 = 0.267$ J/(mol K). This is how calorimetry fills in the stretch below its lowest measured temperature: the entropy there is a third of the heat capacity measured at that temperature.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "ai1",
+   "concept": "debye-t3-law"
+  },
+  {
+   "exercise": "ai1",
+   "concept": "entropy-change-constant-pressure"
+  }
+ ],
+ "footnotes": []
+}

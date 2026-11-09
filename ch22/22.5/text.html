@@ -1,0 +1,109 @@
+<section id="opening">
+<h2>Four equations in their natural variables</h2>
+<p><span data-concept="fundamental-equations">The fundamental thermodynamic equations</span> follow from five primary thermodynamic definitions and describe <span data-concept="internal-energy">internal energy</span>, <span data-concept="enthalpy">enthalpy</span>, <span data-concept="helmholtz-energy">Helmholtz energy</span>, and <span data-concept="gibbs-energy">Gibbs energy</span> in terms of their <span data-concept="natural-variables">natural variables</span>. Here they will be presented in their differential forms.</p>
+</section>
+
+<section id="introduction">
+<h2>Introduction</h2>
+<p><span data-concept="fundamental-equations">The fundamental thermodynamic equations</span> describe the thermodynamic quantities U, H, G, and A in terms of their <span data-concept="natural-variables">natural variables</span>. The term "<span data-concept="natural-variables">natural variable</span>" simply denotes a variable that is one of the convenient variables to describe U, H, G, or A. When considered as a whole, the four fundamental equations demonstrate how four important thermodynamic quantities depend on variables that can be controlled and measured experimentally. Thus, they are essentially equations of state, and using the fundamental equations, experimental data can be used to determine sought-after quantities like $\kG$ or $\kHenth$.</p>
+</section>
+
+<section id="first-law-of-thermodynamics">
+<h2>First Law of Thermodynamics</h2>
+<p>The <span data-concept="first-law-of-thermodynamics">first law of thermodynamics</span> is represented below in its differential form</p>
+$$ d\kU = đ\kq+đ\kw $$
+<p>where</p>
+<ul><li>$\kU$ is the <span data-concept="internal-energy">internal energy</span> of the system,</li><li>$\kq$ is <span data-concept="heat">heat</span> flow of the system, and</li><li>$\kw$ is the work of the system.</li></ul>
+<p>The "đ" symbol represent <strong><span data-concept="exact-and-inexact-differentials">inexact differentials</span></strong> and indicates that both $\kq$ and $\kw$ are <span data-concept="path-function">path functions</span>. Recall that $\kU$ is a <span data-concept="state-function">state function</span>. The first law states that internal energy changes occur only as a result of heat flow and work done.</p>
+<p>It is assumed that w refers only to PV work, where</p>
+$$ \kw = -\int{\kp d\kV} $$
+<p><span data-concept="fundamental-equation-u">The fundamental thermodynamic equation for internal energy follows directly from the first law and the principle of Clausius</span>:</p>
+$$ d\kU = đ\kq + đ\kw $$
+$$ d\kSent = \dfrac{\delta \kqrev}{\kT} $$
+<p>we have</p>
+$$ d\kU = \kT d\kSent + \delta \kw $$
+<p>Since only $PV$ work is performed,</p>
+$$ d\kU = \kT d\kSent - \kp d\kV \tag{22.5.1} $$
+<p>The above equation is the fundamental equation for $\kU$ with <span data-concept="natural-variables">natural variables</span> of entropy $\kSent$ and volume$\kV$.</p>
+<h3>Principle of Clausius</h3>
+<p>The <em>Principle of Clausius</em> states that <span data-concept="entropy">the entropy change of a system is equal to the ratio of heat flow in a reversible process to the temperature at which the process occurs</span>. Mathematically this is written as</p>
+$$ d\kSent = \dfrac{\delta \kqrev}{\kT} $$
+<p>where</p>
+<ul><li>$\kSent$ is the <span data-concept="entropy">entropy</span> of the system,</li><li>$\kqrev$ is the heat flow of a reversible process, and</li><li>$\kT$ is the temperature in Kelvin.</li></ul>
+</section>
+
+<section id="enthalpy">
+<h2>Enthalpy</h2>
+<p>Mathematically, <span data-concept="enthalpy">enthalpy</span> is defined as</p>
+$$ \kHenth = \kU + \kp\kV \tag{22.5.2} $$
+<p>where $\kHenth$ is <span data-concept="enthalpy">enthalpy</span> of the system, $\kp$ is pressure, and $\kV$ is volume. <span data-concept="fundamental-equation-h">The fundamental thermodynamic equation for enthalpy follows directly from it deffinition (Equation 22.5.2) and the fundamental equation for internal energy (Equation 22.5.1)</span> :</p>
+$$ \begin{aligned} d\kHenth &= d\kU + d(\kp\kV) \\[4pt] &= d\kU + \kp d\kV + \kV d\kP \\[4pt]  d\kU &= \kT d\kSent - \kp d\kV \\[4pt]  d\kHenth &= \kT d\kSent - \kp d\kV + \kp d\kV + \kV d\kp \\[4pt]  d\kHenth &= \kT d\kSent + \kV d\kp \end{aligned} $$
+<p>The above equation is the fundamental equation for $\kHenth$. The <span data-concept="natural-variables">natural variables</span> of enthalpy are $\kSent$ and $\kp$, entropy and pressure.</p>
+</section>
+
+<section id="gibbs-energy">
+<h2>Gibbs Energy</h2>
+<p>The mathematical description of <span data-concept="gibbs-energy">Gibbs energy</span> is as follows</p>
+$$ \begin{aligned} \kG &= \kU + \kp\kV - \kT\kSent  \\[4pt] &= \kHenth - \kT\kSent  \end{aligned} \tag{22.5.3} $$
+<p>where $\kG$ is the <span data-concept="gibbs-energy">Gibbs energy</span> of the system. <span data-concept="gibbs-fundamental-equation">The fundamental thermodynamic equation for Gibbs Energy follows directly from its definition 22.5.3 and the fundamental equation for enthalpy 22.5.2</span>:</p>
+$$ \begin{aligned} d\kG &= d\kHenth - d(\kT\kSent) \\[4pt] & d\kHenth - \kT d\kSent - \kSent d\kT \end{aligned} $$
+<p>Since</p>
+$$ \begin{aligned} d\kHenth &= \kT d\kSent + \kV d\kP  \\[4pt]  d\kG &= \kT d\kSent + \kV d\kP - \kT d\kSent - \kSent d\kT  \\[4pt]  &= \kV d\kP - \kSent d\kT  \end{aligned} \tag{22.5.4} $$
+<p>The above equation is the fundamental equation for $\kG$. The <span data-concept="natural-variables">natural variables</span> of Gibbs energy are $\kP$ and $\kT$.</p>
+</section>
+
+<section id="helmholtz-energy">
+<h2>Helmholtz Energy</h2>
+<p>Mathematically, <span data-concept="helmholtz-energy">Helmholtz energy</span> is defined as</p>
+$$ \kA = \kU - \kT\kSent \tag{22.5.5} $$
+<p>where $\kA$ is the <span data-concept="helmholtz-energy">Helmholtz energy</span> of the system, which is often written as the symbol $F$. <span data-concept="helmholtz-fundamental-equation">The fundamental thermodynamic equation for Helmholtz energy follows directly from its definition (Equation 22.5.5) and the fundamental equation for internal energy (Equation 22.5.1)</span>:</p>
+$$ \begin{aligned} d\kA &= d\kU - d(\kT\kSent) \\[4pt] &= d\kU - \kT d\kSent - \kSent d\kT \end{aligned} $$
+<p>Since</p>
+$$ \begin{aligned} d\kU &= \kT d\kSent - \kp d\kV  \\[4pt]  d\kA &= \kT d\kSent - \kp d\kV -\kT d\kSent - \kSent d\kT  \\[4pt] &= -\kp d\kV - \kSent d\kT  \end{aligned} \tag{22.5.6} $$
+<p>Equation 22.5.6 is the fundamental equation for $\kA$ with <span data-concept="natural-variables">natural variables</span> of $\kV$ and $\kT$. For the definitions to hold, it is assumed that <strong>only</strong> PV work is done and that <strong>only reversible</strong> processes are used. These assumptions are required for the first law and the principle of Clausius to remain valid. Also, these equations do not account include n, the number of moles, as a variable. When $n$ is included, the equations appear different, but the essence of their meaning is captured without including the n-dependence.</p>
+</section>
+
+<section id="chemical-potential">
+<h2>Chemical Potential</h2>
+<p>The fundamental equations derived above were not dependent on changes in the amounts of species in the system. <span data-concept="fundamental-equations-composition">Below the n-dependent forms are presented</span><sup>1</sup><sup>,4</sup>.</p>
+$$ d\kU = \kT d\kSent - \kP d\kV + \sum_{i=1}^{N}\kmui dn_i $$
+$$ d\kHenth = \kT d\kSent + \kV d\kP + \sum_{i=1}^{N}\kmui dn_i $$
+$$ d\kG = -\kSent d\kT + \kV d\kp + \sum_{i=1}^{N}\kmui dn_i $$
+$$ d\kA = -\kSent d\kT - \kP d\kV + \sum_{i=1}^{N}\kmui dn_i $$
+<p>where <span data-concept="chemical-potential">μ<sub>i</sub> is the chemical potential of species i</span> and dn<sub>i</sub><sub> </sub>is the change in number of moles of substance i.</p>
+</section>
+
+<section id="importance">
+<h2>Importance/Relevance of Fundamental Equations</h2>
+<p>The differential <span data-concept="fundamental-equations">fundamental equations</span> describe U, H, G, and A in terms of their <span data-concept="natural-variables">natural variables</span>. The natural variables become useful in understanding not only how thermodynamic quantities are related to each other, but also in analyzing relationships between measurable quantities (i.e. P, V, T) in order to learn about the thermodynamics of a system. Below is a table summarizing the natural variables for U, H, G, and A:</p>
+<div class="book-table">
+  <div class="tcap"><span class="eyebrow">Table</span><span></span></div>
+  <table>
+    <thead><tr><th><strong>Thermodynamic Quantity</strong></th><th><strong><span data-concept="natural-variables">Natural Variables</span></strong></th></tr></thead>
+    <tbody>
+      <tr><td>U (<span data-concept="internal-energy">internal energy</span>)</td><td>S, V</td></tr>
+      <tr><td>H (<span data-concept="enthalpy">enthalpy</span>)</td><td>S, P</td></tr>
+      <tr><td>G (<span data-concept="gibbs-energy">Gibbs energy</span>)</td><td>T, P</td></tr>
+      <tr><td>A (<span data-concept="helmholtz-energy">Helmholtz energy</span>)</td><td>T, V</td></tr>
+    </tbody>
+  </table>
+</div>
+</section>
+
+<section id="maxwell-relations">
+<h2>Maxwell Relations</h2>
+<p>The fundamental thermodynamic equations are the means by which the <span data-concept="maxwell-relations">Maxwell relations</span> are derived<sup>1</sup><sup>,4</sup>. The <span data-concept="maxwell-relations">Maxwell Relations</span> can, in turn, be used to group thermodynamic functions and relations into more general "families"<sup>2,3</sup>.</p>
+<p>As we said dA is an <strong><span data-concept="exact-and-inexact-differentials">exact differential</span></strong>. Let's write is out in its natural variables (Equation 22.5.6) and take a cross derivative. The dA expression in natural variables is</p>
+$$ d\kA = \left( \dfrac{\partial \kA}{\partial \kV} \right)_{\kT} d\kV + \left( \dfrac{\partial \kA}{\partial \kT} \right) _{\kV} d\kT $$
+<p>The partial derivatives of A of first order can already be quite interesting we see e.g. in step 2 that the first partial of A versus V (at T constant) is the negative of the pressure.</p>
+$$ \left( \dfrac{\partial \kA}{\partial \kV} \right)_{\kT} = -\kP $$
+<p>Likewise we find the (isochoric) slope with temperature gives us the negative of the entropy. <span data-concept="helmholtz-first-derivatives">Thus entropy is one of the <em><strong>first order derivatives</strong></em> of A.</span></p>
+$$ \left( \dfrac{\partial \kA}{\partial \kT} \right) _{\kV} = -\kSent $$
+<p>When we apply a cross derivative we get what is known as a <em><strong><span data-concept="maxwell-relation-a">Maxwell relation</span></strong></em>:</p>
+<figure class="dv" id="drv-maxwell-a"></figure>
+<p>A similar treatment of dG (Equation 22.5.4 gives:</p>
+$$ \left( \dfrac{\partial \kG}{\partial \kT} \right) _{\kP} = -\kSent $$
+$$ \left( \dfrac{\partial \kG}{\partial \kP} \right) _{\kT} = \kV $$
+<p>and <span data-concept="maxwell-relation-g">another Maxwell relation</span></p>
+<figure class="dv" id="drv-maxwell-g"></figure>
+</section>

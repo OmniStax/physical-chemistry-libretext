@@ -1,0 +1,271 @@
+{
+ "id": "20.3",
+ "module": "13717",
+ "chapter": "20",
+ "title": "Unlike heat, Entropy is a State Function",
+ "short": "Entropy is a state function",
+ "lead": "An ideal gas is taken between the same two states along an isotherm and along an adiabat followed by an isochore. Comparing the heat and the entropy change on each path tells which of the two is a state function.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "The page prints no credits.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercise here; the one exercise is new and AI-written, its answers computed. Numeric answers accept a 2% tolerance.",
+ "figures": [
+  {
+   "id": "sim-entropy-two-paths",
+   "kind": "sim",
+   "number": "20.3.1",
+   "originals": [
+    "/media/ch20/347606-20.3.1.svg"
+   ],
+   "widths": [
+    456
+   ],
+   "original_caption": "A: isothermal expansion, B:adiabat, C:isochore (CC BY-NC; Ümit Kaya via LibreTexts)",
+   "draws": [
+    "volume",
+    "pressure",
+    "temperature",
+    "heat",
+    "entropy",
+    "heat-capacity"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "circular-integrals",
+   "concept": "cycle-integral-zero",
+   "verb": "introduces"
+  },
+  {
+   "span": "entropy-along-two-paths",
+   "concept": "heating-entropy-change",
+   "verb": "introduces"
+  },
+  {
+   "span": "entropy-along-two-paths",
+   "concept": "isothermal-entropy-change",
+   "verb": "introduces"
+  },
+  {
+   "span": "entropy-along-two-paths",
+   "concept": "entropy-state-function",
+   "verb": "introduces"
+  },
+  {
+   "span": "entropy-along-two-paths",
+   "concept": "entropy",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "We took two different paths to get start and end at the same points",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "entropy-along-two-paths",
+   "prompt": "<p>One mole of a monatomic ideal gas ($\\kCv = \\tfrac{3}{2}R$) at 298.15 K triples its volume. Path A is a reversible isotherm. Path B + C is a reversible adiabat followed by heating at constant volume back to 298.15 K.</p><ol type=\"a\"><li>What is $\\Delta\\kSA$?</li><li>What is $\\kqrevA$?</li><li>What temperature $\\kTtwo$ does the adiabat reach?</li><li>What is $\\kqrevC$?</li></ol>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 9.13,
+      "unit": "J/K"
+     },
+     {
+      "part": "b",
+      "value": 2723,
+      "unit": "J"
+     },
+     {
+      "part": "c",
+      "value": 143.3,
+      "unit": "K",
+      "hint": "Along a reversible adiabat of a monatomic gas, $\\kT V^{2/3}$ stays constant."
+     },
+     {
+      "part": "d",
+      "value": 1931,
+      "unit": "J"
+     }
+    ],
+    "solution": "<p>a. $\\Delta\\kSA = \\knmol R\\ln\\dfrac{\\kVb}{\\kVa} = (8.314)\\ln 3 = 9.13$ J/K.</p><p>b. $\\kqrevA = \\knmol R\\kT\\ln 3 = (8.314)(298.15)(1.0986) = 2723$ J.</p><p>c. $\\kTtwo = (298.15\\ \\text{K})\\,3^{-2/3} = 143.3$ K.</p><p>d. $\\kqrevC = \\kCv(\\kTone - \\kTtwo) = (12.47)(298.15 - 143.3) = 1931$ J. The heat along B + C is smaller than along A, but $\\kCv\\ln(298.15/143.3) = 9.13$ J/K, the same entropy change.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "isothermal-entropy-change"
+  },
+  {
+   "exercise": "a1",
+   "concept": "entropy-state-function"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "qrec",
+   "kind": "correction",
+   "html": "The book prints $q_{rec,A}$; it means $q_{rev,A}$, the reversible heat along the isotherm A."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "two-paths",
+   "what": "the entropy change along the two paths",
+   "source": "Physical Chemistry (LibreTexts), 20.3",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "d\\kSent = \\dfrac{\\delta\\kqrev}{\\kT}",
+       "src": "20.2"
+      },
+      {
+       "tex": "\\kqrevB = 0",
+       "src": "20.3"
+      },
+      {
+       "tex": "\\delta\\kqrevC = \\kCv\\, d\\kT",
+       "src": "20.3"
+      },
+      {
+       "text": "$\\kCv$ of an ideal gas does not depend on the temperature."
+      },
+      {
+       "tex": "\\kCv\\ln\\dfrac{\\kTtwo}{\\kTone} = -\\knmol R\\ln\\dfrac{\\kVb}{\\kVa}",
+       "src": "Section 19-6, the reversible adiabat"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{s}{\\Delta\\kSBC} = \\mk{i}{\\int \\dfrac{\\delta\\kqrevBC}{\\kT}}",
+      "uses": [
+       0
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{s}{\\Delta\\kSBC} = \\mk{i}{\\int_{C} \\dfrac{\\delta\\kqrevC}{\\kT}}",
+       "uses": [
+        1
+       ],
+       "cap": "No heat flows along the adiabat B, so only the isochore C contributes."
+      },
+      {
+       "tex": "\\mk{s}{\\Delta\\kSBC} = \\mk{i}{\\int_{\\kTtwo}^{\\kTone} \\dfrac{\\kCv}{\\kT}\\, d\\kT}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{s}{\\Delta\\kSBC} = \\mk{i}{\\kCv\\ln\\dfrac{\\kTone}{\\kTtwo}}",
+       "uses": [
+        3
+       ],
+       "cap": "With $\\kCv$ constant it comes out of the integral, and $\\int d\\kT/\\kT = \\ln \\kT$."
+      },
+      {
+       "tex": "\\mk{s}{\\Delta\\kSBC} = \\mk{i}{-\\kCv\\ln\\dfrac{\\kTtwo}{\\kTone}}",
+       "uses": [],
+       "cap": "Inverting the argument of a logarithm changes its sign: $\\ln(1/x) = -\\ln x$."
+      },
+      {
+       "tex": "\\mk{s}{\\Delta\\kSBC} = \\mk{i}{\\knmol R\\ln\\dfrac{\\kVb}{\\kVa}}",
+       "uses": [
+        4
+       ]
+      }
+     ],
+     "num": "(20.3.1)"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "d\\kSent = \\dfrac{\\delta\\kqrev}{\\kT}",
+       "src": "20.2"
+      },
+      {
+       "text": "$\\kT$ is constant along the isotherm A."
+      },
+      {
+       "tex": "\\kqrevA = \\knmol R\\kT \\ln \\dfrac{\\kVb}{\\kVa}",
+       "src": "Chapter 19"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{s}{\\Delta\\kSA} = \\mk{i}{\\dfrac{\\kqrevA}{\\kT}}",
+      "uses": [
+       0,
+       1
+      ],
+      "why": "With $\\kT$ fixed it comes out of the integral of $\\delta\\kqrev/\\kT$."
+     },
+     "steps": [
+      {
+       "tex": "\\mk{s}{\\Delta\\kSA} = \\mk{i}{\\dfrac{\\knmol R\\kT \\ln (\\kVb/\\kVa)}{\\kT}}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{s}{\\Delta\\kSA} = \\mk{i}{\\knmol R\\ln \\dfrac{\\kVb}{\\kVa}}",
+       "uses": []
+      }
+     ]
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "step": 1
+      }
+     ],
+     "then": {
+      "tex": "\\mk{s}{\\Delta\\kSA} = \\mk{i}{\\knmol R\\ln \\dfrac{\\kVb}{\\kVa}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{s}{\\Delta\\kSA} = \\mk{b}{\\Delta\\kSBC}",
+       "uses": [
+        0
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

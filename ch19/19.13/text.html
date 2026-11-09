@@ -1,0 +1,62 @@
+<section id="kirchhoffs-law">
+<h2>Kirchhoff's law</h2>
+<p>It is often required to know thermodynamic functions (such as enthalpy) at temperatures other than those available from tabulated data. Fortunately, the conversion to other temperatures is not difficult.</p>
+<p>At constant pressure</p>
+$$ dH = \kCpheat \,d\kT $$
+<p>And so for a temperature change from $\kTone$ to $\kTtwo$</p>
+$$ \kDeltaH = \int_{\kTtwo}^{\kTtwo} \kCpheat\, d\kT \tag{19.13.1} $$
+<p>Equation 19.13.1<sup class="fn" data-note="limits"></sup> is often referred to as <em><span data-concept="kirchhoffs-law">Kirchhoff's Law</span></em>. If $\kCpheat$ is independent of temperature, then</p>
+$$ \kDeltaH = \kCpheat \,\Delta \kT \tag{19.13.2} $$
+<p>If the temperature dependence of the heat capacity is known, it can be incorporated into the integral in Equation 19.13.1. <span data-concept="heat-capacity-empirical-fit">A common <em>empirical</em> model used to fit heat capacities over broad temperature ranges</span> is</p>
+$$ \kCpheat(\kT) = a+ b\kT + \dfrac{c}{\kT^2} \tag{19.13.3} $$
+<p>After combining Equations 19.13.3 and 19.13.1, <span data-concept="enthalpy-change-from-fit">the enthalpy change for the temperature change can be found obtained by a simple integration</span></p>
+<figure class="dv" id="drv-enthalpy-from-fit"></figure>
+<p>This expression can then be used with experimentally determined values of $a$, $b$, and $c$, some of which are shown in the following table.</p>
+<div class="book-table">
+  <div class="tcap"><span class="eyebrow">Table 19.13.1</span><span><em>Empirical Parameters for the temperature dependence of $\kCpheat$</em></span></div>
+  <table>
+    <thead><tr><th><strong>Substance</strong></th><th><strong>a (J mol<sup>-1</sup> K<sup>-1</sup>)</strong></th><th><strong>b (J mol<sup>-1</sup> K<sup>-2</sup>)</strong></th><th><strong>c (J mol<sup>-1</sup> K)</strong></th></tr></thead>
+    <tbody>
+      <tr><td><strong>C(gr)</strong></td><td>16.86</td><td>4.77 x 10<sup>-3</sup></td><td>-8.54 x 10<sup>5</sup></td></tr>
+      <tr><td><strong>CO<sub>2</sub>(g)</strong></td><td>44.22</td><td>8.79 x 10<sup>-3</sup></td><td>-8.62 x 10<sup>5</sup></td></tr>
+      <tr><td><strong>H<sub>2</sub>O(l)</strong></td><td>75.29</td><td>0</td><td>0</td></tr>
+      <tr><td><strong>N<sub>2</sub>(g)</strong></td><td>28.58</td><td>3.77 x 10<sup>-3</sup></td><td>-5.0 x 10<sup>4</sup></td></tr>
+      <tr><td><strong>Pb(s)</strong></td><td>22.13</td><td>1.172 x 10<sup>-2</sup></td><td>9.6 x 10<sup>4</sup></td></tr>
+    </tbody>
+  </table>
+</div>
+<div class="example" id="ex-19-13-1">
+<h3>Example 19.13.1 · Heating Lead</h3>
+<p>What is the molar enthalpy change for a temperature increase from 273 K to 353 K for Pb(s)?</p>
+<h4>Solution</h4>
+<p>The enthalpy change is given by Equation 19.13.1 with a temperature dependence $\kCpheat$ given by Equation 19.13.1<sup class="fn" data-note="cite-fit"></sup> using the parameters in Table 19.13.1. This results in the integral form (Equation 19.13.5):</p>
+$$ \Delta H = a(T_2-T_1) + \dfrac{b}{2}(T_2^2-T_1^2) - c \left( \dfrac{1}{T_2} - \dfrac{1}{T_1} \right) $$
+<p>when substituted with the relevant parameters of Pb(s) from Table 19.13.1.<sup class="fn" data-note="lead-numbers"></sup></p>
+$$ \begin{aligned} \Delta H = \,& (22.14\, \dfrac{J}{mol\,K} ( 353\,K - 273\,K) \\ & + \dfrac{1.172 \times 10^{-2} \frac{J}{mol\,K^2}}{2} \left( (353\,K)^2 - (273\,K)^2 \right) \\ &- 9.6 \times 10^4 \dfrac{J\,K}{mol} \left( \dfrac{1}{(353\,K)} - \dfrac{1}{(273\,K)} \right) \\ \Delta H = \, & 1770.4 \, \dfrac{J}{mol}+ 295.5\, \dfrac{J}{mol}+ 470.5 \, \dfrac{J}{mol} \\ = & 2534.4 \,\dfrac{J}{mol} \end{aligned} $$
+</div>
+</section>
+
+<section id="reaction-enthalpies">
+<h2>Reaction enthalpies at other temperatures</h2>
+<p>For chemical reactions, <span data-concept="kirchhoffs-law">the reaction enthalpy at differing temperatures</span> can be calculated from<sup class="fn" data-note="dT"></sup></p>
+$$ \kDeltaHrxn(\kTtwo) = \kDeltaHrxn(\kTone) + \int_{\kTone}^{\kTtwo} \kDeltaCp \Delta \kT $$
+<div class="example" id="ex-19-13-2">
+<h3>Example 19.13.2 · Enthalpy of Formation</h3>
+<p>The <span data-concept="standard-enthalpy-of-formation">enthalpy of formation</span> of NH<sub>3</sub>(g) is -46.11 kJ/mol at 25 <sup>o</sup>C. Calculate the enthalpy of formation at 100 <sup>o</sup>C.</p>
+<h4>Solution</h4>
+$$ \mathrm{N_{2}(g) + 3 H_{2}(g) \rightleftharpoons 2 NH_{3}(g)} $$
+<p>with $\kDeltaH \,(298\, K) = -46.11\, kJ/mol$<sup class="fn" data-note="per-mole"></sup></p>
+<div class="book-table">
+  <div class="tcap"><span class="eyebrow">Table</span><span></span></div>
+  <table>
+    <thead><tr><th>Compound</th><th>Cp (J mol<sup>-1</sup> K<sup>-1</sup>)</th></tr></thead>
+    <tbody>
+      <tr><td><strong>N<sub>2</sub>(g)</strong></td><td>29.12</td></tr>
+      <tr><td><strong>H<sub>2</sub>(g)</strong></td><td>28.82</td></tr>
+      <tr><td><strong>NH<sub>3</sub>(g)</strong></td><td>35.06</td></tr>
+    </tbody>
+  </table>
+</div>
+$$ \begin{aligned} \kDeltaH (373\,K) & = \kDeltaH (298\,K) + \kDeltaCp\Delta \kT \\ & = -46110 +\dfrac{J}{mol} \left[ 2 \left(35.06 \dfrac{J}{mol\,K}\right) - \left(29.12\, \dfrac{J}{mol\,K}\right) - 3\left(28.82\, \dfrac{J}{mol\,K}\right) \right] (373\,K -298\,K) \\ & = -49.5\, \dfrac{kJ}{mol} \end{aligned} $$
+</div>
+</section>

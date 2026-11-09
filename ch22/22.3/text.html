@@ -1,0 +1,43 @@
+<section id="first-and-second-laws">
+<h2>The combined first and second laws</h2>
+<p>Modeling the dependence of the Gibbs and Helmholtz functions behave with varying temperature, pressure, and volume is fundamentally useful. But in order to do that, a little bit more development is necessary. To see the power and utility of these functions, it is useful to combine the First and Second Laws into a single mathematical statement. In order to do that, one notes that since</p>
+$$ d\kSent = \dfrac{dq}{\kT} $$
+<p>for a reversible change, it follows that</p>
+$$ dq= \kT d\kSent $$
+<p>And since</p>
+$$ dw = \kT d\kSent - \kp d\kV $$<sup class="fn" data-note="c-dw"></sup>
+<p>for a reversible expansion in which only p-V works is done, it also follows that (since $d\kU=dq+dw$):</p>
+$$ d\kU = \kT d\kSent - \kp d\kV \tag{22.3.1} $$
+<p><span data-concept="fundamental-equation-u">This is an extraordinarily powerful result.</span> This differential for $d\kU$ can be used to simplify the differentials for $\kHenth$, $\kA$, and $\kG$. But even more useful are the constraints it places on the variables $\kT$, $\kSent$, $\kp$, and $\kV$ due to the mathematics of <span data-concept="exact-and-inexact-differentials">exact differentials</span>!</p>
+</section>
+
+<section id="maxwell-relations">
+<h2>Maxwell Relations</h2>
+<p>The above result suggests that the <span data-concept="natural-variables-u">natural variables of internal energy are $\kSent$ and $\kV$</span> (or the function can be considered as $\kU(\kSent, \kV)$). So the total differential ($d\kU$) in Equation 22.3.1 can be expressed:</p>
+<figure class="dv" id="drv-maxwell-u"></figure>
+<p>This is an example of a <strong><span data-concept="maxwell-relations">Maxwell Relation</span></strong>. These are very powerful relationship that allows one to substitute partial derivatives when one is more convenient (perhaps it can be expressed entirely in terms of $\alpha$ and/or $\kappa_T$ for example.)</p>
+<p>A similar result can be derived based on the definition of $\kHenth$.</p>
+<figure class="dv" id="drv-maxwell-h"></figure>
+<p>This is the <span data-concept="maxwell-relation-h">Maxwell relation on $\kHenth$</span>. <span data-concept="maxwell-relations">Maxwell relations</span> can also be developed based on $\kA$ and $\kG$. The results of those derivations are summarized in Table 22.3.1.</p>
+<div class="book-table" id="table-22-3-1">
+  <div class="tcap"><span class="eyebrow">Table 22.3.1</span><span>Maxwell Relations</span></div>
+  <table>
+    <thead><tr><th>Function</th><th>Differential</th><th>Natural Variables</th><th>Maxwell Relation</th></tr></thead>
+    <tbody>
+      <tr><td>$\kU$</td><td>$d\kU = \kT d\kSent - \kp d\kV$</td><td>$\kSent, \,\kV$</td><td>$\left( \dfrac{\partial \kT}{\partial \kV} \right)_{\kSent} = - \left( \dfrac{\partial \kp}{\partial \kSent} \right)_{\kV}$</td></tr>
+      <tr><td>$\kHenth$</td><td>$d\kHenth = \kT d\kSent + \kV d\kp$</td><td>$\kSent, \,\kp$</td><td>$\left( \dfrac{\partial \kT}{\partial \kp} \right)_{\kSent} = \left( \dfrac{\partial \kV}{\partial \kSent} \right)_{\kp}$</td></tr>
+      <tr><td>$\kA$</td><td>$d\kA = -\kp d\kV - \kSent d\kT$</td><td>$\kV, \,\kT$</td><td>$\left( \dfrac{\partial \kp}{\partial \kT} \right)_{\kV} = \left( \dfrac{\partial \kSent}{\partial \kV} \right)_{\kT}$</td></tr>
+      <tr><td>$\kG$</td><td>$d\kG = \kV d\kp - \kSent d\kT$</td><td>$\kp, \,\kT$</td><td>$\left( \dfrac{\partial \kV}{\partial \kT} \right)_{\kp} = - \left( \dfrac{\partial \kSent}{\partial \kp} \right)_{\kT}$</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>The <span data-concept="maxwell-relations">Maxwell relations</span> are extraordinarily useful in deriving the dependence of thermodynamic variables on the state variables of $\kp$, $\kT$, and $\kV$.</p>
+<div class="example" id="ex-22-3-1">
+<h3>Example 22.3.1</h3>
+<p>Show that</p>
+$$ \left( \dfrac{\partial \kV}{\partial \kT} \right)_{\kp} = \kT\dfrac{\alpha}{\kappa_T} - \kp $$<sup class="fn" data-note="c-ex-target"></sup>
+<h4>Solution</h4>
+<figure class="dv" id="drv-example-22-3-1"></figure>
+<p><em>Note</em>: How cool is that? <span data-concept="thermodynamic-equation-of-state">This result</span> was given without proof in Chapter 4,<sup class="fn" data-note="c-chapter-4"></sup> but can now be proven analytically using the <span data-concept="maxwell-relations">Maxwell Relations</span>!</p>
+</div>
+</section>

@@ -1,0 +1,33 @@
+<section id="defining-fugacity">
+<h2>The fugacity of a gas</h2>
+<p>We have seen that, for a closed system, the <span data-concept="gibbs-energy">Gibbs energy</span> is related to pressure and temperature as follows:</p>
+$$ d\kG =\kV d\kP - \kSent d\kT $$
+<p>For a constant temperature process:</p>
+$$ d\kG = \kV d\kP \tag{22.8.1} $$
+<p>Equation 22.8.1 can be evaluated for an <span data-concept="ideal-gas">ideal gas</span>:</p>
+$$ d\kGbar =\dfrac{\kR\kT}{\kP} d\kP $$
+<p>At constant temperature, $\kT$:</p>
+$$ d\kGbar = \kR\kT\;d\ln \kP $$
+<p>This expression by itself is strictly applicable to ideal gases. However, Lewis, in 1905, suggested extending the applicability of this expression to all substances by defining a new thermodynamic property called <strong><span data-concept="fugacity">fugacity</span></strong>, $\kf$, such that:</p>
+$$ d\kGbar = \kR\kT\;d\ln \kf $$
+<p>This definition implies that for ideal gases, $\kf$ must be equal to $\kP$. For non ideal gases, $\kf$ is not equal to $\kP$. The ratio between <span data-concept="fugacity">fugacity</span> and pressure is:</p>
+$$ \phi = \frac{\kf}{\kP} $$
+<p>where $\phi$ is the <span data-concept="fugacity-coefficient">fugacity coefficient</span>. The <span data-concept="fugacity-coefficient">fugacity coefficient</span> takes a value of unity when the substance behaves like an ideal gas. Therefore, the <span data-concept="fugacity-coefficient">fugacity coefficient</span> is also regarded as a <em>measure of non-ideality</em>; the closer the value of the fugacity coefficient is to unity, the closer we are to the ideal state. <span data-concept="fugacity-zero-pressure-limit">In the zero-pressure limit, fugacity approaches ideal gas behavior</span>:</p>
+$$ \lim_{\kP\rightarrow0}{d\kGbar = \kR\kT\;d\ln \kP} $$
+<figure class="sim" id="sim-fugacity-coefficient">
+  <div class="sim-head"><span class="eyebrow">Sim</span><span>Pick a gas and change <span data-type="temperature">the temperature</span>. The <span data-concept="fugacity-coefficient">fugacity coefficient</span> starts at 1 at zero pressure, sags below 1 where the attractions between molecules win, and climbs past 1 where their own volume wins. Move <span data-type="pressure">the pressure</span> to read the <span data-concept="fugacity">fugacity</span> off the curve.</span></div>
+</figure>
+</section>
+
+<section id="mixtures">
+<h2>Fugacity in mixtures and at equilibrium</h2>
+<p>For mixtures, this expression is written as:</p>
+$$ d\kGbari = \kR\kT\;d\ln \kfi $$
+<p>where <span data-concept="component-fugacity">$\kGbari$ and $\kfi$ are the partial molar Gibbs energy and fugacity of the i-th component</span>, respectively. Fugacity can be readily related to <span data-concept="chemical-potential">chemical potential</span> because of the one-to-one relationship of Gibbs energy to chemical potential, which we have discussed previously. Therefore, the definition of <span data-concept="component-fugacity">fugacity in terms of chemical potential</span> becomes:</p>
+$$ d\kmubari = \kR\kT\;d\ln \kfi $$
+<p>Even though the concept of thermodynamic equilibrium is given in terms of chemical potentials, the above definitions allow us to restate the same principle in terms of fugacity. To do this, <span data-concept="chemical-potential-fugacity">previous expressions can be integrated to obtain</span>:</p>
+$$ \kmubar = \kmubarstd + \kR\kT\ln\frac{\kf}{\kPstd} $$
+<p>At equilibrium:</p>
+$$ 0 = \kmubarstd + \kR\kT\ln\frac{\kf}{\kPstd} $$<sup class="fn" data-note="c-equilibrium-zero"></sup>
+$$ \kmubarstd = - \kR\kT\ln\frac{\kf}{\kPstd} $$
+</section>

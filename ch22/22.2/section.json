@@ -1,0 +1,353 @@
+{
+ "id": "22.2",
+ "module": "14489",
+ "chapter": "22",
+ "title": "Gibbs Energy Determines the Direction of Spontaneity at Constant Pressure and Temperature",
+ "short": "Gibbs energy",
+ "lead": "Most chemistry happens at constant pressure and temperature, not at constant volume. The Gibbs energy is the state function for those conditions: its sign says which way a reaction runs, and its change says how much useful work the reaction can do.",
+ "objectives": [],
+ "summary_html": "<p>We now have developed the basic set of concepts and functions that together form the framework of thermodynamics. Let's summarize four very basic state functions:</p><div class=\"book-table\">\n  <div class=\"tcap\"><span class=\"eyebrow\">Table</span><span></span></div>\n  <table>\n    <thead><tr><th>state function</th><th>natural variables</th></tr></thead>\n    <tbody>\n      <tr><td>$d\\kU = -\\kP d\\kV + \\kT d\\kSent$</td><td>$\\kU(\\kV,\\kSent)$</td></tr>\n      <tr><td>$d\\kHenth = +\\kV d\\kP + \\kT d\\kSent$</td><td>$\\kHenth(\\kP,\\kSent)$</td></tr>\n      <tr><td>$d\\kA = -\\kP d\\kV - \\kSent d\\kT$</td><td>$\\kA(\\kV,\\kT)$</td></tr>\n      <tr><td>$d\\kG = +\\kV d\\kP - \\kSent d\\kT$</td><td>$\\kG(\\kP,\\kT)$</td></tr>\n    </tbody>\n  </table>\n</div><p>Note:</p><ol><li>The replacement of $δq$ by $\\kT d\\kSent$ was based on <em>reversible</em> heat. This means that in the irreversible case the expressions for dU and dH become inequalities</li><li>We only include <em>volume</em> work in the above expressions. If other work (elastic, electrical e.g.) is involved extra terms need to be added: $d\\kU = \\kT d\\kSent - \\kP d\\kV + xdX$ etc.</li></ol><p>We are now ready to begin applying thermodynamics to a number of very diverse situations, but we will first develop some useful partial differential machinery.</p>",
+ "notes": "",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercise on this section, so the exercise, its solution, Bloom level and concept tags are written by AI. The numeric answers accept a 2% tolerance.",
+ "figures": [
+  {
+   "id": "sim-gibbs-sign",
+   "kind": "sim",
+   "draws": [
+    "energy",
+    "temperature",
+    "entropy"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "gibbs-energy",
+   "concept": "gibbs-energy",
+   "verb": "introduces"
+  },
+  {
+   "span": "gibbs-energy",
+   "concept": "gibbs-criterion",
+   "verb": "introduces"
+  },
+  {
+   "span": "gibbs-energy",
+   "concept": "coupled-processes",
+   "verb": "introduces"
+  },
+  {
+   "span": "gibbs-energy",
+   "concept": "helmholtz-energy",
+   "verb": "uses"
+  },
+  {
+   "span": "gibbs-energy",
+   "concept": "enthalpy",
+   "verb": "uses"
+  },
+  {
+   "span": "gibbs-energy",
+   "concept": "clausius-inequality",
+   "verb": "uses"
+  },
+  {
+   "span": "direction-of-the-spontaneous-change",
+   "concept": "spontaneity-temperature",
+   "verb": "introduces"
+  },
+  {
+   "span": "direction-of-the-spontaneous-change",
+   "concept": "gibbs-criterion",
+   "verb": "reinforces"
+  },
+  {
+   "span": "meaning-of-the-term",
+   "concept": "gibbs-maximum-non-pv-work",
+   "verb": "introduces"
+  },
+  {
+   "span": "meaning-of-the-term",
+   "concept": "helmholtz-maximum-work",
+   "verb": "uses"
+  },
+  {
+   "span": "natural-variables-of-g",
+   "concept": "gibbs-fundamental-equation",
+   "verb": "introduces"
+  },
+  {
+   "span": "natural-variables-of-g",
+   "concept": "natural-variables",
+   "verb": "uses"
+  },
+  {
+   "span": "natural-variables-of-g",
+   "concept": "fundamental-equation-h",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "However at 618 K this is a different story",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "direction-of-the-spontaneous-change",
+   "prompt": "<p>For $\\mathrm{NH_3(g) + HCl(g) \\rightarrow NH_4Cl(s)}$ take $\\kDeltaH = -176.2$ kJ and $\\Delta \\kSent = -0.285$ kJ/K, held fixed.</p><ol type=\\\"a\\\"><li>What is $\\Delta \\kG$ at 400 K?</li><li>Above what temperature does the salt decompose spontaneously?</li></ol>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": -62.2,
+      "unit": "kJ",
+      "hint": "Put the numbers into $\\Delta \\kG = \\kDeltaH - \\kT\\Delta \\kSent$."
+     },
+     {
+      "part": "b",
+      "value": 618,
+      "unit": "K",
+      "hint": "The sign changes where $\\Delta \\kG = 0$."
+     }
+    ],
+    "solution": "<p>a. $\\Delta \\kG = -176.2\\ \\text{kJ} - (400\\ \\text{K})(-0.285\\ \\text{kJ/K}) = -176.2 + 114.0 = -62.2$ kJ, still negative, so the salt still forms at 400 K.</p><p>b. $\\Delta \\kG = 0$ at $\\kT = \\kDeltaH/\\Delta \\kSent = (-176.2\\ \\text{kJ})/(-0.285\\ \\text{kJ/K}) = 618$ K. Above it $-\\kT\\Delta \\kSent$ outweighs $\\kDeltaH$, $\\Delta \\kG$ is positive and the reverse reaction, the decomposition of the salt, is the spontaneous one.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "spontaneity-temperature"
+  },
+  {
+   "exercise": "a1",
+   "concept": "gibbs-criterion"
+  }
+ ],
+ "footnotes": [],
+ "derivations": [
+  {
+   "id": "gibbs-criterion",
+   "what": "the Gibbs energy as the test of spontaneity at constant T and P",
+   "source": "Physical Chemistry (LibreTexts), 22.2 Gibbs Energy Determines the Direction of Spontaneity at Constant Pressure and Temperature",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "d\\kSent \\ge \\dfrac{\\delta q}{\\kT}",
+       "src": "20.4"
+      },
+      {
+       "tex": "d\\kU = \\delta q + \\delta w",
+       "src": "19.1"
+      },
+      {
+       "tex": "\\delta w = -\\kP d\\kV",
+       "src": "19.2"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{dS}{d\\kSent} \\ge \\mk{q}{\\dfrac{\\delta q}{\\kT}}",
+      "src": "20.4"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{dS}{\\kT d\\kSent} \\ge \\mk{q}{\\delta q}",
+       "uses": [],
+       "cap": "The temperature is positive, so multiplying both sides by $\\kT$ keeps the direction of the inequality."
+      },
+      {
+       "tex": "\\mk{dS}{\\kT d\\kSent} \\ge \\mk{q}{d\\kU - \\delta w}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{dS}{\\kT d\\kSent} \\ge \\mk{U}{d\\kU} + \\mk{PV}{\\kP d\\kV}",
+       "uses": [
+        2
+       ],
+       "map": {
+        "q": [
+         "U",
+         "PV"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{U}{d\\kU} - \\mk{dS}{\\kT d\\kSent} + \\mk{PV}{\\kP d\\kV} \\le 0",
+       "uses": []
+      }
+     ],
+     "src": "22.2"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\kG = \\kU + \\kP\\kV - \\kT\\kSent"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{G}{\\kG} = \\mk{U}{\\kU} + \\mk{PV}{\\kP\\kV} - \\mk{TS}{\\kT\\kSent}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{G}{d\\kG} = \\mk{U}{d\\kU} + \\mk{PV}{d(\\kP\\kV)} - \\mk{TS}{d(\\kT\\kSent)}",
+       "uses": [],
+       "cap": "Take the differential of both sides."
+      },
+      {
+       "tex": "\\mk{G}{d\\kG} = \\mk{U}{d\\kU} + \\mk{a}{\\kP d\\kV} + \\mk{b}{\\kV d\\kP} - \\mk{c}{\\kT d\\kSent} - \\mk{e}{\\kSent d\\kT}",
+       "uses": [],
+       "cap": "The product rule on both products: $d(\\kP\\kV) = \\kP d\\kV + \\kV d\\kP$ and $d(\\kT\\kSent) = \\kT d\\kSent + \\kSent d\\kT$.",
+       "map": {
+        "PV": [
+         "a",
+         "b"
+        ],
+        "TS": [
+         "c",
+         "e"
+        ]
+       }
+      }
+     ],
+     "src": "22.2"
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "text": "Both $\\kT$ and $\\kP$ are held constant: $d\\kT = 0$ and $d\\kP = 0$."
+      },
+      {
+       "step": 0
+      }
+     ],
+     "then": {
+      "tex": "\\mk{G}{d\\kG} = \\mk{U}{d\\kU} + \\mk{a}{\\kP d\\kV} + \\mk{b}{\\kV d\\kP} - \\mk{c}{\\kT d\\kSent} - \\mk{e}{\\kSent d\\kT}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{G}{d\\kG} = \\mk{U}{d\\kU} - \\mk{c}{\\kT d\\kSent} + \\mk{a}{\\kP d\\kV}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{G}{d\\kG} \\le 0",
+       "uses": [
+        2
+       ],
+       "cap": "The right-hand side is the left-hand side of result 1, which is at most zero."
+      }
+     ],
+     "src": "22.2"
+    }
+   ]
+  },
+  {
+   "id": "gibbs-non-pv-work",
+   "what": "ΔG as the maximum work other than volume work",
+   "source": "Physical Chemistry (LibreTexts), 22.2 Gibbs Energy Determines the Direction of Spontaneity at Constant Pressure and Temperature",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kG = \\kU + \\kP\\kV - \\kT\\kSent"
+      },
+      {
+       "tex": "d\\kU = \\kT d\\kSent + \\delta \\kwrev"
+      },
+      {
+       "text": "The term $\\kP d\\kV$ is $-\\delta w_{volume}$, the volume work with its sign.",
+       "src": "19.2"
+      },
+      {
+       "text": "At constant $\\kT$ and $\\kP$, $d\\kT = 0$ and $d\\kP = 0$: the two middle terms drop out."
+      }
+     ],
+     "then": {
+      "tex": "\\mk{G}{\\kG} = \\mk{x}{\\kU + \\kP\\kV - \\kT\\kSent}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{G}{d\\kG} = \\mk{x}{d(\\kU+\\kP\\kV-\\kT\\kSent)}",
+       "uses": [],
+       "cap": "Take the differential of both sides."
+      },
+      {
+       "tex": "\\mk{G}{d\\kG} = \\mk{U}{d\\kU} \\mk{TdS}{-\\kT d\\kSent} \\mk{SdT}{- \\kSent d\\kT} \\mk{PdV}{+ \\kP d\\kV} \\mk{VdP}{+\\kV d\\kP}",
+       "uses": [],
+       "cap": "The product rule: $d(\\kP\\kV) = \\kP d\\kV + \\kV d\\kP$ and $d(\\kT\\kSent) = \\kT d\\kSent + \\kSent d\\kT$.",
+       "map": {
+        "x": [
+         "U",
+         "TdS",
+         "SdT",
+         "PdV",
+         "VdP"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{G}{d\\kG} = \\mk{U}{\\delta \\kwrev} \\mk{SdT}{-\\kSent d\\kT} \\mk{VdP}{+ \\kV d\\kP} \\mk{PdV}{+ \\kP d\\kV}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{G}{d\\kG} = \\mk{U}{\\delta \\kwrev} \\mk{SdT}{-\\kSent d\\kT} \\mk{VdP}{+ \\kV d\\kP} \\mk{PdV}{- \\delta w_{volume}}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{G}{d\\kG} = \\mk{U}{\\delta \\kwrev} \\mk{PdV}{- \\delta w_{volume}}",
+       "uses": [
+        3
+       ]
+      },
+      {
+       "tex": "\\mk{G}{d\\kG} = \\mk{U}{\\delta \\kwrev} \\mk{PdV}{- \\delta w_{volume}} = \\mk{o}{\\delta w_{other\\ useful\\ work}}",
+       "uses": []
+      }
+     ],
+     "src": "22.2",
+     "note": "The book's first line reads $- \\kP d\\kV$; the product rule gives $d(\\kP\\kV) = \\kP d\\kV + \\kV d\\kP$, so the term is $+\\kP d\\kV$, as the book's next line has it."
+    }
+   ]
+  }
+ ]
+}

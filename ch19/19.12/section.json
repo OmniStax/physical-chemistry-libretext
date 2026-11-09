@@ -1,0 +1,90 @@
+{
+ "id": "19.12",
+ "module": "13710",
+ "chapter": "19",
+ "title": "Heats of Reactions Can Be Calculated from Tabulated Heats of Formation",
+ "short": "Heats of formation",
+ "lead": "No table could list the enthalpy of every reaction. Chemists tabulate a few kinds instead: forming a compound from its elements in their standard states, adding or removing an electron, and breaking a bond in the gas.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "",
+ "ai": {
+  "text": [{"model": "claude-opus-5-5", "effort": "low"}],
+  "figures": []
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book prints no exercises here; both questions and their solutions were written by AI. Numeric answers accept a 2% tolerance.",
+ "figures": [
+  {
+   "id": "fig-ethanol-combustion",
+   "kind": "figure",
+   "originals": ["/media/ch19/113036-3.jpg"],
+   "draws": [],
+   "ai": [{"model": "claude-opus-5-5", "effort": "low", "part": "kept as the book prints it"}]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {"span": "adding-reactions", "concept": "hess-law", "verb": "reinforces"},
+  {"span": "adding-reactions", "concept": "reaction-enthalpy", "verb": "uses"},
+  {"span": "standard-enthalpy-of-formation", "concept": "standard-state", "verb": "introduces"},
+  {"span": "standard-enthalpy-of-formation", "concept": "standard-formation-reaction", "verb": "introduces"},
+  {"span": "standard-enthalpy-of-formation", "concept": "standard-enthalpy-of-formation", "verb": "introduces"},
+  {"span": "standard-enthalpy-of-formation", "concept": "reaction-enthalpy-from-formation", "verb": "introduces"},
+  {"span": "standard-enthalpy-of-formation", "concept": "no-absolute-enthalpies", "verb": "reinforces"},
+  {"span": "ionization-reactions", "concept": "ionization-energy", "verb": "reinforces"},
+  {"span": "ionization-reactions", "concept": "electron-affinity", "verb": "introduces"},
+  {"span": "average-bond-enthalpies", "concept": "average-bond-enthalpy", "verb": "introduces"},
+  {"span": "average-bond-enthalpies", "concept": "bond-enthalpy-estimate", "verb": "introduces"},
+  {"span": "average-bond-enthalpies", "concept": "dissociation-energy", "verb": "uses"}
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "term:standard enthalpy of formation",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {"at": "end"},
+   "cite": "standard-enthalpy-of-formation",
+   "prompt": "<p>Propane burns by C<sub>3</sub>H<sub>8</sub>(g) + 5O<sub>2</sub>(g) → 3CO<sub>2</sub>(g) + 4H<sub>2</sub>O(l). Find $\\kDeltaHrxn$ at 25 °C for the reaction as written from the standard enthalpies of formation in this section: C<sub>3</sub>H<sub>8</sub>(g) −103.8, CO<sub>2</sub>(g) −393.5 and H<sub>2</sub>O(l) −285.8 kJ/mol.</p>",
+   "answer": {
+    "type": "number",
+    "value": -2219.9,
+    "unit": "kJ",
+    "generated_by": "ai",
+    "hint": "O₂ is an element in its standard state, so its $\\kDeltaHf$ is zero.",
+    "solution": "<p>The products contribute $3(-393.5) + 4(-285.8) = -1180.5 - 1143.2 = -2323.7$ kJ and the reactants $1(-103.8) + 5(0) = -103.8$ kJ, since O<sub>2</sub>(g) is an element in its standard state. Then $\\kDeltaHrxn = -2323.7 - (-103.8) = -2219.9$ kJ: burning one mole of propane with five moles of oxygen releases 2219.9 kJ at 25 °C.</p>"
+   }
+  },
+  {
+   "id": "a2",
+   "source_id": "tab:1",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {"at": "end"},
+   "cite": "average-bond-enthalpies",
+   "prompt": "<p>Estimate $\\kDeltaHrxn$ for CH<sub>4</sub>(g) + 2O<sub>2</sub>(g) → CO<sub>2</sub>(g) + 2H<sub>2</sub>O(g) from the average bond energies in the table.</p>",
+   "answer": {
+    "type": "number",
+    "value": -808,
+    "unit": "kJ",
+    "generated_by": "ai",
+    "hint": "Count the bonds: CH₄ has four C–H, each O₂ one O=O, CO₂ two C=O and each H₂O two O–H.",
+    "solution": "<p>Broken: four C–H and two O=O, $4(413) + 2(495) = 1652 + 990 = 2642$ kJ. Formed: two C=O and four O–H, $2(799) + 4(463) = 1598 + 1852 = 3450$ kJ. So $\\kDeltaHrxn \\approx 2642 - 3450 = -808$ kJ. The water is a gas here, as the bond energies assume; the tabulated value for liquid water, −890.5 kJ, also includes the heat of condensation.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {"exercise": "a1", "concept": "reaction-enthalpy-from-formation"},
+  {"exercise": "a1", "concept": "standard-enthalpy-of-formation"},
+  {"exercise": "a2", "concept": "bond-enthalpy-estimate"},
+  {"exercise": "a2", "concept": "average-bond-enthalpy"}
+ ],
+ "footnotes": [
+  {"id": "occur", "kind": "correction", "html": "The book prints \"°Ccur\" for \"occur\"."},
+  {"id": "data-reactions", "kind": "correction", "html": "The two bracketed reactions should read $CO(g) \\rightarrow C(gr) + \\tfrac{1}{2}O_2(g)$, the first data reaction reversed, and $C(gr) + O_2(g) \\rightarrow CO_2(g)$, the second as given. Twice each of these adds up to the target reaction; the lines as printed do not."},
+  {"id": "swapped-labels", "kind": "correction", "html": "The labels are swapped: $-787.02$ kJ is $2\\Delta H_2$, and $+221.06$ kJ is $-2\\Delta H_1$, twice the reversed first reaction. The total, $-565.96$ kJ, is right."},
+  {"id": "ethanol-balance", "kind": "correction", "html": "The scheme is not balanced, and the sum in Equation 19.12.2 counts two O–H bonds formed. Balanced, C<sub>2</sub>H<sub>5</sub>OH + 3O<sub>2</sub> → 2CO<sub>2</sub> + 3H<sub>2</sub>O breaks five C–H, one C–C, one C–O, one O–H and three O=O bonds and forms four C=O and six O–H bonds, so the table gives $\\kDeltaHc \\approx 4719 - 5974 = -1255$ kJ/mol."}
+ ]
+}

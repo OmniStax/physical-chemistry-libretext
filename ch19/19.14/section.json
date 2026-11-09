@@ -1,0 +1,193 @@
+{
+ "id": "19.14",
+ "module": "359804",
+ "chapter": "19",
+ "title": "Enthalpy is a State Function",
+ "short": "Enthalpy is a state function",
+ "lead": "At constant pressure the first law ties the heat a system takes in to its internal energy, pressure and volume in the initial and final states.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "The page carries no licence tag of its own and is shared under the book's CC BY-NC-SA 4.0.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": []
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book prints no exercises here; the question and its solution were written by AI.",
+ "figures": [],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "heat-at-constant-pressure",
+   "concept": "enthalpy",
+   "verb": "reinforces"
+  },
+  {
+   "span": "heat-at-constant-pressure",
+   "concept": "heat-at-constant-pressure",
+   "verb": "reinforces"
+  },
+  {
+   "span": "heat-at-constant-pressure",
+   "concept": "first-law-of-thermodynamics",
+   "verb": "uses"
+  },
+  {
+   "span": "heat-at-constant-pressure",
+   "concept": "constant-pressure-work",
+   "verb": "uses"
+  },
+  {
+   "span": "heat-at-constant-pressure",
+   "concept": "state-function",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "H\\equiv U+PV",
+   "kind": "exercise",
+   "bloom": "Analyze",
+   "place": {
+    "at": "end"
+   },
+   "cite": "heat-at-constant-pressure",
+   "prompt": "<p>Show that when $n$ moles of an ideal gas change temperature by $\\Delta T$ at constant pressure, $\\kDeltaH - \\kDeltaU = nR\\,\\Delta T$.</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "Write $\\kDeltaH$ from $\\kHenth \\equiv \\kU + \\kP\\kV$ and hold $\\kP$ fixed.",
+    "solution": "<p>From $\\kHenth \\equiv \\kU + \\kP\\kV$, $\\kDeltaH = \\kDeltaU + \\Delta(\\kP\\kV)$. At constant pressure $\\Delta(\\kP\\kV) = \\kP\\,\\Delta\\kV$, so $\\kDeltaH - \\kDeltaU = \\kP\\,\\Delta\\kV$. For an ideal gas $\\kP\\kV = nRT$, and with $\\kP$ and $n$ fixed, $\\kP\\,\\Delta\\kV = nR\\,\\Delta T$. Hence $\\kDeltaH - \\kDeltaU = nR\\,\\Delta T$: the difference is the work the gas does pushing back its surroundings as it expands.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "enthalpy"
+  },
+  {
+   "exercise": "a1",
+   "concept": "ideal-gas-law"
+  }
+ ],
+ "footnotes": [],
+ "derivations": [
+  {
+   "id": "enthalpy-from-qp",
+   "what": "enthalpy from the heat at constant pressure",
+   "source": "Physical Chemistry (LibreTexts), 19.14 Enthalpy is a State Function",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kDeltaU = \\kq + \\kw",
+       "src": "19.1"
+      },
+      {
+       "text": "The pressure is constant, and the heat taken in is then written $\\kqP$."
+      },
+      {
+       "tex": "\\kw = -\\kP\\Delta\\kV",
+       "src": "(19.2.2)",
+       "drv": "19.2/constant-pressure-work"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{U}{\\kDeltaU} = \\mk{q}{\\kq} + \\mk{w}{\\kw}",
+      "src": "19.1"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{U}{\\kDeltaU} = \\mk{q}{\\kqP} + \\mk{w}{\\kw}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{U}{\\kDeltaU} = \\mk{q}{\\kqP} \\mk{w}{- \\kP\\Delta\\kV}",
+       "uses": [
+        2
+       ]
+      }
+     ],
+     "src": "19.14"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      }
+     ],
+     "then": {
+      "tex": "\\mk{U}{\\kDeltaU} = \\mk{q}{\\kqP} \\mk{w}{- \\kP\\Delta\\kV}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{q}{\\kqP} = \\mk{U}{\\kDeltaU} \\mk{w}{+ \\kP\\Delta\\kV}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{q}{\\kqP} = \\mk{U}{U_2 - U_1} \\mk{w}{+ \\kP(V_2 - V_1)}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{q}{\\kqP} = \\mk{two}{\\left(U_2 + \\kP V_2\\right)} - \\mk{one}{\\left(U_1 + \\kP V_1\\right)}",
+       "uses": [],
+       "map": {
+        "U": [
+         "two",
+         "one"
+        ],
+        "w": [
+         "two",
+         "one"
+        ]
+       }
+      }
+     ],
+     "src": "19.14"
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "tex": "\\kHenth \\equiv \\kU + \\kP\\kV",
+       "src": "19.8",
+       "drv": "19.8/enthalpy-heat-constant-pressure"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{q}{\\kqP} = \\mk{two}{\\left(U_2 + \\kP V_2\\right)} - \\mk{one}{\\left(U_1 + \\kP V_1\\right)}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{q}{\\kqP} = \\mk{two}{H_2} - \\mk{one}{H_1}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{q}{\\kqP} = \\mk{H}{\\kDeltaH}",
+       "uses": [],
+       "map": {
+        "two": "H",
+        "one": "H"
+       }
+      }
+     ],
+     "src": "19.14"
+    }
+   ]
+  }
+ ]
+}

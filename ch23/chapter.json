@@ -1,0 +1,1045 @@
+{
+ "id": "23",
+ "dir": "ch23",
+ "title": "Phase Equilibria",
+ "intro": {
+  "module": "11819",
+  "slug": "23:_Phase_Equilibria"
+ },
+ "sections": [
+  {
+   "id": "23.1",
+   "module": "14497",
+   "title": "A Phase Diagram Summarizes the Solid-Liquid-Gas Behavior of a Substance",
+   "slug": "23:_Phase_Equilibria/23.01:_A_Phase_Diagram_Summarizes_the_Solid-Liquid-Gas_Behavior_of_a_Substance"
+  },
+  {
+   "id": "23.2",
+   "module": "14498",
+   "title": "Gibbs Energies and Phase Diagrams",
+   "slug": "23:_Phase_Equilibria/23.02:_Gibbs_Energies_and_Phase_Diagrams"
+  },
+  {
+   "id": "23.3",
+   "module": "14499",
+   "title": "The Chemical Potentials of a Pure Substance in Two Phases in Equilibrium",
+   "slug": "23:_Phase_Equilibria/23.03:_The_Chemical_Potentials_of_a_Pure_Substance_in_Two_Phases_in_Equilibrium"
+  },
+  {
+   "id": "23.4",
+   "module": "14500",
+   "title": "The Clausius-Clapeyron Equation",
+   "slug": "23:_Phase_Equilibria/23.04:_The_Clausius-Clapeyron_Equation"
+  },
+  {
+   "id": "23.5",
+   "module": "14501",
+   "title": "Chemical Potential Can be Evaluated From a Partition Function",
+   "slug": "23:_Phase_Equilibria/23.05:_Chemical_Potential_Can_be_Evaluated_From_a_Partition_Function"
+  }
+ ],
+ "variables": [
+  {
+   "sym": "G",
+   "concept": "gibbs-energy",
+   "meaning": "the Gibbs energy of the system",
+   "unit": "J",
+   "section": "23.1"
+  },
+  {
+   "sym": "S_ent",
+   "concept": "entropy",
+   "meaning": "the entropy",
+   "unit": "J/K",
+   "section": "23.1"
+  },
+  {
+   "sym": "H",
+   "concept": "enthalpy",
+   "meaning": "the enthalpy",
+   "unit": "J",
+   "section": "23.1"
+  },
+  {
+   "sym": "T",
+   "type": "temperature",
+   "meaning": "the temperature",
+   "unit": "K",
+   "section": "23.1"
+  },
+  {
+   "sym": "P",
+   "concept": "pressure",
+   "meaning": "the pressure",
+   "unit": "Pa",
+   "section": "23.1"
+  },
+  {
+   "sym": "V",
+   "type": "volume",
+   "meaning": "the volume",
+   "unit": "m³",
+   "section": "23.1"
+  },
+  {
+   "sym": "P_eq",
+   "concept": "equilibrium-vapor-pressure",
+   "meaning": "the equilibrium vapor pressure of the liquid",
+   "unit": "Torr",
+   "section": "23.1"
+  },
+  {
+   "sym": "T_c",
+   "concept": "critical-temperature",
+   "meaning": "the critical temperature, written T_C and T_c",
+   "unit": "K",
+   "section": "23.1"
+  },
+  {
+   "sym": "n",
+   "type": "amount",
+   "meaning": "the amount of substance in moles",
+   "unit": "mol",
+   "section": "23.1"
+  },
+  {
+   "sym": "n_ice",
+   "type": "amount",
+   "meaning": "the amount of ice",
+   "unit": "mol",
+   "section": "23.1"
+  },
+  {
+   "sym": "n_water",
+   "type": "amount",
+   "meaning": "the amount of liquid water",
+   "unit": "mol",
+   "section": "23.1"
+  },
+  {
+   "sym": "n_total",
+   "type": "amount",
+   "meaning": "the total amount of water, ice and liquid together",
+   "unit": "mol",
+   "section": "23.1"
+  },
+  {
+   "sym": "n_1",
+   "type": "amount",
+   "meaning": "the amount of component 1 of a mixture",
+   "unit": "mol",
+   "section": "23.1"
+  },
+  {
+   "sym": "n_2",
+   "type": "amount",
+   "meaning": "the amount of component 2 of a mixture",
+   "unit": "mol",
+   "section": "23.1"
+  },
+  {
+   "sym": "n_i",
+   "type": "amount",
+   "meaning": "the amount of species i",
+   "unit": "mol",
+   "section": "23.1"
+  },
+  {
+   "sym": "G_molar",
+   "concept": "molar-quantity",
+   "type": "energy",
+   "meaning": "the molar Gibbs energy, G/n",
+   "unit": "J/mol",
+   "section": "23.1"
+  },
+  {
+   "sym": "V_molar",
+   "concept": "molar-volume",
+   "meaning": "the molar volume, V/n",
+   "unit": "m³/mol",
+   "section": "23.1"
+  },
+  {
+   "sym": "G_ice",
+   "type": "energy",
+   "meaning": "the Gibbs energy of the ice",
+   "unit": "J",
+   "section": "23.1"
+  },
+  {
+   "sym": "V_ice",
+   "type": "volume",
+   "meaning": "the volume of the ice",
+   "unit": "m³",
+   "section": "23.1"
+  },
+  {
+   "sym": "G_water",
+   "type": "energy",
+   "meaning": "the Gibbs energy of the liquid water",
+   "unit": "J",
+   "section": "23.1"
+  },
+  {
+   "sym": "V_water",
+   "type": "volume",
+   "meaning": "the volume of the liquid water",
+   "unit": "m³",
+   "section": "23.1"
+  },
+  {
+   "sym": "G_molar_ice",
+   "type": "energy",
+   "meaning": "the molar Gibbs energy of ice",
+   "unit": "J/mol",
+   "section": "23.1"
+  },
+  {
+   "sym": "V_molar_ice",
+   "concept": "molar-volume",
+   "meaning": "the molar volume of ice",
+   "unit": "m³/mol",
+   "section": "23.1"
+  },
+  {
+   "sym": "G_molar_water",
+   "type": "energy",
+   "meaning": "the molar Gibbs energy of liquid water",
+   "unit": "J/mol",
+   "section": "23.1"
+  },
+  {
+   "sym": "V_molar_water",
+   "concept": "molar-volume",
+   "meaning": "the molar volume of liquid water",
+   "unit": "m³/mol",
+   "section": "23.1"
+  },
+  {
+   "sym": "V_pm_1",
+   "concept": "partial-molar-quantity",
+   "type": "molar-volume",
+   "meaning": "the partial molar volume of component 1, ∂V/∂n₁ at constant n₂",
+   "unit": "m³/mol",
+   "section": "23.1"
+  },
+  {
+   "sym": "V_pm_2",
+   "concept": "partial-molar-quantity",
+   "type": "molar-volume",
+   "meaning": "the partial molar volume of component 2, ∂V/∂n₂ at constant n₁",
+   "unit": "m³/mol",
+   "section": "23.1"
+  },
+  {
+   "sym": "mu",
+   "concept": "chemical-potential",
+   "meaning": "the chemical potential, (∂G/∂n_i) at constant P, T and the other amounts, which the book calls the thermodynamic potential",
+   "unit": "J/mol",
+   "section": "23.1"
+  },
+  {
+   "sym": "mu_i",
+   "concept": "chemical-potential",
+   "meaning": "the chemical potential of phase or species i",
+   "unit": "J/mol",
+   "section": "23.1"
+  },
+  {
+   "sym": "G_i",
+   "type": "energy",
+   "meaning": "the Gibbs energy of phase i",
+   "unit": "J",
+   "section": "23.1"
+  },
+  {
+   "sym": "G",
+   "concept": "gibbs-energy",
+   "meaning": "the Gibbs energy",
+   "unit": "J",
+   "section": "23.2"
+  },
+  {
+   "sym": "G_bar",
+   "type": "energy",
+   "meaning": "the molar Gibbs energy",
+   "unit": "J/mol",
+   "section": "23.2"
+  },
+  {
+   "sym": "T",
+   "type": "temperature",
+   "meaning": "the temperature",
+   "unit": "K",
+   "section": "23.2"
+  },
+  {
+   "sym": "P",
+   "concept": "pressure",
+   "meaning": "the pressure",
+   "unit": "Pa",
+   "section": "23.2"
+  },
+  {
+   "sym": "V",
+   "type": "volume",
+   "meaning": "the volume",
+   "unit": "m³",
+   "section": "23.2"
+  },
+  {
+   "sym": "S_ent",
+   "concept": "entropy",
+   "meaning": "the entropy",
+   "unit": "J/K",
+   "section": "23.2"
+  },
+  {
+   "sym": "H",
+   "concept": "enthalpy",
+   "meaning": "the enthalpy",
+   "unit": "J",
+   "section": "23.2"
+  },
+  {
+   "sym": "A",
+   "concept": "helmholtz-energy",
+   "meaning": "the Helmholtz energy",
+   "unit": "J",
+   "section": "23.2"
+  },
+  {
+   "sym": "U",
+   "concept": "internal-energy",
+   "meaning": "the internal energy",
+   "unit": "J",
+   "section": "23.2"
+  },
+  {
+   "sym": "C_P",
+   "type": "heat-capacity",
+   "meaning": "the heat capacity at constant pressure, written C_P and CP",
+   "unit": "J/K",
+   "section": "23.2"
+  },
+  {
+   "sym": "C_V",
+   "type": "heat-capacity",
+   "meaning": "the heat capacity at constant volume, written CV",
+   "unit": "J/K",
+   "section": "23.2"
+  },
+  {
+   "sym": "alpha",
+   "concept": "thermal-expansion-coefficient",
+   "meaning": "the thermal expansion coefficient, written α",
+   "unit": "1/K",
+   "section": "23.2"
+  },
+  {
+   "sym": "kappa",
+   "concept": "isothermal-compressibility",
+   "meaning": "the isothermal compressibility, written κ",
+   "unit": "1/Pa",
+   "section": "23.2"
+  },
+  {
+   "sym": "N",
+   "meaning": "the number of particles",
+   "section": "23.2"
+  },
+  {
+   "sym": "G_solid",
+   "type": "energy",
+   "meaning": "the Gibbs energy of the solid",
+   "unit": "J",
+   "section": "23.2"
+  },
+  {
+   "sym": "G_liquid",
+   "type": "energy",
+   "meaning": "the Gibbs energy of the liquid",
+   "unit": "J",
+   "section": "23.2"
+  },
+  {
+   "sym": "S_solid",
+   "type": "entropy",
+   "meaning": "the entropy of the solid",
+   "unit": "J/K",
+   "section": "23.2"
+  },
+  {
+   "sym": "S_liquid",
+   "type": "entropy",
+   "meaning": "the entropy of the liquid",
+   "unit": "J/K",
+   "section": "23.2"
+  },
+  {
+   "sym": "V_bar",
+   "concept": "molar-volume",
+   "meaning": "the average molar volume, ∂Ḡ/∂P",
+   "unit": "m³/mol",
+   "section": "23.2"
+  },
+  {
+   "sym": "V_bar_gas",
+   "concept": "molar-volume",
+   "meaning": "the molar volume of the gas",
+   "unit": "m³/mol",
+   "section": "23.2"
+  },
+  {
+   "sym": "V_bar_liquid",
+   "concept": "molar-volume",
+   "meaning": "the molar volume of the liquid",
+   "unit": "m³/mol",
+   "section": "23.2"
+  },
+  {
+   "sym": "V_bar_solid",
+   "concept": "molar-volume",
+   "meaning": "the molar volume of the solid",
+   "unit": "m³/mol",
+   "section": "23.2"
+  },
+  {
+   "sym": "emf",
+   "type": "potential",
+   "meaning": "the electromotive force",
+   "unit": "V",
+   "section": "23.2"
+  },
+  {
+   "sym": "e_q",
+   "type": "charge",
+   "meaning": "the amount of charge transported against the electromotive force",
+   "unit": "C",
+   "section": "23.2"
+  },
+  {
+   "sym": "M_mag",
+   "type": "magnetic-moment",
+   "meaning": "the magnetization",
+   "unit": "A/m",
+   "section": "23.2"
+  },
+  {
+   "sym": "H_mag",
+   "type": "magnetic-field",
+   "meaning": "the magnetic field",
+   "unit": "A/m",
+   "section": "23.2"
+  },
+  {
+   "sym": "F_el",
+   "type": "force",
+   "meaning": "the elastic force, as of a stretched rubber band",
+   "unit": "N",
+   "section": "23.2"
+  },
+  {
+   "sym": "L_el",
+   "type": "length",
+   "meaning": "the length by which the band is stretched",
+   "unit": "m",
+   "section": "23.2"
+  },
+  {
+   "sym": "gamma_st",
+   "meaning": "the surface tension, as of a soap bubble",
+   "unit": "N/m",
+   "section": "23.2"
+  },
+  {
+   "sym": "A_s",
+   "meaning": "the surface area",
+   "unit": "m²",
+   "section": "23.2"
+  },
+  {
+   "sym": "mu",
+   "concept": "chemical-potential",
+   "meaning": "the chemical potential, which the book calls the thermodynamic potential",
+   "unit": "J/mol",
+   "section": "23.2"
+  },
+  {
+   "sym": "n",
+   "type": "amount",
+   "meaning": "the amount of substance",
+   "unit": "mol",
+   "section": "23.2"
+  },
+  {
+   "sym": "G",
+   "concept": "gibbs-energy",
+   "meaning": "the Gibbs energy",
+   "unit": "J",
+   "section": "23.3"
+  },
+  {
+   "sym": "S_ent",
+   "concept": "entropy",
+   "meaning": "the entropy",
+   "unit": "J/K",
+   "section": "23.3"
+  },
+  {
+   "sym": "T",
+   "type": "temperature",
+   "meaning": "the temperature",
+   "unit": "K",
+   "section": "23.3"
+  },
+  {
+   "sym": "P",
+   "concept": "pressure",
+   "meaning": "the pressure",
+   "unit": "Pa",
+   "section": "23.3"
+  },
+  {
+   "sym": "V",
+   "type": "volume",
+   "meaning": "the volume",
+   "unit": "m³",
+   "section": "23.3"
+  },
+  {
+   "sym": "mu",
+   "concept": "chemical-potential",
+   "meaning": "the chemical potential (thermodynamic potential), equal to Ḡ",
+   "unit": "J/mol",
+   "section": "23.3"
+  },
+  {
+   "sym": "mu_ice",
+   "concept": "chemical-potential",
+   "meaning": "the chemical potential of ice",
+   "unit": "J/mol",
+   "section": "23.3"
+  },
+  {
+   "sym": "mu_water",
+   "concept": "chemical-potential",
+   "meaning": "the chemical potential of liquid water",
+   "unit": "J/mol",
+   "section": "23.3"
+  },
+  {
+   "sym": "Delta_mu",
+   "type": "energy",
+   "meaning": "the difference μ_ice − μ_water",
+   "unit": "J/mol",
+   "section": "23.3"
+  },
+  {
+   "sym": "n",
+   "type": "amount",
+   "meaning": "the amount of substance",
+   "unit": "mol",
+   "section": "23.3"
+  },
+  {
+   "sym": "n_ice",
+   "type": "amount",
+   "meaning": "the amount of ice",
+   "unit": "mol",
+   "section": "23.3"
+  },
+  {
+   "sym": "n_water",
+   "type": "amount",
+   "meaning": "the amount of liquid water",
+   "unit": "mol",
+   "section": "23.3"
+  },
+  {
+   "sym": "G_bar",
+   "type": "energy",
+   "meaning": "the molar Gibbs energy",
+   "unit": "J/mol",
+   "section": "23.3"
+  },
+  {
+   "sym": "V_bar",
+   "concept": "molar-volume",
+   "meaning": "the molar volume",
+   "unit": "m³/mol",
+   "section": "23.3"
+  },
+  {
+   "sym": "S_bar",
+   "type": "entropy",
+   "meaning": "the molar entropy",
+   "unit": "J/(mol K)",
+   "section": "23.3"
+  },
+  {
+   "sym": "S_bar_ice",
+   "type": "entropy",
+   "meaning": "the molar entropy of ice",
+   "unit": "J/(mol K)",
+   "section": "23.3"
+  },
+  {
+   "sym": "S_bar_water",
+   "type": "entropy",
+   "meaning": "the molar entropy of liquid water",
+   "unit": "J/(mol K)",
+   "section": "23.3"
+  },
+  {
+   "sym": "V_bar_ice",
+   "concept": "molar-volume",
+   "meaning": "the molar volume of ice",
+   "unit": "m³/mol",
+   "section": "23.3"
+  },
+  {
+   "sym": "V_bar_water",
+   "concept": "molar-volume",
+   "meaning": "the molar volume of liquid water",
+   "unit": "m³/mol",
+   "section": "23.3"
+  },
+  {
+   "sym": "Delta_S_bar",
+   "type": "entropy",
+   "meaning": "the molar entropy change of the transition",
+   "unit": "J/(mol K)",
+   "section": "23.3"
+  },
+  {
+   "sym": "Delta_V_bar",
+   "type": "molar-volume",
+   "meaning": "the molar volume change of the transition",
+   "unit": "m³/mol",
+   "section": "23.3"
+  },
+  {
+   "sym": "Delta_H_bar",
+   "type": "energy",
+   "meaning": "the molar enthalpy change of the transition",
+   "unit": "J/mol",
+   "section": "23.3"
+  },
+  {
+   "sym": "Delta_G_bar",
+   "type": "energy",
+   "meaning": "the molar Gibbs energy change of the transition",
+   "unit": "J/mol",
+   "section": "23.3"
+  },
+  {
+   "sym": "T_m",
+   "type": "temperature",
+   "meaning": "the melting temperature",
+   "unit": "K",
+   "section": "23.3"
+  },
+  {
+   "sym": "P",
+   "concept": "pressure",
+   "meaning": "the vapor pressure",
+   "unit": "Pa",
+   "section": "23.4"
+  },
+  {
+   "sym": "T",
+   "type": "temperature",
+   "meaning": "the temperature",
+   "unit": "K",
+   "section": "23.4"
+  },
+  {
+   "sym": "R",
+   "meaning": "the gas constant",
+   "section": "23.4"
+  },
+  {
+   "sym": "Delta_H_molar",
+   "type": "energy",
+   "meaning": "the molar enthalpy of the transition",
+   "unit": "J/mol",
+   "section": "23.4"
+  },
+  {
+   "sym": "Delta_V_molar",
+   "type": "molar-volume",
+   "meaning": "the molar volume change of the transition",
+   "unit": "m³/mol",
+   "section": "23.4"
+  },
+  {
+   "sym": "Delta_H_molar_vap",
+   "concept": "enthalpy-of-vaporization",
+   "meaning": "the molar enthalpy of vaporization",
+   "unit": "J/mol",
+   "section": "23.4"
+  },
+  {
+   "sym": "V_molar_gas",
+   "concept": "molar-volume",
+   "meaning": "the molar volume of the gas",
+   "unit": "m³/mol",
+   "section": "23.4"
+  },
+  {
+   "sym": "V_molar_liquid",
+   "concept": "molar-volume",
+   "meaning": "the molar volume of the liquid",
+   "unit": "m³/mol",
+   "section": "23.4"
+  },
+  {
+   "sym": "alpha",
+   "concept": "thermal-expansion-coefficient",
+   "meaning": "the thermal expansion coefficient",
+   "unit": "1/K",
+   "section": "23.4"
+  },
+  {
+   "sym": "kappa",
+   "concept": "isothermal-compressibility",
+   "meaning": "the isothermal compressibility",
+   "unit": "1/Pa",
+   "section": "23.4"
+  },
+  {
+   "sym": "P_1",
+   "type": "pressure",
+   "meaning": "the vapor pressure at T₁",
+   "unit": "Pa",
+   "section": "23.4"
+  },
+  {
+   "sym": "P_2",
+   "type": "pressure",
+   "meaning": "the vapor pressure at T₂",
+   "unit": "Pa",
+   "section": "23.4"
+  },
+  {
+   "sym": "P_3",
+   "type": "pressure",
+   "meaning": "the vapor pressure at T₃",
+   "unit": "Pa",
+   "section": "23.4"
+  },
+  {
+   "sym": "T_1",
+   "type": "temperature",
+   "meaning": "the temperature at which the vapor pressure is P₁",
+   "unit": "K",
+   "section": "23.4"
+  },
+  {
+   "sym": "T_2",
+   "type": "temperature",
+   "meaning": "the temperature at which the vapor pressure is P₂",
+   "unit": "K",
+   "section": "23.4"
+  },
+  {
+   "sym": "T_3",
+   "type": "temperature",
+   "meaning": "the temperature at which the vapor pressure is P₃",
+   "unit": "K",
+   "section": "23.4"
+  },
+  {
+   "sym": "mu_alpha",
+   "concept": "chemical-potential",
+   "meaning": "the chemical potential of phase α",
+   "unit": "J/mol",
+   "section": "23.4"
+  },
+  {
+   "sym": "mu_beta",
+   "concept": "chemical-potential",
+   "meaning": "the chemical potential of phase β",
+   "unit": "J/mol",
+   "section": "23.4"
+  },
+  {
+   "sym": "mu",
+   "concept": "chemical-potential",
+   "meaning": "the chemical potential",
+   "unit": "J/mol",
+   "section": "23.4"
+  },
+  {
+   "sym": "G",
+   "concept": "gibbs-energy",
+   "meaning": "the Gibbs energy",
+   "unit": "J",
+   "section": "23.4"
+  },
+  {
+   "sym": "G_bar",
+   "type": "energy",
+   "meaning": "the molar Gibbs energy, G/n",
+   "unit": "J/mol",
+   "section": "23.4"
+  },
+  {
+   "sym": "n",
+   "type": "amount",
+   "meaning": "the amount of substance",
+   "unit": "mol",
+   "section": "23.4"
+  },
+  {
+   "sym": "V_bar",
+   "concept": "molar-volume",
+   "meaning": "the molar volume",
+   "unit": "m³/mol",
+   "section": "23.4"
+  },
+  {
+   "sym": "S_bar",
+   "type": "entropy",
+   "meaning": "the molar entropy",
+   "unit": "J/(mol K)",
+   "section": "23.4"
+  },
+  {
+   "sym": "G_bar_alpha",
+   "type": "energy",
+   "meaning": "the molar Gibbs energy of phase α",
+   "unit": "J/mol",
+   "section": "23.4"
+  },
+  {
+   "sym": "G_bar_beta",
+   "type": "energy",
+   "meaning": "the molar Gibbs energy of phase β",
+   "unit": "J/mol",
+   "section": "23.4"
+  },
+  {
+   "sym": "V_bar_alpha",
+   "concept": "molar-volume",
+   "meaning": "the molar volume of phase α",
+   "unit": "m³/mol",
+   "section": "23.4"
+  },
+  {
+   "sym": "V_bar_beta",
+   "concept": "molar-volume",
+   "meaning": "the molar volume of phase β",
+   "unit": "m³/mol",
+   "section": "23.4"
+  },
+  {
+   "sym": "S_bar_alpha",
+   "type": "entropy",
+   "meaning": "the molar entropy of phase α",
+   "unit": "J/(mol K)",
+   "section": "23.4"
+  },
+  {
+   "sym": "S_bar_beta",
+   "type": "entropy",
+   "meaning": "the molar entropy of phase β",
+   "unit": "J/(mol K)",
+   "section": "23.4"
+  },
+  {
+   "sym": "H_bar_alpha",
+   "type": "energy",
+   "meaning": "the molar enthalpy of phase α",
+   "unit": "J/mol",
+   "section": "23.4"
+  },
+  {
+   "sym": "H_bar_beta",
+   "type": "energy",
+   "meaning": "the molar enthalpy of phase β",
+   "unit": "J/mol",
+   "section": "23.4"
+  },
+  {
+   "sym": "Delta_ab_H_bar",
+   "type": "energy",
+   "meaning": "the molar enthalpy change between phases α and β",
+   "unit": "J/mol",
+   "section": "23.4"
+  },
+  {
+   "sym": "Delta_ab_V_bar",
+   "type": "molar-volume",
+   "meaning": "the molar volume change between phases α and β",
+   "unit": "m³/mol",
+   "section": "23.4"
+  },
+  {
+   "sym": "Delta_H_bar_fus",
+   "concept": "enthalpy-of-fusion",
+   "meaning": "the molar enthalpy of fusion",
+   "unit": "J/mol",
+   "section": "23.4"
+  },
+  {
+   "sym": "Delta_V_bar_fus",
+   "type": "molar-volume",
+   "meaning": "the molar volume change on fusion",
+   "unit": "m³/mol",
+   "section": "23.4"
+  },
+  {
+   "sym": "Delta_H_bar_vap",
+   "concept": "enthalpy-of-vaporization",
+   "meaning": "the molar enthalpy of vaporization",
+   "unit": "J/mol",
+   "section": "23.4"
+  },
+  {
+   "sym": "Delta_V_bar_vap",
+   "type": "molar-volume",
+   "meaning": "the molar volume change on vaporization",
+   "unit": "m³/mol",
+   "section": "23.4"
+  },
+  {
+   "sym": "V_bar_g",
+   "concept": "molar-volume",
+   "meaning": "the molar volume of the gas",
+   "unit": "m³/mol",
+   "section": "23.4"
+  },
+  {
+   "sym": "V_bar_l",
+   "concept": "molar-volume",
+   "meaning": "the molar volume of the liquid",
+   "unit": "m³/mol",
+   "section": "23.4"
+  },
+  {
+   "sym": "V",
+   "type": "volume",
+   "meaning": "the volume of the gas",
+   "unit": "m³",
+   "section": "23.4"
+  },
+  {
+   "sym": "Delta_H_vap",
+   "concept": "enthalpy-of-vaporization",
+   "meaning": "the enthalpy (heat) of vaporization",
+   "unit": "J/mol",
+   "section": "23.4"
+  },
+  {
+   "sym": "Delta_sub_H",
+   "type": "energy",
+   "meaning": "the enthalpy of sublimation, written ΔH_sub",
+   "unit": "J/mol",
+   "section": "23.4"
+  },
+  {
+   "sym": "Delta_H_bar",
+   "type": "energy",
+   "meaning": "the molar enthalpy change of the transition",
+   "unit": "J/mol",
+   "section": "23.4"
+  },
+  {
+   "sym": "Delta_V_bar",
+   "type": "molar-volume",
+   "meaning": "the molar volume change of the transition",
+   "unit": "m³/mol",
+   "section": "23.4"
+  },
+  {
+   "sym": "H",
+   "concept": "enthalpy",
+   "meaning": "the enthalpy",
+   "unit": "J",
+   "section": "23.4"
+  },
+  {
+   "sym": "S_ent",
+   "concept": "entropy",
+   "meaning": "the entropy",
+   "unit": "J/K",
+   "section": "23.4"
+  },
+  {
+   "sym": "U",
+   "concept": "internal-energy",
+   "meaning": "the internal energy",
+   "unit": "J",
+   "section": "23.5"
+  },
+  {
+   "sym": "S_ent",
+   "concept": "entropy",
+   "meaning": "the entropy",
+   "unit": "J/K",
+   "section": "23.5"
+  },
+  {
+   "sym": "A",
+   "concept": "helmholtz-energy",
+   "meaning": "the Helmholtz energy",
+   "unit": "J",
+   "section": "23.5"
+  },
+  {
+   "sym": "G",
+   "concept": "gibbs-energy",
+   "meaning": "the Gibbs energy",
+   "unit": "J",
+   "section": "23.5"
+  },
+  {
+   "sym": "Q_sys",
+   "concept": "canonical-partition-function",
+   "meaning": "the partition function of the system",
+   "section": "23.5"
+  },
+  {
+   "sym": "R",
+   "meaning": "the gas constant",
+   "section": "23.5"
+  },
+  {
+   "sym": "T",
+   "type": "temperature",
+   "meaning": "the temperature",
+   "unit": "K",
+   "section": "23.5"
+  },
+  {
+   "sym": "P",
+   "concept": "pressure",
+   "meaning": "the pressure",
+   "unit": "Pa",
+   "section": "23.5"
+  },
+  {
+   "sym": "V",
+   "type": "volume",
+   "meaning": "the volume",
+   "unit": "m³",
+   "section": "23.5"
+  },
+  {
+   "sym": "n",
+   "type": "amount",
+   "meaning": "the amount of substance in moles",
+   "unit": "mol",
+   "section": "23.5"
+  },
+  {
+   "sym": "mu",
+   "concept": "chemical-potential",
+   "meaning": "the chemical potential",
+   "unit": "J/mol",
+   "section": "23.5"
+  }
+ ]
+}

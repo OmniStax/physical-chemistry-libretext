@@ -1,0 +1,259 @@
+{
+ "id": "19.7",
+ "module": "13705",
+ "chapter": "19",
+ "title": "Work and Heat Have a Simple Molecular Interpretation",
+ "short": "Heat and work on the molecular scale",
+ "lead": "The energy of a system is an average over its quantum states, so a small change in it can come from two places: the energies of the states or the probabilities of finding the system in them. Heat and work each take one of these routes.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "The book prints no credits for this page; all four of its equation images are missing at the source and are given here as reconstructed lines.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercises for this section; the one here is new and AI-written. Its Bloom level and concept tags were chosen by AI.",
+ "figures": [
+  {
+   "id": "sim-heat-and-work-levels",
+   "kind": "sim",
+   "draws": [
+    "energy",
+    "heat",
+    "work",
+    "length"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ],
+   "conventions": [
+    "He"
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "statistical-interpretation",
+   "concept": "molecular-heat-and-work",
+   "verb": "introduces"
+  },
+  {
+   "span": "statistical-interpretation",
+   "concept": "canonical-partition-function",
+   "verb": "uses"
+  },
+  {
+   "span": "statistical-interpretation",
+   "concept": "pressure-from-q",
+   "verb": "reinforces"
+  },
+  {
+   "span": "statistical-interpretation",
+   "concept": "first-law-of-thermodynamics",
+   "verb": "uses"
+  },
+  {
+   "span": "statistical-interpretation",
+   "concept": "pressure-volume-work",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "We can use what we know about the statistical side of thermodynamics",
+   "kind": "exercise",
+   "bloom": "Understand",
+   "place": {
+    "at": "end"
+   },
+   "cite": "statistical-interpretation",
+   "prompt": "<p>A gas is given the same small amount of energy in two ways: (a) by heating it at constant volume, and (b) by compressing it reversibly and adiabatically. In each case, say which change, in the energy levels $\\kEi$ or in the probabilities $P_i$ of the states, carries the change in $\\kU$, and why.</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "Start from $dU = \\sum_i E_i\\,dP_i + \\sum_i P_i\\,dE_i$ and ask which quantity each process holds fixed.",
+    "solution": "<p>Write $d\\kU = \\sum_i \\kEi\\,dP_i + \\sum_i P_i\\,d\\kEi$. (a) At constant volume the levels $\\kEi$ do not move, so $d\\kEi = 0$ and all of $d\\kU$ comes from the first sum: the heat shifts the probabilities toward higher states, $\\delta \\kqrev = \\sum_i \\kEi\\,dP_i$. (b) In a reversible adiabatic change no heat flows, so the first sum is zero and the probabilities stay as they were. The compression raises every level, since the levels depend on the volume, and $d\\kU = \\delta \\kwrev = \\sum_i P_i\\,d\\kEi = -\\kP\\,d\\kV$.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "molecular-heat-and-work"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-image67-68",
+   "kind": "correction",
+   "html": "The book's two equation images here (CH431_Image67 and Image68) are missing at the source. Reconstructed, they are $dU = \\sum_i E_i\\,dP_i + \\sum_i P_i\\,dE_i$, with $\\delta q_{rev} = \\sum_i E_i\\,dP_i$ and $\\delta w_{rev} = \\sum_i P_i\\,dE_i = -P\\,dV$; the derivation below works them out."
+  },
+  {
+   "id": "c-factor",
+   "kind": "correction",
+   "html": "The factor is missing at the source. Since $(\\partial \\ln Q/\\partial V)_{N,T} = \\beta P$, it is $\\beta = 1/kT$."
+  },
+  {
+   "id": "c-image69-70",
+   "kind": "correction",
+   "html": "The book's two equation images here (CH431_Image69 and Image70) are missing at the source. Reconstructed, they are $P = -\\sum_i P_i(\\partial E_i/\\partial V)_N$ and, with Section 17.5, $P = kT(\\partial \\ln Q/\\partial V)_{N,T}$: the last two results of the derivation below."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "molecular-heat-and-work",
+   "what": "heat and work on the molecular scale",
+   "source": "Physical Chemistry (LibreTexts), 19.7 Work and Heat Have a Simple Molecular Interpretation",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kU = \\sum_i P_i\\kEi",
+       "src": "17.3, 17.4"
+      }
+     ],
+     "then": {
+      "tex": "\\kU = \\sum_i \\mk{p}{P_i}\\mk{e}{\\kEi}"
+     },
+     "steps": [
+      {
+       "tex": "d\\kU = \\sum_i \\mk{e}{\\kEi}\\,\\mk{p}{dP_i} + \\sum_i \\mk{p2}{P_i}\\,\\mk{e2}{d\\kEi}",
+       "uses": [],
+       "map": {
+        "p": [
+         "p",
+         "p2"
+        ],
+        "e": [
+         "e",
+         "e2"
+        ]
+       },
+       "cap": "The product rule: $d(P_iE_i) = E_i\\,dP_i + P_i\\,dE_i$."
+      }
+     ],
+     "note": "Reconstructed: the book's display here (CH431_Image67) is missing at the source."
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "d\\kU = \\delta \\kqrev + \\delta \\kwrev",
+       "src": "19.1"
+      },
+      {
+       "text": "Heat taken in at constant volume leaves the energy levels in place and changes only the probabilities $P_i$.",
+       "src": "19.7"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{u}{d\\kU} = \\mk{q}{\\delta \\kqrev} + \\mk{w}{\\delta \\kwrev}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{q}{\\delta \\kqrev} + \\mk{w}{\\delta \\kwrev} = \\mk{a}{\\sum_i \\kEi\\,dP_i} + \\mk{b}{\\sum_i P_i\\,d\\kEi}",
+       "uses": [
+        0
+       ],
+       "map": {
+        "u": [
+         "a",
+         "b"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{w}{\\delta \\kwrev} = \\mk{b}{\\sum_i P_i\\,d\\kEi}",
+       "uses": [
+        2
+       ],
+       "cap": "The heat is the part that shifts the probabilities, $\\delta q_{rev} = \\sum_i E_i\\,dP_i$, so the work is what is left: the shift of the levels."
+      }
+     ],
+     "note": "Reconstructed: the book's display here (CH431_Image68) is missing at the source."
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "tex": "\\delta \\kwrev = -\\kP\\,d\\kV",
+       "src": "19.2"
+      },
+      {
+       "text": "At a fixed number of molecules the energy levels change only with the volume, $dE_i = (\\partial E_i/\\partial V)_N\\,dV$.",
+       "src": "17.5"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{w}{\\delta \\kwrev} = \\mk{b}{\\sum_i P_i\\,d\\kEi}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{w}{-\\kP\\,d\\kV} = \\mk{b}{\\sum_i P_i\\,d\\kEi}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{w}{-\\kP\\,d\\kV} = \\mk{b}{\\sum_i P_i\\left(\\dfrac{\\partial\\kEi}{\\partial\\kV}\\right)_Nd\\kV}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{w}{\\kP} = \\mk{b}{-\\sum_i P_i\\left(\\dfrac{\\partial\\kEi}{\\partial\\kV}\\right)_N}",
+       "uses": []
+      }
+     ],
+     "note": "Reconstructed: the book's display here (CH431_Image69) is missing at the source."
+    },
+    {
+     "assumes": [
+      {
+       "step": 2
+      },
+      {
+       "tex": "-\\sum_i P_i\\left(\\dfrac{\\partial\\kEi}{\\partial\\kV}\\right)_N = k\\kT\\left(\\dfrac{\\partial \\ln \\kQsys}{\\partial \\kV}\\right)_{N,T}",
+       "src": "17.5",
+       "drv": "17.5/pressure-from-q"
+      }
+     ],
+     "then": {
+      "tex": "\\kP = \\mk{b}{-\\sum_i P_i\\left(\\dfrac{\\partial\\kEi}{\\partial\\kV}\\right)_N}"
+     },
+     "steps": [
+      {
+       "tex": "\\kP = \\mk{b}{k\\kT\\left(\\dfrac{\\partial \\ln \\kQsys}{\\partial \\kV}\\right)_{N,T}}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "note": "Reconstructed: the book's display here (CH431_Image70) is missing at the source."
+    }
+   ]
+  }
+ ]
+}

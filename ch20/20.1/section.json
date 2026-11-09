@@ -1,0 +1,174 @@
+{
+ "id": "20.1",
+ "module": "13714",
+ "chapter": "20",
+ "title": "Energy Does not Determine Spontaneity",
+ "short": "Energy and spontaneity",
+ "lead": "Energy alone does not say which way a process will go. Counting the ways a set of objects can be arranged, and following a gas as it expands into a vacuum, leads to Boltzmann's formula for entropy.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "The page prints no credits, and the stork photograph in the causality note is left out because the page gives it a credit (Frank Vassen, via Wikipedia) but no licence.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercise here; the one exercise is new and AI-written, its answers computed. Numeric answers accept a 2% tolerance, the count of arrangements 0.1%.",
+ "figures": [
+  {
+   "id": "sim-free-expansion",
+   "kind": "sim",
+   "originals": [
+    "/media/ch20/102761-CH431_Image92.gif"
+   ],
+   "draws": [
+    "entropy"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "sim-levels-realizations",
+   "kind": "sim",
+   "originals": [
+    "/media/ch20/69091-CH431_Wexpansion.jpg"
+   ],
+   "draws": [
+    "length",
+    "energy",
+    "entropy"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "opening",
+   "concept": "spontaneous-process",
+   "verb": "introduces"
+  },
+  {
+   "span": "opening",
+   "concept": "energy-not-spontaneity",
+   "verb": "introduces"
+  },
+  {
+   "span": "entropy-on-a-microscopic-scale",
+   "concept": "arrangements-count",
+   "verb": "introduces"
+  },
+  {
+   "span": "entropy-on-a-microscopic-scale",
+   "concept": "stirlings-approximation",
+   "verb": "reinforces"
+  },
+  {
+   "span": "changing-the-box",
+   "concept": "free-expansion",
+   "verb": "introduces"
+  },
+  {
+   "span": "changing-the-box",
+   "concept": "expansion-more-realizations",
+   "verb": "introduces"
+  },
+  {
+   "span": "changing-the-box",
+   "concept": "distribution-weight",
+   "verb": "reinforces"
+  },
+  {
+   "span": "changing-the-box",
+   "concept": "boltzmann-entropy",
+   "verb": "introduces"
+  },
+  {
+   "span": "changing-the-box",
+   "concept": "entropy-additive",
+   "verb": "introduces"
+  },
+  {
+   "span": "changing-the-box",
+   "concept": "more-states-drive-spontaneity",
+   "verb": "introduces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "If we have n distinguishable objects",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "entropy-on-a-microscopic-scale",
+   "prompt": "<p>Ten identical gas molecules are spread over the two halves of a box, five in each half.</p><ol type=\"a\"><li>In how many ways $W$ can this split be made?</li><li>What is $\\ln W$?</li><li>What does Stirling's approximation give for $\\ln 10!$?</li><li>What is $\\ln 10!$ exactly?</li></ol>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 252,
+      "tol": 0.001,
+      "hint": "The molecules fall in two groups of five, and swaps within a group give nothing new."
+     },
+     {
+      "part": "b",
+      "value": 5.53
+     },
+     {
+      "part": "c",
+      "value": 13.03
+     },
+     {
+      "part": "d",
+      "value": 15.1
+     }
+    ],
+    "solution": "<p>a. $W = \\dfrac{10!}{5!\\,5!} = \\dfrac{3628800}{120 \\times 120} = 252$.</p><p>b. $\\ln W = \\ln 252 = 5.53$.</p><p>c. $\\ln N! \\approx N\\ln N - N = 10\\ln 10 - 10 = 23.03 - 10 = 13.03$.</p><p>d. $\\ln 10! = \\ln 3628800 = 15.10$. At $N = 10$ the approximation is still 14% low; it improves quickly as $N$ grows toward the size of an ensemble.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "arrangements-count"
+  },
+  {
+   "exercise": "a1",
+   "concept": "stirlings-approximation"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "n3",
+   "kind": "correction",
+   "html": "The book prints $n_2^2$ twice in the bracket. The third term is $n_3^2$, the quantum number of the motion along the third axis."
+  }
+ ]
+}

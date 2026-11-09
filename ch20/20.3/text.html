@@ -1,0 +1,38 @@
+<section id="circular-integrals">
+<h2>Circular integrals</h2>
+<p><span data-concept="cycle-integral-zero">Because entropy is a state function, it integrates to zero over any circular path going back to initial conditions, just like $\kU$ and $\kHenth$</span>:</p>
+$$ \oint d\kSent =0 $$
+$$ \oint d\kHenth =0 $$
+$$ \oint d\kU =0 $$
+<p>As discussed previously, we can use this fact to revisit the isotherm + isochore + adiabat circular path (Figure 20.3.1).</p>
+<figure class="sim" id="sim-entropy-two-paths" data-figure="20.3.1" data-original="/media/ch20/347606-20.3.1.svg" data-original-width="456" data-original-caption="A: isothermal expansion, B:adiabat, C:isochore (CC BY-NC; Ümit Kaya via LibreTexts)">
+  <div class="sim-head"><span class="eyebrow">Figure 20.3.1</span><span>Change how far the gas expands and <span data-type="temperature">the temperature of the isotherm</span>. The <span data-type="heat">heat</span> taken along A and along B + C differs, while the two <span data-type="entropy">entropy changes</span> stay equal.</span></div>
+</figure>
+<p><strong>Along adiabat B and isochore C:</strong></p>
+<ul><li>There is no heat transfer along adiabat B:</li></ul>
+$$ \kqrevB = 0 $$
+<ul><li>There is no work along isochore C:</li></ul>
+$$ \delta \kw=0 $$
+<ul><li>But the temperature changes from $\kTtwo$ back to $\kTone$. This requires heat:</li></ul>
+$$ \kqrevC=\kCV\Delta \kT $$
+<p><strong>Along the isotherm A:</strong></p>
+<ul><li>We have seen that</li></ul>
+$$ \kqrevA = \knmol R\kT \ln \dfrac{\kVb}{\kVa} $$
+<p>The quantities q<sub>rev</sub><sub>,A</sub>, q<sub>rev</sub><sub>,B</sub>, and q<sub>rev</sub><sub>,C</sub> are <em><strong>not</strong></em> the same, which once again underlines that heat is a path function. How about entropy?</p>
+</section>
+
+<section id="entropy-along-two-paths">
+<h2>Entropy along the two paths</h2>
+<p>First, consider the combined paths of B and C:</p>
+$$ \kqrevBC = \int _{\kTtwo}^{\kTone} \kCv d\kT $$
+$$ \int d\kSBC = \int \dfrac{d\kqrevBC}{\kT} = \int _{\kTtwo}^{\kTone} \dfrac{\kCv}{\kT} d\kT $$
+<p>We had seen <span data-concept="heating-entropy-change">this integral</span> before from Section 19-6, albeit from $\kTone$ to $\kTtwo$:</p>
+$$ \Delta \kSBC = \knmol R\ln \dfrac{\kVb}{\kVa} \tag{20.3.1} $$
+<p>(Notice sign in Equation 20.3.1 is positive)</p>
+<p>Along the isotherm A:</p>
+$$ \kqrevA = \knmol R\kT \ln\frac{\kVb}{\kVa} $$
+<p>$\kT$ is a constant so we can just divide $q_{rec,A}$<sup class="fn" data-note="qrec"></sup> by $\kT$ to get <span data-concept="isothermal-entropy-change">$\Delta \kSA$</span>:</p>
+$$ \Delta \kSA = \knmol R\ln \dfrac{\kVb}{\kVa} $$
+<p>We took two different paths to get start and end at the same points. Both paths had the same change in entropy. Clearly <span data-concept="entropy-state-function">entropy is a <em>state function</em> while $\kqrev$ is not</span>.</p>
+<figure class="dv" id="drv-two-paths"></figure>
+</section>

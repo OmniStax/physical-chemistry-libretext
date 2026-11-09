@@ -1,0 +1,156 @@
+{
+ "id": "21.3",
+ "module": "14479",
+ "chapter": "21",
+ "title": "The Entropy of a Phase Transition can be Calculated from the Enthalpy of the Phase Transition",
+ "short": "Entropy of a phase transition",
+ "lead": "At a phase transition two phases stand in equilibrium at one temperature and pressure, and the Gibbs energy ties the entropy of the transition to its enthalpy. Melting, boiling, sublimation and the change from one solid form to another each carry such an entropy.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "The page names no authors.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": []
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercise for this section; the one exercise, on the rhombic to monoclinic transition of sulfur from Example 21.2.1, was written by AI with an AI solution. Its Bloom level and concept tags were chosen by AI. Numeric answers accept a 2% tolerance.",
+ "figures": [],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "equilibrium-at-transition",
+   "concept": "entropy-of-transition",
+   "verb": "introduces"
+  },
+  {
+   "span": "equilibrium-at-transition",
+   "concept": "gibbs-temperature-derivative",
+   "verb": "introduces"
+  },
+  {
+   "span": "equilibrium-at-transition",
+   "concept": "first-order-transition",
+   "verb": "introduces"
+  },
+  {
+   "span": "equilibrium-at-transition",
+   "concept": "heat-capacity-singular-at-transition",
+   "verb": "introduces"
+  },
+  {
+   "span": "equilibrium-at-transition",
+   "concept": "gibbs-energy",
+   "verb": "uses"
+  },
+  {
+   "span": "equilibrium-at-transition",
+   "concept": "enthalpy-of-fusion",
+   "verb": "uses"
+  },
+  {
+   "span": "equilibrium-at-transition",
+   "concept": "entropy-of-fusion",
+   "verb": "reinforces"
+  },
+  {
+   "span": "transition-kinds",
+   "concept": "phase-transition-kinds",
+   "verb": "introduces"
+  },
+  {
+   "span": "transition-kinds",
+   "concept": "entropy-of-transition",
+   "verb": "reinforces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "ai1",
+   "source_id": "Δ_{trs}H}{T_{trs}}",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "equilibrium-at-transition",
+   "prompt": "<p>At 368.5 K rhombic and monoclinic sulfur are in equilibrium, and the entropy of the transition from rhombic to monoclinic is 1.09 J/(mol K) (Example 21.2.1). What is the enthalpy of the transition, in J/mol?</p>",
+   "answer": {
+    "type": "number",
+    "value": 402,
+    "unit": "J/mol",
+    "generated_by": "ai",
+    "hint": "At the transition temperature $\\Delta_{trs}G = 0$.",
+    "solution": "<p>At equilibrium $\\Delta_{trs}\\kG = 0$, so $\\Delta_{trs}H = \\kTtrs\\Delta_{trs}\\kSent = (368.5\\ \\text{K})(1.09\\ \\text{J mol}^{-1}\\text{K}^{-1}) = 402$ J/mol. The transition takes in heat, and the monoclinic form, stable above 368.5 K, has the higher entropy.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "ai1",
+   "concept": "entropy-of-transition"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-liquid",
+   "kind": "correction",
+   "html": "The comparison is with the liquid: the solid has a much more ordered structure than the liquid it melts into."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "entropy-of-transition",
+   "what": "the entropy of a phase transition",
+   "source": "Physical Chemistry (LibreTexts), 21.3 The Entropy of a Phase Transition can be Calculated from the Enthalpy of the Phase Transition",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kG = \\kHenth - \\kT\\kSent",
+       "src": "22.4"
+      },
+      {
+       "text": "The transition happens at one temperature $T_{trs}$ and constant $P$."
+      },
+      {
+       "text": "The two phases are in equilibrium at the transition, so $\\Delta_{trs}G = 0$."
+      }
+     ],
+     "then": {
+      "tex": "\\mk{g}{\\kG} = \\mk{h}{\\kHenth} - \\mk{ts}{\\kT\\kSent}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{g}{Δ_{trs}\\kG} = \\mk{h}{Δ_{trs}\\kHenth} - \\mk{ts}{\\kTtrs Δ_{trs}\\kSent}",
+       "uses": [
+        1
+       ],
+       "cap": "At a single temperature the change in $TS$ is $T_{trs}\\,\\Delta_{trs}S$."
+      },
+      {
+       "tex": "\\mk{g}{0} = \\mk{h}{Δ_{trs}\\kHenth} - \\mk{ts}{\\kTtrs Δ_{trs}\\kSent}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{h}{Δ_{trs}\\kHenth} = \\mk{ts}{\\kTtrs Δ_{trs}\\kSent}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{h}{\\dfrac{Δ_{trs}\\kHenth}{\\kTtrs}} = \\mk{ts}{Δ_{trs}\\kSent}",
+       "uses": []
+      }
+     ],
+     "src": "21.3"
+    }
+   ]
+  }
+ ]
+}

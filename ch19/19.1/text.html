@@ -1,0 +1,87 @@
+<section id="first-law">
+<h2>Joule's paddles and the first law</h2>
+<p>One of the pioneers in the field of modern thermodynamics was James P. Joule (1818 - 1889). Among the experiments Joule carried out, was an attempt to measure the effect on the temperature of a sample of water that was caused by doing work on the water. Using a clever apparatus to perform work on water by using a falling weight to turn paddles within an insulated canister filled with water, Joule was able to measure a temperature increase in the water.</p>
+<figure class="photo" id="fig-19-1-1" data-figure="19.1.1">
+  <img src="/media/ch19/113010-1200px-Joule_James_sitting1.jpg" alt="Black and white portrait of a seated man with a thick beard and a suit, looking to the side. Victorian-era attire is evident, with a waistcoat and bow tie. Neutral background."><img src="/media/ch19/113011-651px-Joule_Apparatus.jpg" alt="A metal heat engine with a wooden handle, featuring multiple stacked, angled blades within a cylindrical frame.">
+  <figcaption><span class="eyebrow">Figure 19.1.1</span><span>(left) James Prescott Joule (1818 - 1889) (right) Joule's apparatus for measuring the work equivalent of heat. (CC BY-SA 3.0; Dr. Mirko Junge)</span></figcaption>
+</figure>
+<p>Thus, Joule was able to show that work and heat can have the same effect on matter – a change in temperature! It would then be reasonable to conclude that heating, as well as doing work on a system will increase its energy content, and thus it’s ability to perform work in the surroundings. This leads to an important construct of the <strong><span data-concept="first-law-of-thermodynamics">First Law of Thermodynamics</span></strong>:</p>
+<blockquote><p>The capacity of a system to do work is increased by heating the system or doing work on it.</p></blockquote>
+<p>The <strong><span data-concept="internal-energy">internal energy</span></strong> ($\kU$) of a system is a measure of its capacity to supply energy that can do work within the surroundings, making $\kU$ the ideal variable to keep track of the flow of heat and work energy into and out of a system. <span data-concept="internal-energy-change">Changes in the internal energy of a system</span> ($\kDeltaU$) can be calculated by</p>
+$$ \kDeltaU = \kUf - \kUi \tag{19.1.1} $$
+<p>where the subscripts $i$ and $f$ indicate initial and final states of the system. $\kU$ as it turns out, is a <span data-concept="state-function">state variable</span>. In other words, the amount of energy available in a system to be supplied to the surroundings is independent on how that energy came to be available. That’s important because the manner in which energy is transferred is path dependent.</p>
+<p>There are two main methods energy can be transferred to or from a system. These are suggested in the previous statement of the <span data-concept="first-law-of-thermodynamics">first law of thermodynamics</span>. Mathematically, we can restate the first law as</p>
+$$ \kDeltaU = \kq + \kw $$
+<p>or</p>
+$$ d\kU = d\kq + d\kw $$
+<p>where $\kq$ is defined as the amount of energy that flows into a system in the form of <strong><span data-concept="heat">heat</span></strong> and $\kw$ is the amount of energy lost due to the system doing <strong><span data-concept="thermodynamic-work">work</span></strong> on the surroundings.<sup class="fn" data-note="c-w-sign"></sup></p>
+</section>
+
+<section id="heat">
+<h2>Heat</h2>
+<p><span data-concept="heat">Heat</span> is the kind of energy that in the absence of other changes would have the effect of changing the temperature of the system. A process in which heat flows into a system is <strong><span data-concept="endothermic-and-exothermic">endothermic</span></strong> from the standpoint of the system ($\kq_{system} > 0$, $\kq_{surroundings} < 0$). Likewise, a process in which heat flows out of the system (into the surroundings) is called <strong><span data-concept="endothermic-and-exothermic">exothermic</span></strong> ($\kq_{system} < 0$, $\kq_{surroundings} > 0$). In the absence of any energy flow in the form or work, the flow of heat into or out of a system can be measured by a change in temperature. In cases where it is difficult to measure temperature changes of the system directly, the amount of heat energy transferred in a process can be measured using a change in temperature of the soundings. (This concept will be used later in the discussion of calorimetry).</p>
+<p>An infinitesimal amount of heat flow into or out of a system can be related to a change in temperature by</p>
+$$ d\kq = \kCheat\, d\kT $$
+<p>where $\kCheat$ is the <strong><span data-concept="heat-capacity">heat capacity</span></strong> and has the definition</p>
+$$ \kCheat = \dfrac{d\kq}{\partial \kT} $$<sup class="fn" data-note="c-heat-capacity"></sup>
+<p><span data-concept="heat-capacity">Heat capacities</span> generally have units of (J mol<sup>-1</sup> K<sup>-1</sup>) and magnitudes equal to the number of J needed to raise the temperature of 1 mol of substance by 1 K. Similar to a <span data-concept="heat-capacity">heat capacity</span> is a <strong><span data-concept="specific-heat-capacity">specific heat</span></strong> which is defined per unit mass rather than per mol. The <span data-concept="specific-heat-capacity">specific heat</span> of water, for example, has a value of 4.184 J g<sup>-1</sup> K<sup>-1</sup> (at constant pressure – a pathway distinction that will be discussed later.)</p>
+<div class="example" id="ex-19-1-1">
+<h3>Example 19.1.1 · Heat required to Raise Temperature</h3>
+<p>How much energy is needed to raise the temperature of 5.0 g of water from 21.0 °C to 25.0 °C?</p>
+<h4>Solution</h4>
+$$ \begin{aligned} \kq &=\km C \Delta \kT \\[4pt] &= (5.0 \,\cancel{g}) (4.184 \dfrac{J}{\cancel{g} \, \cancel{°C}}) (25.0 \cancel{°C} - 21.0 \cancel{°C}) \\[4pt] &= 84\, J \end{aligned} $$
+</div>
+<div class="note">
+<div class="eyebrow">Note</div>
+<h3>What is a partial derivative?</h3>
+<p>A <span data-concept="partial-derivative">partial derivative</span>, like a total derivative, is a slope. It gives a magnitude as to how quickly a function changes value when one of the dependent variables changes. Mathematically, a <span data-concept="partial-derivative">partial derivative</span> is defined for a function $f(x_1,x_2, \dots x_n)$ by</p>
+$$ \left( \dfrac{ \partial f}{\partial x_i} \right)_{x_j \neq i} = \lim_{\Delta _i \rightarrow 0} \left( \dfrac{f(x_1+ \Delta x_1 , x_2 + \Delta x_2, \dots, x_i +\Delta x_i, \dots x_n+\Delta x_n) - f(x_1,x_2, \dots x_i, \dots x_n) }{\Delta x_i} \right) $$
+<p>Because it measures how much a function changes for a change in a given dependent variable, <span data-concept="total-differential">infinitesimal changes in the in the function</span> can be described by</p>
+$$ df = \sum_i \left( \dfrac{\partial f}{\partial x_i} \right)_{x_j \neq i} $$<sup class="fn" data-note="c-df"></sup>
+<p>So that each contribution to the total change in the function $f$ can be considered separately.</p>
+<p>For simplicity, consider an <span data-concept="ideal-gas">ideal gas</span>. The <span data-concept="pressure">pressure</span> can be calculated for the gas using the <span data-concept="ideal-gas-law">ideal gas law</span>. In this expression, <span data-concept="pressure">pressure</span> is a function of temperature and molar volume.</p>
+$$ \kppress(\kV,\kT) = \dfrac{\kR\kT}{\kV} $$
+<figure class="dv" id="drv-pressure-differential"></figure>
+<figure class="sim" id="sim-pressure-surface" data-original="/media/ch19/113012-imageedit_1_9031701417.png" data-original-caption="">
+  <div class="sim-head"><span class="eyebrow">Sim</span><span>Pick a route from 1.0 L/mol and 200 K and drag the end state. One route falls along an isotherm first, the other climbs an isochore first, and both arrive at the same <span data-type="pressure">pressure</span>.</span></div>
+</figure>
+<p>Macroscopic changes can be expressed by integrating the individual pieces of Equation 19.1.4 over appropriate intervals.</p>
+$$ \Delta \kppress = \int_{\kVa}^{\kVb} \left( \dfrac{\partial \kppress}{ \partial \kV} \right)_{\kT} d\kV + \int_{\kTone}^{\kTtwo} \left( \dfrac{\partial \kppress}{ \partial \kT} \right)_{\kV} d\kT $$
+<p>This can be thought of as two consecutive changes. The first is an <strong><span data-concept="isotherm">isothermal</span></strong> (constant temperature) expansion from $\kVa$ to $\kVb$ at $\kTone$ and the second is an <strong><span data-concept="isochore">isochoric</span></strong> (constant volume) temperature change from $\kTone$ to $\kTtwo$ at $\kVb$. For example, suppose one needs to calculate the change in pressure for an ideal gas expanding from <span data-type="molar-volume">1.0 L/mol</span> at <span data-type="temperature">200 K</span> to <span data-type="molar-volume">3.0 L/mol</span> at <span data-type="temperature">400 K</span>. The set up might look as follows.</p>
+$$ \Delta \kppress = \underbrace{ \int_{\kVa}^{\kVb} \left( - \dfrac{\kR\kT}{\kV^2} \right ) d\kV}_{\text{isothermal expansion}} + \underbrace{ \int_{\kTone}^{\kTtwo}\left( \dfrac{\kR}{\kV} \right) d\kT}_{\text{isochoric heating}} $$
+<p>or</p>
+$$ \begin{aligned} \Delta \kppress &= \int_{1.0 \,L/mol}^{3.0 \,L/mol} \left( - \dfrac{\kR( 400\,K)}{\kV^2} \right ) d\kV + \int_{200 \,K}^{400,\ K }\left( \dfrac{\kR}{1.0 \, L/mol} \right) d\kT \\[4pt] &= \left[ \dfrac{\kR(200\,K)}{\kV} \right]_{ 1.0\, L/mol}^{3.0\, L/mol} + \left[ \dfrac{\kR\kT}{3.0 \, L/mol} \right]_{ 200\,K}^{400\,K} \\[4pt] &= \kR \left[ \left( \dfrac{200\,K}{3.0\, L/mol} - \dfrac{200\,K}{1.0\, L/mol}\right) + \left( \dfrac{400\,K}{3.0\, L/mol} - \dfrac{200\,K}{3.0\, L/mol}\right) \right] \\[4pt] &= -5.47 \, atm \end{aligned} $$<sup class="fn" data-note="c-route-one"></sup>
+<p>Alternatively, one could calculate the change as an isochoric temperature change from $\kTone$ to $\kTtwo$ at $\kVa$ followed by an isothermal expansion from $\kVa$ to $\kVb$ at $\kTtwo$:</p>
+$$ \Delta \kppress = \int_{\kTone}^{\kTtwo}\left( \dfrac{\kR}{\kV} \right) d\kT + \int_{\kVa}^{\kVb} \left( - \dfrac{\kR\kT}{\kV^2} \right ) d\kV $$
+<p>or</p>
+$$ \begin{aligned} \Delta \kppress &= \int_{200 \,K}^{400,\ K }\left( \dfrac{\kR}{1.0 \, L/mol} \right) d\kT + \int_{1.0 \,L/mol}^{3.0 \,L/mol} \left( - \dfrac{\kR( 400\,K)}{\kV^2} \right ) d\kV \\[4pt] &= \left[ \dfrac{\kR\kT}{1.0 \, L/mol} \right]_{ 200\,K}^{400\,K} + \left[ \dfrac{\kR(400\,K)}{\kV} \right]_{ 1.0\, L/mol}^{3.0\, L/mol} \\[4pt] &= \kR \left[ \left( \dfrac{400\,K}{1.0\, L/mol} - \dfrac{200\,K}{1.0\, L/mol}\right) + \left( \dfrac{400\,K}{3.0\, L/mol} - \dfrac{400\,K}{1.0\, L/mol}\right) \right] \\[4pt] &= -5.47 \, atm \end{aligned} $$
+<p>This results demonstrates an important property of pressure in that <span data-concept="pressure-is-a-state-function">pressure is a state variable, and so the calculation of changes in pressure do not depend on the pathway</span>!</p>
+</div>
+</section>
+
+<section id="work">
+<h2>Work</h2>
+<p><span data-concept="kinds-of-work">Work can take several forms</span>, such as expansion against a resisting pressure, extending length against a resisting tension (like stretching a rubber band), stretching a surface against a surface tension (like stretching a balloon as it inflates) or pushing electrons through a circuit against a resistance. The key to defining the <span data-concept="thermodynamic-work">work</span> that flows in a process is to start with an infinitesimal amount of work defined by what is changing in the system.</p>
+<div class="book-table">
+  <div class="tcap"><span class="eyebrow">Table 3.1.1</span><span>Changes to the System</span></div>
+  <table>
+    <thead><tr><th>Type of work</th><th>Displacement</th><th>Resistance</th><th>dw</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Expansion</strong></td><td>dV (volume)</td><td>-p<sub>ext</sub> (pressure)</td><td>-p<sub>ext</sub>dV</td></tr>
+      <tr><td><strong>Electrical</strong></td><td>dQ (charge)</td><td>W (resistence)</td><td>-W dQ</td></tr>
+      <tr><td><strong>Extension</strong></td><td>dL (length)</td><td>-t (tension)</td><td>t dL</td></tr>
+      <tr><td><strong>Stretching</strong></td><td>dA</td><td>-s (surf. tens.)</td><td>sdA</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>The pattern followed is always an infinitesimal displacement multiplied by a resisting force. The total <span data-concept="thermodynamic-work">work</span> can then be determined by integrating along the pathway the change follows.</p>
+<div class="example" id="ex-19-1-2">
+<h3>Example 19.1.2 · Work from a Gas Expansion</h3>
+<p>What is the work done by 1.00 mol an ideal gas expanding from a volume of 22.4 L to a volume of 44.8 L against a constant external pressure of 0.500 atm?</p>
+<h4>Solution</h4>
+$$ d\kw = -\kpext dV $$
+<p>since the pressure is constant, we can integrate easily to get total work</p>
+$$ \begin{aligned} \kw &= -p_{exp} \int_{V_1}^{V_2} dV \\[4pt] &= -p_{exp} ( V_2-V_1) \\[4pt] &= -(0.500 \,am)(44.8 \,L - 22.4 \,L) \left(\dfrac{8.314 \,J}{0.08206 \,atm\,L}\right) \\[4pt] &= -1130 \,J = -1.14 \;kJ \end{aligned} $$<sup class="fn" data-note="c-example-work"></sup>
+<p><em>Note</em>: The ratio of gas law constants can be used to convert between atm∙L and J quite conveniently!</p>
+</div>
+</section>
