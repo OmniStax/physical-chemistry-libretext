@@ -172,6 +172,7 @@ class Converter:
         self.eq_count = 0
         self.img_count = 0
         self.tab_count = 0
+        self.macros = {}  # the page's own \\newcommand definitions (26.3)
 
     # ---- inline -------------------------------------------------------
     def inline(self, node):
@@ -247,7 +248,7 @@ class Converter:
         s = re.sub(r"\\\(([^${}\\\n]{1,20}?)\$", r"\\(\1\\)", s)
         s = re.sub(r"(?<![\\$])\$([^${}\\\n]{1,20}?)\\\)", r"\\(\1\\)", s)
         # \( … \) is inline; \[ … \] in a running paragraph is left to block()
-        s = re.sub(r"\\\((.+?)\\\)", lambda m: "$" + self.refs(self.inline_label(m.group(1).strip())) + "$", s, flags=re.S)
+        s = re.sub(r"\\\((.+?)\\\)", lambda m: "$" + self.refs(self.inline_label(expand(m.group(1).strip(), self.macros))) + "$", s, flags=re.S)
         s = self.refs(s) if "\\ref" in s else s
         return re.sub(r"\$\s*(\[ref:eq:[^\]]+\])\s*\$", r"\1", s)
 
@@ -265,6 +266,7 @@ class Converter:
     # ---- display maths --------------------------------------------------
     def display(self, tex):
         tex = re.sub(r"\s*<br>\s*", " ", tex).replace("\xa0", " ").strip()  # KaTeX refuses U+00A0
+        tex = expand(tex, self.macros)
         rows_env = re.search(r"\\begin\{(align|alignat|gather|eqnarray|flalign)\}", tex)
         nonumber = "\\nonumber" in tex or "\\notag" in tex
         labels = re.findall(r"\\label\s*\{\s*([^}]+?)\s*\}", tex)
@@ -626,6 +628,12 @@ def convert(page_json, title, page_ids, prefix=""):
             for k in list(nxt.contents):
                 e.append(k)
     conv = Converter(page_ids, prefix)
+    # a header template of \\newcommand lines (26.3, from DeVoe), hidden on the
+    # live page: its macros are expanded in the page's maths and the header dropped
+    for h in soup.select("div.Headertext"):
+        if "\\newcommand" in h.get_text():
+            conv.macros.update(page_macros(h.get_text().replace("\xa0", " ")))
+            (h.parent if h.parent.name == "h2" and not h.parent.get_text().replace(h.get_text(), "").strip() else h).decompose()
     root = soup.body or soup
     text = conv.children(root)
     text = tidy(re.sub(r"\n{3,}", "\n\n", text))

@@ -1,0 +1,113 @@
+{
+ "id": "24.5",
+ "module": "14507",
+ "chapter": "24",
+ "title": "Most Solutions are Not Ideal",
+ "short": "Non-ideal solutions",
+ "lead": "Above a real mixture the partial pressure of a component bends away from Raoult's straight line. Near each end of the composition range it is straight again, and the two ends follow two different laws.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "The two book figures of the Henry and Raoult lines, Figure 24.5.1 here and Figure 24.6.1 in Section 24.6, are folded into one live graph; its curve is a model with an illustrative vapor pressure, since the book's figures print no numbers.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The section prints no exercise. The one exercise here, its solution, its Bloom level and its concept tags are written by AI; it takes oxygen's Henry constant from Section 24.7. Numeric answers accept a 2% tolerance.",
+ "figures": [
+  {
+   "id": "sim-henry-raoult",
+   "kind": "sim",
+   "number": "24.5.1",
+   "folds": [
+    "24.6.1"
+   ],
+   "originals": [
+    "/media/ch24/113532-limiting-nonidealsolns.png",
+    "/media/ch24/113364-Figure_8.7.1.png"
+   ],
+   "original_caption": "Vapor pressure above an ideal and a non-ideal solution",
+   "draws": [
+    "pressure"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "two-limiting-laws",
+   "concept": "henrys-law",
+   "verb": "introduces"
+  },
+  {
+   "span": "two-limiting-laws",
+   "concept": "henrys-law-constant",
+   "verb": "introduces"
+  },
+  {
+   "span": "two-limiting-laws",
+   "concept": "limiting-laws",
+   "verb": "introduces"
+  },
+  {
+   "span": "two-limiting-laws",
+   "concept": "raoults-law",
+   "verb": "reinforces"
+  },
+  {
+   "span": "two-limiting-laws",
+   "concept": "mole-fraction",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "so it needs to be measured for each solute-solvent combination",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "two-limiting-laws",
+   "prompt": "<p>For oxygen dissolved in water at 25 °C, Henry's law constant in mole fractions is $\\kKH = 4.259\\times10^{4}$ atm. Air above the water has an oxygen partial pressure of 0.21 atm. What is the mole fraction of oxygen in the water, and why is it Henry's law, not Raoult's, that gives it?</p>",
+   "answer": {
+    "type": "number",
+    "value": 4.93e-06,
+    "unit": "",
+    "generated_by": "ai",
+    "hint": "Dissolved oxygen is the minority component, so $x \\rightarrow 0$: solve $\\kPone = \\kKH\\kxone$ for $\\kxone$.",
+    "solution": "<p>Oxygen in water is the solute, present at a tiny mole fraction, so it sits at the $x \\rightarrow 0$ end where Henry's law holds. Raoult's law would need the vapor pressure of pure liquid oxygen, which describes the other end of the range and has nothing to do with a dilute solution. With Henry's law,</p>$$ \\kxone = \\dfrac{\\kPone}{\\kKH} = \\dfrac{0.21\\ \\text{atm}}{4.259\\times10^{4}\\ \\text{atm}} = 4.93\\times10^{-6} $$<p>about five oxygen molecules per million molecules of water.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "henrys-law"
+  },
+  {
+   "exercise": "a1",
+   "concept": "limiting-laws"
+  }
+ ],
+ "footnotes": []
+}

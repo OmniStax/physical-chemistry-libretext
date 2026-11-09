@@ -1,0 +1,71 @@
+<section id="opening">
+<h2>Dissociation and charge</h2>
+<p>A solution with a <span data-concept="electrolyte-nonideality">strong electrolyte</span>, such as NaCl in water, is perhaps one of the most obvious systems to consider but, unfortunately, is also one of the more difficult ones. The reason is that the electrolyte produces two <em><strong>charged</strong></em> solutes, Na<sup>+</sup> and Cl<sup>+</sup><sup class="fn" data-note="c-cl-minus"></sup> (both in hydrated form), in solution. We need to consider the dissociation process and stoichiometry as we are bringing more than one solute species into solution. We also need to consider electrostatic interactions between solutes. The charges introduce a strong interaction that falls off with r<sup>-1</sup>, as opposed to ~r<sup>-6</sup> if only neutral species are present. This causes a very serious <span data-concept="electrolyte-nonideality">divergence from ideality even at very low concentrations</span>. Consider a <span data-concept="salt-dissociation">salt going into solution</span>:</p>
+$$ C_{ν_+}A_{ν_-} \rightarrow ν_+C^{z+} + ν_-A^{z-} \tag{25.5.1} $$
+<p>where $ν_+$ and $ν_-$ are the <em><strong><span data-concept="salt-dissociation">stoichiometric coefficients</span></strong></em> and $z_+$ and $z_-$ are the formal charges of the cation and anion, respectively. As we shall see, the stoichiometric coefficients involved in the dissociation process are important for a proper description of the thermodynamics of strong electrolytes. Charge neutrality demands:</p>
+$$ ν_+z_+ + ν_- z_- = 0 \tag{25.5.2} $$
+</section>
+
+<section id="thermodynamic-potentials-versus-the-diss">
+<h2>Thermodynamic potentials versus the dissociation</h2>
+<p>For the salt, we can write:</p>
+$$ \kmutwo =\kmutwostd + \kR\kT \ln a_2 \tag{25.5.3} $$
+<p>However, we need to take into account the <span data-concept="salt-chemical-potential">dissociation of the salt</span>.</p>
+<p>Usually Henry's law is taken as standard state for both type of ions. However, we cannot measure the activities of the ions separately as it is impossible to add one without adding the other. Nevertheless, we can derive a useful formalism that takes into account the dissociation process.</p>
+<figure class="dv" id="drv-salt-activity-ions"></figure>
+<p>Notice that the stoichiometric coefficients (Equation 25.5.1) are <em>exponents</em> in Equation 25.5.9. We now introduce the sum of the stoichiometric coefficients:</p>
+$$ ν_+ + ν_- = ν \tag{25.5.10} $$
+<p>and <em>define</em> the <em><strong><span data-concept="mean-ionic-activity">mean ionic activity</span></strong></em> $a_±$ as:</p>
+$$ a_±^ ν ≡ a_2 =a_+^{ν+}a_-^{ ν-} $$
+<div class="note">
+<div class="eyebrow">Note</div>
+<h3>Note</h3>
+<p>The <span data-concept="mean-ionic-activity">mean ionic activity</span> $a_\pm$ and the <span data-concept="activity">activity</span> of the salt are closely related but the relationship involves <em>exponents</em> due to stoichiometric coefficients involved in the dissociation process. For example:</p>
+<ul><li>For Na<sub>1</sub>Cl<sub>1</sub>: ν= 1+1 = <strong>2</strong>: a<sub>±</sub> <sup> <strong>2</strong> </sup>= a<sub>NaCl</sub></li><li>For Al<sub>2</sub>(SO<sub>4</sub>)<sub>3</sub>: ν= 2+3 = <strong>5</strong>: a<sub>±</sub> <sup> <strong>5</strong> </sup>= a<sub>Al<sub>2</sub></sub><sub>(SO<sub>4</sub>)<sub>3</sub></sub></li></ul>
+</div>
+</section>
+
+<section id="activity-coefficients">
+<h2>Activity coefficients</h2>
+<p>All this remains a formality unless we find a way to relate it back to the concentration of the salt. Usually <em>molality</em> is used as a convenient concentration measure rather than molarity because we are dealing with pretty strong deviations from ideal behavior and that implies that volume may not be an additive quantity. Molality does not involve volume in contrast to molarity. Working with molalities, we can define <span data-concept="ionic-activity-coefficients">activity coefficients for both ions</span>, even though we have no hope to determine them separately:</p>
+$$ a_+ =γ_+ m_+ \tag{25.5.11} $$
+$$ a_- =γ_- m_- \tag{25.5.12} $$
+<p>Stoichiometry dictates the <span data-concept="ion-molalities">molalities of the individual ions</span> must be related to the <em><strong>molality of the salt</strong></em> $m$ by:</p>
+$$ m_-=ν_-m \tag{25.5.13} $$
+$$ m_+=ν_+m \tag{25.5.14} $$
+<div class="note">
+<div class="eyebrow">Note</div>
+<h3>Note</h3>
+<p>We cannot measure the activities of the ions separately because it is impossible to add one without adding the other</p>
+</div>
+<p>Analogous to the <span data-concept="mean-ionic-activity">mean ionic activity</span>, we can define a <strong><span data-concept="mean-ionic-molality">mean ionic molality</span></strong> as:</p>
+$$ m_{\pm}^ν ≡ m_+^{ν+}m_-^{ ν-} \tag{25.5.15} $$
+<p>We can do the same for the <strong><span data-concept="mean-ionic-activity-coefficient">mean ionic activity coefficient</span></strong>:</p>
+$$ γ_{\pm}^ν = γ_+^{ν+}γ_-^{ν-} \tag{25.5.16} $$
+<figure class="dv" id="drv-salt-activity-mean"></figure>
+<div class="note">
+<div class="eyebrow">Note</div>
+<h3>Note</h3>
+<p>Note that when preparing a salt solution of molality $m$, we should <em><strong>substitute</strong>:</em></p>
+$$ m_-=ν_-m $$
+$$ m_+=ν_+m $$
+<p>into:</p>
+$$ m_±^ν ≡ m_+^{ν+}m_-^{ ν-} $$
+</div>
+<div class="example" id="ex-25-5-1">
+<h3>Example 25.5.1 · Aluminum Sulfate</h3>
+<p>For Al<sub>2</sub>(SO<sub>4</sub>)<sub>3</sub> we get:</p>
+<ul><li>ν= 2+3 = <strong>5</strong></li><li>a<sub>±</sub> <sup> <strong>5</strong> </sup>= a<sub>Al<sub>2</sub></sub><sub>(SO<sub>4</sub>)<sub>3</sub></sub></li><li>m<sub>-</sub>=3m</li><li>m<sub>+</sub>=2m</li></ul>
+<p>So:</p>
+<p>m<sub>±</sub> <sup> ν </sup>=m<sub>+</sub><sup>ν<sub>+</sub></sup>m<sub>-</sub><sup> ν<sub>-</sub></sup>=(2m)<sup>2</sup>(3m)<sup>3</sup>=<strong>108</strong>m<sup><strong>5</strong></sup></p>
+<p>a<sub>Al<sub>2</sub></sub><sub>(SO<sub>4</sub>)<sub>3</sub></sub>= a<sub>±</sub> <sup> <strong>5</strong> </sup> =<strong>108</strong>m<sup><strong>5</strong></sup>γ<sub>±</sub><sup>5</sup></p>
+<p>As you can see the stoichiometry enter <em>both</em> into the exponents <em>and</em> into the calculation of the molality. Notice that <span data-concept="salt-activity-mean-quantities">the activity of the salt now goes as the fifth power of its overall molality</span> (on top of the dependency of γ<sub>±</sub> of exp(√m) as shown below).</p>
+</div>
+</section>
+
+<section id="measuring-mean-ionic-activity-coefficien">
+<h2>Measuring mean ionic activity coefficients</h2>
+<p>In contrast to the individual coefficients, the <em><strong><span data-concept="mean-ionic-activity-coefficient">mean ionic activity coefficient</span></strong></em> $γ_{\pm}$ is a quantity that <em><strong><span data-concept="mean-ionic-gamma-from-vapor-pressure">can be determined</span></strong></em>. In fact we can use the same <span data-concept="gibbs-duhem-equation">Gibbs-Duhem</span> trick we did for <a class="xref" href="#24.7-non-volatile-solutes">the sucrose problem</a> to do so. We simply measure the water vapor pressure above the salt solution and use:<sup class="fn" data-note="c-integrand"></sup></p>
+$$ \ln γ_{\pm} = φ -1 + \int_{m'=0}^m [ φ -1 ]m' \,dm' $$
+<p>The fact that the salt itself has a negligible vapor pressure does not matter. Particularly for ions with high charges, the deviations from ideality are very strong even at tiny concentrations. Admittedly doing these vapor pressure measurements in pretty tedious, there are some other procedures involving electrochemical potentials. However, they too are tedious.</p>
+</section>

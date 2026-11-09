@@ -62,7 +62,7 @@ const f1 = (v) => fmt(v, v < 10 ? 2 : 1);
     const end = ps === null ? 500 : Math.min(500, ps);
     const phi = (p) => (p > end + 1e-9 ? NaN : Math.exp(lnPhiAt(g, p, t, gasRoot(g, p, t))));
     const box = { l: 130, r: W - 60, t: 115, b: 500 };
-    const ax = axes(ctx, box, [0, 500], [0.4, 1.2], { nx: 5, ny: 8, xl: 'pressure P (bar)', yl: 'fugacity coefficient φ', xc: C('pressure') });
+    const ax = axes(ctx, box, [0, 500], [0.4, 1.2], { nx: 5, ny: 8, xl: 'pressure P (bar)', yl: 'fugacity coefficient ϕ', xc: C('pressure') });
     line(ctx, ax.X(0), ax.Y(1), ax.X(500), ax.Y(1), alpha(PAL.ink, 0.45), 3, [10, 10]);
     plot(ctx, ax, phi, PAL.ink, { w: 5, x: [0.01, end] });
     hits.length = 0;
@@ -70,12 +70,12 @@ const f1 = (v) => fmt(v, v < 10 ? 2 : 1);
     const p = gone ? ps : Pc.v, ph = phi(p), fug = ph * p;
     if (ps !== null && ps <= 500) {
       dot(ctx, ax.X(ps), ax.Y(phi(ps)), PAL.ink, true, 10);
-      hits.push({ x: ax.X(ps), y: ax.Y(phi(ps)), r: 16, name: `${g.name} condenses at ${f1(ps)} bar, where φ = ${f3(phi(ps))}` });
+      hits.push({ x: ax.X(ps), y: ax.Y(phi(ps)), r: 16, name: `${g.name} condenses at ${f1(ps)} bar, where ϕ = ${f3(phi(ps))}` });
     }
     if (!gone) {
       line(ctx, ax.X(p), ax.Y(ph), ax.X(p), box.b, alpha(PAL.ink, 0.4), 2, [4, 8]);
       dot(ctx, ax.X(p), ax.Y(ph), C('pressure'), true, 9);
-      hits.push({ x: ax.X(p), y: ax.Y(ph), r: 16, name: `${fmt(p, 0)} bar: φ = ${f3(ph)}, f = ${f1(fug)} bar` });
+      hits.push({ x: ax.X(p), y: ax.Y(ph), r: 16, name: `${fmt(p, 0)} bar: ϕ = ${f3(ph)}, f = ${f1(fug)} bar` });
     }
     legend(ctx, ax, [{ s: `${g.name} as a van der Waals gas`, color: PAL.ink, w: 5, f: phi }, { s: 'ideal gas', color: alpha(PAL.ink, 0.45), w: 3, dash: [10, 10] }]);
     const tk = fmt(t, Math.abs(t - 298.15) < 0.01 ? 2 : 0);

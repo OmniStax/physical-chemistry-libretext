@@ -1435,3 +1435,42 @@ Known gaps: 21.5's jump at sublimation is drawn in the energy colour beside the 
 two violets sit close; 21.5's ΔS_trs and ΔS_sub write `\Delta \kSent_{trs}`, so their hover reads S's
 meaning; Δ_fus H and Δ_fus S (21.2) stay keys with no symbol row (19.8's `Delta_fusH` is the same
 quantity); 21.3's `gibbs-temperature-derivative` states 22.4's (∂G/∂T)_P = −S again, unlinked.
+
+## Chapter 22 pass · 2026-11-08
+
+Chapter 22 as built: 22.1–22.8 (no intro, no summary, no 22.E). 2 figure rows, both still 2D
+Sims (22.2's `sim-gibbs-sign`, ΔG = ΔH − TΔS crossing zero at 618 K; 22.8's
+`sim-fugacity-coefficient`, φ against P for the book's van der Waals gases); none moving, no 3D;
+`sim-gibbs-temperature` not built (no benzene data from memory). 10 derivations (22.1 one, 22.2
+two, 22.3 three with Example 22.3.1, 22.4 one, 22.5 two, 22.7 one). 13 exercises in the Exercises
+document, all kind `exercise`: 4 book keyed (22.5.1, 22.5.2 in 22.5; 22.5.3 → 22.3; 22.5.4 →
+22.4), 1 book unkeyed with an AI solution (22.5's unnumbered "Equation three"), 8 AI exercises;
+22.5.5 is held for 23.3. 14 AI-marked corrections: 8 footnotes and 6 derivation notes.
+
+Chapter pass: the builders' wanted variables rows: 22.1 `q` (heat) and `Delta_U`
+(`internal-energy-change`, the concept 19.x's ΔU rows name, not `internal-energy`); 22.2 `q`, `x`
+and `X` (the generalized force and displacement of non-volume work, `redefines`, worded to stand
+alone); 22.3 `q`, `w` (`thermodynamic-work`), `n_mol`, `R`; 22.5 `q`, `w`, `C_V`. The macros now
+replace the plain symbols: δq → `\kq` in 22.1's text and derivation and 22.2's derivation and
+summary, `xdX` → `\kx dX`, 22.3's dq and dw in the text and the `c-dw` footnote, n and R in 22.3's
+AI exercise, `\kDeltaU` for 22.1's ΔU (text and a1's solution), and 22.7's derivation reason
+writes H/T through the macros. Every `\k` macro of Chapter 22 now has a row in force (the three
+of 22.5 had none). Edge `gibbs-temperature-derivative` → `gibbs-energy` (staged in ch21, merged;
+Hasse-clean); the redundant `gibbs-helmholtz-equation` → `constant-pressure-heat-capacity`
+removed (reached through `entropy-change-constant-pressure`). 22.1: the book's "Consider a new
+state function, **Helmholtz energy**, **A**:" restored before the derivation with the
+`helmholtz-energy` span (rule 29.2); the derivation's A ≡ U − TS fact cites 22.1 and the
+definition shows once. The other derivations compared with `source.md`: nothing else lost.
+22.3's α and κ_T now carry their concepts' spans. 22.8's figure writes ϕ as the text's `\phi`
+sets it (axis title and hover names had φ). `colours:default` rerun (every type kept its colour).
+`check:content`: no errors, no warnings from the book's Chapter 22 (a ch24 link to an unbuilt 24.6
+belongs to that chapter's build). Both figures screenshot light and dark; every derivation
+scrubbed end to end: no console or KaTeX error on any Chapter 22 page.
+
+Known gaps: 22.2's readout gives ΔG(298 K) = −91.3 kJ, the book's text −91.21 kJ (−176.2 +
+298 × 0.285 = −91.27; not footnoted). Nine introduced concepts have their coverage row but no
+span in the text, being results shown in derivations or tables (22.1's dA; 22.3's first
+derivatives of U and H, the Euler relation, the U, A and G Maxwell relations and α/κ_T; 22.4's
+(∂H/∂P)_T). AI exercises in 22.4, 22.7 and 22.8
+write V̄, H̄, ΔG, T₁ and T₂ plain (no rows of those meanings in their sections). Lewis's date
+(1905 printed, 1901 from memory) stays unfootnoted, as decided.

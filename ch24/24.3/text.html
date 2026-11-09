@@ -1,0 +1,68 @@
+<section id="partial-molar-gibbs-energy">
+<h2>The partial molar Gibbs energy</h2>
+<p>In much the same fashion as the <span data-concept="partial-molar-quantity">partial molar volume</span> is defined, the <strong><span data-concept="partial-molar-quantity">partial molar Gibbs function</span></strong> is defined for compound $i$ in a mixture:</p>
+$$ \kmui = \left( \dfrac{\partial \kG}{\partial n_i} \right) _{\kP,\kT,n_j\neq i} \tag{24.3.1} $$
+<p>The partial molar function is of particular importance and is called the <strong><span data-concept="chemical-potential">chemical potential</span></strong>. The <span data-concept="chemical-potential">chemical potential</span> tells how the Gibbs function will change as the composition of the mixture changes. Since systems tend to seek a minimum aggregate Gibbs function, the <span data-concept="chemical-potential">chemical potential</span> will point to the direction the system can move in order to reduce the total Gibbs function and reach equilibrium. In general, the total change in the Gibbs function ($d\kG$) can be calculated from:</p>
+$$ d\kG = \left( \dfrac{\partial \kG}{\partial \kP} \right) _{\kT,n_i} d\kP + \left( \dfrac{\partial \kG}{\partial \kT} \right) _{\kP, n_i }d\kT + \sum_i \left( \dfrac{\partial \kG}{\partial n_i} \right) _{\kT,n_j\neq i} dn_i $$
+<p><sup class="fn" data-note="c-dg-partial"></sup>Or, by substituting the definition for the <span data-concept="chemical-potential">chemical potential</span>, and evaluating the pressure and temperature derivatives:</p>
+$$ d\kG = \kV d\kP - \kSent d\kT + \sum_i \kmui dn_i $$
+<p>But as it turns out, <span data-concept="fundamental-equations-composition">the chemical potential can be defined as the partial molar quantity of any of the four major thermodynamic functions</span> $\kU$, $\kHenth$, $\kA$, or $\kG$:</p>
+<div class="book-table">
+  <div class="tcap"><span class="eyebrow">Table 24.3.1</span><span>Chemical potential can be defined as the partial molar derivative any of the four major thermodynamic functions</span></div>
+  <table>
+    <thead><tr><th>$d\kU = \kT d\kSent - \kP d\kV + \sum_i \kmui dn_i$</th><th>$\kmui = \left( \dfrac{\partial \kU}{\partial n_i} \right) _{\kSent,\kV,n_j\neq i}$</th></tr></thead>
+    <tbody>
+      <tr><td>$d\kHenth = \kT d\kSent - \kV d\kT + \sum_i \kmui dn_i$<sup class="fn" data-note="c-dh"></sup></td><td>$\kmui = \left( \dfrac{\partial \kHenth}{\partial n_i} \right) _{\kSent,\kP,n_j\neq i}$</td></tr>
+      <tr><td>$d\kA = -\kP d\kV - \kT d\kSent + \sum_i \kmui dn_i$<sup class="fn" data-note="c-da"></sup></td><td>$\kmui = \left( \dfrac{\partial \kA}{\partial n_i} \right) _{\kV,\kT,n_j\neq i}$</td></tr>
+      <tr><td>$d\kG = \kV d\kP - \kSent d\kT + \sum_i \kmui dn_i$</td><td>$\kmui = \left( \dfrac{\partial \kG}{\partial n_i} \right) _{\kP,\kT,n_j\neq i}$</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>The last definition, in which the <span data-concept="chemical-potential">chemical potential</span> is defined as the partial molar Gibbs function, is the most commonly used, and perhaps the most useful (Equation 24.3.1).</p>
+</section>
+
+<section id="chemical-potential-and-pressure">
+<h2>Chemical potential and pressure</h2>
+<p>As the partial most Gibbs function, it is easy to show that:</p>
+$$ d\kmu = \kV d\kP - \kSent d\kT $$
+<p>where $\kV$ is the molar volume, and $\kSent$ is the molar entropy. Using this expression, it is easy to show that:</p>
+$$ \left( \dfrac{\partial \kmu}{\partial \kP} \right) _{\kT} = \kV $$
+<p>and so at constant temperature:</p>
+$$ \int_{\kmustd}^{\kmu} d\kmu = \int_{\kPstd}^{\kP} \kV\,d\kP \tag{24.3.2} $$
+<p>So that <span data-concept="gibbs-solid-pressure">for a substance for which the molar volume is fairly independent of pressure at constant temperature</span> (i. e., $\kappa_T$ is very small), therefore Equation 24.3.2 becomes:</p>
+$$ \int_{\kmustd}^{\kmu} d\kmu = \kV \int_{\kPstd}^{\kP} d\kP $$
+$$ \kmu - \kmustd = \kV(\kP-\kPstd) $$
+<p>or:</p>
+$$ \kmu = \kmustd + \kV(\kP-\kPstd) $$
+<p>Where $\kPstd$ is the standard state pressure (<span data-type="pressure">1 bar</span>) and $\kmustd$ is the <span data-concept="chemical-potential">chemical potential</span> at the standard pressure. If the substance is highly compressible (such as a gas) the pressure dependence of the molar volume is needed to complete the integral. If the substance is an ideal gas:</p>
+$$ \kV =\dfrac{\kR\kT}{\kP} $$
+<p>So at constant temperature, Equation 24.3.2 then becomes:</p>
+$$ \int_{\kmustd}^{\kmu} d\kmu = \kR\kT \int_{\kPstd}^{\kP} \dfrac{d\kP}{\kP} \tag{24.3.3} $$
+<p>or:</p>
+$$ \kmu = \kmustd + \kR\kT \ln \left(\dfrac{\kP}{\kPstd} \right) $$
+<p>A lot of chemistry takes place in solution and therefore this topic is of prime interest for chemistry.</p>
+</section>
+
+<section id="thermodynamic-potentials-of-solutions">
+<h2>Thermodynamic potentials of solutions</h2>
+<p><span data-concept="gibbs-ideal-gas-pressure">The Gibbs free energy of an ideal gas depends logarithmically on pressure</span>:</p>
+$$ \kG = \kG^o + \kR\kT \ln \dfrac{\kP}{\kPstd} $$
+<p>P<sup><s>o</s></sup> is <em>is often dropped out of the formula.</em> and we write:</p>
+$$ \kG = \kG^o + \kR\kT \ln \kP $$
+<div class="note">
+<div class="eyebrow">Note</div>
+<p>Notice however that although $\kP$ and $\kP/\kPstd$ have the same numerical value, the dimensions are different. $\kP$ usually has dimensions of bar, but $\kP/\kPstd$ is <em>dimensionless</em>.</p>
+</div>
+<p>If we have a gas mixture we can hold the same logarithmic argument for each <span data-type="pressure">partial pressure</span> as the gases do not notice each other. We do need to take into account the number of moles of each and work with (partial) molar values, i.e. <span data-concept="ideal-gas-mixture-chemical-potential">the thermodynamic potential</span>:</p>
+$$ \kmuj = \kmustdj + \kR\kT \ln \dfrac{P_j}{\kPstd} \tag{24.3.4} $$
+<p>If we are dealing with an equilibrium over an ideal liquid solution the situation in the gas phase gives us a probe for the situation in the liquid. <span data-concept="component-phase-equilibrium">The equilibrium must hold for each of <em>all</em> components j (say two in binary mixture). That means that for each of them the thermodynamic potential in the liquid and in the gas must be equal</span>:</p>
+$$ \kmuslnj = \kmugasj $$
+<p>for all $j$. Consider what happens to a pure component, e.g. $j=1$ in equilibrium with its vapor. We can write:</p>
+$$ \kmuone^{pure \,liq}= \kmuone^{pure\, vapor}=\kmuone^{o} + \kR\kT \ln \dfrac{\kPstarone}{\kPstd} $$
+<p>The asterisk in $\kPstarone$ denotes the <span data-concept="equilibrium-vapor-pressure">equilibrium vapor pressure</span> of pure component 1 and we will use that to indicate <span data-concept="pure-liquid-chemical-potential">the thermodynamic potential of pure compounds</span> too:</p>
+$$ \kmuone^{*liq}= \kmuone^{o} + \kR\kT \ln \dfrac{\kPstarone}{\kPstd} \tag{24.3.5} $$
+<p>Combining Equations 24.3.5 and 24.3.4 we find <span data-concept="solution-chemical-potential-vapor">a relationship between the solution and the pure liquid</span>:</p>
+$$ \kmuslnj=\kmustarj + \kR\kT \ln \dfrac{P_j}{\kPstarj} $$
+<figure class="dv" id="drv-solution-mu"></figure>
+<p>Notice that the <em>gas</em> and its pressure is used to link the mixture and the pure compound.</p>
+</section>

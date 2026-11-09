@@ -1,0 +1,356 @@
+{
+ "id": "25.5",
+ "module": "14517",
+ "chapter": "25",
+ "title": "Electrolytes Solutions are Nonideal at Low Concentrations",
+ "short": "Electrolyte solutions",
+ "lead": "A dissolved salt puts charged ions into the solvent, and the long reach of their electrostatic attraction makes the solution nonideal even when it is very dilute. Its thermodynamics has to follow the dissociation, with quantities built from both ions at once.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "The book prints no credits for this page.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": []
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercise here; the one exercise is new and AI-written, with an AI solution, and its answer was checked by computation.",
+ "figures": [],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "opening",
+   "concept": "electrolyte-nonideality",
+   "verb": "introduces"
+  },
+  {
+   "span": "opening",
+   "concept": "salt-dissociation",
+   "verb": "introduces"
+  },
+  {
+   "span": "thermodynamic-potentials-versus-the-diss",
+   "concept": "salt-chemical-potential",
+   "verb": "introduces"
+  },
+  {
+   "span": "thermodynamic-potentials-versus-the-diss",
+   "concept": "mean-ionic-activity",
+   "verb": "introduces"
+  },
+  {
+   "span": "thermodynamic-potentials-versus-the-diss",
+   "concept": "activity",
+   "verb": "uses"
+  },
+  {
+   "span": "thermodynamic-potentials-versus-the-diss",
+   "concept": "chemical-potential",
+   "verb": "uses"
+  },
+  {
+   "span": "thermodynamic-potentials-versus-the-diss",
+   "concept": "henry-activity-convention",
+   "verb": "uses"
+  },
+  {
+   "span": "activity-coefficients",
+   "concept": "ionic-activity-coefficients",
+   "verb": "introduces"
+  },
+  {
+   "span": "activity-coefficients",
+   "concept": "ion-molalities",
+   "verb": "introduces"
+  },
+  {
+   "span": "activity-coefficients",
+   "concept": "mean-ionic-molality",
+   "verb": "introduces"
+  },
+  {
+   "span": "activity-coefficients",
+   "concept": "salt-activity-mean-quantities",
+   "verb": "introduces"
+  },
+  {
+   "span": "activity-coefficients",
+   "concept": "mean-ionic-activity-coefficient",
+   "verb": "reinforces"
+  },
+  {
+   "span": "measuring-mean-ionic-activity-coefficien",
+   "concept": "mean-ionic-gamma-from-vapor-pressure",
+   "verb": "introduces"
+  },
+  {
+   "span": "measuring-mean-ionic-activity-coefficien",
+   "concept": "mean-ionic-activity-coefficient",
+   "verb": "uses"
+  },
+  {
+   "span": "measuring-mean-ionic-activity-coefficien",
+   "concept": "osmotic-coefficient",
+   "verb": "uses"
+  },
+  {
+   "span": "measuring-mean-ionic-activity-coefficien",
+   "concept": "gibbs-duhem-equation",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "Analogous to the mean ionic activity, we can define a",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "activity-coefficients",
+   "prompt": "<p>A solution of CaCl<sub>2</sub> has molality $m = 0.010$ mol/kg and mean ionic activity coefficient $γ_\\pm = 0.73$. Find (a) the mean ionic molality $m_\\pm$ and (b) the activity $a_2$ of the salt.</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 0.0159,
+      "unit": "mol/kg",
+      "hint": "CaCl₂ gives $ν_+ = 1$ and $ν_- = 2$, so $m_+ = m$ and $m_- = 2m$."
+     },
+     {
+      "part": "b",
+      "value": 1.56e-06
+     }
+    ],
+    "solution": "<p>CaCl<sub>2</sub> dissociates into one Ca<sup>2+</sup> and two Cl<sup>−</sup>, so $ν_+ = 1$, $ν_- = 2$ and $ν = 3$. The ion molalities are $m_+ = 0.010$ mol/kg and $m_- = 0.020$ mol/kg.</p><p>(a) $m_\\pm^3 = m_+m_-^2 = (0.010)(0.020)^2 = 4.0\\times10^{-6}$, so $m_\\pm = 4^{1/3}(0.010) = 0.0159$ mol/kg.</p><p>(b) $a_2 = a_\\pm^3 = γ_\\pm^3 m_\\pm^3 = (0.73)^3(4.0\\times10^{-6}) = 1.56\\times10^{-6}$, with $m_\\pm$ taken relative to 1 mol/kg. Without the activity coefficient the activity would be $4.0\\times10^{-6}$; the ions' attraction lowers it by a factor of 0.39.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "mean-ionic-molality"
+  },
+  {
+   "exercise": "a1",
+   "concept": "salt-activity-mean-quantities"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-cl-minus",
+   "kind": "correction",
+   "html": "The chloride ion carries a negative charge: Cl<sup>−</sup>."
+  },
+  {
+   "id": "c-integrand",
+   "kind": "correction",
+   "html": "The integrand is $(φ - 1)/m'$, not $[φ - 1]m'$: $\\ln γ_\\pm = φ - 1 + \\int_0^m \\dfrac{φ - 1}{m'}\\,dm'$, the form Section 24.7 prints for a solute's activity coefficient."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "salt-activity-ions",
+   "what": "the activity of a salt from its ions",
+   "source": "Physical Chemistry (LibreTexts), 25.5 Electrolytes Solutions are Nonideal at Low Concentrations",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kmutwo = \\kmutwostd + \\kR\\kT\\ln a_2",
+       "src": "(25.5.3)"
+      },
+      {
+       "tex": "\\kmutwo = \\nu_+\\kmuplus + \\nu_-\\kmuminus",
+       "src": "(25.5.4)"
+      },
+      {
+       "tex": "\\kmutwostd = \\nu_+\\kmuplusstd + \\nu_-\\kmuminusstd",
+       "src": "(25.5.5)"
+      },
+      {
+       "tex": "\\kmuplus = \\kmuplusstd + \\kR\\kT\\ln a_+",
+       "src": "(25.5.6)"
+      },
+      {
+       "tex": "\\kmuminus = \\kmuminusstd + \\kR\\kT\\ln a_-",
+       "src": "(25.5.7)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\kmutwo} = \\mk{p}{\\nu_+\\kmuplus} + \\mk{n}{\\nu_-\\kmuminus}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\kmutwo} = \\mk{p}{\\nu_+(\\kmuplusstd + \\kR\\kT\\ln a_+)} + \\mk{n}{\\nu_-(\\kmuminusstd + \\kR\\kT\\ln a_-)}",
+       "uses": [
+        3,
+        4
+       ]
+      },
+      {
+       "tex": "\\mk{l}{\\kmutwo} = \\mk{s}{\\nu_+\\kmuplusstd + \\nu_-\\kmuminusstd} + \\mk{g}{\\kR\\kT(\\nu_+\\ln a_+ + \\nu_-\\ln a_-)}",
+       "uses": [],
+       "map": {
+        "p": [
+         "s",
+         "g"
+        ],
+        "n": [
+         "s",
+         "g"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{l}{\\kmutwo} = \\mk{s}{\\kmutwostd} + \\mk{g}{\\kR\\kT(\\nu_+\\ln a_+ + \\nu_-\\ln a_-)}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{l}{\\kmutwostd + \\kR\\kT\\ln a_2} = \\mk{s}{\\kmutwostd} + \\mk{g}{\\kR\\kT(\\nu_+\\ln a_+ + \\nu_-\\ln a_-)}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{l}{\\kR\\kT\\ln a_2} = \\mk{g}{\\kR\\kT(\\nu_+\\ln a_+ + \\nu_-\\ln a_-)}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{g}{\\nu_+\\ln a_+ + \\nu_-\\ln a_-} = \\mk{l}{\\ln a_2}",
+       "uses": []
+      }
+     ],
+     "num": "(25.5.8)",
+     "src": "25.5",
+     "note": "The book prints Equation 25.5.6 as $\\mu_+ = \\mu_-^o + RT\\ln a_+$, with the anion's standard potential. The cation's belongs there: $\\mu_+ = \\mu_+^o + RT\\ln a_+$."
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      }
+     ],
+     "then": {
+      "tex": "\\mk{g}{\\nu_+\\ln a_+ + \\nu_-\\ln a_-} = \\mk{l}{\\ln a_2}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{g}{\\ln\\left(a_+^{\\nu_+}a_-^{\\nu_-}\\right)} = \\mk{l}{\\ln a_2}",
+       "uses": [],
+       "cap": "$\\nu\\ln a = \\ln a^{\\nu}$, and a sum of logarithms is the logarithm of the product."
+      },
+      {
+       "tex": "\\mk{l}{a_2} = \\mk{g}{a_+^{\\nu_+}a_-^{\\nu_-}}",
+       "uses": [],
+       "cap": "Taking the exponent of either side."
+      }
+     ],
+     "num": "(25.5.9)",
+     "src": "25.5"
+    }
+   ]
+  },
+  {
+   "id": "salt-activity-mean",
+   "what": "the activity of a salt from its mean ionic quantities",
+   "source": "Physical Chemistry (LibreTexts), 25.5 Electrolytes Solutions are Nonideal at Low Concentrations",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "a_2 = a_+^{\\nu_+}a_-^{\\nu_-}",
+       "src": "(25.5.9)",
+       "drv": "salt-activity-ions"
+      },
+      {
+       "tex": "a_\\pm^{\\nu} \\equiv a_2"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{a_2} = \\mk{r}{a_+^{\\nu_+}a_-^{\\nu_-}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{a_2} = \\mk{a}{a_\\pm^{\\nu}} = \\mk{r}{a_+^{\\nu_+}a_-^{\\nu_-}}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "num": "(25.5.17)",
+     "src": "25.5"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "a_+ = \\gamma_+ m_+",
+       "src": "(25.5.11)"
+      },
+      {
+       "tex": "a_- = \\gamma_- m_-",
+       "src": "(25.5.12)"
+      },
+      {
+       "tex": "\\gamma_\\pm^{\\nu} = \\gamma_+^{\\nu_+}\\gamma_-^{\\nu_-}",
+       "src": "(25.5.16)"
+      },
+      {
+       "tex": "m_\\pm^{\\nu} \\equiv m_+^{\\nu_+}m_-^{\\nu_-}",
+       "src": "(25.5.15)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{a_2} = \\mk{a}{a_\\pm^{\\nu}} = \\mk{r}{a_+^{\\nu_+}a_-^{\\nu_-}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{a_2} = \\mk{a}{a_\\pm^{\\nu}} = \\mk{r}{(\\gamma_+m_+)^{\\nu_+}(\\gamma_-m_-)^{\\nu_-}}",
+       "uses": [
+        1,
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{l}{a_2} = \\mk{a}{a_\\pm^{\\nu}} = \\mk{g}{\\gamma_+^{\\nu_+}\\gamma_-^{\\nu_-}}\\,\\mk{m}{m_+^{\\nu_+}m_-^{\\nu_-}}",
+       "uses": [],
+       "map": {
+        "r": [
+         "g",
+         "m"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{l}{a_2} = \\mk{a}{a_\\pm^{\\nu}} = \\mk{g}{\\gamma_\\pm^{\\nu}}\\,\\mk{m}{m_+^{\\nu_+}m_-^{\\nu_-}}",
+       "uses": [
+        3
+       ]
+      },
+      {
+       "tex": "\\mk{l}{a_2} = \\mk{a}{a_\\pm^{\\nu}} = \\mk{g}{\\gamma_\\pm^{\\nu}}\\,\\mk{m}{m_\\pm^{\\nu}}",
+       "uses": [
+        4
+       ]
+      }
+     ],
+     "num": "(25.5.18)",
+     "src": "25.5"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,57 @@
+<section id="activity-coefficients">
+<h2>Activity and activity coefficients</h2>
+<p>In the ideal case, we have seen that the thermodynamic potential for species $i$ can be written as:</p>
+$$ \kmuslni=μ^o_i + \kR\kT \ln \,\kxi=μ^o_2 + \kR\kT \ln \left(\dfrac{P_i}{\kPstd}\right) $$<sup class="fn" data-note="c-mu2"></sup>
+<p>One approach to non-ideality is to simply <em><strong>redefine</strong></em> the problem and say:</p>
+$$ \kmuslni \equiv μ^o_i + \kR\kT \ln\, a_i $$
+<p>≡ indicates this is actually a definition. The newly defined variable a<sub>2</sub> is known as the <strong><span data-concept="activity">activity</span></strong>. Alternatively we can define it as:</p>
+$$ [a_i] \equiv \dfrac{P_i}{\kPstd} $$
+<p>As at high enough values of the mole fraction we know that we can still apply <span data-concept="raoults-law">Raoult law</span>. So $a_i$ must approach $\kxi$ in this limit, but for other concentrations this will no longer hold. Often this is expressed in terms of an <em><strong><span data-concept="activity-coefficient">activity coefficient</span></strong></em> $\gamma$:</p>
+$$ [a_i] = \kgammai \kxi $$
+<p>For high values of $\kxi$, $\kgammai$ will approach unity. If we model the non-ideality with a <span data-concept="margules-function">Margules function</span> we see that:</p>
+$$ P_i = \kxi\kPstd\kfMar $$
+$$ [a_i] = \left[\frac{P_i}{\kPstd}\right] = \left[\frac{\kxi\kPstd\kfMar}{\kPstd}\right] = [\kxi\kfMar] $$
+<p><span data-concept="margules-activity-coefficient">The activity coefficient and the Margules function are the same thing in this description.</span></p>
+</section>
+
+<section id="regular-solutions">
+<h2>Regular solutions</h2>
+<p>A special and simplest case of a <span data-concept="margules-function">Margules function</span> is the case where all but one Margules parameters ($\kareg$) can be neglected. Such a system is called a <em><strong><span data-concept="regular-solution-activities">regular solution</span></strong>.</em> In this case, we can write:</p>
+$$ a_1 = \kxone e^{\kareg\kxtwo^2} $$
+<p>We can use <span data-concept="gibbs-duhem-equation">Gibbs-Duhem</span> to show that this <em>implies</em>:</p>
+$$ a_2 = \kxtwo e^{\kareg\kxone^2} $$
+<figure class="dv" id="drv-regular-second-activity"></figure>
+<h3>Gibbs free energy of regular solutions</h3>
+<p>Consider the change in <span data-concept="regular-gibbs-energy-of-mixing">Gibbs free energy when we mix two components to form a regular solution</span>:</p>
+<figure class="dv" id="drv-regular-mixing-gibbs"></figure>
+<p>In this expression we see that we have an additional term to the <span data-concept="entropy-of-mixing">entropy of mixing</span> term we had seen before. Its coefficient $\kareg$ is dimensionless but represents the fact that the (strong!) interactions between the molecules are different depending on who is the neighbor. In general. $\kareg$ can be written as $\kWint/\kR\kT$, where $\kWint$ represents an <span data-concept="regular-interaction-energy">energy (enthalpy) that brings the difference in interaction energies into account</span>. $\kWint$ does not depend strongly on temperature. We could look at $\kWint$ as the difference in average interaction energies:</p>
+$$ \kWint = 2\kUot - \kUoo - \kUtt $$
+<p>Rearranging we get:</p>
+$$ \frac{\kDeltamixG}{\kWint} = \frac{\kR\kT}{\kWint} [\kxone\ln{X_1}+\kxtwo\ln{\kxtwo}]+\kxone\kxtwo $$
+<p>The two terms will <em><strong>compete</strong></em> as a function of temperature. The mixing entropy will be more important at high temperatures, the interaction enthalpy at low temperatures. The entropy term has a <em>minimum</em> at x<sub>1</sub>=0.5, the enthalpy term a <em>maximum</em> if W is positive. So, one tends to favor mixing, the other segregation and we will get a compromise between the two. Depending on the value of $\kR\kT/\kWint$ (read: temperature), we can either get one or two minima. This means that at low temperatures there will be a solubility limit of 1 into 2 and <em>vice versa</em>. At higher temperatures the two components can mix completely. At the transition between these two regimes we will have <em><strong><span data-concept="consolute-point">critical or consolute point</span></strong>.</em></p>
+<figure class="sim" id="sim-mixing-gibbs">
+  <div class="sim-head"><span class="eyebrow">Sim</span><span>Lower $\kR\kT/\kWint$ below one half and the single minimum of the <span data-concept="regular-gibbs-energy-of-mixing">Gibbs energy of mixing</span> splits in two. A mixture between the two touching points of the dashed tangent lowers its Gibbs energy by separating into those two liquids, and the dome on the right traces their compositions up to the <span data-concept="consolute-point">consolute point</span>.</span></div>
+</figure>
+<p>Notice that even though we used the vapor pressures of the gas to develop our theory, they are conspicuously absent from the final result. The same thing we said about melting points hold true here. Because we are dealing with the miscibility behavior of two condensed phases, the outcome should not depend very strongly on the total pressure of our experiment.</p>
+<p>Although in regular solutions the <span data-concept="consolute-point">consolute point</span> is predicted to be a maximum in temperature, we can find them as minima as well in practice. The nicotine-water system even has two <span data-concept="consolute-point">consolute points</span>, an upper and a lower one. When heating up a mixture of these we first observe mixing, then segregation and then mixing again. Obviously this behavior is far more complicated than we can describe with just one Margules parameter.</p>
+<h3>Partial molar volumes</h3>
+<p>What we said above about <span data-concept="ideal-volume-of-mixing">volumes simply being additive in the ideal case</span> is no longer true here.</p>
+$$ \left(\frac{\partial\Delta G_{mix}}{\partial \kP}\right)_{\kT} = \Delta V_\text{regular} $$
+$$ \left(\frac{\partial\Delta H_{mix}+\kR\kT(n_1\ln{[\kxone]}+n_2\ln{[\kxtwo]})}{\partial \kP}\right)_{\kT} = \kDeltamixV $$
+$$ \left(\frac{\partial\Delta H_{mix}}{\partial \kP}\right)_{\kT} = \kDeltamixV $$
+<p>In general the enthalpy of mixing does depend on pressure as it is related to the interactions between the molecules in solution. ($\kWint$ depends on the distance between them). This means that <span data-concept="regular-volume-of-mixing">partial molar volumes now become a function of composition and volume is no longer simply additive</span>.</p>
+</section>
+
+<section id="real-solutions">
+<h2>Real solutions</h2>
+<p>Notice that the curves are <em>symmetrical</em> around $x=0.5$. This implies that it is as easy (or not) dissolving A into B as vice versa. In many cases this is not realistic. Many systems diverge more seriously from ideal behavior that the regular one. Up to a point we can model that by adding more terms to the <span data-concept="margules-function">Margules function</span>. For example, adding a β-term undoes the symmetry (see example 24-7).<sup class="fn" data-note="c-example"></sup> However, many systems are so non-ideal that the Margules expression become unwieldy with too many parameters.</p>
+</section>
+
+<section id="boiling-non-ideal-solutions">
+<h2>Boiling non-ideal solutions</h2>
+<h3>Azeotropes</h3>
+<p>For ideal solutions we have seen that there is a lense shaped two-phase region between the gas and the liquid phase. For non-ideal systems the two-phase region can attain different shapes. In many cases there is either a minimum or a maximum. As such a point the phase gap closes to a point that is known as an <em><span data-concept="azeotrope">azeotrope</span></em>. It represents a composition of the liquid that boils <em>congruently</em>. That means that the vapor and the liquid have the same composition for a change. <span data-concept="azeotrope">Azeotropes</span> impose an important limitation unto distillation: they represent the end point of a distillation beyond which we can not purify by this method.</p>
+<h3>Eutectics</h3>
+<p>Another point to be made is that in the diagram with the <span data-concept="consolute-point">consolute point</span> we are assuming the pressure to be constant. If we lower the pressure this would affect the boiling points strongly: <span data-concept="boiling-gap-meets-solubility-gap">the whole gas-liquid gap would come down in temperature</span> (see animation).<sup class="fn" data-note="c-animation"></sup> The mixing behavior is only weakly affected. (The reason is that one involves the volume term of the gas, the other only of the liquid(s)). At lower pressures it is possible therefore that the <span data-concept="consolute-point">consolute point</span> is <em>above</em> the gas-liquid gap. In other words: the mixtures will boil before they get a chance to mix. The boiling points will be lower there than for the pure compounds. There will be a composition for which the boiling point is at a minimum and where the mixture boils congruently (i.e. to a vapor with the same (overall) composition).</p>
+<p>The mutual solubility limits increase as temperature increases, just as happens in the critical mixing case, but that due to the competition from the vapor phase this process comes to an end at the eutectic temperature. At this temperature one liquid boils always completely, the other one in part. At the eutectic composition they both boil away simultaneously.</p>
+</section>

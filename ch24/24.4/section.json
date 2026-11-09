@@ -1,0 +1,351 @@
+{
+ "id": "24.4",
+ "module": "14506",
+ "chapter": "24",
+ "title": "Ideal Solutions obey Raoult's Law",
+ "short": "Ideal solutions",
+ "lead": "Two volatile liquids that mix ideally each obey Raoult's law, which fixes the pressure and temperature diagrams used for distillation. The Gibbs energy of forming such a solution can be written down at once, and with it what happens to the enthalpy and the volume.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "Figures 24.4.1 and 24.4.2 are kept as the book prints them; the first caption names ethanol's mole fraction as the axis, since the image's X_H₂O label contradicts its own end points.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The section prints no exercise. Both exercises here, their solutions, Bloom levels and concept tags are written by AI; the second uses the book's vapor pressures at 75 °C. Numeric answers accept a 2% tolerance.",
+ "figures": [
+  {
+   "id": "fig-24-4-1",
+   "kind": "photo",
+   "number": "24.4.1",
+   "draws": []
+  },
+  {
+   "id": "fig-24-4-2",
+   "kind": "photo",
+   "number": "24.4.2",
+   "draws": []
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "raoults-law-volatile",
+   "concept": "raoults-law",
+   "verb": "reinforces"
+  },
+  {
+   "span": "raoults-law-volatile",
+   "concept": "ideal-solution",
+   "verb": "uses"
+  },
+  {
+   "span": "raoults-law-volatile",
+   "concept": "pressure-composition-diagram",
+   "verb": "reinforces"
+  },
+  {
+   "span": "raoults-law-volatile",
+   "concept": "temperature-composition-diagram",
+   "verb": "reinforces"
+  },
+  {
+   "span": "raoults-law-volatile",
+   "concept": "lever-rule",
+   "verb": "uses"
+  },
+  {
+   "span": "raoults-law-volatile",
+   "concept": "distillation",
+   "verb": "reinforces"
+  },
+  {
+   "span": "gibbs-energy-of-mixing",
+   "concept": "ideal-gibbs-energy-of-mixing",
+   "verb": "introduces"
+  },
+  {
+   "span": "gibbs-energy-of-mixing",
+   "concept": "ideal-enthalpy-of-mixing",
+   "verb": "introduces"
+  },
+  {
+   "span": "gibbs-energy-of-mixing",
+   "concept": "ideal-solution-chemical-potential",
+   "verb": "uses"
+  },
+  {
+   "span": "gibbs-energy-of-mixing",
+   "concept": "entropy-of-mixing",
+   "verb": "uses"
+  },
+  {
+   "span": "gibbs-energy-of-mixing",
+   "concept": "gibbs-energy",
+   "verb": "uses"
+  },
+  {
+   "span": "volumes-additive",
+   "concept": "ideal-volume-of-mixing",
+   "verb": "introduces"
+  },
+  {
+   "span": "volumes-additive",
+   "concept": "gibbs-first-derivatives",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "where $n$ is the total moles",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "gibbs-energy-of-mixing",
+   "prompt": "<p>Two liquids that form an ideal solution are mixed at 298.15 K, 0.500 mol of each. Find (a) $\\kDeltamixG$ in kJ and (b) $\\kDeltamixS$ in J/K. What is $\\kDeltamixH$?</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": -1.72,
+      "unit": "kJ",
+      "hint": "Here $n = 1.00$ mol and both mole fractions are 0.500."
+     },
+     {
+      "part": "b",
+      "value": 5.76,
+      "unit": "J/K"
+     }
+    ],
+    "solution": "<p>(a) With $n = 1.00$ mol and $\\kxA = \\kxB = 0.500$, the sum is $0.500\\ln 0.500 + 0.500\\ln 0.500 = \\ln 0.500 = -0.6931$, so</p>$$ \\kDeltamixG = (1.00\\ \\text{mol})(8.314\\ \\text{J K}^{-1}\\text{mol}^{-1})(298.15\\ \\text{K})(-0.6931) = -1718\\ \\text{J} = -1.72\\ \\text{kJ} $$<p>(b) $\\kDeltamixS = -n\\kR\\sum_i \\kxi\\ln\\kxi = -(1.00)(8.314\\ \\text{J/K})(-0.6931) = 5.76$ J/K. For an ideal solution $\\kDeltamixH = 0$, and indeed $-\\kT\\kDeltamixS = -(298.15)(5.76)$ J $= -1.72$ kJ is all of $\\kDeltamixG$.</p>"
+   }
+  },
+  {
+   "id": "a2",
+   "source_id": "ethanol has a pure vapor pressure of 945 Torr",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "raoults-law-volatile",
+   "prompt": "<p>Take the book's vapor pressures at 75 °C, 384 Torr for water and 945 Torr for ethanol, and treat the mixture as ideal. For a liquid with equal mole fractions of the two, find (a) the total vapor pressure and (b) the mole fraction of ethanol in the vapor.</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 664.5,
+      "unit": "Torr",
+      "hint": "Each partial pressure is $P_j = x_j\\kPstarj$; the total is their sum."
+     },
+     {
+      "part": "b",
+      "value": 0.711,
+      "unit": ""
+     }
+    ],
+    "solution": "<p>(a) By Raoult's law the partial pressures are $0.500 \\times 384 = 192.0$ Torr for water and $0.500 \\times 945 = 472.5$ Torr for ethanol, so the total is $664.5$ Torr. (b) The vapor's mole fraction of ethanol is its share of the pressure, $472.5/664.5 = 0.711$. The vapor holds far more ethanol than the liquid's 0.500, because ethanol is the more volatile of the two.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "ideal-gibbs-energy-of-mixing"
+  },
+  {
+   "exercise": "a1",
+   "concept": "ideal-enthalpy-of-mixing"
+  },
+  {
+   "exercise": "a1",
+   "concept": "entropy-of-mixing"
+  },
+  {
+   "exercise": "a2",
+   "concept": "raoults-law"
+  },
+  {
+   "exercise": "a2",
+   "concept": "ideal-solution"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-water-ethanol",
+   "kind": "correction",
+   "html": "Water and ethanol do not form an ideal solution. They deviate positively from Raoult's law and form a minimum-boiling azeotrope near 89 mol % ethanol (95.6 % by mass), which boils at 78.2 °C at 1 atm."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "ideal-mixing",
+   "what": "the Gibbs energy and enthalpy of ideal mixing",
+   "source": "Physical Chemistry (LibreTexts), 24.4 Ideal Solutions obey Raoult's Law",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kDeltamixG = n_1\\mu_1^{sln}+n_2\\mu_2^{sln} - (n_1\\mu_1^* + n_2\\mu_2^*)"
+      },
+      {
+       "tex": "\\kmuslni = \\kmustari + \\kR\\kT\\ln \\kxi",
+       "src": "24.2"
+      },
+      {
+       "tex": "\\kxi = \\dfrac{n_i}{n}",
+       "src": "20.6"
+      },
+      {
+       "text": "Components 1 and 2 are the $A$ and $B$ of the text."
+      }
+     ],
+     "then": {
+      "tex": "\\mk{g}{\\kDeltamixG} = \\mk{a}{n_1\\mu_1^{sln}}+\\mk{b}{n_2\\mu_2^{sln}} - \\mk{c}{(n_1\\mu_1^* + n_2\\mu_2^*)}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{g}{\\kDeltamixG} = \\mk{a}{n_1(\\mu_1^* + \\kR\\kT\\ln x_1)}+\\mk{b}{n_2(\\mu_2^* + \\kR\\kT\\ln x_2)} - \\mk{c}{(n_1\\mu_1^* + n_2\\mu_2^*)}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{g}{\\kDeltamixG} = \\mk{a}{n_1\\kR\\kT\\ln x_1}+\\mk{b}{n_2\\kR\\kT\\ln x_2}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{g}{\\kDeltamixG} = \\mk{a}{n\\kR\\kT x_1\\ln x_1}+\\mk{b}{n\\kR\\kT x_2\\ln x_2}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{g}{\\kDeltamixG} = \\mk{a}{n\\kR\\kT\\kxA\\ln{\\kxA}} + \\mk{b}{n\\kR\\kT\\kxB\\ln{\\kxB}}",
+       "uses": [
+        3
+       ]
+      },
+      {
+       "tex": "\\mk{g}{\\kDeltamixG} = \\mk{s}{n\\kR\\kT\\sum_i{\\kxi\\ln{\\kxi}}}",
+       "uses": [],
+       "cap": "With more than two components the same steps give one such term for each component."
+      }
+     ],
+     "src": "24.4",
+     "note": "The book prints $\\mu_i^{sln} \\equiv \\mu_i^* + nRTx_i\\ln{x_i}$. The chemical potential of a component of an ideal solution is $\\mu_i^* + RT\\ln x_i$; the factor $n x_i$ enters only when it is multiplied by the amount $n_i$."
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "\\kDeltamixS = -n\\kR\\sum_i{\\kxi\\ln{\\kxi}}",
+       "src": "20.6"
+      },
+      {
+       "tex": "\\kDeltamixG = \\kDeltamixH-\\kT\\kDeltamixS",
+       "src": "22.2"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{g}{\\kDeltamixG} = \\mk{h}{\\kDeltamixH} - \\mk{t}{\\kT\\kDeltamixS}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{g}{n\\kR\\kT\\sum_i{\\kxi\\ln{\\kxi}}} = \\mk{h}{\\kDeltamixH} - \\mk{t}{\\kT\\kDeltamixS}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{g}{n\\kR\\kT\\sum_i{\\kxi\\ln{\\kxi}}} = \\mk{h}{\\kDeltamixH} + \\mk{t}{n\\kR\\kT\\sum_i{\\kxi\\ln{\\kxi}}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{h}{\\kDeltamixH} = \\mk{z}{0}",
+       "uses": []
+      }
+     ],
+     "src": "24.4"
+    }
+   ]
+  },
+  {
+   "id": "additive-volumes",
+   "what": "volumes are additive in an ideal solution",
+   "source": "Physical Chemistry (LibreTexts), 24.4 Ideal Solutions obey Raoult's Law",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\left(\\dfrac{\\partial \\kG}{\\partial \\kP} \\right)_{\\kT} = \\kV",
+       "src": "22.4"
+      },
+      {
+       "text": "The solution is ideal."
+      },
+      {
+       "tex": "\\Delta G^{ideal} = \\kR\\kT ( n_1 \\ln x_1 + n_2\\ln x_2)",
+       "src": "24.4",
+       "drv": "ideal-mixing"
+      },
+      {
+       "text": "At constant $\\kT$ the amounts $n_1$ and $n_2$, and so the mole fractions, do not depend on $\\kP$."
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\left(\\dfrac{\\partial \\Delta G}{\\partial \\kP} \\right)_{\\kT}} = \\mk{r}{\\kDeltamixV}",
+      "uses": [
+       0
+      ],
+      "why": "The relation holds for the solution and for each pure liquid, so it holds for the difference between them, the change on mixing."
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\left(\\dfrac{\\partial \\Delta G^{ideal}}{\\partial \\kP} \\right)_{\\kT}} = \\mk{r}{\\kDeltamixV^{ideal}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{l}{\\left(\\dfrac{\\partial \\kR\\kT ( n_1 \\ln x_1 + n_2\\ln x_2)}{\\partial \\kP} \\right)_{\\kT}} = \\mk{r}{\\kDeltamixV^{ideal}}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{l}{\\left(\\dfrac{\\partial \\kR\\kT ( n_1 \\ln x_1 + n_2\\ln x_2)}{\\partial \\kP} \\right)_{\\kT}} = \\mk{r}{\\kDeltamixV^{ideal}} = \\mk{z}{0}",
+       "uses": [
+        3
+       ]
+      }
+     ],
+     "src": "24.4"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,419 @@
+{
+ "id": "24.9",
+ "module": "14511",
+ "chapter": "24",
+ "title": "Gibbs Energy of Mixing of Binary Solutions in Terms of the Activity Coefficient",
+ "short": "Gibbs energy of mixing and activity",
+ "lead": "Writing the chemical potential with an activity turns the Margules function into an activity coefficient. With a single Margules parameter this gives the regular solution, whose Gibbs energy of mixing weighs the entropy of mixing against the interactions between unlike neighbors as the temperature changes.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "The page prints no credit; the animation it cites under Eutectics is not printed on the page.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The one exercise and its solution are AI-written; numeric answers accept a 2% tolerance, and its Bloom level and concept tags were chosen by AI.",
+ "figures": [
+  {
+   "id": "sim-mixing-gibbs",
+   "kind": "sim",
+   "draws": [
+    "energy",
+    "entropy"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "activity-coefficients",
+   "concept": "margules-activity-coefficient",
+   "verb": "introduces"
+  },
+  {
+   "span": "activity-coefficients",
+   "concept": "activity",
+   "verb": "reinforces"
+  },
+  {
+   "span": "activity-coefficients",
+   "concept": "activity-coefficient",
+   "verb": "reinforces"
+  },
+  {
+   "span": "activity-coefficients",
+   "concept": "margules-function",
+   "verb": "uses"
+  },
+  {
+   "span": "regular-solutions",
+   "concept": "regular-solution-activities",
+   "verb": "introduces"
+  },
+  {
+   "span": "regular-solutions",
+   "concept": "gibbs-energy-of-mixing-activity",
+   "verb": "introduces"
+  },
+  {
+   "span": "regular-solutions",
+   "concept": "regular-gibbs-energy-of-mixing",
+   "verb": "introduces"
+  },
+  {
+   "span": "regular-solutions",
+   "concept": "regular-interaction-energy",
+   "verb": "introduces"
+  },
+  {
+   "span": "regular-solutions",
+   "concept": "consolute-point",
+   "verb": "introduces"
+  },
+  {
+   "span": "regular-solutions",
+   "concept": "regular-volume-of-mixing",
+   "verb": "introduces"
+  },
+  {
+   "span": "regular-solutions",
+   "concept": "gibbs-duhem-binary",
+   "verb": "uses"
+  },
+  {
+   "span": "regular-solutions",
+   "concept": "entropy-of-mixing",
+   "verb": "uses"
+  },
+  {
+   "span": "regular-solutions",
+   "concept": "ideal-volume-of-mixing",
+   "verb": "uses"
+  },
+  {
+   "span": "real-solutions",
+   "concept": "margules-function",
+   "verb": "reinforces"
+  },
+  {
+   "span": "boiling-non-ideal-solutions",
+   "concept": "boiling-gap-meets-solubility-gap",
+   "verb": "introduces"
+  },
+  {
+   "span": "boiling-non-ideal-solutions",
+   "concept": "azeotrope",
+   "verb": "reinforces"
+  },
+  {
+   "span": "boiling-non-ideal-solutions",
+   "concept": "consolute-point",
+   "verb": "reinforces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "we can either get one or two minima",
+   "kind": "exercise",
+   "bloom": "Analyze",
+   "place": {
+    "at": "end"
+   },
+   "cite": "regular-solutions",
+   "prompt": "<p>For a regular solution, $\\kDeltamixG/\\kR\\kT = x\\ln x + (1-x)\\ln(1-x) + \\kareg x(1-x)$ with $x = \\kxone$.</p><ol type=\"a\"><li>Find the second derivative of $\\kDeltamixG/\\kR\\kT$ at $x = 0.5$. Above what value of $\\kareg$ is it negative, so that the curve has two minima?</li><li>With $\\kWint = 5.0$ kJ/mol and $\\kareg = \\kWint/\\kR\\kT$, at what temperature is the consolute point?</li></ol>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 2,
+      "hint": "Differentiate twice: x ln x gives 1/x."
+     },
+     {
+      "part": "b",
+      "value": 300.7,
+      "unit": "K",
+      "hint": "Set W/RT equal to the value from part a."
+     }
+    ],
+    "solution": "<p>(a) The second derivative is $1/x + 1/(1-x) - 2\\kareg$, which at $x = 0.5$ is $4 - 2\\kareg$. It is negative for $\\kareg > 2$: the middle of the curve then bulges upward and the single minimum splits into two.</p><p>(b) The consolute point is at $\\kareg = 2$, so $\\kT = \\kWint/2\\kR = (5000\\ \\text{J/mol})/(2 \\times 8.314\\ \\text{J K}^{-1}\\text{mol}^{-1}) = 300.7$ K. Below it the two liquids separate; above it they mix in every proportion.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "regular-gibbs-energy-of-mixing"
+  },
+  {
+   "exercise": "a1",
+   "concept": "consolute-point"
+  },
+  {
+   "exercise": "a1",
+   "concept": "regular-interaction-energy"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-mu2",
+   "kind": "correction",
+   "html": "$\\mu^o_2$ should read $\\mu^o_i$, the standard potential of species $i$."
+  },
+  {
+   "id": "c-example",
+   "kind": "correction",
+   "html": "The book has no example 24-7. The Margules function with its β-term is in Section 24.6."
+  },
+  {
+   "id": "c-animation",
+   "kind": "correction",
+   "html": "The page prints no animation. Figure 24.6.3 in Section 24.6 shows the arrangement: a minimum-boiling gas-liquid gap above the solubility gap of two partly miscible liquids."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "regular-second-activity",
+   "what": "the regular solution's second activity",
+   "source": "Physical Chemistry (LibreTexts), 24.9 Gibbs Energy of Mixing of Binary Solutions in Terms of the Activity Coefficient",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "a_1 = \\kxone e^{\\kareg\\kxtwo^2}",
+       "src": "24.9"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{a}{a_1} = \\mk{x}{\\kxone} \\mk{e}{e^{\\kareg\\kxtwo^2}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{a}{\\ln a_1} = \\mk{x}{\\ln \\kxone} + \\mk{e}{\\kareg\\kxtwo^2}",
+       "uses": [],
+       "cap": "The logarithm of a product is the sum of the logarithms."
+      },
+      {
+       "tex": "\\mk{a}{d\\ln a_1} = \\mk{x}{\\dfrac{d\\kxone}{\\kxone}} + \\mk{e}{2\\kareg\\kxtwo\\,d\\kxtwo}",
+       "uses": [],
+       "cap": "Differentiate each side; $\\kareg$ is a constant."
+      }
+     ],
+     "src": "24.9"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "d\\kmuone = -\\dfrac{\\kxtwo}{\\kxone}\\,d\\kmutwo",
+       "src": "24.2"
+      },
+      {
+       "tex": "\\kmuslni \\equiv \\kmustari + \\kR\\kT\\ln{a_i}",
+       "src": "24.9"
+      },
+      {
+       "step": 0
+      },
+      {
+       "tex": "\\kxone + \\kxtwo = 1",
+       "src": "24.9"
+      },
+      {
+       "text": "At high enough mole fraction Raoult's law applies, so $a_i$ approaches $\\kxi$ as $\\kxi \\to 1$.",
+       "src": "24.9"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{d\\kmuone} = \\mk{r}{-\\dfrac{\\kxtwo}{\\kxone}\\,d\\kmutwo}",
+      "why": "The Gibbs-Duhem equation for two components, written for 1 and 2."
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\kR\\kT\\,d\\ln a_1} = \\mk{r}{-\\dfrac{\\kxtwo}{\\kxone}\\,\\kR\\kT\\,d\\ln a_2}",
+       "uses": [
+        1
+       ],
+       "cap": "At constant temperature $\\kmustari$ does not change, so $d\\kmui = \\kR\\kT\\,d\\ln a_i$."
+      },
+      {
+       "tex": "\\mk{r}{d\\ln a_2} = \\mk{l}{-\\dfrac{\\kxone}{\\kxtwo}\\,d\\ln a_1}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{r}{d\\ln a_2} = \\mk{l}{-\\dfrac{\\kxone}{\\kxtwo}\\left(\\dfrac{d\\kxone}{\\kxone} + 2\\kareg\\kxtwo\\,d\\kxtwo\\right)}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{r}{d\\ln a_2} = \\mk{p}{-\\dfrac{d\\kxone}{\\kxtwo}} \\mk{q}{- 2\\kareg\\kxone\\,d\\kxtwo}",
+       "uses": [],
+       "map": {
+        "l": [
+         "p",
+         "q"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{r}{d\\ln a_2} = \\mk{p}{\\dfrac{d\\kxtwo}{\\kxtwo}} \\mk{q}{+ 2\\kareg\\kxone\\,d\\kxone}",
+       "uses": [
+        3
+       ],
+       "cap": "With $\\kxone + \\kxtwo = 1$, $d\\kxone = -d\\kxtwo$."
+      },
+      {
+       "tex": "\\mk{r}{\\ln a_2} = \\mk{p}{\\ln\\kxtwo} \\mk{q}{+ \\kareg\\kxone^2} \\mk{c}{+ C}",
+       "uses": [],
+       "cap": "Integrate each side; $C$ is a constant of integration."
+      },
+      {
+       "tex": "\\mk{r}{\\ln a_2} = \\mk{p}{\\ln\\kxtwo} \\mk{q}{+ \\kareg\\kxone^2}",
+       "uses": [
+        4
+       ],
+       "cap": "At $\\kxtwo = 1$ we have $\\kxone = 0$ and $a_2 = 1$, so $C = 0$."
+      },
+      {
+       "tex": "\\mk{r}{a_2} = \\mk{p}{\\kxtwo} \\mk{q}{e^{\\kareg\\kxone^2}}",
+       "uses": []
+      }
+     ],
+     "src": "24.9"
+    }
+   ]
+  },
+  {
+   "id": "regular-mixing-gibbs",
+   "what": "the Gibbs energy of mixing of a regular solution",
+   "source": "Physical Chemistry (LibreTexts), 24.9 Gibbs Energy of Mixing of Binary Solutions in Terms of the Activity Coefficient",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kmuslni \\equiv \\kmustari + \\kR\\kT\\ln{a_i}",
+       "src": "24.9"
+      },
+      {
+       "tex": "[a_i] = \\kgammai \\kxi",
+       "src": "24.9"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{g}{\\Delta G_{mix}} = \\mk{t1}{n_1\\kmuone^{sln}} + \\mk{t2}{n_2\\kmutwo^{sln}} - \\mk{p}{(n_1\\kmuone^* + n_2\\kmutwo^*)}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{g}{\\kDeltamixG} = \\mk{t1}{\\kxone\\kmuone^{sln}} + \\mk{t2}{\\kxtwo\\kmutwo^{sln}} - \\mk{p}{(\\kxone\\kmuone^* + \\kxtwo\\kmutwo^*)}",
+       "uses": [],
+       "cap": "Dividing by the total number of moles, each $n_i/n$ is the mole fraction $x_i$."
+      },
+      {
+       "tex": "\\mk{g}{\\kDeltamixG} = \\mk{t1}{\\kxone(\\kmuone^* + \\kR\\kT\\ln{a_1})} + \\mk{t2}{\\kxtwo(\\kmutwo^* + \\kR\\kT\\ln{a_2})} - \\mk{p}{(\\kxone\\kmuone^* + \\kxtwo\\kmutwo^*)}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{g}{\\kDeltamixG} = \\mk{t1}{\\kxone\\kR\\kT\\ln{a_1}} + \\mk{t2}{\\kxtwo\\kR\\kT\\ln{a_2}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{g}{\\kDeltamixG} = \\mk{t1}{\\kxone\\kR\\kT\\ln{(\\gamma_1\\kxone)}} + \\mk{t2}{\\kxtwo\\kR\\kT\\ln{(\\gamma_2\\kxtwo)}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{g}{\\dfrac{\\kDeltamixG}{\\kR\\kT}} = \\mk{t1}{\\kxone\\ln{(\\gamma_1\\kxone)}} + \\mk{t2}{\\kxtwo\\ln{(\\gamma_2\\kxtwo)}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{g}{\\dfrac{\\kDeltamixG}{\\kR\\kT}} = \\mk{x1}{\\kxone\\ln{\\kxone}} + \\mk{x2}{\\kxtwo\\ln{\\kxtwo}} + \\mk{g1}{\\kxone\\ln{\\gamma_1}} + \\mk{g2}{\\kxtwo\\ln{\\gamma_2}}",
+       "uses": [],
+       "map": {
+        "t1": [
+         "x1",
+         "g1"
+        ],
+        "t2": [
+         "x2",
+         "g2"
+        ]
+       },
+       "cap": "The logarithm of a product is the sum of the logarithms."
+      }
+     ],
+     "src": "24.9"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "\\ln{\\gamma_1} = \\ln{\\kfMar} = \\kareg\\kxtwo^2",
+       "src": "24.9"
+      },
+      {
+       "tex": "\\ln{\\gamma_2} = \\ln{\\kfMar} = \\kareg\\kxone^2",
+       "src": "24.9"
+      },
+      {
+       "tex": "\\kxone + \\kxtwo = 1",
+       "src": "24.9"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{g}{\\dfrac{\\kDeltamixG}{\\kR\\kT}} = \\mk{x1}{\\kxone\\ln{\\kxone}} + \\mk{x2}{\\kxtwo\\ln{\\kxtwo}} + \\mk{g1}{\\kxone\\ln{\\gamma_1}} + \\mk{g2}{\\kxtwo\\ln{\\gamma_2}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{g}{\\dfrac{\\kDeltamixG}{\\kR\\kT}} = \\mk{x1}{\\kxone\\ln{\\kxone}} + \\mk{x2}{\\kxtwo\\ln{\\kxtwo}} + \\mk{g1}{\\kxone\\kareg\\kxtwo^2} + \\mk{g2}{\\kxtwo\\kareg\\kxone^2}",
+       "uses": [
+        1,
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{g}{\\dfrac{\\kDeltamixG}{\\kR\\kT}} = \\mk{x1}{\\kxone\\ln{\\kxone}} + \\mk{x2}{\\kxtwo\\ln{\\kxtwo}} + \\mk{e}{\\kareg[\\kxone+\\kxtwo]\\kxone\\kxtwo}",
+       "uses": [],
+       "map": {
+        "g1": "e",
+        "g2": "e"
+       }
+      },
+      {
+       "tex": "\\mk{g}{\\dfrac{\\kDeltamixG}{\\kR\\kT}} = \\mk{x1}{\\kxone\\ln{\\kxone}} + \\mk{x2}{\\kxtwo\\ln{\\kxtwo}} + \\mk{e}{\\kareg\\kxone\\kxtwo}",
+       "uses": [
+        3
+       ]
+      }
+     ],
+     "src": "24.9"
+    }
+   ]
+  }
+ ]
+}
