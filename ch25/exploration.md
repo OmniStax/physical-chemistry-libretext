@@ -22,8 +22,8 @@ Wikipedia excerpt ((25.6.1), A and B, Figure 25.6.2) and its note "Importance fo
 Winter's again; 25.7 is Wikipedia's "Debye–Hückel equation" and "Davies equation" articles (its
 Figure 25.7.1, and "Davis Equation" as a header), and the page is CC BY-SA 4.0.
 
-**Repeated material** (built once where the book first works it, cited after; Chapter 24 is being
-prepared at the same time, so these are proposals for whichever chapter merges second): Chapter 24's
+**Repeated material** (built once where the book first works it, cited after; Chapter 24 was prepared
+at the same time and merged first, and this chapter reuses its concepts): Chapter 24's
 24.7 ("Activities of Nonideal Solutions") already states the **activity** a_B = γ m_B/m° and
 μ = μ° + RT ln a, the **activity coefficient**, the **mean activity coefficient** γ± = √(γ₊γ₋) and its
 general form, a **Debye–Hückel law** (in a wrong form, with |z₊ + z₋| and no minus sign), the
@@ -99,15 +99,16 @@ no video. 25.7 is CC BY-SA 4.0 at the source and is shared BY-SA (`modules.json`
   standard state and a₂ = a₊^ν₊ a₋^ν₋ (one result); the **mean ionic activity** a±^ν ≡ a₂, ν = ν₊ + ν₋;
   the **single-ion activity coefficients** a₊ = γ₊m₊, a₋ = γ₋m₋ (not measurable separately: the
   note); the ion molalities m₊ = ν₊m, m₋ = ν₋m; the **mean ionic molality** m±^ν = m₊^ν₊ m₋^ν₋; the
-  **mean ionic activity coefficient** γ±^ν = γ₊^ν₊ γ₋^ν₋ (24.7's mean activity coefficient, in its
-  general form: reuse if 24 owns it); a₂ = a±^ν = γ±^ν m±^ν (result); γ± measured from the solvent's
+  **mean ionic activity coefficient** γ±^ν = γ₊^ν₊ γ₋^ν₋ (24.7's `mean-ionic-activity-coefficient`, in
+  its general form: reused, (25.5.16) a form of it); a₂ = a±^ν = γ±^ν m±^ν (result); γ± measured from the solvent's
   vapor through the osmotic coefficient (result, formula corrected below). Example 25.5.1 (Al₂(SO₄)₃,
   a = 108 m⁵ γ±⁵) kept whole as an example; checked: (2m)²(3m)³ = 108 m⁵.
 - **25.6** Opening block: header proposed "The Ionic Atmosphere"; "Ionic Strength" kept. Concepts
   (new): the **ionic atmosphere** (idea); the **Debye length** 1/κ (type length; the book's word is
-  "Debye-length", see corrections); **ionic strength** I = ½Σm_iz_i² (24.7's: reuse if 24 owns it);
-  κ² = constant · I with constant = 2000e²N_A/(ε_rε₀kT); the **Debye–Hückel limiting law**
-  ln γ± = −|q₊q₋|κ/(8πε_rε₀kT), ln γ± ∝ √m; (25.6.1) with A and B and the **distance of closest
+  "Debye-length", see corrections); **ionic strength** I = ½Σm_iz_i² (24.7's `ionic-strength`, reused; the sum a form of it);
+  κ² = constant · I with constant = 2000e²N_A/(ε_rε₀kT); the limiting law in terms of the
+  atmosphere, ln γ± = −|q₊q₋|κ/(8πε_rε₀kT), ln γ± ∝ √m (`ln-gamma-debye-length`; 24.7's
+  `debye-huckel-law` is the law itself, reused); (25.6.1) with A and B and the **distance of closest
   approach** a₀ (the book calls (25.6.1) the "Debye limiting law"; it is the extended form, see
   corrections); keeping I constant by a spectator ion (idea, Cu²⁺/Zn²⁺); **colloid** and its
   stabilisation by a charged atmosphere, destroyed by added salt (idea, the note); metastable is
@@ -120,7 +121,7 @@ no video. 25.7 is CC BY-SA 4.0 at the source and is shared BY-SA (`modules.json`
   **Pitzer equations**; **specific ion interaction theory**. (25.7.1) repeats (25.6.1): the number
   stays, the concept is 25.6's. "Plot of activity coefficients calculated using the Davies equation."
   is a stray caption line before Figure 25.7.1: kept as printed (or folded into the figure by the
-  builder). An empty `<br>` paragraph between the two Pitzer displays is dropped from the draft.
+  builder). The draft carries an empty `<br>` paragraph between the two Pitzer displays: delete it.
 
 ## Equation numbers
 
@@ -214,7 +215,7 @@ the example says it).
 | 25.3, μ₁ˢ = μ₁^sln → −Δμ₁/RT = ln a₁ → Gibbs–Helmholtz → ∂ln a₁/∂T → ln a₁ ≈ −x₂ → integrate → −x₂ ≈ Δ_fus H(−ΔT)/(RT_m*²) → ΔT = K_f m | printed block, 9 displays with words | printed | **Build**: "Derivation · the freezing-point depression"; facts 23.3's equal chemical potentials, 22.7's Gibbs–Helmholtz, 24's ln a₁ = ln x₁ ≈ −x₂; the broken lines ("∂[ln a₁", "ln a₁ ln x₁ ≈ −x₂") follow the correct mathematics with notes; one line inserted for x₂ ≈ M₁m to reach ΔT = K_f m (K_f = RT_m*²M₁/Δ_fus H̄₁, which the book skips). |
 | 25.4, μ*(T, P) = μ^sln(T, P + Π, a₁) → … → ΠV̄₁* = −RT ln a₁ → RTx₂ = ΠV̄₁* → x₂ ≈ n₂/n₁ → Π = RTc | printed block, 11 displays with words | printed | **Build**: "Derivation · the osmotic pressure of a dilute solution"; facts 22.4's (∂G/∂P)_T = V, 24's ln a₁ ≈ −x₂, V̄₁* incompressible (a condition the book uses silently: inserted as a fact of the derivation with no place, 'a given'); one line inserted (V ≈ n₁V̄₁*, so n₂/(n₁V̄₁*) = c); "the partial versus x₁" corrected to n₁ in a note. `drv` to 25.3's for the shared ln a₁ ≈ −x₂ step. |
 | 25.5, (25.5.3)–(25.5.9) → ν, a± → (25.5.17) → (25.5.18) | printed block with words, 14 displays | printed | **Build**: "Derivation · the activity of a salt from its ions"; facts (25.5.1)–(25.5.2) dissociation, the definitions (25.5.10), (25.5.11)–(25.5.16) as facts of this section; (25.5.6)'s μ₋° followed by the correct μ₊° with a note. |
-| 25.5, ln γ± = φ − 1 + ∫(φ − 1)… from Gibbs–Duhem ("the same Gibbs-Duhem trick") | hidden: ≥ 5 moves; facts 3 (Gibbs–Duhem 24.2, φ, (25.5.18)) + unprinted run 5 + joins 1 = 9 | 9 | **Stays** (fails rule 29.3): the molal osmotic coefficient of an electrolyte (ln a₁ = −νmM₁φ) that the steps need is printed nowhere in the book (24.7's φ is ln a₁ ≈ −x₂φ), so the derivation would invent a fact. The printed integrand is corrected by a footnote. |
+| 25.5, ln γ± = φ − 1 + ∫(φ − 1)… from Gibbs–Duhem ("the same Gibbs-Duhem trick") | hidden: ≥ 5 moves; facts 3 (Gibbs–Duhem 24.2, φ, (25.5.18)) + unprinted run 5 + joins 1 = 9 | 9 | **Stays** (fails rule 29.3): the molal osmotic coefficient of an electrolyte (ln a₁ = −νmM₁φ) that the steps need is printed nowhere in the book (24.7's φ is ln a₁ ≈ −x₂φ), so the derivation would invent a fact; 24.7's `solute-activity-from-solvent` already states the nonelectrolyte form. The printed integrand is corrected by a footnote. |
 | 25.6, the Debye–Hückel theory itself (Poisson–Boltzmann, linearised, κ, the atmosphere's potential at the ion) | hidden: "We can only scratch the surface"; facts ≥ 4 (Poisson's equation, the Boltzmann factor, Coulomb's law, charge neutrality) + run ≥ 6 = ≥ 10 | ≥ 10 | **Stays**: Poisson's equation and the charging step are stated nowhere in the book; building it would invent the facts (rule 29.3). The book prints results only. |
 | 25.6, (25.6.1) → limiting law as Ba₀√I → 0 | prose, 1 move | | Stays (the emphasis note says it). |
 | 25.7, Davies → DH at low I; Pitzer's two displays; SIT | 1 move / no chain | | Stay. |
@@ -239,8 +240,8 @@ correction worked here; *from memory, unchecked* one the builder checks first.
   27 bar by Π = cRT (*checked by computation*; no footnote, "about").
 - **25.5**: "Na⁺ and Cl⁺" (Cl⁻; footnote); (25.5.6) μ₊ = μ₋° + RT ln a₊ (μ₊°; footnote, the derivation
   follows the correct line); the vapor-pressure formula ln γ± = φ − 1 + ∫₀^m [φ − 1] m′ dm′ (the
-  integrand is (φ − 1)/m′; footnote, *from memory, unchecked*: the standard Bjerrum relation, which
-  the builder confirms against a text before writing the note); "doing these vapor pressure
+  integrand is (φ − 1)/m′; footnote, *checked against the book's own 24.7*, which prints
+  ln γ₂,m = φ − 1 + ∫₀^m (φ − 1)/m′ dm′); "doing these vapor pressure
   measurements in pretty tedious" (as printed); "{term:2}" bold digits in the note and the example
   are the book's emphasis (kept).
 - **25.6**: "1/κ is a measure for the size of this cloud and κ is the Debye-length" (1/κ is the
@@ -278,18 +279,31 @@ correction worked here; *from memory, unchecked* one the builder checks first.
 
 ## What is new to OmniStax here
 
-- **No new type proposed.** Π is pressure; ΔT, T_m*, T_m temperature; Δ_fus H̄₁, μ's energy; V̄₁*
-  molar-volume; 1/κ and a₀, a and the Bjerrum length length; n₁, n₂ amount; e charge. Molality m,
-  molarity c, mole fraction x, ionic strength I, activities and activity coefficients, φ, ν and z are
-  untyped (ink). Chapter 24 may add a concentration type (*orchestrator*); if it does, m, c, m±, m₊,
-  m₋, m_i and I take it here.
-- **Symbols**: new keys with macros for the typed ones (`\kPi` osmotic pressure, `\kDeltaTf`,
-  `\kTmstar`, `\kDeltaHfusone`, `\kVbaronestar`, `\kmuone…`, `\kmupm`, `\kkappaD`, `\kaion`, `\kqplus`,
-  `\kqminus`); the untyped (γ±, a±, m±, ν₊, ν₋, z₊, z₋, I, K_f, φ, ε_r, f±) without. Reused: mu,
-  mu_i, R, T, P, V_bar, n_1, n_2, m, c, a_0, A, B, e, N_A, k, epsilon_0, phi, f, z, nu, kappa
-  (the isothermal compressibility's key is `kappa_T`; `kappa` is free of a chapter meaning here? see
-  `chapter.json`).
-- **Concepts, edges, forms**: as staged in `book-rows.json` (counts in `config.md`).
+- **No new type.** Π is pressure; ΔT, T_m*, T_m temperature; every μ and Δ_fus H̄₁ energy; V̄₁*
+  molar-volume; n₁, n₂ amount; V volume; e, q₊, q₋ charge; the Debye length (1/κ), a₀ and a length
+  (κ's own row is in ink: it is an inverse length). Molality m, molarity c, mole fraction x, ionic
+  strength I, activities and activity coefficients, φ, ν, z, K_f, ε_r stay untyped, as Chapter 24
+  left them. `colours:default` not run.
+- **Reconciled with Chapter 24** (merged before this chapter): 24.7's `activity`, `activity-coefficient`,
+  `mean-ionic-activity-coefficient`, `ionic-strength`, `debye-huckel-law`, `osmotic-coefficient`,
+  `solute-activity-from-solvent`, `raoult-activity-convention`, `henry-activity-convention` and 24.1's
+  `raoults-law` are reused, not duplicated (Chapter 25's own versions of the mean ionic activity
+  coefficient, the ionic strength and the limiting law were withdrawn before the merge). The forms 25.5
+  and 25.6 print for those concepts (γ±^ν = γ₊^ν₊γ₋^ν₋ (25.5.16); I = ½Σm_iz_i²) are left to the
+  builders of 25.5 and 25.6 to add with `ost add forms` (they stage on Chapter 24's concepts). 25.6's
+  κ form of the law is its own result, `ln-gamma-debye-length`; (25.6.1) and 25.7's extended equation
+  are one concept, `extended-debye-huckel-equation`, introduced in 25.6.
+- **Symbols**: 41 new keys, 19 with macros (`\kPi`, `\kDeltaT`, `\kTmstar`, `\kDeltafusHone`,
+  `\kVbaronestar`, `\kmustar`, `\kmusln`, `\kmuones`, `\kmuonesln`, `\kmuoneliqstar`, `\kDeltamuone`,
+  `\kmuivapor`, `\kmuistd`, `\kPiR`, `\kmutwostd`, `\kmuplusstd`, `\kmuminusstd`, `\kqplus`,
+  `\kqminus`); the untyped (K_f, ν₊, ν₋, a±, m±, κ as `kappa_D`, z_i, z_j, ε_r, f±, the Pitzer and SIT
+  symbols) without. Reused from Chapter 24: x_1, x_2, x_i, mu_std, mu_star_i, mu_sln_i, P_star_i,
+  gamma_i, gamma_pm, gamma_plus, gamma_minus, a_plus, a_minus, m_plus, m_minus, z_plus, z_minus,
+  mu_plus, mu_minus, mu_2, I_ion, phi_osm; from earlier: mu, R, T, P, P_i, P_std, G, V, a, a_1, a_2,
+  a_i, m, m_i, c, nu, n_1, n_2, T_m, a_0, A, B, e, N_A, k_B, epsilon_0, gamma. `a` is the activity in
+  25.2 and the hydrated diameter in 25.7 (`redefines`). 112 variables rows.
+- **38 concepts, 59 edges** (Hasse-checked against the merged book with Chapter 24: one redundant edge,
+  osmotic equilibrium → (∂G/∂P)_T = V, removed), **41 forms**.
 
 ## The chapter's answer to root rule 23
 

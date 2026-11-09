@@ -24,9 +24,9 @@ Proposed by the agent after the chapter exploration (2026-11-08). Status:
 | Model data | the book's: A = 0.51, B = 3.29 nm⁻¹ (25.6); A = 0.5085, B = 0.3281 Å⁻¹, a = 3 and 9 Å, Davies' 0.5 and 0.30 (25.7); ≈ 30 bar for sea water (25.4); KBr's points read off Figure 25.6.2 (Petergans, Wikipedia; source named in the figure's notes); water's Δ_fus H 6006 J/mol and Δ_vap H 40.65 kJ/mol (Chapter 23) for the Sim; glucose concentrations and 298 K for 25.4.1 are the figure's own settings, not data; ε_r = 78.5 for water *from memory, unchecked*, used only to check the book's constant (in `LOG.md`) |
 | Extra simulations | one recommended: `sim-colligative-mu` (25.3, still: μ(T) of solid, pure liquid, solution and gas, a solute slider moving the freezing point down 1.86 K and the boiling point up 0.51 K per molal); others judged and dropped (`exploration.md`) |
 | Derivations | built, all printed: the freezing-point depression (25.3; two broken lines corrected, the x₂ → m line inserted); the osmotic pressure of a dilute solution (25.4; "versus x₁" corrected, V ≈ n₁V̄₁* inserted); the activity of a salt from its ions (25.5; (25.5.6)'s μ₋° corrected); the chemical potential of a component in solution (25.2) only if Chapter 24 does not build the same chain; not built: the γ± from φ relation (a needed fact is printed nowhere) and the Debye–Hückel theory itself (its facts are printed nowhere) |
-| Corrections | root rule 13's footnotes, the book's words kept (list in `exploration.md`): chiefly 25.3/25.4's lost "=" in ln a₁ = ln x₁ ≈ −x₂; 25.4's "versus x₁"; 25.5's Cl⁺, (25.5.6)'s μ₋°, the integrand of ln γ± (*from memory, unchecked*: confirm before writing); 25.6's κ named the Debye length, (25.6.1) named the limiting law with z_j², A's unit, γ± "proportional to √I"; 25.7's μ for the ionic strength; Figure 25.6.2's axis, 25.6.3's caption and 25.7.1's "Semi-log" in the rows |
+| Corrections | root rule 13's footnotes, the book's words kept (list in `exploration.md`): chiefly 25.3/25.4's lost "=" in ln a₁ = ln x₁ ≈ −x₂; 25.4's "versus x₁"; 25.5's Cl⁺, (25.5.6)'s μ₋°, the integrand of ln γ± (24.7 prints it right); 25.6's κ named the Debye length, (25.6.1) named the limiting law with z_j², A's unit, γ± "proportional to √I"; 25.7's μ for the ionic strength; Figure 25.6.2's axis, 25.6.3's caption and 25.7.1's "Semi-log" in the rows |
 | Colour | no new type; pressure (Π, P_i, P_i*, P_i^R), temperature (T, T_m, T_m*, ΔT), energy (every μ, Δ_fus H̄₁), molar-volume (V̄₁*), amount (n₁, n₂), volume, charge (e, q₊, q₋), length (1/κ as the Debye length, a₀, a) reused; molality, molarity, mole fraction, ionic strength, activities, activity and osmotic coefficients, ν, z, K_f, ε_r in ink (they take a concentration type if Chapter 24 adds one); facts: the gold colloid's wine red only if a figure draws it (none proposed); conventions: Na and Cl through `F.el` in Figure 25.6.1; referents: none proposed |
-| Symbols | 62 new (26 with macros: the typed ones), 112 variables rows (see `chapter.json`); 40 concepts, 55 edges, 43 forms (before reconciling with Chapter 24: see the open question) |
+| Symbols | 41 new (19 with macros: the typed ones), 22 reused from Chapter 24, 112 variables rows (see `chapter.json`); 38 concepts, 59 edges, 41 forms, merged after Chapter 24 |
 | Licence | every page CC BY-NC-SA 4.0 except 25.7 (CC BY-SA 4.0, shared BY-SA); Figures 25.6.1 (CC BY-SA 3.0, Roland1952), 25.6.2 (Public Domain, Petergans), 25.6.3 (CC BY-SA 3.0, Larryisgood), 25.7.1 (CC BY-SA 4.0, PChemiker) shipped with their credits; 25.2.1 and 25.4.1, uncredited, under the page's licence |
 | `ai` and `built` | `ai` names the model and effort that wrote each part; `built` is the build date |
 
@@ -62,7 +62,17 @@ Only what Chapters 3–23's decisions do not settle:
    "chapter 10") name chapters and equations of another LibreTexts book and link there. Proposed: keep
    the words as printed and point each link at this book's equivalent (22.8's μ from fugacity, 24.1's
    Raoult's law, Chapter 26), with one footnote saying the numbers are another text's.
-3. **Ownership with Chapter 24**: 24.7 first states the mean activity coefficient, the ionic strength,
-   the Debye–Hückel law and the osmotic coefficient; 25.5–25.6 define and work them. Proposed: whichever
-   concepts Chapter 24 has merged stay its own and Chapter 25 reuses them (its rows, forms and edges
-   repointed), as rule 6 asks ("where the book first does"). See `LOG.md` for what was reconciled.
+3. **Ownership with Chapter 24** (settled here on rule 6's "where the book first does"; the
+   orchestrator may reverse it): 24.7 first states the mean activity coefficient, the ionic strength, the
+   Debye–Hückel law and the osmotic coefficient, so Chapter 24's concepts are reused and Chapter 25 adds
+   only what 25.5–25.7 newly work (the κ form of the law, the extended equation, the mean ionic
+   activity and molality, the salt's chemical potential). 25.5's γ±^ν form and 25.6's I = ½Σm_iz_i² are
+   to be added as forms of Chapter 24's concepts by this chapter's builders.
+
+## Decisions taken by the orchestrator (2026-11-09)
+
+- **No intro page.** 25.8 "Homework Problems" is treated as the exercise page. It isn't built or routed, since its one exercise is already 1.9's card `e3`.
+- **Peverati's references in 25.2** ("chapter 11", "Equation 11.4.2" and the like): the words stay; links point at this book's 22.8, 24.1 and Chapter 26, with one footnote.
+- **Concepts shared with Chapter 24** are owned by Chapter 24 (rule 6). Builders add the two forms (γ±^ν = γ₊^ν₊γ₋^ν₋ and I = ½Σm_iz_i²) to Chapter 24's concepts with `ost add forms`.
+- **Sims**: `sim-colligative-mu` (25.3), the moving osmosis Sim (25.4), the moving ionic atmosphere (25.6) and the activity-coefficient comparison (25.7).
+- **Captions** have no fixed length.

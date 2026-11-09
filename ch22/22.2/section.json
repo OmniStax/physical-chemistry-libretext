@@ -6,7 +6,7 @@
  "short": "Gibbs energy",
  "lead": "Most chemistry happens at constant pressure and temperature, not at constant volume. The Gibbs energy is the state function for those conditions: its sign says which way a reaction runs, and its change says how much useful work the reaction can do.",
  "objectives": [],
- "summary_html": "<p>We now have developed the basic set of concepts and functions that together form the framework of thermodynamics. Let's summarize four very basic state functions:</p><div class=\"book-table\">\n  <div class=\"tcap\"><span class=\"eyebrow\">Table</span><span></span></div>\n  <table>\n    <thead><tr><th>state function</th><th>natural variables</th></tr></thead>\n    <tbody>\n      <tr><td>$d\\kU = -\\kP d\\kV + \\kT d\\kSent$</td><td>$\\kU(\\kV,\\kSent)$</td></tr>\n      <tr><td>$d\\kHenth = +\\kV d\\kP + \\kT d\\kSent$</td><td>$\\kHenth(\\kP,\\kSent)$</td></tr>\n      <tr><td>$d\\kA = -\\kP d\\kV - \\kSent d\\kT$</td><td>$\\kA(\\kV,\\kT)$</td></tr>\n      <tr><td>$d\\kG = +\\kV d\\kP - \\kSent d\\kT$</td><td>$\\kG(\\kP,\\kT)$</td></tr>\n    </tbody>\n  </table>\n</div><p>Note:</p><ol><li>The replacement of $δq$ by $\\kT d\\kSent$ was based on <em>reversible</em> heat. This means that in the irreversible case the expressions for dU and dH become inequalities</li><li>We only include <em>volume</em> work in the above expressions. If other work (elastic, electrical e.g.) is involved extra terms need to be added: $d\\kU = \\kT d\\kSent - \\kP d\\kV + xdX$ etc.</li></ol><p>We are now ready to begin applying thermodynamics to a number of very diverse situations, but we will first develop some useful partial differential machinery.</p>",
+ "summary_html": "<p>We now have developed the basic set of concepts and functions that together form the framework of thermodynamics. Let's summarize four very basic state functions:</p><div class=\"book-table\">\n  <div class=\"tcap\"><span class=\"eyebrow\">Table</span><span></span></div>\n  <table>\n    <thead><tr><th>state function</th><th>natural variables</th></tr></thead>\n    <tbody>\n      <tr><td>$d\\kU = -\\kP d\\kV + \\kT d\\kSent$</td><td>$\\kU(\\kV,\\kSent)$</td></tr>\n      <tr><td>$d\\kHenth = +\\kV d\\kP + \\kT d\\kSent$</td><td>$\\kHenth(\\kP,\\kSent)$</td></tr>\n      <tr><td>$d\\kA = -\\kP d\\kV - \\kSent d\\kT$</td><td>$\\kA(\\kV,\\kT)$</td></tr>\n      <tr><td>$d\\kG = +\\kV d\\kP - \\kSent d\\kT$</td><td>$\\kG(\\kP,\\kT)$</td></tr>\n    </tbody>\n  </table>\n</div><p>Note:</p><ol><li>The replacement of $δ\\kq$ by $\\kT d\\kSent$ was based on <em>reversible</em> heat. This means that in the irreversible case the expressions for dU and dH become inequalities</li><li>We only include <em>volume</em> work in the above expressions. If other work (elastic, electrical e.g.) is involved extra terms need to be added: $d\\kU = \\kT d\\kSent - \\kP d\\kV + \\kx dX$ etc.</li></ol><p>We are now ready to begin applying thermodynamics to a number of very diverse situations, but we will first develop some useful partial differential machinery.</p>",
  "notes": "",
  "ai": {
   "text": [
@@ -163,11 +163,11 @@
     {
      "assumes": [
       {
-       "tex": "d\\kSent \\ge \\dfrac{\\delta q}{\\kT}",
+       "tex": "d\\kSent \\ge \\dfrac{\\delta \\kq}{\\kT}",
        "src": "20.4"
       },
       {
-       "tex": "d\\kU = \\delta q + \\delta w",
+       "tex": "d\\kU = \\delta \\kq + \\delta w",
        "src": "19.1"
       },
       {
@@ -176,12 +176,12 @@
       }
      ],
      "then": {
-      "tex": "\\mk{dS}{d\\kSent} \\ge \\mk{q}{\\dfrac{\\delta q}{\\kT}}",
+      "tex": "\\mk{dS}{d\\kSent} \\ge \\mk{q}{\\dfrac{\\delta \\kq}{\\kT}}",
       "src": "20.4"
      },
      "steps": [
       {
-       "tex": "\\mk{dS}{\\kT d\\kSent} \\ge \\mk{q}{\\delta q}",
+       "tex": "\\mk{dS}{\\kT d\\kSent} \\ge \\mk{q}{\\delta \\kq}",
        "uses": [],
        "cap": "The temperature is positive, so multiplying both sides by $\\kT$ keeps the direction of the inequality."
       },

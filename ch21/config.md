@@ -65,3 +65,15 @@ None yet; the open questions are at the end of the agent's report and in `explor
 - **Pending edges** into Chapters 19, 20 and 22: left to Chapter 21's pass.
 - **21.6** ends mid-argument at the source; a footnote says the book never prints its conclusion.
 - **Captions** have no fixed length.
+
+## Decisions taken in the chapter pass (2026-11-09)
+
+- **Entropy typed** with Chapter 20's `entropy`: the S_ent rows of 21.1–21.6 name `entropy`, 21.3's S̄ is typed
+  `entropy`, and the chapter's entropy concepts (absolute, standard molar, residual, of fusion, of transition,
+  at constant V and P, calorimetric, spectroscopic, of reaction, near 0 K) carry the type. S°, S°_i, S°_exp,
+  S°_calc, S̄_calc, S̄_exp, S_disorder, Δ_trs S and Δ_rxn S° have macros (`\kSstd`, `\kSstdi`, `\kSstdexp`,
+  `\kSstdcalc`, `\kSbarcalc`, `\kSbarexp`, `\kSdisorder`, `\kDeltatrsS`, `\kDeltarxnS`); the plain S of the
+  text, captions, exercises, footnotes and derivations is `\kSent`, the book's ΔS_trs and ΔS_sub as
+  `\Delta \kSent_{trs}` (Chapter 23's form). 21.5's S(T) curve is drawn in the entropy colour.
+- **Problem 1 of 21.E** is 21.1's `e2`, `source_section: "21.E"`, which the checker now reads from
+  `exercises/source.md`.

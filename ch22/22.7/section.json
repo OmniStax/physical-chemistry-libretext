@@ -173,7 +173,7 @@
       {
        "tex": "\\mk{g}{\\left( \\dfrac{\\partial \\kG / \\kT}{\\partial \\kT} \\right)_{\\kP}} = \\mk{h}{- \\dfrac{\\kHenth}{\\kT^{2}} + \\dfrac{1}{\\kT} \\left( \\dfrac{\\partial \\kHenth}{\\partial \\kT} \\right)_{\\kP}} - \\mk{s}{\\left( \\dfrac{\\partial \\kSent}{\\partial \\kT} \\right)_{\\kP}}",
        "uses": [],
-       "cap": "Take the derivative under constant pressure of each side; $H/T$ is a product of $H$ and $1/T$, so it gives two terms."
+       "cap": "Take the derivative under constant pressure of each side; $\\kHenth/\\kT$ is a product of $\\kHenth$ and $1/\\kT$, so it gives two terms."
       },
       {
        "tex": "\\mk{g}{\\left( \\dfrac{\\partial \\kG / \\kT}{\\partial \\kT} \\right)_{\\kP}} = \\mk{h}{- \\dfrac{\\kHenth}{\\kT^{2}} + \\dfrac{\\kCP}{\\kT}} - \\mk{s}{\\left( \\dfrac{\\partial \\kSent}{\\partial \\kT} \\right)_{\\kP}}",

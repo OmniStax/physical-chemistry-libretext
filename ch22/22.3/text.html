@@ -1,12 +1,12 @@
 <section id="first-and-second-laws">
 <h2>The combined first and second laws</h2>
 <p>Modeling the dependence of the Gibbs and Helmholtz functions behave with varying temperature, pressure, and volume is fundamentally useful. But in order to do that, a little bit more development is necessary. To see the power and utility of these functions, it is useful to combine the First and Second Laws into a single mathematical statement. In order to do that, one notes that since</p>
-$$ d\kSent = \dfrac{dq}{\kT} $$
+$$ d\kSent = \dfrac{d\kq}{\kT} $$
 <p>for a reversible change, it follows that</p>
-$$ dq= \kT d\kSent $$
+$$ d\kq= \kT d\kSent $$
 <p>And since</p>
-$$ dw = \kT d\kSent - \kp d\kV $$<sup class="fn" data-note="c-dw"></sup>
-<p>for a reversible expansion in which only p-V works is done, it also follows that (since $d\kU=dq+dw$):</p>
+$$ d\kw = \kT d\kSent - \kp d\kV $$<sup class="fn" data-note="c-dw"></sup>
+<p>for a reversible expansion in which only p-V works is done, it also follows that (since $d\kU=d\kq+d\kw$):</p>
 $$ d\kU = \kT d\kSent - \kp d\kV \tag{22.3.1} $$
 <p><span data-concept="fundamental-equation-u">This is an extraordinarily powerful result.</span> This differential for $d\kU$ can be used to simplify the differentials for $\kHenth$, $\kA$, and $\kG$. But even more useful are the constraints it places on the variables $\kT$, $\kSent$, $\kp$, and $\kV$ due to the mathematics of <span data-concept="exact-and-inexact-differentials">exact differentials</span>!</p>
 </section>
@@ -15,7 +15,7 @@ $$ d\kU = \kT d\kSent - \kp d\kV \tag{22.3.1} $$
 <h2>Maxwell Relations</h2>
 <p>The above result suggests that the <span data-concept="natural-variables-u">natural variables of internal energy are $\kSent$ and $\kV$</span> (or the function can be considered as $\kU(\kSent, \kV)$). So the total differential ($d\kU$) in Equation 22.3.1 can be expressed:</p>
 <figure class="dv" id="drv-maxwell-u"></figure>
-<p>This is an example of a <strong><span data-concept="maxwell-relations">Maxwell Relation</span></strong>. These are very powerful relationship that allows one to substitute partial derivatives when one is more convenient (perhaps it can be expressed entirely in terms of $\alpha$ and/or $\kappa_T$ for example.)</p>
+<p>This is an example of a <strong><span data-concept="maxwell-relations">Maxwell Relation</span></strong>. These are very powerful relationship that allows one to substitute partial derivatives when one is more convenient (perhaps it can be expressed entirely in terms of <span data-concept="thermal-expansion-coefficient">$\alpha$</span> and/or <span data-concept="isothermal-compressibility">$\kappa_T$</span> for example.)</p>
 <p>A similar result can be derived based on the definition of $\kHenth$.</p>
 <figure class="dv" id="drv-maxwell-h"></figure>
 <p>This is the <span data-concept="maxwell-relation-h">Maxwell relation on $\kHenth$</span>. <span data-concept="maxwell-relations">Maxwell relations</span> can also be developed based on $\kA$ and $\kG$. The results of those derivations are summarized in Table 22.3.1.</p>

@@ -132,14 +132,14 @@
     "at": "end"
    },
    "cite": "maxwell-relations",
-   "prompt": "<p>A van der Waals gas obeys $\\kp = \\dfrac{nR\\kT}{\\kV - n b} - \\dfrac{an^2}{\\kV^2}$. Use the Maxwell relation from $\\kA$ to find $\\left(\\dfrac{\\partial \\kSent}{\\partial \\kV}\\right)_{\\kT}$ for 1.00 mol of $\\mathrm{N_2}$ ($b = 0.03913$ L/mol) in a volume of 1.00 L.</p>",
+   "prompt": "<p>A van der Waals gas obeys $\\kp = \\dfrac{\\knmol\\kR\\kT}{\\kV - \\knmol b} - \\dfrac{a\\knmol^2}{\\kV^2}$. Use the Maxwell relation from $\\kA$ to find $\\left(\\dfrac{\\partial \\kSent}{\\partial \\kV}\\right)_{\\kT}$ for 1.00 mol of $\\mathrm{N_2}$ ($b = 0.03913$ L/mol) in a volume of 1.00 L.</p>",
    "answer": {
     "type": "number",
     "value": 8.65,
     "unit": "J/(K·L)",
     "generated_by": "ai",
     "hint": "By Table 22.3.1, $(\\partial \\kSent/\\partial \\kV)_{\\kT} = (\\partial \\kp/\\partial \\kT)_{\\kV}$, and only the first term of $\\kp$ depends on $\\kT$.",
-    "solution": "<p>The Maxwell relation from $\\kA$ is $(\\partial \\kSent/\\partial \\kV)_{\\kT} = (\\partial \\kp/\\partial \\kT)_{\\kV}$. At constant $\\kV$ the attraction term $an^2/\\kV^2$ does not change with $\\kT$, so $(\\partial \\kp/\\partial \\kT)_{\\kV} = nR/(\\kV - n b)$. With the numbers, $(1.00)(8.314\\ \\text{J K}^{-1})/(1.00\\ \\text{L} - 0.0391\\ \\text{L}) = 8.65$ J/(K·L), a little more than the ideal gas's $nR/\\kV = 8.31$ J/(K·L), because the molecules' own volume leaves less room to expand into.</p>"
+    "solution": "<p>The Maxwell relation from $\\kA$ is $(\\partial \\kSent/\\partial \\kV)_{\\kT} = (\\partial \\kp/\\partial \\kT)_{\\kV}$. At constant $\\kV$ the attraction term $a\\knmol^2/\\kV^2$ does not change with $\\kT$, so $(\\partial \\kp/\\partial \\kT)_{\\kV} = \\knmol\\kR/(\\kV - \\knmol b)$. With the numbers, $(1.00)(8.314\\ \\text{J K}^{-1})/(1.00\\ \\text{L} - 0.0391\\ \\text{L}) = 8.65$ J/(K·L), a little more than the ideal gas's $\\knmol\\kR/\\kV = 8.31$ J/(K·L), because the molecules' own volume leaves less room to expand into.</p>"
    }
   }
  ],
@@ -161,7 +161,7 @@
   {
    "id": "c-dw",
    "kind": "correction",
-   "html": "For a reversible expansion with only $\\kp$-$\\kV$ work the work is $dw = -\\kp d\\kV$; with $dq = \\kT d\\kSent$ that gives Equation 22.3.1."
+   "html": "For a reversible expansion with only $\\kp$-$\\kV$ work the work is $d\\kw = -\\kp d\\kV$; with $d\\kq = \\kT d\\kSent$ that gives Equation 22.3.1."
   },
   {
    "id": "c-ex-target",

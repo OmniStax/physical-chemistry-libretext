@@ -1304,3 +1304,28 @@ Flags, from memory and **unchecked**: water's and ethanol's vapor pressures at 7
 ≈ 666 Torr against the book's 384 and 945), the water–ethanol minimum-boiling azeotrope (≈ 89 mol %
 ethanol), water's dielectric constant 78.54 at 25 °C, the Debye–Hückel limiting law's negative sign
 and |z₊z₋|, "heteroazeotrope" for the book's "eutectics".
+
+## Chapter 25 prep · 2026-11-08
+
+Prep only, no section built. Fetched Chapter 25's 6 images into `media/ch25/`. Converted the landing
+page (no text: no `intro/` page or record, Chapters 4, 22, 24 precedent), 25.1–25.7 and 25.8 "Homework
+Problems" (a section in `modules.json`, treated as the exercise page: a stray Chapter 4 passage and
+Exercise 25.8.1, which is 1.9's card `e3`, not routed, 19.E precedent; not built). Wrote
+`ch25/exploration.md`, `ch25/config.md` (agreed on Chapter 1's terms), `ch25/chapter.json` (7
+sections, 112 variables) and merged `ch25/book-rows.json` after Chapter 24: no new type, 41 symbols
+(19 with macros), 38 concepts, 59 edges (Hasse-checked, 1 redundant removed), 41 forms. Chapter 24's
+activity, activity coefficient, mean ionic activity coefficient, ionic strength, Debye–Hückel law and
+osmotic coefficient reused (Chapter 25's own versions withdrawn before the merge). Drafts for
+25.1–25.7, 145 maths spans, KaTeX strict, no error. No tool changes. `colours:default` not run.
+
+Found: no inline exercise, 1 example (25.5.1); 9 AI exercises proposed. Figures: 25.4.1 replaced
+(moving osmosis), 25.6.1 replaced (moving ionic atmosphere), 25.7.1 replaced (still log γ± against √I,
+three laws); 25.2.1, 25.6.2, 25.6.3 kept (two captions corrected in the rows); one extra Sim
+recommended (25.3's μ(T) lines). Three derivation records, a fourth (25.2) only if Chapter 24 lacks
+the chain. Corrections checked by computation: the book's κ constant and A (3.29 nm⁻¹, 0.510),
+Figure 25.6.2's axis is √I, the gold–citrate balance, 27 bar for sea water, Davies at 0.1 M; 25.5's
+ln γ± integrand checked against 24.7's printed form.
+
+Literature from memory, **unchecked**: water's ε_r = 78.5 at 298 K (used only to check the book's
+constant); NaCl's measured γ± ≈ 0.778 at 0.1 m (only to judge 25.7's "about 2%", nothing built on it).
+KBr's points for Figure 25.7.1 are read off the book's Figure 25.6.2 (Petergans, Wikipedia).
