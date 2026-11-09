@@ -1,0 +1,82 @@
+<section id="activity">
+<h2>Activity</h2>
+<p>The bulk of the discussion in this chapter dealt with ideal solutions. However, real solutions will deviate from this kind of behavior. So much as in the case of gases, where <span data-concept="fugacity">fugacity</span> was introduced to allow us to use the ideal models, <strong><span data-concept="activity">activity</span></strong> is used to allow for the deviation of real solutes from limiting ideal behavior. The <span data-concept="activity">activity of a solute</span> is related to its concentration by</p>
+$$ \kaB=\gamma \dfrac{\kmB}{\kmstd} $$
+<p>where $\gamma$ is the <strong><span data-concept="activity-coefficient">activity coefficient</span></strong>, $\kmB$ is the molaliy of the solute, and $\kmstd$ is unit molality. The <span data-concept="activity-coefficient">activity coefficient</span> is unitless in this definition, and so the <span data-concept="activity">activity</span> itself is also unitless. Furthermore, the <span data-concept="activity-coefficient">activity coefficient</span> approaches unity as the molality of the solute approaches zero, insuring that dilute solutions behave ideally. The use of <span data-concept="activity">activity</span> to describe the solute allows us to use the simple model for <span data-concept="chemical-potential">chemical potential</span> by inserting the <span data-concept="activity">activity of a solute</span> in place of its mole fraction:</p>
+$$ \mu_B =\kmustdB + \kR\kT \ln \kaB $$
+<p>The problem that then remains is the measurement of the <span data-concept="activity-coefficient">activity coefficients</span> themselves, which may depend on temperature, pressure, and even concentration.</p>
+</section>
+
+<section id="activity-coefficients-for-ionic-solutes">
+<h2>Activity Coefficients for Ionic Solutes</h2>
+<p>For an ionic substance that dissociates upon dissolving</p>
+$$ MX(s) \rightarrow M^+(aq) + X^-(aq) $$
+<p>the <span data-concept="chemical-potential">chemical potential</span> of the cation can be denoted $\kmuplus$ and that of the anion as $\kmuminus$. For a solution, the total molar Gibbs function of the solutes is given by</p>
+$$ \kG = \kmuplus + \kmuminus $$
+<p>where</p>
+$$ \kmu = \mu^* + \kR\kT \ln a $$
+<p>where $\mu^*$ denotes the <span data-concept="chemical-potential">chemical potential</span> of an ideal solution, and $a$ is the <span data-concept="activity">activity of the solute</span>. Substituting his into the above relationship yields</p>
+$$ \kG = \mu^*_+ + \kR\kT \ln \kaplus + \mu_-^* + \kR\kT \ln \kaminus $$
+<p>Using a molal definition for the <span data-concept="activity-coefficient">activity coefficient</span></p>
+$$ a_i = \kgammai m_i $$
+<p>The expression for the total molar Gibbs function of the solutes becomes</p>
+$$ \kG = \mu_+^* + \kR\kT \ln \kgammaplus \kmplus + \mu_-^* + \kR\kT \ln \kgammaminus \kmminus $$
+<p>This expression can be rearranged to yield</p>
+$$ \kG = \mu_+^* + \mu_-^* + \kR\kT \ln \kmplus\kmminus + \kR\kT \ln \kgammaplus\kgammaminus $$
+<p>where all of the deviation from ideal behavior comes from the last term. Unfortunately, it impossible to experimentally deconvolute the term into the specific contributions of the two ions. So instead, we use a geometric average to define the <strong><span data-concept="mean-ionic-activity-coefficient">mean activity coefficient</span></strong>, $\kgammapm$.</p>
+$$ \kgammapm = \sqrt{\kgammaplus\kgammaminus} $$
+<p>For a substance that dissociates according to the general process</p>
+$$ M_xX_y(s) \rightarrow x M^{y+} (aq) + yX^{x-} (aq) $$
+<p>the expression for the <span data-concept="mean-ionic-activity-coefficient">mean activity coefficient</span> is given by</p>
+$$ \kgammapm = (\kgammaplus^x \kgammaminus^y)^{1/x+y} $$<sup class="fn" data-note="c-exponent"></sup>
+<h3>Debeye-Hückel Law</h3>
+<p>In 1923, Debeye and Hückel (Debye &amp; Hückel, 1923) suggested a means of calculating the <span data-concept="mean-ionic-activity-coefficient">mean activity coefficients</span> from experimental data. Briefly, they suggest that</p>
+$$ \log _{10} \kgammapm = \dfrac{1.824 \times 10^6}{(\kepsilon \kT)^{3/2}} |\kzplus+\kzminus | \sqrt{\kIion} $$<sup class="fn" data-note="c-dh-sign"></sup>
+<p>where $\kepsilon$ is the dielectric constant of the solvent, $\kT$ is the temperature in K, $\kzplus$ and $\kzminus$ are the charges on the ions, and $\kIion$ is the <strong><span data-concept="ionic-strength">ionic strength</span></strong> of the solution. $\kIion$ is given by</p>
+$$ \kIion = \dfrac{1}{2} \dfrac{\kmplus \kzplus^2 + \kmminus\kzminus^2}{\kmstd} $$
+<p>For a solution in water at <span data-type="temperature">25 <sup>o</sup>C</span>,<sup class="fn" data-note="c-25c"></sup></p>
+<p>As seen before <span data-concept="activity">activities</span> are a way to account for deviation from ideal behavior while still keeping the formulism for the ideal case intact. For example in a ideal solution we have:</p>
+$$ \kmuslni = \kmustari + \kR\kT \ln \kxi $$
+<p>is replaced by</p>
+$$ \kmuslni = \kmustari + \kR\kT \ln a_i $$
+<p>The relationship between $a_i$ and $\kxi$ is often written using an <span data-concept="activity-coefficient">activity coefficient</span> $γ$:</p>
+$$ a_i= \kgammai\kxi $$
+</section>
+
+<section id="raoult-versus-henry">
+<h2>Raoult versus Henry</h2>
+<p>Implicitly we have made use of <span data-concept="raoults-law">Raoult's law</span> here because we originally used</p>
+$$ \kxi = \dfrac{P_i}{P^*_i} $$
+<p>In the case of a solvent this makes sense because <span data-concept="raoult-activity-convention">Raoult's law is still valid in the limiting case</span>, but for the solute it would make more sense to use <span data-concept="henry-activity-convention">Henry's law as a basis for the definition of activity</span>:</p>
+$$ \kasolute ≡ \dfrac{\kPsolute}{\kKxH} $$
+<p>This does mean that the $μ^*$ now becomes a $μ^{*Henry}$ because the extrapolation of the <span data-concept="henrys-law">Henry law</span> all the way to the other side of the diagram where $x_{solute}=1$ points to a point that is not the equilibrium vapor pressure of this component. In fact it represents a virtual state of the system that cannot be realized. This however does not affect the usefulness of the convention.</p>
+</section>
+
+<section id="various-concentration-units">
+<h2>Various concentration units</h2>
+<p>The subscript X was added to the K value because we are still using mole fractions. However <span data-concept="henrys-law">Henry's law</span> is often used with other concentration measures. The most important are:</p>
+<ul><li>molarity</li><li>molality</li><li>mole fraction</li></ul>
+<p>Both the numerical values and the dimensions of K will differ depending on which concentration measure is used. In addition the pressure units can differ. For example for oxygen in water we have:</p>
+<p>K<sub>x,H</sub>= <span data-type="pressure">4.259 10<sup>4</sup> atm</span></p>
+<p>K<sub>cp</sub><sub>,H</sub>= 1.3 10<sup>-3</sup> mol/lit.atm</p>
+<p>K<sub>pc,H</sub>= 769.23 lit.atm/mol</p>
+<p>As you can see K<sub>cp</sub><sub>,H</sub> is simply 1/K<sub>pc,H</sub>, both conventions are used..</p>
+<p>Note that in this case a choice based on Raoult is really not feasible. At room temperature we are far above the critical point of oxygen which make the equilibrium vapor pressure a non-existent entity. Returning to <span data-concept="activity">activities</span> we could use each of the versions of K as a basis for the <span data-concept="activity">activity</span> definition. This means that when using <span data-concept="activity">activities</span> it must be specified what scale we are using. <span data-concept="activity">Activities</span> and Henry coefficients of dissolved gases in water (both fresh and salt) are quite important in geochemistry, environmental chemistry etc.</p>
+</section>
+
+<section id="non-volatile-solutes">
+<h2>Non-volatile solutes</h2>
+<p>A special case arises if the vapor pressure of a solute is negligible. For example if we dissolve sucrose in water. In that case we can still use the <span data-concept="henry-activity-convention">Henry based definition</span></p>
+$$ \kasolute ≡ \dfrac{\kPsolute}{\kKxH} $$
+<p>Even though both $K$ and $P$ will be exceedingly small their ratio is still finite. However how do we determine either?</p>
+<p>The answer lies in the solvent. Even if the vapor pressure of sucrose is immeasurably small, the water vapor pressure above the solution can be measured. The <span data-concept="gibbs-duhem-equation">Gibbs-Duhem equation</span> can then be used to translate one into the other. We can use <span data-concept="raoult-activity-convention">Raoult Law to define the activity of the solvent</span>:</p>
+$$ a_1 = \dfrac{\kPone}{\kPstarone} $$
+<p>We can measure the pressures as a function of the solute concentrations. At low concentrations</p>
+$$ \ln a_1 \ln x-1 ≈ -x-2 $$<sup class="fn" data-note="c-ln-a1"></sup>
+<p>At higher concentrations we will get deviations, we can write:</p>
+$$ \ln \dfrac{\kPone}{\kPstarone}=\ln a_1 ≈ -\kxtwo\kphiosm $$
+<p>The 'fudge factor' $\kphiosm$ is known as the <em><span data-concept="osmotic-coefficient">osmotic coefficient</span></em> and can thus be determined as a function of the solute concentration from the pressure data. What we are really interested in is $a_2$, not $a_1$:</p>
+$$ a_2= γ_2\kxtwo $$
+<p>Using <span data-concept="gibbs-duhem-equation">Gibbs-Duhem</span> we can convert $\kphiosm$ into $γ_2$. Usually this is done in terms of molalities rather than mole fractions and it leads to <span data-concept="solute-activity-from-solvent">this integral</span>:</p>
+$$ \ln \kgammatwom = \kphiosm - 1 + \int_{m'=0}^m \dfrac{\kphiosm - 1}{m'} dm' $$
+</section>

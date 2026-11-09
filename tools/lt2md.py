@@ -99,6 +99,71 @@ def warn(msg):
     sys.stderr.write(f"warning: {msg}\n")
 
 
+def braced(s, i):
+    """The {…} group starting at s[i] (balanced), and the index after it."""
+    depth, j = 0, i
+    while j < len(s):
+        if s[j] == "\\":
+            j += 2
+            continue
+        depth += {"{": 1, "}": -1}.get(s[j], 0)
+        if depth == 0:
+            return s[i + 1:j], j + 1
+        j += 1
+    return s[i + 1:], len(s)
+
+
+def page_macros(text):
+    """A page's own \\newcommand block (26.3, DeVoe's header template, hidden on
+    the live page): name → (argument count, body)."""
+    macros = {}
+    for m in re.finditer(r"\\(?:re)?newcommand\s*\{\\([A-Za-z]+)\}\s*(?:\[(\d)\])?\s*(?=\{)", text):
+        body, _ = braced(text, m.end())
+        macros[m.group(1)] = (int(m.group(2) or 0), body.replace("\\mbox", "\\text"))
+    return macros
+
+
+def expand(tex, macros):
+    """Expand the page's macros in one formula; maths written inside \\text{}
+    (\\tx{H$^+$(aq)}) is lifted out so the formula holds no dollar sign."""
+    if not macros:
+        return tex
+    use = re.compile(r"\\(" + "|".join(sorted(macros, key=len, reverse=True)) + r")(?![A-Za-z])")
+    for _ in range(6):  # macros defined through macros (\\K is \\units{K})
+        if not use.search(tex):
+            break
+        out, i = [], 0
+        for m in use.finditer(tex):
+            if m.start() < i:
+                continue
+            n, body = macros[m.group(1)]
+            j = m.end()
+            for k in range(1, n + 1):
+                while j < len(tex) and tex[j] == " ":
+                    j += 1
+                if j < len(tex) and tex[j] == "{":
+                    arg, j = braced(tex, j)
+                else:
+                    arg, j = tex[j:j + 1], j + 1
+                body = body.replace(f"#{k}", arg)
+            out.append(tex[i:m.start()] + body)
+            i = j
+        out.append(tex[i:])
+        tex = "".join(out)
+    def lift(m):
+        out, last_math = "", False
+        for k, p in enumerate(m.group(1).split("$")):
+            if k % 2:
+                out += ("{}" if last_math else "") + p
+                last_math = True
+            elif p:
+                out += f"\\text{{{p}}}"
+                last_math = False
+        return out
+    tex = re.sub(r"\\text\{((?:[^{}]|\{[^{}]*\})*\$(?:[^{}]|\{[^{}]*\})*)\}", lift, tex)
+    return tex
+
+
 class Converter:
     def __init__(self, page_ids, prefix=""):
         self.prefix = prefix  # the section number, for \\PageIndex

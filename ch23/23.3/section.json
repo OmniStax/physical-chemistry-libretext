@@ -277,7 +277,8 @@
        "tex": "\\mk{l}{\\kVbarice d\\kP -\\kSbarice d\\kT} = \\mk{r}{\\kVbarwater d\\kP -\\kSbarwater d\\kT}",
        "uses": [
         0
-       ]
+       ],
+       "cap": "This is true for both water and ice, or any two phases in equilibrium."
       },
       {
        "tex": "\\mk{l}{(\\kVbarwater - \\kVbarice) d\\kP} = \\mk{r}{(\\kSbarwater - \\kSbarice) d\\kT}",

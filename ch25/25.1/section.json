@@ -1,0 +1,48 @@
+{
+ "id": "25.1",
+ "module": "14513",
+ "chapter": "25",
+ "title": "Standard State of Nonvolatile Solutions",
+ "short": "Solute standard state",
+ "lead": "Activities are measured against a standard state. For a solute in solution, that state is defined by how the solute behaves at infinite dilution.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "The book prints no credits for this page.",
+ "ai": {
+  "text": [{"model": "claude-opus-5-5", "effort": "low"}],
+  "figures": []
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercise here; the one exercise is new and AI-written, with an AI answer to compare against.",
+ "figures": [],
+ "referents": [],
+ "coverage": [
+  {"span": "infinite-dilution", "concept": "solute-standard-state", "verb": "introduces"},
+  {"span": "infinite-dilution", "concept": "activity", "verb": "uses"},
+  {"span": "infinite-dilution", "concept": "activity-coefficient", "verb": "uses"},
+  {"span": "infinite-dilution", "concept": "standard-state", "verb": "uses"}
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "The standard state for a solution is defined in terms of the infinite-dilution behavior",
+   "kind": "exercise",
+   "bloom": "Understand",
+   "place": {"at": "end"},
+   "cite": "infinite-dilution",
+   "prompt": "<p>The standard state of a solute is a solution of 1 mol/L in which the solute has infinite-dilution properties. Why can no real solution be in this state, and what does an activity coefficient other than 1 tell you about a real solution measured against it?</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "Ask how close the solute particles are to one another in a real 1 mol/L solution.",
+    "solution": "<p>At 1 mol/L the solute particles are close enough to interact, so a real solution of that concentration does not have infinite-dilution properties. The standard state takes the concentration from 1 mol/L and the behavior from a solution so dilute that solute particles never meet, a combination no real solution has. That is why it is hypothetical.</p><p>Measured against it, a solute whose particles did not interact would have an activity equal to its concentration over 1 mol/L, with an activity coefficient of 1. Everything the interactions between solute particles do goes into the activity coefficient, so a value other than 1 measures how far the real solution departs from infinite-dilution behavior.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {"exercise": "a1", "concept": "solute-standard-state"},
+  {"exercise": "a1", "concept": "activity-coefficient"}
+ ],
+ "footnotes": []
+}

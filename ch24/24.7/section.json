@@ -1,0 +1,188 @@
+{
+ "id": "24.7",
+ "module": "14509",
+ "chapter": "24",
+ "title": "Activities of Nonideal Solutions",
+ "short": "Activities of nonideal solutions",
+ "lead": "Real solutions stray from ideal behavior. Activity keeps the ideal formula for the chemical potential and puts the departure in an activity coefficient, which the page follows through dissolved salts, the choice between Raoult and Henry, and solutes too involatile to measure directly.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "The page prints no credit; the ions' Gibbs function stays printed as the book writes it, one substitution per line.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": []
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The one exercise and its solution are AI-written; numeric answers accept a 2% tolerance, and its Bloom level and concept tags were chosen by AI.",
+ "figures": [],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "activity",
+   "concept": "activity",
+   "verb": "introduces"
+  },
+  {
+   "span": "activity",
+   "concept": "activity-coefficient",
+   "verb": "introduces"
+  },
+  {
+   "span": "activity",
+   "concept": "fugacity",
+   "verb": "uses"
+  },
+  {
+   "span": "activity",
+   "concept": "chemical-potential",
+   "verb": "uses"
+  },
+  {
+   "span": "activity-coefficients-for-ionic-solutes",
+   "concept": "mean-ionic-activity-coefficient",
+   "verb": "introduces"
+  },
+  {
+   "span": "activity-coefficients-for-ionic-solutes",
+   "concept": "debye-huckel-law",
+   "verb": "introduces"
+  },
+  {
+   "span": "activity-coefficients-for-ionic-solutes",
+   "concept": "ionic-strength",
+   "verb": "introduces"
+  },
+  {
+   "span": "activity-coefficients-for-ionic-solutes",
+   "concept": "activity",
+   "verb": "reinforces"
+  },
+  {
+   "span": "activity-coefficients-for-ionic-solutes",
+   "concept": "activity-coefficient",
+   "verb": "reinforces"
+  },
+  {
+   "span": "raoult-versus-henry",
+   "concept": "raoult-activity-convention",
+   "verb": "introduces"
+  },
+  {
+   "span": "raoult-versus-henry",
+   "concept": "henry-activity-convention",
+   "verb": "introduces"
+  },
+  {
+   "span": "raoult-versus-henry",
+   "concept": "raoults-law",
+   "verb": "uses"
+  },
+  {
+   "span": "raoult-versus-henry",
+   "concept": "henrys-law",
+   "verb": "uses"
+  },
+  {
+   "span": "various-concentration-units",
+   "concept": "henrys-law-constant",
+   "verb": "reinforces"
+  },
+  {
+   "span": "various-concentration-units",
+   "concept": "activity",
+   "verb": "uses"
+  },
+  {
+   "span": "non-volatile-solutes",
+   "concept": "osmotic-coefficient",
+   "verb": "introduces"
+  },
+  {
+   "span": "non-volatile-solutes",
+   "concept": "solute-activity-from-solvent",
+   "verb": "introduces"
+  },
+  {
+   "span": "non-volatile-solutes",
+   "concept": "gibbs-duhem-equation",
+   "verb": "uses"
+  },
+  {
+   "span": "non-volatile-solutes",
+   "concept": "raoult-activity-convention",
+   "verb": "reinforces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "suggested a means of calculating the mean activity coefficients from experimental data",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "activity-coefficients-for-ionic-solutes",
+   "prompt": "<p>A solution of MgCl₂ in water at 298.15 K has a molality of 0.010 mol/kg. Take the dielectric constant of water as 78.54.</p><ol type=\"a\"><li>What is the ionic strength $\\kIion$ of the solution?</li><li>What is the mean activity coefficient $\\kgammapm$ from the Debye-Hückel law, $\\log_{10}\\kgammapm = -\\dfrac{1.824\\times10^6}{(\\kepsilon\\kT)^{3/2}}|\\kzplus\\kzminus|\\sqrt{\\kIion}$?</li></ol>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 0.03,
+      "hint": "Each formula unit gives one Mg²⁺ and two Cl⁻."
+     },
+     {
+      "part": "b",
+      "value": 0.666,
+      "hint": "Work out the constant for water at 298.15 K first."
+     }
+    ],
+    "solution": "<p>(a) $\\kmplus = 0.010$ mol/kg with $\\kzplus = +2$, and $\\kmminus = 0.020$ mol/kg with $\\kzminus = -1$, so $\\kIion = \\tfrac{1}{2}[(0.010)(4) + (0.020)(1)] = 0.030$.</p><p>(b) The constant is $1.824\\times10^6/(78.54 \\times 298.15)^{3/2} = 0.509$. Then $\\log_{10}\\kgammapm = -(0.509)(2)\\sqrt{0.030} = -0.176$, and $\\kgammapm = 10^{-0.176} = 0.666$.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "ionic-strength"
+  },
+  {
+   "exercise": "a1",
+   "concept": "debye-huckel-law"
+  },
+  {
+   "exercise": "a1",
+   "concept": "mean-ionic-activity-coefficient"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-exponent",
+   "kind": "correction",
+   "html": "The exponent is $1/(x+y)$. For MX, with $x = y = 1$, it gives the square root above."
+  },
+  {
+   "id": "c-dh-sign",
+   "kind": "correction",
+   "html": "The limiting law has a minus sign and the product of the charges: $\\log_{10}\\kgammapm = -\\dfrac{1.824\\times10^6}{(\\kepsilon\\kT)^{3/2}}|\\kzplus\\kzminus|\\sqrt{\\kIion}$. So $\\kgammapm$ is below 1 and falls as the ionic strength grows."
+  },
+  {
+   "id": "c-25c",
+   "kind": "correction",
+   "html": "The sentence breaks off here. For water at 25 °C ($\\kepsilon = 78.54$, $\\kT = 298.15$ K) the constant $1.824\\times10^6/(\\kepsilon\\kT)^{3/2}$ is 0.509, so $\\log_{10}\\kgammapm = -0.509\\,|\\kzplus\\kzminus|\\sqrt{\\kIion}$."
+  },
+  {
+   "id": "c-ln-a1",
+   "kind": "correction",
+   "html": "The line should read $\\ln a_1 = \\ln \\kxone \\approx -\\kxtwo$: at low solute concentrations $a_1 \\approx \\kxone = 1 - \\kxtwo$, and $\\ln(1-\\kxtwo) \\approx -\\kxtwo$ for small $\\kxtwo$."
+  }
+ ]
+}

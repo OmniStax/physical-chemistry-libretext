@@ -1400,3 +1400,38 @@ round numbers (1.00 mol, 10.0 L, 300 K) in its paths Sim are ours, not the book'
 Known gaps: 19.5's text displays w_A, w_B, q_C with typed main letters but no referent rows for
 the paths; 19.1's derivation fact "The pressure of an ideal gas is a function of its molar volume
 and temperature alone" restates the sentence just before it in prose.
+
+## Chapter 21 pass · 2026-11-08
+
+Built: 21.1–21.9 (no intro, no summary; 21.E not built). 5 figure rows: 2 interactive, both still
+(21.4's Debye against Einstein Sim, 21.5.1's calorimetric entropy of CO₂ from the book's curve; none
+moving, no 3D) and 3 kept images (21.2.1–21.2.3). 6 derivations (21.1 four, 21.3 one, 21.6 one, hidden).
+10 exercises, all `exercise` kind in the Exercises document: 3 unkeyed book items with AI solutions
+(Example 21.1.1, Exercise 21.2.1, 21.E's Problem 1) and 7 AI exercises. 9 AI-marked corrections in
+footnotes, besides derivation node notes.
+
+Chapter pass: the checker reads a chapter's `exercises/source.md` for `source_section: "N.E"`
+(`checkSources`, with a unit test; the schema description and `docs/content-format.md` say so), and
+21.E's Problem 1 is 21.1's `e2` (ΔS = −131.8 J/K, recomputed). Entropy typed with Chapter 20's
+`entropy`: the S_ent rows name `entropy`, 21.3's S̄ is typed, 13 entropy concepts carry the type, nine
+S-symbols got macros (`\kSstd`, `\kSstdi`, `\kSstdexp`, `\kSstdcalc`, `\kSbarcalc`, `\kSbarexp`,
+`\kSdisorder`, `\kDeltatrsS`, `\kDeltarxnS`), the plain S of text, captions, footnotes, exercises and
+derivations now writes them or `\kSent`, and 21.5's S(T) curve and axis are drawn in the entropy colour;
+rows added so every `\k` macro has a row in force (21.3 S_ent, H, G; 21.4 S_ent; 21.5 H; 21.9 S°).
+Edges: `fundamental-equation-h` ← 19.8's `enthalpy-differential` (dH = δq + VdP, a different statement,
+not a duplicate); the pending edges into Chapters 19, 20 and 22 added (`fundamental-equation-u` ←
+`entropy`; `entropy-change-constant-pressure` ← `constant-pressure-heat-capacity`; `third-law`,
+`entropy-of-fusion` ← `entropy`; `perfect-crystal-zero-entropy` ← `boltzmann-entropy`;
+`entropy-of-fusion` ← `enthalpy-of-fusion`; `entropy-of-transition` ← `gibbs-energy`;
+`partition-function-third-law`, `spectroscopic-entropy` ← `entropy-from-partition-function`;
+`reaction-entropy` ← `entropy-state-function`), and four edges they made redundant removed (U ←
+internal-energy, the perfect crystal ← distribution-weight, the 0 K entropy ← canonical-partition-function,
+ΔS at constant V ← C_V, reached through 20.2's integrating factor); no new redundancy in the book.
+`colours:default`: every type keeps its stored colour. `check:content`: no errors, no warnings. Both
+figures screenshot light and dark (contact sheets in the pass's scratch folder); no console or KaTeX
+error on any Chapter 21 page, derivations included.
+
+Known gaps: 21.5's jump at sublimation is drawn in the energy colour beside the entropy curve, and the
+two violets sit close; 21.5's ΔS_trs and ΔS_sub write `\Delta \kSent_{trs}`, so their hover reads S's
+meaning; Δ_fus H and Δ_fus S (21.2) stay keys with no symbol row (19.8's `Delta_fusH` is the same
+quantity); 21.3's `gibbs-temperature-derivative` states 22.4's (∂G/∂T)_P = −S again, unlinked.

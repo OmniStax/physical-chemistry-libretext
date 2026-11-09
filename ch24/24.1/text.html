@@ -1,0 +1,105 @@
+<section id="mixtures-of-two-components">
+<h2>Mixtures of two components</h2>
+<p>So far, we have only discussed systems that are comprised of one component. Because a lot of chemistry occurs in mixtures or produces a mixture, chemists need to consider the thermodynamics of mixtures. A mixture can consist of many different components, however, for the sake of simplicity, we will restrict ourselves for now to two-component mixtures. Two-component mixtures can consist of two gases, two liquids, two solids, or even a liquid and a gas.</p>
+</section>
+
+<section id="partial-quantities-and-scaling">
+<h2>Partial Quantities and Scaling</h2>
+<p>Let's consider a two-component system where the volume and number of moles are changing. For example, we could have a system of a certain size of 1 and reduce its size stepwise in successive steps by taking half of it and throwing the other half away. The number of moles of each component, $n_1$ and $n_2$, will change as the volume of the system, $\kV$, changes:</p>
+<figure class="dv" id="drv-scaling"></figure>
+<p>By the same argument we have:</p>
+$$ \kV=\kVbarone n_1+\kVbartwo n_2 $$
+<p>where $\kVbari$ is the <span data-concept="partial-molar-quantity">partial molar volume</span> for component $i$. These <span data-concept="partial-molar-quantity">partial molar volumes</span> are generally a function of composition (and $\kP$, $\kT$) and have been tabulated for a number of liquid systems. <span data-concept="partial-molar-additivity">They allow us to calculate the real volume of a binary mixture.</span> Volumes are generally speaking <em><strong>not strictly additive</strong></em>. This fact is typically ignored in volumetric analysis and the use of molarities. Fortunately the deviations are often negligible in dilute solutions.</p>
+<p>For phase diagrams, molarity (moles per liter) is not a very suitable quantity to use for concentration due to its volume dependence. Usually we work with <span data-concept="mole-fraction">mole fractions</span> or molalities (moles per kilogram), where there are no volume dependencies.</p>
+</section>
+
+<section id="gaseous-mixtures">
+<h2>Gaseous Mixtures</h2>
+<p>Gases can always mix in any ratio and mixtures typically act close to ideal unless heavily compressed or brought to low temperatures. The only exception is if the gases react (e.g, HCl and NH<sub>3</sub>). Gas molecules experience little interaction with each other and, therefore, it does not matter much whether the molecules are different or the same. The <span data-type="pressure">total pressure</span> can be computed by adding the <span data-type="pressure">partial pressures</span> of the two components (<span data-concept="daltons-law">Dalton's Law of Partial Pressures</span>):</p>
+$$ \kPtotal = \kPone + \kPtwo \tag{24.1.1} $$
+</section>
+
+<section id="liquid-mixtures">
+<h2>Liquid Mixtures</h2>
+<p>There are binary liquid systems that are fully miscible and are said to act as <em><span data-concept="ideal-solution">ideal solutions</span></em>. Liquid molecules typically experience <em>strong</em> interactions with their neighbors. For the solution to be ideal, the interactions must remain <em>equally strong</em> even when the neighboring substance is different. This means they must be chemically similar. For this reason, liquid binaries are often <em>not</em> ideal. The next nearest thing are <strong><span data-concept="regular-solution">regular solutions</span></strong>. Even these systems can display phase segregation and limited mutual solubilities at low temperatures. Many liquid-liquid binaries diverge from ideality even more than the <span data-concept="regular-solution">regular solutions</span> and many of them are hardly miscible at all.</p>
+<div class="book-table">
+  <div class="tcap"><span class="eyebrow">Table 24.1.1</span><span>Solutions</span></div>
+  <table>
+    <thead><tr><th>Solution/mixture</th><th>Interactions</th><th>Miscibility</th></tr></thead>
+    <tbody>
+      <tr><td>Ideal gas</td><td>none</td><td>complete</td></tr>
+      <tr><td>Ideal liquid</td><td>strong but similar</td><td>complete</td></tr>
+      <tr><td>Regular liquid</td><td>strong, modestly dissimilar</td><td>not always complete</td></tr>
+      <tr><td>Real liquid</td><td>often strongly dissimilar</td><td>partial or none</td></tr>
+    </tbody>
+  </table>
+</div>
+</section>
+
+<section id="solid-mixtures">
+<h2>Solid Mixtures</h2>
+<p>Solid binaries tend to be even less miscible than liquid binaries to the point that immiscibility is the rule and miscibility is the exception. Even totally miscible systems like electrum (the alloys of silver and gold) are far from ideal.</p>
+<figure class="photo" id="fig-24-1-1" data-figure="24.1.1">
+  <img src="/media/ch24/78364-Histamenon_nomisma-Alexius_I-sb1776.jpg" alt="Two faces of a gold-coloured Byzantine coin: the emperor standing in robes and crown, and on the reverse two standing figures." data-width="323">
+  <figcaption><span class="eyebrow">Figure 24.1.1</span><span>Electrum coin of the Byzantine Emperor Alexius I Comnenus. (CC-BY-SA-3.0; Classical Numismatic Group, Inc. <a href="http://www.cngcoins.com">http://www.cngcoins.com</a>)</span></figcaption>
+</figure>
+<p>Another point of practical (kinetic rather than thermodynamic) importance is that even if two compounds are able to form a homogeneous <span data-concept="solid-solution">solid solution</span>, it usually takes heating for prolonged periods to get them to mix because solid diffusion is typically very slow. Nevertheless, solid solubility is an important issue for many systems, particularly for metal alloys. Two molecular solid substances that differ vastly in shape, size, polarity and or hydrogen bonding (e.g. organic compounds) typically have <em>negligible</em> mutual solid solubility. The latter fact is frequently exploited in organic chemistry to purify compounds through recrystallization.</p>
+<div class="note">
+<div class="eyebrow">Note</div>
+<h3>Note</h3>
+<p><span data-concept="solid-solution">Solid solutions</span> are relatively infrequent and never ideal.</p>
+</div>
+</section>
+
+<section id="ideal-liquid-ideal-gas-phase-diagrams">
+<h2>Ideal liquid/Ideal Gas Phase Diagrams</h2>
+<p>Let's mix two liquids together. Liquids typically have different boiling points, with one being more volatile than the other. The <span data-type="pressure">vapor pressure</span> of a component scales simply with the <span data-concept="equilibrium-vapor-pressure">equilibrium vapor pressure</span> of the pure component. In the gas phase, <em><strong><span data-concept="daltons-law">Dalton's law</span></strong></em> is applicable:</p>
+$$ y_i= \dfrac{P_i}{\kPtotal} \tag{24.1.2} $$
+<p>This is a consequence of the fact that ideal gases do not interact. The latter implies that the <span data-type="pressure">total pressure</span> is simply the sum of the partial ones:</p>
+$$ \kPtotal = \sum_i^N P_i $$
+<p>If the liquid solution is ideal, then the <span data-type="pressure">vapor pressure</span> of both components follow <em><strong><span data-concept="raoults-law">Raoult's law</span></strong></em>, which states that the equilibrium vapor pressure above the mixture is the equilibrium pressure of the pure component times the <span data-concept="mole-fraction">mole fraction</span>:</p>
+$$ P_i = \kchii \kPcirci \tag{24.1.3} $$
+<ul><li>$P_i$ is the <span data-type="pressure">vapor pressure</span> of component $i$ in the mixture</li><li>$\kPcirci$ is <span data-concept="equilibrium-vapor-pressure">equilibrium vapor pressure</span> of the pure component $i$.</li><li>$\kchii$ is the <span data-concept="mole-fraction">mole fraction</span> of $i^{th}$ component in the liquid phase.</li></ul>
+<p>Note that values for pure components are typically indicated by adding an asterisk $^\circ$ superscript.</p>
+<p>The idea behind <span data-concept="raoults-law">Raoult's law</span> is that if the interactions are similar, it is a matter of random chance which component sits at the interface at any given moment. The <span data-concept="equilibrium-vapor-pressure">equilibrium vapor pressure</span> has to do with the probability that a molecule escapes from the interface into the gas phase and is dependent on both the substances volatility and the number that cover the surface. This leads to <span data-concept="raoults-law">Raoult's Law</span>, where we must multiply the <span data-type="pressure">vapor pressure of the pure liquid</span> (volatility) by the <span data-concept="mole-fraction">mole fraction</span> (number on the surface).</p>
+<div class="note">
+<div class="eyebrow">Note</div>
+<h3>Note: Applicability of Raoult's Law</h3>
+<p><span data-concept="raoults-law">Raoult's law</span> seldom holds completely, which is more applicable if the two components are almost chemically identical like two isomers, e.g., 1-propanol and 2-propanol.</p>
+</div>
+</section>
+
+<section id="the-pressure-phase-diagram">
+<h2>The Pressure Phase Diagram</h2>
+<p>If we assume that temperature is constant, we can plot the <span data-type="pressure">total pressure</span> for both Dalton and Raoult's laws versus composition (of gas: $y_1$ and liquid: $\kchione$ on the same axis).</p>
+<p><strong>Liquid Phase:</strong></p>
+<figure class="dv" id="drv-liquid-line"></figure>
+<p>Clearly this is <span data-concept="ideal-bubble-line">a straight line going from $\kPcirctwo$ at $x=0$ to $\kPcircone$ at $x=1$</span>.</p>
+<p>However the composition of the vapor in equilibrium with a liquid at a given <span data-concept="mole-fraction">mole fraction</span> $\chi$ is <em>different</em> than that of the liquid. So $y$ is not $\chi$. If we take <span data-concept="daltons-law">Dalton's law</span> (Equation 24.1.2) and substitute <span data-concept="raoults-law">Raoult's Law</span> (Equation 24.1.3) in the numerator and the straight line in the denominator we get:</p>
+$$ y_1 = \dfrac{\kchione \kPcircone}{\kPcirctwo- \kchione(\kPcirctwo-\kPcircone)} \tag{24.1.5} $$
+<p>We can rearrange Equations 24.1.4 and 24.1.5 to plot <span data-concept="ideal-vapor-composition">the total pressure as function of $y_1$</span>:</p>
+$$ \kPtotal= \dfrac{\kPcircone\kPcirctwo }{\kPcircone + (\kPcirctwo-\kPcircone)y_1} \tag{24.1.6} $$
+<p>This is <em>not</em> a straight line.</p>
+<figure class="dv" id="drv-vapor-line"></figure>
+<figure class="sim" id="sim-pxy" data-original="/media/ch24/427419-Raoult's_Law_-_P_versus_X.png" data-original-width="350" data-original-caption="an ideal-ideal phase diagram for the binary system of toluene (A) and benzene (B). The curves are calculated from Equations 24.1.4 and 24.1.6.">
+  <div class="sim-head"><span class="eyebrow">Sim</span><span>Set the overall composition and <span data-type="pressure">the pressure</span> inside the gap between the two lines. The mixture splits along the horizontal tie-line into a liquid at one end and a vapor at the other, and the vapor is richer in the more volatile component.</span></div>
+</figure>
+<p>As you can see when we plot both lines<sup class="fn" data-note="c-second-figure"></sup> we get a <span data-concept="pressure-composition-diagram">diagram with three regions</span>. At high pressures we just have a liquid. At low pressures we just have a gas. In between we have a <em><strong><span data-concept="pressure-composition-diagram">phase gap</span></strong></em> or <em><strong><span data-concept="pressure-composition-diagram">two phase region</span></strong></em>. Points inside this region represent states that the system cannot achieve homogeneously. The horizontal <em><strong><span data-concept="pressure-composition-diagram">tie-line</span></strong></em> shows which <em>two</em> phases coexists. I used the same <span data-type="pressure">25 and 50 Torr</span> values for the pure equilibrium pressures as in the question above.<sup class="fn" data-note="c-torr"></sup> If you try to make a system with <em>overall</em> composition x and impose a pressure that falls in the forbidden zone you get two phases: a gaseous one that is richer in the more volatile component and a liquid one that is poorer in the volatile component than the overall composition would indicate.</p>
+</section>
+
+<section id="the-temperature-phase-diagram">
+<h2>The Temperature Phase Diagram</h2>
+<p>Note that the question: <em>what phase do we have when?</em> is really a function of <em><strong>both $\kP$ and $\kT$</strong></em>, so that if we want to represent <em>all</em> our knowledge in a diagram we should make it a three dimensional picture. This is not so easy to draw and not easy to comprehend visually either. This is why we usually look at a 2D cross section of the 3D space.</p>
+<p>The above diagram is <em>isothermal</em>: we vary $\kP$, keeping $\kT$ constant. It is, however, more usual (and easier) to do it the other way around. We keep pressure constant (say <span data-type="pressure">1 bar</span>, that's easy) and start heating things up isobarically.</p>
+<p><span data-concept="temperature-composition-diagram">The boiling points of our mixtures can also be plotted against $x$ (the liquid composition) and $y$ (the gaseous one) on the same horizontal axis.</span> Again because in general $y$ is not equal $x$ we get two different curves. Neither of them are straight lines in this case and we end up with a lens-shaped two phase region:</p>
+<figure class="sim" id="sim-txy-lever">
+  <div class="sim-head"><span class="eyebrow">Sim</span><span>Move the isopleth and the isotherm into the lens. The tie-line's left arm sets the amount of liquid and its right arm the amount of vapor. Add distillation stages and watch the condensed vapor walk toward the more volatile component.</span></div>
+</figure>
+<p>What happens to a mixture with a given overall composition x(=x<sub>1</sub>) when it is brought to a temperature where it boils can be seen at the intersection of a vertical line (an isopleth) at $x_{overall}$ and a horizontal one (an isotherm) at $T_{boil}$. If the intersection points in inside the two phase region a vapor phase and a liquid phase result that have a different composition from the overall one. The vapor phase is always richer in the more volatile component (the one with the lowest boiling point, on the left in the diagram). The liquid phase is enriched in the less volatile one.</p>
+<h3>The Lever Rule</h3>
+<p>How much of each phase is present is represented by the arrows in the diagram.<sup class="fn" data-note="c-arrows"></sup> <span data-concept="lever-rule">The amount of liquid is proportional to the left arrow, the amount of gas to the right one (i.e. it works crosswise).</span> The composition of the liquid in equilibrium with the vapor is:</p>
+<figure class="dv" id="drv-lever-rule"></figure>
+<h3>Distillation</h3>
+<p>The difference in composition between the gas and the liquid can be exploited to separate the two components, at least partially. We could trap the vapor and cool it down to form a liquid with a different composition. We could then boil it again and repeat the process. Each time the vapor will be more enriched in the volatile phase whereas the residual liquid is more enriched in the less volatile one. This process is known as <em><strong><span data-concept="distillation">distillation</span></strong></em>. In practice the process is done one a fractionation column which makes it possible to have a series of vapor-liquid equilibria at once.</p>
+<p>A good degree of purity can be reached this way, although 100% purity would take an infinite number of distillation steps.</p>
+</section>
