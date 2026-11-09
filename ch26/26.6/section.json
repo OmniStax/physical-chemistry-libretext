@@ -1,0 +1,90 @@
+{
+ "id": "26.6",
+ "module": "14527",
+ "chapter": "26",
+ "title": "The Sign of ΔG and not ΔG° Determines the Direction of Reaction Spontaneity",
+ "short": "The sign of ΔG",
+ "lead": "The standard reaction Gibbs energy refers to every species at 1 bar or 1 M and unmixed, which no real reaction is. The synthesis of ammonia shows why the reaction Gibbs energy at the actual composition is the one that decides.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "The book prints no credits for this page.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": []
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercise here; the one exercise and its solution are AI-written. Numeric answers accept a 2% tolerance.",
+ "figures": [],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "standard-conditions",
+   "concept": "sign-of-delta-g",
+   "verb": "introduces"
+  },
+  {
+   "span": "standard-conditions",
+   "concept": "reaction-gibbs-quotient",
+   "verb": "uses"
+  },
+  {
+   "span": "standard-conditions",
+   "concept": "standard-reaction-gibbs-energy",
+   "verb": "uses"
+  },
+  {
+   "span": "standard-conditions",
+   "concept": "equilibrium-constant",
+   "verb": "reinforces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "do not actually represent real reaction conditions",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "standard-conditions",
+   "prompt": "<p>For N₂(g) + 3H₂(g) → 2NH₃(g), $\\kDeltarGstd = -32.9$ kJ/mol at 298.15 K. What is $\\kDeltarG$ for a mixture with NH₃ at 1 bar and N₂ and H₂ at 0.010 bar each?</p>",
+   "answer": {
+    "type": "number",
+    "value": 12.8,
+    "unit": "kJ/mol",
+    "generated_by": "ai",
+    "hint": "Find Q from the pressures in bar, then add RT ln Q to the standard value.",
+    "solution": "<p>$Q = \\dfrac{1^2}{(0.010)(0.010)^3} = 1.0\\times10^{8}$, so $\\kR\\kT\\ln Q = (8.314)(298.15)(18.42)\\ \\text{J/mol} = 45.7$ kJ/mol and $\\kDeltarG = -32.9 + 45.7 = +12.8$ kJ/mol. Although $\\kDeltarGstd < 0$, this mixture holds so little N₂ and H₂ that the reaction runs in reverse: NH₃ decomposes.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "sign-of-delta-g"
+  },
+  {
+   "exercise": "a1",
+   "concept": "reaction-gibbs-quotient"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-units",
+   "kind": "correction",
+   "html": "The unit of $\\Delta_rG^\\circ = -32.9$ and of $\\Delta_rG = 0$ is kJ/mol, not kJ/(mol K): a Gibbs energy of reaction carries no kelvin."
+  },
+  {
+   "id": "c-o2",
+   "kind": "correction",
+   "html": "Read H₂: the reactants are N₂ and H₂, and no O₂ takes part."
+  }
+ ]
+}

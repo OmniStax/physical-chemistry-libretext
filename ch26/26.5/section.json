@@ -1,0 +1,110 @@
+{
+ "id": "26.5",
+ "module": "14526",
+ "chapter": "26",
+ "title": "Reaction Quotient and Equilibrium Constant Ratio Determines Reaction Direction",
+ "short": "Q against K",
+ "lead": "A mixture that is not at equilibrium has a reaction quotient Q, and the reaction has an equilibrium constant K. Comparing the two tells which way the reaction will run from where it starts.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "The book prints no credits for this page.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercise here; the one exercise and its solution are AI-written, from the standard reaction Gibbs energy the book gives for ammonia in Section 26.6. Numeric answers accept a 2% tolerance.",
+ "figures": [
+  {
+   "id": "sim-q-toward-k",
+   "kind": "sim",
+   "draws": [
+    "energy",
+    "amount"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "direction",
+   "concept": "reaction-gibbs-quotient",
+   "verb": "uses"
+  },
+  {
+   "span": "direction",
+   "concept": "q-over-k-direction",
+   "verb": "introduces"
+  },
+  {
+   "span": "direction",
+   "concept": "reaction-quotient",
+   "verb": "reinforces"
+  },
+  {
+   "span": "direction",
+   "concept": "equilibrium-constant",
+   "verb": "reinforces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "A comparison of $Q$ with $K$ indicates which way the reaction shifts",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "direction",
+   "prompt": "<p>For N₂(g) + 3H₂(g) ⇌ 2NH₃(g) at 298.15 K, $K = 5.81\\times10^{5}$. A mixture holds NH₃ at 10 bar and N₂ and H₂ at 1 bar each.</p><ol type=\"a\"><li>What is the reaction quotient $Q$ (pressures in bar)?</li><li>What is $\\kDeltarG$ for this mixture? Which way does the reaction run?</li></ol>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 100,
+      "hint": "Products over reactants, each pressure raised to its coefficient."
+     },
+     {
+      "part": "b",
+      "value": -21.5,
+      "unit": "kJ/mol",
+      "hint": "Use Δ_rG = RT ln(Q/K)."
+     }
+    ],
+    "solution": "<p>(a) $Q = \\dfrac{P_{\\text{NH}_3}^2}{P_{\\text{N}_2}P_{\\text{H}_2}^3} = \\dfrac{10^2}{(1)(1)^3} = 100$.</p><p>(b) $\\kDeltarG = \\kR\\kT\\ln(Q/K) = (8.314)(298.15)\\ln\\left(\\dfrac{100}{5.81\\times10^{5}}\\right) = (2479\\ \\text{J/mol})(-8.67) = -21.5$ kJ/mol. $Q < K$ and $\\kDeltarG < 0$, so the reaction runs forward, making more NH₃.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "q-over-k-direction"
+  },
+  {
+   "exercise": "a1",
+   "concept": "reaction-quotient"
+  }
+ ],
+ "footnotes": []
+}

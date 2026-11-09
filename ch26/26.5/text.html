@@ -1,0 +1,23 @@
+<section id="direction">
+<h2>Which way a reaction goes</h2>
+<p>The Gibbs free energy function was constructed to be able to predict which changes could occur spontaneously. If we start with a set of initial concentrations we can write them in a <span data-concept="reaction-quotient">reaction quotient</span></p>
+$$ \kDeltarG = \kDeltarGstd + \kR\kT \ln Q $$
+<p>if we subtract the equilibrium version of this expression:</p>
+$$ 0= \kDeltarGstd + \kR\kT\ln K $$
+<p>we get</p>
+$$ \kDeltarG = \kR\kT \ln \left(\dfrac{Q}{K} \right) $$
+<p>That gives us the sign of $\kDeltarG$. <span data-concept="q-over-k-direction">If this is negative the reaction will spontaneously proceed from left to right as written, if positive it will run in reverse.</span> In both case the value of $Q$ will change until $Q=K$ and equilibrium has been reached.</p>
+<figure class="sim" id="sim-q-toward-k">
+  <div class="sim-head"><span class="eyebrow">Sim</span><span>N₂ + 3H₂ ⇌ 2NH₃ at 298 K. Set the starting $Q$ and play: the mixture rolls down $\kG$ toward the minimum while $Q$ walks to $K$. Start above $K$ and it runs in reverse. Either way $\kDeltarG = \kR\kT\ln(Q/K)$ reaches zero exactly when $Q = K$.</span></div>
+</figure>
+<p>The main difference between $K$ and $Q$ is that $K$ describes a reaction that is at <span data-concept="equilibrium-constant">equilibrium</span>, whereas $Q$ describes a reaction that is not at equilibrium. To determine $Q$, the concentrations of the reactants and products must be known. For a given general chemical equation:</p>
+$$ aA + bB \rightleftharpoons cC + dD \tag{26.5.1} $$
+<p>the $Q$ equation is written by multiplying the <a href="https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Physical_Properties_of_Matter/Solutions_and_Mixtures/Nonideal_Solutions/Activity">activities</a> for the species of the products and dividing by the activities of the reactants. If any component in the reaction has a coefficient, indicated above with lower case letters, the concentration is raised to the power of the coefficient. $Q$ for the above equation is therefore:</p>
+$$ Q = \dfrac{[C]^c[D]^d}{[A]^a[B]^b} \tag{26.5.2} $$
+<div class="note">
+<div class="eyebrow">Note</div>
+<h3>Note</h3>
+<p>A comparison of $Q$ with $K$ indicates which way the reaction shifts and which side of the reaction is favored:</p>
+<ul><li>If $Q>K$, then the reaction favors the reactants. This means that in the $Q$ equation, the ratio of the numerator (the concentration or pressure of the products) to the denominator (the concentration or pressure of the reactants) is larger than that for $K$, indicating that more products are present than there would be at equilibrium. Because reactions always tend toward equilibrium (<a href="https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Equilibria/Le_Chateliers_Principle">Le Châtelier's Principle</a>), the reaction produces more reactants from the excess products, therefore causing the system to shift to the <strong>LEFT.</strong> This allows the system to reach equilibrium.</li><li>If $Q<K$, then the reaction favors the products. The ratio of products to reactants is less than that for the system at equilibrium—the concentration or the pressure of the reactants is greater than the concentration or pressure of the products. Because the reaction tends toward reach equilibrium, the system shifts to the <strong>RIGHT</strong> to make more products.</li><li>If $Q=K$, then the reaction is already at equilibrium. There is no tendency to form more reactants or more products at this point. No side is favored and no shift occurs.</li></ul>
+</div>
+</section>

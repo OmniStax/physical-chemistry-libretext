@@ -1,0 +1,151 @@
+{
+ "id": "26.4",
+ "module": "14525",
+ "chapter": "26",
+ "title": "Gibbs Energy of a Reaction vs. Extent of Reaction is a Minimum at Equilibrium",
+ "short": "The minimum of G",
+ "lead": "The Gibbs energy of a reacting mixture, plotted against the extent of reaction, has a lowest point that every reaction moves toward. For one ideal gas turning into another, the shape of that curve comes from two parts: the standard Gibbs energies of the pure gases and the Gibbs energy of mixing them.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "The book prints no credits for this page; Figures 26.4.1 and 26.4.2 are Ümit Kaya's (CC BY-NC 4.0, via LibreTexts).",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercise here; the one exercise and its solution are AI-written. Numeric answers accept a 2% tolerance.",
+ "figures": [
+  {
+   "id": "sim-gibbs-extent",
+   "kind": "sim",
+   "number": "26.4.1",
+   "folds": [
+    "26.4.2"
+   ],
+   "originals": [
+    "/media/ch26/404307-reactive_gibbs_energy.svg",
+    "/media/ch26/404308-GE-ne.svg"
+   ],
+   "original_caption": "Reactive Gibbs Energy and Equilibria. (CC BY-NC 4.0; Ümit Kaya via LibreTexts)",
+   "draws": [
+    "energy",
+    "amount",
+    "temperature"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "minimum",
+   "concept": "extent-of-reaction",
+   "verb": "uses"
+  },
+  {
+   "span": "minimum",
+   "concept": "gibbs-minimum-equilibrium",
+   "verb": "reinforces"
+  },
+  {
+   "span": "minimum",
+   "concept": "equilibrium-position",
+   "verb": "introduces"
+  },
+  {
+   "span": "minimum",
+   "concept": "exergonic-endergonic",
+   "verb": "introduces"
+  },
+  {
+   "span": "ideal-gas-equilibrium",
+   "concept": "mixing-places-minimum",
+   "verb": "introduces"
+  },
+  {
+   "span": "ideal-gas-equilibrium",
+   "concept": "standard-reaction-gibbs-energy",
+   "verb": "reinforces"
+  },
+  {
+   "span": "ideal-gas-equilibrium",
+   "concept": "reaction-gibbs-quotient",
+   "verb": "reinforces"
+  },
+  {
+   "span": "ideal-gas-equilibrium",
+   "concept": "equilibrium-constant",
+   "verb": "reinforces"
+  },
+  {
+   "span": "ideal-gas-equilibrium",
+   "concept": "standard-gibbs-equilibrium-constant",
+   "verb": "reinforces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "Lets work through this for an ideal gas reaction",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "ideal-gas-equilibrium",
+   "prompt": "<p>For the ideal gas reaction A ⇌ B, $\\kDeltarGstd = +5.00$ kJ/mol at 298.15 K. Starting from 1.00 mol of A at a total pressure of 1 bar:</p><ol type=\"a\"><li>What is the equilibrium constant?</li><li>What is the equilibrium position $\\kxieq$, in moles of B formed?</li></ol>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 0.133,
+      "hint": "Use K = exp(−Δ_rG°/RT)."
+     },
+     {
+      "part": "b",
+      "value": 0.117,
+      "unit": "mol",
+      "hint": "With one mole in all, P_B/P_A = ξ/(1 − ξ)."
+     }
+    ],
+    "solution": "<p>(a) $K = e^{-\\kDeltarGstd/\\kR\\kT} = \\exp\\left(-\\dfrac{5000}{(8.314)(298.15)}\\right) = e^{-2.017} = 0.133$.</p><p>(b) At equilibrium $K = \\kPB/\\kPA = \\kxieq/(1-\\kxieq)$, so $\\kxieq = K/(1+K) = 0.133/1.133 = 0.117$ mol. The positive $\\kDeltarGstd$ holds the minimum on the side of A, but the mixing term keeps some B in the mixture.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "equilibrium-position"
+  },
+  {
+   "exercise": "a1",
+   "concept": "mixing-places-minimum"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-section",
+   "kind": "correction",
+   "html": "The extent of reaction is defined in Section 26.1, not 26.4."
+  }
+ ]
+}
