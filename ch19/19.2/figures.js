@@ -11,7 +11,7 @@ const { tex, C, PAL, alpha, ctl, register, begin, line, dot, text, topline, axes
    spans 0.5 to 2 bar, so V runs 0.5 to 2 L): the isotherm P = nRT/V dashed, P_ext as a level from V1 to V2 and
    the rectangle under it, -P_ext dV, shaded in the work colour. Still: the step itself is 19.3's figure. */
 (function () {
-  const d = F.sim(root, 'sim-pv-work', 560);
+  const d = F.sim(root, 'sim-pv-work', 600);
   const NRT = 1.0, V1 = 1.0, P1 = 1.0;
   const PX = ctl(d.controls, { label: '\\kPext', cls: 'pressure', min: 0.5, max: 2, step: 0.05, value: 2, unit: 'bar', dec: 2, detents: [{ v: 1, label: 'P' }, 2], snap: true, aria: 'the constant external pressure' });
   const hits = [];
@@ -25,7 +25,7 @@ const { tex, C, PAL, alpha, ctl, register, begin, line, dot, text, topline, axes
       : pe > P1 ? `At $\\kPext = ${fmt(pe, 2)}$ bar the piston is driven down to ${fmt(V2, 2)} L, and the surroundings do ${fmt(wJ, 0)} J of work on the gas.`
         : `At $\\kPext = ${fmt(pe, 2)}$ bar the gas pushes the piston up to ${fmt(V2, 2)} L and does ${fmt(-wJ, 0)} J of work on the surroundings.`);
     /* the cylinder: 150 units per litre, standing on y = 500 */
-    const cx = 230, half = 95, base = 500, s = 150, yV = (v) => base - v * s;
+    const cx = 260, half = 95, base = 520, s = 150, yV = (v) => base - v * s;
     const yTop = yV(2.25);
     ctx.save(); ctx.fillStyle = alpha(cv, 0.16); ctx.fillRect(cx - half, yV(V2), 2 * half, base - yV(V2)); ctx.restore();
     line(ctx, cx - half, yTop, cx - half, base, PAL.ink, 3); line(ctx, cx + half, yTop, cx + half, base, PAL.ink, 3); line(ctx, cx - half, base, cx + half, base, PAL.ink, 3);
@@ -37,14 +37,14 @@ const { tex, C, PAL, alpha, ctl, register, begin, line, dot, text, topline, axes
     arrow(ctx, cx + 55, yp - 100, cx + 55, yp - 22, cp, 4);
     text(ctx, `P_{ext} = ${fmt(pe, 2)} bar`, cx + 70, yp - 84, cp, { size: 20, weight: 600 });
     arrow(ctx, cx - 50, yp + 70, cx - 50, yp + 8, alpha(cp, 0.7), 3);
-    text(ctx, `P = ${fmt(NRT / V2, 2)} bar`, cx - 40, yp + 50, alpha(cp, 0.85), { size: 20 });
-    if (!same) text(ctx, 'start', cx + half + 10, yV(V1) + 6, PAL.muted, { size: 17 });
-    text(ctx, `${fmt(V2, 2)} L`, cx, base - 18, cv, { size: 20, weight: 600, align: 'center' });
+    text(ctx, `P = ${fmt(NRT / V2, 2)} bar`, cx - half - 12, yp + 46, alpha(cp, 0.85), { size: 20, align: 'right' });
+    if (!same) text(ctx, 'start', cx - half - 12, yV(V1) + 6, PAL.muted, { size: 17, align: 'right' });
+    text(ctx, `${fmt(V2, 2)} L`, cx, base + 30, cv, { size: 20, weight: 600, align: 'center' });
     hits.length = 0;
     hits.push({ x: cx, y: yp - 8, r: 30, name: `the piston at rest, where P = Pext = ${fmt(pe, 2)} bar` });
     if (!same) hits.push({ x: cx + half - 20, y: yV(V1), r: 16, name: 'where the piston started, 1.00 L at 1.00 bar' });
     /* the PV plane */
-    const box = { l: 600, r: 1330, t: 110, b: 480 };
+    const box = { l: 620, r: 1330, t: 150, b: 520 };
     const ax = axes(ctx, box, [0, 2.5], [0, 2.5], { nx: 5, ny: 5, xl: 'volume V (L)', yl: 'pressure P (bar)', xc: cv, yc: cp });
     const lo = Math.min(V1, V2), hi = Math.max(V1, V2);
     if (!same) { ctx.save(); ctx.fillStyle = alpha(cw, 0.35); ctx.fillRect(ax.X(lo), ax.Y(pe), ax.X(hi) - ax.X(lo), ax.Y(0) - ax.Y(pe)); ctx.restore(); }

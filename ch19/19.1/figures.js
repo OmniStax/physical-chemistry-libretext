@@ -46,8 +46,8 @@ const { tex, C, alpha, ctl, register, fmt } = F;
       { k: 'line', pts: [[0, 0, 0], [0, 0, ZS]], color: 'guide', w: 2 },
       { k: 'label', s: 'V (L/mol)', p: [0.5, -0.24, 0], color: C('molar-volume'), cls: 'bare' },
       { k: 'label', s: '1', p: [0, -0.09, 0], cls: 'tick' }, { k: 'label', s: '2', p: [0.5, -0.09, 0], cls: 'tick' }, { k: 'label', s: '3', p: [1, -0.09, 0], cls: 'tick' },
-      { k: 'label', s: 'T (K)', p: [1.27, 0.5, 0], color: C('temperature'), cls: 'bare' },
-      { k: 'label', s: '200', p: [1.1, 0, 0], cls: 'tick' }, { k: 'label', s: '300', p: [1.1, 0.5, 0], cls: 'tick' }, { k: 'label', s: '400', p: [1.1, 1, 0], cls: 'tick' },
+      { k: 'label', s: 'T (K)', p: [1.32, 0.5, 0], color: C('temperature'), cls: 'bare' },
+      { k: 'label', s: '200', p: [1.15, 0, 0], cls: 'tick' }, { k: 'label', s: '300', p: [1.15, 0.5, 0], cls: 'tick' }, { k: 'label', s: '400', p: [1.15, 1, 0], cls: 'tick' },
       { k: 'label', s: 'p (atm)', p: [0, 0, ZS + 0.08], color: cp, cls: 'bare' },
     ]);
     const dp = +(a + b).toFixed(2);
