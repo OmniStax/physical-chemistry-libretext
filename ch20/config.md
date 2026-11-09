@@ -25,8 +25,8 @@ Proposed by the agent after the chapter exploration (2026-11-08). Status:
 | Extra simulations | one offered, not recommended: `sim-two-level-entropy` (20.8) |
 | Derivations | built: entropy as an exact differential (20.2, printed); the adiabat-and-isochore entropy change (20.3, hidden, score 6); entropy produced as two blocks reach one temperature (20.4, printed + hidden, score 8, result corrected); the entropy of mixing (20.6, printed); the Carnot efficiency by two routes (20.7, printed, one line inserted); entropy from probabilities and from Q (20.8, printed, sign corrected); the thermodynamic entropy from the statistical one (20.9, hidden, score 7); the rest kept as printed (table in `exploration.md`) |
 | Corrections | root rule 13's footnotes, the book's words kept (list in `exploration.md`): chiefly 20.1's n₂², 20.2's ∂q/dT, 20.4's (T_A + T_B)² and "q a state function", 20.5's W = 2^N, 20.6's Hawking, 20.7's 25%, the Stirling steps 2 and 4 and C_VΔT, 20.8's sign, 20.9's systems; every one checked by computation or by the page itself, none from memory |
-| Colour | new type `entropy` (J/K); `heat` and `work` (J) shared with Chapter 19 (added here only if 19 had not merged them; `LOG.md` says which); reused energy, temperature, volume, pressure, amount, mass, length, heat-capacity, partition-function; untyped and in ink: W and its kin, p_j, η, mole fractions χ, A, a_j, quantum numbers, k, R; facts: none; conventions: none; referents: none |
-| Symbols | see `book-rows.json` and `chapter.json`: 64 new (58 with macros), 161 variables rows; 40 concepts, 70 edges, 26 forms; entropy is `S_ent` (`\kSent`) since `S` is 8.8's spin; H left plain for Chapter 19's enthalpy symbol |
+| Colour | new type `entropy` (J/K); `heat` and `work` are Chapter 19's (merged before this chapter), reused; reused energy, temperature, volume, pressure, amount, mass, length, heat-capacity, partition-function; untyped and in ink: W and its kin, p_j, η, mole fractions χ, A, a_j, quantum numbers, k, R; facts: none; conventions: none; referents: none |
+| Symbols | see `book-rows.json` and `chapter.json`: 56 new (50 with macros), 163 variables rows; 39 concepts, 72 edges, 25 forms; entropy is `S_ent` (`\kSent`) since `S` is 8.8's spin; H is Chapter 19's `H` (`\kHenth`, rows linked to `enthalpy`) |
 | Licence | every page CC BY-NC-SA 4.0; 20.7.1 and 20.7.4 CC BY 4.0 (LaRue), 20.7.2 CC BY-SA 2.5 (Emoscopes), 20.7.3 public domain (Eric Gaba), 20.3.1 CC BY-NC (Ümit Kaya), the stork photograph credited to Frank Vassen as printed; the uncredited images under the page's licence |
 | `ai` and `built` | `ai` names the model and effort that wrote each part; `built` is the build date |
 
@@ -51,3 +51,13 @@ an item of the Exercises document (`place: end`), kind `exercise`.
 
 None yet; the open questions are at the end of the agent's report and in `exploration.md`
 (marked *orchestrator*).
+
+## Decisions taken by the orchestrator (2026-11-09)
+
+- **No intro page** (the landing page has no text).
+- **20.4's two unnumbered images** fold into `sim-two-blocks`, which reads "Sim" under today's rule 14 (unnumbered).
+- **20.7.3** folds into 20.7.1 as "Figure 20.7.1 + 20.7.3"; the Carnot Sim's energy-flow arrows carry it.
+- **20.1's stork note** is kept verbatim (book's words).
+- **Stork photo**: dropped unless the builder can confirm a free licence from the page itself. `notes` names the credit.
+- **Extra simulations**: none.
+- **Captions** have no fixed length.

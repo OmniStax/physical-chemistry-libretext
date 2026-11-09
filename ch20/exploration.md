@@ -29,8 +29,8 @@ passages too (the heat-pump and Stirling text, the "zero law process"). Every pa
 whose figure links 20.1's); the Boltzmann probability p_j = e^{−βE_j}/Q (17.2; 20.8 as (20.8.3)).
 From Chapter 19 (being prepared alongside): the first law, reversible PV work, δw_rev = −PdV,
 dU = C_vdT for an ideal gas, q_rev = nRT ln(V₂/V₁), the adiabat relation, work and heat as path
-functions; 20.3 cites "Section 19-6" and an equation label `19.21`. Edges to Chapter 19's concepts
-are left to the chapter pass, once 19 has merged (*orchestrator*, below).
+functions; 20.3 cites "Section 19-6" and an equation label `19.21`. Chapter 19 merged before this
+chapter's rows, so the edges to its concepts are in.
 
 ## Pages
 
@@ -205,7 +205,7 @@ Seven derivation records (20.2; 20.3; 20.4; 20.6; 20.7; 20.8; 20.9), three hidde
 - **20.1**: "n_1² + n_2² + n_2²" (n_3²); "Clearly if the side (a" (unclosed, as printed); "iis own",
   "thermodynamincs", "forms energy" (as printed); W = A!/A!0!0!… for W = 1 (as printed); "Thus
   entropy is very large" (as printed); the stork note's demographic aside (kept verbatim as the
-  book's note; flagged for the orchestrator only because it is opinion, see below).
+  book's note; flagged for the orchestrator only because it is opinion, see the open questions).
 - **20.2**: "(∂q/dT)_V dT + (∂q/dV)_T dV" (∂T, ∂V); "∂(C_v/T)/∂V" and "∂(P/T)/∂T = ∂(nR/V)/∂T = 0"
   are right (no correction).
 - **20.3**: "q_{rec,A}" (q_rev,A); (20.3.1)'s ΔS_{B+C} = nR ln(V₂/V₁) follows from the integral
@@ -244,7 +244,7 @@ Seven derivation records (20.2; 20.3; 20.4; 20.6; 20.7; 20.8; 20.9), three hidde
 | 20.7.1, 20.7.4 | "CC BY 4.0; Jerry LaRue via LibreTexts" | own licence with credit |
 | 20.7.2 | "CC SA-BY 2.5; Emoscopes" | own licence (CC BY-SA 2.5) with credit |
 | 20.7.3 | "Public Domain; Eric Gaba" | public domain with credit |
-| stork (20.1) | "from Wikipedia (credit: Frank Vassen)" | kept with the credit as printed (Wikimedia, CC BY 2.0 on Commons: *orchestrator* to confirm before shipping) |
+| stork (20.1) | "from Wikipedia (credit: Frank Vassen)" | kept with the credit as printed (its licence on Commons is not printed; the builder confirms it before shipping, *orchestrator*) |
 | 20.5.1 (two photographs) | none | page licence (both are old public-domain photographs of Boltzmann and his grave as reproduced on Wikimedia; no credit printed) |
 | 20.1's two CH431 images, 20.4's two images, 20.6's two images | none | page licence |
 
@@ -252,9 +252,8 @@ Seven derivation records (20.2; 20.3; 20.4; 20.6; 20.7; 20.8; 20.9), three hidde
 
 ## What is new to OmniStax here
 
-- **Types**: `entropy` (J/K), new, this chapter's. `heat` and `work` (J) are needed for q and w in
-  every section; Chapter 19 (prepared alongside) is their natural owner. The staged rows add them
-  only if Chapter 19 has not merged them first (the merge checks; see `LOG.md` for which happened).
+- **Types**: `entropy` (J/K), new, this chapter's (colour `#700486/#E99AFF` from the stable
+  assignment, no other type moved). `heat` and `work` are Chapter 19's, merged before this chapter.
 - **Symbols**: S is 8.8's spin quantum number (no macro), so entropy is `S_ent` (`\kSent`, latex
   S), with `S_prod`, `S_exch`, `S_sys`, `S_surr`, `S_total`, `S_ensemble`, `S_system`, `S_A`, `S_B`,
   `S_BC`, `S_bar`; heats `q_rev`, `q_irrev`, `q_rev_A/B/C/BC`, `q_h`, `q_A`, `q_1`–`q_4` (q and
@@ -262,9 +261,11 @@ Seven derivation records (20.2; 20.3; 20.4; 20.6; 20.7; 20.8; 20.9), three hidde
   `w_c`, `w_hot`, `w_cold`; `T_A`, `T_B`, `T_1`, `T_2`, `T_h`, `T_cold` (T_c reused, `redefines`);
   `V_A`–`V_D`, `V_tot`, `n_A`, `n_B`, `n_tot`, `P_ext`, `P_1`, `P_2`, `U_A`, `U_B`, `U_1`, `U_4`,
   `U_cycle`, `E_kin`; untyped `p_j`, `eta`, `n_3`, `W_1`, `W_2`, `W_tot`; χ's reused untyped
-  (mole fractions, `redefines` on 9.12's electronegativity). H (∮dH = 0 in 20.3, "U and H" in
-  20.1) is left plain: enthalpy is Chapter 19's symbol.
-- **40 concepts, 70 edges, 26 forms**; reused: 17.2's `distribution-weight`,
+  (mole fractions, `redefines` on 9.12's electronegativity). Chapters 19, 21 and 22 merged first
+  under the same names: `w`, `w_rev`, `q_rev`, `T_1`, `T_2`, `P_ext`, `P_1`, `P_2` are theirs and
+  reused; H is 19's `H` (`\kHenth`). Chapter 21 left its S° symbols untyped awaiting this
+  chapter's `entropy`.
+- **39 concepts, 72 edges (Hasse-reduced against the merged book: 17 redundant edges removed before the merge), 25 forms**; reused: 19.4's `exact-and-inexact-differentials` (not a new exact-differential concept), Chapter 19's first law, reversible and irreversible processes, path and state functions, the adiabat, `work-as-area` and `molecular-heat-and-work`; 17.2's `distribution-weight`,
   `stirlings-approximation`, `boltzmann-probability`, 17.3's `average-ensemble-energy`, 17.4's
   `internal-energy` and `constant-volume-heat-capacity`, 16.1's `ideal-gas-law` and `isotherm`,
   3.9's `particle-in-a-3d-box`.
@@ -287,3 +288,17 @@ figures; the bare `![…]` images of 20.1, 20.4 and 20.6 come through as `<p><im
 4–12), for the builder to make figure rows. Notes for builders: the drafter leaves no header above
 the openings of 20.1, 20.2, 20.5, 20.6 (its emphasis note), 20.8 and 20.9; 20.5's credits land in
 `credits`; 20.1's "### Permutations" comes through as an `<h3>` inside its block.
+
+## Open questions (*orchestrator*)
+
+1. **Two unnumbered images folded into one figure** (20.4's two-blocks sketch and its S(t) curve
+   into `sim-two-blocks`, eyebrow "Figure"): the fold rule speaks of numbered figures; precedent for
+   one unnumbered image folded into a numbered figure is 18.4.1.
+2. **Folding a different scene** (20.7.3's energy-flow diagram into 20.7.1's cycle, eyebrow "Figure
+   20.7.1 + 20.7.3"): the text ties them, one cycle drives both; the alternative keeps 20.7.3 as
+   printed.
+3. **20.1's stork note** closes on an aside about post-war Germany and immigration "mostly from
+   Muslim countries … that usually have larger families": the book's words, kept verbatim under
+   rule 13 unless the orchestrator wants the note's answer cut to its first and last sentences.
+4. **The stork photograph's licence** is not printed (credit only): keep with the credit if the
+   builder confirms a free licence, else drop it (decoration of a note).

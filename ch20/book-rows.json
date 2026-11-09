@@ -732,14 +732,6 @@
     },
     {
       "concept": "boltzmann-entropy",
-      "prereq": "distribution-weight"
-    },
-    {
-      "concept": "boltzmann-entropy",
-      "prereq": "boltzmann-constant"
-    },
-    {
-      "concept": "boltzmann-entropy",
       "prereq": "expansion-more-realizations"
     },
     {
@@ -772,10 +764,6 @@
     },
     {
       "concept": "reversible-heat-inexact",
-      "prereq": "first-law-of-thermodynamics"
-    },
-    {
-      "concept": "reversible-heat-inexact",
       "prereq": "pressure-volume-work"
     },
     {
@@ -803,16 +791,8 @@
       "prereq": "entropy"
     },
     {
-      "concept": "isothermal-entropy-change",
-      "prereq": "ideal-gas-law"
-    },
-    {
       "concept": "heating-entropy-change",
       "prereq": "entropy"
-    },
-    {
-      "concept": "heating-entropy-change",
-      "prereq": "constant-volume-heat-capacity"
     },
     {
       "concept": "entropy-state-function",
@@ -847,10 +827,6 @@
       "prereq": "heat-flow-entropy-production"
     },
     {
-      "concept": "second-law",
-      "prereq": "spontaneous-process"
-    },
-    {
       "concept": "entropy-production-exchange",
       "prereq": "second-law"
     },
@@ -865,10 +841,6 @@
     {
       "concept": "microstates-measure-dispersal",
       "prereq": "energy-dispersal"
-    },
-    {
-      "concept": "microstates-measure-dispersal",
-      "prereq": "many-microstates-one-macrostate"
     },
     {
       "concept": "reversible-path-for-entropy",
@@ -923,10 +895,6 @@
       "prereq": "heat-engine"
     },
     {
-      "concept": "carnot-cycle",
-      "prereq": "isotherm"
-    },
-    {
       "concept": "cycle-work-area",
       "prereq": "carnot-cycle"
     },
@@ -955,14 +923,6 @@
       "prereq": "carnot-efficiency"
     },
     {
-      "concept": "heat-pump",
-      "prereq": "dissipation"
-    },
-    {
-      "concept": "stirling-cycle",
-      "prereq": "heat-engine"
-    },
-    {
       "concept": "stirling-cycle",
       "prereq": "cycle-work-area"
     },
@@ -980,10 +940,6 @@
     },
     {
       "concept": "entropy-from-partition-function",
-      "prereq": "boltzmann-probability"
-    },
-    {
-      "concept": "entropy-from-partition-function",
       "prereq": "average-ensemble-energy"
     },
     {
@@ -993,10 +949,6 @@
     {
       "concept": "statistical-thermodynamic-entropy",
       "prereq": "entropy"
-    },
-    {
-      "concept": "statistical-thermodynamic-entropy",
-      "prereq": "boltzmann-probability"
     },
     {
       "concept": "entropy",
@@ -1012,27 +964,7 @@
     },
     {
       "concept": "entropy-state-function",
-      "prereq": "path-function"
-    },
-    {
-      "concept": "entropy-state-function",
       "prereq": "reversible-adiabatic-cooling"
-    },
-    {
-      "concept": "heat-flow-entropy-production",
-      "prereq": "first-law-of-thermodynamics"
-    },
-    {
-      "concept": "entropy-production-exchange",
-      "prereq": "irreversible-process"
-    },
-    {
-      "concept": "reversible-path-for-entropy",
-      "prereq": "reversible-process"
-    },
-    {
-      "concept": "reversible-path-for-entropy",
-      "prereq": "irreversible-process"
     },
     {
       "concept": "dissipation",

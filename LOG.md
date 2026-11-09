@@ -1194,3 +1194,21 @@ and this chapter's pass (listed in `exploration.md`). Drafts made for 21.1–21.
 KaTeX strict, no error); no tool changed. Flags, unchecked: CO's experimental residual entropy
 4.4 J/(mol K) (often quoted as 4.6) and S°(N₂) ≈ 191.6 J/(mol K), both from memory; the noble-gas
 table (21.7) checked against Sackur–Tetrode.
+
+## Chapter 20 prep · 2026-11-08
+
+Fetched (`fetch.py --media 20`, 14 images to `media/ch20/`) and converted (`convert.py 20`): nine
+sections, an empty landing page (no `intro/` page, Chapter 4's precedent) and an empty 20.E; no 20.S.
+The chapter prints no exercise (one worked example, 20.5.1); 9 AI exercises proposed, one per
+section, answers computed. `exploration.md` and `config.md` written; 6 interactive figures proposed
+(3 moving: the free expansion with W counted, the two blocks trading heat, the Carnot cycle on PV
+and TS folded with 20.7.3; 3 still: W as levels crowd, two paths one ΔS, the mixing entropy), 5
+images kept, 1 extra Sim offered; 7 derivations (3 hidden, scores 6–8). Rows merged after
+Chapters 19, 21 and 22: new type `entropy` (colours:default run: `#700486/#E99AFF`, nothing else
+moved), 56 symbols (50 macros; entropy is `S_ent`/`\kSent` since `S` is 8.8's spin; `w`, `q_rev`,
+`T_1`, `P_1` and kin reused from 19 and 22), 163 variables rows, 39 concepts, 72 edges
+(17 redundant removed), 25 forms; 19.4's `exact-and-inexact-differentials` reused. Corrections
+noted (all checked by computation or against the page; none from memory): 20.4's ΔS formula
+((T_A + T_B)², the printed one is negative at 400/300 K), 20.5.1's W = 2^N, 20.7's 25% and the
+Stirling steps, 20.8's sign. No tool changed; drafts for the nine sections and the intro, 252 maths
+spans set by KaTeX without error. Unchecked: the stork photograph's licence (credit only printed).

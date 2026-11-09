@@ -62,7 +62,6 @@
   },
   {
    "sym": "U",
-   "type": "energy",
    "concept": "internal-energy",
    "meaning": "the internal energy of the system",
    "unit": "J",
@@ -70,7 +69,6 @@
   },
   {
    "sym": "A",
-   "type": "energy",
    "concept": "helmholtz-energy",
    "meaning": "the Helmholtz energy of the system",
    "unit": "J",
@@ -94,7 +92,6 @@
   },
   {
    "sym": "A_molar",
-   "type": "energy",
    "concept": "helmholtz-energy",
    "meaning": "the molar Helmholtz energy",
    "unit": "J/mol",
@@ -102,11 +99,13 @@
   },
   {
    "sym": "y_1",
+   "concept": "mole-fraction",
    "meaning": "the mole fraction of gas 1",
    "section": "22.1"
   },
   {
    "sym": "y_2",
+   "concept": "mole-fraction",
    "meaning": "the mole fraction of gas 2",
    "section": "22.1"
   },
@@ -132,6 +131,13 @@
    "section": "22.1"
   },
   {
+   "sym": "S_ent",
+   "concept": "entropy",
+   "meaning": "the entropy of the system",
+   "unit": "J/K",
+   "section": "22.1"
+  },
+  {
    "sym": "T",
    "type": "temperature",
    "meaning": "the temperature",
@@ -140,7 +146,6 @@
   },
   {
    "sym": "U",
-   "type": "energy",
    "concept": "internal-energy",
    "meaning": "the internal energy of the system",
    "unit": "J",
@@ -148,7 +153,6 @@
   },
   {
    "sym": "A",
-   "type": "energy",
    "concept": "helmholtz-energy",
    "meaning": "the Helmholtz energy of the system",
    "unit": "J",
@@ -170,7 +174,6 @@
   },
   {
    "sym": "G",
-   "type": "energy",
    "concept": "gibbs-energy",
    "meaning": "the Gibbs energy of the system",
    "unit": "J",
@@ -178,7 +181,6 @@
   },
   {
    "sym": "H",
-   "type": "energy",
    "concept": "enthalpy",
    "meaning": "the enthalpy of the system",
    "unit": "J",
@@ -199,6 +201,13 @@
    "section": "22.2"
   },
   {
+   "sym": "S_ent",
+   "concept": "entropy",
+   "meaning": "the entropy of the system",
+   "unit": "J/K",
+   "section": "22.2"
+  },
+  {
    "sym": "T",
    "type": "temperature",
    "meaning": "the temperature",
@@ -207,7 +216,6 @@
   },
   {
    "sym": "U",
-   "type": "energy",
    "concept": "internal-energy",
    "meaning": "the internal energy of the system",
    "unit": "J",
@@ -251,10 +259,16 @@
   },
   {
    "sym": "H",
-   "type": "energy",
    "concept": "enthalpy",
    "meaning": "the enthalpy of the system",
    "unit": "J",
+   "section": "22.3"
+  },
+  {
+   "sym": "S_ent",
+   "concept": "entropy",
+   "meaning": "the entropy of the system",
+   "unit": "J/K",
    "section": "22.3"
   },
   {
@@ -280,7 +294,6 @@
   },
   {
    "sym": "G",
-   "type": "energy",
    "concept": "gibbs-energy",
    "meaning": "the Gibbs energy of the system",
    "unit": "J",
@@ -302,10 +315,16 @@
   },
   {
    "sym": "H",
-   "type": "energy",
    "concept": "enthalpy",
    "meaning": "the enthalpy of the system",
    "unit": "J",
+   "section": "22.4"
+  },
+  {
+   "sym": "S_ent",
+   "concept": "entropy",
+   "meaning": "the entropy of the system",
+   "unit": "J/K",
    "section": "22.4"
   },
   {
@@ -317,7 +336,6 @@
   },
   {
    "sym": "U",
-   "type": "energy",
    "concept": "internal-energy",
    "meaning": "the internal energy of the system",
    "unit": "J",
@@ -325,7 +343,6 @@
   },
   {
    "sym": "A",
-   "type": "energy",
    "concept": "helmholtz-energy",
    "meaning": "the Helmholtz energy of the system",
    "unit": "J",
@@ -354,7 +371,6 @@
   },
   {
    "sym": "G",
-   "type": "energy",
    "concept": "gibbs-energy",
    "meaning": "the Gibbs energy of the system",
    "unit": "J",
@@ -362,7 +378,6 @@
   },
   {
    "sym": "mu_i",
-   "type": "energy",
    "concept": "chemical-potential",
    "meaning": "the chemical potential of species i",
    "unit": "J/mol",
@@ -379,10 +394,16 @@
   },
   {
    "sym": "H",
-   "type": "energy",
    "concept": "enthalpy",
    "meaning": "the enthalpy of the system",
    "unit": "J",
+   "section": "22.5"
+  },
+  {
+   "sym": "S_ent",
+   "concept": "entropy",
+   "meaning": "the entropy of the system",
+   "unit": "J/K",
    "section": "22.5"
   },
   {
@@ -408,7 +429,6 @@
   },
   {
    "sym": "G",
-   "type": "energy",
    "concept": "gibbs-energy",
    "meaning": "the Gibbs energy of the system",
    "unit": "J",
@@ -431,7 +451,6 @@
   },
   {
    "sym": "G_molar",
-   "type": "energy",
    "concept": "gibbs-energy",
    "meaning": "the molar Gibbs energy",
    "unit": "J/mol",
@@ -439,7 +458,6 @@
   },
   {
    "sym": "G_std_molar",
-   "type": "energy",
    "concept": "gibbs-energy",
    "meaning": "the molar Gibbs energy in the standard state of 1 bar",
    "unit": "J/mol",
@@ -489,7 +507,6 @@
   },
   {
    "sym": "H",
-   "type": "energy",
    "concept": "enthalpy",
    "meaning": "the enthalpy of the system",
    "unit": "J",
@@ -504,7 +521,6 @@
   },
   {
    "sym": "C_P",
-   "type": "heat-capacity",
    "concept": "constant-pressure-heat-capacity",
    "meaning": "the heat capacity at constant pressure, written C_p or C_P",
    "unit": "J/K",
@@ -515,6 +531,13 @@
    "type": "temperature",
    "meaning": "the temperature of a phase transition",
    "unit": "K",
+   "section": "22.7"
+  },
+  {
+   "sym": "S_ent",
+   "concept": "entropy",
+   "meaning": "the entropy of the system",
+   "unit": "J/K",
    "section": "22.7"
   },
   {
@@ -540,7 +563,6 @@
   },
   {
    "sym": "G",
-   "type": "energy",
    "concept": "gibbs-energy",
    "meaning": "the Gibbs energy of the system",
    "unit": "J",
@@ -555,7 +577,6 @@
   },
   {
    "sym": "G_bar",
-   "type": "energy",
    "concept": "gibbs-energy",
    "meaning": "the molar Gibbs energy",
    "unit": "J/mol",
@@ -563,7 +584,6 @@
   },
   {
    "sym": "f",
-   "type": "pressure",
    "concept": "fugacity",
    "meaning": "the fugacity of the gas",
    "unit": "Pa",
@@ -578,7 +598,6 @@
   },
   {
    "sym": "G_bar_i",
-   "type": "energy",
    "concept": "gibbs-energy",
    "meaning": "the partial molar Gibbs energy of component i",
    "unit": "J/mol",
@@ -595,7 +614,6 @@
   },
   {
    "sym": "mu_bar_i",
-   "type": "energy",
    "concept": "chemical-potential",
    "meaning": "the chemical potential of component i, written μ̄_i",
    "unit": "J/mol",
@@ -603,7 +621,6 @@
   },
   {
    "sym": "mu_bar",
-   "type": "energy",
    "concept": "chemical-potential",
    "meaning": "the molar chemical potential of the gas",
    "unit": "J/mol",
@@ -611,7 +628,6 @@
   },
   {
    "sym": "mu_bar_std",
-   "type": "energy",
    "concept": "chemical-potential",
    "meaning": "the chemical potential in the standard state",
    "unit": "J/mol",
@@ -622,6 +638,13 @@
    "type": "pressure",
    "meaning": "the standard pressure, 1 bar",
    "unit": "bar",
+   "section": "22.8"
+  },
+  {
+   "sym": "S_ent",
+   "concept": "entropy",
+   "meaning": "the entropy of the system",
+   "unit": "J/K",
    "section": "22.8"
   }
  ]

@@ -18329,7 +18329,7 @@
       "forms": [
         {
           "id": "helmholtz-definition",
-          "latex": "\\kA \\equiv \\kU - \\kT S"
+          "latex": "\\kA \\equiv \\kU - \\kT \\kSent"
         }
       ]
     },
@@ -18342,7 +18342,7 @@
       "forms": [
         {
           "id": "helmholtz-criterion-inequality",
-          "latex": "d\\kA = d\\kU - \\kT dS \\le 0"
+          "latex": "d\\kA = d\\kU - \\kT d\\kSent \\le 0"
         }
       ]
     },
@@ -18381,7 +18381,7 @@
       "forms": [
         {
           "id": "da-fundamental",
-          "latex": "d\\kA = -\\kP d\\kV - S d\\kT"
+          "latex": "d\\kA = -\\kP d\\kV - \\kSent d\\kT"
         }
       ]
     },
@@ -18396,7 +18396,7 @@
       "forms": [
         {
           "id": "gibbs-definition",
-          "latex": "\\kG \\equiv \\kHenth - \\kT S"
+          "latex": "\\kG \\equiv \\kHenth - \\kT \\kSent"
         },
         {
           "id": "gibbs-from-helmholtz",
@@ -18413,7 +18413,7 @@
       "forms": [
         {
           "id": "gibbs-criterion-delta",
-          "latex": "\\Delta \\kG = \\kDeltaH - \\kT\\Delta S \\le 0"
+          "latex": "\\Delta \\kG = \\kDeltaH - \\kT\\Delta \\kSent \\le 0"
         },
         {
           "id": "gibbs-criterion-differential",
@@ -18457,7 +18457,7 @@
       "forms": [
         {
           "id": "dg-fundamental",
-          "latex": "d\\kG = \\kV d\\kP - S d\\kT"
+          "latex": "d\\kG = \\kV d\\kP - \\kSent d\\kT"
         }
       ]
     },
@@ -18470,11 +18470,11 @@
       "forms": [
         {
           "id": "du-ds",
-          "latex": "\\left( \\dfrac{\\partial \\kU}{\\partial S} \\right)_{\\kV} = \\kT"
+          "latex": "\\left( \\dfrac{\\partial \\kU}{\\partial \\kSent} \\right)_{\\kV} = \\kT"
         },
         {
           "id": "du-dv",
-          "latex": "\\left( \\dfrac{\\partial \\kU}{\\partial \\kV} \\right)_S = -\\kp"
+          "latex": "\\left( \\dfrac{\\partial \\kU}{\\partial \\kV} \\right)_{\\kSent} = -\\kp"
         }
       ]
     },
@@ -18501,7 +18501,7 @@
       "forms": [
         {
           "id": "maxwell-u",
-          "latex": "\\left( \\dfrac{\\partial \\kT}{\\partial \\kV} \\right)_S = - \\left( \\dfrac{\\partial \\kp}{\\partial S} \\right)_{\\kV}"
+          "latex": "\\left( \\dfrac{\\partial \\kT}{\\partial \\kV} \\right)_{\\kSent} = - \\left( \\dfrac{\\partial \\kp}{\\partial \\kSent} \\right)_{\\kV}"
         }
       ]
     },
@@ -18514,11 +18514,11 @@
       "forms": [
         {
           "id": "dh-ds",
-          "latex": "\\left( \\dfrac{\\partial \\kHenth}{\\partial S} \\right)_{\\kp}= \\kT"
+          "latex": "\\left( \\dfrac{\\partial \\kHenth}{\\partial \\kSent} \\right)_{\\kp}= \\kT"
         },
         {
           "id": "dh-dp",
-          "latex": "\\left( \\dfrac{\\partial \\kHenth}{\\partial \\kp} \\right)_S = \\kV"
+          "latex": "\\left( \\dfrac{\\partial \\kHenth}{\\partial \\kp} \\right)_{\\kSent} = \\kV"
         }
       ]
     },
@@ -18531,7 +18531,7 @@
       "forms": [
         {
           "id": "maxwell-h",
-          "latex": "\\left( \\dfrac{\\partial \\kT}{\\partial \\kp} \\right)_S = \\left( \\dfrac{\\partial \\kV}{\\partial S} \\right)_{\\kp}"
+          "latex": "\\left( \\dfrac{\\partial \\kT}{\\partial \\kp} \\right)_{\\kSent} = \\left( \\dfrac{\\partial \\kV}{\\partial \\kSent} \\right)_{\\kp}"
         }
       ]
     },
@@ -18544,7 +18544,7 @@
       "forms": [
         {
           "id": "maxwell-a",
-          "latex": "\\left( \\dfrac{\\partial \\kp}{\\partial \\kT} \\right)_{\\kV} = \\left( \\dfrac{\\partial S}{\\partial \\kV} \\right)_{\\kT}"
+          "latex": "\\left( \\dfrac{\\partial \\kp}{\\partial \\kT} \\right)_{\\kV} = \\left( \\dfrac{\\partial \\kSent}{\\partial \\kV} \\right)_{\\kT}"
         }
       ]
     },
@@ -18557,7 +18557,7 @@
       "forms": [
         {
           "id": "maxwell-g",
-          "latex": "\\left( \\dfrac{\\partial \\kV}{\\partial \\kT} \\right)_{\\kp} = - \\left( \\dfrac{\\partial S}{\\partial \\kp} \\right)_{\\kT}"
+          "latex": "\\left( \\dfrac{\\partial \\kV}{\\partial \\kT} \\right)_{\\kp} = - \\left( \\dfrac{\\partial \\kSent}{\\partial \\kp} \\right)_{\\kT}"
         }
       ]
     },
@@ -18616,7 +18616,7 @@
       "forms": [
         {
           "id": "dg-dt",
-          "latex": "\\left( \\dfrac{\\partial \\kG}{\\partial \\kT} \\right)_{\\kP} = -S"
+          "latex": "\\left( \\dfrac{\\partial \\kG}{\\partial \\kT} \\right)_{\\kP} = -\\kSent"
         },
         {
           "id": "dg-dp",
@@ -18675,19 +18675,19 @@
       "forms": [
         {
           "id": "dg-composition",
-          "latex": "d\\kG = -S d\\kT + \\kV d\\kp + \\sum_{i=1}^{N}\\kmui dn_i"
+          "latex": "d\\kG = -\\kSent d\\kT + \\kV d\\kp + \\sum_{i=1}^{N}\\kmui dn_i"
         },
         {
           "id": "du-composition",
-          "latex": "d\\kU = \\kT dS - \\kP d\\kV + \\sum_{i=1}^{N}\\kmui dn_i"
+          "latex": "d\\kU = \\kT d\\kSent - \\kP d\\kV + \\sum_{i=1}^{N}\\kmui dn_i"
         },
         {
           "id": "dh-composition",
-          "latex": "d\\kHenth = \\kT dS + \\kV d\\kP + \\sum_{i=1}^{N}\\kmui dn_i"
+          "latex": "d\\kHenth = \\kT d\\kSent + \\kV d\\kP + \\sum_{i=1}^{N}\\kmui dn_i"
         },
         {
           "id": "da-composition",
-          "latex": "d\\kA = -S d\\kT - \\kP d\\kV + \\sum_{i=1}^{N}\\kmui dn_i"
+          "latex": "d\\kA = -\\kSent d\\kT - \\kP d\\kV + \\sum_{i=1}^{N}\\kmui dn_i"
         }
       ]
     },
@@ -18704,7 +18704,7 @@
         },
         {
           "id": "da-dt",
-          "latex": "\\left( \\dfrac{\\partial \\kA}{\\partial \\kT} \\right) _{\\kV} = -S"
+          "latex": "\\left( \\dfrac{\\partial \\kA}{\\partial \\kT} \\right) _{\\kV} = -\\kSent"
         }
       ]
     },
@@ -18771,7 +18771,7 @@
       "forms": [
         {
           "id": "g-of-t",
-          "latex": "\\kG(\\kT) = \\kHenth(\\kT) - \\kT S(\\kT)"
+          "latex": "\\kG(\\kT) = \\kHenth(\\kT) - \\kT \\kSent(\\kT)"
         }
       ]
     },
@@ -26446,10 +26446,6 @@
       "prereq": "standard-molar-entropy"
     },
     {
-      "concept": "helmholtz-energy",
-      "prereq": "internal-energy"
-    },
-    {
       "concept": "helmholtz-criterion",
       "prereq": "helmholtz-energy"
     },
@@ -26568,10 +26564,6 @@
     {
       "concept": "ideal-gas-enthalpy-pressure",
       "prereq": "enthalpy-pressure-dependence"
-    },
-    {
-      "concept": "ideal-gas-enthalpy-pressure",
-      "prereq": "ideal-gas-law"
     },
     {
       "concept": "fundamental-equations",
@@ -27078,10 +27070,6 @@
       "prereq": "entropy-change-constant-pressure"
     },
     {
-      "concept": "gibbs-temperature-curve",
-      "prereq": "entropy-of-transition"
-    },
-    {
       "concept": "arrangements-count",
       "prereq": "distribution-weight"
     },
@@ -27100,14 +27088,6 @@
     {
       "concept": "expansion-more-realizations",
       "prereq": "ensemble-average"
-    },
-    {
-      "concept": "boltzmann-entropy",
-      "prereq": "distribution-weight"
-    },
-    {
-      "concept": "boltzmann-entropy",
-      "prereq": "boltzmann-constant"
     },
     {
       "concept": "boltzmann-entropy",
@@ -27143,10 +27123,6 @@
     },
     {
       "concept": "reversible-heat-inexact",
-      "prereq": "first-law-of-thermodynamics"
-    },
-    {
-      "concept": "reversible-heat-inexact",
       "prereq": "pressure-volume-work"
     },
     {
@@ -27174,16 +27150,8 @@
       "prereq": "entropy"
     },
     {
-      "concept": "isothermal-entropy-change",
-      "prereq": "ideal-gas-law"
-    },
-    {
       "concept": "heating-entropy-change",
       "prereq": "entropy"
-    },
-    {
-      "concept": "heating-entropy-change",
-      "prereq": "constant-volume-heat-capacity"
     },
     {
       "concept": "entropy-state-function",
@@ -27218,10 +27186,6 @@
       "prereq": "heat-flow-entropy-production"
     },
     {
-      "concept": "second-law",
-      "prereq": "spontaneous-process"
-    },
-    {
       "concept": "entropy-production-exchange",
       "prereq": "second-law"
     },
@@ -27236,10 +27200,6 @@
     {
       "concept": "microstates-measure-dispersal",
       "prereq": "energy-dispersal"
-    },
-    {
-      "concept": "microstates-measure-dispersal",
-      "prereq": "many-microstates-one-macrostate"
     },
     {
       "concept": "reversible-path-for-entropy",
@@ -27294,10 +27254,6 @@
       "prereq": "heat-engine"
     },
     {
-      "concept": "carnot-cycle",
-      "prereq": "isotherm"
-    },
-    {
       "concept": "cycle-work-area",
       "prereq": "carnot-cycle"
     },
@@ -27326,14 +27282,6 @@
       "prereq": "carnot-efficiency"
     },
     {
-      "concept": "heat-pump",
-      "prereq": "dissipation"
-    },
-    {
-      "concept": "stirling-cycle",
-      "prereq": "heat-engine"
-    },
-    {
       "concept": "stirling-cycle",
       "prereq": "cycle-work-area"
     },
@@ -27351,10 +27299,6 @@
     },
     {
       "concept": "entropy-from-partition-function",
-      "prereq": "boltzmann-probability"
-    },
-    {
-      "concept": "entropy-from-partition-function",
       "prereq": "average-ensemble-energy"
     },
     {
@@ -27364,10 +27308,6 @@
     {
       "concept": "statistical-thermodynamic-entropy",
       "prereq": "entropy"
-    },
-    {
-      "concept": "statistical-thermodynamic-entropy",
-      "prereq": "boltzmann-probability"
     },
     {
       "concept": "entropy",
@@ -27383,27 +27323,7 @@
     },
     {
       "concept": "entropy-state-function",
-      "prereq": "path-function"
-    },
-    {
-      "concept": "entropy-state-function",
       "prereq": "reversible-adiabatic-cooling"
-    },
-    {
-      "concept": "heat-flow-entropy-production",
-      "prereq": "first-law-of-thermodynamics"
-    },
-    {
-      "concept": "entropy-production-exchange",
-      "prereq": "irreversible-process"
-    },
-    {
-      "concept": "reversible-path-for-entropy",
-      "prereq": "reversible-process"
-    },
-    {
-      "concept": "reversible-path-for-entropy",
-      "prereq": "irreversible-process"
     },
     {
       "concept": "dissipation",
@@ -27472,6 +27392,26 @@
     {
       "concept": "gibbs-temperature-curve",
       "prereq": "absolute-entropy-heating-path"
+    },
+    {
+      "concept": "helmholtz-energy",
+      "prereq": "entropy"
+    },
+    {
+      "concept": "helmholtz-criterion",
+      "prereq": "clausius-inequality"
+    },
+    {
+      "concept": "helmholtz-energy-of-mixing",
+      "prereq": "entropy-of-mixing"
+    },
+    {
+      "concept": "gibbs-criterion",
+      "prereq": "clausius-inequality"
+    },
+    {
+      "concept": "euler-reciprocity",
+      "prereq": "exact-and-inexact-differentials"
     }
   ],
   "sheets": [
