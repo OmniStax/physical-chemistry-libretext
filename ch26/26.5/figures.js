@@ -53,18 +53,18 @@ function sciText(x) {
     const a1 = axes(ctx, top, [0, 1], [-35, 0], { nx: 5, ny: 7, xl: 'extent of reaction ξ (mol)', yl: 'G (kJ)', xc: C('amount'), yc: C('energy') });
     plot(ctx, a1, G, C('energy'), { w: 5 });
     line(ctx, a1.X(XEQ), a1.Y(G(XEQ)), a1.X(XEQ), top.b, alpha(C('amount'), 0.85), 3, [4, 8]);
-    text(ctx, `ξ_eq = ${fmt(XEQ, 3)}`, a1.X(XEQ) - 10, a1.Y(G(XEQ)) - 26, C('amount'), { size: 20, weight: 600, align: 'right', bg: true });
+    text(ctx, `ξ_eq = ${fmt(XEQ, 3)}`, a1.X(XEQ) - 10, a1.Y(G(XEQ)) - 26, C('amount'), { size: 20, weight: 600, align: 'right', bg: PAL.panel });
     dot(ctx, a1.X(x0), a1.Y(G(x0)), C('energy'), false, 10);
     dot(ctx, a1.X(x), a1.Y(G(x)), C('energy'), true, 11);
     /* bottom: Delta_rG against log10 Q */
     const bot = { l: 150, r: W - 70, t: 440, b: 650 };
-    const a2 = axes(ctx, bot, [-4, 12], [-50, 30], { nx: 8, ny: 4, xl: 'log₁₀ Q', yl: 'Δ_rG (kJ/mol)', yc: C('energy') });
+    const a2 = axes(ctx, bot, [-4, 12], [-50, 30], { nx: 8, ny: 8, xl: 'log₁₀ Q', yl: 'Δ_rG (kJ/mol)', yc: C('energy') });
     line(ctx, a2.X(-4), a2.Y(0), a2.X(12), a2.Y(0), alpha(PAL.ink, 0.4), 2);
     line(ctx, a2.X(LK), bot.t, a2.X(LK), bot.b, alpha(PAL.ink, 0.4), 3, [10, 10]);
     text(ctx, 'Q = K', a2.X(LK) + 10, bot.t + 22, PAL.ink, { size: 20 });
     plot(ctx, a2, (u) => RT * Math.LN10 * (u - LK) / 1000, C('energy'), { w: 4 });
     text(ctx, 'forward', a2.X(1), a2.Y(-38), PAL.muted, { size: 20, align: 'center' });
-    text(ctx, 'reverse', a2.X(9.5), a2.Y(22), PAL.muted, { size: 20, align: 'center' });
+    text(ctx, 'reverse', a2.X(10), a2.Y(8), PAL.muted, { size: 20, align: 'center' });
     dot(ctx, a2.X(l0), a2.Y(RT * Math.LN10 * (l0 - LK) / 1000), C('energy'), false, 10);
     dot(ctx, a2.X(lq), a2.Y(dgr), C('energy'), true, 11);
     hits.length = 0;

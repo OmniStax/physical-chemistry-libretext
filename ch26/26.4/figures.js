@@ -8,15 +8,16 @@ const sim = (id, H) => F.sim(root, id, H);
    Ideal gases at a total pressure of 1 bar, one mole in all: xi mol of B and 1 - xi of A.
    G(xi) = (1 - xi) mu_A° + xi mu_B° + RT[(1 - xi) ln(1 - xi) + xi ln xi], with mu_A° = 0 and mu_B° = Delta_rG°.
    The straight line is the first two terms (unmixed), the mixing term is Equation 26.4.1, their sum the curve.
-   y fixed -10 to 6 kJ from the slider extremes (Delta_rG° = -5 kJ/mol at 1000 K bottoms at -8.6 kJ).
+   y fixed -8 to 6 kJ from the slider extremes (Delta_rG° = -5 kJ/mol at 600 K bottoms at -6.6 kJ); T stops at 600 K
+   so the default dip (-3.7 kJ at 298 K) fills the frame. Opens at Delta_rG° = -3 kJ/mol, where the tilt and the dip both show.
    The point: at Delta_rG° = 0 the minimum sits at half and half; Delta_rG° slides it toward the lower side
    but never to an end, because the mixing term's slope is infinite there. Still: it answers its sliders. */
 (function () {
   const d = sim('sim-gibbs-extent', 600);
   const R = 8.314e-3;   /* kJ/(mol K) */
-  const DG = ctl(d.controls, { label: '\\kDeltarGstd', cls: 'energy', key: 'dg', min: -5, max: 5, step: 0.1, value: 0, unit: 'kJ/mol', dec: 1,
+  const DG = ctl(d.controls, { label: '\\kDeltarGstd', cls: 'energy', key: 'dg', min: -5, max: 5, step: 0.1, value: -3, unit: 'kJ/mol', dec: 1,
     specials: [{ at: 0, label: 'Δ_rG° = 0: the minimum at half and half' }] });
-  const T = ctl(d.controls, { label: '\\kT', cls: 'temperature', key: 't', min: 200, max: 1000, step: 1, value: 298, unit: 'K', dec: 0, detents: [298] });
+  const T = ctl(d.controls, { label: '\\kT', cls: 'temperature', key: 't', min: 200, max: 600, step: 1, value: 298, unit: 'K', dec: 0, detents: [298] });
   const X = ctl(d.controls, { label: '\\kxiext', cls: 'amount', key: 'xi', min: 0.02, max: 0.98, step: 0.01, value: 0.2, unit: 'mol', dec: 2 });
   const xlnx = (x) => (x <= 0 ? 0 : x * Math.log(x));
   const mix = (x, t) => R * t * (xlnx(1 - x) + xlnx(x));
@@ -31,7 +32,7 @@ const sim = (id, H) => F.sim(root, id, H);
     const way = Math.abs(slope) < 0.005 ? 'the point is at equilibrium' : slope < 0 ? 'the reaction runs forward, toward B' : 'the reaction runs in reverse, toward A';
     topline(ctx, `At $\\kxiext = ${fmt(x, 2)}$ mol the slope is $\\kDeltarG = ${fmt(slope, 2)}$ kJ/mol: ${way}.`);
     const box = { l: 140, r: W - 70, t: 120, b: 500 };
-    const ax = axes(ctx, box, [0, 1], [-10, 6], { nx: 5, ny: 8, xl: 'extent of reaction ξ (mol of B)', yl: 'Gibbs energy G (kJ)', xc: C('amount'), yc: C('energy') });
+    const ax = axes(ctx, box, [0, 1], [-8, 6], { nx: 5, ny: 7, xl: 'extent of reaction ξ (mol of B)', yl: 'Gibbs energy G (kJ)', xc: C('amount'), yc: C('energy') });
     line(ctx, ax.X(0), ax.Y(0), ax.X(1), ax.Y(0), alpha(PAL.ink, 0.25), 2);
     /* unmixed line, mixing term, and their sum */
     plot(ctx, ax, (u) => u * dg, PAL.muted, { w: 3, dash: [10, 10] });
@@ -42,7 +43,7 @@ const sim = (id, H) => F.sim(root, id, H);
     /* the minimum */
     line(ctx, ax.X(xeq), ax.Y(G(xeq)), ax.X(xeq), box.b, alpha(C('amount'), 0.85), 3, [4, 8]);
     dot(ctx, ax.X(xeq), ax.Y(G(xeq)), C('amount'), true, 10);
-    text(ctx, `ξ_eq = ${fmt(xeq, 2)}`, ax.X(xeq), box.b - 14, C('amount'), { size: 20, weight: 600, align: xeq > 0.8 ? 'right' : xeq < 0.2 ? 'left' : 'center', bg: true });
+    text(ctx, `ξ_eq = ${fmt(xeq, 2)}`, ax.X(xeq), box.b - 14, C('amount'), { size: 20, weight: 600, align: xeq > 0.8 ? 'right' : xeq < 0.2 ? 'left' : 'center', bg: PAL.panel });
     const p = P.draw(ctx, ax, C('energy'));
     if (p) dot(ctx, p.x, p.y, C('energy'), true, 9);
     F.legend(ctx, ax, [
