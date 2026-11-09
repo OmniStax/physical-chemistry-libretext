@@ -1,0 +1,67 @@
+<section id="heat-into-work">
+<h2>Heat into work</h2>
+<p>Heat and work are both forms of transferring energy, and under the right circumstance, one form may be transformed into the other. However, the second law of thermodynamics puts a limitation on this. To go from work to heat is called <span data-concept="dissipation">dissipation</span> and there is no limitation on this at all. In fact it was through <span data-concept="dissipation">dissipation</span> (by friction) that we discovered that heat and work were both forms of energy. There is, however, a limitation on converting heat to work.</p>
+</section>
+
+<section id="carnot-cycle">
+<h2>The Carnot Cycle</h2>
+<p>Let's consider a circular, reversible path of an ideal gas on a PV diagram in Figure 20.7.1:</p>
+<figure class="sim" id="sim-carnot-cycle" data-figure="20.7.1 + 20.7.3" data-original="/media/ch20/402075-Carnot_Cycle.png,/media/ch20/99715-CH431_carnot-engine.jpg" data-original-caption="A circular, reversible path of a Carnot cycle as an ideal gas on a PV diagram. (CC BY 4.0; Jerry LaRue via LibreTexts)">
+  <div class="sim-head"><span class="eyebrow">Figure 20.7.1 + 20.7.3</span><span>The gas runs round the cycle on both diagrams at once. The shaded area is the <span data-type="work">work</span>, and on the diagram of <span data-type="temperature">temperature</span> against <span data-type="entropy">entropy</span> it is a rectangle. Bring <span data-type="temperature">the cold side</span> up toward <span data-type="temperature">the hot side</span> and the work shrinks to nothing. Run as a heat pump, the cycle turns the other way and every flow reverses.</span></div>
+</figure>
+<p>This cycle forms the 4-stage <span data-concept="carnot-cycle">Carnot cycle</span> <span data-concept="heat-engine">heat engine</span>. A <span data-concept="heat-engine">heat engine</span> converts heat energy into work. The cycle consists of:</p>
+<ol><li><p>Isothermal expansion at the hot temperature, $\kTh$:</p>
+$$ \Delta \kUone=\kwone+\kqh=0 $$</li><li><p>Adiabatic cooling from $\kTh$ to $\kTc$:</p>
+$$ \Delta \kUtwo=\kwtwo $$</li><li><p>Isothermal compression at the cold temperature, $\kTc$:</p>
+$$ \Delta \kUthree=\kwthree+\kqc=0 $$</li><li><p>Adiabatic heating from $\kTc$ to $\kTh$:</p>
+$$ \Delta \kUfour=\kwfour $$</li></ol>
+<p>The total four-step process produces work because $\kwhot > \kwcold$.<sup class="fn" data-note="c-whot"></sup> <span data-concept="cycle-work-area">The work is the integral under the upper isotherm minus the one under the lower curve, i.e. the surface <em>area in between</em>.</span></p>
+<div class="note">
+<div class="eyebrow">Note</div>
+<h3>Sadi Carnot</h3>
+<p>Sadi Carnot was a French engineer at the beginning of the 19th century. He considered a cyclic process involving a cylinder filled with gas. This cycle the <span data-concept="carnot-cycle">Carnot cycle</span> contributed greatly to the development of thermodynamics and the improvement of the steam engine. Carnot demonstrated that the cold temperature on the right is as important as the heat source on the left in defining the possible efficiency of a heat engine</p>
+<figure class="photo" id="fig-20-7-2" data-figure="20.7.2">
+  <img src="/media/ch20/99717-ezgif-82d8796a155543.gif" alt="Diagram of three locks with colored lines and multiple rods, illustrating a mechanism or system.">
+  <figcaption><span class="eyebrow">Figure 20.7.2</span><span>Animation of a typical vertical triple-expansion engine. (CC SA-BY 2.5; <a href="https://commons.wikimedia.org/wiki/User:Emoscopes">Emoscopes</a>)</span></figcaption>
+</figure>
+</div>
+</section>
+
+<section id="efficiency">
+<h2>Efficiency</h2>
+<p>Of course we spend good money on the fuel to start the cycle by heating things up. So how much work do we get for the heat we put in? In other words, we want to know how efficient our heat engine is. The <span data-concept="engine-efficiency">efficiency</span>, $\eta$ of a <span data-concept="heat-engine">heat engine</span> is:</p>
+$$ \eta=\frac{|\kwcycle|}{\kqh}=\frac{\kqh+\kqc}{\kqh}=1+\frac{\kqc}{\kqh} $$
+<figure class="dv" id="drv-carnot-efficiency"></figure>
+<p>As you see we can only get full <span data-concept="carnot-efficiency">efficiency</span> if $\kTcold$ is 0 K, which is never (i.e., we always waste energy). Another implication is that if $\kTc = \kTh$ then <strong>no work</strong> can be obtained, no matter how much energy is available in the from of heat. Or in other words, if one dissipates work into heat isothermally, <em>none</em> of it can be retrieved. Equation 20.7.1 is not very forgiving at all. Just imaging that you have a heat source of say 400 K (a superheated pool of water, e.g. a geyser) and you are dumping in the river at room temperature 300 K. The best efficiency you'll ever get is:<sup class="fn" data-note="c-24"></sup></p>
+$$ η= 1-\dfrac{300}{400}= 24\% $$
+<p>Sadly, you'd be dumping three quarters of your energy as heat in the river (and that is best case scenario as there are always more losses, e.g. due to friction). The arrow saying $Q_C$ in Figure 20.7.3 should then be three times as fat as the one that says $\kw$.</p>
+</section>
+
+<section id="heat-pumps">
+<h2>Heat pumps</h2>
+<p>So getting our work from heat is hard and always less than 100% successful. The other way around should be easy. After all, we can dissipate work into heat freely even under isothermal conditions!</p>
+<p>What happens if we let the <span data-concept="heat-pump">heat engine run backwards</span>? Consider reversing all the flows in the above diagram. Obviously we must <em>put in work</em> to make the cycle run in reverse. The heat will now flow from cold to hot, say from your cold garden into your nice and warm apartment. The amount of heat you get in your humble abode will be the sum of all the work (say 100 Joules) you dissipate <em>plus</em> the heat you pumped out of the garden (say 300 Joules). Thus if you are willing to pay for the energy you dissipate (100 Joules), you may well end up with a total of 400 Joules of heat in your apartment! Obviously if it is heat you after this is a better deal than just dissipating the work in your apartment (by burning some oil). Then you'd only get 100 J for your precious buck.</p>
+<p>Dissipating it as electrical heating is even worse because you would</p>
+<ol><li>first burn (a lot more!) oil to generate heat</li><li>use this heat to produce electrical work at great expense because a lot of the heats gets dumped at the low temperature side (the river or so)</li><li>dissipate the work again in your apartment (without using it to pump any heat out of the garden)</li></ol>
+<p>Refrigerators are also <span data-concept="heat-pump">heat pumps</span>. They heat the kitchen by pumping heat from its innards to the kitchen. If I keep the door open, however, all it does is dissipate precious electrical work, because the pumped heat will flow back into its innards and spoil the milk.</p>
+</section>
+
+<section id="stirling-engine">
+<h2>Stirling Engine</h2>
+<p>Let's consider another type of heat engine, the <span data-concept="stirling-cycle">Stirling engine</span>. The <span data-concept="stirling-cycle">Stirling engine</span> uses a circular reversible path in an ideal PV diagram in Figure 20.7.4:</p>
+<figure class="photo" id="fig-20-7-4" data-figure="20.7.4">
+  <img src="/media/ch20/402128-Stirling_Engine.png" alt="Graph displaying pressure versus volume with labeled isothermal processes: heating, expansion, cooling, and compression.">
+  <figcaption><span class="eyebrow">Figure 20.7.4</span><span>an ideal PV diagram of the Stirling engine. (CC BY 4.0; Jerry LaRue via LibreTexts)</span></figcaption>
+</figure>
+<p>The path consists of four steps:</p>
+<ol><li><p><em>Isothermal</em> expansion at the hot temperature $\kTh$:</p>
+$$ \kqone=\kqh =-\kw $$
+<p>and we get work <strong>out</strong> (i.e., negative work):</p>
+$$ \kwh =-R\kTh \ln \left( \dfrac{\kVB}{\kVA} \right) $$</li><li><p><em>Isochoric</em> heating from $\kTc$ to $\kTh$ (with constant $\kCV$):<sup class="fn" data-note="c-stirling-order"></sup></p>
+$$ \kqtwo= \dfrac{\kCV}{ΔT} \tag{20.7.2} $$</li><li><p><em>Isothermal</em> compression at the cold temperature $\kTc$:</p>
+$$ \kqthree=\kqc =-\kw $$
+<p>and we must put work <strong>in</strong> (i.e., positive work):</p>
+$$ \kwc =-R\kTc \ln \left( \dfrac{\kVD}{\kVC}\right)=R\kTc \ln \left( \dfrac{\kVB}{\kVA} \right) $$</li><li><p><em>Isochoric</em> cooling from $\kTh$ to $\kTc$ (with constant $\kCV$):<sup class="fn" data-note="c-stirling-q"></sup></p>
+$$ \kqfour= -\dfrac{\kCV}{ΔT} \tag{20.7.3} $$</li></ol>
+<p>Notice that this gray area <em>vanishes</em> if $\kTh= \kTc$. Obviously how cold the cold side is of great importance! The amount of work is also equal to the difference in the heat picked up at high temperature $\kqh$ and dumped at low temperature $\kqc$. The isochoric heats cancel. The problem is that $\kqc$ is only zero if the cold temperature is 0 K. That means that we can never get all the heat we pick up at high temperatures to come out as work.</p>
+</section>

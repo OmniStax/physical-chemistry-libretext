@@ -482,8 +482,8 @@ class Converter:
 
     @staticmethod
     def lone_img(c):
-        """The img of a div that holds one image and no text, else None."""
-        if not (isinstance(c, Tag) and c.name == "div"):
+        """The img of a div (or a p: 23.1.2) that holds one image and no text, else None."""
+        if not (isinstance(c, Tag) and c.name in ("div", "p")):
             return None
         imgs = c.find_all("img")
         return imgs[0] if len(imgs) == 1 and not c.get_text(strip=True) else None

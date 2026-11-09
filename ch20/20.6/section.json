@@ -1,0 +1,358 @@
+{
+ "id": "20.6",
+ "module": "13720",
+ "chapter": "20",
+ "title": "We Must Always Devise a Reversible Process to Calculate Entropy Changes",
+ "short": "Entropy changes along reversible paths",
+ "lead": "An expansion into a vacuum takes in no heat, yet the gas ends in the same state as a reversible expansion does, so the entropy change is found along the reversible path. The same reasoning applied to two gases that mix gives the entropy of mixing.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "Adapted from Jerry LaRue (Chapman University).",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercises for this section; the one exercise, on mixing nitrogen and oxygen, was written by AI with an AI solution. Its Bloom level and concept tags were chosen by AI. Numeric answers accept a 2% tolerance.",
+ "figures": [
+  {
+   "id": "fig-vacuum-piston",
+   "kind": "figure",
+   "originals": [
+    "/media/ch20/402030-Ideal_Gas_-_Vacuum_Piston.jpg"
+   ],
+   "draws": [],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "kept as the book prints it"
+    }
+   ]
+  },
+  {
+   "id": "sim-mixing-entropy",
+   "kind": "sim",
+   "originals": [
+    "/media/ch20/402032-Two_gases.jpg"
+   ],
+   "draws": [
+    "entropy",
+    "amount"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "entropy-and-the-universe",
+   "concept": "second-law",
+   "verb": "reinforces"
+  },
+  {
+   "span": "entropy-and-the-universe",
+   "concept": "isolated-system",
+   "verb": "uses"
+  },
+  {
+   "span": "vacuum-expansion",
+   "concept": "reversible-path-for-entropy",
+   "verb": "introduces"
+  },
+  {
+   "span": "vacuum-expansion",
+   "concept": "entropy-of-surroundings",
+   "verb": "introduces"
+  },
+  {
+   "span": "vacuum-expansion",
+   "concept": "total-entropy-change",
+   "verb": "introduces"
+  },
+  {
+   "span": "vacuum-expansion",
+   "concept": "free-expansion",
+   "verb": "reinforces"
+  },
+  {
+   "span": "vacuum-expansion",
+   "concept": "isothermal-entropy-change",
+   "verb": "reinforces"
+  },
+  {
+   "span": "vacuum-expansion",
+   "concept": "entropy-state-function",
+   "verb": "uses"
+  },
+  {
+   "span": "mixing-of-two-gases",
+   "concept": "mole-fraction",
+   "verb": "introduces"
+  },
+  {
+   "span": "mixing-of-two-gases",
+   "concept": "entropy-of-mixing",
+   "verb": "introduces"
+  },
+  {
+   "span": "mixing-of-two-gases",
+   "concept": "isothermal-entropy-change",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "ai1",
+   "source_id": "eq:Molar Entropy",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "mixing-of-two-gases",
+   "prompt": "<p>1.00 mol of N<sub>2</sub> and 3.00 mol of O<sub>2</sub>, both ideal gases at the same pressure and temperature, are separated by a wall that is then removed. Find the entropy of mixing per mole of gas, $\\Delta \\kSbar$, and the total entropy change $\\Delta \\kSent$.</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 4.675,
+      "unit": "J K⁻¹ mol⁻¹",
+      "hint": "The mole fractions are 0.25 and 0.75."
+     },
+     {
+      "part": "b",
+      "value": 18.7,
+      "unit": "J/K"
+     }
+    ],
+    "solution": "<p>$\\chi_{N_2} = 1.00/4.00 = 0.25$ and $\\chi_{O_2} = 0.75$. Equation 20.6.4 gives $\\Delta \\kSbar = -R\\left[0.25\\ln 0.25 + 0.75\\ln 0.75\\right] = -(8.314\\ \\text{J K}^{-1}\\text{mol}^{-1})(-0.3466 - 0.2158) = 4.675\\ \\text{J K}^{-1}\\text{mol}^{-1}$. For all 4.00 mol, $\\Delta \\kSent = \\kntot \\Delta \\kSbar = 18.70\\ \\text{J/K}$. Both terms are positive, as every $\\ln \\chi_i$ is negative, so mixing always raises the entropy; an even mix would give the most, $R\\ln 2 = 5.76\\ \\text{J K}^{-1}\\text{mol}^{-1}$.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "ai1",
+   "concept": "entropy-of-mixing"
+  },
+  {
+   "exercise": "ai1",
+   "concept": "mole-fraction"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-hawking",
+   "kind": "correction",
+   "html": "The cosmologist meant is Stephen Hawking, who died in 2018; the book writes Richard Hawkins."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "mixing",
+   "what": "the entropy of mixing",
+   "source": "Physical Chemistry (LibreTexts), 20.6 We Must Always Devise a Reversible Process to Calculate Entropy Changes",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\Delta \\kSent = \\knmol R \\ln \\left(\\dfrac{\\kVb}{\\kVa}\\right)",
+       "src": "(20.6.1), (20.6.2)"
+      },
+      {
+       "text": "At the same pressure and temperature, the amount of each gas is proportional to the volume it fills, so $\\kVtot/\\kVA = \\kntot/\\knA$ and $\\kVtot/\\kVB = \\kntot/\\knB$.",
+       "src": "20.6"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{s}{\\Delta \\kSA} = \\mk{n}{\\knA R} \\mk{l}{\\ln \\dfrac{\\kVtot}{\\kVA}}",
+      "uses": [
+       0
+      ],
+      "why": "Gas A expands from $V_A$ into the whole volume as if gas B were not there."
+     },
+     "steps": [
+      {
+       "tex": "\\mk{s}{\\Delta \\kSA} = \\mk{n}{\\knA R} \\mk{l}{\\ln \\dfrac{\\kntot}{\\knA}}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "src": "20.6"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\Delta \\kSent = \\knmol R \\ln \\left(\\dfrac{\\kVb}{\\kVa}\\right)",
+       "src": "(20.6.1), (20.6.2)"
+      },
+      {
+       "text": "At the same pressure and temperature, the amount of each gas is proportional to the volume it fills, so $\\kVtot/\\kVA = \\kntot/\\knA$ and $\\kVtot/\\kVB = \\kntot/\\knB$.",
+       "src": "20.6"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{s}{\\Delta \\kSB} = \\mk{n}{\\knB R} \\mk{l}{\\ln \\dfrac{\\kVtot}{\\kVB}}",
+      "uses": [
+       0
+      ],
+      "why": "Gas B expands from $V_B$ into the whole volume in the same way."
+     },
+     "steps": [
+      {
+       "tex": "\\mk{s}{\\Delta \\kSB} = \\mk{n}{\\knB R} \\mk{l}{\\ln \\dfrac{\\kntot}{\\knB}}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "src": "20.6"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "step": 1
+      },
+      {
+       "tex": "\\Delta \\kSent = \\Delta \\kSA + \\Delta \\kSB",
+       "src": "20.6"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{s}{\\Delta \\kSent} = \\mk{a}{\\Delta \\kSA} + \\mk{b}{\\Delta \\kSB}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{s}{\\Delta \\kSent} = \\mk{a}{\\knA R \\ln \\dfrac{\\kntot}{\\knA}} + \\mk{b}{\\Delta \\kSB}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{s}{\\Delta \\kSent} = \\mk{a}{\\knA R \\ln \\dfrac{\\kntot}{\\knA}} + \\mk{b}{\\knB R \\ln \\dfrac{\\kntot}{\\knB}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{s}{\\dfrac{\\Delta \\kSent}{\\kntot}} = \\mk{r}{R \\dfrac{\\left[\\knB \\ln \\dfrac{\\kntot}{\\knB}+ \\knA \\ln \\dfrac{\\kntot}{\\knA} \\right]}{\\kntot}}",
+       "uses": [],
+       "map": {
+        "a": "r",
+        "b": "r"
+       }
+      }
+     ],
+     "num": "(20.6.3)",
+     "src": "20.6"
+    },
+    {
+     "assumes": [
+      {
+       "step": 2
+      },
+      {
+       "tex": "\\chi_A = \\dfrac{\\knA}{\\kntot}",
+       "src": "20.6"
+      },
+      {
+       "tex": "\\chi_B = \\dfrac{\\knB}{\\kntot}",
+       "src": "20.6"
+      },
+      {
+       "tex": "\\ln \\left( \\dfrac{x}{y} \\right)= - \\ln \\left( \\dfrac{y}{x} \\right)",
+       "src": "20.6"
+      },
+      {
+       "tex": "\\Delta \\kSbar = \\dfrac{\\Delta \\kSent}{\\kntot}",
+       "src": "20.6"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{s}{\\dfrac{\\Delta \\kSent}{\\kntot}} = \\mk{r}{R \\dfrac{\\left[\\knB \\ln \\dfrac{\\kntot}{\\knB}+ \\knA \\ln \\dfrac{\\kntot}{\\knA} \\right]}{\\kntot}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{s}{\\dfrac{\\Delta \\kSent}{\\kntot}} = R\\left[\\mk{b}{\\dfrac{\\knB}{\\kntot} \\ln \\dfrac{\\kntot}{\\knB}} + \\mk{a}{\\dfrac{\\knA}{\\kntot} \\ln \\dfrac{\\kntot}{\\knA}}\\right]",
+       "uses": [],
+       "map": {
+        "r": [
+         "b",
+         "a"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{s}{\\dfrac{\\Delta \\kSent}{\\kntot}} = R\\left[\\mk{b}{\\chi_B \\ln \\dfrac{1}{\\chi_B}} + \\mk{a}{\\chi_A \\ln \\dfrac{1}{\\chi_A}}\\right]",
+       "uses": [
+        1,
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{s}{\\dfrac{\\Delta \\kSent}{\\kntot}} = -R\\left[\\mk{b}{\\chi_B \\ln \\chi_B} + \\mk{a}{\\chi_A \\ln \\chi_A}\\right]",
+       "uses": [
+        3
+       ]
+      },
+      {
+       "tex": "\\mk{s}{\\Delta \\kSbar} = -R\\left[\\mk{a}{\\chi_A \\ln \\chi_A} + \\mk{b}{\\chi_B \\ln \\chi_B}\\right]",
+       "uses": [
+        4
+       ]
+      }
+     ],
+     "num": "(20.6.4)",
+     "src": "20.6"
+    },
+    {
+     "assumes": [
+      {
+       "step": 3
+      },
+      {
+       "text": "With more than two gases, each gas expands into the total volume in the same way and adds a term of its own.",
+       "src": "20.6"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{s}{\\Delta \\kSbar} = \\mk{r}{-R\\left[\\chi_A \\ln \\chi_A + \\chi_B \\ln \\chi_B\\right]}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{s}{\\Delta \\kSbar} = \\mk{r}{-R \\sum \\chi_i\\ln \\chi_i}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "num": "(20.6.5)",
+     "src": "20.6"
+    }
+   ]
+  }
+ ]
+}

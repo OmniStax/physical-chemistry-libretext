@@ -1,0 +1,121 @@
+<section id="adding-reactions">
+<h2>Adding reactions</h2>
+<p><span data-concept="reaction-enthalpy">Reaction enthalpies</span> are important, but difficult to tabulate. However, because <span data-concept="enthalpy">enthalpy</span> is a <span data-concept="state-function">state function</span>, it is possible to use <strong><span data-concept="hess-law">Hess’ Law</span></strong> to simplify the tabulation of reaction enthalpies. Hess’ Law is based on the addition of reactions. By knowing the reaction enthalpy for constituent reactions, the enthalpy of a reaction that can be expressed as the sum of the constituent reactions can be calculated. The key lies in the canceling of reactants and products that °Ccur<sup class="fn" data-note="occur"></sup> in the “data” reactions but not in the “target reaction.</p>
+<div class="example" id="ex-19-12-1">
+<h3>Example 19.12.1</h3>
+<p>Find $\kDeltaHrxn$ for the reaction</p>
+$$ 2 CO(g) + O_2(g) \rightarrow 2 CO_2(g) $$
+<p>Given</p>
+$$ C(gr) + \tfrac{1}{2} O_2(g) \rightarrow CO(g) $$
+<p>with $\Delta H_1 = -110.53 \,kJ$</p>
+$$ C(gr) + O_2(g) \rightarrow CO_2(g) $$
+<p>with $\Delta H_2 = -393.51\, kJ$</p>
+<h4>Solution</h4>
+<p>The target reaction can be generated from the data reactions.</p>
+$$ {\color{red} 2 \times} \left[ CO(g) \rightarrow C(gr) + O_2(g) \right] $$
+<p>plus<sup class="fn" data-note="data-reactions"></sup></p>
+$$ { \color{red} 2 \times} \left[ C(gr) + 2 O_2(g) \rightarrow 2 CO_2(g) \right] $$
+<p>equals</p>
+$$ 2 CO(g) + O_2(g) \rightarrow 2 CO_2(g) $$
+<p>so<sup class="fn" data-note="swapped-labels"></sup></p>
+$$ { \color{red} 2 \times} \Delta H_1 = -787.02 \, kJ $$
+$$ { \color{red} 2 \times} \Delta H_2 = 221.06\, kJ $$
+$$ { \color{red} 2 \times} \Delta H_1 + { \color{red} 2 \times} \Delta H_2 = -565.96 \,kJ $$
+</div>
+</section>
+
+<section id="standard-enthalpy-of-formation">
+<h2>Standard Enthalpy of Formation</h2>
+<p>One of the difficulties with many thermodynamic state variables (such as enthalpy) is that while it is possible to measure changes, it is impossible to measure an absolute value of the variable itself. In these cases, it is necessary to define a zero to the scale defining the variable. For enthalpy, the definition of a zero is that <span data-concept="standard-enthalpy-of-formation">the standard enthalpy of formation of a pure element in its standard state is zero</span>. All other enthalpy changes are defined relative to this standard. Thus it is essential to very carefully define a <span data-concept="standard-state">standard state</span>.</p>
+<div class="note">
+<div class="eyebrow">Note</div>
+<h3>Definition: the Standard State</h3>
+<p><span data-concept="standard-state">The standard state of a substance</span> is the most stable form of that substance at 1 atmosphere pressure and the specified temperature.</p>
+</div>
+<p>Using this definition, a convenient reaction for which enthalpies can be measured and tabulated is the <strong><span data-concept="standard-formation-reaction">standard formation reaction</span></strong>. This is a reaction which forms one mole of the substance of interest in its standard state from elements in their standard states. The enthalpy of a standard formation reaction is the <strong><span data-concept="standard-enthalpy-of-formation">standard enthalpy of formation</span></strong> ($\kDeltaHf$). Some examples are</p>
+<ul><li><p>$NaCl(s)$:</p>
+$$ Na(s) + \tfrac{1}{2} Cl_2(g) \rightarrow NaCl(s) $$
+<p>with $\kDeltaHf = -411.2\, kJ/mol$</p></li><li><p>$C_3H_8(g)$:</p>
+$$ 3 C(gr) + 4 H_2(g) \rightarrow C_3H_8(g) $$
+<p>with $\kDeltaHf = -103.8\, kJ/mol$</p></li></ul>
+<p>It is important to note that the standard state of a substance is <strong>temperature dependent</strong>. For example, the standard state of water at -10 °C is solid, whereas the standard state at room temperature is liquid. Once these values are tabulated, calculating reaction enthalpies becomes a snap. Consider the heat combustion ($\kDeltaHc$) of methane (at 25 °C) as an example.</p>
+$$ CH_4(g) + 2 O_2(g) \rightarrow CO_2(g) + 2 H_2O(l) $$
+<p>The reaction can expressed as a sum of a combination of the following standard formation reactions.</p>
+$$ C(gr) + 2 H_2(g) \rightarrow CH_4(g) $$
+<p>with $\kDeltaHf = -74.6\, kJ/mol$</p>
+$$ C(gr) + O_2(g) \rightarrow CO_2(g) $$
+<p>with $\kDeltaHf = -393.5\, kJ/mol$</p>
+$$ H_2(g) + \tfrac{1}{2} O_2(g) \rightarrow H_2O(l) $$
+<p>with $\kDeltaHf = -285.8 \,kJ/mol$</p>
+<p>The target reaction can be generated from the following combination of reactions</p>
+$$ { \color{red} -1 \times} \left[ C(gr) + 2 H_2(g) \rightarrow CH_4(g)\right] $$
+$$ CH_4(g) \rightarrow C(gr) + 2 H_2(g) $$
+<p>with $\kDeltaHf ={ \color{red} -1 \times} \left[ -74.6\, kJ/mol \right]= 74.6\, kJ/mol$</p>
+$$ C(gr) + O_2(g) \rightarrow CO_2(g) $$
+<p>with $\kDeltaHf = -393.5\, kJ/mol$</p>
+$$ { \color{red} 2 \times} \left[ H_2(g) + \tfrac{1}{2} O_2(g) \rightarrow H_2O(l) \right] $$
+$$ 2H_2(g) +  O_2(g) \rightarrow 2H_2O(l) $$
+<p>with $\kDeltaHf = {\color{red} 2 \times} \left[ -285.8 \,kJ/mol \right] = -571.6\, kJ/mol$.</p>
+$$ CH_4(g) + 2 O_2(g) \rightarrow CO2_(g) + 2 H_2O(l) $$
+<p>with $\kDeltaHc^o = -890.5\, kJ/mol$</p>
+<p>Alternately, <span data-concept="reaction-enthalpy-from-formation">the reaction enthalpy could be calculated from the following relationship</span></p>
+$$ \kDeltaHrxn = \sum_{products} \nu \cdot \kDeltaHf - \sum_{reactants} \nu \cdot \kDeltaHf $$
+<p>where $\nu$ is the stoichiometric coefficient of a species in the balanced chemical reaction. For the combustion of methane, this calculation is</p>
+$$ \begin{aligned} \Delta _{rxn} & = (1\,mol) \left(\Delta H_f^o(CO_2)\right)  + (2\,mol) \left(\Delta H_f^o(H_2O)\right) - (1\,mol) \left(\Delta H_f^o(CH_4)\right) \\ & = (1\,mol) (-393.5 \, kJ/mol)  + (2\,mol) \left(-285.8 \, kJ/mol \right) - (1\,mol) \left(-74.6 \, kJ/mol \right) \\ & = -890.5 \, kJ/mol \end{aligned} \tag{19.12.1} $$
+<p>A note about units is in order. Note that reaction enthalpies have units of kJ, whereas enthalpies of formation have units of kJ/mol. The reason for the difference is that enthalpies of formation (or for that matter enthalpies of combustion, sublimation, vaporization, fusion, etc.) refer to specific substances and/or specific processes involving those substances. As such, the total enthalpy change is scaled by the amount of substance used. General reactions, on the other hand, have to be interpreted in a very specific way. When examining a reaction like the combustion of methane</p>
+$$ CH_4(g) + 2 O_2(g) \rightarrow CO_2(g) + 2 H_2O(l) $$
+<p>with <span data-type="energy">$\kDeltaHrxn = -890.5\, kJ$</span>. The correct interpretation is that the reaction of one mole of CH<sub>4</sub>(g) with two moles of O<sub>2</sub>(g) to form one mole of CO<sub>2</sub>(g) and two moles of H<sub>2</sub>O(l) releases 890.5 kJ at 25 °C.</p>
+</section>
+
+<section id="ionization-reactions">
+<h2>Ionization Reactions</h2>
+<p>Ionized species appear throughout chemistry. The energy changes involved in the formation of ions can be measured and tabulated for several substances. In the case of the formation of positive ions, the enthalpy change to remove a single electron at 0 K is defined as the <strong><span data-concept="ionization-energy">ionization potential</span></strong>.</p>
+$$ M(g) \rightarrow M^+(g) + e^- $$
+<p>with $\Delta H (0 K) \equiv 1^{st} \text{ ionization potential (IP)}$</p>
+<p>The removal of subsequent electrons requires energies called the 2<sup>nd</sup> Ionization potential, 3<sup>rd</sup> ionization potential, and so on.</p>
+$$ M^+(g) \rightarrow M^{2+}(g) + e^- $$
+<p>with $\Delta H(0 K) ≡ 2^{nd} IP$</p>
+$$ M^{2+}(g) \rightarrow M^{3+}(g) + e^- $$
+<p>with $\Delta H(0 K) ≡ 3^{rd} IP$</p>
+<p>An atom can have as many ionization potentials as it has electrons, although since very highly charged ions are rare, only the first few are important for most atoms.</p>
+<p>Similarly, the <strong><span data-concept="electron-affinity">electron affinity</span></strong> can be defined for the formation of negative ions. In this case, the first electron affinity is defined by</p>
+$$ X(g) + e^- \rightarrow X^-(g) $$
+<p>with $-\Delta H(0 K) \equiv 1^{st} \text{ electron affinity (EA)}$</p>
+<p>The minus sign is included in the definition in order to make electron affinities mostly positive. Some atoms (such as noble gases) will have negative electron affinities since the formation of a negative ion is very unfavorable for these species. Just as in the case of ionization potentials, an atom can have several electron affinities.</p>
+$$ X^-(g) + e^- \rightarrow X^{2-}(g) $$
+<p>with $-\Delta H(0 K) ≡ 2^{nd} EA$.</p>
+$$ X^{2-}(g) + e^- \rightarrow X^{3-}(g) $$
+<p>with $-\Delta H(0 K) ≡ 3^{rd} EA$.</p>
+</section>
+
+<section id="average-bond-enthalpies">
+<h2>Average Bond Enthalpies</h2>
+<p>In the absence of standard formation enthalpies, reaction enthalpies can be estimated using <span data-concept="average-bond-enthalpy">average bond enthalpies</span>. This method is not perfect, but it can be used to get ball-park estimates when more detailed data is not available. A <strong><span data-concept="average-bond-enthalpy">bond dissociation energy</span></strong> $\kDbond$ is defined by</p>
+$$ XY(g) \rightarrow X(g) + Y(g) $$
+<p>with $\kDeltaH \equiv \kDbond(X-Y)$</p>
+<p>In this process, <span data-concept="bond-enthalpy-estimate">one adds energy</span> to the reaction to break bonds, and extracts energy for the bonds that are formed.</p>
+$$ \kDeltaHrxn = \sum (\text{bonds broken}) - \sum (\text{bonds formed}) $$
+<p>As an example, consider the combustion of ethanol:</p>
+<figure class="photo" id="fig-ethanol-combustion">
+  <img src="/media/ch19/113036-3.jpg" alt="Structural formulas: ethanol plus O=O gives two O=C=O plus H-O-H.">
+  <figcaption><span class="eyebrow">Figure</span><span></span></figcaption>
+</figure>
+<p>In this reaction, five C-H bonds, one C-C bond, and one C-O bond, and one O=O bond must be broken. Also, four C=O bonds, and one O-H bond are formed.<sup class="fn" data-note="ethanol-balance"></sup></p>
+<div class="book-table">
+  <div class="tcap"><span class="eyebrow">Table</span><span></span></div>
+  <table>
+    <thead><tr><th><strong>Bond</strong></th><th><strong>Average Bond Energy (kJ/mol)</strong></th></tr></thead>
+    <tbody>
+      <tr><td><strong>C-H</strong></td><td>413</td></tr>
+      <tr><td><strong>C-C</strong></td><td>348</td></tr>
+      <tr><td><strong>C-O</strong></td><td>358</td></tr>
+      <tr><td><strong>O=O</strong></td><td>495</td></tr>
+      <tr><td><strong>C=O</strong></td><td>799</td></tr>
+      <tr><td><strong>O-H</strong></td><td>463</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>The reaction enthalpy is then given by</p>
+$$ \begin{aligned} \kDeltaHc = \, &5(413 \,kJ/mol) + 1(348\, kJ/mol) + 1(358 \,kJ/mol)  \\ & + 1(495\, kJ/mol) - 4(799 \,kJ/mol) - 2(463\, kJ/mol)  \\  =\,&  -856\, kJ/mol \end{aligned} \tag{19.12.2} $$
+<p>Because the bond energies are defined for gas-phase reactants and products, this method does not account for the enthalpy change of condensation to form liquids or solids, and so the result may be off systematically due to these differences. Also, since the bond enthalpies are averaged over a large number of molecules containing the particular type of bond, the results may deviate due to the variance in the actual bond enthalpy in the specific molecule under consideration. <span data-concept="bond-enthalpy-estimate">Typically, reaction enthalpies derived by this method are only reliable to within ± 5-10%.</span></p>
+</section>

@@ -1,0 +1,52 @@
+{
+ "id": "19.11",
+ "module": "13709",
+ "chapter": "19",
+ "title": "Enthalpy Changes for Chemical Equations are Additive",
+ "short": "Additive enthalpy changes",
+ "lead": "Chemical equations can be reversed, scaled and added, and their enthalpy changes go along with them. Hess's law turns this bookkeeping into a way to find heats of reaction that are hard to measure directly.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "",
+ "ai": {
+  "text": [{"model": "claude-opus-5-5", "effort": "low"}],
+  "figures": []
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book prints no exercises here; the question and its solution were written by AI. The numeric answer accepts a 2% tolerance.",
+ "figures": [],
+ "referents": [],
+ "coverage": [
+  {"span": "hess-law", "concept": "hess-law", "verb": "introduces"},
+  {"span": "hess-law", "concept": "reaction-enthalpy", "verb": "introduces"},
+  {"span": "hess-law", "concept": "state-function", "verb": "uses"},
+  {"span": "hess-law", "concept": "enthalpy", "verb": "uses"}
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "tab:1",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {"at": "end"},
+   "cite": "hess-law",
+   "prompt": "<p>Use the two reactions of carbon in the table, C(s) + ½O<sub>2</sub>(g) → CO(g) with $\\kDeltarH = -110.5$ kJ and C(s) + O<sub>2</sub>(g) → CO<sub>2</sub>(g) with $\\kDeltarH = -393.5$ kJ, to find $\\kDeltarH$ for the reaction as written: 2CO<sub>2</sub>(g) → 2CO(g) + O<sub>2</sub>(g).</p>",
+   "answer": {
+    "type": "number",
+    "value": 566.0,
+    "unit": "kJ",
+    "generated_by": "ai",
+    "hint": "Reverse the formation of CO₂, add the formation of CO, then double the sum.",
+    "solution": "<p>Reversing the second reaction gives CO<sub>2</sub>(g) → C(s) + O<sub>2</sub>(g) with $\\kDeltarH = +393.5$ kJ. Adding the first, C(s) + ½O<sub>2</sub>(g) → CO(g) with $-110.5$ kJ, cancels the carbon and leaves CO<sub>2</sub>(g) → CO(g) + ½O<sub>2</sub>(g) with $\\kDeltarH = +283.0$ kJ. The reaction as written is twice this, so $\\kDeltarH = 2(+283.0\\ \\text{kJ}) = +566.0$ kJ, the reverse of twice the burning of CO in the table.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {"exercise": "a1", "concept": "hess-law"},
+  {"exercise": "a1", "concept": "reaction-enthalpy"}
+ ],
+ "footnotes": [
+  {"id": "pcl3", "kind": "correction", "html": "The book does not go on to print the PCl<sub>3</sub> example announced here."}
+ ]
+}

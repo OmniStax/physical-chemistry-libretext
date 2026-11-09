@@ -1,0 +1,53 @@
+<section id="entropy-and-the-universe">
+<h2>Entropy and the universe</h2>
+<p>The <span data-concept="second-law">second law of thermodynamics</span> can be formulated in many ways, but in one way or another they are all related to the fact that the state function <span data-concept="entropy">entropy</span>, $\kSent$, tends to increase over time in <span data-concept="isolated-system">isolated systems</span>. For a long time, people have looked at the entire universe as an example of an <span data-concept="isolated-system">isolated system</span> and concluded that its <span data-concept="entropy">entropy</span> must be steadily increasing until $\delta S_{universe}$ becomes zero. As we will see below, the <span data-concept="second-law">second law</span> has important consequences for the question of how we can use heat to do useful work.</p>
+<div class="note">
+<div class="eyebrow">Note</div>
+<p>Of late, cosmologists like the late Richard Hawkins<sup class="fn" data-note="c-hawking"></sup> have begun to question the assumption that the <span data-concept="entropy">entropy</span> of the universe is steadily increasing. The key problem is the role that gravity and relativity play in creating black holes.</p>
+</div>
+</section>
+
+<section id="vacuum-expansion">
+<h2>Vacuum Expansion</h2>
+<p>Let's compare two expansions from $\kVa$ to $\kVb$ for an <span data-concept="ideal-gas">ideal gas</span>, both are isothermal. The first is an irreversible one, where we pull a peg an let the piston <a class="figref" href="#20.1-sim-free-expansion">move against vacuum</a>:</p>
+<figure class="photo" id="fig-vacuum-piston">
+  <img src="/media/ch20/402030-Ideal_Gas_-_Vacuum_Piston.jpg" alt="Diagram showing a division between ideal gas and vacuum, with a peg in the center separating the two.">
+  <figcaption><span class="eyebrow">Figure</span><span>An ideal gas held by a pegged piston, with vacuum on the other side.</span></figcaption>
+</figure>
+<p>The second one is a reversible isothermal expansion from $\kVa$ to $\kVb$ (and $\kPone$ to $\kPtwo$) that we have examined before. In both cases, the is no change in internal energy since $\kT$ does not change. During the irreversible expansion, however, there is also no volume work because the piston is expanding against a vacuum and the following integral:</p>
+$$ \int -\kPext d\kV = 0 $$
+<p>integrates to zero. The piston has nothing to perform work against until it slams into the right hand wall. At this point $\kV=\kVb$ and then $d\kV$ becomes zero. This is not true for the reversible isothermal expansion as the external pressure must always equal the internal pressure.</p>
+<blockquote><p>No energy and no work means no heat!</p></blockquote>
+<p>Clearly the zero heat is irreversible heat ($\kqirrev = 0$) and this makes it hard to calculate the <span data-concept="entropy">entropy</span> of this <span data-concept="spontaneous-process">spontaneous process</span>. But then this process ends in the same final state as the reversible expansion from $\kVa$ to $\kVb$. We know that $dU$ is still zero, but now $δ\kwrev = -δ\kqrev$ is nonzero. We calculated its value before:</p>
+$$ \kqrev = \knmol R\kT \ln \left(\dfrac{\kVb}{\kVa} \right) \tag{20.6.1} $$
+<p>The Claussius definition of <span data-concept="entropy">entropy</span> change can be used to find $\Delta \kSent$ (under constant temperature).</p>
+$$ \Delta \kSent = \dfrac{\kqrev}{\kT} \tag{20.6.2} $$
+<p>Substituting Equation 20.6.1 into Equation 20.6.2 results in</p>
+$$ \Delta \kSent = \knmol R \ln \left(\dfrac{\kVb}{\kVa} \right) $$
+<p>As $\kSent$ is a <span data-concept="entropy-state-function">state function</span> this equation also holds for the irreversible expansion against vacuum.</p>
+<div class="note">
+<div class="eyebrow">Note</div>
+<p><span data-concept="reversible-path-for-entropy">Always calculate the entropy difference between two points along a <strong>reversible</strong> path.</span></p>
+</div>
+<p>For the irreversible expansion into vacuum we see that</p>
+$$ \begin{aligned}\Delta \kStotal &= \Delta \kSsys + \Delta \kSsurr \\[4pt] &= \knmol R\ln \left( \dfrac{\kVb}{\kVa}\right) + 0 \\[4pt] &= \knmol R\ln \left( \dfrac{\kVb}{\kVa}\right) \end{aligned} $$
+<p>For the reversible expansion, heat is transferred to the system while the system does work on the surroundings in order to keep the process isothermal:</p>
+$$ \begin{aligned}\Delta \kSsys &= \knmol R\ln \left( \dfrac{\kVb}{\kVa}\right) \end{aligned} $$
+<p>The <span data-concept="entropy-of-surroundings">entropy change for the surrounding</span> is the opposite of the system:</p>
+$$ \begin{aligned}\Delta \kSsurr &= -\knmol R\ln \left( \dfrac{\kVb}{\kVa}\right) \end{aligned} $$
+<p>This is because the amount of heat transferred to the system is the same as the heat transferred from the surroundings and this process is reversible so the system and surroundings are at the same temperature (equilibrium). Heat is related to <span data-concept="entropy">entropy</span> by the following equation:</p>
+$$ d\kSent = \frac{\delta \kq}{\kT} $$
+<p>Therefore, the <span data-concept="total-entropy-change">total entropy change</span> for the reversible process is zero:</p>
+$$ \begin{aligned}\Delta \kStotal &= \Delta \kSsys + \Delta \kSsurr \\[4pt] &= \knmol R\ln \left( \dfrac{\kVb}{\kVa}\right)- \knmol R\ln \left( \dfrac{\kVb}{\kVa}\right) \\[4pt] &=0 \end{aligned} $$
+</section>
+
+<section id="mixing-of-two-gases">
+<h2>The Mixing of Two Gases</h2>
+<p>Consider two <span data-concept="ideal-gas">ideal gases</span> at same pressure separated by a thin wall that is punctured. Both gases behave as if the other one is not there and again we get a <span data-concept="spontaneous-process">spontaneous process</span>, mixing in this case.</p>
+<figure class="sim" id="sim-mixing-entropy" data-original="/media/ch20/402032-Two_gases.jpg" data-original-caption="">
+  <div class="sim-head"><span class="eyebrow">Sim</span><span>Set how much of the gas is A. Once the wall is gone each gas fills the whole box, and the <span data-type="entropy">molar entropy of mixing</span> peaks at an even mix.</span></div>
+</figure>
+<p>If the pressure is the same the number of moles of each gas should be proportional to the original volumes, $\kVA$ and $\kVB$, and the total number of moles to the total volume $\kVtot$.</p>
+<figure class="dv" id="drv-mixing"></figure>
+<p>This entropy expressed in Equations 20.6.4 and 20.6.5 is known as the <strong><span data-concept="entropy-of-mixing">entropy of mixing</span></strong>; its existence is the major reason why there is such a thing as diffusion and mixing when gases, and also solutions (even solid ones), are brought into contact with each other.</p>
+</section>

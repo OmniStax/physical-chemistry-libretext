@@ -1,0 +1,179 @@
+{
+ "id": "21.2",
+ "module": "14477",
+ "chapter": "21",
+ "title": "The 3rd Law of Thermodynamics Puts Entropy on an Absolute Scale",
+ "short": "The third law",
+ "lead": "Unlike the enthalpy, entropy can be put on an absolute scale, with its zero set by a perfect crystal at 0 K. Real crystals, carbon monoxide among them, keep some disorder as they are cooled, and phase transitions and molecular mass leave their marks in tabulated entropies.",
+ "objectives": [
+  "Recall the third law of thermodynamics."
+ ],
+ "summary_html": "<p>Residual entropy quantifies the remaining disorder or randomness in a system even at absolute zero temperature (0 K). According to the Third Law of Thermodynamics, the entropy of a perfect crystal approaches zero as the temperature nears absolute zero. However, some systems retain a nonzero entropy at 0 K, exhibiting residual entropy. This phenomenon represents an exception to the Third Law rather than a contradiction. The law assumes a perfect crystal with a singular, unique ground state, whereas systems with residual entropy, such as carbon monoxide, possess multiple degenerate ground states.</p>",
+ "notes": "The page names no authors; Figure 21.2.3 is BlyumJ's, via Wikipedia, under CC BY-SA 4.0.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": []
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "Exercise 21.2.1 is unkeyed and has an AI solution; its Bloom level and concept tags were chosen by AI. Numeric answers accept a 2% tolerance.",
+ "figures": [
+  {
+   "id": "fig-21-2-1",
+   "kind": "photo",
+   "number": "21.2.1",
+   "draws": []
+  },
+  {
+   "id": "fig-21-2-2",
+   "kind": "photo",
+   "number": "21.2.2",
+   "widths": [
+    352
+   ],
+   "draws": []
+  },
+  {
+   "id": "fig-21-2-3",
+   "kind": "photo",
+   "number": "21.2.3",
+   "draws": []
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "natural-zero",
+   "concept": "absolute-entropy",
+   "verb": "introduces"
+  },
+  {
+   "span": "natural-zero",
+   "concept": "third-law",
+   "verb": "introduces"
+  },
+  {
+   "span": "natural-zero",
+   "concept": "perfect-crystal-zero-entropy",
+   "verb": "introduces"
+  },
+  {
+   "span": "natural-zero",
+   "concept": "constant-pressure-heat-capacity",
+   "verb": "uses"
+  },
+  {
+   "span": "natural-zero",
+   "concept": "enthalpy",
+   "verb": "uses"
+  },
+  {
+   "span": "natural-zero",
+   "concept": "boltzmann-entropy",
+   "verb": "uses"
+  },
+  {
+   "span": "natural-zero",
+   "concept": "entropy-change-constant-pressure",
+   "verb": "uses"
+  },
+  {
+   "span": "residual-disorder",
+   "concept": "residual-entropy",
+   "verb": "introduces"
+  },
+  {
+   "span": "residual-disorder",
+   "concept": "third-law",
+   "verb": "reinforces"
+  },
+  {
+   "span": "jumps-and-trends",
+   "concept": "entropy-of-fusion",
+   "verb": "introduces"
+  },
+  {
+   "span": "jumps-and-trends",
+   "concept": "standard-molar-entropy",
+   "verb": "introduces"
+  },
+  {
+   "span": "jumps-and-trends",
+   "concept": "entropy-increases-with-mass",
+   "verb": "introduces"
+  },
+  {
+   "span": "jumps-and-trends",
+   "concept": "orientational-disorder-entropy",
+   "verb": "introduces"
+  },
+  {
+   "span": "jumps-and-trends",
+   "concept": "enthalpy-of-fusion",
+   "verb": "uses"
+  },
+  {
+   "span": "jumps-and-trends",
+   "concept": "pib-energy-levels",
+   "verb": "uses"
+  },
+  {
+   "span": "jumps-and-trends",
+   "concept": "gibbs-energy",
+   "verb": "uses"
+  },
+  {
+   "span": "jumps-and-trends",
+   "concept": "residual-entropy",
+   "verb": "reinforces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "e1",
+   "source_id": "exr:21.2.1",
+   "source_number": "Exercise 21.2.1",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "jumps-and-trends",
+   "prompt": "<p>The entropy of a crystal composed of one mole of identical molecules is measured to be 9.134 J/K at 0 K. Determine the number of possible orientations each molecule can adopt within the crystal. Additionally, illustrate a molecule that would be expected to exhibit this behavior.</p>",
+   "answer": {
+    "type": "number",
+    "value": 3,
+    "generated_by": "ai",
+    "hint": "If each of $N$ molecules has $w$ orientations, $W = w^N$ and $S = k\\ln w^N = Nk\\ln w$.",
+    "solution": "<p>With $w$ equally likely orientations per molecule, the crystal has $W_{disorder} = w^N$ arrangements, so $S_{disorder} = \\kk\\ln w^N = N\\kk\\ln w$. For one mole $N\\kk = R = 8.314$ J/K, so $\\ln w = 9.134/8.314 = 1.0986$ and $w = e^{1.0986} = 3.000$. Each molecule can sit in its site in three ways. A molecule that does this has threefold shape with one odd arm about the size of the other two: a trigonal planar molecule XY₂Z with Z nearly as large as Y, packed in a triangular site. Drawn in the site, the odd atom Z can point to any of the three corners, and the three orientations have nearly the same energy, just as CO's two orientations do.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "e1",
+   "concept": "orientational-disorder-entropy"
+  },
+  {
+   "exercise": "e1",
+   "concept": "residual-entropy"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-integrand",
+   "kind": "correction",
+   "html": "The integrand is $C_p/T$: $S(T) = S(0) + \\int_0^T \\dfrac{C_p(T)}{T}\\,dT$, as the next paragraph says and as Equation 21.5.3 writes it."
+  },
+  {
+   "id": "c-sulfur-units",
+   "kind": "correction",
+   "html": "The unit of an entropy of transition is J/(mol·K), as Figure 21.2.2 prints it, not J·mol/K."
+  }
+ ]
+}

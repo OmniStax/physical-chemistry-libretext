@@ -1,0 +1,338 @@
+{
+ "id": "21.1",
+ "module": "14476",
+ "chapter": "21",
+ "title": "Entropy Increases with Increasing Temperature",
+ "short": "Entropy and temperature",
+ "lead": "The first and second laws together give the internal energy and the enthalpy as functions of entropy, and the heat capacities then tell how the entropy of a substance changes as it is heated at constant volume or at constant pressure.",
+ "objectives": [
+  "Define entropy and its relation to energy flow."
+ ],
+ "summary_html": "",
+ "notes": "The page names no authors, and Example 21.1.1, printed without a solution, is set as an exercise.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": []
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "Example 21.1.1, which the book prints as five steps with no solution, is unkeyed and has an AI solution; its Bloom level and concept tags were chosen by AI. Problem 1 of the chapter's exercise page (21.E), which belongs here, waits until the checker can find its source.",
+ "figures": [],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "entropy-versus-temperature",
+   "concept": "fundamental-equation-u",
+   "verb": "introduces"
+  },
+  {
+   "span": "entropy-versus-temperature",
+   "concept": "natural-variables-u",
+   "verb": "introduces"
+  },
+  {
+   "span": "entropy-versus-temperature",
+   "concept": "entropy-change-constant-volume",
+   "verb": "introduces"
+  },
+  {
+   "span": "entropy-versus-temperature",
+   "concept": "entropy-increases-with-temperature",
+   "verb": "introduces"
+  },
+  {
+   "span": "entropy-versus-temperature",
+   "concept": "fundamental-equation-h",
+   "verb": "introduces"
+  },
+  {
+   "span": "entropy-versus-temperature",
+   "concept": "entropy-change-constant-pressure",
+   "verb": "introduces"
+  },
+  {
+   "span": "entropy-versus-temperature",
+   "concept": "first-law-of-thermodynamics",
+   "verb": "uses"
+  },
+  {
+   "span": "entropy-versus-temperature",
+   "concept": "entropy",
+   "verb": "uses"
+  },
+  {
+   "span": "entropy-versus-temperature",
+   "concept": "internal-energy",
+   "verb": "uses"
+  },
+  {
+   "span": "entropy-versus-temperature",
+   "concept": "constant-volume-heat-capacity",
+   "verb": "uses"
+  },
+  {
+   "span": "entropy-versus-temperature",
+   "concept": "enthalpy",
+   "verb": "uses"
+  },
+  {
+   "span": "entropy-versus-temperature",
+   "concept": "constant-pressure-heat-capacity",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "e1",
+   "source_id": "ex:21.1.1",
+   "source_number": "Example 21.1.1",
+   "kind": "exercise",
+   "bloom": "Analyze",
+   "place": {
+    "at": "end"
+   },
+   "cite": "entropy-versus-temperature",
+   "prompt": "<ol><li>Write $\\kU$ as a function of $\\kT$ and $\\kV$.</li><li>Write $\\kU$ as a function of its natural variables.</li><li>Rearrange (2) to find an expression for $d\\kSent$.</li><li>Substitute (1) into (3) and rearrange. This is the definition of $\\kCV$.</li><li>Write out $\\kSent$ as a function of $\\kT$ and $\\kV$.</li></ol>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "Write the total differential of $U(T, V)$ and set it equal to $T\\,dS - P\\,dV$.",
+    "solution": "<p>(1) As a function of $\\kT$ and $\\kV$, $d\\kU = \\left(\\dfrac{\\partial \\kU}{\\partial \\kT}\\right)_{\\kV} d\\kT + \\left(\\dfrac{\\partial \\kU}{\\partial \\kV}\\right)_{\\kT} d\\kV$.</p><p>(2) In its natural variables, $d\\kU = \\kT\\,d\\kSent - \\kP\\,d\\kV$.</p><p>(3) Solved for the entropy, $d\\kSent = \\dfrac{1}{\\kT}\\,d\\kU + \\dfrac{\\kP}{\\kT}\\,d\\kV$.</p><p>(4) Putting (1) into (3) gives $d\\kSent = \\dfrac{1}{\\kT}\\left(\\dfrac{\\partial \\kU}{\\partial \\kT}\\right)_{\\kV} d\\kT + \\dfrac{1}{\\kT}\\left[\\left(\\dfrac{\\partial \\kU}{\\partial \\kV}\\right)_{\\kT} + \\kP\\right] d\\kV$. The coefficient of $d\\kT$ is $(\\partial \\kSent/\\partial \\kT)_{\\kV}$, so $\\left(\\dfrac{\\partial \\kSent}{\\partial \\kT}\\right)_{\\kV} = \\dfrac{1}{\\kT}\\left(\\dfrac{\\partial \\kU}{\\partial \\kT}\\right)_{\\kV} = \\dfrac{\\kCV}{\\kT}$, which is the definition of $\\kCV$ written as $\\kCV = \\kT(\\partial \\kSent/\\partial \\kT)_{\\kV}$.</p><p>(5) For $\\kSent(\\kT, \\kV)$, then, $d\\kSent = \\dfrac{\\kCV}{\\kT}\\,d\\kT + \\dfrac{1}{\\kT}\\left[\\left(\\dfrac{\\partial \\kU}{\\partial \\kV}\\right)_{\\kT} + \\kP\\right] d\\kV$. At constant volume only the first term is left, which is $d\\kSent = (\\kCV/\\kT)\\,d\\kT$.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "e1",
+   "concept": "entropy-change-constant-volume"
+  },
+  {
+   "exercise": "e1",
+   "concept": "natural-variables-u"
+  }
+ ],
+ "footnotes": [],
+ "derivations": [
+  {
+   "id": "fundamental-equation-u",
+   "what": "the fundamental equation for U",
+   "source": "Physical Chemistry (LibreTexts), 21.1 Entropy Increases with Increasing Temperature",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "d\\kU = \\delta \\kqrev + \\delta \\kwrev",
+       "src": "19.1"
+      },
+      {
+       "tex": "\\delta \\kqrev = \\kT\\,d\\kSent",
+       "src": "20.2"
+      },
+      {
+       "tex": "\\delta \\kwrev = -\\kP\\,d\\kV",
+       "src": "19.2"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{u}{d\\kU} = \\mk{q}{\\delta \\kqrev} + \\mk{w}{\\delta \\kwrev}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{u}{d\\kU} = \\mk{q}{\\kT\\,d\\kSent} + \\mk{w}{\\delta \\kwrev}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{u}{d\\kU} = \\mk{q}{\\kT\\,d\\kSent} \\mk{w}{- \\kP\\,d\\kV}",
+       "uses": [
+        2
+       ]
+      }
+     ],
+     "src": "21.1"
+    }
+   ]
+  },
+  {
+   "id": "entropy-change-constant-volume",
+   "what": "the entropy change at constant volume",
+   "source": "Physical Chemistry (LibreTexts), 21.1 Entropy Increases with Increasing Temperature",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "d\\kU = \\kT\\,d\\kSent - \\kP\\,d\\kV",
+       "src": "21.1",
+       "drv": "fundamental-equation-u"
+      },
+      {
+       "text": "The volume is constant, so $dV = 0$."
+      }
+     ],
+     "then": {
+      "tex": "\\mk{u}{d\\kU} = \\mk{q}{\\kT\\,d\\kSent} \\mk{w}{- \\kP\\,d\\kV}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{u}{d\\kU} = \\mk{q}{\\kT\\,d\\kSent}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "src": "21.1"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "\\kCV = \\left(\\dfrac{\\partial \\kU}{\\partial \\kT}\\right)_{\\kV}",
+       "src": "(17.4.1)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{u}{d\\kU} = \\mk{q}{\\kT\\,d\\kSent}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{u}{\\kCV\\,d\\kT} = \\mk{q}{\\kT\\,d\\kSent}",
+       "uses": [
+        1
+       ],
+       "cap": "At constant volume the change in $U$ is $C_V\\,dT$."
+      },
+      {
+       "tex": "\\mk{q}{d\\kSent} = \\mk{u}{\\dfrac{\\kCV}{\\kT}\\,d\\kT}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{q}{\\Delta \\kSent} = \\mk{u}{\\int_{\\kTone}^{\\kTtwo}{\\dfrac{\\kCV(\\kT)}{\\kT}d\\kT}}",
+       "uses": [],
+       "cap": "Integrating both sides from $T_1$ to $T_2$; the left side sums to the change $\\Delta S$."
+      }
+     ],
+     "src": "21.1"
+    }
+   ]
+  },
+  {
+   "id": "fundamental-equation-h",
+   "what": "the fundamental equation for H",
+   "source": "Physical Chemistry (LibreTexts), 21.1 Entropy Increases with Increasing Temperature",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kHenth = \\kU + \\kP\\kV",
+       "src": "19.8"
+      },
+      {
+       "tex": "d\\kU = \\kT\\,d\\kSent - \\kP\\,d\\kV",
+       "src": "21.1",
+       "drv": "fundamental-equation-u"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{h}{\\kHenth} = \\mk{u}{\\kU} + \\mk{pv}{\\kP\\kV}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{h}{d\\kHenth} = \\mk{u}{d\\kU} + \\mk{pv}{d(\\kP\\kV)}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{h}{d\\kHenth} = \\mk{u}{d\\kU} + \\mk{pv}{\\kP\\,d\\kV + \\kV\\,d\\kP}",
+       "uses": [],
+       "cap": "The product rule: $d(PV) = P\\,dV + V\\,dP$."
+      },
+      {
+       "tex": "\\mk{h}{d\\kHenth} = \\mk{u}{\\kT\\,d\\kSent - \\kP\\,d\\kV} + \\mk{pv}{\\kP\\,d\\kV + \\kV\\,d\\kP}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{h}{d\\kHenth} = \\mk{u}{\\kT\\,d\\kSent} + \\mk{pv}{\\kV\\,d\\kP}",
+       "uses": []
+      }
+     ],
+     "src": "21.1",
+     "note": "The book's second line ends in $+ VP$; the term is $V\\,dP$, from the product rule two lines before."
+    }
+   ]
+  },
+  {
+   "id": "entropy-change-constant-pressure",
+   "what": "the entropy change at constant pressure",
+   "source": "Physical Chemistry (LibreTexts), 21.1 Entropy Increases with Increasing Temperature",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "d\\kHenth = \\kT\\,d\\kSent + \\kV\\,d\\kP",
+       "src": "21.1",
+       "drv": "fundamental-equation-h"
+      },
+      {
+       "text": "The pressure is constant, so $dP = 0$."
+      }
+     ],
+     "then": {
+      "tex": "\\mk{h}{d\\kHenth} = \\mk{q}{\\kT\\,d\\kSent} + \\mk{w}{\\kV\\,d\\kP}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{h}{d\\kHenth} = \\mk{q}{\\kT\\,d\\kSent}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "src": "21.1",
+     "note": "The book prints $dH = TdS + VdP$ again under \\\"At constant pressure\\\"; with $dP = 0$ the line is $dH = TdS$."
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "\\kCP = \\left(\\dfrac{\\partial \\kHenth}{\\partial \\kT}\\right)_{\\kP}",
+       "src": "19.9"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{h}{d\\kHenth} = \\mk{q}{\\kT\\,d\\kSent}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{h}{\\kCP\\,d\\kT} = \\mk{q}{\\kT\\,d\\kSent}",
+       "uses": [
+        1
+       ],
+       "cap": "At constant pressure the change in $H$ is $C_P\\,dT$."
+      },
+      {
+       "tex": "\\mk{q}{d\\kSent} = \\mk{h}{\\dfrac{\\kCP}{\\kT}\\,d\\kT}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{q}{\\Delta \\kSent} = \\mk{h}{\\int_{\\kTone}^{\\kTtwo}{\\dfrac{\\kCP(\\kT)}{\\kT}d\\kT}}",
+       "uses": [],
+       "cap": "Integrating both sides from $T_1$ to $T_2$; the left side sums to the change $\\Delta S$."
+      }
+     ],
+     "src": "21.1"
+    }
+   ]
+  }
+ ]
+}

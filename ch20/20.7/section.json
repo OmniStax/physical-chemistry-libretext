@@ -1,0 +1,466 @@
+{
+ "id": "20.7",
+ "module": "13721",
+ "chapter": "20",
+ "title": "Thermodynamics Provides Insight into the Conversion of Heat into Work",
+ "short": "Heat into work",
+ "lead": "Work turns into heat without limit, but heat turns into work only in part. The Carnot cycle, an ideal gas taken reversibly between a hot and a cold reservoir, sets how large that part can be; run backwards, the same cycle is a heat pump. The Stirling cycle is a second example.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "Adapted from Jerry LaRue (Chapman University); Figure 20.7.3, the engine's energy-flow diagram, is folded into the live Carnot cycle.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercises for this section; the one exercise, on a Carnot engine and heat pump between 500 K and 300 K, was written by AI with an AI solution. Its Bloom level and concept tags were chosen by AI. Numeric answers accept a 2% tolerance.",
+ "figures": [
+  {
+   "id": "sim-carnot-cycle",
+   "kind": "sim",
+   "number": "20.7.1",
+   "folds": [
+    "20.7.3"
+   ],
+   "originals": [
+    "/media/ch20/402075-Carnot_Cycle.png",
+    "/media/ch20/99715-CH431_carnot-engine.jpg"
+   ],
+   "original_caption": "A circular, reversible path of a Carnot cycle as an ideal gas on a PV diagram. (CC BY 4.0; Jerry LaRue via LibreTexts)",
+   "draws": [
+    "pressure",
+    "volume",
+    "temperature",
+    "entropy",
+    "heat",
+    "work"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "fig-20-7-2",
+   "kind": "photo",
+   "number": "20.7.2",
+   "draws": []
+  },
+  {
+   "id": "fig-20-7-4",
+   "kind": "photo",
+   "number": "20.7.4",
+   "draws": []
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "heat-into-work",
+   "concept": "dissipation",
+   "verb": "introduces"
+  },
+  {
+   "span": "carnot-cycle",
+   "concept": "heat-engine",
+   "verb": "introduces"
+  },
+  {
+   "span": "carnot-cycle",
+   "concept": "carnot-cycle",
+   "verb": "introduces"
+  },
+  {
+   "span": "carnot-cycle",
+   "concept": "cycle-work-area",
+   "verb": "introduces"
+  },
+  {
+   "span": "efficiency",
+   "concept": "engine-efficiency",
+   "verb": "introduces"
+  },
+  {
+   "span": "efficiency",
+   "concept": "carnot-efficiency",
+   "verb": "introduces"
+  },
+  {
+   "span": "efficiency",
+   "concept": "cycle-integral-zero",
+   "verb": "uses"
+  },
+  {
+   "span": "heat-pumps",
+   "concept": "heat-pump",
+   "verb": "introduces"
+  },
+  {
+   "span": "heat-pumps",
+   "concept": "dissipation",
+   "verb": "reinforces"
+  },
+  {
+   "span": "stirling-engine",
+   "concept": "stirling-cycle",
+   "verb": "introduces"
+  },
+  {
+   "span": "stirling-engine",
+   "concept": "cycle-work-area",
+   "verb": "reinforces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "ai1",
+   "source_id": "eq:eff",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "efficiency",
+   "prompt": "<p>A Carnot engine works between reservoirs at 500 K and 300 K and takes in $\\kqh = 1000$ J per cycle at the hot side. Find (a) its efficiency $\\eta$, (b) the work of the cycle $\\kwcycle$ (work done on the gas), and (c) the heat $\\kqc$ the gas takes in at the cold side. (d) The same cycle is run backwards as a heat pump that delivers 1000 J to the warm side. How much work must be put in?</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 0.4,
+      "hint": "Use Equation 20.7.1."
+     },
+     {
+      "part": "b",
+      "value": -400,
+      "unit": "J"
+     },
+     {
+      "part": "c",
+      "value": -600,
+      "unit": "J"
+     },
+     {
+      "part": "d",
+      "value": 400,
+      "unit": "J"
+     }
+    ],
+    "solution": "<p>(a) $\\eta = 1 - \\kTc/\\kTh = 1 - 300/500 = 0.40$. (b) $|\\kwcycle| = \\eta\\,\\kqh = 400$ J, and the gas does this work on the surroundings, so $\\kwcycle = -400$ J. (c) From $\\kqh + \\kqc = -\\kwcycle$, $\\kqc = 400 - 1000 = -600$ J: 600 J leaves the gas at 300 K. The ratio checks: $\\kqc/\\kqh = -0.60 = -\\kTc/\\kTh$. (d) Reversed, every flow changes sign: 400 J of work and 600 J pumped from the cold side together deliver 1000 J to the warm side, so the work put in is 400 J.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "ai1",
+   "concept": "carnot-efficiency"
+  },
+  {
+   "exercise": "ai1",
+   "concept": "engine-efficiency"
+  },
+  {
+   "exercise": "ai1",
+   "concept": "heat-pump"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-whot",
+   "kind": "correction",
+   "html": "In the book's convention $w$ is the work done on the gas, so $w_{hot}$ is negative and $w_{cold}$ positive. What is meant is $|w_{hot}| > |w_{cold}|$: the gas does more work expanding at $T_h$ than is done on it while it is compressed at $T_c$."
+  },
+  {
+   "id": "c-24",
+   "kind": "correction",
+   "html": "$1 - 300/400 = 0.25$, so the best efficiency is 25%, which agrees with the three quarters of the energy dumped in the river."
+  },
+  {
+   "id": "c-stirling-order",
+   "kind": "correction",
+   "html": "Figure 20.7.4 takes the steps in the other order: after the expansion at $T_h$ (A to B), step 2 is isochoric cooling from $T_h$ to $T_c$ (B to C), and step 4 is isochoric heating from $T_c$ to $T_h$ (D to A)."
+  },
+  {
+   "id": "c-stirling-q",
+   "kind": "correction",
+   "html": "The heat of an isochoric step is $C_V\\Delta T$, not $C_V/\\Delta T$: with $\\Delta T = T_h - T_c$, Equations 20.7.2 and 20.7.3 read $q_2 = C_V\\Delta T$ and $q_4 = -C_V\\Delta T$."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "carnot-efficiency",
+   "what": "the efficiency of a Carnot engine",
+   "source": "Physical Chemistry (LibreTexts), 20.7 Thermodynamics Provides Insight into the Conversion of Heat into Work",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "text": "$U$ is a state function, so its change around a closed path is zero.",
+       "src": "20.3"
+      },
+      {
+       "tex": "\\Delta \\kUone=\\kwone+\\kqh",
+       "src": "20.7"
+      },
+      {
+       "tex": "\\Delta \\kUtwo=\\kwtwo",
+       "src": "20.7"
+      },
+      {
+       "tex": "\\Delta \\kUthree=\\kwthree+\\kqc",
+       "src": "20.7"
+      },
+      {
+       "tex": "\\Delta \\kUfour=\\kwfour",
+       "src": "20.7"
+      },
+      {
+       "tex": "\\kwcycle=\\kwone+\\kwtwo+\\kwthree+\\kwfour",
+       "src": "20.7"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{c}{\\Delta \\kUcycle} = \\mk{s}{\\Delta \\kUone+\\Delta \\kUtwo+\\Delta \\kUthree+\\Delta \\kUfour}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{c}{\\Delta \\kUcycle} = \\mk{s}{\\kwone+\\kqh+\\kwtwo+\\kwthree+\\kqc+\\kwfour}",
+       "uses": [
+        1,
+        2,
+        3,
+        4
+       ]
+      },
+      {
+       "tex": "\\mk{c}{0} = \\mk{s}{\\kwone+\\kqh+\\kwtwo+\\kwthree+\\kqc+\\kwfour}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{q}{\\kqh + \\kqc} = \\mk{w}{-\\kwone-\\kwtwo-\\kwthree-\\kwfour}",
+       "uses": [],
+       "map": {
+        "s": [
+         "q",
+         "w"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{q}{\\kqh + \\kqc} = \\mk{w}{-\\kwcycle}",
+       "uses": [
+        5
+       ]
+      }
+     ],
+     "src": "20.7"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\kwone=-R\\kTh\\ln\\left(\\dfrac{\\kVB}{\\kVA}\\right)",
+       "src": "20.7"
+      },
+      {
+       "tex": "\\kwtwo=\\kCVbar\\left(\\kTc-\\kTh\\right)",
+       "src": "20.7"
+      },
+      {
+       "tex": "\\kwthree=-R\\kTc\\ln\\left(\\dfrac{\\kVD}{\\kVC}\\right)",
+       "src": "20.7"
+      },
+      {
+       "tex": "\\kwfour=\\kCVbar\\left(\\kTh-\\kTc\\right)",
+       "src": "20.7"
+      },
+      {
+       "tex": "\\kwcycle=\\kwone+\\kwtwo+\\kwthree+\\kwfour",
+       "src": "20.7"
+      },
+      {
+       "tex": "\\dfrac{\\kVD}{\\kVC}=\\dfrac{\\kVA}{\\kVB}",
+       "src": "19.6"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{w}{\\kwcycle} = \\mk{a}{\\kwone}+\\mk{b}{\\kwtwo}+\\mk{c}{\\kwthree}+\\mk{d}{\\kwfour}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{w}{\\kwcycle} = \\mk{a}{-R\\kTh\\ln\\left(\\dfrac{\\kVB}{\\kVA}\\right)}+\\mk{b}{\\kCVbar\\left(\\kTc-\\kTh\\right)}+\\mk{c}{\\kwthree}+\\mk{d}{\\kwfour}",
+       "uses": [
+        0,
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{w}{\\kwcycle} = \\mk{a}{-R\\kTh\\ln\\left(\\dfrac{\\kVB}{\\kVA}\\right)}+\\mk{b}{\\kCVbar\\left(\\kTc-\\kTh\\right)}+\\mk{c}{-R\\kTc\\ln\\left(\\dfrac{\\kVD}{\\kVC}\\right)}+\\mk{d}{\\kCVbar\\left(\\kTh-\\kTc\\right)}",
+       "uses": [
+        2,
+        3
+       ]
+      },
+      {
+       "tex": "\\mk{w}{\\kwcycle} = \\mk{a}{-R\\kTh\\ln\\left(\\dfrac{\\kVB}{\\kVA}\\right)}\\mk{c}{-R\\kTc\\ln\\left(\\dfrac{\\kVD}{\\kVC}\\right)}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{w}{\\kwcycle} = \\mk{a}{-R\\kTh\\ln\\left(\\dfrac{\\kVB}{\\kVA}\\right)}\\mk{c}{+R\\kTc\\ln\\left(\\dfrac{\\kVB}{\\kVA}\\right)}",
+       "uses": [
+        5
+       ],
+       "cap": "The two adiabats join the same two temperatures, so $V_C/V_B = V_D/V_A$, which gives $V_D/V_C = V_A/V_B$, and $\\ln(V_A/V_B) = -\\ln(V_B/V_A)$."
+      },
+      {
+       "tex": "\\mk{w}{\\kwcycle} = \\mk{r}{-R(\\kTh-\\kTc)\\ln\\left(\\dfrac{\\kVB}{\\kVA}\\right)}",
+       "uses": [],
+       "map": {
+        "a": "r",
+        "c": "r"
+       }
+      }
+     ],
+     "src": "20.7"
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "tex": "\\eta=\\dfrac{|\\kwcycle|}{\\kqh}",
+       "src": "20.7"
+      },
+      {
+       "tex": "\\kqh=-\\kwone=R\\kTh\\ln\\left(\\dfrac{\\kVB}{\\kVA}\\right)",
+       "src": "20.7"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{e}{\\eta} = \\mk{f}{\\dfrac{|\\kwcycle|}{\\kqh}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{e}{\\eta} = \\mk{f}{\\dfrac{R\\left(\\kTh-\\kTc\\right)\\ln\\left(\\dfrac{\\kVB}{\\kVA}\\right)}{\\kqh}}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{e}{\\eta} = \\mk{f}{\\dfrac{R\\left(\\kTh-\\kTc\\right)\\ln\\left(\\dfrac{\\kVB}{\\kVA}\\right)}{R\\kTh\\ln\\left(\\dfrac{\\kVB}{\\kVA}\\right)}}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{e}{\\eta} = \\mk{f}{\\dfrac{\\kTh-\\kTc}{\\kTh}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{e}{\\eta} = \\mk{f}{1-\\dfrac{\\kTc}{\\kTh}}",
+       "uses": []
+      }
+     ],
+     "src": "20.7"
+    },
+    {
+     "assumes": [
+      {
+       "text": "$S$ is a state function, so its change around the closed cycle is zero.",
+       "src": "20.3"
+      },
+      {
+       "text": "Steps 2 and 4 are adiabats: no heat flows in them, so they add nothing to the entropy.",
+       "src": "20.7"
+      },
+      {
+       "text": "Along each isotherm the entropy changes by the reversible heat divided by the constant temperature.",
+       "src": "(20.6.2)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{i}{\\oint d\\kSent} = \\mk{s}{\\dfrac{\\kqh}{\\kTh}+\\dfrac{\\kqc}{\\kTc}}",
+      "uses": [
+       1,
+       2
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{i}{0} = \\mk{s}{\\dfrac{\\kqh}{\\kTh}+\\dfrac{\\kqc}{\\kTc}}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{r}{\\dfrac{\\kqc}{\\kqh}} = \\mk{t}{-\\dfrac{\\kTc}{\\kTh}}",
+       "uses": [],
+       "map": {
+        "s": [
+         "r",
+         "t"
+        ]
+       }
+      }
+     ],
+     "src": "20.7"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "step": 3
+      },
+      {
+       "tex": "\\eta=\\dfrac{|\\kwcycle|}{\\kqh}",
+       "src": "20.7"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{e}{\\eta} = \\mk{f}{\\dfrac{|\\kwcycle|}{\\kqh}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{e}{\\eta} = \\mk{f}{\\dfrac{\\kqh+\\kqc}{\\kqh}}",
+       "uses": [
+        0
+       ],
+       "cap": "The engine does work, so $w_\\text{cycle}$ is negative and $|w_\\text{cycle}| = -w_\\text{cycle} = q_h + q_c$."
+      },
+      {
+       "tex": "\\mk{e}{\\eta} = \\mk{f}{1+\\dfrac{\\kqc}{\\kqh}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{e}{\\eta} = \\mk{f}{1-\\dfrac{\\kTc}{\\kTh}}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "num": "(20.7.1)",
+     "src": "20.7"
+    }
+   ]
+  }
+ ]
+}

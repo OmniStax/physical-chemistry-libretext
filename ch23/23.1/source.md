@@ -29,11 +29,9 @@ A unary phase diagram summarizes the equilibrium states of a single pure substan
 
 We have seen that the Gibbs function $G$ depends strongly (logarithmically) on pressure for a gas, but only slightly (and linearly) for a liquid. The two curves intersect in a point representing the *equilibrium vapor pressure* of the liquid. At lower pressures the vapor is more stable, at higher ones the liquid. (For a solid the same holds as for the liquid). This means that except at the intersection point we only will observe one phase.
 
-![Illustration showing three states of matter in containers: liquid, liquid-vapor, and vapor, with pressure indicators.](media/113530-CH431_vaporeq.jpg)
-
-Figure 23.1.2
-
-: A cylinder with one substance
+> FIGURE {fig:23.1.2} src=media/113530-CH431_vaporeq.jpg
+> alt: Illustration showing three states of matter in containers: liquid, liquid-vapor, and vapor, with pressure indicators.
+> caption: A cylinder with one substance
 
 It is important to stress that this holds *in the absence of other matter*, e.g., when we put only water into an evacuated cylinder (Figure 23.1.2). We may get three cases:
 
