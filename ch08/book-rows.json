@@ -117,7 +117,8 @@
   },
   {
    "sym": "mu_B",
-   "latex": "\\mu_B"
+   "latex": "\\mu_B",
+   "macro": "\\kmuB"
   },
   {
    "sym": "gamma_e",

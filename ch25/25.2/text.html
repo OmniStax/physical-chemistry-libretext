@@ -8,11 +8,11 @@ $$ {\kmu}_{\text{non-ideal}} = \kmustd + \kR\kT \ln \ka, \tag{25.2.1} $$
 <section id="activity-coefficients-vapor">
 <h2>Activity coefficients from vapor pressure</h2>
 <p>For a component in a solution we can use Equation 11.4.2 to write the <span data-concept="chemical-potential">chemical potential</span> in the gas phase as:</p>
-$$ \kmuivapor = \kmuistd + \kR\kT \ln \dfrac{P_i}{\kPstd}. \tag{25.2.2} $$
+$$ \kmuivapor = \kmuistd + \kR\kT \ln \dfrac{\kPpi}{\kPstd}. \tag{25.2.2} $$
 <p>If the gas phase is in equilibrium with the liquid solution, then:</p>
 $$ \kmuslni = \kmuivapor = \kmustari, \tag{25.2.3} $$
 <p>where $\kmustari$ is the <span data-concept="chemical-potential">chemical potential</span> of the pure element. Subtracting Equation 25.2.3 from Equation 25.2.2, we obtain:</p>
-$$ \kmuslni = \kmustari + \kR\kT \ln \dfrac{P_i}{\kPstari}. \tag{25.2.4} $$
+$$ \kmuslni = \kmustari + \kR\kT \ln \dfrac{\kPpi}{\kPstari}. \tag{25.2.4} $$
 <p>For an <span data-concept="ideal-solution">ideal solution</span>, we can use <span data-concept="raoults-law">Raoult’s law</span>, Equation 13.1.1, to rewrite Equation 25.2.4 as:</p>
 $$ \kmuslni = \kmustari + \kR\kT \ln \kxi, \tag{25.2.5} $$
 <p>which relates the <span data-concept="ideal-solution-chemical-potential">chemical potential of a component in an ideal solution</span> to the <span data-concept="chemical-potential">chemical potential</span> of the pure liquid and its <span data-concept="mole-fraction">mole fraction</span> in the solution. For a non-ideal solution, the partial pressure in Equation 25.2.4 is either larger (positive deviation) or smaller (negative deviation) than the pressure calculated using <span data-concept="raoults-law">Raoult’s law</span>. The <span data-concept="chemical-potential">chemical potential</span> of a component in the mixture is then calculated using:</p>
@@ -20,9 +20,9 @@ $$ \kmuslni = \kmustari + \kR\kT \ln \left(\kgammai \kxi\right), \tag{25.2.6} $$
 <p>where $\kgammai$ is a positive coefficient that accounts for deviations from ideality. This coefficient is either larger than one (for positive deviations), or smaller than one (for negative deviations). The <span data-concept="activity">activity</span> of component $i$ can be calculated as an <em>effective mole fraction</em>, using:</p>
 $$ a_i = \kgammai \kxi, \tag{25.2.7} $$
 <p>where $\kgammai$ is defined as the <strong><span data-concept="activity-coefficient">activity coefficient</span></strong>. The partial pressure of the component can then be related to its <span data-concept="equilibrium-vapor-pressure">vapor pressure</span>, using:</p>
-$$ P_i = a_i \kPstari. \tag{25.2.8} $$
+$$ \kPpi = a_i \kPstari. \tag{25.2.8} $$
 <p>Comparing Equation 25.2.8 with <span data-concept="raoults-law">Raoult’s law</span>, we can calculate the <span data-concept="activity-coefficient-from-vapor-pressure">activity coefficient</span> as:</p>
-$$ \kgammai = \dfrac{P_i}{\kxi \kPstari} = \dfrac{P_i}{\kPiR}, \tag{25.2.9} $$
+$$ \kgammai = \dfrac{\kPpi}{\kxi \kPstari} = \dfrac{\kPpi}{\kPiR}, \tag{25.2.9} $$
 <p>where $\kPiR$ is the partial pressure calculated using <span data-concept="raoults-law">Raoult’s law</span>. This result also proves that for an <span data-concept="ideal-solution">ideal solution</span>, $\gamma=1$. Equation 25.2.9 can also be used experimentally to obtain the <span data-concept="activity-coefficient">activity coefficient</span> from the phase diagram of the non-ideal solution. This is achieved by measuring the value of the partial pressure of the vapor of a non-ideal solution. Examples of this procedure are reported for both positive and negative deviations in Figure 25.2.1.</p>
 <figure class="photo" id="fig-25-2-1" data-figure="25.2.1">
   <img src="/media/ch25/424149-clipboard_e9cb3f74a44ae467cc26494825c366099.png" data-width="878" alt="Two pressure–composition diagrams from pure A to pure B. On the left the partial pressure curve bows above the dotted Raoult's law line, so the measured P_i at x_i lies above P_i^R (γ greater than 1); on the right it sags below the line, so P_i lies below P_i^R (γ between 0 and 1).">

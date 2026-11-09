@@ -544,7 +544,7 @@
        }
       },
       {
-       "tex": "\\mk{r}{\\dfrac{\\knliq}{\\kngas}} = \\mk{q}{\\dfrac{y_2-\\kxall}{\\kxall-\\kxtwo}}",
+       "tex": "\\mk{r}{\\knliq(\\kxall-\\kxtwo)} = \\mk{q}{\\kngas(y_2-\\kxall)}",
        "uses": [],
        "map": {
         "x": [
@@ -555,9 +555,13 @@
          "q"
         ],
         "l": [
-         "q"
+         "r"
         ]
        }
+      },
+      {
+       "tex": "\\mk{r}{\\dfrac{\\knliq}{\\kngas}} = \\mk{q}{\\dfrac{y_2-\\kxall}{\\kxall-\\kxtwo}}",
+       "uses": []
       }
      ],
      "src": "24.1"

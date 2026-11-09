@@ -15,7 +15,7 @@ const sim = (id, H) => F.sim(root, id, H);
   const PAIRS = [
     { value: 'bt', label: 'benzene and toluene', P1: 0.24, P2: 0.66, unit: 'bar', dec: 3, top: 0.8, ny: 4, n1: 'toluene', n2: 'benzene', r: { min: 0.15, max: 0.75, step: 0.005, value: 0.4 } },
     { value: 'torr', label: '50 and 25 Torr', P1: 50, P2: 25, unit: 'Torr', dec: 1, top: 60, ny: 6, n1: 'component 1', n2: 'component 2', r: { min: 15, max: 58, step: 0.5, value: 35 } },
-    { value: 'we', label: 'water and ethanol', P1: 384, P2: 945, unit: 'Torr', dec: 0, top: 1000, ny: 5, n1: 'water', n2: 'ethanol', r: { min: 250, max: 990, step: 5, value: 600 } },
+    { value: 'we', label: 'water and ethanol', P1: 384, P2: 945, unit: 'Torr', dec: 0, top: 1200, ny: 6, n1: 'water', n2: 'ethanol', r: { min: 250, max: 990, step: 5, value: 600 } },
   ];
   const byId = (v) => PAIRS.find((p) => p.value === v) || PAIRS[0];
   const bubble = (p) => (x) => p.P2 - x * (p.P2 - p.P1);

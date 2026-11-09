@@ -1,0 +1,114 @@
+{
+ "id": "26.7",
+ "module": "14528",
+ "chapter": "26",
+ "title": "The van 't Hoff Equation",
+ "short": "The van 't Hoff equation",
+ "lead": "An equilibrium constant changes with temperature, and the reaction enthalpy decides which way. Writing the standard Gibbs energy as enthalpy minus temperature times entropy turns ln K into a function of 1/T that can be read off a plot.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "The book prints no credits for this page; its two van 't Hoff plots (Figure 26.7.1) are Wikipedia's, used with permission.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercise here; the one exercise is new and AI-written, with an AI solution checked by computation.",
+ "figures": [
+  {
+   "id": "sim-van-t-hoff",
+   "kind": "sim",
+   "number": "26.7.1",
+   "original_caption": "Endothermic Reaction (left) and Exothermic Reaction van 't Hoff Plots (right). Figures used with permission of Wikipedia",
+   "withheld": "The book's Figure 26.7.1 is used with Wikipedia's permission, and that permission does not extend to this page.",
+   "draws": [
+    "energy",
+    "entropy",
+    "temperature"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "k-and-temperature",
+   "concept": "gibbs-helmholtz-equation",
+   "verb": "uses"
+  },
+  {
+   "span": "k-and-temperature",
+   "concept": "van-t-hoff-equation",
+   "verb": "reinforces"
+  },
+  {
+   "span": "k-and-temperature",
+   "concept": "integrated-van-t-hoff",
+   "verb": "reinforces"
+  },
+  {
+   "span": "van-t-hoff-plot",
+   "concept": "standard-gibbs-equilibrium-constant",
+   "verb": "uses"
+  },
+  {
+   "span": "van-t-hoff-plot",
+   "concept": "reaction-gibbs-enthalpy-entropy",
+   "verb": "uses"
+  },
+  {
+   "span": "van-t-hoff-plot",
+   "concept": "van-t-hoff-plot",
+   "verb": "introduces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "we can translate a $K$ value at one temperature into another",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "k-and-temperature",
+   "prompt": "<p>For N<sub>2</sub>(g) + 3H<sub>2</sub>(g) ⇌ 2NH<sub>3</sub>(g), $K = 5.8 \\times 10^{5}$ at 298.15 K and $\\Delta_rH^\\circ = -91.8$ kJ/mol, twice the enthalpy of formation of NH<sub>3</sub>. Taking $\\Delta_rH^\\circ$ as constant, estimate $K$ at 400 K.</p>",
+   "answer": {
+    "type": "number",
+    "value": 46.6,
+    "tol": 0.03,
+    "generated_by": "ai",
+    "hint": "Use the integrated form with $T_1 = 298.15$ K and $T_2 = 400$ K.",
+    "solution": "<p>$\\ln \\dfrac{K(T_2)}{K(T_1)} = \\dfrac{-\\Delta H^o}{R}\\left(\\dfrac{1}{T_2} - \\dfrac{1}{T_1}\\right) = \\dfrac{91\\,800\\ \\text{J/mol}}{8.314\\ \\text{J/(K mol)}}\\left(\\dfrac{1}{400\\ \\text{K}} - \\dfrac{1}{298.15\\ \\text{K}}\\right) = -9.43$.</p><p>So $K(400\\ \\text{K}) = (5.8 \\times 10^{5})\\,e^{-9.43} = 47$. The reaction is exothermic, so heating it lowers $K$ by a factor of about 12 000.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "integrated-van-t-hoff"
+  },
+  {
+   "exercise": "a1",
+   "concept": "van-t-hoff-plot"
+  }
+ ],
+ "footnotes": []
+}

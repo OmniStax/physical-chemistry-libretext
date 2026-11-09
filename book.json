@@ -417,11 +417,13 @@
     },
     {
       "sym": "n_1",
-      "latex": "n_1"
+      "latex": "n_1",
+      "macro": "\\knone"
     },
     {
       "sym": "n_2",
-      "latex": "n_2"
+      "latex": "n_2",
+      "macro": "\\kntwo"
     },
     {
       "sym": "Z",
@@ -1570,7 +1572,8 @@
     },
     {
       "sym": "mu_B",
-      "latex": "\\mu_B"
+      "latex": "\\mu_B",
+      "macro": "\\kmuB"
     },
     {
       "sym": "gamma_e",
@@ -3477,7 +3480,8 @@
     },
     {
       "sym": "P_i",
-      "latex": "P_i"
+      "latex": "P_i",
+      "macro": "\\kPpi"
     },
     {
       "sym": "M_j",
@@ -5750,6 +5754,14 @@
     {
       "sym": "q_xi",
       "latex": "q"
+    },
+    {
+      "sym": "M_1",
+      "latex": "M_1"
+    },
+    {
+      "sym": "K_b",
+      "latex": "K_b"
     }
   ],
   "exercise_kinds": [
@@ -22049,6 +22061,11 @@
         {
           "id": "gamma-pm-xy",
           "latex": "\\gamma _{\\pm} = (\\gamma_+^x \\gamma_-^y)^{1/x+y}"
+        },
+        {
+          "id": "gamma-pm-nu",
+          "section": "25.5",
+          "latex": "\\gamma_{\\pm}^\\nu = \\gamma_+^{\\nu_+}\\gamma_-^{\\nu_-}"
         }
       ]
     },
@@ -22079,6 +22096,11 @@
         {
           "id": "ionic-strength-def",
           "latex": "I = \\dfrac{1}{2} \\dfrac{m_+ z_+^2 + m_-z_-^2}{m^o}"
+        },
+        {
+          "id": "ionic-strength-sum",
+          "section": "25.6",
+          "latex": "I = \\dfrac{1}{2}\\sum m_i z_i^2"
         }
       ]
     },
@@ -22594,10 +22616,6 @@
         {
           "id": "salt-activity-mean",
           "latex": "a_2=a_{\\pm}^ ν =γ_{\\pm}^ ν m_{\\pm}^ ν"
-        },
-        {
-          "id": "salt-activity-ions",
-          "latex": "a_2=a_{\\pm}^ν=a_+^{ν+}a_-^{ν-}"
         }
       ]
     },

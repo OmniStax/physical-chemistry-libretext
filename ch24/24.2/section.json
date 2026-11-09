@@ -78,14 +78,14 @@
     "at": "end"
    },
    "cite": "gibbs-duhem-for-binary-systems",
-   "prompt": "<p>In a binary mixture at constant temperature and pressure, $\\chi_A = 0.30$. A small change in composition raises the chemical potential of $B$ by $d\\mu_B = +12$ J/mol. By how much does the chemical potential of $A$ change?</p>",
+   "prompt": "<p>In a binary mixture at constant temperature and pressure, $\\chi_A = 0.30$. A small change in composition raises the chemical potential of $B$ by $d\\kmuB = +12$ J/mol. By how much does the chemical potential of $A$ change?</p>",
    "answer": {
     "type": "number",
     "value": -28,
     "unit": "J/mol",
     "generated_by": "ai",
     "hint": "Use the two-component Gibbs-Duhem equation with χ_B = 1 − χ_A.",
-    "solution": "<p>With $\\chi_B = 1 - 0.30 = 0.70$, the Gibbs-Duhem equation for two components gives $d\\kmuA = -(\\chi_B/\\chi_A)\\,d\\mu_B = -(0.70/0.30)(12\\ \\text{J/mol}) = -28$ J/mol. The chemical potential of $A$ falls by 28 J/mol, more than $B$'s rises, because $A$ is the minor component.</p>"
+    "solution": "<p>With $\\chi_B = 1 - 0.30 = 0.70$, the Gibbs-Duhem equation for two components gives $d\\kmuA = -(\\chi_B/\\chi_A)\\,d\\kmuB = -(0.70/0.30)(12\\ \\text{J/mol}) = -28$ J/mol. The chemical potential of $A$ falls by 28 J/mol, more than $B$'s rises, because $A$ is the minor component.</p>"
    }
   }
  ],
@@ -185,7 +185,7 @@
      },
      "steps": [
       {
-       "tex": "\\mk{b}{\\knB d\\mu_B} + \\mk{a}{\\knA d\\kmuA} = \\mk{z}{0}",
+       "tex": "\\mk{b}{\\knB d\\kmuB} + \\mk{a}{\\knA d\\kmuA} = \\mk{z}{0}",
        "uses": [],
        "map": {
         "s": [
@@ -195,7 +195,7 @@
        }
       },
       {
-       "tex": "\\mk{b}{d\\mu_B} = \\mk{a}{-\\dfrac{\\knA}{\\knB} d\\kmuA}",
+       "tex": "\\mk{b}{d\\kmuB} = \\mk{a}{-\\dfrac{\\knA}{\\knB} d\\kmuA}",
        "uses": []
       }
      ],
@@ -204,17 +204,17 @@
     {
      "assumes": [
       {
-       "tex": "\\kG = \\kmuA\\knA + \\mu_B\\knB",
+       "tex": "\\kG = \\kmuA\\knA + \\kmuB\\knB",
        "src": "24.1",
        "drv": "24.1/scaling"
       },
       {
-       "tex": "d\\kG = \\kmuA d\\knA + \\mu_B d\\knB",
+       "tex": "d\\kG = \\kmuA d\\knA + \\kmuB d\\knB",
        "src": "22.5"
       }
      ],
      "then": {
-      "tex": "\\mk{g}{\\kG} = \\mk{a}{\\kmuA\\knA} + \\mk{b}{\\mu_B\\knB}",
+      "tex": "\\mk{g}{\\kG} = \\mk{a}{\\kmuA\\knA} + \\mk{b}{\\kmuB\\knB}",
       "uses": [
        0
       ],
@@ -222,26 +222,30 @@
      },
      "steps": [
       {
-       "tex": "\\mk{g}{d\\kG} = \\mk{a}{\\knA d\\kmuA+\\kmuA d\\knA} + \\mk{b}{\\knB d\\mu_B+\\mu_B d\\knB}",
+       "tex": "\\mk{g}{d\\kG} = \\mk{a}{d(\\kmuA\\knA)} + \\mk{b}{d(\\kmuB\\knB)}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{g}{d\\kG} = \\mk{a}{\\knA d\\kmuA+\\kmuA d\\knA} + \\mk{b}{\\knB d\\kmuB+\\kmuB d\\knB}",
        "uses": [],
        "cap": "A change in each product $\\mu n$ has two terms."
       },
       {
-       "tex": "\\mk{g}{\\kmuA d\\knA + \\mu_B d\\knB} = \\mk{a}{\\knA d\\kmuA+\\kmuA d\\knA} + \\mk{b}{\\knB d\\mu_B+\\mu_B d\\knB}",
+       "tex": "\\mk{g}{\\kmuA d\\knA + \\kmuB d\\knB} = \\mk{a}{\\knA d\\kmuA+\\kmuA d\\knA} + \\mk{b}{\\knB d\\kmuB+\\kmuB d\\knB}",
        "uses": [
         1
        ]
       },
       {
-       "tex": "\\mk{g}{0} = \\mk{a}{\\knA d\\kmuA} + \\mk{b}{\\knB d\\mu_B}",
+       "tex": "\\mk{g}{0} = \\mk{a}{\\knA d\\kmuA} + \\mk{b}{\\knB d\\kmuB}",
        "uses": []
       },
       {
-       "tex": "\\mk{a}{d\\kmuA} = \\mk{b}{- \\dfrac{\\knB}{\\knA}d\\mu_B}",
+       "tex": "\\mk{a}{d\\kmuA} = \\mk{b}{- \\dfrac{\\knB}{\\knA}d\\kmuB}",
        "uses": []
       },
       {
-       "tex": "\\mk{a}{d\\kmuA} = \\mk{b}{- \\dfrac{\\chi_B}{\\chi_A}d\\mu_B}",
+       "tex": "\\mk{a}{d\\kmuA} = \\mk{b}{- \\dfrac{\\chi_B}{\\chi_A}d\\kmuB}",
        "uses": []
       }
      ],
@@ -257,7 +261,7 @@
     {
      "assumes": [
       {
-       "tex": "\\mu_B = \\kmustarB + \\kR\\kT \\ln \\kxB",
+       "tex": "\\kmuB = \\kmustarB + \\kR\\kT \\ln \\kxB",
        "src": "24.2"
       },
       {
@@ -265,11 +269,11 @@
       }
      ],
      "then": {
-      "tex": "\\mk{m}{\\mu_B} = \\mk{s}{\\kmustarB} + \\mk{l}{\\kR\\kT \\ln \\kxB}"
+      "tex": "\\mk{m}{\\kmuB} = \\mk{s}{\\kmustarB} + \\mk{l}{\\kR\\kT \\ln \\kxB}"
      },
      "steps": [
       {
-       "tex": "\\mk{m}{d\\mu_B} = \\mk{s}{0} + \\mk{l}{\\dfrac{\\kR\\kT}{\\kxB}\\,d\\kxB}",
+       "tex": "\\mk{m}{d\\kmuB} = \\mk{s}{0} + \\mk{l}{\\dfrac{\\kR\\kT}{\\kxB}\\,d\\kxB}",
        "uses": [
         1
        ],
@@ -277,7 +281,7 @@
       }
      ],
      "src": "24.2",
-     "note": "The book writes $d\\mu_B = 0 + RT/\\chi_B$ and drops $d\\chi_B$."
+     "note": "The book writes $d\\kmuB = 0 + RT/\\chi_B$ and drops $d\\chi_B$."
     },
     {
      "assumes": [
@@ -285,7 +289,7 @@
        "step": 0
       },
       {
-       "tex": "d\\kmuA = - \\dfrac{\\chi_B}{\\chi_A} d\\mu_B",
+       "tex": "d\\kmuA = - \\dfrac{\\chi_B}{\\chi_A} d\\kmuB",
        "src": "24.2",
        "drv": "gibbs-duhem-binary"
       },
@@ -294,7 +298,7 @@
       }
      ],
      "then": {
-      "tex": "\\mk{a}{d\\kmuA} = \\mk{c}{- \\dfrac{\\chi_B}{\\chi_A}} \\mk{b}{d\\mu_B}"
+      "tex": "\\mk{a}{d\\kmuA} = \\mk{c}{- \\dfrac{\\chi_B}{\\chi_A}} \\mk{b}{d\\kmuB}"
      },
      "steps": [
       {

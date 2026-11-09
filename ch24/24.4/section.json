@@ -209,7 +209,8 @@
       },
       {
        "tex": "\\kmuslni = \\kmustari + \\kR\\kT\\ln \\kxi",
-       "src": "24.2"
+       "src": "24.2",
+       "drv": "24.2/raoult-both"
       },
       {
        "tex": "\\kxi = \\dfrac{n_i}{n}",
@@ -224,17 +225,17 @@
      },
      "steps": [
       {
-       "tex": "\\mk{g}{\\kDeltamixG} = \\mk{a}{n_1(\\mu_1^* + \\kR\\kT\\ln x_1)}+\\mk{b}{n_2(\\mu_2^* + \\kR\\kT\\ln x_2)} - \\mk{c}{(n_1\\mu_1^* + n_2\\mu_2^*)}",
+       "tex": "\\mk{g}{\\kDeltamixG} = \\mk{a}{n_1(\\mu_1^* + \\kR\\kT\\ln \\kxone)}+\\mk{b}{n_2(\\mu_2^* + \\kR\\kT\\ln \\kxtwo)} - \\mk{c}{(n_1\\mu_1^* + n_2\\mu_2^*)}",
        "uses": [
         1
        ]
       },
       {
-       "tex": "\\mk{g}{\\kDeltamixG} = \\mk{a}{n_1\\kR\\kT\\ln x_1}+\\mk{b}{n_2\\kR\\kT\\ln x_2}",
+       "tex": "\\mk{g}{\\kDeltamixG} = \\mk{a}{n_1\\kR\\kT\\ln \\kxone}+\\mk{b}{n_2\\kR\\kT\\ln \\kxtwo}",
        "uses": []
       },
       {
-       "tex": "\\mk{g}{\\kDeltamixG} = \\mk{a}{n\\kR\\kT x_1\\ln x_1}+\\mk{b}{n\\kR\\kT x_2\\ln x_2}",
+       "tex": "\\mk{g}{\\kDeltamixG} = \\mk{a}{n\\kR\\kT \\kxone\\ln \\kxone}+\\mk{b}{n\\kR\\kT \\kxtwo\\ln \\kxtwo}",
        "uses": [
         2
        ]
@@ -308,7 +309,7 @@
        "text": "The solution is ideal."
       },
       {
-       "tex": "\\Delta G^{ideal} = \\kR\\kT ( n_1 \\ln x_1 + n_2\\ln x_2)",
+       "tex": "\\Delta G^{ideal} = \\kR\\kT ( n_1 \\ln \\kxone + n_2\\ln \\kxtwo)",
        "src": "24.4",
        "drv": "ideal-mixing"
       },
@@ -331,13 +332,13 @@
        ]
       },
       {
-       "tex": "\\mk{l}{\\left(\\dfrac{\\partial \\kR\\kT ( n_1 \\ln x_1 + n_2\\ln x_2)}{\\partial \\kP} \\right)_{\\kT}} = \\mk{r}{\\kDeltamixV^{ideal}}",
+       "tex": "\\mk{l}{\\left(\\dfrac{\\partial \\kR\\kT ( n_1 \\ln \\kxone + n_2\\ln \\kxtwo)}{\\partial \\kP} \\right)_{\\kT}} = \\mk{r}{\\kDeltamixV^{ideal}}",
        "uses": [
         2
        ]
       },
       {
-       "tex": "\\mk{l}{\\left(\\dfrac{\\partial \\kR\\kT ( n_1 \\ln x_1 + n_2\\ln x_2)}{\\partial \\kP} \\right)_{\\kT}} = \\mk{r}{\\kDeltamixV^{ideal}} = \\mk{z}{0}",
+       "tex": "\\mk{l}{\\left(\\dfrac{\\partial \\kR\\kT ( n_1 \\ln \\kxone + n_2\\ln \\kxtwo)}{\\partial \\kP} \\right)_{\\kT}} = \\mk{r}{\\kDeltamixV^{ideal}} = \\mk{z}{0}",
        "uses": [
         3
        ]

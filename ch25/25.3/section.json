@@ -334,7 +334,7 @@
        "step": 2
       },
       {
-       "text": "In a dilute solution $\\kxtwo \\approx n_2/n_1 = M_1\\km$, with $M_1$ the solvent's molar mass in kg/mol."
+       "text": "In a dilute solution $\\kxtwo \\approx \\kntwo/\\knone = M_1\\km$, with $M_1$ the solvent's molar mass in kg/mol."
       }
      ],
      "then": {

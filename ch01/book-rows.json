@@ -251,11 +251,13 @@
   },
   {
    "sym": "n_1",
-   "latex": "n_1"
+   "latex": "n_1",
+   "macro": "\\knone"
   },
   {
    "sym": "n_2",
-   "latex": "n_2"
+   "latex": "n_2",
+   "macro": "\\kntwo"
   },
   {
    "sym": "Z",

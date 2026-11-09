@@ -211,7 +211,7 @@
       }
      ],
      "src": "25.4",
-     "note": "The book says \"Taking the partial versus $x_1$\"; the derivative that gives the molar volume is taken with respect to $n_1$."
+     "note": "The book says \"Taking the partial versus $x_1$\"; the derivative that gives the molar volume is taken with respect to $\\knone$."
     },
     {
      "assumes": [
@@ -265,13 +265,13 @@
        "src": "24.7"
       },
       {
-       "tex": "\\kxtwo = \\dfrac{n_2}{n_1+n_2}≈\\dfrac{n_2}{n_1}"
+       "tex": "\\kxtwo = \\dfrac{\\kntwo}{\\knone+\\kntwo}≈\\dfrac{\\kntwo}{\\knone}"
       },
       {
-       "text": "In a dilute solution the volume is nearly that of the solvent, $\\kV \\approx n_1\\kVbaronestar$."
+       "text": "In a dilute solution the volume is nearly that of the solvent, $\\kV \\approx \\knone\\kVbaronestar$."
       },
       {
-       "text": "$c = n_2/\\kV$ is the molar concentration of the solute."
+       "text": "$c = \\kntwo/\\kV$ is the molar concentration of the solute."
       }
      ],
      "then": {
@@ -285,17 +285,17 @@
        ]
       },
       {
-       "tex": "\\mk{l}{\\kPi\\kVbaronestar} = \\mk{r}{\\kR\\kT \\dfrac{n_2}{n_1}}",
+       "tex": "\\mk{l}{\\kPi\\kVbaronestar} = \\mk{r}{\\kR\\kT \\dfrac{\\kntwo}{\\knone}}",
        "uses": [
         2
        ]
       },
       {
-       "tex": "\\mk{l}{\\kPi} = \\mk{r}{\\kR\\kT \\dfrac{n_2}{n_1\\kVbaronestar}}",
+       "tex": "\\mk{l}{\\kPi} = \\mk{r}{\\kR\\kT \\dfrac{\\kntwo}{\\knone\\kVbaronestar}}",
        "uses": []
       },
       {
-       "tex": "\\mk{l}{\\kPi} = \\mk{r}{\\kR\\kT \\dfrac{n_2}{\\kV}}",
+       "tex": "\\mk{l}{\\kPi} = \\mk{r}{\\kR\\kT \\dfrac{\\kntwo}{\\kV}}",
        "uses": [
         3
        ]

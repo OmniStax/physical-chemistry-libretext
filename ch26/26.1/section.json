@@ -1,0 +1,305 @@
+{
+ "id": "26.1",
+ "module": "14522",
+ "chapter": "26",
+ "title": "Equilibrium Results when Gibbs Energy is Minimized",
+ "short": "Gibbs energy and the extent of reaction",
+ "lead": "A reaction's progress can be counted by one number, the extent of reaction. Written in that number, the Gibbs energy of the reacting mixture has a slope, the reaction Gibbs energy, which for a gas reaction splits into a standard part and a part that depends on the pressures.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "The book prints no credits for this page.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": []
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercise here; the one exercise and its solution are AI-written. Numeric answers accept a 2% tolerance.",
+ "figures": [
+  {
+   "id": "fig-gibbs-energy",
+   "kind": "figure",
+   "originals": [
+    "/media/ch26/411105-Gibbs_energy.png"
+   ],
+   "widths": [
+    551
+   ],
+   "draws": [],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "kept as the book prints it"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "extent-of-reaction",
+   "concept": "extent-of-reaction",
+   "verb": "introduces"
+  },
+  {
+   "span": "measuring",
+   "concept": "measuring-extent",
+   "verb": "introduces"
+  },
+  {
+   "span": "measuring",
+   "concept": "extent-of-reaction",
+   "verb": "uses"
+  },
+  {
+   "span": "thermodynamic-potentials",
+   "concept": "chemical-potential",
+   "verb": "uses"
+  },
+  {
+   "span": "thermodynamic-potentials",
+   "concept": "reaction-gibbs-energy",
+   "verb": "introduces"
+  },
+  {
+   "span": "thermodynamic-potentials",
+   "concept": "gibbs-minimum-equilibrium",
+   "verb": "introduces"
+  },
+  {
+   "span": "gas-reactions",
+   "concept": "reaction-gibbs-quotient",
+   "verb": "introduces"
+  },
+  {
+   "span": "gas-reactions",
+   "concept": "reaction-quotient",
+   "verb": "introduces"
+  },
+  {
+   "span": "gas-reactions",
+   "concept": "standard-reaction-gibbs-energy",
+   "verb": "introduces"
+  },
+  {
+   "span": "gas-reactions",
+   "concept": "reaction-gibbs-energy",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "Using stoichiometry we can define the extent",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "extent-of-reaction",
+   "prompt": "<p>A vessel holds 1.00 mol N₂ and 3.00 mol H₂. After some time the reaction N₂ + 3H₂ → 2NH₃ has formed 0.40 mol NH₃.</p><ol type=\"a\"><li>What is the extent of reaction $\\kxiext$?</li><li>How much N₂ is left?</li><li>How much H₂ is left?</li></ol>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 0.2,
+      "unit": "mol",
+      "hint": "For a product, n = n₀ + vξ, and NH₃ starts at zero."
+     },
+     {
+      "part": "b",
+      "value": 0.8,
+      "unit": "mol"
+     },
+     {
+      "part": "c",
+      "value": 2.4,
+      "unit": "mol"
+     }
+    ],
+    "solution": "<p>(a) NH₃ is a product with $v = 2$ and starts at zero, so $0.40\\ \\text{mol} = 2\\kxiext$ and $\\kxiext = 0.20$ mol.</p><p>(b) $n_{\\text{N}_2} = 1.00 - 1 \\times 0.20 = 0.80$ mol.</p><p>(c) $n_{\\text{H}_2} = 3.00 - 3 \\times 0.20 = 2.40$ mol. Every species gives the same $\\kxiext$ once its amount change is divided by its own coefficient.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "extent-of-reaction"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-slope",
+   "kind": "correction",
+   "figure": "fig-gibbs-energy",
+   "html": "The slope that the image labels $dG/d\\xi = \\mu$ is the reaction Gibbs energy, $(\\partial G/\\partial \\xi)_{T,P} = \\Delta_r G$."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "reaction-gibbs-slope",
+   "what": "the reaction Gibbs energy as the slope of G",
+   "source": "Physical Chemistry (LibreTexts), 26.1 Equilibrium Results when Gibbs Energy is Minimized",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "d\\kG = \\sum \\kmui\\, dn_i",
+       "src": "22.5"
+      },
+      {
+       "tex": "dn_A = -v_A\\, d\\kxiext"
+      },
+      {
+       "tex": "dn_B = -v_B\\, d\\kxiext"
+      },
+      {
+       "tex": "dn_Y = v_Y\\, d\\kxiext"
+      },
+      {
+       "tex": "dn_Z = v_Z\\, d\\kxiext"
+      },
+      {
+       "tex": "\\left( \\dfrac{\\partial \\kG}{\\partial \\kxiext} \\right)_{\\kT,P} = \\kDeltarG"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{g}{d\\kG} = \\mk{s}{\\sum \\kmui\\, dn_i}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{g}{d\\kG} = \\mk{a}{\\mu_A\\, dn_A} + \\mk{b}{\\mu_B\\, dn_B} + \\mk{y}{\\mu_Y\\, dn_Y} + \\mk{z}{\\mu_Z\\, dn_Z}",
+       "uses": [],
+       "map": {
+        "s": [
+         "a",
+         "b",
+         "y",
+         "z"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{g}{d\\kG} = \\mk{a}{-v_A\\mu_A\\, d\\kxiext} \\mk{b}{- v_B\\mu_B\\, d\\kxiext} + \\mk{y}{v_Y\\mu_Y\\, d\\kxiext} + \\mk{z}{v_Z\\mu_Z\\, d\\kxiext}",
+       "uses": [
+        1,
+        2,
+        3,
+        4
+       ]
+      },
+      {
+       "tex": "\\mk{g}{d\\kG} = \\mk{k}{\\left[ \\sum -v_{i,r}\\mu_{i,r} + \\sum v_{j,p}\\mu_{j,p} \\right]} \\mk{x}{d\\kxiext}",
+       "uses": [],
+       "cap": "The reactant terms and the product terms are gathered into a sum each, with $d\\kxiext$ taken out as a common factor."
+      },
+      {
+       "tex": "\\mk{g}{\\left( \\dfrac{\\partial \\kG}{\\partial \\kxiext} \\right)_{\\kT,P}} = \\mk{k}{-\\sum v_{i,r}\\mu_{i,r} + \\sum v_{j,p}\\mu_{j,p}}",
+       "uses": [],
+       "cap": "At constant $\\kT$ and $P$ the Gibbs energy changes only through $\\kxiext$, so the ratio $d\\kG/d\\kxiext$ is the partial derivative."
+      },
+      {
+       "tex": "\\mk{g}{\\kDeltarG} = \\mk{k}{-\\sum v_{i,r}\\mu_{i,r} + \\sum v_{j,p}\\mu_{j,p}}",
+       "uses": [
+        5
+       ]
+      }
+     ],
+     "src": "26.1",
+     "note": "The book prints $dn_B = -v_A\\,d\\xi$. B changes by its own coefficient: $dn_B = -v_B\\,d\\xi$."
+    }
+   ]
+  },
+  {
+   "id": "reaction-gibbs-quotient",
+   "what": "the reaction Gibbs energy from the reaction quotient",
+   "source": "Physical Chemistry (LibreTexts), 26.1 Equilibrium Results when Gibbs Energy is Minimized",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kDeltarG = -\\sum v_{i,r}\\mu_{i,r} + \\sum v_{j,p}\\mu_{j,p}",
+       "drv": "reaction-gibbs-slope"
+      },
+      {
+       "tex": "\\kmui= \\kmuio+\\kR\\kT \\ln \\dfrac{\\kPpi}{\\kPistd}",
+       "src": "22.7"
+      },
+      {
+       "tex": "\\kDeltarGstd = -\\sum v_{i,r} \\mu^o_{i,r} + \\sum v_{j,p} \\mu^o_{j,p}"
+      },
+      {
+       "tex": "\\kR\\kT \\ln Q= - v_A \\kR\\kT \\ln \\dfrac{\\kPA}{P_A^o}- v_B \\kR\\kT\\ln \\dfrac{\\kPB}{P_B^o} + v_Y\\kR\\kT \\ln \\dfrac{\\kPY}{P_Y^o} + v_Z\\kR\\kT \\ln \\dfrac{\\kPZ}{P_Z^o}"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{d}{\\kDeltarG} = \\mk{s}{-\\sum v_{i,r}\\mu_{i,r} + \\sum v_{j,p}\\mu_{j,p}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{d}{\\kDeltarG} = \\mk{a}{-v_A\\mu_A} \\mk{b}{- v_B\\mu_B} + \\mk{y}{v_Y\\mu_Y} + \\mk{z}{v_Z\\mu_Z}",
+       "uses": [],
+       "map": {
+        "s": [
+         "a",
+         "b",
+         "y",
+         "z"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{d}{\\kDeltarG} = \\mk{a}{-v_A\\left(\\mu_A^o + \\kR\\kT\\ln\\dfrac{\\kPA}{P_A^o}\\right)} \\mk{b}{- v_B\\left(\\mu_B^o + \\kR\\kT\\ln\\dfrac{\\kPB}{P_B^o}\\right)} + \\mk{y}{v_Y\\left(\\mu_Y^o + \\kR\\kT\\ln\\dfrac{\\kPY}{P_Y^o}\\right)} + \\mk{z}{v_Z\\left(\\mu_Z^o + \\kR\\kT\\ln\\dfrac{\\kPZ}{P_Z^o}\\right)}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{d}{\\kDeltarG} = \\mk{o}{\\left(-v_A\\mu_A^o - v_B\\mu_B^o + v_Y\\mu_Y^o + v_Z\\mu_Z^o\\right)} + \\mk{l}{\\left(- v_A \\kR\\kT \\ln \\dfrac{\\kPA}{P_A^o} - v_B \\kR\\kT\\ln \\dfrac{\\kPB}{P_B^o} + v_Y\\kR\\kT \\ln \\dfrac{\\kPY}{P_Y^o} + v_Z\\kR\\kT \\ln \\dfrac{\\kPZ}{P_Z^o}\\right)}",
+       "uses": [],
+       "map": {
+        "a": [
+         "o",
+         "l"
+        ],
+        "b": [
+         "o",
+         "l"
+        ],
+        "y": [
+         "o",
+         "l"
+        ],
+        "z": [
+         "o",
+         "l"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{d}{\\kDeltarG} = \\mk{o}{\\kDeltarGstd} + \\mk{l}{\\left(- v_A \\kR\\kT \\ln \\dfrac{\\kPA}{P_A^o} - v_B \\kR\\kT\\ln \\dfrac{\\kPB}{P_B^o} + v_Y\\kR\\kT \\ln \\dfrac{\\kPY}{P_Y^o} + v_Z\\kR\\kT \\ln \\dfrac{\\kPZ}{P_Z^o}\\right)}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{d}{\\kDeltarG} = \\mk{o}{\\kDeltarGstd} + \\mk{l}{\\kR\\kT\\ln Q}",
+       "uses": [
+        3
+       ]
+      }
+     ],
+     "src": "26.1"
+    }
+   ]
+  }
+ ]
+}

@@ -833,6 +833,11 @@
     {
      "id": "gamma-pm-xy",
      "latex": "\\gamma _{\\pm} = (\\gamma_+^x \\gamma_-^y)^{1/x+y}"
+    },
+    {
+     "id": "gamma-pm-nu",
+     "section": "25.5",
+     "latex": "\\gamma_{\\pm}^\\nu = \\gamma_+^{\\nu_+}\\gamma_-^{\\nu_-}"
     }
    ]
   },
@@ -863,6 +868,11 @@
     {
      "id": "ionic-strength-def",
      "latex": "I = \\dfrac{1}{2} \\dfrac{m_+ z_+^2 + m_-z_-^2}{m^o}"
+    },
+    {
+     "id": "ionic-strength-sum",
+     "section": "25.6",
+     "latex": "I = \\dfrac{1}{2}\\sum m_i z_i^2"
     }
    ]
   },

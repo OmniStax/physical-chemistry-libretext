@@ -90,7 +90,7 @@ function rng(seed) { let a = seed >>> 0; return () => { a = (a + 0x6D2B79F5) >>>
     hits.push({ x: cx, y: cyy, r: 16, name: `the central ion, ${ion.catN}` });
     /* the radius label, inside the slice where the circle fits, else at its edge */
     const rl = Math.min(deb * PX, 235), ang = -Math.PI / 4;
-    text(ctx, `1/κ = ${fmt(deb, deb < 1 ? 2 : 1)} nm`, Math.min(cx + rl * Math.cos(ang) + 14, fr.r - 150), Math.max(cyy + rl * Math.sin(ang) - 10, fr.t + 30), C('length'), { size: 22, weight: 600, bg: true });
+    text(ctx, `1/κ = ${fmt(deb, deb < 1 ? 2 : 1)} nm`, Math.min(cx + rl * Math.cos(ang) + 14, fr.r - 150), Math.max(cyy + rl * Math.sin(ang) - 10, fr.t + 30), C('length'), { size: 22, weight: 600, bg: PAL.panel });
     /* scale bar */
     const sx = fr.l + 20, sy = fr.b - 24;
     ctx.save(); ctx.fillStyle = PAL.panel; ctx.fillRect(sx - 8, sy - 30, 5 * PX + 16, 46); ctx.restore();

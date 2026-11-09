@@ -183,6 +183,14 @@
     {
       "sym": "q_pitzer",
       "latex": "q"
+    },
+    {
+      "sym": "M_1",
+      "latex": "M_1"
+    },
+    {
+      "sym": "K_b",
+      "latex": "K_b"
     }
   ],
   "concepts": [
@@ -529,10 +537,6 @@
         {
           "id": "salt-activity-mean",
           "latex": "a_2=a_{\\pm}^ ν =γ_{\\pm}^ ν m_{\\pm}^ ν"
-        },
-        {
-          "id": "salt-activity-ions",
-          "latex": "a_2=a_{\\pm}^ν=a_+^{ν+}a_-^{ν-}"
         }
       ]
     },

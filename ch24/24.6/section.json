@@ -282,7 +282,8 @@
      "assumes": [
       {
        "tex": "\\kxone\\,d\\kmuone + \\kxtwo\\,d\\kmutwo = 0",
-       "src": "24.2"
+       "src": "24.2",
+       "drv": "24.2/gibbs-duhem-binary"
       },
       {
        "step": 0

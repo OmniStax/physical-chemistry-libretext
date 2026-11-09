@@ -1,0 +1,31 @@
+<section id="k-and-temperature">
+<h2>How K changes with temperature</h2>
+<p>We can use <span data-concept="gibbs-helmholtz-equation">Gibbs-Helmholtz</span> to get the temperature dependence of $K$</p>
+$$ \left( \dfrac{∂[\kDeltaGstd/\kT]}{∂\kT} \right)_P = \dfrac{-\kDeltaHstd}{\kT^2} $$
+<p>At equilibrium, we can equate $\kDeltaGstd$ to $-\kR\kT\ln K$ so we get:</p>
+$$ \left( \dfrac{∂[\ln K]}{∂\kT} \right)_P = \dfrac{\kDeltaHstd}{\kR\kT^2} $$
+<p>We see that whether $K$ increases or decreases with temperature is linked to whether the reaction enthalpy is positive or negative. If temperature is changed little enough that $\kDeltaHstd$ can be considered constant, we can translate a $K$ value at one temperature into another by integrating the above expression, we get a similar derivation as with melting point depression:</p>
+$$ \ln \dfrac{K(\kTtwo)}{K(\kTone)} = \dfrac{-\kDeltaHstd}{\kR} \left( \dfrac{1}{\kTtwo} - \dfrac{1}{\kTone} \right) $$
+<p>If more precision is required we could correct for the temperature changes of $\kDeltaHstd$ by using heat capacity data.</p>
+<div class="note">
+<div class="eyebrow">Note</div>
+<p>How $K$ increases or decreases with temperature is linked to whether the reaction enthalpy is positive or negative.</p>
+</div>
+</section>
+
+<section id="van-t-hoff-plot">
+<h2>The van 't Hoff plot</h2>
+<p>The expression for $K$ is a rather sensitive function of temperature given its exponential dependence on the difference of stoichiometric coefficients One way to see the sensitive temperature dependence of equilibrium constants is to recall that</p>
+$$ K=e^{−\kDeltarGstd/\kR\kT} \tag{26.7.1} $$
+<p>However, since under constant pressure and temperature</p>
+$$ \kDeltaGstd= \kDeltaHstd−\kT\kDeltaSstd $$
+<p>Equation 26.7.1 becomes</p>
+$$ K=e^{-\kDeltaHstd/\kR\kT} e^{\kDeltaSstd/\kR} \tag{26.7.2} $$
+<p>Taking the natural log of both sides, we obtain <span data-concept="van-t-hoff-plot">a linear relation between $\ln K$and the standard enthalpies and entropies</span>:</p>
+$$ \ln K = - \dfrac{\kDeltaHstd}{\kR} \dfrac{1}{\kT} + \dfrac{\kDeltaSstd}{\kR} \tag{26.7.3} $$
+<p>which is known as the <span data-concept="van-t-hoff-plot">van ’t Hoff equation</span>. It shows that a plot of $\ln K$ vs. $1/\kT$ should be a line with slope $-\kDeltarHstd/\kR$ and intercept $\kDeltarSstd/\kR$.</p>
+<figure class="sim" id="sim-van-t-hoff" data-figure="26.7.1" data-original-caption="Endothermic Reaction (left) and Exothermic Reaction van 't Hoff Plots (right). Figures used with permission of Wikipedia">
+  <div class="sim-head"><span class="eyebrow">Figure 26.7.1</span><span>Make $\kDeltaHstd$ negative and the line climbs toward low <span data-type="temperature">temperature</span>, at large $1/\kT$; make it positive and the line falls; at zero it is flat. $\kDeltaSstd$ raises or lowers the whole line.</span></div>
+</figure>
+<p>Hence, these quantities can be determined from the $\ln K$ vs. $1/\kT$ data without doing calorimetry. Of course, the main assumption here is that $\kDeltarHstd$ and $\kDeltarSstd$ are only very weakly dependent on $\kT$, which is usually valid.</p>
+</section>

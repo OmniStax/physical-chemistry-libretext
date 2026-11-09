@@ -1197,6 +1197,30 @@
    "meaning": "the average interaction energy between two molecules of 2",
    "unit": "J/mol",
    "section": "24.9"
+  },
+  {
+   "sym": "x_1",
+   "concept": "mole-fraction",
+   "meaning": "the mole fraction of component 1",
+   "section": "24.4"
+  },
+  {
+   "sym": "x_2",
+   "concept": "mole-fraction",
+   "meaning": "the mole fraction of component 2",
+   "section": "24.4"
+  },
+  {
+   "sym": "mu_1",
+   "concept": "chemical-potential",
+   "meaning": "the chemical potential of component 1",
+   "section": "24.6"
+  },
+  {
+   "sym": "mu_2",
+   "concept": "chemical-potential",
+   "meaning": "the chemical potential of component 2",
+   "section": "24.6"
   }
  ]
 }

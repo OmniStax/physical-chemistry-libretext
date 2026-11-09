@@ -94,7 +94,7 @@
     "at": "end"
    },
    "cite": "activity-coefficients-vapor",
-   "prompt": "<p>A component of a liquid mixture has mole fraction $\\kxi = 0.40$, and its pure liquid has a vapor pressure $\\kPstari = 100$ Torr at the temperature of the mixture. The partial pressure measured over the mixture is $P_i = 52$ Torr.</p><ol type=\"a\"><li>What partial pressure $\\kPiR$ does Raoult's law predict?</li><li>What is the activity coefficient $\\kgammai$?</li><li>What is the activity $a_i$?</li></ol>",
+   "prompt": "<p>A component of a liquid mixture has mole fraction $\\kxi = 0.40$, and its pure liquid has a vapor pressure $\\kPstari = 100$ Torr at the temperature of the mixture. The partial pressure measured over the mixture is $\\kPpi = 52$ Torr.</p><ol type=\"a\"><li>What partial pressure $\\kPiR$ does Raoult's law predict?</li><li>What is the activity coefficient $\\kgammai$?</li><li>What is the activity $a_i$?</li></ol>",
    "answer": {
     "type": "multi",
     "generated_by": "ai",
@@ -114,7 +114,7 @@
       "value": 0.52
      }
     ],
-    "solution": "<p>a. $\\kPiR = \\kxi\\kPstari = (0.40)(100\\ \\text{Torr}) = 40$ Torr.</p><p>b. $\\kgammai = P_i/\\kPiR = 52/40 = 1.30$. The vapor pressure is above Raoult's prediction, a positive deviation, so $\\kgammai > 1$.</p><p>c. $a_i = \\kgammai\\kxi = (1.30)(0.40) = 0.52$, which is also $P_i/\\kPstari = 52/100$.</p>"
+    "solution": "<p>a. $\\kPiR = \\kxi\\kPstari = (0.40)(100\\ \\text{Torr}) = 40$ Torr.</p><p>b. $\\kgammai = \\kPpi/\\kPiR = 52/40 = 1.30$. The vapor pressure is above Raoult's prediction, a positive deviation, so $\\kgammai > 1$.</p><p>c. $a_i = \\kgammai\\kxi = (1.30)(0.40) = 0.52$, which is also $\\kPpi/\\kPstari = 52/100$.</p>"
    }
   }
  ],

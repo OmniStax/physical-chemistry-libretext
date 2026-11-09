@@ -747,6 +747,41 @@
       "meaning": "the molality of ion k",
       "unit": "mol/kg",
       "section": "25.7"
+    },
+    {
+      "sym": "M_1",
+      "meaning": "the molar mass of the solvent",
+      "unit": "kg/mol",
+      "section": "25.3"
+    },
+    {
+      "sym": "K_b",
+      "concept": "boiling-point-elevation",
+      "type": null,
+      "meaning": "the solvent's boiling point elevation constant",
+      "unit": "K kg/mol",
+      "section": "25.3"
+    },
+    {
+      "sym": "n_1",
+      "type": "amount",
+      "meaning": "the amount of solvent",
+      "unit": "mol",
+      "section": "25.3"
+    },
+    {
+      "sym": "n_2",
+      "type": "amount",
+      "meaning": "the amount of solute",
+      "unit": "mol",
+      "section": "25.3"
+    },
+    {
+      "sym": "Delta_T",
+      "concept": "freezing-point-depression",
+      "meaning": "the melting point depression, T_m* − T_m",
+      "unit": "K",
+      "section": "25.4"
     }
   ]
 }

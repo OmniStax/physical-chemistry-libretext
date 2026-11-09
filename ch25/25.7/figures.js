@@ -55,7 +55,7 @@ const dav = (s, zz) => -0.5 * zz * (s / (1 + s) - 0.30 * s * s);
       { s: 'extended equation', color: cE, w: 5, f: (x) => ext(x, zz, av) },
       { s: 'Davies equation', color: cD, w: 5, f: (x) => dav(x, zz) },
     ];
-    if (zz === 1) entries.push({ s: 'KBr, measured', kind: 'dot', color: PAL.ink });
+    if (zz === 1) entries.push({ s: 'KBr, measured', kind: 'dot', hollow: true, color: PAL.ink });
     F.legend(ctx, ax, entries, { corner: 'bl', size: 20 });
     tex(d.readout, `\\gamma_\\pm = 10^{-(${A})(${zz})\\sqrt{${fmt(I.v, 3)}}} = ${fmt(gl, 3)} \\\\ \\gamma_\\pm = 10^{-\\frac{(${A})(${zz})\\sqrt{${fmt(I.v, 3)}}}{1 + (${B})(${fmt(av, 1)})\\sqrt{${fmt(I.v, 3)}}}} = ${fmt(ge, 3)} \\\\ f_\\pm = 10^{-0.5(${zz})\\left(\\frac{\\sqrt{${fmt(I.v, 3)}}}{1+\\sqrt{${fmt(I.v, 3)}}} - 0.30(${fmt(I.v, 3)})\\right)} = ${fmt(gd, 3)}`);
   }

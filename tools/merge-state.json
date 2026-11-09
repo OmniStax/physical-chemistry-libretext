@@ -1283,7 +1283,9 @@
       "epsilon_jk",
       "m_k",
       "p_pitzer",
-      "q_pitzer"
+      "q_pitzer",
+      "M_1",
+      "K_b"
     ],
     "types": []
   },

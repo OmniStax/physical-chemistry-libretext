@@ -1533,3 +1533,35 @@ shipped), 411105 kept; `sim-k-from-q` optional. Eight derivation records propose
 Literature from memory, **unchecked**: water's V̄ 18.07 cm³/mol (an AI exercise), graphite's density
 2.26 g/cm³ (only to judge 26.11's "1.01 at 100 bars", which it puts at 1.02), Δ_fG°(NH₃) −16.45 kJ/mol
 and HCl's formation ΔH°/ΔS° (cross-checks only, nothing built on them).
+
+## Chapter 25 pass · 2026-11-08
+
+Built: 25.1–25.7 (no intro or summary page; 25.8 "Homework Problems" not built, its one problem
+already 1.9's card `e3`). 7 figure rows: 4 interactive (2 moving: 25.4.1's osmosis U-tube and 25.6.1's
+ionic atmosphere; 2 still: `sim-colligative-mu` in 25.3 and 25.7.1's log γ± against √I by three laws;
+no 3D) and 3 kept images (25.2.1, 25.6.2, 25.6.3, the last two with captions corrected in their rows).
+4 derivations (25.3 one, 25.4 one, 25.5 two). 9 exercises, all `exercise` kind and AI-written, in the
+Exercises document; no book exercise. 12 AI-marked corrections in footnotes and 4 derivation notes.
+
+Chapter pass: forms `gamma-pm-nu` (25.5) and `ionic-strength-sum` (25.6) added to Chapter 24's
+`mean-ionic-activity-coefficient` and `ionic-strength`. Macros `\kPpi` (P_i, staged in ch17, its
+owner) and `\knone`, `\kntwo` (n_1, n_2, staged in ch01, their owner); 25.2's text and exercise and
+25.3's and 25.4's derivations now use them, with new 25.3 variables rows for n_1 and n_2. New symbols
+`M_1` (25.3 row, the solvent's molar mass, kg/mol, ink) and `K_b` (25.3 row on
+`boiling-point-elevation`, set in ink like K_f). 25.4 gained the `Delta_T` row its AI exercise uses.
+Form `salt-activity-ions` deleted: it repeated `mean-ionic-activity-def` (a_±^ν ≡ a₂ = a₊^ν₊a₋^ν₋).
+Figure 25.6.1's 1/κ label passed `bg: true`, which painted a black box; now `PAL.panel`. 25.7.1's
+legend marks KBr hollow, as the points are drawn. Derivations read against `source.md`: the book's
+lines are kept, the lost "=" and "versus x₁" corrected in notes, facts cite 24.7, 23.3, 22.4, 22.7.
+Every `\k` macro of ch25 has a variables row in its section. `node --check` clean on the four
+`figures.js`; no `\braket`, bare `\k`, U+2011/U+FEFF/U+200B; in-book links carry `xref`/`figref`;
+every page has `ai`, `built`, `notes`. `mediacheck.py` silent. `colours:default` run: every type
+keeps its stored colour. `check:content`: no errors, no warnings. Every figure screenshot in light
+(25.6.1 mid-motion) and dark; no console or KaTeX error on any Chapter 25 page, the four derivations
+included. The two figure fixes were checked on the served copies, not in a second build.
+
+Known gaps: 25.5's derivation keeps the book's (25.5.17), which restates the definition of a_± printed
+just above it. 25.3's derivation drops the book's linking prose ("We can now apply Gibbs-Helmholtz
+relations…"); its reasons are the agent's. 25.6.1's readout goes from |q₊q₋| to the bare |z₊z₋| factor
+in front of 0.357 nm (the Bjerrum length over two) without saying so. In 25.3's Sim the "0.51 K" label
+crosses the vapor line at 1 mol/kg.
