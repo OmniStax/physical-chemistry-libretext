@@ -1,0 +1,207 @@
+{
+ "id": "24.3",
+ "module": "14505",
+ "chapter": "24",
+ "title": "Chemical Potential of Each Component Has the Same Value in Each Phase in Which the Component Appears",
+ "short": "Chemical potential in each phase",
+ "lead": "The chemical potential is the partial molar Gibbs energy, and it changes with pressure in one way for a liquid or solid and in another for a gas. Over a solution the vapor gives a handle on each component: its partial pressure links the component in the mixture to the pure liquid.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "The page prints no credit.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": []
+ },
+ "built": "2026-11-08",
+ "exercise_notes": "The book sets no exercise here; the one exercise and its solution are AI-written, with Bloom level and concept tags chosen by AI.",
+ "figures": [],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "partial-molar-gibbs-energy",
+   "concept": "chemical-potential",
+   "verb": "reinforces"
+  },
+  {
+   "span": "partial-molar-gibbs-energy",
+   "concept": "partial-molar-quantity",
+   "verb": "uses"
+  },
+  {
+   "span": "partial-molar-gibbs-energy",
+   "concept": "fundamental-equations-composition",
+   "verb": "reinforces"
+  },
+  {
+   "span": "chemical-potential-and-pressure",
+   "concept": "gibbs-solid-pressure",
+   "verb": "reinforces"
+  },
+  {
+   "span": "chemical-potential-and-pressure",
+   "concept": "chemical-potential",
+   "verb": "uses"
+  },
+  {
+   "span": "thermodynamic-potentials-of-solutions",
+   "concept": "gibbs-ideal-gas-pressure",
+   "verb": "reinforces"
+  },
+  {
+   "span": "thermodynamic-potentials-of-solutions",
+   "concept": "ideal-gas-mixture-chemical-potential",
+   "verb": "introduces"
+  },
+  {
+   "span": "thermodynamic-potentials-of-solutions",
+   "concept": "component-phase-equilibrium",
+   "verb": "introduces"
+  },
+  {
+   "span": "thermodynamic-potentials-of-solutions",
+   "concept": "pure-liquid-chemical-potential",
+   "verb": "introduces"
+  },
+  {
+   "span": "thermodynamic-potentials-of-solutions",
+   "concept": "solution-chemical-potential-vapor",
+   "verb": "introduces"
+  },
+  {
+   "span": "thermodynamic-potentials-of-solutions",
+   "concept": "equilibrium-vapor-pressure",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "Thermodynamic potentials of solutions",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "thermodynamic-potentials-of-solutions",
+   "prompt": "<p>At 298.15 K the partial pressure of component $j$ above a solution is 0.40 times the vapor pressure $\\kPstarj$ of pure $j$. How much lower is the chemical potential of $j$ in the solution than in the pure liquid? Give $\\kmuslnj - \\kmustarj$ in kJ/mol.</p>",
+   "answer": {
+    "type": "number",
+    "value": -2.27,
+    "unit": "kJ/mol",
+    "generated_by": "ai",
+    "hint": "Use the relation that links the solution to the pure liquid through the vapor.",
+    "solution": "<p>From $\\kmuslnj = \\kmustarj + \\kR\\kT \\ln (P_j/\\kPstarj)$, $\\kmuslnj - \\kmustarj = (8.314\\ \\text{J K}^{-1}\\text{mol}^{-1})(298.15\\ \\text{K}) \\ln 0.40 = (2479\\ \\text{J/mol})(-0.916) = -2.27$ kJ/mol. A component that escapes less readily from the solution than from its pure liquid has the lower chemical potential there.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "solution-chemical-potential-vapor"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-dg-partial",
+   "kind": "correction",
+   "html": "The last derivative is taken at constant pressure as well: $(\\partial \\kG/\\partial n_i)_{\\kP,\\kT,n_{j\\neq i}}$, as in Equation 24.3.1."
+  },
+  {
+   "id": "c-dh",
+   "kind": "correction",
+   "html": "The enthalpy row should read $d\\kHenth = \\kT d\\kSent + \\kV d\\kP + \\sum_i \\kmui dn_i$, which fits the constant $\\kSent$ and $\\kP$ of its partial derivative."
+  },
+  {
+   "id": "c-da",
+   "kind": "correction",
+   "html": "The Helmholtz row should read $d\\kA = -\\kP d\\kV - \\kSent d\\kT + \\sum_i \\kmui dn_i$, which fits the constant $\\kV$ and $\\kT$ of its partial derivative."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "solution-mu",
+   "what": "the chemical potential of a component in solution",
+   "source": "Physical Chemistry (LibreTexts), 24.3 Chemical Potential of Each Component Has the Same Value in Each Phase in Which the Component Appears",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kmuslnj = \\kmugasj",
+       "src": "24.3"
+      },
+      {
+       "tex": "\\kmuj = \\kmustdj + \\kR\\kT \\ln \\dfrac{P_j}{\\kPstd}",
+       "src": "(24.3.4)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{s}{\\kmuslnj} = \\mk{g}{\\kmugasj}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{s}{\\kmuslnj} = \\mk{g}{\\kmustdj + \\kR\\kT \\ln \\dfrac{P_j}{\\kPstd}}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "src": "24.3"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\kmuone^{*liq} = \\kmuone^{o} + \\kR\\kT \\ln \\dfrac{\\kPstarone}{\\kPstd}",
+       "src": "(24.3.5)"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{p}{\\kmustarj} = \\mk{o}{\\kmustdj} + \\mk{l}{\\kR\\kT \\ln \\dfrac{\\kPstarj}{\\kPstd}}",
+      "uses": [
+       0
+      ],
+      "why": "Equation 24.3.5 holds for any pure component $j$ in equilibrium with its vapor."
+     },
+     "steps": [
+      {
+       "tex": "\\mk{o}{\\kmustdj} = \\mk{p}{\\kmustarj} - \\mk{l}{\\kR\\kT \\ln \\dfrac{\\kPstarj}{\\kPstd}}",
+       "uses": []
+      }
+     ],
+     "src": "24.3"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "step": 1
+      }
+     ],
+     "then": {
+      "tex": "\\mk{s}{\\kmuslnj} = \\mk{o}{\\kmustdj} + \\mk{g}{\\kR\\kT \\ln \\dfrac{P_j}{\\kPstd}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{s}{\\kmuslnj} = \\mk{o}{\\kmustarj - \\kR\\kT \\ln \\dfrac{\\kPstarj}{\\kPstd}} + \\mk{g}{\\kR\\kT \\ln \\dfrac{P_j}{\\kPstd}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{s}{\\kmuslnj} = \\mk{o}{\\kmustarj} + \\mk{g}{\\kR\\kT \\ln \\dfrac{P_j}{\\kPstarj}}",
+       "uses": [],
+       "cap": "A difference of logarithms is the logarithm of the quotient, and $\\kPstd$ cancels."
+      }
+     ],
+     "src": "24.3"
+    }
+   ]
+  }
+ ]
+}

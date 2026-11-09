@@ -1,0 +1,568 @@
+{
+ "id": "24.1",
+ "module": "14503",
+ "chapter": "24",
+ "title": "A Mixture is a Combination of Two or More Substances",
+ "short": "Mixtures of two substances",
+ "lead": "What happens when two substances are mixed: gases that mix in any ratio, liquids that may or may not be ideal, solids that seldom mix at all. For two volatile liquids, the pressure or the temperature decides which phases are present, what each contains and how much there is of each.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "The page prints no credit; the electrum coin is Classical Numismatic Group's photograph under CC BY-SA 3.0, and the lever-rule diagram missing at the source is drawn as a Sim.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercise_notes": "The book's exercise is unkeyed, so its solution is AI-written; the Bloom level and concept tags were chosen by AI.",
+ "figures": [
+  {
+   "id": "fig-24-1-1",
+   "kind": "photo",
+   "number": "24.1.1",
+   "widths": [
+    323
+   ],
+   "draws": []
+  },
+  {
+   "id": "sim-pxy",
+   "kind": "sim",
+   "originals": [
+    "/media/ch24/427419-Raoults_Law_-_P_versus_X.png"
+   ],
+   "original_caption": "an ideal-ideal phase diagram for the binary system of toluene (A) and benzene (B). The curves are calculated from Equations 24.1.4 and 24.1.6.",
+   "widths": [
+    350
+   ],
+   "draws": [
+    "pressure"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "sim-txy-lever",
+   "kind": "sim",
+   "draws": [
+    "temperature",
+    "amount"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "partial-quantities-and-scaling",
+   "concept": "partial-molar-additivity",
+   "verb": "introduces"
+  },
+  {
+   "span": "partial-quantities-and-scaling",
+   "concept": "fundamental-equations-composition",
+   "verb": "uses"
+  },
+  {
+   "span": "partial-quantities-and-scaling",
+   "concept": "partial-molar-quantity",
+   "verb": "uses"
+  },
+  {
+   "span": "partial-quantities-and-scaling",
+   "concept": "mole-fraction",
+   "verb": "uses"
+  },
+  {
+   "span": "gaseous-mixtures",
+   "concept": "daltons-law",
+   "verb": "introduces"
+  },
+  {
+   "span": "liquid-mixtures",
+   "concept": "ideal-solution",
+   "verb": "introduces"
+  },
+  {
+   "span": "liquid-mixtures",
+   "concept": "regular-solution",
+   "verb": "introduces"
+  },
+  {
+   "span": "solid-mixtures",
+   "concept": "solid-solution",
+   "verb": "introduces"
+  },
+  {
+   "span": "ideal-liquid-ideal-gas-phase-diagrams",
+   "concept": "raoults-law",
+   "verb": "introduces"
+  },
+  {
+   "span": "ideal-liquid-ideal-gas-phase-diagrams",
+   "concept": "daltons-law",
+   "verb": "reinforces"
+  },
+  {
+   "span": "ideal-liquid-ideal-gas-phase-diagrams",
+   "concept": "equilibrium-vapor-pressure",
+   "verb": "uses"
+  },
+  {
+   "span": "ideal-liquid-ideal-gas-phase-diagrams",
+   "concept": "mole-fraction",
+   "verb": "uses"
+  },
+  {
+   "span": "the-pressure-phase-diagram",
+   "concept": "ideal-bubble-line",
+   "verb": "introduces"
+  },
+  {
+   "span": "the-pressure-phase-diagram",
+   "concept": "ideal-vapor-composition",
+   "verb": "introduces"
+  },
+  {
+   "span": "the-pressure-phase-diagram",
+   "concept": "pressure-composition-diagram",
+   "verb": "introduces"
+  },
+  {
+   "span": "the-pressure-phase-diagram",
+   "concept": "raoults-law",
+   "verb": "uses"
+  },
+  {
+   "span": "the-pressure-phase-diagram",
+   "concept": "daltons-law",
+   "verb": "uses"
+  },
+  {
+   "span": "the-temperature-phase-diagram",
+   "concept": "temperature-composition-diagram",
+   "verb": "introduces"
+  },
+  {
+   "span": "the-temperature-phase-diagram",
+   "concept": "lever-rule",
+   "verb": "introduces"
+  },
+  {
+   "span": "the-temperature-phase-diagram",
+   "concept": "distillation",
+   "verb": "introduces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "e1",
+   "source_id": "exr:?",
+   "source_number": "Exercise",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "the-pressure-phase-diagram",
+   "prompt": "<p>Suppose $\\kPcircone = 50$ Torr and $\\kPcirctwo = 25$ Torr. If $\\kchione= 0.6$ what is the composition of the vapor?</p>",
+   "answer": {
+    "type": "number",
+    "value": 0.75,
+    "generated_by": "ai",
+    "hint": "Find the total pressure from the liquid line first, then use Dalton's law for component 1.",
+    "solution": "<p>The liquid line (24.1.4) gives the total pressure: $\\kPtotal = \\kPcirctwo - \\kchione(\\kPcirctwo - \\kPcircone) = 25 - 0.6\\,(25 - 50) = 40$ Torr. By Raoult's law component 1 contributes $\\kPone = \\kchione\\kPcircone = 0.6 \\times 50 = 30$ Torr, so (24.1.5) gives $y_1 = 30/40 = 0.75$ and $y_2 = 0.25$. The vapor holds more of component 1, the more volatile one, than the liquid does (0.6).</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "e1",
+   "concept": "ideal-vapor-composition"
+  },
+  {
+   "exercise": "e1",
+   "concept": "raoults-law"
+  },
+  {
+   "exercise": "e1",
+   "concept": "ideal-bubble-line"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-second-figure",
+   "kind": "correction",
+   "html": "The book numbers this diagram Figure 24.1.1 too, a number it has already given the electrum coin above."
+  },
+  {
+   "id": "c-torr",
+   "kind": "correction",
+   "html": "The diagram the book prints is for benzene and toluene, with pure vapor pressures of about 0.66 and 0.24 bar. The 50 and 25 Torr of the question are the second pair in the Sim."
+  },
+  {
+   "id": "c-arrows",
+   "kind": "correction",
+   "html": "The book's diagram with the arrows is missing at the source. In the Sim above, the two arms are the brackets on the tie-line."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "scaling",
+   "what": "G = μ₁n₁ + μ₂n₂ by scaling",
+   "source": "Physical Chemistry (LibreTexts), 24.1 A Mixture is a Combination of Two or More Substances",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "dn_1 = n_1\\,d\\kV"
+      },
+      {
+       "tex": "dn_2 = n_2\\,d\\kV"
+      },
+      {
+       "tex": "d\\kG = \\kG\\,d\\kV"
+      },
+      {
+       "tex": "d\\kG = -\\kSent\\,d\\kT + \\kV\\,d\\kP + \\kmuone\\,dn_1 + \\kmutwo\\,dn_2",
+       "src": "22.5"
+      },
+      {
+       "text": "The temperature and the pressure are constant: $d\\kT = 0$ and $d\\kP = 0$."
+      }
+     ],
+     "then": {
+      "tex": "\\mk{g}{d\\kG} = \\mk{s}{-\\kSent\\,d\\kT} + \\mk{v}{\\kV\\,d\\kP} + \\mk{a}{\\kmuone\\,dn_1} + \\mk{b}{\\kmutwo\\,dn_2}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{g}{d\\kG} = \\mk{a}{\\kmuone\\,dn_1} + \\mk{b}{\\kmutwo\\,dn_2}",
+       "uses": [
+        4
+       ]
+      },
+      {
+       "tex": "\\mk{g}{\\kG\\,d\\kV} = \\mk{a}{\\kmuone\\,dn_1} + \\mk{b}{\\kmutwo\\,dn_2}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{g}{\\kG\\,d\\kV} = \\mk{a}{\\kmuone n_1\\,d\\kV} + \\mk{b}{\\kmutwo n_2\\,d\\kV}",
+       "uses": [
+        0,
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{g}{\\int_0^1 \\kG\\,d\\kV} = \\mk{a}{\\int_0^1 \\kmuone n_1\\,d\\kV} + \\mk{b}{\\int_0^1 \\kmutwo n_2\\,d\\kV}",
+       "uses": [],
+       "cap": "Integrate from the original size, 1, down to 0 (or from 0 to 1, it does not matter)."
+      },
+      {
+       "tex": "\\mk{g}{\\kG \\int_0^1 d\\kV} = \\mk{a}{\\kmuone n_1 \\int_0^1 d\\kV} + \\mk{b}{\\kmutwo n_2 \\int_0^1 d\\kV}",
+       "uses": [],
+       "cap": "$\\kG$, $n_1$ and $n_2$ are the values at the full size 1, and $\\kmuone$ and $\\kmutwo$ do not change with size, so they come out of the integrals."
+      },
+      {
+       "tex": "\\mk{g}{\\kG} = \\mk{a}{\\kmuone n_1} + \\mk{b}{\\kmutwo n_2}",
+       "uses": []
+      }
+     ],
+     "src": "24.1"
+    }
+   ]
+  },
+  {
+   "id": "liquid-line",
+   "what": "the liquid line of the pressure diagram",
+   "source": "Physical Chemistry (LibreTexts), 24.1 A Mixture is a Combination of Two or More Substances",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kPtotal = \\kPone + \\kPtwo",
+       "src": "(24.1.1)"
+      },
+      {
+       "tex": "P_i = \\kchii \\kPcirci",
+       "src": "(24.1.3)"
+      },
+      {
+       "tex": "\\kchitwo = 1 - \\kchione",
+       "src": "20.6"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{t}{\\kPtotal} = \\mk{a}{\\kPone} + \\mk{b}{\\kPtwo}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{t}{\\kPtotal} = \\mk{a}{\\kchione\\kPcircone} + \\mk{b}{\\kchitwo\\kPcirctwo}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{t}{\\kPtotal} = \\mk{a}{\\kchione\\kPcircone} + \\mk{b}{(1-\\kchione)\\kPcirctwo}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{t}{\\kPtotal} = \\mk{b}{\\kPcirctwo} - \\mk{a}{\\kchione(\\kPcirctwo-\\kPcircone)}",
+       "uses": []
+      }
+     ],
+     "num": "(24.1.4)",
+     "src": "24.1"
+    }
+   ]
+  },
+  {
+   "id": "vapor-line",
+   "what": "the vapor line of the pressure diagram",
+   "source": "Physical Chemistry (LibreTexts), 24.1 A Mixture is a Combination of Two or More Substances",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "y_i = \\dfrac{P_i}{\\kPtotal}",
+       "src": "(24.1.2)"
+      },
+      {
+       "tex": "P_i = \\kchii \\kPcirci",
+       "src": "(24.1.3)"
+      },
+      {
+       "tex": "\\kPtotal = \\kPcirctwo - \\kchione(\\kPcirctwo - \\kPcircone)",
+       "src": "(24.1.4)",
+       "drv": "liquid-line"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{y}{y_1} = \\dfrac{\\mk{n}{\\kPone}}{\\mk{d}{\\kPtotal}}",
+      "uses": [
+       0
+      ],
+      "why": "Dalton's law for component 1."
+     },
+     "steps": [
+      {
+       "tex": "\\mk{y}{y_1} = \\dfrac{\\mk{n}{\\kchione\\kPcircone}}{\\mk{d}{\\kPtotal}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{y}{y_1} = \\dfrac{\\mk{n}{\\kchione\\kPcircone}}{\\mk{d}{\\kPcirctwo - \\kchione(\\kPcirctwo-\\kPcircone)}}",
+       "uses": [
+        2
+       ]
+      }
+     ],
+     "num": "(24.1.5)",
+     "src": "24.1"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      }
+     ],
+     "then": {
+      "tex": "\\mk{y}{y_1} = \\dfrac{\\mk{n}{\\kchione\\kPcircone}}{\\mk{d}{\\kPcirctwo - \\kchione(\\kPcirctwo-\\kPcircone)}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{d}{y_1\\kPcirctwo - y_1\\kchione(\\kPcirctwo-\\kPcircone)} = \\mk{n}{\\kchione\\kPcircone}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{d}{y_1\\kPcirctwo} = \\mk{n}{\\kchione\\left(\\kPcircone + (\\kPcirctwo-\\kPcircone)y_1\\right)}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{n}{\\kchione} = \\mk{d}{\\dfrac{y_1\\kPcirctwo}{\\kPcircone + (\\kPcirctwo-\\kPcircone)y_1}}",
+       "uses": []
+      }
+     ],
+     "src": "24.1"
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "tex": "\\kPtotal = \\kPcirctwo - \\kchione(\\kPcirctwo - \\kPcircone)",
+       "src": "(24.1.4)",
+       "drv": "liquid-line"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{t}{\\kPtotal} = \\mk{b}{\\kPcirctwo} - \\mk{c}{\\kchione}\\mk{k}{(\\kPcirctwo-\\kPcircone)}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{t}{\\kPtotal} = \\mk{b}{\\kPcirctwo} - \\mk{c}{\\dfrac{y_1\\kPcirctwo}{\\kPcircone + (\\kPcirctwo-\\kPcircone)y_1}}\\mk{k}{(\\kPcirctwo-\\kPcircone)}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{t}{\\kPtotal} = \\mk{b}{\\dfrac{\\kPcircone\\kPcirctwo + \\kPcirctwo(\\kPcirctwo-\\kPcircone)y_1 - y_1\\kPcirctwo(\\kPcirctwo-\\kPcircone)}{\\kPcircone + (\\kPcirctwo-\\kPcircone)y_1}}",
+       "uses": [],
+       "map": {
+        "b": [
+         "b"
+        ],
+        "c": [
+         "b"
+        ],
+        "k": [
+         "b"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{t}{\\kPtotal} = \\mk{b}{\\dfrac{\\kPcircone\\kPcirctwo}{\\kPcircone + (\\kPcirctwo-\\kPcircone)y_1}}",
+       "uses": []
+      }
+     ],
+     "num": "(24.1.6)",
+     "src": "24.1"
+    }
+   ]
+  },
+  {
+   "id": "lever-rule",
+   "what": "the lever rule",
+   "source": "Physical Chemistry (LibreTexts), 24.1 A Mixture is a Combination of Two or More Substances",
+   "nodes": [
+    {
+     "assumes": [],
+     "then": {
+      "tex": "\\mk{x}{\\kxtwo} = \\mk{f}{\\dfrac{n^{liq}_2}{\\knliq}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{x}{\\kxtwo}\\mk{d}{\\knliq} = \\mk{f}{n^{liq}_2}",
+       "uses": []
+      }
+     ],
+     "src": "24.1",
+     "note": "The book writes the product as $x_2^*n^{liq}_{1+2}$, and likewise for $y_2$ and $x_{all}$; the asterisk is a multiplication sign."
+    },
+    {
+     "assumes": [],
+     "then": {
+      "tex": "\\mk{y}{y_2} = \\mk{f}{\\dfrac{n^{gas}_2}{\\kngas}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{y}{y_2}\\mk{d}{\\kngas} = \\mk{f}{n^{gas}_2}",
+       "uses": []
+      }
+     ],
+     "src": "24.1"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "step": 1
+      },
+      {
+       "text": "Component 2 is all in the gas or the liquid: $n^{liq+gas}_2 = n^{gas}_2 + n^{liq}_2$."
+      },
+      {
+       "text": "The total amount is split the same way: $n^{liq+gas}_{1+2} = \\kngas + \\knliq$."
+      }
+     ],
+     "then": {
+      "tex": "\\mk{x}{\\kxall} = \\mk{f}{\\dfrac{n^{liq+gas}_2}{n^{liq+gas}_{1+2}}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{x}{\\kxall}\\mk{d}{n^{liq+gas}_{1+2}} = \\mk{f}{n^{liq+gas}_2}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{x}{\\kxall}\\mk{d}{n^{liq+gas}_{1+2}} = \\mk{g}{n^{gas}_2} + \\mk{l}{n^{liq}_2}",
+       "uses": [
+        2
+       ],
+       "map": {
+        "f": [
+         "g",
+         "l"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{x}{\\kxall}\\mk{d}{n^{liq+gas}_{1+2}} = \\mk{g}{y_2\\kngas} + \\mk{l}{\\kxtwo\\knliq}",
+       "uses": [
+        0,
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{x}{\\kxall\\kngas + \\kxall\\knliq} = \\mk{g}{y_2\\kngas} + \\mk{l}{\\kxtwo\\knliq}",
+       "uses": [
+        3
+       ],
+       "map": {
+        "x": [
+         "x"
+        ],
+        "d": [
+         "x"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{r}{\\dfrac{\\knliq}{\\kngas}} = \\mk{q}{\\dfrac{y_2-\\kxall}{\\kxall-\\kxtwo}}",
+       "uses": [],
+       "map": {
+        "x": [
+         "r",
+         "q"
+        ],
+        "g": [
+         "q"
+        ],
+        "l": [
+         "q"
+        ]
+       }
+      }
+     ],
+     "src": "24.1"
+    }
+   ]
+  }
+ ]
+}

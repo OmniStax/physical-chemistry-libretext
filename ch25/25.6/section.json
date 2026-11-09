@@ -1,0 +1,232 @@
+{
+ "id": "25.6",
+ "module": "14518",
+ "chapter": "25",
+ "title": "The Debye-Hückel Theory",
+ "short": "Debye–Hückel theory",
+ "lead": "Activity coefficients of ions can be estimated instead of measured. Debye and Hückel pictured each ion surrounded by a cloud of opposite charge whose size depends on every ion in the solution, which also explains why charged colloidal particles stay dispersed.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "The book prints no credits for this page; Figure 25.6.1 is by Roland1952 (CC BY-SA 3.0), Figure 25.6.2 by Petergans (public domain) and Figure 25.6.3 by Larryisgood (CC BY-SA 3.0).",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercise here; both exercises are new and AI-written, with AI solutions, and their answers were checked by computation.",
+ "figures": [
+  {
+   "id": "sim-ionic-atmosphere",
+   "kind": "sim",
+   "number": "25.6.1",
+   "originals": [
+    "/media/ch25/424173-Ionenverteilung_inLoesung.svg"
+   ],
+   "original_caption": "An idealized representation of a solution of a 1:1 electrolyte. (CC BY-SA 3.0 unported; [Roland1952](https://commons.wikimedia.org/wiki/User:Roland1952) via [Wikipedia](https://commons.wikimedia.org/wiki/File:Ionenverteilung_inLoesung.svg))",
+   "draws": [
+    "length",
+    "charge",
+    "temperature"
+   ],
+   "conventions": [
+    "Na",
+    "Cl",
+    "Zn",
+    "S"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "fig-25-6-2",
+   "kind": "photo",
+   "number": "25.6.2",
+   "draws": []
+  },
+  {
+   "id": "fig-25-6-3",
+   "kind": "photo",
+   "number": "25.6.3",
+   "draws": []
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "opening",
+   "concept": "ionic-atmosphere",
+   "verb": "introduces"
+  },
+  {
+   "span": "opening",
+   "concept": "debye-length",
+   "verb": "introduces"
+  },
+  {
+   "span": "opening",
+   "concept": "mean-ionic-activity-coefficient",
+   "verb": "uses"
+  },
+  {
+   "span": "ionic-strength",
+   "concept": "ionic-strength",
+   "verb": "reinforces"
+  },
+  {
+   "span": "ionic-strength",
+   "concept": "debye-length",
+   "verb": "reinforces"
+  },
+  {
+   "span": "ionic-strength",
+   "concept": "ln-gamma-debye-length",
+   "verb": "introduces"
+  },
+  {
+   "span": "ionic-strength",
+   "concept": "constant-ionic-strength",
+   "verb": "introduces"
+  },
+  {
+   "span": "ionic-strength",
+   "concept": "extended-debye-huckel-equation",
+   "verb": "introduces"
+  },
+  {
+   "span": "ionic-strength",
+   "concept": "distance-of-closest-approach",
+   "verb": "introduces"
+  },
+  {
+   "span": "ionic-strength",
+   "concept": "debye-huckel-law",
+   "verb": "reinforces"
+  },
+  {
+   "span": "ionic-strength",
+   "concept": "colloid",
+   "verb": "introduces"
+  },
+  {
+   "span": "ionic-strength",
+   "concept": "equilibrium-stability-kinds",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "If there are other ions present the ionic strength involves",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "ionic-strength",
+   "prompt": "<p>A solution is 0.010 mol/kg in CaCl<sub>2</sub> and 0.020 mol/kg in NaCl. Find (a) its ionic strength and (b) the size $1/κ$ of the ionic atmosphere, using the book's $κ = 3.29\\sqrt{I}$ nm<sup>−1</sup> for water at 25 °C.</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 0.05,
+      "unit": "mol/kg",
+      "hint": "List every ion with its molality: Cl⁻ comes from both salts."
+     },
+     {
+      "part": "b",
+      "value": 1.36,
+      "unit": "nm"
+     }
+    ],
+    "solution": "<p>(a) The ions are Ca<sup>2+</sup> at 0.010 mol/kg, Na<sup>+</sup> at 0.020 mol/kg and Cl<sup>−</sup> at 0.020 + 0.020 = 0.040 mol/kg. Then $I = \\tfrac{1}{2}\\left[(0.010)(2)^2 + (0.020)(1)^2 + (0.040)(1)^2\\right] = \\tfrac{1}{2}(0.10) = 0.050$ mol/kg.</p><p>(b) $κ = 3.29\\sqrt{0.050} = 0.736$ nm<sup>−1</sup>, so $1/κ = 1.36$ nm. The calcium ions, a third of the ions in number, supply 40% of the ionic strength because their charge enters squared.</p>"
+   }
+  },
+  {
+   "id": "a2",
+   "source_id": "Unfortunately this theory only works at very low concentrations",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "ionic-strength",
+   "prompt": "<p>Estimate the mean ionic activity coefficient of 0.0010 mol/kg ZnSO<sub>4</sub> in water at 25 °C from the limiting law, $\\log_{10}γ_\\pm = -A|z_+z_-|\\sqrt{I}$ with $A = 0.51$.</p>",
+   "answer": {
+    "type": "number",
+    "value": 0.74,
+    "tol": 0.02,
+    "generated_by": "ai",
+    "hint": "Work out the ionic strength first: both ions carry a charge of magnitude 2.",
+    "solution": "<p>$I = \\tfrac{1}{2}\\left[(0.0010)(2)^2 + (0.0010)(2)^2\\right] = 0.0040$ mol/kg, four times the molality. With $|z_+z_-| = 4$, $\\log_{10}γ_\\pm = -(0.51)(4)\\sqrt{0.0040} = -0.129$, so $γ_\\pm = 0.74$. A 1:1 salt at the same molality would have $γ_\\pm = 0.96$: the doubled charges matter far more than the concentration here.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "ionic-strength"
+  },
+  {
+   "exercise": "a1",
+   "concept": "debye-length"
+  },
+  {
+   "exercise": "a2",
+   "concept": "debye-huckel-law"
+  },
+  {
+   "exercise": "a2",
+   "concept": "ionic-strength"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-debye-length",
+   "kind": "correction",
+   "html": "The Debye length is $1/κ$, the size of the cloud, and $κ$ is its inverse. Below, where the book says the Debye length and $\\ln γ_\\pm$ are proportional, $\\ln γ_\\pm$ is proportional to $κ$, the inverse of the Debye length."
+  },
+  {
+   "id": "c-units",
+   "kind": "correction",
+   "html": "The unit printed as mol<sup>−1</sup>/2dm<sup>3/2</sup> is mol<sup>−1/2</sup> dm<sup>3/2</sup>, so that $A\\sqrt{I}$ and $Ba_0\\sqrt{I}$ are pure numbers with $I$ in mol/dm<sup>3</sup>."
+  },
+  {
+   "id": "c-dh-extended",
+   "kind": "correction",
+   "html": "Equation 25.6.1, with its denominator $1 + Ba_0\\sqrt{I}$, is the extended Debye–Hückel equation of Section 25.7. The limiting law is its form at very low ionic strength, $\\log_{10}γ_\\pm = -A|z_+z_-|\\sqrt{I}$. For the mean activity coefficient of a salt the charge factor is $|z_+z_-|$; $z_j^2$ belongs to the activity coefficient of a single ion $j$."
+  },
+  {
+   "id": "c-proportional",
+   "kind": "correction",
+   "html": "The logarithm of the mean activity coefficient, $\\log γ_\\pm$, is proportional to $\\sqrt{I}$; $γ_\\pm$ itself is not."
+  },
+  {
+   "id": "c-fig-axis",
+   "kind": "correction",
+   "html": "The horizontal axis is the square root of the ionic strength, $\\sqrt{I}$, though the image labels it ionic strength. Only against $\\sqrt{I}$ is the limiting law a straight line of slope −0.51."
+  },
+  {
+   "id": "c-fig-colloid",
+   "kind": "correction",
+   "html": "The image shows no plot of potential against distance. It draws a gold nanoparticle with a layer of cations bound to its surface and a looser cloud of cations and anions around it."
+  }
+ ]
+}

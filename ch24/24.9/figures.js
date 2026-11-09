@@ -27,8 +27,8 @@ const sim = (id, H) => F.sim(root, id, H);
     return (lo + hi) / 2;
   }
 
-  const d = sim('sim-mixing-gibbs', 600);
-  const tau = ctl(d.controls, { label: '\\kR\\kT/\\kWint', cls: '', key: 'rtw', min: 0.15, max: 1.0, step: 0.01, value: 0.40, unit: '', dec: 2,
+  const d = sim('sim-mixing-gibbs', 640);
+  const tau = ctl(d.controls, { label: '\\kR\\kT/\\kWint', cls: '', key: 'rtw', min: 0.20, max: 0.70, step: 0.01, value: 0.30, unit: '', dec: 2,
     specials: [{ at: 0.5, label: 'consolute point' }] });
   const xs = ctl(d.controls, { label: '\\kxone', cls: '', key: 'x1', min: 0.02, max: 0.98, step: 0.01, value: 0.30, unit: '', dec: 2 });
   const hits = [];
@@ -41,11 +41,11 @@ const sim = (id, H) => F.sim(root, id, H);
     topline(ctx, xb === null
       ? `$\\kR\\kT/\\kWint = ${fmt(t, 2)}$: one minimum, so the two liquids mix in every proportion.`
       : `$\\kR\\kT/\\kWint = ${fmt(t, 2)}$: two minima. Between $\\kxone = ${fmt(xb, 2)}$ and $${fmt(1 - xb, 2)}$ the mixture splits into two liquids.`);
-    const L = { l: 130, r: 760, t: 130, b: 510 }, Rb = { l: 920, r: 1340, t: 130, b: 510 };
-    const a1 = axes(ctx, L, [0, 1], [-0.75, 0.3], { nice: true, nx: 4, ny: 5, xl: 'mole fraction x_1', yl: 'Δ_{mix}G / W', yc: C('energy') });
+    const L = { l: 130, r: 760, t: 130, b: 550 }, Rb = { l: 920, r: 1340, t: 130, b: 550 };
+    const a1 = axes(ctx, L, [0, 1], [-0.5, 0.3], { nx: 4, ny: 4, xl: 'mole fraction x_1', yl: 'Δ_{mix}G / W', yc: C('energy') });
     line(ctx, L.l, a1.Y(0), L.r, a1.Y(0), alpha(PAL.ink, 0.35), 2);
     plot(ctx, a1, Hterm, alpha(C('energy'), 0.55), { w: 3, dash: [10, 10] });
-    plot(ctx, a1, Sterm(t), C('entropy'), { w: 3, dash: [10, 10] });
+    plot(ctx, a1, Sterm(t), alpha(PAL.ink, 0.5), { w: 3, dash: [4, 8] });
     plot(ctx, a1, g, C('energy'), { w: 5 });
     hits.length = 0;
     if (xb !== null) {
@@ -66,16 +66,16 @@ const sim = (id, H) => F.sim(root, id, H);
     hits.push({ x: a1.X(x), y: a1.Y(g(x)), r: 14, name: `one liquid at x₁ = ${fmt(x, 2)}: Δ_mix G/W = ${fmt(g(x), 3)}` });
     legend(ctx, a1, [
       { s: 'Δ_{mix}G / W', color: C('energy'), w: 5, f: g },
-      { s: 'interaction term x_1x_2', color: alpha(C('energy'), 0.55), w: 3, dash: [10, 10], f: Hterm },
-      { s: 'entropy term', color: C('entropy'), w: 3, dash: [10, 10], f: Sterm(t) },
+      { s: 'interaction term x_1 x_2', color: alpha(C('energy'), 0.55), w: 3, dash: [10, 10], f: Hterm },
+      { s: 'entropy term', color: alpha(PAL.ink, 0.5), w: 3, dash: [4, 8], f: Sterm(t) },
     ], { corner: 'br' });
 
     /* right: the dome */
-    const a2 = axes(ctx, Rb, [0, 1], [0, 1], { nx: 4, ny: 4, xl: 'mole fraction x_1', yl: 'RT / W' });
+    const a2 = axes(ctx, Rb, [0, 1], [0, 0.8], { nx: 4, ny: 4, xl: 'mole fraction x_1', yl: 'RT / W' });
     F.shade(ctx, a2, dome, 0, 0.001, 0.999, alpha(PAL.ink, 1), { alpha: 0.08 });
     plot(ctx, a2, dome, PAL.ink, { w: 4, x: [0.001, 0.999] });
-    text(ctx, 'one liquid', a2.X(0.5), a2.Y(0.8), PAL.muted, { size: 19, align: 'center' });
-    text(ctx, 'two liquids', a2.X(0.5), a2.Y(0.2), PAL.muted, { size: 19, align: 'center' });
+    text(ctx, 'one liquid', a2.X(0.5), a2.Y(0.66), PAL.muted, { size: 19, align: 'center' });
+    text(ctx, 'two liquids', a2.X(0.5), a2.Y(0.12), PAL.muted, { size: 19, align: 'center' });
     dot(ctx, a2.X(0.5), a2.Y(0.5), PAL.ink, false, 8);
     hits.push({ x: a2.X(0.5), y: a2.Y(0.5), r: 14, name: 'consolute point: RT/W = 1/2, a = 2' });
     line(ctx, Rb.l, a2.Y(t), Rb.r, a2.Y(t), alpha(PAL.ink, 0.45), 2, [6, 8]);

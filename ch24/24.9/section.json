@@ -30,8 +30,7 @@
    "id": "sim-mixing-gibbs",
    "kind": "sim",
    "draws": [
-    "energy",
-    "entropy"
+    "energy"
    ],
    "ai": [
     {
@@ -226,7 +225,8 @@
      "assumes": [
       {
        "tex": "d\\kmuone = -\\dfrac{\\kxtwo}{\\kxone}\\,d\\kmutwo",
-       "src": "24.2"
+       "src": "24.2",
+       "drv": "24.2/gibbs-duhem-binary"
       },
       {
        "tex": "\\kmuslni \\equiv \\kmustari + \\kR\\kT\\ln{a_i}",

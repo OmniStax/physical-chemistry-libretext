@@ -1,0 +1,426 @@
+{
+ "id": "24.6",
+ "module": "14508",
+ "chapter": "24",
+ "title": "Vapor Pressures of Volatile Binary Solutions",
+ "short": "Henry's law and azeotropes",
+ "lead": "Henry's law describes a dilute component of a non-ideal mixture, and strong deviations from Raoult's law produce azeotropes, which distillation cannot get past. The Gibbs–Duhem equation ties the two components' vapor pressures together, and a Margules function describes the whole range.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "Figure 24.6.1 is folded into the live graph of Henry's and Raoult's lines in Section 24.5; Figure 24.6.2 is redrawn from one model with illustrative liquids, and its original caption's second \"maximum\" is corrected to minimum.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The section prints no exercise. The one exercise here, its worked answer, its Bloom level and its concept tags are written by AI.",
+ "figures": [
+  {
+   "id": "sim-azeotrope",
+   "kind": "sim",
+   "number": "24.6.2",
+   "originals": [
+    "/media/ch24/113366-Figure_A.png",
+    "/media/ch24/113365-Figure_8.7.2.png"
+   ],
+   "original_caption": "Phase diagrams for (left) a maximum boiling point azeotrope and (right) a minimum boiling point azeotrope.",
+   "draws": [
+    "temperature",
+    "pressure"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "fig-24-6-3",
+   "kind": "photo",
+   "number": "24.6.3",
+   "draws": []
+  },
+  {
+   "id": "fig-24-6-example",
+   "kind": "figure",
+   "originals": [
+    "/media/ch24/113368-Figure_D.png"
+   ],
+   "draws": [],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "kept as the book prints it"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "henrys-law",
+   "concept": "henrys-law",
+   "verb": "reinforces"
+  },
+  {
+   "span": "henrys-law",
+   "concept": "henrys-law-constant",
+   "verb": "reinforces"
+  },
+  {
+   "span": "henrys-law",
+   "concept": "raoults-law",
+   "verb": "uses"
+  },
+  {
+   "span": "henrys-law",
+   "concept": "ideal-solution",
+   "verb": "uses"
+  },
+  {
+   "span": "azeotropes",
+   "concept": "azeotrope",
+   "verb": "introduces"
+  },
+  {
+   "span": "azeotropes",
+   "concept": "partially-miscible-boiling-diagram",
+   "verb": "introduces"
+  },
+  {
+   "span": "azeotropes",
+   "concept": "gibbs-duhem-vapor-pressures",
+   "verb": "introduces"
+  },
+  {
+   "span": "azeotropes",
+   "concept": "raoult-implies-henry",
+   "verb": "introduces"
+  },
+  {
+   "span": "azeotropes",
+   "concept": "temperature-composition-diagram",
+   "verb": "uses"
+  },
+  {
+   "span": "azeotropes",
+   "concept": "lever-rule",
+   "verb": "uses"
+  },
+  {
+   "span": "azeotropes",
+   "concept": "distillation",
+   "verb": "uses"
+  },
+  {
+   "span": "azeotropes",
+   "concept": "gibbs-duhem-binary",
+   "verb": "uses"
+  },
+  {
+   "span": "azeotropes",
+   "concept": "ideal-gas-mixture-chemical-potential",
+   "verb": "uses"
+  },
+  {
+   "span": "margules-functions",
+   "concept": "margules-function",
+   "verb": "introduces"
+  },
+  {
+   "span": "margules-functions",
+   "concept": "henrys-law",
+   "verb": "reinforces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "distillation cannot purify past the azeotrope point",
+   "kind": "exercise",
+   "bloom": "Understand",
+   "place": {
+    "at": "end"
+   },
+   "cite": "azeotropes",
+   "prompt": "<p>A liquid mixture is boiled at exactly its azeotropic composition. Why does distilling it separate nothing? And if a pair forms a minimum-boiling azeotrope, what do the distillate and the residue tend toward when you distil a mixture that starts on one side of it?</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "Distillation works only because the vapor's composition differs from the liquid's. Where on the diagram is that difference zero?",
+    "solution": "<p>Distillation separates by taking off a vapor richer in one component than the liquid it leaves. At the azeotrope the liquid and vapor curves touch, so the vapor has exactly the liquid's composition: condensing it and boiling it again gives the same mixture, and no number of stages changes it. For a minimum-boiling azeotrope the azeotrope is the lowest-boiling mixture, so the vapor taken off moves toward it, and the distillate tends to the azeotropic composition. The residue moves the other way, toward the pure component on the side where the mixture started. Only one pure component can be recovered from a given starting mixture.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "azeotrope"
+  },
+  {
+   "exercise": "a1",
+   "concept": "distillation"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-henry-form",
+   "kind": "correction",
+   "html": "Henry's law relates the partial pressure to the mole fraction, $\\kPB = \\kkH\\kxB$, as Example 24.6.1 uses it; the pure vapor pressure $P_B^o$ does not appear in it."
+  },
+  {
+   "id": "c-kh-value",
+   "kind": "correction",
+   "html": "$10^5$ Pa divided by $5.98\\times10^{-4}$ is $1.67\\times10^{8}$ Pa, not $1.67\\times10^{9}$ Pa."
+  },
+  {
+   "id": "c-fig-right",
+   "kind": "correction",
+   "html": "The diagram described here is Figure 24.6.3, printed next. Figure 24.6.2 has no panel with two liquid phases."
+  },
+  {
+   "id": "c-fig-example",
+   "kind": "correction",
+   "html": "The diagram described here is the one in the example that follows, where the boiling lens comes down onto the region of two liquid phases; Figure 24.6.3 shows the lens above it."
+  },
+  {
+   "id": "c-second-example",
+   "kind": "correction",
+   "html": "The book prints this second example under the same number as the first, Example 24.6.1."
+  },
+  {
+   "id": "c-margules-delta",
+   "kind": "correction",
+   "html": "The third term of the series is $δ\\kxtwo^4$. As printed, the $β$ and $δ$ terms are both cubic."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "gibbs-duhem-lnp",
+   "what": "the Gibbs–Duhem equation in vapor pressures",
+   "source": "Physical Chemistry (LibreTexts), 24.6 Vapor Pressures of Volatile Binary Solutions",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kmuj = \\kmustdj + \\kR\\kT \\ln P_j"
+      },
+      {
+       "text": "The temperature is constant."
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\kmuone} = \\mk{s}{\\mu_1^o} + \\mk{r}{\\kR\\kT\\ln \\kPone}",
+      "uses": [
+       0
+      ],
+      "why": "The gas-phase chemical potential written for component 1."
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{d\\kmuone} = \\mk{r}{\\kR\\kT\\,d\\ln \\kPone}",
+       "uses": [
+        1
+       ],
+       "cap": "At constant temperature $\\mu_1^o$ and $RT$ do not change, so only the logarithm does."
+      },
+      {
+       "tex": "\\mk{l}{d\\kmuone} = \\mk{r}{\\kR\\kT\\left(\\dfrac{\\partial \\ln \\kPone}{\\partial \\kxone}\\right)d\\kxone}",
+       "uses": [],
+       "cap": "$P_1$ changes because the composition does, so $d\\ln P_1$ is its slope against $x_1$ times $dx_1$."
+      }
+     ],
+     "src": "24.6"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\kmuj = \\kmustdj + \\kR\\kT \\ln P_j"
+      },
+      {
+       "text": "The temperature is constant."
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\kmutwo} = \\mk{s}{\\mu_2^o} + \\mk{r}{\\kR\\kT\\ln \\kPtwo}",
+      "uses": [
+       0
+      ],
+      "why": "The gas-phase chemical potential written for component 2."
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{d\\kmutwo} = \\mk{r}{\\kR\\kT\\,d\\ln \\kPtwo}",
+       "uses": [
+        1
+       ],
+       "cap": "At constant temperature $\\mu_2^o$ and $RT$ do not change, so only the logarithm does."
+      },
+      {
+       "tex": "\\mk{l}{d\\kmutwo} = \\mk{r}{\\kR\\kT\\left(\\dfrac{\\partial \\ln \\kPtwo}{\\partial \\kxtwo}\\right)d\\kxtwo}",
+       "uses": [],
+       "cap": "$P_2$ changes because the composition does, so $d\\ln P_2$ is its slope against $x_2$ times $dx_2$."
+      }
+     ],
+     "src": "24.6"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\kxone\\,d\\kmuone + \\kxtwo\\,d\\kmutwo = 0",
+       "src": "24.2"
+      },
+      {
+       "step": 0
+      },
+      {
+       "step": 1
+      },
+      {
+       "tex": "d\\kxone = -d\\kxtwo"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{a}{\\kxone\\,d\\kmuone} + \\mk{b}{\\kxtwo\\,d\\kmutwo} = 0"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{a}{\\kxone \\kR\\kT\\left(\\dfrac{\\partial \\ln \\kPone}{\\partial \\kxone}\\right) d\\kxone} + \\mk{b}{\\kxtwo \\kR\\kT\\left(\\dfrac{\\partial \\ln \\kPtwo}{\\partial \\kxtwo}\\right) d\\kxtwo} = 0",
+       "uses": [
+        1,
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{a}{\\kxone \\left(\\dfrac{\\partial \\ln \\kPone}{\\partial \\kxone}\\right) d\\kxone} + \\mk{b}{\\kxtwo \\left(\\dfrac{\\partial \\ln \\kPtwo}{\\partial \\kxtwo}\\right) d\\kxtwo} = 0",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{a}{\\kxone \\left(\\dfrac{\\partial \\ln \\kPone}{\\partial \\kxone}\\right) d\\kxone} - \\mk{b}{\\kxtwo \\left(\\dfrac{\\partial \\ln \\kPtwo}{\\partial \\kxtwo}\\right) d\\kxone} = 0",
+       "uses": [
+        3
+       ]
+      },
+      {
+       "tex": "\\mk{a}{\\kxone \\left(\\dfrac{\\partial \\ln \\kPone}{\\partial \\kxone}\\right)} = \\mk{b}{\\kxtwo \\left(\\dfrac{\\partial \\ln \\kPtwo}{\\partial \\kxtwo}\\right)}",
+       "uses": []
+      }
+     ],
+     "src": "24.6"
+    }
+   ]
+  },
+  {
+   "id": "raoult-means-henry",
+   "what": "Raoult for one component means Henry for the other",
+   "source": "Physical Chemistry (LibreTexts), 24.6 Vapor Pressures of Volatile Binary Solutions",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "text": "The mixture is nearly pure component 1: $x_1 \\rightarrow 1$, so $x_2 \\rightarrow 0$."
+      },
+      {
+       "tex": "\\kPone = \\kxone\\kPstarone",
+       "src": "24.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{p}{\\kPone} = \\mk{r}{\\kxone\\kPstarone}",
+      "uses": [
+       0
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{p}{\\ln \\kPone} = \\mk{r}{\\ln \\kxone + \\ln \\kPstarone}",
+       "uses": [],
+       "cap": "The logarithm of a product is the sum of the logarithms."
+      },
+      {
+       "tex": "\\mk{p}{\\dfrac{\\partial \\ln \\kPone}{\\partial \\kxone}} = \\mk{r}{\\dfrac{1}{\\kxone}}",
+       "uses": [],
+       "cap": "$P^*_1$ is a constant, and the slope of $\\ln x_1$ is $1/x_1$."
+      }
+     ],
+     "src": "24.6"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\kxone \\left(\\dfrac{\\partial \\ln \\kPone}{\\partial \\kxone}\\right) = \\kxtwo \\left(\\dfrac{\\partial \\ln \\kPtwo}{\\partial \\kxtwo}\\right)",
+       "src": "24.6",
+       "drv": "gibbs-duhem-lnp"
+      },
+      {
+       "step": 0
+      }
+     ],
+     "then": {
+      "tex": "\\mk{a}{\\kxone \\left(\\dfrac{\\partial \\ln \\kPone}{\\partial \\kxone}\\right)} = \\mk{b}{\\kxtwo \\left(\\dfrac{\\partial \\ln \\kPtwo}{\\partial \\kxtwo}\\right)}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{a}{\\dfrac{\\kxone}{\\kxone}} = \\mk{b}{\\kxtwo \\dfrac{\\partial \\ln \\kPtwo}{\\partial \\kxtwo}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{a}{1} = \\mk{b}{\\kxtwo \\dfrac{\\partial \\ln \\kPtwo}{\\partial \\kxtwo}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{a}{\\dfrac{1}{\\kxtwo}} = \\mk{b}{\\dfrac{\\partial \\ln \\kPtwo}{\\partial \\kxtwo}}",
+       "uses": []
+      }
+     ],
+     "num": "(24.6.2)",
+     "src": "24.6"
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      }
+     ],
+     "then": {
+      "tex": "\\mk{a}{\\dfrac{1}{\\kxtwo}} = \\mk{b}{\\dfrac{\\partial \\ln \\kPtwo}{\\partial \\kxtwo}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{b}{\\ln \\kPtwo} = \\mk{a}{\\ln \\kxtwo} + \\mk{c}{constant}",
+       "uses": [],
+       "cap": "Integrating both sides over $x_2$ leaves a constant of integration."
+      },
+      {
+       "tex": "\\mk{b}{\\ln \\kPtwo} = \\mk{a}{\\ln \\left(K \\kxtwo \\right)}",
+       "uses": [],
+       "cap": "Writing the constant as $\\ln K$ folds it into the logarithm as a factor."
+      },
+      {
+       "tex": "\\mk{b}{\\kPtwo} = \\mk{a}{K \\kxtwo}",
+       "uses": [],
+       "cap": "Exponentiating both sides."
+      }
+     ],
+     "src": "24.6"
+    }
+   ]
+  }
+ ]
+}

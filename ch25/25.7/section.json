@@ -1,0 +1,167 @@
+{
+ "id": "25.7",
+ "module": "14519",
+ "chapter": "25",
+ "title": "Extending Debye-Hückel Theory to Higher Concentrations",
+ "short": "Beyond Debye–Hückel",
+ "lead": "Debye–Hückel theory rests on simplifying assumptions about ions and solvent that stop holding as solutions get more concentrated. Empirical extensions add terms that keep its low-concentration behavior and fit measurements at higher ionic strength.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "The book prints no credits for this page, which is adapted from Wikipedia under CC BY-SA 4.0; Figure 25.7.1's original is by PChemiker (CC BY-SA 4.0), and the points in its redrawing are read off Figure 25.6.2 (Petergans, public domain).",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercise here; the one exercise is new and AI-written, with an AI solution, and its answers were checked by computation.",
+ "figures": [
+  {
+   "id": "sim-activity-coefficients",
+   "kind": "sim",
+   "number": "25.7.1",
+   "originals": [
+    "/media/ch25/424175-ActivityCoefficientsDaviesEquation_lin.png"
+   ],
+   "original_caption": "Semi-log plot of activity coefficients calculated using the Davies equation. (CC BY-SA 4.0; PChemiker via [Wikipedia](https://commons.wikimedia.org/wiki/File:ActivityCoefficientsDaviesEquation_lin.png))",
+   "draws": [
+    "length"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "opening",
+   "concept": "debye-huckel-assumptions",
+   "verb": "introduces"
+  },
+  {
+   "span": "opening",
+   "concept": "bjerrum-length",
+   "verb": "introduces"
+  },
+  {
+   "span": "opening",
+   "concept": "extended-debye-huckel-equation",
+   "verb": "uses"
+  },
+  {
+   "span": "extended-debye-h-ckel-equation",
+   "concept": "extended-debye-huckel-equation",
+   "verb": "reinforces"
+  },
+  {
+   "span": "extended-debye-h-ckel-equation",
+   "concept": "distance-of-closest-approach",
+   "verb": "reinforces"
+  },
+  {
+   "span": "extended-debye-h-ckel-equation",
+   "concept": "ionic-strength",
+   "verb": "uses"
+  },
+  {
+   "span": "davis-equation",
+   "concept": "davies-equation",
+   "verb": "introduces"
+  },
+  {
+   "span": "davis-equation",
+   "concept": "debye-huckel-law",
+   "verb": "uses"
+  },
+  {
+   "span": "pitzer-equations",
+   "concept": "pitzer-equations",
+   "verb": "introduces"
+  },
+  {
+   "span": "pitzer-equations",
+   "concept": "osmotic-coefficient",
+   "verb": "uses"
+  },
+  {
+   "span": "specific-ion-interaction-theory",
+   "concept": "specific-ion-interaction-theory",
+   "verb": "introduces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "For 1:1 electrolytes the difference between measured values and those calculated with this equation",
+   "kind": "exercise",
+   "bloom": "Evaluate",
+   "place": {
+    "at": "end"
+   },
+   "cite": "davis-equation",
+   "prompt": "<p>Calculate the mean activity coefficient of 0.10 mol/L NaCl at 25 °C (a) by the limiting law $\\log γ_\\pm = -A|z_+z_-|\\sqrt{I}$, (b) by the extended Debye–Hückel equation with $a = 3$ Å, using $A = 0.5085$ and $B = 0.3281$, and (c) by the Davies equation. Which would you trust at this concentration, and why?</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 0.69,
+      "hint": "For NaCl the ionic strength equals the concentration and $|z_+z_-| = 1$."
+     },
+     {
+      "part": "b",
+      "value": 0.754
+     },
+     {
+      "part": "c",
+      "value": 0.785
+     }
+    ],
+    "solution": "<p>For NaCl, $I = 0.10$ mol/L and $\\sqrt{I} = 0.316$.</p><p>(a) $\\log γ_\\pm = -(0.5085)(0.316) = -0.161$, so $γ_\\pm = 0.690$.</p><p>(b) The denominator is $1 + (0.3281)(3)(0.316) = 1.311$, so $\\log γ_\\pm = -0.161/1.311 = -0.123$ and $γ_\\pm = 0.754$.</p><p>(c) $-\\log f_\\pm = 0.5\\left(\\dfrac{0.316}{1.316} - 0.030\\right) = 0.105$, so $f_\\pm = 0.785$.</p><p>The limiting law holds only below about $10^{-3}$ mol/L, a hundred times more dilute, and it is far too low here. The Davies equation is fitted to data and is good to about 2% for 1:1 electrolytes at 0.1 M, so it is the one to trust; the extended equation comes closer than the limiting law because it allows for the size of the ions.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "davies-equation"
+  },
+  {
+   "exercise": "a1",
+   "concept": "extended-debye-huckel-equation"
+  },
+  {
+   "exercise": "a1",
+   "concept": "debye-huckel-assumptions"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-mu-ionic",
+   "kind": "correction",
+   "html": "The ionic strength is $I$, the symbol in the equation, not $\\mu$."
+  },
+  {
+   "id": "c-fig-semilog",
+   "kind": "correction",
+   "figure": "sim-activity-coefficients",
+   "html": "Both axes of the plot are linear: it shows the activity coefficient $f$ itself against $I$, not on a logarithmic scale."
+  }
+ ]
+}

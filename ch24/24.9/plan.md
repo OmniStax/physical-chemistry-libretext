@@ -13,7 +13,7 @@ The page opens with `###` headers before its first `<h2>`; they become blocks of
 
 ## Figures
 
-- `sim-mixing-gibbs` · Sim · regular-gibbs-energy-of-mixing, consolute-point, regular-interaction-energy · variation by slider: as RT/W falls the single minimum of Δ_mix G/W flattens and splits in two, which the text states and no figure draws; the right panel traces the coexisting compositions into the miscibility dome · arrows: none · still: a curve at one RT/W has no time in it · sliders RT/W (untyped, 0.15–1.00, default 0.40, special 0.5 = consolute point) and x₁ (untyped, default 0.30) · headline: one minimum or two, and the split compositions · graph left (Δ_mix G/W against x₁: the sum heavy in energy, the interaction term x₁x₂ and the entropy term thin and dashed, the horizontal common tangent with its two touching points, the mixture's point and, inside the gap, its split state on the tangent), dome beside it (RT/W against x₁, regions "one liquid" and "two liquids", the consolute point) · 2D. The book's form divided by W keeps the interaction term fixed, so the competition reads directly; the model is the book's regular solution, no data.
+- `sim-mixing-gibbs` · Sim · regular-gibbs-energy-of-mixing, consolute-point, regular-interaction-energy · variation by slider: as RT/W falls the single minimum of Δ_mix G/W flattens and splits in two, which the text states and no figure draws; the right panel traces the coexisting compositions into the miscibility dome · arrows: none · still: a curve at one RT/W has no time in it · sliders RT/W (untyped, 0.20–0.70, default 0.30 where the hump between the minima is plain; special 0.5 = consolute point) and x₁ (untyped, default 0.30) · headline: one minimum or two, and the split compositions · graph left (Δ_mix G/W against x₁: the sum heavy in energy, the interaction term x₁x₂ thin and dashed in energy, the entropy term thin and dotted in ink, the horizontal common tangent with its two touching points, the mixture's point and, inside the gap, its split state on the tangent), dome beside it (RT/W against x₁, regions "one liquid" and "two liquids", the consolute point) · 2D. The book's form divided by W keeps the interaction term fixed, so the competition reads directly; the model is the book's regular solution, no data.
 
 Not built (orchestrator): `sim-gap-meets-dome` (24.9's lost "see animation" is footnoted instead).
 
@@ -33,4 +33,4 @@ One AI exercise (config): `a1` (Analyze, multi): the curvature of Δ_mix G/RT at
 
 ## Wanted at chapter level
 
-None. (The `drv` link from the second-activity derivation's Gibbs-Duhem fact to 24.2's binary derivation is left out: that page was not built when this one was; the orchestrator can add `"drv": "24.2/<id>"` on node 2's first fact.)
+None. (Node 2's Gibbs-Duhem fact links to 24.2's `gibbs-duhem-binary` with `drv`.)

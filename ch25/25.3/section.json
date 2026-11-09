@@ -1,0 +1,365 @@
+{
+ "id": "25.3",
+ "module": "14515",
+ "chapter": "25",
+ "title": "Colligative Properties Depend only on Number Density",
+ "short": "Colligative properties",
+ "lead": "Some properties of a solution depend only on how many solute particles it holds. The melting point of the solvent is one of them, worked out here from the solvent's chemical potential in the solid and in the solution.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "The book prints no credits for this page.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercise here; both exercises are new and AI-written, their answers computed from water's molar enthalpies of fusion and vaporization in Chapter 23. Numeric answers accept a 2% tolerance.",
+ "figures": [
+  {
+   "id": "sim-colligative-mu",
+   "kind": "sim",
+   "draws": [
+    "energy",
+    "temperature"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "counting-particles",
+   "concept": "colligative-property",
+   "verb": "introduces"
+  },
+  {
+   "span": "melting-point-depression",
+   "concept": "solvent-activity-at-freezing",
+   "verb": "introduces"
+  },
+  {
+   "span": "melting-point-depression",
+   "concept": "freezing-point-depression",
+   "verb": "introduces"
+  },
+  {
+   "span": "melting-point-depression",
+   "concept": "freezing-point-constant",
+   "verb": "introduces"
+  },
+  {
+   "span": "melting-point-depression",
+   "concept": "molar-mass-from-freezing-point",
+   "verb": "introduces"
+  },
+  {
+   "span": "melting-point-depression",
+   "concept": "boiling-point-elevation",
+   "verb": "introduces"
+  },
+  {
+   "span": "melting-point-depression",
+   "concept": "raoults-law",
+   "verb": "uses"
+  },
+  {
+   "span": "melting-point-depression",
+   "concept": "gibbs-helmholtz-equation",
+   "verb": "uses"
+  },
+  {
+   "span": "melting-point-depression",
+   "concept": "phase-equilibrium-chemical-potential",
+   "verb": "uses"
+  },
+  {
+   "span": "melting-point-depression",
+   "concept": "enthalpy-of-fusion",
+   "verb": "uses"
+  },
+  {
+   "span": "melting-point-depression",
+   "concept": "activity",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "Boiling point elevation is quite similar",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "melting-point-depression",
+   "prompt": "<p>Water has $\\kTmstar = 273.15$ K and a molar enthalpy of fusion of 6006 J/mol. It boils at 373.15 K with a molar enthalpy of vaporization of 40.65 kJ/mol. Its molar mass is $M_1 = 0.018015$ kg/mol.</p><ol type=\"a\"><li>What is $K_f$ for water?</li><li>The same reasoning at the boiling point, with the vapor in place of the solid, gives $K_b = \\kR T_b^{*2}M_1/\\Delta_{vap}H$. What is $K_b$ for water?</li></ol>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 1.86,
+      "unit": "K kg/mol",
+      "hint": "$K_f = \\kR\\kTmstar^{2}M_1/\\kDeltafusHone$, all in SI units."
+     },
+     {
+      "part": "b",
+      "value": 0.513,
+      "unit": "K kg/mol"
+     }
+    ],
+    "solution": "<p>a. $K_f = \\dfrac{\\kR\\kTmstar^{2}M_1}{\\kDeltafusHone} = \\dfrac{(8.314)(273.15)^2(0.018015)}{6006} = 1.86$ K kg/mol.</p><p>b. $K_b = \\dfrac{(8.314)(373.15)^2(0.018015)}{40650} = 0.513$ K kg/mol. The enthalpy of vaporization is almost seven times that of fusion, so the same molality raises the boiling point only about a quarter as much as it lowers the melting point.</p>"
+   }
+  },
+  {
+   "id": "a2",
+   "source_id": "From molality and weight we can then calculate molar mass",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "melting-point-depression",
+   "prompt": "<p>1.00 g of an unknown nonvolatile compound dissolved in 50.0 g of water lowers its melting point by $\\kDeltaT = 0.207$ K. Take $K_f = 1.86$ K kg/mol.</p><ol type=\"a\"><li>What is the molality of the solution?</li><li>What is the molar mass of the compound?</li></ol>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 0.111,
+      "unit": "mol/kg"
+     },
+     {
+      "part": "b",
+      "value": 180,
+      "unit": "g/mol",
+      "hint": "The molality times the mass of water in kilograms is the amount of solute."
+     }
+    ],
+    "solution": "<p>a. $\\km = \\kDeltaT/K_f = 0.207/1.86 = 0.111$ mol/kg.</p><p>b. The solution holds $(0.111\\ \\text{mol/kg})(0.0500\\ \\text{kg}) = 5.56\\times10^{-3}$ mol of solute, so its molar mass is $1.00\\ \\text{g}/5.56\\times10^{-3}\\ \\text{mol} = 180$ g/mol.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "freezing-point-constant"
+  },
+  {
+   "exercise": "a1",
+   "concept": "boiling-point-elevation"
+  },
+  {
+   "exercise": "a2",
+   "concept": "molar-mass-from-freezing-point"
+  },
+  {
+   "exercise": "a2",
+   "concept": "freezing-point-depression"
+  }
+ ],
+ "footnotes": [],
+ "derivations": [
+  {
+   "id": "freezing-point-depression",
+   "what": "the melting point depression",
+   "source": "Physical Chemistry (LibreTexts), 25.3 Colligative Properties Depend only on Number Density",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\mu^{\\alpha} = \\mu^{\\beta}",
+       "src": "23.3",
+       "drv": "23.3/equal-chemical-potentials"
+      },
+      {
+       "tex": "\\kmuonesln = \\kmuoneliqstar + \\kR\\kT\\ln a_1",
+       "src": "24.7"
+      },
+      {
+       "tex": "\\kDeltamuone = \\kmuoneliqstar - \\kmuones"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\kmuones} = \\mk{r}{\\kmuonesln}",
+      "uses": [
+       0
+      ],
+      "why": "The solid holds no solute, so the solvent is pure in the solid and in equilibrium with the solvent of the solution."
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\kmuones} = \\mk{r}{\\kmuoneliqstar + \\kR\\kT\\ln\\, a_1}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{l}{\\dfrac{\\kmuones - \\kmuoneliqstar}{\\kR\\kT}} = \\mk{r}{\\ln \\, a_1}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{l}{\\dfrac{-\\kDeltamuone}{\\kR\\kT}} = \\mk{r}{\\ln \\,a_1}",
+       "uses": [
+        2
+       ]
+      }
+     ],
+     "src": "25.3"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "\\dfrac{\\partial}{\\partial \\kT} \\dfrac{\\kDeltamuone}{\\kT} = \\dfrac{- \\kDeltafusHone}{\\kT^2}",
+       "src": "22.7",
+       "drv": "22.7/gibbs-helmholtz"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\ln \\,a_1} = \\mk{r}{\\dfrac{-\\kDeltamuone}{\\kR\\kT}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\dfrac{\\partial \\ln a_1}{\\partial \\kT}} = \\mk{r}{-\\dfrac{1}{\\kR}\\dfrac{\\partial}{\\partial \\kT} \\dfrac{\\kDeltamuone}{\\kT}}",
+       "uses": [],
+       "cap": "Differentiate both sides with respect to $\\kT$; $\\kR$ is a constant."
+      },
+      {
+       "tex": "\\mk{l}{\\dfrac{\\partial \\ln a_1}{\\partial \\kT}} = \\mk{r}{-\\dfrac{1}{\\kR}\\cdot\\dfrac{-\\kDeltafusHone}{\\kT^2}}",
+       "uses": [
+        1
+       ],
+       "cap": "$\\kDeltamuone$ is the molar Gibbs energy of fusion of the solvent, so the Gibbs–Helmholtz equation brings in its molar enthalpy of fusion."
+      },
+      {
+       "tex": "\\mk{l}{\\dfrac{\\partial \\ln a_1}{\\partial \\kT}} = \\mk{r}{\\dfrac{\\kDeltafusHone}{\\kR\\kT^2}}",
+       "uses": []
+      }
+     ],
+     "src": "25.3"
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "text": "The pure solvent, with $a_1 = 1$, melts at $\\kTmstar$; the solution melts at $\\kTm$."
+      },
+      {
+       "text": "$\\kDeltafusHone$ is taken as constant between $\\kTm$ and $\\kTmstar$."
+      },
+      {
+       "text": "In the liquid the solvent follows Raoult's law, so $a_1 = \\kxone$.",
+       "src": "25.3"
+      },
+      {
+       "tex": "\\ln \\kxone \\approx -\\kxtwo",
+       "src": "24.7"
+      },
+      {
+       "text": "$\\kDeltaT = \\kTmstar - \\kTm$ is small beside $\\kTmstar$, so $\\kTmstar\\kTm \\approx \\kTmstar^2$."
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\dfrac{\\partial \\ln a_1}{\\partial \\kT}} = \\mk{r}{\\dfrac{\\kDeltafusHone}{\\kR\\kT^2}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\ln a_1} = \\mk{r}{\\int_{\\kTmstar}^{\\kTm} \\dfrac{\\kDeltafusHone}{\\kR\\kT^2}\\, d\\kT}",
+       "uses": [
+        1
+       ],
+       "cap": "Integrate from the pure solvent's melting point, where $\\ln a_1 = 0$, to the solution's."
+      },
+      {
+       "tex": "\\mk{l}{\\ln a_1} = \\mk{r}{\\dfrac{\\kDeltafusHone}{\\kR} \\left( \\dfrac{1}{\\kTmstar}- \\dfrac{1}{\\kTm} \\right)}",
+       "uses": [
+        2
+       ],
+       "cap": "With the enthalpy constant, $\\int d\\kT/\\kT^2 = -1/\\kT$."
+      },
+      {
+       "tex": "\\mk{l}{\\ln \\kxone} = \\mk{r}{\\dfrac{\\kDeltafusHone}{\\kR} \\left( \\dfrac{1}{\\kTmstar}- \\dfrac{1}{\\kTm} \\right)}",
+       "uses": [
+        3
+       ]
+      },
+      {
+       "tex": "\\mk{l}{-\\kxtwo} = \\mk{r}{\\dfrac{\\kDeltafusHone}{\\kR} \\left( \\dfrac{1}{\\kTmstar}- \\dfrac{1}{\\kTm} \\right)}",
+       "uses": [
+        4
+       ]
+      },
+      {
+       "tex": "\\mk{l}{-\\kxtwo} = \\mk{r}{\\dfrac{\\kDeltafusHone}{\\kR} \\left( \\dfrac{\\kTm- \\kTmstar}{\\kTmstar \\kTm} \\right)}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{l}{-\\kxtwo} \\approx \\mk{r}{\\dfrac{\\kDeltafusHone}{\\kR} \\left(\\dfrac{ -\\kDeltaT}{\\kTmstar^{2}} \\right)}",
+       "uses": [
+        5
+       ]
+      }
+     ],
+     "src": "25.3",
+     "note": "The book prints the Raoult step as $\\ln a_1 \\ln x_1 \\approx -x_2$, which has lost its equals sign: $\\ln a_1 = \\ln x_1 \\approx -x_2$."
+    },
+    {
+     "assumes": [
+      {
+       "step": 2
+      },
+      {
+       "text": "In a dilute solution $\\kxtwo \\approx n_2/n_1 = M_1\\km$, with $M_1$ the solvent's molar mass in kg/mol."
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{-\\kxtwo} \\approx \\mk{r}{\\dfrac{\\kDeltafusHone}{\\kR} \\left(\\dfrac{ -\\kDeltaT}{\\kTmstar^{2}} \\right)}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\kDeltaT} \\approx \\mk{r}{\\dfrac{\\kR\\kTmstar^{2}}{\\kDeltafusHone}\\,\\kxtwo}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{l}{\\kDeltaT} \\approx \\mk{r}{\\dfrac{\\kR\\kTmstar^{2}M_1}{\\kDeltafusHone}\\,\\km}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{l}{\\kDeltaT} = \\mk{r}{K_f\\km}",
+       "uses": [],
+       "cap": "The solvent's constants are collected into one, $K_f = \\kR\\kTmstar^{2}M_1/\\kDeltafusHone$."
+      }
+     ],
+     "src": "25.3"
+    }
+   ]
+  }
+ ]
+}

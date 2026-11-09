@@ -1,0 +1,316 @@
+{
+ "id": "25.4",
+ "module": "14516",
+ "chapter": "25",
+ "title": "Osmotic Pressure can Determine Molecular Masses",
+ "short": "Osmotic pressure",
+ "lead": "A membrane that lets solvent through but holds solute back sets up osmosis, and the pressure it builds can be measured. The section works out that pressure for a dilute solution and turns to molar masses, from polymers to purity checks.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "The book prints no credits for this page; Figure 25.4.1, uncredited at the source, is shared under the page's licence.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercise here; the one exercise is new and AI-written, its answers computed. Numeric answers accept a 2% tolerance.",
+ "figures": [
+  {
+   "id": "sim-osmosis",
+   "kind": "sim",
+   "number": "25.4.1",
+   "originals": [
+    "/media/ch25/125804-imageedit_4_7763787191.jpg"
+   ],
+   "original_caption": "Osmotic Pressure. (a) A dilute solution of glucose in water is placed in the right arm of a U-tube, and the left arm is filled to the same height with pure water; a semipermeable membrane separates the two arms. Because the flow of pure solvent through the membrane from left to right (from pure water to the solution) is greater than the flow of solvent in the reverse direction, the level of liquid in the right tube rises. (b) At equilibrium, the pressure differential, equal to the osmotic pressure of the solution ($\\Pi_{soln}$), equalizes the flow rate of solvent in both directions. (c) Applying an external pressure equal to the osmotic pressure of the original glucose solution to the liquid in the right arm reverses the flow of solvent and restores the original situation.",
+   "draws": [
+    "pressure"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "osmotic-pressure",
+   "concept": "semipermeable-membrane",
+   "verb": "introduces"
+  },
+  {
+   "span": "osmotic-pressure",
+   "concept": "osmosis",
+   "verb": "introduces"
+  },
+  {
+   "span": "osmotic-pressure",
+   "concept": "osmotic-pressure",
+   "verb": "introduces"
+  },
+  {
+   "span": "osmotic-pressure",
+   "concept": "osmotic-equilibrium",
+   "verb": "introduces"
+  },
+  {
+   "span": "osmotic-pressure",
+   "concept": "osmotic-pressure-dilute",
+   "verb": "introduces"
+  },
+  {
+   "span": "osmotic-pressure",
+   "concept": "reverse-osmosis",
+   "verb": "introduces"
+  },
+  {
+   "span": "osmotic-pressure",
+   "concept": "gibbs-first-derivatives",
+   "verb": "uses"
+  },
+  {
+   "span": "osmotic-pressure",
+   "concept": "phase-equilibrium-chemical-potential",
+   "verb": "uses"
+  },
+  {
+   "span": "osmotic-pressure",
+   "concept": "activity",
+   "verb": "uses"
+  },
+  {
+   "span": "determining-molar-masses",
+   "concept": "osmometry",
+   "verb": "introduces"
+  },
+  {
+   "span": "determining-molar-masses",
+   "concept": "polymer-molar-mass-distribution",
+   "verb": "introduces"
+  },
+  {
+   "span": "determining-molar-masses",
+   "concept": "melting-purity-analysis",
+   "verb": "introduces"
+  },
+  {
+   "span": "determining-molar-masses",
+   "concept": "freezing-point-depression",
+   "verb": "reinforces"
+  },
+  {
+   "span": "determining-molar-masses",
+   "concept": "colligative-property",
+   "verb": "reinforces"
+  },
+  {
+   "span": "determining-molar-masses",
+   "concept": "differential-scanning-calorimetry",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "Osmometry is still of some practical usefulness",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "determining-molar-masses",
+   "prompt": "<p>2.00 g of a protein is dissolved in water to make 100 mL of solution. At 298.15 K its osmotic pressure is $\\kPi = 7.4$ Torr.</p><ol type=\"a\"><li>What is the molar concentration $c$ of the protein, in mol/m³?</li><li>What is the protein's molar mass?</li><li>About how far would the same solution's melting point be lowered? Take $K_f = 1.86$ K kg/mol and treat 100 mL of solution as 0.100 kg of water.</li></ol>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 0.398,
+      "unit": "mol/m³",
+      "hint": "Convert the pressure to pascals first: 760 Torr is 101325 Pa."
+     },
+     {
+      "part": "b",
+      "value": 50000,
+      "unit": "g/mol",
+      "tol": 0.03
+     },
+     {
+      "part": "c",
+      "value": 0.00074,
+      "unit": "K",
+      "tol": 0.03
+     }
+    ],
+    "solution": "<p>a. $\\kPi = (7.4/760)(101325\\ \\text{Pa}) = 986.6$ Pa, so $c = \\kPi/\\kR\\kT = 986.6/(8.314 \\times 298.15) = 0.398$ mol/m³.</p><p>b. The 100 mL ($1.00\\times10^{-4}$ m³) holds $3.98\\times10^{-5}$ mol, so $M = 2.00\\ \\text{g}/3.98\\times10^{-5}\\ \\text{mol} = 5.0\\times10^{4}$ g/mol.</p><p>c. The molality is about $3.98\\times10^{-5}\\ \\text{mol}/0.100\\ \\text{kg} = 3.98\\times10^{-4}$ mol/kg, so $\\kDeltaT \\approx 1.86 \\times 3.98\\times10^{-4} = 7.4\\times10^{-4}$ K. A pressure of 7.4 Torr is easy to measure; a shift of under a thousandth of a kelvin is not, which is why large molecules are weighed by osmometry.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "osmometry"
+  },
+  {
+   "exercise": "a1",
+   "concept": "osmotic-pressure-dilute"
+  }
+ ],
+ "footnotes": [],
+ "derivations": [
+  {
+   "id": "osmotic-pressure",
+   "what": "the osmotic pressure of a dilute solution",
+   "source": "Physical Chemistry (LibreTexts), 25.4 Osmotic Pressure can Determine Molecular Masses",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\left(\\dfrac{∂\\kG}{∂\\kP} \\right)_{T,x} = \\kV",
+       "src": "22.4"
+      },
+      {
+       "text": "The molar volume $\\kVbaronestar$ of the liquid solvent hardly changes with pressure."
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\left(\\dfrac{∂\\kG}{∂\\kP} \\right)_{T,x}} = \\mk{r}{\\kV}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\left( \\dfrac{∂\\kmustar}{∂\\kP} \\right)_{T,x_{j}}} = \\mk{r}{\\kVbaronestar}",
+       "uses": [],
+       "cap": "Taken per mole of pure solvent, $\\kG$ becomes $\\kmustar$ and $\\kV$ becomes the molar volume $\\kVbaronestar$."
+      },
+      {
+       "tex": "\\mk{l}{\\kmustar(\\kT,\\kP+\\kPi)} = \\mk{r}{\\kmustar(\\kT,\\kP) + \\int_{\\kP}^{\\kP+ \\kPi} \\kVbaronestar\\, d\\kP}",
+       "uses": [],
+       "cap": "Integrate over pressure at constant temperature, from $\\kP$ to $\\kP + \\kPi$."
+      },
+      {
+       "tex": "\\mk{l}{\\kmustar(\\kT,\\kP+\\kPi)} = \\mk{r}{\\kmustar(\\kT,\\kP) + \\kPi\\kVbaronestar}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "src": "25.4",
+     "note": "The book says \"Taking the partial versus $x_1$\"; the derivative that gives the molar volume is taken with respect to $n_1$."
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\mu^{\\alpha} = \\mu^{\\beta}",
+       "src": "23.3",
+       "drv": "23.3/equal-chemical-potentials"
+      },
+      {
+       "tex": "\\kmusln = \\kmustar + \\kR\\kT\\ln a_1",
+       "src": "24.7"
+      },
+      {
+       "step": 0
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\kmustar(\\kT,\\kP)} = \\mk{r}{\\kmusln(\\kT,\\kP+ \\kPi,a_1)}",
+      "uses": [
+       0
+      ],
+      "why": "Only the solvent crosses the membrane, so at equilibrium it has the same chemical potential on both sides, the solution side standing at the higher pressure."
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\kmustar(\\kT,\\kP)} = \\mk{r}{\\kmustar(\\kT,\\kP+ \\kPi)+ \\kR\\kT\\ln a_1}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{l}{\\kmustar(\\kT,\\kP)} = \\mk{r}{\\kmustar(\\kT,\\kP)+ \\kPi\\kVbaronestar+ \\kR\\kT\\ln a_1}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{l}{\\kPi\\kVbaronestar} = \\mk{r}{-\\kR\\kT\\ln a_1}",
+       "uses": []
+      }
+     ],
+     "src": "25.4"
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "tex": "\\ln a_1 = \\ln \\kxone \\approx -\\kxtwo",
+       "src": "24.7"
+      },
+      {
+       "tex": "\\kxtwo = \\dfrac{n_2}{n_1+n_2}≈\\dfrac{n_2}{n_1}"
+      },
+      {
+       "text": "In a dilute solution the volume is nearly that of the solvent, $\\kV \\approx n_1\\kVbaronestar$."
+      },
+      {
+       "text": "$c = n_2/\\kV$ is the molar concentration of the solute."
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\kPi\\kVbaronestar} = \\mk{r}{-\\kR\\kT\\ln a_1}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\kPi\\kVbaronestar} = \\mk{r}{\\kR\\kT \\kxtwo}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{l}{\\kPi\\kVbaronestar} = \\mk{r}{\\kR\\kT \\dfrac{n_2}{n_1}}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{l}{\\kPi} = \\mk{r}{\\kR\\kT \\dfrac{n_2}{n_1\\kVbaronestar}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{l}{\\kPi} = \\mk{r}{\\kR\\kT \\dfrac{n_2}{\\kV}}",
+       "uses": [
+        3
+       ]
+      },
+      {
+       "tex": "\\mk{l}{\\kPi} = \\mk{r}{\\kR\\kT c}",
+       "uses": [
+        4
+       ]
+      }
+     ],
+     "src": "25.4",
+     "note": "The book prints the ideal approximation as $\\ln a_1 \\ln x_1 \\approx -x_2$, which has lost its equals sign: $\\ln a_1 = \\ln x_1 \\approx -x_2$."
+    }
+   ]
+  }
+ ]
+}
