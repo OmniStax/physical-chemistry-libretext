@@ -1,0 +1,110 @@
+{
+ "id": "21.7",
+ "module": "14484",
+ "chapter": "21",
+ "title": "Standard Entropies Depend Upon Molecular Mass and Structure",
+ "short": "Mass, structure and entropy",
+ "lead": "Molecules differ in how much entropy they hold at the same temperature and pressure. The difference comes from the number of microstates open to them, which depends on how heavy the molecules are and how they are built. The noble gases isolate the effect of mass.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": []
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercise on this section, so the exercise, its solution, Bloom level and concept tags are written by AI. The numeric answer accepts a 2% tolerance.",
+ "figures": [],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "mass-and-structure",
+   "concept": "entropy-increases-with-complexity",
+   "verb": "introduces"
+  },
+  {
+   "span": "mass-and-structure",
+   "concept": "entropy-increases-with-mass",
+   "verb": "reinforces"
+  },
+  {
+   "span": "mass-and-structure",
+   "concept": "standard-molar-entropy",
+   "verb": "reinforces"
+  },
+  {
+   "span": "mass-and-structure",
+   "concept": "microstate",
+   "verb": "uses"
+  },
+  {
+   "span": "mass-and-structure",
+   "concept": "degrees-of-freedom",
+   "verb": "uses"
+  },
+  {
+   "span": "noble-gases",
+   "concept": "entropy-increases-with-mass",
+   "verb": "reinforces"
+  },
+  {
+   "span": "noble-gases",
+   "concept": "entropy-increases-with-complexity",
+   "verb": "reinforces"
+  },
+  {
+   "span": "noble-gases",
+   "concept": "standard-molar-entropy",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "The table below shows the molar entropies for the noble gases",
+   "kind": "exercise",
+   "bloom": "Analyze",
+   "place": {
+    "at": "end"
+   },
+   "cite": "noble-gases",
+   "prompt": "<p>At a fixed temperature and pressure, the translational entropy of a monatomic ideal gas depends on the atomic mass $m$ only through a term $\\tfrac{3}{2}R\\ln m$. Use it to predict how much $S^\\circ$ rises from argon (39.9 g/mol) to krypton (83.8 g/mol), and compare the prediction with the table.</p>",
+   "answer": {
+    "type": "number",
+    "value": 9.25,
+    "unit": "J/(mol·K)",
+    "generated_by": "ai",
+    "hint": "Only the mass term differs between the two gases, so the rise is $\\tfrac{3}{2}R\\ln(m_{\\text{Kr}}/m_{\\text{Ar}})$.",
+    "solution": "<p>The rise is $\\tfrac{3}{2}R\\ln(m_{\\text{Kr}}/m_{\\text{Ar}}) = \\tfrac{3}{2}(8.314)\\ln(83.8/39.9) = (12.47)(0.742) = 9.25$ J/(mol·K). The table gives $164.08 - 154.84 = 9.24$ J/(mol·K). An atom has no rotations or vibrations, so the noble gases differ only in mass, and the whole rise comes from the closer spacing of the heavier atom's translational levels.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "entropy-increases-with-mass"
+  },
+  {
+   "exercise": "a1",
+   "concept": "standard-molar-entropy"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "ch4-co2",
+   "kind": "correction",
+   "html": "The order is the reverse: the table of Section 21.9 gives 186.25 J/(mol·K) for $\\mathrm{CH_4}$ and 213.79 J/(mol·K) for $\\mathrm{CO_2}$."
+  },
+  {
+   "id": "kr-mass",
+   "kind": "correction",
+   "html": "The molar mass of krypton is 83.8 g/mol."
+  }
+ ]
+}

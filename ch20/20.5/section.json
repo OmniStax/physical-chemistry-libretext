@@ -1,0 +1,52 @@
+{
+ "id": "20.5",
+ "module": "13719",
+ "chapter": "20",
+ "title": "The Famous Equation of Statistical Thermodynamics is S=k ln W",
+ "short": "S = k ln W",
+ "lead": "Boltzmann tied entropy to a count: the number of microstates that give the same macrostate. His formula, carved on his grave, turns that count into an entropy, here for a crystal whose molecules can point two ways.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "Adapted from Patrick E. Fleming (California State University, East Bay) and Jerry LaRue (Chapman University).",
+ "ai": {"text": [{"model": "claude-opus-5-5", "effort": "low"}], "figures": []},
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercises for this section; the one exercise, on a crystal whose molecules take four orientations, was written by AI with an AI solution. Its Bloom level and concept tags were chosen by AI. Numeric answers accept a 2% tolerance.",
+ "figures": [
+  {"id": "fig-20-5-1", "kind": "photo", "number": "20.5.1", "widths": [239, 220], "draws": []}
+ ],
+ "referents": [],
+ "coverage": [
+  {"span": "counting-microstates", "concept": "microstates-measure-dispersal", "verb": "introduces"},
+  {"span": "counting-microstates", "concept": "boltzmann-entropy", "verb": "reinforces"},
+  {"span": "counting-microstates", "concept": "distribution-weight", "verb": "reinforces"},
+  {"span": "counting-microstates", "concept": "energy-dispersal", "verb": "uses"},
+  {"span": "two-orientations", "concept": "boltzmann-entropy", "verb": "uses"}
+ ],
+ "exercises": [
+  {
+   "id": "ai1",
+   "source_id": "ex:20.5.1",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {"at": "end"},
+   "cite": "two-orientations",
+   "prompt": "<p>In a crystal of 1.00 mol of a compound, each molecule can sit in any one of four equivalent orientations, independently of the others. Find the entropy that this orientational freedom contributes, in J/K. Why is $W$ not simply 4?</p>",
+   "answer": {
+    "type": "number",
+    "value": 11.53,
+    "unit": "J/K",
+    "generated_by": "ai",
+    "hint": "Each of the $N$ molecules chooses its orientation on its own, so the counts multiply.",
+    "solution": "<p>Each of the $N = nN_A$ molecules has four choices, and the choices are independent, so the number of microstates is $W = 4^{N}$, not 4: a value of 4 would describe a single molecule. Then $\\kSent = k\\ln W = Nk\\ln 4 = nN_Ak\\ln 4 = nR\\ln 4 = (1.00\\ \\text{mol})(8.314\\ \\text{J K}^{-1}\\text{mol}^{-1})(1.386) = 11.53\\ \\text{J/K}$, twice the 5.76 J/K of the two orientations in Example 20.5.1, since $\\ln 4 = 2\\ln 2$.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {"exercise": "ai1", "concept": "boltzmann-entropy"},
+  {"exercise": "ai1", "concept": "microstates-measure-dispersal"}
+ ],
+ "footnotes": [
+  {"id": "c-co-weight", "kind": "correction", "html": "The book writes $S = nK\\ln(W)$ with $W = 2$. Each of the $N = nN_A$ molecules takes one of two orientations, so $W = 2^{N}$ and $S = k\\ln 2^{N} = nN_Ak\\ln 2 = nR\\ln 2$, which gives the 5.76 J/K printed. The $\\cot$ in the next line stands for a multiplication sign."}
+ ]
+}

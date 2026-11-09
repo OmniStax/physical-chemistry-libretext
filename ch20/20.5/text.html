@@ -1,0 +1,28 @@
+<section id="counting-microstates">
+<h2>Counting microstates</h2>
+<p>A common interpretation of <span data-concept="entropy">entropy</span> is that it is somehow a measure of chaos or randomness. There is some utility in that concept. Given that <span data-concept="entropy">entropy</span> is a measure of the <span data-concept="energy-dispersal">dispersal of energy</span> in a system, the more chaotic a system is, the greater the <span data-concept="energy-dispersal">dispersal of energy</span> will be, and thus the greater the <span data-concept="entropy">entropy</span> will be. Ludwig Boltzmann (1844 – 1906) (O'Connor &amp; Robertson, 1998) understood this concept well, and used it to derive a statistical approach to calculating <span data-concept="entropy">entropy</span>. Boltzmann proposed a method for calculating the <span data-concept="entropy">entropy</span> of a system based on the number of energetically equivalent ways a system can be constructed.</p>
+<p>Boltzmann proposed an expression, which in its modern form is:</p>
+$$ \kSent = k_b \ln(W) \tag{20.5.1} $$
+<p>$W$ is the number of available microstates in a macrostate (ensemble of systems) and can be taken as the <span data-concept="microstates-measure-dispersal">quantitative measure of energy dispersal in a macrostate</span>:</p>
+$$ W=\frac{A!}{\prod_j{a_j}!} $$
+<p>Where $a_j$ is the number of systems in the ensemble that are in state $j$ and $A$ represents the total number of systems in the ensemble:</p>
+$$ A=\sum_j{a_j} $$
+<p>Equation 20.5.1 is a rather famous equation etched on Boltzmann’s grave marker in commemoration of his profound contributions to the science of thermodynamics (Figure 20.5.1).</p>
+<figure class="photo" id="fig-20-5-1" data-figure="20.5.1">
+  <img src="/media/ch20/113517-561.jpg" alt="Black and white portrait of a man with glasses and a full beard, wearing a suit with a high collar." data-width="239"><img src="/media/ch20/113518-562.jpg" alt="A stone monument featuring a bust of a man and an engraved plaque with text, surrounded by greenery." data-width="220">
+  <figcaption><span class="eyebrow">Figure 20.5.1</span><span>Ludwig Boltzmann (1844 - 1906)</span></figcaption>
+</figure>
+</section>
+
+<section id="two-orientations">
+<h2>An entropy from two orientations</h2>
+<div class="example" id="ex-20-5-1">
+<h3>Example 20.5.1</h3>
+<p>Calculate the <span data-concept="entropy">entropy</span> of a carbon monoxide crystal, containing <span data-type="amount">1.00 mol</span> of $\mathrm{CO}$, and assuming that the molecules are randomly oriented in one of two equivalent orientations.</p>
+<p><strong>Solution</strong>:</p>
+<p>Using the <span data-concept="boltzmann-entropy">Boltzmann formula</span> (Equation 20.5.1):</p>
+$$ \kSent = nK \ln (W) $$
+<p>And using $W = 2$, the calculation is straightforward.<sup class="fn" data-note="c-co-weight"></sup></p>
+$$ \begin{aligned} \kSent &= \left(1.00 \, mol \cot \dfrac{6.022\times 10^{23}}{1\,mol} \right) (1.38 \times 10^{-23} J/K) \ln 2 \\ &= 5.76\, J/K \end{aligned} $$
+</div>
+</section>

@@ -1240,3 +1240,28 @@ Tool fixes: `lt2md.py` reads an image whose "Figure N.M.K: caption" is the next 
 23.1 has the same); `md2html.py` turns a dead-path image into a comment and reads `\end {align*}`.
 Chapters 1–18 reconverted to scratch: 210 source.md byte-identical; 190 drafts identical with the
 old and new `md2html.py`. `check:content`: no errors, no warnings from Chapter 19.
+
+## Chapter 22 prep · 2026-11-08
+
+Prep only, no section built. Chapter 22 prints no images (`--media 22` fetched none) and its
+landing page no text, so no `intro/` (Chapter 4's precedent); no 22.S, no 22.E. Converted 22.1–22.8;
+wrote `ch22/exploration.md`, `ch22/config.md` (agreed on Chapter 1's terms), `ch22/chapter.json` (8
+sections, 84 variables) and merged `ch22/book-rows.json`: no new type, 21 symbols (17 with macros),
+41 concepts, 67 edges (Hasse-checked against the book with Chapters 19–21 merged), 43 forms. 21.1's
+`fundamental-equation-u`, `natural-variables-u`, `fundamental-equation-h` and 19.4's
+`exact-and-inexact-differentials` reused (Chapter 22's own versions withdrawn before the final
+merge). Drafts made for all eight sections.
+
+Found: 6 exercise boxes, all in 22.5 (4 keyed); routed 22.5.3 → 22.3, 22.5.4 → 22.4, 22.5.5 →
+23.3; 9 AI exercises proposed. Three Sims proposed, all still: ΔG = ΔH − TΔS crossing zero at 618 K
+(22.2), φ against P for the book's van der Waals gases (22.8), G − H(0) of benzene per phase (22.7,
+needs literature data). Eight derivation records. Corrections checked: 22.2's −PdV, 22.3's dw and
+Example 22.3.1's target, 22.4's (∂G/∂P)_T = −V, 22.5's cross derivative; the fugacity coefficients
+of N₂ from 16.2's a and b computed here.
+
+Literature from memory, **unchecked**: Lewis introduced the fugacity in 1901, not 1905 (footnote
+only after checking); benzene's T_fus 278.7 K, Δ_fus H 9.87 kJ/mol, T_b 353.2 K, Δ_vap H 30.7 kJ/mol,
+C̄_P(l) ≈ 136 and C̄_P(g) ≈ 82 J/(K mol) (only if `sim-gibbs-temperature` is built).
+
+No tool changes. `colours:default` not run (no type added; the merge reports the colours stale
+for Chapter 20's `entropy`). `check:content`: no errors, no warnings.

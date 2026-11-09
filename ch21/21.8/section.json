@@ -1,0 +1,84 @@
+{
+ "id": "21.8",
+ "module": "14485",
+ "chapter": "21",
+ "title": "Spectroscopic Entropies sometimes disgree with Calorimetric Entropies",
+ "short": "Spectroscopic and calorimetric entropies",
+ "lead": "The standard entropy of a gas can be measured by calorimetry or calculated from spectroscopic data. For a few substances, such as ice and carbon monoxide, the two values disagree.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": []
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercise on this section, so the exercise, its solution, Bloom level and concept tags are written by AI. The numeric answer accepts a 2% tolerance.",
+ "figures": [],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "calorimetric-and-spectroscopic",
+   "concept": "spectroscopic-entropy",
+   "verb": "introduces"
+  },
+  {
+   "span": "calorimetric-and-spectroscopic",
+   "concept": "residual-entropy-discrepancy",
+   "verb": "introduces"
+  },
+  {
+   "span": "calorimetric-and-spectroscopic",
+   "concept": "residual-entropy",
+   "verb": "reinforces"
+  },
+  {
+   "span": "calorimetric-and-spectroscopic",
+   "concept": "third-law",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "carbon monoxide",
+   "kind": "exercise",
+   "bloom": "Analyze",
+   "place": {
+    "at": "end"
+   },
+   "cite": "calorimetric-and-spectroscopic",
+   "prompt": "<p>The residual entropy of solid carbon monoxide is 4.4 J/(mol·K) (Section 21.2). If each molecule could sit in its site in $W$ equally likely ways, the residual entropy would be $R\\ln W$. Find the $W$ that gives 4.4 J/(mol·K), and say what it tells you about the two orientations, CO and OC.</p>",
+   "answer": {
+    "type": "number",
+    "value": 1.7,
+    "generated_by": "ai",
+    "hint": "Solve $R\\ln W = 4.4$ J/(mol·K) for $W$ and compare it with 2.",
+    "solution": "<p>$R\\ln W = 4.4$ J/(mol·K) gives $\\ln W = 4.4/8.314 = 0.529$, so $W = e^{0.529} = 1.70$. Two equally likely orientations would give $W = 2$ and $R\\ln 2 = 5.76$ J/(mol·K). A value below 2 means the solid froze with one orientation favored, so it holds less disorder than a fifty-fifty mix of CO and OC.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "residual-entropy-discrepancy"
+  },
+  {
+   "exercise": "a1",
+   "concept": "residual-entropy"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "third-law",
+   "kind": "correction",
+   "html": "The third law speaks only of perfect crystals. A substance frozen into many configurations is not one, so the law asks no zero of it, and the entropy it keeps at 0 K is its residual entropy."
+  }
+ ]
+}

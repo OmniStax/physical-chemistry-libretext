@@ -286,3 +286,14 @@ app's `strict: false` (a strict parse warns), so no change. Notes for builders: 
 unnumbered exercise `e?` / `exr:?` (rename); 22.2's Summary (table, Note list and last sentence)
 lands in `summary_html`; 22.5's References come through as a block (to `notes`); 22.7's
 `<h3>`s sit in the opening block before the first `<h2>`.
+
+## Open questions (*orchestrator*)
+
+1. **`sim-gibbs-temperature`** needs benzene's transition data and heat capacities from the
+   literature (the page gives none and points at a figure it does not print). Build it with NIST
+   WebBook values named in the caption and flagged in `LOG.md`, or drop it?
+2. **22.5.5's key** ("See the third outside link", no link printed): treat as unkeyed (AI solution,
+   the printed pointer kept with a footnote under the card), as counted here?
+3. **μ's type**: the chemical potential, Ḡ and μ̄ are proposed as `energy` (molar variants of G),
+   though the book gave molar volume a type of its own. Keep, or declare a `molar-energy` type (and
+   run `colours:default`)?
