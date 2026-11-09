@@ -72,3 +72,12 @@ Only what Chapters 3–25's decisions do not settle:
 ## Decisions taken by the orchestrator
 
 None yet.
+
+## Decisions taken by the orchestrator (2026-11-09)
+
+- **No intro page.** 26.13 isn't built (already 1.9's card `e3`).
+- **26.3's DeVoe tags** (11.8.20)–(11.8.31) are renumbered into the page's 26.3.K sequence, as Chapter 12 did with Vallance. The prose's "Eq. 11.8.23" links to the new number, and a footnote names DeVoe's numbering.
+- **Example 26.8.1** stays as printed, with one footnote under it giving the corrected factors and K_c = 7.2×10¹⁵.
+- **Image names**: `26.7/source.md` keeps `van't`; the media and pages use `vant`.
+- **Sims**: the G(ξ) figure (26.4), `sim-q-toward-k` (26.5) and `sim-van-t-hoff` (26.7). Not built: the optional `sim-k-from-q` and the K-in-concentrations derivation.
+- **Captions** have no fixed length.
