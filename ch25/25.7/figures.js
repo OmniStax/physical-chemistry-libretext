@@ -35,7 +35,7 @@ const dav = (s, zz) => -0.5 * zz * (s / (1 + s) - 0.30 * s * s);
     const gl = Math.pow(10, yl), ge = Math.pow(10, ye), gd = Math.pow(10, yd);
     topline(ctx, `At $\\kIion = ${fmt(I.v, 3)}$ mol/L, $\\gamma_\\pm$ is ${fmt(gl, 3)} by the limiting law, ${fmt(ge, 3)} by the extended equation and ${fmt(gd, 3)} by Davies.`);
     const box = { l: 150, r: W - 60, t: 120, b: 500 };
-    const ax = axes(ctx, box, [0, 0.7], [-0.6, 0], { nx: 7, ny: 6, xl: 'square root of the ionic strength √I (mol/L)^½', yl: 'log γ±' });
+    const ax = axes(ctx, box, [0, 0.7], [-0.6, 0], { nx: 7, ny: 6, xl: 'square root of the ionic strength √I', yl: 'log γ±' });
     plot(ctx, ax, (x) => lim(x, zz), cL, { w: 4, dash: [10, 10] });
     plot(ctx, ax, (x) => ext(x, zz, av), cE, { w: 5 });
     plot(ctx, ax, (x) => dav(x, zz), cD, { w: 5 });

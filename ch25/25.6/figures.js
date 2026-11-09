@@ -92,12 +92,13 @@ function rng(seed) { let a = seed >>> 0; return () => { a = (a + 0x6D2B79F5) >>>
     const rl = Math.min(deb * PX, 235), ang = -Math.PI / 4;
     text(ctx, `1/κ = ${fmt(deb, deb < 1 ? 2 : 1)} nm`, Math.min(cx + rl * Math.cos(ang) + 14, fr.r - 150), Math.max(cyy + rl * Math.sin(ang) - 10, fr.t + 30), C('length'), { size: 22, weight: 600, bg: true });
     /* scale bar */
-    line(ctx, fr.l, fr.b + 32, fr.l + 5 * PX, fr.b + 32, PAL.ink, 3);
-    line(ctx, fr.l, fr.b + 24, fr.l, fr.b + 40, PAL.ink, 2); line(ctx, fr.l + 5 * PX, fr.b + 24, fr.l + 5 * PX, fr.b + 40, PAL.ink, 2);
-    text(ctx, '5 nm', fr.l + 5 * PX + 14, fr.b + 39, PAL.ink, { size: 20 });
-    F.legend(ctx, { l: fr.l + 160, r: fr.r, t: fr.b + 12, b: fr.b + 56 }, [
-      { s: `${ion.catN} cation`, draw: (c, x, y) => dot(c, x + 22, y, F.el(ion.cat), true, 8) },
-      { s: `${ion.anN} anion`, draw: (c, x, y) => dot(c, x + 22, y, F.el(ion.an), true, 8) },
+    const sx = fr.l + 20, sy = fr.b - 24;
+    ctx.save(); ctx.fillStyle = PAL.panel; ctx.fillRect(sx - 8, sy - 30, 5 * PX + 16, 46); ctx.restore();
+    line(ctx, sx, sy, sx + 5 * PX, sy, PAL.ink, 4);
+    text(ctx, '5 nm', sx + 2.5 * PX, sy - 10, PAL.ink, { size: 20, align: 'center' });
+    F.legend(ctx, { l: fr.l, r: fr.r, t: fr.b + 8, b: fr.b + 58 }, [
+      { s: `${ion.catN} cation`, kind: 'swatch', color: F.el(ion.cat) },
+      { s: `${ion.anN} anion`, kind: 'swatch', color: F.el(ion.an) },
     ], { corner: 'br', row: true, size: 20, panel: false });
     /* the graph: share of the central charge cancelled within r (y fixed 0 to 1, x fixed 0 to 12 nm) */
     const box = { l: 720, r: W - 50, t: 130, b: 540 };

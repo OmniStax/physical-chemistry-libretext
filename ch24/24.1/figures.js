@@ -49,7 +49,8 @@ const sim = (id, H) => F.sim(root, id, H);
     /* the two one-phase regions, named where they are widest */
     const xm = p.P1 > p.P2 ? 0.25 : 0.75;
     text(ctx, 'liquid', a.X(xm), a.Y(Math.min(p.top * 0.95, bubble(p)(xm) + 0.18 * p.top)), PAL.muted, { size: 20, align: 'center' });
-    text(ctx, 'vapor', a.X(1 - xm), a.Y(dew(p)(1 - xm) * 0.45), PAL.muted, { size: 20, align: 'center' });
+    const vx = a.X(1 - xm), vy = a.Y(dew(p)(1 - xm) * 0.45);
+    text(ctx, 'vapor', vx, vy, PAL.muted, { size: 20, align: 'center' });
     hits.length = 0;
     const X = a.X(z), Yp = a.Y(pr);
     line(ctx, X, Yp, X, B.b, alpha(PAL.ink, 0.4), 2, [4, 8]);
@@ -64,7 +65,7 @@ const sim = (id, H) => F.sim(root, id, H);
     }
     dot(ctx, X, Yp, PAL.ink, true, 8);
     hits.push({ x: X, y: Yp, r: 14, name: `overall composition x₁ = ${fmt(z, 2)} at ${f(pr)} ${u}` });
-    legend(ctx, a, [{ s: 'liquid line (24.1.4)', color: C('pressure'), w: 5, f: bubble(p) }, { s: 'vapor line (24.1.6)', color: C('pressure'), w: 4, dash: [10, 10], f: dew(p) }, { s: 'liquid + vapor', color: alpha(PAL.ink, 0.15), kind: 'swatch' }], { avoid: [{ l: X - 20, r: X + 20, t: Yp - 20, b: Yp + 20 }, { l: B.l, r: B.l + 260, t: B.t, b: B.t + 44 }, { l: B.r - 260, r: B.r, t: B.t, b: B.t + 44 }] });
+    legend(ctx, a, [{ s: 'liquid line (24.1.4)', color: C('pressure'), w: 5, f: bubble(p) }, { s: 'vapor line (24.1.6)', color: C('pressure'), w: 4, dash: [10, 10], f: dew(p) }, { s: 'liquid + vapor', color: alpha(PAL.ink, 0.15), kind: 'swatch' }], { avoid: [{ l: X - 20, r: X + 20, t: Yp - 20, b: Yp + 20 }, { l: B.l, r: B.l + 260, t: B.t, b: B.t + 44 }, { l: B.r - 260, r: B.r, t: B.t, b: B.t + 44 }, { l: vx - 50, r: vx + 50, t: vy - 20, b: vy + 20 }] });
     const U = `\\ \\text{${u}}`;
     if (inGap) {
       const x2 = 1 - chi, y2 = 1 - y, xa = 1 - z;

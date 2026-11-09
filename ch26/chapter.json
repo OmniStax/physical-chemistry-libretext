@@ -1,0 +1,1100 @@
+{
+  "id": "26",
+  "dir": "ch26",
+  "title": "Chemical Equilibrium",
+  "sections": [
+    {
+      "id": "26.1",
+      "module": "14522",
+      "title": "Equilibrium Results when Gibbs Energy is Minimized",
+      "slug": "26:_Chemical_Equilibrium/26.01:_Equilibrium_Results_when_Gibbs_Energy_is_Minimized"
+    },
+    {
+      "id": "26.2",
+      "module": "14523",
+      "title": "An Equilibrium Constant is a Function of Temperature Only",
+      "slug": "26:_Chemical_Equilibrium/26.02:_An_Equilibrium_Constant_is_a_Function_of_Temperature_Only"
+    },
+    {
+      "id": "26.3",
+      "module": "14524",
+      "title": "Standard Gibbs Energies of Formation Can Be Used to Calculate Equilibrium Constants",
+      "slug": "26:_Chemical_Equilibrium/26.03:_Standard_Gibbs_Energies_of_Formation_Can_Be_Used_to_Calculate_Equilibrium_Constants"
+    },
+    {
+      "id": "26.4",
+      "module": "14525",
+      "title": "Gibbs Energy of a Reaction vs. Extent of Reaction is a Minimum at Equilibrium",
+      "slug": "26:_Chemical_Equilibrium/26.04:_Gibbs_Energy_of_a_Reaction_vs._Extent_of_Reaction_is_a_Minimum_at_Equilibrium"
+    },
+    {
+      "id": "26.5",
+      "module": "14526",
+      "title": "Reaction Quotient and Equilibrium Constant Ratio Determines Reaction Direction",
+      "slug": "26:_Chemical_Equilibrium/26.05:_Reaction_Quotient_and_Equilibrium_Constant_Ratio_Determines_Reaction_Direction"
+    },
+    {
+      "id": "26.6",
+      "module": "14527",
+      "title": "The Sign of ΔG and not ΔG° Determines the Direction of Reaction Spontaneity",
+      "slug": "26:_Chemical_Equilibrium/26.06:_The_Sign_of_G_and_not_G_Determines_the_Direction_of_Reaction_Spontaneity"
+    },
+    {
+      "id": "26.7",
+      "module": "14528",
+      "title": "The van 't Hoff Equation",
+      "slug": "26:_Chemical_Equilibrium/26.07:_The_van_'t_Hoff_Equation"
+    },
+    {
+      "id": "26.8",
+      "module": "14529",
+      "title": "Equilibrium Constants in Terms of Partition Functions",
+      "slug": "26:_Chemical_Equilibrium/26.08:_Equilibrium_Constants_in_Terms_of_Partition_Functions"
+    },
+    {
+      "id": "26.9",
+      "module": "14530",
+      "title": "Molecular Partition Functions and Related Thermodynamic Data Are Extensively Tabulated",
+      "slug": "26:_Chemical_Equilibrium/26.09:_Molecular_Partition_Functions_and_Related_Thermodynamic_Data_Are_Extensively_Tabulated"
+    },
+    {
+      "id": "26.10",
+      "module": "14531",
+      "title": "Real Gases Are Expressed in Terms of Partial Fugacities",
+      "slug": "26:_Chemical_Equilibrium/26.10:_Real_Gases_Are_Expressed_in_Terms_of_Partial_Fugacities"
+    },
+    {
+      "id": "26.11",
+      "module": "14532",
+      "title": "Thermodynamic Equilibrium Constants Are Expressed in Terms of Activities",
+      "slug": "26:_Chemical_Equilibrium/26.11:_Thermodynamic_Equilibrium_Constants_Are_Expressed_in_Terms_of_Activities"
+    },
+    {
+      "id": "26.12",
+      "module": "14533",
+      "title": "Activities are Important for Ionic Species",
+      "slug": "26:_Chemical_Equilibrium/26.12:_Activities_are_Important_for_Ionic_Species"
+    }
+  ],
+  "variables": [
+    {
+      "sym": "xi",
+      "concept": "extent-of-reaction",
+      "meaning": "the extent of reaction",
+      "unit": "mol",
+      "section": "26.1"
+    },
+    {
+      "sym": "xi_eq",
+      "type": "amount",
+      "meaning": "the extent of reaction at equilibrium",
+      "unit": "mol",
+      "section": "26.1"
+    },
+    {
+      "sym": "nu_A",
+      "meaning": "the stoichiometric coefficient of A, printed v_A",
+      "section": "26.1"
+    },
+    {
+      "sym": "nu_B",
+      "meaning": "the stoichiometric coefficient of B, printed v_B",
+      "section": "26.1"
+    },
+    {
+      "sym": "nu_Y",
+      "meaning": "the stoichiometric coefficient of Y, printed v_Y",
+      "section": "26.1"
+    },
+    {
+      "sym": "nu_Z",
+      "meaning": "the stoichiometric coefficient of Z, printed v_Z",
+      "section": "26.1"
+    },
+    {
+      "sym": "nu_i_st",
+      "meaning": "the stoichiometric coefficient of species i, printed v_i",
+      "section": "26.1"
+    },
+    {
+      "sym": "n_i0",
+      "type": "amount",
+      "meaning": "the amount of species i before the reaction",
+      "unit": "mol",
+      "section": "26.1"
+    },
+    {
+      "sym": "n_A",
+      "meaning": "the amount of A",
+      "unit": "mol",
+      "section": "26.1"
+    },
+    {
+      "sym": "q_xi",
+      "meaning": "a measured quantity that depends linearly on ξ",
+      "section": "26.1"
+    },
+    {
+      "sym": "G",
+      "meaning": "the Gibbs energy of the reacting system",
+      "unit": "J",
+      "section": "26.1"
+    },
+    {
+      "sym": "mu_i",
+      "meaning": "the chemical potential of species i",
+      "unit": "J/mol",
+      "section": "26.1"
+    },
+    {
+      "sym": "n_i",
+      "meaning": "the amount of species i",
+      "unit": "mol",
+      "section": "26.1"
+    },
+    {
+      "sym": "Delta_rG",
+      "concept": "reaction-gibbs-energy",
+      "meaning": "the Gibbs energy of reaction, (∂G/∂ξ)_{T,P}",
+      "unit": "J/mol",
+      "section": "26.1"
+    },
+    {
+      "sym": "Delta_rG_std",
+      "concept": "standard-reaction-gibbs-energy",
+      "meaning": "the standard Gibbs energy of reaction",
+      "unit": "J/mol",
+      "section": "26.1"
+    },
+    {
+      "sym": "mu_i_o",
+      "meaning": "the standard chemical potential of species i",
+      "unit": "J/mol",
+      "section": "26.1"
+    },
+    {
+      "sym": "P_i",
+      "type": "pressure",
+      "meaning": "the partial pressure of species i",
+      "unit": "bar",
+      "section": "26.1"
+    },
+    {
+      "sym": "P_i_std",
+      "meaning": "the standard pressure of species i, usually 1 bar",
+      "unit": "bar",
+      "section": "26.1"
+    },
+    {
+      "sym": "P_A",
+      "meaning": "the partial pressure of A",
+      "unit": "bar",
+      "section": "26.1"
+    },
+    {
+      "sym": "P_Y",
+      "meaning": "the partial pressure of Y",
+      "unit": "bar",
+      "section": "26.1"
+    },
+    {
+      "sym": "P_Z",
+      "meaning": "the partial pressure of Z",
+      "unit": "bar",
+      "section": "26.1"
+    },
+    {
+      "sym": "P_B",
+      "meaning": "the partial pressure of B",
+      "unit": "bar",
+      "section": "26.1"
+    },
+    {
+      "sym": "Q_r",
+      "concept": "reaction-quotient",
+      "meaning": "the reaction quotient, dimensionless",
+      "section": "26.1"
+    },
+    {
+      "sym": "Q_P",
+      "meaning": "the reaction quotient in pressures, with dimensions",
+      "section": "26.1"
+    },
+    {
+      "sym": "Q_std",
+      "meaning": "the quotient of standard pressures that cancels the dimensions of Q_P",
+      "section": "26.1"
+    },
+    {
+      "sym": "R",
+      "meaning": "the gas constant",
+      "unit": "J/(mol K)",
+      "section": "26.1"
+    },
+    {
+      "sym": "T",
+      "meaning": "the temperature",
+      "unit": "K",
+      "section": "26.1"
+    },
+    {
+      "sym": "K_eq",
+      "concept": "equilibrium-constant",
+      "meaning": "the equilibrium constant",
+      "section": "26.2"
+    },
+    {
+      "sym": "Delta_rG",
+      "concept": "reaction-gibbs-energy",
+      "meaning": "the Gibbs energy of reaction",
+      "unit": "J/mol",
+      "section": "26.2"
+    },
+    {
+      "sym": "Delta_rG_std",
+      "concept": "standard-reaction-gibbs-energy",
+      "meaning": "the standard Gibbs energy of reaction",
+      "unit": "J/mol",
+      "section": "26.2"
+    },
+    {
+      "sym": "Delta_rH_std",
+      "meaning": "the standard enthalpy of reaction",
+      "unit": "J/mol",
+      "section": "26.2"
+    },
+    {
+      "sym": "Delta_fH_std",
+      "meaning": "the standard enthalpy of formation",
+      "unit": "kJ/mol",
+      "section": "26.2"
+    },
+    {
+      "sym": "R",
+      "meaning": "the gas constant",
+      "unit": "J/(mol K)",
+      "section": "26.2"
+    },
+    {
+      "sym": "T",
+      "meaning": "the temperature",
+      "unit": "K",
+      "section": "26.2"
+    },
+    {
+      "sym": "T_1",
+      "meaning": "the temperature at which K is K(T₁)",
+      "unit": "K",
+      "section": "26.2"
+    },
+    {
+      "sym": "T_2",
+      "meaning": "the temperature at which K is K(T₂)",
+      "unit": "K",
+      "section": "26.2"
+    },
+    {
+      "sym": "P",
+      "meaning": "the total pressure",
+      "unit": "bar",
+      "section": "26.2"
+    },
+    {
+      "sym": "xi_eq",
+      "type": "amount",
+      "meaning": "the extent of the dissociation at equilibrium",
+      "unit": "mol",
+      "section": "26.2"
+    },
+    {
+      "sym": "xi",
+      "concept": "extent-of-reaction",
+      "meaning": "the extent of reaction",
+      "unit": "mol",
+      "section": "26.2"
+    },
+    {
+      "sym": "P_A",
+      "meaning": "the partial pressure of A",
+      "unit": "bar",
+      "section": "26.2"
+    },
+    {
+      "sym": "P_B",
+      "meaning": "the partial pressure of B",
+      "unit": "bar",
+      "section": "26.2"
+    },
+    {
+      "sym": "P_C",
+      "meaning": "the partial pressure of C",
+      "unit": "bar",
+      "section": "26.2"
+    },
+    {
+      "sym": "n_A",
+      "meaning": "the amount of A",
+      "unit": "mol",
+      "section": "26.2"
+    },
+    {
+      "sym": "c",
+      "concept": "molarity",
+      "meaning": "the molarity, the molar amount per unit volume",
+      "unit": "mol/L",
+      "section": "26.2"
+    },
+    {
+      "sym": "V",
+      "meaning": "the volume",
+      "unit": "L",
+      "section": "26.2"
+    },
+    {
+      "sym": "n_i",
+      "meaning": "the amount of gas",
+      "unit": "mol",
+      "section": "26.2"
+    },
+    {
+      "sym": "nu_A",
+      "meaning": "the stoichiometric coefficient of A, printed vA",
+      "section": "26.2"
+    },
+    {
+      "sym": "nu_B",
+      "meaning": "the stoichiometric coefficient of B, printed vB",
+      "section": "26.2"
+    },
+    {
+      "sym": "nu_Y",
+      "meaning": "the stoichiometric coefficient of Y, printed vY",
+      "section": "26.2"
+    },
+    {
+      "sym": "nu_Z",
+      "meaning": "the stoichiometric coefficient of Z, printed vZ",
+      "section": "26.2"
+    },
+    {
+      "sym": "K_eq",
+      "concept": "equilibrium-constant",
+      "meaning": "the thermodynamic equilibrium constant",
+      "section": "26.3"
+    },
+    {
+      "sym": "Delta_rG",
+      "concept": "reaction-gibbs-energy",
+      "meaning": "the molar reaction Gibbs energy",
+      "unit": "J/mol",
+      "section": "26.3"
+    },
+    {
+      "sym": "Delta_rG_std",
+      "concept": "standard-reaction-gibbs-energy",
+      "meaning": "the standard molar reaction Gibbs energy",
+      "unit": "J/mol",
+      "section": "26.3"
+    },
+    {
+      "sym": "Delta_fG_std",
+      "concept": "standard-gibbs-energy-of-formation",
+      "meaning": "the standard molar Gibbs energy of formation",
+      "unit": "J/mol",
+      "section": "26.3"
+    },
+    {
+      "sym": "Delta_fH_std",
+      "meaning": "the standard molar enthalpy of formation",
+      "unit": "J/mol",
+      "section": "26.3"
+    },
+    {
+      "sym": "Delta_rH",
+      "meaning": "the molar reaction enthalpy",
+      "unit": "J/mol",
+      "section": "26.3"
+    },
+    {
+      "sym": "Delta_rH_std",
+      "meaning": "the standard molar reaction enthalpy",
+      "unit": "J/mol",
+      "section": "26.3"
+    },
+    {
+      "sym": "Delta_rS",
+      "meaning": "the molar reaction entropy",
+      "unit": "J/(K mol)",
+      "section": "26.3"
+    },
+    {
+      "sym": "Delta_rS_std",
+      "meaning": "the standard molar reaction entropy",
+      "unit": "J/(K mol)",
+      "section": "26.3"
+    },
+    {
+      "sym": "S_std_i",
+      "meaning": "the standard molar entropy of species i",
+      "unit": "J/(K mol)",
+      "section": "26.3"
+    },
+    {
+      "sym": "S_m_std",
+      "meaning": "the standard molar entropy of a substance or ion",
+      "unit": "J/(K mol)",
+      "section": "26.3"
+    },
+    {
+      "sym": "mu_i",
+      "meaning": "the chemical potential of species i",
+      "unit": "J/mol",
+      "section": "26.3"
+    },
+    {
+      "sym": "nu_i_st",
+      "meaning": "the stoichiometric number of species i, negative for a reactant",
+      "section": "26.3"
+    },
+    {
+      "sym": "z_plus",
+      "meaning": "the charge number of the cation",
+      "section": "26.3"
+    },
+    {
+      "sym": "z_minus",
+      "meaning": "the charge number of the anion",
+      "section": "26.3"
+    },
+    {
+      "sym": "R",
+      "meaning": "the gas constant",
+      "unit": "J/(mol K)",
+      "section": "26.3"
+    },
+    {
+      "sym": "T",
+      "meaning": "the temperature",
+      "unit": "K",
+      "section": "26.3"
+    },
+    {
+      "sym": "xi",
+      "concept": "extent-of-reaction",
+      "meaning": "the extent of reaction",
+      "unit": "mol",
+      "section": "26.4"
+    },
+    {
+      "sym": "xi_eq",
+      "concept": "equilibrium-position",
+      "meaning": "the extent at the equilibrium position",
+      "unit": "mol",
+      "section": "26.4"
+    },
+    {
+      "sym": "G",
+      "meaning": "the Gibbs energy of the reacting system",
+      "unit": "J",
+      "section": "26.4"
+    },
+    {
+      "sym": "Delta_rG",
+      "concept": "reaction-gibbs-energy",
+      "meaning": "the Gibbs energy of reaction",
+      "unit": "J/mol",
+      "section": "26.4"
+    },
+    {
+      "sym": "Delta_rG_std",
+      "concept": "standard-reaction-gibbs-energy",
+      "meaning": "the standard Gibbs free energy of reaction",
+      "unit": "J/mol",
+      "section": "26.4"
+    },
+    {
+      "sym": "Delta_mix_G",
+      "meaning": "the Gibbs free energy of mixing of A and B",
+      "unit": "J",
+      "section": "26.4"
+    },
+    {
+      "sym": "chi_A",
+      "meaning": "the mole fraction of A",
+      "section": "26.4"
+    },
+    {
+      "sym": "chi_B",
+      "meaning": "the mole fraction of B",
+      "section": "26.4"
+    },
+    {
+      "sym": "P_A",
+      "meaning": "the partial pressure of A",
+      "unit": "bar",
+      "section": "26.4"
+    },
+    {
+      "sym": "P_B",
+      "meaning": "the partial pressure of B",
+      "unit": "bar",
+      "section": "26.4"
+    },
+    {
+      "sym": "P_std",
+      "meaning": "the standard pressure, 1 bar",
+      "unit": "bar",
+      "section": "26.4"
+    },
+    {
+      "sym": "K_eq",
+      "concept": "equilibrium-constant",
+      "meaning": "the equilibrium constant, P_B/P_A at equilibrium",
+      "section": "26.4"
+    },
+    {
+      "sym": "R",
+      "meaning": "the gas constant",
+      "unit": "J/(mol K)",
+      "section": "26.4"
+    },
+    {
+      "sym": "T",
+      "meaning": "the temperature",
+      "unit": "K",
+      "section": "26.4"
+    },
+    {
+      "sym": "n_i",
+      "meaning": "the total amount of gas",
+      "unit": "mol",
+      "section": "26.4"
+    },
+    {
+      "sym": "Delta_rG",
+      "concept": "reaction-gibbs-energy",
+      "meaning": "the Gibbs energy of reaction",
+      "unit": "J/mol",
+      "section": "26.5"
+    },
+    {
+      "sym": "Delta_rG_std",
+      "concept": "standard-reaction-gibbs-energy",
+      "meaning": "the standard Gibbs energy of reaction",
+      "unit": "J/mol",
+      "section": "26.5"
+    },
+    {
+      "sym": "Q_r",
+      "concept": "reaction-quotient",
+      "meaning": "the reaction quotient",
+      "section": "26.5"
+    },
+    {
+      "sym": "K_eq",
+      "concept": "equilibrium-constant",
+      "meaning": "the equilibrium constant",
+      "section": "26.5"
+    },
+    {
+      "sym": "R",
+      "meaning": "the gas constant",
+      "unit": "J/(mol K)",
+      "section": "26.5"
+    },
+    {
+      "sym": "T",
+      "meaning": "the temperature",
+      "unit": "K",
+      "section": "26.5"
+    },
+    {
+      "sym": "Delta_rG",
+      "concept": "reaction-gibbs-energy",
+      "meaning": "the Gibbs energy of reaction at the actual composition",
+      "unit": "kJ/mol",
+      "section": "26.6"
+    },
+    {
+      "sym": "Delta_rG_std",
+      "concept": "standard-reaction-gibbs-energy",
+      "meaning": "the standard state Gibbs energy of reaction",
+      "unit": "kJ/mol",
+      "section": "26.6"
+    },
+    {
+      "sym": "Q_r",
+      "concept": "reaction-quotient",
+      "meaning": "the reaction quotient",
+      "section": "26.6"
+    },
+    {
+      "sym": "K_eq",
+      "concept": "equilibrium-constant",
+      "meaning": "the equilibrium constant",
+      "section": "26.6"
+    },
+    {
+      "sym": "P_i",
+      "type": "pressure",
+      "meaning": "the partial pressure of gas i",
+      "unit": "bar",
+      "section": "26.6"
+    },
+    {
+      "sym": "R",
+      "meaning": "the gas constant",
+      "unit": "J/(mol K)",
+      "section": "26.6"
+    },
+    {
+      "sym": "T",
+      "meaning": "the temperature",
+      "unit": "K",
+      "section": "26.6"
+    },
+    {
+      "sym": "K_eq",
+      "concept": "equilibrium-constant",
+      "meaning": "the equilibrium constant",
+      "section": "26.7"
+    },
+    {
+      "sym": "Delta_G_std",
+      "meaning": "the standard Gibbs energy of reaction, printed ΔG° and Δ_rG°",
+      "unit": "J/mol",
+      "section": "26.7"
+    },
+    {
+      "sym": "Delta_H_std",
+      "meaning": "the standard enthalpy of reaction, printed ΔH° and Δ_rH°",
+      "unit": "J/mol",
+      "section": "26.7"
+    },
+    {
+      "sym": "Delta_S_std",
+      "meaning": "the standard entropy of reaction, printed ΔS° and Δ_rS°",
+      "unit": "J/(K mol)",
+      "section": "26.7"
+    },
+    {
+      "sym": "T_1",
+      "meaning": "the temperature at which K is K(T₁)",
+      "unit": "K",
+      "section": "26.7"
+    },
+    {
+      "sym": "T_2",
+      "meaning": "the temperature at which K is K(T₂)",
+      "unit": "K",
+      "section": "26.7"
+    },
+    {
+      "sym": "R",
+      "meaning": "the gas constant",
+      "unit": "J/(mol K)",
+      "section": "26.7"
+    },
+    {
+      "sym": "T",
+      "meaning": "the temperature",
+      "unit": "K",
+      "section": "26.7"
+    },
+    {
+      "sym": "nu_A",
+      "meaning": "the stoichiometric coefficient of A",
+      "section": "26.8"
+    },
+    {
+      "sym": "nu_B",
+      "meaning": "the stoichiometric coefficient of B",
+      "section": "26.8"
+    },
+    {
+      "sym": "nu_C",
+      "meaning": "the stoichiometric coefficient of C",
+      "section": "26.8"
+    },
+    {
+      "sym": "nu_D",
+      "meaning": "the stoichiometric coefficient of D",
+      "section": "26.8"
+    },
+    {
+      "sym": "K_c",
+      "concept": "equilibrium-constant-partition-functions",
+      "meaning": "the equilibrium constant in concentrations",
+      "section": "26.8"
+    },
+    {
+      "sym": "mu_i",
+      "meaning": "the chemical potential of species i",
+      "unit": "J",
+      "section": "26.8"
+    },
+    {
+      "sym": "A",
+      "concept": "helmholtz-energy",
+      "meaning": "the Helmholtz energy",
+      "unit": "J",
+      "section": "26.8"
+    },
+    {
+      "sym": "N_i",
+      "meaning": "the number of molecules of species i",
+      "section": "26.8"
+    },
+    {
+      "sym": "Q_sys",
+      "meaning": "the total partition function",
+      "section": "26.8"
+    },
+    {
+      "sym": "q_i",
+      "meaning": "the molecular partition function of species i",
+      "section": "26.8"
+    },
+    {
+      "sym": "k_B",
+      "meaning": "Boltzmann's constant",
+      "unit": "J/K",
+      "section": "26.8"
+    },
+    {
+      "sym": "T",
+      "meaning": "the temperature",
+      "unit": "K",
+      "section": "26.8"
+    },
+    {
+      "sym": "V",
+      "meaning": "the volume",
+      "unit": "m³",
+      "section": "26.8"
+    },
+    {
+      "sym": "lambda_x",
+      "meaning": "the progress variable of the reaction, dN_j = ν_j dλ",
+      "section": "26.8"
+    },
+    {
+      "sym": "nu_i_st",
+      "meaning": "the stoichiometric coefficient of species j, positive for products and negative for reactants",
+      "section": "26.8"
+    },
+    {
+      "sym": "rho_A",
+      "meaning": "the number density of A, N_A/V",
+      "unit": "m⁻³",
+      "section": "26.8"
+    },
+    {
+      "sym": "Theta_r",
+      "meaning": "the characteristic temperature of rotation",
+      "unit": "K",
+      "section": "26.8"
+    },
+    {
+      "sym": "Theta_nu",
+      "meaning": "the characteristic temperature of vibration",
+      "unit": "K",
+      "section": "26.8"
+    },
+    {
+      "sym": "D_0",
+      "meaning": "the dissociation energy from the ground state",
+      "unit": "kJ/mol",
+      "section": "26.8"
+    },
+    {
+      "sym": "g_1",
+      "meaning": "the degeneracy of the electronic ground state",
+      "section": "26.8"
+    },
+    {
+      "sym": "m",
+      "type": "mass",
+      "meaning": "the mass of the molecule",
+      "unit": "kg",
+      "section": "26.8",
+      "redefines": true
+    },
+    {
+      "sym": "sigma",
+      "meaning": "the symmetry number of the molecule",
+      "section": "26.8"
+    },
+    {
+      "sym": "h",
+      "meaning": "Planck's constant",
+      "unit": "J s",
+      "section": "26.8"
+    },
+    {
+      "sym": "R",
+      "meaning": "the gas constant",
+      "unit": "J/(mol K)",
+      "section": "26.8"
+    },
+    {
+      "sym": "q_trans",
+      "meaning": "the translational partition function",
+      "section": "26.8"
+    },
+    {
+      "sym": "q_rot",
+      "meaning": "the rotational partition function",
+      "section": "26.8"
+    },
+    {
+      "sym": "q_vib",
+      "meaning": "the vibrational partition function",
+      "section": "26.8"
+    },
+    {
+      "sym": "q_elec",
+      "meaning": "the electronic partition function",
+      "section": "26.8"
+    },
+    {
+      "sym": "Delta_fG_std",
+      "concept": "standard-gibbs-energy-of-formation",
+      "meaning": "the standard state Gibbs energy of formation",
+      "unit": "kJ/mol",
+      "section": "26.9"
+    },
+    {
+      "sym": "Delta_fH_std",
+      "meaning": "the standard state enthalpy of formation",
+      "unit": "kJ/mol",
+      "section": "26.9"
+    },
+    {
+      "sym": "S_std",
+      "meaning": "the standard state entropy",
+      "unit": "J/(K mol)",
+      "section": "26.9"
+    },
+    {
+      "sym": "T",
+      "meaning": "the temperature",
+      "unit": "K",
+      "section": "26.9"
+    },
+    {
+      "sym": "mu",
+      "meaning": "the chemical potential of the gas",
+      "unit": "J/mol",
+      "section": "26.10"
+    },
+    {
+      "sym": "mu_std",
+      "meaning": "the standard chemical potential",
+      "unit": "J/mol",
+      "section": "26.10"
+    },
+    {
+      "sym": "p",
+      "meaning": "the pressure",
+      "unit": "bar",
+      "section": "26.10"
+    },
+    {
+      "sym": "f",
+      "concept": "fugacity",
+      "meaning": "the fugacity",
+      "unit": "bar",
+      "section": "26.10"
+    },
+    {
+      "sym": "f_std",
+      "meaning": "the standard fugacity",
+      "unit": "bar",
+      "section": "26.10"
+    },
+    {
+      "sym": "gamma",
+      "concept": "fugacity-coefficient",
+      "meaning": "the fugacity coefficient, f/p",
+      "section": "26.10",
+      "redefines": true
+    },
+    {
+      "sym": "Z",
+      "concept": "compressibility-factor",
+      "meaning": "the compression factor pV/RT",
+      "section": "26.10",
+      "redefines": true
+    },
+    {
+      "sym": "V",
+      "type": "molar-volume",
+      "meaning": "the molar volume of the gas, V in dμ = V dp",
+      "unit": "L/mol",
+      "section": "26.10",
+      "redefines": true
+    },
+    {
+      "sym": "R",
+      "meaning": "the gas constant",
+      "unit": "J/(mol K)",
+      "section": "26.10"
+    },
+    {
+      "sym": "T",
+      "meaning": "the temperature",
+      "unit": "K",
+      "section": "26.10"
+    },
+    {
+      "sym": "mu_i",
+      "meaning": "the chemical potential of species i",
+      "unit": "J/mol",
+      "section": "26.11"
+    },
+    {
+      "sym": "mu_std",
+      "meaning": "the standard chemical potential",
+      "unit": "J/mol",
+      "section": "26.11"
+    },
+    {
+      "sym": "a_i",
+      "meaning": "the activity of species i",
+      "section": "26.11"
+    },
+    {
+      "sym": "gamma_i",
+      "meaning": "the activity coefficient of species i",
+      "section": "26.11"
+    },
+    {
+      "sym": "c_i",
+      "meaning": "the concentration of species i",
+      "unit": "mol/L",
+      "section": "26.11",
+      "redefines": true
+    },
+    {
+      "sym": "c_i_std",
+      "meaning": "unity in the chosen concentration unit, cancelling the dimension of c_i",
+      "section": "26.11"
+    },
+    {
+      "sym": "K_eq",
+      "concept": "activity-equilibrium-constant",
+      "meaning": "the thermodynamic equilibrium constant in activities",
+      "section": "26.11"
+    },
+    {
+      "sym": "K_gamma",
+      "meaning": "the quotient of activity coefficients",
+      "section": "26.11"
+    },
+    {
+      "sym": "K_c",
+      "meaning": "the quotient of equilibrium concentrations",
+      "section": "26.11"
+    },
+    {
+      "sym": "K_c_std",
+      "meaning": "the quotient of unit concentrations, unity",
+      "section": "26.11"
+    },
+    {
+      "sym": "V_bar",
+      "meaning": "the molar volume of the pure solid or liquid",
+      "unit": "m³/mol",
+      "section": "26.11"
+    },
+    {
+      "sym": "P_prime",
+      "meaning": "a pressure other than the standard 1 bar",
+      "unit": "bar",
+      "section": "26.11"
+    },
+    {
+      "sym": "a_prime",
+      "meaning": "the activity at the pressure P′",
+      "section": "26.11"
+    },
+    {
+      "sym": "Delta_rG",
+      "concept": "reaction-gibbs-energy",
+      "meaning": "the reaction Gibbs energy",
+      "unit": "J/mol",
+      "section": "26.11"
+    },
+    {
+      "sym": "Delta_rG_std",
+      "concept": "standard-reaction-gibbs-energy",
+      "meaning": "the standard reaction Gibbs energy",
+      "unit": "J/mol",
+      "section": "26.11"
+    },
+    {
+      "sym": "Delta_rH_std",
+      "meaning": "the standard reaction enthalpy",
+      "unit": "J/mol",
+      "section": "26.11"
+    },
+    {
+      "sym": "Delta_rS_std",
+      "meaning": "the standard reaction entropy",
+      "unit": "J/(K mol)",
+      "section": "26.11"
+    },
+    {
+      "sym": "T_eq",
+      "concept": "condensed-equilibrium-temperature",
+      "meaning": "the one temperature at which pure condensed phases are in equilibrium",
+      "unit": "K",
+      "section": "26.11"
+    },
+    {
+      "sym": "R",
+      "meaning": "the gas constant",
+      "unit": "J/(mol K)",
+      "section": "26.11"
+    },
+    {
+      "sym": "T",
+      "meaning": "the temperature",
+      "unit": "K",
+      "section": "26.11"
+    },
+    {
+      "sym": "K_eq",
+      "concept": "activity-equilibrium-constant",
+      "meaning": "the equilibrium constant in activities",
+      "section": "26.12"
+    },
+    {
+      "sym": "a_i",
+      "meaning": "the activity of species i",
+      "section": "26.12"
+    },
+    {
+      "sym": "gamma_pm",
+      "meaning": "the mean ionic activity coefficient",
+      "section": "26.12"
+    },
+    {
+      "sym": "I_ion",
+      "meaning": "the ionic strength",
+      "unit": "mol/L",
+      "section": "26.12"
+    },
+    {
+      "sym": "z_plus",
+      "meaning": "the charge of the cation",
+      "section": "26.12"
+    },
+    {
+      "sym": "z_minus",
+      "meaning": "the charge of the anion",
+      "section": "26.12"
+    }
+  ]
+}

@@ -1,0 +1,1037 @@
+{
+ "types": [],
+ "symbols": [
+  {
+   "sym": "xi",
+   "latex": "\\xi",
+   "macro": "\\kxiext"
+  },
+  {
+   "sym": "xi_eq",
+   "latex": "\\xi_{eq}",
+   "macro": "\\kxieq"
+  },
+  {
+   "sym": "Delta_rG",
+   "latex": "\\Delta_r G",
+   "macro": "\\kDeltarG"
+  },
+  {
+   "sym": "Delta_rG_std",
+   "latex": "\\Delta_r G^\\circ",
+   "macro": "\\kDeltarGstd"
+  },
+  {
+   "sym": "Delta_fG_std",
+   "latex": "\\Delta_f G^\\circ",
+   "macro": "\\kDeltafGstd"
+  },
+  {
+   "sym": "Delta_rH_std",
+   "latex": "\\Delta_r H^\\circ",
+   "macro": "\\kDeltarHstd"
+  },
+  {
+   "sym": "Delta_fH_std",
+   "latex": "\\Delta_f H^\\circ",
+   "macro": "\\kDeltafHstd"
+  },
+  {
+   "sym": "Delta_rS_std",
+   "latex": "\\Delta_r S^\\circ",
+   "macro": "\\kDeltarSstd"
+  },
+  {
+   "sym": "Delta_rS",
+   "latex": "\\Delta_r S",
+   "macro": "\\kDeltarS"
+  },
+  {
+   "sym": "Delta_G_std",
+   "latex": "\\Delta G^o",
+   "macro": "\\kDeltaGstd"
+  },
+  {
+   "sym": "Delta_H_std",
+   "latex": "\\Delta H^o",
+   "macro": "\\kDeltaHstd"
+  },
+  {
+   "sym": "Delta_S_std",
+   "latex": "\\Delta S^o",
+   "macro": "\\kDeltaSstd"
+  },
+  {
+   "sym": "S_m_std",
+   "latex": "S_{\\text{m}}^\\circ",
+   "macro": "\\kSmstd"
+  },
+  {
+   "sym": "mu_i_o",
+   "latex": "\\mu_i^o",
+   "macro": "\\kmuio"
+  },
+  {
+   "sym": "P_A",
+   "latex": "P_A",
+   "macro": "\\kPA"
+  },
+  {
+   "sym": "P_C",
+   "latex": "P_C",
+   "macro": "\\kPC"
+  },
+  {
+   "sym": "P_Y",
+   "latex": "P_Y",
+   "macro": "\\kPY"
+  },
+  {
+   "sym": "P_Z",
+   "latex": "P_Z",
+   "macro": "\\kPZ"
+  },
+  {
+   "sym": "P_i_std",
+   "latex": "P_i^o",
+   "macro": "\\kPistd"
+  },
+  {
+   "sym": "f_std",
+   "latex": "f^o",
+   "macro": "\\kfstd"
+  },
+  {
+   "sym": "P_prime",
+   "latex": "P'",
+   "macro": "\\kPprime"
+  },
+  {
+   "sym": "T_eq",
+   "latex": "T_{equilibrium}",
+   "macro": "\\kTeq"
+  },
+  {
+   "sym": "Theta_r",
+   "latex": "\\Theta_r",
+   "macro": "\\kThetar"
+  },
+  {
+   "sym": "Theta_nu",
+   "latex": "\\Theta_\\nu",
+   "macro": "\\kThetanu"
+  },
+  {
+   "sym": "nu_A",
+   "latex": "\\nu_A"
+  },
+  {
+   "sym": "nu_B",
+   "latex": "\\nu_B"
+  },
+  {
+   "sym": "nu_C",
+   "latex": "\\nu_C"
+  },
+  {
+   "sym": "nu_D",
+   "latex": "\\nu_D"
+  },
+  {
+   "sym": "nu_Y",
+   "latex": "\\nu_Y"
+  },
+  {
+   "sym": "nu_Z",
+   "latex": "\\nu_Z"
+  },
+  {
+   "sym": "nu_i_st",
+   "latex": "\\nu_i"
+  },
+  {
+   "sym": "Q_r",
+   "latex": "Q"
+  },
+  {
+   "sym": "Q_P",
+   "latex": "Q_P"
+  },
+  {
+   "sym": "Q_std",
+   "latex": "Q^o"
+  },
+  {
+   "sym": "K_eq",
+   "latex": "K"
+  },
+  {
+   "sym": "K_c",
+   "latex": "K_c"
+  },
+  {
+   "sym": "K_gamma",
+   "latex": "K_\\gamma"
+  },
+  {
+   "sym": "K_c_std",
+   "latex": "K_{c^o}"
+  },
+  {
+   "sym": "c_i_std",
+   "latex": "c_i^o"
+  },
+  {
+   "sym": "N_i",
+   "latex": "N_i"
+  },
+  {
+   "sym": "lambda_x",
+   "latex": "\\lambda"
+  },
+  {
+   "sym": "rho_A",
+   "latex": "\\rho_A"
+  },
+  {
+   "sym": "a_prime",
+   "latex": "a'"
+  },
+  {
+   "sym": "n_i0",
+   "latex": "n_{i,0}"
+  },
+  {
+   "sym": "q_xi",
+   "latex": "q"
+  }
+ ],
+ "concepts": [
+  {
+   "id": "extent-of-reaction",
+   "kind": "definition",
+   "section": "26.1",
+   "name": "Extent of reaction",
+   "symbol": "xi",
+   "terms": [
+    "extent of reaction"
+   ],
+   "type": "amount",
+   "statement": "The single variable ξ that measures how far a reaction has run: each amount changes as n_i = n_{i,0} − ν_iξ for a reactant and n_{i,0} + ν_iξ for a product, so ξ is in moles. Starting from ν moles of the limiting reactant it runs from 0 to 1 at completion, and a reaction that reaches equilibrium stops at ξ_eq.",
+   "forms": [
+    {
+     "id": "extent-reactant",
+     "latex": "n_A = n_{A,0} - \\nu_A \\xi"
+    },
+    {
+     "id": "extent-product",
+     "latex": "n_Y = n_{Y,0} + \\nu_Y \\xi"
+    }
+   ]
+  },
+  {
+   "id": "measuring-extent",
+   "kind": "skill",
+   "section": "26.1",
+   "name": "Measuring the extent of reaction",
+   "statement": "Following a quantity q that depends linearly on the extent, q(ξ) = aξ + b (an absorbance, a conductivity, a mass, a heat), gives ξ = (q − q₀)/(q₁ − q₀) from its values at the start and at completion; where those cannot be observed, a and b are fitted to the data.",
+   "forms": [
+    {
+     "id": "extent-from-q",
+     "latex": "\\dfrac{q(t)-q_0}{q_1-q_0}=\\dfrac{q(t)-b}{a}"
+    }
+   ]
+  },
+  {
+   "id": "reaction-gibbs-energy",
+   "kind": "definition",
+   "section": "26.1",
+   "name": "Reaction Gibbs energy",
+   "symbol": "Delta_rG",
+   "type": "energy",
+   "statement": "At constant T and P, writing every dn_i as ±ν_i dξ turns dG = Σμ_i dn_i into a single slope: Δ_rG = (∂G/∂ξ)_{T,P} = Σν_iμ_i over products minus reactants, the change in G per mole of reaction as written at a fixed composition, in J/mol.",
+   "forms": [
+    {
+     "id": "reaction-gibbs-slope",
+     "latex": "\\left(\\dfrac{\\partial G}{\\partial \\xi}\\right)_{T,P} = \\Delta_r G = -\\sum \\nu_{i,r}\\mu_{i,r} + \\sum \\nu_{j,p}\\mu_{j,p}"
+    }
+   ]
+  },
+  {
+   "id": "gibbs-minimum-equilibrium",
+   "kind": "result",
+   "section": "26.1",
+   "name": "Equilibrium at the minimum of the Gibbs energy",
+   "statement": "At constant T and P a reaction moves down the curve of G against ξ: the slope Δ_rG is negative on one side of the minimum and positive on the other, so the reaction runs toward the minimum from either side and stops where (∂G/∂ξ)_{T,P} = Δ_rG = 0. For A ⇌ B this is where μ_A = μ_B.",
+   "forms": [
+    {
+     "id": "equilibrium-slope-zero",
+     "latex": "\\left(\\dfrac{\\partial G}{\\partial \\xi}\\right)_{P,T}=0"
+    }
+   ]
+  },
+  {
+   "id": "standard-reaction-gibbs-energy",
+   "kind": "definition",
+   "section": "26.1",
+   "name": "Standard reaction Gibbs energy",
+   "symbol": "Delta_rG_std",
+   "terms": [
+    "standard Gibbs free energy of reaction"
+   ],
+   "type": "energy",
+   "statement": "The reaction Gibbs energy with every species in its standard state, Δ_rG° = Σν_iμ_i° over products minus reactants: a property of the reaction looked up in tables, whose value depends on the standard pressures chosen.",
+   "forms": [
+    {
+     "id": "standard-reaction-gibbs",
+     "latex": "\\Delta_r G^o = -\\sum \\nu_{i,r} \\mu^o_{i,r} + \\sum \\nu_{j,p} \\mu^o_{j,p}"
+    }
+   ]
+  },
+  {
+   "id": "reaction-quotient",
+   "kind": "definition",
+   "section": "26.1",
+   "name": "Reaction quotient",
+   "symbol": "Q_r",
+   "terms": [
+    "reaction quotient"
+   ],
+   "statement": "The product of the species' relative pressures (or concentrations, or activities), each raised to its stoichiometric coefficient, products over reactants: Q = (P_Y/P°)^{ν_Y}(P_Z/P°)^{ν_Z}/((P_A/P°)^{ν_A}(P_B/P°)^{ν_B}). The standard pressures make Q dimensionless; Q_P, written without them, equals Q in magnitude.",
+   "forms": [
+    {
+     "id": "q-pressures",
+     "latex": "Q = \\dfrac{P_Y^{\\nu_Y}P_Z^{\\nu_Z}}{P_A^{\\nu_A}P_B^{\\nu_B}}"
+    },
+    {
+     "id": "q-concentrations",
+     "latex": "Q = \\dfrac{[C]^c[D]^d}{[A]^a[B]^b}"
+    }
+   ]
+  },
+  {
+   "id": "reaction-gibbs-quotient",
+   "kind": "result",
+   "section": "26.1",
+   "name": "Reaction Gibbs energy from the reaction quotient",
+   "statement": "For ideal gases μ_i = μ_i° + RT ln(P_i/P_i°), so the reaction Gibbs energy splits into its standard value and a composition term: Δ_rG = Δ_rG° + RT ln Q. Δ_rG describes the reaction at its actual pressures, Δ_rG° at standard conditions.",
+   "forms": [
+    {
+     "id": "delta-r-g-q",
+     "latex": "\\Delta_r G = \\Delta_r G^o + RT\\ln Q"
+    }
+   ]
+  },
+  {
+   "id": "equilibrium-constant",
+   "kind": "definition",
+   "section": "26.2",
+   "name": "Equilibrium constant",
+   "symbol": "K_eq",
+   "terms": [
+    "equilibrium constant"
+   ],
+   "statement": "The value K that the reaction quotient takes at equilibrium, where Δ_rG = 0: for gases the quotient of the equilibrium partial pressures, K = P_{eq,Y}^{ν_Y}P_{eq,Z}^{ν_Z}/(P_{eq,A}^{ν_A}P_{eq,B}^{ν_B}).",
+   "forms": [
+    {
+     "id": "k-pressures",
+     "latex": "K=\\dfrac{P_{eq,Y}^{\\nu_Y}P_{eq,Z}^{\\nu_Z}}{P_{eq,A}^{\\nu_A}P_{eq,B}^{\\nu_B}}"
+    }
+   ]
+  },
+  {
+   "id": "standard-gibbs-equilibrium-constant",
+   "kind": "result",
+   "section": "26.2",
+   "name": "Equilibrium constant from the standard reaction Gibbs energy",
+   "statement": "Setting Δ_rG = Δ_rG° + RT ln K = 0 at equilibrium gives Δ_rG° = −RT ln K, so K = e^{−Δ_rG°/RT}. Δ_rG° is not zero, because the standard state is in general not an equilibrium state.",
+   "forms": [
+    {
+     "id": "delta-g-std-ln-k",
+     "latex": "\\Delta_r G^\\circ = - RT\\ln K"
+    },
+    {
+     "id": "k-exp",
+     "latex": "K=e^{-\\Delta_r G^\\circ/RT}"
+    }
+   ]
+  },
+  {
+   "id": "k-temperature-only",
+   "kind": "result",
+   "section": "26.2",
+   "name": "The equilibrium constant depends on temperature only",
+   "statement": "For a reaction of ideal gases K depends only on T, not on the total pressure, because Δ_rG° refers to fixed standard pressures. In non-ideal gases and solutions K can shift a little with pressure or ionic strength through the fugacity or activity coefficients."
+  },
+  {
+   "id": "van-t-hoff-equation",
+   "kind": "result",
+   "section": "26.2",
+   "name": "van 't Hoff equation",
+   "terms": [
+    "Van't Hoff equation",
+    "van 't Hoff equation"
+   ],
+   "statement": "Putting ln K = −Δ_rG°/RT into the Gibbs–Helmholtz equation gives (∂ln K/∂T)_P = Δ_rH°/RT²: K rises with temperature for an endothermic reaction and falls for an exothermic one.",
+   "forms": [
+    {
+     "id": "van-t-hoff",
+     "latex": "\\left(\\frac{\\partial\\ln{K}}{\\partial T}\\right)_P=\\frac{\\Delta_rH^{\\circ}}{RT^2}"
+    }
+   ]
+  },
+  {
+   "id": "integrated-van-t-hoff",
+   "kind": "result",
+   "section": "26.2",
+   "name": "Integrated van 't Hoff equation",
+   "statement": "With Δ_rH° taken as independent of temperature, integrating the van 't Hoff equation gives ln[K(T₂)/K(T₁)] = −(Δ_rH°/R)(1/T₂ − 1/T₁), which carries K from one temperature to another; heat-capacity data correct it where more precision is needed.",
+   "forms": [
+    {
+     "id": "van-t-hoff-integrated",
+     "latex": "\\ln{\\frac{K(T_2)}{K(T_1)}}=-\\frac{\\Delta_rH^{\\circ}}{R}\\left(\\frac{1}{T_2}-\\frac{1}{T_1}\\right)"
+    }
+   ]
+  },
+  {
+   "id": "dissociation-extent-pressure",
+   "kind": "result",
+   "section": "26.2",
+   "name": "Extent of a gas dissociation against pressure",
+   "statement": "For A ⇌ B + C starting from one mole of A, Dalton's law gives partial pressures (1 − ξ)P/(1 + ξ) and ξP/(1 + ξ), so K = Pξ_eq²/(1 − ξ_eq²): at fixed K, raising the total pressure P lowers ξ_eq.",
+   "forms": [
+    {
+     "id": "k-dissociation-xi",
+     "latex": "K = P\\dfrac{\\xi_{eq}^2}{1-\\xi_{eq}^2}"
+    }
+   ]
+  },
+  {
+   "id": "le-chateliers-principle",
+   "kind": "idea",
+   "section": "26.2",
+   "name": "Le Chatelier's principle",
+   "terms": [
+    "le Chatelier's principle",
+    "Le Chatelier's Principle"
+   ],
+   "statement": "When the total pressure of a gas reaction is changed, K stays the same but the equilibrium extent shifts in response, toward the side with fewer molecules on compression."
+  },
+  {
+   "id": "molarity",
+   "kind": "definition",
+   "section": "26.2",
+   "name": "Molarity",
+   "symbol": "c",
+   "terms": [
+    "molarity"
+   ],
+   "statement": "The molar amount per unit volume, c = n/V; for an ideal gas the gas law hides it as P = cRT, so c = P/RT.",
+   "forms": [
+    {
+     "id": "conc-ideal-gas",
+     "latex": "c= \\dfrac{P}{RT}"
+    }
+   ]
+  },
+  {
+   "id": "concentration-equilibrium-constant",
+   "kind": "result",
+   "section": "26.2",
+   "name": "Equilibrium constant in concentrations",
+   "statement": "Written in equilibrium molarities, K = c_{eq,Y}^{ν_Y}c_{eq,Z}^{ν_Z}/(c_{eq,A}^{ν_A}c_{eq,B}^{ν_B}); substituting c = P/RT leaves a factor of RT to the power g = ν_Y + ν_Z − ν_A − ν_B, which is absorbed into Δ_rG°, now referred to a standard state of 1 mol/L of each species.",
+   "forms": [
+    {
+     "id": "k-concentrations",
+     "latex": "K= \\dfrac{c_{eq,Y}^{\\nu_Y} c_{eq,Z}^{\\nu_Z} }{c_{eq,A}^{\\nu_A} c_{eq,B}^{\\nu_B}}"
+    },
+    {
+     "id": "rt-exponent",
+     "latex": "g=\\nu_Y+\\nu_Z-\\nu_A-\\nu_B"
+    }
+   ]
+  },
+  {
+   "id": "reaction-gibbs-enthalpy-entropy",
+   "kind": "result",
+   "section": "26.3",
+   "name": "Reaction Gibbs energy from enthalpy and entropy",
+   "statement": "Substituting μ_i = H_i − TS_i into Δ_rG = Σν_iμ_i gives Δ_rG = Δ_rH − TΔ_rS, and with every species in its standard state Δ_rG° = Δ_rH° − TΔ_rS°, where Δ_rS° = Σν_iS_i°.",
+   "forms": [
+    {
+     "id": "dg-dh-tds",
+     "latex": "\\Delta_{\\text{r}}G = \\Delta_{\\text{r}}H - T\\Delta_{\\text{r}}S"
+    },
+    {
+     "id": "dg-dh-tds-std",
+     "latex": "\\Delta_{\\text{r}}G^\\circ = \\Delta_{\\text{r}}H^\\circ - T\\Delta_{\\text{r}}S^\\circ"
+    }
+   ]
+  },
+  {
+   "id": "standard-gibbs-energy-of-formation",
+   "kind": "definition",
+   "section": "26.3",
+   "name": "Standard Gibbs energy of formation",
+   "symbol": "Delta_fG_std",
+   "terms": [
+    "standard molar Gibbs energy of formation"
+   ],
+   "type": "energy",
+   "statement": "The standard molar reaction Gibbs energy of a substance's formation reaction, Δ_fG° = Δ_fH° − TΣν_iS_i°, evaluated from its enthalpy of formation and the standard molar entropies of the reactants and product; tabulated for substances and ions, often at 298.15 K.",
+   "forms": [
+    {
+     "id": "delta-f-g",
+     "latex": "\\Delta_{\\text{f}}G^\\circ = \\Delta_{\\text{f}}H^\\circ - T\\sum_i\\nu_i S_i^\\circ"
+    }
+   ]
+  },
+  {
+   "id": "reaction-gibbs-from-formation",
+   "kind": "result",
+   "section": "26.3",
+   "name": "Reaction Gibbs energy from Gibbs energies of formation",
+   "statement": "As in Hess's law, Δ_rG° = Σν_iΔ_fG°(i) over the reactants and products, so tabulated Gibbs energies of formation give Δ_rG° and then K; since Δ_fH° comes from calorimetry and S° from heat capacities, K can be found from calorimetry alone.",
+   "forms": [
+    {
+     "id": "delta-r-g-from-f",
+     "latex": "\\Delta_{\\text{r}}G^\\circ = \\sum_i\\nu_i\\Delta_{\\text{f}}G^\\circ(i)"
+    }
+   ]
+  },
+  {
+   "id": "aqueous-ion-convention",
+   "kind": "definition",
+   "section": "26.3",
+   "name": "Reference values for aqueous ions",
+   "statement": "Since no formation reaction can be written for a single ion, the values of S_m° and Δ_fG° for ions in aqueous solution are referred to H⁺(aq), for which S_m° = 0, Δ_fH° = 0 and Δ_fG° = 0 at all temperatures; some ions therefore have negative standard molar entropies."
+  },
+  {
+   "id": "ion-gibbs-energy-of-formation",
+   "kind": "result",
+   "section": "26.3",
+   "name": "Gibbs energy of formation of an ion",
+   "statement": "From a hypothetical reaction that forms the ion from the elements with H⁺(aq) and H₂(g), Δ_fG°(M^{z+}) = Δ_fH°(M^{z+}) − T[S_m°(M^{z+}) − Σ S_i°(elements) + (z₊/2)S_m°(H₂)], and for an anion the same with −|z₋/2|S_m°(H₂).",
+   "forms": [
+    {
+     "id": "df-g-cation",
+     "latex": "\\Delta_{\\text{f}}G^\\circ(\\text{M}^{z_+}) = \\Delta_{\\text{f}}H^\\circ(\\text{M}^{z_+}) -T\\left[ S_{\\text{m}}^\\circ(\\text{M}^{z_+}) -\\sum S_i^\\circ + (z_+/2)S_{\\text{m}}^\\circ(\\text{H}_2) \\right]"
+    },
+    {
+     "id": "df-g-anion",
+     "latex": "\\Delta_{\\text{f}}G^\\circ(\\text{X}^{z_-}) = \\Delta_{\\text{f}}H^\\circ(\\text{X}^{z_-}) -T\\left[ S_{\\text{m}}^\\circ(\\text{X}^{z_-})- \\sum S_i^\\circ -|z_-/2| S_{\\text{m}}^\\circ(\\text{H}_2) \\right]"
+    }
+   ]
+  },
+  {
+   "id": "exergonic-endergonic",
+   "kind": "definition",
+   "section": "26.4",
+   "name": "Exergonic and endergonic reactions",
+   "terms": [
+    "exergonic",
+    "endergonic"
+   ],
+   "statement": "A reaction with Δ_rG < 0 is exergonic and runs forward spontaneously; one with Δ_rG > 0 is endergonic and runs in reverse; at Δ_rG = 0 it is at equilibrium."
+  },
+  {
+   "id": "equilibrium-position",
+   "kind": "definition",
+   "section": "26.4",
+   "name": "Equilibrium position",
+   "symbol": "xi_eq",
+   "terms": [
+    "equilibrium position"
+   ],
+   "type": "amount",
+   "statement": "The extent ξ_eq at the minimum of G against ξ, toward which a reaction moves spontaneously from either side."
+  },
+  {
+   "id": "mixing-places-minimum",
+   "kind": "result",
+   "section": "26.4",
+   "name": "Mixing puts the minimum inside the reaction",
+   "statement": "For A ⇌ B between ideal gases, G against ξ is the straight line of the pure species' standard Gibbs energies plus the Gibbs energy of mixing, nRT(χ_A ln χ_A + χ_B ln χ_B), which is lowest at half and half; with Δ_rG° = 0 the minimum is at χ_A = χ_B = 0.5, and Δ_rG° moves it toward the side of lower standard Gibbs energy, so the minimum always lies between pure reactant and pure product.",
+   "forms": [
+    {
+     "id": "g-mix-ab",
+     "latex": "\\Delta G_{\\text {mix }}=n R T\\left(\\chi_{A} \\ln \\chi_{A}+ \\chi_{B} \\ln \\chi_{B}\\right)"
+    }
+   ]
+  },
+  {
+   "id": "q-over-k-direction",
+   "kind": "result",
+   "section": "26.5",
+   "name": "Q against K decides the direction",
+   "statement": "Subtracting 0 = Δ_rG° + RT ln K from Δ_rG = Δ_rG° + RT ln Q gives Δ_rG = RT ln(Q/K): if Q < K the reaction shifts right to make products, if Q > K it shifts left, and Q changes until Q = K.",
+   "forms": [
+    {
+     "id": "delta-g-q-over-k",
+     "latex": "\\Delta_rG = RT \\ln \\left(\\dfrac{Q}{K} \\right)"
+    }
+   ]
+  },
+  {
+   "id": "sign-of-delta-g",
+   "kind": "idea",
+   "section": "26.6",
+   "name": "The sign of Δ_rG, not Δ_rG°, decides spontaneity",
+   "statement": "Δ_rG° describes the idealised standard state (1 bar of each gas, 1 M in solution, unmixed), which is not the real reaction mixture; whether a reaction runs forward depends on the sign of Δ_rG = Δ_rG° + RT ln Q at the actual composition, which reaches zero, with Q = K, at equilibrium."
+  },
+  {
+   "id": "van-t-hoff-plot",
+   "kind": "result",
+   "section": "26.7",
+   "name": "Linear van 't Hoff plot",
+   "terms": [
+    "van ’t Hoff equation"
+   ],
+   "statement": "With Δ_rG° = Δ_rH° − TΔ_rS°, K = e^{−Δ_rH°/RT}e^{Δ_rS°/R}, so ln K = −(Δ_rH°/R)(1/T) + Δ_rS°/R: a plot of ln K against 1/T is a line of slope −Δ_rH°/R and intercept Δ_rS°/R, which gives both from equilibrium data without calorimetry, as long as they depend only weakly on T.",
+   "forms": [
+    {
+     "id": "ln-k-inverse-t",
+     "latex": "\\ln K = - \\dfrac{\\Delta {H^o}}{R} \\dfrac{1}{T} + \\dfrac{\\Delta{S^o}}{R}"
+    },
+    {
+     "id": "k-enthalpy-entropy",
+     "latex": "K=e^{-\\Delta{H^o}/RT} e^{\\Delta {S^o}/R}"
+    }
+   ]
+  },
+  {
+   "id": "chemical-potential-q-over-n",
+   "kind": "result",
+   "section": "26.8",
+   "name": "Chemical potential from the molecular partition function",
+   "statement": "With A = −k_BT ln(q_i^{N_i}/N_i!) and Stirling's approximation, μ_i = (∂A/∂N_i)_{T,V} = −k_BT ln(q_i/N_i) for a species of independent, indistinguishable molecules.",
+   "forms": [
+    {
+     "id": "mu-q-over-n",
+     "latex": "\\mu_{i} =-k_{B}T\\ln \\left({\\dfrac {q_{i}(V,T)}{N_{i}}}\\right)"
+    }
+   ]
+  },
+  {
+   "id": "helmholtz-minimum-equilibrium",
+   "kind": "result",
+   "section": "26.8",
+   "name": "Equilibrium at the minimum of the Helmholtz energy",
+   "statement": "At fixed T and V, with dN_j = ν_j dλ (ν_j positive for products, negative for reactants), dA = Σμ_jν_j dλ, and equilibrium is where (∂A/∂λ)_{T,V} = 0, that is Σν_jμ_j = 0.",
+   "forms": [
+    {
+     "id": "da-dlambda-zero",
+     "latex": "\\left({\\dfrac {\\partial A}{\\partial \\lambda }}\\right)_{T,V}=0"
+    },
+    {
+     "id": "sum-nu-mu-zero",
+     "latex": "\\sum _{j}\\mu _{j}\\nu _{j}=0"
+    }
+   ]
+  },
+  {
+   "id": "equilibrium-constant-partition-functions",
+   "kind": "result",
+   "section": "26.8",
+   "name": "Equilibrium constant from partition functions",
+   "symbol": "K_c",
+   "statement": "Putting μ_j = −k_BT ln(q_j/N_j) into Σν_jμ_j = 0 and dividing by the volume gives K_c = ρ_C^{ν_C}ρ_D^{ν_D}/(ρ_A^{ν_A}ρ_B^{ν_B}) = (q_C/V)^{ν_C}(q_D/V)^{ν_D}/((q_A/V)^{ν_A}(q_B/V)^{ν_B}): the molecular partition functions of the species give the equilibrium constant.",
+   "forms": [
+    {
+     "id": "kc-partition",
+     "latex": "K_{c}={\\dfrac {\\rho _{C}^{\\nu _{C}}\\rho _{D}^{\\nu _{D}}}{\\rho _{A}^{\\nu _{A}}\\rho _{B}^{\\nu _{B}}}}={\\dfrac {(q_{C}/V)^{\\nu _{C}}(q_{D}/V)^{\\nu _{D}}}{(q_{A}/V)^{\\nu _{A}}(q_{B}/V)^{\\nu _{B}}}}"
+    }
+   ]
+  },
+  {
+   "id": "k-from-molecular-data",
+   "kind": "skill",
+   "section": "26.8",
+   "name": "Computing an equilibrium constant from molecular data",
+   "statement": "Write each q/V as the product of translational, rotational, vibrational and electronic factors, (2πmk_BT/h²)^{3/2} · T/(σΘ_r) · 1/(1 − e^{−Θ_ν/T}) · g₁e^{D₀/RT}, evaluate them per species from the masses, Θ_r, Θ_ν and D₀, and combine them as the equilibrium constant's quotient.",
+   "forms": [
+    {
+     "id": "q-over-v-diatomic",
+     "latex": "\\frac{q}{V} =\\left(\\frac{2 \\pi m k_{B} T}{h^{2}}\\right)^{3 / 2} \\times \\frac{T}{\\sigma \\Theta_{r}} \\times \\frac{1}{1-\\exp \\left(\\frac{-\\Theta_{\\nu}}{T}\\right)} \\times g_{1} \\exp \\left(\\dfrac{D_{0}}{R T} \\right)"
+    }
+   ]
+  },
+  {
+   "id": "thermochemical-tables",
+   "kind": "idea",
+   "section": "26.9",
+   "name": "Tabulated thermochemical data",
+   "terms": [
+    "JANAF"
+   ],
+   "statement": "Because accurate partition functions of real molecules need complex corrections, partition functions and thermodynamic properties are tabulated, as in the JANAF tables: C_P, S°, G° and H° relative to H°(298.15 K), Δ_fH°, Δ_fG° and log K_f against temperature, combining experiment with theory."
+  },
+  {
+   "id": "fugacity-coefficient-from-z",
+   "kind": "result",
+   "section": "26.10",
+   "name": "Fugacity coefficient from the compression factor",
+   "statement": "Since (∂μ/∂p)_T = V = RT(∂ln f/∂p)_T, the fugacity obeys (∂ln f/∂p)_T = Z/p, and with f = γp integrating from 0, where every gas is ideal and γ = 1, gives ln γ = ∫₀^p (Z − 1)/p dp.",
+   "forms": [
+    {
+     "id": "ln-fugacity-coefficient",
+     "latex": "\\ln \\gamma = \\int_0^{p} \\left( \\dfrac{ Z-1}{p}\\right)_T dp"
+    }
+   ]
+  },
+  {
+   "id": "activity-equilibrium-constant",
+   "kind": "result",
+   "section": "26.11",
+   "name": "Thermodynamic equilibrium constant in activities",
+   "terms": [
+    "activities"
+   ],
+   "statement": "With μ_i = μ_i° + RT ln a_i the same steps give K in equilibrium activities, K = a_{eq,Y}^{ν_Y}a_{eq,Z}^{ν_Z}/(a_{eq,A}^{ν_A}a_{eq,B}^{ν_B}); writing a_i = γ_ic_i/c_i° splits it as K = K_γK_c/K_{c°}, where K_{c°} is unity and only cancels dimensions and K_γ is unity only for an ideal solution.",
+   "forms": [
+    {
+     "id": "k-activities",
+     "latex": "K=\\dfrac{a_{eq,Y}^{\\nu_Y}a_{eq,Z}^{\\nu_Z}}{a_{eq,A}^{\\nu_A}a_{eq,B}^{\\nu_B}}"
+    },
+    {
+     "id": "k-three-factors",
+     "latex": "K = \\dfrac{K_\\gamma K_c}{K_{c^o}}"
+    }
+   ]
+  },
+  {
+   "id": "condensed-activity-pressure",
+   "kind": "result",
+   "section": "26.11",
+   "name": "Activity of a pure condensed phase under pressure",
+   "statement": "For a pure solid or liquid with its standard state at 1 bar, dμ = RT d ln a = V̄ dP with a small, nearly constant molar volume, so ln a' = (P' − 1)V̄/RT: the activity stays close to one (graphite's is about 1.01 at 100 bar), and is taken as unity in reactions.",
+   "forms": [
+    {
+     "id": "ln-a-pressure",
+     "latex": "\\ln a' = \\dfrac{(P'-1)\\bar{V}}{RT}"
+    }
+   ]
+  },
+  {
+   "id": "condensed-equilibrium-temperature",
+   "kind": "result",
+   "section": "26.11",
+   "name": "Equilibrium among pure condensed phases",
+   "symbol": "T_eq",
+   "type": "temperature",
+   "statement": "If every species is a pure condensed phase, all activities are one, Q = 1 and Δ_rG = Δ_rG°, so equilibrium is possible only at the single temperature T = Δ_rH°/Δ_rS° (a melting point, for example); at any other temperature the process goes to completion. Equilibrium over a range of temperatures needs a species whose activity depends on composition, such as a solute or a gas.",
+   "forms": [
+    {
+     "id": "t-equilibrium",
+     "latex": "T_{equilibrium} = \\dfrac{\\Delta_r H^o}{\\Delta_r S^o}"
+    }
+   ]
+  },
+  {
+   "id": "equilibrium-activity-iteration",
+   "kind": "skill",
+   "section": "26.12",
+   "name": "Correcting an ionic equilibrium for activities by iteration",
+   "terms": [
+    "iteration"
+   ],
+   "statement": "Solve the equilibrium first as ideal, use the concentrations to find the ionic strength and γ± from an extended Debye–Hückel equation, divide K by the activity-coefficient factor, solve again, and repeat until the concentration no longer changes: for 0.1 mol/L acetic acid x moves from 1.31 to about 1.37 × 10⁻³ mol/L."
+  },
+  {
+   "id": "solubility-activity-effect",
+   "kind": "idea",
+   "section": "26.12",
+   "name": "Non-ideality raises the solubility of a sparingly soluble salt",
+   "terms": [
+    "solubility products"
+   ],
+   "statement": "In a solubility product K = γ±³[Ba²⁺][F⁻]² the activity coefficients fall below one as the dissolved ions raise the ionic strength, so the solubility rises above the ideal estimate (for BaF₂ from 7.52 × 10⁻³ to about 0.011 mol/L), and other solutes, adding to the ionic strength, raise it further."
+  }
+ ],
+ "concept_prereqs": [
+  {
+   "concept": "measuring-extent",
+   "prereq": "extent-of-reaction"
+  },
+  {
+   "concept": "reaction-gibbs-energy",
+   "prereq": "extent-of-reaction"
+  },
+  {
+   "concept": "reaction-gibbs-energy",
+   "prereq": "fundamental-equations-composition"
+  },
+  {
+   "concept": "gibbs-minimum-equilibrium",
+   "prereq": "reaction-gibbs-energy"
+  },
+  {
+   "concept": "gibbs-minimum-equilibrium",
+   "prereq": "gibbs-criterion"
+  },
+  {
+   "concept": "standard-reaction-gibbs-energy",
+   "prereq": "reaction-gibbs-energy"
+  },
+  {
+   "concept": "standard-reaction-gibbs-energy",
+   "prereq": "standard-state-gas"
+  },
+  {
+   "concept": "reaction-quotient",
+   "prereq": "standard-state-gas"
+  },
+  {
+   "concept": "reaction-gibbs-quotient",
+   "prereq": "standard-reaction-gibbs-energy"
+  },
+  {
+   "concept": "reaction-gibbs-quotient",
+   "prereq": "reaction-quotient"
+  },
+  {
+   "concept": "reaction-gibbs-quotient",
+   "prereq": "gibbs-ideal-gas-pressure"
+  },
+  {
+   "concept": "equilibrium-constant",
+   "prereq": "reaction-quotient"
+  },
+  {
+   "concept": "equilibrium-constant",
+   "prereq": "gibbs-minimum-equilibrium"
+  },
+  {
+   "concept": "standard-gibbs-equilibrium-constant",
+   "prereq": "reaction-gibbs-quotient"
+  },
+  {
+   "concept": "standard-gibbs-equilibrium-constant",
+   "prereq": "equilibrium-constant"
+  },
+  {
+   "concept": "k-temperature-only",
+   "prereq": "standard-gibbs-equilibrium-constant"
+  },
+  {
+   "concept": "van-t-hoff-equation",
+   "prereq": "standard-gibbs-equilibrium-constant"
+  },
+  {
+   "concept": "van-t-hoff-equation",
+   "prereq": "gibbs-helmholtz-equation"
+  },
+  {
+   "concept": "integrated-van-t-hoff",
+   "prereq": "van-t-hoff-equation"
+  },
+  {
+   "concept": "dissociation-extent-pressure",
+   "prereq": "equilibrium-constant"
+  },
+  {
+   "concept": "dissociation-extent-pressure",
+   "prereq": "daltons-law"
+  },
+  {
+   "concept": "le-chateliers-principle",
+   "prereq": "dissociation-extent-pressure"
+  },
+  {
+   "concept": "le-chateliers-principle",
+   "prereq": "k-temperature-only"
+  },
+  {
+   "concept": "molarity",
+   "prereq": "ideal-gas-law"
+  },
+  {
+   "concept": "concentration-equilibrium-constant",
+   "prereq": "standard-gibbs-equilibrium-constant"
+  },
+  {
+   "concept": "concentration-equilibrium-constant",
+   "prereq": "molarity"
+  },
+  {
+   "concept": "reaction-gibbs-enthalpy-entropy",
+   "prereq": "reaction-gibbs-energy"
+  },
+  {
+   "concept": "reaction-gibbs-enthalpy-entropy",
+   "prereq": "reaction-enthalpy"
+  },
+  {
+   "concept": "reaction-gibbs-enthalpy-entropy",
+   "prereq": "reaction-entropy"
+  },
+  {
+   "concept": "standard-gibbs-energy-of-formation",
+   "prereq": "standard-enthalpy-of-formation"
+  },
+  {
+   "concept": "standard-gibbs-energy-of-formation",
+   "prereq": "standard-molar-entropy"
+  },
+  {
+   "concept": "standard-gibbs-energy-of-formation",
+   "prereq": "standard-reaction-gibbs-energy"
+  },
+  {
+   "concept": "reaction-gibbs-from-formation",
+   "prereq": "standard-gibbs-energy-of-formation"
+  },
+  {
+   "concept": "reaction-gibbs-from-formation",
+   "prereq": "hess-law"
+  },
+  {
+   "concept": "aqueous-ion-convention",
+   "prereq": "standard-gibbs-energy-of-formation"
+  },
+  {
+   "concept": "ion-gibbs-energy-of-formation",
+   "prereq": "aqueous-ion-convention"
+  },
+  {
+   "concept": "ion-gibbs-energy-of-formation",
+   "prereq": "reaction-gibbs-enthalpy-entropy"
+  },
+  {
+   "concept": "exergonic-endergonic",
+   "prereq": "reaction-gibbs-energy"
+  },
+  {
+   "concept": "exergonic-endergonic",
+   "prereq": "gibbs-criterion"
+  },
+  {
+   "concept": "equilibrium-position",
+   "prereq": "gibbs-minimum-equilibrium"
+  },
+  {
+   "concept": "mixing-places-minimum",
+   "prereq": "equilibrium-position"
+  },
+  {
+   "concept": "mixing-places-minimum",
+   "prereq": "entropy-of-mixing"
+  },
+  {
+   "concept": "mixing-places-minimum",
+   "prereq": "reaction-gibbs-quotient"
+  },
+  {
+   "concept": "q-over-k-direction",
+   "prereq": "standard-gibbs-equilibrium-constant"
+  },
+  {
+   "concept": "q-over-k-direction",
+   "prereq": "exergonic-endergonic"
+  },
+  {
+   "concept": "sign-of-delta-g",
+   "prereq": "q-over-k-direction"
+  },
+  {
+   "concept": "van-t-hoff-plot",
+   "prereq": "standard-gibbs-equilibrium-constant"
+  },
+  {
+   "concept": "van-t-hoff-plot",
+   "prereq": "reaction-gibbs-enthalpy-entropy"
+  },
+  {
+   "concept": "chemical-potential-q-over-n",
+   "prereq": "chemical-potential-from-partition-function"
+  },
+  {
+   "concept": "chemical-potential-q-over-n",
+   "prereq": "indistinguishable-partition-function"
+  },
+  {
+   "concept": "helmholtz-minimum-equilibrium",
+   "prereq": "helmholtz-criterion"
+  },
+  {
+   "concept": "helmholtz-minimum-equilibrium",
+   "prereq": "helmholtz-fundamental-equation"
+  },
+  {
+   "concept": "equilibrium-constant-partition-functions",
+   "prereq": "chemical-potential-q-over-n"
+  },
+  {
+   "concept": "equilibrium-constant-partition-functions",
+   "prereq": "helmholtz-minimum-equilibrium"
+  },
+  {
+   "concept": "k-from-molecular-data",
+   "prereq": "equilibrium-constant-partition-functions"
+  },
+  {
+   "concept": "k-from-molecular-data",
+   "prereq": "partition-function-factorization"
+  },
+  {
+   "concept": "thermochemical-tables",
+   "prereq": "standard-gibbs-energy-of-formation"
+  },
+  {
+   "concept": "fugacity-coefficient-from-z",
+   "prereq": "fugacity-coefficient"
+  },
+  {
+   "concept": "fugacity-coefficient-from-z",
+   "prereq": "compressibility-factor"
+  },
+  {
+   "concept": "fugacity-coefficient-from-z",
+   "prereq": "chemical-potential-fugacity"
+  },
+  {
+   "concept": "fugacity-coefficient-from-z",
+   "prereq": "chemical-potential-differential"
+  },
+  {
+   "concept": "activity-equilibrium-constant",
+   "prereq": "concentration-equilibrium-constant"
+  },
+  {
+   "concept": "activity-equilibrium-constant",
+   "prereq": "activity-coefficient"
+  },
+  {
+   "concept": "condensed-activity-pressure",
+   "prereq": "activity-by-phase"
+  },
+  {
+   "concept": "condensed-activity-pressure",
+   "prereq": "chemical-potential-differential"
+  },
+  {
+   "concept": "condensed-equilibrium-temperature",
+   "prereq": "condensed-activity-pressure"
+  },
+  {
+   "concept": "condensed-equilibrium-temperature",
+   "prereq": "reaction-gibbs-enthalpy-entropy"
+  },
+  {
+   "concept": "condensed-equilibrium-temperature",
+   "prereq": "reaction-gibbs-quotient"
+  },
+  {
+   "concept": "equilibrium-activity-iteration",
+   "prereq": "activity-equilibrium-constant"
+  },
+  {
+   "concept": "equilibrium-activity-iteration",
+   "prereq": "extended-debye-huckel-equation"
+  },
+  {
+   "concept": "solubility-activity-effect",
+   "prereq": "equilibrium-activity-iteration"
+  }
+ ]
+}

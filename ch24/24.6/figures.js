@@ -50,7 +50,7 @@ const sim = (id, H) => F.sim(root, id, H);
     topline(ctx, az
       ? `The curves touch at $\\kxone = ${fmt(az.x, 2)}$, a ${a < 0 ? 'maximum' : 'minimum'} boiling point of ${fmt(az.T, 1)} K. There the liquid and its vapor have one composition.`
       : `No azeotrope: at every composition the vapor is richer in component 1, the lower-boiling liquid.`);
-    const box = { l: 140, r: W - 140, t: 120, b: 520 };
+    const box = { l: 140, r: W - 140, t: 130, b: 530 };
     const ax = axes(ctx, box, [0, 1], [335, 380], { nx: 5, ny: 9, xl: 'mole fraction of component 1, liquid x₁ or vapor y₁', yl: 'temperature T (K)', yc: C('temperature') });
     /* the dew curve as the path (y1, T) traced over the liquid's composition */
     /* y1 rises with x1 at every alpha on the slider, so the dew curve is T as a function of y1, read off a table */
@@ -63,12 +63,12 @@ const sim = (id, H) => F.sim(root, id, H);
     };
     plot(ctx, ax, dew, C('temperature'), { w: 4, dash: [10, 10] });
     plot(ctx, ax, (t) => boil(t, a).T, C('temperature'), { w: 5 });
-    F.legend(ctx, ax, [{ s: 'liquid (boiling point)', color: C('temperature'), w: 5 }, { s: 'vapor (dew point)', color: C('temperature'), w: 4, dash: [10, 10] }], { corner: 'above' });
+    F.legend(ctx, ax, [{ s: 'liquid (boiling point)', color: C('temperature'), w: 5 }, { s: 'vapor (dew point)', color: C('temperature'), w: 4, dash: [10, 10] }], { corner: a < 0 ? 'br' : 'tr' });
     text(ctx, 'vapor', ax.X(0.5), ax.Y(378), PAL.muted, { size: 20, weight: 600, align: 'center' });
     text(ctx, 'liquid', ax.X(0.5), ax.Y(337), PAL.muted, { size: 20, weight: 600, align: 'center' });
     /* the pure boiling points */
     text(ctx, `${TB1} K`, ax.X(1) + 14, ax.Y(TB1), C('temperature'), { size: 20, weight: 600, align: 'left' });
-    text(ctx, `${TB2} K`, ax.X(0) - 14, ax.Y(TB2), C('temperature'), { size: 20, weight: 600, align: 'right' });
+    text(ctx, `${TB2} K`, ax.X(0) + 14, ax.Y(TB2) + 26, C('temperature'), { size: 20, weight: 600, align: 'left' });
     /* the reader's liquid, its boiling point and the vapor it gives off */
     const b = boil(x, a);
     line(ctx, ax.X(x), ax.Y(b.T), ax.X(b.y), ax.Y(b.T), alpha(PAL.ink, 0.6), 3);

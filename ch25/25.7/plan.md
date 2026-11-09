@@ -12,13 +12,13 @@ Source: `source.md`; draft from `python3 tools/md2html.py 25.7`. Status: built 2
 
 ## Figures
 
-- `sim-activity-coefficients` · Figure 25.7.1 · extended-debye-huckel-equation, davies-equation, debye-huckel-assumptions · variation by slider and choice: the reader sees the three equations leave √I = 0 on one slope and separate, the ion size lift the extended curve and higher charges plunge, which the book's single Davies plot cannot show · arrows: none · still: no time in it · choice |z₊z₋| 1–4; I slider 0–0.49 mol/L (untyped, detents 0.001, 0.01, 0.1, default 0.100: the exercise's 0.690 / 0.754 / 0.785 on load); a slider 3–9 Å (length, the book's 3 and 9 as detents) · headline: the three γ± at the live I · graph alone: log γ± against √I, fixed 0–0.7 by −0.6–0 (higher charges leave the frame, markers pinned), KBr's points from Figure 25.6.2 shown for |z₊z₋| = 1; curves in `F.cat` colours, limiting law dashed; legend · 2D. Original kept (CC BY-SA 4.0, PChemiker); its "Semi-log" caption corrected in a figure footnote.
+- `sim-activity-coefficients` · Figure 25.7.1 · extended-debye-huckel-equation, davies-equation, debye-huckel-assumptions · variation by slider and choice: the reader sees the three equations leave √I = 0 on one slope and separate, the ion size lift the extended curve and higher charges plunge, which the book's single Davies plot cannot show · arrows: none · still: no time in it · choice |z₊z₋| 1–4; I slider 0–0.49 mol/L (untyped, detents 0.001, 0.01, 0.1, default 0.100: the exercise's 0.691 / 0.754 / 0.785 on load); a slider 3–9 Å (length, the book's 3 and 9 as detents) · headline: the three γ± at the live I · graph alone: log γ± against √I, fixed 0–0.7 by −0.6–0 (higher charges leave the frame, markers pinned), KBr's points from Figure 25.6.2 shown for |z₊z₋| = 1; curves in `F.cat` colours, limiting law dashed; legend · 2D. Original kept (CC BY-SA 4.0, PChemiker); its "Semi-log" caption corrected in a figure footnote.
 
 Extra simulations: none.
 
 ## Exercises
 
-`a1` (AI): 0.10 M NaCl by the three equations, 0.690, 0.754, 0.785, and which to trust (checked by computation).
+`a1` (AI): 0.10 M NaCl by the three equations, 0.691, 0.754, 0.785, and which to trust (checked by computation).
 
 ## Derivations
 

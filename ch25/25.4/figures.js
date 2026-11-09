@@ -44,7 +44,7 @@ const piOf = (c) => c * R * T / 1000; /* c in mol/m^3 (= mmol/L), Pi in kPa */
       : `A push above $\\kPi = ${fmt(Pi, 2)}$ kPa drives water out of the solution: reverse osmosis.`);
     /* the liquid: pure water left of the membrane, the solution right of it */
     ctx.save();
-    ctx.fillStyle = PAL.soft;
+    ctx.fillStyle = alpha(PAL.muted, 0.22);
     ctx.fillRect(xL - AW, yL, 2 * AW, BOT - yL); ctx.fillRect(xL + AW, IN, XM - xL - AW, BOT - IN);
     ctx.fillStyle = alpha(F.cat(0), 0.14);
     ctx.fillRect(xR - AW, yR, 2 * AW, BOT - yR); ctx.fillRect(XM, IN, xR - AW - XM, BOT - IN);

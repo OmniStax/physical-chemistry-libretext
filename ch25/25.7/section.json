@@ -121,7 +121,7 @@
     "parts": [
      {
       "part": "a",
-      "value": 0.69,
+      "value": 0.691,
       "hint": "For NaCl the ionic strength equals the concentration and $|z_+z_-| = 1$."
      },
      {
@@ -133,7 +133,7 @@
       "value": 0.785
      }
     ],
-    "solution": "<p>For NaCl, $I = 0.10$ mol/L and $\\sqrt{I} = 0.316$.</p><p>(a) $\\log γ_\\pm = -(0.5085)(0.316) = -0.161$, so $γ_\\pm = 0.690$.</p><p>(b) The denominator is $1 + (0.3281)(3)(0.316) = 1.311$, so $\\log γ_\\pm = -0.161/1.311 = -0.123$ and $γ_\\pm = 0.754$.</p><p>(c) $-\\log f_\\pm = 0.5\\left(\\dfrac{0.316}{1.316} - 0.030\\right) = 0.105$, so $f_\\pm = 0.785$.</p><p>The limiting law holds only below about $10^{-3}$ mol/L, a hundred times more dilute, and it is far too low here. The Davies equation is fitted to data and is good to about 2% for 1:1 electrolytes at 0.1 M, so it is the one to trust; the extended equation comes closer than the limiting law because it allows for the size of the ions.</p>"
+    "solution": "<p>For NaCl, $I = 0.10$ mol/L and $\\sqrt{I} = 0.316$.</p><p>(a) $\\log γ_\\pm = -(0.5085)(0.316) = -0.161$, so $γ_\\pm = 0.691$.</p><p>(b) The denominator is $1 + (0.3281)(3)(0.316) = 1.311$, so $\\log γ_\\pm = -0.161/1.311 = -0.123$ and $γ_\\pm = 0.754$.</p><p>(c) $-\\log f_\\pm = 0.5\\left(\\dfrac{0.316}{1.316} - 0.030\\right) = 0.105$, so $f_\\pm = 0.785$.</p><p>The limiting law holds only below about $10^{-3}$ mol/L, a hundred times more dilute, and it is far too low here. The Davies equation is fitted to data and is good to about 2% for 1:1 electrolytes at 0.1 M, so it is the one to trust; the extended equation comes closer than the limiting law because it allows for the size of the ions.</p>"
    }
   }
  ],
