@@ -49,8 +49,9 @@ dropped. Needs BeautifulSoup 4. Markers, in the order a page prints them:
                                   regular table is a markdown table, an
                                   irregular one (spans, paragraphs in cells)
                                   says `irregular` and marks {span=N}/{rows=N}.
-  :::example {ex:N.M.K} Title     a section.box-example; its h6 parts come
-  …  **Solution** … :::           through in bold on a line of their own.
+  :::example {ex:N.M.K} Title     a section.box-example (or a div.box-example
+  …  **Solution** … :::           titled by a p.box-legend, 24.6); its h6 parts
+                                  come through in bold on a line of their own.
   :::exercise {exr:N.M.K} Title   a section.box-exercise; an Answer or Solution
   … **Answer** … :::              part, where the box has one, is in bold.
                                   Where the printed title names the other kind
@@ -380,6 +381,9 @@ class Converter:
         if cls not in KNOWN_BOXES:
             warn(f"unknown box {cls}")
         title_tag = sec.find(["h5", "h6", "h4", "h3"])
+        if title_tag is None and sec.name == "div":
+            # a div box titled by a p.box-legend (24.6's examples)
+            title_tag = sec.find("p", class_="box-legend")
         title = re.sub(r"\s+", " ", title_tag.get_text(" ", strip=True)) if title_tag else ""
         title = self.math_inline(title)
         header = sec.find("header")
@@ -429,6 +433,10 @@ class Converter:
             # exercise boxes of 9.11 and 14.2-14.3 come through as before
             for legend in node.find_all("p", class_="box-legend"):
                 legend.decompose()
+            return self.box(node)
+        if name == "div" and "box-example" in cls:
+            # 24.6 prints its two examples in a div titled by a p.box-legend (the
+            # only div example in the book)
             return self.box(node)
         if name in ("h1", "h2", "h3", "h4"):
             t = re.sub(r"\s+", " ", self.math_inline(node.get_text(" ", strip=True)))

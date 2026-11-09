@@ -1,0 +1,416 @@
+{
+ "id": "19.5",
+ "module": "13703",
+ "chapter": "19",
+ "title": "An Adiabatic Process is a Process in which No Energy as Heat is Transferred",
+ "short": "Adiabatic processes",
+ "lead": "An ideal gas can expand reversibly at constant temperature, or with no heat let in at all. Following both routes between the same two states shows where the energy for the work comes from in each.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "Four of the book's equations are images that no longer load at the source; the lines in their place are reconstructed and footnoted.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "medium"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "medium"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercises for this section; the one exercise, on the heat and work of a reversible isothermal doubling of volume, was written by AI with an AI solution, and its Bloom level and concept tags were chosen by AI. Numeric answers accept a 2% tolerance.",
+ "figures": [
+  {
+   "id": "sim-isotherm-adiabat",
+   "kind": "sim",
+   "originals": [
+    "/media/ch19/402614-Thermodynamic_Reversible_Paths.png"
+   ],
+   "original_caption": "",
+   "draws": [
+    "pressure",
+    "volume",
+    "temperature",
+    "heat",
+    "work",
+    "energy"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "medium",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "isothermal",
+   "concept": "isothermal-ideal-gas-energy",
+   "verb": "introduces"
+  },
+  {
+   "span": "isothermal",
+   "concept": "reversible-isothermal-heat",
+   "verb": "introduces"
+  },
+  {
+   "span": "isothermal",
+   "concept": "reversible-isothermal-work",
+   "verb": "uses"
+  },
+  {
+   "span": "isothermal",
+   "concept": "first-law-of-thermodynamics",
+   "verb": "uses"
+  },
+  {
+   "span": "adiabatic",
+   "concept": "adiabatic-process",
+   "verb": "introduces"
+  },
+  {
+   "span": "adiabatic",
+   "concept": "adiabatic-energy-change",
+   "verb": "introduces"
+  },
+  {
+   "span": "adiabatic",
+   "concept": "ideal-gas-energy-heat-capacity",
+   "verb": "introduces"
+  },
+  {
+   "span": "adiabatic",
+   "concept": "isotherm-and-adiabat-paths",
+   "verb": "introduces"
+  },
+  {
+   "span": "adiabatic",
+   "concept": "constant-volume-heat-capacity",
+   "verb": "reinforces"
+  },
+  {
+   "span": "adiabatic",
+   "concept": "isochore",
+   "verb": "uses"
+  },
+  {
+   "span": "adiabatic",
+   "concept": "path-function",
+   "verb": "reinforces"
+  },
+  {
+   "span": "adiabatic",
+   "concept": "state-function",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "ai1",
+   "source_id": "img:3",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "isothermal",
+   "prompt": "<p>1.00 mol of an ideal gas at 298 K doubles its volume in a reversible isothermal expansion. Find (a) the heat taken in and (b) the work done on the gas.</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 1.72,
+      "unit": "kJ",
+      "hint": "$\\Delta U = 0$ for an isothermal change of an ideal gas, so $q_{rev} = nRT\\ln(V_2/V_1)$."
+     },
+     {
+      "part": "b",
+      "value": -1.72,
+      "unit": "kJ"
+     }
+    ],
+    "solution": "<p>The energy of an ideal gas depends only on its temperature, so $\\Delta U = 0$ and $w_{rev} = -q_{rev}$. (a) $q_{rev} = nRT\\ln(V_2/V_1) = (1.00\\ \\text{mol})(8.314\\ \\text{J K}^{-1}\\text{mol}^{-1})(298\\ \\text{K})\\ln 2 = +1717$ J, or +1.72 kJ. (b) $w_{rev} = -1.72$ kJ: the gas does 1.72 kJ of work on its surroundings, all of it paid for by the heat taken in.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "ai1",
+   "concept": "reversible-isothermal-heat"
+  },
+  {
+   "exercise": "ai1",
+   "concept": "isothermal-ideal-gas-energy"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-image61",
+   "kind": "correction",
+   "html": "The book's equation here is an image that no longer loads at the source (NCSU's CH431_Image61); the line shown is reconstructed from the words around it. For an ideal gas $U$ depends on $T$ alone, so the partial derivative at constant volume is the ordinary derivative $dU/dT$."
+  },
+  {
+   "id": "c-image62",
+   "kind": "correction",
+   "html": "The book's equation here is an image that no longer loads at the source (NCSU's CH431_Image62); the line shown is reconstructed from the words around it. It is the line above with both sides multiplied by $dT$."
+  },
+  {
+   "id": "c-wa-sign",
+   "kind": "correction",
+   "html": "Along the isotherm $w_A = -q_A = -nRT\\ln(V_2/V_1)$, which is negative for an expansion, as the gas does work on its surroundings. The book prints $\\ln(V_1/V_2)$, which has the opposite sign."
+  },
+  {
+   "id": "c-image64",
+   "kind": "correction",
+   "html": "The book's equation here is an image that no longer loads at the source (NCSU's CH431_Image64); the line shown is reconstructed from the words around it. Along the adiabat the reversible volume work is the whole change of energy, and $P = nRT/V$ for an ideal gas."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "isothermal-heat",
+   "what": "the heat of a reversible isothermal expansion",
+   "source": "Physical Chemistry (LibreTexts), 19.5 An Adiabatic Process is a Process in which No Energy as Heat is Transferred",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kU = \\tfrac{3}{2}\\knmol\\kR\\kT",
+       "src": "17.1"
+      },
+      {
+       "text": "The change is isothermal: $T$ stays constant."
+      }
+     ],
+     "then": {
+      "tex": "\\mk{u}{\\kU} = \\mk{r}{\\tfrac{3}{2}\\knmol\\kR\\kT}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{u}{\\kDeltaU} = \\mk{r}{\\tfrac{3}{2}\\knmol\\kR\\,\\Delta\\kT}",
+       "uses": [],
+       "cap": "Take the change of both sides between the two states; $n$ and $R$ do not change."
+      },
+      {
+       "tex": "\\mk{u}{\\kDeltaU} = \\mk{r}{0}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "src": "19.5"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "\\kDeltaU = \\kq + \\kw",
+       "src": "19.1"
+      },
+      {
+       "tex": "\\kwrev = -\\knmol\\kR\\kT\\ln\\dfrac{\\kVb}{\\kVa}",
+       "src": "19.3",
+       "drv": "19.3/reversible-isothermal-work"
+      },
+      {
+       "text": "Heat and work are both taken along the reversible path."
+      }
+     ],
+     "then": {
+      "tex": "\\mk{u}{\\kDeltaU} = \\mk{w}{\\kwrev} + \\mk{q}{\\kqrev}",
+      "uses": [
+       1,
+       3
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{u}{0} = \\mk{w}{\\kwrev} + \\mk{q}{\\kqrev}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{w}{\\kwrev} = \\mk{q}{- \\kqrev}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{q}{\\kqrev} = \\mk{w}{-\\kwrev}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{q}{\\kqrev} = \\mk{w}{\\knmol\\kR\\kT\\ln\\dfrac{\\kVb}{\\kVa}}",
+       "uses": [
+        2
+       ]
+      }
+     ],
+     "src": "19.5"
+    }
+   ]
+  },
+  {
+   "id": "adiabat-and-isochore",
+   "what": "the work along the adiabat against the heat along the isochore",
+   "source": "Physical Chemistry (LibreTexts), 19.5 An Adiabatic Process is a Process in which No Energy as Heat is Transferred",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "text": "Path A and path B + C join the same two states, $P_1, V_1, T_1$ and $P_2, V_2, T_1$.",
+       "src": "19.5"
+      },
+      {
+       "text": "$U$ is a state function: its change depends only on the end points.",
+       "src": "19.4"
+      },
+      {
+       "tex": "\\kDeltaU_A = 0",
+       "src": "19.5",
+       "drv": "isothermal-heat"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{a}{\\kDeltaU_{B+C}} = \\mk{b}{\\kDeltaU_A}",
+      "uses": [
+       0,
+       1
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{a}{\\kDeltaU_{B+C}} = \\mk{b}{0}",
+       "uses": [
+        2
+       ]
+      }
+     ],
+     "src": "19.5"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\kDeltaU = \\kq + \\kw",
+       "src": "19.1"
+      },
+      {
+       "text": "Along the isochore C the volume is kept constant, so there is no volume work: $w_C = 0$.",
+       "src": "19.5"
+      },
+      {
+       "tex": "d\\kU = \\kCv\\, d\\kT",
+       "src": "19.5"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{u}{\\kDeltaU_C} = \\mk{q}{\\kq_C} + \\mk{w}{\\kw_C}",
+      "uses": [
+       0
+      ]
+     },
+     "steps": [
+      {
+       "tex": "\\mk{u}{\\kDeltaU_C} = \\mk{q}{\\kq_C}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{q}{\\kq_C} = \\mk{u}{\\kDeltaU_C}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{q}{\\kq_C} = \\mk{u}{\\int_{\\kTtwo}^{\\kTone}\\kCv\\,d\\kT}",
+       "uses": [
+        2
+       ],
+       "cap": "Along C the gas warms from $T_2$ back to $T_1$, and the changes $dU = C_v\\,dT$ add up along the way."
+      }
+     ],
+     "src": "19.5",
+     "note": "The book's equation for this step is lost at the source (its image CH431_Image63 no longer loads); the line is reconstructed from the words around it."
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "\\kDeltaU = \\kq + \\kw",
+       "src": "19.1"
+      },
+      {
+       "text": "Along the adiabat B no heat flows: $q_B = 0$.",
+       "src": "19.5"
+      },
+      {
+       "text": "Along the isochore C there is no volume work: $w_C = 0$.",
+       "src": "19.5"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{a}{\\kDeltaU_{B+C}} = \\mk{qb}{\\kq_B} + \\mk{wb}{\\kw_B} + \\mk{qc}{\\kq_C} + \\mk{wc}{\\kw_C}",
+      "uses": [
+       1
+      ],
+      "why": "The first law holds along each leg, and the changes along B and C add."
+     },
+     "steps": [
+      {
+       "tex": "\\mk{a}{0} = \\mk{qb}{\\kq_B} + \\mk{wb}{\\kw_B} + \\mk{qc}{\\kq_C} + \\mk{wc}{\\kw_C}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{a}{0} = \\mk{qb}{0} + \\mk{wb}{\\kw_B} + \\mk{qc}{\\kq_C} + \\mk{wc}{0}",
+       "uses": [
+        2,
+        3
+       ]
+      },
+      {
+       "tex": "\\mk{wb}{\\kw_B} = \\mk{qc}{-\\kq_C}",
+       "uses": []
+      }
+     ],
+     "src": "19.5"
+    },
+    {
+     "assumes": [
+      {
+       "step": 2
+      },
+      {
+       "step": 1
+      }
+     ],
+     "then": {
+      "tex": "\\mk{w}{\\kw_B} = \\mk{q}{-\\kq_C}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{w}{\\kw_B} = \\mk{q}{-\\int_{\\kTtwo}^{\\kTone}\\kCv\\,d\\kT}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "src": "19.5"
+    }
+   ]
+  }
+ ]
+}

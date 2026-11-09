@@ -13,7 +13,7 @@ For which the Henry’s Law constant ($k_H$) is determined for the specific comp
 
 Henry’s Law is depicted by the upper straight line and Raoult’s Law by the lower.
 
-Example 24.6.1: Solubility of Carbon Dioxide in Water
+:::example {ex:24.6.1} Solubility of Carbon Dioxide in Water
 
 The solubility of $CO_2(g)$ in water at 25 <sup>o</sup>C is 3.32 x 10<sup>-2</sup> M with a partial pressure of $CO_2$ over the solution of 1 bar. Assuming the density of a saturated solution to be 1 kg/L, calculate the Henry’s Law constant for $CO_2$.
 
@@ -38,6 +38,7 @@ $$ 10^5\, Pa = 5.98 \times 10^{-4} k_H $$
 or
 
 $$ k_H = 1.67 \times 10^9\, Pa $$
+:::
 
 ## Azeotropes
 
@@ -57,7 +58,7 @@ Azeotropes can be either maximum boiling or minimum boiling, as show in Figure 2
 
 Another possibility that is common is for two substances to form a two-phase liquid, form a minimum boiling azeotrope, but for the azeotrope to boil at a temperature below which the two liquid phases become miscible. In this case, the phase diagram will look like Figure 24.6.3.
 
-Example 24.6.1:
+:::example {ex:24.6.1}
 
 In the diagram, make up of a system in each region is summarized below the diagram. The point e indicates the azeotrope composition and boiling temperature.
 
@@ -72,6 +73,7 @@ In the diagram, make up of a system in each region is summarized below the diagr
 {term:Solution}
 
 Within each two-phase region (III, IV, and the two-phase liquid region, the lever rule will apply to describe the composition of each phase present. So, for example, the system with the composition and temperature represented by point b (a single-phase liquid which is mostly compound A, designated by the composition at point a, and vapor with a composition designated by that at point c), will be described by the lever rule using the lengths of tie lines ­*l<sub>A</sub>* and *l<sub>B</sub>*.
+:::
 
 ### Gibbs-Duhem and Henry's law
 

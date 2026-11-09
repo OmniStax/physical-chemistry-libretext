@@ -77,7 +77,7 @@ const f1 = (v) => fmt(v, v < 10 ? 2 : 1);
       dot(ctx, ax.X(p), ax.Y(ph), C('pressure'), true, 9);
       hits.push({ x: ax.X(p), y: ax.Y(ph), r: 16, name: `${fmt(p, 0)} bar: φ = ${f3(ph)}, f = ${f1(fug)} bar` });
     }
-    legend(ctx, ax, [{ s: `${g.name} as a van der Waals gas`, color: PAL.ink, w: 5 }, { s: 'ideal gas', color: alpha(PAL.ink, 0.45), w: 3, dash: [10, 10] }], { corner: 'tr' });
+    legend(ctx, ax, [{ s: `${g.name} as a van der Waals gas`, color: PAL.ink, w: 5, f: phi }, { s: 'ideal gas', color: alpha(PAL.ink, 0.45), w: 3, dash: [10, 10] }]);
     const tk = fmt(t, Math.abs(t - 298.15) < 0.01 ? 2 : 0);
     topline(ctx, gone
       ? `${g.name} at ${tk} K condenses at ${f1(ps)} bar, where $\\phi = ${f3(ph)}$; above that pressure no gas is left.`

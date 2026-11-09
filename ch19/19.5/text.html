@@ -1,6 +1,6 @@
 <section id="isothermal">
 <h2>Isothermal expansion of an ideal gas</h2>
-<p>For a monatomic ideal gas we have seen that energy $\langle E \rangle$ observed as $\kU= 3/2 \knmol\kR\kT$. This means that energy is only dependent on temperature and if a gas is compressed <strong><span data-concept="isotherm">isothermally</span></strong>, then <span data-concept="isothermal-ideal-gas-energy">the internal energy does not change</span>:</p>
+<p>For a monatomic <span data-concept="ideal-gas">ideal gas</span> we have seen that energy $\langle E \rangle$ observed as $\kU= 3/2 \knmol\kR\kT$. This means that energy is only dependent on temperature and if a gas is compressed <strong><span data-concept="isotherm">isothermally</span></strong>, then <span data-concept="isothermal-ideal-gas-energy">the internal energy does not change</span>:</p>
 <figure class="dv" id="drv-isothermal-heat"></figure>
 <p>If $\kVb>\kVa$ (expansion), then you (or the environment) <strong>must</strong> put <span data-concept="reversible-isothermal-heat">heat into the system</span> because this is a positive number.</p>
 </section>
@@ -9,12 +9,12 @@
 <h2>Adiabatic expansion of an ideal gas</h2>
 <p>Now suppose you make sure that no heat can enter the cylinder. (Put it in styrofoam or so). Then the path can still be reversible (slow pulling) but the process is then <span data-concept="adiabatic-process">adiabatic</span>.</p>
 <blockquote><p>This bat- part comes from a Greek verb <em>βαινω</em> (baino) that means walking, compare acro<strong>bat</strong>, someone who goes high places (acro-). The <em>δια</em> (dia) part means 'through' (cf. diagram, diorama, diagonal etc.) and the prefix <em>α-</em> (a-) denies it all (compare <em>atypical</em> versus <em>typical</em>).</p></blockquote>
-<p>So the styrofoam prevents the heat from walking through the wall. When expanding the gas from V<sub>1</sub> to V<sub>2</sub> it still does reversible work but where does that come from? It can only come from the internal energy itself. So in this case <span data-concept="adiabatic-energy-change">any energy change should consist of work</span> (<span data-concept="adiabatic-process">adiabatic</span> means: $\delta \kq=0$).</p>
+<p>So the styrofoam prevents the heat from walking through the wall. When expanding the gas from V<sub>1</sub> to V<sub>2</sub> it still does reversible work but where does that come from? It can only come from the <span data-concept="internal-energy">internal energy</span> itself. So in this case <span data-concept="adiabatic-energy-change">any energy change should consist of work</span> (<span data-concept="adiabatic-process">adiabatic</span> means: $\delta \kq=0$).</p>
 $$ d\kU = \delta \kwrev $$
 <p>This implies that the temperature must drop, because if $\kU$ changes, then $\kT$ must change.</p>
 <p>The change of energy with temperature at constant volume is known as the <span data-concept="constant-volume-heat-capacity">heat capacity (at constant volume)</span> $\kCv$</p>
 $$ \kCv =\left( \dfrac{\partial \kU}{\partial \kT} \right)_V $$
-<p>For an ideal gas <span data-concept="ideal-gas-energy-heat-capacity">$\kU$ only changes with temperature</span>, so that</p>
+<p>For an <span data-concept="ideal-gas">ideal gas</span> <span data-concept="ideal-gas-energy-heat-capacity">$\kU$ only changes with temperature</span>, so that</p>
 $$ \left( \dfrac{\partial \kU}{\partial \kT} \right)_V = \dfrac{d\kU}{d\kT} = \kCv $$<sup class="fn" data-note="c-image61"></sup>
 <p>or:</p>
 $$ d\kU = \kCv\, d\kT $$<sup class="fn" data-note="c-image62"></sup>
@@ -23,11 +23,11 @@ $$ d\kU = \kCv\, d\kT $$<sup class="fn" data-note="c-image62"></sup>
 <figure class="sim" id="sim-isotherm-adiabat" data-original="/media/ch19/402614-Thermodynamic_Reversible_Paths.png" data-original-caption="">
   <div class="sim-head"><span class="eyebrow">Sim</span><span>Stretch the expansion or switch the gas. The isotherm A and the route B + C end at the same <span data-type="temperature">temperature</span>, so $\kDeltaU = 0$ both ways. The <span data-type="work">work</span> along B is not the work along A, and the <span data-type="heat">heat</span> taken in along C pays back what B's work took out.</span></div>
 </figure>
-<p>Notice that the temperature remains $\kTone$ for path A (<span data-concept="isotherm">isotherm</span>!), but that it drops to $\kTtwo$ on the adiabat B, so that the cylinder has to be isochorically warmed up, C, to regain the same temperature.</p>
+<p>Notice that the temperature remains $\kTone$ for path A (<span data-concept="isotherm">isotherm</span>!), but that it drops to $\kTtwo$ on the <span data-concept="adiabatic-process">adiabat</span> B, so that the cylinder has to be isochorically warmed up, C, to regain the same temperature.</p>
 <p>$\kDeltaU_{tot}$ should be the same for both path A and the combined path B+C, because the end points are the same ($\kU$ is a <span data-concept="state-function">state function</span>!). As the and points are at the same temperature and $\kU$ only depends on $\kT$:</p>
 <figure class="dv" id="drv-adiabat-and-isochore"></figure>
-<p>We had already seen before that along the isotherm A:</p>
+<p>We had already seen before that along the <span data-concept="isotherm">isotherm</span> A:</p>
 $$ \kw_A = - \kq_A = - \knmol\kR\kT \ln \dfrac{\kVa}{\kVb} $$<sup class="fn" data-note="c-wa-sign"></sup>
-<p>As you can see \w_A\) and $\kw_B$ are <em><strong>not</strong></em> the same. Work is a <span data-concept="path-function">path function</span>, even if reversible. As we are working with an ideal gas we can be more precise about $\kw_B$ and $q_c$ as well. The term $\kw_B$ along the adiabat is reversible volume work. Since there is no heat along B we can write a straight $d$ instead of $\delta$ for the work contributions (It is the only contribution and must be identical to the state function $d\kU$):</p>
+<p>As you can see \w_A\) and $\kw_B$ are <em><strong>not</strong></em> the same. Work is a <span data-concept="path-function">path function</span>, even if reversible. As we are working with an <span data-concept="ideal-gas">ideal gas</span> we can be more precise about $\kw_B$ and $q_c$ as well. The term $\kw_B$ along the <span data-concept="adiabatic-process">adiabat</span> is reversible volume work. Since there is no heat along B we can write a straight $d$ instead of $\delta$ for the work contributions (It is the only contribution and must be identical to the <span data-concept="state-function">state function</span> $d\kU$):</p>
 $$ d\kw_B = d\kU = -\kP\,d\kV = -\dfrac{\knmol\kR\kT}{\kV}\,d\kV $$<sup class="fn" data-note="c-image64"></sup>
 </section>

@@ -30,16 +30,16 @@ const H = (t) => t <= TM ? CP_ICE * (t - T0) : CP_ICE * (TM - T0) + DFUS + CP_WA
     /* top: the enthalpy */
     const top = axes(ctx, { l: 170, r: W - 60, t: 110, b: 330 }, [253, 293], [0, 9], { nx: 4, ny: 3, xl: '', yl: 'H(T) − H(253 K) (kJ/mol)', xc: C('temperature'), yc: C('energy') });
     const hk = (x) => H(x) / 1000;
-    plot(ctx, top, [{ f: hk, x: [253, 273], ends: '[]' }, { f: hk, x: [273.0001, 293], ends: '(]' }], C('energy'), { w: 5 });
+    plot(ctx, top, [{ f: hk, x: [253, 273], ends: '--' }, { f: hk, x: [273.0001, 293], ends: '--' }], C('energy'), { w: 5 });
     line(ctx, top.X(TM), top.Y(hk(TM)), top.X(TM), top.Y(hk(TM) + DFUS / 1000), C('energy'), 5);
     text(ctx, `Δ_{fus}H = ${fmt(DFUS / 1000, 2)} kJ/mol`, top.X(TM) + 14, top.Y(hk(TM) + DFUS / 2000), C('energy'), { size: 20, weight: 600, base: 'middle', bg: PAL.panel });
     /* bottom: the heat capacity */
-    const bot = axes(ctx, { l: 170, r: W - 60, t: 400, b: 610 }, [253, 293], [0, 1400], { nx: 4, ny: 4, xl: 'temperature T (K)', yl: 'C_p (J mol⁻¹ K⁻¹)', xc: C('temperature'), yc: C('heat-capacity') });
+    const bot = axes(ctx, { l: 170, r: W - 60, t: 420, b: 620 }, [253, 293], [0, 1400], { nx: 4, ny: 4, xl: 'temperature T (K)', yl: 'C_p (J mol⁻¹ K⁻¹)', xc: C('temperature'), yc: C('heat-capacity') });
     const g = (x) => DFUS / (s * Math.sqrt(2 * Math.PI)) * Math.exp(-((x - TM) ** 2) / (2 * s * s));
     const dsc = (x) => base(x) + g(x);
     const area = shade(ctx, bot, dsc, base, Math.max(253, TM - 5 * s), Math.min(293, TM + 5 * s), C('heat-capacity'), { alpha: 0.2 });
     plot(ctx, bot, dsc, alpha(C('heat-capacity'), 0.7), { w: 3, dash: [10, 10] });
-    plot(ctx, bot, [{ f: () => CP_ICE, x: [253, 273], ends: '[)' }, { f: () => CP_WATER, x: [273, 293], ends: '[]' }], C('heat-capacity'), { w: 5 });
+    plot(ctx, bot, [{ f: () => CP_ICE, x: [253, 273], ends: '--' }, { f: () => CP_WATER, x: [273, 293], ends: '--' }], C('heat-capacity'), { w: 5 });
     arrow(ctx, bot.X(TM), bot.Y(CP_WATER), bot.X(TM), bot.box.t + 4, C('heat-capacity'), 4);
     text(ctx, 'ideal: infinite at 273 K', bot.X(TM) - 14, bot.box.t + 22, C('heat-capacity'), { size: 20, weight: 600, align: 'right', bg: PAL.panel });
     text(ctx, `DSC peak, area ${fmt(area / 1000, 2)} kJ/mol`, bot.X(TM) + 14 + 2.2 * s * (bot.X(254) - bot.X(253)), bot.Y(dsc(TM) * 0.55), C('heat-capacity'), { size: 20, base: 'middle', bg: PAL.panel });
