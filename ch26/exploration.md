@@ -41,7 +41,7 @@ form Q = [C]^c[D]^d/[A]^a[B]^b** (26.5) is a form of 26.1's concept.
 | landing | 11822 | BY-NC-SA | none, no text | | | | | |
 | 26.1 Equilibrium Results when Gibbs Energy is Minimized | 14522 | BY-NC-SA | Extent of reaction; Measuring ξ; Thermodynamic Potentials; Gas Reactions | | 1 unnumbered (411105) | | | 18 (0) |
 | 26.2 An Equilibrium Constant is a Function of Temperature Only | 14523 | BY-NC-SA | Le Chatelier's Principle; Concentration | 1 unnumbered example **without a solution** (holding a 5-row table) | | 1 (in the example) | "Note" | 26 (2) |
-| 26.3 Standard Gibbs Energies of Formation … | 14524 | BY-NC-SA | none once the macro header is dropped | | | | | 14 (0; 10 carry DeVoe's \tag) |
+| 26.3 Standard Gibbs Energies of Formation … | 14524 | BY-NC-SA | none once the macro header is dropped | | | | | 14 (0; 12 carry DeVoe's \tag) |
 | 26.4 Gibbs Energy of a Reaction vs. Extent … | 14525 | **CC BY 4.0** | Ideal Gas Equilibrium | | 2 (26.4.1, 26.4.2) | | "Terminology", "Think about it" | 11 (2) |
 | 26.5 Reaction Quotient and Equilibrium Constant Ratio … | 14526 | **CC BY 4.0** | none | | | | "Note" (Q vs K) | 5 (2) |
 | 26.6 The Sign of ΔG and not ΔG° … | 14527 | BY-NC-SA | none | | | | | 5 (0) |

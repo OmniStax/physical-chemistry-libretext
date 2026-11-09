@@ -17,7 +17,7 @@ Proposed by the agent after the chapter exploration (2026-11-08). Status:
 | Boxed notes | kept as titled notes: 26.2's "Note", 26.4's "Terminology" and "Think about it", 26.5's "Note"; 26.7's pull-quote as an untitled emphasis note (13.12 precedent) |
 | Embeds | none |
 | Printed labels | kept as printed: DeVoe's "Eq. 9.2.46", "Sec. 11.3.2", "Sec. 6.2", "Sec. 14.3.3", "Appendix H" in 26.3 with one footnote naming them another text's (25.2's Peverati precedent); 26.4's "Section 26.4" linked to 26.1 with a footnote; 26.11's "S&McQ 1083" and "Example 26-12" (McQuarrie and Simon's) as printed; 26.12's "CH 431/Lecture 17/answer2" left with its exercise as printed |
-| Equation numbers | one per display, N.M.K, as the converter numbers them: (26.2.1)–(26.2.2), (26.4.1)–(26.4.2), (26.5.1)–(26.5.2), (26.7.1)–(26.7.3), (26.8.1)–(26.8.6), (26.10.1); 26.3's ten displays keep DeVoe's printed tags (11.8.20)–(11.8.31) (the converter's 4.S rule; see the open question); the rest unnumbered |
+| Equation numbers | one per display, N.M.K, as the converter numbers them: (26.2.1)–(26.2.2), (26.4.1)–(26.4.2), (26.5.1)–(26.5.2), (26.7.1)–(26.7.3), (26.8.1)–(26.8.6), (26.10.1); 26.3's twelve tagged displays keep DeVoe's printed tags (11.8.20)–(11.8.31) (the converter's 4.S rule; see the open question); the rest unnumbered |
 | Repeated material | built once where the book first works it and cited after: Δ_rG = Δ_rG° + RT ln Q (26.1; 26.4 cites), K = e^{−Δ_rG°/RT} (26.2; 26.3, 26.4, 26.7 cite), the van 't Hoff equation and its integrated form (26.2; 26.7 cites, its own result being the ln K–1/T line), the equilibrium constant's definition (26.2; 26.4's K_eq = P_B/P_A cites); from earlier chapters 22.2, 22.5–22.8 (fugacity: 22.8, its Sim cited by 26.10), 23.3, 23.5, 17.2, 17.8, 18, 19.11–19.12, 20.6, 21.2, 21.9, 24.1, 24.7–24.8, 25.6 |
 | Figures | as the table in `exploration.md`: 411105 (26.1) kept, "= μ" corrected in the row's caption; Figures 26.4.1 + 26.4.2 folded (still: G(ξ) for A ⇌ B as line plus mixing, Δ_rG° and T sliders, minimum ξ_eq); `sim-q-toward-k` (26.5, moving: the state point rolls down G(ξ) of the NH₃ synthesis as Q walks to K); 26.7.1 replaced by `sim-van-t-hoff` (still: ln K against 1/T, Δ_rH° and Δ_rS° sliders, special at Δ_rH° = 0); 26.8's hot-linked Wikimedia image not shipped (cites 26.4's fold) |
 | 3D | none |
@@ -59,7 +59,7 @@ Only what Chapters 3–25's decisions do not settle:
 1. **DeVoe's printed equation tags in 26.3** ((11.8.20)–(11.8.31), the first page of the book to print
    another text's tags with `\tag`). Proposed: keep them as printed (the converter's 4.S rule; the
    live page shows them; the prose's "Eq. 11.8.23" then resolves on the page), with the footnote on
-   DeVoe's other references. Alternative: renumber (26.3.1)–(26.3.10) and link the prose's "Eq. 11.8.2x"
+   DeVoe's other references. Alternative: renumber (26.3.1)–(26.3.14) and link the prose's "Eq. 11.8.2x"
    to them, the same footnote saying so.
 2. **Example 26.8.1** is wrong by four orders of magnitude (7.2 × 10¹⁵, not 2.26 × 10¹¹). Proposed: keep
    the example as printed with one footnote under it giving the corrected factors and K_c, and build

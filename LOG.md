@@ -1508,3 +1508,28 @@ between two phases … is at constant T and P", 23.4's "ΔH̄_vap is independent
 reading of 16.1 and 19.1. 23.4's integrated derivation leaves the book's fragments "which actually has
 the wrong curvature …", "assuming that …" and "so that we can determine …" after it in the text. In
 dark mode the ice and liquid regions of the phase diagram are two close greens.
+
+## Chapter 26 prep · 2026-11-08
+
+Prep only, no section built. Fetched Chapter 26's 5 images into `media/ch26/` (the two 26.7.1 PNGs
+renamed `…_vant_Hoff_Plot.png` for the offline build; 26.8's Wikimedia image is hot-linked and
+refused here). Converted the landing page (no text: no `intro/` page or record), 26.1–26.12 and 26.13
+"Homework Problems" (the exercise page: the stray Chapter 4 passage and Exercise 26.13.1, 1.9's card
+`e3`, not routed, not built). Wrote `ch26/exploration.md`, `ch26/config.md` (agreed on Chapter 1's
+terms, three open questions), `ch26/chapter.json` (12 sections, 171 variables) and merged
+`ch26/book-rows.json`: no new type, 45 symbols (24 with macros), 38 concepts, 71 edges (Hasse-checked,
+4 redundant removed), 38 forms. `colours:default` not run. `check:content`: no errors, no warnings.
+
+Tool: `lt2md.py` now expands a page's own `\newcommand` header (26.3, DeVoe's, hidden on the live
+page) in its maths and drops the header; Chapters 1–25 reconverted to scratch before and after are
+byte-identical. Drafts for 26.1–26.12, 392 maths spans, KaTeX strict, no error.
+
+Found: 3 unkeyed book items (26.2's example without a solution, 26.12's exercise and inline question),
+1 worked example (26.8.1, wrong: K_c = 7.2 × 10¹⁵ by the book's own constants and true masses, not
+2.26 × 10¹¹); 10 AI exercises proposed. Figures: 26.4.1 + 26.4.2 folded (still G(ξ)), `sim-q-toward-k`
+(26.5, moving), 26.7.1 replaced by `sim-van-t-hoff` (still; original "used with permission", not
+shipped), 411105 kept; `sim-k-from-q` optional. Eight derivation records proposed.
+
+Literature from memory, **unchecked**: water's V̄ 18.07 cm³/mol (an AI exercise), graphite's density
+2.26 g/cm³ (only to judge 26.11's "1.01 at 100 bars", which it puts at 1.02), Δ_fG°(NH₃) −16.45 kJ/mol
+and HCl's formation ΔH°/ΔS° (cross-checks only, nothing built on them).
