@@ -221,7 +221,8 @@
       },
       {
        "tex": "\\kqrevA = \\knmol R\\kT \\ln \\dfrac{\\kVb}{\\kVa}",
-       "src": "Chapter 19"
+       "src": "19.5",
+       "drv": "19.5/isothermal-heat"
       }
      ],
      "then": {

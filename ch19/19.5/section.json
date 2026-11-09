@@ -245,7 +245,8 @@
       },
       {
        "tex": "\\mk{w}{\\kwrev} = \\mk{q}{- \\kqrev}",
-       "uses": []
+       "uses": [],
+       "cap": "This means that the reversible work must cancel the reversible heat."
       },
       {
        "tex": "\\mk{q}{\\kqrev} = \\mk{w}{-\\kwrev}",
@@ -307,7 +308,7 @@
        "src": "19.1"
       },
       {
-       "text": "Along the isochore C the volume is kept constant, so there is no volume work: $w_C = 0$.",
+       "text": "Along isochoric heating C, there is no volume work because the volume is kept constant: $w_C = 0$.",
        "src": "19.5"
       },
       {
@@ -357,7 +358,7 @@
        "src": "19.5"
       },
       {
-       "text": "Along the isochore C there is no volume work: $w_C = 0$.",
+       "text": "Along isochoric heating C, there is no volume work because the volume is kept constant: $w_C = 0$.",
        "src": "19.5"
       }
      ],
@@ -380,11 +381,13 @@
        "uses": [
         2,
         3
-       ]
+       ],
+       "cap": "This is the only reversible heat involved in path B+C."
       },
       {
        "tex": "\\mk{wb}{\\kw_B} = \\mk{qc}{-\\kq_C}",
-       "uses": []
+       "uses": [],
+       "cap": "This means that the volume work along B must cancel the heat along C."
       }
      ],
      "src": "19.5"

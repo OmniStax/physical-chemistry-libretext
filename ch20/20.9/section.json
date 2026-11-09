@@ -69,12 +69,12 @@
     "at": "end"
    },
    "cite": "statistical-to-heat",
-   "prompt": "<p>Differentiating $\\kSent = -k_B\\sum_j p_j\\ln p_j$ gives two sums, $\\sum_j dp_j$ and $\\sum_j \\ln p_j\\,dp_j$. Explain why the first is zero, and why $\\sum_j E_j\\,dp_j$ is the reversible heat while $\\sum_j p_j\\,dE_j$ is the work.</p>",
+   "prompt": "<p>Differentiating $\\kSent = -k_B\\sum_j p_j\\ln p_j$ gives two sums, $\\sum_j dp_j$ and $\\sum_j \\ln p_j\\,dp_j$. Explain why the first is zero, and why $\\sum_j \\kEj\\,dp_j$ is the reversible heat while $\\sum_j p_j\\,d\\kEj$ is the work.</p>",
    "answer": {
     "type": "open",
     "generated_by": "ai",
-    "hint": "Write the energy as $U = \\sum_j p_jE_j$ and take its differential.",
-    "solution": "<p>The probabilities always add up to 1, so whatever changes them must leave the total at 1: $\\sum_j dp_j = d\\left(\\sum_j p_j\\right) = 0$. For the second part, $U = \\sum_j p_jE_j$, so $dU = \\sum_j E_j\\,dp_j + \\sum_j p_j\\,dE_j$. The levels $E_j$ depend on the volume, so they move only when work is done, for instance when a piston changes the size of the box: $\\sum_j p_j\\,dE_j$ is the work. Heating at fixed volume leaves the levels where they are and shifts the systems among them: $\\sum_j E_j\\,dp_j$ is the heat. With the first law, $dU = \\delta q_{rev} + \\delta w_{rev}$, the two sums match the two terms.</p>"
+    "hint": "Write the energy as $U = \\sum_j p_j\\kEj$ and take its differential.",
+    "solution": "<p>The probabilities always add up to 1, so whatever changes them must leave the total at 1: $\\sum_j dp_j = d\\left(\\sum_j p_j\\right) = 0$. For the second part, $U = \\sum_j p_j\\kEj$, so $dU = \\sum_j \\kEj\\,dp_j + \\sum_j p_j\\,d\\kEj$. The levels $\\kEj$ depend on the volume, so they move only when work is done, for instance when a piston changes the size of the box: $\\sum_j p_j\\,d\\kEj$ is the work. Heating at fixed volume leaves the levels where they are and shifts the systems among them: $\\sum_j \\kEj\\,dp_j$ is the heat. With the first law, $dU = \\delta q_{rev} + \\delta w_{rev}$, the two sums match the two terms.</p>"
    }
   }
  ],
@@ -135,7 +135,7 @@
     {
      "assumes": [
       {
-       "tex": "p_j=\\dfrac{e^{-\\beta E_j}}{Q}",
+       "tex": "p_j=\\dfrac{e^{-\\beta \\kEj}}{\\kQsys}",
        "src": "(20.8.3)"
       },
       {
@@ -143,7 +143,7 @@
        "src": "20.9"
       },
       {
-       "text": "Heat changes how the systems are spread over fixed energy levels, so $\\delta q_{rev} = \\sum_j E_j\\,dp_j$, while work shifts the levels themselves.",
+       "text": "Heat changes how the systems are spread over fixed energy levels, so $\\delta q_{rev} = \\sum_j \\kEj\\,dp_j$, while work shifts the levels themselves.",
        "src": "19.7"
       },
       {
@@ -152,24 +152,24 @@
       }
      ],
      "then": {
-      "tex": "\\mk{l}{\\ln p_j} = \\mk{r}{\\ln\\dfrac{e^{-\\beta E_j}}{Q}}",
+      "tex": "\\mk{l}{\\ln p_j} = \\mk{r}{\\ln\\dfrac{e^{-\\beta \\kEj}}{\\kQsys}}",
       "uses": [
        0
       ]
      },
      "steps": [
       {
-       "tex": "\\mk{l}{\\ln p_j} = \\mk{r}{-\\beta E_j - \\ln Q}",
+       "tex": "\\mk{l}{\\ln p_j} = \\mk{r}{-\\beta \\kEj - \\ln \\kQsys}",
        "uses": [],
-       "cap": "$\\ln e^{-\\beta E_j} = -\\beta E_j$, and the logarithm of a quotient is the difference of the logarithms."
+       "cap": "$\\ln e^{-\\beta \\kEj} = -\\beta \\kEj$, and the logarithm of a quotient is the difference of the logarithms."
       },
       {
-       "tex": "\\mk{l}{\\sum_j \\ln p_j\\,dp_j} = \\mk{r}{-\\beta\\sum_j E_j\\,dp_j - \\ln Q\\sum_j dp_j}",
+       "tex": "\\mk{l}{\\sum_j \\ln p_j\\,dp_j} = \\mk{r}{-\\beta\\sum_j \\kEj\\,dp_j - \\ln \\kQsys\\sum_j dp_j}",
        "uses": [],
-       "cap": "Multiply by $dp_j$ and sum over the states; $\\ln Q$ is the same for every state and comes out of its sum."
+       "cap": "Multiply by $dp_j$ and sum over the states; $\\ln \\kQsys$ is the same for every state and comes out of its sum."
       },
       {
-       "tex": "\\mk{l}{\\sum_j \\ln p_j\\,dp_j} = \\mk{r}{-\\beta\\sum_j E_j\\,dp_j}",
+       "tex": "\\mk{l}{\\sum_j \\ln p_j\\,dp_j} = \\mk{r}{-\\beta\\sum_j \\kEj\\,dp_j}",
        "uses": [
         1
        ]

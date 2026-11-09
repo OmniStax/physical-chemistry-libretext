@@ -1,0 +1,71 @@
+<section id="first-order-transitions">
+<h2>First Order Transitions</h2>
+<p>The following plot shows the <span data-concept="gibbs-energy">Gibbs energy</span> as a function of <span data-type="temperature">temperature</span>, including phase changes from solid to liquid (melting) and liquid to gas (boiling).</p>
+<figure class="sim" id="sim-gibbs-temperature" data-figure="13.5" data-original="/media/ch23/410058-Gibbs_versus_Temperature.png,/media/ch23/65990-Tuckerman_Screenshot_13-5.png" data-original-caption="Gibbs energy ($\bar{G}$) as a function of temperature ($T$). Behavior of the Gibbs free energy across the solid-liquid phase (left) and liquid-gas (right) transitions for benzene.">
+  <div class="sim-head"><span class="eyebrow">Figure 13.5</span><span>The stable phase of benzene is the lowest line. Lower <span data-type="pressure">the pressure</span> and the gas line drops, pulling the boiling point down fast while the melting point hardly moves; below the triple point the solid turns straight to gas.</span></div>
+</figure>
+<p>Although the $\kG$ curve is continuous, its first order derivatives ($-\kSent$) is discontinuous at the phase changes. This is why this transition it called a <em><span data-concept="first-order-transition">first order transition</span></em>. We could say that:</p>
+<ul><li>$\kG$ is continuous but has a kink</li><li>The first order derivatives ($\kHenth$,$\kSent$,..) are discontinuous (have a jump)</li><li>The second order derivatives ($\kCP$, ..) have a singularity (go to ∞)</li></ul>
+</section>
+
+<section id="second-order-transitions">
+<h2>Second Order Transitions</h2>
+<p>More subtle transitions where $\kG$ is continuous, $\kHenth$ and $\kSent$ are also continuous but have a kink and the discontinuity is only found in the second order derivatives (such as $\kCP$) also exist. They are called <em><span data-concept="second-order-transition">second order transitions</span></em>. In such a case:</p>
+<ul><li>$\kG$ is continuous and has no kink</li><li>The first order derivatives ($\kHenth$,$\kSent$,..) are continuous (but have a kink)</li><li>The second order derivatives ($\kCP$, ..) are discontinuous (have a jump)</li></ul>
+<div class="book-table">
+  <div class="tcap"><span class="eyebrow">Table 23.2.1</span><span>Properties of Phase Transitions</span></div>
+  <table>
+    <thead><tr><th><strong><span data-concept="ehrenfest-classification">Transition Order</span></strong></th><th><strong>Function</strong></th><th><strong>1<sup>st</sup> Order</strong></th><th><strong>2<sup>nd</sup> Order</strong></th></tr></thead>
+    <tbody>
+      <tr><td>0</td><td>G,A</td><td>kink</td><td>smooth</td></tr>
+      <tr><td>1</td><td>H,S,V,..</td><td>jump</td><td>kink</td></tr>
+      <tr><td>2</td><td>CP,CV,α,κ</td><td>sing. ∞</td><td>jump</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>This <span data-concept="ehrenfest-classification">classification goes back to Ehrenfest</span>. Obviously it based on the question: what order derivative is the first to go discontinuous? Of course we could extend this principle and define <em>third order transitions</em> but there are reasons to be doubtful that such things exist. Another problem is that it is assumed that the order must be integer: 1,2, etc. Is it possible to have a transition of intermediate non-integer order, say 1.3? Although derivatives of fractional order are beyond the scope of the chemistry curriculum the mathematics does exist (Liouville).</p>
+<figure class="photo" id="fig-landau">
+  <img src="/media/ch23/113526-CH431_Landau.gif" alt="Six small graphs against temperature. For a first-order transition, G has a kink, S jumps and C_P spikes to infinity at the melting point; for a second-order transition, G is smooth, S has a kink and C_P jumps at the critical temperature.">
+  <figcaption><span class="eyebrow">Figure</span><span>Schematic comparison of $\kG$, $\kSent$ and $\kCP$ for 1st and 2nd order transitions<sup class="fn" data-note="c-landau"></sup></span></figcaption>
+</figure>
+</section>
+
+<section id="gibbs-energy-of-benzene">
+<h2>Gibbs energy across benzene's transitions</h2>
+<p>The <span data-concept="gibbs-energy">Gibbs free energy</span> is a particularly important function in the study of phases and phase transitions. The behavior of $\kG(N, \kP,\kT)$, particularly as a function of $\kP$ and $\kT$, can signify a phase transition and can tell us some of the thermodynamic properties of different phases.</p>
+<figure class="photo" id="fig-13-4" data-figure="13.4">
+  <img src="/media/ch23/65989-Tuckerman_Screenshot_13-4.png" alt="Phase diagram of water at high pressure, showing the liquid and the regions of the ice polymorphs I, III, V, VI and VII." data-width="356">
+  <figcaption><span class="eyebrow">Figure 13.4</span><span>Some of the ice polymorphs.</span></figcaption>
+</figure>
+<p>Consider, first, <a class="figref" href="#23.2-sim-gibbs-temperature">the behavior of $\kG$ vs. $\kT$ between the solid and liquid phases of benzene</a>: We immediately notice several things. First, although the free energy is continuous across the phase transition, its first derivative, $\partial \kG/\partial \kT$ is not: The slope of $\kG(\kT)$ in the solid region is different from the slope in the liquid region. When the first derivative of the free energy with respect to one of its dependent thermodynamic variables is discontinuous across a phase transition, this is an example of what is called a <em><span data-concept="first-order-transition">first order phase transition</span></em>. The solid-liquid-gas phase transition of most substances is first order. When the free energy exhibits continuous first derivatives but discontinuous second derivatives, the phase transition is called <em><span data-concept="second-order-transition">second order</span></em>. Examples of this type of phase transition are the order-disorder transition in paramagnetic materials.</p>
+<figure class="dv" id="drv-liquid-entropy"></figure>
+<p>This is what we might expect considering that the <span data-concept="liquid-entropy-exceeds-solid">liquid phase is higher in entropy than the solid phase</span>. The same argument can be made with regards to the gaseous phase.</p>
+<p>Similarly, if we consider the dependence of $\kG$ on <span data-concept="pressure">pressure</span>, we obtain a curve like that shown in the figure below:</p>
+<figure class="photo" id="fig-13-6" data-figure="13.6">
+  <img src="/media/ch23/65991-Tuckerman_Screenshot_13-6.png" alt="Two graphs of molar Gibbs energy against pressure, for benzene and for water, each made of gas, liquid and solid segments with different slopes." data-width="460">
+  <figcaption><span class="eyebrow">Figure 13.6</span><span>Dependence of the Gibbs free energy as a function of pressure for benzene (left) and water (right). For benzene, the temperature is above the triple point, whereas for water, it is set below triple point.</span></figcaption>
+</figure>
+<p>As noted previously, here again, we see that the first derivative of $\kGbar (\kP)$ is discontinuous, signifying a first-order phase transition. Recalling that the average <span data-concept="molar-volume">molar volume</span> is</p>
+$$ \kVbar = \dfrac{\partial \kGbar}{\partial \kP} \tag{23.2.4} $$
+<p>From the graph, we see that <span data-concept="phase-molar-volume-ordering">the slopes obey</span></p>
+$$ \kVbargas \gg \kVbarliquid > \kVbarsolid \tag{23.2.5} $$
+<p>as one might expect for a normal substance like benzene at a temperature above its triple point. Because the temperature is above the triple point, the free energy follows a continuous path (even though it is not everywhere differentiable) from gas to liquid to solid.</p>
+<p>On the other hand, for water, we see something a bit different, namely, that</p>
+$$ \kVbargas \gg \kVbarsolid > \kVbarliquid \tag{23.2.6} $$
+<p>at a temperature below the triple point. This, again, indicates, the unusual property of water that its solid phase is less dense than its liquid phase in the coexistence region.</p>
+<p>Interestingly, if we look at <span data-concept="gibbs-pressure-curves">how the plot of $\kG(\kP)$ changes with $\kT$</span>, we obtain a plot like that shown below: Below the <span data-concept="triple-point">triple point</span>, it is easy to see from the benzene <span data-concept="phase-diagram">phase diagram</span> that the system proceeds directly from solid to gas. There is a liquid curve on this plot that is completely disconnected from the gas-solid curve, suggesting that, below the <span data-concept="triple-point">triple point</span>, the liquid state can exist metastably if at all. AT the <span data-concept="triple-point">triple point</span>, the solid can transition into the liquid or gas phases depending on the value of the free energy. Near the <span data-concept="critical-temperature">critical temperature</span>, we see the liquid-gas transition line, while the solid line is disconnected. Above the <span data-concept="critical-temperature">critical temperature</span>, the system exists as a <span data-concept="supercritical-fluid">supercritical fluid</span>, which is shown on the lower line, and this line now shows derivative discontinuity.<sup class="fn" data-note="c-above-tc"></sup></p>
+<figure class="photo" id="fig-13-7" data-figure="13.7">
+  <img src="/media/ch23/65992-Tuckerman_Screenshot_13-7.png" alt="Four graphs of molar Gibbs energy against pressure for benzene: (a) below the triple point, (b) at it, (c) just below the critical temperature and (d) above it." data-width="462">
+  <figcaption><span class="eyebrow">Figure 13.7</span><span>Behavior of the Gibbs free energy as a function of $\kP$ across different phases at different temperatures for benzene. (a): Temperature is less than the triple point; (b): Temperature is equal to the triple point; (c): Temperature is just below the critical temperature; (d): Temperature is greater than the critical temperature.</span></figcaption>
+</figure>
+</section>
+
+<section id="conjugate-variables">
+<h2>Conjugate Variables</h2>
+<p>As discussed before there are many other forms of work possible, such as electrical work, magnetic work or elastic work. These they are commonly incorporated in the formalism of thermodynamics by <span data-concept="generalized-gibbs-differential">adding other terms</span>, e.g:</p>
+$$ d\kG = -\kSent d\kT + \kV d\kP + \kemf d\keq + \kMmag d\kHmag + \kFel d\kLel + \kgammast d\kAs $$
+<ol><li><em>ℰde</em> stands for the electromotoric force <em>ℰ</em> and <em>de</em> the amount of charge transported against it.</li><li><em>MdH</em> stand for magnetization and (change in) magnetic field.</li><li><em>F</em> stands for the elastic force of e.g. a rubber band <em>dL</em> for the length it is stretched</li><li><em>γ</em> stands for the surface tension (e.g. of a soap bubble), <em>A</em> for its surafce area.</li></ol>
+<p>The terms always appear in a pair of what is known as <span data-concept="conjugate-variables">conjugate variables</span>. That is even clearer if we write out the state function rather than its differential form:</p>
+$$ \kG = \kU + \kP\kV -\kT\kSent + \kemf \keq + \kMmag \kHmag + \kFel \kLel + \kgammast \kAs + ... $$
+<p>The PV term can also be generalized -and needs to be so- for a viscous fluid to a stress-strain conjugate pair. It then involves a stress tensor. We will soon encounter another <span data-concept="conjugate-variables">conjugate pair</span>: μdn that deals with changes in composition (n) and the <span data-concept="chemical-potential">thermodynamic potential</span> μ.</p>
+</section>

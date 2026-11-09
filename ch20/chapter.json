@@ -1172,6 +1172,12 @@
       "meaning": "the energy of state j of a system",
       "unit": "J",
       "section": "20.9"
+    },
+    {
+      "sym": "Q_sys",
+      "type": "partition-function",
+      "meaning": "the canonical partition function of a system",
+      "section": "20.9"
     }
   ]
 }

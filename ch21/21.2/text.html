@@ -5,7 +5,7 @@ $$ \kSent(\kT) = \kSent(0) + \int_{0}^{\kT} \kCP(\kT)~ d\kT $$
 <p>It is tempting to set the $\kSent(0)$ to zero and make the entropy thus an absolute quantity. As we have seen with enthalpy, it was not really possible set $\kHenth(0)$ to zero. All we did was define $Δ\kHenth$ for a particular process, although if $\kCP$ data are available we could construct an enthalpy function (albeit with a floating zero point) by integration of $\kCP$ (instead of $\kCP/\kT$!). The situation is different for entropy $\kSent$ than for $\kHenth$. Here we can actually put things on an <em><strong><span data-concept="absolute-entropy">absolute</span></strong></em> scale. Both Nernst and Planck have proposed to do so. Nernst postulated that for a pure and perfect crystal $\kSent$ should indeed to go to zero as $\kT$ goes to zero (Figure 21.2.1).</p>
 <figure class="photo" id="fig-21-2-1" data-figure="21.2.1">
   <img src="/media/ch21/484602-FeFig5.11.jpg" alt="Entropy rising with temperature through solid I, solid II, liquid and gas, with a vertical jump at each of the three phase transitions.">
-  <figcaption><span class="eyebrow">Figure 21.2.1</span><span>Entropy as a Function of Temperature. The entropy ($S$) of a substance (compound or element) as a function of temperature (T). Note that there are three phase transitions in this system with evolution through two solid phases. These result in positive jumps in the entropy.</span></figcaption>
+  <figcaption><span class="eyebrow">Figure 21.2.1</span><span>Entropy as a Function of Temperature. The entropy ($\kSent$) of a substance (compound or element) as a function of temperature (T). Note that there are three phase transitions in this system with evolution through two solid phases. These result in positive jumps in the entropy.</span></figcaption>
 </figure>
 <div class="example" id="ex-21-2-1">
 <h3>Example 21.2.1 · Sulfur</h3>
@@ -21,13 +21,13 @@ $$ \lim_{\kT\rightarrow 0}\Delta_r\kSent=0 $$
 <ol><li>Energy is as concentrated as it can be.</li><li>Only the very lowest energy states can be occupied.</li></ol>
 </div>
 <p><span data-concept="perfect-crystal-zero-entropy">For a pure, perfect crystalline solid at 0 K, there is only one energetic arrangement to represent its lowest energy state.</span> We can use this to define a natural zero, giving entropy an absolute scale. The <strong><span data-concept="third-law">third Law of Thermodynamics</span></strong> states that the entropy of a pure substance in a perfect crystalline form is 0 $\frac{J}{mol\cdot K}$ at 0 K:</p>
-$$ \bar{S}_{0\text{ K}}^\circ=0 $$
+$$ \bar{\kSent}_{0\text{ K}}^\circ=0 $$
 <p>This is consistent with our molecular formula for entropy:</p>
 $$ \kSent=\kk\ln{W} $$
 <p>For a perfect crystal at 0 K, the number of ways the total energy of a system can be distributed is one ($W=1$). The $\ln{W}$ term goes to zero, resulting in the perfect crystal at 0 K having zero entropy (Figure 21.2.3a).</p>
 <figure class="photo" id="fig-21-2-3" data-figure="21.2.3">
   <img src="/media/ch21/484603-Figure_Showing_Entropy_at_0_K.png" alt="Two square lattices of atoms: (a) every atom on its site at 0 K; (b) atoms displaced from their sites at a temperature above 0 K.">
-  <figcaption><span class="eyebrow">Figure 21.2.3</span><span>(a) Single possible configuration for a system at absolute zero, i.e., only one microstate is accessible. Thus $S = k \ln W = 0$. (b) At temperatures greater than absolute zero, multiple microstates are accessible due to atomic dislocation (exaggerated in the figure). Since the number of accessible microstates is greater than 1, $S = k \ln W > 0$. (CC BY-SA 4.0; BlyumJ via <a href="https://commons.wikimedia.org/wiki/File:Figure_Showing_Entropy_at_0_K.png">Wikipedia</a>)</span></figcaption>
+  <figcaption><span class="eyebrow">Figure 21.2.3</span><span>(a) Single possible configuration for a system at absolute zero, i.e., only one microstate is accessible. Thus $\kSent = k \ln W = 0$. (b) At temperatures greater than absolute zero, multiple microstates are accessible due to atomic dislocation (exaggerated in the figure). Since the number of accessible microstates is greater than 1, $\kSent = k \ln W > 0$. (CC BY-SA 4.0; BlyumJ via <a href="https://commons.wikimedia.org/wiki/File:Figure_Showing_Entropy_at_0_K.png">Wikipedia</a>)</span></figcaption>
 </figure>
 </section>
 <section id="residual-disorder">
@@ -38,7 +38,7 @@ $$ \kSent=\kk\ln{W} $$
 <div class="eyebrow">Note</div>
 <h3>Definition: Third law of thermodynamics</h3>
 <p><span data-concept="third-law">The entropy of a perfect crystal approaches zero when $\kT$ approaches zero</span> (but perfect crystals do not exist).</p>
-$$ \lim_{\kT\rightarrow 0}{S^\circ(\kT)} =0 \tag{21.2.1} $$
+$$ \lim_{\kT\rightarrow 0}{\kSstd(\kT)} =0 \tag{21.2.1} $$
 </div>
 </section>
 <section id="jumps-and-trends">
@@ -59,7 +59,7 @@ $$ Δ_{fus}\kSent = \dfrac{\kqrev}{\kT}= \dfrac{Δ_{fus}\kHenth}{\kT} $$
 <h3>Residual Entropy in Carbon Monoxide</h3>
 <p>For most substances, the assumption made in Equation 21.2.1 regarding the Third Law is generally valid; however, there are notable exceptions, such as carbon monoxide. In its solid state, carbon monoxide molecules would ideally be fully ordered at absolute zero. However, due to the similar sizes of carbon and oxygen atoms and the molecule’s weak dipole, it is possible for some molecules to be positioned "upside down"—with oxygen occupying a carbon site and vice versa (i.e., the $\mathrm{C{\equiv}O}$ and $\mathrm{O{\equiv}C}$ orientations are nearly isoenergetic in the lattice). When the crystal forms at higher temperatures, this disorder increases entropy, thereby lowering the Gibbs energy ($\kG$). Essentially, if each molecule can be placed into the lattice in two different orientations, the total number of possible configurations ($W_{\text{disorder}}$) for $N$ molecules is $2^N$.</p>
 <p>This leads to <span data-concept="orientational-disorder-entropy">an additional contribution to the entropy</span> of</p>
-$$ S_{disorder} = \kk\,\ln{W_{disorder}} = \kk\,\ln 2^N = N \kk \ln 2 = 5.7\, \text{J/(mol K)} $$
+$$ \kSdisorder = \kk\,\ln{W_{disorder}} = \kk\,\ln 2^N = N \kk \ln 2 = 5.7\, \text{J/(mol K)} $$
 <p>At lower temperatures, the entropy term in $\Delta \kG= \Delta \kHenth−\kT \Delta \kSent$ diminishes in significance, and the crystal should theoretically transition to a more ordered state with lower entropy. However, in practice, the kinetics of this process are extremely slow, preventing the ordering from occurring. As a result, solid $\mathrm{CO}$ retains <strong><span data-concept="residual-entropy">a nonzero entropy</span></strong> even as it approaches absolute zero (Equation 21.2.1).</p>
 <p>In principle <em>all</em> crystalline materials have this effect to some extent, but $\mathrm{CO}$ is unusual because the concentration of 'wrongly aligned' entities is of the order of 50% rather than say 1 in 10<sup>13</sup> (a typical defect concentration in say single crystal silicon). The experimental residual entropy of $\mathrm{CO}$ is approximately 4.4 J/(mol K); this indicates that the two orientations of $\mathrm{CO}$ are not exactly identical in energy (i.e., equal probability of forming), which would give a residulate entropy of 5.7 J/(mol K).</p>
 </div>

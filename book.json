@@ -42,7 +42,9 @@
     "ch20",
     "ch21",
     "ch22",
-    "ch23"
+    "ch23",
+    "ch24",
+    "ch25"
   ],
   "types": [
     {
@@ -4093,7 +4095,8 @@
     },
     {
       "sym": "Delta_trs_S",
-      "latex": "\\Delta_{trs}S"
+      "latex": "\\Delta_{trs}S",
+      "macro": "\\kDeltatrsS"
     },
     {
       "sym": "Delta_trs_H",
@@ -4109,7 +4112,8 @@
     },
     {
       "sym": "Delta_rxn_S",
-      "latex": "\\Delta_{rxn}S^\\circ"
+      "latex": "\\Delta_{rxn}S^\\circ",
+      "macro": "\\kDeltarxnS"
     },
     {
       "sym": "nu_stoich",
@@ -5013,6 +5017,534 @@
       "sym": "S_tot",
       "latex": "S_{tot}",
       "macro": "\\kStot"
+    },
+    {
+      "sym": "P_total",
+      "latex": "P_{total}",
+      "macro": "\\kPtotal"
+    },
+    {
+      "sym": "P_circ_i",
+      "latex": "P^\\circ_i",
+      "macro": "\\kPcirci"
+    },
+    {
+      "sym": "P_circ_1",
+      "latex": "P^\\circ_1",
+      "macro": "\\kPcircone"
+    },
+    {
+      "sym": "P_circ_2",
+      "latex": "P^\\circ_2",
+      "macro": "\\kPcirctwo"
+    },
+    {
+      "sym": "P_star_i",
+      "latex": "P^*_i",
+      "macro": "\\kPstari"
+    },
+    {
+      "sym": "P_star_j",
+      "latex": "P^*_j",
+      "macro": "\\kPstarj"
+    },
+    {
+      "sym": "P_star_1",
+      "latex": "P^*_1",
+      "macro": "\\kPstarone"
+    },
+    {
+      "sym": "chi_1",
+      "latex": "\\chi_1",
+      "macro": "\\kchione"
+    },
+    {
+      "sym": "chi_2",
+      "latex": "\\chi_2",
+      "macro": "\\kchitwo"
+    },
+    {
+      "sym": "x_1",
+      "latex": "x_1",
+      "macro": "\\kxone"
+    },
+    {
+      "sym": "x_2",
+      "latex": "x_2",
+      "macro": "\\kxtwo"
+    },
+    {
+      "sym": "x_A",
+      "latex": "x_A",
+      "macro": "\\kxA"
+    },
+    {
+      "sym": "x_B",
+      "latex": "x_B",
+      "macro": "\\kxB"
+    },
+    {
+      "sym": "P_B",
+      "latex": "P_B",
+      "macro": "\\kPB"
+    },
+    {
+      "sym": "x_i",
+      "latex": "x_i",
+      "macro": "\\kxi"
+    },
+    {
+      "sym": "x_all",
+      "latex": "x_{all}",
+      "macro": "\\kxall"
+    },
+    {
+      "sym": "mu_1",
+      "latex": "\\mu_1",
+      "macro": "\\kmuone"
+    },
+    {
+      "sym": "mu_2",
+      "latex": "\\mu_2",
+      "macro": "\\kmutwo"
+    },
+    {
+      "sym": "mu_A",
+      "latex": "\\mu_A",
+      "macro": "\\kmuA"
+    },
+    {
+      "sym": "mu_j",
+      "latex": "\\mu_j",
+      "macro": "\\kmuj"
+    },
+    {
+      "sym": "mu_star_A",
+      "latex": "\\mu^*_A",
+      "macro": "\\kmustarA"
+    },
+    {
+      "sym": "mu_star_B",
+      "latex": "\\mu^*_B",
+      "macro": "\\kmustarB"
+    },
+    {
+      "sym": "mu_star_i",
+      "latex": "\\mu_i^*",
+      "macro": "\\kmustari"
+    },
+    {
+      "sym": "mu_star_j",
+      "latex": "\\mu^*_j",
+      "macro": "\\kmustarj"
+    },
+    {
+      "sym": "mu_std",
+      "latex": "\\mu^o",
+      "macro": "\\kmustd"
+    },
+    {
+      "sym": "mu_std_j",
+      "latex": "\\mu_j^o",
+      "macro": "\\kmustdj"
+    },
+    {
+      "sym": "mu_std_B",
+      "latex": "\\mu_B^o",
+      "macro": "\\kmustdB"
+    },
+    {
+      "sym": "mu_sln_j",
+      "latex": "\\mu_j^{sln}",
+      "macro": "\\kmuslnj"
+    },
+    {
+      "sym": "mu_gas_j",
+      "latex": "\\mu_j^{gas}",
+      "macro": "\\kmugasj"
+    },
+    {
+      "sym": "mu_sln_i",
+      "latex": "\\mu_i^{sln}",
+      "macro": "\\kmuslni"
+    },
+    {
+      "sym": "mu_plus",
+      "latex": "\\mu_+",
+      "macro": "\\kmuplus"
+    },
+    {
+      "sym": "mu_minus",
+      "latex": "\\mu_-",
+      "macro": "\\kmuminus"
+    },
+    {
+      "sym": "V_bar_1",
+      "latex": "\\bar{V}_{1}",
+      "macro": "\\kVbarone"
+    },
+    {
+      "sym": "V_bar_2",
+      "latex": "\\bar{V}_{2}",
+      "macro": "\\kVbartwo"
+    },
+    {
+      "sym": "V_bar_i",
+      "latex": "\\bar{V}_i",
+      "macro": "\\kVbari"
+    },
+    {
+      "sym": "n_liq",
+      "latex": "n^{liq}_{1+2}",
+      "macro": "\\knliq"
+    },
+    {
+      "sym": "n_gas",
+      "latex": "n^{gas}_{1+2}",
+      "macro": "\\kngas"
+    },
+    {
+      "sym": "G_tot",
+      "latex": "G_\\text{tot}",
+      "macro": "\\kGtot"
+    },
+    {
+      "sym": "K_H",
+      "latex": "K_H",
+      "macro": "\\kKH"
+    },
+    {
+      "sym": "k_H",
+      "latex": "k_H",
+      "macro": "\\kkH"
+    },
+    {
+      "sym": "K_xH",
+      "latex": "K_{x,H}",
+      "macro": "\\kKxH"
+    },
+    {
+      "sym": "gamma_i",
+      "latex": "\\gamma_i",
+      "macro": "\\kgammai"
+    },
+    {
+      "sym": "gamma_pm",
+      "latex": "\\gamma_{\\pm}",
+      "macro": "\\kgammapm"
+    },
+    {
+      "sym": "gamma_plus",
+      "latex": "\\gamma_+",
+      "macro": "\\kgammaplus"
+    },
+    {
+      "sym": "gamma_minus",
+      "latex": "\\gamma_-",
+      "macro": "\\kgammaminus"
+    },
+    {
+      "sym": "a_B",
+      "latex": "a_B",
+      "macro": "\\kaB"
+    },
+    {
+      "sym": "a_plus",
+      "latex": "a_+",
+      "macro": "\\kaplus"
+    },
+    {
+      "sym": "a_minus",
+      "latex": "a_-",
+      "macro": "\\kaminus"
+    },
+    {
+      "sym": "m_std",
+      "latex": "m^o",
+      "macro": "\\kmstd"
+    },
+    {
+      "sym": "m_plus",
+      "latex": "m_+",
+      "macro": "\\kmplus"
+    },
+    {
+      "sym": "m_minus",
+      "latex": "m_-",
+      "macro": "\\kmminus"
+    },
+    {
+      "sym": "I_ion",
+      "latex": "I",
+      "macro": "\\kIion"
+    },
+    {
+      "sym": "z_plus",
+      "latex": "z_+",
+      "macro": "\\kzplus"
+    },
+    {
+      "sym": "z_minus",
+      "latex": "z_-",
+      "macro": "\\kzminus"
+    },
+    {
+      "sym": "Delta_mix_G",
+      "latex": "\\Delta_{mix} G",
+      "macro": "\\kDeltamixG"
+    },
+    {
+      "sym": "Delta_mix_S",
+      "latex": "\\Delta_{mix} S",
+      "macro": "\\kDeltamixS"
+    },
+    {
+      "sym": "Delta_mix_H",
+      "latex": "\\Delta_{mix} H",
+      "macro": "\\kDeltamixH"
+    },
+    {
+      "sym": "Delta_mix_V",
+      "latex": "\\Delta V_{mix}",
+      "macro": "\\kDeltamixV"
+    },
+    {
+      "sym": "f_Mar",
+      "latex": "f_{Mar}",
+      "macro": "\\kfMar"
+    },
+    {
+      "sym": "a_reg",
+      "latex": "a",
+      "macro": "\\kareg"
+    },
+    {
+      "sym": "W_int",
+      "latex": "W",
+      "macro": "\\kWint"
+    },
+    {
+      "sym": "U_12",
+      "latex": "U_{12}",
+      "macro": "\\kUot"
+    },
+    {
+      "sym": "U_11",
+      "latex": "U_{11}",
+      "macro": "\\kUoo"
+    },
+    {
+      "sym": "U_22",
+      "latex": "U_{22}",
+      "macro": "\\kUtt"
+    },
+    {
+      "sym": "U_ij",
+      "latex": "U_{ij}",
+      "macro": "\\kUij"
+    },
+    {
+      "sym": "phi_osm",
+      "latex": "\\phi",
+      "macro": "\\kphiosm"
+    },
+    {
+      "sym": "gamma_2m",
+      "latex": "\\gamma_{2,m}",
+      "macro": "\\kgammatwom"
+    },
+    {
+      "sym": "a_solute",
+      "latex": "a_{solute,H}",
+      "macro": "\\kasolute"
+    },
+    {
+      "sym": "P_solute",
+      "latex": "P_{solute}",
+      "macro": "\\kPsolute"
+    },
+    {
+      "sym": "mu_i_vapor",
+      "latex": "\\mu_i^{\\text{vapor}}",
+      "macro": "\\kmuivapor"
+    },
+    {
+      "sym": "mu_i_std",
+      "latex": "\\mu_i^{\\ominus}",
+      "macro": "\\kmuistd"
+    },
+    {
+      "sym": "P_i_R",
+      "latex": "P_i^{\\text{R}}",
+      "macro": "\\kPiR"
+    },
+    {
+      "sym": "mu_1_s",
+      "latex": "\\mu_1^s",
+      "macro": "\\kmuones"
+    },
+    {
+      "sym": "mu_1_sln",
+      "latex": "\\mu_1^{sln}",
+      "macro": "\\kmuonesln"
+    },
+    {
+      "sym": "mu_1_liqstar",
+      "latex": "\\mu_1^{liq*}",
+      "macro": "\\kmuoneliqstar"
+    },
+    {
+      "sym": "Delta_mu_1",
+      "latex": "\\Delta\\mu_1",
+      "macro": "\\kDeltamuone"
+    },
+    {
+      "sym": "Delta_fusH_1",
+      "latex": "\\Delta_{fus}H_{molar,1}",
+      "macro": "\\kDeltafusHone"
+    },
+    {
+      "sym": "T_m_star",
+      "latex": "T_m^*",
+      "macro": "\\kTmstar"
+    },
+    {
+      "sym": "Delta_T",
+      "latex": "\\Delta T",
+      "macro": "\\kDeltaT"
+    },
+    {
+      "sym": "K_f",
+      "latex": "K_f"
+    },
+    {
+      "sym": "Pi",
+      "latex": "\\Pi",
+      "macro": "\\kPi"
+    },
+    {
+      "sym": "mu_star",
+      "latex": "\\mu^*",
+      "macro": "\\kmustar"
+    },
+    {
+      "sym": "mu_sln",
+      "latex": "\\mu^{sln}",
+      "macro": "\\kmusln"
+    },
+    {
+      "sym": "V_bar_1_star",
+      "latex": "\\bar{V}^*_{1}",
+      "macro": "\\kVbaronestar"
+    },
+    {
+      "sym": "nu_plus",
+      "latex": "\\nu_+"
+    },
+    {
+      "sym": "nu_minus",
+      "latex": "\\nu_-"
+    },
+    {
+      "sym": "mu_2_std",
+      "latex": "\\mu_2^o",
+      "macro": "\\kmutwostd"
+    },
+    {
+      "sym": "mu_plus_std",
+      "latex": "\\mu_+^o",
+      "macro": "\\kmuplusstd"
+    },
+    {
+      "sym": "mu_minus_std",
+      "latex": "\\mu_-^o",
+      "macro": "\\kmuminusstd"
+    },
+    {
+      "sym": "a_pm",
+      "latex": "a_\\pm"
+    },
+    {
+      "sym": "m_pm",
+      "latex": "m_\\pm"
+    },
+    {
+      "sym": "kappa_D",
+      "latex": "\\kappa"
+    },
+    {
+      "sym": "z_i",
+      "latex": "z_i"
+    },
+    {
+      "sym": "z_j",
+      "latex": "z_j"
+    },
+    {
+      "sym": "epsilon_r",
+      "latex": "\\epsilon_r"
+    },
+    {
+      "sym": "q_plus",
+      "latex": "q_+",
+      "macro": "\\kqplus"
+    },
+    {
+      "sym": "q_minus",
+      "latex": "q_-",
+      "macro": "\\kqminus"
+    },
+    {
+      "sym": "f_pm",
+      "latex": "f_\\pm"
+    },
+    {
+      "sym": "z_1",
+      "latex": "z_1"
+    },
+    {
+      "sym": "z_2",
+      "latex": "z_2"
+    },
+    {
+      "sym": "gamma_M",
+      "latex": "\\gamma_M"
+    },
+    {
+      "sym": "gamma_X",
+      "latex": "\\gamma_X"
+    },
+    {
+      "sym": "f_gamma",
+      "latex": "f^\\gamma"
+    },
+    {
+      "sym": "B_MX",
+      "latex": "B_{MX}^\\gamma"
+    },
+    {
+      "sym": "C_MX",
+      "latex": "C_{MX}^\\gamma"
+    },
+    {
+      "sym": "gamma_j",
+      "latex": "\\gamma_j"
+    },
+    {
+      "sym": "epsilon_jk",
+      "latex": "\\epsilon_{jk}"
+    },
+    {
+      "sym": "m_k",
+      "latex": "m_k"
+    },
+    {
+      "sym": "p_pitzer",
+      "latex": "p"
+    },
+    {
+      "sym": "q_pitzer",
+      "latex": "q"
     }
   ],
   "exercise_kinds": [
@@ -20826,6 +21358,1213 @@
           "latex": "\\kmu = -\\kR\\kT\\left(\\frac{\\partial \\ln \\kQsys}{\\partial n}\\right)_{\\kV,\\kT}"
         }
       ]
+    },
+    {
+      "id": "partial-molar-additivity",
+      "kind": "result",
+      "section": "24.1",
+      "name": "Additivity of partial molar quantities",
+      "terms": [
+        "not strictly additive"
+      ],
+      "statement": "Scaling a two-component system down at constant T and P changes n₁, n₂ and G in proportion, so integrating dG = μ₁dn₁ + μ₂dn₂ gives G = μ₁n₁ + μ₂n₂, and by the same argument V = V̄₁n₁ + V̄₂n₂. The partial molar volumes depend on composition, so volumes are generally not strictly additive, though the deviations are often negligible in dilute solutions.",
+      "forms": [
+        {
+          "id": "g-sum-mu-n-binary",
+          "latex": "G=\\mu _1n_1+\\mu _2n_2"
+        },
+        {
+          "id": "v-sum-partial-molar-binary",
+          "latex": "V=\\bar{V}_{1}n_1+\\bar{V}_{2}n_2"
+        }
+      ]
+    },
+    {
+      "id": "daltons-law",
+      "kind": "axiom",
+      "section": "24.1",
+      "name": "Dalton's law of partial pressures",
+      "terms": [
+        "Dalton's law"
+      ],
+      "statement": "Gases mix in any ratio and, interacting little, behave close to ideal: the total pressure is the sum of the partial pressures, and a component's mole fraction in the gas is its share of the total pressure.",
+      "forms": [
+        {
+          "id": "dalton-total-pressure",
+          "latex": "P_{total} = P_1 + P_2"
+        },
+        {
+          "id": "dalton-mole-fraction",
+          "latex": "y_i= \\dfrac{P_i}{P_{total}}"
+        },
+        {
+          "id": "dalton-sum",
+          "latex": "P_{total} = \\sum_i^N P_i"
+        }
+      ]
+    },
+    {
+      "id": "ideal-solution",
+      "kind": "definition",
+      "section": "24.1",
+      "name": "Ideal solution",
+      "terms": [
+        "ideal solutions"
+      ],
+      "statement": "A fully miscible liquid mixture whose molecules interact just as strongly with a neighbour of the other kind as with one of their own kind, which asks that the components be chemically similar; liquid binaries are often not ideal."
+    },
+    {
+      "id": "regular-solution",
+      "kind": "definition",
+      "section": "24.1",
+      "name": "Regular solution",
+      "terms": [
+        "regular solutions",
+        "regular solution"
+      ],
+      "statement": "The next nearest thing to an ideal solution: the interactions are strong and modestly dissimilar, so mixing may be incomplete and phases can segregate at low temperature. In terms of the Margules function, it is the simplest case, where all parameters but one, a, can be neglected."
+    },
+    {
+      "id": "solid-solution",
+      "kind": "idea",
+      "section": "24.1",
+      "name": "Solid solution",
+      "statement": "Solid binaries are even less miscible than liquid ones: immiscibility is the rule, solid solutions are relatively infrequent and never ideal (even electrum, silver and gold, is far from ideal), and mixing in the solid is slow because solid diffusion is slow. The negligible mutual solubility of dissimilar molecular solids is what recrystallization exploits."
+    },
+    {
+      "id": "raoults-law",
+      "kind": "axiom",
+      "section": "24.1",
+      "name": "Raoult's law",
+      "terms": [
+        "Raoult's law",
+        "Raoult’s Law:"
+      ],
+      "statement": "Above an ideal solution the vapor pressure of each component is the equilibrium vapor pressure of the pure component times its mole fraction in the liquid: the volatility times the share of the surface it occupies. It seldom holds completely, best for nearly identical components such as two isomers.",
+      "forms": [
+        {
+          "id": "raoult-law",
+          "latex": "P_i = \\chi_i P^\\circ_i"
+        },
+        {
+          "id": "raoult-law-star",
+          "latex": "P_j = x_jP^*_j"
+        }
+      ]
+    },
+    {
+      "id": "ideal-bubble-line",
+      "kind": "result",
+      "section": "24.1",
+      "name": "Liquid line of an ideal pressure diagram",
+      "statement": "At constant temperature the total pressure above an ideal liquid of composition χ₁ is a straight line from P°₂ at χ₁ = 0 to P°₁ at χ₁ = 1.",
+      "forms": [
+        {
+          "id": "ideal-liquidus",
+          "latex": "P_{total} = P^\\circ_2- \\chi_1(P^\\circ_2-P^\\circ_1)"
+        }
+      ]
+    },
+    {
+      "id": "ideal-vapor-composition",
+      "kind": "result",
+      "section": "24.1",
+      "name": "Vapor composition above an ideal solution",
+      "statement": "The vapor in equilibrium with an ideal liquid is richer in the more volatile component than the liquid: by Dalton's and Raoult's laws y₁ = χ₁P°₁/(P°₂ − χ₁(P°₂ − P°₁)), and the total pressure against y₁ is not a straight line.",
+      "forms": [
+        {
+          "id": "ideal-vapor-y1",
+          "latex": "y_1 = \\dfrac{\\chi_1 P^\\circ_1}{P^\\circ_2- \\chi_1(P^\\circ_2-P^\\circ_1)}"
+        },
+        {
+          "id": "ideal-vaporus",
+          "latex": "P_{total}= \\dfrac{P^\\circ_1P^\\circ_2 }{P^\\circ_1 + (P^\\circ_2-P^\\circ_1)y_1}"
+        }
+      ]
+    },
+    {
+      "id": "pressure-composition-diagram",
+      "kind": "definition",
+      "section": "24.1",
+      "name": "Pressure–composition phase diagram",
+      "terms": [
+        "phase gap",
+        "two phase region",
+        "tie-line"
+      ],
+      "statement": "An isothermal diagram of total pressure against the liquid composition χ₁ and the vapor composition y₁ on one axis: liquid above the liquid line, gas below the vapor line, and between them a phase gap or two-phase region, whose horizontal tie-line joins the liquid and the vapor that coexist."
+    },
+    {
+      "id": "temperature-composition-diagram",
+      "kind": "definition",
+      "section": "24.1",
+      "name": "Temperature–composition phase diagram",
+      "statement": "An isobaric diagram of boiling temperature against the liquid composition x and the vapor composition y: neither curve is straight and the two-phase region is lens-shaped. Where the isopleth at the overall composition meets the isotherm inside the lens, a liquid and a vapor of different compositions result, the vapor richer in the more volatile component."
+    },
+    {
+      "id": "lever-rule",
+      "kind": "result",
+      "section": "24.1",
+      "name": "Lever rule",
+      "statement": "The amounts of liquid and gas on a tie-line work crosswise: the amount of liquid is proportional to the arm on the vapor side and the amount of gas to the arm on the liquid side, n_liq/n_gas = (y₂ − x_all)/(x_all − x₂).",
+      "forms": [
+        {
+          "id": "lever-rule-ratio",
+          "latex": "\\dfrac{n^{liq}_{1+2} }{n^{gas}_{1+2}} = \\dfrac{y_2-x_{all}}{ x_{all}-x_2}"
+        }
+      ]
+    },
+    {
+      "id": "distillation",
+      "kind": "idea",
+      "section": "24.1",
+      "name": "Distillation",
+      "terms": [
+        "distillation"
+      ],
+      "statement": "Trapping the vapor, condensing it and boiling it again enriches the vapor in the volatile component and the residue in the less volatile one each time; a fractionation column runs a series of such vapor–liquid equilibria at once, and 100% purity would take infinitely many steps."
+    },
+    {
+      "id": "gibbs-duhem-equation",
+      "kind": "result",
+      "section": "24.2",
+      "name": "Gibbs–Duhem equation",
+      "terms": [
+        "Gibbs-Duhem equation"
+      ],
+      "statement": "Differentiating G = Σn_iμ_i and comparing with dG = VdP − SdT + Σμ_i dn_i gives Σn_i dμ_i = VdP − SdT, so at constant temperature and pressure Σn_i dμ_i = 0: the chemical potentials of a mixture cannot change independently.",
+      "forms": [
+        {
+          "id": "gibbs-duhem",
+          "latex": "\\sum_i n_i d\\mu_i = 0"
+        },
+        {
+          "id": "gibbs-duhem-general",
+          "latex": "\\sum_i n_i d \\mu_i = Vdp - sdT"
+        }
+      ]
+    },
+    {
+      "id": "gibbs-duhem-binary",
+      "kind": "result",
+      "section": "24.2",
+      "name": "Gibbs–Duhem equation for two components",
+      "statement": "For a binary mixture at constant T and P, n_Adμ_A + n_Bdμ_B = 0, so dμ_A = −(χ_B/χ_A)dμ_B: the change in one component's chemical potential fixes the change in the other's.",
+      "forms": [
+        {
+          "id": "gibbs-duhem-binary-n",
+          "latex": "0 = n_Ad\\mu_A+ n_Bd\\mu_B"
+        },
+        {
+          "id": "gibbs-duhem-binary-chi",
+          "latex": "d\\mu_A= - \\dfrac{\\chi_B}{\\chi_A}d\\mu_B"
+        }
+      ]
+    },
+    {
+      "id": "ideal-solution-chemical-potential",
+      "kind": "result",
+      "section": "24.2",
+      "name": "Chemical potential in an ideal solution",
+      "statement": "In an ideal solution the chemical potential of a component is that of the pure liquid plus RT ln of its mole fraction.",
+      "forms": [
+        {
+          "id": "mu-ideal-solution",
+          "latex": "\\mu_B = \\mu^*_B + RT \\ln x_B"
+        }
+      ]
+    },
+    {
+      "id": "raoult-both-components",
+      "kind": "result",
+      "section": "24.2",
+      "name": "Raoult's law holds for both components or neither",
+      "statement": "Putting μ_B = μ*_B + RT ln x_B into the binary Gibbs–Duhem equation and integrating from pure A gives μ_A = μ*_A + RT ln χ_A: Raoult's law can hold over the whole range for one component only if it holds for the other over the whole range.",
+      "forms": [
+        {
+          "id": "mu-ideal-a",
+          "latex": "\\mu_A = \\mu^*_A + RT \\ln \\chi_A"
+        }
+      ]
+    },
+    {
+      "id": "ideal-gas-mixture-chemical-potential",
+      "kind": "result",
+      "section": "24.3",
+      "name": "Chemical potential of a gas in a mixture",
+      "statement": "Ideal gases in a mixture do not notice each other, so each component's chemical potential depends logarithmically on its own partial pressure.",
+      "forms": [
+        {
+          "id": "mu-gas-partial",
+          "latex": "μ_j = μ_j^o + RT \\ln \\dfrac{P_j}{P^o}"
+        }
+      ]
+    },
+    {
+      "id": "component-phase-equilibrium",
+      "kind": "result",
+      "section": "24.3",
+      "name": "Equal chemical potentials of a component in every phase",
+      "statement": "At equilibrium between a solution and its vapor, every component has the same chemical potential in the liquid as in the gas, so the gas and its partial pressures are a probe of the liquid.",
+      "forms": [
+        {
+          "id": "mu-sln-gas",
+          "latex": "μ_j^{sln} = μ_j^{gas}"
+        }
+      ]
+    },
+    {
+      "id": "pure-liquid-chemical-potential",
+      "kind": "result",
+      "section": "24.3",
+      "name": "Chemical potential of a pure liquid from its vapor pressure",
+      "statement": "A pure liquid in equilibrium with its vapor has the vapor's chemical potential, μ*₁ = μ°₁ + RT ln(P*₁/P°), the asterisk marking the pure compound and its equilibrium vapor pressure.",
+      "forms": [
+        {
+          "id": "mu-pure-liquid",
+          "latex": "μ_1^{*liq}= μ_1^o + RT \\ln \\dfrac{P^*_1}{P^o}"
+        }
+      ]
+    },
+    {
+      "id": "solution-chemical-potential-vapor",
+      "kind": "result",
+      "section": "24.3",
+      "name": "Chemical potential of a component in solution",
+      "statement": "Combining the gas-phase chemical potential with the pure liquid's links the solution to the pure compound through the gas: μ_j^sln = μ*_j + RT ln(P_j/P*_j).",
+      "forms": [
+        {
+          "id": "mu-sln-vapor",
+          "latex": "μ_j^{sln}=μ^*_j + RT \\ln \\dfrac{P_j}{P^*_j}"
+        }
+      ]
+    },
+    {
+      "id": "ideal-gibbs-energy-of-mixing",
+      "kind": "result",
+      "section": "24.4",
+      "name": "Gibbs energy of mixing of an ideal solution",
+      "symbol": "Delta_mix_G",
+      "type": "energy",
+      "statement": "Forming an ideal solution from its pure liquids changes the Gibbs energy by nRTΣx_i ln x_i; every mole fraction is below one, so the Gibbs energy of mixing is always negative and mixing always spontaneous.",
+      "forms": [
+        {
+          "id": "ideal-mix-g-binary",
+          "latex": "\\Delta_{mix} G = nRTx_A\\ln{x_A} + nRTx_B\\ln{x_B}"
+        },
+        {
+          "id": "ideal-mix-g",
+          "latex": "\\Delta_{mix} G = nRT\\sum_i{x_i\\ln{x_i}}"
+        }
+      ]
+    },
+    {
+      "id": "ideal-enthalpy-of-mixing",
+      "kind": "result",
+      "section": "24.4",
+      "name": "No enthalpy of mixing in an ideal solution",
+      "statement": "The ideal Gibbs energy of mixing is −T times the entropy of mixing, which leaves no room for an enthalpy effect: Δ_mix H = 0, as if the average interaction energy U_ij were always the same whoever the neighbour. In practice this is seldom the case.",
+      "forms": [
+        {
+          "id": "ideal-mix-h",
+          "latex": "\\Delta_{mix} H = 0"
+        }
+      ]
+    },
+    {
+      "id": "ideal-volume-of-mixing",
+      "kind": "result",
+      "section": "24.4",
+      "name": "Volumes are additive in an ideal solution",
+      "statement": "Since (∂G/∂P)_T = V, the volume of mixing is the pressure derivative of the Gibbs energy of mixing, and RT(n₁ ln x₁ + n₂ ln x₂) does not depend on pressure: ΔV_mix = 0 and volumes are additive.",
+      "forms": [
+        {
+          "id": "ideal-mix-v",
+          "latex": "\\left (\\dfrac{\\partial RT ( n_1 \\ln x_1 + n_2\\ln x_2)}{\\partial P} \\right)_T =\\Delta V_{mix}^{ideal} =0"
+        }
+      ]
+    },
+    {
+      "id": "henrys-law",
+      "kind": "axiom",
+      "section": "24.5",
+      "name": "Henry's law",
+      "terms": [
+        "Henry's law"
+      ],
+      "statement": "Above a non-ideal solution the partial pressure of a component is still nearly linear in its mole fraction as x → 0, but with a slope K_H that differs from P*; it is often used for the solubility of gases in liquids.",
+      "forms": [
+        {
+          "id": "henry-law",
+          "latex": "P_1 = K_H x_1"
+        }
+      ]
+    },
+    {
+      "id": "henrys-law-constant",
+      "kind": "definition",
+      "section": "24.5",
+      "name": "Henry's law constant",
+      "symbol": "K_H",
+      "type": "pressure",
+      "statement": "The slope K_H of Henry's law, whose line meets x = 1 at a point other than P*. P* is a property of one pure component, K_H of a combination of two, so it is measured for each solute–solvent pair; its value and dimensions depend on the concentration measure (K_x,H, K_cp,H = 1/K_pc,H) and the pressure unit."
+    },
+    {
+      "id": "limiting-laws",
+      "kind": "idea",
+      "section": "24.5",
+      "name": "Limiting laws of a solution",
+      "terms": [
+        "solute",
+        "solvent"
+      ],
+      "statement": "As x₁ → 1 a component is the solvent and follows Raoult's law; as x₁ → 0 it is the solute and follows Henry's law. The smaller the deviations from ideality, the wider the range of the two laws; neither describes the middle."
+    },
+    {
+      "id": "gibbs-duhem-vapor-pressures",
+      "kind": "result",
+      "section": "24.6",
+      "name": "Gibbs–Duhem equation in vapor pressures",
+      "statement": "With μ_j = μ_j° + RT ln P_j and dx₁ = −dx₂, the Gibbs–Duhem equation becomes x₁(∂ln P₁/∂x₁) = x₂(∂ln P₂/∂x₂).",
+      "forms": [
+        {
+          "id": "gibbs-duhem-lnp",
+          "latex": "x_ 1 \\left( \\dfrac{∂\\ln P_1}{ ∂x_1} \\right) =x_2 \\left( \\dfrac{∂\\ln P_2}{∂x_2} \\right)"
+        }
+      ]
+    },
+    {
+      "id": "raoult-implies-henry",
+      "kind": "result",
+      "section": "24.6",
+      "name": "Raoult for the solvent means Henry for the solute",
+      "statement": "If Raoult's law holds for component 1 as x₁ → 1, the Gibbs–Duhem equation gives ∂ln P₂/∂x₂ = 1/x₂, so P₂ = Kx₂ with some constant K, not necessarily P*: when one component follows Raoult the other must follow Henry. The ideal case is the one where K = P* and linearity holds over the whole range.",
+      "forms": [
+        {
+          "id": "lnp2-slope",
+          "latex": "\\dfrac{1}{x_2}= \\dfrac{∂ \\ln P_2}{∂x_2}"
+        },
+        {
+          "id": "henry-from-gd",
+          "latex": "P_2=K x_2"
+        }
+      ]
+    },
+    {
+      "id": "azeotrope",
+      "kind": "definition",
+      "section": "24.6",
+      "name": "Azeotrope",
+      "terms": [
+        "azeotrope"
+      ],
+      "statement": "The composition at which a boiling liquid and its vapor have the same composition: the two-phase lens of a non-ideal pair closes to a point at a maximum or a minimum of the boiling temperature, and the liquid boils congruently. Distillation cannot purify past it."
+    },
+    {
+      "id": "partially-miscible-boiling-diagram",
+      "kind": "idea",
+      "section": "24.6",
+      "name": "Boiling diagram of partially miscible liquids",
+      "statement": "Two liquids that form two liquid phases over a range of composition and a minimum-boiling azeotrope give a diagram with the boiling lens above a solubility dome; where the azeotrope boils below the temperature at which the liquids become miscible, the lens sits on the dome, and the lever rule applies in each two-phase region."
+    },
+    {
+      "id": "margules-function",
+      "kind": "definition",
+      "section": "24.6",
+      "name": "Margules function",
+      "symbol": "f_Mar",
+      "terms": [
+        "Margules function"
+      ],
+      "statement": "A factor that describes moderate non-ideality over the whole range, P₁ = (x₁P*₁)f_Mar, with f_Mar an exponential of a series in the mole fraction of the other component lacking its constant and linear terms; its parameters α, β, δ … are found by experiment, and the Gibbs–Duhem equation turns the expression for P₁ into the one for P₂.",
+      "forms": [
+        {
+          "id": "margules-p1",
+          "latex": "P_1= \\left(x_1P^*_1 \\right)f_{Mar}"
+        },
+        {
+          "id": "margules-f",
+          "latex": "f_{Mar}= \\text{exp} \\left[ αx_2^2+βx_2^3+δx_2^3 + .... \\right]"
+        }
+      ]
+    },
+    {
+      "id": "activity",
+      "kind": "definition",
+      "section": "24.7",
+      "name": "Activity",
+      "symbol": "a_i",
+      "terms": [
+        "activity"
+      ],
+      "statement": "The effective concentration that keeps the ideal formulas for a real solution: the chemical potential is written with the activity in place of the mole fraction, μ = μ° + RT ln a. Defined from molality, a_B = γm_B/m°, unitless.",
+      "forms": [
+        {
+          "id": "activity-molal",
+          "latex": "a_B=\\gamma \\dfrac{m_B}{m^o}"
+        },
+        {
+          "id": "mu-activity",
+          "latex": "\\mu_B =\\mu_B^o + RT \\ln a_B"
+        }
+      ]
+    },
+    {
+      "id": "activity-coefficient",
+      "kind": "definition",
+      "section": "24.7",
+      "name": "Activity coefficient",
+      "symbol": "gamma_i",
+      "terms": [
+        "activity coefficient"
+      ],
+      "statement": "The factor γ relating activity to concentration, a_i = γ_i x_i (or γ m/m°); it approaches unity in the limit where the reference law holds and may depend on temperature, pressure and concentration.",
+      "forms": [
+        {
+          "id": "activity-gamma-x",
+          "latex": "a_i= γ_ix_i"
+        }
+      ]
+    },
+    {
+      "id": "mean-ionic-activity-coefficient",
+      "kind": "definition",
+      "section": "24.7",
+      "name": "Mean ionic activity coefficient",
+      "symbol": "gamma_pm",
+      "terms": [
+        "mean activity coefficient"
+      ],
+      "statement": "Since the deviation RT ln γ₊γ₋ of a dissolved salt cannot be split between its ions by experiment, the geometric mean γ± = (γ₊γ₋)^{1/2} is used, and for M_xX_y the mean (γ₊^xγ₋^y)^{1/(x+y)} (the book prints the exponent as 1/x+y).",
+      "forms": [
+        {
+          "id": "gamma-pm-11",
+          "latex": "\\gamma_{\\pm} = \\sqrt{\\gamma_+\\gamma_-}"
+        },
+        {
+          "id": "gamma-pm-xy",
+          "latex": "\\gamma _{\\pm} = (\\gamma_+^x \\gamma_-^y)^{1/x+y}"
+        }
+      ]
+    },
+    {
+      "id": "debye-huckel-law",
+      "kind": "result",
+      "section": "24.7",
+      "name": "Debye–Hückel limiting law",
+      "statement": "Debye and Hückel (1923) related the mean activity coefficient to the solvent's dielectric constant, the temperature, the ions' charges and the ionic strength; the law reads log₁₀γ± = −1.824 × 10⁶|z₊z₋|√I/(εT)^{3/2}, where the book prints a positive sign and |z₊ + z₋| (corrected in the text's footnote).",
+      "forms": [
+        {
+          "id": "debye-huckel",
+          "latex": "\\log _{10} \\gamma_{\\pm} = \\dfrac{1.824 \\times 10^6}{(\\epsilon T)^{3/2}} |z_++z_- | \\sqrt{I}"
+        }
+      ]
+    },
+    {
+      "id": "ionic-strength",
+      "kind": "definition",
+      "section": "24.7",
+      "name": "Ionic strength",
+      "symbol": "I_ion",
+      "terms": [
+        "ionic strength"
+      ],
+      "statement": "I = ½(m₊z₊² + m₋z₋²)/m°, the charge-weighted molality of the ions on which the Debye–Hückel law depends.",
+      "forms": [
+        {
+          "id": "ionic-strength-def",
+          "latex": "I = \\dfrac{1}{2} \\dfrac{m_+ z_+^2 + m_-z_-^2}{m^o}"
+        }
+      ]
+    },
+    {
+      "id": "raoult-activity-convention",
+      "kind": "definition",
+      "section": "24.7",
+      "name": "Raoult's law basis of activity",
+      "statement": "For a solvent the activity is defined from Raoult's law, a₁ = P₁/P*₁, since Raoult's law still holds in its limit.",
+      "forms": [
+        {
+          "id": "activity-raoult",
+          "latex": "a_1 = \\dfrac{P_1}{P^*_1}"
+        }
+      ]
+    },
+    {
+      "id": "henry-activity-convention",
+      "kind": "definition",
+      "section": "24.7",
+      "name": "Henry's law basis of activity",
+      "statement": "For a solute the activity is better based on Henry's law, a_solute,H = P_solute/K_x,H; its μ* then belongs to a virtual state, the Henry line extrapolated to x_solute = 1, which cannot be realized but keeps the convention useful. An activity must name the scale it uses.",
+      "forms": [
+        {
+          "id": "activity-henry",
+          "latex": "a_{solute,H} ≡ \\dfrac{P_{solute}}{K_{x,H}}"
+        }
+      ]
+    },
+    {
+      "id": "osmotic-coefficient",
+      "kind": "definition",
+      "section": "24.7",
+      "name": "Osmotic coefficient",
+      "symbol": "phi_osm",
+      "statement": "For a nearly non-volatile solute the solvent's measurable vapor pressure gives ln(P₁/P*₁) = ln a₁ ≈ −x₂φ, where the 'fudge factor' φ is found from pressure data as a function of concentration.",
+      "forms": [
+        {
+          "id": "osmotic-coefficient-def",
+          "latex": "\\ln \\dfrac{P_1}{P^*_1}=\\ln a_1 ≈ -x_2φ"
+        }
+      ]
+    },
+    {
+      "id": "solute-activity-from-solvent",
+      "kind": "result",
+      "section": "24.7",
+      "name": "Solute activity from the osmotic coefficient",
+      "statement": "The Gibbs–Duhem equation converts the osmotic coefficient into the solute's activity coefficient; in molalities ln γ_2,m = φ − 1 + ∫₀^m (φ − 1)/m′ dm′.",
+      "forms": [
+        {
+          "id": "ln-gamma2-integral",
+          "latex": "\\ln γ_{2,m} = φ – 1 + \\int_{m'=0}^m \\dfrac{φ – 1}{m'} dm'"
+        }
+      ]
+    },
+    {
+      "id": "activity-by-phase",
+      "kind": "definition",
+      "section": "24.8",
+      "name": "Activity relative to a standard state",
+      "statement": "The activity is dimensionless and calculated with respect to a standard state: for a real gas a_i = f_i/P° = φ_iy_iP/P°; for a gas treated as ideal a_i = y_iP/P°; for a solute a_i = γ_i[A]/1 M (γ_i = 1 in general and organic chemistry); for a pure solid or liquid a_i = 1.",
+      "forms": [
+        {
+          "id": "activity-real-gas",
+          "latex": "a_i=\\frac{f_i}{P^{\\circ}}=\\frac{\\phi_iP_i}{P^{\\circ}}=\\frac{\\phi_i(y_iP)}{P^{\\circ}}"
+        },
+        {
+          "id": "activity-ideal-gas",
+          "latex": "a_i=\\frac{P_i}{P^{\\circ}}=y_i\\frac{P}{P^{\\circ}}"
+        },
+        {
+          "id": "activity-pure-condensed",
+          "latex": "a_i=1"
+        }
+      ]
+    },
+    {
+      "id": "margules-activity-coefficient",
+      "kind": "result",
+      "section": "24.9",
+      "name": "Activity coefficient as the Margules function",
+      "statement": "Modelling the non-ideality with a Margules function, P_i = x_iP°f_Mar gives a_i = x_if_Mar: the activity coefficient and the Margules function are the same thing."
+    },
+    {
+      "id": "regular-solution-activities",
+      "kind": "result",
+      "section": "24.9",
+      "name": "Activities of a regular solution",
+      "statement": "With one Margules parameter a, a₁ = x₁e^{ax₂²}, and the Gibbs–Duhem equation implies a₂ = x₂e^{ax₁²}.",
+      "forms": [
+        {
+          "id": "regular-a1",
+          "latex": "a_1 = x_1e^{ax_2^2}"
+        },
+        {
+          "id": "regular-a2",
+          "latex": "a_2 = x_2e^{ax_1^2}"
+        }
+      ]
+    },
+    {
+      "id": "gibbs-energy-of-mixing-activity",
+      "kind": "result",
+      "section": "24.9",
+      "name": "Gibbs energy of mixing in terms of activity coefficients",
+      "statement": "Per mole of solution, with μ_i = μ*_i + RT ln a_i and a_i = γ_ix_i, Δ_mix G/RT = x₁ln x₁ + x₂ln x₂ + x₁ln γ₁ + x₂ln γ₂: the ideal term plus the activity coefficients' share.",
+      "forms": [
+        {
+          "id": "mix-g-activity",
+          "latex": "\\frac{\\Delta_{mix} G}{RT} = x_1\\ln{x_1} + x_2\\ln{x_2} + x_1\\ln{\\gamma_1} + x_2\\ln{\\gamma_2}"
+        }
+      ]
+    },
+    {
+      "id": "regular-gibbs-energy-of-mixing",
+      "kind": "result",
+      "section": "24.9",
+      "name": "Gibbs energy of mixing of a regular solution",
+      "statement": "With ln γ₁ = ax₂² and ln γ₂ = ax₁², Δ_mix G/RT = x₁ln x₁ + x₂ln x₂ + ax₁x₂: the entropy of mixing, with its minimum at x₁ = 0.5, competes with an interaction term with a maximum there when a is positive, and the curves are symmetrical about x = 0.5.",
+      "forms": [
+        {
+          "id": "regular-mix-g",
+          "latex": "\\frac{\\Delta_{mix} G}{RT} = x_1\\ln{x_1} + x_2\\ln{x_2} + ax_1x_2"
+        }
+      ]
+    },
+    {
+      "id": "regular-interaction-energy",
+      "kind": "definition",
+      "section": "24.9",
+      "name": "Interaction energy of a regular solution",
+      "symbol": "W_int",
+      "type": "energy",
+      "statement": "The dimensionless a is W/RT, where W is an energy (enthalpy), weakly dependent on temperature, that accounts for the difference in average interaction energies: W = 2U₁₂ − U₁₁ − U₂₂.",
+      "forms": [
+        {
+          "id": "regular-w",
+          "latex": "W = 2U_{12} - U_{11} - U_{22}"
+        }
+      ]
+    },
+    {
+      "id": "consolute-point",
+      "kind": "definition",
+      "section": "24.9",
+      "name": "Consolute point",
+      "terms": [
+        "critical or consolute point"
+      ],
+      "statement": "Depending on RT/W, the regular Gibbs energy of mixing has one minimum or two: at low temperature two, so each component has a solubility limit in the other; at high temperature one, and they mix completely. The transition is the critical or consolute point; real systems can also show a lower one, and nicotine–water has both."
+    },
+    {
+      "id": "regular-volume-of-mixing",
+      "kind": "result",
+      "section": "24.9",
+      "name": "Volume of mixing of a regular solution",
+      "statement": "Since W depends on the distance between molecules, the enthalpy of mixing depends on pressure and ΔV_mix = (∂Δ_mix H/∂P)_T: partial molar volumes depend on composition and volume is no longer additive.",
+      "forms": [
+        {
+          "id": "regular-mix-v",
+          "latex": "\\left(\\frac{\\partial\\Delta H_{mix}}{\\partial P}\\right)_T = \\Delta V_\\text{mix}"
+        }
+      ]
+    },
+    {
+      "id": "boiling-gap-meets-solubility-gap",
+      "kind": "idea",
+      "section": "24.9",
+      "name": "Boiling gap meeting the solubility gap",
+      "statement": "Lowering the pressure brings the whole gas–liquid gap down in temperature while the mixing behaviour of the liquids barely moves (one involves the gas's volume, the other only the liquids'). At low enough pressure the consolute point lies above the gap: the mixture boils before it can mix, at a minimum where it boils congruently, and at the temperature the book calls eutectic one liquid boils completely and the other in part."
+    },
+    {
+      "id": "solute-standard-state",
+      "kind": "definition",
+      "section": "25.1",
+      "name": "Standard state of a solute",
+      "terms": [
+        "standard state"
+      ],
+      "statement": "For a solution the standard state is defined by the solute's infinite-dilution behavior: a hypothetical solution of 1 mol/L in which the solute still behaves as at infinite dilution, its particles not interacting with each other, so that the activity coefficient describes all the nonideal behavior where it is not equal to 1."
+    },
+    {
+      "id": "activity-coefficient-from-vapor-pressure",
+      "kind": "result",
+      "section": "25.2",
+      "name": "Activity coefficient from the vapor pressure",
+      "statement": "The partial pressure of a component over a solution is P_i = a_iP_i*, so comparing with Raoult's law the activity coefficient is γ_i = P_i/(x_iP_i*) = P_i/P_i^R, the measured partial pressure over the one Raoult's law predicts: larger than one for a positive deviation, smaller than one for a negative one, and one for an ideal solution. Measuring the partial pressure of the vapor over a nonideal solution gives it from the phase diagram.",
+      "forms": [
+        {
+          "id": "gamma-from-partial-pressure",
+          "latex": "\\gamma_i = \\dfrac{P_i}{x_i P_i^*} = \\dfrac{P_i}{P_i^{\\text{R}}}"
+        },
+        {
+          "id": "partial-pressure-from-activity",
+          "latex": "P_i = a_i P_i^*"
+        }
+      ]
+    },
+    {
+      "id": "colligative-property",
+      "kind": "definition",
+      "section": "25.3",
+      "name": "Colligative property",
+      "terms": [
+        "Colligative properties"
+      ],
+      "statement": "A property that depends on the number of particles rather than their total mass, which is why it can be used to measure molar mass: melting point depression, boiling point elevation and osmotic pressure."
+    },
+    {
+      "id": "solvent-activity-at-freezing",
+      "kind": "result",
+      "section": "25.3",
+      "name": "Solvent activity at the freezing point",
+      "statement": "When a solution whose solid is pure solvent freezes, the solvent's chemical potentials in the solid and the solution are equal, μ₁ˢ = μ₁^liq* + RT ln a₁, so −Δμ₁/RT = ln a₁, and the Gibbs–Helmholtz relation turns this into ∂ln a₁/∂T = Δ_fus H̄₁/RT²; integrating that quantity determines activities.",
+      "forms": [
+        {
+          "id": "dlna1-dT-freezing",
+          "latex": "\\dfrac{\\partial \\ln a_1}{\\partial T} = \\dfrac{Δ_{fus}H_{molar,1}}{RT^2}"
+        },
+        {
+          "id": "freezing-mu-balance",
+          "latex": "μ_1^s = μ_1^{liq*} + RT\\ln\\, a_1"
+        },
+        {
+          "id": "freezing-ln-a1",
+          "latex": "\\dfrac{-Δμ_1}{RT}=\\ln \\,a_1"
+        }
+      ]
+    },
+    {
+      "id": "freezing-point-depression",
+      "kind": "result",
+      "section": "25.3",
+      "name": "Melting point depression",
+      "symbol": "Delta_T",
+      "terms": [
+        "melting point depression"
+      ],
+      "type": "temperature",
+      "statement": "A dilute solution whose solvent follows Raoult's law and whose solid holds no solute melts below the pure solvent: integrating ∂ln a₁/∂T from T_m* to T_m with ln a₁ = ln x₁ ≈ −x₂ gives −x₂ ≈ Δ_fus H̄₁(−ΔT)/(RT_m*²), often rewritten in molality as ΔT = K_f m.",
+      "forms": [
+        {
+          "id": "freezing-x2",
+          "latex": "-x_2 = \\dfrac{Δ_{fus}H_{molar,1}}{R} \\left( \\dfrac{1}{T_m^*}- \\dfrac{1}{T_m} \\right) ≈ \\dfrac{Δ_{fus}H_{molar,1}}{R} \\left(\\dfrac{ -ΔT}{T_m^{*2}} \\right)"
+        },
+        {
+          "id": "freezing-kf-m",
+          "latex": "ΔT = K_f m"
+        }
+      ]
+    },
+    {
+      "id": "freezing-point-constant",
+      "kind": "definition",
+      "section": "25.3",
+      "name": "Cryoscopic constant",
+      "symbol": "K_f",
+      "statement": "The solvent's constant K_f in ΔT = K_f m, the lowering of the melting point per unit molality of solute."
+    },
+    {
+      "id": "molar-mass-from-freezing-point",
+      "kind": "skill",
+      "section": "25.3",
+      "name": "Finding a molar mass from the melting point depression",
+      "statement": "With K_f known for the solvent, add a weighed amount of an unknown compound, measure the temperature depression to get the molality, and from the molality and the masses calculate the molar mass."
+    },
+    {
+      "id": "boiling-point-elevation",
+      "kind": "result",
+      "section": "25.3",
+      "name": "Boiling point elevation",
+      "terms": [
+        "boiling point elevation"
+      ],
+      "type": "temperature",
+      "statement": "A nonvolatile solute raises the boiling point of the solvent, by reasoning quite similar to the melting point depression."
+    },
+    {
+      "id": "semipermeable-membrane",
+      "kind": "definition",
+      "section": "25.4",
+      "name": "Semipermeable membrane",
+      "terms": [
+        "semi-permeable membranes",
+        "semipermeable"
+      ],
+      "statement": "A membrane permeable for some molecules but not for others, often by their size but also by their solubility in the barrier material; the walls of most plant and animal cells are one."
+    },
+    {
+      "id": "osmosis",
+      "kind": "definition",
+      "section": "25.4",
+      "name": "Osmosis",
+      "statement": "When solvent molecules can pass through a membrane but solute molecules or ions cannot, solvent migrates spontaneously into the solution to increase its volume and reduce its concentration, much as an ideal gas expands against vacuum."
+    },
+    {
+      "id": "osmotic-pressure",
+      "kind": "definition",
+      "section": "25.4",
+      "name": "Osmotic pressure",
+      "symbol": "Pi",
+      "terms": [
+        "osmotic pressure"
+      ],
+      "type": "pressure",
+      "statement": "The hydrostatic pressure Π that builds up on the solution side as osmosis proceeds, under gravity in a U-shaped tube; at equilibrium it equalizes the flow of solvent through the membrane in both directions."
+    },
+    {
+      "id": "osmotic-equilibrium",
+      "kind": "result",
+      "section": "25.4",
+      "name": "Osmotic equilibrium",
+      "statement": "At equilibrium the pure solvent at P and the solution at P + Π have the same chemical potential, μ*(T, P) = μ*(T, P + Π) + RT ln a₁; integrating (∂μ*/∂P)_T = V̄₁* over the extra pressure turns this into ΠV̄₁* = −RT ln a₁.",
+      "forms": [
+        {
+          "id": "osmotic-mu-balance",
+          "latex": "μ^*(T,P) = μ^{sln}(T,P+ Π,a_1)"
+        },
+        {
+          "id": "osmotic-mu-activity",
+          "latex": "μ^*(T,P) = μ^*(T,P+ Π)+ RT\\ln a_1"
+        },
+        {
+          "id": "osmotic-mu-pressure-integral",
+          "latex": "μ^*(T,P+\\Pi) = μ^*(T,P) + \\int_P^{P+ \\Pi} \\bar{V}^*_{1} dP"
+        },
+        {
+          "id": "osmotic-pi-vbar",
+          "latex": "μ^*(T,P) = μ^*(T,P)+ \\Pi\\bar{V}^*_{1}+ RT\\ln a_1"
+        }
+      ]
+    },
+    {
+      "id": "osmotic-pressure-dilute",
+      "kind": "result",
+      "section": "25.4",
+      "name": "Osmotic pressure of a dilute solution",
+      "statement": "With the ideal approximation ln a₁ ≈ −x₂ the osmotic equilibrium gives RTx₂ = ΠV̄₁*, and with x₂ ≈ n₂/n₁ this becomes Π = RTc in the molar concentration of the solute.",
+      "forms": [
+        {
+          "id": "osmotic-pi-rtc",
+          "latex": "\\Pi=RTc"
+        },
+        {
+          "id": "osmotic-rtx2",
+          "latex": "RT x_2 = \\Pi\\bar{V}^*_{1}"
+        }
+      ]
+    },
+    {
+      "id": "reverse-osmosis",
+      "kind": "idea",
+      "section": "25.4",
+      "name": "Reverse osmosis",
+      "statement": "Osmosis can be used in reverse: about 30 bar applied to sea water drives fresh water through a suitable membrane. Membranes clog easily and the water is not completely salt-free, so salt may accumulate on fields watered with it."
+    },
+    {
+      "id": "osmometry",
+      "kind": "skill",
+      "section": "25.4",
+      "name": "Finding a molar mass by osmometry",
+      "statement": "Osmotic pressure is colligative, so measuring it for a known mass of dissolved solute gives the solute's molar mass, up to about 8000 daltons, where melting point depression and boiling point elevation reach only small molar masses."
+    },
+    {
+      "id": "polymer-molar-mass-distribution",
+      "kind": "idea",
+      "section": "25.4",
+      "name": "Molar mass distribution of a polymer",
+      "statement": "A polymer usually has a distribution of molar masses. It is dissolved and led over a size-exclusion column, and the effluent is probed against elution time by UV absorption (the monomer concentration) and by low angle laser light scattering or viscometry, which give different moments of the distribution; together they show how much material there is at each molar mass and how branched the chains are."
+    },
+    {
+      "id": "melting-purity-analysis",
+      "kind": "idea",
+      "section": "25.4",
+      "name": "Purity from the melting behavior",
+      "statement": "A slightly impure solid melts over a range, from a lower eutectic temperature up to its depressed melting point; in differential scanning calorimetry the melting peak skews toward lower temperatures as impurity grows, and modelling its shape with a modified melting point depression expression gives the total impurity level, a quality control in the pharmaceutical industry."
+    },
+    {
+      "id": "electrolyte-nonideality",
+      "kind": "idea",
+      "section": "25.5",
+      "name": "Nonideality of electrolyte solutions",
+      "statement": "A strong electrolyte puts charged solutes into solution, whose interaction falls off as r⁻¹ rather than about r⁻⁶ for neutral species, so the solution diverges seriously from ideality even at very low concentrations."
+    },
+    {
+      "id": "salt-dissociation",
+      "kind": "definition",
+      "section": "25.5",
+      "name": "Dissociation of a salt",
+      "terms": [
+        "stoichiometric coefficients"
+      ],
+      "statement": "A salt C_ν₊A_ν₋ goes into solution as ν₊ cations of formal charge z₊ and ν₋ anions of charge z₋; ν₊ and ν₋ are the stoichiometric coefficients, ν = ν₊ + ν₋, and charge neutrality demands ν₊z₊ + ν₋z₋ = 0.",
+      "forms": [
+        {
+          "id": "salt-dissociation-reaction",
+          "latex": "C_{ν_+}A_{ν_-} \\rightarrow ν_+C^{z+} + ν_-A^{z-}"
+        },
+        {
+          "id": "salt-charge-neutrality",
+          "latex": "ν_+z_+ + ν_- z_- = 0"
+        },
+        {
+          "id": "salt-nu-sum",
+          "latex": "ν_+ + ν_- = ν"
+        }
+      ]
+    },
+    {
+      "id": "salt-chemical-potential",
+      "kind": "result",
+      "section": "25.5",
+      "name": "Chemical potential of a dissolved salt",
+      "statement": "The dissociation makes the salt's chemical potential the sum over its ions, μ₂ = ν₊μ₊ + ν₋μ₋ with μ₂° = ν₊μ₊° + ν₋μ₋°, so ν₊ ln a₊ + ν₋ ln a₋ = ln a₂ and a₂ = a₊^ν₊ a₋^ν₋: the stoichiometric coefficients become exponents.",
+      "forms": [
+        {
+          "id": "salt-mu-sum",
+          "latex": "μ_2 = ν_+μ_+ + ν_-μ_-"
+        },
+        {
+          "id": "salt-mu-std-sum",
+          "latex": "μ_2^o = ν_+μ_+^o + ν_-μ_-^o"
+        },
+        {
+          "id": "salt-ln-activity",
+          "latex": "ν_+\\ln a_+ + ν_- \\ln a_-=\\ln a_2"
+        },
+        {
+          "id": "salt-activity-product",
+          "latex": "a_2 =a_+^{ν_+}a_-^{ ν-}"
+        }
+      ]
+    },
+    {
+      "id": "mean-ionic-activity",
+      "kind": "definition",
+      "section": "25.5",
+      "name": "Mean ionic activity",
+      "symbol": "a_pm",
+      "terms": [
+        "mean ionic activity"
+      ],
+      "statement": "The activity a± defined by a±^ν ≡ a₂ = a₊^ν₊ a₋^ν₋: closely related to the salt's activity, but through an exponent, so a±² = a_NaCl and a±⁵ is the activity of Al₂(SO₄)₃.",
+      "forms": [
+        {
+          "id": "mean-ionic-activity-def",
+          "latex": "a_±^ ν ≡ a_2 =a_+^{ν+}a_-^{ ν-}"
+        }
+      ]
+    },
+    {
+      "id": "ionic-activity-coefficients",
+      "kind": "definition",
+      "section": "25.5",
+      "name": "Activity coefficients of the ions",
+      "statement": "Working with molalities, each ion has an activity coefficient, a₊ = γ₊m₊ and a₋ = γ₋m₋, though neither can be determined separately, since one ion cannot be added without the other.",
+      "forms": [
+        {
+          "id": "ion-activity-plus",
+          "latex": "a_+ =γ_+ m_+"
+        },
+        {
+          "id": "ion-activity-minus",
+          "latex": "a_- =γ_- m_-"
+        }
+      ]
+    },
+    {
+      "id": "ion-molalities",
+      "kind": "result",
+      "section": "25.5",
+      "name": "Molalities of the ions",
+      "terms": [
+        "molality of the salt"
+      ],
+      "statement": "Stoichiometry relates the molalities of the ions to the molality m of the salt: m₊ = ν₊m and m₋ = ν₋m.",
+      "forms": [
+        {
+          "id": "ion-molality-plus",
+          "latex": "m_+=ν_+m"
+        },
+        {
+          "id": "ion-molality-minus",
+          "latex": "m_-=ν_-m"
+        }
+      ]
+    },
+    {
+      "id": "mean-ionic-molality",
+      "kind": "definition",
+      "section": "25.5",
+      "name": "Mean ionic molality",
+      "symbol": "m_pm",
+      "terms": [
+        "mean ionic molality"
+      ],
+      "statement": "The molality m± defined by m±^ν ≡ m₊^ν₊ m₋^ν₋.",
+      "forms": [
+        {
+          "id": "mean-ionic-molality-def",
+          "latex": "m_{\\pm}^ν ≡ m_+^{ν+}m_-^{ ν-}"
+        }
+      ]
+    },
+    {
+      "id": "salt-activity-mean-quantities",
+      "kind": "result",
+      "section": "25.5",
+      "name": "Activity of a salt from mean ionic quantities",
+      "statement": "a₂ = a±^ν = γ±^ν m±^ν: the stoichiometry enters both the exponents and the molalities, so the activity of Al₂(SO₄)₃ is 108m⁵γ±⁵ and goes as the fifth power of its molality.",
+      "forms": [
+        {
+          "id": "salt-activity-mean",
+          "latex": "a_2=a_{\\pm}^ ν =γ_{\\pm}^ ν m_{\\pm}^ ν"
+        },
+        {
+          "id": "salt-activity-ions",
+          "latex": "a_2=a_{\\pm}^ν=a_+^{ν+}a_-^{ν-}"
+        }
+      ]
+    },
+    {
+      "id": "mean-ionic-gamma-from-vapor-pressure",
+      "kind": "result",
+      "section": "25.5",
+      "name": "Measuring the mean ionic activity coefficient",
+      "statement": "γ± can be determined: the water vapor pressure measured above the salt solution gives the osmotic coefficient φ, and the Gibbs–Duhem equation turns it into ln γ± (the book prints the integrand as [φ − 1]m′; it is (φ − 1)/m′). The salt's own negligible vapor pressure does not matter.",
+      "forms": [
+        {
+          "id": "ln-gamma-pm-phi",
+          "latex": "\\ln γ_{\\pm} = φ -1 + \\int_{m'=0}^m [ φ -1 ]m' \\,dm'"
+        }
+      ]
+    },
+    {
+      "id": "ionic-atmosphere",
+      "kind": "idea",
+      "section": "25.6",
+      "name": "Ionic atmosphere",
+      "statement": "Debye–Hückel theory treats the vicinity of each ion as an atmosphere-like cloud of charges of opposite sign that cancels the charge of the central ion, so from a distance the cloud looks neutral; its size depends on the concentration of all the other ions."
+    },
+    {
+      "id": "debye-length",
+      "kind": "definition",
+      "section": "25.6",
+      "name": "Debye length",
+      "symbol": "kappa_D",
+      "terms": [
+        "Debye-length"
+      ],
+      "type": "length",
+      "statement": "The size 1/κ of the ionic atmosphere, set by the ionic strength through κ² = constant · I, the constant holding e²N_A over ε_rε₀kT; the book calls κ itself the Debye-length.",
+      "forms": [
+        {
+          "id": "debye-kappa-squared",
+          "latex": "κ^2 = constant \\, I"
+        },
+        {
+          "id": "debye-constant",
+          "latex": "constant= 2000 \\dfrac{e^2N_A}{ε_rε_okT}"
+        }
+      ]
+    },
+    {
+      "id": "ln-gamma-debye-length",
+      "kind": "result",
+      "section": "25.6",
+      "name": "Mean activity coefficient from the Debye length",
+      "statement": "At sufficiently low concentrations ln γ± = −|q₊q₋|κ/(8πε_rε₀kT): the logarithm of the mean ionic activity coefficient is proportional to κ and so, for one salt, to the square root of its molality, and it depends on the ionic strength rather than the electrolyte's own concentration.",
+      "forms": [
+        {
+          "id": "dh-ln-gamma-kappa",
+          "latex": "\\ln γ_± = -|q_+q_-| \\dfrac{κ}{8πε_rε_okT}"
+        },
+        {
+          "id": "dh-ln-gamma-sqrt-m",
+          "latex": "\\ln \\gamma_{\\pm} \\propto \\sqrt{m}"
+        }
+      ]
+    },
+    {
+      "id": "distance-of-closest-approach",
+      "kind": "definition",
+      "section": "25.6",
+      "name": "Distance of closest approach",
+      "symbol": "a_0",
+      "type": "length",
+      "statement": "The parameter a₀ of the Debye–Hückel equation, the distance of closest approach of ions; in the extended equation it is the effective hydrated diameter a, about 3 Å for H⁺, Cl⁻, CN⁻ and HCOO⁻ and 9 Å for hydronium."
+    },
+    {
+      "id": "extended-debye-huckel-equation",
+      "kind": "result",
+      "section": "25.6",
+      "name": "Extended Debye–Hückel equation",
+      "statement": "log₁₀γ± = −Az²√I/(1 + Ba₀√I), with A = 0.51 and B = 3.29 nm⁻¹ (in mol^−1/2 dm^3/2) for water at 25 °C; at very low ionic strength the denominator is nearly one and the limiting law returns. Written with |z₊z₋| and the hydrated diameter a, it extends the limiting law to somewhat higher concentrations.",
+      "forms": [
+        {
+          "id": "dh-log-gamma",
+          "latex": "\\log _{10}\\gamma _{\\pm }=-Az_{j}^{2}{\\frac {\\sqrt {I}}{1+Ba_{0}{\\sqrt {I}}}}"
+        },
+        {
+          "id": "extended-dh-zz",
+          "latex": "- \\log(\\gamma) = \\dfrac{A|z_+z_-|\\sqrt{I}}{1 + Ba\\sqrt{I}}"
+        },
+        {
+          "id": "dh-a-constant",
+          "latex": "A={\\frac {e^{2}B}{2.303\\times 8\\pi \\epsilon _{0}\\epsilon _{r}k_{\\rm {B}}T}}"
+        },
+        {
+          "id": "dh-b-constant",
+          "latex": "B=\\left({\\frac {2e^{2}N}{\\epsilon _{0}\\epsilon _{r}k_{\\rm {B}}T}}\\right)^{1/2}"
+        }
+      ]
+    },
+    {
+      "id": "constant-ionic-strength",
+      "kind": "idea",
+      "section": "25.6",
+      "name": "Holding the ionic strength constant",
+      "statement": "Because the ionic strength involves every ion present, one ion can be replaced by a spectator of the same charge, Cu²⁺ by Zn²⁺ by diluting with a zinc solution of the same concentration, to lower its concentration while keeping the activity coefficients as nearly the same as possible."
+    },
+    {
+      "id": "colloid",
+      "kind": "definition",
+      "section": "25.6",
+      "name": "Colloid",
+      "terms": [
+        "colloid",
+        "nanoparticles",
+        "colloidal particles"
+      ],
+      "statement": "A dispersion of solid particles of nanometre size, smaller than the wavelength of visible light, so the liquid stays clear, kept from precipitating because the particles are charged and wear an atmosphere of a certain Debye length that repels the others. Colloids are metastable, and a salt with highly charged ions can destabilize one by changing the ionic strength and so the Debye length."
+    },
+    {
+      "id": "debye-huckel-assumptions",
+      "kind": "idea",
+      "section": "25.7",
+      "name": "Limits of Debye–Hückel theory",
+      "statement": "The theory agrees with experiment below about 10⁻³ mol/L; beyond that its assumptions fail: ions associate, weak electrolytes are not fully dissociated, ions are neither point charges nor unpolarizable, the solvent is made of dipolar, polarizable molecules that solvate the ions, and the ionic radius becomes comparable to the atmosphere's. Most extensions are empirical, keeping the law at low concentration and adding terms in powers of the ionic strength."
+    },
+    {
+      "id": "bjerrum-length",
+      "kind": "definition",
+      "section": "25.7",
+      "name": "Bjerrum length",
+      "type": "length",
+      "statement": "The separation at which the electrostatic interaction between two ions is comparable in magnitude to kT, which marks where ion association, followed up by Bjerrum, sets in."
+    },
+    {
+      "id": "davies-equation",
+      "kind": "result",
+      "section": "25.7",
+      "name": "Davies equation",
+      "statement": "An empirical extension of Debye–Hückel theory, refined by fitting to data, for 25 °C: −log f± = 0.5z₁z₂(√I/(1 + √I) − 0.30I). The 0.30I term vanishes at low ionic strength, leaving Debye–Hückel, and grows at higher strength; for 1:1 electrolytes it is within about 2% at 0.1 M.",
+      "forms": [
+        {
+          "id": "davies",
+          "latex": "-\\log f_{\\pm }=0.5z_{1}z_{2}\\left({\\frac {\\sqrt {I}}{1+{\\sqrt {I}}}}-0.30I\\right)"
+        }
+      ]
+    },
+    {
+      "id": "pitzer-equations",
+      "kind": "result",
+      "section": "25.7",
+      "name": "Pitzer equations",
+      "statement": "Activity coefficients from a virial expansion of the excess Gibbs energy whose parameters characterize interactions among ions and solvent, thermodynamically rigorous at a given level of expansion; for the mean activity coefficient they agree with data to about 6 mol/kg.",
+      "forms": [
+        {
+          "id": "pitzer-mean",
+          "latex": "\\ln \\gamma _{\\pm }= \\dfrac {p\\ln \\gamma _{M}+q\\ln \\gamma _{X}}{p+q}"
+        },
+        {
+          "id": "pitzer-expansion",
+          "latex": "\\ln \\gamma _{\\pm }=|z^{+}z^{-}|f^{\\gamma }+m\\left({\\frac {2pq}{p+q}}\\right)B_{MX}^{\\gamma }+m^{2}\\left[2{\\frac {(pq)^{3/2}}{p+q}}\\right]C_{MX}^{\\gamma }"
+        }
+      ]
+    },
+    {
+      "id": "specific-ion-interaction-theory",
+      "kind": "result",
+      "section": "25.7",
+      "name": "Specific ion interaction theory",
+      "statement": "SIT estimates single-ion activity coefficients at relatively high concentrations as the Debye–Hückel term plus interaction coefficients times the molalities of the other ions present; fitting equilibrium constants at several ionic strengths gives the coefficients and the constant at infinite dilution.",
+      "forms": [
+        {
+          "id": "sit-log-gamma",
+          "latex": "\\log \\gamma _{j}=-z_{j}^{2}{\\frac {0.51{\\sqrt {I}}}{1+1.5{\\sqrt {I}}}}+\\sum _{k}\\epsilon _{jk}m_{k}"
+        }
+      ]
     }
   ],
   "concept_prereqs": [
@@ -28198,10 +29937,6 @@
       "prereq": "standard-state"
     },
     {
-      "concept": "gibbs-helmholtz-equation",
-      "prereq": "constant-pressure-heat-capacity"
-    },
-    {
       "concept": "gibbs-temperature-curve",
       "prereq": "enthalpy-from-heat-capacity"
     },
@@ -28428,6 +30163,598 @@
     {
       "concept": "chemical-potential-from-partition-function",
       "prereq": "chemical-potential-from-a"
+    },
+    {
+      "concept": "fundamental-equation-u",
+      "prereq": "entropy"
+    },
+    {
+      "concept": "fundamental-equation-h",
+      "prereq": "enthalpy-differential"
+    },
+    {
+      "concept": "partial-molar-additivity",
+      "prereq": "fundamental-equations-composition"
+    },
+    {
+      "concept": "partial-molar-additivity",
+      "prereq": "partial-molar-quantity"
+    },
+    {
+      "concept": "daltons-law",
+      "prereq": "mole-fraction"
+    },
+    {
+      "concept": "ideal-solution",
+      "prereq": "mole-fraction"
+    },
+    {
+      "concept": "regular-solution",
+      "prereq": "ideal-solution"
+    },
+    {
+      "concept": "raoults-law",
+      "prereq": "ideal-solution"
+    },
+    {
+      "concept": "raoults-law",
+      "prereq": "equilibrium-vapor-pressure"
+    },
+    {
+      "concept": "ideal-bubble-line",
+      "prereq": "raoults-law"
+    },
+    {
+      "concept": "ideal-bubble-line",
+      "prereq": "daltons-law"
+    },
+    {
+      "concept": "ideal-vapor-composition",
+      "prereq": "ideal-bubble-line"
+    },
+    {
+      "concept": "pressure-composition-diagram",
+      "prereq": "ideal-vapor-composition"
+    },
+    {
+      "concept": "pressure-composition-diagram",
+      "prereq": "phase-diagram"
+    },
+    {
+      "concept": "temperature-composition-diagram",
+      "prereq": "pressure-composition-diagram"
+    },
+    {
+      "concept": "lever-rule",
+      "prereq": "temperature-composition-diagram"
+    },
+    {
+      "concept": "distillation",
+      "prereq": "temperature-composition-diagram"
+    },
+    {
+      "concept": "gibbs-duhem-equation",
+      "prereq": "partial-molar-additivity"
+    },
+    {
+      "concept": "gibbs-duhem-binary",
+      "prereq": "gibbs-duhem-equation"
+    },
+    {
+      "concept": "gibbs-duhem-binary",
+      "prereq": "mole-fraction"
+    },
+    {
+      "concept": "ideal-solution-chemical-potential",
+      "prereq": "ideal-solution"
+    },
+    {
+      "concept": "ideal-solution-chemical-potential",
+      "prereq": "chemical-potential"
+    },
+    {
+      "concept": "raoult-both-components",
+      "prereq": "gibbs-duhem-binary"
+    },
+    {
+      "concept": "raoult-both-components",
+      "prereq": "ideal-solution-chemical-potential"
+    },
+    {
+      "concept": "raoult-both-components",
+      "prereq": "raoults-law"
+    },
+    {
+      "concept": "ideal-gas-mixture-chemical-potential",
+      "prereq": "gibbs-ideal-gas-pressure"
+    },
+    {
+      "concept": "ideal-gas-mixture-chemical-potential",
+      "prereq": "daltons-law"
+    },
+    {
+      "concept": "component-phase-equilibrium",
+      "prereq": "phase-equilibrium-chemical-potential"
+    },
+    {
+      "concept": "pure-liquid-chemical-potential",
+      "prereq": "component-phase-equilibrium"
+    },
+    {
+      "concept": "pure-liquid-chemical-potential",
+      "prereq": "ideal-gas-mixture-chemical-potential"
+    },
+    {
+      "concept": "solution-chemical-potential-vapor",
+      "prereq": "pure-liquid-chemical-potential"
+    },
+    {
+      "concept": "ideal-gibbs-energy-of-mixing",
+      "prereq": "ideal-solution-chemical-potential"
+    },
+    {
+      "concept": "ideal-enthalpy-of-mixing",
+      "prereq": "ideal-gibbs-energy-of-mixing"
+    },
+    {
+      "concept": "ideal-enthalpy-of-mixing",
+      "prereq": "entropy-of-mixing"
+    },
+    {
+      "concept": "ideal-volume-of-mixing",
+      "prereq": "ideal-gibbs-energy-of-mixing"
+    },
+    {
+      "concept": "ideal-volume-of-mixing",
+      "prereq": "gibbs-first-derivatives"
+    },
+    {
+      "concept": "henrys-law",
+      "prereq": "raoults-law"
+    },
+    {
+      "concept": "henrys-law-constant",
+      "prereq": "henrys-law"
+    },
+    {
+      "concept": "limiting-laws",
+      "prereq": "henrys-law"
+    },
+    {
+      "concept": "gibbs-duhem-vapor-pressures",
+      "prereq": "gibbs-duhem-binary"
+    },
+    {
+      "concept": "gibbs-duhem-vapor-pressures",
+      "prereq": "ideal-gas-mixture-chemical-potential"
+    },
+    {
+      "concept": "raoult-implies-henry",
+      "prereq": "gibbs-duhem-vapor-pressures"
+    },
+    {
+      "concept": "raoult-implies-henry",
+      "prereq": "limiting-laws"
+    },
+    {
+      "concept": "azeotrope",
+      "prereq": "distillation"
+    },
+    {
+      "concept": "azeotrope",
+      "prereq": "henrys-law"
+    },
+    {
+      "concept": "partially-miscible-boiling-diagram",
+      "prereq": "azeotrope"
+    },
+    {
+      "concept": "partially-miscible-boiling-diagram",
+      "prereq": "lever-rule"
+    },
+    {
+      "concept": "margules-function",
+      "prereq": "raoults-law"
+    },
+    {
+      "concept": "activity",
+      "prereq": "ideal-solution-chemical-potential"
+    },
+    {
+      "concept": "activity",
+      "prereq": "fugacity"
+    },
+    {
+      "concept": "activity-coefficient",
+      "prereq": "activity"
+    },
+    {
+      "concept": "mean-ionic-activity-coefficient",
+      "prereq": "activity-coefficient"
+    },
+    {
+      "concept": "ionic-strength",
+      "prereq": "activity"
+    },
+    {
+      "concept": "debye-huckel-law",
+      "prereq": "mean-ionic-activity-coefficient"
+    },
+    {
+      "concept": "debye-huckel-law",
+      "prereq": "ionic-strength"
+    },
+    {
+      "concept": "raoult-activity-convention",
+      "prereq": "activity"
+    },
+    {
+      "concept": "raoult-activity-convention",
+      "prereq": "raoults-law"
+    },
+    {
+      "concept": "henry-activity-convention",
+      "prereq": "activity"
+    },
+    {
+      "concept": "henry-activity-convention",
+      "prereq": "henrys-law-constant"
+    },
+    {
+      "concept": "osmotic-coefficient",
+      "prereq": "raoult-activity-convention"
+    },
+    {
+      "concept": "solute-activity-from-solvent",
+      "prereq": "osmotic-coefficient"
+    },
+    {
+      "concept": "solute-activity-from-solvent",
+      "prereq": "gibbs-duhem-binary"
+    },
+    {
+      "concept": "solute-activity-from-solvent",
+      "prereq": "activity-coefficient"
+    },
+    {
+      "concept": "activity-by-phase",
+      "prereq": "activity-coefficient"
+    },
+    {
+      "concept": "activity-by-phase",
+      "prereq": "fugacity-coefficient"
+    },
+    {
+      "concept": "margules-activity-coefficient",
+      "prereq": "margules-function"
+    },
+    {
+      "concept": "margules-activity-coefficient",
+      "prereq": "activity-coefficient"
+    },
+    {
+      "concept": "regular-solution-activities",
+      "prereq": "margules-activity-coefficient"
+    },
+    {
+      "concept": "regular-solution-activities",
+      "prereq": "gibbs-duhem-binary"
+    },
+    {
+      "concept": "regular-solution-activities",
+      "prereq": "regular-solution"
+    },
+    {
+      "concept": "gibbs-energy-of-mixing-activity",
+      "prereq": "ideal-gibbs-energy-of-mixing"
+    },
+    {
+      "concept": "gibbs-energy-of-mixing-activity",
+      "prereq": "activity-coefficient"
+    },
+    {
+      "concept": "regular-gibbs-energy-of-mixing",
+      "prereq": "gibbs-energy-of-mixing-activity"
+    },
+    {
+      "concept": "regular-gibbs-energy-of-mixing",
+      "prereq": "regular-solution-activities"
+    },
+    {
+      "concept": "regular-interaction-energy",
+      "prereq": "regular-gibbs-energy-of-mixing"
+    },
+    {
+      "concept": "consolute-point",
+      "prereq": "regular-interaction-energy"
+    },
+    {
+      "concept": "regular-volume-of-mixing",
+      "prereq": "regular-gibbs-energy-of-mixing"
+    },
+    {
+      "concept": "regular-volume-of-mixing",
+      "prereq": "ideal-volume-of-mixing"
+    },
+    {
+      "concept": "boiling-gap-meets-solubility-gap",
+      "prereq": "consolute-point"
+    },
+    {
+      "concept": "boiling-gap-meets-solubility-gap",
+      "prereq": "partially-miscible-boiling-diagram"
+    },
+    {
+      "concept": "gibbs-temperature-derivative",
+      "prereq": "gibbs-energy"
+    },
+    {
+      "concept": "entropy-change-constant-pressure",
+      "prereq": "constant-pressure-heat-capacity"
+    },
+    {
+      "concept": "third-law",
+      "prereq": "entropy"
+    },
+    {
+      "concept": "perfect-crystal-zero-entropy",
+      "prereq": "boltzmann-entropy"
+    },
+    {
+      "concept": "entropy-of-fusion",
+      "prereq": "enthalpy-of-fusion"
+    },
+    {
+      "concept": "entropy-of-fusion",
+      "prereq": "entropy"
+    },
+    {
+      "concept": "entropy-of-transition",
+      "prereq": "gibbs-energy"
+    },
+    {
+      "concept": "partition-function-third-law",
+      "prereq": "entropy-from-partition-function"
+    },
+    {
+      "concept": "solute-standard-state",
+      "prereq": "henry-activity-convention"
+    },
+    {
+      "concept": "solute-standard-state",
+      "prereq": "activity-coefficient"
+    },
+    {
+      "concept": "activity-coefficient-from-vapor-pressure",
+      "prereq": "activity-coefficient"
+    },
+    {
+      "concept": "activity-coefficient-from-vapor-pressure",
+      "prereq": "raoults-law"
+    },
+    {
+      "concept": "colligative-property",
+      "prereq": "mole-fraction"
+    },
+    {
+      "concept": "solvent-activity-at-freezing",
+      "prereq": "phase-equilibrium-chemical-potential"
+    },
+    {
+      "concept": "solvent-activity-at-freezing",
+      "prereq": "gibbs-helmholtz-equation"
+    },
+    {
+      "concept": "solvent-activity-at-freezing",
+      "prereq": "enthalpy-of-fusion"
+    },
+    {
+      "concept": "solvent-activity-at-freezing",
+      "prereq": "activity"
+    },
+    {
+      "concept": "freezing-point-depression",
+      "prereq": "solvent-activity-at-freezing"
+    },
+    {
+      "concept": "freezing-point-depression",
+      "prereq": "colligative-property"
+    },
+    {
+      "concept": "freezing-point-depression",
+      "prereq": "raoult-activity-convention"
+    },
+    {
+      "concept": "freezing-point-constant",
+      "prereq": "freezing-point-depression"
+    },
+    {
+      "concept": "molar-mass-from-freezing-point",
+      "prereq": "freezing-point-constant"
+    },
+    {
+      "concept": "boiling-point-elevation",
+      "prereq": "colligative-property"
+    },
+    {
+      "concept": "boiling-point-elevation",
+      "prereq": "enthalpy-of-vaporization"
+    },
+    {
+      "concept": "osmosis",
+      "prereq": "semipermeable-membrane"
+    },
+    {
+      "concept": "osmotic-pressure",
+      "prereq": "osmosis"
+    },
+    {
+      "concept": "osmotic-pressure",
+      "prereq": "pressure"
+    },
+    {
+      "concept": "osmotic-equilibrium",
+      "prereq": "osmotic-pressure"
+    },
+    {
+      "concept": "osmotic-equilibrium",
+      "prereq": "phase-equilibrium-chemical-potential"
+    },
+    {
+      "concept": "osmotic-pressure-dilute",
+      "prereq": "osmotic-equilibrium"
+    },
+    {
+      "concept": "osmotic-pressure-dilute",
+      "prereq": "raoult-activity-convention"
+    },
+    {
+      "concept": "reverse-osmosis",
+      "prereq": "osmotic-pressure-dilute"
+    },
+    {
+      "concept": "osmometry",
+      "prereq": "osmotic-pressure-dilute"
+    },
+    {
+      "concept": "polymer-molar-mass-distribution",
+      "prereq": "osmometry"
+    },
+    {
+      "concept": "melting-purity-analysis",
+      "prereq": "freezing-point-depression"
+    },
+    {
+      "concept": "melting-purity-analysis",
+      "prereq": "differential-scanning-calorimetry"
+    },
+    {
+      "concept": "electrolyte-nonideality",
+      "prereq": "coulomb-potential"
+    },
+    {
+      "concept": "salt-chemical-potential",
+      "prereq": "salt-dissociation"
+    },
+    {
+      "concept": "salt-chemical-potential",
+      "prereq": "activity"
+    },
+    {
+      "concept": "mean-ionic-activity",
+      "prereq": "salt-chemical-potential"
+    },
+    {
+      "concept": "ionic-activity-coefficients",
+      "prereq": "salt-chemical-potential"
+    },
+    {
+      "concept": "ionic-activity-coefficients",
+      "prereq": "activity-coefficient"
+    },
+    {
+      "concept": "ion-molalities",
+      "prereq": "salt-dissociation"
+    },
+    {
+      "concept": "mean-ionic-molality",
+      "prereq": "ion-molalities"
+    },
+    {
+      "concept": "salt-activity-mean-quantities",
+      "prereq": "mean-ionic-activity"
+    },
+    {
+      "concept": "salt-activity-mean-quantities",
+      "prereq": "mean-ionic-molality"
+    },
+    {
+      "concept": "salt-activity-mean-quantities",
+      "prereq": "mean-ionic-activity-coefficient"
+    },
+    {
+      "concept": "salt-activity-mean-quantities",
+      "prereq": "ionic-activity-coefficients"
+    },
+    {
+      "concept": "mean-ionic-gamma-from-vapor-pressure",
+      "prereq": "mean-ionic-activity-coefficient"
+    },
+    {
+      "concept": "mean-ionic-gamma-from-vapor-pressure",
+      "prereq": "solute-activity-from-solvent"
+    },
+    {
+      "concept": "ionic-atmosphere",
+      "prereq": "electrolyte-nonideality"
+    },
+    {
+      "concept": "debye-length",
+      "prereq": "ionic-atmosphere"
+    },
+    {
+      "concept": "debye-length",
+      "prereq": "ionic-strength"
+    },
+    {
+      "concept": "ln-gamma-debye-length",
+      "prereq": "debye-length"
+    },
+    {
+      "concept": "ln-gamma-debye-length",
+      "prereq": "debye-huckel-law"
+    },
+    {
+      "concept": "distance-of-closest-approach",
+      "prereq": "ionic-atmosphere"
+    },
+    {
+      "concept": "extended-debye-huckel-equation",
+      "prereq": "ln-gamma-debye-length"
+    },
+    {
+      "concept": "extended-debye-huckel-equation",
+      "prereq": "distance-of-closest-approach"
+    },
+    {
+      "concept": "constant-ionic-strength",
+      "prereq": "debye-huckel-law"
+    },
+    {
+      "concept": "colloid",
+      "prereq": "debye-length"
+    },
+    {
+      "concept": "colloid",
+      "prereq": "equilibrium-stability-kinds"
+    },
+    {
+      "concept": "debye-huckel-assumptions",
+      "prereq": "extended-debye-huckel-equation"
+    },
+    {
+      "concept": "bjerrum-length",
+      "prereq": "coulomb-potential"
+    },
+    {
+      "concept": "bjerrum-length",
+      "prereq": "boltzmann-constant"
+    },
+    {
+      "concept": "davies-equation",
+      "prereq": "debye-huckel-assumptions"
+    },
+    {
+      "concept": "pitzer-equations",
+      "prereq": "debye-huckel-assumptions"
+    },
+    {
+      "concept": "specific-ion-interaction-theory",
+      "prereq": "debye-huckel-assumptions"
+    },
+    {
+      "concept": "spectroscopic-entropy",
+      "prereq": "entropy-from-partition-function"
     }
   ],
   "sheets": [

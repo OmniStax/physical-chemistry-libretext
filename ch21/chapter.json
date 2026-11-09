@@ -91,7 +91,8 @@
    "sym": "S_ent",
    "meaning": "the entropy of the system",
    "unit": "J/K",
-   "section": "21.1"
+   "section": "21.1",
+   "concept": "entropy"
   },
   {
    "sym": "P",
@@ -146,7 +147,8 @@
    "sym": "S_ent",
    "meaning": "the entropy of the substance",
    "unit": "J/K",
-   "section": "21.2"
+   "section": "21.2",
+   "concept": "entropy"
   },
   {
    "sym": "T",
@@ -295,7 +297,8 @@
    "sym": "S_bar",
    "meaning": "the molar entropy",
    "unit": "J/(mol K)",
-   "section": "21.3"
+   "section": "21.3",
+   "type": "entropy"
   },
   {
    "sym": "T",
@@ -399,7 +402,7 @@
   },
   {
    "sym": "S_ent",
-   "concept": "calorimetric-absolute-entropy",
+   "concept": "entropy",
    "meaning": "the absolute molar entropy at temperature T",
    "unit": "J/(mol K)",
    "section": "21.5"
@@ -429,7 +432,8 @@
    "sym": "S_ent",
    "meaning": "the entropy of the system",
    "unit": "J/K",
-   "section": "21.6"
+   "section": "21.6",
+   "concept": "entropy"
   },
   {
    "sym": "U",
@@ -535,6 +539,48 @@
    "meaning": "the standard molar entropy of species i",
    "unit": "J/(mol K)",
    "section": "21.9"
+  },
+  {
+   "sym": "S_std",
+   "concept": "standard-molar-entropy",
+   "meaning": "the standard molar entropy, whose change in the reaction is ΔS°",
+   "unit": "J/(mol K)",
+   "section": "21.9"
+  },
+  {
+   "sym": "S_ent",
+   "concept": "entropy",
+   "meaning": "the entropy",
+   "unit": "J/K",
+   "section": "21.3"
+  },
+  {
+   "sym": "H",
+   "type": "energy",
+   "meaning": "the enthalpy",
+   "unit": "J",
+   "section": "21.3"
+  },
+  {
+   "sym": "G",
+   "type": "energy",
+   "meaning": "the Gibbs energy",
+   "unit": "J",
+   "section": "21.3"
+  },
+  {
+   "sym": "S_ent",
+   "concept": "entropy",
+   "meaning": "the molar entropy of the solid",
+   "unit": "J/(mol K)",
+   "section": "21.4"
+  },
+  {
+   "sym": "H",
+   "type": "energy",
+   "meaning": "the enthalpy",
+   "unit": "J/mol",
+   "section": "21.5"
   }
  ]
 }

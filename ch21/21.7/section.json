@@ -74,7 +74,7 @@
     "at": "end"
    },
    "cite": "noble-gases",
-   "prompt": "<p>At a fixed temperature and pressure, the translational entropy of a monatomic ideal gas depends on the atomic mass $m$ only through a term $\\tfrac{3}{2}R\\ln m$. Use it to predict how much $S^\\circ$ rises from argon (39.9 g/mol) to krypton (83.8 g/mol), and compare the prediction with the table.</p>",
+   "prompt": "<p>At a fixed temperature and pressure, the translational entropy of a monatomic ideal gas depends on the atomic mass $m$ only through a term $\\tfrac{3}{2}R\\ln m$. Use it to predict how much $\\kSstd$ rises from argon (39.9 g/mol) to krypton (83.8 g/mol), and compare the prediction with the table.</p>",
    "answer": {
     "type": "number",
     "value": 9.25,

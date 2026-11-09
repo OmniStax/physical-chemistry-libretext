@@ -267,7 +267,8 @@
        "tex": "\\mk{q}{\\kqh + \\kqc} = \\mk{w}{-\\kwcycle}",
        "uses": [
         5
-       ]
+       ],
+       "cap": "An ideal engine would take $\\kqh\\rightarrow \\kqc$ with 100% efficiency. The work of the cycle will be equivalent to the heat transfer."
       }
      ],
      "src": "20.7"

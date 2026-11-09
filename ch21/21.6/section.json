@@ -70,8 +70,8 @@
     "value": 5.76,
     "unit": "J/K",
     "generated_by": "ai",
-    "hint": "Take the low-temperature limit $S \\to k_B\\ln n$ with $n = 2^{N_A}$, and use $N_Ak_B = R$.",
-    "solution": "<p>As $\\kT \\to 0$ the entropy goes to $k_B\\ln n$, and here $n = 2^{N_A}$. So $S \\to k_B\\ln 2^{N_A} = N_Ak_B\\ln 2 = (1\\ \\text{mol})(8.314\\ \\text{J mol}^{-1}\\text{K}^{-1})(0.6931) = 5.76$ J/K. The crystal keeps this entropy at 0 K because its ground state is not single.</p>"
+    "hint": "Take the low-temperature limit $\\kSent \\to k_B\\ln n$ with $n = 2^{N_A}$, and use $N_Ak_B = R$.",
+    "solution": "<p>As $\\kT \\to 0$ the entropy goes to $k_B\\ln n$, and here $n = 2^{N_A}$. So $\\kSent \\to k_B\\ln 2^{N_A} = N_Ak_B\\ln 2 = (1\\ \\text{mol})(8.314\\ \\text{J mol}^{-1}\\text{K}^{-1})(0.6931) = 5.76$ J/K. The crystal keeps this entropy at 0 K because its ground state is not single.</p>"
    }
   }
  ],
@@ -89,7 +89,7 @@
   {
    "id": "no-conclusion",
    "kind": "correction",
-   "html": "The book stops at the sum over levels and never takes the limit. As $\\kT \\to 0$, $S \\to k_B\\ln n$, which is zero for a ground state that is not degenerate; the derivation after the sum works the steps."
+   "html": "The book stops at the sum over levels and never takes the limit. As $\\kT \\to 0$, $\\kSent \\to k_B\\ln n$, which is zero for a ground state that is not degenerate; the derivation after the sum works the steps."
   },
   {
    "id": "e-n",
@@ -152,7 +152,7 @@
     {
      "assumes": [
       {
-       "tex": "S=k_B\\ln\\kQsys+k_B\\kT\\left(\\frac{\\partial\\ln\\kQsys}{\\partial\\kT}\\right)",
+       "tex": "\\kSent=k_B\\ln\\kQsys+k_B\\kT\\left(\\frac{\\partial\\ln\\kQsys}{\\partial\\kT}\\right)",
        "src": "21.6"
       },
       {
@@ -160,12 +160,12 @@
       }
      ],
      "then": {
-      "tex": "S=\\mk{a}{k_B\\ln\\kQsys}+\\mk{b}{k_B\\kT\\left(\\frac{\\partial\\ln\\kQsys}{\\partial\\kT}\\right)}",
+      "tex": "\\kSent=\\mk{a}{k_B\\ln\\kQsys}+\\mk{b}{k_B\\kT\\left(\\frac{\\partial\\ln\\kQsys}{\\partial\\kT}\\right)}",
       "src": "21.6"
      },
      "steps": [
       {
-       "tex": "S=\\mk{lnn}{k_B\\ln n}-\\mk{E}{\\frac{\\kEone}{\\kT}}+\\mk{c}{k_B\\ln\\left(1+\\frac{m}{n}e^{-\\frac{E_{n+1}-\\kEone}{k_B\\kT}}+\\dots\\right)}+\\mk{b}{k_B\\kT\\frac{\\partial}{\\partial\\kT}\\left[\\ln n-\\frac{\\kEone}{k_B\\kT}+\\ln\\left(1+\\frac{m}{n}e^{-\\frac{E_{n+1}-\\kEone}{k_B\\kT}}+\\dots\\right)\\right]}",
+       "tex": "\\kSent=\\mk{lnn}{k_B\\ln n}-\\mk{E}{\\frac{\\kEone}{\\kT}}+\\mk{c}{k_B\\ln\\left(1+\\frac{m}{n}e^{-\\frac{E_{n+1}-\\kEone}{k_B\\kT}}+\\dots\\right)}+\\mk{b}{k_B\\kT\\frac{\\partial}{\\partial\\kT}\\left[\\ln n-\\frac{\\kEone}{k_B\\kT}+\\ln\\left(1+\\frac{m}{n}e^{-\\frac{E_{n+1}-\\kEone}{k_B\\kT}}+\\dots\\right)\\right]}",
        "uses": [
         1
        ],
@@ -178,7 +178,7 @@
        }
       },
       {
-       "tex": "S=\\mk{lnn}{k_B\\ln n}-\\mk{E}{\\frac{\\kEone}{\\kT}}+\\mk{c}{k_B\\ln\\left(1+\\frac{m}{n}e^{-\\frac{E_{n+1}-\\kEone}{k_B\\kT}}+\\dots\\right)}+\\mk{E2}{\\frac{\\kEone}{\\kT}}+\\mk{d}{k_B\\kT\\frac{\\partial}{\\partial\\kT}\\ln\\left(1+\\frac{m}{n}e^{-\\frac{E_{n+1}-\\kEone}{k_B\\kT}}+\\dots\\right)}",
+       "tex": "\\kSent=\\mk{lnn}{k_B\\ln n}-\\mk{E}{\\frac{\\kEone}{\\kT}}+\\mk{c}{k_B\\ln\\left(1+\\frac{m}{n}e^{-\\frac{E_{n+1}-\\kEone}{k_B\\kT}}+\\dots\\right)}+\\mk{E2}{\\frac{\\kEone}{\\kT}}+\\mk{d}{k_B\\kT\\frac{\\partial}{\\partial\\kT}\\ln\\left(1+\\frac{m}{n}e^{-\\frac{E_{n+1}-\\kEone}{k_B\\kT}}+\\dots\\right)}",
        "uses": [],
        "cap": "$\\ln n$ does not change with $\\kT$, and the derivative of $-\\kEone/k_B\\kT$ with respect to $\\kT$ is $\\kEone/k_B\\kT^2$.",
        "map": {
@@ -189,7 +189,7 @@
        }
       },
       {
-       "tex": "S=\\mk{lnn}{k_B\\ln n}+\\mk{c}{k_B\\ln\\left(1+\\frac{m}{n}e^{-\\frac{E_{n+1}-\\kEone}{k_B\\kT}}+\\dots\\right)}+\\mk{d}{k_B\\kT\\frac{\\partial}{\\partial\\kT}\\ln\\left(1+\\frac{m}{n}e^{-\\frac{E_{n+1}-\\kEone}{k_B\\kT}}+\\dots\\right)}",
+       "tex": "\\kSent=\\mk{lnn}{k_B\\ln n}+\\mk{c}{k_B\\ln\\left(1+\\frac{m}{n}e^{-\\frac{E_{n+1}-\\kEone}{k_B\\kT}}+\\dots\\right)}+\\mk{d}{k_B\\kT\\frac{\\partial}{\\partial\\kT}\\ln\\left(1+\\frac{m}{n}e^{-\\frac{E_{n+1}-\\kEone}{k_B\\kT}}+\\dots\\right)}",
        "uses": []
       }
      ],
@@ -206,18 +206,18 @@
       }
      ],
      "then": {
-      "tex": "S=\\mk{lnn}{k_B\\ln n}+\\mk{c}{k_B\\ln\\left(1+\\frac{m}{n}e^{-\\frac{E_{n+1}-\\kEone}{k_B\\kT}}+\\dots\\right)}+\\mk{d}{k_B\\kT\\frac{\\partial}{\\partial\\kT}\\ln\\left(1+\\frac{m}{n}e^{-\\frac{E_{n+1}-\\kEone}{k_B\\kT}}+\\dots\\right)}"
+      "tex": "\\kSent=\\mk{lnn}{k_B\\ln n}+\\mk{c}{k_B\\ln\\left(1+\\frac{m}{n}e^{-\\frac{E_{n+1}-\\kEone}{k_B\\kT}}+\\dots\\right)}+\\mk{d}{k_B\\kT\\frac{\\partial}{\\partial\\kT}\\ln\\left(1+\\frac{m}{n}e^{-\\frac{E_{n+1}-\\kEone}{k_B\\kT}}+\\dots\\right)}"
      },
      "steps": [
       {
-       "tex": "\\lim_{\\kT\\to 0}S=\\mk{lnn}{k_B\\ln n}+\\mk{c}{k_B\\ln 1}+\\mk{d}{0}",
+       "tex": "\\lim_{\\kT\\to 0}\\kSent=\\mk{lnn}{k_B\\ln n}+\\mk{c}{k_B\\ln 1}+\\mk{d}{0}",
        "uses": [
         1
        ],
        "cap": "With $E_{n+1}-\\kEone > 0$, each $e^{-(E_{n+1}-\\kEone)/k_B\\kT}$ goes to zero faster than any power of $\\kT$. The logarithm goes to $\\ln 1$, and $k_B\\kT$ times its derivative, about $\\frac{m}{n}\\frac{E_{n+1}-\\kEone}{\\kT}e^{-(E_{n+1}-\\kEone)/k_B\\kT}$, goes to zero too."
       },
       {
-       "tex": "\\lim_{\\kT\\to 0}S=\\mk{lnn}{k_B\\ln n}",
+       "tex": "\\lim_{\\kT\\to 0}\\kSent=\\mk{lnn}{k_B\\ln n}",
        "uses": []
       }
      ],
@@ -234,11 +234,11 @@
       }
      ],
      "then": {
-      "tex": "\\lim_{\\kT\\to 0}S=\\mk{lnn}{k_B\\ln n}"
+      "tex": "\\lim_{\\kT\\to 0}\\kSent=\\mk{lnn}{k_B\\ln n}"
      },
      "steps": [
       {
-       "tex": "\\lim_{\\kT\\to 0}S=\\mk{lnn}{k_B\\ln 1}=0",
+       "tex": "\\lim_{\\kT\\to 0}\\kSent=\\mk{lnn}{k_B\\ln 1}=0",
        "uses": [
         1
        ]

@@ -61,7 +61,8 @@
   },
   {
    "sym": "Delta_trs_S",
-   "latex": "\\Delta_{trs}S"
+   "latex": "\\Delta_{trs}S",
+   "macro": "\\kDeltatrsS"
   },
   {
    "sym": "Delta_trs_H",
@@ -77,7 +78,8 @@
   },
   {
    "sym": "Delta_rxn_S",
-   "latex": "\\Delta_{rxn}S^\\circ"
+   "latex": "\\Delta_{rxn}S^\\circ",
+   "macro": "\\kDeltarxnS"
   },
   {
    "sym": "nu_stoich",
@@ -603,6 +605,50 @@
   {
    "concept": "reaction-entropy",
    "prereq": "standard-molar-entropy"
+  },
+  {
+   "concept": "fundamental-equation-u",
+   "prereq": "entropy"
+  },
+  {
+   "concept": "fundamental-equation-h",
+   "prereq": "enthalpy-differential"
+  },
+  {
+   "concept": "gibbs-temperature-derivative",
+   "prereq": "gibbs-energy"
+  },
+  {
+   "concept": "entropy-change-constant-pressure",
+   "prereq": "constant-pressure-heat-capacity"
+  },
+  {
+   "concept": "third-law",
+   "prereq": "entropy"
+  },
+  {
+   "concept": "perfect-crystal-zero-entropy",
+   "prereq": "boltzmann-entropy"
+  },
+  {
+   "concept": "entropy-of-fusion",
+   "prereq": "enthalpy-of-fusion"
+  },
+  {
+   "concept": "entropy-of-fusion",
+   "prereq": "entropy"
+  },
+  {
+   "concept": "entropy-of-transition",
+   "prereq": "gibbs-energy"
+  },
+  {
+   "concept": "partition-function-third-law",
+   "prereq": "entropy-from-partition-function"
+  },
+  {
+   "concept": "spectroscopic-entropy",
+   "prereq": "entropy-from-partition-function"
   }
  ]
 }

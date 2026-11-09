@@ -131,14 +131,14 @@ const pow10 = (e) => e === 0 ? '1' : '10' + String(e).split('').map((c) => SUP[c
   const bisect = (f, a, b) => { let fa = f(a); for (let i = 0; i < 60; i++) { const m = (a + b) / 2, fm = f(m); if (fa * fm <= 0) b = m; else { a = m; fa = fm; } } return (a + b) / 2; };
   const tVap = (P) => bisect((T) => lnVap(T) - Math.log(P), TT, TC);
   const tSub = (P) => bisect((T) => lnSub(T) - Math.log(P), 150, TT);
-  const T = ctl(d.controls, { label: '\\kT', cls: 'temperature', min: 200, max: 700, step: 0.1, value: TT, unit: 'K', dec: 2,
+  const T = ctl(d.controls, { label: '\\kT', cls: 'temperature', min: 200, max: 700, step: 0.01, value: TT, unit: 'K', dec: 2,
     specials: [
       { at: TT, label: 'triple point' },
       { at: TC, label: 'critical temperature' },
       { at: () => { const P = 10 ** LP.v; return P >= PT && P <= 1000 ? tMelt(P) : null; }, label: 'melting point' },
       { at: () => { const P = 10 ** LP.v; return P < PT ? tSub(P) : P <= PC ? tVap(P) : null; }, label: 'boiling or sublimation point' },
     ] });
-  const LP = ctl(d.controls, { label: '\\kP', cls: 'pressure', min: -5, max: 3, step: 0.01, value: LPT, unit: '',
+  const LP = ctl(d.controls, { label: '\\kP', cls: 'pressure', min: -5, max: 3, step: 0.0001, value: LPT, unit: '',
     fmt: (lg) => fmtP(10 ** lg),
     specials: [
       { at: LPT, label: 'triple point' },
@@ -171,7 +171,7 @@ const pow10 = (e) => e === 0 ? '1' : '10' + String(e).split('').map((c) => SUP[c
   function draw() {
     const { ctx, W } = begin(d.c);
     const t = T.v, lp = LP.v, st = state(t, lp);
-    const NAME = { solid: 'ice', liquid: 'liquid water', vapor: 'water vapor', fluid: 'a supercritical fluid' };
+    const NAME = { solid: 'ice', liquid: 'liquid', vapor: 'vapor', fluid: 'a supercritical fluid' };
     const two = { sub: 'ice and vapor coexist', vap: 'liquid and vapor coexist', melt: 'ice and liquid coexist' };
     const where = `At ${fmt(t, t % 1 ? 2 : 0)} K and ${fmtP(10 ** lp)}`;
     topline(ctx, st.k === 'triple' ? 'At the triple point, 273.16 K and 4.58 Torr, ice, liquid and vapor coexist.'
@@ -200,7 +200,7 @@ const pow10 = (e) => e === 0 ? '1' : '10' + String(e).split('').map((c) => SUP[c
     dot(ctx, X(TT), Y(LPT), C('pressure'), true, 9);
     dot(ctx, X(TC), Y(LPC), C('pressure'), true, 9);
     text(ctx, 'triple point', X(TT) + 18, Y(LPT) + 22, PAL.ink, { size: 20 });
-    text(ctx, 'critical point', X(TC) + 16, Y(LPC) - 20, PAL.ink, { size: 20 });
+    text(ctx, 'critical point', X(TC) - 14, Y(LPC) - 22, PAL.ink, { size: 20, align: 'right' });
     const tm1 = tMelt(1), tb1 = tVap(1);
     dot(ctx, X(tm1), Y(0), PAL.muted, false, 7); dot(ctx, X(tb1), Y(0), PAL.muted, false, 7);
     text(ctx, 'ice', X(225), Y(1.2), F.cat(0), { size: 24, weight: 600, align: 'center' });

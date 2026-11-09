@@ -1,0 +1,1202 @@
+{
+ "id": "24",
+ "dir": "ch24",
+ "title": "Solutions I - Volatile Solutes",
+ "sections": [
+  {
+   "id": "24.1",
+   "module": "14503",
+   "title": "A Mixture is a Combination of Two or More Substances",
+   "slug": "24:_Solutions_I_-_Volatile_Solutes/24.01:_A_Mixture_is_a_Combination_of_Two_or_More_Substances"
+  },
+  {
+   "id": "24.2",
+   "module": "14504",
+   "title": "The Gibbs-Duhem Equation Relates Chemical Potential and Composition at Equilibrium",
+   "slug": "24:_Solutions_I_-_Volatile_Solutes/24.02:_The_Gibbs-Duhem_Equation_Relates_Chemical_Potential_and_Composition_at_Equilibrium"
+  },
+  {
+   "id": "24.3",
+   "module": "14505",
+   "title": "Chemical Potential of Each Component Has the Same Value in Each Phase in Which the Component Appears",
+   "slug": "24:_Solutions_I_-_Volatile_Solutes/24.03:_Chemical_Potential_of_Each_Component_Has_the_Same_Value_in_Each_Phase_in_Which_the_Component_Appears"
+  },
+  {
+   "id": "24.4",
+   "module": "14506",
+   "title": "Ideal Solutions obey Raoult's Law",
+   "slug": "24:_Solutions_I_-_Volatile_Solutes/24.04:_Ideal_Solutions_obey_Raoult's_Law"
+  },
+  {
+   "id": "24.5",
+   "module": "14507",
+   "title": "Most Solutions are Not Ideal",
+   "slug": "24:_Solutions_I_-_Volatile_Solutes/24.05:_Most_Solutions_are_Not_Ideal"
+  },
+  {
+   "id": "24.6",
+   "module": "14508",
+   "title": "Vapor Pressures of Volatile Binary Solutions",
+   "slug": "24:_Solutions_I_-_Volatile_Solutes/24.06:_Vapor_Pressures_of_Volatile_Binary_Solutions"
+  },
+  {
+   "id": "24.7",
+   "module": "14509",
+   "title": "Activities of Nonideal Solutions",
+   "slug": "24:_Solutions_I_-_Volatile_Solutes/24.07:_Activities_of_Nonideal_Solutions"
+  },
+  {
+   "id": "24.8",
+   "module": "14510",
+   "title": "Activities are Calculated with Respect to Standard States",
+   "slug": "24:_Solutions_I_-_Volatile_Solutes/24.08:_Activities_are_Calculated_with_Respect_to_Standard_States"
+  },
+  {
+   "id": "24.9",
+   "module": "14511",
+   "title": "Gibbs Energy of Mixing of Binary Solutions in Terms of the Activity Coefficient",
+   "slug": "24:_Solutions_I_-_Volatile_Solutes/24.09:_Gibbs_Energy_of_Mixing_of_Binary_Solutions_in_Terms_of_the_Activity_Coefficient"
+  }
+ ],
+ "variables": [
+  {
+   "sym": "n_1",
+   "type": "amount",
+   "meaning": "the amount of component 1",
+   "unit": "mol",
+   "section": "24.1"
+  },
+  {
+   "sym": "n_1",
+   "type": "amount",
+   "meaning": "the amount of component 1",
+   "unit": "mol",
+   "section": "24.4"
+  },
+  {
+   "sym": "n_2",
+   "type": "amount",
+   "meaning": "the amount of component 2",
+   "unit": "mol",
+   "section": "24.1"
+  },
+  {
+   "sym": "n_2",
+   "type": "amount",
+   "meaning": "the amount of component 2",
+   "unit": "mol",
+   "section": "24.4"
+  },
+  {
+   "sym": "V",
+   "type": "volume",
+   "meaning": "the size of the system, scaled from 1 down to 0 (its volume)",
+   "unit": "m³",
+   "section": "24.1"
+  },
+  {
+   "sym": "G",
+   "concept": "gibbs-energy",
+   "meaning": "the Gibbs energy of the mixture",
+   "unit": "J",
+   "section": "24.1"
+  },
+  {
+   "sym": "G",
+   "concept": "gibbs-energy",
+   "meaning": "the Gibbs energy of the mixture",
+   "unit": "J",
+   "section": "24.2"
+  },
+  {
+   "sym": "G",
+   "concept": "gibbs-energy",
+   "meaning": "the Gibbs energy of the mixture",
+   "unit": "J",
+   "section": "24.3"
+  },
+  {
+   "sym": "mu_1",
+   "concept": "chemical-potential",
+   "meaning": "the chemical potential of component 1",
+   "unit": "J/mol",
+   "section": "24.1"
+  },
+  {
+   "sym": "mu_1",
+   "concept": "chemical-potential",
+   "meaning": "the chemical potential of component 1",
+   "unit": "J/mol",
+   "section": "24.3"
+  },
+  {
+   "sym": "mu_2",
+   "concept": "chemical-potential",
+   "meaning": "the chemical potential of component 2",
+   "unit": "J/mol",
+   "section": "24.1"
+  },
+  {
+   "sym": "S_ent",
+   "concept": "entropy",
+   "meaning": "the entropy",
+   "unit": "J/K",
+   "section": "24.1"
+  },
+  {
+   "sym": "S_ent",
+   "concept": "entropy",
+   "meaning": "the entropy",
+   "unit": "J/K",
+   "section": "24.2"
+  },
+  {
+   "sym": "S_ent",
+   "concept": "entropy",
+   "meaning": "the entropy",
+   "unit": "J/K",
+   "section": "24.3"
+  },
+  {
+   "sym": "T",
+   "type": "temperature",
+   "meaning": "the temperature",
+   "unit": "K",
+   "section": "24.1"
+  },
+  {
+   "sym": "T",
+   "type": "temperature",
+   "meaning": "the temperature",
+   "unit": "K",
+   "section": "24.2"
+  },
+  {
+   "sym": "T",
+   "type": "temperature",
+   "meaning": "the temperature",
+   "unit": "K",
+   "section": "24.3"
+  },
+  {
+   "sym": "T",
+   "type": "temperature",
+   "meaning": "the temperature",
+   "unit": "K",
+   "section": "24.4"
+  },
+  {
+   "sym": "T",
+   "type": "temperature",
+   "meaning": "the temperature",
+   "unit": "K",
+   "section": "24.6"
+  },
+  {
+   "sym": "T",
+   "type": "temperature",
+   "meaning": "the temperature",
+   "unit": "K",
+   "section": "24.7"
+  },
+  {
+   "sym": "T",
+   "type": "temperature",
+   "meaning": "the temperature",
+   "unit": "K",
+   "section": "24.9"
+  },
+  {
+   "sym": "P",
+   "type": "pressure",
+   "meaning": "the pressure",
+   "unit": "bar",
+   "section": "24.1"
+  },
+  {
+   "sym": "P",
+   "type": "pressure",
+   "meaning": "the pressure",
+   "unit": "bar",
+   "section": "24.2"
+  },
+  {
+   "sym": "P",
+   "type": "pressure",
+   "meaning": "the pressure",
+   "unit": "bar",
+   "section": "24.3"
+  },
+  {
+   "sym": "P",
+   "type": "pressure",
+   "meaning": "the pressure",
+   "unit": "bar",
+   "section": "24.4"
+  },
+  {
+   "sym": "P",
+   "type": "pressure",
+   "meaning": "the pressure",
+   "unit": "bar",
+   "section": "24.8"
+  },
+  {
+   "sym": "V_bar_1",
+   "concept": "partial-molar-quantity",
+   "type": "molar-volume",
+   "meaning": "the partial molar volume of component 1",
+   "unit": "m³/mol",
+   "section": "24.1"
+  },
+  {
+   "sym": "V_bar_2",
+   "concept": "partial-molar-quantity",
+   "type": "molar-volume",
+   "meaning": "the partial molar volume of component 2",
+   "unit": "m³/mol",
+   "section": "24.1"
+  },
+  {
+   "sym": "V_bar_i",
+   "concept": "partial-molar-quantity",
+   "type": "molar-volume",
+   "meaning": "the partial molar volume of component i",
+   "unit": "m³/mol",
+   "section": "24.1"
+  },
+  {
+   "sym": "P_total",
+   "type": "pressure",
+   "meaning": "the total pressure of the gas mixture, the sum of the partial pressures",
+   "unit": "bar",
+   "section": "24.1"
+  },
+  {
+   "sym": "P_1",
+   "type": "pressure",
+   "meaning": "the partial (vapor) pressure of component 1",
+   "unit": "bar",
+   "section": "24.1"
+  },
+  {
+   "sym": "P_1",
+   "type": "pressure",
+   "meaning": "the partial (vapor) pressure of component 1",
+   "unit": "bar",
+   "section": "24.5"
+  },
+  {
+   "sym": "P_1",
+   "type": "pressure",
+   "meaning": "the partial (vapor) pressure of component 1",
+   "unit": "bar",
+   "section": "24.6"
+  },
+  {
+   "sym": "P_1",
+   "type": "pressure",
+   "meaning": "the partial (vapor) pressure of component 1",
+   "unit": "bar",
+   "section": "24.7"
+  },
+  {
+   "sym": "P_1",
+   "type": "pressure",
+   "meaning": "the partial (vapor) pressure of component 1",
+   "unit": "bar",
+   "section": "24.9"
+  },
+  {
+   "sym": "P_2",
+   "type": "pressure",
+   "meaning": "the partial (vapor) pressure of component 2",
+   "unit": "bar",
+   "section": "24.1"
+  },
+  {
+   "sym": "P_2",
+   "type": "pressure",
+   "meaning": "the partial (vapor) pressure of component 2",
+   "unit": "bar",
+   "section": "24.6"
+  },
+  {
+   "sym": "P_i",
+   "type": "pressure",
+   "meaning": "the partial (vapor) pressure of component i",
+   "unit": "bar",
+   "section": "24.1"
+  },
+  {
+   "sym": "P_i",
+   "type": "pressure",
+   "meaning": "the partial (vapor) pressure of component i",
+   "unit": "bar",
+   "section": "24.8"
+  },
+  {
+   "sym": "P_i",
+   "type": "pressure",
+   "meaning": "the partial (vapor) pressure of component i",
+   "unit": "bar",
+   "section": "24.9"
+  },
+  {
+   "sym": "y_i",
+   "concept": "mole-fraction",
+   "meaning": "the mole fraction of component i in the gas",
+   "section": "24.1"
+  },
+  {
+   "sym": "y_i",
+   "concept": "mole-fraction",
+   "meaning": "the mole fraction of component i in the gas",
+   "section": "24.8"
+  },
+  {
+   "sym": "y_1",
+   "concept": "mole-fraction",
+   "meaning": "the mole fraction of component 1 in the vapor",
+   "section": "24.1"
+  },
+  {
+   "sym": "y_2",
+   "concept": "mole-fraction",
+   "meaning": "the mole fraction of component 2 in the vapor",
+   "section": "24.1"
+  },
+  {
+   "sym": "chi_i",
+   "concept": "mole-fraction",
+   "meaning": "the mole fraction of component i in the liquid phase",
+   "section": "24.1"
+  },
+  {
+   "sym": "chi_1",
+   "concept": "mole-fraction",
+   "meaning": "the mole fraction of component 1 in the liquid",
+   "section": "24.1"
+  },
+  {
+   "sym": "chi_2",
+   "concept": "mole-fraction",
+   "meaning": "the mole fraction of component 2 in the liquid",
+   "section": "24.1"
+  },
+  {
+   "sym": "P_circ_i",
+   "concept": "equilibrium-vapor-pressure",
+   "meaning": "the equilibrium vapor pressure of the pure component i",
+   "unit": "bar",
+   "section": "24.1"
+  },
+  {
+   "sym": "P_circ_1",
+   "concept": "equilibrium-vapor-pressure",
+   "meaning": "the equilibrium vapor pressure of pure component 1",
+   "unit": "bar",
+   "section": "24.1"
+  },
+  {
+   "sym": "P_circ_2",
+   "concept": "equilibrium-vapor-pressure",
+   "meaning": "the equilibrium vapor pressure of pure component 2",
+   "unit": "bar",
+   "section": "24.1"
+  },
+  {
+   "sym": "x_2",
+   "concept": "mole-fraction",
+   "meaning": "the mole fraction of component 2 in the liquid in equilibrium with the vapor",
+   "section": "24.1"
+  },
+  {
+   "sym": "x_all",
+   "concept": "mole-fraction",
+   "meaning": "the overall mole fraction of component 2, liquid and gas together",
+   "section": "24.1"
+  },
+  {
+   "sym": "n_liq",
+   "type": "amount",
+   "meaning": "the total amount of both components in the liquid",
+   "unit": "mol",
+   "section": "24.1"
+  },
+  {
+   "sym": "n_gas",
+   "type": "amount",
+   "meaning": "the total amount of both components in the gas",
+   "unit": "mol",
+   "section": "24.1"
+  },
+  {
+   "sym": "n_i",
+   "type": "amount",
+   "meaning": "the amount of component i",
+   "unit": "mol",
+   "section": "24.2"
+  },
+  {
+   "sym": "n_i",
+   "type": "amount",
+   "meaning": "the amount of component i",
+   "unit": "mol",
+   "section": "24.3"
+  },
+  {
+   "sym": "mu_i",
+   "concept": "chemical-potential",
+   "meaning": "the chemical potential of component i",
+   "unit": "J/mol",
+   "section": "24.2"
+  },
+  {
+   "sym": "mu_i",
+   "concept": "chemical-potential",
+   "meaning": "the chemical potential of component i",
+   "unit": "J/mol",
+   "section": "24.3"
+  },
+  {
+   "sym": "G_tot",
+   "concept": "gibbs-energy",
+   "meaning": "the total Gibbs energy of the mixture",
+   "unit": "J",
+   "section": "24.2"
+  },
+  {
+   "sym": "V",
+   "type": "volume",
+   "meaning": "the volume",
+   "unit": "m³",
+   "section": "24.2"
+  },
+  {
+   "sym": "V",
+   "type": "volume",
+   "meaning": "the volume",
+   "unit": "m³",
+   "section": "24.3"
+  },
+  {
+   "sym": "n_A",
+   "type": "amount",
+   "meaning": "the amount of component A",
+   "unit": "mol",
+   "section": "24.2"
+  },
+  {
+   "sym": "n_B",
+   "type": "amount",
+   "meaning": "the amount of component B",
+   "unit": "mol",
+   "section": "24.2"
+  },
+  {
+   "sym": "mu_A",
+   "concept": "chemical-potential",
+   "meaning": "the chemical potential of component A",
+   "unit": "J/mol",
+   "section": "24.2"
+  },
+  {
+   "sym": "mu_B",
+   "concept": "chemical-potential",
+   "meaning": "the chemical potential of component B",
+   "unit": "J/mol",
+   "section": "24.2"
+  },
+  {
+   "sym": "chi_A",
+   "concept": "mole-fraction",
+   "meaning": "the mole fraction of A",
+   "section": "24.2"
+  },
+  {
+   "sym": "chi_B",
+   "concept": "mole-fraction",
+   "meaning": "the mole fraction of B",
+   "section": "24.2"
+  },
+  {
+   "sym": "x_B",
+   "concept": "mole-fraction",
+   "meaning": "the mole fraction of B",
+   "section": "24.2"
+  },
+  {
+   "sym": "x_B",
+   "concept": "mole-fraction",
+   "meaning": "the mole fraction of B",
+   "section": "24.4"
+  },
+  {
+   "sym": "mu_star_A",
+   "type": "energy",
+   "meaning": "the chemical potential of pure A",
+   "unit": "J/mol",
+   "section": "24.2"
+  },
+  {
+   "sym": "mu_star_B",
+   "type": "energy",
+   "meaning": "the chemical potential of pure B",
+   "unit": "J/mol",
+   "section": "24.2"
+  },
+  {
+   "sym": "R",
+   "meaning": "the gas constant",
+   "unit": "J/(K·mol)",
+   "section": "24.2"
+  },
+  {
+   "sym": "R",
+   "meaning": "the gas constant",
+   "unit": "J/(K·mol)",
+   "section": "24.3"
+  },
+  {
+   "sym": "R",
+   "meaning": "the gas constant",
+   "unit": "J/(K·mol)",
+   "section": "24.4"
+  },
+  {
+   "sym": "R",
+   "meaning": "the gas constant",
+   "unit": "J/(K·mol)",
+   "section": "24.6"
+  },
+  {
+   "sym": "R",
+   "meaning": "the gas constant",
+   "unit": "J/(K·mol)",
+   "section": "24.7"
+  },
+  {
+   "sym": "R",
+   "meaning": "the gas constant",
+   "unit": "J/(K·mol)",
+   "section": "24.9"
+  },
+  {
+   "sym": "mu",
+   "concept": "chemical-potential",
+   "meaning": "the chemical potential of a pure substance",
+   "unit": "J/mol",
+   "section": "24.3"
+  },
+  {
+   "sym": "mu_std",
+   "type": "energy",
+   "meaning": "the chemical potential at the standard pressure",
+   "unit": "J/mol",
+   "section": "24.3"
+  },
+  {
+   "sym": "P_std",
+   "type": "pressure",
+   "meaning": "the standard pressure, 1 bar",
+   "unit": "bar",
+   "section": "24.3"
+  },
+  {
+   "sym": "P_std",
+   "type": "pressure",
+   "meaning": "the standard pressure, 1 bar",
+   "unit": "bar",
+   "section": "24.6"
+  },
+  {
+   "sym": "P_std",
+   "type": "pressure",
+   "meaning": "the standard pressure, 1 bar",
+   "unit": "bar",
+   "section": "24.8"
+  },
+  {
+   "sym": "P_std",
+   "type": "pressure",
+   "meaning": "the standard pressure, 1 bar",
+   "unit": "bar",
+   "section": "24.9"
+  },
+  {
+   "sym": "U",
+   "meaning": "the internal energy",
+   "unit": "J",
+   "section": "24.3"
+  },
+  {
+   "sym": "H",
+   "concept": "enthalpy",
+   "meaning": "the enthalpy",
+   "unit": "J",
+   "section": "24.3"
+  },
+  {
+   "sym": "A",
+   "meaning": "the Helmholtz energy",
+   "unit": "J",
+   "section": "24.3"
+  },
+  {
+   "sym": "kappa_T",
+   "meaning": "the isothermal compressibility",
+   "unit": "1/bar",
+   "section": "24.3"
+  },
+  {
+   "sym": "mu_j",
+   "concept": "chemical-potential",
+   "meaning": "the chemical potential of gas j in the mixture",
+   "unit": "J/mol",
+   "section": "24.3"
+  },
+  {
+   "sym": "mu_j",
+   "concept": "chemical-potential",
+   "meaning": "the chemical potential of gas j in the mixture",
+   "unit": "J/mol",
+   "section": "24.6"
+  },
+  {
+   "sym": "mu_std_j",
+   "type": "energy",
+   "meaning": "the standard chemical potential of gas j",
+   "unit": "J/mol",
+   "section": "24.3"
+  },
+  {
+   "sym": "mu_std_j",
+   "type": "energy",
+   "meaning": "the standard chemical potential of gas j",
+   "unit": "J/mol",
+   "section": "24.6"
+  },
+  {
+   "sym": "P_j",
+   "type": "pressure",
+   "meaning": "the partial pressure of component j",
+   "unit": "bar",
+   "section": "24.3"
+  },
+  {
+   "sym": "P_j",
+   "type": "pressure",
+   "meaning": "the partial pressure of component j",
+   "unit": "bar",
+   "section": "24.4"
+  },
+  {
+   "sym": "P_j",
+   "type": "pressure",
+   "meaning": "the partial pressure of component j",
+   "unit": "bar",
+   "section": "24.6"
+  },
+  {
+   "sym": "mu_sln_j",
+   "concept": "chemical-potential",
+   "meaning": "the chemical potential of component j in the solution",
+   "unit": "J/mol",
+   "section": "24.3"
+  },
+  {
+   "sym": "mu_gas_j",
+   "concept": "chemical-potential",
+   "meaning": "the chemical potential of component j in the gas",
+   "unit": "J/mol",
+   "section": "24.3"
+  },
+  {
+   "sym": "P_star_1",
+   "concept": "equilibrium-vapor-pressure",
+   "meaning": "the equilibrium vapor pressure of pure component 1",
+   "unit": "bar",
+   "section": "24.3"
+  },
+  {
+   "sym": "P_star_1",
+   "concept": "equilibrium-vapor-pressure",
+   "meaning": "the equilibrium vapor pressure of pure component 1",
+   "unit": "bar",
+   "section": "24.5"
+  },
+  {
+   "sym": "P_star_1",
+   "concept": "equilibrium-vapor-pressure",
+   "meaning": "the equilibrium vapor pressure of pure component 1",
+   "unit": "bar",
+   "section": "24.6"
+  },
+  {
+   "sym": "P_star_1",
+   "concept": "equilibrium-vapor-pressure",
+   "meaning": "the equilibrium vapor pressure of pure component 1",
+   "unit": "bar",
+   "section": "24.7"
+  },
+  {
+   "sym": "P_star_j",
+   "concept": "equilibrium-vapor-pressure",
+   "meaning": "the equilibrium vapor pressure of pure component j",
+   "unit": "bar",
+   "section": "24.3"
+  },
+  {
+   "sym": "P_star_j",
+   "concept": "equilibrium-vapor-pressure",
+   "meaning": "the equilibrium vapor pressure of pure component j",
+   "unit": "bar",
+   "section": "24.4"
+  },
+  {
+   "sym": "mu_star_j",
+   "type": "energy",
+   "meaning": "the chemical potential of pure component j",
+   "unit": "J/mol",
+   "section": "24.3"
+  },
+  {
+   "sym": "x_A",
+   "concept": "mole-fraction",
+   "meaning": "the mole fraction of A",
+   "section": "24.4"
+  },
+  {
+   "sym": "x_i",
+   "concept": "mole-fraction",
+   "meaning": "the mole fraction of component i",
+   "section": "24.4"
+  },
+  {
+   "sym": "x_i",
+   "concept": "mole-fraction",
+   "meaning": "the mole fraction of component i",
+   "section": "24.7"
+  },
+  {
+   "sym": "x_i",
+   "concept": "mole-fraction",
+   "meaning": "the mole fraction of component i",
+   "section": "24.9"
+  },
+  {
+   "sym": "T_A",
+   "type": "temperature",
+   "meaning": "the boiling point of pure A",
+   "unit": "K",
+   "section": "24.4"
+  },
+  {
+   "sym": "T_B",
+   "type": "temperature",
+   "meaning": "the boiling point of pure B",
+   "unit": "K",
+   "section": "24.4"
+  },
+  {
+   "sym": "n",
+   "type": "amount",
+   "meaning": "the total amount",
+   "unit": "mol",
+   "section": "24.4"
+  },
+  {
+   "sym": "mu_sln_i",
+   "concept": "chemical-potential",
+   "meaning": "the chemical potential of component i in the solution",
+   "unit": "J/mol",
+   "section": "24.4"
+  },
+  {
+   "sym": "mu_sln_i",
+   "concept": "chemical-potential",
+   "meaning": "the chemical potential of component i in the solution",
+   "unit": "J/mol",
+   "section": "24.9"
+  },
+  {
+   "sym": "mu_star_i",
+   "type": "energy",
+   "meaning": "the chemical potential of pure component i",
+   "unit": "J/mol",
+   "section": "24.4"
+  },
+  {
+   "sym": "mu_star_i",
+   "type": "energy",
+   "meaning": "the chemical potential of pure component i",
+   "unit": "J/mol",
+   "section": "24.9"
+  },
+  {
+   "sym": "Delta_mix_G",
+   "concept": "ideal-gibbs-energy-of-mixing",
+   "meaning": "the Gibbs energy of mixing",
+   "unit": "J",
+   "section": "24.4"
+  },
+  {
+   "sym": "Delta_mix_G",
+   "concept": "ideal-gibbs-energy-of-mixing",
+   "meaning": "the Gibbs energy of mixing",
+   "unit": "J",
+   "section": "24.9"
+  },
+  {
+   "sym": "Delta_mix_S",
+   "concept": "entropy-of-mixing",
+   "meaning": "the entropy of mixing",
+   "unit": "J/K",
+   "section": "24.4"
+  },
+  {
+   "sym": "Delta_mix_H",
+   "type": "energy",
+   "meaning": "the enthalpy of mixing",
+   "unit": "J",
+   "section": "24.4"
+  },
+  {
+   "sym": "U_ij",
+   "type": "energy",
+   "meaning": "the average interaction energy between molecules i and j",
+   "unit": "J",
+   "section": "24.4"
+  },
+  {
+   "sym": "Delta_mix_V",
+   "type": "volume",
+   "meaning": "the volume of mixing",
+   "unit": "m³",
+   "section": "24.4"
+  },
+  {
+   "sym": "Delta_mix_V",
+   "type": "volume",
+   "meaning": "the volume of mixing",
+   "unit": "m³",
+   "section": "24.9"
+  },
+  {
+   "sym": "x_1",
+   "concept": "mole-fraction",
+   "meaning": "the mole fraction of component 1",
+   "section": "24.5"
+  },
+  {
+   "sym": "x_1",
+   "concept": "mole-fraction",
+   "meaning": "the mole fraction of component 1",
+   "section": "24.6"
+  },
+  {
+   "sym": "x_1",
+   "concept": "mole-fraction",
+   "meaning": "the mole fraction of component 1",
+   "section": "24.9"
+  },
+  {
+   "sym": "K_H",
+   "concept": "henrys-law-constant",
+   "meaning": "Henry's law constant",
+   "unit": "bar",
+   "section": "24.5"
+  },
+  {
+   "sym": "P_B",
+   "type": "pressure",
+   "meaning": "the partial pressure of B",
+   "unit": "bar",
+   "section": "24.6"
+  },
+  {
+   "sym": "k_H",
+   "concept": "henrys-law-constant",
+   "meaning": "Henry's law constant",
+   "unit": "Pa",
+   "section": "24.6"
+  },
+  {
+   "sym": "x_2",
+   "concept": "mole-fraction",
+   "meaning": "the mole fraction of component 2",
+   "section": "24.6"
+  },
+  {
+   "sym": "x_2",
+   "concept": "mole-fraction",
+   "meaning": "the mole fraction of component 2",
+   "section": "24.7"
+  },
+  {
+   "sym": "x_2",
+   "concept": "mole-fraction",
+   "meaning": "the mole fraction of component 2",
+   "section": "24.9"
+  },
+  {
+   "sym": "f_Mar",
+   "concept": "margules-function",
+   "meaning": "the Margules function",
+   "section": "24.6"
+  },
+  {
+   "sym": "f_Mar",
+   "concept": "margules-function",
+   "meaning": "the Margules function",
+   "section": "24.9"
+  },
+  {
+   "sym": "a_B",
+   "concept": "activity",
+   "meaning": "the activity of solute B",
+   "section": "24.7"
+  },
+  {
+   "sym": "gamma",
+   "concept": "activity-coefficient",
+   "meaning": "the activity coefficient",
+   "section": "24.7"
+  },
+  {
+   "sym": "m_B",
+   "meaning": "the molality of solute B",
+   "unit": "mol/kg",
+   "section": "24.7"
+  },
+  {
+   "sym": "m_std",
+   "meaning": "unit molality, 1 mol/kg",
+   "unit": "mol/kg",
+   "section": "24.7"
+  },
+  {
+   "sym": "mu_std_B",
+   "type": "energy",
+   "meaning": "the standard chemical potential of solute B",
+   "unit": "J/mol",
+   "section": "24.7"
+  },
+  {
+   "sym": "mu_plus",
+   "concept": "chemical-potential",
+   "meaning": "the chemical potential of the cation",
+   "unit": "J/mol",
+   "section": "24.7"
+  },
+  {
+   "sym": "mu_minus",
+   "concept": "chemical-potential",
+   "meaning": "the chemical potential of the anion",
+   "unit": "J/mol",
+   "section": "24.7"
+  },
+  {
+   "sym": "a_plus",
+   "concept": "activity",
+   "meaning": "the activity of the cation",
+   "section": "24.7"
+  },
+  {
+   "sym": "a_minus",
+   "concept": "activity",
+   "meaning": "the activity of the anion",
+   "section": "24.7"
+  },
+  {
+   "sym": "gamma_plus",
+   "concept": "activity-coefficient",
+   "meaning": "the activity coefficient of the cation",
+   "section": "24.7"
+  },
+  {
+   "sym": "gamma_minus",
+   "concept": "activity-coefficient",
+   "meaning": "the activity coefficient of the anion",
+   "section": "24.7"
+  },
+  {
+   "sym": "m_plus",
+   "meaning": "the molality of the cation",
+   "unit": "mol/kg",
+   "section": "24.7"
+  },
+  {
+   "sym": "m_minus",
+   "meaning": "the molality of the anion",
+   "unit": "mol/kg",
+   "section": "24.7"
+  },
+  {
+   "sym": "gamma_pm",
+   "concept": "mean-ionic-activity-coefficient",
+   "meaning": "the mean activity coefficient",
+   "section": "24.7"
+  },
+  {
+   "sym": "epsilon",
+   "meaning": "the dielectric constant of the solvent",
+   "section": "24.7"
+  },
+  {
+   "sym": "z_plus",
+   "meaning": "the charge number of the cation",
+   "section": "24.7"
+  },
+  {
+   "sym": "z_minus",
+   "meaning": "the charge number of the anion",
+   "section": "24.7"
+  },
+  {
+   "sym": "I_ion",
+   "concept": "ionic-strength",
+   "meaning": "the ionic strength of the solution",
+   "section": "24.7"
+  },
+  {
+   "sym": "a_i",
+   "concept": "activity",
+   "meaning": "the activity of component i",
+   "section": "24.7"
+  },
+  {
+   "sym": "a_i",
+   "concept": "activity",
+   "meaning": "the activity of component i",
+   "section": "24.8"
+  },
+  {
+   "sym": "a_i",
+   "concept": "activity",
+   "meaning": "the activity of component i",
+   "section": "24.9"
+  },
+  {
+   "sym": "gamma_i",
+   "concept": "activity-coefficient",
+   "meaning": "the activity coefficient of component i",
+   "section": "24.7"
+  },
+  {
+   "sym": "gamma_i",
+   "concept": "activity-coefficient",
+   "meaning": "the activity coefficient of component i",
+   "section": "24.8"
+  },
+  {
+   "sym": "gamma_i",
+   "concept": "activity-coefficient",
+   "meaning": "the activity coefficient of component i",
+   "section": "24.9"
+  },
+  {
+   "sym": "K_xH",
+   "concept": "henrys-law-constant",
+   "meaning": "Henry's law constant on the mole-fraction scale",
+   "unit": "atm",
+   "section": "24.7"
+  },
+  {
+   "sym": "a_solute",
+   "concept": "activity",
+   "meaning": "the activity of the solute on Henry's scale",
+   "section": "24.7"
+  },
+  {
+   "sym": "P_solute",
+   "type": "pressure",
+   "meaning": "the vapor pressure of the solute above the solution",
+   "unit": "bar",
+   "section": "24.7"
+  },
+  {
+   "sym": "a_1",
+   "concept": "activity",
+   "meaning": "the activity of the solvent, component 1",
+   "section": "24.7"
+  },
+  {
+   "sym": "a_1",
+   "concept": "activity",
+   "meaning": "the activity of the solvent, component 1",
+   "section": "24.9"
+  },
+  {
+   "sym": "a_2",
+   "concept": "activity",
+   "meaning": "the activity of the solute, component 2",
+   "section": "24.7"
+  },
+  {
+   "sym": "a_2",
+   "concept": "activity",
+   "meaning": "the activity of the solute, component 2",
+   "section": "24.9"
+  },
+  {
+   "sym": "phi_osm",
+   "concept": "osmotic-coefficient",
+   "meaning": "the osmotic coefficient",
+   "section": "24.7"
+  },
+  {
+   "sym": "gamma_2m",
+   "concept": "activity-coefficient",
+   "meaning": "the activity coefficient of the solute on the molality scale",
+   "section": "24.7"
+  },
+  {
+   "sym": "f_i",
+   "concept": "fugacity",
+   "meaning": "the fugacity of component i",
+   "unit": "bar",
+   "section": "24.8"
+  },
+  {
+   "sym": "phi_i",
+   "concept": "fugacity-coefficient",
+   "meaning": "the fugacity coefficient of component i",
+   "section": "24.8"
+  },
+  {
+   "sym": "a_reg",
+   "meaning": "the single Margules parameter of a regular solution, W/RT",
+   "section": "24.9"
+  },
+  {
+   "sym": "W_int",
+   "concept": "regular-interaction-energy",
+   "meaning": "the interaction energy (enthalpy) of a regular solution, 2U₁₂ − U₁₁ − U₂₂",
+   "unit": "J/mol",
+   "section": "24.9"
+  },
+  {
+   "sym": "U_12",
+   "type": "energy",
+   "meaning": "the average interaction energy between unlike molecules 1 and 2",
+   "unit": "J/mol",
+   "section": "24.9"
+  },
+  {
+   "sym": "U_11",
+   "type": "energy",
+   "meaning": "the average interaction energy between two molecules of 1",
+   "unit": "J/mol",
+   "section": "24.9"
+  },
+  {
+   "sym": "U_22",
+   "type": "energy",
+   "meaning": "the average interaction energy between two molecules of 2",
+   "unit": "J/mol",
+   "section": "24.9"
+  }
+ ]
+}

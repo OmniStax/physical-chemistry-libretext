@@ -149,8 +149,8 @@
     "type": "number",
     "value": 3,
     "generated_by": "ai",
-    "hint": "If each of $N$ molecules has $w$ orientations, $W = w^N$ and $S = k\\ln w^N = Nk\\ln w$.",
-    "solution": "<p>With $w$ equally likely orientations per molecule, the crystal has $W_{disorder} = w^N$ arrangements, so $S_{disorder} = \\kk\\ln w^N = N\\kk\\ln w$. For one mole $N\\kk = R = 8.314$ J/K, so $\\ln w = 9.134/8.314 = 1.0986$ and $w = e^{1.0986} = 3.000$. Each molecule can sit in its site in three ways. A molecule that does this has threefold shape with one odd arm about the size of the other two: a trigonal planar molecule XY₂Z with Z nearly as large as Y, packed in a triangular site. Drawn in the site, the odd atom Z can point to any of the three corners, and the three orientations have nearly the same energy, just as CO's two orientations do.</p>"
+    "hint": "If each of $N$ molecules has $w$ orientations, $W = w^N$ and $\\kSent = k\\ln w^N = Nk\\ln w$.",
+    "solution": "<p>With $w$ equally likely orientations per molecule, the crystal has $W_{disorder} = w^N$ arrangements, so $\\kSdisorder = \\kk\\ln w^N = N\\kk\\ln w$. For one mole $N\\kk = R = 8.314$ J/K, so $\\ln w = 9.134/8.314 = 1.0986$ and $w = e^{1.0986} = 3.000$. Each molecule can sit in its site in three ways. A molecule that does this has threefold shape with one odd arm about the size of the other two: a trigonal planar molecule XY₂Z with Z nearly as large as Y, packed in a triangular site. Drawn in the site, the odd atom Z can point to any of the three corners, and the three orientations have nearly the same energy, just as CO's two orientations do.</p>"
    }
   }
  ],
@@ -168,7 +168,7 @@
   {
    "id": "c-integrand",
    "kind": "correction",
-   "html": "The integrand is $C_p/T$: $S(T) = S(0) + \\int_0^T \\dfrac{C_p(T)}{T}\\,dT$, as the next paragraph says and as Equation 21.5.3 writes it."
+   "html": "The integrand is $\\kCP/\\kT$: $\\kSent(\\kT) = \\kSent(0) + \\int_0^{\\kT} \\dfrac{\\kCP(\\kT)}{\\kT}\\,d\\kT$, as the next paragraph says and as Equation 21.5.3 writes it."
   },
   {
    "id": "c-sulfur-units",

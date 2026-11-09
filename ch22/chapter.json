@@ -646,6 +646,88 @@
    "meaning": "the entropy of the system",
    "unit": "J/K",
    "section": "22.8"
+  },
+  {
+   "sym": "q",
+   "concept": "heat",
+   "meaning": "the heat exchanged, written δq for a small amount",
+   "unit": "J",
+   "section": "22.1"
+  },
+  {
+   "sym": "Delta_U",
+   "concept": "internal-energy-change",
+   "meaning": "the change in internal energy of the process",
+   "unit": "J",
+   "section": "22.1"
+  },
+  {
+   "sym": "q",
+   "concept": "heat",
+   "meaning": "the heat exchanged, written δq for a small amount",
+   "unit": "J",
+   "section": "22.2"
+  },
+  {
+   "sym": "x",
+   "meaning": "the generalized force of a kind of work other than volume work",
+   "section": "22.2",
+   "redefines": true
+  },
+  {
+   "sym": "X",
+   "meaning": "the generalized displacement of a kind of work other than volume work",
+   "section": "22.2",
+   "redefines": true
+  },
+  {
+   "sym": "q",
+   "concept": "heat",
+   "meaning": "the heat exchanged in a reversible change",
+   "unit": "J",
+   "section": "22.3"
+  },
+  {
+   "sym": "w",
+   "concept": "thermodynamic-work",
+   "meaning": "the work done on the system",
+   "unit": "J",
+   "section": "22.3"
+  },
+  {
+   "sym": "n_mol",
+   "type": "amount",
+   "meaning": "the amount of gas",
+   "unit": "mol",
+   "section": "22.3"
+  },
+  {
+   "sym": "R",
+   "concept": "ideal-gas-constant",
+   "meaning": "the gas constant",
+   "unit": "J K⁻¹ mol⁻¹",
+   "section": "22.3"
+  },
+  {
+   "sym": "q",
+   "concept": "heat",
+   "meaning": "the heat flow of the system",
+   "unit": "J",
+   "section": "22.5"
+  },
+  {
+   "sym": "w",
+   "concept": "thermodynamic-work",
+   "meaning": "the work of the system",
+   "unit": "J",
+   "section": "22.5"
+  },
+  {
+   "sym": "C_V",
+   "concept": "constant-volume-heat-capacity",
+   "meaning": "the heat capacity at constant volume",
+   "unit": "J/K",
+   "section": "22.5"
   }
  ]
 }

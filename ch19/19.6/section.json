@@ -222,7 +222,7 @@
        "map": {
         "t": "c"
        },
-       "cap": "Each side now holds one variable, so each can be integrated along the path from $(T_1,\\bar{V}_1)$ to $(T_2,\\bar{V}_2)$."
+       "cap": "This is an expression for an ideal path along a reversible, adiabatic path that relates temperature to volume. To find our path along a PV surface for an ideal gas, we can start in TV surface and convert to a PV surface. Let's go from $(T_1,\\bar{V}_1)$ to $(T_2,\\bar{V}_2)$."
       },
       {
        "tex": "\\mk{c}{\\kCVbar\\ln\\left(\\dfrac{\\kTtwo}{\\kTone}\\right)} = \\mk{u}{-\\kR\\ln\\left(\\dfrac{{\\kVbar}_2}{{\\kVbar}_1}\\right)}",

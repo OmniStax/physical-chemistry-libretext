@@ -37,7 +37,8 @@
    "draws": [
     "heat-capacity",
     "temperature",
-    "energy"
+    "energy",
+    "entropy"
    ],
    "ai": [
     {
@@ -104,7 +105,7 @@
     "tol": 0.03,
     "generated_by": "ai",
     "hint": "The jump is $\\Delta H_{sub}/T_{sub}$ (Equation 21.5.2).",
-    "solution": "<p>The jump is the entropy of sublimation, $\\Delta S_{sub} = 200 - 69 = 131$ J/(mol K). By Equation 21.5.2, $\\Delta H_{sub} = \\kTsub\\,\\Delta S_{sub} = (194.7\\ \\text{K})(131\\ \\text{J mol}^{-1}\\text{K}^{-1}) = 2.55\\times10^4$ J/mol $= 25.5$ kJ/mol.</p>"
+    "solution": "<p>The jump is the entropy of sublimation, $\\Delta \\kSent_{sub} = 200 - 69 = 131$ J/(mol K). By Equation 21.5.2, $\\Delta H_{sub} = \\kTsub\\,\\Delta \\kSent_{sub} = (194.7\\ \\text{K})(131\\ \\text{J mol}^{-1}\\text{K}^{-1}) = 2.55\\times10^4$ J/mol $= 25.5$ kJ/mol.</p>"
    }
   }
  ],

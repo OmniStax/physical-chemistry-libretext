@@ -52,9 +52,9 @@ const sim = (id, H) => F.sim(root, id, H);
     text(ctx, 'gas', ax.X(250), ax.Y(0.24), C('heat-capacity'), { size: 20, weight: 600, align: 'center' });
     /* bottom: S(T) */
     const bot = { l: 170, r: 1080, t: 420, b: 630 };
-    const bx = axes(ctx, bot, [0, 300], [0, 250], { nx: 6, ny: 5, xl: 'temperature T (K)', yl: 'entropy S (J/(mol K))', xc: C('temperature'), yc: PAL.ink });
-    plot(ctx, bx, [{ f: sSolid, x: [0, TSUB] }, { f: (x) => S0 + JUMP + sGas(x), x: [TSUB, 300] }], alpha(PAL.ink, 0.2), { w: 3 });
-    plot(ctx, bx, [{ f: sSolid, x: [0, Math.min(t, TSUB)] }].concat(past ? [{ f: (x) => S0 + JUMP + sGas(x), x: [TSUB, Math.max(t, TSUB + 0.01)] }] : []), PAL.ink, { w: 5 });
+    const bx = axes(ctx, bot, [0, 300], [0, 250], { nx: 6, ny: 5, xl: 'temperature T (K)', yl: 'entropy S (J/(mol K))', xc: C('temperature'), yc: C('entropy') });
+    plot(ctx, bx, [{ f: sSolid, x: [0, TSUB] }, { f: (x) => S0 + JUMP + sGas(x), x: [TSUB, 300] }], alpha(C('entropy'), 0.2), { w: 3 });
+    plot(ctx, bx, [{ f: sSolid, x: [0, Math.min(t, TSUB)] }].concat(past ? [{ f: (x) => S0 + JUMP + sGas(x), x: [TSUB, Math.max(t, TSUB + 0.01)] }] : []), C('entropy'), { w: 5 });
     line(ctx, bx.X(TSUB), bx.Y(S0), bx.X(TSUB), bx.Y(S0 + JUMP), past ? C('energy') : alpha(C('energy'), 0.25), past ? 5 : 3);
     /* the sublimation temperature through both graphs */
     line(ctx, ax.X(TSUB), top.t, ax.X(TSUB), bot.b, alpha(C('temperature'), 0.5), 2, [4, 8]);

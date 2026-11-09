@@ -241,7 +241,7 @@
       {
        "tex": "\\mk{q}{\\Delta \\kSent} = \\mk{u}{\\int_{\\kTone}^{\\kTtwo}{\\dfrac{\\kCV(\\kT)}{\\kT}d\\kT}}",
        "uses": [],
-       "cap": "Integrating both sides from $T_1$ to $T_2$; the left side sums to the change $\\Delta S$."
+       "cap": "Integrating both sides from $\\kTone$ to $\\kTtwo$; the left side sums to the change $\\Delta \\kSent$."
       }
      ],
      "src": "21.1"
@@ -352,7 +352,7 @@
       {
        "tex": "\\mk{q}{\\Delta \\kSent} = \\mk{h}{\\int_{\\kTone}^{\\kTtwo}{\\dfrac{\\kCP(\\kT)}{\\kT}d\\kT}}",
        "uses": [],
-       "cap": "Integrating both sides from $T_1$ to $T_2$; the left side sums to the change $\\Delta S$."
+       "cap": "Integrating both sides from $\\kTone$ to $\\kTtwo$; the left side sums to the change $\\Delta \\kSent$."
       }
      ],
      "src": "21.1"

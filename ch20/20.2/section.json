@@ -106,15 +106,15 @@
      "assumes": [
       {
        "tex": "d\\kU = \\delta\\kqrev + \\delta\\kwrev",
-       "src": "Chapter 19, the first law"
+       "src": "19.1"
       },
       {
        "tex": "d\\kU = \\kCv\\, d\\kT",
-       "src": "Chapter 19"
+       "src": "19.5"
       },
       {
        "tex": "\\delta\\kwrev = -\\kP\\, d\\kV",
-       "src": "Chapter 19"
+       "src": "19.2"
       }
      ],
      "then": {
@@ -129,13 +129,15 @@
        "tex": "\\mk{q}{\\delta\\kqrev} = \\mk{u}{\\kCv\\, d\\kT} - \\mk{w}{\\delta\\kwrev}",
        "uses": [
         1
-       ]
+       ],
+       "cap": "We know that $\\kU$ only depends on temperature."
       },
       {
        "tex": "\\mk{q}{\\delta\\kqrev} = \\mk{u}{\\kCv\\, d\\kT} + \\mk{w}{\\kP\\, d\\kV}",
        "uses": [
         2
-       ]
+       ],
+       "cap": "We also know that any reversible work would be volume work."
       }
      ]
     },

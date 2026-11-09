@@ -1,0 +1,109 @@
+<section id="evaporation">
+<h2>Evaporation</h2>
+<p>In <a class="xref" href="#23.3-clapeyron">Section 23.3</a>, the <span data-concept="clapeyron-equation">Clapeyron Equation</span> was derived for melting points.</p>
+<p>However, our argument is actually quite general and should hold for vapor equilibria as well. The only problem is that the <span data-concept="molar-volume">molar volume</span> of gases are by no means so nicely constant as they are for condensed phases. (i. e., for condenses phases, both $\alpha$ and $\kkappa$ are pretty small).</p>
+<figure class="dv" id="drv-clausius-clapeyron"></figure>
+<p>Equation 23.4.1 is known as the <strong><span data-concept="clausius-clapeyron-equation">Clausius-Clapeyron</span></strong> equation. We can further work our the integration and find the how <span data-concept="integrated-clausius-clapeyron">the equilibrium vapor pressure changes with temperature</span>:</p>
+$$ \ln \left( \dfrac{\kPtwo}{\kPone} \right)= \dfrac{-\kDeltaHmolarvap}{\kR} \left[\dfrac{1}{\kTtwo}-\dfrac{1}{\kTone} \right] $$
+<p>Thus if we know the <span data-concept="enthalpy-of-vaporization">molar enthalpy of vaporization</span> we can predict the vapor lines in the diagram. Of course the approximations made are likely to lead to deviations if the vapor is not ideal or very dense (e.g., approaching the <span data-concept="critical-point">critical point</span>).</p>
+</section>
+
+<section id="the-clapeyron-equation">
+<h2>The Clapeyron Equation</h2>
+<p>The Clapeyron attempts to answer the question of what the shape of a two-phase coexistence line is. In the $\kP-\kT$ plane, we see the a function $\kP(\kT)$, which gives us the dependence of $\kP$ on $\kT$ along a coexistence curve.</p>
+<p>Consider two phases, denoted $\alpha$ and $\beta$, in equilibrium with each other. These could be solid and liquid, liquid and gas, solid and gas, two solid phases, et. Let $\kmualpha (\kP, \kT)$ and $\kmubeta (\kP, \kT)$ be the <span data-concept="chemical-potential">chemical potentials</span> of the two phases. <a class="xref" href="#23.3-drv-equal-chemical-potentials">We have just seen that</a></p>
+$$ \kmualpha (\kP, \kT) = \kmubeta (\kP, \kT) \tag{23.4.2} $$
+<p>Next, suppose that the pressure and temperature are changed by $d\kP$ and $d\kT$. The changes in the chemical potentials of each phase are</p>
+$$ d \kmualpha (\kP, \kT) = d \kmubeta (\kP, \kT) \tag{23.4.3} $$
+$$ \left( \dfrac{\partial \kmualpha}{\partial \kP} \right)_{\kT} d\kP + \left( \dfrac{\partial \kmualpha}{\partial \kT} \right)_{\kP} d\kT = \left( \dfrac{\partial \kmubeta}{\partial \kP} \right)_{\kT} d\kP + \left( \dfrac{\partial \kmubeta}{\partial \kT} \right)_{\kP} d\kT \tag{23.4.4} $$
+<p>However, since $\kG(n, \kP, \kT) = n \kmu (\kP, \kT)$, the <em>molar</em> free energy $\kGbar (\kP, \kT)$, which is $\kG(n, \kP, \kT)/n$, is also just equal to the chemical potential</p>
+$$ \kGbar (\kP, \kT) = \dfrac{\kG(n, \kP, \kT)}{n} = \kmu (\kP, \kT) \tag{23.4.5} $$
+<p>Moreover, the derivatives of $\kGbar$ are</p>
+$$ \left( \dfrac{\partial \kGbar}{\partial \kP} \right)_{\kT} = \kVbar, \: \: \: \: \: \: \: \left( \dfrac{\partial \kGbar}{\partial \kT} \right)_{\kP} = -\kSbar \tag{23.4.6} $$
+<p>Applying these results to the chemical potential condition in Equation 23.4.4, we obtain</p>
+$$ \begin{aligned} \left( \dfrac{\partial \kGbaralpha}{\partial \kP} \right)_{\kT} d\kP + \left( \dfrac{\partial \kGbaralpha}{\partial \kT} \right)_{\kP} d\kT &= \left( \dfrac{\partial \kGbarbeta}{\partial \kP} \right)_{\kT} d\kP + \left( \dfrac{\partial \kGbarbeta}{\partial \kT} \right)_{\kP} d\kT \\[5pt] \kVbaralpha d\kP - \kSbaralpha d\kT &= \kVbarbeta d\kP - \kSbarbeta d\kT \end{aligned} \tag{23.4.7} $$
+<p>Dividing through by $d\kT$, we obtain</p>
+$$ \begin{aligned} \kVbaralpha \dfrac{\partial \kP}{\partial \kT} - \kSbaralpha &= \kVbarbeta \dfrac{\partial \kP}{\partial \kT} - \kSbarbeta \\[5pt] (\kVbaralpha - \kVbarbeta) \dfrac{\partial \kP}{\partial \kT} &= \kSbaralpha - \kSbarbeta \\[5pt] \dfrac{d\kP}{d\kT} &= \dfrac{\kSbaralpha - \kSbarbeta}{\kVbaralpha - \kVbarbeta} \end{aligned} \tag{23.4.8} $$
+<p>The importance of the quantity $d\kP/d\kT$ is that is represents the slope of the coexistence curve on the phase diagram between the two phases. Now, in equilibrium $d\kG = 0$, and since $\kG = \kHenth - \kT \kSent$, it follows that $d\kHenth = \kT \: d\kSent$ at fixed $\kT$. In the narrow temperature range in which the two phases are in equilibrium, we can assume that $\kHenth$ is independent of $\kT$, hence, we can write $\kSent = \kHenth/\kT$. Consequently, we can write the molar entropy difference as</p>
+$$ \kSbaralpha - \kSbarbeta = \dfrac{\kHbaralpha - \kHbarbeta}{\kT} \tag{23.4.9} $$
+<p>and the pressure derivative $d\kP/d\kT$ becomes</p>
+$$ \dfrac{d\kP}{d\kT} = \dfrac{\kHbaralpha - \kHbarbeta}{\kT (\kVbaralpha - \kVbarbeta)} = \dfrac{\kDeltaabHbar}{\kT \kDeltaabVbar} \tag{23.4.10} $$
+<p>a result known as the <strong><a class="xref" href="#23.3-drv-clapeyron">Clapeyron equation</a></strong>, which tells us that the slope of the coexistence curve is related to the ratio of the molar enthalpy between the phases to the change in the molar volume between the phases. If the phase equilibrium is between the solid and liquid phases, then $\kDeltaabHbar$ and $\kDeltaabVbar$ are $\kDeltaHbarfus$ and $\kDeltaVbarfus$, respectively. If the phase equilibrium is between the liquid and gas phases, then $\kDeltaabHbar$ and $\kDeltaabVbar$ are $\kDeltaHbarvap$ and $\kDeltaVbarvap$, respectively.</p>
+<p>For the liquid-gas equilibrium, some interesting approximations can be made in the use of the Clapeyron equation. For this equilibrium, Equation 23.4.10 becomes</p>
+$$ \dfrac{d\kP}{d\kT} = \dfrac{\kDeltaHbarvap}{\kT (\kVbarg - \kVbarl)} \tag{23.4.11} $$
+<p>In this case, $\kVbarg \gg \kVbarl$, and we can approximate Equation 23.4.11 as</p>
+$$ \dfrac{d\kP}{d\kT} \approx \dfrac{\kDeltaHbarvap}{\kT \kVbarg} \tag{23.4.12} $$
+<p>Suppose that we can treat the vapor phase as an ideal gas. Certainly, this is not a good approximation so close to the vaporization point, but it leads to an example we can integrate. Since $\kP V_g = n\kR \kT$, $\kP \kVbarg = \kR \kT$, Equation 23.4.12 becomes</p>
+$$ \begin{aligned} \dfrac{d\kP}{d\kT} &= \dfrac{\kDeltaHbarvap \kP}{\kR \kT^2} \\[5pt] \dfrac{1}{\kP} \dfrac{d\kP}{d\kT} &= \dfrac{\kDeltaHbarvap}{\kR \kT^2} \\[5pt] \dfrac{d \: \text{ln} \: \kP}{d\kT} &= \dfrac{\kDeltaHbarvap}{\kR \kT^2} \end{aligned} \tag{23.4.13} $$
+<p>which is called the <strong><em><a class="xref" href="#23.4-drv-clausius-clapeyron">Clausius-Clapeyron equation</a></em></strong>.</p>
+<figure class="dv" id="drv-integrated-clausius-clapeyron"></figure>
+<p>which actually has the wrong curvature for large $\kT$, but since the liquid-vapor coexistence line terminates in a <span data-concept="critical-point">critical point</span>, as long as $\kT$ is not too large, the approximation leading to the above expression is not that bad.</p>
+<p>assuming that $\kDeltaHbarvap$ is independent of $\kT$. Here $\kPone$ is the pressure of the liquid phase, and $\kPtwo$ is the pressure of the vapor phase.<sup class="fn" data-note="c-p1-p2"></sup> Suppose we know $\kPtwo$ at a temperature $\kTtwo$, and we want to know $\kPthree$ at another temperature $\kTthree$.</p>
+<p>so that we can determine <span data-concept="clausius-clapeyron-estimates">the vapor pressure at any temperature if it is known as one temperature</span>.</p>
+<p>In order to illustrate the use of this result, consider the following example:</p>
+<div class="example" id="ex-23-4-1">
+<h3>Example 23.4.1</h3>
+<p>At $1 \: \text{bar}$, the boiling point of water is $373 \: \text{K}$. At what pressure does water boil at $473 \: \text{K}$? Take the heat of vaporization of water to be $40.65 \: \text{kJ/mol}$.</p>
+<h4>Solution</h4>
+<p>Let $P_1 = 1 \: \text{bar}$ and $T_1 = 373 \: \text{K}$. Take $T_2 = 473 \: \text{K}$, and we need to calculate $P_2$. Substituting in the numbers, we find</p>
+$$ \begin{aligned} \text{ln} \: P_2(\text{bar}) &= -\dfrac{(40.65 \: \text{kJ/mol})(1000 \: \text{J/kJ})}{8.3145 \: \text{J/mol} \cdot \text{K}} \left( \dfrac{1}{473 \: \text{K}} - \dfrac{1}{373 \: \text{K}} \right) = 2.77 \\[5pt] P_2(\text{bar}) &= (1 \: \text{bar}) \: e^{2.77} = 16 \: \text{bar} \end{aligned} \tag{23.4.17} $$
+</div>
+</section>
+
+<section id="vapor-pressure-curves">
+<h2>Vapor pressure curves</h2>
+<p><span data-concept="vapor-pressure-curve">The <em>vaporization curve</em>s of most liquids have similar shapes with the vapor pressure steadily increasing as the temperature increases</span> (<a class="figref" href="#23.4-sim-vapor-pressure">Figure 23.4.1</a>).</p>
+<figure class="sim" id="sim-vapor-pressure" data-figure="23.4.1" data-original="/media/ch23/125762-imageedit_3_4342158846.png" data-original-caption="The Vapor Pressures of Several Liquids as a Function of Temperature. The point at which the vapor pressure curve crosses the $P$ = 1 atm line (dashed) is the normal boiling point of the liquid. (CC BY-SA-NC 3.0; Anonymous)">
+  <div class="sim-head"><span class="eyebrow">Figure 23.4.1</span><span>Pick a liquid and slide <span data-type="temperature">the temperature</span>. On the left its <span data-type="pressure">vapor pressure</span> climbs ever faster; on the right the same points lie on a straight line, and the liquids with the steeper lines have the larger <span data-concept="enthalpy-of-vaporization">enthalpy of vaporization</span>.</span></div>
+</figure>
+<p>A good approach is to find a mathematical model for the pressure increase as a function of temperature. Experiments showed that the vapor pressure $\kP$ and temperature $\kT$ are related,</p>
+$$ \kP \propto \exp \left(- \dfrac{\kDeltaHvap}{\kR \kT}\right) \ \tag{23.4.18} $$
+<p>where $\kDeltaHvap$ is the <span data-concept="enthalpy-of-vaporization">Enthalpy (heat) of Vaporization</span> and $\kR$ is the gas constant (8.3145 J mol<sup>-1</sup> K<sup>-1</sup>).</p>
+<p>A simple relationship can be found by integrating Equation 23.4.18 between two pressure-temperature endpoints:</p>
+$$ \ln \left( \dfrac{\kPone}{\kPtwo} \right) = \dfrac{\kDeltaHvap}{\kR} \left( \dfrac{1}{\kTtwo}- \dfrac{1}{\kTone} \right) \tag{23.4.19} $$
+<p>where $\kPone$ and $\kPtwo$ are the vapor pressures at two temperatures $\kTone$ and $\kTtwo$. Equation 23.4.19 is known as the <strong><span data-concept="integrated-clausius-clapeyron">Clausius-Clapeyron Equation</span></strong> and allows us to estimate the vapor pressure at another temperature, if the vapor pressure is known at some temperature, and if the enthalpy of vaporization is known.</p>
+<div class="note">
+<div class="eyebrow">Note</div>
+<h3>Alternative Formulation</h3>
+<p>The order of the temperatures in Equation 23.4.19 matters as the Clausius-Clapeyron Equation is sometimes written with a negative sign (and switched order of temperatures):</p>
+$$ \ln \left( \dfrac{\kPone}{\kPtwo} \right) = - \dfrac{\kDeltaHvap}{\kR} \left( \dfrac{1}{\kTone}- \dfrac{1}{\kTtwo} \right) \tag{23.4.20} $$
+</div>
+<div class="example" id="ex-23-4-1-2">
+<h3>Example 23.4.1 · Vapor Pressure of Water<sup class="fn" data-note="c-second-example"></sup></h3>
+<p>The vapor pressure of water is 1.0 atm at 373 K, and the enthalpy of vaporization is 40.7 kJ mol<sup>-1</sup>. Estimate the vapor pressure at temperature 363 and 383 K respectively.</p>
+<h4>Solution</h4>
+<p>Using the Clausius-Clapeyron equation (Equation 23.4.20), we have:</p>
+$$ \begin{aligned} P_{363} &= 1.0 \exp \left[- \left(\dfrac{40,700}{8.3145}\right) \left(\dfrac{1}{363\;K} -\dfrac{1}{373\; K}\right) \right]  \\[4pt] &= 0.697\; \text{atm}  \end{aligned} $$
+$$ \begin{aligned} P_{383} &= 1.0 \exp \left[- \left( \dfrac{40,700}{8.3145} \right)\left(\dfrac{1}{383\;K} - \dfrac{1}{373\;K} \right) \right]  \\[4pt] &= 1.409\; \text{atm}  \end{aligned} $$
+<p>Note that the increase in vapor pressure from 363 K to 373 K is 0.303 atm, but the increase from 373 to 383 K is 0.409 atm. The increase in vapor pressure is not a linear process.</p>
+<h4>Discussion</h4>
+<p>We can use the Clausius-Clapeyron equation to construct the entire vaporization curve. There is a deviation from experimental value, that is because the enthalpy of vaporization varies slightly with temperature.</p>
+</div>
+<p>The <span data-concept="clausius-clapeyron-equation">Clausius-Clapeyron equation</span> can be also applied to <span data-concept="sublimation-enthalpy-sum">sublimation</span>; the following example shows its application in estimating the heat of sublimation.</p>
+<div class="example" id="ex-23-4-2">
+<h3>Example 23.4.2 · Sublimation of Ice</h3>
+<p>The vapor pressures of ice at 268 K and 273 K are 2.965 and 4.560 torr respectively. Estimate the heat of sublimation of ice.</p>
+<h4>Solution</h4>
+<p>The enthalpy of sublimation is $\Delta{H}_{sub}$. Use a piece of paper and derive the Clausius-Clapeyron equation so that you can get the form:</p>
+$$ \begin{aligned} \Delta H_{sub} &= \dfrac{ R \ln \left(\dfrac{P_{273}}{P_{268}}\right)}{\dfrac{1}{268 \;K} - \dfrac{1}{273\;K}} \\[4pt] &= \dfrac{8.3145 \ln \left(\dfrac{4.560}{2.965} \right)}{ \dfrac{1}{268\;\text{K}} - \dfrac{1}{273\;\text{K}} } \\[4pt] &= 52,370\; \text{J mol}^{-1} \end{aligned} $$
+<p>Note that the heat of sublimation is the sum of heat of melting (6,006 J/mol at 0°C and 101 kPa) and the heat of vaporization (45,051 J/mol at 0 °C).</p>
+</div>
+<div class="example" id="ex-23-4-3">
+<h3>Example 23.4.3 · Vaporization of Ethanol</h3>
+<p>Calculate $\Delta{H_{vap}}$ for ethanol, given vapor pressure at 40 <sup>o</sup>C = 150 torr. The normal boiling point for ethanol is 78 <sup>o</sup>C.</p>
+<h4>Solution</h4>
+<p>Recognize that we have TWO sets of $(P,T)$ data:</p>
+<ul><li>Set 1: (150 torr at 40+273K)</li><li>Set 2: (760 torr at 78+273K)</li></ul>
+<p>We then directly use these data in Equation 23.4.20</p>
+$$ \begin{aligned} \ln \left(\dfrac{150}{760} \right) &= \dfrac{-\Delta{H_{vap}}}{8.314} \left[ \dfrac{1}{313} - \dfrac{1}{351}\right] \\[4pt] \ln 150 -\ln 760 &= \dfrac{-\Delta{H_{vap}}}{8.314} \left[ \dfrac{1}{313} - \dfrac{1}{351}\right] \\[4pt] -1.623 &= \dfrac{-\Delta{H_{vap}}}{8.314} \left[ 0.0032 - 0.0028 \right] \end{aligned} $$
+<p>Then solving for $\Delta{H_{vap}}$<sup class="fn" data-note="c-ethanol-rounding"></sup></p>
+$$ \begin{aligned} \Delta{H_{vap}} &= 3.90 \times 10^4 \text{ J/mol} \\[4pt] &= 39.0 \text{ kJ/mol} \end{aligned} $$
+</div>
+<div class="note">
+<div class="eyebrow">Note</div>
+<h3>Advanced Note</h3>
+<p>It is important to not use the Clausius-Clapeyron equation for the solid to liquid transition. That requires the use of the more general <strong><span data-concept="clapeyron-equation">Clapeyron equation</span></strong></p>
+$$ \dfrac{d\kP}{d\kT} = \dfrac{\kDeltaHbar}{\kT \kDeltaVbar} $$
+<p>where $\kDeltaHbar$ and $\kDeltaVbar$ is the molar change in enthalpy (the enthalpy of fusion in this case) and volume respectively between the two phases in the transition.</p>
+</div>
+</section>

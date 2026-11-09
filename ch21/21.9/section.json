@@ -49,14 +49,14 @@
     "at": "end"
    },
    "cite": "products-minus-reactants",
-   "prompt": "<p>Use the table of standard entropies to find $\\Delta_{rxn}S^\\circ$ for the reverse of the combustion, $2\\,\\mathrm{H_2O}(g) + \\mathrm{CO_2}(g) \\rightarrow \\mathrm{CH_4}(g) + 2\\,\\mathrm{O_2}(g)$.</p>",
+   "prompt": "<p>Use the table of standard entropies to find $\\kDeltarxnS$ for the reverse of the combustion, $2\\,\\mathrm{H_2O}(g) + \\mathrm{CO_2}(g) \\rightarrow \\mathrm{CH_4}(g) + 2\\,\\mathrm{O_2}(g)$.</p>",
    "answer": {
     "type": "number",
     "value": 5.08,
     "unit": "J/(mol·K)",
     "generated_by": "ai",
     "hint": "$\\mathrm{CH_4}$ and $\\mathrm{O_2}$ are now the products.",
-    "solution": "<p>$\\Delta_{rxn}S^\\circ = [1(186.25) + 2(205.15)] - [2(188.84) + 1(213.79)] = 596.55 - 591.47 = +5.08$ J/(mol·K). Reversing a reaction swaps its products and reactants, so $\\Delta_{rxn}S^\\circ$ keeps its size and changes sign.</p>"
+    "solution": "<p>$\\kDeltarxnS = [1(186.25) + 2(205.15)] - [2(188.84) + 1(213.79)] = 596.55 - 591.47 = +5.08$ J/(mol·K). Reversing a reaction swaps its products and reactants, so $\\kDeltarxnS$ keeps its size and changes sign.</p>"
    }
   }
  ],

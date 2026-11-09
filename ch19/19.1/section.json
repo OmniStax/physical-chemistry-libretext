@@ -208,13 +208,13 @@
     {
      "assumes": [
       {
-       "tex": "\\kppress = \\dfrac{\\kR\\kT}{\\kV}",
+       "tex": "\\kppress(\\kV,\\kT) = \\dfrac{\\kR\\kT}{\\kV}",
        "src": "16.1",
        "drv": "16.1/ideal-gas-law"
       }
      ],
      "then": {
-      "tex": "\\mk{l}{\\kppress} = \\mk{r}{\\dfrac{\\kR\\kT}{\\kV}}"
+      "tex": "\\mk{l}{\\kppress(\\kV,\\kT)} = \\mk{r}{\\dfrac{\\kR\\kT}{\\kV}}"
      },
      "steps": [
       {
@@ -229,13 +229,13 @@
     {
      "assumes": [
       {
-       "tex": "\\kppress = \\dfrac{\\kR\\kT}{\\kV}",
+       "tex": "\\kppress(\\kV,\\kT) = \\dfrac{\\kR\\kT}{\\kV}",
        "src": "16.1",
        "drv": "16.1/ideal-gas-law"
       }
      ],
      "then": {
-      "tex": "\\mk{l}{\\kppress} = \\mk{r}{\\dfrac{\\kR\\kT}{\\kV}}"
+      "tex": "\\mk{l}{\\kppress(\\kV,\\kT)} = \\mk{r}{\\dfrac{\\kR\\kT}{\\kV}}"
      },
      "steps": [
       {

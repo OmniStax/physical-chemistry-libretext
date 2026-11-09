@@ -131,7 +131,7 @@
        "uses": [
         1
        ],
-       "cap": "At a single temperature the change in $TS$ is $T_{trs}\\,\\Delta_{trs}S$."
+       "cap": "At a single temperature the change in $\\kT\\kSent$ is $\\kTtrs\\,\\kDeltatrsS$."
       },
       {
        "tex": "\\mk{g}{0} = \\mk{h}{Δ_{trs}\\kHenth} - \\mk{ts}{\\kTtrs Δ_{trs}\\kSent}",

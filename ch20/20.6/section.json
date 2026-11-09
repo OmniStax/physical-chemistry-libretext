@@ -176,7 +176,8 @@
      "assumes": [
       {
        "tex": "\\Delta \\kSent = \\knmol R \\ln \\left(\\dfrac{\\kVb}{\\kVa}\\right)",
-       "src": "(20.6.1), (20.6.2)"
+       "src": "(20.6.1), (20.6.2)",
+       "drv": "20.3/two-paths"
       },
       {
        "text": "At the same pressure and temperature, the amount of each gas is proportional to the volume it fills, so $\\kVtot/\\kVA = \\kntot/\\knA$ and $\\kVtot/\\kVB = \\kntot/\\knB$.",
@@ -204,7 +205,8 @@
      "assumes": [
       {
        "tex": "\\Delta \\kSent = \\knmol R \\ln \\left(\\dfrac{\\kVb}{\\kVa}\\right)",
-       "src": "(20.6.1), (20.6.2)"
+       "src": "(20.6.1), (20.6.2)",
+       "drv": "20.3/two-paths"
       },
       {
        "text": "At the same pressure and temperature, the amount of each gas is proportional to the volume it fills, so $\\kVtot/\\kVA = \\kntot/\\knA$ and $\\kVtot/\\kVB = \\kntot/\\knB$.",
@@ -310,7 +312,8 @@
        "uses": [
         1,
         2
-       ]
+       ],
+       "cap": "Equation 20.6.3 can be simplified using mole fractions."
       },
       {
        "tex": "\\mk{s}{\\dfrac{\\Delta \\kSent}{\\kntot}} = -R\\left[\\mk{b}{\\chi_B \\ln \\chi_B} + \\mk{a}{\\chi_A \\ln \\chi_A}\\right]",

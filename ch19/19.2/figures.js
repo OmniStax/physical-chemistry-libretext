@@ -56,7 +56,7 @@ const { tex, C, PAL, alpha, ctl, register, begin, line, dot, text, topline, axes
     text(ctx, '1', ax.X(V1) + 14, ax.Y(P1) - 14, PAL.ink, { size: 22, weight: 600 });
     if (!same) text(ctx, '2', ax.X(V2) + 14, ax.Y(pe) - 14, PAL.ink, { size: 22, weight: 600 });
     text(ctx, 'isotherm', ax.X(2.2) - 10, ax.Y(NRT / 2.2) - 16, alpha(cp, 0.8), { size: 20, align: 'center' });
-    if (!same) text(ctx, `|w| = ${fmt(Math.abs(wJ), 0)} J`, ax.X((lo + hi) / 2), ax.Y(pe / 2) + 7, cw, { size: 20, weight: 600, align: 'center', bg: true });
+    if (!same) text(ctx, `|w| = ${fmt(Math.abs(wJ), 0)} J`, ax.X((lo + hi) / 2), ax.Y(pe / 2) + 7, cw, { size: 20, weight: 600, align: 'center', bg: PAL.panel });
     hits.push({ x: ax.X(V1), y: ax.Y(P1), r: 14, name: 'state 1: 1.00 L, 1.00 bar' });
     hits.push({ x: ax.X(V2), y: ax.Y(pe), r: 14, name: `state 2: ${fmt(V2, 2)} L, ${fmt(pe, 2)} bar` });
     hits.push({ x: ax.X(1.8), y: ax.Y(NRT / 1.8), r: 14, name: 'the isotherm, the gas\'s own pressure at its starting temperature' });

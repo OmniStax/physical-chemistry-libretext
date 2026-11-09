@@ -1,0 +1,387 @@
+{
+ "id": "23.4",
+ "module": "14500",
+ "chapter": "23",
+ "title": "The Clausius-Clapeyron Equation",
+ "short": "Clausius-Clapeyron equation",
+ "lead": "Applied to a liquid and its vapor, the Clapeyron equation simplifies because the vapor takes up far more room than the liquid and behaves nearly as an ideal gas. The result ties how fast a vapor pressure rises with temperature to the enthalpy of vaporization.",
+ "objectives": [
+  "Apply the Clausius-Clapeyron equation to estimate the vapor pressure at any temperature.",
+  "Estimate the heat of phase transition from the vapor pressures measured at two temperatures."
+ ],
+ "summary_html": "",
+ "notes": "Figure 23.4.1 is shared under its printed licence, CC BY-NC-SA 3.0, from an anonymous author; its liquids' boiling points and enthalpies of vaporization other than water's and ethanol's are read off that figure.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "Exercise 23.4.2 is the book's and prints no answer, so its solution is written by AI, using the triple point from Section 23.1 and the heats in Example 23.4.2. Its Bloom level and concept tags were chosen by AI.",
+ "figures": [
+  {
+   "id": "sim-vapor-pressure",
+   "kind": "sim",
+   "number": "23.4.1",
+   "originals": [
+    "/media/ch23/125762-imageedit_3_4342158846.png"
+   ],
+   "original_caption": "The Vapor Pressures of Several Liquids as a Function of Temperature. The point at which the vapor pressure curve crosses the $P$ = 1 atm line (dashed) is the normal boiling point of the liquid. (CC BY-SA-NC 3.0; Anonymous)",
+   "draws": [
+    "pressure",
+    "temperature",
+    "energy"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "evaporation",
+   "concept": "clausius-clapeyron-equation",
+   "verb": "introduces"
+  },
+  {
+   "span": "evaporation",
+   "concept": "integrated-clausius-clapeyron",
+   "verb": "introduces"
+  },
+  {
+   "span": "evaporation",
+   "concept": "enthalpy-of-vaporization",
+   "verb": "introduces"
+  },
+  {
+   "span": "evaporation",
+   "concept": "clapeyron-equation",
+   "verb": "uses"
+  },
+  {
+   "span": "evaporation",
+   "concept": "ideal-gas-law",
+   "verb": "uses"
+  },
+  {
+   "span": "the-clapeyron-equation",
+   "concept": "phase-equilibrium-chemical-potential",
+   "verb": "reinforces"
+  },
+  {
+   "span": "the-clapeyron-equation",
+   "concept": "chemical-potential-pure-substance",
+   "verb": "reinforces"
+  },
+  {
+   "span": "the-clapeyron-equation",
+   "concept": "gibbs-first-derivatives",
+   "verb": "uses"
+  },
+  {
+   "span": "the-clapeyron-equation",
+   "concept": "clapeyron-equation",
+   "verb": "reinforces"
+  },
+  {
+   "span": "the-clapeyron-equation",
+   "concept": "clausius-clapeyron-equation",
+   "verb": "reinforces"
+  },
+  {
+   "span": "the-clapeyron-equation",
+   "concept": "integrated-clausius-clapeyron",
+   "verb": "reinforces"
+  },
+  {
+   "span": "the-clapeyron-equation",
+   "concept": "clausius-clapeyron-estimates",
+   "verb": "introduces"
+  },
+  {
+   "span": "vapor-pressure-curves",
+   "concept": "vapor-pressure-curve",
+   "verb": "introduces"
+  },
+  {
+   "span": "vapor-pressure-curves",
+   "concept": "sublimation-enthalpy-sum",
+   "verb": "introduces"
+  },
+  {
+   "span": "vapor-pressure-curves",
+   "concept": "integrated-clausius-clapeyron",
+   "verb": "reinforces"
+  },
+  {
+   "span": "vapor-pressure-curves",
+   "concept": "enthalpy-of-vaporization",
+   "verb": "reinforces"
+  },
+  {
+   "span": "vapor-pressure-curves",
+   "concept": "normal-and-standard-transition-points",
+   "verb": "uses"
+  },
+  {
+   "span": "vapor-pressure-curves",
+   "concept": "clausius-clapeyron-estimates",
+   "verb": "reinforces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "e1",
+   "source_id": "exr:23.4.2",
+   "source_number": "Exercise 23.4.2",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "vapor-pressure-curves",
+   "prompt": "<p>Show that the vapor pressure of ice at 274 K is higher than that of water at the same temperature. Note the curve of vaporization is also called the curve of vaporization.<sup class=\"fn\" data-note=\"c-curve-name\"></sup></p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "Both curves pass through the triple point, 273.16 K and 4.58 Torr. Run the Clausius-Clapeyron equation from there to 274 K, with the heat of sublimation for ice and the heat of vaporization for water.",
+    "solution": "<p>Ice and liquid water have the same vapor pressure at the triple point, $\\kTone = 273.16$ K and $\\kPone = 4.58$ Torr. From there, $\\ln(\\kPtwo/\\kPone) = -(\\kDeltaHvap/\\kR)(1/\\kTtwo - 1/\\kTone)$ with $\\kTtwo = 274$ K, where $1/274 - 1/273.16 = -1.122\\times10^{-5}$ K⁻¹. For water, with 45 051 J/mol, the exponent is $0.0608$ and $\\kPtwo = 4.867$ Torr. For ice, the heat of sublimation is $6006 + 45\\,051 = 51\\,057$ J/mol, the exponent is $0.0689$ and $\\kPtwo = 4.907$ Torr. Dividing the two,</p>$$ \\dfrac{P_{ice}}{P_{water}} = \\exp\\left[\\dfrac{6006\\ \\text{J/mol}}{8.314\\ \\text{J/(mol K)}}\\left(\\dfrac{1}{273.16\\ \\text{K}} - \\dfrac{1}{274\\ \\text{K}}\\right)\\right] = 1.008 $$<p>so above the triple point ice has the higher vapor pressure. The sublimation curve is steeper because the heat of sublimation exceeds the heat of vaporization by the heat of fusion, and that is why ice above 273.16 K turns to liquid.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "e1",
+   "concept": "clausius-clapeyron-estimates"
+  },
+  {
+   "exercise": "e1",
+   "concept": "sublimation-enthalpy-sum"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-p1-p2",
+   "kind": "correction",
+   "html": "$\\kPone$ and $\\kPtwo$ are both vapor pressures, the pressures of the vapor in equilibrium with the liquid at $\\kTone$ and at $\\kTtwo$."
+  },
+  {
+   "id": "c-second-example",
+   "kind": "correction",
+   "html": "The book prints this second example under the same number as the first, Example 23.4.1."
+  },
+  {
+   "id": "c-ethanol-rounding",
+   "kind": "correction",
+   "html": "With the bracket rounded to $0.0032 - 0.0028 = 0.0004$ K⁻¹ the result would be 33.7 kJ/mol. The printed 39.0 kJ/mol comes from the unrounded difference, $1/313 - 1/351 = 3.459\\times10^{-4}$ K⁻¹."
+  },
+  {
+   "id": "c-curve-name",
+   "kind": "correction",
+   "html": "As printed, the sentence names the same curve twice. The curve for ice is the sublimation curve; the curve for water is the vaporization curve."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "clausius-clapeyron",
+   "what": "the Clausius–Clapeyron equation",
+   "source": "Physical Chemistry (LibreTexts), 23.4 The Clausius-Clapeyron Equation",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\dfrac{d\\kP}{d\\kT} = \\dfrac{\\kDeltaHmolar}{\\kT\\kDeltaVmolar}",
+       "src": "23.3",
+       "drv": "23.3/clapeyron"
+      },
+      {
+       "text": "For vaporization, $\\kDeltaHmolar$ is the molar enthalpy of vaporization $\\kDeltaHmolarvap$, and $\\kDeltaVmolar = \\kVmolargas-\\kVmolarliquid$."
+      },
+      {
+       "tex": "\\kVmolargas \\gg \\kVmolarliquid"
+      },
+      {
+       "tex": "\\kVmolargas = \\dfrac{\\kR\\kT}{\\kP}",
+       "src": "16.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\dfrac{d\\kP}{d\\kT}} = \\mk{r}{\\dfrac{\\kDeltaHmolar}{\\kT\\kDeltaVmolar}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\dfrac{d\\kP}{d\\kT}} = \\mk{r}{\\dfrac{\\kDeltaHmolarvap}{\\kT\\left[\\kVmolargas-\\kVmolarliquid\\right]}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{l}{\\dfrac{d\\kP}{d\\kT}} = \\mk{r}{\\dfrac{\\kDeltaHmolarvap}{\\kT\\kVmolargas}}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{l}{\\dfrac{d\\kP}{d\\kT}} = \\mk{r}{\\dfrac{\\kDeltaHmolarvap\\kP}{\\kR\\kT^2}}",
+       "uses": [
+        3
+       ]
+      },
+      {
+       "tex": "\\mk{l}{\\dfrac{1}{\\kP}\\dfrac{d\\kP}{d\\kT}} = \\mk{r}{\\dfrac{\\kDeltaHmolarvap}{\\kR\\kT^2}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{l}{\\dfrac{d \\ln \\kP}{d\\kT}} = \\mk{r}{\\dfrac{\\kDeltaHmolarvap}{\\kR\\kT^2}}",
+       "uses": [],
+       "cap": "$d\\ln \\kP = d\\kP/\\kP$."
+      }
+     ],
+     "num": "(23.4.1)",
+     "src": "23.4",
+     "note": "The book prints $\\dfrac{\\Delta H_{molar}}{T}\\left[V_{molar}^{gas}-V_{molar}^{liquid}\\right]$, with the volume difference multiplying. It divides: $\\dfrac{\\Delta H_{molar}}{T\\left[V_{molar}^{gas}-V_{molar}^{liquid}\\right]}$."
+    }
+   ]
+  },
+  {
+   "id": "integrated-clausius-clapeyron",
+   "what": "the integrated Clausius–Clapeyron equation",
+   "source": "Physical Chemistry (LibreTexts), 23.4 The Clausius-Clapeyron Equation",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\dfrac{d \\ln \\kP}{d\\kT} = \\dfrac{\\kDeltaHbarvap}{\\kR\\kT^2}",
+       "src": "(23.4.13)",
+       "drv": "clausius-clapeyron"
+      },
+      {
+       "text": "$\\kDeltaHbarvap$ is independent of $\\kT$."
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\dfrac{d \\ln \\kP}{d\\kT}} = \\mk{r}{\\dfrac{\\kDeltaHbarvap}{\\kR\\kT^2}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{d \\ln \\kP} = \\mk{r}{\\dfrac{\\kDeltaHbarvap}{\\kR\\kT^2}d\\kT}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{l}{\\ln \\kP} = \\mk{r}{-\\dfrac{\\kDeltaHbarvap}{\\kR\\kT} + C}",
+       "uses": [
+        1
+       ],
+       "cap": "Integrating both sides; with $\\kDeltaHbarvap$ constant, $1/\\kT^2$ integrates to $-1/\\kT$, and $C$ is a constant of integration."
+      },
+      {
+       "tex": "\\mk{l}{\\kP(\\kT)} = \\mk{r}{C' e^{-\\kDeltaHbarvap/\\kR\\kT}}",
+       "uses": [],
+       "cap": "Exponentiating both sides, with $C' = e^{C}$."
+      }
+     ],
+     "src": "23.4"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\dfrac{d \\ln \\kP}{d\\kT} = \\dfrac{\\kDeltaHbarvap}{\\kR\\kT^2}",
+       "src": "(23.4.13)",
+       "drv": "clausius-clapeyron"
+      },
+      {
+       "text": "$\\kDeltaHbarvap$ is independent of $\\kT$."
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\int_{\\kPone}^{\\kPtwo} d \\ln \\kP} = \\mk{r}{\\int_{\\kTone}^{\\kTtwo} \\dfrac{\\kDeltaHbarvap}{\\kR\\kT^2} d\\kT}",
+      "uses": [
+       0
+      ],
+      "why": "Both sides integrated, the left from $\\kPone$ to $\\kPtwo$ and the right from $\\kTone$ to $\\kTtwo$."
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\ln\\left(\\dfrac{\\kPtwo}{\\kPone}\\right)} = \\mk{r}{-\\dfrac{\\kDeltaHbarvap}{\\kR}\\left(\\dfrac{1}{\\kTtwo} - \\dfrac{1}{\\kTone}\\right)}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{l}{\\ln\\left(\\dfrac{\\kPtwo}{\\kPone}\\right)} = \\mk{r}{-\\dfrac{\\kDeltaHbarvap}{\\kR}\\left(\\dfrac{1}{\\kTtwo} - \\dfrac{1}{\\kTone}\\right)} = \\mk{s}{\\dfrac{\\kDeltaHbarvap}{\\kR}\\left(\\dfrac{\\kTtwo - \\kTone}{\\kTone\\kTtwo}\\right)}",
+       "uses": []
+      }
+     ],
+     "num": "(23.4.14)",
+     "src": "23.4",
+     "note": "The book's last line prints $\\left(\\dfrac{T_1 - T_1}{T_1T_2}\\right)$, which is zero; the numerator is $T_2 - T_1$."
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\ln\\left(\\dfrac{\\kPtwo}{\\kPone}\\right)} = \\mk{r}{-\\dfrac{\\kDeltaHbarvap}{\\kR}\\left(\\dfrac{1}{\\kTtwo} - \\dfrac{1}{\\kTone}\\right)}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\ln\\left(\\dfrac{\\kPthree}{\\kPone}\\right)} = \\mk{r}{-\\dfrac{\\kDeltaHbarvap}{\\kR}\\left(\\dfrac{1}{\\kTthree} - \\dfrac{1}{\\kTone}\\right)}",
+       "uses": [],
+       "cap": "The result holds for any second temperature, so $\\kPthree$ at $\\kTthree$ can stand in for $\\kPtwo$ at $\\kTtwo$."
+      }
+     ],
+     "num": "(23.4.15)",
+     "src": "23.4"
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "step": 2
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\ln\\left(\\dfrac{\\kPtwo}{\\kPone}\\right) - \\ln\\left(\\dfrac{\\kPthree}{\\kPone}\\right)} = \\mk{r}{-\\dfrac{\\kDeltaHbarvap}{\\kR}\\left(\\dfrac{1}{\\kTtwo} - \\dfrac{1}{\\kTone}\\right) + \\dfrac{\\kDeltaHbarvap}{\\kR}\\left(\\dfrac{1}{\\kTthree} - \\dfrac{1}{\\kTone}\\right)}",
+      "uses": [
+       0,
+       1
+      ],
+      "why": "Equation 23.4.15 subtracted from Equation 23.4.14."
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\ln\\left(\\dfrac{\\kPtwo}{\\kPthree}\\right)} = \\mk{r}{-\\dfrac{\\kDeltaHbarvap}{\\kR}\\left(\\dfrac{1}{\\kTtwo} - \\dfrac{1}{\\kTone}\\right) + \\dfrac{\\kDeltaHbarvap}{\\kR}\\left(\\dfrac{1}{\\kTthree} - \\dfrac{1}{\\kTone}\\right)}",
+       "uses": [],
+       "cap": "A difference of logarithms is the logarithm of the quotient."
+      },
+      {
+       "tex": "\\mk{l}{\\ln\\left(\\dfrac{\\kPtwo}{\\kPthree}\\right)} = \\mk{r}{-\\dfrac{\\kDeltaHbarvap}{\\kR}\\left(\\dfrac{1}{\\kTtwo} - \\dfrac{1}{\\kTthree}\\right)}",
+       "uses": []
+      }
+     ],
+     "num": "(23.4.16)",
+     "src": "23.4"
+    }
+   ]
+  }
+ ]
+}

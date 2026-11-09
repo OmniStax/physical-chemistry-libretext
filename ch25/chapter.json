@@ -1,0 +1,763 @@
+{
+  "id": "25",
+  "dir": "ch25",
+  "title": "Solutions II - Nonvolatile Solutes",
+  "sections": [
+    {
+      "id": "25.1",
+      "module": "14513",
+      "title": "Standard State of Nonvolatile Solutions",
+      "slug": "25:_Solutions_II_-_Nonvolatile_Solutes/25.01:_Standard_State_of_Nonvolatile_Solutions"
+    },
+    {
+      "id": "25.2",
+      "module": "14514",
+      "title": "The Activities of Nonvolatile Solutes",
+      "slug": "25:_Solutions_II_-_Nonvolatile_Solutes/25.02:_The_Activities_of_Nonvolatile_Solutes"
+    },
+    {
+      "id": "25.3",
+      "module": "14515",
+      "title": "Colligative Properties Depend only on Number Density",
+      "slug": "25:_Solutions_II_-_Nonvolatile_Solutes/25.03:_Colligative_Properties_Depend_only_on_Number_Density"
+    },
+    {
+      "id": "25.4",
+      "module": "14516",
+      "title": "Osmotic Pressure can Determine Molecular Masses",
+      "slug": "25:_Solutions_II_-_Nonvolatile_Solutes/25.04:_Osmotic_Pressure_can_Determine_Molecular_Masses"
+    },
+    {
+      "id": "25.5",
+      "module": "14517",
+      "title": "Electrolytes Solutions are Nonideal at Low Concentrations",
+      "slug": "25:_Solutions_II_-_Nonvolatile_Solutes/25.05:_Electrolytes_Solutions_are_Nonideal_at_Low_Concentrations"
+    },
+    {
+      "id": "25.6",
+      "module": "14518",
+      "title": "The Debye-Hückel Theory",
+      "slug": "25:_Solutions_II_-_Nonvolatile_Solutes/25.06:_The_Debye-Huckel_Theory"
+    },
+    {
+      "id": "25.7",
+      "module": "14519",
+      "title": "Extending Debye-Hückel Theory to Higher Concentrations",
+      "slug": "25:_Solutions_II_-_Nonvolatile_Solutes/25.07:_Extending_Debye-Huckel_Theory_to_Higher_Concentrations"
+    }
+  ],
+  "variables": [
+    {
+      "sym": "mu",
+      "concept": "chemical-potential",
+      "meaning": "the chemical potential of the substance or the mixture",
+      "unit": "J/mol",
+      "section": "25.2"
+    },
+    {
+      "sym": "mu_std",
+      "type": "energy",
+      "meaning": "the chemical potential at standard state",
+      "unit": "J/mol",
+      "section": "25.2"
+    },
+    {
+      "sym": "R",
+      "meaning": "the gas constant",
+      "unit": "J/(mol K)",
+      "section": "25.2"
+    },
+    {
+      "sym": "T",
+      "type": "temperature",
+      "meaning": "the temperature",
+      "unit": "K",
+      "section": "25.2"
+    },
+    {
+      "sym": "a",
+      "concept": "activity",
+      "type": null,
+      "meaning": "the activity of a liquid or a solid",
+      "section": "25.2"
+    },
+    {
+      "sym": "P_std",
+      "type": "pressure",
+      "meaning": "the standard pressure, 1 bar",
+      "unit": "bar",
+      "section": "25.2"
+    },
+    {
+      "sym": "mu_i_vapor",
+      "type": "energy",
+      "meaning": "the chemical potential of component i in the gas phase",
+      "unit": "J/mol",
+      "section": "25.2"
+    },
+    {
+      "sym": "mu_i_std",
+      "type": "energy",
+      "meaning": "the standard chemical potential of component i in the gas phase",
+      "unit": "J/mol",
+      "section": "25.2"
+    },
+    {
+      "sym": "P_i",
+      "type": "pressure",
+      "meaning": "the partial pressure of component i over the solution",
+      "unit": "bar",
+      "section": "25.2"
+    },
+    {
+      "sym": "mu_sln_i",
+      "type": "energy",
+      "meaning": "the chemical potential of component i in the solution",
+      "unit": "J/mol",
+      "section": "25.2"
+    },
+    {
+      "sym": "mu_star_i",
+      "type": "energy",
+      "meaning": "the chemical potential of pure component i",
+      "unit": "J/mol",
+      "section": "25.2"
+    },
+    {
+      "sym": "P_star_i",
+      "type": "pressure",
+      "meaning": "the vapor pressure of pure component i",
+      "unit": "bar",
+      "section": "25.2"
+    },
+    {
+      "sym": "x_i",
+      "concept": "mole-fraction",
+      "meaning": "the mole fraction of component i in the solution",
+      "section": "25.2"
+    },
+    {
+      "sym": "gamma_i",
+      "concept": "activity-coefficient",
+      "meaning": "the activity coefficient of component i",
+      "section": "25.2"
+    },
+    {
+      "sym": "a_i",
+      "concept": "activity",
+      "meaning": "the activity of component i, an effective mole fraction",
+      "section": "25.2"
+    },
+    {
+      "sym": "P_i_R",
+      "type": "pressure",
+      "meaning": "the partial pressure of component i calculated using Raoult's law",
+      "unit": "bar",
+      "section": "25.2"
+    },
+    {
+      "sym": "mu_1_s",
+      "type": "energy",
+      "meaning": "the chemical potential of the solvent in the solid",
+      "unit": "J/mol",
+      "section": "25.3"
+    },
+    {
+      "sym": "mu_1_sln",
+      "type": "energy",
+      "meaning": "the chemical potential of the solvent in the solution",
+      "unit": "J/mol",
+      "section": "25.3"
+    },
+    {
+      "sym": "mu_1_liqstar",
+      "type": "energy",
+      "meaning": "the chemical potential of the pure liquid solvent",
+      "unit": "J/mol",
+      "section": "25.3"
+    },
+    {
+      "sym": "R",
+      "meaning": "the gas constant",
+      "unit": "J/(mol K)",
+      "section": "25.3"
+    },
+    {
+      "sym": "T",
+      "type": "temperature",
+      "meaning": "the temperature",
+      "unit": "K",
+      "section": "25.3"
+    },
+    {
+      "sym": "a_1",
+      "concept": "activity",
+      "meaning": "the activity of the solvent",
+      "section": "25.3"
+    },
+    {
+      "sym": "Delta_mu_1",
+      "type": "energy",
+      "meaning": "the chemical potential of the pure liquid solvent less that of the solid, μ₁^liq* − μ₁ˢ",
+      "unit": "J/mol",
+      "section": "25.3"
+    },
+    {
+      "sym": "Delta_fusH_1",
+      "concept": "enthalpy-of-fusion",
+      "meaning": "the molar enthalpy of fusion of the solvent",
+      "unit": "J/mol",
+      "section": "25.3"
+    },
+    {
+      "sym": "x_1",
+      "concept": "mole-fraction",
+      "meaning": "the mole fraction of the solvent",
+      "section": "25.3"
+    },
+    {
+      "sym": "x_2",
+      "concept": "mole-fraction",
+      "meaning": "the mole fraction of the solute",
+      "section": "25.3"
+    },
+    {
+      "sym": "T_m_star",
+      "type": "temperature",
+      "meaning": "the melting point of the pure solvent",
+      "unit": "K",
+      "section": "25.3"
+    },
+    {
+      "sym": "T_m",
+      "type": "temperature",
+      "meaning": "the melting point of the solution",
+      "unit": "K",
+      "section": "25.3"
+    },
+    {
+      "sym": "Delta_T",
+      "concept": "freezing-point-depression",
+      "meaning": "the melting point depression, T_m* − T_m",
+      "unit": "K",
+      "section": "25.3"
+    },
+    {
+      "sym": "K_f",
+      "concept": "freezing-point-constant",
+      "meaning": "the solvent's melting point depression constant",
+      "unit": "K kg/mol",
+      "section": "25.3"
+    },
+    {
+      "sym": "m",
+      "type": null,
+      "meaning": "the molality of the solute",
+      "unit": "mol/kg",
+      "section": "25.3"
+    },
+    {
+      "sym": "Pi",
+      "concept": "osmotic-pressure",
+      "meaning": "the osmotic pressure",
+      "unit": "bar",
+      "section": "25.4"
+    },
+    {
+      "sym": "mu_star",
+      "type": "energy",
+      "meaning": "the chemical potential of the pure solvent",
+      "unit": "J/mol",
+      "section": "25.4"
+    },
+    {
+      "sym": "mu_sln",
+      "type": "energy",
+      "meaning": "the chemical potential of the solvent in the solution",
+      "unit": "J/mol",
+      "section": "25.4"
+    },
+    {
+      "sym": "T",
+      "type": "temperature",
+      "meaning": "the temperature",
+      "unit": "K",
+      "section": "25.4"
+    },
+    {
+      "sym": "P",
+      "concept": "pressure",
+      "meaning": "the pressure",
+      "unit": "bar",
+      "section": "25.4"
+    },
+    {
+      "sym": "R",
+      "meaning": "the gas constant",
+      "unit": "J/(mol K)",
+      "section": "25.4"
+    },
+    {
+      "sym": "a_1",
+      "concept": "activity",
+      "meaning": "the activity of the solvent",
+      "section": "25.4"
+    },
+    {
+      "sym": "G",
+      "concept": "gibbs-energy",
+      "meaning": "the Gibbs energy",
+      "unit": "J",
+      "section": "25.4"
+    },
+    {
+      "sym": "V",
+      "type": "volume",
+      "meaning": "the volume",
+      "unit": "m³",
+      "section": "25.4"
+    },
+    {
+      "sym": "V_bar_1_star",
+      "concept": "molar-volume",
+      "meaning": "the molar volume of the pure solvent",
+      "unit": "m³/mol",
+      "section": "25.4"
+    },
+    {
+      "sym": "x_1",
+      "concept": "mole-fraction",
+      "meaning": "the mole fraction of the solvent",
+      "section": "25.4"
+    },
+    {
+      "sym": "x_2",
+      "concept": "mole-fraction",
+      "meaning": "the mole fraction of the solute",
+      "section": "25.4"
+    },
+    {
+      "sym": "n_1",
+      "type": "amount",
+      "meaning": "the amount of solvent",
+      "unit": "mol",
+      "section": "25.4"
+    },
+    {
+      "sym": "n_2",
+      "type": "amount",
+      "meaning": "the amount of solute",
+      "unit": "mol",
+      "section": "25.4"
+    },
+    {
+      "sym": "c",
+      "type": null,
+      "meaning": "the molar concentration of the solute",
+      "unit": "mol/L",
+      "section": "25.4"
+    },
+    {
+      "sym": "nu_plus",
+      "concept": "salt-dissociation",
+      "meaning": "the stoichiometric coefficient of the cation",
+      "section": "25.5"
+    },
+    {
+      "sym": "nu_minus",
+      "concept": "salt-dissociation",
+      "meaning": "the stoichiometric coefficient of the anion",
+      "section": "25.5"
+    },
+    {
+      "sym": "z_plus",
+      "concept": "salt-dissociation",
+      "meaning": "the formal charge of the cation",
+      "section": "25.5"
+    },
+    {
+      "sym": "z_minus",
+      "concept": "salt-dissociation",
+      "meaning": "the formal charge of the anion",
+      "section": "25.5"
+    },
+    {
+      "sym": "nu",
+      "concept": "salt-dissociation",
+      "type": null,
+      "meaning": "the sum of the stoichiometric coefficients, ν₊ + ν₋",
+      "section": "25.5"
+    },
+    {
+      "sym": "mu_2",
+      "type": "energy",
+      "meaning": "the chemical potential of the salt",
+      "unit": "J/mol",
+      "section": "25.5"
+    },
+    {
+      "sym": "mu_2_std",
+      "type": "energy",
+      "meaning": "the standard chemical potential of the salt",
+      "unit": "J/mol",
+      "section": "25.5"
+    },
+    {
+      "sym": "mu_plus",
+      "type": "energy",
+      "meaning": "the chemical potential of the cation",
+      "unit": "J/mol",
+      "section": "25.5"
+    },
+    {
+      "sym": "mu_minus",
+      "type": "energy",
+      "meaning": "the chemical potential of the anion",
+      "unit": "J/mol",
+      "section": "25.5"
+    },
+    {
+      "sym": "mu_plus_std",
+      "type": "energy",
+      "meaning": "the standard chemical potential of the cation",
+      "unit": "J/mol",
+      "section": "25.5"
+    },
+    {
+      "sym": "mu_minus_std",
+      "type": "energy",
+      "meaning": "the standard chemical potential of the anion",
+      "unit": "J/mol",
+      "section": "25.5"
+    },
+    {
+      "sym": "R",
+      "meaning": "the gas constant",
+      "unit": "J/(mol K)",
+      "section": "25.5"
+    },
+    {
+      "sym": "T",
+      "type": "temperature",
+      "meaning": "the temperature",
+      "unit": "K",
+      "section": "25.5"
+    },
+    {
+      "sym": "a_2",
+      "concept": "activity",
+      "meaning": "the activity of the salt",
+      "section": "25.5"
+    },
+    {
+      "sym": "a_plus",
+      "concept": "activity",
+      "meaning": "the activity of the cation",
+      "section": "25.5"
+    },
+    {
+      "sym": "a_minus",
+      "concept": "activity",
+      "meaning": "the activity of the anion",
+      "section": "25.5"
+    },
+    {
+      "sym": "a_pm",
+      "concept": "mean-ionic-activity",
+      "meaning": "the mean ionic activity",
+      "section": "25.5"
+    },
+    {
+      "sym": "gamma_plus",
+      "concept": "ionic-activity-coefficients",
+      "meaning": "the activity coefficient of the cation",
+      "section": "25.5"
+    },
+    {
+      "sym": "gamma_minus",
+      "concept": "ionic-activity-coefficients",
+      "meaning": "the activity coefficient of the anion",
+      "section": "25.5"
+    },
+    {
+      "sym": "gamma_pm",
+      "concept": "mean-ionic-activity-coefficient",
+      "meaning": "the mean ionic activity coefficient",
+      "section": "25.5"
+    },
+    {
+      "sym": "m_plus",
+      "meaning": "the molality of the cation",
+      "unit": "mol/kg",
+      "section": "25.5"
+    },
+    {
+      "sym": "m_minus",
+      "meaning": "the molality of the anion",
+      "unit": "mol/kg",
+      "section": "25.5"
+    },
+    {
+      "sym": "m_pm",
+      "concept": "mean-ionic-molality",
+      "meaning": "the mean ionic molality",
+      "unit": "mol/kg",
+      "section": "25.5"
+    },
+    {
+      "sym": "m",
+      "type": null,
+      "meaning": "the molality of the salt",
+      "unit": "mol/kg",
+      "section": "25.5"
+    },
+    {
+      "sym": "phi_osm",
+      "concept": "osmotic-coefficient",
+      "meaning": "the osmotic coefficient of the solvent",
+      "section": "25.5"
+    },
+    {
+      "sym": "gamma_pm",
+      "concept": "mean-ionic-activity-coefficient",
+      "meaning": "the mean ionic activity coefficient",
+      "section": "25.6"
+    },
+    {
+      "sym": "kappa_D",
+      "concept": "debye-length",
+      "type": null,
+      "meaning": "κ, whose inverse 1/κ is the size of the ionic atmosphere; the book calls κ the Debye-length",
+      "unit": "nm⁻¹",
+      "section": "25.6"
+    },
+    {
+      "sym": "I_ion",
+      "concept": "ionic-strength",
+      "meaning": "the ionic strength",
+      "unit": "mol/kg",
+      "section": "25.6"
+    },
+    {
+      "sym": "m_i",
+      "type": null,
+      "meaning": "the molality of ion i",
+      "unit": "mol/kg",
+      "section": "25.6"
+    },
+    {
+      "sym": "z_i",
+      "meaning": "the charge number of ion i",
+      "section": "25.6"
+    },
+    {
+      "sym": "k_B",
+      "meaning": "Boltzmann's constant, written k",
+      "section": "25.6"
+    },
+    {
+      "sym": "T",
+      "type": "temperature",
+      "meaning": "the temperature",
+      "unit": "K",
+      "section": "25.6"
+    },
+    {
+      "sym": "epsilon_r",
+      "meaning": "the relative permittivity of the medium",
+      "section": "25.6"
+    },
+    {
+      "sym": "epsilon_0",
+      "meaning": "the permittivity of vacuum",
+      "section": "25.6"
+    },
+    {
+      "sym": "N_A",
+      "meaning": "Avogadro's number",
+      "section": "25.6"
+    },
+    {
+      "sym": "e",
+      "type": "charge",
+      "meaning": "the charge of the electron",
+      "unit": "C",
+      "section": "25.6"
+    },
+    {
+      "sym": "q_plus",
+      "type": "charge",
+      "meaning": "the charge of the cation",
+      "unit": "C",
+      "section": "25.6"
+    },
+    {
+      "sym": "q_minus",
+      "type": "charge",
+      "meaning": "the charge of the anion",
+      "unit": "C",
+      "section": "25.6"
+    },
+    {
+      "sym": "m",
+      "type": null,
+      "meaning": "the molality of the salt",
+      "unit": "mol/kg",
+      "section": "25.6"
+    },
+    {
+      "sym": "A",
+      "type": null,
+      "meaning": "the Debye–Hückel constant A, 0.51 mol^−1/2 dm^3/2 for water at 25 °C",
+      "section": "25.6"
+    },
+    {
+      "sym": "B",
+      "type": null,
+      "meaning": "the Debye–Hückel constant B, 3.29 nm⁻¹ mol^−1/2 dm^3/2 for water at 25 °C",
+      "section": "25.6"
+    },
+    {
+      "sym": "z_j",
+      "meaning": "the charge number of the ion",
+      "section": "25.6"
+    },
+    {
+      "sym": "a_0",
+      "concept": "distance-of-closest-approach",
+      "meaning": "the distance of closest approach of ions",
+      "unit": "nm",
+      "section": "25.6"
+    },
+    {
+      "sym": "gamma",
+      "concept": "activity-coefficient",
+      "meaning": "the activity coefficient",
+      "section": "25.7"
+    },
+    {
+      "sym": "gamma_pm",
+      "concept": "mean-ionic-activity-coefficient",
+      "meaning": "the mean ionic activity coefficient",
+      "section": "25.7"
+    },
+    {
+      "sym": "A",
+      "type": null,
+      "meaning": "the constant A of the extended equation, 0.5085 at 25 °C in water",
+      "section": "25.7"
+    },
+    {
+      "sym": "B",
+      "type": null,
+      "meaning": "the constant B of the extended equation, 0.3281 at 25 °C in water",
+      "section": "25.7"
+    },
+    {
+      "sym": "I_ion",
+      "concept": "ionic-strength",
+      "meaning": "the ionic strength",
+      "unit": "mol/kg",
+      "section": "25.7"
+    },
+    {
+      "sym": "z_plus",
+      "concept": "salt-dissociation",
+      "meaning": "the charge of the cation",
+      "section": "25.7"
+    },
+    {
+      "sym": "z_minus",
+      "concept": "salt-dissociation",
+      "meaning": "the charge of the anion",
+      "section": "25.7"
+    },
+    {
+      "sym": "a",
+      "concept": "distance-of-closest-approach",
+      "meaning": "the effective hydrated diameter of the ion",
+      "unit": "Å",
+      "section": "25.7"
+    },
+    {
+      "sym": "f_pm",
+      "concept": "mean-ionic-activity-coefficient",
+      "meaning": "the mean molal activity coefficient in the Davies equation",
+      "section": "25.7"
+    },
+    {
+      "sym": "z_1",
+      "meaning": "the charge of the first ion",
+      "section": "25.7"
+    },
+    {
+      "sym": "z_2",
+      "meaning": "the charge of the second ion",
+      "section": "25.7"
+    },
+    {
+      "sym": "gamma_M",
+      "meaning": "the activity coefficient of the cation M",
+      "section": "25.7"
+    },
+    {
+      "sym": "gamma_X",
+      "meaning": "the activity coefficient of the anion X",
+      "section": "25.7"
+    },
+    {
+      "sym": "p_pitzer",
+      "meaning": "the number of cations M in the salt M_pX_q",
+      "section": "25.7"
+    },
+    {
+      "sym": "q_pitzer",
+      "meaning": "the number of anions X in the salt M_pX_q",
+      "section": "25.7"
+    },
+    {
+      "sym": "f_gamma",
+      "meaning": "the Debye–Hückel term of the Pitzer equation",
+      "section": "25.7"
+    },
+    {
+      "sym": "B_MX",
+      "meaning": "the second virial parameter of the Pitzer equation for the salt MX",
+      "section": "25.7"
+    },
+    {
+      "sym": "C_MX",
+      "meaning": "the third virial parameter of the Pitzer equation for the salt MX",
+      "section": "25.7"
+    },
+    {
+      "sym": "m",
+      "type": null,
+      "meaning": "the molality of the salt",
+      "unit": "mol/kg",
+      "section": "25.7"
+    },
+    {
+      "sym": "gamma_j",
+      "concept": "activity-coefficient",
+      "meaning": "the activity coefficient of ion j on the molal scale",
+      "section": "25.7"
+    },
+    {
+      "sym": "z_j",
+      "meaning": "the charge of ion j",
+      "section": "25.7"
+    },
+    {
+      "sym": "epsilon_jk",
+      "meaning": "the interaction coefficient between ions j and k",
+      "section": "25.7"
+    },
+    {
+      "sym": "m_k",
+      "meaning": "the molality of ion k",
+      "unit": "mol/kg",
+      "section": "25.7"
+    }
+  ]
+}
