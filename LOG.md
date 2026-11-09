@@ -1212,3 +1212,31 @@ noted (all checked by computation or against the page; none from memory): 20.4's
 ((T_A + T_B)², the printed one is negative at 400/300 K), 20.5.1's W = 2^N, 20.7's 25% and the
 Stirling steps, 20.8's sign. No tool changed; drafts for the nine sections and the intro, 252 maths
 spans set by KaTeX without error. Unchecked: the stork photograph's licence (credit only printed).
+
+## Chapter 19 prep · 2026-11-08
+
+Prep only, no section built. Fetched Chapter 19's 16 images into `media/ch19/`. Converted 19.1–19.14
+and 19.E; the landing page prints only a thumbnail credit, so no `intro/` page and no `intro`
+record (Chapter 4's precedent); no summary page. Wrote `ch19/exploration.md`, `ch19/config.md`
+(agreed on Chapter 1's terms), `ch19/chapter.json` (14 sections, 119 variables) and merged
+`ch19/book-rows.json`: 2 new types, `heat` and `work` (the same rows Chapter 20 stages; colours
+run, no existing type moved), 35 symbols (30 macros), 58 concepts, 103 edges (Hasse-checked, 4
+redundant removed), 43 forms. Drafts made for all 14 sections.
+
+Found: no exercise of the chapter's own (19.E.1 is 1.9's `e3`, not routed); 15 AI exercises
+proposed. Eleven equation images of 19.5–19.8 (NCSU `CH431_Image61`–`71.gif`) are dead at the
+source (404); their inferred content is in the exploration, **unchecked**, for the orchestrator.
+Figures: the p(V, T) surface with 19.1's two routes (3D), 19.2.1–19.2.3 folded (still), 19.3's six
+images folded (moving), 19.5's paths (still), 19.10.1 folding the DSC image (still), 19.7's
+levels-and-populations Sim. Nine derivation records (a tenth in 19.7 if the lost lines are
+restored). Corrections checked by computation: 19.1's two routes and −1.13 kJ, 19.3's 69.3/138.6 J,
+19.5's w_A sign, Example 19.12.1, the balanced ethanol count (−1255 kJ/mol), Example 19.13.1
+(2143.6 J/mol), Example 19.13.2 (−47.81 kJ/mol per NH₃).
+
+Literature from memory, **unchecked**: ice's C_p ≈ 38 J mol⁻¹ K⁻¹ and Δ_fus H = 6.01 kJ/mol (proposed
+for Figure 19.10.1's curve); the inferred equations of the eleven lost images.
+
+Tool fixes: `lt2md.py` reads an image whose "Figure N.M.K: caption" is the next div (19.10.1;
+23.1 has the same); `md2html.py` turns a dead-path image into a comment and reads `\end {align*}`.
+Chapters 1–18 reconverted to scratch: 210 source.md byte-identical; 190 drafts identical with the
+old and new `md2html.py`. `check:content`: no errors, no warnings from Chapter 19.

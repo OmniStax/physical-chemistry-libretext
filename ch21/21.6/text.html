@@ -1,0 +1,20 @@
+<section id="ground-states">
+<h2>The partition function near absolute zero</h2>
+<p>Recall that the <span data-concept="entropy-from-partition-function">entropy of a system, $S$, can be calculated if the partition function, $\kQsys$, is known</span>:</p>
+$$ S=\frac{\kU}{\kT}+k_B \ln{\kQsys} $$
+<p>where $\kQsys$ is:</p>
+$$ \kQsys=\sum_j{e^{-\frac{\kEj}{k\kT}}} $$
+<p>The <span data-concept="internal-energy">internal energy</span> of the system can also be calculated from the <span data-concept="canonical-partition-function">partition function</span>:</p>
+$$ \kU=k_B\kT^2\left(\frac{\delta \ln{\kQsys}}{\delta \kT}\right) $$
+<p>Combining these equations, we obtain:</p>
+$$ S=k_B\ln{\kQsys}+k_B\kT\left(\frac{\delta \ln{\kQsys}}{\delta \kT}\right) $$
+<p>The <span data-concept="third-law">third law of thermodynamics</span> states that entropy of a perfect crystal at absolute zero is zero. We can show that <span data-concept="partition-function-third-law">our equation for entropy in terms of the partition function is consistent with the third law</span>.<sup class="fn" data-note="no-conclusion"></sup> Plugging in our equation for the <span data-concept="canonical-partition-function">partition function</span> into our equation for entropy, we obtain:</p>
+$$ S=k_B\ln{\sum_j{e^{-\frac{\kEj}{k\kT}}}}+k_B\kT\left(\frac{\delta \ln{\sum_j{e^{-\frac{\kEj}{k\kT}}}}}{\delta \kT}\right) $$
+<p>As $\kT$ goes to zero, all the states will be in their lowest energy configuration. If the ground state is $n$ <span data-concept="degeneracy">degenerate</span>, then $n$ states will be in the ground state:<sup class="fn" data-note="e-n"></sup></p>
+$$ \kEone=E_2=...=E_m $$
+<p>This is true for all the next states. For example, if the next state is $m$ <span data-concept="degeneracy">degenerate</span>, then:</p>
+$$ E_{n+1}=E_{n+2}=...=E_{n+m} $$
+<p>This gives us the result:</p>
+$$ \sum_j{e^{-\frac{\kEj}{k\kT}}} = ne^{-\frac{\kEone}{k\kT}}+me^{-\frac{E_{n+1}}{k\kT}}+... $$
+<figure class="dv" id="drv-low-t-entropy"></figure>
+</section>
