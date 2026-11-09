@@ -1,0 +1,85 @@
+{
+ "id": "26.9",
+ "module": "14530",
+ "chapter": "26",
+ "title": "Molecular Partition Functions and Related Thermodynamic Data Are Extensively Tabulated",
+ "short": "Tabulated thermodynamic data",
+ "lead": "Accurate partition functions of real molecules take corrections that simple models leave out, so the results are collected in tables. The JANAF tables are one such collection.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "The book prints no credits for this page.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": []
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercise here; the one exercise is new and AI-written, with an AI solution checked by computation. Its Gibbs energy of formation of NH₃ is quoted from memory, not from the book.",
+ "figures": [],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "tabulated-data",
+   "concept": "thermochemical-tables",
+   "verb": "introduces"
+  },
+  {
+   "span": "tabulated-data",
+   "concept": "constant-pressure-heat-capacity",
+   "verb": "uses"
+  },
+  {
+   "span": "tabulated-data",
+   "concept": "standard-enthalpy-of-formation",
+   "verb": "uses"
+  },
+  {
+   "span": "tabulated-data",
+   "concept": "standard-gibbs-energy-of-formation",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "equilibrium constant of formation expressed as a log value",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "tabulated-data",
+   "prompt": "<p>A thermochemical table lists $\\Delta_fG^\\circ = -16.45$ kJ/mol for NH<sub>3</sub>(g) at 298.15 K. What value of $\\log(K_f)$ should the same row list for the formation reaction ½N<sub>2</sub>(g) + 3/2H<sub>2</sub>(g) → NH<sub>3</sub>(g)?</p>",
+   "answer": {
+    "type": "number",
+    "value": 2.88,
+    "tol": 0.01,
+    "generated_by": "ai",
+    "hint": "$\\Delta_fG^\\circ = -RT\\ln K_f$, and $\\log K_f = \\ln K_f / \\ln 10$.",
+    "solution": "<p>$\\ln K_f = -\\Delta_fG^\\circ/RT = 16\\,450/(8.314 \\times 298.15) = 6.636$, so $\\log(K_f) = 6.636/2.303 = 2.88$ and $K_f = 7.6 \\times 10^{2}$.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "thermochemical-tables"
+  },
+  {
+   "exercise": "a1",
+   "concept": "standard-gibbs-energy-of-formation"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-gibbs-symbol",
+   "kind": "correction",
+   "html": "The standard state Gibbs energy of formation is $\\Delta_fG^\\circ$; the book repeats the symbol for the enthalpy of formation, $\\Delta_fH^\\circ$."
+  }
+ ]
+}

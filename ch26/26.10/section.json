@@ -1,0 +1,253 @@
+{
+ "id": "26.10",
+ "module": "14531",
+ "chapter": "26",
+ "title": "Real Gases Are Expressed in Terms of Partial Fugacities",
+ "short": "Fugacities of real gases",
+ "lead": "A real gas does not follow the ideal chemical potential, so its pressure is replaced by a fugacity. How far the fugacity strays from the pressure follows from the gas's compression factor.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "The book prints no credits for this page.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": []
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercise here; the one exercise is new and AI-written, with an AI solution checked by computation.",
+ "figures": [],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "fugacity-and-z",
+   "concept": "ideal-gas",
+   "verb": "uses"
+  },
+  {
+   "span": "fugacity-and-z",
+   "concept": "fugacity",
+   "verb": "reinforces"
+  },
+  {
+   "span": "fugacity-and-z",
+   "concept": "chemical-potential-fugacity",
+   "verb": "uses"
+  },
+  {
+   "span": "fugacity-and-z",
+   "concept": "fugacity-coefficient",
+   "verb": "uses"
+  },
+  {
+   "span": "fugacity-and-z",
+   "concept": "compressibility-factor",
+   "verb": "uses"
+  },
+  {
+   "span": "fugacity-and-z",
+   "concept": "fugacity-coefficient-from-z",
+   "verb": "introduces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "Finally, integrating from $0$ to $p$ yields",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "fugacity-and-z",
+   "prompt": "<p>Up to moderate pressures a gas at fixed temperature follows $Z = 1 + B'p$ with $B' = -5.0 \\times 10^{-3}$ bar<sup>−1</sup>. At $p = 50$ bar find (a) $\\ln \\gamma$, (b) the fugacity coefficient $\\gamma$ and (c) the fugacity $f$.</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": -0.25,
+      "tol": 0.02,
+      "hint": "$(Z - 1)/p$ is the constant $B'$."
+     },
+     {
+      "part": "b",
+      "value": 0.779,
+      "tol": 0.01
+     },
+     {
+      "part": "c",
+      "value": 38.9,
+      "unit": "bar",
+      "tol": 0.01
+     }
+    ],
+    "solution": "<p>(a) $(Z - 1)/p = B'$, so $\\ln \\gamma = \\int_0^{p} B'\\,dp = B'p = (-5.0 \\times 10^{-3}\\ \\text{bar}^{-1})(50\\ \\text{bar}) = -0.25$.</p><p>(b) $\\gamma = e^{-0.25} = 0.779$.</p><p>(c) $f = \\gamma p = 0.779 \\times 50\\ \\text{bar} = 38.9$ bar. With $Z$ below 1 the attractions dominate and the gas's fugacity is below its pressure.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "fugacity-coefficient-from-z"
+  },
+  {
+   "exercise": "a1",
+   "concept": "fugacity-coefficient"
+  }
+ ],
+ "footnotes": [],
+ "derivations": [
+  {
+   "id": "fugacity-coefficient-from-z",
+   "what": "the fugacity coefficient from the compression factor",
+   "source": "Physical Chemistry (LibreTexts), 26.10 Real Gases Are Expressed in Terms of Partial Fugacities",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "d\\kmu = \\kV\\,d\\kp - S\\,d\\kT",
+       "src": "23.3"
+      },
+      {
+       "text": "The temperature is held constant, $d\\kT = 0$."
+      }
+     ],
+     "then": {
+      "tex": "\\mk{m}{d\\kmu} = \\mk{v}{\\kV\\,d\\kp} \\mk{s}{- S\\,d\\kT}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{m}{\\left(\\dfrac{\\partial \\kmu}{\\partial \\kp}\\right)_{\\kT}} = \\mk{v}{\\kV}",
+       "uses": [
+        1
+       ],
+       "cap": "With $d\\kT = 0$ the entropy term drops, and dividing by $d\\kp$ gives the derivative at constant temperature."
+      }
+     ],
+     "num": "(26.10.1)",
+     "src": "26.10",
+     "note": "The book prints the differential as $d\\mu - Vdp - SdT$; it is $d\\mu = V\\,dp - S\\,dT$."
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\kmu = \\kmustd + \\kR\\kT\\ln\\left(\\dfrac{\\kf}{\\kfstd}\\right)",
+       "src": "22.8"
+      },
+      {
+       "step": 0
+      }
+     ],
+     "then": {
+      "tex": "\\mk{m}{\\kmu} = \\mk{r}{\\kmustd + \\kR\\kT\\ln\\left(\\dfrac{\\kf}{\\kfstd}\\right)}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{m}{\\left(\\dfrac{\\partial \\kmu}{\\partial \\kp}\\right)_{\\kT}} = \\mk{r}{\\left\\{\\dfrac{\\partial}{\\partial \\kp}\\left[\\kmustd + \\kR\\kT\\ln\\left(\\dfrac{\\kf}{\\kfstd}\\right)\\right]\\right\\}_{\\kT}}",
+       "uses": [],
+       "cap": "Differentiate both sides with respect to pressure at constant temperature."
+      },
+      {
+       "tex": "\\mk{m}{\\left(\\dfrac{\\partial \\kmu}{\\partial \\kp}\\right)_{\\kT}} = \\mk{r}{\\kR\\kT\\left[\\dfrac{\\partial \\ln \\kf}{\\partial \\kp}\\right]_{\\kT}}",
+       "uses": [],
+       "cap": "$\\kmustd$ and $\\kfstd$ do not depend on $\\kp$, and $\\ln(\\kf/\\kfstd) = \\ln \\kf - \\ln \\kfstd$."
+      },
+      {
+       "tex": "\\mk{r}{\\kR\\kT\\left[\\dfrac{\\partial \\ln \\kf}{\\partial \\kp}\\right]_{\\kT}} = \\mk{m}{\\kV}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "src": "26.10",
+     "note": "The book differentiates \"with respect to pressure at constant volume\"; the derivative is taken at constant temperature, as its subscript $T$ says."
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "tex": "Z = \\dfrac{\\kp\\kV}{\\kR\\kT}",
+       "src": "16.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{r}{\\kR\\kT\\left[\\dfrac{\\partial \\ln \\kf}{\\partial \\kp}\\right]_{\\kT}} = \\mk{m}{\\kV}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{r}{\\left[\\dfrac{\\partial \\ln \\kf}{\\partial \\kp}\\right]_{\\kT}} = \\mk{m}{\\dfrac{\\kV}{\\kR\\kT}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{r}{\\left[\\dfrac{\\partial \\ln \\kf}{\\partial \\kp}\\right]_{\\kT}} = \\mk{m}{\\dfrac{Z}{\\kp}}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "src": "26.10",
+     "note": "The book multiplies by $p/RT$ and writes $\\left[\\partial \\ln f/\\partial p\\right]_T = pV/RT = Z$. Dividing by $RT$ gives $\\left[\\partial \\ln f/\\partial p\\right]_T = V/RT = Z/p$; it is $p\\left[\\partial \\ln f/\\partial p\\right]_T$ that equals $Z$."
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\kf = \\gamma \\kp"
+      },
+      {
+       "step": 2
+      },
+      {
+       "text": "Every gas behaves ideally as $\\kp \\rightarrow 0$, so there $\\gamma = 1$ and $\\ln\\gamma = 0$."
+      }
+     ],
+     "then": {
+      "tex": "\\mk{f}{\\kf} = \\mk{g}{\\gamma} \\mk{p}{\\kp}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{f}{\\ln \\kf} = \\mk{g}{\\ln \\gamma} + \\mk{p}{\\ln \\kp}",
+       "uses": [],
+       "cap": "The logarithm of a product is the sum of the logarithms."
+      },
+      {
+       "tex": "\\mk{g}{\\ln \\gamma} = \\mk{f}{\\ln \\kf} \\mk{p}{- \\ln \\kp}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{g}{\\left(\\dfrac{\\partial \\ln \\gamma}{\\partial \\kp}\\right)_{\\kT}} = \\mk{f}{\\left(\\dfrac{\\partial \\ln \\kf}{\\partial \\kp}\\right)_{\\kT}} \\mk{p}{- \\left(\\dfrac{\\partial \\ln \\kp}{\\partial \\kp}\\right)_{\\kT}}",
+       "uses": [],
+       "cap": "Differentiate both sides with respect to $\\kp$ at constant temperature."
+      },
+      {
+       "tex": "\\mk{g}{\\left(\\dfrac{\\partial \\ln \\gamma}{\\partial \\kp}\\right)_{\\kT}} = \\mk{f}{\\dfrac{Z}{\\kp}} \\mk{p}{- \\dfrac{1}{\\kp}}",
+       "uses": [
+        1
+       ],
+       "cap": "$\\partial \\ln \\kp/\\partial \\kp = 1/\\kp$."
+      },
+      {
+       "tex": "\\mk{g}{\\ln \\gamma} = \\mk{f}{\\int_0^{\\kp} \\left( \\dfrac{Z-1}{\\kp}\\right)_{\\kT} d\\kp}",
+       "uses": [
+        2
+       ],
+       "cap": "Integrate from 0, where $\\ln\\gamma = 0$, up to the pressure $\\kp$.",
+       "map": {
+        "p": "f"
+       }
+      }
+     ],
+     "src": "26.10",
+     "note": "The book's middle line, $\\int \\left(\\frac{Z}{\\partial p} - \\frac{1}{\\partial p}\\right)_T dp$, means $\\int \\left(\\frac{Z}{p} - \\frac{1}{p}\\right)_T dp$."
+    }
+   ]
+  }
+ ]
+}

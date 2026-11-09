@@ -1,0 +1,39 @@
+<section id="formation">
+<h2>Gibbs energies of formation</h2>
+<p><span data-concept="standard-gibbs-equilibrium-constant">The relation $K=e^{-\frac{\kDeltarGstd}{\kR\kT}}$</span> gives us a way to evaluate the thermodynamic equilibrium constant $K$ of a reaction at a given temperature from the value of the standard molar reaction Gibbs energy $\kDeltarGstd$ at that temperature. If we know the value of $\kDeltarGstd$, we can calculate the value of $K$.</p>
+<p>One method is to calculate $\kDeltarGstd$ from values of the <strong><span data-concept="standard-gibbs-energy-of-formation">standard molar Gibbs energy of formation</span></strong> $\kDeltafGstd$ of each reactant and product. These values are the standard molar reaction Gibbs energies for the formation reactions of the substances. To relate $\kDeltafGstd$ to measurable quantities, we make the substitution $\kmui = H_i - \kT S_i$ (Eq. 9.2.46)<sup class="fn" data-note="c-devoe"></sup> in $\kDeltarG = \sum_i\!\nu_i\kmui$ to give <span data-concept="reaction-gibbs-enthalpy-entropy">$\kDeltarG = \sum_i\!\nu_i H_i - \kT \sum_i\!\nu_i S_i$</span>, or</p>
+$$ \begin{equation} \kDeltarG = \kDeltarH - \kT\kDeltarS \tag{26.3.1} \end{equation} $$
+<p>When we apply this equation to a reaction with each reactant and product in its standard state, it becomes</p>
+$$ \begin{equation} \kDeltarGstd = \kDeltarHstd - \kT\kDeltarSstd \tag{26.3.2} \end{equation} $$
+<p>where the standard molar reaction entropy is given by</p>
+$$ \begin{equation} \kDeltarSstd = \sum_i\nu_i \kSstdi \tag{26.3.3} \end{equation} $$
+<p>If the reaction is the <em>formation</em> reaction of a substance, we have</p>
+$$ \begin{equation} \kDeltafGstd = \kDeltafHstd - \kT\sum_i\nu_i \kSstdi \tag{26.3.4} \end{equation} $$
+<p>where the sum over $i$ is for the reactants and product of the formation reaction. We can evaluate the standard molar Gibbs energy of formation of a substance, then, from its standard molar enthalpy of formation and the standard molar entropies of the reactants and product.</p>
+<p>Extensive tables are available of values of $\kDeltafGstd$ for substances and ions. An abbreviated version at the single temperature $298.15\thinspace\text{K}$ is given in Appendix H. For a reaction of interest, <span data-concept="reaction-gibbs-from-formation">the tabulated values enable us to evaluate $\kDeltarGstd$, and then $K$,</span> from the expression (analogous to <span data-concept="hess-law">Hess’s law</span>)</p>
+$$ \begin{equation} \kDeltarGstd = \sum_i\nu_i\kDeltafGstd(i) \tag{26.3.5} \end{equation} $$
+<p>The sum over $i$ is for the reactants and products of the reaction of interest.</p>
+<p>Recall that the standard molar enthalpies of formation needed in <a class="xref" href="#26.3-formation">Eq. 11.8.23</a> can be evaluated by calorimetric methods (Sec. 11.3.2). The absolute molar entropy values $\kSstdi$ come from heat capacity data or statistical mechanical theory by methods discussed in Sec. 6.2. Thus, it is entirely feasible to use nothing but calorimetry to evaluate an equilibrium constant, a goal sought by thermodynamicists during the first half of the 20th century. (Another method, for a reaction that can be carried out reversibly in a galvanic cell, is described in Sec. 14.3.3.)</p>
+</section>
+
+<section id="ions">
+<h2>Ions in aqueous solution</h2>
+<p>For <em>ions in aqueous solution</em>, the values of $\kSmstd$ and $\kDeltafGstd$ found in Appendix H are based on the <span data-concept="aqueous-ion-convention">reference values</span> $\kSmstd=0$ and $\kDeltafGstd = 0$ for H$^+$(aq) at all temperatures, similar to the convention for $\kDeltafHstd$ values discussed in Sec. 11.3.2. For a reaction with aqueous ions as reactants or products, these values correctly give $\kDeltarSstd$ using <a class="xref" href="#26.3-formation">Eq. 11.8.22</a>, or $\kDeltarGstd$ using <a class="xref" href="#26.3-formation">Eq. 11.8.24</a>.</p>
+<p>Note that the values of $\kSmstd$ in Appendix H for some ions, unlike the values for substances, are <em>negative</em>; this simply means that the standard molar entropies of these ions are less than that of H$^+$(aq).</p>
+<p>The relation of <a class="xref" href="#26.3-formation">Eq. 11.8.23</a> does not apply to an ion, because we cannot write a formation reaction for a single ion. Instead, the relation between $\kDeltafGstd$, $\kDeltafHstd$ and $\kSmstd$ is more complicated.</p>
+<p>Consider first a hypothetical reaction in which hydrogen ions and one or more elements form H$_2$ and a cation M$^{z_+}$ with charge number $z_+$:</p>
+$$ z_+\text{H}^+\text{(aq)}+\text{elements} \,\rightarrow\, (z_+/2)\text{H}_2\text{(g)}+\text{M}^{z_+}\text{(aq)} $$
+<p>For this reaction, using the convention that $\kDeltafHstd$, $\kSmstd$, and $\kDeltafGstd$ are zero for the aqueous H$^+$ ion and the fact that $\kDeltafHstd$ and $\kDeltafGstd$ are zero for the elements, we can write the following expressions for standard molar reaction quantities:</p>
+$$ \begin{equation} \kDeltarHstd = \kDeltafHstd(\text{M}^{z_+}) \tag{26.3.6} \end{equation} $$
+$$ \begin{equation} \kDeltarSstd = (z_+/2)\kSmstd(\text{H}_2) +\kSmstd(\text{M}^{z_+})- \! \sum_{\text{elements}}\!\!\!\kSstdi \tag{26.3.7} \end{equation} $$
+$$ \begin{equation} \kDeltarGstd = \kDeltafGstd(\text{M}^{z_+}) \tag{26.3.8} \end{equation} $$
+<figure class="dv" id="drv-ion-gibbs-formation"></figure>
+<p>For example, the <span data-concept="ion-gibbs-energy-of-formation">standard molar Gibbs energy of the aqueous mercury(I) ion</span> is found from</p>
+$$ \begin{equation} \textstyle \kDeltafGstd(\text{Hg}_2{}^{2+}) = \kDeltafHstd(\text{Hg}_2{}^{2+}) - \kT\kSmstd(\text{Hg}_2{}^{2+}) + 2\kT\kSmstd(\text{Hg}) - \frac{2}{2}\kT\kSmstd(\text{H}_2) \tag{26.3.10} \end{equation} $$
+<p>For an anion X$^{z_-}$ with negative charge number $z_-$, using the hypothetical reaction</p>
+$$ |z_-/2| \text{H}_2\text{(g)}+\text{elements} \,\rightarrow\, |z_-| \text{H}^+\text{(aq)}+\text{X}^{z_-}\text{(aq)} $$
+<p>we find by the same method</p>
+$$ \begin{equation} \kDeltafGstd(\text{X}^{z_-}) = \kDeltafHstd(\text{X}^{z_-}) -\kT\left[ \kSmstd(\text{X}^{z_-})- \! \sum_{\text{elements}}\!\!\!\kSstdi -|z_-/2| \kSmstd(\text{H}_2) \right] \tag{26.3.11} \end{equation} $$
+<p>For example, the calculation for the nitrate ion is</p>
+$$ \begin{equation} \textstyle \kDeltafGstd(\text{NO}_3{}^-) = \kDeltafHstd(\text{NO}_3{}^-) - \kT\kSmstd(\text{NO}_3{}^-) + \frac{1}{2}\kT\kSmstd(\text{N}_2) + \frac{3}{2}\kT\kSmstd(\text{O}_2) + \frac{1}{2}\kT\kSmstd(\text{H}_2) \tag{26.3.12} \end{equation} $$
+</section>

@@ -1,0 +1,399 @@
+{
+ "id": "26.8",
+ "module": "14529",
+ "chapter": "26",
+ "title": "Equilibrium Constants in Terms of Partition Functions",
+ "short": "K from partition functions",
+ "lead": "Statistical mechanics can give an equilibrium constant without any calorimetry. Writing each species' chemical potential through its molecular partition function and asking where the Helmholtz energy stops changing leads to a formula for K built from molecular data, which a worked example applies to hydrogen chloride.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "Adapted from the Wikibooks Statistical Thermodynamics and Rate Theories page under CC BY-SA 4.0; its plot of the Helmholtz energy against the equilibrium shift, linked from Wikimedia Commons, is not shown.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercise here; the one exercise is new and AI-written, with an AI solution checked by computation.",
+ "figures": [],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "partition-functions-to-k",
+   "concept": "equilibrium-constant",
+   "verb": "uses"
+  },
+  {
+   "span": "partition-functions-to-k",
+   "concept": "chemical-potential",
+   "verb": "uses"
+  },
+  {
+   "span": "partition-functions-to-k",
+   "concept": "helmholtz-energy",
+   "verb": "uses"
+  },
+  {
+   "span": "partition-functions-to-k",
+   "concept": "chemical-potential-from-partition-function",
+   "verb": "uses"
+  },
+  {
+   "span": "partition-functions-to-k",
+   "concept": "stirlings-approximation",
+   "verb": "uses"
+  },
+  {
+   "span": "partition-functions-to-k",
+   "concept": "chemical-potential-q-over-n",
+   "verb": "introduces"
+  },
+  {
+   "span": "partition-functions-to-k",
+   "concept": "helmholtz-minimum-equilibrium",
+   "verb": "introduces"
+  },
+  {
+   "span": "partition-functions-to-k",
+   "concept": "equilibrium-constant-partition-functions",
+   "verb": "introduces"
+  },
+  {
+   "span": "example-26-8-1",
+   "concept": "k-from-molecular-data",
+   "verb": "introduces"
+  },
+  {
+   "span": "example-26-8-1",
+   "concept": "equilibrium-constant-partition-functions",
+   "verb": "uses"
+  },
+  {
+   "span": "example-26-8-1",
+   "concept": "partition-function-factorization",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "The spontaneity of this reaction is largely due to the electronic partition function",
+   "kind": "exercise",
+   "bloom": "Analyze",
+   "place": {
+    "at": "end"
+   },
+   "cite": "example-26-8-1",
+   "prompt": "<p>In Example 26.8.1 the electronic factor of $K_c$ for H<sub>2</sub> + Cl<sub>2</sub> ⇌ 2HCl is $e^{(2D_0(\\mathrm{HCl}) - D_0(\\mathrm{H_2}) - D_0(\\mathrm{Cl_2}))/RT}$, with the table's $D_0$ of 427.7, 431.9 and 239.0 kJ/mol. Evaluate it (a) at 650 K and (b) at 1000 K, and say why $K_c$ falls as the temperature rises.</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": 672000000000000.0,
+      "tol": 0.03,
+      "hint": "The exponent's numerator is $2(427.7) - 431.9 - 239.0 = 184.5$ kJ/mol."
+     },
+     {
+      "part": "b",
+      "value": 4340000000.0,
+      "tol": 0.03
+     }
+    ],
+    "solution": "<p>The bonds formed beat the bonds broken by $2(427.7) - 431.9 - 239.0 = 184.5$ kJ/mol.</p><p>(a) At 650 K the exponent is $184\\,500/(8.314 \\times 650) = 34.14$, so the factor is $e^{34.14} = 6.7 \\times 10^{14}$.</p><p>(b) At 1000 K the exponent is $184\\,500/(8.314 \\times 1000) = 22.19$, so the factor is $e^{22.19} = 4.3 \\times 10^{9}$.</p><p>The other three ratios change only slowly with $T$, so $K_c$ follows the electronic factor. Its exponent is $D_0$'s difference over $RT$, and a larger $RT$ shrinks the advantage of the stronger bonds: the reaction is exothermic, and its $K_c$ falls as it is heated.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "k-from-molecular-data"
+  },
+  {
+   "exercise": "a1",
+   "concept": "equilibrium-constant-partition-functions"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-n-j-not-i",
+   "kind": "correction",
+   "html": "The subscript $N_{j\\neq 1}$ means $N_{j\\neq i}$: every number of molecules except that of species $i$ is held constant."
+  },
+  {
+   "id": "c-example",
+   "kind": "correction",
+   "html": "The table's $\\Theta_\\nu$ are swapped: 6125 K belongs to H$_2$ and 808 K to Cl$_2$. The masses in the translational factors are not those of the molecules (HCl is $6.054 \\times 10^{-26}$ kg, not $2.1957 \\times 10^{-24}$ kg, and likewise for H$_2$ and Cl$_2$), and the final product puts H$_2$'s translational factor in the numerator and takes the rotational ratio $(42.76)^2/((3.71)(925.9))$ as 0.1333 instead of 0.532. With the true masses and the table's own $\\Theta_r$, $\\Theta_\\nu$ and $D_0$, the four ratios are 28.4 (translation), 0.532 (rotation), 0.713 (vibration) and $6.70 \\times 10^{14}$ (electronic), so $K_c = 7.2 \\times 10^{15}$ at 650 K rather than $2.26 \\times 10^{11}$. The conclusion stands: the electronic factor dominates."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "mu-q-over-n",
+   "what": "the chemical potential from the molecular partition function",
+   "source": "Physical Chemistry (LibreTexts), 26.8 Equilibrium Constants in Terms of Partition Functions",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kA = -k_B\\kT\\ln \\kQsys",
+       "src": "23.5",
+       "drv": "23.5/mu-from-q"
+      },
+      {
+       "tex": "\\kQsys = \\dfrac{\\kqi(\\kV,\\kT)^{N_i}}{N_i!}",
+       "src": "17.2"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{a}{\\kA} = \\mk{k}{-k_B\\kT}\\mk{l}{\\ln \\kQsys}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{a}{\\kA} = \\mk{k}{-k_B\\kT}\\mk{l}{\\ln \\left(\\dfrac{\\kqi(\\kV,\\kT)^{N_i}}{N_i!}\\right)}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "src": "26.8"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\kmui = \\left(\\dfrac{\\partial \\kA}{\\partial N_i}\\right)_{\\kT,\\kV,N_{j\\neq i}}",
+       "src": "(26.8.2)"
+      },
+      {
+       "step": 0
+      },
+      {
+       "tex": "\\ln N! = N\\ln N - N",
+       "src": "17.2"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{m}{\\kmui} = \\mk{d}{\\left(\\dfrac{\\partial \\kA}{\\partial N_i}\\right)_{\\kT,\\kV,N_{j\\neq i}}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{m}{\\kmui} = \\mk{d}{\\left(\\dfrac{\\partial \\left[-k_B\\kT\\ln \\left(\\dfrac{\\kqi(\\kV,\\kT)^{N_i}}{N_i!}\\right)\\right]}{\\partial N_i}\\right)_{\\kT,\\kV,N_{j\\neq i}}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{m}{\\kmui} = \\mk{k}{-k_B\\kT}\\left[\\mk{q}{\\left(\\dfrac{\\partial N_i\\ln \\kqi(\\kV,\\kT)}{\\partial N_i}\\right)} - \\mk{n}{\\left(\\dfrac{\\partial \\ln N_i!}{\\partial N_i}\\right)}\\right]_{\\kT,\\kV,N_{j\\neq i}}",
+       "uses": [],
+       "cap": "The logarithm of a quotient is a difference, $\\ln(x^N/y) = N\\ln x - \\ln y$, and $k_B\\kT$ is a constant at fixed $\\kT$.",
+       "map": {
+        "d": [
+         "k",
+         "q",
+         "n"
+        ]
+       }
+      },
+      {
+       "tex": "\\mk{m}{\\kmui} = \\mk{k}{-k_B\\kT}\\left[\\mk{q}{\\left(\\dfrac{\\partial N_i\\ln \\kqi(\\kV,\\kT)}{\\partial N_i}\\right)} - \\mk{n}{\\left(\\dfrac{\\partial (N_i\\ln N_i - N_i)}{\\partial N_i}\\right)}\\right]_{\\kT,\\kV,N_{j\\neq i}}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{m}{\\kmui} = \\mk{k}{-k_B\\kT}\\left(\\mk{q}{\\ln \\kqi(\\kV,\\kT)} \\mk{n}{- \\ln N_i - 1 + 1}\\right)",
+       "uses": [],
+       "cap": "$\\kqi$ depends on $\\kV$ and $\\kT$ only, so $\\partial(N_i\\ln \\kqi)/\\partial N_i = \\ln \\kqi$; by the product rule $\\partial(N_i\\ln N_i)/\\partial N_i = \\ln N_i + 1$."
+      },
+      {
+       "tex": "\\mk{m}{\\kmui} = \\mk{k}{-k_B\\kT}\\left(\\mk{q}{\\ln \\kqi(\\kV,\\kT)} \\mk{n}{- \\ln N_i}\\right)",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{m}{\\kmui} = \\mk{k}{-k_B\\kT}\\mk{q}{\\ln \\left(\\dfrac{\\kqi(\\kV,\\kT)}{N_i}\\right)}",
+       "uses": [],
+       "cap": "A difference of logarithms is the logarithm of the quotient.",
+       "map": {
+        "n": "q"
+       }
+      }
+     ],
+     "num": "(26.8.3)",
+     "src": "26.8",
+     "note": "The book holds $N_{j\\neq 1}$ constant in these derivatives; it means every number of molecules except the one being varied, $N_{j\\neq i}$."
+    }
+   ]
+  },
+  {
+   "id": "kc-partition",
+   "what": "the equilibrium constant from partition functions",
+   "source": "Physical Chemistry (LibreTexts), 26.8 Equilibrium Constants in Terms of Partition Functions",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "d\\kA = -S\\,d\\kT - p\\,d\\kV + \\sum_j \\mu_j\\,dN_j",
+       "src": "22.1"
+      },
+      {
+       "text": "The reaction runs at fixed volume and temperature, so $d\\kT = 0$ and $d\\kV = 0$."
+      },
+      {
+       "tex": "dN_j = \\nu_j\\,d\\lambda"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{a}{d\\kA} = \\mk{t}{-S\\,d\\kT} \\mk{v}{- p\\,d\\kV} + \\mk{s}{\\sum_j \\mu_j\\,dN_j}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{a}{d\\kA} = \\mk{s}{\\sum_j \\mu_j\\,dN_j}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{a}{d\\kA} = \\mk{s}{\\sum_j \\mu_j\\nu_j\\,d\\lambda}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{a}{d\\kA} = \\mk{s}{d\\lambda\\sum_j \\mu_j\\nu_j}",
+       "uses": []
+      }
+     ],
+     "src": "26.8"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "\\left(\\dfrac{\\partial \\kA}{\\partial \\lambda}\\right)_{\\kT,\\kV} = 0"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{a}{d\\kA} = \\mk{s}{d\\lambda\\sum_j \\mu_j\\nu_j}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{a}{\\left(\\dfrac{\\partial \\kA}{\\partial \\lambda}\\right)_{\\kT,\\kV}} = \\mk{s}{\\sum_j \\mu_j\\nu_j}",
+       "uses": [],
+       "cap": "With $\\kT$ and $\\kV$ fixed, dividing by $d\\lambda$ gives the partial derivative."
+      },
+      {
+       "tex": "\\mk{a}{0} = \\mk{s}{\\sum_j \\mu_j\\nu_j}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "src": "26.8"
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "tex": "\\mu_j = -k_B\\kT\\ln\\left(\\dfrac{q_j}{N_j}\\right)",
+       "src": "(26.8.3)",
+       "drv": "mu-q-over-n"
+      },
+      {
+       "text": "$\\nu_j$ is positive for products and negative for reactants; written out for the reaction of Equation 26.8.1, the reactants' terms carry a minus sign and $\\nu_A$, $\\nu_B$ stand for the coefficients as printed."
+      }
+     ],
+     "then": {
+      "tex": "\\mk{s}{\\sum_j \\mu_j\\nu_j} = \\mk{z}{0}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{s}{-k_B\\kT\\sum_j \\ln\\left(\\dfrac{q_j}{N_j}\\right)\\nu_j} = \\mk{z}{0}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{s}{\\sum_j \\ln\\left(\\dfrac{q_j}{N_j}\\right)\\nu_j} = \\mk{z}{0}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{s}{\\sum_j \\nu_j[\\ln(q_j) - \\ln(N_j)]} = \\mk{z}{0}",
+       "uses": [],
+       "cap": "The logarithm of a quotient is the difference of the logarithms."
+      },
+      {
+       "tex": "\\mk{s}{[\\nu_C\\ln(q_C) - \\nu_C\\ln(N_C)] + [\\nu_D\\ln(q_D) - \\nu_D\\ln(N_D)] - [\\nu_A\\ln(q_A) - \\nu_A\\ln(N_A)] - [\\nu_B\\ln(q_B) - \\nu_B\\ln(N_B)]} = \\mk{z}{0}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{q}{\\dfrac{(q_C)^{\\nu_C}(q_D)^{\\nu_D}}{(q_A)^{\\nu_A}(q_B)^{\\nu_B}}} = \\mk{n}{\\dfrac{(N_C)^{\\nu_C}(N_D)^{\\nu_D}}{(N_A)^{\\nu_A}(N_B)^{\\nu_B}}}",
+       "uses": [],
+       "cap": "Move the $\\ln N$ terms to the right, write each $\\nu\\ln x$ as $\\ln x^{\\nu}$, and exponentiate both sides.",
+       "map": {
+        "s": [
+         "q",
+         "n"
+        ]
+       }
+      }
+     ],
+     "src": "26.8",
+     "note": "The book writes the sum as $\\sum_j \\ln(q_i/N_i)\\nu_j$, with $i$ where the summed index is $j$: each term is $\\nu_j\\ln(q_j/N_j)$."
+    },
+    {
+     "assumes": [
+      {
+       "step": 2
+      },
+      {
+       "tex": "\\dfrac{N_A}{\\kV} = \\rho_A = [A]"
+      },
+      {
+       "tex": "K_c = \\dfrac{[C]^{\\nu_C}[D]^{\\nu_D}}{[A]^{\\nu_A}[B]^{\\nu_B}}"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{q}{\\dfrac{(q_C)^{\\nu_C}(q_D)^{\\nu_D}}{(q_A)^{\\nu_A}(q_B)^{\\nu_B}}} = \\mk{n}{\\dfrac{(N_C)^{\\nu_C}(N_D)^{\\nu_D}}{(N_A)^{\\nu_A}(N_B)^{\\nu_B}}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{q}{\\dfrac{(q_C/\\kV)^{\\nu_C}(q_D/\\kV)^{\\nu_D}}{(q_A/\\kV)^{\\nu_A}(q_B/\\kV)^{\\nu_B}}} = \\mk{n}{\\dfrac{(N_C/\\kV)^{\\nu_C}(N_D/\\kV)^{\\nu_D}}{(N_A/\\kV)^{\\nu_A}(N_B/\\kV)^{\\nu_B}}}",
+       "uses": [],
+       "cap": "Dividing every $q$ and every $N$ by $\\kV$ takes the same power of $\\kV$ out of both sides."
+      },
+      {
+       "tex": "\\mk{q}{\\dfrac{(q_C/\\kV)^{\\nu_C}(q_D/\\kV)^{\\nu_D}}{(q_A/\\kV)^{\\nu_A}(q_B/\\kV)^{\\nu_B}}} = \\mk{n}{\\dfrac{\\rho_C^{\\nu_C}\\rho_D^{\\nu_D}}{\\rho_A^{\\nu_A}\\rho_B^{\\nu_B}}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{k}{K_c} = \\mk{n}{\\dfrac{\\rho_C^{\\nu_C}\\rho_D^{\\nu_D}}{\\rho_A^{\\nu_A}\\rho_B^{\\nu_B}}} = \\mk{q}{\\dfrac{(q_C/\\kV)^{\\nu_C}(q_D/\\kV)^{\\nu_D}}{(q_A/\\kV)^{\\nu_A}(q_B/\\kV)^{\\nu_B}}}",
+       "uses": [
+        2
+       ]
+      }
+     ],
+     "num": "(26.8.4)",
+     "src": "26.8"
+    }
+   ]
+  }
+ ]
+}

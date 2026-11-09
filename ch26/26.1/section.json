@@ -4,7 +4,7 @@
  "chapter": "26",
  "title": "Equilibrium Results when Gibbs Energy is Minimized",
  "short": "Gibbs energy and the extent of reaction",
- "lead": "A reaction's progress can be counted by one number, the extent of reaction. Written in that number, the Gibbs energy of the reacting mixture has a slope, the reaction Gibbs energy, which for a gas reaction splits into a standard part and a part that depends on the pressures.",
+ "lead": "How far a reaction has run is measured by one number, the extent of reaction. Written against that number, the Gibbs energy of the reacting mixture decides where a reaction stops.",
  "objectives": [],
  "summary_html": "",
  "notes": "The book prints no credits for this page.",
@@ -26,9 +26,6 @@
    "kind": "figure",
    "originals": [
     "/media/ch26/411105-Gibbs_energy.png"
-   ],
-   "widths": [
-    551
    ],
    "draws": [],
    "ai": [
@@ -139,7 +136,6 @@
   {
    "id": "c-slope",
    "kind": "correction",
-   "figure": "fig-gibbs-energy",
    "html": "The slope that the image labels $dG/d\\xi = \\mu$ is the reaction Gibbs energy, $(\\partial G/\\partial \\xi)_{T,P} = \\Delta_r G$."
   }
  ],

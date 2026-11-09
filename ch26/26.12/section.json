@@ -1,0 +1,161 @@
+{
+ "id": "26.12",
+ "module": "14533",
+ "chapter": "26",
+ "title": "Activities are Important for Ionic Species",
+ "short": "Activities of ions",
+ "lead": "Ions in solution are far from ideal, and their equilibria must be written in activities. Acetic acid and barium fluoride show how the correction is found by iteration and how large it gets.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "The book prints no credits for this page.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": []
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "Both exercises are the book's, an exercise box and a question set in a one-cell table; the book keys neither, so both carry AI solutions checked by computation with the page's extended Debye-Hückel formula.",
+ "figures": [],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "weak-electrolytes",
+   "concept": "activity-equilibrium-constant",
+   "verb": "uses"
+  },
+  {
+   "span": "weak-electrolytes",
+   "concept": "activity-by-phase",
+   "verb": "uses"
+  },
+  {
+   "span": "weak-electrolytes",
+   "concept": "mean-ionic-activity-coefficient",
+   "verb": "uses"
+  },
+  {
+   "span": "weak-electrolytes",
+   "concept": "debye-huckel-law",
+   "verb": "uses"
+  },
+  {
+   "span": "weak-electrolytes",
+   "concept": "extended-debye-huckel-equation",
+   "verb": "uses"
+  },
+  {
+   "span": "weak-electrolytes",
+   "concept": "ionic-strength",
+   "verb": "uses"
+  },
+  {
+   "span": "weak-electrolytes",
+   "concept": "equilibrium-activity-iteration",
+   "verb": "introduces"
+  },
+  {
+   "span": "solubility-products",
+   "concept": "equilibrium-activity-iteration",
+   "verb": "reinforces"
+  },
+  {
+   "span": "solubility-products",
+   "concept": "solubility-activity-effect",
+   "verb": "introduces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "e1",
+   "source_id": "Even pure water contains",
+   "source_number": "Exercise",
+   "kind": "exercise",
+   "bloom": "Analyze",
+   "place": {
+    "at": "end"
+   },
+   "cite": "weak-electrolytes",
+   "prompt": "<p>Even pure water contains OH<sup>-</sup> and H<sub>3</sub>O<sup>+</sup> ions. The K for this equilibrium is 10<sup>-14</sup>. How does the pH change if we add 0.5 m/lit of a strong electrolyte M<sup>2+</sup> X<sup>2-</sup>? CH 431/Lecture 17/answer2</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "[H₃O⁺]",
+      "value": 1.99e-07,
+      "unit": "mol/L",
+      "tol": 0.02,
+      "hint": "The salt sets the ionic strength; H₃O⁺ and OH⁻ are a 1:1 pair, so $|z_+z_-| = 1$ in the formula for $\\gamma_\\pm$."
+     },
+     {
+      "part": "pH",
+      "value": 7.0,
+      "tol": 0.01
+     }
+    ],
+    "solution": "<p>The salt alone sets the ionic strength: $I = \\tfrac{1}{2}\\left[(0.5)(+2)^2 + (0.5)(-2)^2\\right] = 2.0$ mol/L. For the 1:1 pair H<sub>3</sub>O<sup>+</sup>/OH<sup>−</sup>, $\\ln \\gamma_\\pm = -1.173\\,\\dfrac{\\sqrt{2.0}}{1 + \\sqrt{2.0}} = -0.687$, so $\\gamma_\\pm = 0.503$ and $\\gamma_\\pm^2 = 0.253$.</p><p>$K = \\gamma_\\pm^2[\\mathrm{H_3O^+}][\\mathrm{OH^-}] = 10^{-14}$ with $[\\mathrm{H_3O^+}] = [\\mathrm{OH^-}]$ gives $[\\mathrm{H_3O^+}] = 10^{-7}/0.503 = 1.99 \\times 10^{-7}$ mol/L, twice the ideal value.</p><p>The pH is defined by the activity, $a_{\\mathrm{H_3O^+}} = \\gamma_\\pm[\\mathrm{H_3O^+}] = 10^{-7}$, so it stays 7.00. Only a pH computed from the concentration would read 6.70: the salt doubles the ions' concentrations and leaves their activities alone.</p>"
+   }
+  },
+  {
+   "id": "q1",
+   "source_id": "does the equilibrium change if we add 0.5 mol/l NaCl to the solution?",
+   "source_number": "Question",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "weak-electrolytes",
+   "prompt": "<p><em>Question</em>: does the equilibrium change if we add 0.5 mol/l NaCl to the solution?</p>",
+   "answer": {
+    "type": "number",
+    "value": 0.00212,
+    "unit": "mol/L",
+    "tol": 0.02,
+    "generated_by": "ai",
+    "part": "the equilibrium [Ac⁻] = [H₃O⁺] = x",
+    "hint": "The NaCl sets the ionic strength at about 0.50 mol/L, far above what the acid adds.",
+    "solution": "<p>Yes. The NaCl gives $I \\approx 0.50$ mol/L (the acid's own ions add only $1.4 \\times 10^{-3}$). Then $\\ln \\gamma_\\pm = -1.173\\,\\dfrac{\\sqrt{0.50}}{1 + \\sqrt{0.50}} = -0.486$, $\\gamma_\\pm = 0.615$ and $\\gamma_\\pm^2 = 0.378$.</p><p>$\\dfrac{x^2}{0.1 - x} = \\dfrac{1.74 \\times 10^{-5}}{0.378} = 4.60 \\times 10^{-5}$ gives $x = 2.12 \\times 10^{-3}$ mol/L, against $1.37 \\times 10^{-3}$ mol/L without the salt. $K$ itself is unchanged, but the lower activity coefficients let about 55% more of the acid ionize.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "e1",
+   "concept": "equilibrium-activity-iteration"
+  },
+  {
+   "exercise": "e1",
+   "concept": "ionic-strength"
+  },
+  {
+   "exercise": "e1",
+   "concept": "extended-debye-huckel-equation"
+  },
+  {
+   "exercise": "q1",
+   "concept": "equilibrium-activity-iteration"
+  },
+  {
+   "exercise": "q1",
+   "concept": "ionic-strength"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-ionic-strength",
+   "kind": "correction",
+   "html": "With $[\\mathrm{Ba^{2+}}] = x$ and $[\\mathrm{F^-}] = 2x$, $I = \\tfrac{1}{2}\\left[(+2)^2x + (-1)^2(2x)\\right] = 3x$. The printed line drops the brackets and the 2 of the fluoride term, though its result, $3x$, is right."
+  },
+  {
+   "id": "c-thirty-percent",
+   "kind": "correction",
+   "html": "Iterating to convergence gives $x = 0.0107$ mol/L, 43% above the ideal $7.52 \\times 10^{-3}$ mol/L; the rounded 0.011 is 46% above it."
+  }
+ ]
+}

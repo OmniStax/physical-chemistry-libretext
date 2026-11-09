@@ -1,0 +1,269 @@
+{
+ "id": "26.2",
+ "module": "14523",
+ "chapter": "26",
+ "title": "An Equilibrium Constant is a Function of Temperature Only",
+ "short": "The equilibrium constant",
+ "lead": "At equilibrium the reaction quotient takes a fixed value, the equilibrium constant. Its link to the standard reaction Gibbs energy tells how it moves with temperature, why compressing a gas mixture shifts the equilibrium without changing it, and how it reads in concentrations.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "The book prints no credits for this page.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": []
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The question is the book's example on ammonia, which prints no answer; its solution is AI-written, and its Bloom level and concept tags were chosen by AI.",
+ "figures": [],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "equilibrium-constant",
+   "concept": "equilibrium-constant",
+   "verb": "introduces"
+  },
+  {
+   "span": "equilibrium-constant",
+   "concept": "standard-gibbs-equilibrium-constant",
+   "verb": "introduces"
+  },
+  {
+   "span": "equilibrium-constant",
+   "concept": "reaction-gibbs-quotient",
+   "verb": "uses"
+  },
+  {
+   "span": "temperature",
+   "concept": "van-t-hoff-equation",
+   "verb": "introduces"
+  },
+  {
+   "span": "temperature",
+   "concept": "integrated-van-t-hoff",
+   "verb": "introduces"
+  },
+  {
+   "span": "temperature",
+   "concept": "gibbs-helmholtz-equation",
+   "verb": "uses"
+  },
+  {
+   "span": "le-chatelier-s-principle",
+   "concept": "k-temperature-only",
+   "verb": "introduces"
+  },
+  {
+   "span": "le-chatelier-s-principle",
+   "concept": "dissociation-extent-pressure",
+   "verb": "introduces"
+  },
+  {
+   "span": "le-chatelier-s-principle",
+   "concept": "le-chateliers-principle",
+   "verb": "introduces"
+  },
+  {
+   "span": "le-chatelier-s-principle",
+   "concept": "daltons-law",
+   "verb": "uses"
+  },
+  {
+   "span": "concentration",
+   "concept": "molarity",
+   "verb": "introduces"
+  },
+  {
+   "span": "concentration",
+   "concept": "concentration-equilibrium-constant",
+   "verb": "introduces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "q1",
+   "source_id": "Consider the reaction of ammonia decomposition",
+   "kind": "question",
+   "bloom": "Understand",
+   "place": {
+    "at": "end"
+   },
+   "cite": "le-chatelier-s-principle",
+   "prompt": "<p>Consider the reaction of ammonia decomposition:</p>$$ \\sf 2NH_3\\it\\left(g\\right)\\sf\\leftrightharpoons N_2\\it\\left(g\\right)\\sf+3H_2\\it\\left(g\\right) $$ $$ \\Delta_fH^{\\circ}(\\text{NH}_3, g)=-45.90\\;\\sf kJ/mol $$<p>The reaction is initially at equilibrium. For each of the stresses, use your General Chemistry knowledge to decide if equilibrium will be unaffected, or if it will shift towards reactants or products.</p><table><thead><tr><th>Process</th><th>Shifts towards</th></tr></thead><tbody><tr><td>Isothermal removal of $\\sf H_2$ gas</td><td></td></tr><tr><td>Isothermal addition of $\\sf N_2$ gas</td><td></td></tr><tr><td>Isothermal decrease of container volume</td><td></td></tr><tr><td>Isothermal and isochoric addition of argon gas</td><td></td></tr><tr><td>Isobaric increase of temperature</td><td></td></tr></tbody></table><p>Write the equilibrium constant expression for the above chemical reaction in terms of gas-phase mole fractions.</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "Count the moles of gas on each side, and find the sign of the reaction enthalpy from the enthalpy of formation of NH₃.",
+    "solution": "<p>Removing H₂ lowers $Q$ below $K$, so the equilibrium shifts towards the products. Adding N₂ raises $Q$ above $K$, so it shifts towards the reactants. A smaller volume raises the total pressure, and the equilibrium moves to the side with fewer molecules: 2 mol of NH₃ against 4 mol of N₂ and H₂, so towards the reactants. Argon added at constant volume leaves every partial pressure as it was, so $Q$ still equals $K$ and the equilibrium is unaffected. The reaction enthalpy is $\\Delta_rH^\\circ = -2\\times(-45.90) = +91.80$ kJ/mol, so the decomposition is endothermic, and by the van 't Hoff equation $K$ grows with temperature: the equilibrium shifts towards the products.</p><p>With $P_i = x_iP$,</p>$$ K = \\dfrac{(P_{\\text{N}_2}/P^\\circ)(P_{\\text{H}_2}/P^\\circ)^3}{(P_{\\text{NH}_3}/P^\\circ)^2} = \\dfrac{x_{\\text{N}_2}\\,x_{\\text{H}_2}^3}{x_{\\text{NH}_3}^2}\\left(\\dfrac{P}{P^\\circ}\\right)^2 $$"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "q1",
+   "concept": "le-chateliers-principle"
+  },
+  {
+   "exercise": "q1",
+   "concept": "van-t-hoff-equation"
+  },
+  {
+   "exercise": "q1",
+   "concept": "equilibrium-constant"
+  }
+ ],
+ "footnotes": [],
+ "derivations": [
+  {
+   "id": "van-t-hoff",
+   "what": "the van 't Hoff equation",
+   "source": "Physical Chemistry (LibreTexts), 26.2 An Equilibrium Constant is a Function of Temperature Only",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kDeltarGstd = -\\kR\\kT\\ln K"
+      },
+      {
+       "tex": "\\left[\\frac{\\partial\\left(\\Delta\\bar{G}/T\\right)}{\\partial T}\\right]_P=-\\frac{\\Delta \\bar{H}}{T^2}",
+       "src": "22.7",
+       "drv": "22.7/gibbs-helmholtz"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{s}{\\kDeltarGstd} = \\mk{l}{-\\kR\\kT\\ln K}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\ln K} = \\mk{s}{-\\dfrac{\\kDeltarGstd}{\\kR\\kT}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{l}{\\left(\\dfrac{\\partial\\ln K}{\\partial \\kT}\\right)_P} = \\mk{s}{-\\dfrac{1}{\\kR}\\left[\\dfrac{\\partial(\\kDeltarGstd/\\kT)}{\\partial \\kT}\\right]_P}",
+       "uses": [],
+       "cap": "Differentiate both sides with respect to $\\kT$ at constant pressure; $\\kR$ is a constant."
+      },
+      {
+       "tex": "\\mk{l}{\\left(\\dfrac{\\partial\\ln K}{\\partial \\kT}\\right)_P} = \\mk{s}{-\\dfrac{1}{\\kR}\\left(-\\dfrac{\\kDeltarHstd}{\\kT^2}\\right)}",
+       "uses": [
+        1
+       ],
+       "cap": "The Gibbs–Helmholtz equation holds for any process, so also for the reaction with every species in its standard state."
+      },
+      {
+       "tex": "\\mk{l}{\\left(\\dfrac{\\partial\\ln K}{\\partial \\kT}\\right)_P} = \\mk{s}{\\dfrac{\\kDeltarHstd}{\\kR\\kT^2}}",
+       "uses": []
+      }
+     ],
+     "src": "26.2"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "text": "The enthalpy of reaction $\\kDeltarHstd$ is independent of temperature."
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\left(\\dfrac{\\partial\\ln K}{\\partial \\kT}\\right)_P} = \\mk{r}{\\dfrac{\\kDeltarHstd}{\\kR\\kT^2}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{d\\left(\\ln K\\right)} = \\mk{r}{\\dfrac{\\kDeltarHstd(\\kT)}{\\kR\\kT^2}\\,d\\kT}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{l}{\\int_{\\ln K(T_1)}^{\\ln K(T_2)} d\\ln K} = \\mk{r}{\\dfrac{\\kDeltarHstd}{\\kR}\\int_{\\kTone}^{\\kTtwo}\\dfrac{d\\kT}{\\kT^2}}",
+       "uses": [
+        1
+       ],
+       "cap": "Integrate both sides from $\\kTone$ to $\\kTtwo$; a constant $\\kDeltarHstd$ comes out of the integral."
+      },
+      {
+       "tex": "\\mk{l}{\\ln\\dfrac{K(\\kTtwo)}{K(\\kTone)}} = \\mk{r}{-\\dfrac{\\kDeltarHstd}{\\kR}\\left(\\dfrac{1}{\\kTtwo}-\\dfrac{1}{\\kTone}\\right)}",
+       "uses": [],
+       "cap": "The integral of $d\\kT/\\kT^2$ is $-1/\\kT$."
+      }
+     ],
+     "src": "26.2"
+    }
+   ]
+  },
+  {
+   "id": "dissociation-extent",
+   "what": "K for A ⇌ B + C from the extent",
+   "source": "Physical Chemistry (LibreTexts), 26.2 An Equilibrium Constant is a Function of Temperature Only",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "K = \\dfrac{\\kPB\\kPC}{\\kPA}"
+      },
+      {
+       "tex": "\\knA = 1- \\kxiext"
+      },
+      {
+       "tex": "n_B= \\kxiext"
+      },
+      {
+       "tex": "n_C= \\kxiext"
+      },
+      {
+       "tex": "n_{Total} = 1+ \\kxiext"
+      },
+      {
+       "tex": "\\kPpi = \\dfrac{n_i}{n_{Total}}\\kP",
+       "src": "24.1"
+      },
+      {
+       "text": "At equilibrium the extent is $\\kxieq$."
+      }
+     ],
+     "then": {
+      "tex": "\\mk{k}{K} = \\mk{r}{\\dfrac{\\kPB\\kPC}{\\kPA}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{k}{K} = \\mk{r}{\\dfrac{\\left(\\dfrac{n_B}{n_{Total}}\\kP\\right)\\left(\\dfrac{n_C}{n_{Total}}\\kP\\right)}{\\dfrac{\\knA}{n_{Total}}\\kP}}",
+       "uses": [
+        5
+       ],
+       "cap": "Dalton's law gives each partial pressure as the species' share of the moles times the total pressure."
+      },
+      {
+       "tex": "\\mk{k}{K} = \\mk{r}{\\dfrac{\\left(\\dfrac{\\kxiext}{1+\\kxiext}\\kP\\right)\\left(\\dfrac{\\kxiext}{1+\\kxiext}\\kP\\right)}{\\dfrac{1-\\kxiext}{1+\\kxiext}\\kP}}",
+       "uses": [
+        1,
+        2,
+        3,
+        4
+       ]
+      },
+      {
+       "tex": "\\mk{k}{K} = \\mk{r}{\\kP\\dfrac{\\kxiext^2}{(1+\\kxiext)(1-\\kxiext)}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{k}{K} = \\mk{r}{\\kP\\dfrac{\\kxiext^2}{1-\\kxiext^2}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{k}{K} = \\mk{r}{\\kP\\dfrac{\\kxieq^2}{1-\\kxieq^2}}",
+       "uses": [
+        6
+       ]
+      }
+     ],
+     "src": "26.2"
+    }
+   ]
+  }
+ ]
+}

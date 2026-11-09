@@ -1,0 +1,52 @@
+<section id="equilibrium-constant">
+<h2>The equilibrium constant</h2>
+<p>Consider a generic reaction:</p>
+$$ v_AA + v_BB \rightleftharpoons v_YY + v_ZZ $$
+<p><span data-concept="standard-gibbs-equilibrium-constant">When the reaction reaches equilibrium, the Gibbs energy of reaction, $\kDeltarG$, goes to zero.</span> In this case, the reaction quotient, $Q$, is usually rewritten as the <strong><span data-concept="equilibrium-constant">equilibrium constant</span></strong>, $K$, and we get:</p>
+$$ \kDeltarG = \kDeltarGstd + \kR\kT\ln K=0 $$
+$$ \kDeltarGstd = - \kR\kT\ln K $$
+<p>where</p>
+$$ K=\dfrac{P_{eq,Y}^{vY}P_{eq,Z}^{vZ}}{P_{eq,A}^{vA}P_{eq,B}^{vB}} $$
+<div class="note">
+<div class="eyebrow">Note</div>
+<h3>Note</h3>
+<p>As you see $\kDeltarGstd$ is <em><strong>not</strong></em> zero, because the standard state does <em><strong>not</strong></em> represent an equilibrium state (typically).</p>
+</div>
+</section>
+
+<section id="temperature">
+<h2>Equilibrium constant and temperature</h2>
+<p>We can calculate the temperature dependence of $K$. Rather than look at:</p>
+$$ \left(\frac{\partial K}{\partial \kT}\right)_P $$
+<p>We will look at:</p>
+$$ \left(\frac{\partial\ln{K}}{\partial \kT}\right)_P $$
+<figure class="dv" id="drv-van-t-hoff"></figure>
+<p>The temperature dependence of the equilibrium constant depends on enthalpy of reaction. This is the <span data-concept="van-t-hoff-equation">Van't Hoff equation</span>. We can use it to <span data-concept="integrated-van-t-hoff">find $K$ at other temperatures</span>.</p>
+</section>
+
+<section id="le-chatelier-s-principle">
+<h2>Le Chatelier's Principle</h2>
+<p>In the ideal gas reaction case, <span data-concept="k-temperature-only">$K$ <strong>only</strong> depends on temperature, $\kT$, (just like $U$) not on the total pressure, $\kP$</span>. This leads to the well-known principle of Le Chatelier. Consider a gas reaction like:</p>
+$$ A \rightleftharpoons B + C $$
+<p>e.g.</p>
+$$ PCl_5 \rightleftharpoons PCl_3 + Cl_2 $$
+<p>In pressures, the equilibrium constant becomes:</p>
+$$ K = \dfrac{\kPB\kPC}{\kPA} $$
+<figure class="dv" id="drv-dissociation-extent"></figure>
+<p>Even though the total pressure, $\kP$, does occur in this equation, $K$ is <em>not</em> dependent on $\kP$. If the total pressure is changed (e.g. by compression of the gas) <span data-concept="dissociation-extent-pressure">the value of ξ<sub>eq</sub> will change (the equilibrium shifts) in response</span>. It will go to the side with the fewer molecules. This fact is known as <span data-concept="le-chateliers-principle">le Chatelier's principle</span></p>
+<p>If the system is not ideal we will also get a Chatelier shift, but the value of $K$ may change a little because the value of the <span data-concept="activity-coefficient">activity coefficients</span> (or fugacity) is a little dependent on the pressure too. In solution the same thing holds. In ideal solutions $K$ is only $\kT$ dependent, but as we saw these systems are rare. Particularly in ionic solutions equilibrium constants will be effected by other things than just temperature, e.g. changes in the ionic strength and we need to find the <span data-concept="activity-coefficient">activity coefficients</span> to make any predictions.</p>
+</section>
+
+<section id="concentration">
+<h2>Concentration</h2>
+<p>The gas law contains a hidden definition of concentration:</p>
+$$ \kP\kV= n\kR\kT $$
+$$ \kP= \left(\dfrac{n}{\kV} \right) \kR\kT $$
+$$ \kP= c \kR\kT $$
+$$ c= \dfrac{\kP}{\kR\kT} \tag{26.2.1} $$
+<p>Here c stands for the molar amount per unit volume or <em><strong><span data-concept="molarity">molarity</span></strong></em>. For gaseous mixtures we do not use this fact much, but it provides the link to the more important liquid solution as a reaction medium. <span data-concept="concentration-equilibrium-constant">We can rewrite the equilibrium constant as</span></p>
+$$ K= \dfrac{c_{eq,Y}^{v_Y} c_{eq,Z}^{v_Z} }{c_{eq,A}^{v_A} c_{eq,B}^{v_B}} \tag{26.2.2} $$
+<p>However, c (Equation 26.2.1) is substituted into $K$ (Equation 26.2.2), then not all the factors of $\kR\kT$ cancel. The missing term g. ln[RT] depends on the stoichiometric coefficients:</p>
+$$ g=v_Y+v_Z-v_A-v_B $$
+<p>The term is generally <em>incorporated</em> in Δ<sub>r</sub>G<sup><s>o</s></sup> so that the latter now refers to a new standard state of 1 mole per liter of each species rather than 1 bar of each (or so).</p>
+</section>

@@ -1565,3 +1565,37 @@ just above it. 25.3's derivation drops the book's linking prose ("We can now app
 relations…"); its reasons are the agent's. 25.6.1's readout goes from |q₊q₋| to the bare |z₊z₋| factor
 in front of 0.357 nm (the Bjerrum length over two) without saying so. In 25.3's Sim the "0.51 K" label
 crosses the vapor line at 1 mol/kg.
+
+## Chapter 24 pass · 2026-11-08
+
+Built: 24.1–24.9 (no intro, no summary; 24.E "TBA", not built). 10 figure rows: 5 still 2D Sims
+(24.1's `sim-pxy` and `sim-txy-lever`, unnumbered; Figure 24.5.1 + 24.6.1 `sim-henry-raoult`;
+Figure 24.6.2 `sim-azeotrope`; 24.9's `sim-mixing-gibbs`), none moving, no 3D; 4 kept images (the
+coin 24.1.1, 24.4.1 with its caption corrected, 24.4.2, 24.6.3) and the unnumbered example diagram
+of 24.6. `sim-gap-meets-dome` and `sim-pTx` not built (orchestrator). 14 derivations (24.1 four,
+24.2 three, 24.3 one, 24.4 two, 24.6 two, 24.9 two). 10 exercises, all kind `exercise` in the
+Exercises document: 1 unkeyed book item with an AI solution (24.1's "Exercise") and 9 AI
+exercises, one each in 24.2–24.9 and two in 24.4. 25 AI-marked corrections: 20 footnotes and 5
+derivation notes.
+
+Chapter pass: `mu_B` (owned by ch08, the Bohr magneton's key) given the macro `\kmuB` through
+`ost set … --chapter 8`, the only route `ost` allows; 24.2's text, AI exercise and derivations now
+write `\kmuB` (24.2's row already names `chemical-potential`). Variables rows added: 24.4 `x_1`,
+`x_2` (`mole-fraction`), and its derivations write `\kxone`, `\kxtwo`; 24.6 `mu_1`, `mu_2`
+(`chemical-potential`). `drv` links: 24.4's `ideal-mixing` fact μ_i^sln = μ_i* + RT ln x_i →
+`24.2/raoult-both`; 24.6's `gibbs-duhem-lnp` fact x₁dμ₁ + x₂dμ₂ = 0 → `24.2/gibbs-duhem-binary`.
+Derivations compared with `source.md`: 24.2's binary line dG = d(μ_A n_A) + d(μ_B n_B), dropped by
+the builder, restored as a step; 24.1's lever rule gains the skipped line
+n^liq(x_all − x₂) = n^gas(y₂ − x_all) (the key map moved onto it). 24.1's `sim-pxy`: on
+water–ethanol the "pure ethanol" label sat on the 945 Torr end of the lines; the pressure axis
+now runs to 1200 Torr. Every `\k` macro of Chapter 24 has a variables row in force. mediacheck
+clean. `colours:default` run: every type keeps its stored colour. `check:content`: no errors, no
+warnings. Every figure screenshot in light (`sim-pxy` also on water–ethanol), 24.1 and 24.9 in
+dark; no console or KaTeX error on any Chapter 24 page; four derivations played through.
+
+Known gaps: 24.3's `solution-mu` and 24.9's `regular-second-activity` follow the prose-first
+reading, so their end results (and 24.3's three facts) also stand printed just above them; the
+same for 24.6's gas-phase fact after (24.6.1). In `sim-pxy` the "vapor" region name sits against
+the legend's edge. Several derivation symbols stay plain where no row or macro exists (n₁, n₂,
+μ₁*, μ₂*, μ_i^sln in 24.4; χ_A, χ_B in 24.2). The memory flags of the prep stand (water and
+ethanol at 75 °C, ε = 78.54, the Debye–Hückel sign).

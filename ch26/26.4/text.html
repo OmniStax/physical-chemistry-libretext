@@ -1,0 +1,46 @@
+<section id="minimum">
+<h2>Down to the minimum</h2>
+<p>As discussed in <a class="xref" href="#26.1-extent-of-reaction">Section 26.4</a><sup class="fn" data-note="c-section"></sup>, we defined the <span data-concept="extent-of-reaction">extent of the reaction</span> ($\kxiext$) as a quantitative measure of how far along the reaction has evolved. For simple reactions like $\mathrm{A <=> B}$, the extent of reaction is easy to define and is simply the number of moles of $\mathrm{A}$ that has been converted to $\mathrm{B}$. Since $d\kxiext$ has the same value as $dn$, we can write that</p>
+$$ \begin{aligned} dG &= \mu_A dn_A + \mu_B dn_B \\[4pt] &= -\mu_A d\kxiext + \mu_B d\kxiext. \end{aligned} $$
+<p>The minus sign comes from the fact that when the reaction goes in the left to right direction, the amount of $\mathrm{A}$ is decreasing, while the amount of $\mathrm{B}$ is increasing. Looking at these equations, it is reasonable to suggest that:</p>
+$$ \left(\frac{\partial \kG}{\partial \kxiext}\right)_{P T}=\mu_{B}-\mu_{A} $$
+<p>This is the slope of the free energy with respect to the extent of the reaction. This relationship will have a region where the sign is negative, one point where the value is zero and a region where the value is positive (Figure 26.4.1). If we look at a plot of $\kG$ as a function of $\kxiext$, we can see that the point where is the minimum of the curve:</p>
+$$ \left(\frac{\partial \kG}{\partial \kxiext}\right)_{PT}=0 $$
+<p>This is the point where $\mu_A$ and $\mu_B$ are the same. On one side of the minimum, the slope is negative and on the other side, the slope is positive. In both cases, the reaction is spontaneous (i.e, $d\kG < 0$) as long as the reaction is evolving towards the minimum, which will be called the <strong><span data-concept="equilibrium-position">equilibrium position</span></strong>. Hence, all reactions spontaneously move towards equilibrium; the immediate question is what value of $\kxiext$ corresponds to the equilibrium position of a reaction?</p>
+<figure class="sim" id="sim-gibbs-extent" data-figure="26.4.1 + 26.4.2" data-original="/media/ch26/404307-reactive_gibbs_energy.svg,/media/ch26/404308-GE-ne.svg" data-original-caption="Reactive Gibbs Energy and Equilibria. (CC BY-NC 4.0; Ümit Kaya via LibreTexts)">
+  <div class="sim-head"><span class="eyebrow">Figure 26.4.1 + 26.4.2</span><span>Drag the point along the curve. Its slope is $\kDeltarG$: negative before the minimum, zero at $\kxieq$, positive after it. Move $\kDeltarGstd$ away from zero and the minimum slides toward the side of lower $\kG$, but the mixing dip keeps it off the ends.</span></div>
+</figure>
+<div class="note">
+<div class="eyebrow">Note</div>
+<h3>Terminology</h3>
+<ul><li>A reaction for which $\kDeltarG < 0$ is called <strong><span data-concept="exergonic-endergonic">exergonic</span></strong>.</li><li>A reaction for which $\kDeltarG > 0$ is called <strong><span data-concept="exergonic-endergonic">endergonic</span></strong>.</li><li>$\kDeltarG < 0$, the forward reaction is spontaneous.</li><li>$\kDeltarG > 0$, the reverse reaction is spontaneous.</li><li>$\kDeltarG = 0$, the reaction is at equilibrium.</li></ul>
+</div>
+</section>
+
+<section id="ideal-gas-equilibrium">
+<h2>Ideal Gas Equilibrium</h2>
+<p>To understand how we can find the minimum and what the Gibbs free energy of a reaction depends on, let's first start with a reaction that converts one ideal gas into another.</p>
+$$ \mathrm{A<=>B} $$
+<p>Let's assume the reaction enthalpy is zero and hence the only thing that determines what the ratio of product to reactant should be is the entropy term (the mixing term), which is the most favorable when the mixture is half and half.</p>
+$$ \kDeltamixG=n \kR\kT\left(\chi_{A} \ln \chi_{A}+ \chi_{B} \ln \chi_{B}\right) \tag{26.4.1} $$
+<p>Remember that the Gibbs free energy of mixing is not a molar quantity and depends on $n$ (unlike the reaction Gibbs free energy). Also, the Gibbs free energy of mixing is defined relative to pure $\mathrm{A}$ and $\mathrm{B}$. The free energy of mixing in Equation 26.4.1 is at a minimum when the amounts of $\mathrm{A}$ equal $\mathrm{B}$.</p>
+<p>Thus, if we have a reaction $\mathrm{A<=>B}$ and there is no enthalpy term (and no change in the inherent entropy of A vs. B), we would expect the system to have the minimum Gibbs free energy when the mole fraction of $\mathrm{A}$ and $\mathrm{B}$ are each 0.5.</p>
+<div class="note">
+<div class="eyebrow">Note</div>
+<h3>Think about it</h3>
+<p>If $\mathrm{A}$ can form $\mathrm{B}$ and $\mathrm{B}$ can form $\mathrm{A}$ and there is no other forces involved (no heat/enthalpy) that would favor one product over the other, probability would just state that eventually you will have statistically the same amount of both A and B present -- this is the lowest free energy state. (This, of course, will not be true if the enthalpy for the reaction is not zero or if $\mathrm{A}$ and $\mathrm{B}$ have different inherent entropies). Usually there are additional terms for the reaction.</p>
+</div>
+<p>Lets work through this for an ideal gas reaction:</p>
+$$ \begin{aligned} \kDeltarG &=\mu_{B}-\mu_{A} \\[4pt] &=\mu_{B}^{o}+\kR\kT \ln \dfrac{\kPB}{P^{\theta}}-\mu_{A}^{o}-\kR\kT \ln \dfrac{\kPA}{P^{\theta}} \\[4pt] &=\mu_{B}^{o}-\mu_{A}^{o}+\kR\kT \ln \dfrac{\kPB}{\kPA} \end{aligned} $$
+<p>What we normally do at this point is to give the first two terms a special name. Since it is the difference between the chemical potentials at standard conditions, we refer to it as the Gibbs free energy of reaction at standard conditions or the <strong><span data-concept="standard-reaction-gibbs-energy">standard Gibbs free energy of reaction</span></strong>.</p>
+$$ \begin{aligned} \kDeltarGstd &= \mu_B^{o}-\mu_A^{o}  \\[4pt] \kDeltarG &= \kDeltarGstd + \kR\kT \ln \dfrac{\kPB}{\kPA}  \end{aligned} \tag{26.4.2} $$
+<p>There are two parts to Equation 26.4.2. The first term ($\kDeltarGstd$) is the Gibbs free energy for converting one mole of $\mathrm{A}$ to $\mathrm{B}$ under standard conditions (1 bar of both $\mathrm{A}$ and $\mathrm{B}$). <span data-concept="mixing-places-minimum">The second term is the mixing term that is minimized when the amounts of A and B are equal to one another</span> (Figure 26.4.2). The first term you look up in a reference book and is specific for a specific reaction. The second term is calculated knowing the partial pressures of $\mathrm{A}$ and $\mathrm{B}$ in the gas.</p>
+<p>Now the minimum absolute Gibbs free energy will occur at the bottom of the curve where the slope is zero. Thus, the lowest free energy will occur when the reaction free energy (i.e., the slope of that curve in Figure 26.4.1) is equal to zero. The chemical potentials of $\mathrm{A}$ and $\mathrm{B}$ are equal.</p>
+$$ \mu_A = \mu_B $$
+<p>At this point, the reaction will neither go forwards or backwards and we call this equilibrium. Hence, at equilibrium:</p>
+$$ \begin{aligned} \kDeltarG &=\kDeltarGstd+\kR\kT \ln \dfrac{\kPB}{\kPA} \\[4pt] &=0 \end{aligned} $$
+<p>and the specific ratio of $\kPA$ and $\kPB$ necessary to ensure $\kDeltarG=0$ is characteristic of the reaction and is called the <strong><span data-concept="equilibrium-constant">equilibrium constant</span></strong> for that reaction.</p>
+$$ K_{eq}=\dfrac{\kPB}{\kPA} $$
+<p>We can now relate thermodynamic quantities to concentrations of molecules at equilibrium. We can also see that at equilibrium:</p>
+$$ \begin{aligned} &0=\kDeltarGstd+\kR\kT \ln K_{eq} \\[4pt] &\kDeltarGstd=-\kR\kT \ln K_{eq} \\[4pt] &K_{eq}=e^{-\dfrac{\kDeltarGstd}{\kR\kT}} \end{aligned} $$
+</section>

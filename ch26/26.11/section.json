@@ -1,0 +1,211 @@
+{
+ "id": "26.11",
+ "module": "14532",
+ "chapter": "26",
+ "title": "Thermodynamic Equilibrium Constants Are Expressed in Terms of Activities",
+ "short": "K in activities",
+ "lead": "In a non-ideal system the equilibrium constant is written in activities. It splits into a quotient of activity coefficients and a quotient of concentrations, and a pure solid or liquid gets an activity of its own.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "The book prints no credits for this page.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": []
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercise here; the one exercise is new and AI-written, with an AI solution checked by computation. The molar volume of water it gives is quoted from memory, not from the book.",
+ "figures": [],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "k-in-activities",
+   "concept": "activity",
+   "verb": "uses"
+  },
+  {
+   "span": "k-in-activities",
+   "concept": "activity-coefficient",
+   "verb": "uses"
+  },
+  {
+   "span": "k-in-activities",
+   "concept": "equilibrium-constant",
+   "verb": "uses"
+  },
+  {
+   "span": "k-in-activities",
+   "concept": "activity-equilibrium-constant",
+   "verb": "introduces"
+  },
+  {
+   "span": "activities-of-pure-condensed-phases",
+   "concept": "chemical-potential-differential",
+   "verb": "uses"
+  },
+  {
+   "span": "activities-of-pure-condensed-phases",
+   "concept": "condensed-activity-pressure",
+   "verb": "introduces"
+  },
+  {
+   "span": "activities-of-pure-condensed-phases",
+   "concept": "raoults-law",
+   "verb": "uses"
+  },
+  {
+   "span": "activities-of-pure-condensed-phases",
+   "concept": "reaction-gibbs-quotient",
+   "verb": "uses"
+  },
+  {
+   "span": "activities-of-pure-condensed-phases",
+   "concept": "condensed-equilibrium-temperature",
+   "verb": "introduces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "Upon integration to a different pressure P' we find",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "activities-of-pure-condensed-phases",
+   "prompt": "<p>Liquid water at 298.15 K has a molar volume of 18.07 cm<sup>3</sup>/mol. Taking its standard state as pure water at 1 bar, find its activity at 100 bar.</p>",
+   "answer": {
+    "type": "number",
+    "value": 1.075,
+    "tol": 0.004,
+    "generated_by": "ai",
+    "hint": "Convert $\\bar{V}$ to m<sup>3</sup>/mol and the pressure difference to Pa before dividing by $RT$.",
+    "solution": "<p>$\\ln a' = \\dfrac{(P'-1)\\bar{V}}{RT} = \\dfrac{(99 \\times 10^{5}\\ \\text{Pa})(18.07 \\times 10^{-6}\\ \\text{m}^3/\\text{mol})}{(8.314\\ \\text{J/(K mol)})(298.15\\ \\text{K})} = 0.0722$, so $a' = e^{0.0722} = 1.075$.</p><p>A hundredfold rise in pressure moves the activity by under 8%, which is why a pure liquid is usually given an activity of one.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "condensed-activity-pressure"
+  }
+ ],
+ "footnotes": [],
+ "derivations": [
+  {
+   "id": "condensed-activity-pressure",
+   "what": "the activity of a pure solid or liquid under pressure",
+   "source": "Physical Chemistry (LibreTexts), 26.11 Thermodynamic Equilibrium Constants Are Expressed in Terms of Activities",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "text": "The standard state is the pure compound at 1 bar and the temperature of interest, where $\\kmu = \\kmustd$."
+      },
+      {
+       "tex": "\\kmu = \\kmustd + \\kR\\kT\\ln a",
+       "src": "24.7"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{m}{\\kmu} = \\mk{s}{\\kmustd} + \\mk{a}{\\kR\\kT\\ln a}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{m}{\\kmustd} = \\mk{s}{\\kmustd} + \\mk{a}{\\kR\\kT\\ln a}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{a}{\\kR\\kT\\ln a} = \\mk{m}{0}",
+       "uses": [],
+       "map": {
+        "s": "m"
+       }
+      },
+      {
+       "tex": "\\mk{a}{a} = \\mk{m}{1}",
+       "uses": []
+      }
+     ],
+     "src": "26.11"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\kmu = \\kmustd + \\kR\\kT\\ln a",
+       "src": "24.7"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{m}{\\kmu} = \\mk{s}{\\kmustd} + \\mk{a}{\\kR\\kT\\ln a}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{m}{d\\kmu} = \\mk{a}{\\kR\\kT\\,d\\ln a}",
+       "uses": [],
+       "cap": "At fixed temperature $\\kmustd$ is a constant, so only the logarithm changes.",
+       "map": {
+        "s": "a"
+       }
+      }
+     ],
+     "src": "26.11"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\left(\\dfrac{\\partial \\kmu}{\\partial P}\\right)_{\\kT} = \\kVbar",
+       "src": "23.3"
+      },
+      {
+       "text": "For a solid or liquid $\\kVbar$ is a relatively small and constant value."
+      },
+      {
+       "step": 1
+      },
+      {
+       "step": 0
+      }
+     ],
+     "then": {
+      "tex": "\\mk{d}{\\left(\\dfrac{\\partial \\kmu}{\\partial P}\\right)_{\\kT}} = \\mk{v}{\\kVbar}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{d}{d\\kmu} = \\mk{v}{\\kVbar\\,dP}",
+       "uses": [],
+       "cap": "At constant temperature the change in $\\kmu$ comes from the change in pressure alone."
+      },
+      {
+       "tex": "\\mk{d}{\\kR\\kT\\,d\\ln a} = \\mk{v}{\\kVbar\\,dP}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{d}{d\\ln a} = \\mk{v}{\\dfrac{\\kVbar\\,dP}{\\kR\\kT}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{d}{\\ln a'} = \\mk{v}{\\dfrac{(\\kPprime-1)\\kVbar}{\\kR\\kT}}",
+       "uses": [
+        1,
+        3
+       ],
+       "cap": "Integrate from 1 bar, where $a = 1$, to $\\kPprime$, taking $\\kVbar$ outside the integral since it is constant."
+      }
+     ],
+     "src": "26.11"
+    }
+   ]
+  }
+ ]
+}

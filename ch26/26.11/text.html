@@ -1,0 +1,41 @@
+<section id="k-in-activities">
+<h2>Equilibrium constants in activities</h2>
+<p>The above is a general principle that can be extended to other concentration units and to liquid solutions, ideal or not. In non-ideal systems we could replace</p>
+$$ \kmui = \kmuio + \kR\kT\ln \dfrac{\kPpi}{\kPistd} $$
+<p>by:</p>
+$$ \kmui = \kmuio + \kR\kT\ln a_i $$
+<p>and follow the same procedure as above. In stead of an expression for K involving pressures or concentrations it now read in <em><strong><span data-concept="activity">activities</span></strong></em>:</p>
+$$ K = \dfrac{a_{eq,Y}^{\nu_Y}a_{eq,Z}^{\nu_Z}}{a_{eq,A}^{\nu_A}a_{eq,B}^{\nu_B}} $$
+<p>For each species we could write the activity as:</p>
+$$ a_i = \dfrac{\kgammai c_i}{c_i^o} $$
+<p>Here $c_i^o$ is unity in whatever concentration measure we wish to choose. Again its function is to cancel the dimension of $c_i$.</p>
+<p>With this split in three factors we can write <span data-concept="activity-equilibrium-constant">K as three factors</span> as well:</p>
+$$ K = \dfrac{K_\gamma K_c}{K_{c^o}} $$
+$$ K_\gamma = \dfrac{\gamma_{eq,Y}^{\nu_Y}\gamma_{eq,Z}^{\nu_Z}}{\gamma_{eq,A}^{\nu_A}\gamma_{eq,B}^{\nu_B}} $$
+$$ K_c = \dfrac{c_{eq,Y}^{\nu_Y}c_{eq,Z}^{\nu_Z}}{c_{eq,A}^{\nu_A}c_{eq,B}^{\nu_B}} $$
+$$ K_{c^o} = \dfrac{(c^o)^{\nu_Y}(c^o)^{\nu_Z}}{(c^o)^{\nu_A}(c^o)^{\nu_B}} $$
+<p>The last factor is unity, it cancels the dimensions of $K_c$ and is often <em>omitted</em>. The factor $K_\gamma$ is unity <em>if the solution is ideal</em>. Obviously, for ionic solutions that is seldom the case.</p>
+</section>
+
+<section id="activities-of-pure-condensed-phases">
+<h2>activities of pure condensed phases</h2>
+<p>Sometimes one of the reactants or products is a pure solid (precipitate) or liquid (more solvent e.g.). What activity should we assign in such a case?</p>
+<figure class="dv" id="drv-condensed-activity-pressure"></figure>
+<div class="book-table">
+  <div class="tcap"><span class="eyebrow">Table</span><span></span></div>
+  <table>
+    <thead><tr><th><strong>S&amp;McQ</strong><br> 1083</th></tr></thead>
+    <tbody>
+      
+    </tbody>
+  </table>
+</div>
+<p>Example 26-12 shows that for graphite <span data-concept="condensed-activity-pressure">the activity is only 1.01 at 100 bars</span>, so the activity is <em>not</em> very pressure dependent. Mostly if pure condensed compounds are involved in reactions the activity can taken as <strong>unity</strong>.</p>
+<p>This is also in line with what we said previously about the solvent following <span data-concept="raoults-law">Raoult's law</span>. In the limit of the solvent going to pure solvent we have that its P goes to P<em>. As the activity is defined as P/P</em> this converges to unity. If a reaction produces more solvent molecules we can usually consider their activity equal to one in very good approximation for dilute solutions, even if they are already non-ideal.</p>
+<p>The fact that a=1 for pure condensed phases has an important consequence for reactions (in general: processes) that only involve such phases. If all activities are unity, Q=1 and lnQ=0 which means that $\kDeltarG = \kDeltarGstd + 0$. Thus $\kDeltarG$ can only be zero -i.e. an equilibrium achieved- <em><strong>if</strong></em> $\kDeltarGstd$ happens to be zero, which is generally not the case. In fact there can only be <span data-concept="condensed-equilibrium-temperature">an equilbrium at one specific temperature</span>:</p>
+$$ \kDeltarGstd = 0 $$
+$$ \kDeltarHstd - \kT\kDeltarSstd $$
+$$ \kTeq = \dfrac{\kDeltarHstd}{\kDeltarSstd} $$
+<p>If the process is the transformation from a solid to a liquid this is the well-known <em>melting point</em>. At temperature other than 0<sup>o</sup>C only one phase can exist: either ice or water. If the other is present, that is an unstable condition and it will transform <em>entirely</em> to the stable form. In other words the process will go to completion, <em>not</em> equilbirium. Only <em>at</em> 0<sup>o</sup>C can the two coexist in equilibrium. This holds for all melting points but it also holds for e.g. a solid-solid chemical reactions only producing, say, another solid.</p>
+<p>Another way of expressing the above is to say that in order to have equilibrium at a <em>series</em> of temperatures, one needs at least one species involved for which activity depends on composition, e.g. a dilute solute or a gas.</p>
+</section>
