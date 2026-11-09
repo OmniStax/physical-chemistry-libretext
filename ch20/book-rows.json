@@ -1,0 +1,1070 @@
+{
+  "types": [
+    {
+      "id": "entropy",
+      "label": "entropy",
+      "dimension": "J/K"
+    }
+  ],
+  "symbols": [
+    {
+      "sym": "S_ent",
+      "latex": "S",
+      "macro": "\\kSent"
+    },
+    {
+      "sym": "S_prod",
+      "latex": "S_\\text{prod}",
+      "macro": "\\kSprod"
+    },
+    {
+      "sym": "S_exch",
+      "latex": "S_\\text{exchange}",
+      "macro": "\\kSexch"
+    },
+    {
+      "sym": "S_sys",
+      "latex": "S_\\text{sys}",
+      "macro": "\\kSsys"
+    },
+    {
+      "sym": "S_surr",
+      "latex": "S_\\text{surr}",
+      "macro": "\\kSsurr"
+    },
+    {
+      "sym": "S_total",
+      "latex": "S_\\text{total}",
+      "macro": "\\kStotal"
+    },
+    {
+      "sym": "S_ensemble",
+      "latex": "S_{ensemble}",
+      "macro": "\\kSens"
+    },
+    {
+      "sym": "S_system",
+      "latex": "S_{system}",
+      "macro": "\\kSsystem"
+    },
+    {
+      "sym": "S_A",
+      "latex": "S_A",
+      "macro": "\\kSA"
+    },
+    {
+      "sym": "S_B",
+      "latex": "S_B",
+      "macro": "\\kSB"
+    },
+    {
+      "sym": "S_BC",
+      "latex": "S_{B+C}",
+      "macro": "\\kSBC"
+    },
+    {
+      "sym": "S_bar",
+      "latex": "\\bar{S}",
+      "macro": "\\kSbar"
+    },
+    {
+      "sym": "q_irrev",
+      "latex": "q_{irrev}",
+      "macro": "\\kqirrev"
+    },
+    {
+      "sym": "q_rev_A",
+      "latex": "q_{rev,A}",
+      "macro": "\\kqrevA"
+    },
+    {
+      "sym": "q_rev_B",
+      "latex": "q_{rev,B}",
+      "macro": "\\kqrevB"
+    },
+    {
+      "sym": "q_rev_C",
+      "latex": "q_{rev,C}",
+      "macro": "\\kqrevC"
+    },
+    {
+      "sym": "q_rev_BC",
+      "latex": "q_{rev,B+C}",
+      "macro": "\\kqrevBC"
+    },
+    {
+      "sym": "q_h",
+      "latex": "q_h",
+      "macro": "\\kqh"
+    },
+    {
+      "sym": "q_A",
+      "latex": "q_A",
+      "macro": "\\kqA"
+    },
+    {
+      "sym": "q_1",
+      "latex": "q_1",
+      "macro": "\\kqone"
+    },
+    {
+      "sym": "q_2",
+      "latex": "q_2",
+      "macro": "\\kqtwo"
+    },
+    {
+      "sym": "q_3",
+      "latex": "q_3",
+      "macro": "\\kqthree"
+    },
+    {
+      "sym": "q_4",
+      "latex": "q_4",
+      "macro": "\\kqfour"
+    },
+    {
+      "sym": "w_cycle",
+      "latex": "w_\\text{cycle}",
+      "macro": "\\kwcycle"
+    },
+    {
+      "sym": "w_1",
+      "latex": "w_1",
+      "macro": "\\kwone"
+    },
+    {
+      "sym": "w_2",
+      "latex": "w_2",
+      "macro": "\\kwtwo"
+    },
+    {
+      "sym": "w_3",
+      "latex": "w_3",
+      "macro": "\\kwthree"
+    },
+    {
+      "sym": "w_4",
+      "latex": "w_4",
+      "macro": "\\kwfour"
+    },
+    {
+      "sym": "w_h",
+      "latex": "w_h",
+      "macro": "\\kwh"
+    },
+    {
+      "sym": "w_c",
+      "latex": "w_c",
+      "macro": "\\kwc"
+    },
+    {
+      "sym": "w_hot",
+      "latex": "w_{hot}",
+      "macro": "\\kwhot"
+    },
+    {
+      "sym": "w_cold",
+      "latex": "w_{cold}",
+      "macro": "\\kwcold"
+    },
+    {
+      "sym": "U_A",
+      "latex": "U_A",
+      "macro": "\\kUA"
+    },
+    {
+      "sym": "U_B",
+      "latex": "U_B",
+      "macro": "\\kUB"
+    },
+    {
+      "sym": "U_1",
+      "latex": "U_1",
+      "macro": "\\kUone"
+    },
+    {
+      "sym": "U_4",
+      "latex": "U_4",
+      "macro": "\\kUfour"
+    },
+    {
+      "sym": "U_cycle",
+      "latex": "U_\\text{cycle}",
+      "macro": "\\kUcycle"
+    },
+    {
+      "sym": "E_kin",
+      "latex": "E_{kin}",
+      "macro": "\\kEkin"
+    },
+    {
+      "sym": "T_A",
+      "latex": "T_A",
+      "macro": "\\kTA"
+    },
+    {
+      "sym": "T_B",
+      "latex": "T_B",
+      "macro": "\\kTB"
+    },
+    {
+      "sym": "T_h",
+      "latex": "T_h",
+      "macro": "\\kTh"
+    },
+    {
+      "sym": "T_cold",
+      "latex": "T_{cold}",
+      "macro": "\\kTcold"
+    },
+    {
+      "sym": "V_A",
+      "latex": "V_A",
+      "macro": "\\kVA"
+    },
+    {
+      "sym": "V_B",
+      "latex": "V_B",
+      "macro": "\\kVB"
+    },
+    {
+      "sym": "V_C",
+      "latex": "V_C",
+      "macro": "\\kVC"
+    },
+    {
+      "sym": "V_D",
+      "latex": "V_D",
+      "macro": "\\kVD"
+    },
+    {
+      "sym": "V_tot",
+      "latex": "V_{tot}",
+      "macro": "\\kVtot"
+    },
+    {
+      "sym": "n_A",
+      "latex": "n_A",
+      "macro": "\\knA"
+    },
+    {
+      "sym": "n_B",
+      "latex": "n_B",
+      "macro": "\\knB"
+    },
+    {
+      "sym": "n_tot",
+      "latex": "n_{tot}",
+      "macro": "\\kntot"
+    },
+    {
+      "sym": "p_j",
+      "latex": "p_j"
+    },
+    {
+      "sym": "eta",
+      "latex": "\\eta"
+    },
+    {
+      "sym": "n_3",
+      "latex": "n_3"
+    },
+    {
+      "sym": "W_1",
+      "latex": "W_1"
+    },
+    {
+      "sym": "W_2",
+      "latex": "W_2"
+    },
+    {
+      "sym": "W_tot",
+      "latex": "W_\\text{tot}"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "spontaneous-process",
+      "kind": "definition",
+      "section": "20.1",
+      "name": "Spontaneous process",
+      "statement": "A process that happens of its own accord once it is allowed to, such as a gas filling an evacuated chamber or two gases mixing when a valve is opened."
+    },
+    {
+      "id": "energy-not-spontaneity",
+      "kind": "idea",
+      "section": "20.1",
+      "name": "Energy does not decide spontaneity",
+      "statement": "The state functions U and H give no clue which way a process goes: KNO₃ dissolves spontaneously and the solution gets cold, KOH dissolves spontaneously and it gets hot, so the first law is not enough to describe nature."
+    },
+    {
+      "id": "arrangements-count",
+      "kind": "result",
+      "section": "20.1",
+      "name": "Number of distinguishable arrangements",
+      "statement": "n distinguishable objects can be arranged in n! ways; when they fall in groups of a, b, c … indistinguishable objects, the count is n!/(a!b!c!…), the number of realizations W.",
+      "forms": [
+        {
+          "id": "arrangements-n-factorial",
+          "latex": "W=n!"
+        },
+        {
+          "id": "arrangements-groups",
+          "latex": "W=\\frac{n!}{a!\\,b!\\,c!\\dots z!}"
+        }
+      ]
+    },
+    {
+      "id": "free-expansion",
+      "kind": "idea",
+      "section": "20.1",
+      "name": "Expansion of an ideal gas into a vacuum",
+      "statement": "A model experiment in which nothing happens but a spontaneous expansion and a change in entropy: no energy change, no heat, no work, no interactions."
+    },
+    {
+      "id": "expansion-more-realizations",
+      "kind": "idea",
+      "section": "20.1",
+      "name": "Expansion adds ways to share the same energy",
+      "statement": "When the box grows its energy levels crowd together, so the same average energy ⟨E⟩ can be realized in more ways; Boltzmann put the number of ways the energy can be distributed, not the energy itself, at the root of entropy."
+    },
+    {
+      "id": "boltzmann-entropy",
+      "kind": "result",
+      "section": "20.1",
+      "name": "Boltzmann's entropy formula",
+      "type": "entropy",
+      "statement": "Entropy is the logarithm of the number of realizations W, the number of ways the same energy can be distributed in the ensemble, times Boltzmann's constant; the logarithm makes entropies add when the W of two ensembles multiply, and a perfectly ordered ensemble, W = 1, has S = 0.",
+      "forms": [
+        {
+          "id": "boltzmann-entropy",
+          "latex": "S= k \\ln W"
+        },
+        {
+          "id": "boltzmann-entropy-kb",
+          "latex": "S = k_b \\ln(W)"
+        }
+      ]
+    },
+    {
+      "id": "entropy-additive",
+      "kind": "idea",
+      "section": "20.1",
+      "name": "Entropies add as numbers of realizations multiply",
+      "statement": "Two ensembles together have W_tot = W₁W₂ arrangements, while their entropies should add; a logarithm turns the product into the sum."
+    },
+    {
+      "id": "more-states-drive-spontaneity",
+      "kind": "idea",
+      "section": "20.1",
+      "name": "More accessible states drive expansion and mixing",
+      "statement": "Expanding into a vacuum or mixing gives the molecules more energy states to use, which raises W and so S, and that is why the process is spontaneous."
+    },
+    {
+      "id": "energy-dispersal",
+      "kind": "idea",
+      "section": "20.2",
+      "name": "Energy dispersal",
+      "statement": "In an isolated system a spontaneous process balances lowering the energy against spreading it out; at constant energy the system evolves to maximize the dispersal of its energy."
+    },
+    {
+      "id": "reversible-heat-inexact",
+      "kind": "result",
+      "section": "20.2",
+      "name": "Reversible heat is not a state function",
+      "statement": "For an ideal gas δq_rev = C_v dT + P dV, and ∂C_v/∂V = 0 while ∂P/∂T = nR/V, so δq_rev is not an exact differential.",
+      "forms": [
+        {
+          "id": "reversible-heat-ideal-gas",
+          "latex": "\\delta q_{rev} = C_v dT + P dV"
+        }
+      ]
+    },
+    {
+      "id": "integrating-factor-1-over-t",
+      "kind": "idea",
+      "section": "20.2",
+      "name": "1/T as an integrating factor",
+      "statement": "Multiplying δq_rev by 1/T gives δq_rev/T = (C_v/T)dT + (P/T)dV, whose cross derivatives both vanish, so the result is exact."
+    },
+    {
+      "id": "entropy",
+      "kind": "definition",
+      "section": "20.2",
+      "name": "Entropy",
+      "symbol": "S_ent",
+      "type": "entropy",
+      "statement": "The state function whose differential is the reversible heat divided by the temperature; it measures the dispersal of energy, or equivalently the number of possible microstates of a system.",
+      "forms": [
+        {
+          "id": "entropy-clausius",
+          "latex": "dS = \\dfrac{\\delta q_{rev}}{T}"
+        }
+      ]
+    },
+    {
+      "id": "cycle-integral-zero",
+      "kind": "result",
+      "section": "20.3",
+      "name": "A state function integrates to zero around a cycle",
+      "statement": "Because U, H and S are state functions, each integrates to zero over any circular path that returns to the initial conditions.",
+      "forms": [
+        {
+          "id": "cycle-integral-s",
+          "latex": "\\oint dS =0"
+        },
+        {
+          "id": "cycle-integral-u",
+          "latex": "\\oint dU =0"
+        },
+        {
+          "id": "cycle-integral-h",
+          "latex": "\\oint dH =0"
+        }
+      ]
+    },
+    {
+      "id": "isothermal-entropy-change",
+      "kind": "result",
+      "section": "20.3",
+      "name": "Entropy change of an isothermal expansion",
+      "type": "entropy",
+      "statement": "For n moles of ideal gas taken from V₁ to V₂ at constant temperature, ΔS = q_rev/T = nR ln(V₂/V₁).",
+      "forms": [
+        {
+          "id": "isothermal-entropy-change",
+          "latex": "\\Delta S = nR\\ln \\dfrac{V_2}{V_1}"
+        }
+      ]
+    },
+    {
+      "id": "heating-entropy-change",
+      "kind": "result",
+      "section": "20.3",
+      "name": "Entropy change on heating at constant volume",
+      "type": "entropy",
+      "statement": "Heating reversibly at constant volume changes the entropy by the integral of C_v/T over the temperature.",
+      "forms": [
+        {
+          "id": "heating-entropy-change",
+          "latex": "\\Delta S = \\int_{T_1}^{T_2} \\dfrac{C_v}{T}\\, dT"
+        }
+      ]
+    },
+    {
+      "id": "entropy-state-function",
+      "kind": "result",
+      "section": "20.3",
+      "name": "Entropy is a state function",
+      "statement": "Along the isotherm A and along the adiabat B with the isochore C the reversible heats differ, but the entropy changes are the same, nR ln(V₂/V₁): entropy is a state function while q_rev is not."
+    },
+    {
+      "id": "isolated-system",
+      "kind": "definition",
+      "section": "20.4",
+      "name": "Isolated system",
+      "statement": "A system from which nothing gets in or out, neither heat nor mass nor radiation; a little universe all to itself, more than merely adiabatic."
+    },
+    {
+      "id": "heat-flow-entropy-production",
+      "kind": "result",
+      "section": "20.4",
+      "name": "Entropy produced by heat flowing between two bodies",
+      "type": "entropy",
+      "statement": "When two blocks at different temperatures exchange energy in isolation, dS = dU_A(1/T_A − 1/T_B), which is positive while the temperatures differ and zero when they are equal.",
+      "forms": [
+        {
+          "id": "heat-flow-entropy-production",
+          "latex": "dS = dU_A \\left( \\dfrac{1}{T_A} - \\dfrac{1}{T_B} \\right)"
+        }
+      ]
+    },
+    {
+      "id": "two-block-entropy-change",
+      "kind": "result",
+      "section": "20.4",
+      "name": "Entropy change of two identical blocks reaching one temperature",
+      "type": "entropy",
+      "statement": "Two identical blocks of heat capacity C_V at T_A and T_B reach the average temperature, and the entropy rises by C_V ln[(T_A + T_B)²/4T_AT_B], always positive.",
+      "forms": [
+        {
+          "id": "two-block-entropy-change",
+          "latex": "\\Delta S = C_V \\ln \\left[\\dfrac{(T_A + T_B)^2}{4T_AT_B}\\right]"
+        }
+      ]
+    },
+    {
+      "id": "second-law",
+      "kind": "axiom",
+      "section": "20.4",
+      "name": "Second law of thermodynamics",
+      "statement": "The entropy of an isolated system never decreases; a spontaneous process in an isolated system produces entropy, dS > 0, which is a criterion for spontaneity.",
+      "forms": [
+        {
+          "id": "second-law-isolated",
+          "latex": "dS \\ge 0"
+        }
+      ]
+    },
+    {
+      "id": "entropy-production-exchange",
+      "kind": "definition",
+      "section": "20.4",
+      "name": "Entropy production and exchange",
+      "statement": "A system's entropy change splits into entropy produced inside it and entropy exchanged with the surroundings along with heat; a reversible change produces none, an isolated system exchanges none.",
+      "forms": [
+        {
+          "id": "entropy-production-exchange",
+          "latex": "dS = dS_{prod} + dS_{exchange}"
+        }
+      ]
+    },
+    {
+      "id": "clausius-inequality",
+      "kind": "result",
+      "section": "20.4",
+      "name": "Clausius inequality",
+      "statement": "Generalizing the isolated, irreversible and reversible cases, a system's entropy change is at least the heat it exchanges divided by the temperature.",
+      "forms": [
+        {
+          "id": "clausius-inequality",
+          "latex": "dS \\ge \\dfrac{\\delta q}{T}"
+        }
+      ]
+    },
+    {
+      "id": "microstates-measure-dispersal",
+      "kind": "idea",
+      "section": "20.5",
+      "name": "Microstates as the measure of energy dispersal",
+      "statement": "The number W of microstates available in a macrostate can be taken as the quantitative measure of energy dispersal; the more chaotic a system, the greater the dispersal and the entropy."
+    },
+    {
+      "id": "reversible-path-for-entropy",
+      "kind": "skill",
+      "section": "20.6",
+      "name": "Calculating an entropy change along a reversible path",
+      "statement": "Find ΔS of any process, an irreversible one included, by devising a reversible path between the same two states and integrating δq_rev/T along it."
+    },
+    {
+      "id": "entropy-of-surroundings",
+      "kind": "result",
+      "section": "20.6",
+      "name": "Entropy change of the surroundings",
+      "type": "entropy",
+      "statement": "In a reversible isothermal expansion the surroundings give up the heat the system takes in at the same temperature, so ΔS_surr = −nR ln(V₂/V₁); in an expansion into a vacuum they exchange nothing and ΔS_surr = 0."
+    },
+    {
+      "id": "total-entropy-change",
+      "kind": "result",
+      "section": "20.6",
+      "name": "Total entropy change of a process",
+      "type": "entropy",
+      "statement": "ΔS_total = ΔS_sys + ΔS_surr is zero for the reversible isothermal expansion and nR ln(V₂/V₁) > 0 for the expansion into a vacuum between the same states.",
+      "forms": [
+        {
+          "id": "total-entropy-change",
+          "latex": "\\Delta S_\\text{total} = \\Delta S_\\text{sys} + \\Delta S_\\text{surr}"
+        }
+      ]
+    },
+    {
+      "id": "mole-fraction",
+      "kind": "definition",
+      "section": "20.6",
+      "name": "Mole fraction",
+      "statement": "The amount of one component divided by the total amount, χ_A = n_A/n_tot.",
+      "forms": [
+        {
+          "id": "mole-fraction",
+          "latex": "\\chi_A = \\dfrac{n_A}{n_{tot}}"
+        }
+      ]
+    },
+    {
+      "id": "entropy-of-mixing",
+      "kind": "result",
+      "section": "20.6",
+      "name": "Entropy of mixing",
+      "type": "entropy",
+      "statement": "Ideal gases at the same pressure that mix each expand into the total volume, and the molar entropy rises by −R Σ χ_i ln χ_i; it is the main reason gases, and solutions, diffuse and mix.",
+      "forms": [
+        {
+          "id": "entropy-of-mixing-two",
+          "latex": "\\Delta \\bar{S} = -R \\left [\\chi_A\\ln \\chi_A +\\chi_B \\ln \\chi_B \\right]"
+        },
+        {
+          "id": "entropy-of-mixing-sum",
+          "latex": "\\Delta \\bar{S} = -R \\sum \\chi_i\\ln \\chi_i"
+        }
+      ]
+    },
+    {
+      "id": "dissipation",
+      "kind": "definition",
+      "section": "20.7",
+      "name": "Dissipation",
+      "statement": "The conversion of work into heat, which the second law does not limit; heat into work is limited."
+    },
+    {
+      "id": "heat-engine",
+      "kind": "definition",
+      "section": "20.7",
+      "name": "Heat engine",
+      "statement": "A device that runs a working substance around a cycle, taking heat from a hot source, doing work and passing the rest of the heat to a cold sink."
+    },
+    {
+      "id": "carnot-cycle",
+      "kind": "definition",
+      "section": "20.7",
+      "name": "Carnot cycle",
+      "statement": "The reversible cycle of an ideal gas through an isothermal expansion at T_h, an adiabatic cooling to T_c, an isothermal compression at T_c and an adiabatic heating back to T_h."
+    },
+    {
+      "id": "cycle-work-area",
+      "kind": "idea",
+      "section": "20.7",
+      "name": "The work of a cycle is the area it encloses",
+      "statement": "The work a cycle produces is the area under the upper curve minus that under the lower one, the area enclosed on the PV diagram; it vanishes when T_h = T_c."
+    },
+    {
+      "id": "engine-efficiency",
+      "kind": "definition",
+      "section": "20.7",
+      "name": "Efficiency of a heat engine",
+      "statement": "The work the engine delivers per heat it takes in at the hot temperature.",
+      "forms": [
+        {
+          "id": "engine-efficiency",
+          "latex": "\\eta=\\frac{|w_\\text{cycle}|}{q_h}=1+\\frac{q_c}{q_h}"
+        }
+      ]
+    },
+    {
+      "id": "carnot-efficiency",
+      "kind": "result",
+      "section": "20.7",
+      "name": "Carnot efficiency",
+      "statement": "A reversible engine between T_h and T_c has efficiency 1 − T_c/T_h, which reaches 1 only if T_c = 0 K and is zero when T_c = T_h; heat dissipated isothermally cannot be retrieved as work.",
+      "forms": [
+        {
+          "id": "carnot-efficiency",
+          "latex": "\\eta= 1-\\dfrac{T_c}{T_h}"
+        }
+      ]
+    },
+    {
+      "id": "heat-pump",
+      "kind": "idea",
+      "section": "20.7",
+      "name": "Heat pump",
+      "statement": "A heat engine run backwards: work put in moves heat from cold to hot, so the warm side receives the work plus the heat pumped from the cold side; a refrigerator is one."
+    },
+    {
+      "id": "stirling-cycle",
+      "kind": "definition",
+      "section": "20.7",
+      "name": "Stirling cycle",
+      "statement": "The reversible cycle of an ideal gas through two isotherms, at T_h and T_c, joined by two isochores, whose heats cancel."
+    },
+    {
+      "id": "entropy-from-probabilities",
+      "kind": "result",
+      "section": "20.8",
+      "name": "Entropy from the probabilities of the states",
+      "type": "entropy",
+      "statement": "With Stirling's approximation and a_j = p_jA, Boltzmann's S = k ln W of the ensemble divided by the number of systems gives S = −k Σ p_j ln p_j; a system certain to be in one state has zero entropy.",
+      "forms": [
+        {
+          "id": "entropy-from-probabilities",
+          "latex": "S_{system}=- k \\sum_j{p_j\\ln{p_j}}"
+        }
+      ]
+    },
+    {
+      "id": "entropy-from-partition-function",
+      "kind": "result",
+      "section": "20.8",
+      "name": "Entropy from the partition function",
+      "type": "entropy",
+      "statement": "Putting the Boltzmann probabilities p_j = e^{−βE_j}/Q into S = −k Σ p_j ln p_j gives S = U/T + k ln Q.",
+      "forms": [
+        {
+          "id": "entropy-from-partition-function",
+          "latex": "S= \\dfrac{U}{T} + k\\ln Q"
+        }
+      ]
+    },
+    {
+      "id": "statistical-thermodynamic-entropy",
+      "kind": "result",
+      "section": "20.9",
+      "name": "Statistical and thermodynamic entropy agree",
+      "statement": "Differentiating S = −k_B Σ p_j ln p_j, with Σ dp_j = 0 and Σ ln p_j dp_j = −δq_rev/k_BT, gives dS = δq_rev/T: the statistical definition explains why the thermodynamic one works.",
+      "forms": [
+        {
+          "id": "statistical-to-thermodynamic",
+          "latex": "dS = -k_B\\sum_j{\\ln{p_j}dp_j} = \\frac{\\delta q_{rev}}{T}"
+        }
+      ]
+    }
+  ],
+  "concept_prereqs": [
+    {
+      "concept": "arrangements-count",
+      "prereq": "distribution-weight"
+    },
+    {
+      "concept": "free-expansion",
+      "prereq": "ideal-gas"
+    },
+    {
+      "concept": "expansion-more-realizations",
+      "prereq": "free-expansion"
+    },
+    {
+      "concept": "expansion-more-realizations",
+      "prereq": "particle-in-a-3d-box"
+    },
+    {
+      "concept": "expansion-more-realizations",
+      "prereq": "ensemble-average"
+    },
+    {
+      "concept": "boltzmann-entropy",
+      "prereq": "distribution-weight"
+    },
+    {
+      "concept": "boltzmann-entropy",
+      "prereq": "boltzmann-constant"
+    },
+    {
+      "concept": "boltzmann-entropy",
+      "prereq": "expansion-more-realizations"
+    },
+    {
+      "concept": "entropy-additive",
+      "prereq": "boltzmann-entropy"
+    },
+    {
+      "concept": "more-states-drive-spontaneity",
+      "prereq": "boltzmann-entropy"
+    },
+    {
+      "concept": "more-states-drive-spontaneity",
+      "prereq": "spontaneous-process"
+    },
+    {
+      "concept": "energy-not-spontaneity",
+      "prereq": "spontaneous-process"
+    },
+    {
+      "concept": "energy-dispersal",
+      "prereq": "spontaneous-process"
+    },
+    {
+      "concept": "reversible-heat-inexact",
+      "prereq": "exact-and-inexact-differentials"
+    },
+    {
+      "concept": "reversible-heat-inexact",
+      "prereq": "ideal-gas-law"
+    },
+    {
+      "concept": "reversible-heat-inexact",
+      "prereq": "first-law-of-thermodynamics"
+    },
+    {
+      "concept": "reversible-heat-inexact",
+      "prereq": "pressure-volume-work"
+    },
+    {
+      "concept": "reversible-heat-inexact",
+      "prereq": "ideal-gas-energy-heat-capacity"
+    },
+    {
+      "concept": "integrating-factor-1-over-t",
+      "prereq": "reversible-heat-inexact"
+    },
+    {
+      "concept": "entropy",
+      "prereq": "integrating-factor-1-over-t"
+    },
+    {
+      "concept": "entropy",
+      "prereq": "energy-dispersal"
+    },
+    {
+      "concept": "cycle-integral-zero",
+      "prereq": "internal-energy"
+    },
+    {
+      "concept": "isothermal-entropy-change",
+      "prereq": "entropy"
+    },
+    {
+      "concept": "isothermal-entropy-change",
+      "prereq": "ideal-gas-law"
+    },
+    {
+      "concept": "heating-entropy-change",
+      "prereq": "entropy"
+    },
+    {
+      "concept": "heating-entropy-change",
+      "prereq": "constant-volume-heat-capacity"
+    },
+    {
+      "concept": "entropy-state-function",
+      "prereq": "cycle-integral-zero"
+    },
+    {
+      "concept": "entropy-state-function",
+      "prereq": "isothermal-entropy-change"
+    },
+    {
+      "concept": "entropy-state-function",
+      "prereq": "heating-entropy-change"
+    },
+    {
+      "concept": "heat-flow-entropy-production",
+      "prereq": "entropy"
+    },
+    {
+      "concept": "heat-flow-entropy-production",
+      "prereq": "isolated-system"
+    },
+    {
+      "concept": "two-block-entropy-change",
+      "prereq": "heat-flow-entropy-production"
+    },
+    {
+      "concept": "two-block-entropy-change",
+      "prereq": "heating-entropy-change"
+    },
+    {
+      "concept": "second-law",
+      "prereq": "heat-flow-entropy-production"
+    },
+    {
+      "concept": "second-law",
+      "prereq": "spontaneous-process"
+    },
+    {
+      "concept": "entropy-production-exchange",
+      "prereq": "second-law"
+    },
+    {
+      "concept": "clausius-inequality",
+      "prereq": "entropy-production-exchange"
+    },
+    {
+      "concept": "microstates-measure-dispersal",
+      "prereq": "boltzmann-entropy"
+    },
+    {
+      "concept": "microstates-measure-dispersal",
+      "prereq": "energy-dispersal"
+    },
+    {
+      "concept": "microstates-measure-dispersal",
+      "prereq": "many-microstates-one-macrostate"
+    },
+    {
+      "concept": "reversible-path-for-entropy",
+      "prereq": "entropy-state-function"
+    },
+    {
+      "concept": "reversible-path-for-entropy",
+      "prereq": "free-expansion"
+    },
+    {
+      "concept": "entropy-of-surroundings",
+      "prereq": "isothermal-entropy-change"
+    },
+    {
+      "concept": "total-entropy-change",
+      "prereq": "entropy-of-surroundings"
+    },
+    {
+      "concept": "total-entropy-change",
+      "prereq": "reversible-path-for-entropy"
+    },
+    {
+      "concept": "total-entropy-change",
+      "prereq": "second-law"
+    },
+    {
+      "concept": "mole-fraction",
+      "prereq": "ideal-gas-law"
+    },
+    {
+      "concept": "entropy-of-mixing",
+      "prereq": "isothermal-entropy-change"
+    },
+    {
+      "concept": "entropy-of-mixing",
+      "prereq": "mole-fraction"
+    },
+    {
+      "concept": "entropy-of-mixing",
+      "prereq": "more-states-drive-spontaneity"
+    },
+    {
+      "concept": "dissipation",
+      "prereq": "internal-energy"
+    },
+    {
+      "concept": "heat-engine",
+      "prereq": "dissipation"
+    },
+    {
+      "concept": "carnot-cycle",
+      "prereq": "heat-engine"
+    },
+    {
+      "concept": "carnot-cycle",
+      "prereq": "isotherm"
+    },
+    {
+      "concept": "cycle-work-area",
+      "prereq": "carnot-cycle"
+    },
+    {
+      "concept": "engine-efficiency",
+      "prereq": "heat-engine"
+    },
+    {
+      "concept": "carnot-efficiency",
+      "prereq": "engine-efficiency"
+    },
+    {
+      "concept": "carnot-efficiency",
+      "prereq": "carnot-cycle"
+    },
+    {
+      "concept": "carnot-efficiency",
+      "prereq": "cycle-integral-zero"
+    },
+    {
+      "concept": "carnot-efficiency",
+      "prereq": "isothermal-entropy-change"
+    },
+    {
+      "concept": "heat-pump",
+      "prereq": "carnot-efficiency"
+    },
+    {
+      "concept": "heat-pump",
+      "prereq": "dissipation"
+    },
+    {
+      "concept": "stirling-cycle",
+      "prereq": "heat-engine"
+    },
+    {
+      "concept": "stirling-cycle",
+      "prereq": "cycle-work-area"
+    },
+    {
+      "concept": "entropy-from-probabilities",
+      "prereq": "boltzmann-entropy"
+    },
+    {
+      "concept": "entropy-from-probabilities",
+      "prereq": "stirlings-approximation"
+    },
+    {
+      "concept": "entropy-from-partition-function",
+      "prereq": "entropy-from-probabilities"
+    },
+    {
+      "concept": "entropy-from-partition-function",
+      "prereq": "boltzmann-probability"
+    },
+    {
+      "concept": "entropy-from-partition-function",
+      "prereq": "average-ensemble-energy"
+    },
+    {
+      "concept": "statistical-thermodynamic-entropy",
+      "prereq": "entropy-from-probabilities"
+    },
+    {
+      "concept": "statistical-thermodynamic-entropy",
+      "prereq": "entropy"
+    },
+    {
+      "concept": "statistical-thermodynamic-entropy",
+      "prereq": "boltzmann-probability"
+    },
+    {
+      "concept": "entropy",
+      "prereq": "reversible-process"
+    },
+    {
+      "concept": "cycle-integral-zero",
+      "prereq": "state-function"
+    },
+    {
+      "concept": "isothermal-entropy-change",
+      "prereq": "reversible-isothermal-heat"
+    },
+    {
+      "concept": "entropy-state-function",
+      "prereq": "path-function"
+    },
+    {
+      "concept": "entropy-state-function",
+      "prereq": "reversible-adiabatic-cooling"
+    },
+    {
+      "concept": "heat-flow-entropy-production",
+      "prereq": "first-law-of-thermodynamics"
+    },
+    {
+      "concept": "entropy-production-exchange",
+      "prereq": "irreversible-process"
+    },
+    {
+      "concept": "reversible-path-for-entropy",
+      "prereq": "reversible-process"
+    },
+    {
+      "concept": "reversible-path-for-entropy",
+      "prereq": "irreversible-process"
+    },
+    {
+      "concept": "dissipation",
+      "prereq": "heat"
+    },
+    {
+      "concept": "dissipation",
+      "prereq": "thermodynamic-work"
+    },
+    {
+      "concept": "carnot-cycle",
+      "prereq": "adiabatic-process"
+    },
+    {
+      "concept": "carnot-cycle",
+      "prereq": "reversible-isothermal-work"
+    },
+    {
+      "concept": "cycle-work-area",
+      "prereq": "work-as-area"
+    },
+    {
+      "concept": "carnot-efficiency",
+      "prereq": "reversible-adiabatic-cooling"
+    },
+    {
+      "concept": "stirling-cycle",
+      "prereq": "isochore"
+    },
+    {
+      "concept": "statistical-thermodynamic-entropy",
+      "prereq": "molecular-heat-and-work"
+    }
+  ]
+}

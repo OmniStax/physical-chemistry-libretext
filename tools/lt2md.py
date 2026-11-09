@@ -480,9 +480,43 @@ class Converter:
             return ""
         return self.children(node)
 
+    @staticmethod
+    def lone_img(c):
+        """The img of a div that holds one image and no text, else None."""
+        if not (isinstance(c, Tag) and c.name == "div"):
+            return None
+        imgs = c.find_all("img")
+        return imgs[0] if len(imgs) == 1 and not c.get_text(strip=True) else None
+
+    def caption_div(self, c):
+        """A div printing "Figure N.M.K: caption" on its own (19.10.1), as (number, caption)."""
+        if not (isinstance(c, Tag) and c.name == "div") or c.find("img"):
+            return None
+        t = re.sub(r"\s+", " ", self.inline(c)).strip()
+        t = re.sub(r"^[*]+|[*]+$", "", t).strip()
+        m = re.match(r"(?:\{term:)?Figure\s*(\d+\.\d+\.\d+)\s*\}?\s*:\s*(.+)$", t)
+        return (m.group(1), m.group(2).strip(" *")) if m else None
+
     def children(self, node):
         out = []
-        for c in node.children:
+        kids = [c for c in node.children if not (isinstance(c, NavigableString) and not c.strip())]
+        skip = None
+        for k, c in enumerate(kids):
+            if c is skip:
+                continue
+            img = self.lone_img(c)
+            cap = self.caption_div(kids[k + 1]) if img is not None and k + 1 < len(kids) else None
+            if cap:
+                # an image whose caption is the next div, not a figcaption (19.10.1)
+                skip = kids[k + 1]
+                width = img.get("width") or ""
+                lines = [f"> FIGURE {{fig:{cap[0]}}} src={self.src(img)}" + (f" width={width}" if width else "")]
+                alt = (img.get("alt") or "").strip()
+                if alt:
+                    lines.append(f"> alt: {alt}")
+                lines.append(f"> caption: {cap[1]}")
+                out.append("\n".join(lines))
+                continue
             b = self.block(c)
             if b and b.strip():
                 out.append(b.strip("\n"))

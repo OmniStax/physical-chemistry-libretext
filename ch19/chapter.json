@@ -1,0 +1,925 @@
+{
+ "id": "19",
+ "dir": "ch19",
+ "title": "The First Law of Thermodynamics",
+ "sections": [
+  {
+   "id": "19.1",
+   "module": "47709",
+   "title": "Overview of Classical Thermodynamics",
+   "slug": "19:_The_First_Law_of_Thermodynamics/19.01:_Overview_of_Classical_Thermodynamics"
+  },
+  {
+   "id": "19.2",
+   "module": "13700",
+   "title": "Pressure-Volume Work",
+   "slug": "19:_The_First_Law_of_Thermodynamics/19.02:_Pressure-Volume_Work"
+  },
+  {
+   "id": "19.3",
+   "module": "13701",
+   "title": "Work and Heat are not State Functions",
+   "slug": "19:_The_First_Law_of_Thermodynamics/19.03:_Work_and_Heat_are_not_State_Functions"
+  },
+  {
+   "id": "19.4",
+   "module": "13702",
+   "title": "Energy is a State Function",
+   "slug": "19:_The_First_Law_of_Thermodynamics/19.04:_Energy_is_a_State_Function"
+  },
+  {
+   "id": "19.5",
+   "module": "13703",
+   "title": "An Adiabatic Process is a Process in which No Energy as Heat is Transferred",
+   "slug": "19:_The_First_Law_of_Thermodynamics/19.05:_An_Adiabatic_Process_is_a_Process_in_which_No_Energy_as_Heat_is_Transferred"
+  },
+  {
+   "id": "19.6",
+   "module": "13704",
+   "title": "The Temperature of a Gas Decreases in a Reversible Adiabatic Expansion",
+   "slug": "19:_The_First_Law_of_Thermodynamics/19.06:_The_Temperature_of_a_Gas_Decreases_in_a_Reversible_Adiabatic_Expansion"
+  },
+  {
+   "id": "19.7",
+   "module": "13705",
+   "title": "Work and Heat Have a Simple Molecular Interpretation",
+   "slug": "19:_The_First_Law_of_Thermodynamics/19.07:_Work_and_Heat_Have_a_Simple_Molecular_Interpretation"
+  },
+  {
+   "id": "19.8",
+   "module": "13706",
+   "title": "Pressure-Volume Work",
+   "slug": "19:_The_First_Law_of_Thermodynamics/19.08:_Pressure-Volume_Work"
+  },
+  {
+   "id": "19.9",
+   "module": "13707",
+   "title": "Heat Capacity is a Path Function",
+   "slug": "19:_The_First_Law_of_Thermodynamics/19.09:_Heat_Capacity_is_a_Path_Function"
+  },
+  {
+   "id": "19.10",
+   "module": "13708",
+   "title": "Relative Enthalpies Can Be Determined from Heat Capacity Data and Heats of Transition",
+   "slug": "19:_The_First_Law_of_Thermodynamics/19.10:_Relative_Enthalpies_Can_Be_Determined_from_Heat_Capacity_Data_and_Heats_of_Transition"
+  },
+  {
+   "id": "19.11",
+   "module": "13709",
+   "title": "Enthalpy Changes for Chemical Equations are Additive",
+   "slug": "19:_The_First_Law_of_Thermodynamics/19.11:_Enthalpy_Changes_for_Chemical_Equations_are_Additive"
+  },
+  {
+   "id": "19.12",
+   "module": "13710",
+   "title": "Heats of Reactions Can Be Calculated from Tabulated Heats of Formation",
+   "slug": "19:_The_First_Law_of_Thermodynamics/19.12:_Heats_of_Reactions_Can_Be_Calculated_from_Tabulated_Heats_of_Formation"
+  },
+  {
+   "id": "19.13",
+   "module": "13711",
+   "title": "The Temperature Dependence of ΔH",
+   "slug": "19:_The_First_Law_of_Thermodynamics/19.13:_The_Temperature_Dependence_of_H"
+  },
+  {
+   "id": "19.14",
+   "module": "359804",
+   "title": "Enthalpy is a State Function",
+   "slug": "19:_The_First_Law_of_Thermodynamics/19.14:_Enthalpy_is_a_State_Function"
+  }
+ ],
+ "variables": [
+  {
+   "sym": "U",
+   "concept": "internal-energy",
+   "meaning": "the internal energy of the system",
+   "unit": "J",
+   "section": "19.1"
+  },
+  {
+   "sym": "Delta_U",
+   "concept": "internal-energy-change",
+   "meaning": "the change in internal energy",
+   "unit": "J",
+   "section": "19.1"
+  },
+  {
+   "sym": "q",
+   "concept": "heat",
+   "meaning": "the heat that flows into the system",
+   "unit": "J",
+   "section": "19.1"
+  },
+  {
+   "sym": "w",
+   "concept": "thermodynamic-work",
+   "meaning": "the work done on the system",
+   "unit": "J",
+   "section": "19.1"
+  },
+  {
+   "sym": "U_i",
+   "type": "energy",
+   "meaning": "the internal energy of the initial state",
+   "unit": "J",
+   "section": "19.1"
+  },
+  {
+   "sym": "U_f",
+   "type": "energy",
+   "meaning": "the internal energy of the final state",
+   "unit": "J",
+   "section": "19.1"
+  },
+  {
+   "sym": "C_heat",
+   "concept": "heat-capacity",
+   "meaning": "the heat capacity",
+   "unit": "J mol⁻¹ K⁻¹",
+   "section": "19.1"
+  },
+  {
+   "sym": "T",
+   "type": "temperature",
+   "meaning": "the temperature of the system",
+   "unit": "K",
+   "section": "19.1"
+  },
+  {
+   "sym": "p_press",
+   "concept": "pressure",
+   "meaning": "the pressure of the ideal gas",
+   "unit": "atm",
+   "section": "19.1"
+  },
+  {
+   "sym": "p_ext",
+   "concept": "external-pressure",
+   "meaning": "the constant external pressure the gas expands against",
+   "unit": "atm",
+   "section": "19.1"
+  },
+  {
+   "sym": "V",
+   "type": "molar-volume",
+   "meaning": "the molar volume of the ideal gas, written V",
+   "unit": "L/mol",
+   "section": "19.1"
+  },
+  {
+   "sym": "V_1",
+   "type": "molar-volume",
+   "meaning": "the initial molar volume",
+   "unit": "L/mol",
+   "section": "19.1"
+  },
+  {
+   "sym": "V_2",
+   "type": "molar-volume",
+   "meaning": "the final molar volume",
+   "unit": "L/mol",
+   "section": "19.1"
+  },
+  {
+   "sym": "T_1",
+   "type": "temperature",
+   "meaning": "the initial temperature",
+   "unit": "K",
+   "section": "19.1"
+  },
+  {
+   "sym": "T_2",
+   "type": "temperature",
+   "meaning": "the final temperature",
+   "unit": "K",
+   "section": "19.1"
+  },
+  {
+   "sym": "R",
+   "concept": "ideal-gas-constant",
+   "meaning": "the gas constant",
+   "unit": "L atm K⁻¹ mol⁻¹",
+   "section": "19.1"
+  },
+  {
+   "sym": "m",
+   "type": "mass",
+   "meaning": "the mass of the sample",
+   "unit": "g",
+   "section": "19.1"
+  },
+  {
+   "sym": "w",
+   "concept": "thermodynamic-work",
+   "meaning": "the work",
+   "unit": "J",
+   "section": "19.2"
+  },
+  {
+   "sym": "F_vec",
+   "type": "force",
+   "meaning": "the force along the path",
+   "unit": "N",
+   "section": "19.2"
+  },
+  {
+   "sym": "F",
+   "type": "force",
+   "meaning": "the force the gas exerts on the piston",
+   "unit": "N",
+   "section": "19.2"
+  },
+  {
+   "sym": "A",
+   "meaning": "the area of the piston",
+   "unit": "m²",
+   "section": "19.2"
+  },
+  {
+   "sym": "s",
+   "meaning": "the displacement of the piston",
+   "section": "19.2"
+  },
+  {
+   "sym": "P",
+   "concept": "pressure",
+   "meaning": "the pressure of the gas",
+   "unit": "Pa",
+   "section": "19.2"
+  },
+  {
+   "sym": "P_ext",
+   "concept": "external-pressure",
+   "meaning": "the external pressure on the piston",
+   "unit": "Pa",
+   "section": "19.2"
+  },
+  {
+   "sym": "V",
+   "type": "volume",
+   "meaning": "the volume of the gas in the system",
+   "unit": "m³",
+   "redefines": true,
+   "section": "19.2"
+  },
+  {
+   "sym": "w_PV",
+   "concept": "pressure-volume-work",
+   "meaning": "the pressure-volume work done on the system",
+   "unit": "J",
+   "section": "19.2"
+  },
+  {
+   "sym": "e",
+   "type": "charge",
+   "meaning": "the charge moved, such as the negative charge of an electron",
+   "unit": "C",
+   "section": "19.2"
+  },
+  {
+   "sym": "w",
+   "concept": "thermodynamic-work",
+   "meaning": "the work done on the system",
+   "unit": "J",
+   "section": "19.3"
+  },
+  {
+   "sym": "P",
+   "concept": "pressure",
+   "meaning": "the pressure of the gas",
+   "unit": "Pa",
+   "section": "19.3"
+  },
+  {
+   "sym": "V",
+   "type": "volume",
+   "meaning": "the volume of the gas in the system",
+   "unit": "m³",
+   "redefines": true,
+   "section": "19.3"
+  },
+  {
+   "sym": "V_1",
+   "type": "volume",
+   "meaning": "the initial volume of the gas",
+   "unit": "m³",
+   "redefines": true,
+   "section": "19.3"
+  },
+  {
+   "sym": "V_2",
+   "type": "volume",
+   "meaning": "the final volume of the gas",
+   "unit": "m³",
+   "redefines": true,
+   "section": "19.3"
+  },
+  {
+   "sym": "P_ext",
+   "concept": "external-pressure",
+   "meaning": "the external pressure on the piston",
+   "unit": "Pa",
+   "section": "19.3"
+  },
+  {
+   "sym": "n_mol",
+   "type": "amount",
+   "meaning": "the amount of gas in moles",
+   "unit": "mol",
+   "section": "19.3"
+  },
+  {
+   "sym": "R",
+   "concept": "ideal-gas-constant",
+   "meaning": "the gas constant",
+   "unit": "J K⁻¹ mol⁻¹",
+   "section": "19.3"
+  },
+  {
+   "sym": "T",
+   "type": "temperature",
+   "meaning": "the temperature",
+   "unit": "K",
+   "section": "19.3"
+  },
+  {
+   "sym": "q",
+   "concept": "heat",
+   "meaning": "the heat",
+   "unit": "J",
+   "section": "19.3"
+  },
+  {
+   "sym": "U",
+   "concept": "internal-energy",
+   "meaning": "the internal energy of the system",
+   "unit": "J",
+   "section": "19.4"
+  },
+  {
+   "sym": "Delta_U",
+   "concept": "internal-energy-change",
+   "meaning": "the change in internal energy",
+   "unit": "J",
+   "section": "19.4"
+  },
+  {
+   "sym": "q",
+   "concept": "heat",
+   "meaning": "the heat that flows into the system",
+   "unit": "J",
+   "section": "19.4"
+  },
+  {
+   "sym": "w",
+   "concept": "thermodynamic-work",
+   "meaning": "the work done on the system",
+   "unit": "J",
+   "section": "19.4"
+  },
+  {
+   "sym": "U",
+   "concept": "internal-energy",
+   "meaning": "the internal energy of the system",
+   "unit": "J",
+   "section": "19.5"
+  },
+  {
+   "sym": "Delta_U",
+   "concept": "internal-energy-change",
+   "meaning": "the change in internal energy",
+   "unit": "J",
+   "section": "19.5"
+  },
+  {
+   "sym": "n_mol",
+   "type": "amount",
+   "meaning": "the amount of gas in moles",
+   "unit": "mol",
+   "section": "19.5"
+  },
+  {
+   "sym": "R",
+   "concept": "ideal-gas-constant",
+   "meaning": "the gas constant",
+   "unit": "J K⁻¹ mol⁻¹",
+   "section": "19.5"
+  },
+  {
+   "sym": "T",
+   "type": "temperature",
+   "meaning": "the temperature",
+   "unit": "K",
+   "section": "19.5"
+  },
+  {
+   "sym": "q_rev",
+   "type": "heat",
+   "meaning": "the heat taken in along a reversible path",
+   "unit": "J",
+   "section": "19.5"
+  },
+  {
+   "sym": "w_rev",
+   "type": "work",
+   "meaning": "the work done on the system along a reversible path",
+   "unit": "J",
+   "section": "19.5"
+  },
+  {
+   "sym": "V_1",
+   "type": "volume",
+   "meaning": "the initial volume of the gas",
+   "unit": "m³",
+   "redefines": true,
+   "section": "19.5"
+  },
+  {
+   "sym": "V_2",
+   "type": "volume",
+   "meaning": "the final volume of the gas",
+   "unit": "m³",
+   "redefines": true,
+   "section": "19.5"
+  },
+  {
+   "sym": "T_1",
+   "type": "temperature",
+   "meaning": "the initial temperature",
+   "unit": "K",
+   "section": "19.5"
+  },
+  {
+   "sym": "T_2",
+   "type": "temperature",
+   "meaning": "the final temperature",
+   "unit": "K",
+   "section": "19.5"
+  },
+  {
+   "sym": "C_v",
+   "concept": "constant-volume-heat-capacity",
+   "meaning": "the heat capacity at constant volume",
+   "unit": "J K⁻¹",
+   "section": "19.5"
+  },
+  {
+   "sym": "P_1",
+   "type": "pressure",
+   "meaning": "the pressure of the initial state",
+   "unit": "Pa",
+   "section": "19.5"
+  },
+  {
+   "sym": "P_2",
+   "type": "pressure",
+   "meaning": "the pressure at the end of the isotherm A",
+   "unit": "Pa",
+   "section": "19.5"
+  },
+  {
+   "sym": "P_3",
+   "type": "pressure",
+   "meaning": "the pressure at the end of the adiabat B",
+   "unit": "Pa",
+   "section": "19.5"
+  },
+  {
+   "sym": "C_V_bar",
+   "concept": "molar-heat-capacity",
+   "meaning": "the molar heat capacity at constant volume",
+   "unit": "J K⁻¹ mol⁻¹",
+   "section": "19.6"
+  },
+  {
+   "sym": "T",
+   "type": "temperature",
+   "meaning": "the temperature",
+   "unit": "K",
+   "section": "19.6"
+  },
+  {
+   "sym": "T_1",
+   "type": "temperature",
+   "meaning": "the initial temperature",
+   "unit": "K",
+   "section": "19.6"
+  },
+  {
+   "sym": "T_2",
+   "type": "temperature",
+   "meaning": "the final temperature",
+   "unit": "K",
+   "section": "19.6"
+  },
+  {
+   "sym": "R",
+   "concept": "ideal-gas-constant",
+   "meaning": "the gas constant",
+   "unit": "J K⁻¹ mol⁻¹",
+   "section": "19.6"
+  },
+  {
+   "sym": "P",
+   "concept": "pressure",
+   "meaning": "the pressure of the gas",
+   "unit": "Pa",
+   "section": "19.6"
+  },
+  {
+   "sym": "V_bar",
+   "concept": "molar-volume",
+   "meaning": "the molar volume",
+   "unit": "m³ mol⁻¹",
+   "section": "19.6"
+  },
+  {
+   "sym": "U_bar",
+   "concept": "internal-energy",
+   "meaning": "the molar internal energy",
+   "unit": "J mol⁻¹",
+   "section": "19.6"
+  },
+  {
+   "sym": "C_P_bar",
+   "concept": "constant-pressure-heat-capacity",
+   "meaning": "the molar heat capacity at constant pressure",
+   "unit": "J K⁻¹ mol⁻¹",
+   "section": "19.6"
+  },
+  {
+   "sym": "gamma_hc",
+   "concept": "heat-capacity-ratio",
+   "meaning": "the heat capacity ratio C̄_P/C̄_V",
+   "section": "19.6"
+  },
+  {
+   "sym": "q",
+   "concept": "heat",
+   "meaning": "the heat",
+   "unit": "J",
+   "section": "19.6"
+  },
+  {
+   "sym": "w",
+   "concept": "thermodynamic-work",
+   "meaning": "the work",
+   "unit": "J",
+   "section": "19.6"
+  },
+  {
+   "sym": "U",
+   "concept": "internal-energy",
+   "meaning": "the internal energy of the system",
+   "unit": "J",
+   "section": "19.7"
+  },
+  {
+   "sym": "P",
+   "concept": "pressure",
+   "meaning": "the pressure of the gas",
+   "unit": "Pa",
+   "section": "19.7"
+  },
+  {
+   "sym": "V",
+   "type": "volume",
+   "meaning": "the volume of the gas in the system",
+   "unit": "m³",
+   "redefines": true,
+   "section": "19.7"
+  },
+  {
+   "sym": "w_rev",
+   "type": "work",
+   "meaning": "the work done on the system along a reversible path",
+   "unit": "J",
+   "section": "19.7"
+  },
+  {
+   "sym": "Q_sys",
+   "concept": "canonical-partition-function",
+   "meaning": "the canonical partition function of the system",
+   "section": "19.7"
+  },
+  {
+   "sym": "U",
+   "concept": "internal-energy",
+   "meaning": "the internal energy of the system",
+   "unit": "J",
+   "section": "19.8"
+  },
+  {
+   "sym": "Delta_U",
+   "concept": "internal-energy-change",
+   "meaning": "the change in internal energy",
+   "unit": "J",
+   "section": "19.8"
+  },
+  {
+   "sym": "H",
+   "concept": "enthalpy",
+   "meaning": "the enthalpy of the system",
+   "unit": "J",
+   "section": "19.8"
+  },
+  {
+   "sym": "Delta_H",
+   "type": "energy",
+   "meaning": "the enthalpy change of the process",
+   "unit": "J",
+   "section": "19.8"
+  },
+  {
+   "sym": "P",
+   "concept": "pressure",
+   "meaning": "the pressure of the gas",
+   "unit": "Pa",
+   "section": "19.8"
+  },
+  {
+   "sym": "V",
+   "type": "volume",
+   "meaning": "the volume of the gas in the system",
+   "unit": "m³",
+   "redefines": true,
+   "section": "19.8"
+  },
+  {
+   "sym": "q",
+   "concept": "heat",
+   "meaning": "the heat that flows into the system",
+   "unit": "J",
+   "section": "19.8"
+  },
+  {
+   "sym": "w",
+   "concept": "thermodynamic-work",
+   "meaning": "the work done on the system",
+   "unit": "J",
+   "section": "19.8"
+  },
+  {
+   "sym": "n_mol",
+   "type": "amount",
+   "meaning": "the amount of gas in moles",
+   "unit": "mol",
+   "section": "19.8"
+  },
+  {
+   "sym": "q_P",
+   "type": "heat",
+   "meaning": "the heat taken in at constant pressure",
+   "unit": "J",
+   "section": "19.8"
+  },
+  {
+   "sym": "q_V",
+   "type": "heat",
+   "meaning": "the heat taken in at constant volume",
+   "unit": "J",
+   "section": "19.8"
+  },
+  {
+   "sym": "C_p_heat",
+   "concept": "constant-pressure-heat-capacity",
+   "meaning": "the heat capacity at constant pressure",
+   "unit": "J K⁻¹",
+   "section": "19.8"
+  },
+  {
+   "sym": "Delta_fusH",
+   "concept": "enthalpy-of-fusion",
+   "meaning": "the molar heat of fusion",
+   "unit": "kJ/mol",
+   "section": "19.8"
+  },
+  {
+   "sym": "H",
+   "concept": "enthalpy",
+   "meaning": "the enthalpy of the system",
+   "unit": "J",
+   "section": "19.9"
+  },
+  {
+   "sym": "C_P",
+   "concept": "constant-pressure-heat-capacity",
+   "meaning": "the heat capacity at constant pressure",
+   "unit": "J K⁻¹",
+   "section": "19.9"
+  },
+  {
+   "sym": "T",
+   "type": "temperature",
+   "meaning": "the temperature",
+   "unit": "K",
+   "section": "19.9"
+  },
+  {
+   "sym": "C_p_heat",
+   "concept": "constant-pressure-heat-capacity",
+   "meaning": "the heat capacity at constant pressure",
+   "unit": "J K⁻¹",
+   "section": "19.9"
+  },
+  {
+   "sym": "Delta_H",
+   "type": "energy",
+   "meaning": "the enthalpy change of the process",
+   "unit": "J",
+   "section": "19.10"
+  },
+  {
+   "sym": "H",
+   "concept": "enthalpy",
+   "meaning": "the enthalpy of the system",
+   "unit": "J",
+   "section": "19.10"
+  },
+  {
+   "sym": "T",
+   "type": "temperature",
+   "meaning": "the temperature",
+   "unit": "K",
+   "section": "19.10"
+  },
+  {
+   "sym": "C_p_heat",
+   "concept": "constant-pressure-heat-capacity",
+   "meaning": "the heat capacity at constant pressure",
+   "unit": "J K⁻¹",
+   "section": "19.10"
+  },
+  {
+   "sym": "Delta_fusH",
+   "concept": "enthalpy-of-fusion",
+   "meaning": "the enthalpy of fusion, H_liquid − H_solid at the melting point",
+   "unit": "kJ/mol",
+   "section": "19.10"
+  },
+  {
+   "sym": "Delta_rH",
+   "concept": "reaction-enthalpy",
+   "meaning": "the enthalpy of the reaction as written",
+   "unit": "kJ",
+   "section": "19.11"
+  },
+  {
+   "sym": "Delta_Hrxn",
+   "concept": "reaction-enthalpy",
+   "meaning": "the enthalpy of the reaction",
+   "unit": "kJ",
+   "section": "19.12"
+  },
+  {
+   "sym": "Delta_Hf0",
+   "concept": "standard-enthalpy-of-formation",
+   "meaning": "the standard enthalpy of formation",
+   "unit": "kJ/mol",
+   "section": "19.12"
+  },
+  {
+   "sym": "Delta_H",
+   "type": "energy",
+   "meaning": "the enthalpy change of the reaction",
+   "unit": "kJ",
+   "section": "19.12"
+  },
+  {
+   "sym": "Delta_Hc",
+   "type": "energy",
+   "meaning": "the enthalpy of combustion",
+   "unit": "kJ/mol",
+   "section": "19.12"
+  },
+  {
+   "sym": "nu_coef",
+   "meaning": "the stoichiometric coefficient of a species in the balanced reaction",
+   "section": "19.12"
+  },
+  {
+   "sym": "D_bond",
+   "concept": "average-bond-enthalpy",
+   "meaning": "the bond dissociation energy of the bond X–Y",
+   "unit": "kJ/mol",
+   "section": "19.12"
+  },
+  {
+   "sym": "Delta_H",
+   "type": "energy",
+   "meaning": "the enthalpy change of the process",
+   "unit": "J",
+   "section": "19.13"
+  },
+  {
+   "sym": "C_p_heat",
+   "concept": "constant-pressure-heat-capacity",
+   "meaning": "the heat capacity at constant pressure",
+   "unit": "J K⁻¹",
+   "section": "19.13"
+  },
+  {
+   "sym": "T_1",
+   "type": "temperature",
+   "meaning": "the initial temperature",
+   "unit": "K",
+   "section": "19.13"
+  },
+  {
+   "sym": "T_2",
+   "type": "temperature",
+   "meaning": "the final temperature",
+   "unit": "K",
+   "section": "19.13"
+  },
+  {
+   "sym": "T",
+   "type": "temperature",
+   "meaning": "the temperature",
+   "unit": "K",
+   "section": "19.13"
+  },
+  {
+   "sym": "Delta_Hrxn",
+   "concept": "reaction-enthalpy",
+   "meaning": "the enthalpy of the reaction",
+   "unit": "kJ",
+   "section": "19.13"
+  },
+  {
+   "sym": "a_cp",
+   "meaning": "the constant term of the empirical heat capacity",
+   "unit": "J mol⁻¹ K⁻¹",
+   "section": "19.13"
+  },
+  {
+   "sym": "b_cp",
+   "meaning": "the coefficient of T in the empirical heat capacity",
+   "unit": "J mol⁻¹ K⁻²",
+   "section": "19.13"
+  },
+  {
+   "sym": "c_cp",
+   "meaning": "the coefficient of 1/T² in the empirical heat capacity",
+   "unit": "J mol⁻¹ K",
+   "section": "19.13"
+  },
+  {
+   "sym": "Delta_Cp",
+   "type": "heat-capacity",
+   "meaning": "the heat capacity of the products less that of the reactants",
+   "unit": "J mol⁻¹ K⁻¹",
+   "section": "19.13"
+  },
+  {
+   "sym": "Delta_U",
+   "concept": "internal-energy-change",
+   "meaning": "the change in internal energy",
+   "unit": "J",
+   "section": "19.14"
+  },
+  {
+   "sym": "U",
+   "concept": "internal-energy",
+   "meaning": "the internal energy of the system",
+   "unit": "J",
+   "section": "19.14"
+  },
+  {
+   "sym": "P",
+   "concept": "pressure",
+   "meaning": "the pressure of the gas",
+   "unit": "Pa",
+   "section": "19.14"
+  },
+  {
+   "sym": "V",
+   "type": "volume",
+   "meaning": "the volume of the gas in the system",
+   "unit": "m³",
+   "redefines": true,
+   "section": "19.14"
+  },
+  {
+   "sym": "H",
+   "concept": "enthalpy",
+   "meaning": "the enthalpy of the system",
+   "unit": "J",
+   "section": "19.14"
+  },
+  {
+   "sym": "q_P",
+   "type": "heat",
+   "meaning": "the heat taken in at constant pressure",
+   "unit": "J",
+   "section": "19.14"
+  },
+  {
+   "sym": "w",
+   "concept": "thermodynamic-work",
+   "meaning": "the work",
+   "unit": "J",
+   "section": "19.14"
+  }
+ ]
+}

@@ -1,0 +1,588 @@
+{
+ "types": [],
+ "symbols": [
+  {
+   "sym": "T_trs",
+   "latex": "T_{trs}",
+   "macro": "\\kTtrs"
+  },
+  {
+   "sym": "T_sub",
+   "latex": "T_{sub}",
+   "macro": "\\kTsub"
+  },
+  {
+   "sym": "C_P_g",
+   "latex": "C_P^g",
+   "macro": "\\kCPg"
+  },
+  {
+   "sym": "a_el",
+   "latex": "a"
+  },
+  {
+   "sym": "S_std",
+   "latex": "S^\\circ"
+  },
+  {
+   "sym": "S_std_i",
+   "latex": "S^\\circ_i"
+  },
+  {
+   "sym": "S_std_exp",
+   "latex": "S^\\circ_{\\text{exp}}"
+  },
+  {
+   "sym": "S_std_calc",
+   "latex": "S^\\circ_{\\text{calc}}"
+  },
+  {
+   "sym": "S_bar_calc",
+   "latex": "\\bar{S}_{\\text{calc}}"
+  },
+  {
+   "sym": "S_bar_exp",
+   "latex": "\\bar{S}_{\\text{exp}}"
+  },
+  {
+   "sym": "S_disorder",
+   "latex": "S_{disorder}"
+  },
+  {
+   "sym": "W_disorder",
+   "latex": "W_{disorder}"
+  },
+  {
+   "sym": "Delta_trs_S",
+   "latex": "\\Delta_{trs}S"
+  },
+  {
+   "sym": "Delta_trs_H",
+   "latex": "\\Delta_{trs}H"
+  },
+  {
+   "sym": "Delta_trs_G",
+   "latex": "\\Delta_{trs}G"
+  },
+  {
+   "sym": "Delta_sub_H",
+   "latex": "\\Delta H_{sub}"
+  },
+  {
+   "sym": "Delta_rxn_S",
+   "latex": "\\Delta_{rxn}S^\\circ"
+  },
+  {
+   "sym": "nu_stoich",
+   "latex": "v_i"
+  },
+  {
+   "sym": "m_deg",
+   "latex": "m"
+  }
+ ],
+ "concepts": [
+  {
+   "id": "fundamental-equation-u",
+   "kind": "result",
+   "section": "21.1",
+   "name": "Fundamental equation for the internal energy",
+   "statement": "For a reversible change with only PV work, the first law with δq_rev = TdS and δw_rev = −PdV gives dU = TdS − PdV, an exact differential since U, S and V are all state functions; for an irreversible change dU ≤ TdS − PdV.",
+   "forms": [
+    {
+     "id": "du-tds-pdv",
+     "latex": "dU= TdS -PdV"
+    },
+    {
+     "id": "du-inequality",
+     "latex": "dU \\le TdS - PdV"
+    }
+   ]
+  },
+  {
+   "id": "natural-variables-u",
+   "kind": "definition",
+   "section": "21.1",
+   "name": "Natural variables of the internal energy",
+   "terms": [
+    "natural variables"
+   ],
+   "statement": "The variables in which dU = TdS − PdV expresses U, so U = U(S, V): S and V are the natural variables of U."
+  },
+  {
+   "id": "entropy-change-constant-volume",
+   "kind": "result",
+   "section": "21.1",
+   "name": "Entropy change with temperature at constant volume",
+   "statement": "At constant volume dU = TdS and C_V = (∂U/∂T)_V, so dS = (C_V/T)dT and ΔS = ∫C_V(T)/T dT from T₁ to T₂.",
+   "forms": [
+    {
+     "id": "ds-cv",
+     "latex": "dS=\\frac{C_V}{T}dT"
+    },
+    {
+     "id": "delta-s-cv",
+     "latex": "\\Delta S=\\int_{T_1}^{T_2}{\\frac{C_V(T)}{T}dT}"
+    }
+   ]
+  },
+  {
+   "id": "entropy-increases-with-temperature",
+   "kind": "result",
+   "section": "21.1",
+   "name": "Entropy increases with temperature",
+   "statement": "Since a heat capacity is always positive, entropy must increase as the temperature increases."
+  },
+  {
+   "id": "fundamental-equation-h",
+   "kind": "result",
+   "section": "21.1",
+   "name": "Fundamental equation for the enthalpy",
+   "statement": "From H = U + PV and dU = TdS − PdV, a reversible change gives dH = TdS + VdP: the natural variables of H are S and P.",
+   "forms": [
+    {
+     "id": "dh-tds-vdp",
+     "latex": "dH=TdS+VdP"
+    }
+   ]
+  },
+  {
+   "id": "entropy-change-constant-pressure",
+   "kind": "result",
+   "section": "21.1",
+   "name": "Entropy change with temperature at constant pressure",
+   "statement": "At constant pressure dH = TdS and C_P = (∂H/∂T)_P, so dS = (C_P/T)dT and ΔS = ∫C_P(T)/T dT; this is the more common route, since heat capacities are easier to measure at constant pressure.",
+   "forms": [
+    {
+     "id": "ds-cp",
+     "latex": "dS=\\frac{C_P}{T}dT"
+    },
+    {
+     "id": "delta-s-cp",
+     "latex": "\\Delta S=\\int_{T_1}^{T_2}{\\frac{C_P(T)}{T}dT}"
+    }
+   ]
+  },
+  {
+   "id": "absolute-entropy",
+   "kind": "definition",
+   "section": "21.2",
+   "name": "Absolute entropy",
+   "terms": [
+    "absolute"
+   ],
+   "statement": "The entropy measured from a natural zero, S(0) = 0 for a perfect crystal at 0 K, so that S(T) follows from heat-capacity data alone; unlike the enthalpy, which has only a floating zero point."
+  },
+  {
+   "id": "third-law",
+   "kind": "axiom",
+   "section": "21.2",
+   "name": "Third law of thermodynamics",
+   "terms": [
+    "third Law of Thermodynamics",
+    "Third law of thermodynamics"
+   ],
+   "statement": "The entropy of a pure substance in a perfect crystalline form approaches zero as T approaches zero (but perfect crystals do not exist).",
+   "forms": [
+    {
+     "id": "third-law-limit",
+     "latex": "\\lim_{T\\rightarrow 0}{S^\\circ(T)} =0"
+    },
+    {
+     "id": "third-law-molar",
+     "latex": "\\bar{S}_{0\\text{ K}}^\\circ=0"
+    }
+   ]
+  },
+  {
+   "id": "perfect-crystal-zero-entropy",
+   "kind": "result",
+   "section": "21.2",
+   "name": "A perfect crystal at 0 K has one microstate",
+   "statement": "A perfect crystal at 0 K has only one arrangement of its lowest energy, W = 1, so S = k ln W = 0; above 0 K more microstates are accessible and S > 0.",
+   "forms": [
+    {
+     "id": "s-k-ln-w-zero",
+     "latex": "S = k \\ln W = 0"
+    }
+   ]
+  },
+  {
+   "id": "entropy-of-fusion",
+   "kind": "result",
+   "section": "21.2",
+   "name": "Entropy of fusion",
+   "statement": "Ice and water in equilibrium melt reversibly at one temperature, so Δ_fus S = q_rev/T = Δ_fus H/T, and the entropy curve jumps by this amount at the melting point.",
+   "forms": [
+    {
+     "id": "entropy-of-fusion",
+     "latex": "Δ_{fus}S = \\dfrac{q_{rev}}{T}= \\dfrac{Δ_{fus}H}{T}"
+    }
+   ]
+  },
+  {
+   "id": "standard-molar-entropy",
+   "kind": "definition",
+   "section": "21.2",
+   "name": "Standard molar entropy",
+   "symbol": "S_std",
+   "statement": "The absolute entropy of one mole of a substance in its standard state (1 bar), S°, found from calorimetric data and tabulated against temperature."
+  },
+  {
+   "id": "entropy-increases-with-mass",
+   "kind": "result",
+   "section": "21.2",
+   "name": "Heavier particles have more entropy",
+   "statement": "The particle-in-a-box energies have the mass in the denominator, so the levels crowd together as m increases: more levels within reach, more entropy, as the noble gases show."
+  },
+  {
+   "id": "residual-entropy",
+   "kind": "definition",
+   "section": "21.2",
+   "name": "Residual entropy",
+   "terms": [
+    "a nonzero entropy",
+    "residual entropy"
+   ],
+   "statement": "The nonzero entropy a real crystal keeps as T approaches 0 K, because it is frozen into more than one ground-state arrangement; an exception to the third law, which assumes a perfect crystal with a single ground state."
+  },
+  {
+   "id": "orientational-disorder-entropy",
+   "kind": "result",
+   "section": "21.2",
+   "name": "Entropy of orientational disorder",
+   "statement": "If each of N molecules can sit in the lattice in two orientations, W = 2^N and S = k ln 2^N = Nk ln 2, 5.7 J/(mol K) per mole, as for solid CO.",
+   "forms": [
+    {
+     "id": "s-disorder-co",
+     "latex": "S_{disorder} = k\\,\\ln{W_{disorder}} = k\\,\\ln 2^N = N k \\ln 2"
+    }
+   ]
+  },
+  {
+   "id": "entropy-of-transition",
+   "kind": "result",
+   "section": "21.3",
+   "name": "Entropy of a phase transition",
+   "statement": "A phase transition at equilibrium at constant T and P has Δ_trs G = Δ_trs H − T_trs Δ_trs S = 0, so Δ_trs S = Δ_trs H/T_trs.",
+   "forms": [
+    {
+     "id": "entropy-of-transition",
+     "latex": "Δ_{trs}S = \\dfrac{Δ_{trs}H}{T_{trs}}"
+    },
+    {
+     "id": "delta-s-trs",
+     "latex": "\\Delta S_{trs}=\\frac{\\Delta H_{trs}}{T_{trs}}",
+     "section": "21.5"
+    }
+   ]
+  },
+  {
+   "id": "gibbs-temperature-derivative",
+   "kind": "result",
+   "section": "21.3",
+   "name": "Temperature derivative of the Gibbs energy",
+   "statement": "At constant pressure the temperature derivative of the molar Gibbs energy is minus the molar entropy.",
+   "forms": [
+    {
+     "id": "dg-dt-minus-s",
+     "latex": "\\left(\\frac{\\partial\\bar{G}}{\\partial T}\\right)_P=-\\bar{S}"
+    }
+   ]
+  },
+  {
+   "id": "first-order-transition",
+   "kind": "definition",
+   "section": "21.3",
+   "name": "First-order transition",
+   "terms": [
+    "first order"
+   ],
+   "statement": "A phase transition in which a first derivative of G (or A), such as S, jumps at the transition temperature."
+  },
+  {
+   "id": "heat-capacity-singular-at-transition",
+   "kind": "result",
+   "section": "21.3",
+   "name": "Heat capacity at a first-order transition",
+   "statement": "A second derivative of G, such as the heat capacity, displays a singularity (+∞) at a first-order transition point."
+  },
+  {
+   "id": "phase-transition-kinds",
+   "kind": "definition",
+   "section": "21.3",
+   "name": "Kinds of phase transition",
+   "statement": "Vaporization (l → g), condensation (g → l), fusion (s → l), freezing (l → s), sublimation (s → g), deposition (g → s) and solid-to-solid transitions; each has a change in entropy."
+  },
+  {
+   "id": "debye-model",
+   "kind": "idea",
+   "section": "21.4",
+   "name": "Debye model of a crystal",
+   "terms": [
+    "Debye function",
+    "Debye model"
+   ],
+   "statement": "Debye treated the vibrations of a crystal lattice as a collection of quantized normal modes, phonons; at low temperature only the low-frequency modes are accessible, so the heat capacity falls sharply, and at high temperature it approaches the classical Dulong–Petit limit."
+  },
+  {
+   "id": "debye-t3-law",
+   "kind": "result",
+   "section": "21.4",
+   "name": "Debye T³ law",
+   "type": "heat-capacity",
+   "statement": "At low temperature the heat capacity of a nonmetallic crystal is proportional to T³, C_P = aT³.",
+   "forms": [
+    {
+     "id": "debye-t3",
+     "latex": "C_P=aT^3"
+    }
+   ]
+  },
+  {
+   "id": "metal-low-temperature-heat-capacity",
+   "kind": "result",
+   "section": "21.4",
+   "name": "Low-temperature heat capacity of a metal",
+   "type": "heat-capacity",
+   "statement": "In a metal the conduction electrons add a term linear in T to the lattice's T³ term, C_P = aT + bT³.",
+   "forms": [
+    {
+     "id": "metal-cp",
+     "latex": "C_P=aT+bT^3"
+    }
+   ]
+  },
+  {
+   "id": "calorimetric-absolute-entropy",
+   "kind": "result",
+   "section": "21.5",
+   "name": "Absolute entropy from calorimetry",
+   "statement": "With S(0) = 0 from the third law, the absolute entropy at T is the integral of C_p/T from 0 K plus ΔH_trs/T_trs for every phase transition on the way: S(T) = ∫₀ᵀ C_p/T dT + Σ ΔH_trs/T_trs.",
+   "forms": [
+    {
+     "id": "absolute-entropy-calorimetric",
+     "latex": "S(T)=\\int_0^T \\frac{C_p(T)}{T} d T+\\sum \\frac{\\Delta H_{\\text {trs}}}{T_{\\text {trs}}}"
+    }
+   ]
+  },
+  {
+   "id": "absolute-entropy-heating-path",
+   "kind": "skill",
+   "section": "21.5",
+   "name": "Finding an absolute entropy along a heating path",
+   "statement": "Split the warming from 0 K into stretches of one phase, integrate C_P/T over each with that phase's heat capacity, and add ΔH_trs/T_trs at each transition, as for CO₂ gas at 300 K through its sublimation at 194.7 K."
+  },
+  {
+   "id": "partition-function-third-law",
+   "kind": "result",
+   "section": "21.6",
+   "name": "Entropy from the partition function near absolute zero",
+   "statement": "As T goes to zero only the n degenerate ground states contribute to Q = Σ e^(−E_j/kT), so S = k_B ln Q + k_BT(∂ln Q/∂T) approaches k_B ln n, which is zero for a nondegenerate ground state, consistent with the third law.",
+   "forms": [
+    {
+     "id": "q-low-temperature",
+     "latex": "\\sum_j{e^{-\\frac{E_j}{kT}}} = ne^{-\\frac{E_1}{kT}}+me^{-\\frac{E_{n+1}}{kT}}+\\dots"
+    }
+   ]
+  },
+  {
+   "id": "entropy-increases-with-complexity",
+   "kind": "result",
+   "section": "21.7",
+   "name": "More complex molecules have more entropy",
+   "statement": "A molecule with more atoms, or a nonlinear one, has more rotational and vibrational modes to take up energy, so more accessible microstates and a higher standard molar entropy."
+  },
+  {
+   "id": "spectroscopic-entropy",
+   "kind": "definition",
+   "section": "21.8",
+   "name": "Spectroscopic entropy",
+   "statement": "The standard entropy of a gas calculated from spectroscopic data through its partition function, S°_calc, as against the calorimetric S°_exp."
+  },
+  {
+   "id": "residual-entropy-discrepancy",
+   "kind": "result",
+   "section": "21.8",
+   "name": "Residual entropy from spectroscopic and calorimetric entropies",
+   "statement": "Where a substance can exist in many configurations at 0 K (glass, ice, carbon monoxide), its calorimetric entropy falls short of the spectroscopic one, and the residual entropy is the difference S̄_calc − S̄_exp.",
+   "forms": [
+    {
+     "id": "residual-entropy-difference",
+     "latex": "\\bar{S}_{\\text{calc}}-\\bar{S}_{\\text{exp}}"
+    }
+   ]
+  },
+  {
+   "id": "reaction-entropy",
+   "kind": "result",
+   "section": "21.9",
+   "name": "Standard entropy of a reaction",
+   "statement": "Because entropy is a state function, the standard entropy change of a reaction is the sum of the standard entropies of the products less that of the reactants, each times its stoichiometric coefficient.",
+   "forms": [
+    {
+     "id": "reaction-entropy",
+     "latex": "\\Delta_{rxn}S^\\circ = \\sum_{\\text{Products}}{v_i S^\\circ_i} - \\sum_{\\text{Reactants}}{v_i S^\\circ_i}"
+    }
+   ]
+  }
+ ],
+ "concept_prereqs": [
+  {
+   "concept": "fundamental-equation-u",
+   "prereq": "internal-energy"
+  },
+  {
+   "concept": "natural-variables-u",
+   "prereq": "fundamental-equation-u"
+  },
+  {
+   "concept": "entropy-change-constant-volume",
+   "prereq": "fundamental-equation-u"
+  },
+  {
+   "concept": "entropy-change-constant-volume",
+   "prereq": "constant-volume-heat-capacity"
+  },
+  {
+   "concept": "entropy-increases-with-temperature",
+   "prereq": "entropy-change-constant-volume"
+  },
+  {
+   "concept": "fundamental-equation-h",
+   "prereq": "fundamental-equation-u"
+  },
+  {
+   "concept": "entropy-change-constant-pressure",
+   "prereq": "fundamental-equation-h"
+  },
+  {
+   "concept": "absolute-entropy",
+   "prereq": "third-law"
+  },
+  {
+   "concept": "absolute-entropy",
+   "prereq": "entropy-change-constant-pressure"
+  },
+  {
+   "concept": "perfect-crystal-zero-entropy",
+   "prereq": "third-law"
+  },
+  {
+   "concept": "perfect-crystal-zero-entropy",
+   "prereq": "distribution-weight"
+  },
+  {
+   "concept": "standard-molar-entropy",
+   "prereq": "absolute-entropy"
+  },
+  {
+   "concept": "entropy-increases-with-mass",
+   "prereq": "standard-molar-entropy"
+  },
+  {
+   "concept": "entropy-increases-with-mass",
+   "prereq": "pib-energy-levels"
+  },
+  {
+   "concept": "residual-entropy",
+   "prereq": "perfect-crystal-zero-entropy"
+  },
+  {
+   "concept": "orientational-disorder-entropy",
+   "prereq": "residual-entropy"
+  },
+  {
+   "concept": "entropy-of-transition",
+   "prereq": "entropy-of-fusion"
+  },
+  {
+   "concept": "first-order-transition",
+   "prereq": "gibbs-temperature-derivative"
+  },
+  {
+   "concept": "first-order-transition",
+   "prereq": "entropy-of-transition"
+  },
+  {
+   "concept": "heat-capacity-singular-at-transition",
+   "prereq": "first-order-transition"
+  },
+  {
+   "concept": "phase-transition-kinds",
+   "prereq": "entropy-of-transition"
+  },
+  {
+   "concept": "debye-model",
+   "prereq": "einstein-model-limits"
+  },
+  {
+   "concept": "debye-model",
+   "prereq": "molecular-normal-modes"
+  },
+  {
+   "concept": "debye-t3-law",
+   "prereq": "debye-model"
+  },
+  {
+   "concept": "metal-low-temperature-heat-capacity",
+   "prereq": "debye-t3-law"
+  },
+  {
+   "concept": "calorimetric-absolute-entropy",
+   "prereq": "absolute-entropy"
+  },
+  {
+   "concept": "calorimetric-absolute-entropy",
+   "prereq": "entropy-of-transition"
+  },
+  {
+   "concept": "absolute-entropy-heating-path",
+   "prereq": "calorimetric-absolute-entropy"
+  },
+  {
+   "concept": "partition-function-third-law",
+   "prereq": "third-law"
+  },
+  {
+   "concept": "partition-function-third-law",
+   "prereq": "canonical-partition-function"
+  },
+  {
+   "concept": "partition-function-third-law",
+   "prereq": "degeneracy"
+  },
+  {
+   "concept": "entropy-increases-with-complexity",
+   "prereq": "standard-molar-entropy"
+  },
+  {
+   "concept": "entropy-increases-with-complexity",
+   "prereq": "vibrational-mode-count"
+  },
+  {
+   "concept": "spectroscopic-entropy",
+   "prereq": "standard-molar-entropy"
+  },
+  {
+   "concept": "spectroscopic-entropy",
+   "prereq": "molecular-ideal-gas-partition-function"
+  },
+  {
+   "concept": "residual-entropy-discrepancy",
+   "prereq": "spectroscopic-entropy"
+  },
+  {
+   "concept": "residual-entropy-discrepancy",
+   "prereq": "calorimetric-absolute-entropy"
+  },
+  {
+   "concept": "residual-entropy-discrepancy",
+   "prereq": "residual-entropy"
+  },
+  {
+   "concept": "reaction-entropy",
+   "prereq": "standard-molar-entropy"
+  }
+ ]
+}

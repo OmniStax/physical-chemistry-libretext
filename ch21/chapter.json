@@ -1,0 +1,540 @@
+{
+ "id": "21",
+ "dir": "ch21",
+ "title": "Entropy and the Third Law of Thermodynamics",
+ "sections": [
+  {
+   "id": "21.1",
+   "module": "14476",
+   "title": "Entropy Increases with Increasing Temperature",
+   "slug": "21:_Entropy_and_the_Third_Law_of_Thermodynamics/21.01:_Entropy_Increases_with_Increasing_Temperature"
+  },
+  {
+   "id": "21.2",
+   "module": "14477",
+   "title": "The 3rd Law of Thermodynamics Puts Entropy on an Absolute Scale",
+   "slug": "21:_Entropy_and_the_Third_Law_of_Thermodynamics/21.02:_The_3rd_Law_of_Thermodynamics_Puts_Entropy_on_an_Absolute_Scale"
+  },
+  {
+   "id": "21.3",
+   "module": "14479",
+   "title": "The Entropy of a Phase Transition can be Calculated from the Enthalpy of the Phase Transition",
+   "slug": "21:_Entropy_and_the_Third_Law_of_Thermodynamics/21.03:_The_Entropy_of_a_Phase_Transition_can_be_Calculated_from_the_Enthalpy_of_the_Phase_Transition"
+  },
+  {
+   "id": "21.4",
+   "module": "14481",
+   "title": "The Debye Function is Used to Calculate the Heat Capacity at Low Temperatures",
+   "slug": "21:_Entropy_and_the_Third_Law_of_Thermodynamics/21.04:_The_Debye_Function_is_Used_to_Calculate_the_Heat_Capacity_at_Low_Temperatures"
+  },
+  {
+   "id": "21.5",
+   "module": "14482",
+   "title": "Practical Absolute Entropies Can Be Determined Calorimetrically",
+   "slug": "21:_Entropy_and_the_Third_Law_of_Thermodynamics/21.05:_Practical_Absolute_Entropies_Can_Be_Determined_Calorimetrically"
+  },
+  {
+   "id": "21.6",
+   "module": "14483",
+   "title": "Practical Absolute Entropies of Gases Can Be Calculated from Partition Functions",
+   "slug": "21:_Entropy_and_the_Third_Law_of_Thermodynamics/21.06:_Practical_Absolute_Entropies_of_Gases_Can_Be_Calculated_from_Partition_Functions"
+  },
+  {
+   "id": "21.7",
+   "module": "14484",
+   "title": "Standard Entropies Depend Upon Molecular Mass and Structure",
+   "slug": "21:_Entropy_and_the_Third_Law_of_Thermodynamics/21.07:_Standard_Entropies_Depend_Upon_Molecular_Mass_and_Structure"
+  },
+  {
+   "id": "21.8",
+   "module": "14485",
+   "title": "Spectroscopic Entropies sometimes disgree with Calorimetric Entropies",
+   "slug": "21:_Entropy_and_the_Third_Law_of_Thermodynamics/21.08:_Spectroscopic_Entropies_sometimes_disgree_with_Calorimetric_Entropies"
+  },
+  {
+   "id": "21.9",
+   "module": "14486",
+   "title": "Standard Entropies Can Be Used to Calculate Entropy Changes of Chemical Reactions",
+   "slug": "21:_Entropy_and_the_Third_Law_of_Thermodynamics/21.09:_Standard_Entropies_Can_Be_Used_to_Calculate_Entropy_Changes_of_Chemical_Reactions"
+  }
+ ],
+ "variables": [
+  {
+   "sym": "U",
+   "concept": "internal-energy",
+   "meaning": "the internal energy of the system",
+   "unit": "J",
+   "section": "21.1"
+  },
+  {
+   "sym": "q_rev",
+   "type": "heat",
+   "meaning": "the heat exchanged in a reversible change",
+   "unit": "J",
+   "section": "21.1"
+  },
+  {
+   "sym": "w_rev",
+   "type": "work",
+   "meaning": "the work done on the system in a reversible change",
+   "unit": "J",
+   "section": "21.1"
+  },
+  {
+   "sym": "T",
+   "type": "temperature",
+   "meaning": "the temperature",
+   "unit": "K",
+   "section": "21.1"
+  },
+  {
+   "sym": "S_ent",
+   "meaning": "the entropy of the system",
+   "unit": "J/K",
+   "section": "21.1"
+  },
+  {
+   "sym": "P",
+   "type": "pressure",
+   "meaning": "the pressure",
+   "unit": "Pa",
+   "section": "21.1"
+  },
+  {
+   "sym": "V",
+   "type": "volume",
+   "meaning": "the volume",
+   "unit": "m³",
+   "section": "21.1"
+  },
+  {
+   "sym": "C_V",
+   "concept": "constant-volume-heat-capacity",
+   "meaning": "the heat capacity at constant volume",
+   "unit": "J/K",
+   "section": "21.1"
+  },
+  {
+   "sym": "T_1",
+   "type": "temperature",
+   "meaning": "the starting temperature",
+   "unit": "K",
+   "section": "21.1"
+  },
+  {
+   "sym": "T_2",
+   "type": "temperature",
+   "meaning": "the final temperature",
+   "unit": "K",
+   "section": "21.1"
+  },
+  {
+   "sym": "H",
+   "type": "energy",
+   "meaning": "the enthalpy, U + PV",
+   "unit": "J",
+   "section": "21.1"
+  },
+  {
+   "sym": "C_P",
+   "type": "heat-capacity",
+   "meaning": "the heat capacity at constant pressure, written C_P or C_p",
+   "unit": "J/K",
+   "section": "21.1"
+  },
+  {
+   "sym": "S_ent",
+   "meaning": "the entropy of the substance",
+   "unit": "J/K",
+   "section": "21.2"
+  },
+  {
+   "sym": "T",
+   "type": "temperature",
+   "meaning": "the temperature",
+   "unit": "K",
+   "section": "21.2"
+  },
+  {
+   "sym": "C_P",
+   "type": "heat-capacity",
+   "meaning": "the heat capacity at constant pressure, written C_p or C_P",
+   "unit": "J/K",
+   "section": "21.2"
+  },
+  {
+   "sym": "H",
+   "type": "energy",
+   "meaning": "the enthalpy",
+   "unit": "J",
+   "section": "21.2"
+  },
+  {
+   "sym": "S_std",
+   "concept": "standard-molar-entropy",
+   "meaning": "the standard entropy of a substance, at 1 bar",
+   "unit": "J/(mol K)",
+   "section": "21.2"
+  },
+  {
+   "sym": "Delta_trs_S",
+   "concept": "entropy-of-fusion",
+   "meaning": "the molar entropy of a phase transition",
+   "unit": "J/(mol K)",
+   "section": "21.2"
+  },
+  {
+   "sym": "k",
+   "concept": "boltzmann-constant",
+   "meaning": "Boltzmann's constant, written k",
+   "unit": "J/K",
+   "section": "21.2"
+  },
+  {
+   "sym": "W",
+   "concept": "distribution-weight",
+   "meaning": "the number of ways the energy of the system can be distributed, its microstates",
+   "section": "21.2"
+  },
+  {
+   "sym": "Delta_fus_H",
+   "type": "energy",
+   "meaning": "the enthalpy of fusion",
+   "unit": "J/mol",
+   "section": "21.2"
+  },
+  {
+   "sym": "q_P",
+   "type": "heat",
+   "meaning": "the heat absorbed at constant pressure",
+   "unit": "J",
+   "section": "21.2"
+  },
+  {
+   "sym": "q_rev",
+   "type": "heat",
+   "meaning": "the heat absorbed reversibly",
+   "unit": "J",
+   "section": "21.2"
+  },
+  {
+   "sym": "Delta_fus_S",
+   "concept": "entropy-of-fusion",
+   "meaning": "the entropy of fusion",
+   "unit": "J/(mol K)",
+   "section": "21.2"
+  },
+  {
+   "sym": "m",
+   "type": "mass",
+   "meaning": "the mass of a particle",
+   "unit": "kg",
+   "section": "21.2"
+  },
+  {
+   "sym": "G",
+   "type": "energy",
+   "meaning": "the Gibbs energy",
+   "unit": "J",
+   "section": "21.2"
+  },
+  {
+   "sym": "W_disorder",
+   "concept": "orientational-disorder-entropy",
+   "meaning": "the number of orientational arrangements of the N molecules, 2^N for CO",
+   "section": "21.2"
+  },
+  {
+   "sym": "S_disorder",
+   "concept": "orientational-disorder-entropy",
+   "meaning": "the entropy of orientational disorder",
+   "unit": "J/K",
+   "section": "21.2"
+  },
+  {
+   "sym": "N",
+   "meaning": "the number of molecules",
+   "section": "21.2"
+  },
+  {
+   "sym": "Delta_trs_G",
+   "type": "energy",
+   "meaning": "the Gibbs energy of a phase transition",
+   "unit": "J/mol",
+   "section": "21.3"
+  },
+  {
+   "sym": "Delta_trs_H",
+   "type": "energy",
+   "meaning": "the enthalpy of a phase transition",
+   "unit": "J/mol",
+   "section": "21.3"
+  },
+  {
+   "sym": "Delta_trs_S",
+   "concept": "entropy-of-transition",
+   "meaning": "the entropy of a phase transition",
+   "unit": "J/(mol K)",
+   "section": "21.3"
+  },
+  {
+   "sym": "T_trs",
+   "concept": "entropy-of-transition",
+   "meaning": "the temperature of a phase transition",
+   "unit": "K",
+   "section": "21.3"
+  },
+  {
+   "sym": "G_bar",
+   "type": "energy",
+   "meaning": "the molar Gibbs energy",
+   "unit": "J/mol",
+   "section": "21.3"
+  },
+  {
+   "sym": "S_bar",
+   "meaning": "the molar entropy",
+   "unit": "J/(mol K)",
+   "section": "21.3"
+  },
+  {
+   "sym": "T",
+   "type": "temperature",
+   "meaning": "the temperature",
+   "unit": "K",
+   "section": "21.3"
+  },
+  {
+   "sym": "P",
+   "type": "pressure",
+   "meaning": "the pressure",
+   "unit": "Pa",
+   "section": "21.3"
+  },
+  {
+   "sym": "C_P",
+   "type": "heat-capacity",
+   "meaning": "the heat capacity of the solid at constant pressure",
+   "unit": "J/(mol K)",
+   "section": "21.4"
+  },
+  {
+   "sym": "T",
+   "type": "temperature",
+   "meaning": "the temperature",
+   "unit": "K",
+   "section": "21.4"
+  },
+  {
+   "sym": "a",
+   "concept": "debye-t3-law",
+   "meaning": "the constant of the Debye T³ law, C_P = aT³",
+   "unit": "J/(mol K⁴)",
+   "redefines": true,
+   "section": "21.4"
+  },
+  {
+   "sym": "a_el",
+   "concept": "metal-low-temperature-heat-capacity",
+   "meaning": "the constant of the electronic term aT in a metal's heat capacity",
+   "unit": "J/(mol K²)",
+   "section": "21.4"
+  },
+  {
+   "sym": "b",
+   "concept": "metal-low-temperature-heat-capacity",
+   "meaning": "the constant of the lattice term bT³ in a metal's heat capacity",
+   "unit": "J/(mol K⁴)",
+   "redefines": true,
+   "section": "21.4"
+  },
+  {
+   "sym": "C_P",
+   "type": "heat-capacity",
+   "meaning": "the molar heat capacity at constant pressure, written C_P or C_p",
+   "unit": "J/(mol K)",
+   "section": "21.5"
+  },
+  {
+   "sym": "T",
+   "type": "temperature",
+   "meaning": "the temperature",
+   "unit": "K",
+   "section": "21.5"
+  },
+  {
+   "sym": "T_1",
+   "type": "temperature",
+   "meaning": "the starting temperature",
+   "unit": "K",
+   "section": "21.5"
+  },
+  {
+   "sym": "T_2",
+   "type": "temperature",
+   "meaning": "the final temperature",
+   "unit": "K",
+   "section": "21.5"
+  },
+  {
+   "sym": "Delta_trs_S",
+   "concept": "entropy-of-transition",
+   "meaning": "the entropy of a phase transition",
+   "unit": "J/(mol K)",
+   "section": "21.5"
+  },
+  {
+   "sym": "Delta_trs_H",
+   "type": "energy",
+   "meaning": "the enthalpy of a phase transition",
+   "unit": "J/mol",
+   "section": "21.5"
+  },
+  {
+   "sym": "T_trs",
+   "concept": "entropy-of-transition",
+   "meaning": "the temperature of a phase transition",
+   "unit": "K",
+   "section": "21.5"
+  },
+  {
+   "sym": "S_ent",
+   "concept": "calorimetric-absolute-entropy",
+   "meaning": "the absolute molar entropy at temperature T",
+   "unit": "J/(mol K)",
+   "section": "21.5"
+  },
+  {
+   "sym": "T_sub",
+   "type": "temperature",
+   "meaning": "the temperature of sublimation, 194.7 K for CO₂",
+   "unit": "K",
+   "section": "21.5"
+  },
+  {
+   "sym": "Delta_sub_H",
+   "type": "energy",
+   "meaning": "the enthalpy of sublimation",
+   "unit": "J/mol",
+   "section": "21.5"
+  },
+  {
+   "sym": "C_P_g",
+   "type": "heat-capacity",
+   "meaning": "the molar heat capacity of the gas at constant pressure",
+   "unit": "J/(mol K)",
+   "section": "21.5"
+  },
+  {
+   "sym": "S_ent",
+   "meaning": "the entropy of the system",
+   "unit": "J/K",
+   "section": "21.6"
+  },
+  {
+   "sym": "U",
+   "concept": "internal-energy",
+   "meaning": "the internal energy of the system",
+   "unit": "J",
+   "section": "21.6"
+  },
+  {
+   "sym": "T",
+   "type": "temperature",
+   "meaning": "the temperature",
+   "unit": "K",
+   "section": "21.6"
+  },
+  {
+   "sym": "k_B",
+   "concept": "boltzmann-constant",
+   "meaning": "Boltzmann's constant, also written k",
+   "unit": "J/K",
+   "section": "21.6"
+  },
+  {
+   "sym": "Q_sys",
+   "concept": "canonical-partition-function",
+   "meaning": "the partition function of the system",
+   "section": "21.6"
+  },
+  {
+   "sym": "E_j",
+   "type": "energy",
+   "meaning": "the energy of state j of the system",
+   "unit": "J",
+   "section": "21.6"
+  },
+  {
+   "sym": "E_1",
+   "type": "energy",
+   "meaning": "the energy of the ground state",
+   "unit": "J",
+   "section": "21.6"
+  },
+  {
+   "sym": "n",
+   "meaning": "the degeneracy of the ground state",
+   "section": "21.6"
+  },
+  {
+   "sym": "m_deg",
+   "meaning": "the degeneracy of the next level",
+   "section": "21.6"
+  },
+  {
+   "sym": "S_std",
+   "concept": "standard-molar-entropy",
+   "meaning": "the standard molar entropy, at 1 bar",
+   "unit": "J/(mol K)",
+   "section": "21.7"
+  },
+  {
+   "sym": "S_std_exp",
+   "concept": "residual-entropy-discrepancy",
+   "meaning": "the standard entropy measured by calorimetry",
+   "unit": "J/(mol K)",
+   "section": "21.8"
+  },
+  {
+   "sym": "S_std_calc",
+   "concept": "spectroscopic-entropy",
+   "meaning": "the standard entropy calculated from spectroscopic data",
+   "unit": "J/(mol K)",
+   "section": "21.8"
+  },
+  {
+   "sym": "S_bar_calc",
+   "concept": "spectroscopic-entropy",
+   "meaning": "the molar entropy calculated from spectroscopic data",
+   "unit": "J/(mol K)",
+   "section": "21.8"
+  },
+  {
+   "sym": "S_bar_exp",
+   "concept": "residual-entropy-discrepancy",
+   "meaning": "the molar entropy measured by calorimetry",
+   "unit": "J/(mol K)",
+   "section": "21.8"
+  },
+  {
+   "sym": "Delta_rxn_S",
+   "concept": "reaction-entropy",
+   "meaning": "the standard entropy change of a reaction",
+   "unit": "J/(mol K)",
+   "section": "21.9"
+  },
+  {
+   "sym": "nu_stoich",
+   "meaning": "the stoichiometric coefficient of species i, written v_i",
+   "section": "21.9"
+  },
+  {
+   "sym": "S_std_i",
+   "concept": "standard-molar-entropy",
+   "meaning": "the standard molar entropy of species i",
+   "unit": "J/(mol K)",
+   "section": "21.9"
+  }
+ ]
+}

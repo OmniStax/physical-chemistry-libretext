@@ -37,7 +37,11 @@
     "ch15",
     "ch16",
     "ch17",
-    "ch18"
+    "ch18",
+    "ch19",
+    "ch20",
+    "ch21",
+    "ch22"
   ],
   "types": [
     {
@@ -212,6 +216,21 @@
     {
       "id": "partition-function",
       "label": "partition function"
+    },
+    {
+      "id": "heat",
+      "label": "heat",
+      "dimension": "J"
+    },
+    {
+      "id": "work",
+      "label": "work",
+      "dimension": "J"
+    },
+    {
+      "id": "entropy",
+      "label": "entropy",
+      "dimension": "J/K"
     }
   ],
   "symbols": [
@@ -4012,6 +4031,630 @@
       "sym": "q_k",
       "latex": "q_k",
       "macro": "\\kqk"
+    },
+    {
+      "sym": "T_trs",
+      "latex": "T_{trs}",
+      "macro": "\\kTtrs"
+    },
+    {
+      "sym": "T_sub",
+      "latex": "T_{sub}",
+      "macro": "\\kTsub"
+    },
+    {
+      "sym": "C_P_g",
+      "latex": "C_P^g",
+      "macro": "\\kCPg"
+    },
+    {
+      "sym": "a_el",
+      "latex": "a"
+    },
+    {
+      "sym": "S_std",
+      "latex": "S^\\circ"
+    },
+    {
+      "sym": "S_std_i",
+      "latex": "S^\\circ_i"
+    },
+    {
+      "sym": "S_std_exp",
+      "latex": "S^\\circ_{\\text{exp}}"
+    },
+    {
+      "sym": "S_std_calc",
+      "latex": "S^\\circ_{\\text{calc}}"
+    },
+    {
+      "sym": "S_bar_calc",
+      "latex": "\\bar{S}_{\\text{calc}}"
+    },
+    {
+      "sym": "S_bar_exp",
+      "latex": "\\bar{S}_{\\text{exp}}"
+    },
+    {
+      "sym": "S_disorder",
+      "latex": "S_{disorder}"
+    },
+    {
+      "sym": "W_disorder",
+      "latex": "W_{disorder}"
+    },
+    {
+      "sym": "Delta_trs_S",
+      "latex": "\\Delta_{trs}S"
+    },
+    {
+      "sym": "Delta_trs_H",
+      "latex": "\\Delta_{trs}H"
+    },
+    {
+      "sym": "Delta_trs_G",
+      "latex": "\\Delta_{trs}G"
+    },
+    {
+      "sym": "Delta_sub_H",
+      "latex": "\\Delta H_{sub}"
+    },
+    {
+      "sym": "Delta_rxn_S",
+      "latex": "\\Delta_{rxn}S^\\circ"
+    },
+    {
+      "sym": "nu_stoich",
+      "latex": "v_i"
+    },
+    {
+      "sym": "m_deg",
+      "latex": "m"
+    },
+    {
+      "sym": "G",
+      "latex": "G",
+      "macro": "\\kG"
+    },
+    {
+      "sym": "G_bar",
+      "latex": "\\bar{G}",
+      "macro": "\\kGbar"
+    },
+    {
+      "sym": "G_bar_i",
+      "latex": "\\bar{G}_i",
+      "macro": "\\kGbari"
+    },
+    {
+      "sym": "G_molar",
+      "latex": "G_{molar}",
+      "macro": "\\kGmolar"
+    },
+    {
+      "sym": "G_std_molar",
+      "latex": "G^o_{molar}",
+      "macro": "\\kGstdmolar"
+    },
+    {
+      "sym": "A_molar",
+      "latex": "A_{molar}",
+      "macro": "\\kAmolar"
+    },
+    {
+      "sym": "f",
+      "latex": "f",
+      "macro": "\\kf"
+    },
+    {
+      "sym": "mu_bar",
+      "latex": "\\bar{\\mu}",
+      "macro": "\\kmubar"
+    },
+    {
+      "sym": "mu_bar_std",
+      "latex": "\\bar{\\mu}^\\circ",
+      "macro": "\\kmubarstd"
+    },
+    {
+      "sym": "mu_bar_i",
+      "latex": "\\bar{\\mu}_i",
+      "macro": "\\kmubari"
+    },
+    {
+      "sym": "P_std",
+      "latex": "P^\\circ",
+      "macro": "\\kPstd"
+    },
+    {
+      "sym": "P_1",
+      "latex": "P_1",
+      "macro": "\\kPone"
+    },
+    {
+      "sym": "P_2",
+      "latex": "P_2",
+      "macro": "\\kPtwo"
+    },
+    {
+      "sym": "P_initial",
+      "latex": "P_{initial}",
+      "macro": "\\kPinitial"
+    },
+    {
+      "sym": "P_final",
+      "latex": "P_{final}",
+      "macro": "\\kPfinal"
+    },
+    {
+      "sym": "T_fus",
+      "latex": "T_{fus}",
+      "macro": "\\kTfus"
+    },
+    {
+      "sym": "T_boil",
+      "latex": "T_{boil}",
+      "macro": "\\kTboil"
+    },
+    {
+      "sym": "alpha_V",
+      "latex": "\\alpha"
+    },
+    {
+      "sym": "kappa_T",
+      "latex": "\\kappa_T"
+    },
+    {
+      "sym": "y_1",
+      "latex": "y_1"
+    },
+    {
+      "sym": "y_2",
+      "latex": "y_2"
+    },
+    {
+      "sym": "w",
+      "latex": "w",
+      "macro": "\\kw"
+    },
+    {
+      "sym": "Delta_U",
+      "latex": "\\Delta U",
+      "macro": "\\kDeltaU"
+    },
+    {
+      "sym": "U_i",
+      "latex": "U_i",
+      "macro": "\\kUi"
+    },
+    {
+      "sym": "U_f",
+      "latex": "U_f",
+      "macro": "\\kUf"
+    },
+    {
+      "sym": "p_press",
+      "latex": "p",
+      "macro": "\\kppress"
+    },
+    {
+      "sym": "p_ext",
+      "latex": "p_{ext}",
+      "macro": "\\kpext"
+    },
+    {
+      "sym": "P_ext",
+      "latex": "P_{ext}",
+      "macro": "\\kPext"
+    },
+    {
+      "sym": "w_PV",
+      "latex": "w_{PV}",
+      "macro": "\\kwPV"
+    },
+    {
+      "sym": "T_1",
+      "latex": "T_1",
+      "macro": "\\kTone"
+    },
+    {
+      "sym": "T_2",
+      "latex": "T_2",
+      "macro": "\\kTtwo"
+    },
+    {
+      "sym": "P_3",
+      "latex": "P_3",
+      "macro": "\\kPthree"
+    },
+    {
+      "sym": "q_rev",
+      "latex": "q_{rev}",
+      "macro": "\\kqrev"
+    },
+    {
+      "sym": "w_rev",
+      "latex": "w_{rev}",
+      "macro": "\\kwrev"
+    },
+    {
+      "sym": "U_bar",
+      "latex": "\\bar{U}",
+      "macro": "\\kUbar"
+    },
+    {
+      "sym": "C_P_bar",
+      "latex": "\\bar{C}_P",
+      "macro": "\\kCPbar"
+    },
+    {
+      "sym": "gamma_hc",
+      "latex": "\\gamma",
+      "macro": "\\kgammahc"
+    },
+    {
+      "sym": "H",
+      "latex": "H",
+      "macro": "\\kHenth"
+    },
+    {
+      "sym": "Delta_H",
+      "latex": "\\Delta H",
+      "macro": "\\kDeltaH"
+    },
+    {
+      "sym": "q_P",
+      "latex": "q_P",
+      "macro": "\\kqP"
+    },
+    {
+      "sym": "q_V",
+      "latex": "q_V",
+      "macro": "\\kqV"
+    },
+    {
+      "sym": "C_P",
+      "latex": "C_P",
+      "macro": "\\kCP"
+    },
+    {
+      "sym": "C_p_heat",
+      "latex": "C_p",
+      "macro": "\\kCpheat"
+    },
+    {
+      "sym": "Delta_fusH",
+      "latex": "\\Delta_{fus}H",
+      "macro": "\\kDeltafusH"
+    },
+    {
+      "sym": "Delta_rH",
+      "latex": "\\Delta_r H",
+      "macro": "\\kDeltarH"
+    },
+    {
+      "sym": "Delta_Hf0",
+      "latex": "\\Delta H_f^o",
+      "macro": "\\kDeltaHf"
+    },
+    {
+      "sym": "Delta_Hrxn",
+      "latex": "\\Delta H_{rxn}",
+      "macro": "\\kDeltaHrxn"
+    },
+    {
+      "sym": "Delta_Hc",
+      "latex": "\\Delta H_c",
+      "macro": "\\kDeltaHc"
+    },
+    {
+      "sym": "Delta_Cp",
+      "latex": "\\Delta C_p",
+      "macro": "\\kDeltaCp"
+    },
+    {
+      "sym": "D_bond",
+      "latex": "D",
+      "macro": "\\kDbond"
+    },
+    {
+      "sym": "nu_coef",
+      "latex": "\\nu"
+    },
+    {
+      "sym": "a_cp",
+      "latex": "a"
+    },
+    {
+      "sym": "b_cp",
+      "latex": "b"
+    },
+    {
+      "sym": "c_cp",
+      "latex": "c"
+    },
+    {
+      "sym": "ds_vec",
+      "latex": "\\textbf{ds}"
+    },
+    {
+      "sym": "F_vec",
+      "latex": "\\textbf{F}",
+      "macro": "\\kFvec"
+    },
+    {
+      "sym": "S_ent",
+      "latex": "S",
+      "macro": "\\kSent"
+    },
+    {
+      "sym": "S_prod",
+      "latex": "S_\\text{prod}",
+      "macro": "\\kSprod"
+    },
+    {
+      "sym": "S_exch",
+      "latex": "S_\\text{exchange}",
+      "macro": "\\kSexch"
+    },
+    {
+      "sym": "S_sys",
+      "latex": "S_\\text{sys}",
+      "macro": "\\kSsys"
+    },
+    {
+      "sym": "S_surr",
+      "latex": "S_\\text{surr}",
+      "macro": "\\kSsurr"
+    },
+    {
+      "sym": "S_total",
+      "latex": "S_\\text{total}",
+      "macro": "\\kStotal"
+    },
+    {
+      "sym": "S_ensemble",
+      "latex": "S_{ensemble}",
+      "macro": "\\kSens"
+    },
+    {
+      "sym": "S_system",
+      "latex": "S_{system}",
+      "macro": "\\kSsystem"
+    },
+    {
+      "sym": "S_A",
+      "latex": "S_A",
+      "macro": "\\kSA"
+    },
+    {
+      "sym": "S_B",
+      "latex": "S_B",
+      "macro": "\\kSB"
+    },
+    {
+      "sym": "S_BC",
+      "latex": "S_{B+C}",
+      "macro": "\\kSBC"
+    },
+    {
+      "sym": "S_bar",
+      "latex": "\\bar{S}",
+      "macro": "\\kSbar"
+    },
+    {
+      "sym": "q_irrev",
+      "latex": "q_{irrev}",
+      "macro": "\\kqirrev"
+    },
+    {
+      "sym": "q_rev_A",
+      "latex": "q_{rev,A}",
+      "macro": "\\kqrevA"
+    },
+    {
+      "sym": "q_rev_B",
+      "latex": "q_{rev,B}",
+      "macro": "\\kqrevB"
+    },
+    {
+      "sym": "q_rev_C",
+      "latex": "q_{rev,C}",
+      "macro": "\\kqrevC"
+    },
+    {
+      "sym": "q_rev_BC",
+      "latex": "q_{rev,B+C}",
+      "macro": "\\kqrevBC"
+    },
+    {
+      "sym": "q_h",
+      "latex": "q_h",
+      "macro": "\\kqh"
+    },
+    {
+      "sym": "q_A",
+      "latex": "q_A",
+      "macro": "\\kqA"
+    },
+    {
+      "sym": "q_1",
+      "latex": "q_1",
+      "macro": "\\kqone"
+    },
+    {
+      "sym": "q_2",
+      "latex": "q_2",
+      "macro": "\\kqtwo"
+    },
+    {
+      "sym": "q_3",
+      "latex": "q_3",
+      "macro": "\\kqthree"
+    },
+    {
+      "sym": "q_4",
+      "latex": "q_4",
+      "macro": "\\kqfour"
+    },
+    {
+      "sym": "w_cycle",
+      "latex": "w_\\text{cycle}",
+      "macro": "\\kwcycle"
+    },
+    {
+      "sym": "w_1",
+      "latex": "w_1",
+      "macro": "\\kwone"
+    },
+    {
+      "sym": "w_2",
+      "latex": "w_2",
+      "macro": "\\kwtwo"
+    },
+    {
+      "sym": "w_3",
+      "latex": "w_3",
+      "macro": "\\kwthree"
+    },
+    {
+      "sym": "w_4",
+      "latex": "w_4",
+      "macro": "\\kwfour"
+    },
+    {
+      "sym": "w_h",
+      "latex": "w_h",
+      "macro": "\\kwh"
+    },
+    {
+      "sym": "w_c",
+      "latex": "w_c",
+      "macro": "\\kwc"
+    },
+    {
+      "sym": "w_hot",
+      "latex": "w_{hot}",
+      "macro": "\\kwhot"
+    },
+    {
+      "sym": "w_cold",
+      "latex": "w_{cold}",
+      "macro": "\\kwcold"
+    },
+    {
+      "sym": "U_A",
+      "latex": "U_A",
+      "macro": "\\kUA"
+    },
+    {
+      "sym": "U_B",
+      "latex": "U_B",
+      "macro": "\\kUB"
+    },
+    {
+      "sym": "U_1",
+      "latex": "U_1",
+      "macro": "\\kUone"
+    },
+    {
+      "sym": "U_4",
+      "latex": "U_4",
+      "macro": "\\kUfour"
+    },
+    {
+      "sym": "U_cycle",
+      "latex": "U_\\text{cycle}",
+      "macro": "\\kUcycle"
+    },
+    {
+      "sym": "E_kin",
+      "latex": "E_{kin}",
+      "macro": "\\kEkin"
+    },
+    {
+      "sym": "T_A",
+      "latex": "T_A",
+      "macro": "\\kTA"
+    },
+    {
+      "sym": "T_B",
+      "latex": "T_B",
+      "macro": "\\kTB"
+    },
+    {
+      "sym": "T_h",
+      "latex": "T_h",
+      "macro": "\\kTh"
+    },
+    {
+      "sym": "T_cold",
+      "latex": "T_{cold}",
+      "macro": "\\kTcold"
+    },
+    {
+      "sym": "V_A",
+      "latex": "V_A",
+      "macro": "\\kVA"
+    },
+    {
+      "sym": "V_B",
+      "latex": "V_B",
+      "macro": "\\kVB"
+    },
+    {
+      "sym": "V_C",
+      "latex": "V_C",
+      "macro": "\\kVC"
+    },
+    {
+      "sym": "V_D",
+      "latex": "V_D",
+      "macro": "\\kVD"
+    },
+    {
+      "sym": "V_tot",
+      "latex": "V_{tot}",
+      "macro": "\\kVtot"
+    },
+    {
+      "sym": "n_A",
+      "latex": "n_A",
+      "macro": "\\knA"
+    },
+    {
+      "sym": "n_B",
+      "latex": "n_B",
+      "macro": "\\knB"
+    },
+    {
+      "sym": "n_tot",
+      "latex": "n_{tot}",
+      "macro": "\\kntot"
+    },
+    {
+      "sym": "p_j",
+      "latex": "p_j"
+    },
+    {
+      "sym": "eta",
+      "latex": "\\eta"
+    },
+    {
+      "sym": "n_3",
+      "latex": "n_3"
+    },
+    {
+      "sym": "W_1",
+      "latex": "W_1"
+    },
+    {
+      "sym": "W_2",
+      "latex": "W_2"
+    },
+    {
+      "sym": "W_tot",
+      "latex": "W_\\text{tot}"
     }
   ],
   "exercise_kinds": [
@@ -17323,6 +17966,2050 @@
       "section": "18.11",
       "name": "Heat capacity of a diatomic gas against temperature",
       "statement": "The molar heat capacity of a diatomic gas rises from (3/2)R through (5/2)R to (7/2)R as rotation and then vibration stop being frozen out, near T_rot and T_vib respectively."
+    },
+    {
+      "id": "fundamental-equation-u",
+      "kind": "result",
+      "section": "21.1",
+      "name": "Fundamental equation for the internal energy",
+      "statement": "For a reversible change with only PV work, the first law with δq_rev = TdS and δw_rev = −PdV gives dU = TdS − PdV, an exact differential since U, S and V are all state functions; for an irreversible change dU ≤ TdS − PdV.",
+      "forms": [
+        {
+          "id": "du-tds-pdv",
+          "latex": "dU= TdS -PdV"
+        },
+        {
+          "id": "du-inequality",
+          "latex": "dU \\le TdS - PdV"
+        }
+      ]
+    },
+    {
+      "id": "natural-variables-u",
+      "kind": "definition",
+      "section": "21.1",
+      "name": "Natural variables of the internal energy",
+      "terms": [
+        "natural variables"
+      ],
+      "statement": "The variables in which dU = TdS − PdV expresses U, so U = U(S, V): S and V are the natural variables of U."
+    },
+    {
+      "id": "entropy-change-constant-volume",
+      "kind": "result",
+      "section": "21.1",
+      "name": "Entropy change with temperature at constant volume",
+      "statement": "At constant volume dU = TdS and C_V = (∂U/∂T)_V, so dS = (C_V/T)dT and ΔS = ∫C_V(T)/T dT from T₁ to T₂.",
+      "forms": [
+        {
+          "id": "ds-cv",
+          "latex": "dS=\\frac{C_V}{T}dT"
+        },
+        {
+          "id": "delta-s-cv",
+          "latex": "\\Delta S=\\int_{T_1}^{T_2}{\\frac{C_V(T)}{T}dT}"
+        }
+      ]
+    },
+    {
+      "id": "entropy-increases-with-temperature",
+      "kind": "result",
+      "section": "21.1",
+      "name": "Entropy increases with temperature",
+      "statement": "Since a heat capacity is always positive, entropy must increase as the temperature increases."
+    },
+    {
+      "id": "fundamental-equation-h",
+      "kind": "result",
+      "section": "21.1",
+      "name": "Fundamental equation for the enthalpy",
+      "statement": "From H = U + PV and dU = TdS − PdV, a reversible change gives dH = TdS + VdP: the natural variables of H are S and P.",
+      "forms": [
+        {
+          "id": "dh-tds-vdp",
+          "latex": "dH=TdS+VdP"
+        }
+      ]
+    },
+    {
+      "id": "entropy-change-constant-pressure",
+      "kind": "result",
+      "section": "21.1",
+      "name": "Entropy change with temperature at constant pressure",
+      "statement": "At constant pressure dH = TdS and C_P = (∂H/∂T)_P, so dS = (C_P/T)dT and ΔS = ∫C_P(T)/T dT; this is the more common route, since heat capacities are easier to measure at constant pressure.",
+      "forms": [
+        {
+          "id": "ds-cp",
+          "latex": "dS=\\frac{C_P}{T}dT"
+        },
+        {
+          "id": "delta-s-cp",
+          "latex": "\\Delta S=\\int_{T_1}^{T_2}{\\frac{C_P(T)}{T}dT}"
+        }
+      ]
+    },
+    {
+      "id": "absolute-entropy",
+      "kind": "definition",
+      "section": "21.2",
+      "name": "Absolute entropy",
+      "terms": [
+        "absolute"
+      ],
+      "statement": "The entropy measured from a natural zero, S(0) = 0 for a perfect crystal at 0 K, so that S(T) follows from heat-capacity data alone; unlike the enthalpy, which has only a floating zero point."
+    },
+    {
+      "id": "third-law",
+      "kind": "axiom",
+      "section": "21.2",
+      "name": "Third law of thermodynamics",
+      "terms": [
+        "third Law of Thermodynamics",
+        "Third law of thermodynamics"
+      ],
+      "statement": "The entropy of a pure substance in a perfect crystalline form approaches zero as T approaches zero (but perfect crystals do not exist).",
+      "forms": [
+        {
+          "id": "third-law-limit",
+          "latex": "\\lim_{T\\rightarrow 0}{S^\\circ(T)} =0"
+        },
+        {
+          "id": "third-law-molar",
+          "latex": "\\bar{S}_{0\\text{ K}}^\\circ=0"
+        }
+      ]
+    },
+    {
+      "id": "perfect-crystal-zero-entropy",
+      "kind": "result",
+      "section": "21.2",
+      "name": "A perfect crystal at 0 K has one microstate",
+      "statement": "A perfect crystal at 0 K has only one arrangement of its lowest energy, W = 1, so S = k ln W = 0; above 0 K more microstates are accessible and S > 0.",
+      "forms": [
+        {
+          "id": "s-k-ln-w-zero",
+          "latex": "S = k \\ln W = 0"
+        }
+      ]
+    },
+    {
+      "id": "entropy-of-fusion",
+      "kind": "result",
+      "section": "21.2",
+      "name": "Entropy of fusion",
+      "statement": "Ice and water in equilibrium melt reversibly at one temperature, so Δ_fus S = q_rev/T = Δ_fus H/T, and the entropy curve jumps by this amount at the melting point.",
+      "forms": [
+        {
+          "id": "entropy-of-fusion",
+          "latex": "Δ_{fus}S = \\dfrac{q_{rev}}{T}= \\dfrac{Δ_{fus}H}{T}"
+        }
+      ]
+    },
+    {
+      "id": "standard-molar-entropy",
+      "kind": "definition",
+      "section": "21.2",
+      "name": "Standard molar entropy",
+      "symbol": "S_std",
+      "statement": "The absolute entropy of one mole of a substance in its standard state (1 bar), S°, found from calorimetric data and tabulated against temperature."
+    },
+    {
+      "id": "entropy-increases-with-mass",
+      "kind": "result",
+      "section": "21.2",
+      "name": "Heavier particles have more entropy",
+      "statement": "The particle-in-a-box energies have the mass in the denominator, so the levels crowd together as m increases: more levels within reach, more entropy, as the noble gases show."
+    },
+    {
+      "id": "residual-entropy",
+      "kind": "definition",
+      "section": "21.2",
+      "name": "Residual entropy",
+      "terms": [
+        "a nonzero entropy",
+        "residual entropy"
+      ],
+      "statement": "The nonzero entropy a real crystal keeps as T approaches 0 K, because it is frozen into more than one ground-state arrangement; an exception to the third law, which assumes a perfect crystal with a single ground state."
+    },
+    {
+      "id": "orientational-disorder-entropy",
+      "kind": "result",
+      "section": "21.2",
+      "name": "Entropy of orientational disorder",
+      "statement": "If each of N molecules can sit in the lattice in two orientations, W = 2^N and S = k ln 2^N = Nk ln 2, 5.7 J/(mol K) per mole, as for solid CO.",
+      "forms": [
+        {
+          "id": "s-disorder-co",
+          "latex": "S_{disorder} = k\\,\\ln{W_{disorder}} = k\\,\\ln 2^N = N k \\ln 2"
+        }
+      ]
+    },
+    {
+      "id": "entropy-of-transition",
+      "kind": "result",
+      "section": "21.3",
+      "name": "Entropy of a phase transition",
+      "statement": "A phase transition at equilibrium at constant T and P has Δ_trs G = Δ_trs H − T_trs Δ_trs S = 0, so Δ_trs S = Δ_trs H/T_trs.",
+      "forms": [
+        {
+          "id": "entropy-of-transition",
+          "latex": "Δ_{trs}S = \\dfrac{Δ_{trs}H}{T_{trs}}"
+        },
+        {
+          "id": "delta-s-trs",
+          "latex": "\\Delta S_{trs}=\\frac{\\Delta H_{trs}}{T_{trs}}",
+          "section": "21.5"
+        }
+      ]
+    },
+    {
+      "id": "gibbs-temperature-derivative",
+      "kind": "result",
+      "section": "21.3",
+      "name": "Temperature derivative of the Gibbs energy",
+      "statement": "At constant pressure the temperature derivative of the molar Gibbs energy is minus the molar entropy.",
+      "forms": [
+        {
+          "id": "dg-dt-minus-s",
+          "latex": "\\left(\\frac{\\partial\\bar{G}}{\\partial T}\\right)_P=-\\bar{S}"
+        }
+      ]
+    },
+    {
+      "id": "first-order-transition",
+      "kind": "definition",
+      "section": "21.3",
+      "name": "First-order transition",
+      "terms": [
+        "first order"
+      ],
+      "statement": "A phase transition in which a first derivative of G (or A), such as S, jumps at the transition temperature."
+    },
+    {
+      "id": "heat-capacity-singular-at-transition",
+      "kind": "result",
+      "section": "21.3",
+      "name": "Heat capacity at a first-order transition",
+      "statement": "A second derivative of G, such as the heat capacity, displays a singularity (+∞) at a first-order transition point."
+    },
+    {
+      "id": "phase-transition-kinds",
+      "kind": "definition",
+      "section": "21.3",
+      "name": "Kinds of phase transition",
+      "statement": "Vaporization (l → g), condensation (g → l), fusion (s → l), freezing (l → s), sublimation (s → g), deposition (g → s) and solid-to-solid transitions; each has a change in entropy."
+    },
+    {
+      "id": "debye-model",
+      "kind": "idea",
+      "section": "21.4",
+      "name": "Debye model of a crystal",
+      "terms": [
+        "Debye function",
+        "Debye model"
+      ],
+      "statement": "Debye treated the vibrations of a crystal lattice as a collection of quantized normal modes, phonons; at low temperature only the low-frequency modes are accessible, so the heat capacity falls sharply, and at high temperature it approaches the classical Dulong–Petit limit."
+    },
+    {
+      "id": "debye-t3-law",
+      "kind": "result",
+      "section": "21.4",
+      "name": "Debye T³ law",
+      "type": "heat-capacity",
+      "statement": "At low temperature the heat capacity of a nonmetallic crystal is proportional to T³, C_P = aT³.",
+      "forms": [
+        {
+          "id": "debye-t3",
+          "latex": "C_P=aT^3"
+        }
+      ]
+    },
+    {
+      "id": "metal-low-temperature-heat-capacity",
+      "kind": "result",
+      "section": "21.4",
+      "name": "Low-temperature heat capacity of a metal",
+      "type": "heat-capacity",
+      "statement": "In a metal the conduction electrons add a term linear in T to the lattice's T³ term, C_P = aT + bT³.",
+      "forms": [
+        {
+          "id": "metal-cp",
+          "latex": "C_P=aT+bT^3"
+        }
+      ]
+    },
+    {
+      "id": "calorimetric-absolute-entropy",
+      "kind": "result",
+      "section": "21.5",
+      "name": "Absolute entropy from calorimetry",
+      "statement": "With S(0) = 0 from the third law, the absolute entropy at T is the integral of C_p/T from 0 K plus ΔH_trs/T_trs for every phase transition on the way: S(T) = ∫₀ᵀ C_p/T dT + Σ ΔH_trs/T_trs.",
+      "forms": [
+        {
+          "id": "absolute-entropy-calorimetric",
+          "latex": "S(T)=\\int_0^T \\frac{C_p(T)}{T} d T+\\sum \\frac{\\Delta H_{\\text {trs}}}{T_{\\text {trs}}}"
+        }
+      ]
+    },
+    {
+      "id": "absolute-entropy-heating-path",
+      "kind": "skill",
+      "section": "21.5",
+      "name": "Finding an absolute entropy along a heating path",
+      "statement": "Split the warming from 0 K into stretches of one phase, integrate C_P/T over each with that phase's heat capacity, and add ΔH_trs/T_trs at each transition, as for CO₂ gas at 300 K through its sublimation at 194.7 K."
+    },
+    {
+      "id": "partition-function-third-law",
+      "kind": "result",
+      "section": "21.6",
+      "name": "Entropy from the partition function near absolute zero",
+      "statement": "As T goes to zero only the n degenerate ground states contribute to Q = Σ e^(−E_j/kT), so S = k_B ln Q + k_BT(∂ln Q/∂T) approaches k_B ln n, which is zero for a nondegenerate ground state, consistent with the third law.",
+      "forms": [
+        {
+          "id": "q-low-temperature",
+          "latex": "\\sum_j{e^{-\\frac{E_j}{kT}}} = ne^{-\\frac{E_1}{kT}}+me^{-\\frac{E_{n+1}}{kT}}+\\dots"
+        }
+      ]
+    },
+    {
+      "id": "entropy-increases-with-complexity",
+      "kind": "result",
+      "section": "21.7",
+      "name": "More complex molecules have more entropy",
+      "statement": "A molecule with more atoms, or a nonlinear one, has more rotational and vibrational modes to take up energy, so more accessible microstates and a higher standard molar entropy."
+    },
+    {
+      "id": "spectroscopic-entropy",
+      "kind": "definition",
+      "section": "21.8",
+      "name": "Spectroscopic entropy",
+      "statement": "The standard entropy of a gas calculated from spectroscopic data through its partition function, S°_calc, as against the calorimetric S°_exp."
+    },
+    {
+      "id": "residual-entropy-discrepancy",
+      "kind": "result",
+      "section": "21.8",
+      "name": "Residual entropy from spectroscopic and calorimetric entropies",
+      "statement": "Where a substance can exist in many configurations at 0 K (glass, ice, carbon monoxide), its calorimetric entropy falls short of the spectroscopic one, and the residual entropy is the difference S̄_calc − S̄_exp.",
+      "forms": [
+        {
+          "id": "residual-entropy-difference",
+          "latex": "\\bar{S}_{\\text{calc}}-\\bar{S}_{\\text{exp}}"
+        }
+      ]
+    },
+    {
+      "id": "reaction-entropy",
+      "kind": "result",
+      "section": "21.9",
+      "name": "Standard entropy of a reaction",
+      "statement": "Because entropy is a state function, the standard entropy change of a reaction is the sum of the standard entropies of the products less that of the reactants, each times its stoichiometric coefficient.",
+      "forms": [
+        {
+          "id": "reaction-entropy",
+          "latex": "\\Delta_{rxn}S^\\circ = \\sum_{\\text{Products}}{v_i S^\\circ_i} - \\sum_{\\text{Reactants}}{v_i S^\\circ_i}"
+        }
+      ]
+    },
+    {
+      "id": "natural-variables",
+      "kind": "definition",
+      "section": "22.1",
+      "name": "Natural variables",
+      "statement": "The variables in which a state function's fundamental equation writes it: S and V for U, S and P for H, V and T for A, P and T for G. They are the convenient variables to describe the function."
+    },
+    {
+      "id": "helmholtz-energy",
+      "kind": "definition",
+      "section": "22.1",
+      "name": "Helmholtz energy",
+      "symbol": "A",
+      "type": "energy",
+      "statement": "The state function A ≡ U − TS, also called the Helmholtz free energy.",
+      "forms": [
+        {
+          "id": "helmholtz-definition",
+          "latex": "\\kA \\equiv \\kU - \\kT S"
+        }
+      ]
+    },
+    {
+      "id": "helmholtz-criterion",
+      "kind": "result",
+      "section": "22.1",
+      "name": "Helmholtz energy decreases in a spontaneous change at constant T and V",
+      "statement": "At constant temperature and volume dA = dU − TdS ≤ 0: A decreases in a spontaneous change, whether or not the system is isolated, and is constant once equilibrium is reached.",
+      "forms": [
+        {
+          "id": "helmholtz-criterion-inequality",
+          "latex": "d\\kA = d\\kU - \\kT dS \\le 0"
+        }
+      ]
+    },
+    {
+      "id": "helmholtz-maximum-work",
+      "kind": "result",
+      "section": "22.1",
+      "name": "Helmholtz energy as the maximum work",
+      "statement": "At constant temperature ΔA = ΔU − q_rev = w_rev, the maximal work a system can produce; at constant volume this is work other than volume work.",
+      "forms": [
+        {
+          "id": "helmholtz-work",
+          "latex": "\\Delta \\kA = \\Delta \\kU - \\kqrev = \\kwrev"
+        }
+      ]
+    },
+    {
+      "id": "helmholtz-energy-of-mixing",
+      "kind": "result",
+      "section": "22.1",
+      "name": "Helmholtz energy of mixing two ideal gases",
+      "statement": "Mixing two ideal gases at constant temperature and total volume has ΔU = 0, so ΔA_molar = RT(y₁ ln y₁ + y₂ ln y₂), which is negative because the mole fractions are below one.",
+      "forms": [
+        {
+          "id": "helmholtz-mixing",
+          "latex": "\\Delta \\kAmolar = \\kR\\kT (y_1\\ln y_1+y_2\\ln y_2)"
+        }
+      ]
+    },
+    {
+      "id": "helmholtz-fundamental-equation",
+      "kind": "result",
+      "section": "22.1",
+      "name": "Fundamental equation for A",
+      "statement": "dA = −PdV − SdT, so the natural variables of A are V and T.",
+      "forms": [
+        {
+          "id": "da-fundamental",
+          "latex": "d\\kA = -\\kP d\\kV - S d\\kT"
+        }
+      ]
+    },
+    {
+      "id": "gibbs-energy",
+      "kind": "definition",
+      "section": "22.2",
+      "name": "Gibbs energy",
+      "symbol": "G",
+      "type": "energy",
+      "statement": "The state function G ≡ H − TS = U + PV − TS = A + PV, the counterpart of A for changes at constant pressure.",
+      "forms": [
+        {
+          "id": "gibbs-definition",
+          "latex": "\\kG \\equiv \\kHenth - \\kT S"
+        },
+        {
+          "id": "gibbs-from-helmholtz",
+          "latex": "\\kG = \\kA + \\kP\\kV"
+        }
+      ]
+    },
+    {
+      "id": "gibbs-criterion",
+      "kind": "result",
+      "section": "22.2",
+      "name": "Gibbs energy decreases in a spontaneous change at constant T and P",
+      "statement": "At constant temperature and pressure dG ≤ 0, and between two states ΔG = ΔH − TΔS ≤ 0: G decreases in a spontaneous change and is constant at equilibrium (ΔG = 0); a process with ΔG > 0 does not occur spontaneously.",
+      "forms": [
+        {
+          "id": "gibbs-criterion-delta",
+          "latex": "\\Delta \\kG = \\kDeltaH - \\kT\\Delta S \\le 0"
+        },
+        {
+          "id": "gibbs-criterion-differential",
+          "latex": "d\\kG \\le 0"
+        }
+      ]
+    },
+    {
+      "id": "coupled-processes",
+      "kind": "idea",
+      "section": "22.2",
+      "name": "Driving a process by coupling",
+      "statement": "A process with positive ΔG can be made to occur only when it is coupled with a process that has a negative ΔG."
+    },
+    {
+      "id": "spontaneity-temperature",
+      "kind": "result",
+      "section": "22.2",
+      "name": "Temperature can reverse the spontaneous direction",
+      "statement": "Because the entropy term of ΔG = ΔH − TΔS carries T, the spontaneous direction of a process can change with temperature: NH₃(g) + HCl(g) → NH₄Cl(s), with ΔH = −176.2 kJ and ΔS = −0.285 kJ/K, is spontaneous at 298 K and runs in reverse above 618 K."
+    },
+    {
+      "id": "gibbs-maximum-non-pv-work",
+      "kind": "result",
+      "section": "22.2",
+      "name": "Gibbs energy as the maximum non-PV work",
+      "statement": "At constant T and P, dG = δw_rev − δw_volume: ΔG is the maximal reversible, isobaric, isothermal work other than PV work that a spontaneous change can perform.",
+      "forms": [
+        {
+          "id": "gibbs-non-pv-work",
+          "latex": "d\\kG = \\delta \\kwrev - \\delta w_{volume}"
+        }
+      ]
+    },
+    {
+      "id": "gibbs-fundamental-equation",
+      "kind": "result",
+      "section": "22.2",
+      "name": "Fundamental equation for G",
+      "statement": "dG = VdP − SdT, so the natural variables of G are P and T, those of most laboratory experiments.",
+      "forms": [
+        {
+          "id": "dg-fundamental",
+          "latex": "d\\kG = \\kV d\\kP - S d\\kT"
+        }
+      ]
+    },
+    {
+      "id": "internal-energy-first-derivatives",
+      "kind": "result",
+      "section": "22.3",
+      "name": "First derivatives of U",
+      "statement": "Comparing dU = TdS − pdV with the total differential of U(S, V) gives (∂U/∂S)_V = T and (∂U/∂V)_S = −p.",
+      "forms": [
+        {
+          "id": "du-ds",
+          "latex": "\\left( \\dfrac{\\partial \\kU}{\\partial S} \\right)_{\\kV} = \\kT"
+        },
+        {
+          "id": "du-dv",
+          "latex": "\\left( \\dfrac{\\partial \\kU}{\\partial \\kV} \\right)_S = -\\kp"
+        }
+      ]
+    },
+    {
+      "id": "euler-reciprocity",
+      "kind": "result",
+      "section": "22.3",
+      "name": "Euler relation for an exact differential",
+      "statement": "For an exact differential the two mixed second partial derivatives are equal: differentiating the coefficient of one variable by the other gives the same result either way round."
+    },
+    {
+      "id": "maxwell-relations",
+      "kind": "definition",
+      "section": "22.3",
+      "name": "Maxwell relations",
+      "statement": "Equalities between partial derivatives of T, S, p and V that follow from the Euler relation applied to dU, dH, dA and dG; they let a convenient derivative, perhaps one in α and κ_T, stand in for an inconvenient one."
+    },
+    {
+      "id": "maxwell-relation-u",
+      "kind": "result",
+      "section": "22.3",
+      "name": "Maxwell relation from U",
+      "statement": "(∂T/∂V)_S = −(∂p/∂S)_V.",
+      "forms": [
+        {
+          "id": "maxwell-u",
+          "latex": "\\left( \\dfrac{\\partial \\kT}{\\partial \\kV} \\right)_S = - \\left( \\dfrac{\\partial \\kp}{\\partial S} \\right)_{\\kV}"
+        }
+      ]
+    },
+    {
+      "id": "enthalpy-first-derivatives",
+      "kind": "result",
+      "section": "22.3",
+      "name": "First derivatives of H",
+      "statement": "(∂H/∂S)_p = T and (∂H/∂p)_S = V; so (∂U/∂S)_V = (∂H/∂S)_p, both equal to T.",
+      "forms": [
+        {
+          "id": "dh-ds",
+          "latex": "\\left( \\dfrac{\\partial \\kHenth}{\\partial S} \\right)_{\\kp}= \\kT"
+        },
+        {
+          "id": "dh-dp",
+          "latex": "\\left( \\dfrac{\\partial \\kHenth}{\\partial \\kp} \\right)_S = \\kV"
+        }
+      ]
+    },
+    {
+      "id": "maxwell-relation-h",
+      "kind": "result",
+      "section": "22.3",
+      "name": "Maxwell relation from H",
+      "statement": "(∂T/∂p)_S = (∂V/∂S)_p.",
+      "forms": [
+        {
+          "id": "maxwell-h",
+          "latex": "\\left( \\dfrac{\\partial \\kT}{\\partial \\kp} \\right)_S = \\left( \\dfrac{\\partial \\kV}{\\partial S} \\right)_{\\kp}"
+        }
+      ]
+    },
+    {
+      "id": "maxwell-relation-a",
+      "kind": "result",
+      "section": "22.3",
+      "name": "Maxwell relation from A",
+      "statement": "(∂p/∂T)_V = (∂S/∂V)_T.",
+      "forms": [
+        {
+          "id": "maxwell-a",
+          "latex": "\\left( \\dfrac{\\partial \\kp}{\\partial \\kT} \\right)_{\\kV} = \\left( \\dfrac{\\partial S}{\\partial \\kV} \\right)_{\\kT}"
+        }
+      ]
+    },
+    {
+      "id": "maxwell-relation-g",
+      "kind": "result",
+      "section": "22.3",
+      "name": "Maxwell relation from G",
+      "statement": "(∂V/∂T)_p = −(∂S/∂p)_T.",
+      "forms": [
+        {
+          "id": "maxwell-g",
+          "latex": "\\left( \\dfrac{\\partial \\kV}{\\partial \\kT} \\right)_{\\kp} = - \\left( \\dfrac{\\partial S}{\\partial \\kp} \\right)_{\\kT}"
+        }
+      ]
+    },
+    {
+      "id": "thermal-expansion-coefficient",
+      "kind": "definition",
+      "section": "22.3",
+      "name": "Thermal expansion coefficient",
+      "symbol": "alpha_V",
+      "statement": "α = (1/V)(∂V/∂T)_p, the fractional change of volume with temperature at constant pressure."
+    },
+    {
+      "id": "isothermal-compressibility",
+      "kind": "definition",
+      "section": "22.3",
+      "name": "Isothermal compressibility",
+      "symbol": "kappa_T",
+      "statement": "κ_T = −(1/V)(∂V/∂p)_T, the fractional decrease of volume with pressure at constant temperature; it is small for solids."
+    },
+    {
+      "id": "pressure-coefficient-alpha-kappa",
+      "kind": "result",
+      "section": "22.3",
+      "name": "(∂p/∂T)_V from α and κ_T",
+      "statement": "(∂p/∂T)_V = α/κ_T.",
+      "forms": [
+        {
+          "id": "dp-dt-alpha-kappa",
+          "latex": "\\left( \\dfrac{\\partial \\kp}{\\partial \\kT} \\right)_{\\kV} = \\dfrac{\\alpha}{\\kappa_T}"
+        }
+      ]
+    },
+    {
+      "id": "thermodynamic-equation-of-state",
+      "kind": "result",
+      "section": "22.3",
+      "name": "Thermodynamic equation of state",
+      "statement": "(∂U/∂V)_T = T(∂p/∂T)_V − p = Tα/κ_T − p, from dU = TdS − pdV and the Maxwell relation from A (Example 22.3.1).",
+      "forms": [
+        {
+          "id": "du-dv-t",
+          "latex": "\\left( \\dfrac{\\partial \\kU}{\\partial \\kV} \\right)_{\\kT} = \\kT \\left( \\dfrac{\\partial \\kp}{\\partial \\kT} \\right)_{\\kV} -\\kp"
+        },
+        {
+          "id": "du-dv-alpha-kappa",
+          "latex": "\\left( \\dfrac{\\partial \\kU}{\\partial \\kV} \\right)_{\\kT} = \\kT\\dfrac{\\alpha}{\\kappa_T} - \\kp"
+        }
+      ]
+    },
+    {
+      "id": "gibbs-first-derivatives",
+      "kind": "result",
+      "section": "22.4",
+      "name": "First derivatives of G",
+      "statement": "(∂G/∂T)_P = −S and (∂G/∂P)_T = V: entropy and volume are first-order derivatives of G.",
+      "forms": [
+        {
+          "id": "dg-dt",
+          "latex": "\\left( \\dfrac{\\partial \\kG}{\\partial \\kT} \\right)_{\\kP} = -S"
+        },
+        {
+          "id": "dg-dp",
+          "latex": "\\left( \\dfrac{\\partial \\kG}{\\partial \\kP} \\right)_{\\kT} = \\kV"
+        }
+      ]
+    },
+    {
+      "id": "enthalpy-pressure-dependence",
+      "kind": "result",
+      "section": "22.4",
+      "name": "Pressure dependence of the enthalpy",
+      "statement": "(∂H/∂P)_T = V − T(∂V/∂T)_P, from G = H − TS, (∂G/∂P)_T = V and the Maxwell relation from G.",
+      "forms": [
+        {
+          "id": "dh-dp-t",
+          "latex": "\\left( \\dfrac{\\partial \\kHenth}{\\partial \\kP}\\right)_{\\kT} = \\kV -\\kT \\left( \\dfrac{\\partial \\kV}{\\partial \\kT}\\right)_{\\kP}"
+        }
+      ]
+    },
+    {
+      "id": "ideal-gas-enthalpy-pressure",
+      "kind": "result",
+      "section": "22.4",
+      "name": "Enthalpy of an ideal gas is independent of pressure",
+      "statement": "For an ideal gas (∂V/∂T)_P = nR/P, so (∂H/∂P)_T = V − T(nR/P) = 0: H does not depend on P.",
+      "forms": [
+        {
+          "id": "ideal-dh-dp",
+          "latex": "\\left( \\dfrac{\\partial \\kHenth}{\\partial \\kP}\\right)_{\\kT} = 0"
+        }
+      ]
+    },
+    {
+      "id": "fundamental-equations",
+      "kind": "idea",
+      "section": "22.5",
+      "name": "The fundamental thermodynamic equations",
+      "statement": "The four differentials dU = TdS − pdV, dH = TdS + Vdp, dG = VdP − SdT and dA = −pdV − SdT write U, H, G and A in their natural variables; they assume only PV work and reversible processes, and are essentially equations of state from which experimental data give G or H."
+    },
+    {
+      "id": "chemical-potential",
+      "kind": "definition",
+      "section": "22.5",
+      "name": "Chemical potential",
+      "symbol": "mu_i",
+      "type": "energy",
+      "statement": "μ_i, the chemical potential of species i: the coefficient of dn_i in the fundamental equations once the amounts of the species may change."
+    },
+    {
+      "id": "fundamental-equations-composition",
+      "kind": "result",
+      "section": "22.5",
+      "name": "Fundamental equations with changing composition",
+      "statement": "When the amounts may change, each fundamental equation gains Σμ_i dn_i: dU = TdS − PdV + Σμ_i dn_i, dH = TdS + VdP + Σμ_i dn_i, dG = −SdT + VdP + Σμ_i dn_i, dA = −SdT − PdV + Σμ_i dn_i.",
+      "forms": [
+        {
+          "id": "dg-composition",
+          "latex": "d\\kG = -S d\\kT + \\kV d\\kp + \\sum_{i=1}^{N}\\kmui dn_i"
+        },
+        {
+          "id": "du-composition",
+          "latex": "d\\kU = \\kT dS - \\kP d\\kV + \\sum_{i=1}^{N}\\kmui dn_i"
+        },
+        {
+          "id": "dh-composition",
+          "latex": "d\\kHenth = \\kT dS + \\kV d\\kP + \\sum_{i=1}^{N}\\kmui dn_i"
+        },
+        {
+          "id": "da-composition",
+          "latex": "d\\kA = -S d\\kT - \\kP d\\kV + \\sum_{i=1}^{N}\\kmui dn_i"
+        }
+      ]
+    },
+    {
+      "id": "helmholtz-first-derivatives",
+      "kind": "result",
+      "section": "22.5",
+      "name": "First derivatives of A",
+      "statement": "(∂A/∂V)_T = −P and (∂A/∂T)_V = −S: pressure and entropy are first-order derivatives of A.",
+      "forms": [
+        {
+          "id": "da-dv",
+          "latex": "\\left( \\dfrac{\\partial \\kA}{\\partial \\kV} \\right)_{\\kT} = -\\kP"
+        },
+        {
+          "id": "da-dt",
+          "latex": "\\left( \\dfrac{\\partial \\kA}{\\partial \\kT} \\right) _{\\kV} = -S"
+        }
+      ]
+    },
+    {
+      "id": "standard-state-gas",
+      "kind": "definition",
+      "section": "22.6",
+      "name": "Standard state of a gas",
+      "statement": "A pure ideal gas at 1 bar, the standard state conditions (SSC) in which data are tabulated, marked with °; the temperature is stated with the data and is not part of the definition."
+    },
+    {
+      "id": "gibbs-ideal-gas-pressure",
+      "kind": "result",
+      "section": "22.7",
+      "name": "Gibbs energy of an ideal gas against pressure",
+      "statement": "For a mole of ideal gas ΔG_molar = RT ln(P₂/P₁), and with P₁ the standard state of 1 bar, G_molar(P) = G°_molar + RT ln(P/1 bar).",
+      "forms": [
+        {
+          "id": "gibbs-molar-pressure-ratio",
+          "latex": "\\Delta \\kGmolar = \\kR\\kT \\ln \\left(\\dfrac{\\kPtwo}{\\kPone}\\right)"
+        },
+        {
+          "id": "gibbs-molar-standard",
+          "latex": "\\kGmolar(\\kP) = \\kGstdmolar + \\kR\\kT \\ln \\left(\\dfrac{\\kP}{1}\\right)"
+        }
+      ]
+    },
+    {
+      "id": "gibbs-solid-pressure",
+      "kind": "result",
+      "section": "22.7",
+      "name": "Gibbs energy of a solid against pressure",
+      "statement": "A solid's volume hardly changes with pressure, so G(P_final) ≈ G(P_initial) + VΔP.",
+      "forms": [
+        {
+          "id": "gibbs-solid",
+          "latex": "\\kG(\\kPfinal) \\approx \\kG(\\kPinitial)+ \\kV\\Delta\\kP"
+        }
+      ]
+    },
+    {
+      "id": "gibbs-helmholtz-equation",
+      "kind": "result",
+      "section": "22.7",
+      "name": "Gibbs–Helmholtz equation",
+      "statement": "(∂(G/T)/∂T)_P = −H/T², and for a process (∂(ΔG/T)/∂T)_P = −ΔH/T²: H is a first-order derivative of G/T.",
+      "forms": [
+        {
+          "id": "gibbs-helmholtz",
+          "latex": "\\left( \\dfrac{\\partial \\kG / \\kT}{\\partial \\kT} \\right)_{\\kP} = - \\dfrac{\\kHenth}{\\kT^2}"
+        },
+        {
+          "id": "gibbs-helmholtz-delta",
+          "latex": "\\left( \\dfrac{\\partial \\Delta \\kG / \\kT}{\\partial \\kT} \\right)_{\\kP} = - \\dfrac{\\kDeltaH}{\\kT^2}"
+        }
+      ]
+    },
+    {
+      "id": "gibbs-temperature-curve",
+      "kind": "result",
+      "section": "22.7",
+      "name": "Gibbs energy as a function of temperature",
+      "statement": "G(T) = H(T) − TS(T) is continuous at phase transitions, where Δ_trs H = T_trs Δ_trs S, and descends with temperature; its slope −S jumps at each transition, so the curve has kinks at the melting and boiling points. It is plotted as G(T) − H(0).",
+      "forms": [
+        {
+          "id": "g-of-t",
+          "latex": "\\kG(\\kT) = \\kHenth(\\kT) - \\kT S(\\kT)"
+        }
+      ]
+    },
+    {
+      "id": "fugacity",
+      "kind": "definition",
+      "section": "22.8",
+      "name": "Fugacity",
+      "symbol": "f",
+      "type": "pressure",
+      "statement": "The property f that Lewis defined in 1905 by dḠ = RT d ln f, extending the ideal-gas expression dḠ = RT d ln P to every substance; for an ideal gas f = P.",
+      "forms": [
+        {
+          "id": "fugacity-definition",
+          "latex": "d\\kGbar = \\kR\\kT\\;d\\ln \\kf"
+        }
+      ]
+    },
+    {
+      "id": "fugacity-coefficient",
+      "kind": "definition",
+      "section": "22.8",
+      "name": "Fugacity coefficient",
+      "symbol": "phi",
+      "statement": "φ = f/P, unity for a gas that behaves ideally, so it measures non-ideality: the closer φ is to one, the closer the gas is to the ideal state.",
+      "forms": [
+        {
+          "id": "fugacity-coefficient-definition",
+          "latex": "\\phi = \\frac{\\kf}{\\kP}"
+        }
+      ]
+    },
+    {
+      "id": "fugacity-zero-pressure-limit",
+      "kind": "result",
+      "section": "22.8",
+      "name": "Fugacity approaches pressure as P → 0",
+      "statement": "In the zero-pressure limit every gas behaves ideally, so dḠ → RT d ln P and f → P."
+    },
+    {
+      "id": "component-fugacity",
+      "kind": "definition",
+      "section": "22.8",
+      "name": "Fugacity of a component of a mixture",
+      "statement": "dḠ_i = RT d ln f_i, where Ḡ_i and f_i are the partial molar Gibbs energy and fugacity of the i-th component; in terms of the chemical potential, dμ̄_i = RT d ln f_i.",
+      "forms": [
+        {
+          "id": "component-fugacity-g",
+          "latex": "d\\kGbari = \\kR\\kT\\;d\\ln \\kfi"
+        },
+        {
+          "id": "component-fugacity-mu",
+          "latex": "d\\kmubari = \\kR\\kT\\;d\\ln \\kfi"
+        }
+      ]
+    },
+    {
+      "id": "chemical-potential-fugacity",
+      "kind": "result",
+      "section": "22.8",
+      "name": "Chemical potential from the fugacity",
+      "statement": "Integrating dμ̄ = RT d ln f from the standard state gives μ̄ = μ̄° + RT ln(f/P°).",
+      "forms": [
+        {
+          "id": "mu-fugacity",
+          "latex": "\\kmubar = \\kmubarstd + \\kR\\kT\\ln\\frac{\\kf}{\\kPstd}"
+        }
+      ]
+    },
+    {
+      "id": "heat",
+      "kind": "definition",
+      "section": "19.1",
+      "name": "Heat",
+      "symbol": "q",
+      "terms": [
+        "heat"
+      ],
+      "type": "heat",
+      "statement": "Energy that flows into or out of a system as heat, q; in the absence of other changes it would change the system's temperature."
+    },
+    {
+      "id": "thermodynamic-work",
+      "kind": "definition",
+      "section": "19.1",
+      "name": "Work",
+      "symbol": "w",
+      "terms": [
+        "work"
+      ],
+      "type": "work",
+      "statement": "Energy that flows as work, w: an infinitesimal displacement of the system multiplied by the force that resists it, integrated along the path the change follows.",
+      "forms": [
+        {
+          "id": "dw-displacement-resistance",
+          "latex": "dw = -p_{ext}\\,dV"
+        }
+      ]
+    },
+    {
+      "id": "internal-energy-change",
+      "kind": "definition",
+      "section": "19.1",
+      "name": "Change in internal energy",
+      "symbol": "Delta_U",
+      "type": "energy",
+      "statement": "The change in internal energy between the initial and final states of a system, ΔU = U_f − U_i.",
+      "forms": [
+        {
+          "id": "delta-u-final-initial",
+          "latex": "\\Delta U = U_f - U_i"
+        }
+      ]
+    },
+    {
+      "id": "first-law-of-thermodynamics",
+      "kind": "axiom",
+      "section": "19.1",
+      "name": "First law of thermodynamics",
+      "terms": [
+        "First Law of Thermodynamics",
+        "first law of thermodynamics"
+      ],
+      "statement": "The capacity of a system to do work is increased by heating the system or doing work on it: the change in its internal energy is the heat that flows in plus the work done on it, ΔU = q + w.",
+      "forms": [
+        {
+          "id": "first-law",
+          "latex": "\\Delta U = q + w"
+        },
+        {
+          "id": "first-law-differential",
+          "latex": "dU = dq + dw"
+        },
+        {
+          "id": "first-law-inexact",
+          "latex": "dU = \\delta w +\\delta q",
+          "section": "19.4"
+        }
+      ]
+    },
+    {
+      "id": "endothermic-and-exothermic",
+      "kind": "definition",
+      "section": "19.1",
+      "name": "Endothermic and exothermic processes",
+      "terms": [
+        "endothermic",
+        "exothermic"
+      ],
+      "statement": "A process in which heat flows into the system is endothermic (q_system > 0); one in which heat flows out of the system is exothermic (q_system < 0)."
+    },
+    {
+      "id": "heat-capacity",
+      "kind": "definition",
+      "section": "19.1",
+      "name": "Heat capacity",
+      "symbol": "C_heat",
+      "terms": [
+        "heat capacity"
+      ],
+      "type": "heat-capacity",
+      "statement": "The heat needed per unit rise in temperature, C = dq/dT, so that dq = C dT; it is usually given per mole, in J mol⁻¹ K⁻¹.",
+      "forms": [
+        {
+          "id": "heat-capacity-dq",
+          "latex": "dq = C\\, dT"
+        },
+        {
+          "id": "heat-capacity-definition",
+          "latex": "C = \\dfrac{dq}{\\partial T}"
+        }
+      ]
+    },
+    {
+      "id": "state-function",
+      "kind": "definition",
+      "section": "19.1",
+      "name": "State function",
+      "terms": [
+        "state variable"
+      ],
+      "statement": "A property of a system whose value depends only on the system's state, so that its change between two states is the same whatever path joins them; U and p are state variables."
+    },
+    {
+      "id": "partial-derivative",
+      "kind": "definition",
+      "section": "19.1",
+      "name": "Partial derivative",
+      "statement": "The slope of a function of several variables with respect to one of them while the others are held fixed.",
+      "forms": [
+        {
+          "id": "partial-derivative-limit",
+          "latex": "\\left( \\dfrac{ \\partial f}{\\partial x_i} \\right)_{x_j \\neq i} = \\lim_{\\Delta _i \\rightarrow 0} \\left( \\dfrac{f(x_1+ \\Delta x_1 , x_2 + \\Delta x_2, \\dots, x_i +\\Delta x_i, \\dots x_n+\\Delta x_n) - f(x_1,x_2, \\dots x_i, \\dots x_n) }{\\Delta x_i} \\right)"
+        }
+      ]
+    },
+    {
+      "id": "total-differential",
+      "kind": "result",
+      "section": "19.1",
+      "name": "Total differential",
+      "statement": "An infinitesimal change in a function of several variables is the sum of its partial derivatives, each times the change in its own variable, so each contribution can be considered separately; for an ideal gas dp = (∂p/∂V)_T dV + (∂p/∂T)_V dT.",
+      "forms": [
+        {
+          "id": "dp-total-differential",
+          "latex": "dp = \\left( \\dfrac{\\partial p}{ \\partial V} \\right)_{T} dV + \\left( \\dfrac{\\partial p}{ \\partial T} \\right)_{V} dT"
+        },
+        {
+          "id": "df-total-differential",
+          "latex": "df = \\sum_i \\left( \\dfrac{\\partial f}{\\partial x_i} \\right)_{x_j \\neq i}"
+        }
+      ]
+    },
+    {
+      "id": "pressure-is-a-state-function",
+      "kind": "result",
+      "section": "19.1",
+      "name": "Pressure is a state function",
+      "statement": "The change in pressure of an ideal gas between two states comes out the same whether it goes by an isothermal step then an isochoric one or the other way round: pressure is a state variable, and its change does not depend on the pathway."
+    },
+    {
+      "id": "kinds-of-work",
+      "kind": "idea",
+      "section": "19.1",
+      "name": "Kinds of work",
+      "terms": [
+        "Expansion",
+        "Electrical",
+        "Extension",
+        "Stretching"
+      ],
+      "statement": "Work can be expansion against a resisting pressure, pushing charge through a circuit, extension against a tension or stretching a surface against a surface tension; each is an infinitesimal displacement times a resisting force."
+    },
+    {
+      "id": "mechanical-work",
+      "kind": "definition",
+      "section": "19.2",
+      "name": "Work as a line integral",
+      "statement": "Work is the integral along the path of the inner product of a force and the path element, w = ∫F·ds.",
+      "forms": [
+        {
+          "id": "work-line-integral",
+          "latex": "w = \\int \\textbf{F} \\cdot \\textbf{ds}"
+        }
+      ]
+    },
+    {
+      "id": "work-sign-convention",
+      "kind": "definition",
+      "section": "19.2",
+      "name": "Sign convention for heat and work",
+      "terms": [
+        "you pay the bill"
+      ],
+      "statement": "Positive heat and positive work are energy put into the system; energy the system gives off as heat or work takes a minus sign."
+    },
+    {
+      "id": "external-pressure",
+      "kind": "definition",
+      "section": "19.2",
+      "name": "External pressure",
+      "symbol": "P_ext",
+      "type": "pressure",
+      "statement": "The pressure the surroundings exert on the system, P_ext, as on the outside of a piston."
+    },
+    {
+      "id": "pressure-volume-work",
+      "kind": "definition",
+      "section": "19.2",
+      "name": "Pressure-volume work",
+      "symbol": "w_PV",
+      "terms": [
+        "pressure-volume work"
+      ],
+      "type": "work",
+      "statement": "The work of a change of volume against a pressure, w_PV = −∫P dV in the sign convention; one form of work among others.",
+      "forms": [
+        {
+          "id": "w-pv",
+          "latex": "w_{PV} = - \\int \\left( \\dfrac{F}{A} \\right) (A\\,ds) = - \\int P\\,dV"
+        },
+        {
+          "id": "volume-work-unsigned",
+          "latex": "w_{volume} = \\int \\left( \\dfrac{F}{A} \\right) (A\\,ds) = \\int P\\,dV"
+        }
+      ]
+    },
+    {
+      "id": "constant-pressure-work",
+      "kind": "result",
+      "section": "19.2",
+      "name": "Work against a constant external pressure",
+      "statement": "When the external pressure is constant, the work is w = −P_ext ΔV; if it changes along the way, w = −∫P_ext(V) dV.",
+      "forms": [
+        {
+          "id": "work-const-pext",
+          "latex": "w = -P_\\text{ext}\\int_{V_{initial}}^{V_{final}}dV = -P_\\text{ext}\\Delta V"
+        },
+        {
+          "id": "work-varying-pext",
+          "latex": "w = - \\int_{V_{initial}}^{V_{final}}P_\\text{ext}(V)\\, dV"
+        }
+      ]
+    },
+    {
+      "id": "irreversible-process",
+      "kind": "definition",
+      "section": "19.2",
+      "name": "Irreversible process",
+      "terms": [
+        "irreversible process"
+      ],
+      "statement": "A process in which the system's pressure differs from the pressure exerted on it, so the system passes through states out of equilibrium that cannot be drawn on a PV diagram; the forces balance only at the end."
+    },
+    {
+      "id": "work-as-area",
+      "kind": "result",
+      "section": "19.2",
+      "name": "Work as an area on a PV diagram",
+      "statement": "The work of a volume change is the area under the external pressure on a PV diagram between the initial and final volumes, even where the process itself cannot be drawn."
+    },
+    {
+      "id": "path-function",
+      "kind": "definition",
+      "section": "19.3",
+      "name": "Path function",
+      "terms": [
+        "path functions"
+      ],
+      "statement": "A quantity, such as work or heat, that depends on the path taken between two states; it is an energy transfer, not a property of the system."
+    },
+    {
+      "id": "reversible-process",
+      "kind": "definition",
+      "section": "19.3",
+      "name": "Reversible process",
+      "statement": "A path that follows a series of states at rest, the forces balanced at all times (P_ext = P), as in a compression in infinitesimally small steps."
+    },
+    {
+      "id": "reversible-isothermal-work",
+      "kind": "result",
+      "section": "19.3",
+      "name": "Work of a reversible isothermal volume change",
+      "type": "energy",
+      "statement": "For an ideal gas changed reversibly at constant temperature from V₁ to V₂, w = −nRT ln(V₂/V₁).",
+      "forms": [
+        {
+          "id": "reversible-isothermal-work",
+          "latex": "w=-\\int^{V_2}_{V_1}{PdV}=-nRT\\int^{V_2}_{V_1}{\\frac{1}{V}}=-nRT\\ln{\\left(\\frac{V_2}{V_1}\\right)}"
+        }
+      ]
+    },
+    {
+      "id": "reversible-work-extremes",
+      "kind": "result",
+      "section": "19.3",
+      "name": "Reversible paths need least work and deliver most",
+      "statement": "Between the same two states, the reversible isothermal path needs the least work to compress a gas and gets the most work out of its expansion; a one-step irreversible path needs more and delivers less."
+    },
+    {
+      "id": "exact-and-inexact-differentials",
+      "kind": "definition",
+      "section": "19.4",
+      "name": "Exact and inexact differentials",
+      "statement": "A straight d marks the change of a state function (dU), a crooked δ the path-dependent amounts of heat and work (δq, δw); only ΔU = U₂ − U₁ follows from the end points alone.",
+      "forms": [
+        {
+          "id": "du-delta-q-delta-w",
+          "latex": "dU = \\delta w +\\delta q"
+        }
+      ]
+    },
+    {
+      "id": "energy-is-a-state-function",
+      "kind": "result",
+      "section": "19.4",
+      "name": "Internal energy is a state function",
+      "statement": "The internal energy is conserved: around any closed cycle its change is zero, ∮dU = 0, though heat and work can be produced, destroyed and turned into each other.",
+      "forms": [
+        {
+          "id": "cyclic-du-zero",
+          "latex": "\\oint{dU}=0"
+        }
+      ]
+    },
+    {
+      "id": "isothermal-ideal-gas-energy",
+      "kind": "result",
+      "section": "19.5",
+      "name": "Isothermal change of an ideal gas leaves U unchanged",
+      "statement": "The energy of an ideal gas depends only on its temperature, so in an isothermal change ΔU = 0 and the work and the heat cancel, w = −q.",
+      "forms": [
+        {
+          "id": "delta-u-isothermal-ideal",
+          "latex": "ΔU_{isothermal-ideal gas} = 0"
+        }
+      ]
+    },
+    {
+      "id": "reversible-isothermal-heat",
+      "kind": "result",
+      "section": "19.5",
+      "name": "Heat of a reversible isothermal expansion",
+      "type": "energy",
+      "statement": "In a reversible isothermal expansion of an ideal gas the heat taken in is q_rev = nRT ln(V₂/V₁), positive when V₂ > V₁.",
+      "forms": [
+        {
+          "id": "q-rev-isothermal",
+          "latex": "q_{rev}= nRT\\ln \\dfrac{V_2}{V_1}"
+        }
+      ]
+    },
+    {
+      "id": "adiabatic-process",
+      "kind": "definition",
+      "section": "19.5",
+      "name": "Adiabatic process",
+      "terms": [
+        "adiabatic"
+      ],
+      "statement": "A process in which no energy as heat crosses the system's boundary, δq = 0."
+    },
+    {
+      "id": "adiabatic-energy-change",
+      "kind": "result",
+      "section": "19.5",
+      "name": "In an adiabatic process the energy change is the work",
+      "statement": "With no heat flowing, dU = δw_rev: the work of an adiabatic expansion comes from the internal energy, so the temperature of the gas drops.",
+      "forms": [
+        {
+          "id": "du-adiabatic",
+          "latex": "dU = δw_{rev}"
+        }
+      ]
+    },
+    {
+      "id": "ideal-gas-energy-heat-capacity",
+      "kind": "result",
+      "section": "19.5",
+      "name": "Energy change of an ideal gas from its heat capacity",
+      "statement": "Since the energy of an ideal gas changes only with temperature, dU = C_V dT along any path; per mole dŪ = C̄_V dT.",
+      "forms": [
+        {
+          "id": "dubar-cvbar-dt",
+          "latex": "d\\bar{U}={\\bar{C}}_VdT",
+          "section": "19.6"
+        }
+      ]
+    },
+    {
+      "id": "isotherm-and-adiabat-paths",
+      "kind": "result",
+      "section": "19.5",
+      "name": "Two reversible paths between the same states",
+      "statement": "Going from P₁, V₁, T₁ to P₂, V₂, T₁ along the isotherm A or along the adiabat B and the isochore C gives the same ΔU = 0, but the heats and works differ: w_B = −q_C and w_A ≠ w_B, so work is a path function even when reversible.",
+      "forms": [
+        {
+          "id": "wb-minus-qc",
+          "latex": "w_B=-q_C"
+        },
+        {
+          "id": "bookkeeping-b-plus-c",
+          "latex": "\\Delta U_{B+C} = \\Delta U_A = 0 = q_B + w_B + q_C + w_C"
+        }
+      ]
+    },
+    {
+      "id": "ideal-gas-cp-cv",
+      "kind": "result",
+      "section": "19.6",
+      "name": "Heat capacities of an ideal gas at constant pressure and volume",
+      "statement": "For an ideal gas the molar heat capacities differ by the gas constant, C̄_P − C̄_V = R; for n moles C_p = C_V + nR.",
+      "forms": [
+        {
+          "id": "r-cp-minus-cv",
+          "latex": "R={\\bar{C}}_P-{\\bar{C}}_V"
+        },
+        {
+          "id": "cp-cv-nR",
+          "latex": "C_p = C-V + nR",
+          "section": "19.8"
+        }
+      ]
+    },
+    {
+      "id": "heat-capacity-ratio",
+      "kind": "definition",
+      "section": "19.6",
+      "name": "Heat capacity ratio",
+      "symbol": "gamma_hc",
+      "statement": "The ratio γ = C̄_P/C̄_V of the constant-pressure and constant-volume heat capacities; for an ideal gas R/C̄_V = γ − 1.",
+      "forms": [
+        {
+          "id": "r-over-cv-gamma",
+          "latex": "\\frac{R}{{\\bar{C}}_V}=\\gamma-1"
+        }
+      ]
+    },
+    {
+      "id": "reversible-adiabatic-cooling",
+      "kind": "result",
+      "section": "19.6",
+      "name": "Temperature and volume in a reversible adiabatic change",
+      "statement": "Along a reversible adiabatic path of an ideal gas, T₂/T₁ = (V̄₁/V̄₂)^(γ−1): as the volume increases the temperature decreases.",
+      "forms": [
+        {
+          "id": "adiabatic-t-v-gamma",
+          "latex": "\\left(\\frac{T_2}{T_1}\\right)=\\left(\\frac{\\bar{V}_1}{\\bar{V}_2}\\right)^{\\gamma-1}"
+        },
+        {
+          "id": "adiabatic-t-v-r-cv",
+          "latex": "\\left(\\frac{T_2}{T_1}\\right)=\\left(\\frac{\\bar{V}_1}{\\bar{V}_2}\\right)^{\\frac{R}{\\bar{C}_V}}"
+        }
+      ]
+    },
+    {
+      "id": "molecular-heat-and-work",
+      "kind": "result",
+      "section": "19.7",
+      "name": "Molecular interpretation of heat and work",
+      "statement": "A change in the energy of a system, dU = Σ ε_j dN_j + Σ N_j dε_j, has two parts: heat shifts the populations of fixed energy levels, and reversible work shifts the levels themselves while the populations stay put; the pressure follows from the partition function as P = kT(∂ln Q/∂V)."
+    },
+    {
+      "id": "enthalpy",
+      "kind": "definition",
+      "section": "19.8",
+      "name": "Enthalpy",
+      "symbol": "H",
+      "terms": [
+        "ENTHALPY",
+        "enthalpy"
+      ],
+      "type": "energy",
+      "statement": "The state function H ≡ U + PV.",
+      "forms": [
+        {
+          "id": "enthalpy-definition",
+          "latex": "H ≡ U + PV"
+        }
+      ]
+    },
+    {
+      "id": "enthalpy-differential",
+      "kind": "result",
+      "section": "19.8",
+      "name": "Differential of the enthalpy",
+      "statement": "Under reversible conditions with no work other than pressure-volume work, dH = δq + V dP.",
+      "forms": [
+        {
+          "id": "dh-dq-vdp",
+          "latex": "dH = δq + VdP"
+        }
+      ]
+    },
+    {
+      "id": "heat-at-constant-pressure",
+      "kind": "result",
+      "section": "19.8",
+      "name": "Heat at constant pressure is the enthalpy change",
+      "statement": "With no other work, the heat taken in at constant pressure is the enthalpy change, ΔH = q_P, as the heat at constant volume is the energy change, ΔU = q_V.",
+      "forms": [
+        {
+          "id": "delta-h-qp",
+          "latex": "ΔH = q_P"
+        },
+        {
+          "id": "delta-u-qv",
+          "latex": "ΔU= q_V"
+        },
+        {
+          "id": "qp-u-pv",
+          "latex": "q_P=\\left(U_2+PV_2\\right)-\\left(U_1+PV_1\\right)",
+          "section": "19.14"
+        }
+      ]
+    },
+    {
+      "id": "enthalpy-of-fusion",
+      "kind": "definition",
+      "section": "19.8",
+      "name": "Molar heat of fusion",
+      "symbol": "Delta_fusH",
+      "type": "energy",
+      "statement": "The heat needed at constant pressure to melt one mole of a solid, Δ_fus H = H_liquid − H_solid at the melting point."
+    },
+    {
+      "id": "enthalpy-and-energy-of-condensed-matter",
+      "kind": "idea",
+      "section": "19.8",
+      "name": "Enthalpy and energy differ for gases",
+      "statement": "Because the volume change is small, U ≈ H for condensed matter; the difference matters for gases."
+    },
+    {
+      "id": "heat-capacity-path-function",
+      "kind": "result",
+      "section": "19.8",
+      "name": "Heat capacity is a path function",
+      "statement": "The heat capacity depends on what is kept constant: at constant volume and at constant pressure it differs, little for most materials and by nR for an ideal gas."
+    },
+    {
+      "id": "constant-pressure-heat-capacity",
+      "kind": "definition",
+      "section": "19.9",
+      "name": "Heat capacity at constant pressure",
+      "symbol": "C_P",
+      "type": "heat-capacity",
+      "statement": "The rate of change of the enthalpy with temperature at constant pressure, C_P = (∂H/∂T)_P.",
+      "forms": [
+        {
+          "id": "cp-dh-dt",
+          "latex": "\\left ( \\dfrac{\\partial H}{ \\partial T} \\right)_P = C_P"
+        }
+      ]
+    },
+    {
+      "id": "enthalpy-from-heat-capacity",
+      "kind": "skill",
+      "section": "19.9",
+      "name": "Finding enthalpies from heat capacities",
+      "statement": "Measuring C_p as a function of temperature and integrating it gives H(T), relative to a reference temperature, with the heat of each phase transition added where H jumps."
+    },
+    {
+      "id": "heat-capacity-at-transition",
+      "kind": "result",
+      "section": "19.9",
+      "name": "Heat capacity at a phase transition",
+      "statement": "At a phase transition H jumps at a fixed temperature, so ΔH/ΔT is infinitely large and C_p has a singularity."
+    },
+    {
+      "id": "no-absolute-enthalpies",
+      "kind": "idea",
+      "section": "19.9",
+      "name": "There are no absolute enthalpies",
+      "terms": [
+        "are no absolute enthalpies"
+      ],
+      "statement": "Only differences in enthalpy, ΔH, are properly defined, and only for processes."
+    },
+    {
+      "id": "enthalpy-of-a-process",
+      "kind": "skill",
+      "section": "19.10",
+      "name": "Adding enthalpy changes along a process",
+      "terms": [
+        "Define the Process"
+      ],
+      "statement": "Define the process, then add the enthalpy change of each step: heating each phase (∫C_P dT) and each transition, as ΔH_total = ΔH₁ + Δ_fus H + ΔH₃ for warming ice from −20 to +20 °C.",
+      "forms": [
+        {
+          "id": "delta-h-total-process",
+          "latex": "ΔH_{total process} = ΔH_1 + Δ_{fus}H + ΔH_3"
+        }
+      ]
+    },
+    {
+      "id": "differential-scanning-calorimetry",
+      "kind": "idea",
+      "section": "19.10",
+      "name": "Differential scanning calorimetry",
+      "statement": "Heating a sample pan and an empty reference pan at a constant rate, the small temperature difference between them measures the heat capacity of the sample against temperature; a melting shows as a broadened peak whose area is Δ_fus H."
+    },
+    {
+      "id": "reaction-enthalpy",
+      "kind": "definition",
+      "section": "19.11",
+      "name": "Reaction enthalpy",
+      "symbol": "Delta_rH",
+      "terms": [
+        "reaction-as-written"
+      ],
+      "type": "energy",
+      "statement": "The enthalpy change Δ_rH of a reaction as written: doubling the equation doubles it, and the reverse reaction has the same enthalpy with the opposite sign."
+    },
+    {
+      "id": "hess-law",
+      "kind": "result",
+      "section": "19.11",
+      "name": "Hess's law",
+      "terms": [
+        "Hess's Law",
+        "Hess’ Law"
+      ],
+      "statement": "Because enthalpy is a state function, enthalpy changes of reactions are additive: the enthalpy of a reaction that is the sum of steps is the sum of their enthalpies, so it can be found even when the reaction is hard to carry out."
+    },
+    {
+      "id": "standard-state",
+      "kind": "definition",
+      "section": "19.12",
+      "name": "Standard state",
+      "terms": [
+        "Standard State"
+      ],
+      "statement": "The most stable form of a substance at 1 atmosphere pressure and the specified temperature."
+    },
+    {
+      "id": "standard-formation-reaction",
+      "kind": "definition",
+      "section": "19.12",
+      "name": "Standard formation reaction",
+      "terms": [
+        "standard formation reaction"
+      ],
+      "statement": "The reaction that forms one mole of a substance in its standard state from its elements in their standard states."
+    },
+    {
+      "id": "standard-enthalpy-of-formation",
+      "kind": "definition",
+      "section": "19.12",
+      "name": "Standard enthalpy of formation",
+      "symbol": "Delta_Hf0",
+      "terms": [
+        "standard enthalpy of formation"
+      ],
+      "type": "energy",
+      "statement": "The enthalpy of a standard formation reaction, ΔH_f°; for a pure element in its standard state it is zero, which sets the zero of the enthalpy scale."
+    },
+    {
+      "id": "reaction-enthalpy-from-formation",
+      "kind": "result",
+      "section": "19.12",
+      "name": "Reaction enthalpy from enthalpies of formation",
+      "statement": "A reaction enthalpy is the sum of the enthalpies of formation of the products less that of the reactants, each times its stoichiometric coefficient.",
+      "forms": [
+        {
+          "id": "delta-h-rxn-formation",
+          "latex": "\\Delta H_{rxn} = \\sum_{products} \\nu \\cdot \\Delta H_f^o - \\sum_{reactants} \\nu \\cdot \\Delta H_f^o"
+        }
+      ]
+    },
+    {
+      "id": "electron-affinity",
+      "kind": "definition",
+      "section": "19.12",
+      "name": "Electron affinity",
+      "terms": [
+        "electron affinity"
+      ],
+      "statement": "The first electron affinity is −ΔH(0 K) of X(g) + e⁻ → X⁻(g), defined with a minus sign so that most are positive; later electron affinities add further electrons."
+    },
+    {
+      "id": "average-bond-enthalpy",
+      "kind": "definition",
+      "section": "19.12",
+      "name": "Average bond enthalpy",
+      "symbol": "D_bond",
+      "terms": [
+        "bond dissociation energy"
+      ],
+      "type": "energy",
+      "statement": "The enthalpy D(X–Y) of breaking a bond in the gas, XY(g) → X(g) + Y(g), averaged over many molecules that contain that bond."
+    },
+    {
+      "id": "bond-enthalpy-estimate",
+      "kind": "skill",
+      "section": "19.12",
+      "name": "Estimating a reaction enthalpy from bond enthalpies",
+      "statement": "In the absence of formation enthalpies, ΔH_rxn ≈ Σ(bonds broken) − Σ(bonds formed), reliable to within about 5–10% since the bond enthalpies are averages for the gas phase.",
+      "forms": [
+        {
+          "id": "delta-h-bonds",
+          "latex": "\\Delta H_{rxn} = \\sum (\\text{bonds broken}) - \\sum (\\text{bonds formed})"
+        }
+      ]
+    },
+    {
+      "id": "kirchhoffs-law",
+      "kind": "result",
+      "section": "19.13",
+      "name": "Kirchhoff's law",
+      "terms": [
+        "Kirchhoff's Law"
+      ],
+      "statement": "At constant pressure the enthalpy change over a temperature change is the integral of the heat capacity, ΔH = ∫C_p dT, which is C_pΔT when C_p is constant; for a reaction, ΔH_rxn(T₂) = ΔH_rxn(T₁) + ∫ΔC_p dT.",
+      "forms": [
+        {
+          "id": "kirchhoff-integral",
+          "latex": "\\Delta H = \\int_{T_2}^{T_2} C_p\\, dT"
+        },
+        {
+          "id": "delta-h-cp-delta-t",
+          "latex": "\\Delta H = C_p \\,\\Delta T"
+        },
+        {
+          "id": "kirchhoff-reaction",
+          "latex": "\\Delta H_{rxn}(T_2) = \\Delta H_{rxn}(T_1) + \\int_{T_1}^{T_2} \\Delta C_p \\Delta T"
+        }
+      ]
+    },
+    {
+      "id": "heat-capacity-empirical-fit",
+      "kind": "definition",
+      "section": "19.13",
+      "name": "Empirical heat capacity model",
+      "statement": "A common empirical fit of heat capacities over broad temperature ranges, C_p(T) = a + bT + c/T², with a, b and c found by experiment.",
+      "forms": [
+        {
+          "id": "cp-abc",
+          "latex": "C_p(T) = a+ bT + \\dfrac{c}{T^2}"
+        }
+      ]
+    },
+    {
+      "id": "enthalpy-change-from-fit",
+      "kind": "result",
+      "section": "19.13",
+      "name": "Enthalpy change from the empirical heat capacity",
+      "statement": "Integrating a + bT + c/T² gives ΔH = a(T₂ − T₁) + (b/2)(T₂² − T₁²) − c(1/T₂ − 1/T₁).",
+      "forms": [
+        {
+          "id": "delta-h-abc",
+          "latex": "\\Delta H = a(T_2-T_1) + \\dfrac{b}{2}(T_2^2-T_1^2) - c \\left( \\dfrac{1}{T_2} - \\dfrac{1}{T_1} \\right)"
+        }
+      ]
+    },
+    {
+      "id": "spontaneous-process",
+      "kind": "definition",
+      "section": "20.1",
+      "name": "Spontaneous process",
+      "statement": "A process that happens of its own accord once it is allowed to, such as a gas filling an evacuated chamber or two gases mixing when a valve is opened."
+    },
+    {
+      "id": "energy-not-spontaneity",
+      "kind": "idea",
+      "section": "20.1",
+      "name": "Energy does not decide spontaneity",
+      "statement": "The state functions U and H give no clue which way a process goes: KNO₃ dissolves spontaneously and the solution gets cold, KOH dissolves spontaneously and it gets hot, so the first law is not enough to describe nature."
+    },
+    {
+      "id": "arrangements-count",
+      "kind": "result",
+      "section": "20.1",
+      "name": "Number of distinguishable arrangements",
+      "statement": "n distinguishable objects can be arranged in n! ways; when they fall in groups of a, b, c … indistinguishable objects, the count is n!/(a!b!c!…), the number of realizations W.",
+      "forms": [
+        {
+          "id": "arrangements-n-factorial",
+          "latex": "W=n!"
+        },
+        {
+          "id": "arrangements-groups",
+          "latex": "W=\\frac{n!}{a!\\,b!\\,c!\\dots z!}"
+        }
+      ]
+    },
+    {
+      "id": "free-expansion",
+      "kind": "idea",
+      "section": "20.1",
+      "name": "Expansion of an ideal gas into a vacuum",
+      "statement": "A model experiment in which nothing happens but a spontaneous expansion and a change in entropy: no energy change, no heat, no work, no interactions."
+    },
+    {
+      "id": "expansion-more-realizations",
+      "kind": "idea",
+      "section": "20.1",
+      "name": "Expansion adds ways to share the same energy",
+      "statement": "When the box grows its energy levels crowd together, so the same average energy ⟨E⟩ can be realized in more ways; Boltzmann put the number of ways the energy can be distributed, not the energy itself, at the root of entropy."
+    },
+    {
+      "id": "boltzmann-entropy",
+      "kind": "result",
+      "section": "20.1",
+      "name": "Boltzmann's entropy formula",
+      "type": "entropy",
+      "statement": "Entropy is the logarithm of the number of realizations W, the number of ways the same energy can be distributed in the ensemble, times Boltzmann's constant; the logarithm makes entropies add when the W of two ensembles multiply, and a perfectly ordered ensemble, W = 1, has S = 0.",
+      "forms": [
+        {
+          "id": "boltzmann-entropy",
+          "latex": "S= k \\ln W"
+        },
+        {
+          "id": "boltzmann-entropy-kb",
+          "latex": "S = k_b \\ln(W)"
+        }
+      ]
+    },
+    {
+      "id": "entropy-additive",
+      "kind": "idea",
+      "section": "20.1",
+      "name": "Entropies add as numbers of realizations multiply",
+      "statement": "Two ensembles together have W_tot = W₁W₂ arrangements, while their entropies should add; a logarithm turns the product into the sum."
+    },
+    {
+      "id": "more-states-drive-spontaneity",
+      "kind": "idea",
+      "section": "20.1",
+      "name": "More accessible states drive expansion and mixing",
+      "statement": "Expanding into a vacuum or mixing gives the molecules more energy states to use, which raises W and so S, and that is why the process is spontaneous."
+    },
+    {
+      "id": "energy-dispersal",
+      "kind": "idea",
+      "section": "20.2",
+      "name": "Energy dispersal",
+      "statement": "In an isolated system a spontaneous process balances lowering the energy against spreading it out; at constant energy the system evolves to maximize the dispersal of its energy."
+    },
+    {
+      "id": "reversible-heat-inexact",
+      "kind": "result",
+      "section": "20.2",
+      "name": "Reversible heat is not a state function",
+      "statement": "For an ideal gas δq_rev = C_v dT + P dV, and ∂C_v/∂V = 0 while ∂P/∂T = nR/V, so δq_rev is not an exact differential.",
+      "forms": [
+        {
+          "id": "reversible-heat-ideal-gas",
+          "latex": "\\delta q_{rev} = C_v dT + P dV"
+        }
+      ]
+    },
+    {
+      "id": "integrating-factor-1-over-t",
+      "kind": "idea",
+      "section": "20.2",
+      "name": "1/T as an integrating factor",
+      "statement": "Multiplying δq_rev by 1/T gives δq_rev/T = (C_v/T)dT + (P/T)dV, whose cross derivatives both vanish, so the result is exact."
+    },
+    {
+      "id": "entropy",
+      "kind": "definition",
+      "section": "20.2",
+      "name": "Entropy",
+      "symbol": "S_ent",
+      "type": "entropy",
+      "statement": "The state function whose differential is the reversible heat divided by the temperature; it measures the dispersal of energy, or equivalently the number of possible microstates of a system.",
+      "forms": [
+        {
+          "id": "entropy-clausius",
+          "latex": "dS = \\dfrac{\\delta q_{rev}}{T}"
+        }
+      ]
+    },
+    {
+      "id": "cycle-integral-zero",
+      "kind": "result",
+      "section": "20.3",
+      "name": "A state function integrates to zero around a cycle",
+      "statement": "Because U, H and S are state functions, each integrates to zero over any circular path that returns to the initial conditions.",
+      "forms": [
+        {
+          "id": "cycle-integral-s",
+          "latex": "\\oint dS =0"
+        },
+        {
+          "id": "cycle-integral-u",
+          "latex": "\\oint dU =0"
+        },
+        {
+          "id": "cycle-integral-h",
+          "latex": "\\oint dH =0"
+        }
+      ]
+    },
+    {
+      "id": "isothermal-entropy-change",
+      "kind": "result",
+      "section": "20.3",
+      "name": "Entropy change of an isothermal expansion",
+      "type": "entropy",
+      "statement": "For n moles of ideal gas taken from V₁ to V₂ at constant temperature, ΔS = q_rev/T = nR ln(V₂/V₁).",
+      "forms": [
+        {
+          "id": "isothermal-entropy-change",
+          "latex": "\\Delta S = nR\\ln \\dfrac{V_2}{V_1}"
+        }
+      ]
+    },
+    {
+      "id": "heating-entropy-change",
+      "kind": "result",
+      "section": "20.3",
+      "name": "Entropy change on heating at constant volume",
+      "type": "entropy",
+      "statement": "Heating reversibly at constant volume changes the entropy by the integral of C_v/T over the temperature.",
+      "forms": [
+        {
+          "id": "heating-entropy-change",
+          "latex": "\\Delta S = \\int_{T_1}^{T_2} \\dfrac{C_v}{T}\\, dT"
+        }
+      ]
+    },
+    {
+      "id": "entropy-state-function",
+      "kind": "result",
+      "section": "20.3",
+      "name": "Entropy is a state function",
+      "statement": "Along the isotherm A and along the adiabat B with the isochore C the reversible heats differ, but the entropy changes are the same, nR ln(V₂/V₁): entropy is a state function while q_rev is not."
+    },
+    {
+      "id": "isolated-system",
+      "kind": "definition",
+      "section": "20.4",
+      "name": "Isolated system",
+      "statement": "A system from which nothing gets in or out, neither heat nor mass nor radiation; a little universe all to itself, more than merely adiabatic."
+    },
+    {
+      "id": "heat-flow-entropy-production",
+      "kind": "result",
+      "section": "20.4",
+      "name": "Entropy produced by heat flowing between two bodies",
+      "type": "entropy",
+      "statement": "When two blocks at different temperatures exchange energy in isolation, dS = dU_A(1/T_A − 1/T_B), which is positive while the temperatures differ and zero when they are equal.",
+      "forms": [
+        {
+          "id": "heat-flow-entropy-production",
+          "latex": "dS = dU_A \\left( \\dfrac{1}{T_A} - \\dfrac{1}{T_B} \\right)"
+        }
+      ]
+    },
+    {
+      "id": "two-block-entropy-change",
+      "kind": "result",
+      "section": "20.4",
+      "name": "Entropy change of two identical blocks reaching one temperature",
+      "type": "entropy",
+      "statement": "Two identical blocks of heat capacity C_V at T_A and T_B reach the average temperature, and the entropy rises by C_V ln[(T_A + T_B)²/4T_AT_B], always positive.",
+      "forms": [
+        {
+          "id": "two-block-entropy-change",
+          "latex": "\\Delta S = C_V \\ln \\left[\\dfrac{(T_A + T_B)^2}{4T_AT_B}\\right]"
+        }
+      ]
+    },
+    {
+      "id": "second-law",
+      "kind": "axiom",
+      "section": "20.4",
+      "name": "Second law of thermodynamics",
+      "statement": "The entropy of an isolated system never decreases; a spontaneous process in an isolated system produces entropy, dS > 0, which is a criterion for spontaneity.",
+      "forms": [
+        {
+          "id": "second-law-isolated",
+          "latex": "dS \\ge 0"
+        }
+      ]
+    },
+    {
+      "id": "entropy-production-exchange",
+      "kind": "definition",
+      "section": "20.4",
+      "name": "Entropy production and exchange",
+      "statement": "A system's entropy change splits into entropy produced inside it and entropy exchanged with the surroundings along with heat; a reversible change produces none, an isolated system exchanges none.",
+      "forms": [
+        {
+          "id": "entropy-production-exchange",
+          "latex": "dS = dS_{prod} + dS_{exchange}"
+        }
+      ]
+    },
+    {
+      "id": "clausius-inequality",
+      "kind": "result",
+      "section": "20.4",
+      "name": "Clausius inequality",
+      "statement": "Generalizing the isolated, irreversible and reversible cases, a system's entropy change is at least the heat it exchanges divided by the temperature.",
+      "forms": [
+        {
+          "id": "clausius-inequality",
+          "latex": "dS \\ge \\dfrac{\\delta q}{T}"
+        }
+      ]
+    },
+    {
+      "id": "microstates-measure-dispersal",
+      "kind": "idea",
+      "section": "20.5",
+      "name": "Microstates as the measure of energy dispersal",
+      "statement": "The number W of microstates available in a macrostate can be taken as the quantitative measure of energy dispersal; the more chaotic a system, the greater the dispersal and the entropy."
+    },
+    {
+      "id": "reversible-path-for-entropy",
+      "kind": "skill",
+      "section": "20.6",
+      "name": "Calculating an entropy change along a reversible path",
+      "statement": "Find ΔS of any process, an irreversible one included, by devising a reversible path between the same two states and integrating δq_rev/T along it."
+    },
+    {
+      "id": "entropy-of-surroundings",
+      "kind": "result",
+      "section": "20.6",
+      "name": "Entropy change of the surroundings",
+      "type": "entropy",
+      "statement": "In a reversible isothermal expansion the surroundings give up the heat the system takes in at the same temperature, so ΔS_surr = −nR ln(V₂/V₁); in an expansion into a vacuum they exchange nothing and ΔS_surr = 0."
+    },
+    {
+      "id": "total-entropy-change",
+      "kind": "result",
+      "section": "20.6",
+      "name": "Total entropy change of a process",
+      "type": "entropy",
+      "statement": "ΔS_total = ΔS_sys + ΔS_surr is zero for the reversible isothermal expansion and nR ln(V₂/V₁) > 0 for the expansion into a vacuum between the same states.",
+      "forms": [
+        {
+          "id": "total-entropy-change",
+          "latex": "\\Delta S_\\text{total} = \\Delta S_\\text{sys} + \\Delta S_\\text{surr}"
+        }
+      ]
+    },
+    {
+      "id": "mole-fraction",
+      "kind": "definition",
+      "section": "20.6",
+      "name": "Mole fraction",
+      "statement": "The amount of one component divided by the total amount, χ_A = n_A/n_tot.",
+      "forms": [
+        {
+          "id": "mole-fraction",
+          "latex": "\\chi_A = \\dfrac{n_A}{n_{tot}}"
+        }
+      ]
+    },
+    {
+      "id": "entropy-of-mixing",
+      "kind": "result",
+      "section": "20.6",
+      "name": "Entropy of mixing",
+      "type": "entropy",
+      "statement": "Ideal gases at the same pressure that mix each expand into the total volume, and the molar entropy rises by −R Σ χ_i ln χ_i; it is the main reason gases, and solutions, diffuse and mix.",
+      "forms": [
+        {
+          "id": "entropy-of-mixing-two",
+          "latex": "\\Delta \\bar{S} = -R \\left [\\chi_A\\ln \\chi_A +\\chi_B \\ln \\chi_B \\right]"
+        },
+        {
+          "id": "entropy-of-mixing-sum",
+          "latex": "\\Delta \\bar{S} = -R \\sum \\chi_i\\ln \\chi_i"
+        }
+      ]
+    },
+    {
+      "id": "dissipation",
+      "kind": "definition",
+      "section": "20.7",
+      "name": "Dissipation",
+      "statement": "The conversion of work into heat, which the second law does not limit; heat into work is limited."
+    },
+    {
+      "id": "heat-engine",
+      "kind": "definition",
+      "section": "20.7",
+      "name": "Heat engine",
+      "statement": "A device that runs a working substance around a cycle, taking heat from a hot source, doing work and passing the rest of the heat to a cold sink."
+    },
+    {
+      "id": "carnot-cycle",
+      "kind": "definition",
+      "section": "20.7",
+      "name": "Carnot cycle",
+      "statement": "The reversible cycle of an ideal gas through an isothermal expansion at T_h, an adiabatic cooling to T_c, an isothermal compression at T_c and an adiabatic heating back to T_h."
+    },
+    {
+      "id": "cycle-work-area",
+      "kind": "idea",
+      "section": "20.7",
+      "name": "The work of a cycle is the area it encloses",
+      "statement": "The work a cycle produces is the area under the upper curve minus that under the lower one, the area enclosed on the PV diagram; it vanishes when T_h = T_c."
+    },
+    {
+      "id": "engine-efficiency",
+      "kind": "definition",
+      "section": "20.7",
+      "name": "Efficiency of a heat engine",
+      "statement": "The work the engine delivers per heat it takes in at the hot temperature.",
+      "forms": [
+        {
+          "id": "engine-efficiency",
+          "latex": "\\eta=\\frac{|w_\\text{cycle}|}{q_h}=1+\\frac{q_c}{q_h}"
+        }
+      ]
+    },
+    {
+      "id": "carnot-efficiency",
+      "kind": "result",
+      "section": "20.7",
+      "name": "Carnot efficiency",
+      "statement": "A reversible engine between T_h and T_c has efficiency 1 − T_c/T_h, which reaches 1 only if T_c = 0 K and is zero when T_c = T_h; heat dissipated isothermally cannot be retrieved as work.",
+      "forms": [
+        {
+          "id": "carnot-efficiency",
+          "latex": "\\eta= 1-\\dfrac{T_c}{T_h}"
+        }
+      ]
+    },
+    {
+      "id": "heat-pump",
+      "kind": "idea",
+      "section": "20.7",
+      "name": "Heat pump",
+      "statement": "A heat engine run backwards: work put in moves heat from cold to hot, so the warm side receives the work plus the heat pumped from the cold side; a refrigerator is one."
+    },
+    {
+      "id": "stirling-cycle",
+      "kind": "definition",
+      "section": "20.7",
+      "name": "Stirling cycle",
+      "statement": "The reversible cycle of an ideal gas through two isotherms, at T_h and T_c, joined by two isochores, whose heats cancel."
+    },
+    {
+      "id": "entropy-from-probabilities",
+      "kind": "result",
+      "section": "20.8",
+      "name": "Entropy from the probabilities of the states",
+      "type": "entropy",
+      "statement": "With Stirling's approximation and a_j = p_jA, Boltzmann's S = k ln W of the ensemble divided by the number of systems gives S = −k Σ p_j ln p_j; a system certain to be in one state has zero entropy.",
+      "forms": [
+        {
+          "id": "entropy-from-probabilities",
+          "latex": "S_{system}=- k \\sum_j{p_j\\ln{p_j}}"
+        }
+      ]
+    },
+    {
+      "id": "entropy-from-partition-function",
+      "kind": "result",
+      "section": "20.8",
+      "name": "Entropy from the partition function",
+      "type": "entropy",
+      "statement": "Putting the Boltzmann probabilities p_j = e^{−βE_j}/Q into S = −k Σ p_j ln p_j gives S = U/T + k ln Q.",
+      "forms": [
+        {
+          "id": "entropy-from-partition-function",
+          "latex": "S= \\dfrac{U}{T} + k\\ln Q"
+        }
+      ]
+    },
+    {
+      "id": "statistical-thermodynamic-entropy",
+      "kind": "result",
+      "section": "20.9",
+      "name": "Statistical and thermodynamic entropy agree",
+      "statement": "Differentiating S = −k_B Σ p_j ln p_j, with Σ dp_j = 0 and Σ ln p_j dp_j = −δq_rev/k_BT, gives dS = δq_rev/T: the statistical definition explains why the thermodynamic one works.",
+      "forms": [
+        {
+          "id": "statistical-to-thermodynamic",
+          "latex": "dS = -k_B\\sum_j{\\ln{p_j}dp_j} = \\frac{\\delta q_{rev}}{T}"
+        }
+      ]
     }
   ],
   "concept_prereqs": [
@@ -23601,6 +26288,1190 @@
     {
       "concept": "average-translational-energy",
       "prereq": "thermal-wavelength"
+    },
+    {
+      "concept": "fundamental-equation-u",
+      "prereq": "internal-energy"
+    },
+    {
+      "concept": "natural-variables-u",
+      "prereq": "fundamental-equation-u"
+    },
+    {
+      "concept": "entropy-change-constant-volume",
+      "prereq": "fundamental-equation-u"
+    },
+    {
+      "concept": "entropy-change-constant-volume",
+      "prereq": "constant-volume-heat-capacity"
+    },
+    {
+      "concept": "entropy-increases-with-temperature",
+      "prereq": "entropy-change-constant-volume"
+    },
+    {
+      "concept": "fundamental-equation-h",
+      "prereq": "fundamental-equation-u"
+    },
+    {
+      "concept": "entropy-change-constant-pressure",
+      "prereq": "fundamental-equation-h"
+    },
+    {
+      "concept": "absolute-entropy",
+      "prereq": "third-law"
+    },
+    {
+      "concept": "absolute-entropy",
+      "prereq": "entropy-change-constant-pressure"
+    },
+    {
+      "concept": "perfect-crystal-zero-entropy",
+      "prereq": "third-law"
+    },
+    {
+      "concept": "perfect-crystal-zero-entropy",
+      "prereq": "distribution-weight"
+    },
+    {
+      "concept": "standard-molar-entropy",
+      "prereq": "absolute-entropy"
+    },
+    {
+      "concept": "entropy-increases-with-mass",
+      "prereq": "standard-molar-entropy"
+    },
+    {
+      "concept": "entropy-increases-with-mass",
+      "prereq": "pib-energy-levels"
+    },
+    {
+      "concept": "residual-entropy",
+      "prereq": "perfect-crystal-zero-entropy"
+    },
+    {
+      "concept": "orientational-disorder-entropy",
+      "prereq": "residual-entropy"
+    },
+    {
+      "concept": "entropy-of-transition",
+      "prereq": "entropy-of-fusion"
+    },
+    {
+      "concept": "first-order-transition",
+      "prereq": "gibbs-temperature-derivative"
+    },
+    {
+      "concept": "first-order-transition",
+      "prereq": "entropy-of-transition"
+    },
+    {
+      "concept": "heat-capacity-singular-at-transition",
+      "prereq": "first-order-transition"
+    },
+    {
+      "concept": "phase-transition-kinds",
+      "prereq": "entropy-of-transition"
+    },
+    {
+      "concept": "debye-model",
+      "prereq": "einstein-model-limits"
+    },
+    {
+      "concept": "debye-model",
+      "prereq": "molecular-normal-modes"
+    },
+    {
+      "concept": "debye-t3-law",
+      "prereq": "debye-model"
+    },
+    {
+      "concept": "metal-low-temperature-heat-capacity",
+      "prereq": "debye-t3-law"
+    },
+    {
+      "concept": "calorimetric-absolute-entropy",
+      "prereq": "absolute-entropy"
+    },
+    {
+      "concept": "calorimetric-absolute-entropy",
+      "prereq": "entropy-of-transition"
+    },
+    {
+      "concept": "absolute-entropy-heating-path",
+      "prereq": "calorimetric-absolute-entropy"
+    },
+    {
+      "concept": "partition-function-third-law",
+      "prereq": "third-law"
+    },
+    {
+      "concept": "partition-function-third-law",
+      "prereq": "canonical-partition-function"
+    },
+    {
+      "concept": "partition-function-third-law",
+      "prereq": "degeneracy"
+    },
+    {
+      "concept": "entropy-increases-with-complexity",
+      "prereq": "standard-molar-entropy"
+    },
+    {
+      "concept": "entropy-increases-with-complexity",
+      "prereq": "vibrational-mode-count"
+    },
+    {
+      "concept": "spectroscopic-entropy",
+      "prereq": "standard-molar-entropy"
+    },
+    {
+      "concept": "spectroscopic-entropy",
+      "prereq": "molecular-ideal-gas-partition-function"
+    },
+    {
+      "concept": "residual-entropy-discrepancy",
+      "prereq": "spectroscopic-entropy"
+    },
+    {
+      "concept": "residual-entropy-discrepancy",
+      "prereq": "calorimetric-absolute-entropy"
+    },
+    {
+      "concept": "residual-entropy-discrepancy",
+      "prereq": "residual-entropy"
+    },
+    {
+      "concept": "reaction-entropy",
+      "prereq": "standard-molar-entropy"
+    },
+    {
+      "concept": "helmholtz-energy",
+      "prereq": "internal-energy"
+    },
+    {
+      "concept": "helmholtz-criterion",
+      "prereq": "helmholtz-energy"
+    },
+    {
+      "concept": "helmholtz-maximum-work",
+      "prereq": "helmholtz-energy"
+    },
+    {
+      "concept": "helmholtz-energy-of-mixing",
+      "prereq": "helmholtz-criterion"
+    },
+    {
+      "concept": "helmholtz-fundamental-equation",
+      "prereq": "helmholtz-energy"
+    },
+    {
+      "concept": "helmholtz-fundamental-equation",
+      "prereq": "natural-variables"
+    },
+    {
+      "concept": "gibbs-energy",
+      "prereq": "helmholtz-energy"
+    },
+    {
+      "concept": "gibbs-criterion",
+      "prereq": "gibbs-energy"
+    },
+    {
+      "concept": "coupled-processes",
+      "prereq": "gibbs-criterion"
+    },
+    {
+      "concept": "spontaneity-temperature",
+      "prereq": "gibbs-criterion"
+    },
+    {
+      "concept": "gibbs-maximum-non-pv-work",
+      "prereq": "gibbs-energy"
+    },
+    {
+      "concept": "gibbs-fundamental-equation",
+      "prereq": "gibbs-energy"
+    },
+    {
+      "concept": "gibbs-fundamental-equation",
+      "prereq": "natural-variables"
+    },
+    {
+      "concept": "maxwell-relations",
+      "prereq": "euler-reciprocity"
+    },
+    {
+      "concept": "maxwell-relation-u",
+      "prereq": "maxwell-relations"
+    },
+    {
+      "concept": "maxwell-relation-u",
+      "prereq": "internal-energy-first-derivatives"
+    },
+    {
+      "concept": "enthalpy-first-derivatives",
+      "prereq": "internal-energy-first-derivatives"
+    },
+    {
+      "concept": "maxwell-relation-h",
+      "prereq": "maxwell-relations"
+    },
+    {
+      "concept": "maxwell-relation-h",
+      "prereq": "enthalpy-first-derivatives"
+    },
+    {
+      "concept": "maxwell-relation-a",
+      "prereq": "maxwell-relations"
+    },
+    {
+      "concept": "maxwell-relation-a",
+      "prereq": "helmholtz-fundamental-equation"
+    },
+    {
+      "concept": "maxwell-relation-g",
+      "prereq": "maxwell-relations"
+    },
+    {
+      "concept": "maxwell-relation-g",
+      "prereq": "gibbs-fundamental-equation"
+    },
+    {
+      "concept": "pressure-coefficient-alpha-kappa",
+      "prereq": "thermal-expansion-coefficient"
+    },
+    {
+      "concept": "pressure-coefficient-alpha-kappa",
+      "prereq": "isothermal-compressibility"
+    },
+    {
+      "concept": "thermodynamic-equation-of-state",
+      "prereq": "maxwell-relation-a"
+    },
+    {
+      "concept": "thermodynamic-equation-of-state",
+      "prereq": "pressure-coefficient-alpha-kappa"
+    },
+    {
+      "concept": "gibbs-first-derivatives",
+      "prereq": "gibbs-fundamental-equation"
+    },
+    {
+      "concept": "enthalpy-pressure-dependence",
+      "prereq": "gibbs-first-derivatives"
+    },
+    {
+      "concept": "enthalpy-pressure-dependence",
+      "prereq": "maxwell-relation-g"
+    },
+    {
+      "concept": "ideal-gas-enthalpy-pressure",
+      "prereq": "enthalpy-pressure-dependence"
+    },
+    {
+      "concept": "ideal-gas-enthalpy-pressure",
+      "prereq": "ideal-gas-law"
+    },
+    {
+      "concept": "fundamental-equations",
+      "prereq": "helmholtz-fundamental-equation"
+    },
+    {
+      "concept": "fundamental-equations",
+      "prereq": "gibbs-fundamental-equation"
+    },
+    {
+      "concept": "chemical-potential",
+      "prereq": "fundamental-equations"
+    },
+    {
+      "concept": "fundamental-equations-composition",
+      "prereq": "chemical-potential"
+    },
+    {
+      "concept": "helmholtz-first-derivatives",
+      "prereq": "helmholtz-fundamental-equation"
+    },
+    {
+      "concept": "standard-state-gas",
+      "prereq": "ideal-gas-law"
+    },
+    {
+      "concept": "gibbs-ideal-gas-pressure",
+      "prereq": "gibbs-first-derivatives"
+    },
+    {
+      "concept": "gibbs-ideal-gas-pressure",
+      "prereq": "standard-state-gas"
+    },
+    {
+      "concept": "gibbs-solid-pressure",
+      "prereq": "gibbs-first-derivatives"
+    },
+    {
+      "concept": "gibbs-solid-pressure",
+      "prereq": "isothermal-compressibility"
+    },
+    {
+      "concept": "gibbs-helmholtz-equation",
+      "prereq": "gibbs-energy"
+    },
+    {
+      "concept": "gibbs-temperature-curve",
+      "prereq": "gibbs-first-derivatives"
+    },
+    {
+      "concept": "fugacity",
+      "prereq": "gibbs-ideal-gas-pressure"
+    },
+    {
+      "concept": "fugacity-coefficient",
+      "prereq": "fugacity"
+    },
+    {
+      "concept": "fugacity-zero-pressure-limit",
+      "prereq": "fugacity"
+    },
+    {
+      "concept": "component-fugacity",
+      "prereq": "fugacity"
+    },
+    {
+      "concept": "component-fugacity",
+      "prereq": "chemical-potential"
+    },
+    {
+      "concept": "chemical-potential-fugacity",
+      "prereq": "component-fugacity"
+    },
+    {
+      "concept": "heat",
+      "prereq": "thermodynamic-system"
+    },
+    {
+      "concept": "thermodynamic-work",
+      "prereq": "thermodynamic-system"
+    },
+    {
+      "concept": "internal-energy-change",
+      "prereq": "internal-energy"
+    },
+    {
+      "concept": "first-law-of-thermodynamics",
+      "prereq": "internal-energy-change"
+    },
+    {
+      "concept": "first-law-of-thermodynamics",
+      "prereq": "heat"
+    },
+    {
+      "concept": "first-law-of-thermodynamics",
+      "prereq": "thermodynamic-work"
+    },
+    {
+      "concept": "endothermic-and-exothermic",
+      "prereq": "heat"
+    },
+    {
+      "concept": "heat-capacity",
+      "prereq": "heat"
+    },
+    {
+      "concept": "state-function",
+      "prereq": "thermodynamic-system"
+    },
+    {
+      "concept": "total-differential",
+      "prereq": "partial-derivative"
+    },
+    {
+      "concept": "pressure-is-a-state-function",
+      "prereq": "total-differential"
+    },
+    {
+      "concept": "pressure-is-a-state-function",
+      "prereq": "state-function"
+    },
+    {
+      "concept": "pressure-is-a-state-function",
+      "prereq": "ideal-gas-law"
+    },
+    {
+      "concept": "pressure-is-a-state-function",
+      "prereq": "isotherm"
+    },
+    {
+      "concept": "pressure-is-a-state-function",
+      "prereq": "isochore"
+    },
+    {
+      "concept": "kinds-of-work",
+      "prereq": "thermodynamic-work"
+    },
+    {
+      "concept": "work-sign-convention",
+      "prereq": "heat"
+    },
+    {
+      "concept": "work-sign-convention",
+      "prereq": "thermodynamic-work"
+    },
+    {
+      "concept": "external-pressure",
+      "prereq": "pressure"
+    },
+    {
+      "concept": "pressure-volume-work",
+      "prereq": "mechanical-work"
+    },
+    {
+      "concept": "pressure-volume-work",
+      "prereq": "work-sign-convention"
+    },
+    {
+      "concept": "pressure-volume-work",
+      "prereq": "pressure"
+    },
+    {
+      "concept": "constant-pressure-work",
+      "prereq": "pressure-volume-work"
+    },
+    {
+      "concept": "constant-pressure-work",
+      "prereq": "external-pressure"
+    },
+    {
+      "concept": "irreversible-process",
+      "prereq": "external-pressure"
+    },
+    {
+      "concept": "work-as-area",
+      "prereq": "constant-pressure-work"
+    },
+    {
+      "concept": "path-function",
+      "prereq": "state-function"
+    },
+    {
+      "concept": "path-function",
+      "prereq": "work-sign-convention"
+    },
+    {
+      "concept": "reversible-process",
+      "prereq": "irreversible-process"
+    },
+    {
+      "concept": "reversible-isothermal-work",
+      "prereq": "reversible-process"
+    },
+    {
+      "concept": "reversible-isothermal-work",
+      "prereq": "pressure-volume-work"
+    },
+    {
+      "concept": "reversible-isothermal-work",
+      "prereq": "ideal-gas-law"
+    },
+    {
+      "concept": "reversible-isothermal-work",
+      "prereq": "isotherm"
+    },
+    {
+      "concept": "reversible-work-extremes",
+      "prereq": "reversible-isothermal-work"
+    },
+    {
+      "concept": "reversible-work-extremes",
+      "prereq": "constant-pressure-work"
+    },
+    {
+      "concept": "exact-and-inexact-differentials",
+      "prereq": "path-function"
+    },
+    {
+      "concept": "exact-and-inexact-differentials",
+      "prereq": "first-law-of-thermodynamics"
+    },
+    {
+      "concept": "energy-is-a-state-function",
+      "prereq": "exact-and-inexact-differentials"
+    },
+    {
+      "concept": "isothermal-ideal-gas-energy",
+      "prereq": "first-law-of-thermodynamics"
+    },
+    {
+      "concept": "isothermal-ideal-gas-energy",
+      "prereq": "isotherm"
+    },
+    {
+      "concept": "reversible-isothermal-heat",
+      "prereq": "isothermal-ideal-gas-energy"
+    },
+    {
+      "concept": "reversible-isothermal-heat",
+      "prereq": "reversible-isothermal-work"
+    },
+    {
+      "concept": "adiabatic-process",
+      "prereq": "heat"
+    },
+    {
+      "concept": "adiabatic-energy-change",
+      "prereq": "adiabatic-process"
+    },
+    {
+      "concept": "adiabatic-energy-change",
+      "prereq": "first-law-of-thermodynamics"
+    },
+    {
+      "concept": "adiabatic-energy-change",
+      "prereq": "reversible-process"
+    },
+    {
+      "concept": "ideal-gas-energy-heat-capacity",
+      "prereq": "constant-volume-heat-capacity"
+    },
+    {
+      "concept": "ideal-gas-energy-heat-capacity",
+      "prereq": "isothermal-ideal-gas-energy"
+    },
+    {
+      "concept": "isotherm-and-adiabat-paths",
+      "prereq": "reversible-isothermal-heat"
+    },
+    {
+      "concept": "isotherm-and-adiabat-paths",
+      "prereq": "adiabatic-energy-change"
+    },
+    {
+      "concept": "isotherm-and-adiabat-paths",
+      "prereq": "isochore"
+    },
+    {
+      "concept": "isotherm-and-adiabat-paths",
+      "prereq": "energy-is-a-state-function"
+    },
+    {
+      "concept": "ideal-gas-cp-cv",
+      "prereq": "constant-volume-heat-capacity"
+    },
+    {
+      "concept": "ideal-gas-cp-cv",
+      "prereq": "heat-capacity"
+    },
+    {
+      "concept": "ideal-gas-cp-cv",
+      "prereq": "ideal-gas-law"
+    },
+    {
+      "concept": "heat-capacity-ratio",
+      "prereq": "ideal-gas-cp-cv"
+    },
+    {
+      "concept": "reversible-adiabatic-cooling",
+      "prereq": "heat-capacity-ratio"
+    },
+    {
+      "concept": "reversible-adiabatic-cooling",
+      "prereq": "adiabatic-energy-change"
+    },
+    {
+      "concept": "reversible-adiabatic-cooling",
+      "prereq": "ideal-gas-energy-heat-capacity"
+    },
+    {
+      "concept": "reversible-adiabatic-cooling",
+      "prereq": "molar-heat-capacity"
+    },
+    {
+      "concept": "molecular-heat-and-work",
+      "prereq": "first-law-of-thermodynamics"
+    },
+    {
+      "concept": "molecular-heat-and-work",
+      "prereq": "pressure-from-q"
+    },
+    {
+      "concept": "molecular-heat-and-work",
+      "prereq": "reversible-process"
+    },
+    {
+      "concept": "enthalpy",
+      "prereq": "internal-energy"
+    },
+    {
+      "concept": "enthalpy",
+      "prereq": "pressure"
+    },
+    {
+      "concept": "enthalpy",
+      "prereq": "state-function"
+    },
+    {
+      "concept": "enthalpy-differential",
+      "prereq": "enthalpy"
+    },
+    {
+      "concept": "enthalpy-differential",
+      "prereq": "first-law-of-thermodynamics"
+    },
+    {
+      "concept": "enthalpy-differential",
+      "prereq": "pressure-volume-work"
+    },
+    {
+      "concept": "enthalpy-differential",
+      "prereq": "reversible-process"
+    },
+    {
+      "concept": "heat-at-constant-pressure",
+      "prereq": "enthalpy-differential"
+    },
+    {
+      "concept": "enthalpy-of-fusion",
+      "prereq": "heat-at-constant-pressure"
+    },
+    {
+      "concept": "enthalpy-and-energy-of-condensed-matter",
+      "prereq": "enthalpy"
+    },
+    {
+      "concept": "heat-capacity-path-function",
+      "prereq": "path-function"
+    },
+    {
+      "concept": "heat-capacity-path-function",
+      "prereq": "ideal-gas-cp-cv"
+    },
+    {
+      "concept": "constant-pressure-heat-capacity",
+      "prereq": "enthalpy"
+    },
+    {
+      "concept": "constant-pressure-heat-capacity",
+      "prereq": "heat-capacity"
+    },
+    {
+      "concept": "enthalpy-from-heat-capacity",
+      "prereq": "constant-pressure-heat-capacity"
+    },
+    {
+      "concept": "enthalpy-from-heat-capacity",
+      "prereq": "enthalpy-of-fusion"
+    },
+    {
+      "concept": "heat-capacity-at-transition",
+      "prereq": "constant-pressure-heat-capacity"
+    },
+    {
+      "concept": "heat-capacity-at-transition",
+      "prereq": "enthalpy-of-fusion"
+    },
+    {
+      "concept": "no-absolute-enthalpies",
+      "prereq": "enthalpy"
+    },
+    {
+      "concept": "enthalpy-of-a-process",
+      "prereq": "enthalpy-from-heat-capacity"
+    },
+    {
+      "concept": "enthalpy-of-a-process",
+      "prereq": "no-absolute-enthalpies"
+    },
+    {
+      "concept": "differential-scanning-calorimetry",
+      "prereq": "heat-capacity-at-transition"
+    },
+    {
+      "concept": "reaction-enthalpy",
+      "prereq": "enthalpy"
+    },
+    {
+      "concept": "hess-law",
+      "prereq": "reaction-enthalpy"
+    },
+    {
+      "concept": "standard-formation-reaction",
+      "prereq": "standard-state"
+    },
+    {
+      "concept": "standard-enthalpy-of-formation",
+      "prereq": "standard-formation-reaction"
+    },
+    {
+      "concept": "standard-enthalpy-of-formation",
+      "prereq": "reaction-enthalpy"
+    },
+    {
+      "concept": "standard-enthalpy-of-formation",
+      "prereq": "no-absolute-enthalpies"
+    },
+    {
+      "concept": "reaction-enthalpy-from-formation",
+      "prereq": "standard-enthalpy-of-formation"
+    },
+    {
+      "concept": "reaction-enthalpy-from-formation",
+      "prereq": "hess-law"
+    },
+    {
+      "concept": "electron-affinity",
+      "prereq": "enthalpy"
+    },
+    {
+      "concept": "average-bond-enthalpy",
+      "prereq": "dissociation-energy"
+    },
+    {
+      "concept": "average-bond-enthalpy",
+      "prereq": "enthalpy"
+    },
+    {
+      "concept": "bond-enthalpy-estimate",
+      "prereq": "average-bond-enthalpy"
+    },
+    {
+      "concept": "bond-enthalpy-estimate",
+      "prereq": "hess-law"
+    },
+    {
+      "concept": "kirchhoffs-law",
+      "prereq": "constant-pressure-heat-capacity"
+    },
+    {
+      "concept": "kirchhoffs-law",
+      "prereq": "reaction-enthalpy"
+    },
+    {
+      "concept": "heat-capacity-empirical-fit",
+      "prereq": "constant-pressure-heat-capacity"
+    },
+    {
+      "concept": "enthalpy-change-from-fit",
+      "prereq": "kirchhoffs-law"
+    },
+    {
+      "concept": "enthalpy-change-from-fit",
+      "prereq": "heat-capacity-empirical-fit"
+    },
+    {
+      "concept": "natural-variables",
+      "prereq": "natural-variables-u"
+    },
+    {
+      "concept": "gibbs-fundamental-equation",
+      "prereq": "fundamental-equation-h"
+    },
+    {
+      "concept": "internal-energy-first-derivatives",
+      "prereq": "natural-variables-u"
+    },
+    {
+      "concept": "enthalpy-first-derivatives",
+      "prereq": "fundamental-equation-h"
+    },
+    {
+      "concept": "gibbs-helmholtz-equation",
+      "prereq": "entropy-change-constant-pressure"
+    },
+    {
+      "concept": "gibbs-temperature-curve",
+      "prereq": "entropy-of-transition"
+    },
+    {
+      "concept": "arrangements-count",
+      "prereq": "distribution-weight"
+    },
+    {
+      "concept": "free-expansion",
+      "prereq": "ideal-gas"
+    },
+    {
+      "concept": "expansion-more-realizations",
+      "prereq": "free-expansion"
+    },
+    {
+      "concept": "expansion-more-realizations",
+      "prereq": "particle-in-a-3d-box"
+    },
+    {
+      "concept": "expansion-more-realizations",
+      "prereq": "ensemble-average"
+    },
+    {
+      "concept": "boltzmann-entropy",
+      "prereq": "distribution-weight"
+    },
+    {
+      "concept": "boltzmann-entropy",
+      "prereq": "boltzmann-constant"
+    },
+    {
+      "concept": "boltzmann-entropy",
+      "prereq": "expansion-more-realizations"
+    },
+    {
+      "concept": "entropy-additive",
+      "prereq": "boltzmann-entropy"
+    },
+    {
+      "concept": "more-states-drive-spontaneity",
+      "prereq": "boltzmann-entropy"
+    },
+    {
+      "concept": "more-states-drive-spontaneity",
+      "prereq": "spontaneous-process"
+    },
+    {
+      "concept": "energy-not-spontaneity",
+      "prereq": "spontaneous-process"
+    },
+    {
+      "concept": "energy-dispersal",
+      "prereq": "spontaneous-process"
+    },
+    {
+      "concept": "reversible-heat-inexact",
+      "prereq": "exact-and-inexact-differentials"
+    },
+    {
+      "concept": "reversible-heat-inexact",
+      "prereq": "ideal-gas-law"
+    },
+    {
+      "concept": "reversible-heat-inexact",
+      "prereq": "first-law-of-thermodynamics"
+    },
+    {
+      "concept": "reversible-heat-inexact",
+      "prereq": "pressure-volume-work"
+    },
+    {
+      "concept": "reversible-heat-inexact",
+      "prereq": "ideal-gas-energy-heat-capacity"
+    },
+    {
+      "concept": "integrating-factor-1-over-t",
+      "prereq": "reversible-heat-inexact"
+    },
+    {
+      "concept": "entropy",
+      "prereq": "integrating-factor-1-over-t"
+    },
+    {
+      "concept": "entropy",
+      "prereq": "energy-dispersal"
+    },
+    {
+      "concept": "cycle-integral-zero",
+      "prereq": "internal-energy"
+    },
+    {
+      "concept": "isothermal-entropy-change",
+      "prereq": "entropy"
+    },
+    {
+      "concept": "isothermal-entropy-change",
+      "prereq": "ideal-gas-law"
+    },
+    {
+      "concept": "heating-entropy-change",
+      "prereq": "entropy"
+    },
+    {
+      "concept": "heating-entropy-change",
+      "prereq": "constant-volume-heat-capacity"
+    },
+    {
+      "concept": "entropy-state-function",
+      "prereq": "cycle-integral-zero"
+    },
+    {
+      "concept": "entropy-state-function",
+      "prereq": "isothermal-entropy-change"
+    },
+    {
+      "concept": "entropy-state-function",
+      "prereq": "heating-entropy-change"
+    },
+    {
+      "concept": "heat-flow-entropy-production",
+      "prereq": "entropy"
+    },
+    {
+      "concept": "heat-flow-entropy-production",
+      "prereq": "isolated-system"
+    },
+    {
+      "concept": "two-block-entropy-change",
+      "prereq": "heat-flow-entropy-production"
+    },
+    {
+      "concept": "two-block-entropy-change",
+      "prereq": "heating-entropy-change"
+    },
+    {
+      "concept": "second-law",
+      "prereq": "heat-flow-entropy-production"
+    },
+    {
+      "concept": "second-law",
+      "prereq": "spontaneous-process"
+    },
+    {
+      "concept": "entropy-production-exchange",
+      "prereq": "second-law"
+    },
+    {
+      "concept": "clausius-inequality",
+      "prereq": "entropy-production-exchange"
+    },
+    {
+      "concept": "microstates-measure-dispersal",
+      "prereq": "boltzmann-entropy"
+    },
+    {
+      "concept": "microstates-measure-dispersal",
+      "prereq": "energy-dispersal"
+    },
+    {
+      "concept": "microstates-measure-dispersal",
+      "prereq": "many-microstates-one-macrostate"
+    },
+    {
+      "concept": "reversible-path-for-entropy",
+      "prereq": "entropy-state-function"
+    },
+    {
+      "concept": "reversible-path-for-entropy",
+      "prereq": "free-expansion"
+    },
+    {
+      "concept": "entropy-of-surroundings",
+      "prereq": "isothermal-entropy-change"
+    },
+    {
+      "concept": "total-entropy-change",
+      "prereq": "entropy-of-surroundings"
+    },
+    {
+      "concept": "total-entropy-change",
+      "prereq": "reversible-path-for-entropy"
+    },
+    {
+      "concept": "total-entropy-change",
+      "prereq": "second-law"
+    },
+    {
+      "concept": "mole-fraction",
+      "prereq": "ideal-gas-law"
+    },
+    {
+      "concept": "entropy-of-mixing",
+      "prereq": "isothermal-entropy-change"
+    },
+    {
+      "concept": "entropy-of-mixing",
+      "prereq": "mole-fraction"
+    },
+    {
+      "concept": "entropy-of-mixing",
+      "prereq": "more-states-drive-spontaneity"
+    },
+    {
+      "concept": "dissipation",
+      "prereq": "internal-energy"
+    },
+    {
+      "concept": "heat-engine",
+      "prereq": "dissipation"
+    },
+    {
+      "concept": "carnot-cycle",
+      "prereq": "heat-engine"
+    },
+    {
+      "concept": "carnot-cycle",
+      "prereq": "isotherm"
+    },
+    {
+      "concept": "cycle-work-area",
+      "prereq": "carnot-cycle"
+    },
+    {
+      "concept": "engine-efficiency",
+      "prereq": "heat-engine"
+    },
+    {
+      "concept": "carnot-efficiency",
+      "prereq": "engine-efficiency"
+    },
+    {
+      "concept": "carnot-efficiency",
+      "prereq": "carnot-cycle"
+    },
+    {
+      "concept": "carnot-efficiency",
+      "prereq": "cycle-integral-zero"
+    },
+    {
+      "concept": "carnot-efficiency",
+      "prereq": "isothermal-entropy-change"
+    },
+    {
+      "concept": "heat-pump",
+      "prereq": "carnot-efficiency"
+    },
+    {
+      "concept": "heat-pump",
+      "prereq": "dissipation"
+    },
+    {
+      "concept": "stirling-cycle",
+      "prereq": "heat-engine"
+    },
+    {
+      "concept": "stirling-cycle",
+      "prereq": "cycle-work-area"
+    },
+    {
+      "concept": "entropy-from-probabilities",
+      "prereq": "boltzmann-entropy"
+    },
+    {
+      "concept": "entropy-from-probabilities",
+      "prereq": "stirlings-approximation"
+    },
+    {
+      "concept": "entropy-from-partition-function",
+      "prereq": "entropy-from-probabilities"
+    },
+    {
+      "concept": "entropy-from-partition-function",
+      "prereq": "boltzmann-probability"
+    },
+    {
+      "concept": "entropy-from-partition-function",
+      "prereq": "average-ensemble-energy"
+    },
+    {
+      "concept": "statistical-thermodynamic-entropy",
+      "prereq": "entropy-from-probabilities"
+    },
+    {
+      "concept": "statistical-thermodynamic-entropy",
+      "prereq": "entropy"
+    },
+    {
+      "concept": "statistical-thermodynamic-entropy",
+      "prereq": "boltzmann-probability"
+    },
+    {
+      "concept": "entropy",
+      "prereq": "reversible-process"
+    },
+    {
+      "concept": "cycle-integral-zero",
+      "prereq": "state-function"
+    },
+    {
+      "concept": "isothermal-entropy-change",
+      "prereq": "reversible-isothermal-heat"
+    },
+    {
+      "concept": "entropy-state-function",
+      "prereq": "path-function"
+    },
+    {
+      "concept": "entropy-state-function",
+      "prereq": "reversible-adiabatic-cooling"
+    },
+    {
+      "concept": "heat-flow-entropy-production",
+      "prereq": "first-law-of-thermodynamics"
+    },
+    {
+      "concept": "entropy-production-exchange",
+      "prereq": "irreversible-process"
+    },
+    {
+      "concept": "reversible-path-for-entropy",
+      "prereq": "reversible-process"
+    },
+    {
+      "concept": "reversible-path-for-entropy",
+      "prereq": "irreversible-process"
+    },
+    {
+      "concept": "dissipation",
+      "prereq": "heat"
+    },
+    {
+      "concept": "dissipation",
+      "prereq": "thermodynamic-work"
+    },
+    {
+      "concept": "carnot-cycle",
+      "prereq": "adiabatic-process"
+    },
+    {
+      "concept": "carnot-cycle",
+      "prereq": "reversible-isothermal-work"
+    },
+    {
+      "concept": "cycle-work-area",
+      "prereq": "work-as-area"
+    },
+    {
+      "concept": "carnot-efficiency",
+      "prereq": "reversible-adiabatic-cooling"
+    },
+    {
+      "concept": "stirling-cycle",
+      "prereq": "isochore"
+    },
+    {
+      "concept": "statistical-thermodynamic-entropy",
+      "prereq": "molecular-heat-and-work"
+    },
+    {
+      "concept": "helmholtz-maximum-work",
+      "prereq": "reversible-work-extremes"
+    },
+    {
+      "concept": "gibbs-energy",
+      "prereq": "enthalpy"
+    },
+    {
+      "concept": "gibbs-maximum-non-pv-work",
+      "prereq": "kinds-of-work"
+    },
+    {
+      "concept": "thermal-expansion-coefficient",
+      "prereq": "partial-derivative"
+    },
+    {
+      "concept": "isothermal-compressibility",
+      "prereq": "partial-derivative"
+    },
+    {
+      "concept": "standard-state-gas",
+      "prereq": "standard-state"
+    },
+    {
+      "concept": "gibbs-helmholtz-equation",
+      "prereq": "constant-pressure-heat-capacity"
+    },
+    {
+      "concept": "gibbs-temperature-curve",
+      "prereq": "enthalpy-from-heat-capacity"
+    },
+    {
+      "concept": "gibbs-temperature-curve",
+      "prereq": "absolute-entropy-heating-path"
     }
   ],
   "sheets": [
@@ -23764,6 +27635,18 @@
       "partition-function": {
         "light": "#095F2D",
         "dark": "#15D96D"
+      },
+      "heat": {
+        "light": "#740549",
+        "dark": "#FEAAD0"
+      },
+      "work": {
+        "light": "#654D09",
+        "dark": "#DDAB0A"
+      },
+      "entropy": {
+        "light": "#700486",
+        "dark": "#E99AFF"
       }
     },
     "pins": {

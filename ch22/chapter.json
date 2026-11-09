@@ -1,0 +1,628 @@
+{
+ "id": "22",
+ "dir": "ch22",
+ "title": "Helmholtz and Gibbs Energies",
+ "sections": [
+  {
+   "id": "22.1",
+   "module": "14488",
+   "title": "Helmholtz Energy",
+   "slug": "22:_Helmholtz_and_Gibbs_Energies/22.01:_Helmholtz_Energy"
+  },
+  {
+   "id": "22.2",
+   "module": "14489",
+   "title": "Gibbs Energy Determines the Direction of Spontaneity at Constant Pressure and Temperature",
+   "slug": "22:_Helmholtz_and_Gibbs_Energies/22.02:_Gibbs_Energy_Determines_the_Direction_of_Spontaneity_at_Constant_Pressure_and_Temperature"
+  },
+  {
+   "id": "22.3",
+   "module": "14490",
+   "title": "The Maxwell Relations",
+   "slug": "22:_Helmholtz_and_Gibbs_Energies/22.03:_The_Maxwell_Relations"
+  },
+  {
+   "id": "22.4",
+   "module": "14491",
+   "title": "The Enthalpy of an Ideal Gas is Independent of Pressure",
+   "slug": "22:_Helmholtz_and_Gibbs_Energies/22.04:_The_Enthalpy_of_an_Ideal_Gas_is_Independent_of_Pressure"
+  },
+  {
+   "id": "22.5",
+   "module": "14492",
+   "title": "Thermodynamic Functions have Natural Variables",
+   "slug": "22:_Helmholtz_and_Gibbs_Energies/22.05:_Thermodynamic_Functions_have_Natural_Variables"
+  },
+  {
+   "id": "22.6",
+   "module": "14493",
+   "title": "The Standard State for a Gas is an Ideal Gas at 1 Bar",
+   "slug": "22:_Helmholtz_and_Gibbs_Energies/22.06:_The_Standard_State_for_a_Gas_is_an_Ideal_Gas_at_1_Bar"
+  },
+  {
+   "id": "22.7",
+   "module": "14494",
+   "title": "The Gibbs-Helmholtz Equation",
+   "slug": "22:_Helmholtz_and_Gibbs_Energies/22.07:_The_Gibbs-Helmholtz_Equation"
+  },
+  {
+   "id": "22.8",
+   "module": "14495",
+   "title": "Fugacity Measures Nonideality of a Gas",
+   "slug": "22:_Helmholtz_and_Gibbs_Energies/22.08:_Fugacity_Measures_Nonideality_of_a_Gas"
+  }
+ ],
+ "variables": [
+  {
+   "sym": "T",
+   "type": "temperature",
+   "meaning": "the temperature",
+   "unit": "K",
+   "section": "22.1"
+  },
+  {
+   "sym": "U",
+   "type": "energy",
+   "concept": "internal-energy",
+   "meaning": "the internal energy of the system",
+   "unit": "J",
+   "section": "22.1"
+  },
+  {
+   "sym": "A",
+   "type": "energy",
+   "concept": "helmholtz-energy",
+   "meaning": "the Helmholtz energy of the system",
+   "unit": "J",
+   "section": "22.1",
+   "redefines": true
+  },
+  {
+   "sym": "P",
+   "type": "pressure",
+   "meaning": "the pressure",
+   "unit": "Pa",
+   "section": "22.1"
+  },
+  {
+   "sym": "V",
+   "type": "volume",
+   "meaning": "the volume of the system",
+   "unit": "m³",
+   "section": "22.1",
+   "redefines": true
+  },
+  {
+   "sym": "A_molar",
+   "type": "energy",
+   "concept": "helmholtz-energy",
+   "meaning": "the molar Helmholtz energy",
+   "unit": "J/mol",
+   "section": "22.1"
+  },
+  {
+   "sym": "y_1",
+   "meaning": "the mole fraction of gas 1",
+   "section": "22.1"
+  },
+  {
+   "sym": "y_2",
+   "meaning": "the mole fraction of gas 2",
+   "section": "22.1"
+  },
+  {
+   "sym": "R",
+   "concept": "ideal-gas-constant",
+   "meaning": "the gas constant",
+   "unit": "J K⁻¹ mol⁻¹",
+   "section": "22.1"
+  },
+  {
+   "sym": "q_rev",
+   "type": "heat",
+   "meaning": "the heat absorbed along a reversible path",
+   "unit": "J",
+   "section": "22.1"
+  },
+  {
+   "sym": "w_rev",
+   "type": "work",
+   "meaning": "the reversible work done on the system",
+   "unit": "J",
+   "section": "22.1"
+  },
+  {
+   "sym": "T",
+   "type": "temperature",
+   "meaning": "the temperature",
+   "unit": "K",
+   "section": "22.2"
+  },
+  {
+   "sym": "U",
+   "type": "energy",
+   "concept": "internal-energy",
+   "meaning": "the internal energy of the system",
+   "unit": "J",
+   "section": "22.2"
+  },
+  {
+   "sym": "A",
+   "type": "energy",
+   "concept": "helmholtz-energy",
+   "meaning": "the Helmholtz energy of the system",
+   "unit": "J",
+   "section": "22.2"
+  },
+  {
+   "sym": "P",
+   "type": "pressure",
+   "meaning": "the pressure",
+   "unit": "Pa",
+   "section": "22.2"
+  },
+  {
+   "sym": "V",
+   "type": "volume",
+   "meaning": "the volume of the system",
+   "unit": "m³",
+   "section": "22.2"
+  },
+  {
+   "sym": "G",
+   "type": "energy",
+   "concept": "gibbs-energy",
+   "meaning": "the Gibbs energy of the system",
+   "unit": "J",
+   "section": "22.2"
+  },
+  {
+   "sym": "H",
+   "type": "energy",
+   "concept": "enthalpy",
+   "meaning": "the enthalpy of the system",
+   "unit": "J",
+   "section": "22.2"
+  },
+  {
+   "sym": "w_rev",
+   "type": "work",
+   "meaning": "the reversible work done on the system",
+   "unit": "J",
+   "section": "22.2"
+  },
+  {
+   "sym": "Delta_H",
+   "type": "energy",
+   "meaning": "the enthalpy change of the process",
+   "unit": "J",
+   "section": "22.2"
+  },
+  {
+   "sym": "T",
+   "type": "temperature",
+   "meaning": "the temperature",
+   "unit": "K",
+   "section": "22.3"
+  },
+  {
+   "sym": "U",
+   "type": "energy",
+   "concept": "internal-energy",
+   "meaning": "the internal energy of the system",
+   "unit": "J",
+   "section": "22.3"
+  },
+  {
+   "sym": "P",
+   "type": "pressure",
+   "meaning": "the pressure",
+   "unit": "Pa",
+   "section": "22.3"
+  },
+  {
+   "sym": "V",
+   "type": "volume",
+   "meaning": "the volume of the system",
+   "unit": "m³",
+   "section": "22.3"
+  },
+  {
+   "sym": "p",
+   "type": "pressure",
+   "meaning": "the pressure, written p",
+   "unit": "Pa",
+   "section": "22.3",
+   "redefines": true
+  },
+  {
+   "sym": "alpha_V",
+   "concept": "thermal-expansion-coefficient",
+   "meaning": "the thermal expansion coefficient (1/V)(∂V/∂T)_p",
+   "unit": "1/K",
+   "section": "22.3"
+  },
+  {
+   "sym": "kappa_T",
+   "concept": "isothermal-compressibility",
+   "meaning": "the isothermal compressibility −(1/V)(∂V/∂p)_T",
+   "unit": "1/Pa",
+   "section": "22.3"
+  },
+  {
+   "sym": "H",
+   "type": "energy",
+   "concept": "enthalpy",
+   "meaning": "the enthalpy of the system",
+   "unit": "J",
+   "section": "22.3"
+  },
+  {
+   "sym": "T",
+   "type": "temperature",
+   "meaning": "the temperature",
+   "unit": "K",
+   "section": "22.4"
+  },
+  {
+   "sym": "P",
+   "type": "pressure",
+   "meaning": "the pressure",
+   "unit": "Pa",
+   "section": "22.4"
+  },
+  {
+   "sym": "V",
+   "type": "volume",
+   "meaning": "the volume of the system",
+   "unit": "m³",
+   "section": "22.4"
+  },
+  {
+   "sym": "G",
+   "type": "energy",
+   "concept": "gibbs-energy",
+   "meaning": "the Gibbs energy of the system",
+   "unit": "J",
+   "section": "22.4"
+  },
+  {
+   "sym": "R",
+   "concept": "ideal-gas-constant",
+   "meaning": "the gas constant",
+   "unit": "J K⁻¹ mol⁻¹",
+   "section": "22.4"
+  },
+  {
+   "sym": "n_mol",
+   "type": "amount",
+   "meaning": "the amount of gas",
+   "unit": "mol",
+   "section": "22.4"
+  },
+  {
+   "sym": "H",
+   "type": "energy",
+   "concept": "enthalpy",
+   "meaning": "the enthalpy of the system",
+   "unit": "J",
+   "section": "22.4"
+  },
+  {
+   "sym": "T",
+   "type": "temperature",
+   "meaning": "the temperature",
+   "unit": "K",
+   "section": "22.5"
+  },
+  {
+   "sym": "U",
+   "type": "energy",
+   "concept": "internal-energy",
+   "meaning": "the internal energy of the system",
+   "unit": "J",
+   "section": "22.5"
+  },
+  {
+   "sym": "A",
+   "type": "energy",
+   "concept": "helmholtz-energy",
+   "meaning": "the Helmholtz energy of the system",
+   "unit": "J",
+   "section": "22.5"
+  },
+  {
+   "sym": "P",
+   "type": "pressure",
+   "meaning": "the pressure",
+   "unit": "Pa",
+   "section": "22.5"
+  },
+  {
+   "sym": "V",
+   "type": "volume",
+   "meaning": "the volume of the system",
+   "unit": "m³",
+   "section": "22.5"
+  },
+  {
+   "sym": "p",
+   "type": "pressure",
+   "meaning": "the pressure, written p",
+   "unit": "Pa",
+   "section": "22.5"
+  },
+  {
+   "sym": "G",
+   "type": "energy",
+   "concept": "gibbs-energy",
+   "meaning": "the Gibbs energy of the system",
+   "unit": "J",
+   "section": "22.5"
+  },
+  {
+   "sym": "mu_i",
+   "type": "energy",
+   "concept": "chemical-potential",
+   "meaning": "the chemical potential of species i",
+   "unit": "J/mol",
+   "section": "22.5",
+   "redefines": true
+  },
+  {
+   "sym": "n_i",
+   "type": "amount",
+   "meaning": "the amount of species i in moles",
+   "unit": "mol",
+   "section": "22.5",
+   "redefines": true
+  },
+  {
+   "sym": "H",
+   "type": "energy",
+   "concept": "enthalpy",
+   "meaning": "the enthalpy of the system",
+   "unit": "J",
+   "section": "22.5"
+  },
+  {
+   "sym": "T",
+   "type": "temperature",
+   "meaning": "the temperature",
+   "unit": "K",
+   "section": "22.7"
+  },
+  {
+   "sym": "P",
+   "type": "pressure",
+   "meaning": "the pressure",
+   "unit": "Pa",
+   "section": "22.7"
+  },
+  {
+   "sym": "V",
+   "type": "volume",
+   "meaning": "the volume of the system",
+   "unit": "m³",
+   "section": "22.7"
+  },
+  {
+   "sym": "G",
+   "type": "energy",
+   "concept": "gibbs-energy",
+   "meaning": "the Gibbs energy of the system",
+   "unit": "J",
+   "section": "22.7"
+  },
+  {
+   "sym": "R",
+   "concept": "ideal-gas-constant",
+   "meaning": "the gas constant",
+   "unit": "J K⁻¹ mol⁻¹",
+   "section": "22.7"
+  },
+  {
+   "sym": "kappa",
+   "concept": "isothermal-compressibility",
+   "meaning": "the isothermal compressibility, written κ",
+   "unit": "1/Pa",
+   "section": "22.7",
+   "redefines": true
+  },
+  {
+   "sym": "G_molar",
+   "type": "energy",
+   "concept": "gibbs-energy",
+   "meaning": "the molar Gibbs energy",
+   "unit": "J/mol",
+   "section": "22.7"
+  },
+  {
+   "sym": "G_std_molar",
+   "type": "energy",
+   "concept": "gibbs-energy",
+   "meaning": "the molar Gibbs energy in the standard state of 1 bar",
+   "unit": "J/mol",
+   "section": "22.7"
+  },
+  {
+   "sym": "P_1",
+   "type": "pressure",
+   "meaning": "the initial pressure",
+   "unit": "bar",
+   "section": "22.7"
+  },
+  {
+   "sym": "P_2",
+   "type": "pressure",
+   "meaning": "the final pressure",
+   "unit": "bar",
+   "section": "22.7"
+  },
+  {
+   "sym": "P_initial",
+   "type": "pressure",
+   "meaning": "the initial pressure",
+   "unit": "Pa",
+   "section": "22.7"
+  },
+  {
+   "sym": "P_final",
+   "type": "pressure",
+   "meaning": "the final pressure",
+   "unit": "Pa",
+   "section": "22.7"
+  },
+  {
+   "sym": "T_fus",
+   "type": "temperature",
+   "meaning": "the melting temperature",
+   "unit": "K",
+   "section": "22.7"
+  },
+  {
+   "sym": "T_boil",
+   "type": "temperature",
+   "meaning": "the boiling temperature",
+   "unit": "K",
+   "section": "22.7"
+  },
+  {
+   "sym": "H",
+   "type": "energy",
+   "concept": "enthalpy",
+   "meaning": "the enthalpy of the system",
+   "unit": "J",
+   "section": "22.7"
+  },
+  {
+   "sym": "Delta_H",
+   "type": "energy",
+   "meaning": "the enthalpy change of the process",
+   "unit": "J",
+   "section": "22.7"
+  },
+  {
+   "sym": "C_P",
+   "type": "heat-capacity",
+   "concept": "constant-pressure-heat-capacity",
+   "meaning": "the heat capacity at constant pressure, written C_p or C_P",
+   "unit": "J/K",
+   "section": "22.7"
+  },
+  {
+   "sym": "T_trs",
+   "type": "temperature",
+   "meaning": "the temperature of a phase transition",
+   "unit": "K",
+   "section": "22.7"
+  },
+  {
+   "sym": "T",
+   "type": "temperature",
+   "meaning": "the temperature",
+   "unit": "K",
+   "section": "22.8"
+  },
+  {
+   "sym": "P",
+   "type": "pressure",
+   "meaning": "the pressure",
+   "unit": "Pa",
+   "section": "22.8"
+  },
+  {
+   "sym": "V",
+   "type": "volume",
+   "meaning": "the volume of the system",
+   "unit": "m³",
+   "section": "22.8"
+  },
+  {
+   "sym": "G",
+   "type": "energy",
+   "concept": "gibbs-energy",
+   "meaning": "the Gibbs energy of the system",
+   "unit": "J",
+   "section": "22.8"
+  },
+  {
+   "sym": "R",
+   "concept": "ideal-gas-constant",
+   "meaning": "the gas constant",
+   "unit": "J K⁻¹ mol⁻¹",
+   "section": "22.8"
+  },
+  {
+   "sym": "G_bar",
+   "type": "energy",
+   "concept": "gibbs-energy",
+   "meaning": "the molar Gibbs energy",
+   "unit": "J/mol",
+   "section": "22.8"
+  },
+  {
+   "sym": "f",
+   "type": "pressure",
+   "concept": "fugacity",
+   "meaning": "the fugacity of the gas",
+   "unit": "Pa",
+   "section": "22.8"
+  },
+  {
+   "sym": "phi",
+   "concept": "fugacity-coefficient",
+   "meaning": "the fugacity coefficient f/P",
+   "section": "22.8",
+   "redefines": true
+  },
+  {
+   "sym": "G_bar_i",
+   "type": "energy",
+   "concept": "gibbs-energy",
+   "meaning": "the partial molar Gibbs energy of component i",
+   "unit": "J/mol",
+   "section": "22.8"
+  },
+  {
+   "sym": "f_i",
+   "type": "pressure",
+   "concept": "component-fugacity",
+   "meaning": "the fugacity of component i",
+   "unit": "Pa",
+   "section": "22.8",
+   "redefines": true
+  },
+  {
+   "sym": "mu_bar_i",
+   "type": "energy",
+   "concept": "chemical-potential",
+   "meaning": "the chemical potential of component i, written μ̄_i",
+   "unit": "J/mol",
+   "section": "22.8"
+  },
+  {
+   "sym": "mu_bar",
+   "type": "energy",
+   "concept": "chemical-potential",
+   "meaning": "the molar chemical potential of the gas",
+   "unit": "J/mol",
+   "section": "22.8"
+  },
+  {
+   "sym": "mu_bar_std",
+   "type": "energy",
+   "concept": "chemical-potential",
+   "meaning": "the chemical potential in the standard state",
+   "unit": "J/mol",
+   "section": "22.8"
+  },
+  {
+   "sym": "P_std",
+   "type": "pressure",
+   "meaning": "the standard pressure, 1 bar",
+   "unit": "bar",
+   "section": "22.8"
+  }
+ ]
+}

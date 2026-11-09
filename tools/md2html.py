@@ -84,6 +84,9 @@ class Drafter:
         p = self.refs(p)
         # a file name may hold a pair of parentheses (12.13's Energy_level_Diagram_(1).jpg)
         p = re.sub(r"!\[([^\]]*)\]\(media/((?:[^()\s]|\([^()\s]*\))+)\)", lambda m: f'<img src="/media/{self.chdir}/{m.group(2)}" alt="{html.escape(m.group(1))}">', p)
+        # an image the source page links by a dead site path (19.5–19.8's CH431_Image61–71.gif from
+        # wikis.lib.ncsu.edu, equations drawn as images): a comment that names it, for the builder
+        p = re.sub(r"!\[([^\]]*)\]\((/[^()\s]+)\)", lambda m: f"<!-- image missing at the source: {m.group(2)} -->", p)
         p = re.sub(r"\[([^\]]+)\]\(page:(\d+)\)", lambda m: f'<a href="{PAGE_URL.get(m.group(2), "#")}">{m.group(1)}</a>', p)
         p = re.sub(r"\[([^\]]+)\]\((https?://(?:[^()\s]|\([^()\s]*\))+)\)", r'<a href="\2">\1</a>', p)
         p = re.sub(r"\{term:([^{}]+)\}", r"<strong>\1</strong>", p)
@@ -263,8 +266,8 @@ class Drafter:
         own = re.findall(r"\\tag\s*\{([^}]*)\}", tex)
         if len(own) > 1 and len(set(own)) == 1 and re.search(r"\\begin\{align\*\}", tex):
             tex = re.sub(r"\s*\\tag\s*\{[^}]*\}", "", tex).rstrip() + f" \\tag{{{own[0]}}}"
-        tex = re.sub(r"\\begin\{align\*?\}", r"\\begin{aligned}", tex)
-        tex = re.sub(r"\\end\{align\*?\}", r"\\end{aligned}", tex)
+        tex = re.sub(r"\\begin\s*\{align\*?\}", r"\\begin{aligned}", tex)
+        tex = re.sub(r"\\end\s*\{align\*?\}", r"\\end{aligned}", tex)  # 19.13 writes \end {align*}
         if nums:
             tex += f" \\tag{{{nums[0]}}}"
         return f"$$ {tex} $$"

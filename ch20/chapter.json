@@ -1,0 +1,1156 @@
+{
+  "id": "20",
+  "dir": "ch20",
+  "title": "Entropy and The Second Law of Thermodynamics",
+  "sections": [
+    {
+      "id": "20.1",
+      "module": "13714",
+      "title": "Energy Does not Determine Spontaneity",
+      "slug": "20:_Entropy_and_The_Second_Law_of_Thermodynamics/20.01:_Energy_Does_not_Determine_Spontaneity"
+    },
+    {
+      "id": "20.2",
+      "module": "13715",
+      "title": "Nonequilibrium Isolated Systems Evolve in a Direction That Increases Their Energy Dispersal",
+      "slug": "20:_Entropy_and_The_Second_Law_of_Thermodynamics/20.02:_Nonequilibrium_Isolated_Systems_Evolve_in_a_Direction_That_Increases_Their_Energy_Dispersal"
+    },
+    {
+      "id": "20.3",
+      "module": "13717",
+      "title": "Unlike heat, Entropy is a State Function",
+      "slug": "20:_Entropy_and_The_Second_Law_of_Thermodynamics/20.03:_Unlike_heat_Entropy_is_a_State_Function"
+    },
+    {
+      "id": "20.4",
+      "module": "13718",
+      "title": "The Second Law of Thermodynamics",
+      "slug": "20:_Entropy_and_The_Second_Law_of_Thermodynamics/20.04:_The_Second_Law_of_Thermodynamics"
+    },
+    {
+      "id": "20.5",
+      "module": "13719",
+      "title": "The Famous Equation of Statistical Thermodynamics is S=k ln W",
+      "slug": "20:_Entropy_and_The_Second_Law_of_Thermodynamics/20.05:_The_Famous_Equation_of_Statistical_Thermodynamics_is_Sk_ln_W"
+    },
+    {
+      "id": "20.6",
+      "module": "13720",
+      "title": "We Must Always Devise a Reversible Process to Calculate Entropy Changes",
+      "slug": "20:_Entropy_and_The_Second_Law_of_Thermodynamics/20.06:_We_Must_Always_Devise_a_Reversible_Process_to_Calculate_Entropy_Changes"
+    },
+    {
+      "id": "20.7",
+      "module": "13721",
+      "title": "Thermodynamics Provides Insight into the Conversion of Heat into Work",
+      "slug": "20:_Entropy_and_The_Second_Law_of_Thermodynamics/20.07:_Thermodynamics_Provides_Insight_into_the_Conversion_of_Heat_into_Work"
+    },
+    {
+      "id": "20.8",
+      "module": "13722",
+      "title": "Entropy Can Be Expressed in Terms of a Partition Function",
+      "slug": "20:_Entropy_and_The_Second_Law_of_Thermodynamics/20.08:_Entropy_Can_Be_Expressed_in_Terms_of_a_Partition_Function"
+    },
+    {
+      "id": "20.9",
+      "module": "13723",
+      "title": "The Statistical Definition of Entropy is Analogous to the Thermodynamic Definition",
+      "slug": "20:_Entropy_and_The_Second_Law_of_Thermodynamics/20.09:_The_Statistical_Definition_of_Entropy_is_Analogous_to_the_Thermodynamic_Definition"
+    }
+  ],
+  "variables": [
+    {
+      "sym": "U",
+      "type": "energy",
+      "meaning": "the internal energy of the gas",
+      "unit": "J",
+      "section": "20.1"
+    },
+    {
+      "sym": "n",
+      "meaning": "the number of distinguishable objects to be arranged",
+      "section": "20.1"
+    },
+    {
+      "sym": "W",
+      "meaning": "the number of realizations, the ways the objects or the energy can be arranged",
+      "section": "20.1"
+    },
+    {
+      "sym": "N",
+      "meaning": "the number of systems, of the order of Avogadro's number, whose factorial is approximated",
+      "section": "20.1"
+    },
+    {
+      "sym": "E_kin",
+      "type": "energy",
+      "meaning": "the kinetic energy of a particle in a cubic box",
+      "unit": "J",
+      "section": "20.1"
+    },
+    {
+      "sym": "H",
+      "meaning": "the enthalpy, which like U gives no clue to spontaneity",
+      "unit": "J",
+      "section": "20.1",
+      "concept": "enthalpy"
+    },
+    {
+      "sym": "h",
+      "meaning": "Planck's constant",
+      "unit": "J s",
+      "section": "20.1"
+    },
+    {
+      "sym": "m",
+      "type": "mass",
+      "meaning": "the mass of the particle",
+      "unit": "kg",
+      "section": "20.1"
+    },
+    {
+      "sym": "a",
+      "type": "length",
+      "meaning": "the side of the box",
+      "unit": "m",
+      "section": "20.1",
+      "redefines": true
+    },
+    {
+      "sym": "n_1",
+      "meaning": "the quantum number of the motion along the first axis",
+      "section": "20.1",
+      "redefines": true
+    },
+    {
+      "sym": "n_2",
+      "meaning": "the quantum number of the motion along the second axis",
+      "section": "20.1",
+      "redefines": true
+    },
+    {
+      "sym": "n_3",
+      "meaning": "the quantum number of the motion along the third axis",
+      "section": "20.1"
+    },
+    {
+      "sym": "E_avg",
+      "type": "energy",
+      "meaning": "the average energy of the ensemble, constant during the expansion",
+      "unit": "J",
+      "section": "20.1"
+    },
+    {
+      "sym": "Omega",
+      "meaning": "the degeneracy of the ensemble, the number of its realizations",
+      "section": "20.1",
+      "redefines": true
+    },
+    {
+      "sym": "A",
+      "meaning": "the number of systems in the ensemble",
+      "section": "20.1",
+      "redefines": true
+    },
+    {
+      "sym": "a_j",
+      "meaning": "the number of systems in subgroup j, which share one energy distribution",
+      "section": "20.1"
+    },
+    {
+      "sym": "W_1",
+      "meaning": "the number of realizations of the first ensemble",
+      "section": "20.1"
+    },
+    {
+      "sym": "W_2",
+      "meaning": "the number of realizations of the second ensemble",
+      "section": "20.1"
+    },
+    {
+      "sym": "W_tot",
+      "meaning": "the number of realizations of the two ensembles together, W₁W₂",
+      "section": "20.1"
+    },
+    {
+      "sym": "S_ent",
+      "concept": "entropy",
+      "meaning": "the entropy",
+      "unit": "J/K",
+      "section": "20.1"
+    },
+    {
+      "sym": "k",
+      "meaning": "Boltzmann's constant, written k",
+      "unit": "J/K",
+      "section": "20.1",
+      "concept": "boltzmann-constant"
+    },
+    {
+      "sym": "U",
+      "type": "energy",
+      "meaning": "the internal energy of the ideal gas",
+      "unit": "J",
+      "section": "20.2"
+    },
+    {
+      "sym": "C_v",
+      "type": "heat-capacity",
+      "meaning": "the heat capacity at constant volume of the gas",
+      "unit": "J/K",
+      "section": "20.2"
+    },
+    {
+      "sym": "C_V",
+      "type": "heat-capacity",
+      "meaning": "the heat capacity at constant volume, also written C_v",
+      "unit": "J/K",
+      "section": "20.2"
+    },
+    {
+      "sym": "T",
+      "type": "temperature",
+      "meaning": "the temperature",
+      "unit": "K",
+      "section": "20.2"
+    },
+    {
+      "sym": "w_rev",
+      "type": "work",
+      "meaning": "the reversible work done on the gas",
+      "unit": "J",
+      "section": "20.2"
+    },
+    {
+      "sym": "P",
+      "type": "pressure",
+      "meaning": "the pressure of the gas",
+      "unit": "Pa",
+      "section": "20.2"
+    },
+    {
+      "sym": "V",
+      "type": "volume",
+      "meaning": "the volume of the gas",
+      "unit": "m³",
+      "section": "20.2"
+    },
+    {
+      "sym": "q_rev",
+      "type": "heat",
+      "meaning": "the heat absorbed along a reversible path",
+      "unit": "J",
+      "section": "20.2"
+    },
+    {
+      "sym": "q",
+      "type": "heat",
+      "meaning": "the heat, whose small amount δq is tested for exactness",
+      "unit": "J",
+      "section": "20.2",
+      "redefines": true
+    },
+    {
+      "sym": "n_mol",
+      "type": "amount",
+      "meaning": "the amount of gas in moles",
+      "unit": "mol",
+      "section": "20.2"
+    },
+    {
+      "sym": "R",
+      "meaning": "the molar gas constant",
+      "unit": "J K⁻¹ mol⁻¹",
+      "section": "20.2"
+    },
+    {
+      "sym": "S_ent",
+      "concept": "entropy",
+      "meaning": "the entropy, the state function whose differential is δq_rev/T",
+      "unit": "J/K",
+      "section": "20.2"
+    },
+    {
+      "sym": "S_ent",
+      "concept": "entropy",
+      "meaning": "the entropy, a state function",
+      "unit": "J/K",
+      "section": "20.3"
+    },
+    {
+      "sym": "U",
+      "type": "energy",
+      "meaning": "the internal energy",
+      "unit": "J",
+      "section": "20.3"
+    },
+    {
+      "sym": "H",
+      "meaning": "the enthalpy, a state function",
+      "unit": "J",
+      "section": "20.3",
+      "concept": "enthalpy"
+    },
+    {
+      "sym": "q_rev_A",
+      "type": "heat",
+      "meaning": "the heat absorbed reversibly along the isotherm A",
+      "unit": "J",
+      "section": "20.3"
+    },
+    {
+      "sym": "q_rev_B",
+      "type": "heat",
+      "meaning": "the heat absorbed reversibly along the adiabat B, zero",
+      "unit": "J",
+      "section": "20.3"
+    },
+    {
+      "sym": "q_rev_C",
+      "type": "heat",
+      "meaning": "the heat absorbed reversibly along the isochore C",
+      "unit": "J",
+      "section": "20.3"
+    },
+    {
+      "sym": "q_rev_BC",
+      "type": "heat",
+      "meaning": "the heat absorbed reversibly along the adiabat B and the isochore C together",
+      "unit": "J",
+      "section": "20.3"
+    },
+    {
+      "sym": "q_rev",
+      "type": "heat",
+      "meaning": "the heat absorbed along a reversible path",
+      "unit": "J",
+      "section": "20.3"
+    },
+    {
+      "sym": "w",
+      "type": "work",
+      "meaning": "the work done on the gas",
+      "unit": "J",
+      "section": "20.3"
+    },
+    {
+      "sym": "C_V",
+      "type": "heat-capacity",
+      "meaning": "the heat capacity at constant volume of the gas",
+      "unit": "J/K",
+      "section": "20.3"
+    },
+    {
+      "sym": "C_v",
+      "type": "heat-capacity",
+      "meaning": "the heat capacity at constant volume, also written C_V",
+      "unit": "J/K",
+      "section": "20.3"
+    },
+    {
+      "sym": "T",
+      "type": "temperature",
+      "meaning": "the temperature of the isotherm",
+      "unit": "K",
+      "section": "20.3"
+    },
+    {
+      "sym": "T_1",
+      "type": "temperature",
+      "meaning": "the temperature of the isotherm A, where the adiabat starts and the isochore ends",
+      "unit": "K",
+      "section": "20.3"
+    },
+    {
+      "sym": "T_2",
+      "type": "temperature",
+      "meaning": "the temperature at the end of the adiabat B",
+      "unit": "K",
+      "section": "20.3"
+    },
+    {
+      "sym": "V_1",
+      "type": "volume",
+      "meaning": "the volume where the paths start",
+      "unit": "m³",
+      "section": "20.3",
+      "redefines": true
+    },
+    {
+      "sym": "V_2",
+      "type": "volume",
+      "meaning": "the volume where the paths end",
+      "unit": "m³",
+      "section": "20.3",
+      "redefines": true
+    },
+    {
+      "sym": "n_mol",
+      "type": "amount",
+      "meaning": "the amount of gas in moles",
+      "unit": "mol",
+      "section": "20.3"
+    },
+    {
+      "sym": "R",
+      "meaning": "the molar gas constant",
+      "unit": "J K⁻¹ mol⁻¹",
+      "section": "20.3"
+    },
+    {
+      "sym": "S_A",
+      "type": "entropy",
+      "meaning": "the entropy along the isotherm A, whose change is ΔS_A",
+      "unit": "J/K",
+      "section": "20.3"
+    },
+    {
+      "sym": "S_BC",
+      "type": "entropy",
+      "meaning": "the entropy along the adiabat B and isochore C, whose change is ΔS_{B+C}",
+      "unit": "J/K",
+      "section": "20.3"
+    },
+    {
+      "sym": "U_A",
+      "type": "energy",
+      "meaning": "the internal energy of block A",
+      "unit": "J",
+      "section": "20.4"
+    },
+    {
+      "sym": "U_B",
+      "type": "energy",
+      "meaning": "the internal energy of block B",
+      "unit": "J",
+      "section": "20.4"
+    },
+    {
+      "sym": "q_A",
+      "type": "heat",
+      "meaning": "the heat that flows into block A",
+      "unit": "J",
+      "section": "20.4"
+    },
+    {
+      "sym": "q_rev",
+      "type": "heat",
+      "meaning": "the heat absorbed along a reversible path",
+      "unit": "J",
+      "section": "20.4"
+    },
+    {
+      "sym": "q_irrev",
+      "type": "heat",
+      "meaning": "the heat exchanged irreversibly",
+      "unit": "J",
+      "section": "20.4"
+    },
+    {
+      "sym": "q",
+      "type": "heat",
+      "meaning": "the heat exchanged with the surroundings",
+      "unit": "J",
+      "section": "20.4"
+    },
+    {
+      "sym": "S_ent",
+      "concept": "entropy",
+      "meaning": "the entropy of the isolated system or of the system",
+      "unit": "J/K",
+      "section": "20.4"
+    },
+    {
+      "sym": "T",
+      "type": "temperature",
+      "meaning": "the temperature at which the heat is exchanged",
+      "unit": "K",
+      "section": "20.4"
+    },
+    {
+      "sym": "T_A",
+      "type": "temperature",
+      "meaning": "the temperature of block A",
+      "unit": "K",
+      "section": "20.4"
+    },
+    {
+      "sym": "T_B",
+      "type": "temperature",
+      "meaning": "the temperature of block B",
+      "unit": "K",
+      "section": "20.4"
+    },
+    {
+      "sym": "U",
+      "type": "energy",
+      "meaning": "the internal energy",
+      "unit": "J",
+      "section": "20.4"
+    },
+    {
+      "sym": "C_V",
+      "type": "heat-capacity",
+      "meaning": "the heat capacity at constant volume of each block",
+      "unit": "J/K",
+      "section": "20.4"
+    },
+    {
+      "sym": "S_prod",
+      "type": "entropy",
+      "meaning": "the entropy produced inside the system",
+      "unit": "J/K",
+      "section": "20.4"
+    },
+    {
+      "sym": "S_exch",
+      "type": "entropy",
+      "meaning": "the entropy exchanged with the surroundings along with heat",
+      "unit": "J/K",
+      "section": "20.4"
+    },
+    {
+      "sym": "S_ent",
+      "concept": "entropy",
+      "meaning": "the entropy",
+      "unit": "J/K",
+      "section": "20.5"
+    },
+    {
+      "sym": "k_B",
+      "meaning": "Boltzmann's constant, written k_b and k",
+      "unit": "J/K",
+      "section": "20.5",
+      "concept": "boltzmann-constant"
+    },
+    {
+      "sym": "k",
+      "meaning": "Boltzmann's constant, written k",
+      "unit": "J/K",
+      "section": "20.5",
+      "concept": "boltzmann-constant"
+    },
+    {
+      "sym": "W",
+      "meaning": "the number of available microstates in a macrostate",
+      "section": "20.5"
+    },
+    {
+      "sym": "A",
+      "meaning": "the total number of systems in the ensemble",
+      "section": "20.5"
+    },
+    {
+      "sym": "a_j",
+      "meaning": "the number of systems of the ensemble in state j",
+      "section": "20.5"
+    },
+    {
+      "sym": "n_mol",
+      "type": "amount",
+      "meaning": "the amount of carbon monoxide in moles",
+      "unit": "mol",
+      "section": "20.5"
+    },
+    {
+      "sym": "S_ent",
+      "concept": "entropy",
+      "meaning": "the entropy of the gas",
+      "unit": "J/K",
+      "section": "20.6"
+    },
+    {
+      "sym": "S_sys",
+      "type": "entropy",
+      "meaning": "the entropy of the system",
+      "unit": "J/K",
+      "section": "20.6"
+    },
+    {
+      "sym": "S_surr",
+      "type": "entropy",
+      "meaning": "the entropy of the surroundings",
+      "unit": "J/K",
+      "section": "20.6"
+    },
+    {
+      "sym": "S_total",
+      "type": "entropy",
+      "meaning": "the entropy of the system and its surroundings together",
+      "unit": "J/K",
+      "section": "20.6"
+    },
+    {
+      "sym": "V_1",
+      "type": "volume",
+      "meaning": "the volume before the expansion",
+      "unit": "m³",
+      "section": "20.6"
+    },
+    {
+      "sym": "V_2",
+      "type": "volume",
+      "meaning": "the volume after the expansion",
+      "unit": "m³",
+      "section": "20.6"
+    },
+    {
+      "sym": "P_ext",
+      "type": "pressure",
+      "meaning": "the external pressure the piston pushes against",
+      "unit": "Pa",
+      "section": "20.6"
+    },
+    {
+      "sym": "V",
+      "type": "volume",
+      "meaning": "the volume of the gas",
+      "unit": "m³",
+      "section": "20.6"
+    },
+    {
+      "sym": "P_1",
+      "type": "pressure",
+      "meaning": "the pressure before the expansion",
+      "unit": "Pa",
+      "section": "20.6"
+    },
+    {
+      "sym": "P_2",
+      "type": "pressure",
+      "meaning": "the pressure after the expansion",
+      "unit": "Pa",
+      "section": "20.6"
+    },
+    {
+      "sym": "T",
+      "type": "temperature",
+      "meaning": "the temperature, constant in both expansions",
+      "unit": "K",
+      "section": "20.6"
+    },
+    {
+      "sym": "q_irrev",
+      "type": "heat",
+      "meaning": "the heat absorbed in the irreversible expansion, zero",
+      "unit": "J",
+      "section": "20.6"
+    },
+    {
+      "sym": "q_rev",
+      "type": "heat",
+      "meaning": "the heat absorbed in the reversible isothermal expansion",
+      "unit": "J",
+      "section": "20.6"
+    },
+    {
+      "sym": "w_rev",
+      "type": "work",
+      "meaning": "the work done on the gas in the reversible expansion",
+      "unit": "J",
+      "section": "20.6"
+    },
+    {
+      "sym": "q",
+      "type": "heat",
+      "meaning": "the heat exchanged",
+      "unit": "J",
+      "section": "20.6"
+    },
+    {
+      "sym": "n_mol",
+      "type": "amount",
+      "meaning": "the amount of gas in moles",
+      "unit": "mol",
+      "section": "20.6"
+    },
+    {
+      "sym": "R",
+      "meaning": "the molar gas constant",
+      "unit": "J K⁻¹ mol⁻¹",
+      "section": "20.6"
+    },
+    {
+      "sym": "S_A",
+      "type": "entropy",
+      "meaning": "the entropy of gas A, whose change is ΔS_A",
+      "unit": "J/K",
+      "section": "20.6"
+    },
+    {
+      "sym": "S_B",
+      "type": "entropy",
+      "meaning": "the entropy of gas B, whose change is ΔS_B",
+      "unit": "J/K",
+      "section": "20.6"
+    },
+    {
+      "sym": "V_A",
+      "type": "volume",
+      "meaning": "the volume gas A first fills",
+      "unit": "m³",
+      "section": "20.6"
+    },
+    {
+      "sym": "V_B",
+      "type": "volume",
+      "meaning": "the volume gas B first fills",
+      "unit": "m³",
+      "section": "20.6"
+    },
+    {
+      "sym": "V_tot",
+      "type": "volume",
+      "meaning": "the total volume of the two gases",
+      "unit": "m³",
+      "section": "20.6"
+    },
+    {
+      "sym": "n_A",
+      "type": "amount",
+      "meaning": "the amount of gas A",
+      "unit": "mol",
+      "section": "20.6"
+    },
+    {
+      "sym": "n_B",
+      "type": "amount",
+      "meaning": "the amount of gas B",
+      "unit": "mol",
+      "section": "20.6"
+    },
+    {
+      "sym": "n_tot",
+      "type": "amount",
+      "meaning": "the total amount of gas",
+      "unit": "mol",
+      "section": "20.6"
+    },
+    {
+      "sym": "chi_A",
+      "meaning": "the mole fraction of gas A",
+      "section": "20.6",
+      "redefines": true
+    },
+    {
+      "sym": "chi_B",
+      "meaning": "the mole fraction of gas B",
+      "section": "20.6",
+      "redefines": true
+    },
+    {
+      "sym": "chi_i",
+      "meaning": "the mole fraction of gas i",
+      "section": "20.6",
+      "redefines": true
+    },
+    {
+      "sym": "S_bar",
+      "type": "entropy",
+      "meaning": "the molar entropy, whose change on mixing is ΔS̄",
+      "unit": "J K⁻¹ mol⁻¹",
+      "section": "20.6"
+    },
+    {
+      "sym": "x",
+      "meaning": "a positive number in the logarithm rule",
+      "section": "20.6",
+      "redefines": true
+    },
+    {
+      "sym": "y",
+      "meaning": "a positive number in the logarithm rule",
+      "section": "20.6",
+      "redefines": true
+    },
+    {
+      "sym": "U_1",
+      "type": "energy",
+      "meaning": "the internal energy, whose change in step 1 is ΔU₁",
+      "unit": "J",
+      "section": "20.7"
+    },
+    {
+      "sym": "U_2",
+      "type": "energy",
+      "meaning": "the internal energy, whose change in step 2 is ΔU₂",
+      "unit": "J",
+      "section": "20.7",
+      "redefines": true
+    },
+    {
+      "sym": "U_3",
+      "type": "energy",
+      "meaning": "the internal energy, whose change in step 3 is ΔU₃",
+      "unit": "J",
+      "section": "20.7",
+      "redefines": true
+    },
+    {
+      "sym": "U_4",
+      "type": "energy",
+      "meaning": "the internal energy, whose change in step 4 is ΔU₄",
+      "unit": "J",
+      "section": "20.7"
+    },
+    {
+      "sym": "U_cycle",
+      "type": "energy",
+      "meaning": "the internal energy over the cycle, whose change is zero",
+      "unit": "J",
+      "section": "20.7"
+    },
+    {
+      "sym": "U",
+      "type": "energy",
+      "meaning": "the internal energy of the gas",
+      "unit": "J",
+      "section": "20.7"
+    },
+    {
+      "sym": "w_1",
+      "type": "work",
+      "meaning": "the work done on the gas in step 1, the isothermal expansion at T_h",
+      "unit": "J",
+      "section": "20.7"
+    },
+    {
+      "sym": "w_2",
+      "type": "work",
+      "meaning": "the work done on the gas in step 2, the adiabatic cooling",
+      "unit": "J",
+      "section": "20.7"
+    },
+    {
+      "sym": "w_3",
+      "type": "work",
+      "meaning": "the work done on the gas in step 3, the isothermal compression at T_c",
+      "unit": "J",
+      "section": "20.7"
+    },
+    {
+      "sym": "w_4",
+      "type": "work",
+      "meaning": "the work done on the gas in step 4, the adiabatic heating",
+      "unit": "J",
+      "section": "20.7"
+    },
+    {
+      "sym": "q_h",
+      "type": "heat",
+      "meaning": "the heat absorbed from the hot reservoir at T_h",
+      "unit": "J",
+      "section": "20.7"
+    },
+    {
+      "sym": "q_c",
+      "type": "heat",
+      "meaning": "the heat absorbed from the cold reservoir at T_c, negative in an engine",
+      "unit": "J",
+      "section": "20.7",
+      "redefines": true
+    },
+    {
+      "sym": "T_h",
+      "type": "temperature",
+      "meaning": "the temperature of the hot reservoir",
+      "unit": "K",
+      "section": "20.7"
+    },
+    {
+      "sym": "T_c",
+      "type": "temperature",
+      "meaning": "the temperature of the cold reservoir",
+      "unit": "K",
+      "section": "20.7",
+      "redefines": true
+    },
+    {
+      "sym": "T_cold",
+      "type": "temperature",
+      "meaning": "the temperature of the cold side, T_c",
+      "unit": "K",
+      "section": "20.7"
+    },
+    {
+      "sym": "w_hot",
+      "type": "work",
+      "meaning": "the work of the step at the hot temperature",
+      "unit": "J",
+      "section": "20.7"
+    },
+    {
+      "sym": "w_cold",
+      "type": "work",
+      "meaning": "the work of the step at the cold temperature",
+      "unit": "J",
+      "section": "20.7"
+    },
+    {
+      "sym": "w_cycle",
+      "type": "work",
+      "meaning": "the work done on the gas over the whole cycle",
+      "unit": "J",
+      "section": "20.7"
+    },
+    {
+      "sym": "eta",
+      "meaning": "the efficiency of the heat engine, the work out per heat taken in",
+      "section": "20.7"
+    },
+    {
+      "sym": "C_V_bar",
+      "type": "heat-capacity",
+      "meaning": "the molar heat capacity at constant volume",
+      "unit": "J K⁻¹ mol⁻¹",
+      "section": "20.7"
+    },
+    {
+      "sym": "C_V",
+      "type": "heat-capacity",
+      "meaning": "the heat capacity at constant volume",
+      "unit": "J/K",
+      "section": "20.7"
+    },
+    {
+      "sym": "T",
+      "type": "temperature",
+      "meaning": "the temperature of the gas",
+      "unit": "K",
+      "section": "20.7"
+    },
+    {
+      "sym": "R",
+      "meaning": "the molar gas constant",
+      "unit": "J K⁻¹ mol⁻¹",
+      "section": "20.7"
+    },
+    {
+      "sym": "V_A",
+      "type": "volume",
+      "meaning": "the volume at corner A of the cycle",
+      "unit": "m³",
+      "section": "20.7"
+    },
+    {
+      "sym": "V_B",
+      "type": "volume",
+      "meaning": "the volume at corner B of the cycle",
+      "unit": "m³",
+      "section": "20.7"
+    },
+    {
+      "sym": "V_C",
+      "type": "volume",
+      "meaning": "the volume at corner C of the cycle",
+      "unit": "m³",
+      "section": "20.7"
+    },
+    {
+      "sym": "V_D",
+      "type": "volume",
+      "meaning": "the volume at corner D of the cycle",
+      "unit": "m³",
+      "section": "20.7"
+    },
+    {
+      "sym": "S_ent",
+      "concept": "entropy",
+      "meaning": "the entropy of the gas",
+      "unit": "J/K",
+      "section": "20.7"
+    },
+    {
+      "sym": "w",
+      "type": "work",
+      "meaning": "the work of an isothermal step of the Stirling cycle",
+      "unit": "J",
+      "section": "20.7"
+    },
+    {
+      "sym": "w_h",
+      "type": "work",
+      "meaning": "the work done on the gas in the isothermal expansion at T_h",
+      "unit": "J",
+      "section": "20.7"
+    },
+    {
+      "sym": "w_c",
+      "type": "work",
+      "meaning": "the work done on the gas in the isothermal compression at T_c",
+      "unit": "J",
+      "section": "20.7"
+    },
+    {
+      "sym": "q_1",
+      "type": "heat",
+      "meaning": "the heat absorbed in step 1 of the Stirling cycle, the isothermal expansion, q_h",
+      "unit": "J",
+      "section": "20.7"
+    },
+    {
+      "sym": "q_2",
+      "type": "heat",
+      "meaning": "the heat absorbed in step 2 of the Stirling cycle, the isochoric step 2",
+      "unit": "J",
+      "section": "20.7"
+    },
+    {
+      "sym": "q_3",
+      "type": "heat",
+      "meaning": "the heat absorbed in step 3 of the Stirling cycle, the isothermal compression, q_c",
+      "unit": "J",
+      "section": "20.7"
+    },
+    {
+      "sym": "q_4",
+      "type": "heat",
+      "meaning": "the heat absorbed in step 4 of the Stirling cycle, the isochoric step 4",
+      "unit": "J",
+      "section": "20.7"
+    },
+    {
+      "sym": "S_ent",
+      "concept": "entropy",
+      "meaning": "the entropy of the system",
+      "unit": "J/K",
+      "section": "20.8"
+    },
+    {
+      "sym": "k",
+      "meaning": "Boltzmann's constant, written k",
+      "unit": "J/K",
+      "section": "20.8",
+      "concept": "boltzmann-constant"
+    },
+    {
+      "sym": "W",
+      "meaning": "the number of microstates of the ensemble",
+      "section": "20.8"
+    },
+    {
+      "sym": "A",
+      "meaning": "the number of systems in the ensemble",
+      "section": "20.8"
+    },
+    {
+      "sym": "a_j",
+      "meaning": "the number of systems of the ensemble in state j",
+      "section": "20.8"
+    },
+    {
+      "sym": "S_ensemble",
+      "type": "entropy",
+      "meaning": "the entropy of the ensemble",
+      "unit": "J/K",
+      "section": "20.8"
+    },
+    {
+      "sym": "S_system",
+      "type": "entropy",
+      "meaning": "the entropy of one system, the ensemble's divided by A",
+      "unit": "J/K",
+      "section": "20.8"
+    },
+    {
+      "sym": "p_j",
+      "meaning": "the probability of finding the system in state j",
+      "section": "20.8"
+    },
+    {
+      "sym": "beta",
+      "meaning": "1/kT",
+      "unit": "J⁻¹",
+      "section": "20.8"
+    },
+    {
+      "sym": "E_j",
+      "type": "energy",
+      "meaning": "the energy of state j of the system",
+      "unit": "J",
+      "section": "20.8"
+    },
+    {
+      "sym": "Q_sys",
+      "type": "partition-function",
+      "meaning": "the canonical partition function of the system",
+      "section": "20.8"
+    },
+    {
+      "sym": "T",
+      "type": "temperature",
+      "meaning": "the temperature",
+      "unit": "K",
+      "section": "20.8"
+    },
+    {
+      "sym": "U",
+      "type": "energy",
+      "meaning": "the internal energy, the average energy of the system",
+      "unit": "J",
+      "section": "20.8"
+    },
+    {
+      "sym": "S_ensemble",
+      "type": "entropy",
+      "meaning": "the entropy of the ensemble",
+      "unit": "J/K",
+      "section": "20.9"
+    },
+    {
+      "sym": "S_system",
+      "type": "entropy",
+      "meaning": "the entropy of one system",
+      "unit": "J/K",
+      "section": "20.9"
+    },
+    {
+      "sym": "S_ent",
+      "concept": "entropy",
+      "meaning": "the entropy of the system, the subscript dropped",
+      "unit": "J/K",
+      "section": "20.9"
+    },
+    {
+      "sym": "k_B",
+      "meaning": "Boltzmann's constant",
+      "unit": "J/K",
+      "section": "20.9",
+      "concept": "boltzmann-constant"
+    },
+    {
+      "sym": "W",
+      "meaning": "the number of microstates of the ensemble",
+      "section": "20.9"
+    },
+    {
+      "sym": "A",
+      "meaning": "the number of systems in the ensemble",
+      "section": "20.9"
+    },
+    {
+      "sym": "a_j",
+      "meaning": "the number of systems of the ensemble in state j",
+      "section": "20.9"
+    },
+    {
+      "sym": "p_j",
+      "meaning": "the probability of finding a system in state j",
+      "section": "20.9"
+    },
+    {
+      "sym": "q_rev",
+      "type": "heat",
+      "meaning": "the heat absorbed along a reversible path",
+      "unit": "J",
+      "section": "20.9"
+    },
+    {
+      "sym": "T",
+      "type": "temperature",
+      "meaning": "the temperature",
+      "unit": "K",
+      "section": "20.9"
+    }
+  ]
+}

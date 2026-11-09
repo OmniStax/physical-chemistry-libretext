@@ -1180,3 +1180,17 @@ pages worse; the best full fix moves temperature to green and wavelength to indi
 of new close pairs (charge~wavelength 0.061 dark, partition-function~wavefunction 0.039). The
 book's 36 types fill its 36-colour palette, so this needs `--reshuffle` or fewer types on a
 page: the owner's call. 33 other pairs stay under 0.12 (worst dipole-moment~wavenumber 0.054).
+
+## Chapter 21 prep · 2026-11-08
+
+Prep only, no section built. Fetched Chapter 21's 4 images into `media/ch21/`. Converted the
+landing page (`intro/`, no text: no intro page or record, Chapter 4's precedent), 21.1–21.9 and
+21.E (one unkeyed problem, routed to 21.1); wrote `ch21/exploration.md`, `ch21/config.md` (agreed on
+Chapter 1's terms), `ch21/chapter.json` (9 sections, 70 variables) and merged `ch21/book-rows.json`:
+no new type, 19 symbols (3 with macros), 29 concepts, 39 edges (Hasse-checked, 1 redundant
+removed), 21 forms. Entropy and enthalpy types, the thermodynamic base symbols (S's meaning, H, G,
+C_P, q_rev, w_rev …) and the edges into Chapters 19, 20 and 22 are left to those chapters' merges
+and this chapter's pass (listed in `exploration.md`). Drafts made for 21.1–21.9 (182 maths spans,
+KaTeX strict, no error); no tool changed. Flags, unchecked: CO's experimental residual entropy
+4.4 J/(mol K) (often quoted as 4.6) and S°(N₂) ≈ 191.6 J/(mol K), both from memory; the noble-gas
+table (21.7) checked against Sackur–Tetrode.

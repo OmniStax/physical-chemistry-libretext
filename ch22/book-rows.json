@@ -1,0 +1,900 @@
+{
+ "types": [],
+ "symbols": [
+  {
+   "sym": "G",
+   "latex": "G",
+   "macro": "\\kG"
+  },
+  {
+   "sym": "G_bar",
+   "latex": "\\bar{G}",
+   "macro": "\\kGbar"
+  },
+  {
+   "sym": "G_bar_i",
+   "latex": "\\bar{G}_i",
+   "macro": "\\kGbari"
+  },
+  {
+   "sym": "G_molar",
+   "latex": "G_{molar}",
+   "macro": "\\kGmolar"
+  },
+  {
+   "sym": "G_std_molar",
+   "latex": "G^o_{molar}",
+   "macro": "\\kGstdmolar"
+  },
+  {
+   "sym": "A_molar",
+   "latex": "A_{molar}",
+   "macro": "\\kAmolar"
+  },
+  {
+   "sym": "f",
+   "latex": "f",
+   "macro": "\\kf"
+  },
+  {
+   "sym": "mu_bar",
+   "latex": "\\bar{\\mu}",
+   "macro": "\\kmubar"
+  },
+  {
+   "sym": "mu_bar_std",
+   "latex": "\\bar{\\mu}^\\circ",
+   "macro": "\\kmubarstd"
+  },
+  {
+   "sym": "mu_bar_i",
+   "latex": "\\bar{\\mu}_i",
+   "macro": "\\kmubari"
+  },
+  {
+   "sym": "P_std",
+   "latex": "P^\\circ",
+   "macro": "\\kPstd"
+  },
+  {
+   "sym": "P_1",
+   "latex": "P_1",
+   "macro": "\\kPone"
+  },
+  {
+   "sym": "P_2",
+   "latex": "P_2",
+   "macro": "\\kPtwo"
+  },
+  {
+   "sym": "P_initial",
+   "latex": "P_{initial}",
+   "macro": "\\kPinitial"
+  },
+  {
+   "sym": "P_final",
+   "latex": "P_{final}",
+   "macro": "\\kPfinal"
+  },
+  {
+   "sym": "T_fus",
+   "latex": "T_{fus}",
+   "macro": "\\kTfus"
+  },
+  {
+   "sym": "T_boil",
+   "latex": "T_{boil}",
+   "macro": "\\kTboil"
+  },
+  {
+   "sym": "alpha_V",
+   "latex": "\\alpha"
+  },
+  {
+   "sym": "kappa_T",
+   "latex": "\\kappa_T"
+  },
+  {
+   "sym": "y_1",
+   "latex": "y_1"
+  },
+  {
+   "sym": "y_2",
+   "latex": "y_2"
+  }
+ ],
+ "concepts": [
+  {
+   "id": "natural-variables",
+   "kind": "definition",
+   "section": "22.1",
+   "name": "Natural variables",
+   "statement": "The variables in which a state function's fundamental equation writes it: S and V for U, S and P for H, V and T for A, P and T for G. They are the convenient variables to describe the function."
+  },
+  {
+   "id": "helmholtz-energy",
+   "kind": "definition",
+   "section": "22.1",
+   "name": "Helmholtz energy",
+   "symbol": "A",
+   "type": "energy",
+   "statement": "The state function A ≡ U − TS, also called the Helmholtz free energy.",
+   "forms": [
+    {
+     "id": "helmholtz-definition",
+     "latex": "\\kA \\equiv \\kU - \\kT S"
+    }
+   ]
+  },
+  {
+   "id": "helmholtz-criterion",
+   "kind": "result",
+   "section": "22.1",
+   "name": "Helmholtz energy decreases in a spontaneous change at constant T and V",
+   "statement": "At constant temperature and volume dA = dU − TdS ≤ 0: A decreases in a spontaneous change, whether or not the system is isolated, and is constant once equilibrium is reached.",
+   "forms": [
+    {
+     "id": "helmholtz-criterion-inequality",
+     "latex": "d\\kA = d\\kU - \\kT dS \\le 0"
+    }
+   ]
+  },
+  {
+   "id": "helmholtz-maximum-work",
+   "kind": "result",
+   "section": "22.1",
+   "name": "Helmholtz energy as the maximum work",
+   "statement": "At constant temperature ΔA = ΔU − q_rev = w_rev, the maximal work a system can produce; at constant volume this is work other than volume work.",
+   "forms": [
+    {
+     "id": "helmholtz-work",
+     "latex": "\\Delta \\kA = \\Delta \\kU - \\kqrev = \\kwrev"
+    }
+   ]
+  },
+  {
+   "id": "helmholtz-energy-of-mixing",
+   "kind": "result",
+   "section": "22.1",
+   "name": "Helmholtz energy of mixing two ideal gases",
+   "statement": "Mixing two ideal gases at constant temperature and total volume has ΔU = 0, so ΔA_molar = RT(y₁ ln y₁ + y₂ ln y₂), which is negative because the mole fractions are below one.",
+   "forms": [
+    {
+     "id": "helmholtz-mixing",
+     "latex": "\\Delta \\kAmolar = \\kR\\kT (y_1\\ln y_1+y_2\\ln y_2)"
+    }
+   ]
+  },
+  {
+   "id": "helmholtz-fundamental-equation",
+   "kind": "result",
+   "section": "22.1",
+   "name": "Fundamental equation for A",
+   "statement": "dA = −PdV − SdT, so the natural variables of A are V and T.",
+   "forms": [
+    {
+     "id": "da-fundamental",
+     "latex": "d\\kA = -\\kP d\\kV - S d\\kT"
+    }
+   ]
+  },
+  {
+   "id": "gibbs-energy",
+   "kind": "definition",
+   "section": "22.2",
+   "name": "Gibbs energy",
+   "symbol": "G",
+   "type": "energy",
+   "statement": "The state function G ≡ H − TS = U + PV − TS = A + PV, the counterpart of A for changes at constant pressure.",
+   "forms": [
+    {
+     "id": "gibbs-definition",
+     "latex": "\\kG \\equiv \\kHenth - \\kT S"
+    },
+    {
+     "id": "gibbs-from-helmholtz",
+     "latex": "\\kG = \\kA + \\kP\\kV"
+    }
+   ]
+  },
+  {
+   "id": "gibbs-criterion",
+   "kind": "result",
+   "section": "22.2",
+   "name": "Gibbs energy decreases in a spontaneous change at constant T and P",
+   "statement": "At constant temperature and pressure dG ≤ 0, and between two states ΔG = ΔH − TΔS ≤ 0: G decreases in a spontaneous change and is constant at equilibrium (ΔG = 0); a process with ΔG > 0 does not occur spontaneously.",
+   "forms": [
+    {
+     "id": "gibbs-criterion-delta",
+     "latex": "\\Delta \\kG = \\kDeltaH - \\kT\\Delta S \\le 0"
+    },
+    {
+     "id": "gibbs-criterion-differential",
+     "latex": "d\\kG \\le 0"
+    }
+   ]
+  },
+  {
+   "id": "coupled-processes",
+   "kind": "idea",
+   "section": "22.2",
+   "name": "Driving a process by coupling",
+   "statement": "A process with positive ΔG can be made to occur only when it is coupled with a process that has a negative ΔG."
+  },
+  {
+   "id": "spontaneity-temperature",
+   "kind": "result",
+   "section": "22.2",
+   "name": "Temperature can reverse the spontaneous direction",
+   "statement": "Because the entropy term of ΔG = ΔH − TΔS carries T, the spontaneous direction of a process can change with temperature: NH₃(g) + HCl(g) → NH₄Cl(s), with ΔH = −176.2 kJ and ΔS = −0.285 kJ/K, is spontaneous at 298 K and runs in reverse above 618 K."
+  },
+  {
+   "id": "gibbs-maximum-non-pv-work",
+   "kind": "result",
+   "section": "22.2",
+   "name": "Gibbs energy as the maximum non-PV work",
+   "statement": "At constant T and P, dG = δw_rev − δw_volume: ΔG is the maximal reversible, isobaric, isothermal work other than PV work that a spontaneous change can perform.",
+   "forms": [
+    {
+     "id": "gibbs-non-pv-work",
+     "latex": "d\\kG = \\delta \\kwrev - \\delta w_{volume}"
+    }
+   ]
+  },
+  {
+   "id": "gibbs-fundamental-equation",
+   "kind": "result",
+   "section": "22.2",
+   "name": "Fundamental equation for G",
+   "statement": "dG = VdP − SdT, so the natural variables of G are P and T, those of most laboratory experiments.",
+   "forms": [
+    {
+     "id": "dg-fundamental",
+     "latex": "d\\kG = \\kV d\\kP - S d\\kT"
+    }
+   ]
+  },
+  {
+   "id": "internal-energy-first-derivatives",
+   "kind": "result",
+   "section": "22.3",
+   "name": "First derivatives of U",
+   "statement": "Comparing dU = TdS − pdV with the total differential of U(S, V) gives (∂U/∂S)_V = T and (∂U/∂V)_S = −p.",
+   "forms": [
+    {
+     "id": "du-ds",
+     "latex": "\\left( \\dfrac{\\partial \\kU}{\\partial S} \\right)_{\\kV} = \\kT"
+    },
+    {
+     "id": "du-dv",
+     "latex": "\\left( \\dfrac{\\partial \\kU}{\\partial \\kV} \\right)_S = -\\kp"
+    }
+   ]
+  },
+  {
+   "id": "euler-reciprocity",
+   "kind": "result",
+   "section": "22.3",
+   "name": "Euler relation for an exact differential",
+   "statement": "For an exact differential the two mixed second partial derivatives are equal: differentiating the coefficient of one variable by the other gives the same result either way round."
+  },
+  {
+   "id": "maxwell-relations",
+   "kind": "definition",
+   "section": "22.3",
+   "name": "Maxwell relations",
+   "statement": "Equalities between partial derivatives of T, S, p and V that follow from the Euler relation applied to dU, dH, dA and dG; they let a convenient derivative, perhaps one in α and κ_T, stand in for an inconvenient one."
+  },
+  {
+   "id": "maxwell-relation-u",
+   "kind": "result",
+   "section": "22.3",
+   "name": "Maxwell relation from U",
+   "statement": "(∂T/∂V)_S = −(∂p/∂S)_V.",
+   "forms": [
+    {
+     "id": "maxwell-u",
+     "latex": "\\left( \\dfrac{\\partial \\kT}{\\partial \\kV} \\right)_S = - \\left( \\dfrac{\\partial \\kp}{\\partial S} \\right)_{\\kV}"
+    }
+   ]
+  },
+  {
+   "id": "enthalpy-first-derivatives",
+   "kind": "result",
+   "section": "22.3",
+   "name": "First derivatives of H",
+   "statement": "(∂H/∂S)_p = T and (∂H/∂p)_S = V; so (∂U/∂S)_V = (∂H/∂S)_p, both equal to T.",
+   "forms": [
+    {
+     "id": "dh-ds",
+     "latex": "\\left( \\dfrac{\\partial \\kHenth}{\\partial S} \\right)_{\\kp}= \\kT"
+    },
+    {
+     "id": "dh-dp",
+     "latex": "\\left( \\dfrac{\\partial \\kHenth}{\\partial \\kp} \\right)_S = \\kV"
+    }
+   ]
+  },
+  {
+   "id": "maxwell-relation-h",
+   "kind": "result",
+   "section": "22.3",
+   "name": "Maxwell relation from H",
+   "statement": "(∂T/∂p)_S = (∂V/∂S)_p.",
+   "forms": [
+    {
+     "id": "maxwell-h",
+     "latex": "\\left( \\dfrac{\\partial \\kT}{\\partial \\kp} \\right)_S = \\left( \\dfrac{\\partial \\kV}{\\partial S} \\right)_{\\kp}"
+    }
+   ]
+  },
+  {
+   "id": "maxwell-relation-a",
+   "kind": "result",
+   "section": "22.3",
+   "name": "Maxwell relation from A",
+   "statement": "(∂p/∂T)_V = (∂S/∂V)_T.",
+   "forms": [
+    {
+     "id": "maxwell-a",
+     "latex": "\\left( \\dfrac{\\partial \\kp}{\\partial \\kT} \\right)_{\\kV} = \\left( \\dfrac{\\partial S}{\\partial \\kV} \\right)_{\\kT}"
+    }
+   ]
+  },
+  {
+   "id": "maxwell-relation-g",
+   "kind": "result",
+   "section": "22.3",
+   "name": "Maxwell relation from G",
+   "statement": "(∂V/∂T)_p = −(∂S/∂p)_T.",
+   "forms": [
+    {
+     "id": "maxwell-g",
+     "latex": "\\left( \\dfrac{\\partial \\kV}{\\partial \\kT} \\right)_{\\kp} = - \\left( \\dfrac{\\partial S}{\\partial \\kp} \\right)_{\\kT}"
+    }
+   ]
+  },
+  {
+   "id": "thermal-expansion-coefficient",
+   "kind": "definition",
+   "section": "22.3",
+   "name": "Thermal expansion coefficient",
+   "symbol": "alpha_V",
+   "statement": "α = (1/V)(∂V/∂T)_p, the fractional change of volume with temperature at constant pressure."
+  },
+  {
+   "id": "isothermal-compressibility",
+   "kind": "definition",
+   "section": "22.3",
+   "name": "Isothermal compressibility",
+   "symbol": "kappa_T",
+   "statement": "κ_T = −(1/V)(∂V/∂p)_T, the fractional decrease of volume with pressure at constant temperature; it is small for solids."
+  },
+  {
+   "id": "pressure-coefficient-alpha-kappa",
+   "kind": "result",
+   "section": "22.3",
+   "name": "(∂p/∂T)_V from α and κ_T",
+   "statement": "(∂p/∂T)_V = α/κ_T.",
+   "forms": [
+    {
+     "id": "dp-dt-alpha-kappa",
+     "latex": "\\left( \\dfrac{\\partial \\kp}{\\partial \\kT} \\right)_{\\kV} = \\dfrac{\\alpha}{\\kappa_T}"
+    }
+   ]
+  },
+  {
+   "id": "thermodynamic-equation-of-state",
+   "kind": "result",
+   "section": "22.3",
+   "name": "Thermodynamic equation of state",
+   "statement": "(∂U/∂V)_T = T(∂p/∂T)_V − p = Tα/κ_T − p, from dU = TdS − pdV and the Maxwell relation from A (Example 22.3.1).",
+   "forms": [
+    {
+     "id": "du-dv-t",
+     "latex": "\\left( \\dfrac{\\partial \\kU}{\\partial \\kV} \\right)_{\\kT} = \\kT \\left( \\dfrac{\\partial \\kp}{\\partial \\kT} \\right)_{\\kV} -\\kp"
+    },
+    {
+     "id": "du-dv-alpha-kappa",
+     "latex": "\\left( \\dfrac{\\partial \\kU}{\\partial \\kV} \\right)_{\\kT} = \\kT\\dfrac{\\alpha}{\\kappa_T} - \\kp"
+    }
+   ]
+  },
+  {
+   "id": "gibbs-first-derivatives",
+   "kind": "result",
+   "section": "22.4",
+   "name": "First derivatives of G",
+   "statement": "(∂G/∂T)_P = −S and (∂G/∂P)_T = V: entropy and volume are first-order derivatives of G.",
+   "forms": [
+    {
+     "id": "dg-dt",
+     "latex": "\\left( \\dfrac{\\partial \\kG}{\\partial \\kT} \\right)_{\\kP} = -S"
+    },
+    {
+     "id": "dg-dp",
+     "latex": "\\left( \\dfrac{\\partial \\kG}{\\partial \\kP} \\right)_{\\kT} = \\kV"
+    }
+   ]
+  },
+  {
+   "id": "enthalpy-pressure-dependence",
+   "kind": "result",
+   "section": "22.4",
+   "name": "Pressure dependence of the enthalpy",
+   "statement": "(∂H/∂P)_T = V − T(∂V/∂T)_P, from G = H − TS, (∂G/∂P)_T = V and the Maxwell relation from G.",
+   "forms": [
+    {
+     "id": "dh-dp-t",
+     "latex": "\\left( \\dfrac{\\partial \\kHenth}{\\partial \\kP}\\right)_{\\kT} = \\kV -\\kT \\left( \\dfrac{\\partial \\kV}{\\partial \\kT}\\right)_{\\kP}"
+    }
+   ]
+  },
+  {
+   "id": "ideal-gas-enthalpy-pressure",
+   "kind": "result",
+   "section": "22.4",
+   "name": "Enthalpy of an ideal gas is independent of pressure",
+   "statement": "For an ideal gas (∂V/∂T)_P = nR/P, so (∂H/∂P)_T = V − T(nR/P) = 0: H does not depend on P.",
+   "forms": [
+    {
+     "id": "ideal-dh-dp",
+     "latex": "\\left( \\dfrac{\\partial \\kHenth}{\\partial \\kP}\\right)_{\\kT} = 0"
+    }
+   ]
+  },
+  {
+   "id": "fundamental-equations",
+   "kind": "idea",
+   "section": "22.5",
+   "name": "The fundamental thermodynamic equations",
+   "statement": "The four differentials dU = TdS − pdV, dH = TdS + Vdp, dG = VdP − SdT and dA = −pdV − SdT write U, H, G and A in their natural variables; they assume only PV work and reversible processes, and are essentially equations of state from which experimental data give G or H."
+  },
+  {
+   "id": "chemical-potential",
+   "kind": "definition",
+   "section": "22.5",
+   "name": "Chemical potential",
+   "symbol": "mu_i",
+   "type": "energy",
+   "statement": "μ_i, the chemical potential of species i: the coefficient of dn_i in the fundamental equations once the amounts of the species may change."
+  },
+  {
+   "id": "fundamental-equations-composition",
+   "kind": "result",
+   "section": "22.5",
+   "name": "Fundamental equations with changing composition",
+   "statement": "When the amounts may change, each fundamental equation gains Σμ_i dn_i: dU = TdS − PdV + Σμ_i dn_i, dH = TdS + VdP + Σμ_i dn_i, dG = −SdT + VdP + Σμ_i dn_i, dA = −SdT − PdV + Σμ_i dn_i.",
+   "forms": [
+    {
+     "id": "dg-composition",
+     "latex": "d\\kG = -S d\\kT + \\kV d\\kp + \\sum_{i=1}^{N}\\kmui dn_i"
+    },
+    {
+     "id": "du-composition",
+     "latex": "d\\kU = \\kT dS - \\kP d\\kV + \\sum_{i=1}^{N}\\kmui dn_i"
+    },
+    {
+     "id": "dh-composition",
+     "latex": "d\\kHenth = \\kT dS + \\kV d\\kP + \\sum_{i=1}^{N}\\kmui dn_i"
+    },
+    {
+     "id": "da-composition",
+     "latex": "d\\kA = -S d\\kT - \\kP d\\kV + \\sum_{i=1}^{N}\\kmui dn_i"
+    }
+   ]
+  },
+  {
+   "id": "helmholtz-first-derivatives",
+   "kind": "result",
+   "section": "22.5",
+   "name": "First derivatives of A",
+   "statement": "(∂A/∂V)_T = −P and (∂A/∂T)_V = −S: pressure and entropy are first-order derivatives of A.",
+   "forms": [
+    {
+     "id": "da-dv",
+     "latex": "\\left( \\dfrac{\\partial \\kA}{\\partial \\kV} \\right)_{\\kT} = -\\kP"
+    },
+    {
+     "id": "da-dt",
+     "latex": "\\left( \\dfrac{\\partial \\kA}{\\partial \\kT} \\right) _{\\kV} = -S"
+    }
+   ]
+  },
+  {
+   "id": "standard-state-gas",
+   "kind": "definition",
+   "section": "22.6",
+   "name": "Standard state of a gas",
+   "statement": "A pure ideal gas at 1 bar, the standard state conditions (SSC) in which data are tabulated, marked with °; the temperature is stated with the data and is not part of the definition."
+  },
+  {
+   "id": "gibbs-ideal-gas-pressure",
+   "kind": "result",
+   "section": "22.7",
+   "name": "Gibbs energy of an ideal gas against pressure",
+   "statement": "For a mole of ideal gas ΔG_molar = RT ln(P₂/P₁), and with P₁ the standard state of 1 bar, G_molar(P) = G°_molar + RT ln(P/1 bar).",
+   "forms": [
+    {
+     "id": "gibbs-molar-pressure-ratio",
+     "latex": "\\Delta \\kGmolar = \\kR\\kT \\ln \\left(\\dfrac{\\kPtwo}{\\kPone}\\right)"
+    },
+    {
+     "id": "gibbs-molar-standard",
+     "latex": "\\kGmolar(\\kP) = \\kGstdmolar + \\kR\\kT \\ln \\left(\\dfrac{\\kP}{1}\\right)"
+    }
+   ]
+  },
+  {
+   "id": "gibbs-solid-pressure",
+   "kind": "result",
+   "section": "22.7",
+   "name": "Gibbs energy of a solid against pressure",
+   "statement": "A solid's volume hardly changes with pressure, so G(P_final) ≈ G(P_initial) + VΔP.",
+   "forms": [
+    {
+     "id": "gibbs-solid",
+     "latex": "\\kG(\\kPfinal) \\approx \\kG(\\kPinitial)+ \\kV\\Delta\\kP"
+    }
+   ]
+  },
+  {
+   "id": "gibbs-helmholtz-equation",
+   "kind": "result",
+   "section": "22.7",
+   "name": "Gibbs–Helmholtz equation",
+   "statement": "(∂(G/T)/∂T)_P = −H/T², and for a process (∂(ΔG/T)/∂T)_P = −ΔH/T²: H is a first-order derivative of G/T.",
+   "forms": [
+    {
+     "id": "gibbs-helmholtz",
+     "latex": "\\left( \\dfrac{\\partial \\kG / \\kT}{\\partial \\kT} \\right)_{\\kP} = - \\dfrac{\\kHenth}{\\kT^2}"
+    },
+    {
+     "id": "gibbs-helmholtz-delta",
+     "latex": "\\left( \\dfrac{\\partial \\Delta \\kG / \\kT}{\\partial \\kT} \\right)_{\\kP} = - \\dfrac{\\kDeltaH}{\\kT^2}"
+    }
+   ]
+  },
+  {
+   "id": "gibbs-temperature-curve",
+   "kind": "result",
+   "section": "22.7",
+   "name": "Gibbs energy as a function of temperature",
+   "statement": "G(T) = H(T) − TS(T) is continuous at phase transitions, where Δ_trs H = T_trs Δ_trs S, and descends with temperature; its slope −S jumps at each transition, so the curve has kinks at the melting and boiling points. It is plotted as G(T) − H(0).",
+   "forms": [
+    {
+     "id": "g-of-t",
+     "latex": "\\kG(\\kT) = \\kHenth(\\kT) - \\kT S(\\kT)"
+    }
+   ]
+  },
+  {
+   "id": "fugacity",
+   "kind": "definition",
+   "section": "22.8",
+   "name": "Fugacity",
+   "symbol": "f",
+   "type": "pressure",
+   "statement": "The property f that Lewis defined in 1905 by dḠ = RT d ln f, extending the ideal-gas expression dḠ = RT d ln P to every substance; for an ideal gas f = P.",
+   "forms": [
+    {
+     "id": "fugacity-definition",
+     "latex": "d\\kGbar = \\kR\\kT\\;d\\ln \\kf"
+    }
+   ]
+  },
+  {
+   "id": "fugacity-coefficient",
+   "kind": "definition",
+   "section": "22.8",
+   "name": "Fugacity coefficient",
+   "symbol": "phi",
+   "statement": "φ = f/P, unity for a gas that behaves ideally, so it measures non-ideality: the closer φ is to one, the closer the gas is to the ideal state.",
+   "forms": [
+    {
+     "id": "fugacity-coefficient-definition",
+     "latex": "\\phi = \\frac{\\kf}{\\kP}"
+    }
+   ]
+  },
+  {
+   "id": "fugacity-zero-pressure-limit",
+   "kind": "result",
+   "section": "22.8",
+   "name": "Fugacity approaches pressure as P → 0",
+   "statement": "In the zero-pressure limit every gas behaves ideally, so dḠ → RT d ln P and f → P."
+  },
+  {
+   "id": "component-fugacity",
+   "kind": "definition",
+   "section": "22.8",
+   "name": "Fugacity of a component of a mixture",
+   "statement": "dḠ_i = RT d ln f_i, where Ḡ_i and f_i are the partial molar Gibbs energy and fugacity of the i-th component; in terms of the chemical potential, dμ̄_i = RT d ln f_i.",
+   "forms": [
+    {
+     "id": "component-fugacity-g",
+     "latex": "d\\kGbari = \\kR\\kT\\;d\\ln \\kfi"
+    },
+    {
+     "id": "component-fugacity-mu",
+     "latex": "d\\kmubari = \\kR\\kT\\;d\\ln \\kfi"
+    }
+   ]
+  },
+  {
+   "id": "chemical-potential-fugacity",
+   "kind": "result",
+   "section": "22.8",
+   "name": "Chemical potential from the fugacity",
+   "statement": "Integrating dμ̄ = RT d ln f from the standard state gives μ̄ = μ̄° + RT ln(f/P°).",
+   "forms": [
+    {
+     "id": "mu-fugacity",
+     "latex": "\\kmubar = \\kmubarstd + \\kR\\kT\\ln\\frac{\\kf}{\\kPstd}"
+    }
+   ]
+  }
+ ],
+ "concept_prereqs": [
+  {
+   "concept": "natural-variables",
+   "prereq": "natural-variables-u"
+  },
+  {
+   "concept": "helmholtz-energy",
+   "prereq": "internal-energy"
+  },
+  {
+   "concept": "helmholtz-criterion",
+   "prereq": "helmholtz-energy"
+  },
+  {
+   "concept": "helmholtz-maximum-work",
+   "prereq": "helmholtz-energy"
+  },
+  {
+   "concept": "helmholtz-maximum-work",
+   "prereq": "reversible-work-extremes"
+  },
+  {
+   "concept": "helmholtz-energy-of-mixing",
+   "prereq": "helmholtz-criterion"
+  },
+  {
+   "concept": "helmholtz-fundamental-equation",
+   "prereq": "helmholtz-energy"
+  },
+  {
+   "concept": "helmholtz-fundamental-equation",
+   "prereq": "natural-variables"
+  },
+  {
+   "concept": "gibbs-energy",
+   "prereq": "helmholtz-energy"
+  },
+  {
+   "concept": "gibbs-energy",
+   "prereq": "enthalpy"
+  },
+  {
+   "concept": "gibbs-criterion",
+   "prereq": "gibbs-energy"
+  },
+  {
+   "concept": "coupled-processes",
+   "prereq": "gibbs-criterion"
+  },
+  {
+   "concept": "spontaneity-temperature",
+   "prereq": "gibbs-criterion"
+  },
+  {
+   "concept": "gibbs-maximum-non-pv-work",
+   "prereq": "gibbs-energy"
+  },
+  {
+   "concept": "gibbs-maximum-non-pv-work",
+   "prereq": "kinds-of-work"
+  },
+  {
+   "concept": "gibbs-fundamental-equation",
+   "prereq": "gibbs-energy"
+  },
+  {
+   "concept": "gibbs-fundamental-equation",
+   "prereq": "natural-variables"
+  },
+  {
+   "concept": "gibbs-fundamental-equation",
+   "prereq": "fundamental-equation-h"
+  },
+  {
+   "concept": "internal-energy-first-derivatives",
+   "prereq": "natural-variables-u"
+  },
+  {
+   "concept": "maxwell-relations",
+   "prereq": "euler-reciprocity"
+  },
+  {
+   "concept": "maxwell-relation-u",
+   "prereq": "maxwell-relations"
+  },
+  {
+   "concept": "maxwell-relation-u",
+   "prereq": "internal-energy-first-derivatives"
+  },
+  {
+   "concept": "enthalpy-first-derivatives",
+   "prereq": "fundamental-equation-h"
+  },
+  {
+   "concept": "enthalpy-first-derivatives",
+   "prereq": "internal-energy-first-derivatives"
+  },
+  {
+   "concept": "maxwell-relation-h",
+   "prereq": "maxwell-relations"
+  },
+  {
+   "concept": "maxwell-relation-h",
+   "prereq": "enthalpy-first-derivatives"
+  },
+  {
+   "concept": "maxwell-relation-a",
+   "prereq": "maxwell-relations"
+  },
+  {
+   "concept": "maxwell-relation-a",
+   "prereq": "helmholtz-fundamental-equation"
+  },
+  {
+   "concept": "maxwell-relation-g",
+   "prereq": "maxwell-relations"
+  },
+  {
+   "concept": "maxwell-relation-g",
+   "prereq": "gibbs-fundamental-equation"
+  },
+  {
+   "concept": "thermal-expansion-coefficient",
+   "prereq": "partial-derivative"
+  },
+  {
+   "concept": "isothermal-compressibility",
+   "prereq": "partial-derivative"
+  },
+  {
+   "concept": "pressure-coefficient-alpha-kappa",
+   "prereq": "thermal-expansion-coefficient"
+  },
+  {
+   "concept": "pressure-coefficient-alpha-kappa",
+   "prereq": "isothermal-compressibility"
+  },
+  {
+   "concept": "thermodynamic-equation-of-state",
+   "prereq": "maxwell-relation-a"
+  },
+  {
+   "concept": "thermodynamic-equation-of-state",
+   "prereq": "pressure-coefficient-alpha-kappa"
+  },
+  {
+   "concept": "gibbs-first-derivatives",
+   "prereq": "gibbs-fundamental-equation"
+  },
+  {
+   "concept": "enthalpy-pressure-dependence",
+   "prereq": "gibbs-first-derivatives"
+  },
+  {
+   "concept": "enthalpy-pressure-dependence",
+   "prereq": "maxwell-relation-g"
+  },
+  {
+   "concept": "ideal-gas-enthalpy-pressure",
+   "prereq": "enthalpy-pressure-dependence"
+  },
+  {
+   "concept": "ideal-gas-enthalpy-pressure",
+   "prereq": "ideal-gas-law"
+  },
+  {
+   "concept": "fundamental-equations",
+   "prereq": "helmholtz-fundamental-equation"
+  },
+  {
+   "concept": "fundamental-equations",
+   "prereq": "gibbs-fundamental-equation"
+  },
+  {
+   "concept": "chemical-potential",
+   "prereq": "fundamental-equations"
+  },
+  {
+   "concept": "fundamental-equations-composition",
+   "prereq": "chemical-potential"
+  },
+  {
+   "concept": "helmholtz-first-derivatives",
+   "prereq": "helmholtz-fundamental-equation"
+  },
+  {
+   "concept": "standard-state-gas",
+   "prereq": "ideal-gas-law"
+  },
+  {
+   "concept": "standard-state-gas",
+   "prereq": "standard-state"
+  },
+  {
+   "concept": "gibbs-ideal-gas-pressure",
+   "prereq": "gibbs-first-derivatives"
+  },
+  {
+   "concept": "gibbs-ideal-gas-pressure",
+   "prereq": "standard-state-gas"
+  },
+  {
+   "concept": "gibbs-solid-pressure",
+   "prereq": "gibbs-first-derivatives"
+  },
+  {
+   "concept": "gibbs-solid-pressure",
+   "prereq": "isothermal-compressibility"
+  },
+  {
+   "concept": "gibbs-helmholtz-equation",
+   "prereq": "gibbs-energy"
+  },
+  {
+   "concept": "gibbs-helmholtz-equation",
+   "prereq": "entropy-change-constant-pressure"
+  },
+  {
+   "concept": "gibbs-helmholtz-equation",
+   "prereq": "constant-pressure-heat-capacity"
+  },
+  {
+   "concept": "gibbs-temperature-curve",
+   "prereq": "gibbs-first-derivatives"
+  },
+  {
+   "concept": "gibbs-temperature-curve",
+   "prereq": "entropy-of-transition"
+  },
+  {
+   "concept": "gibbs-temperature-curve",
+   "prereq": "enthalpy-from-heat-capacity"
+  },
+  {
+   "concept": "gibbs-temperature-curve",
+   "prereq": "absolute-entropy-heating-path"
+  },
+  {
+   "concept": "fugacity",
+   "prereq": "gibbs-ideal-gas-pressure"
+  },
+  {
+   "concept": "fugacity-coefficient",
+   "prereq": "fugacity"
+  },
+  {
+   "concept": "fugacity-zero-pressure-limit",
+   "prereq": "fugacity"
+  },
+  {
+   "concept": "component-fugacity",
+   "prereq": "fugacity"
+  },
+  {
+   "concept": "component-fugacity",
+   "prereq": "chemical-potential"
+  },
+  {
+   "concept": "chemical-potential-fugacity",
+   "prereq": "component-fugacity"
+  }
+ ]
+}
