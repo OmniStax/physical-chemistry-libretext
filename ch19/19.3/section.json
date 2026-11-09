@@ -216,7 +216,8 @@
      "assumes": [
       {
        "tex": "\\kw = -\\int_{\\kVa}^{\\kVb}\\kPext\\,d\\kV",
-       "src": "19.2"
+       "src": "19.2",
+       "drv": "19.2/constant-pressure-work"
       },
       {
        "text": "Along a reversible path the forces balance at all times, so $P_{ext} = P$.",
@@ -224,7 +225,8 @@
       },
       {
        "tex": "\\kP = \\dfrac{\\knmol\\kR\\kT}{\\kV}",
-       "src": "16.1"
+       "src": "16.1",
+       "drv": "16.1/ideal-gas-law"
       },
       {
        "text": "The compression is isothermal: $T$ stays constant."

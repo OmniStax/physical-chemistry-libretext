@@ -209,7 +209,8 @@
      "assumes": [
       {
        "tex": "\\kppress = \\dfrac{\\kR\\kT}{\\kV}",
-       "src": "16.1"
+       "src": "16.1",
+       "drv": "16.1/ideal-gas-law"
       }
      ],
      "then": {
@@ -229,7 +230,8 @@
      "assumes": [
       {
        "tex": "\\kppress = \\dfrac{\\kR\\kT}{\\kV}",
-       "src": "16.1"
+       "src": "16.1",
+       "drv": "16.1/ideal-gas-law"
       }
      ],
      "then": {

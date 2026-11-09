@@ -280,6 +280,16 @@
     {
       "sym": "W_tot",
       "latex": "W_\\text{tot}"
+    },
+    {
+      "sym": "T_f",
+      "latex": "T_f",
+      "macro": "\\kTf"
+    },
+    {
+      "sym": "S_tot",
+      "latex": "S_{tot}",
+      "macro": "\\kStot"
     }
   ],
   "concepts": [
@@ -306,11 +316,13 @@
       "forms": [
         {
           "id": "arrangements-n-factorial",
-          "latex": "W=n!"
+          "latex": "W=n!",
+          "anchor": "20.1-entropy-on-a-microscopic-scale"
         },
         {
           "id": "arrangements-groups",
-          "latex": "W=\\frac{n!}{a!\\,b!\\,c!\\dots z!}"
+          "latex": "W=\\frac{n!}{a!\\,b!\\,c!\\dots z!}",
+          "anchor": "20.1-entropy-on-a-microscopic-scale"
         }
       ]
     },
@@ -338,7 +350,8 @@
       "forms": [
         {
           "id": "boltzmann-entropy",
-          "latex": "S= k \\ln W"
+          "latex": "S= k \\ln W",
+          "anchor": "20.1-changing-the-box"
         },
         {
           "id": "boltzmann-entropy-kb",
@@ -411,15 +424,18 @@
       "forms": [
         {
           "id": "cycle-integral-s",
-          "latex": "\\oint dS =0"
+          "latex": "\\oint dS =0",
+          "anchor": "20.3-circular-integrals"
         },
         {
           "id": "cycle-integral-u",
-          "latex": "\\oint dU =0"
+          "latex": "\\oint dU =0",
+          "anchor": "20.3-circular-integrals"
         },
         {
           "id": "cycle-integral-h",
-          "latex": "\\oint dH =0"
+          "latex": "\\oint dH =0",
+          "anchor": "20.3-circular-integrals"
         }
       ]
     },
@@ -433,7 +449,8 @@
       "forms": [
         {
           "id": "isothermal-entropy-change",
-          "latex": "\\Delta S = nR\\ln \\dfrac{V_2}{V_1}"
+          "latex": "\\Delta S = nR\\ln \\dfrac{V_2}{V_1}",
+          "anchor": "20.3-entropy-along-two-paths"
         }
       ]
     },
@@ -447,7 +464,8 @@
       "forms": [
         {
           "id": "heating-entropy-change",
-          "latex": "\\Delta S = \\int_{T_1}^{T_2} \\dfrac{C_v}{T}\\, dT"
+          "latex": "\\Delta S = \\int_{T_1}^{T_2} \\dfrac{C_v}{T}\\, dT",
+          "anchor": "20.3-entropy-along-two-paths"
         }
       ]
     },
@@ -475,7 +493,8 @@
       "forms": [
         {
           "id": "heat-flow-entropy-production",
-          "latex": "dS = dU_A \\left( \\dfrac{1}{T_A} - \\dfrac{1}{T_B} \\right)"
+          "latex": "dS = dU_A \\left( \\dfrac{1}{T_A} - \\dfrac{1}{T_B} \\right)",
+          "anchor": "20.4-spontaneity-of-an-isolated-system"
         }
       ]
     },
@@ -489,7 +508,8 @@
       "forms": [
         {
           "id": "two-block-entropy-change",
-          "latex": "\\Delta S = C_V \\ln \\left[\\dfrac{(T_A + T_B)^2}{4T_AT_B}\\right]"
+          "latex": "\\Delta S = C_V \\ln \\left[\\dfrac{(T_A + T_B)^2}{4T_AT_B}\\right]",
+          "anchor": "20.4-spontaneity-of-an-isolated-system"
         }
       ]
     },
@@ -502,7 +522,8 @@
       "forms": [
         {
           "id": "second-law-isolated",
-          "latex": "dS \\ge 0"
+          "latex": "dS \\ge 0",
+          "anchor": "20.4-spontaneity-of-an-isolated-system"
         }
       ]
     },
@@ -515,7 +536,8 @@
       "forms": [
         {
           "id": "entropy-production-exchange",
-          "latex": "dS = dS_{prod} + dS_{exchange}"
+          "latex": "dS = dS_{prod} + dS_{exchange}",
+          "anchor": "20.4-entropy-exchange-of-an-open-system"
         }
       ]
     },
@@ -528,7 +550,8 @@
       "forms": [
         {
           "id": "clausius-inequality",
-          "latex": "dS \\ge \\dfrac{\\delta q}{T}"
+          "latex": "dS \\ge \\dfrac{\\delta q}{T}",
+          "anchor": "20.4-entropy-exchange-of-an-open-system"
         }
       ]
     },

@@ -458,7 +458,7 @@
    "kind": "result",
    "section": "19.3",
    "name": "Work of a reversible isothermal volume change",
-   "type": "energy",
+   "type": "work",
    "statement": "For an ideal gas changed reversibly at constant temperature from V₁ to V₂, w = −nRT ln(V₂/V₁).",
    "forms": [
     {
@@ -518,7 +518,7 @@
    "kind": "result",
    "section": "19.5",
    "name": "Heat of a reversible isothermal expansion",
-   "type": "energy",
+   "type": "heat",
    "statement": "In a reversible isothermal expansion of an ideal gas the heat taken in is q_rev = nRT ln(V₂/V₁), positive when V₂ > V₁.",
    "forms": [
     {
@@ -891,7 +891,7 @@
    "forms": [
     {
      "id": "kirchhoff-integral",
-     "latex": "\\Delta H = \\int_{T_2}^{T_2} C_p\\, dT"
+     "latex": "\\Delta H = \\int_{T_1}^{T_2} C_p\\, dT"
     },
     {
      "id": "delta-h-cp-delta-t",

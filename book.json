@@ -4054,31 +4054,38 @@
     },
     {
       "sym": "S_std",
-      "latex": "S^\\circ"
+      "latex": "S^\\circ",
+      "macro": "\\kSstd"
     },
     {
       "sym": "S_std_i",
-      "latex": "S^\\circ_i"
+      "latex": "S^\\circ_i",
+      "macro": "\\kSstdi"
     },
     {
       "sym": "S_std_exp",
-      "latex": "S^\\circ_{\\text{exp}}"
+      "latex": "S^\\circ_{\\text{exp}}",
+      "macro": "\\kSstdexp"
     },
     {
       "sym": "S_std_calc",
-      "latex": "S^\\circ_{\\text{calc}}"
+      "latex": "S^\\circ_{\\text{calc}}",
+      "macro": "\\kSstdcalc"
     },
     {
       "sym": "S_bar_calc",
-      "latex": "\\bar{S}_{\\text{calc}}"
+      "latex": "\\bar{S}_{\\text{calc}}",
+      "macro": "\\kSbarcalc"
     },
     {
       "sym": "S_bar_exp",
-      "latex": "\\bar{S}_{\\text{exp}}"
+      "latex": "\\bar{S}_{\\text{exp}}",
+      "macro": "\\kSbarexp"
     },
     {
       "sym": "S_disorder",
-      "latex": "S_{disorder}"
+      "latex": "S_{disorder}",
+      "macro": "\\kSdisorder"
     },
     {
       "sym": "W_disorder",
@@ -4996,6 +5003,16 @@
       "sym": "A_s",
       "latex": "A",
       "macro": "\\kAs"
+    },
+    {
+      "sym": "T_f",
+      "latex": "T_f",
+      "macro": "\\kTf"
+    },
+    {
+      "sym": "S_tot",
+      "latex": "S_{tot}",
+      "macro": "\\kStot"
     }
   ],
   "exercise_kinds": [
@@ -18350,7 +18367,8 @@
           "id": "delta-s-cv",
           "latex": "\\Delta S=\\int_{T_1}^{T_2}{\\frac{C_V(T)}{T}dT}"
         }
-      ]
+      ],
+      "type": "entropy"
     },
     {
       "id": "entropy-increases-with-temperature",
@@ -18387,7 +18405,8 @@
           "id": "delta-s-cp",
           "latex": "\\Delta S=\\int_{T_1}^{T_2}{\\frac{C_P(T)}{T}dT}"
         }
-      ]
+      ],
+      "type": "entropy"
     },
     {
       "id": "absolute-entropy",
@@ -18397,7 +18416,8 @@
       "terms": [
         "absolute"
       ],
-      "statement": "The entropy measured from a natural zero, S(0) = 0 for a perfect crystal at 0 K, so that S(T) follows from heat-capacity data alone; unlike the enthalpy, which has only a floating zero point."
+      "statement": "The entropy measured from a natural zero, S(0) = 0 for a perfect crystal at 0 K, so that S(T) follows from heat-capacity data alone; unlike the enthalpy, which has only a floating zero point.",
+      "type": "entropy"
     },
     {
       "id": "third-law",
@@ -18444,7 +18464,8 @@
           "id": "entropy-of-fusion",
           "latex": "Δ_{fus}S = \\dfrac{q_{rev}}{T}= \\dfrac{Δ_{fus}H}{T}"
         }
-      ]
+      ],
+      "type": "entropy"
     },
     {
       "id": "standard-molar-entropy",
@@ -18452,7 +18473,8 @@
       "section": "21.2",
       "name": "Standard molar entropy",
       "symbol": "S_std",
-      "statement": "The absolute entropy of one mole of a substance in its standard state (1 bar), S°, found from calorimetric data and tabulated against temperature."
+      "statement": "The absolute entropy of one mole of a substance in its standard state (1 bar), S°, found from calorimetric data and tabulated against temperature.",
+      "type": "entropy"
     },
     {
       "id": "entropy-increases-with-mass",
@@ -18470,7 +18492,8 @@
         "a nonzero entropy",
         "residual entropy"
       ],
-      "statement": "The nonzero entropy a real crystal keeps as T approaches 0 K, because it is frozen into more than one ground-state arrangement; an exception to the third law, which assumes a perfect crystal with a single ground state."
+      "statement": "The nonzero entropy a real crystal keeps as T approaches 0 K, because it is frozen into more than one ground-state arrangement; an exception to the third law, which assumes a perfect crystal with a single ground state.",
+      "type": "entropy"
     },
     {
       "id": "orientational-disorder-entropy",
@@ -18483,7 +18506,8 @@
           "id": "s-disorder-co",
           "latex": "S_{disorder} = k\\,\\ln{W_{disorder}} = k\\,\\ln 2^N = N k \\ln 2"
         }
-      ]
+      ],
+      "type": "entropy"
     },
     {
       "id": "entropy-of-transition",
@@ -18501,7 +18525,8 @@
           "latex": "\\Delta S_{trs}=\\frac{\\Delta H_{trs}}{T_{trs}}",
           "section": "21.5"
         }
-      ]
+      ],
+      "type": "entropy"
     },
     {
       "id": "gibbs-temperature-derivative",
@@ -18590,7 +18615,8 @@
           "id": "absolute-entropy-calorimetric",
           "latex": "S(T)=\\int_0^T \\frac{C_p(T)}{T} d T+\\sum \\frac{\\Delta H_{\\text {trs}}}{T_{\\text {trs}}}"
         }
-      ]
+      ],
+      "type": "entropy"
     },
     {
       "id": "absolute-entropy-heating-path",
@@ -18610,7 +18636,8 @@
           "id": "q-low-temperature",
           "latex": "\\sum_j{e^{-\\frac{E_j}{kT}}} = ne^{-\\frac{E_1}{kT}}+me^{-\\frac{E_{n+1}}{kT}}+\\dots"
         }
-      ]
+      ],
+      "type": "entropy"
     },
     {
       "id": "entropy-increases-with-complexity",
@@ -18624,7 +18651,8 @@
       "kind": "definition",
       "section": "21.8",
       "name": "Spectroscopic entropy",
-      "statement": "The standard entropy of a gas calculated from spectroscopic data through its partition function, S°_calc, as against the calorimetric S°_exp."
+      "statement": "The standard entropy of a gas calculated from spectroscopic data through its partition function, S°_calc, as against the calorimetric S°_exp.",
+      "type": "entropy"
     },
     {
       "id": "residual-entropy-discrepancy",
@@ -18637,7 +18665,8 @@
           "id": "residual-entropy-difference",
           "latex": "\\bar{S}_{\\text{calc}}-\\bar{S}_{\\text{exp}}"
         }
-      ]
+      ],
+      "type": "entropy"
     },
     {
       "id": "reaction-entropy",
@@ -18650,7 +18679,8 @@
           "id": "reaction-entropy",
           "latex": "\\Delta_{rxn}S^\\circ = \\sum_{\\text{Products}}{v_i S^\\circ_i} - \\sum_{\\text{Reactants}}{v_i S^\\circ_i}"
         }
-      ]
+      ],
+      "type": "entropy"
     },
     {
       "id": "natural-variables",
@@ -19456,7 +19486,7 @@
       "kind": "result",
       "section": "19.3",
       "name": "Work of a reversible isothermal volume change",
-      "type": "energy",
+      "type": "work",
       "statement": "For an ideal gas changed reversibly at constant temperature from V₁ to V₂, w = −nRT ln(V₂/V₁).",
       "forms": [
         {
@@ -19516,7 +19546,7 @@
       "kind": "result",
       "section": "19.5",
       "name": "Heat of a reversible isothermal expansion",
-      "type": "energy",
+      "type": "heat",
       "statement": "In a reversible isothermal expansion of an ideal gas the heat taken in is q_rev = nRT ln(V₂/V₁), positive when V₂ > V₁.",
       "forms": [
         {
@@ -19889,7 +19919,7 @@
       "forms": [
         {
           "id": "kirchhoff-integral",
-          "latex": "\\Delta H = \\int_{T_2}^{T_2} C_p\\, dT"
+          "latex": "\\Delta H = \\int_{T_1}^{T_2} C_p\\, dT"
         },
         {
           "id": "delta-h-cp-delta-t",
@@ -19950,11 +19980,13 @@
       "forms": [
         {
           "id": "arrangements-n-factorial",
-          "latex": "W=n!"
+          "latex": "W=n!",
+          "anchor": "20.1-entropy-on-a-microscopic-scale"
         },
         {
           "id": "arrangements-groups",
-          "latex": "W=\\frac{n!}{a!\\,b!\\,c!\\dots z!}"
+          "latex": "W=\\frac{n!}{a!\\,b!\\,c!\\dots z!}",
+          "anchor": "20.1-entropy-on-a-microscopic-scale"
         }
       ]
     },
@@ -19982,7 +20014,8 @@
       "forms": [
         {
           "id": "boltzmann-entropy",
-          "latex": "S= k \\ln W"
+          "latex": "S= k \\ln W",
+          "anchor": "20.1-changing-the-box"
         },
         {
           "id": "boltzmann-entropy-kb",
@@ -20055,15 +20088,18 @@
       "forms": [
         {
           "id": "cycle-integral-s",
-          "latex": "\\oint dS =0"
+          "latex": "\\oint dS =0",
+          "anchor": "20.3-circular-integrals"
         },
         {
           "id": "cycle-integral-u",
-          "latex": "\\oint dU =0"
+          "latex": "\\oint dU =0",
+          "anchor": "20.3-circular-integrals"
         },
         {
           "id": "cycle-integral-h",
-          "latex": "\\oint dH =0"
+          "latex": "\\oint dH =0",
+          "anchor": "20.3-circular-integrals"
         }
       ]
     },
@@ -20077,7 +20113,8 @@
       "forms": [
         {
           "id": "isothermal-entropy-change",
-          "latex": "\\Delta S = nR\\ln \\dfrac{V_2}{V_1}"
+          "latex": "\\Delta S = nR\\ln \\dfrac{V_2}{V_1}",
+          "anchor": "20.3-entropy-along-two-paths"
         }
       ]
     },
@@ -20091,7 +20128,8 @@
       "forms": [
         {
           "id": "heating-entropy-change",
-          "latex": "\\Delta S = \\int_{T_1}^{T_2} \\dfrac{C_v}{T}\\, dT"
+          "latex": "\\Delta S = \\int_{T_1}^{T_2} \\dfrac{C_v}{T}\\, dT",
+          "anchor": "20.3-entropy-along-two-paths"
         }
       ]
     },
@@ -20119,7 +20157,8 @@
       "forms": [
         {
           "id": "heat-flow-entropy-production",
-          "latex": "dS = dU_A \\left( \\dfrac{1}{T_A} - \\dfrac{1}{T_B} \\right)"
+          "latex": "dS = dU_A \\left( \\dfrac{1}{T_A} - \\dfrac{1}{T_B} \\right)",
+          "anchor": "20.4-spontaneity-of-an-isolated-system"
         }
       ]
     },
@@ -20133,7 +20172,8 @@
       "forms": [
         {
           "id": "two-block-entropy-change",
-          "latex": "\\Delta S = C_V \\ln \\left[\\dfrac{(T_A + T_B)^2}{4T_AT_B}\\right]"
+          "latex": "\\Delta S = C_V \\ln \\left[\\dfrac{(T_A + T_B)^2}{4T_AT_B}\\right]",
+          "anchor": "20.4-spontaneity-of-an-isolated-system"
         }
       ]
     },
@@ -20146,7 +20186,8 @@
       "forms": [
         {
           "id": "second-law-isolated",
-          "latex": "dS \\ge 0"
+          "latex": "dS \\ge 0",
+          "anchor": "20.4-spontaneity-of-an-isolated-system"
         }
       ]
     },
@@ -20159,7 +20200,8 @@
       "forms": [
         {
           "id": "entropy-production-exchange",
-          "latex": "dS = dS_{prod} + dS_{exchange}"
+          "latex": "dS = dS_{prod} + dS_{exchange}",
+          "anchor": "20.4-entropy-exchange-of-an-open-system"
         }
       ]
     },
@@ -20172,7 +20214,8 @@
       "forms": [
         {
           "id": "clausius-inequality",
-          "latex": "dS \\ge \\dfrac{\\delta q}{T}"
+          "latex": "dS \\ge \\dfrac{\\delta q}{T}",
+          "anchor": "20.4-entropy-exchange-of-an-open-system"
         }
       ]
     },

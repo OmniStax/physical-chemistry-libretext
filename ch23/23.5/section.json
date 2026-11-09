@@ -1,0 +1,298 @@
+{
+ "id": "23.5",
+ "module": "14501",
+ "chapter": "23",
+ "title": "Chemical Potential Can be Evaluated From a Partition Function",
+ "short": "Chemical potential from Q",
+ "lead": "The internal energy and the entropy can both be written through the partition function Q. Combining them with the Helmholtz and Gibbs energies carries that link over to the chemical potential.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "The page prints no credit of its own.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": []
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The page prints no exercises. The one exercise here, its solution, its Bloom level and its concept tags are written by AI.",
+ "figures": [],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "q-to-mu",
+   "concept": "helmholtz-from-partition-function",
+   "verb": "introduces"
+  },
+  {
+   "span": "q-to-mu",
+   "concept": "chemical-potential-from-a",
+   "verb": "introduces"
+  },
+  {
+   "span": "q-to-mu",
+   "concept": "chemical-potential-from-partition-function",
+   "verb": "introduces"
+  },
+  {
+   "span": "q-to-mu",
+   "concept": "average-energy-from-q",
+   "verb": "uses"
+  },
+  {
+   "span": "q-to-mu",
+   "concept": "entropy-from-partition-function",
+   "verb": "uses"
+  },
+  {
+   "span": "q-to-mu",
+   "concept": "helmholtz-energy",
+   "verb": "uses"
+  },
+  {
+   "span": "q-to-mu",
+   "concept": "fundamental-equations-composition",
+   "verb": "uses"
+  },
+  {
+   "span": "q-to-mu",
+   "concept": "chemical-potential",
+   "verb": "reinforces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "We now have chemical potential written in terms of the partition function",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "q-to-mu",
+   "prompt": "<p>For an ideal gas of $N$ molecules, $\\kQsys = q^N/N!$, where $q$ is the partition function of one molecule. Using $\\kmu = -\\kR\\kT\\left(\\dfrac{\\partial \\ln \\kQsys}{\\partial N}\\right)_{\\kV,\\kT}$ and Stirling's approximation $\\ln N! \\approx N\\ln N - N$, show that $\\kmu = -\\kR\\kT\\ln(q/N)$.</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "Write $\\ln \\kQsys$ with Stirling's approximation before you differentiate; $q$ depends on $\\kV$ and $\\kT$ but not on $N$.",
+    "solution": "<p>Taking the logarithm, $\\ln \\kQsys = N\\ln q - \\ln N!$, and Stirling's approximation gives $\\ln \\kQsys \\approx N\\ln q - N\\ln N + N$. At constant $\\kV$ and $\\kT$ the molecular partition function $q$ is fixed, so</p>$$ \\left(\\dfrac{\\partial \\ln \\kQsys}{\\partial N}\\right)_{\\kV,\\kT} = \\ln q - \\ln N - 1 + 1 = \\ln \\dfrac{q}{N} $$<p>and therefore $\\kmu = -\\kR\\kT\\ln(q/N)$. Since $q$ for a gas at ordinary conditions is far larger than $N$, $\\ln(q/N)$ is positive and the chemical potential of an ideal gas is negative.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "chemical-potential-from-partition-function"
+  }
+ ],
+ "footnotes": [],
+ "derivations": [
+  {
+   "id": "mu-from-q",
+   "what": "the chemical potential from the partition function",
+   "source": "Physical Chemistry (LibreTexts), 23.5 Chemical Potential Can be Evaluated From a Partition Function",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kSent = \\dfrac{\\kU}{\\kT} + k_B\\ln \\kQsys",
+       "src": "(20.8.4)",
+       "drv": "20.8/entropy-partition"
+      },
+      {
+       "tex": "\\kU = k_B\\kT^2\\left(\\dfrac{\\partial \\ln \\kQsys}{\\partial \\kT}\\right)_{n,\\kV}",
+       "src": "17.3",
+       "drv": "17.3/average-energy"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{s}{\\kSent} = \\mk{u}{\\dfrac{\\kU}{\\kT}} + \\mk{q}{k_B\\ln \\kQsys}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{s}{\\kSent} = \\mk{u}{k_B\\kT\\left(\\dfrac{\\partial \\ln \\kQsys}{\\partial \\kT}\\right)_{n,\\kV}} + \\mk{q}{k_B\\ln \\kQsys}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "src": "23.5",
+     "note": "The book writes $R$ where the constant is Boltzmann's $k_B$: $U=RT^2\\left(\\frac{\\partial \\ln Q}{\\partial T}\\right)_{n,V}$ and $S=RT\\left(\\frac{\\partial \\ln Q}{\\partial T}\\right)_{n,V} + R\\ln Q$. With $Q$ the partition function of the whole system the constant is $k_B$, as in 17.3 and 20.8, and the same holds for $A$ and $\\mu$ below."
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\kA = \\kU - \\kT\\kSent",
+       "src": "22.1"
+      },
+      {
+       "tex": "\\kU = k_B\\kT^2\\left(\\dfrac{\\partial \\ln \\kQsys}{\\partial \\kT}\\right)_{n,\\kV}",
+       "src": "17.3",
+       "drv": "17.3/average-energy"
+      },
+      {
+       "step": 0
+      }
+     ],
+     "then": {
+      "tex": "\\mk{a}{\\kA} = \\mk{u}{\\kU} - \\mk{s}{\\kT\\kSent}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{a}{\\kA} = \\mk{u}{k_B\\kT^2\\left(\\dfrac{\\partial \\ln \\kQsys}{\\partial \\kT}\\right)_{n,\\kV}} - \\mk{s}{\\kT\\kSent}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{a}{\\kA} = \\mk{u}{k_B\\kT^2\\left(\\dfrac{\\partial \\ln \\kQsys}{\\partial \\kT}\\right)_{n,\\kV}} - \\mk{s}{\\kT\\left(k_B\\kT\\left(\\dfrac{\\partial \\ln \\kQsys}{\\partial \\kT}\\right)_{n,\\kV} + k_B\\ln \\kQsys\\right)}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{a}{\\kA} = \\mk{s}{-k_B\\kT\\ln \\kQsys}",
+       "uses": []
+      }
+     ],
+     "src": "23.5"
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\left( \\dfrac{\\partial \\kA}{\\partial \\kT} \\right)_{\\kV} = -\\kSent",
+       "src": "22.5"
+      },
+      {
+       "tex": "\\left( \\dfrac{\\partial \\kA}{\\partial \\kV} \\right)_{\\kT} = -\\kP",
+       "src": "22.5"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{a}{d\\kA} = \\mk{t}{\\left(\\dfrac{\\partial \\kA}{\\partial \\kT}\\right)_{n,\\kV}d\\kT} + \\mk{v}{\\left(\\dfrac{\\partial \\kA}{\\partial \\kV}\\right)_{n,\\kT}d\\kV} + \\mk{n}{\\left(\\dfrac{\\partial \\kA}{\\partial n}\\right)_{\\kV,\\kT}dn}",
+      "why": "$\\kA$ is a function of $\\kT$, $\\kV$ and $n$, so its total differential has a term for each."
+     },
+     "steps": [
+      {
+       "tex": "\\mk{a}{d\\kA} = \\mk{t}{-\\kSent d\\kT} + \\mk{v}{\\left(\\dfrac{\\partial \\kA}{\\partial \\kV}\\right)_{n,\\kT}d\\kV} + \\mk{n}{\\left(\\dfrac{\\partial \\kA}{\\partial n}\\right)_{\\kV,\\kT}dn}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{a}{d\\kA} = \\mk{t}{-\\kSent d\\kT} \\mk{v}{-\\kP d\\kV} + \\mk{n}{\\left(\\dfrac{\\partial \\kA}{\\partial n}\\right)_{\\kV,\\kT}dn}",
+       "uses": [
+        1
+       ]
+      }
+     ],
+     "src": "23.5",
+     "note": "The book's total differential, $dA = \\left(\\frac{\\partial A}{\\partial T}\\right)_{n,V} + \\left(\\frac{\\partial A}{\\partial V}\\right)_{n,T} + \\left(\\frac{\\partial A}{\\partial n}\\right)_{V,T}$, leaves out the differentials $dT$, $dV$ and $dn$."
+    },
+    {
+     "assumes": [
+      {
+       "tex": "\\kG = \\kA + \\kP\\kV",
+       "src": "22.2"
+      },
+      {
+       "step": 2
+      }
+     ],
+     "then": {
+      "tex": "\\mk{g}{\\kG} = \\mk{a}{\\kA} + \\mk{pv}{\\kP\\kV}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{g}{d\\kG} = \\mk{a}{d\\kA} + \\mk{pv}{d(\\kP\\kV)}",
+       "uses": [],
+       "cap": "Take the differential of each side."
+      },
+      {
+       "tex": "\\mk{g}{d\\kG} = \\mk{a}{d\\kA} + \\mk{pv}{\\kP d\\kV + \\kV d\\kP}",
+       "uses": [],
+       "cap": "$d(\\kP\\kV) = \\kP d\\kV + \\kV d\\kP$ by the product rule."
+      },
+      {
+       "tex": "\\mk{g}{d\\kG} = \\mk{a}{-\\kSent d\\kT - \\kP d\\kV + \\left(\\dfrac{\\partial \\kA}{\\partial n}\\right)_{\\kV,\\kT}dn} + \\mk{pv}{\\kP d\\kV + \\kV d\\kP}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{g}{d\\kG} = \\mk{a}{-\\kSent d\\kT + \\kV d\\kP + \\left(\\dfrac{\\partial \\kA}{\\partial n}\\right)_{\\kV,\\kT}dn}",
+       "uses": [],
+       "map": {
+        "pv": "a"
+       }
+      }
+     ],
+     "src": "23.5"
+    },
+    {
+     "assumes": [
+      {
+       "step": 3
+      },
+      {
+       "tex": "d\\kG = -\\kSent d\\kT + \\kV d\\kP + \\kmu dn",
+       "src": "22.5"
+      },
+      {
+       "tex": "\\kmu = \\left(\\dfrac{\\partial \\kG}{\\partial n}\\right)_{\\kP,\\kT}",
+       "src": "22.5"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{a}{\\left(\\dfrac{\\partial \\kA}{\\partial n}\\right)_{\\kV,\\kT}} = \\mk{m}{\\kmu}",
+      "uses": [
+       0,
+       1
+      ],
+      "why": "Both lines are $d\\kG$ with the same $d\\kT$ and $d\\kP$ terms, so the coefficients of $dn$ are equal too."
+     },
+     "steps": [
+      {
+       "tex": "\\mk{m}{\\kmu} = \\mk{g}{\\left(\\dfrac{\\partial \\kG}{\\partial n}\\right)_{\\kP,\\kT}} = \\mk{a}{\\left(\\dfrac{\\partial \\kA}{\\partial n}\\right)_{\\kV,\\kT}}",
+       "uses": [
+        2
+       ]
+      }
+     ],
+     "src": "23.5"
+    },
+    {
+     "assumes": [
+      {
+       "step": 4
+      },
+      {
+       "step": 1
+      }
+     ],
+     "then": {
+      "tex": "\\mk{m}{\\kmu} = \\mk{a}{\\left(\\dfrac{\\partial \\kA}{\\partial n}\\right)_{\\kV,\\kT}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{m}{\\kmu} = \\mk{a}{\\left(\\dfrac{\\partial (-k_B\\kT\\ln \\kQsys)}{\\partial n}\\right)_{\\kV,\\kT}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{m}{\\kmu} = \\mk{a}{-k_B\\kT\\left(\\dfrac{\\partial \\ln \\kQsys}{\\partial n}\\right)_{\\kV,\\kT}}",
+       "uses": []
+      }
+     ],
+     "src": "23.5",
+     "note": "The book prints $\\mu = -RT\\left(\\frac{\\partial \\ln Q}{\\partial n}\\right)_{V,T}$. With $n$ in moles the constant is $k_B$; counting molecules instead, $N = nN_A$ and $R = N_Ak_B$ give $\\mu = -RT\\left(\\frac{\\partial \\ln Q}{\\partial N}\\right)_{V,T}$."
+    }
+   ]
+  }
+ ]
+}

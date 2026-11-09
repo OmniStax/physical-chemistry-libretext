@@ -1086,7 +1086,9 @@
       "n_3",
       "W_1",
       "W_2",
-      "W_tot"
+      "W_tot",
+      "T_f",
+      "S_tot"
     ],
     "types": [
       "entropy"

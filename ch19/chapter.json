@@ -920,6 +920,13 @@
    "meaning": "the work",
    "unit": "J",
    "section": "19.14"
+  },
+  {
+   "sym": "E_i",
+   "type": "energy",
+   "meaning": "the energy of state i of the system, E_i(N, V)",
+   "unit": "J",
+   "section": "19.7"
   }
  ]
 }

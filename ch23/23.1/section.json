@@ -1,0 +1,239 @@
+{
+ "id": "23.1",
+ "module": "14497",
+ "chapter": "23",
+ "title": "A Phase Diagram Summarizes the Solid-Liquid-Gas Behavior of a Substance",
+ "short": "Phase diagrams",
+ "lead": "A pure substance at equilibrium sits at a minimum of its Gibbs energy, and fluctuations decide how firmly it stays there. Its phase diagram maps which phase is stable at each temperature and pressure, and changing amounts of each phase call for molar and partial molar quantities.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "No contributors are printed for this page; the CO₂ and Mars lines of the book's phase diagram are left out of its interactive version.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The one exercise and its solution are AI-written; its Bloom level and concept tags were chosen by AI.",
+ "figures": [
+  {
+   "id": "sim-gibbs-stability",
+   "kind": "sim",
+   "number": "23.1.1",
+   "originals": [
+    "/media/ch23/113529-594ed80acdd14695327402.gif"
+   ],
+   "original_caption": "A schematic $G$ curve showing various Points of stability. Due to statistical fluctuations the value of $G$ is not quite constant over time, because less likely realizations of the ensemble (having a slightly less favorable value of $G$) do occur from time to time. After all, the Boltzmann distribution is simply the most likely one, not the only one possible. The fluctuations have drastically different consequences depending on whether the system is in an unstable ($E$), labile ($D$) , indifferent ($C$), metastable ($B$) or stable ($A$) state. Notice that $A$ and $B$ just wobble around a bit. $C$ fluctuates wildly in the value of $X$, while both $E$ and $D$ eventually vanish because the system transits to a more favorable state. For $E$ this starts immediately, for $D$ it starts once fluctuation has caused it to move from its peak sufficiently.",
+   "widths": [
+    556
+   ],
+   "draws": [
+    "energy"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  },
+  {
+   "id": "fig-23-1-2",
+   "kind": "photo",
+   "number": "23.1.2",
+   "draws": []
+  },
+  {
+   "id": "sim-phase-diagram",
+   "kind": "sim",
+   "originals": [
+    "/media/ch23/113531-CH431_unary.jpg"
+   ],
+   "original_caption": "A typical unary diagram",
+   "draws": [
+    "temperature",
+    "pressure",
+    "energy",
+    "volume"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "thermodynamic-stability-and-fluctuations",
+   "concept": "equilibrium-stability-kinds",
+   "verb": "introduces"
+  },
+  {
+   "span": "thermodynamic-stability-and-fluctuations",
+   "concept": "gibbs-fluctuations",
+   "verb": "introduces"
+  },
+  {
+   "span": "thermodynamic-stability-and-fluctuations",
+   "concept": "critical-opalescence",
+   "verb": "introduces"
+  },
+  {
+   "span": "thermodynamic-stability-and-fluctuations",
+   "concept": "gibbs-energy",
+   "verb": "uses"
+  },
+  {
+   "span": "thermodynamic-stability-and-fluctuations",
+   "concept": "boltzmann-distribution",
+   "verb": "uses"
+  },
+  {
+   "span": "unary-phase-diagrams",
+   "concept": "phase-diagram",
+   "verb": "introduces"
+  },
+  {
+   "span": "unary-phase-diagrams",
+   "concept": "equilibrium-vapor-pressure",
+   "verb": "introduces"
+  },
+  {
+   "span": "unary-phase-diagrams",
+   "concept": "boiling",
+   "verb": "introduces"
+  },
+  {
+   "span": "unary-phase-diagrams",
+   "concept": "coexistence-curves",
+   "verb": "introduces"
+  },
+  {
+   "span": "unary-phase-diagrams",
+   "concept": "triple-point",
+   "verb": "introduces"
+  },
+  {
+   "span": "unary-phase-diagrams",
+   "concept": "normal-and-standard-transition-points",
+   "verb": "introduces"
+  },
+  {
+   "span": "unary-phase-diagrams",
+   "concept": "phase-diagram-dimensionality",
+   "verb": "introduces"
+  },
+  {
+   "span": "unary-phase-diagrams",
+   "concept": "critical-point",
+   "verb": "reinforces"
+  },
+  {
+   "span": "number-of-moles",
+   "concept": "phase-transfer-mole-balance",
+   "verb": "introduces"
+  },
+  {
+   "span": "number-of-moles",
+   "concept": "molar-quantity",
+   "verb": "introduces"
+  },
+  {
+   "span": "number-of-moles",
+   "concept": "partial-molar-quantity",
+   "verb": "introduces"
+  },
+  {
+   "span": "number-of-moles",
+   "concept": "chemical-potential-pure-substance",
+   "verb": "introduces"
+  },
+  {
+   "span": "number-of-moles",
+   "concept": "chemical-potential",
+   "verb": "reinforces"
+  },
+  {
+   "span": "number-of-moles",
+   "concept": "fundamental-equations-composition",
+   "verb": "reinforces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "If the triple point lies above the line that represents atmospheric pressure",
+   "kind": "exercise",
+   "bloom": "Analyze",
+   "place": {
+    "at": "end"
+   },
+   "cite": "unary-phase-diagrams",
+   "prompt": "<p>The triple point of water is at 273.16 K and 4.58 Torr. A piece of ice at 250 K is warmed slowly while the pressure is held at 3 Torr. What happens to it?</p>",
+   "answer": {
+    "type": "choice",
+    "generated_by": "ai",
+    "options": [
+     "It melts near 273 K and then boils",
+     "It turns straight into vapor without ever melting",
+     "It melts and stays liquid up to the critical point",
+     "It stays solid at every temperature"
+    ],
+    "correct": 1,
+    "hint": "Compare the pressure with the pressure of the triple point.",
+    "solution": "<p>A pressure of 3 Torr lies below the triple point's 4.58 Torr, so the 3 Torr line never crosses the liquid region of the phase diagram: it runs from the solid region straight into the vapor region, crossing only the sublimation curve. The ice sublimes when its vapor pressure reaches 3 Torr, a little below 273 K (about 268 K with the sublimation curve of Section 23.4), and no liquid ever forms. At 1 bar the same ice would melt at 273.15 K and boil near 373 K, because the 1 bar line passes above the triple point and crosses the melting curve and then the vaporization curve.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "triple-point"
+  },
+  {
+   "exercise": "a1",
+   "concept": "phase-diagram"
+  },
+  {
+   "exercise": "a1",
+   "concept": "coexistence-curves"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-15-torr",
+   "kind": "correction",
+   "html": "With the book's own triple point (4.58 Torr at 273.16 K) and heat of vaporization (45 051 J/mol, Section 23.4), the integrated Clausius–Clapeyron equation gives about 24 Torr for water at 25 °C. 15 Torr is its vapor pressure near 17 °C."
+  },
+  {
+   "id": "c-triple-melting",
+   "kind": "correction",
+   "html": "273.16 K is the temperature of the triple point. The normal melting point of water is 273.15 K, 0.01 K lower."
+  },
+  {
+   "id": "c-dn1-dg",
+   "kind": "correction",
+   "html": "In the first of the two equations for $d\\kG$ above, the derivative inside the sum over $i$ is printed as $\\partial \\kG/\\partial n_1$; it is $\\partial \\kG/\\partial n_i$, the derivative with respect to the amount of species $i$."
+  },
+  {
+   "id": "c-dn1-mu",
+   "kind": "correction",
+   "html": "The equation for $\\kmui$ above prints $\\partial \\kG/\\partial n_1$; it is $\\partial \\kG/\\partial n_i$."
+  }
+ ]
+}

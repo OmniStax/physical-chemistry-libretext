@@ -186,7 +186,8 @@
      "assumes": [
       {
        "tex": "\\kU = \\tfrac{3}{2}\\knmol\\kR\\kT",
-       "src": "17.1"
+       "src": "17.1",
+       "drv": "17.5/ideal-gas-energy"
       },
       {
        "text": "The change is isothermal: $T$ stays constant."

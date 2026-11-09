@@ -1,0 +1,329 @@
+{
+ "id": "23.3",
+ "module": "14499",
+ "chapter": "23",
+ "title": "The Chemical Potentials of a Pure Substance in Two Phases in Equilibrium",
+ "short": "Chemical potentials in two phases",
+ "lead": "When ice and liquid water sit together at one temperature and pressure, the Gibbs energy fixes how their chemical potentials compare. Following that condition along the melting line gives the slope of the line in terms of the heat and volume of melting.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "The page prints no credit of its own; Exercise 22.5.5 is set here, beside the derivation it asks for.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": []
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "Exercise 22.5.5 comes from Section 22.5, whose key points to an outside link the page does not print, so its solution is written by AI. The second exercise, its solution, and every Bloom level and concept tag are written by AI. Numeric answers accept a 2% tolerance.",
+ "figures": [],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "two-phases",
+   "concept": "phase-equilibrium-chemical-potential",
+   "verb": "introduces"
+  },
+  {
+   "span": "two-phases",
+   "concept": "fundamental-equations-composition",
+   "verb": "uses"
+  },
+  {
+   "span": "two-phases",
+   "concept": "phase-transfer-mole-balance",
+   "verb": "uses"
+  },
+  {
+   "span": "clapeyron",
+   "concept": "chemical-potential-differential",
+   "verb": "introduces"
+  },
+  {
+   "span": "clapeyron",
+   "concept": "clapeyron-equation",
+   "verb": "introduces"
+  },
+  {
+   "span": "clapeyron",
+   "concept": "chemical-potential-pure-substance",
+   "verb": "uses"
+  },
+  {
+   "span": "clapeyron",
+   "concept": "gibbs-first-derivatives",
+   "verb": "uses"
+  },
+  {
+   "span": "clapeyron",
+   "concept": "entropy-of-transition",
+   "verb": "uses"
+  },
+  {
+   "span": "clapeyron",
+   "concept": "coexistence-curves",
+   "verb": "reinforces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "e1",
+   "source_id": "exr:22.5.5",
+   "source_section": "22.5",
+   "source_number": "Exercise 22.5.5",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "clapeyron",
+   "prompt": "<p>Using the definition of Gibbs energy and the conditions observed at phase equilibria, derive the Clapeyron equation.<sup class=\"fn\" data-note=\"c-outside-link\"></sup></p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "ai",
+    "hint": "Two phases in equilibrium have equal chemical potentials, and they stay equal as you move along the coexistence curve.",
+    "solution": "<p>For a pure substance $\\kmu = \\kGbar$, so each phase has $d\\kmu = \\kVbar d\\kP - \\kSbar d\\kT$, from $(\\partial \\kGbar/\\partial \\kP)_{\\kT} = \\kVbar$ and $(\\partial \\kGbar/\\partial \\kT)_{\\kP} = -\\kSbar$. At equilibrium at constant $\\kT$ and $\\kP$, $d\\kG = 0$ for moving $dn$ from one phase to the other, which forces $\\kmuice = \\kmuwater$. Along the coexistence curve the two potentials stay equal, so $d\\kmuice = d\\kmuwater$:</p>$$ \\kVbarice d\\kP - \\kSbarice d\\kT = \\kVbarwater d\\kP - \\kSbarwater d\\kT $$<p>Solving for the slope gives $d\\kP/d\\kT = \\kDeltaSbar/\\kDeltaVbar$. On the curve $\\kDeltaGbar = \\kDeltaHbar - \\kT\\kDeltaSbar = 0$, so $\\kDeltaSbar = \\kDeltaHbar/\\kT$, and</p>$$ \\dfrac{d\\kP}{d\\kT} = \\dfrac{\\kDeltaHbar}{\\kT\\kDeltaVbar} $$<p>which is the Clapeyron equation.</p>"
+   }
+  },
+  {
+   "id": "a1",
+   "source_id": "The values of $\\Delta\\bar{H}$ and $\\Delta\\bar{V}$ do not change much with pressure",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "clapeyron",
+   "prompt": "<p>Ice melts at 273.15 K with $\\kDeltaHbar = 6006$ J/mol. The densities of ice and liquid water there are 0.9167 and 0.9998 g/cm³, and the molar mass of water is 18.015 g/mol. (a) What is the slope $d\\kP/d\\kT$ of the melting line, in bar/K? (b) By how many kelvin does a pressure increase of 100 bar lower the melting point, taking $\\kDeltaHbar$ and $\\kDeltaVbar$ as constant?</p>",
+   "answer": {
+    "type": "multi",
+    "generated_by": "ai",
+    "parts": [
+     {
+      "part": "a",
+      "value": -134.6,
+      "unit": "bar/K",
+      "hint": "Find $\\kDeltaVbar$ from the molar mass divided by each density, liquid minus ice."
+     },
+     {
+      "part": "b",
+      "value": 0.743,
+      "unit": "K"
+     }
+    ],
+    "solution": "<p>(a) The molar volumes are $18.015/0.9998 = 18.019$ cm³/mol for the liquid and $18.015/0.9167 = 19.652$ cm³/mol for ice, so $\\kDeltaVbar = -1.633$ cm³/mol $= -1.633\\times10^{-6}$ m³/mol. Then</p>$$ \\dfrac{d\\kP}{d\\kT} = \\dfrac{6006\\ \\text{J/mol}}{(273.15\\ \\text{K})(-1.633\\times10^{-6}\\ \\text{m}^3/\\text{mol})} = -1.346\\times10^{7}\\ \\text{Pa/K} = -134.6\\ \\text{bar/K} $$<p>(b) $\\Delta \\kT = (100\\ \\text{bar})/(-134.6\\ \\text{bar/K}) = -0.743$ K: 100 bar lowers the melting point by about 0.74 K. The line is steep and leans to the left because ice is less dense than water.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "e1",
+   "concept": "clapeyron-equation"
+  },
+  {
+   "exercise": "e1",
+   "concept": "phase-equilibrium-chemical-potential"
+  },
+  {
+   "exercise": "a1",
+   "concept": "clapeyron-equation"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-outside-link",
+   "kind": "correction",
+   "html": "The book's key for this exercise reads \"See the third outside link\", and the page prints no such link."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "equal-chemical-potentials",
+   "what": "equal chemical potentials in two phases",
+   "source": "Physical Chemistry (LibreTexts), 23.3 The Chemical Potentials of a Pure Substance in Two Phases in Equilibrium",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "d\\kG = -\\kSent d\\kT + \\kV d\\kP + \\sum_{i} \\mu_i dn_i",
+       "src": "22.5"
+      },
+      {
+       "text": "Equilibrium between two phases is at constant $\\kT$ and $\\kP$."
+      },
+      {
+       "text": "At equilibrium at constant $\\kT$ and $\\kP$, $d\\kG = 0$.",
+       "src": "22.2"
+      },
+      {
+       "tex": "d\\knice = -d\\knwater",
+       "src": "23.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{g}{d\\kG} = \\mk{st}{-\\kSent d\\kT + \\kV d\\kP} + \\mk{i}{\\kmuice d\\knice} + \\mk{w}{\\kmuwater d\\knwater}",
+      "uses": [
+       0
+      ],
+      "why": "With only ice and water present, the sum over species has two terms."
+     },
+     "steps": [
+      {
+       "tex": "\\mk{g}{d\\kG} = \\mk{i}{\\kmuice d\\knice} + \\mk{w}{\\kmuwater d\\knwater}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{g}{0} = \\mk{i}{\\kmuice d\\knice} + \\mk{w}{\\kmuwater d\\knwater}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{g}{0} = \\mk{i}{-\\kmuice d\\knwater} + \\mk{w}{\\kmuwater d\\knwater}",
+       "uses": [
+        3
+       ]
+      },
+      {
+       "tex": "\\mk{g}{0} = \\mk{m}{[\\kmuice-\\kmuwater]d\\knwater}",
+       "uses": [],
+       "map": {
+        "i": "m",
+        "w": "m"
+       }
+      },
+      {
+       "tex": "\\mk{g}{0} = \\mk{m}{\\kDeltamu\\; d\\knwater}",
+       "uses": []
+      }
+     ],
+     "src": "23.3"
+    }
+   ]
+  },
+  {
+   "id": "clapeyron",
+   "what": "the Clapeyron equation",
+   "source": "Physical Chemistry (LibreTexts), 23.3 The Chemical Potentials of a Pure Substance in Two Phases in Equilibrium",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kmu = \\left(\\dfrac{\\partial \\kG}{\\partial n}\\right)_{\\kT,\\kP} = \\kGbar",
+       "src": "23.1"
+      },
+      {
+       "tex": "\\left(\\dfrac{\\partial \\kGbar}{\\partial \\kP}\\right)_{\\kT} = \\kVbar",
+       "src": "(23.2.4)"
+      },
+      {
+       "tex": "\\left(\\dfrac{\\partial \\kGbar}{\\partial \\kT}\\right)_{\\kP} = -\\kSbar",
+       "src": "21.3"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{d\\kmu} = \\mk{p}{\\left(\\dfrac{\\partial \\kmu}{\\partial \\kP}\\right)_{\\kT}d\\kP} + \\mk{t}{\\left(\\dfrac{\\partial \\kmu}{\\partial \\kT}\\right)_{\\kP}d\\kT}",
+      "why": "$\\kmu$ is a function of $\\kT$ and $\\kP$, so its total differential has one term for each."
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{d\\kmu} = \\mk{p}{\\left(\\dfrac{\\partial \\kGbar}{\\partial \\kP}\\right)_{\\kT}d\\kP} + \\mk{t}{\\left(\\dfrac{\\partial \\kGbar}{\\partial \\kT}\\right)_{\\kP}d\\kT}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{l}{d\\kmu} = \\mk{p}{\\kVbar d\\kP} + \\mk{t}{\\left(\\dfrac{\\partial \\kGbar}{\\partial \\kT}\\right)_{\\kP}d\\kT}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{l}{d\\kmu} = \\mk{p}{\\kVbar d\\kP} \\mk{t}{-\\kSbar d\\kT}",
+       "uses": [
+        2
+       ]
+      }
+     ],
+     "src": "23.3",
+     "note": "The book prints $d\\mu = (\\partial\\mu/\\partial P)_T dT + (\\partial\\mu/\\partial T)_P dP$, pairing each derivative with the other variable's differential, and repeats the pairing when it equates the two phases. The pressure derivative goes with $dP$ and the temperature derivative with $dT$, as the book's next line has it."
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "\\kmuice = \\kmuwater",
+       "src": "23.3",
+       "drv": "equal-chemical-potentials"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{d\\kmuice} = \\mk{r}{d\\kmuwater}",
+      "uses": [
+       1
+      ],
+      "why": "The two potentials are equal at every point of the line, so they change by the same amount from one point to the next."
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\kVbarice d\\kP -\\kSbarice d\\kT} = \\mk{r}{\\kVbarwater d\\kP -\\kSbarwater d\\kT}",
+       "uses": [
+        0
+       ]
+      },
+      {
+       "tex": "\\mk{l}{(\\kVbarwater - \\kVbarice) d\\kP} = \\mk{r}{(\\kSbarwater - \\kSbarice) d\\kT}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{l}{\\dfrac{d\\kP}{d\\kT}} = \\mk{r}{\\dfrac{\\kSbarwater - \\kSbarice}{\\kVbarwater - \\kVbarice}}",
+       "uses": []
+      },
+      {
+       "tex": "\\mk{l}{\\dfrac{d\\kP}{d\\kT}} = \\mk{r}{\\dfrac{\\kDeltaSbar}{\\kDeltaVbar}}",
+       "uses": []
+      }
+     ],
+     "src": "23.3"
+    },
+    {
+     "assumes": [
+      {
+       "step": 1
+      },
+      {
+       "tex": "\\kDeltaSbar = \\dfrac{\\kDeltaHbar}{\\kTm}",
+       "src": "21.3",
+       "drv": "21.3/entropy-of-transition"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{l}{\\dfrac{d\\kP}{d\\kT}} = \\mk{r}{\\dfrac{\\kDeltaSbar}{\\kDeltaVbar}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{l}{\\dfrac{d\\kP}{d\\kT}} = \\mk{r}{\\dfrac{\\kDeltaHbar}{\\kTm\\kDeltaVbar}}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{l}{\\dfrac{d\\kP}{d\\kT}} = \\mk{r}{\\dfrac{\\kDeltaHbar}{\\kT\\kDeltaVbar}}",
+       "uses": [],
+       "cap": "Every point of the line is a melting point, so $\\kTm$ there is just the temperature $\\kT$."
+      }
+     ],
+     "src": "23.3"
+    }
+   ]
+  }
+ ]
+}

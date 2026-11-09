@@ -185,7 +185,8 @@
       },
       {
        "tex": "\\kP = \\dfrac{\\kR\\kT}{\\kVbar}",
-       "src": "16.1"
+       "src": "16.1",
+       "drv": "16.1/ideal-gas-law"
       }
      ],
      "then": {

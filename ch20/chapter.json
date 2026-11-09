@@ -1151,6 +1151,27 @@
       "meaning": "the temperature",
       "unit": "K",
       "section": "20.9"
+    },
+    {
+      "sym": "T_f",
+      "type": "temperature",
+      "meaning": "the common final temperature of the two blocks",
+      "unit": "K",
+      "section": "20.4"
+    },
+    {
+      "sym": "S_tot",
+      "type": "entropy",
+      "meaning": "the total entropy change of the system",
+      "unit": "J/K",
+      "section": "20.4"
+    },
+    {
+      "sym": "E_j",
+      "type": "energy",
+      "meaning": "the energy of state j of a system",
+      "unit": "J",
+      "section": "20.9"
     }
   ]
 }
