@@ -35,7 +35,7 @@ const { tex, C, PAL, alpha, ctl, register, begin, line, dot, text, topline, axes
     /* the two pressures on the piston, as forces */
     const yp = yV(V2);
     arrow(ctx, cx + 55, yp - 100, cx + 55, yp - 22, cp, 4);
-    text(ctx, `P_{ext} = ${fmt(pe, 2)} bar`, cx + 70, yp - 84, cp, { size: 20, weight: 600 });
+    text(ctx, `P_{ext} = ${fmt(pe, 2)} bar`, cx + 70, yp - 84, cp, { size: 20, weight: 600, bg: PAL.panel });
     arrow(ctx, cx - 50, yp + 70, cx - 50, yp + 8, alpha(cp, 0.7), 3);
     text(ctx, `P = ${fmt(NRT / V2, 2)} bar`, cx - half - 12, yp + 46, alpha(cp, 0.85), { size: 20, align: 'right' });
     if (!same) text(ctx, 'start', cx - half - 12, yV(V1) + 6, PAL.muted, { size: 17, align: 'right' });

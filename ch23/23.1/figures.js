@@ -110,15 +110,17 @@ const pow10 = (e) => e === 0 ? '1' : '10' + String(e).split('').map((c) => SUP[c
    x: temperature 200 to 700 K; y: log10 of the pressure in bar, -5 to 3 (10 microbar to 1000 bar).
    Built from the book's numbers: the triple point 273.16 K and 4.58 Torr; sublimation by the integrated
    Clausius-Clapeyron equation with 51 057 J/mol (6006 + 45 051, 23.4); vaporization from 45 051 J/mol at
-   the triple point, falling by 28 J/mol per kelvin (the heat capacities of vapor and liquid differ), the
-   rate that brings the curve to the critical point near 647 K and 220 bar (from memory, unchecked;
-   the model ends at 222.6 bar); melting by the Clapeyron equation with 6006 J/mol and the molar volumes
-   of ice and water, 19.65 and 18.02 cm3/mol (densities 0.9167 and 0.9998 g/cm3, from memory, unchecked).
+   the triple point, falling by 28.26 J/mol per kelvin (the heat capacities of vapor and liquid differ), the
+   rate that brings the curve to water's critical point, 647 K and 220.6 bar (IAPWS: 647.096 K, 22.064 MPa;
+   checked). The one-parameter fit puts the 1 bar boiling point at 371.3 K, 1.5 K under water's 372.8 K,
+   since the real heat of vaporization falls faster near the critical point; the hover says "in this model".
+   Melting by the Clapeyron equation with 6006 J/mol and the molar volumes of ice and water, 19.65 and
+   18.02 cm3/mol (densities 0.9167 and 0.9998 g/cm3 at 0 °C, checked).
    Still: the reader drags the state point; the sliders hold it, and their dashed circles sit on the curves. */
 (function () {
   const d = sim('sim-phase-diagram', 640);
   const R = 8.314, TT = 273.16, PT = 4.58 / 750.062, LPT = Math.log10(PT), TC = 647;
-  const HVAP0 = 45051, DCP = -28, HSUB = 51057, HFUS = 6006, VICE = 19.65e-6, VLIQ = 18.02e-6, DVM = VLIQ - VICE;
+  const HVAP0 = 45051, DCP = -28.26, HSUB = 51057, HFUS = 6006, VICE = 19.65e-6, VLIQ = 18.02e-6, DVM = VLIQ - VICE;
   const hvap = (T) => HVAP0 + DCP * (T - TT);
   const lnVap = (T) => Math.log(PT) + (HVAP0 - DCP * TT) / R * (1 / TT - 1 / T) + DCP / R * Math.log(T / TT);
   const lnSub = (T) => Math.log(PT) + HSUB / R * (1 / TT - 1 / T);

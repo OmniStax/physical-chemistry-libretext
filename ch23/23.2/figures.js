@@ -9,12 +9,14 @@ const sim = (id, H) => F.sim(root, id, H);
    solid and liquid cross at 279 K and -18.2 kJ/mol, with slopes -0.118 and -0.175 kJ/(mol K); liquid and
    gas cross at 354 K, the gas slope -0.300 kJ/(mol K). Each phase is a straight line of slope -S (the book's
    sketch). The pressure moves the lines: the gas by RT ln(P / 1 bar), the solid and liquid by V(P - 1 bar),
-   with the molar volumes 77.3 and 88.9 cm3/mol (densities 1.01 and 0.879 g/cm3, from memory, unchecked).
+   with the molar volumes 77.3 and 87.4 cm3/mol at the melting point (78.11 g/mol over the densities 1.01
+   and 0.894 g/cm3; the liquid's 0.894 is its 0.8765 g/cm3 at 20 C carried down to 5.5 C, the solid's about
+   1.0 g/cm3 is a handbook value, approximate). The pressure term is a small shift beside the gas's.
    x: T 240 to 440 K; y: G-bar -50 to 0 kJ/mol, fixed. Still: the pressure slider answers at once. */
 (function () {
   const d = sim('sim-gibbs-temperature', 600);
   const R = 8.314e-3, TM0 = 279, GM0 = -18.2, TB0 = 354;
-  const SS = 0.118, SL = 0.175, SG = 0.300, VS = 77.3, VL = 88.9;
+  const SS = 0.118, SL = 0.175, SG = 0.300, VS = 77.3, VL = 87.4;
   const GB0 = GM0 - SL * (TB0 - TM0);
   const mu = {
     s: (T, P) => GM0 - SS * (T - TM0) + VS * (P - 1) * 1e-4,

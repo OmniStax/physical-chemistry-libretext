@@ -1360,3 +1360,43 @@ derivations included.
 
 Known gaps: 20.3's heat bars run to 9000 J (sized for the slider extremes), so the opening
 bars are short; 20.7's |w| arrow reaches the frame's right edge.
+
+## Chapter 19 pass · 2026-11-08
+
+Built: 19.1–19.14 (no intro or summary page; 19.E not built). 8 figure rows: 6 interactive (1
+moving, 19.3's peg pulls; 1 3D, 19.1's p(V, T) surface; still: 19.2.1 + 19.2.2 + 19.2.3 folded,
+19.5's paths A and B + C, 19.7's heat-and-work levels Sim, Figure 19.10.1), 1 kept photograph
+(19.1.1) and 1 kept image (19.12's ethanol scheme). 10 derivations. 16 exercises, all AI-written,
+kind `exercise`, in the Exercises document (the chapter prints none of its own). 31 AI-marked
+corrections in footnotes, besides derivation notes.
+
+Chapter pass: wanted rows: a 19.7 `E_i` variables row (energy, "the energy of state i of the
+system, E_i(N, V)"); `reversible-isothermal-work` typed `work` and `reversible-isothermal-heat`
+`heat` (were `energy`); the `kirchhoff-integral` form now ∫ from T₁ to T₂ (the book's T₂-to-T₂ slip
+stays footnoted in the text). `drv` links: 19.3's w = −∫P_ext dV to `19.2/constant-pressure-work`,
+19.5's U = (3/2)nRT to `17.5/ideal-gas-energy`, and the ideal gas law in 19.1 (twice), 19.3 and
+19.6 to `16.1/ideal-gas-law`. No fact of 19.6's derivation is a result of 19.5's
+`adiabat-and-isochore` (its δw_B = −δq_C lives in the text's reconstructed display, not in the
+derivation), so no link there. No fact twice: 19.1's printed p(V, T) = RT/V display, which the
+derivation's first fact repeated, is removed from the text and the fact now reads it word for
+word; 19.5's two wordings of w_C = 0 are now one fact in the book's words. Book sentences back as
+reasons: 19.5's "This means that the reversible work must cancel the reversible heat", "This is
+the only reversible heat involved in path B+C", "This means that the volume work along B must
+cancel the heat along C"; 19.6's "This is an expression for an ideal path … relates temperature
+to volume. To find our path along a PV surface … Let's go from (T₁,V₁) to (T₂,V₂)" (replacing an AI
+reason). 19.2's |w| label had `bg: true` and painted a black box: now the panel colour, and the
+P_ext label on the piston takes a panel background where it crossed the start line.
+`colours:default` run: every type keeps its stored colour. `check:content`: no errors, no
+warnings from the book at the time of the run (later runs show other chapters' in-progress
+findings, none from Chapter 19). Figure 19.10.1 rebuilt and looked at; every figure screenshot in
+light and dark (contact sheets in the pass's scratch folder); no console or KaTeX error on any
+Chapter 19 page, derivations included.
+
+Unchecked, flagged: the 11 reconstructed equation images of 19.5–19.8 (NCSU CH431_Image61–71,
+lost at the source; AI-marked lines with footnotes or derivation notes); ice's C_p ≈ 38 J mol⁻¹ K⁻¹
+and Δ_fus H = 6.01 kJ/mol in Figure 19.10.1 (from memory, caption names the CRC Handbook); 19.5's
+round numbers (1.00 mol, 10.0 L, 300 K) in its paths Sim are ours, not the book's.
+
+Known gaps: 19.5's text displays w_A, w_B, q_C with typed main letters but no referent rows for
+the paths; 19.1's derivation fact "The pressure of an ideal gas is a function of its molar volume
+and temperature alone" restates the sentence just before it in prose.

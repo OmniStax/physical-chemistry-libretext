@@ -741,7 +741,7 @@
    "kind": "result",
    "section": "23.5",
    "name": "Helmholtz energy from the partition function",
-   "statement": "With U and S written through ln Q, A = U − TS gives A = −RT ln Q.",
+   "statement": "With U and S written through ln Q, A = U − TS gives A = −RT ln Q. For Q of the whole system the constant is Boltzmann’s: A = −k_BT ln Q, as the derivation writes it.",
    "forms": [
     {
      "id": "a-ln-q",
@@ -767,7 +767,7 @@
    "kind": "result",
    "section": "23.5",
    "name": "Chemical potential from the partition function",
-   "statement": "Putting A = −RT ln Q into μ = (∂A/∂n)_{V,T} gives μ = −RT(∂ln Q/∂n)_{V,T}.",
+   "statement": "Putting A = −RT ln Q into μ = (∂A/∂n)_{V,T} gives μ = −RT(∂ln Q/∂n)_{V,T}. The derivation writes it with k_B, μ = −k_BT(∂ln Q/∂n)_{V,T} for n in moles, which is −RT(∂ln Q/∂N)_{V,T} for N molecules.",
    "forms": [
     {
      "id": "mu-ln-q",
