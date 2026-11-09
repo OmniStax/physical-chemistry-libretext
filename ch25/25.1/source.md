@@ -1,0 +1,4 @@
+<!-- LibreTexts page 14513: Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Physical_Chemistry_(LibreTexts)/25:_Solutions_II_-_Nonvolatile_Solutes/25.01:_Standard_State_of_Nonvolatile_Solutions -->
+# Standard State of Nonvolatile Solutions
+
+The activity is a relative measure as it measures equilibrium relative to a standard state. The standard state is defined by the International Union of Pure and Applied Chemistry (IUPAC) and followed systematically by chemists around the globe.︎ The standard state for a solution is defined in terms of the infinite-dilution behavior. This is in contrast to the standard state concentration of 1 mol/L. This can be reconciled by considering that the standard state is a hypothetical solution of 1 mol/L in which the solute has infinite-dilution properties, e.g. solute particles do not interact with each other. This means that the activity coefficient describes all non-ideal behavior when the value is not equal to 1.
