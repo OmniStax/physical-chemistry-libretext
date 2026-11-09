@@ -73,7 +73,7 @@ const sim = (id, H) => F.sim(root, id, H);
     plot(ctx, S, sB, cB, { w: 3, x: [0, Math.max(1e-3, t)] });
     plot(ctx, S, sT, C('entropy'), { w: 5, x: [0, Math.max(1e-3, t)] });
     dot(ctx, S.X(t), S.Y(gain), C('entropy'), true, 9);
-    F.legend(ctx, S, [{ s: 'block A', color: cA, w: 3 }, { s: 'block B', color: cB, w: 3 }, { s: 'both blocks', color: C('entropy'), w: 5 }], { corner: 'above' });
+    F.legend(ctx, S, [{ s: 'A', color: cA, w: 3, f: sA }, { s: 'B', color: cB, w: 3, f: sB }, { s: 'A + B', color: C('entropy'), w: 5, f: sT }], { corner: 'below' });
     hits.push({ x: S.X(t), y: S.Y(gain), r: 16, name: `entropy gained by the pair, ${fmt(gain, 3)} J/K` });
     hits.push({ x: S.X(t), y: S.Y(sA(t)), r: 14, name: `entropy change of block A, ${fmt(sA(t), 3)} J/K` });
     hits.push({ x: S.X(t), y: S.Y(sB(t)), r: 14, name: `entropy change of block B, ${fmt(sB(t), 3)} J/K` });

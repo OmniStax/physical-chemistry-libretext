@@ -21,7 +21,7 @@
  },
  "built": "2026-11-08",
  "exercises_lead": "",
- "exercise_notes": "Example 21.1.1, which the book prints as five steps with no solution, is unkeyed and has an AI solution; its Bloom level and concept tags were chosen by AI. Problem 1 of the chapter's exercise page (21.E), which belongs here, waits until the checker can find its source.",
+ "exercise_notes": "Example 21.1.1, which the book prints as five steps with no solution, is unkeyed and has an AI solution; its Bloom level and concept tags were chosen by AI. Problem 1 of the chapter's exercise page (21.E), routed here, is unkeyed and has an AI solution, its answer computed; its Bloom level and concept tag were chosen by AI.",
  "figures": [],
  "referents": [],
  "coverage": [
@@ -104,6 +104,27 @@
     "hint": "Write the total differential of $U(T, V)$ and set it equal to $T\\,dS - P\\,dV$.",
     "solution": "<p>(1) As a function of $\\kT$ and $\\kV$, $d\\kU = \\left(\\dfrac{\\partial \\kU}{\\partial \\kT}\\right)_{\\kV} d\\kT + \\left(\\dfrac{\\partial \\kU}{\\partial \\kV}\\right)_{\\kT} d\\kV$.</p><p>(2) In its natural variables, $d\\kU = \\kT\\,d\\kSent - \\kP\\,d\\kV$.</p><p>(3) Solved for the entropy, $d\\kSent = \\dfrac{1}{\\kT}\\,d\\kU + \\dfrac{\\kP}{\\kT}\\,d\\kV$.</p><p>(4) Putting (1) into (3) gives $d\\kSent = \\dfrac{1}{\\kT}\\left(\\dfrac{\\partial \\kU}{\\partial \\kT}\\right)_{\\kV} d\\kT + \\dfrac{1}{\\kT}\\left[\\left(\\dfrac{\\partial \\kU}{\\partial \\kV}\\right)_{\\kT} + \\kP\\right] d\\kV$. The coefficient of $d\\kT$ is $(\\partial \\kSent/\\partial \\kT)_{\\kV}$, so $\\left(\\dfrac{\\partial \\kSent}{\\partial \\kT}\\right)_{\\kV} = \\dfrac{1}{\\kT}\\left(\\dfrac{\\partial \\kU}{\\partial \\kT}\\right)_{\\kV} = \\dfrac{\\kCV}{\\kT}$, which is the definition of $\\kCV$ written as $\\kCV = \\kT(\\partial \\kSent/\\partial \\kT)_{\\kV}$.</p><p>(5) For $\\kSent(\\kT, \\kV)$, then, $d\\kSent = \\dfrac{\\kCV}{\\kT}\\,d\\kT + \\dfrac{1}{\\kT}\\left[\\left(\\dfrac{\\partial \\kU}{\\partial \\kV}\\right)_{\\kT} + \\kP\\right] d\\kV$. At constant volume only the first term is left, which is $d\\kSent = (\\kCV/\\kT)\\,d\\kT$.</p>"
    }
+  },
+  {
+   "id": "e2",
+   "source_id": "Liquid water has a nearly constant molar heat capacity",
+   "source_section": "21.E",
+   "source_number": "Problem 1",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "entropy-versus-temperature",
+   "prompt": "<p>Liquid water has a nearly constant molar heat capacity of $\\bar{C}_P=75.4.\\;\\text{J}\\cdot\\text{mol}^{-1}\\text{K}^{-1}$. What is the change in entropy as 200. g of water are cooled from 70.0°C to 20.0°C?</p>",
+   "answer": {
+    "type": "number",
+    "value": -131.8,
+    "unit": "J/K",
+    "generated_by": "ai",
+    "hint": "With a constant heat capacity the integral of $C_P/T$ is $nC_P\\ln(T_2/T_1)$, in kelvins.",
+    "solution": "<p>The water is $n = 200.\\ \\text{g}/18.015\\ \\text{g mol}^{-1} = 11.10$ mol. With $\\bar{C}_P$ constant, $\\Delta \\kSent = \\displaystyle\\int_{\\kTone}^{\\kTtwo} \\dfrac{n\\bar{C}_P}{\\kT}\\,d\\kT = n\\bar{C}_P\\ln\\dfrac{\\kTtwo}{\\kTone}$, and the temperatures are $\\kTone = 343.15$ K and $\\kTtwo = 293.15$ K. So $\\Delta \\kSent = (11.10\\ \\text{mol})(75.4\\ \\text{J mol}^{-1}\\text{K}^{-1})\\ln\\dfrac{293.15}{343.15} = (837.1\\ \\text{J/K})(-0.1575) = -131.8$ J/K. The entropy falls because the water is cooled.</p>"
+   }
   }
  ],
  "exercise_concepts": [
@@ -114,6 +135,10 @@
   {
    "exercise": "e1",
    "concept": "natural-variables-u"
+  },
+  {
+   "exercise": "e2",
+   "concept": "entropy-change-constant-pressure"
   }
  ],
  "footnotes": [],
