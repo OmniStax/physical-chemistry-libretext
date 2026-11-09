@@ -17,7 +17,7 @@ None (the van 't Hoff Sim is 26.7's; a compression Sim was judged and dropped in
 
 ## Exercises
 
-`q1`: the book's unnumbered NH₃ example, which prints no solution, moved out of the text into the Exercises document as a `question` (Chapter 3's decision) with an AI solution: products, reactants, reactants, unaffected, products (2NH₃ ⇌ N₂ + 3H₂ is endothermic, Δ_rH° = +91.80 kJ/mol), and K = x_{N₂}x_{H₂}³(P/P°)²/x_{NH₃}². The exploration's "right, left, right, unaffected, left" reads the volume and temperature rows as for the synthesis; the decomposition the book writes shifts to the reactants on compression and to the products on heating.
+`q1`: the book's unnumbered NH₃ example, which prints no solution, moved out of the text into the Exercises document as a `question` (Chapter 3's decision) with an AI solution: products, reactants, reactants, unaffected, products (2NH₃ ⇌ N₂ + 3H₂ is endothermic, Δ_rH° = +91.80 kJ/mol), and K = x_{N₂}x_{H₂}³(P/P°)²/x_{NH₃}². The exploration's first "right, left, right, unaffected, left" (corrected there in the chapter pass) read the volume and temperature rows as for the synthesis; the decomposition the book writes shifts to the reactants on compression and to the products on heating.
 
 ## Derivations
 

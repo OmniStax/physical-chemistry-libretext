@@ -127,7 +127,8 @@
       "sym": "n_A",
       "meaning": "the amount of A",
       "unit": "mol",
-      "section": "26.1"
+      "section": "26.1",
+      "type": "amount"
     },
     {
       "sym": "q_xi",
@@ -138,19 +139,22 @@
       "sym": "G",
       "meaning": "the Gibbs energy of the reacting system",
       "unit": "J",
-      "section": "26.1"
+      "section": "26.1",
+      "concept": "gibbs-energy"
     },
     {
       "sym": "mu_i",
       "meaning": "the chemical potential of species i",
       "unit": "J/mol",
-      "section": "26.1"
+      "section": "26.1",
+      "concept": "chemical-potential"
     },
     {
       "sym": "n_i",
       "meaning": "the amount of species i",
       "unit": "mol",
-      "section": "26.1"
+      "section": "26.1",
+      "type": "amount"
     },
     {
       "sym": "Delta_rG",
@@ -170,7 +174,8 @@
       "sym": "mu_i_o",
       "meaning": "the standard chemical potential of species i",
       "unit": "J/mol",
-      "section": "26.1"
+      "section": "26.1",
+      "type": "energy"
     },
     {
       "sym": "P_i",
@@ -183,31 +188,36 @@
       "sym": "P_i_std",
       "meaning": "the standard pressure of species i, usually 1 bar",
       "unit": "bar",
-      "section": "26.1"
+      "section": "26.1",
+      "type": "pressure"
     },
     {
       "sym": "P_A",
       "meaning": "the partial pressure of A",
       "unit": "bar",
-      "section": "26.1"
+      "section": "26.1",
+      "type": "pressure"
     },
     {
       "sym": "P_Y",
       "meaning": "the partial pressure of Y",
       "unit": "bar",
-      "section": "26.1"
+      "section": "26.1",
+      "type": "pressure"
     },
     {
       "sym": "P_Z",
       "meaning": "the partial pressure of Z",
       "unit": "bar",
-      "section": "26.1"
+      "section": "26.1",
+      "type": "pressure"
     },
     {
       "sym": "P_B",
       "meaning": "the partial pressure of B",
       "unit": "bar",
-      "section": "26.1"
+      "section": "26.1",
+      "type": "pressure"
     },
     {
       "sym": "Q_r",
@@ -235,7 +245,8 @@
       "sym": "T",
       "meaning": "the temperature",
       "unit": "K",
-      "section": "26.1"
+      "section": "26.1",
+      "type": "temperature"
     },
     {
       "sym": "K_eq",
@@ -261,13 +272,15 @@
       "sym": "Delta_rH_std",
       "meaning": "the standard enthalpy of reaction",
       "unit": "J/mol",
-      "section": "26.2"
+      "section": "26.2",
+      "type": "energy"
     },
     {
       "sym": "Delta_fH_std",
       "meaning": "the standard enthalpy of formation",
       "unit": "kJ/mol",
-      "section": "26.2"
+      "section": "26.2",
+      "type": "energy"
     },
     {
       "sym": "R",
@@ -279,25 +292,29 @@
       "sym": "T",
       "meaning": "the temperature",
       "unit": "K",
-      "section": "26.2"
+      "section": "26.2",
+      "type": "temperature"
     },
     {
       "sym": "T_1",
       "meaning": "the temperature at which K is K(T₁)",
       "unit": "K",
-      "section": "26.2"
+      "section": "26.2",
+      "type": "temperature"
     },
     {
       "sym": "T_2",
       "meaning": "the temperature at which K is K(T₂)",
       "unit": "K",
-      "section": "26.2"
+      "section": "26.2",
+      "type": "temperature"
     },
     {
       "sym": "P",
       "meaning": "the total pressure",
       "unit": "bar",
-      "section": "26.2"
+      "section": "26.2",
+      "type": "pressure"
     },
     {
       "sym": "xi_eq",
@@ -317,25 +334,29 @@
       "sym": "P_A",
       "meaning": "the partial pressure of A",
       "unit": "bar",
-      "section": "26.2"
+      "section": "26.2",
+      "type": "pressure"
     },
     {
       "sym": "P_B",
       "meaning": "the partial pressure of B",
       "unit": "bar",
-      "section": "26.2"
+      "section": "26.2",
+      "type": "pressure"
     },
     {
       "sym": "P_C",
       "meaning": "the partial pressure of C",
       "unit": "bar",
-      "section": "26.2"
+      "section": "26.2",
+      "type": "pressure"
     },
     {
       "sym": "n_A",
       "meaning": "the amount of A",
       "unit": "mol",
-      "section": "26.2"
+      "section": "26.2",
+      "type": "amount"
     },
     {
       "sym": "c",
@@ -348,13 +369,15 @@
       "sym": "V",
       "meaning": "the volume",
       "unit": "L",
-      "section": "26.2"
+      "section": "26.2",
+      "type": "volume"
     },
     {
       "sym": "n_i",
       "meaning": "the amount of gas",
       "unit": "mol",
-      "section": "26.2"
+      "section": "26.2",
+      "type": "amount"
     },
     {
       "sym": "nu_A",
@@ -407,49 +430,57 @@
       "sym": "Delta_fH_std",
       "meaning": "the standard molar enthalpy of formation",
       "unit": "J/mol",
-      "section": "26.3"
+      "section": "26.3",
+      "type": "energy"
     },
     {
       "sym": "Delta_rH",
       "meaning": "the molar reaction enthalpy",
       "unit": "J/mol",
-      "section": "26.3"
+      "section": "26.3",
+      "type": "energy"
     },
     {
       "sym": "Delta_rH_std",
       "meaning": "the standard molar reaction enthalpy",
       "unit": "J/mol",
-      "section": "26.3"
+      "section": "26.3",
+      "type": "energy"
     },
     {
       "sym": "Delta_rS",
       "meaning": "the molar reaction entropy",
       "unit": "J/(K mol)",
-      "section": "26.3"
+      "section": "26.3",
+      "type": "entropy"
     },
     {
       "sym": "Delta_rS_std",
       "meaning": "the standard molar reaction entropy",
       "unit": "J/(K mol)",
-      "section": "26.3"
+      "section": "26.3",
+      "type": "entropy"
     },
     {
       "sym": "S_std_i",
       "meaning": "the standard molar entropy of species i",
       "unit": "J/(K mol)",
-      "section": "26.3"
+      "section": "26.3",
+      "type": "entropy"
     },
     {
       "sym": "S_m_std",
       "meaning": "the standard molar entropy of a substance or ion",
       "unit": "J/(K mol)",
-      "section": "26.3"
+      "section": "26.3",
+      "type": "entropy"
     },
     {
       "sym": "mu_i",
       "meaning": "the chemical potential of species i",
       "unit": "J/mol",
-      "section": "26.3"
+      "section": "26.3",
+      "concept": "chemical-potential"
     },
     {
       "sym": "nu_i_st",
@@ -476,7 +507,8 @@
       "sym": "T",
       "meaning": "the temperature",
       "unit": "K",
-      "section": "26.3"
+      "section": "26.3",
+      "type": "temperature"
     },
     {
       "sym": "xi",
@@ -496,7 +528,8 @@
       "sym": "G",
       "meaning": "the Gibbs energy of the reacting system",
       "unit": "J",
-      "section": "26.4"
+      "section": "26.4",
+      "concept": "gibbs-energy"
     },
     {
       "sym": "Delta_rG",
@@ -516,7 +549,8 @@
       "sym": "Delta_mix_G",
       "meaning": "the Gibbs free energy of mixing of A and B",
       "unit": "J",
-      "section": "26.4"
+      "section": "26.4",
+      "type": "energy"
     },
     {
       "sym": "chi_A",
@@ -532,19 +566,22 @@
       "sym": "P_A",
       "meaning": "the partial pressure of A",
       "unit": "bar",
-      "section": "26.4"
+      "section": "26.4",
+      "type": "pressure"
     },
     {
       "sym": "P_B",
       "meaning": "the partial pressure of B",
       "unit": "bar",
-      "section": "26.4"
+      "section": "26.4",
+      "type": "pressure"
     },
     {
       "sym": "P_std",
       "meaning": "the standard pressure, 1 bar",
       "unit": "bar",
-      "section": "26.4"
+      "section": "26.4",
+      "type": "pressure"
     },
     {
       "sym": "K_eq",
@@ -562,13 +599,15 @@
       "sym": "T",
       "meaning": "the temperature",
       "unit": "K",
-      "section": "26.4"
+      "section": "26.4",
+      "type": "temperature"
     },
     {
       "sym": "n_i",
       "meaning": "the total amount of gas",
       "unit": "mol",
-      "section": "26.4"
+      "section": "26.4",
+      "type": "amount"
     },
     {
       "sym": "Delta_rG",
@@ -606,7 +645,8 @@
       "sym": "T",
       "meaning": "the temperature",
       "unit": "K",
-      "section": "26.5"
+      "section": "26.5",
+      "type": "temperature"
     },
     {
       "sym": "Delta_rG",
@@ -651,7 +691,8 @@
       "sym": "T",
       "meaning": "the temperature",
       "unit": "K",
-      "section": "26.6"
+      "section": "26.6",
+      "type": "temperature"
     },
     {
       "sym": "K_eq",
@@ -663,31 +704,36 @@
       "sym": "Delta_G_std",
       "meaning": "the standard Gibbs energy of reaction, printed ΔG° and Δ_rG°",
       "unit": "J/mol",
-      "section": "26.7"
+      "section": "26.7",
+      "type": "energy"
     },
     {
       "sym": "Delta_H_std",
       "meaning": "the standard enthalpy of reaction, printed ΔH° and Δ_rH°",
       "unit": "J/mol",
-      "section": "26.7"
+      "section": "26.7",
+      "type": "energy"
     },
     {
       "sym": "Delta_S_std",
       "meaning": "the standard entropy of reaction, printed ΔS° and Δ_rS°",
       "unit": "J/(K mol)",
-      "section": "26.7"
+      "section": "26.7",
+      "type": "entropy"
     },
     {
       "sym": "T_1",
       "meaning": "the temperature at which K is K(T₁)",
       "unit": "K",
-      "section": "26.7"
+      "section": "26.7",
+      "type": "temperature"
     },
     {
       "sym": "T_2",
       "meaning": "the temperature at which K is K(T₂)",
       "unit": "K",
-      "section": "26.7"
+      "section": "26.7",
+      "type": "temperature"
     },
     {
       "sym": "R",
@@ -699,7 +745,8 @@
       "sym": "T",
       "meaning": "the temperature",
       "unit": "K",
-      "section": "26.7"
+      "section": "26.7",
+      "type": "temperature"
     },
     {
       "sym": "nu_A",
@@ -731,7 +778,8 @@
       "sym": "mu_i",
       "meaning": "the chemical potential of species i",
       "unit": "J",
-      "section": "26.8"
+      "section": "26.8",
+      "concept": "chemical-potential"
     },
     {
       "sym": "A",
@@ -748,12 +796,14 @@
     {
       "sym": "Q_sys",
       "meaning": "the total partition function",
-      "section": "26.8"
+      "section": "26.8",
+      "type": "partition-function"
     },
     {
       "sym": "q_i",
       "meaning": "the molecular partition function of species i",
-      "section": "26.8"
+      "section": "26.8",
+      "type": "partition-function"
     },
     {
       "sym": "k_B",
@@ -765,13 +815,15 @@
       "sym": "T",
       "meaning": "the temperature",
       "unit": "K",
-      "section": "26.8"
+      "section": "26.8",
+      "type": "temperature"
     },
     {
       "sym": "V",
       "meaning": "the volume",
       "unit": "m³",
-      "section": "26.8"
+      "section": "26.8",
+      "type": "volume"
     },
     {
       "sym": "lambda_x",
@@ -793,19 +845,22 @@
       "sym": "Theta_r",
       "meaning": "the characteristic temperature of rotation",
       "unit": "K",
-      "section": "26.8"
+      "section": "26.8",
+      "type": "temperature"
     },
     {
       "sym": "Theta_nu",
       "meaning": "the characteristic temperature of vibration",
       "unit": "K",
-      "section": "26.8"
+      "section": "26.8",
+      "type": "temperature"
     },
     {
       "sym": "D_0",
       "meaning": "the dissociation energy from the ground state",
       "unit": "kJ/mol",
-      "section": "26.8"
+      "section": "26.8",
+      "type": "energy"
     },
     {
       "sym": "g_1",
@@ -840,22 +895,26 @@
     {
       "sym": "q_trans",
       "meaning": "the translational partition function",
-      "section": "26.8"
+      "section": "26.8",
+      "type": "partition-function"
     },
     {
       "sym": "q_rot",
       "meaning": "the rotational partition function",
-      "section": "26.8"
+      "section": "26.8",
+      "type": "partition-function"
     },
     {
       "sym": "q_vib",
       "meaning": "the vibrational partition function",
-      "section": "26.8"
+      "section": "26.8",
+      "type": "partition-function"
     },
     {
       "sym": "q_elec",
       "meaning": "the electronic partition function",
-      "section": "26.8"
+      "section": "26.8",
+      "type": "partition-function"
     },
     {
       "sym": "Delta_fG_std",
@@ -868,37 +927,43 @@
       "sym": "Delta_fH_std",
       "meaning": "the standard state enthalpy of formation",
       "unit": "kJ/mol",
-      "section": "26.9"
+      "section": "26.9",
+      "type": "energy"
     },
     {
       "sym": "S_std",
       "meaning": "the standard state entropy",
       "unit": "J/(K mol)",
-      "section": "26.9"
+      "section": "26.9",
+      "type": "entropy"
     },
     {
       "sym": "T",
       "meaning": "the temperature",
       "unit": "K",
-      "section": "26.9"
+      "section": "26.9",
+      "type": "temperature"
     },
     {
       "sym": "mu",
       "meaning": "the chemical potential of the gas",
       "unit": "J/mol",
-      "section": "26.10"
+      "section": "26.10",
+      "concept": "chemical-potential"
     },
     {
       "sym": "mu_std",
       "meaning": "the standard chemical potential",
       "unit": "J/mol",
-      "section": "26.10"
+      "section": "26.10",
+      "type": "energy"
     },
     {
       "sym": "p",
       "meaning": "the pressure",
       "unit": "bar",
-      "section": "26.10"
+      "section": "26.10",
+      "type": "pressure"
     },
     {
       "sym": "f",
@@ -911,7 +976,8 @@
       "sym": "f_std",
       "meaning": "the standard fugacity",
       "unit": "bar",
-      "section": "26.10"
+      "section": "26.10",
+      "type": "pressure"
     },
     {
       "sym": "gamma",
@@ -945,19 +1011,22 @@
       "sym": "T",
       "meaning": "the temperature",
       "unit": "K",
-      "section": "26.10"
+      "section": "26.10",
+      "type": "temperature"
     },
     {
       "sym": "mu_i",
       "meaning": "the chemical potential of species i",
       "unit": "J/mol",
-      "section": "26.11"
+      "section": "26.11",
+      "concept": "chemical-potential"
     },
     {
       "sym": "mu_std",
       "meaning": "the standard chemical potential",
       "unit": "J/mol",
-      "section": "26.11"
+      "section": "26.11",
+      "type": "energy"
     },
     {
       "sym": "a_i",
@@ -1006,13 +1075,15 @@
       "sym": "V_bar",
       "meaning": "the molar volume of the pure solid or liquid",
       "unit": "m³/mol",
-      "section": "26.11"
+      "section": "26.11",
+      "type": "molar-volume"
     },
     {
       "sym": "P_prime",
       "meaning": "a pressure other than the standard 1 bar",
       "unit": "bar",
-      "section": "26.11"
+      "section": "26.11",
+      "type": "pressure"
     },
     {
       "sym": "a_prime",
@@ -1037,13 +1108,15 @@
       "sym": "Delta_rH_std",
       "meaning": "the standard reaction enthalpy",
       "unit": "J/mol",
-      "section": "26.11"
+      "section": "26.11",
+      "type": "energy"
     },
     {
       "sym": "Delta_rS_std",
       "meaning": "the standard reaction entropy",
       "unit": "J/(K mol)",
-      "section": "26.11"
+      "section": "26.11",
+      "type": "entropy"
     },
     {
       "sym": "T_eq",
@@ -1062,7 +1135,8 @@
       "sym": "T",
       "meaning": "the temperature",
       "unit": "K",
-      "section": "26.11"
+      "section": "26.11",
+      "type": "temperature"
     },
     {
       "sym": "K_eq",
@@ -1095,6 +1169,69 @@
       "sym": "z_minus",
       "meaning": "the charge of the anion",
       "section": "26.12"
+    },
+    {
+      "sym": "Delta_rG_std",
+      "concept": "standard-reaction-gibbs-energy",
+      "meaning": "the standard Gibbs energy of reaction",
+      "unit": "J/mol",
+      "section": "26.7"
+    },
+    {
+      "sym": "Delta_rH_std",
+      "type": "energy",
+      "meaning": "the standard enthalpy of reaction",
+      "unit": "J/mol",
+      "section": "26.7"
+    },
+    {
+      "sym": "Delta_rS_std",
+      "type": "entropy",
+      "meaning": "the standard entropy of reaction",
+      "unit": "J/(K mol)",
+      "section": "26.7"
+    },
+    {
+      "sym": "P_i",
+      "type": "pressure",
+      "meaning": "the partial pressure of species i",
+      "unit": "bar",
+      "section": "26.2"
+    },
+    {
+      "sym": "G",
+      "concept": "gibbs-energy",
+      "meaning": "the Gibbs energy of the reacting system",
+      "unit": "J",
+      "section": "26.5"
+    },
+    {
+      "sym": "P_i",
+      "type": "pressure",
+      "meaning": "the partial pressure of species i",
+      "unit": "bar",
+      "section": "26.11"
+    },
+    {
+      "sym": "P_i_std",
+      "type": "pressure",
+      "meaning": "the standard pressure of species i, usually 1 bar",
+      "unit": "bar",
+      "section": "26.11"
+    },
+    {
+      "sym": "mu",
+      "concept": "chemical-potential",
+      "meaning": "the chemical potential",
+      "unit": "J/mol",
+      "section": "26.11"
+    },
+    {
+      "sym": "mu_i_o",
+      "type": "energy",
+      "meaning": "the standard chemical potential of species i",
+      "unit": "J/mol",
+      "section": "26.11"
     }
   ]
 }

@@ -119,7 +119,8 @@ printed, with one footnote naming them another text's (25.2's Peverati precedent
   **1 unkeyed** (compute + explain). *Checked*: I = 2.0, γ±² = 0.253 by the page's formula, [H₃O⁺]
   = 1.99 × 10⁻⁷ mol/L (−log of the concentration 6.70), while −log a(H₃O⁺) stays 7.00.
 - **Example boxes without a solution**: **1** (26.2's unnumbered NH₃ example, five stresses and a K in
-  mole fractions); **0 keyed**; **1 unkeyed** (explain: right, left, right, unaffected, left; and
+  mole fractions); **0 keyed**; **1 unkeyed** (explain: right, left, left, unaffected, right, since
+  the decomposition as written has more gas on the right and is endothermic; and
   K = x_{N₂}x_{H₂}³P²/(x_{NH₃}²P°²)).
 - **Inline questions**: **1** (26.12's one-cell "Question": 0.5 mol/L NaCl added to 0.1 mol/L acetic
   acid); **0 keyed**; **1 unkeyed** (compute: with I ≈ 0.50, γ±² = 0.378, x = 2.12 × 10⁻³ mol/L

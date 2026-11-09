@@ -1599,3 +1599,41 @@ same for 24.6's gas-phase fact after (24.6.1). In `sim-pxy` the "vapor" region n
 the legend's edge. Several derivation symbols stay plain where no row or macro exists (n₁, n₂,
 μ₁*, μ₂*, μ_i^sln in 24.4; χ_A, χ_B in 24.2). The memory flags of the prep stand (water and
 ethanol at 75 °C, ε = 78.54, the Debye–Hückel sign).
+
+## Chapter 26 pass · 2026-11-08
+
+Built: 26.1–26.12 (no intro page, no summary; 26.13 "Homework Problems" not built, its one exercise
+already 1.9's card `e3`). 4 figure rows: 3 interactive (1 moving: 26.5's `sim-q-toward-k`; 2 still:
+Figure 26.4.1 + 26.4.2 `sim-gibbs-extent` and Figure 26.7.1 `sim-van-t-hoff`; no 3D) and 1 kept
+image (26.1's 411105, caption corrected in its row). 9 derivations (26.1 two, 26.2 two, 26.3 one,
+26.8 two, 26.10 one, 26.11 one). 13 exercises in the Exercises document: 1 `question` (26.2's
+unsolved NH₃ example) and 12 `exercise` (26.12's two unkeyed book items, 10 AI exercises), every
+solution AI-written. 10 AI-marked footnotes and 6 derivation notes (26.1's dn_B, 26.8's two, 26.10's
+three).
+
+Chapter pass: the prep wrote most of `chapter.json`'s variables rows with neither `concept` nor
+`type`, so nearly every symbol of the chapter printed in ink against the config's colour plan. Now
+typed through `ost set`: T, T₁, T₂, Θ_r, Θ_ν temperature; Δ_rH°, Δ_rH, Δ_fH°, ΔH°, ΔG°, Δ_mixG, D₀,
+μ_i° energy; Δ_rS, Δ_rS°, ΔS°, S°, S_m°, S_i° entropy; n_A, n_i amount; P, P_A…P_Z, P_i°, P°, p, f°,
+P′ pressure; V volume; V̄ molar-volume; q's and Q_sys partition-function; G linked to `gibbs-energy`,
+μ and μ_i to `chemical-potential` (the earlier chapters' rows). K's, Q's, ν's, R, k_B, h, χ's,
+activities and coefficients, N_i, λ, ρ, σ, g₁, z's, I stay in ink as planned. Rows added for macros
+used without one: 26.7 Δ_rG°, Δ_rH°, Δ_rS°; 26.2 and 26.11 P_i; 26.11 P_i°, μ, μ_i°; 26.5 G. Form
+`extended-dh-1173` (26.12, anchor `26.12-weak-electrolytes`) added to Chapter 25's
+`extended-debye-huckel-equation`, staged by `ost` in `ch25/book-rows.json`, its owner. 26.2's `q1`
+solution writes `\kDeltarHstd` and `\kPpi`. `exploration.md`'s answer to that example said "right,
+left, right, unaffected, left"; compression and heating were swapped (the decomposition goes to the
+reactants on compression and to the products on heating); corrected there, and 26.2's plan notes it.
+Derivations read against `source.md`: book lines kept, the corrections carried in notes. Every `\k`
+macro of the chapter has a variables row in its section. `node --check` clean on the three
+`figures.js`; no `\braket`, U+2011/U+FEFF/U+200B; every page has `ai`, `built`, `notes`.
+`mediacheck.py` silent. `colours:default` run: every type keeps its stored colour.
+`check:content`: no errors, no warnings. One build; every figure screenshot in light and dark
+(ΔH°, ΔS° now in their type colours in 26.7.1); no console or KaTeX error on any Chapter 26 page,
+the nine derivations shown in full.
+
+Known gaps: 26.5's readout writes "(8.314)(298.15) ln(Q/K) J/mol = … kJ/mol", true but in two units.
+26.7 keeps two keys for one quantity, the book's ΔH°/ΔS°/ΔG° and Δ_rH°/Δ_rS°/Δ_rG°, as it prints
+both. 26.12's inline "Question" went to the Exercises document (the builder's brief), not a Try It
+as the config said. Several derivation symbols stay plain (ν's printed v, μ_A…μ_Z, P_A°, A, ρ).
+The memory flags of the prep stand (water's V̄, graphite's density, Δ_fG°(NH₃), HCl's ΔH°/ΔS°).

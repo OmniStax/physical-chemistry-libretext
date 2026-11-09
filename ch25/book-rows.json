@@ -630,6 +630,12 @@
         {
           "id": "dh-b-constant",
           "latex": "B=\\left({\\frac {2e^{2}N}{\\epsilon _{0}\\epsilon _{r}k_{\\rm {B}}T}}\\right)^{1/2}"
+        },
+        {
+          "id": "extended-dh-1173",
+          "section": "26.12",
+          "latex": "\\ln \\gamma_\\pm = - 1.173|z_+z_-| \\dfrac{\\sqrt{I}}{1+\\sqrt{I}}",
+          "anchor": "26.12-weak-electrolytes"
         }
       ]
     },
