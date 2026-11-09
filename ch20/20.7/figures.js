@@ -71,7 +71,6 @@ const sim = (id, H) => F.sim(root, id, H);
     iso(0, 100, C('temperature')); iso(200, 300, C('temperature'));
     const corner = (s, name, dx, dy) => { const x = pv.X(s.V), y = pv.Y(n * RL * s.T / s.V); text(ctx, name, x + dx, y + dy, PAL.ink, { size: 22, weight: 600, align: 'center' }); hits.push({ x, y, r: 14, name: `${name}: ${fmt(s.V, 2)} L, ${fmt(n * RL * s.T / s.V, 1)} bar, ${fmt(s.T, 0)} K` }); };
     corner(state(0, th, tc), 'A', -16, -18); corner(state(1, th, tc), 'B', 18, -14); corner(state(2, th, tc), 'C', 14, -18); corner(state(3, th, tc), 'D', -18, 22);
-    if (eta > 0.08) { const mx = pts.reduce((a, p) => a + p[0], 0) / pts.length, my = pts.reduce((a, p) => a + p[1], 0) / pts.length; text(ctx, 'w', mx, my + 8, C('work'), { size: 24, weight: 600, align: 'center' }); }
     text(ctx, (pump ? NAMES_PUMP : NAMES)[engStep], pv.box.r - 4, pv.box.t + 6, PAL.muted, { size: 20, align: 'right' });
     const sx = pv.X(st.V), sy = pv.Y(n * RL * st.T / st.V);
     dot(ctx, sx, sy, PAL.ink, true, 11);

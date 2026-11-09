@@ -1,0 +1,208 @@
+{
+ "id": "22.4",
+ "module": "14491",
+ "chapter": "22",
+ "title": "The Enthalpy of an Ideal Gas is Independent of Pressure",
+ "short": "Enthalpy and pressure",
+ "lead": "How the enthalpy changes with pressure at constant temperature follows from the definition of the Gibbs energy and a Maxwell relation. The general result is then applied to an ideal gas.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": []
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "Exercise 22.5.4 and its key are the book's, moved here from Section 22.5 to the section that derives the result. The second exercise, its solution, and every Bloom level and concept tag are written by AI. The numeric answer accepts a 2% tolerance.",
+ "figures": [],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "pressure-and-enthalpy",
+   "concept": "gibbs-first-derivatives",
+   "verb": "introduces"
+  },
+  {
+   "span": "pressure-and-enthalpy",
+   "concept": "enthalpy-pressure-dependence",
+   "verb": "introduces"
+  },
+  {
+   "span": "pressure-and-enthalpy",
+   "concept": "ideal-gas-enthalpy-pressure",
+   "verb": "introduces"
+  },
+  {
+   "span": "pressure-and-enthalpy",
+   "concept": "maxwell-relation-g",
+   "verb": "uses"
+  },
+  {
+   "span": "pressure-and-enthalpy",
+   "concept": "gibbs-energy",
+   "verb": "uses"
+  },
+  {
+   "span": "pressure-and-enthalpy",
+   "concept": "ideal-gas-law",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "e1",
+   "source_id": "exr:22.5.4",
+   "source_section": "22.5",
+   "source_number": "Exercise 22.5.4",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "pressure-and-enthalpy",
+   "prompt": "<ol><li>Derive the expression</li></ol>$$ \\left (\\dfrac{\\partial \\kHenth}{\\partial \\kP} \\right)_{\\kT,n} = -\\kT \\left(\\dfrac{\\partial \\kV}{\\partial \\kT} \\right)_{\\kP,n} +\\kV $$<p>Then apply this equation to an ideal gas. Does the result seem reasonable?</p>",
+   "answer": {
+    "type": "open",
+    "generated_by": "source",
+    "solution": "<p>$(\\dfrac{\\partial \\kHenth}{\\partial \\kP})_{\\kT,n} = 0$ for an ideal gas. Since there are no interactions between ideal gas molecules, changing the pressure will not involve the formation or breaking of any intermolecular interactions or bonds.</p>"
+   }
+  },
+  {
+   "id": "a1",
+   "source_id": "For an ideal gas",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "pressure-and-enthalpy",
+   "prompt": "<p>At low pressure the molar volume of a van der Waals gas is close to $\\bar{V} = \\dfrac{\\kR\\kT}{\\kP} + b - \\dfrac{a}{\\kR\\kT}$. Use Equation 22.4.2 to find $\\left(\\partial \\bar{H}/\\partial \\kP\\right)_{\\kT}$ for $\\mathrm{N_2}$ at 298.15 K, with $a = 1.43$ L² bar mol⁻² and $b = 0.03913$ L mol⁻¹. Give the answer in J mol⁻¹ bar⁻¹ (1 L bar = 100 J).</p>",
+   "answer": {
+    "type": "number",
+    "value": -7.62,
+    "unit": "J/(mol·bar)",
+    "generated_by": "ai",
+    "hint": "Differentiate $\\bar{V}$ with respect to $\\kT$ at constant $\\kP$, then form $\\bar{V} - \\kT(\\partial \\bar{V}/\\partial \\kT)_{\\kP}$.",
+    "solution": "<p>$(\\partial \\bar{V}/\\partial \\kT)_{\\kP} = \\kR/\\kP + a/\\kR\\kT^2$, so $\\bar{V} - \\kT(\\partial \\bar{V}/\\partial \\kT)_{\\kP} = \\kR\\kT/\\kP + b - a/\\kR\\kT - \\kR\\kT/\\kP - a/\\kR\\kT = b - 2a/\\kR\\kT$. With $\\kR\\kT = (0.08314\\ \\text{L bar K}^{-1}\\text{mol}^{-1})(298.15\\ \\text{K}) = 24.79$ L bar mol⁻¹, $2a/\\kR\\kT = 2.86/24.79 = 0.1154$ L mol⁻¹, and $b - 2a/\\kR\\kT = 0.0391 - 0.1154 = -0.0762$ L mol⁻¹ $= -7.62$ J mol⁻¹ bar⁻¹. Unlike an ideal gas, nitrogen's enthalpy falls slightly as it is compressed at room temperature, because the attractions, through $a$, outweigh the molecules' own volume, through $b$.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "e1",
+   "concept": "enthalpy-pressure-dependence"
+  },
+  {
+   "exercise": "e1",
+   "concept": "ideal-gas-enthalpy-pressure"
+  },
+  {
+   "exercise": "a1",
+   "concept": "enthalpy-pressure-dependence"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-minus-v",
+   "kind": "correction",
+   "html": "The derivative is $\\left(\\dfrac{\\partial \\kG}{\\partial \\kP}\\right)_{\\kT} = +\\kV$, from $d\\kG = \\kV d\\kP - \\kSent d\\kT$ (Section 22.2); with $-\\kV$ the steps below would not give Equation 22.4.2."
+  }
+ ],
+ "derivations": [
+  {
+   "id": "enthalpy-pressure",
+   "what": "the pressure dependence of the enthalpy",
+   "source": "Physical Chemistry (LibreTexts), 22.4 The Enthalpy of an Ideal Gas is Independent of Pressure",
+   "nodes": [
+    {
+     "assumes": [
+      {
+       "tex": "\\kG = \\kHenth - \\kT\\kSent",
+       "src": "(22.4.1)"
+      },
+      {
+       "text": "Consider an isothermal change in pressure: $\\kT$ is held constant."
+      },
+      {
+       "tex": "\\left( \\dfrac{\\partial \\kG}{\\partial \\kP} \\right)_{\\kT} = \\kV"
+      },
+      {
+       "tex": "-\\left( \\dfrac{\\partial \\kSent}{\\partial \\kP} \\right)_{\\kT} = \\left( \\dfrac{\\partial \\kV}{\\partial \\kT} \\right)_{\\kP}"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{G}{\\kG} = \\mk{H}{\\kHenth} - \\mk{TS}{\\kT\\kSent}",
+      "src": "(22.4.1)"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{G}{\\left( \\dfrac{\\partial \\kG}{\\partial \\kP} \\right)_{\\kT}} = \\mk{H}{\\left( \\dfrac{\\partial \\kHenth}{\\partial \\kP} \\right)_{\\kT}} \\mk{TS}{-\\kT \\left( \\dfrac{\\partial \\kSent}{\\partial \\kP} \\right)_{\\kT}}",
+       "uses": [
+        1
+       ],
+       "cap": "Take the partial derivative of each side with respect to $\\kP$ at constant $\\kT$; the constant $\\kT$ comes out of the derivative of $\\kT\\kSent$."
+      },
+      {
+       "tex": "\\mk{G}{\\kV} = \\mk{H}{\\left( \\dfrac{\\partial \\kHenth}{\\partial \\kP} \\right)_{\\kT}} \\mk{TS}{-\\kT \\left( \\dfrac{\\partial \\kSent}{\\partial \\kP} \\right)_{\\kT}}",
+       "uses": [
+        2
+       ]
+      },
+      {
+       "tex": "\\mk{G}{\\kV} = \\mk{H}{\\left( \\dfrac{\\partial \\kHenth}{\\partial \\kP} \\right)_{\\kT}} \\mk{TS}{+\\kT \\left( \\dfrac{\\partial \\kV}{\\partial \\kT} \\right)_{\\kP}}",
+       "uses": [
+        3
+       ]
+      },
+      {
+       "tex": "\\mk{H}{\\left( \\dfrac{\\partial \\kHenth}{\\partial \\kP} \\right)_{\\kT}} = \\mk{G}{\\kV} \\mk{TS}{-\\kT \\left( \\dfrac{\\partial \\kV}{\\partial \\kT} \\right)_{\\kP}}",
+       "uses": []
+      }
+     ],
+     "num": "(22.4.2)",
+     "src": "22.4"
+    },
+    {
+     "assumes": [
+      {
+       "step": 0
+      },
+      {
+       "tex": "\\kP\\kV = \\knmol\\kR\\kT",
+       "src": "16.1"
+      }
+     ],
+     "then": {
+      "tex": "\\mk{H}{\\left( \\dfrac{\\partial \\kHenth}{\\partial \\kP} \\right)_{\\kT}} = \\mk{G}{\\kV} \\mk{TS}{-\\kT \\left( \\dfrac{\\partial \\kV}{\\partial \\kT} \\right)_{\\kP}}"
+     },
+     "steps": [
+      {
+       "tex": "\\mk{H}{\\left( \\dfrac{\\partial \\kHenth}{\\partial \\kP} \\right)_{\\kT}} = \\mk{G}{\\kV} \\mk{TS}{- \\kT \\left( \\dfrac{\\knmol\\kR}{\\kP}\\right)}",
+       "uses": [
+        1
+       ],
+       "cap": "For an ideal gas $\\kV = \\knmol\\kR\\kT/\\kP$, so at constant $\\kP$ the volume grows with temperature at the rate $\\knmol\\kR/\\kP$."
+      },
+      {
+       "tex": "\\mk{H}{\\left( \\dfrac{\\partial \\kHenth}{\\partial \\kP} \\right)_{\\kT}} = \\mk{G}{\\kV} \\mk{TS}{- \\kV}",
+       "uses": [
+        1
+       ]
+      },
+      {
+       "tex": "\\mk{H}{\\left( \\dfrac{\\partial \\kHenth}{\\partial \\kP} \\right)_{\\kT}} = \\mk{z}{0}",
+       "uses": []
+      }
+     ],
+     "src": "22.4"
+    }
+   ]
+  }
+ ]
+}

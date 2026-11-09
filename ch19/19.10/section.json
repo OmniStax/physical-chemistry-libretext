@@ -1,0 +1,128 @@
+{
+ "id": "19.10",
+ "module": "13708",
+ "chapter": "19",
+ "title": "Relative Enthalpies Can Be Determined from Heat Capacity Data and Heats of Transition",
+ "short": "Relative enthalpies",
+ "lead": "Warming ice from −20 °C to liquid water at +20 °C takes three steps, and each has its own enthalpy change. Differential scanning calorimetry measures the heat capacity behind them as a sample is heated.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "The book prints no credits for this page; its unnumbered DSC image is folded into Figure 19.10.1.",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ],
+  "figures": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "low"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercises for this section; the one here is new and AI-written, its answer checked by computation from the values the question gives. Its Bloom level and concept tags were chosen by AI. Numeric answers accept a 2% tolerance.",
+ "figures": [
+  {
+   "id": "sim-enthalpy-melting",
+   "kind": "sim",
+   "number": "19.10.1",
+   "originals": [
+    "/media/ch19/87321-CH431_Image100.gif",
+    "/media/ch19/87323-DSC.gif"
+   ],
+   "original_caption": "Schematic enthalpy function showing the jump at the melting point. The ideal heat capacity signal and its broadened DSC signal",
+   "widths": [
+    574,
+    464
+   ],
+   "draws": [
+    "energy",
+    "temperature",
+    "heat-capacity"
+   ],
+   "ai": [
+    {
+     "model": "claude-opus-5-5",
+     "effort": "low",
+     "part": "built"
+    }
+   ]
+  }
+ ],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "heating-ice",
+   "concept": "enthalpy-of-a-process",
+   "verb": "introduces"
+  },
+  {
+   "span": "heating-ice",
+   "concept": "no-absolute-enthalpies",
+   "verb": "reinforces"
+  },
+  {
+   "span": "heating-ice",
+   "concept": "enthalpy-of-fusion",
+   "verb": "reinforces"
+  },
+  {
+   "span": "heating-ice",
+   "concept": "constant-pressure-heat-capacity",
+   "verb": "uses"
+  },
+  {
+   "span": "singular-heat-capacity",
+   "concept": "differential-scanning-calorimetry",
+   "verb": "introduces"
+  },
+  {
+   "span": "singular-heat-capacity",
+   "concept": "heat-capacity-at-transition",
+   "verb": "reinforces"
+  },
+  {
+   "span": "singular-heat-capacity",
+   "concept": "constant-pressure-heat-capacity",
+   "verb": "reinforces"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "a1",
+   "source_id": "The total change in enthalpy between -20 and +20 would be the sum of the three enthalpy changes.",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "heating-ice",
+   "prompt": "<p>Take $C_{P,\\text{ice}} = 37.7$ J mol⁻¹ K⁻¹, $C_{P,\\text{water}} = 75.29$ J mol⁻¹ K⁻¹ and $\\kDeltafusH = 6.01$ kJ/mol at 273 K, each constant. Find the enthalpy change, in kJ/mol, for taking ice at −20 °C to liquid water at +20 °C.</p>",
+   "answer": {
+    "type": "number",
+    "value": 8.27,
+    "unit": "kJ/mol",
+    "generated_by": "ai",
+    "hint": "Define the process: heat the ice, melt it, heat the water.",
+    "solution": "<p>$\\kDeltaH_1 = (37.7)(273 - 253) = 754$ J/mol to warm the ice, $\\kDeltafusH = 6010$ J/mol to melt it, and $\\kDeltaH_3 = (75.29)(293 - 273) = 1506$ J/mol to warm the water. The sum is $754 + 6010 + 1506 = 8270$ J/mol, or 8.27 kJ/mol. Melting accounts for almost three quarters of it.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "a1",
+   "concept": "enthalpy-of-a-process"
+  }
+ ],
+ "footnotes": [
+  {
+   "id": "c-more-transitions",
+   "kind": "correction",
+   "html": "Figure 19.10.1 shows one transition, melting. Boiling would add a second jump in $H$ and a second singularity in $C_p$."
+  }
+ ]
+}

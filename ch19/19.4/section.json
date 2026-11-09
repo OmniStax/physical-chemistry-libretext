@@ -1,0 +1,83 @@
+{
+ "id": "19.4",
+ "module": "13702",
+ "chapter": "19",
+ "title": "Energy is a State Function",
+ "short": "Energy as a state function",
+ "lead": "Heat and work depend on the path a change takes. Writing the first law for small changes, with a straight d for a state function and a crooked δ for heat and work, shows why the internal energy behaves differently.",
+ "objectives": [],
+ "summary_html": "",
+ "notes": "",
+ "ai": {
+  "text": [
+   {
+    "model": "claude-opus-5-5",
+    "effort": "medium"
+   }
+  ]
+ },
+ "built": "2026-11-08",
+ "exercises_lead": "",
+ "exercise_notes": "The book sets no exercises for this section; the one exercise, on a gas taken round a cycle, was written by AI with an AI solution, and its Bloom level and concept tags were chosen by AI. Numeric answers accept a 2% tolerance.",
+ "figures": [],
+ "referents": [],
+ "coverage": [
+  {
+   "span": "state-function",
+   "concept": "exact-and-inexact-differentials",
+   "verb": "introduces"
+  },
+  {
+   "span": "state-function",
+   "concept": "energy-is-a-state-function",
+   "verb": "introduces"
+  },
+  {
+   "span": "state-function",
+   "concept": "first-law-of-thermodynamics",
+   "verb": "reinforces"
+  },
+  {
+   "span": "state-function",
+   "concept": "internal-energy-change",
+   "verb": "reinforces"
+  },
+  {
+   "span": "state-function",
+   "concept": "path-function",
+   "verb": "uses"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "ai1",
+   "source_id": "term:first law of thermodynamics",
+   "kind": "exercise",
+   "bloom": "Apply",
+   "place": {
+    "at": "end"
+   },
+   "cite": "state-function",
+   "prompt": "<p>A gas is taken round a cycle that returns it to its starting state. Along the way it absorbs 500 J of heat. How much work is done on the gas over the whole cycle?</p>",
+   "answer": {
+    "type": "number",
+    "value": -500,
+    "unit": "J",
+    "generated_by": "ai",
+    "hint": "After a full cycle the gas is back in its starting state. What is $\\Delta U$?",
+    "solution": "<p>The internal energy is a state function, so around a closed cycle $\\oint dU = 0$ and $\\Delta U = 0$. The first law, $\\Delta U = w + q$, then gives $w = -q = -500$ J. The gas does 500 J of work on the surroundings, and heat and work, which are path functions, need not be zero round the cycle even though $\\Delta U$ is.</p>"
+   }
+  }
+ ],
+ "exercise_concepts": [
+  {
+   "exercise": "ai1",
+   "concept": "energy-is-a-state-function"
+  },
+  {
+   "exercise": "ai1",
+   "concept": "first-law-of-thermodynamics"
+  }
+ ],
+ "footnotes": []
+}

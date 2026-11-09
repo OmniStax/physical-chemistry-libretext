@@ -19,7 +19,7 @@ const H = (t) => t <= TM ? CP_ICE * (t - T0) : CP_ICE * (TM - T0) + DFUS + CP_WA
 (function () {
   const d = sim('sim-enthalpy-melting', 700);
   const T = ctl(d.controls, { label: '\\kT', cls: 'temperature', min: 253, max: 293, step: 0.5, value: 293, unit: 'K', dec: 1, detents: [273], snap: true });
-  const SG = ctl(d.controls, { label: '\\sigma', cls: '', min: 2, max: 6, step: 0.1, value: 3, unit: 'K', dec: 1 });
+  const SG = ctl(d.controls, { label: '\\sigma', cls: '', min: 2, max: 5, step: 0.1, value: 3, unit: 'K', dec: 1 });
   const hov = []; F.hover(d.stage, () => hov);
   const base = (t) => t < TM ? CP_ICE : CP_WATER;
   function draw() {
@@ -59,7 +59,7 @@ const H = (t) => t <= TM ? CP_ICE * (t - T0) : CP_ICE * (TM - T0) + DFUS + CP_WA
     const sum = melted
       ? `\\kDeltaH = \\kDeltaH_1 + \\kDeltafusH + \\kDeltaH_3 \\\\ \\kDeltaH = ${fmt(d1, 0)} + ${fmt(DFUS, 0)} + ${fmt(d3, 0)} = ${fmt(d1 + DFUS + d3, 0)}\\ \\text{J/mol}`
       : `\\kDeltaH = \\kDeltaH_1 = \\int_{253\\ \\text{K}}^{${fmt(t, 1)}\\ \\text{K}} C_{P,\\text{ice}}\\,d\\kT = ${fmt(d1, 0)}\\ \\text{J/mol}`;
-    tex(d.readout, `${sum} \\\\ \\textstyle\\int (\\text{DSC} - \\text{baseline})\\,d\\kT = ${fmt(area, 0)}\\ \\text{J/mol} = \\kDeltafusH`);
+    tex(d.readout, `${sum} \\\\ \\textstyle\\int (\\text{DSC} - \\text{baseline})\\,d\\kT = ${fmt(area / 1000, 2)}\\ \\text{kJ/mol} = \\kDeltafusH`);
   }
   register(d.fig, { update: () => {}, draw });
 })();

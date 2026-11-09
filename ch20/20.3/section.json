@@ -165,7 +165,8 @@
       },
       {
        "tex": "\\kCv\\ln\\dfrac{\\kTtwo}{\\kTone} = -\\knmol R\\ln\\dfrac{\\kVb}{\\kVa}",
-       "src": "Section 19-6, the reversible adiabat"
+       "src": "Section 19-6, the reversible adiabat",
+       "drv": "19.6/adiabat-temperature-volume"
       }
      ],
      "then": {
