@@ -218,7 +218,7 @@
      "assumes": [
       {
        "tex": "\\kSent = -\\dfrac{\\partial \\kG}{\\partial \\kT}",
-       "src": "(23.2.1); 22.4"
+       "src": "23.2.1; 22.4"
       }
      ],
      "then": {
@@ -255,7 +255,7 @@
       },
       {
        "tex": "\\dfrac{\\partial \\kGliquid}{\\partial \\kT} < \\dfrac{\\partial \\kGsolid}{\\partial \\kT}",
-       "src": "(23.2.3), Figure 13.5"
+       "src": "23.2.3; Figure 13.5"
       }
      ],
      "then": {

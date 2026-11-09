@@ -451,20 +451,12 @@
  ],
  "concept_prereqs": [
   {
-   "concept": "fundamental-equation-u",
-   "prereq": "internal-energy"
-  },
-  {
    "concept": "natural-variables-u",
    "prereq": "fundamental-equation-u"
   },
   {
    "concept": "entropy-change-constant-volume",
    "prereq": "fundamental-equation-u"
-  },
-  {
-   "concept": "entropy-change-constant-volume",
-   "prereq": "constant-volume-heat-capacity"
   },
   {
    "concept": "entropy-increases-with-temperature",
@@ -489,10 +481,6 @@
   {
    "concept": "perfect-crystal-zero-entropy",
    "prereq": "third-law"
-  },
-  {
-   "concept": "perfect-crystal-zero-entropy",
-   "prereq": "distribution-weight"
   },
   {
    "concept": "standard-molar-entropy",
@@ -565,10 +553,6 @@
   {
    "concept": "partition-function-third-law",
    "prereq": "third-law"
-  },
-  {
-   "concept": "partition-function-third-law",
-   "prereq": "canonical-partition-function"
   },
   {
    "concept": "partition-function-third-law",
@@ -649,6 +633,10 @@
   {
    "concept": "spectroscopic-entropy",
    "prereq": "entropy-from-partition-function"
+  },
+  {
+   "concept": "reaction-entropy",
+   "prereq": "entropy-state-function"
   }
  ]
 }

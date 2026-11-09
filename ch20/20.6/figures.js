@@ -49,7 +49,7 @@ const dSmix = (x) => -R * (xlnx(x) + xlnx(1 - x));
       dot(ctx, bx + 10 + u * (bw - 20), tops[1] + 10 + v * (bh - 20), i < nA ? cA : cB, true, 7);
     }
     text(ctx, 'wall out, mixed', bx, tops[1] - 16, PAL.muted, { size: 20 });
-    F.legend(ctx, { l: bx, r: bx + bw, t: tops[0] + bh + 14, b: tops[1] - 40 }, [{ s: 'gas A', color: cA, kind: 'dot' }, { s: 'gas B', color: cB, kind: 'dot' }], { corner: 'top', row: true });
+    F.legend(ctx, { l: bx, r: bx + bw, t: tops[1], b: tops[1] + bh }, [{ s: 'gas A', color: cA, kind: 'dot' }, { s: 'gas B', color: cB, kind: 'dot' }], { corner: 'above' });
     /* the graph */
     const box = { l: 640, r: W - 60, t: 120, b: 470 };
     const ax = axes(ctx, box, [0, 1], [0, 7], { nx: 4, ny: 7, xl: 'mole fraction of A, χ_A', yl: 'molar entropy of mixing ΔS̄ (J K⁻¹ mol⁻¹)', yc: C('entropy') });

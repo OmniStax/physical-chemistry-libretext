@@ -188,7 +188,7 @@ const pow10 = (e) => e === 0 ? '1' : '10' + String(e).split('').map((c) => SUP[c
     for (let k = 0; k <= 60; k++) { const l = LPT + (3 - LPT) * k / 60; melt.push([tMelt(10 ** l), l]); }
     const fill = (pts, color) => { ctx.save(); ctx.beginPath(); pts.forEach(([a, b], k) => (k ? ctx.lineTo(X(a), Y(b)) : ctx.moveTo(X(a), Y(b)))); ctx.closePath(); ctx.fillStyle = alpha(color, 0.1); ctx.fill(); ctx.restore(); };
     fill([[200, -5], ...sub, ...melt, [200, 3]], F.cat(0));
-    fill([...melt, [TC, 3], ...vap.slice().reverse()], F.cat(1));
+    fill([...melt, [700, 3], [700, LPC], ...vap.slice().reverse()], F.cat(1));
     fill([[tS0, -5], ...sub, ...vap, [700, LPC], [700, -5]], F.cat(2));
     /* the 1 bar line */
     line(ctx, box.l, Y(0), box.r, Y(0), alpha(PAL.ink, 0.45), 2, [10, 10]);

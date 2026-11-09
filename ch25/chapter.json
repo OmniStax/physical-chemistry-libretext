@@ -77,7 +77,6 @@
     {
       "sym": "a",
       "concept": "activity",
-      "type": null,
       "meaning": "the activity of a liquid or a solid",
       "section": "25.2"
     },
@@ -251,7 +250,6 @@
     },
     {
       "sym": "m",
-      "type": null,
       "meaning": "the molality of the solute",
       "unit": "mol/kg",
       "section": "25.3"
@@ -352,7 +350,6 @@
     },
     {
       "sym": "c",
-      "type": null,
       "meaning": "the molar concentration of the solute",
       "unit": "mol/L",
       "section": "25.4"
@@ -384,7 +381,6 @@
     {
       "sym": "nu",
       "concept": "salt-dissociation",
-      "type": null,
       "meaning": "the sum of the stoichiometric coefficients, ν₊ + ν₋",
       "section": "25.5"
     },
@@ -506,7 +502,6 @@
     },
     {
       "sym": "m",
-      "type": null,
       "meaning": "the molality of the salt",
       "unit": "mol/kg",
       "section": "25.5"
@@ -540,7 +535,6 @@
     },
     {
       "sym": "m_i",
-      "type": null,
       "meaning": "the molality of ion i",
       "unit": "mol/kg",
       "section": "25.6"
@@ -600,20 +594,17 @@
     },
     {
       "sym": "m",
-      "type": null,
       "meaning": "the molality of the salt",
       "unit": "mol/kg",
       "section": "25.6"
     },
     {
       "sym": "A",
-      "type": null,
       "meaning": "the Debye–Hückel constant A, 0.51 mol^−1/2 dm^3/2 for water at 25 °C",
       "section": "25.6"
     },
     {
       "sym": "B",
-      "type": null,
       "meaning": "the Debye–Hückel constant B, 3.29 nm⁻¹ mol^−1/2 dm^3/2 for water at 25 °C",
       "section": "25.6"
     },
@@ -643,13 +634,11 @@
     },
     {
       "sym": "A",
-      "type": null,
       "meaning": "the constant A of the extended equation, 0.5085 at 25 °C in water",
       "section": "25.7"
     },
     {
       "sym": "B",
-      "type": null,
       "meaning": "the constant B of the extended equation, 0.3281 at 25 °C in water",
       "section": "25.7"
     },
@@ -675,9 +664,10 @@
     {
       "sym": "a",
       "concept": "distance-of-closest-approach",
-      "meaning": "the effective hydrated diameter of the ion",
+      "meaning": "the effective hydrated diameter of an ion in the extended Debye–Hückel equation",
       "unit": "Å",
-      "section": "25.7"
+      "section": "25.7",
+      "redefines": true
     },
     {
       "sym": "f_pm",
@@ -732,7 +722,6 @@
     },
     {
       "sym": "m",
-      "type": null,
       "meaning": "the molality of the salt",
       "unit": "mol/kg",
       "section": "25.7"

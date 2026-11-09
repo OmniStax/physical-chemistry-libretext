@@ -312,7 +312,8 @@ correction worked here; *from memory, unchecked* one the builder checks first.
   gamma_i, gamma_pm, the Δ_mix quantities, W_int, U_12 …); reused: mu_i, mu_B, chi_A, chi_B, y_i, y_1,
   y_2, P_i, P_j, n_1, n_2, n_A, n_B, n_i, G, V, P, T, R, S_ent, H, T_A, T_B, P_std, f_i, phi_i, epsilon,
   m_B (as molality here: `ost meanings` shows its mass meaning in 5.2 and 9.1; the variables row gives
-  this chapter's). Counts in `config.md`.
+  this chapter's). 69 new symbols, all with macros; 172 variables rows; 49 concepts, 78 edges (2 redundant
+  removed by a Hasse check against the merged book), 51 forms.
 - Reused concepts, not duplicated: 22.5's `chemical-potential` and `fundamental-equations-composition`;
   22.4's `gibbs-first-derivatives`; 22.7's `gibbs-ideal-gas-pressure` and `gibbs-solid-pressure`; 22.8's
   `fugacity`, `fugacity-coefficient`, `component-fugacity`; 23.1's `partial-molar-quantity`; 23.3's
@@ -337,7 +338,7 @@ loose "Example 24.6.1: …" paragraph followed by the body; `box()` takes such a
 legend. Chapters 1–23 reconverted to a scratch folder: every source.md byte-identical except
 `ch01/1.3/source.md` (the stale committed file Chapter 23's prep reported, the same without this change)
 and `ch22/intro/source.md` (not written by Chapter 22's prep, which has no intro page). `tools/md2html.py`
-unchanged; drafts made for 24.1–24.9 (no intro), maths parsed by KaTeX (count in `LOG.md`). Notes for
+unchanged; drafts made for 24.1–24.9 (no intro), 341 maths spans set by KaTeX in strict mode without an error or warning. Notes for
 builders: the dead lever-rule image comes through as an HTML comment in 24.1's draft; the second
 example's diagram (`113368-Figure_D.png`) is a bare inline image inside `ex-24-6-1-2`; 24.1's exercise is
 `e?` / `exr:?` (rename); 24.9's opening `###` headers sit in the opening block; the converter does not

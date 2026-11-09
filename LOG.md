@@ -1283,3 +1283,24 @@ error. Flags, from memory and unchecked: water's critical point (647 K, 220.6 ba
 ice and water (0.9167, 0.9998 g/cm³), Mars's surface pressure (≈ 6 mbar), CO₂'s triple point
 (216.6 K, 5.2 bar) and critical point (304.1 K, 73.8 bar), and the boiling points and Δ_vap H of
 diethyl ether, bromine, n-octane, ethylene glycol and mercury for Figure 23.4.1.
+
+## Chapter 24 prep · 2026-11-08
+
+Prep only, no section built. Fetched Chapter 24's 10 images into `media/ch24/`. Converted the
+landing page (no text: no `intro/` page or record), 24.1–24.9 and 24.E ("TBA"; nothing to route);
+wrote `ch24/exploration.md`, `ch24/config.md` (agreed on Chapter 1's terms), `ch24/chapter.json`
+(9 sections, 172 variables) and merged `ch24/book-rows.json`: no new type, 69 symbols (all with
+macros), 49 concepts, 78 edges (Hasse-checked, 2 redundant removed), 51 forms. Six still 2D figures
+proposed in priority order (P–x–y with tie-line, T–x lens with lever and distillation stages restoring
+24.1's dead NCSU image, Δ_mix G against x with RT/W, the azeotrope from an interaction slider folding
+24.6.2's panels, Henry against Raoult folding 24.5.1 + 24.6.1, the boiling gap meeting the solubility
+dome under a pressure slider), one 3D extra offered; thirteen derivations (two hidden, scores 6 and 9);
+1 unkeyed exercise, 9 AI exercises proposed. Tool: `lt2md.py` reads a `div.box-example` titled by a
+`p.box-legend` (24.6's two examples); Chapters 1–23 reconverted to scratch, byte-identical except 1.3
+(stale committed file) and 22's unwritten intro. Drafts for 24.1–24.9, 341 maths spans, KaTeX strict,
+no error. Corrections checked by computation: Example 24.6.1's k_H is 1.67 × 10⁸ Pa (printed 10⁹);
+the exercise's y₁ = 0.75; the Debye–Hückel constant 1.824 × 10⁶/(εT)^{3/2} = 0.509 at 298.15 K.
+Flags, from memory and **unchecked**: water's and ethanol's vapor pressures at 75 °C (≈ 289 and
+≈ 666 Torr against the book's 384 and 945), the water–ethanol minimum-boiling azeotrope (≈ 89 mol %
+ethanol), water's dielectric constant 78.54 at 25 °C, the Debye–Hückel limiting law's negative sign
+and |z₊z₋|, "heteroazeotrope" for the book's "eutectics".
