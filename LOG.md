@@ -1329,3 +1329,34 @@ ln γ± integrand checked against 24.7's printed form.
 Literature from memory, **unchecked**: water's ε_r = 78.5 at 298 K (used only to check the book's
 constant); NaCl's measured γ± ≈ 0.778 at 0.1 m (only to judge 25.7's "about 2%", nothing built on it).
 KBr's points for Figure 25.7.1 are read off the book's Figure 25.6.2 (Petergans, Wikipedia).
+
+## Chapter 20 pass · 2026-11-08
+
+Built: 20.1–20.9 (no intro page, no summary; 20.E empty, not built). 10 figure rows: 6 interactive
+(3 moving: 20.1's free expansion with W counted, 20.4's two blocks, Figure 20.7.1 + 20.7.3's
+Carnot cycle on PV and TS with its engine / heat-pump choice; 3 still: 20.1's levels as the box
+widens, Figure 20.3.1's two paths, 20.6's mixing entropy; no 3D), 1 kept figure (20.6's piston
+sketch) and 3 kept images (20.5.1, 20.7.2, 20.7.4). 10 derivations (20.2 two, 20.3, 20.4 two,
+20.6, 20.7, 20.8 two, 20.9). 9 exercises, all AI `exercise` cards in the Exercises document (the
+book prints none). 10 AI-marked footnote corrections, besides 4 derivation notes.
+
+Chapter pass: form anchors for the 12 forms the builders listed (20.1, 20.3, 20.4 blocks). New
+symbols `T_f` (`\kTf`) and `S_tot` (`\kStot`) with 20.4 variables rows; the `two-blocks`
+derivation now writes `\kTf` (the general C_V ln(T_f/T_i) fact stays plain beside its T_i) and
+the text's dS_tot is `d\kStot`. 20.9 rows `E_j`, `Q_sys`; its derivation and exercise write
+`\kEj`, `\kQsys`. `drv` links: Chapter 19 derives none of 20.2's three facts (the first law is
+19.1's axiom, δw_rev = −PdV and dU = C_vdT are stated in 19.2 and 19.5), so their `src` now
+names those sections instead of "Chapter 19"; 20.3's q_rev,A fact links `19.5/isothermal-heat`;
+20.6's two ΔS = nR ln(V₂/V₁) facts link `20.3/two-paths`. Book sentences back as reasons: 20.6
+"Equation 20.6.3 can be simplified using mole fractions", 20.7 "An ideal engine would take
+q_h → q_c with 100% efficiency. The work of the cycle will be equivalent to the heat transfer",
+20.2 "We know that U only depends on temperature" and "We also know that any reversible work
+would be volume work"; the other derivations checked against source.md, nothing else dropped.
+20.3's link to `#19.6-cooling-reversible-adiabat` resolves. 20.6's legend sat over "wall out,
+mixed": now on that line, flush right. `colours:default`: every type keeps its stored colour.
+`check:content`: no errors, no warnings. Every figure screenshot light and dark (contact
+sheets in the pass's scratch folder); no console or KaTeX error on any Chapter 20 page,
+derivations included.
+
+Known gaps: 20.3's heat bars run to 9000 J (sized for the slider extremes), so the opening
+bars are short; 20.7's |w| arrow reaches the frame's right edge.
